@@ -7,8 +7,8 @@ Table of Contents
 
 * [Summary](#summary)
 * [Protocol](#protocol)
-  * [Datagram](#datagram)
   * [Joining](#joining)
+  * [Datagram](#datagram)
   * [Downlink](#downlink)
 
 ## Summary
@@ -23,8 +23,18 @@ This proposal is not an all-encompassing specification but lays the foundation f
 ## Protocol
 [protocol]: #protocol
 
+LongFi is a session-oriented protocol. However, unlike most wireless protocols which operate within a network of trusted base stations, devices in the Helium communicate _through_ untrusted hotspots. Therefore, sessions in the Helium network are between devices and routers. Sessions persist regardless of which or how many hotspots receive their packets.
+
+### Joining
+[joining]: #joining
+
+When device starts up, it is session-less, or not connected to its organization's router. The process of establish a session is called joining.
+
+Sessions have a finite lifetime.
+
 > TODO:
-> - add lower-level summary that above?
+> - diffie hellman?
+> - how long do sessions live for?
 
 ### Datagram
 [datagram]: #datagram
@@ -76,10 +86,6 @@ Fingerprint. Packet brokerage between hotspots and routers depend on fingerprint
 > - Is the fingerprint, along with non-payload data, a
 >   zero-knowledge-proof (ZKP)?
 
-### Joining
-[joining]: #joining
-
-> TODO
 
 ### Downlink
 [downlink]: #downlink
