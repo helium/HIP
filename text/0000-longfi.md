@@ -26,6 +26,24 @@ This proposal is not an all-encompassing specification but lays the foundation f
 
 LongFi is a session-oriented protocol. However, unlike most wireless protocols which operate within a network of trusted base stations, devices in the Helium communicate _through_ untrusted hotspots. Therefore, sessions in the Helium network are between devices and routers. Sessions persist regardless of which or how many hotspots receive their packets.
 
+```
+     ┌──────────┐
+     │  Router  │
+     └──────────┘
+           ▲
+     ┌─────┴─────┐
+     ▼           ▼
+┌─────────┐ ┌─────────┐
+│ Hotspot │ │ Hotspot │
+└─────────┘ └─────────┘
+     ▲           ▲
+     └─────┬─────┘
+           ▼
+    ┌────────────┐
+    │   Device   │
+    └────────────┘
+```
+
 ### Joining
 [joining]: #joining
 
