@@ -61,6 +61,8 @@ When device starts up, it is session-less, or not connected to its organization'
 
 Sessions have a finite lifetime.
 
+@vagabond
+
 > TODO:
 > - diffie hellman?
 > - how long do sessions live for?
