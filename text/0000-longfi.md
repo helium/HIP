@@ -6,6 +6,7 @@ Table of Contents
 =================
 
 * [Summary](#summary)
+* [Regulatory](#regulatory)
 * [Protocol](#protocol)
   * [Joining](#joining)
   * [Datagram](#datagram)
@@ -20,6 +21,15 @@ This whitepaper introduces the high-level semantics of LongFi, the Helium networ
 Providing wide-area wireless connectivity is the Helium network's _raison d'être_. Providing this connectivity in a manner that is implementable by both Helium and third-parties requires a free and open protocol that devices, hotspots, and routers understand.
 
 This proposal is not an all-encompassing specification but lays the foundation for further HIPs which will serve as the specification.
+
+## Regulatory
+[regulatory]: #regulatory
+
+Regulations on intentional radiators vary region by region. These regulations inform much of LongFi's design, primarily...
+
+> TODO:
+> - time on air
+> - duty cycle
 
 ## Protocol
 [protocol]: #protocol
