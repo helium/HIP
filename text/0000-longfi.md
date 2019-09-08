@@ -10,6 +10,7 @@ Table of Contents
 * [Protocol](#protocol)
   * [Joining](#joining)
   * [Datagram](#datagram)
+  * [Uplink](#uplink)
   * [Downlink](#downlink)
   * [Fragmentation](#fragmentation)
   * [Channels](#channels)
@@ -119,10 +120,27 @@ Fingerprint. Packet brokerage between hotspots and routers depend on fingerprint
 >   zero-knowledge-proof (ZKP)?
 
 
+### Uplink
+[uplink]: #uplink
+
+Uplink communication is from device to router.
+
+> TODO:
+> - Unacknowledged vs acknowledged
+> - Listen before talk
+> - Spreading-factor vs dwell-time vs range
+> - Initial uplink spreading factor
+
 ### Downlink
 [downlink]: #downlink
 
-> TODO
+Downlink communication is from router to device.
+
+> TODO:
+> - Unacknowledged vs acknowledged
+> - Listen before talk
+> - Spreading-factor vs dwell-time vs range
+> - Initial uplink spreading factor
 
 ### Fragmentation
 [fragmentation]: #fragmentation
