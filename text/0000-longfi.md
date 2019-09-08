@@ -8,6 +8,7 @@ Table of Contents
 * [Summary](#summary)
 * [Regulatory](#regulatory)
 * [Protocol](#protocol)
+  * [Versioning](#versioning)
   * [Joining](#joining)
   * [Datagram](#datagram)
   * [Uplink](#uplink)
@@ -23,6 +24,11 @@ This whitepaper introduces the high-level semantics of LongFi, the Helium networ
 Providing wide-area wireless connectivity is the Helium network's _raison d'être_. Providing this connectivity in a manner that is implementable by both Helium and third-parties requires a free and open protocol that devices, hotspots, and routers understand.
 
 This proposal is not an all-encompassing specification but lays the foundation for further HIPs which will serve as the specification.
+
+## Versioning
+[versioning]: #versioning
+
+LongFi is versioned so that it can be improved in future revisions without breaking backward compatibility.
 
 ## Regulatory
 [regulatory]: #regulatory
