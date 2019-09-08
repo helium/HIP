@@ -12,6 +12,7 @@ Table of Contents
   * [Datagram](#datagram)
   * [Downlink](#downlink)
   * [Fragmentation](#fragmentation)
+  * [Channels](#channels)
 
 ## Summary
 [summary]: #summary
@@ -127,3 +128,7 @@ Fingerprint. Packet brokerage between hotspots and routers depend on fingerprint
 [fragmentation]: #fragmentation
 
 Datagrams are the fundamental unit of messaging in LongFi. Additionally, they have regulatory imposed maximum payload sizes. This poses a problem for applications needing to send data of arbitrary length. The solution to this is problem is fragmentation. Fragmentation is the process of decomposing large application-level messages into several datagrams and reassembling those fragments at the recipient's end of the link. A naive implementation of this process is fraught with peril when communicating over unreliable links.
+
+### Channels
+[channels]: #channels
+
