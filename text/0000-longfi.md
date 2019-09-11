@@ -82,13 +82,13 @@ Super frames contain necessary connection information and requested payload size
 The send structure of an unconnected device has the following fields completed: 
 
 | DGK | OUI | DID | FP | SID | PLS |
-|-----|-----|-----|-----|-----|
+|-----|-----|-----|-----|-----|-----|
 | X | X | X | X | _ | X |
 
 The received structure for an unconnected device has the following fields completed:
 
 | DGK | OUI | DID | FP | SID | PLS |
-|-----|-----|-----|-----|-----|
+|-----|-----|-----|-----|-----|-----|
 | X | X | X | X | X | X |
 
 Once the device receives a complete super frame structure (has been assigned a session ID) it is considered connected and can begin transmitting data frames.
@@ -100,13 +100,13 @@ Before sending a payload, a device must broadcast identifying information and re
 *Call*
 
 | DGK | OUI | DID | FP | SID | PLS |
-|-----|-----|-----|-----|-----|
+|-----|-----|-----|-----|-----| -----| 
 | X | X | X | X | _ | X |
 
 *Response*
 
 | DGK | OUI | DID | FP | SID | PLS |
-|-----|-----|-----|-----|-----|
+|-----|-----|-----|-----|-----|-----|
 | X | X | X | X | X | X |
 
 A completed response indicates that a receiver is in range and a router is capable of receiving/forwarding data to a desired endpoint. 
