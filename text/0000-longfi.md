@@ -86,6 +86,7 @@ A monolithic datagram is expected to be the most common way to transmit data tha
 
 | DGK(0) | OUI | DID | FP | Payload |
 |--------|-----|-----|----|---------|
+| 1      |  4  |  2  |  4 |   N     |
 
 Because the Lora frame itself has length information, simply the remainder of the datagram is treated as the payload.
 
@@ -138,6 +139,7 @@ At this point, however, the device does not have a session key to use in computi
 The router will then send back a join answer. Depending on the device's reported trust epoch, the router may need to deliver key-tree updates. A key tree update is of the following form
 
 | KeyID | Key      | Signature Trust Epoch | Signature |
+|-------|----------|-----------------------|-----------|
 |   1   |  32/64   |                       | 64        |
 
 The signature field is a signature over all the previous fields.
