@@ -73,6 +73,7 @@ Datagram Key (DGK) - OUI - Device ID (DID) - Fingerprint (FP)
 
 | DGK | OUI | DID | FP |
 |-----|-----|-----|----|
+| 1   |  4  |  2  | 4  |
 
 This provides enough information to identify the type of the datagram and to parse the subsequent fields needed for routing/verification.
 
@@ -160,6 +161,7 @@ A key in the key tree is assumed to be signed by the parent key in the tree. Thu
 Therefore, the join answer packet looks like:
 
 | JOIN-ANS(2) | Trust Epoch | ECDH Key ID | Session ID | Payload Fingerprint | Key Updates |
+|-------------|-------------|-------------|------------|---------------------|-------------|
 
 The trust epoch MUST be equal to or greater than the device's trust epoch. If it is the same then no key updates should be attached. If the trust epoch is greater than the device has, the device should verify all the key updates and, if they're correct, it should store the new keys locally and increment its trust epoch. The trust epoch is effectively a monotonic counter describing the version of the chain of trust from a router key back to the trust root. Each time a router or intermediate key is rolled or added the trust epoch should increment.
 
@@ -177,40 +179,6 @@ If this step completes successfully the device and the router should agree on th
 * All relevant key updates
 
 From this point normal datagrams can be constructed, fingerprinted, sent and authenticated by the far side.
-
-#### Connection Frame
-
-Before sending a payload, a device must broadcast identifying information and receive confirmation from a router via hotspot that it is ready to receive data. The call/response for this described above again is:
-
-*Call*
-
-| DGK | OUI | DID | FP | SID | PLS |
-|-----|-----|-----|----|-----|-----|
-| X   | X   | X   | X  | _   | X   |
-
-*Response*
-
-| DGK | OUI | DID | FP | SID | PLS |
-|-----|-----|-----|----|-----|-----|
-| X   | X   | X   | X  | X   | X   |
-
-A completed response indicates that a receiver is in range and a router is capable of receiving/forwarding data to a desired endpoint.
-
-#### Data Frame
-
-Once a connection has been established, the device, referred to as sender, will transmit an upper bounded number of packets to the receiver. The added fields are: Seed 1 (S1), Seed 2 (S2), Payload (PL). The general structure of the data frame is as follows:
-
-*Call*
-
-| DGK | OUI | DID | FP | S1 | S2 | PL |
-|-----|-----|-----|----|----|----|----|
-
-Once the router has successfully received the entire message (one or many transmissions by the sender), the device will receive a response data frame. Added fields are: Acknowledge (ACK). The response data frame will have the following structure:
-
-*Response*
-
-| DGK | OUI | DID | FP | ACK |
-|-----|-----|-----|----|-----|
 
 > TODO:
 > - Detail information on when ACK's can occur may be needed. Alternatively, should it be excluded for brevity in this doc?
