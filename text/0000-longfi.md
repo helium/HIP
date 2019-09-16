@@ -62,36 +62,121 @@ LongFi is a session-oriented protocol. However, unlike most wireless protocols w
     └────────────┘
 ```
 
-### Joining
-[joining]: #joining
+### Datagrams
+[datagrams]: #datagrams
 
-When device starts up, it is session-less, or not connected to its organization's router. The process of establish a session is called joining. The send and response layer is called a super frame. All call/response messages will have the following fields at a minimum:
+Due to variations on packet transmission size and time imposed by various regulatory domains it's impossible to send payloads of arbitrary size over unlicensed spectrum. As a consequence LongFi aims to provide a generic mechanism to spread the arbitrary payload over a number of smaller "datagrams" that are guaranteed to comply with any regulatory domain's restrictions. A datagram's focus should be on imposing as little overhead as possible while retaining enough information for routing and verification. As LongFi is a versioned specification, a "datagram kind" (DGK) field is used to provide for future extensions.
+
+Any currently specified datagram must always include the following fields:
 
 Datagram Key (DGK) - OUI - Device ID (DID) - Fingerprint (FP)
 
 | DGK | OUI | DID | FP |
 |-----|-----|-----|----|
 
-Sessions have a finite lifetime.
+This provides enough information to identify the type of the datagram and to parse the subsequent fields needed for routing/verification.
 
-Super frames contain necessary connection information and requested payload size needed to facilitate communication. The added fields are: Session ID (SID), Payload Size (PLS). The generic super frame structure is as follows:
+The currently specified datagram kinds are as follows:
 
-| DGK | OUI | DID | FP | SID | PLS |
-|-----|-----|-----|----|-----|-----|
+#### Monolithic Datagram
+[monolithic-datagram]: #monolithic-datagram
 
-The send structure of an unconnected device has the following fields completed:
+A monolithic datagram is expected to be the most common way to transmit data that can be fit within a single datagram.
 
-| DGK | OUI | DID | FP | SID | PLS |
-|-----|-----|-----|----|-----|-----|
-| X   | X   | X   | X  | _   | X   |
+| DGK(0) | OUI | DID | FP | Payload |
+|--------|-----|-----|----|---------|
 
-The received structure for an unconnected device has the following fields completed:
+Because the Lora frame itself has length information, simply the remainder of the datagram is treated as the payload.
 
-| DGK | OUI | DID | FP | SID | PLS |
-|-----|-----|-----|----|-----|-----|
-| X   | X   | X   | X  | X   | X   |
+#### Start of Frame Datagram
+[start-of-frame-datagram]: #start-of-frame-datagram
 
-Once the device receives a complete super frame structure (has been assigned a session ID) it is considered connected and can begin transmitting data frames.
+A start of frame datagram is used to describe a series of following datagrams that contain a payload larger than a monolithic datagram can hold. In some cases, if there's room, some of the payload may appear at the end of this datagram.
+
+| DGK(1) | OUI | DID | FP | Frame ID | Datagram Count | Optional Payload |
+|--------|-----|-----|----|----------|----------------|------------------|
+
+A count of the subsequent datagrams is provided (*not* the length of the entire payload). The Frame ID is allocated by the client but it is recommended to be a strictly monotonic counter.
+
+#### Frame Data Datagram
+[frame-data-datagram]: #frame-data-datagram
+
+The frame data datagram simply contains chunks of payload data that correspond to a previous start of frame datagram. The frame ID should be included in the fingerprint generation to avoid crosstalk between frames, but it is not needed to transmit it.
+
+| DGK(2) | OUI | DID | FP | Payload |
+|--------|-----|-----|----|---------|
+
+
+### Joining
+[joining]: #joining
+
+When device starts up, it is session-less, or not connected to its organization's router. The process of establishing a session is called joining.
+
+As LongFi is primarily concerned with the delivery of datagrams, it doesn't concretely specify how joins are done. Device and router implementors are free to choose how they want to establish, maintain and terminate sessions. Helium will provide a specification and a reference implementation that will be described below.
+
+In general, the goal of the joining procedure is to negotiate a shared secret both the router and the device know and agree on, but is not known to anyone else. This can be achieved in several different ways, including:
+
+* Pre shared keys
+* Out of band negotiation (eg. over cellular/wifi/bluetooth)
+* Elliptic Curve Diffie-Hellman key exchange (ECDH)
+
+Having a shared secret is important to producing tamper-proof datagram fingerprints so routers and devices can't be tricked into accepting forged or corrupt data.
+
+#### Helium Joining
+[helium-joining]: #helium-joining
+
+In Helium's implementation, the shared secret will be negotiated over ECDH. This assumes the router knows the public key associated with the DID and the device knows some "root of trust" key associated with the router infrastructure. In addition a special public 'join key' also needs to be stored on the device. Finally, to reduce network traffic later, a 'key tree' with an associated trust epochcan be pre-loaded on the device. These pieces of information are assumed to have been exchanged and recorded at device provisioning. The specific elliptic curve used for the keys has also been pre-agreed upon but is expected to be NIST p-256 or Curve25519.
+
+When a device does not have an active session (first time online, session expired, session lost) it sends, via datagrams as described above, a JOIN message:
+
+| JOIN-ASK(1) | Trust Epoch | Session ID |
+|-------------|-------------|------------|
+
+At this point, however, the device does not have a session key to use in computing a fingerprint or to encrypt the payload with. Thus it should do an ECDH with the 'join' key. This is the ONLY context in which this key should be used. To prevent replay attacks, session IDs should not be reused within a trust epoch and the Session ID should be combined with the ECDH result to form the join AES key.
+
+The router will then send back a join answer. Depending on the device's reported trust epoch, the router may need to deliver key-tree updates. A key tree update is of the following form
+
+| KeyID | Key      | Signature Trust Epoch | Signature |
+|   1   |  32/64   |                       | 64        |
+
+The signature field is a signature over all the previous fields.
+
+A KeyID is an 8 bit integer destructured into 4 2-bit tree identifiers. They address a tree with up to 81 nodes as follows (MSB order, only significant bytes are shown, 00 is the terminator):
+
+```
+                                      Root Key (00...)
+                                  /           |          \
+                       Key 1 (0100...)   Key 2 (1000...)  Key 3 (1100...)
+                   /        |          \                                |
+Key 1.1 (010100...)  Key 1.2 (011000...) Key 1.3 (011100...)       Key 3.1 (110100...)
+```
+
+So, Key 3.2.1.3 would be 11 10 01 11. Keys that do not use all 4 layers of the tree would terminate the key address with the 00 bit sequence.
+
+If the first 2 bytes are 00, that refers to the root key. Root keys can be updated if absolutely necessary if they're signed by the previous root key.
+
+A key in the key tree is assumed to be signed by the parent key in the tree. Thus Key 1.2 is signed by Key 1 and Key 1 is signed by the root key (which is the pre-provioned root of trust key). Keys that are replaced should have all their children in the tree deleted (and replaced by subsequent updates). Key tree updates should appear in an order from the root of the tree to the tips of the branches. A replacement key should have a signature trust epoch higher than the previous key (and the device's current trust epoch). A new key should have a signature trust epoch higher than the device's current trust epoch.
+
+Therefore, the join answer packet looks like:
+
+| JOIN-ANS(2) | Trust Epoch | ECDH Key ID | Session ID | Payload Fingerprint | Key Updates |
+
+The trust epoch MUST be equal to or greater than the device's trust epoch. If it is the same then no key updates should be attached. If the trust epoch is greater than the device has, the device should verify all the key updates and, if they're correct, it should store the new keys locally and increment its trust epoch. The trust epoch is effectively a monotonic counter describing the version of the chain of trust from a router key back to the trust root. Each time a router or intermediate key is rolled or added the trust epoch should increment.
+
+The ECDH key ID field indicates which key should be used for the ECDH operation to negotiate a session key. This key should not have any keys under it in the key tree (it should be a leaf node).
+
+The session ID must match what the device sent in its join request. The session ID and trust epoch should be mixed in with the result of the ECDH to generate the session key.
+
+The fingerprint for the datagrams should be constructed using the join AES key. Additionally a fingerprint over the preceeding payload should be constructed with the session key, so the device is sure that this join answer has not been forged by someone with access to the join key.
+
+If this step completes successfully the device and the router should agree on the following:
+
+* Session ID
+* Session Key
+* Trust Epoch
+* All relevant key updates
+
+From this point normal datagrams can be constructed, fingerprinted, sent and authenticated by the far side.
 
 #### Connection Frame
 
