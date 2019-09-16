@@ -69,65 +69,65 @@ When device starts up, it is session-less, or not connected to its organization'
 
 Datagram Key (DGK) - OUI - Device ID (DID) - Fingerprint (FP)
 
-|DGK | OUI | DID | FP | 
-|-----|-----|-----|-----|
+| DGK | OUI | DID | FP |
+|-----|-----|-----|----|
 
 Sessions have a finite lifetime.
 
 Super frames contain necessary connection information and requested payload size needed to facilitate communication. The added fields are: Session ID (SID), Payload Size (PLS). The generic super frame structure is as follows:
 
-|DGK | OUI | DID | FP | SID | PLS |
-|-----|-----|-----|-----|-----|-----|
+| DGK | OUI | DID | FP | SID | PLS |
+|-----|-----|-----|----|-----|-----|
 
-The send structure of an unconnected device has the following fields completed: 
+The send structure of an unconnected device has the following fields completed:
 
 | DGK | OUI | DID | FP | SID | PLS |
-|-----|-----|-----|-----|-----|-----|
-| X | X | X | X | _ | X |
+|-----|-----|-----|----|-----|-----|
+| X   | X   | X   | X  | _   | X   |
 
 The received structure for an unconnected device has the following fields completed:
 
 | DGK | OUI | DID | FP | SID | PLS |
-|-----|-----|-----|-----|-----|-----|
-| X | X | X | X | X | X |
+|-----|-----|-----|----|-----|-----|
+| X   | X   | X   | X  | X   | X   |
 
 Once the device receives a complete super frame structure (has been assigned a session ID) it is considered connected and can begin transmitting data frames.
 
-#### Connection Frame 
+#### Connection Frame
 
-Before sending a payload, a device must broadcast identifying information and receive confirmation from a router via hotspot that it is ready to receive data. The call/response for this described above again is: 
+Before sending a payload, a device must broadcast identifying information and receive confirmation from a router via hotspot that it is ready to receive data. The call/response for this described above again is:
 
 *Call*
 
 | DGK | OUI | DID | FP | SID | PLS |
-|-----|-----|-----|-----|-----| -----| 
-| X | X | X | X | _ | X |
+|-----|-----|-----|----|-----|-----|
+| X   | X   | X   | X  | _   | X   |
 
 *Response*
 
 | DGK | OUI | DID | FP | SID | PLS |
-|-----|-----|-----|-----|-----|-----|
-| X | X | X | X | X | X |
+|-----|-----|-----|----|-----|-----|
+| X   | X   | X   | X  | X   | X   |
 
-A completed response indicates that a receiver is in range and a router is capable of receiving/forwarding data to a desired endpoint. 
+A completed response indicates that a receiver is in range and a router is capable of receiving/forwarding data to a desired endpoint.
 
 #### Data Frame
 
-Once a connection has been established, the device, referred to as sender, will transmit an upper bounded number of packets to the receiver. The added fields are: Seed 1 (S1), Seed 2 (S2), Payload (PL). The general structure of the data frame is as follows: 
+Once a connection has been established, the device, referred to as sender, will transmit an upper bounded number of packets to the receiver. The added fields are: Seed 1 (S1), Seed 2 (S2), Payload (PL). The general structure of the data frame is as follows:
 
 *Call*
 
 | DGK | OUI | DID | FP | S1 | S2 | PL |
-|-----|-----|-----|-----|-----|-----|-----|
+|-----|-----|-----|----|----|----|----|
 
-Once the router has successfully received the entire message (one or many transmissions by the sender), the device will receive a response data frame. Added fields are: Acknowledge (ACK). The response data frame will have the following structure: 
+Once the router has successfully received the entire message (one or many transmissions by the sender), the device will receive a response data frame. Added fields are: Acknowledge (ACK). The response data frame will have the following structure:
 
 *Response*
 
-| DGK | OUI | DID | FP | ACK | 
-|-----|-----|-----|-----|-----|
+| DGK | OUI | DID | FP | ACK |
+|-----|-----|-----|----|-----|
 
-> TODO: 
+> TODO:
 > - Detail information on when ACK's can occur may be needed. Alternatively, should it be excluded for brevity in this doc?
 > - Size of fields to be included
 > - S1/S1 may be converted to sequence number?
@@ -211,4 +211,3 @@ Datagrams are the fundamental unit of messaging in LongFi. Additionally, they ha
 
 ### Channels
 [channels]: #channels
-
