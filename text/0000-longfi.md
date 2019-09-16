@@ -103,10 +103,10 @@ A count of the subsequent datagrams is provided (*not* the length of the entire 
 #### Frame Data Datagram
 [frame-data-datagram]: #frame-data-datagram
 
-The frame data datagram simply contains chunks of payload data that correspond to a previous start of frame datagram. The frame ID should be included in the fingerprint generation to avoid crosstalk between frames, but it is not needed to transmit it.
+The frame data datagram simply contains chunks of payload data that correspond to a previous start of frame datagram. The frame ID should be included in the fingerprint generation to avoid crosstalk between frames, but it is not needed to transmit it. The sequence number is used to determine the ordering of the payload fragments.
 
-| DGK(2) | OUI | DID | FP | Payload |
-|--------|-----|-----|----|---------|
+| DGK(2) | OUI | DID | FP | Seq # | Payload |
+|--------|-----|-----|----|-------|---------|
 
 
 ### Joining
