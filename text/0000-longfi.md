@@ -6,43 +6,53 @@ Table of Contents
 =================
 
 * [Summary](#summary)
-* [Regulatory](#regulatory)
+* [Versioning](#versioning)
+* [LoRa Physical Layer](#lora)
 * [Protocol](#protocol)
-  * [Versioning](#versioning)
+  * [Datagrams](#datagrams)
   * [Joining](#joining)
-  * [Datagram](#datagram)
   * [Uplink](#uplink)
   * [Downlink](#downlink)
+  * [Fingerprints](#fingerprints)
   * [Fragmentation](#fragmentation)
   * [Channels](#channels)
+* [Regulatory](#regulatory)
 
 ## Summary
 [summary]: #summary
 
 This whitepaper introduces the high-level semantics of LongFi, the Helium network's wireless protocol.
 
-Providing wide-area wireless connectivity is the Helium network's _raison d'être_. Providing this connectivity in a manner that is implementable by both Helium and third-parties requires a free and open protocol that devices, hotspots, and routers understand.
+Existing wide-area wireless protocols suffer from a variety of drawbacks which create challenging circumstances for a ubiquitous wireless network. Our desired implementation would be open source, lightweight, secure, and provide a universal routing and payment mechanism that allows the network to be used anywhere in the world as long as Hotspots are paid for routing traffic. 
 
-This proposal is not an all-encompassing specification but lays the foundation for further HIPs which will serve as the specification.
+Providing wide-area wireless connectivity in a manner that is implementable by both Helium and third-parties requires a free and open protocol that Devices, Hotspots, and Routers understand.
+
+This proposal is not an all-encompassing specification but lays the foundation for further HIPs and a reference implementation which will serve as the specification.
 
 ## Versioning
 [versioning]: #versioning
 
 LongFi is versioned so that it can be improved in future revisions without breaking backward compatibility.
 
-## Regulatory
-[regulatory]: #regulatory
+## LoRa Physical Layer
+[lora]: #lora
 
-Regulations on intentional radiators vary region by region. These regulations inform much of LongFi's design, primarily...
+LongFi is built on top of the LoRa modulation format and physical layer. Any LoRa compatible transceiver is supported, although the SX126x is recommended due to the overall improved power consumption and performance.
 
-> TODO:
-> - time on air
-> - duty cycle
+LoRa is a _Chirp Spread Spectrum_ modulation scheme which encodes symbols as _upchirps_ and _downchirps_. It is extremely resilient to interference, and due to the relatively unique occurrence of the chirps in radio spectrum, packets can be locked on to at very low data rates and long durations of time.
+
+The speed of the transmissions, in bits per second, is determined by the _spreading factor_ of the transmission. The spreading factor is the duration of each chirp, and ranges from SF12 (approximately 250bps) to SF5 (approximately 20,000bps). Longer chirp durations increase the ability of the receiver to lock on to the packet, and receive sensitivities as low as -138dBm are possible using the LongFi specified 125khz channels. 
 
 ## Protocol
 [protocol]: #protocol
 
-LongFi is a session-oriented protocol. However, unlike most wireless protocols which operate within a network of trusted base stations, devices in the Helium communicate _through_ untrusted hotspots. Therefore, sessions in the Helium network are between devices and routers. Sessions persist regardless of which or how many hotspots receive their packets.
+LongFi is a session-oriented protocol. However, unlike most wireless protocols which typically operate within a network of trusted base stations owned by a single operator, Devices in the Helium communicate _through_ untrusted Hotspots owned by many decentralized operators. Therefore, sessions in the Helium network are between Devices, typically a physical sensor, and Routers, which exist on the internet, that are owned by the same operator. Sessions persist regardless of which or how many Hotspots receive their packets.
+
+_Routers_ are internet-connected application servers that communicate with Hotspots and the Helium blockchain via [libp2p](https://github.com/helium/erlang-libp2p). 
+
+It is expected that _Organizations_ deploying one or mode _Devices_ will operate their own Router as the endpoint for [Datagrams](#datagrams) transmitted by their Devices. _Hotspots_, which are libp2p-connected TCP/IP to LongFi bridges, rely on an _Organizationally Unique Identifier (OUI)_ contained in the header of Device transmissions to determine which Router to deliver Datagrams. 
+
+In this sense LongFi combined with the Helium blockchain provides VPN-like functionality for an Organization; any Device whose Datagrams are heard by any Hotspot anywhere in the world will always be delivered to the correct Router.
 
 ```
      ┌──────────┐
@@ -65,48 +75,48 @@ LongFi is a session-oriented protocol. However, unlike most wireless protocols w
 ### Datagrams
 [datagrams]: #datagrams
 
-Due to variations on packet transmission size and time imposed by various regulatory domains it's impossible to send payloads of arbitrary size over unlicensed spectrum. As a consequence LongFi aims to provide a generic mechanism to spread the arbitrary payload over a number of smaller "datagrams" that are guaranteed to comply with any regulatory domain's restrictions. A datagram's focus should be on imposing as little overhead as possible while retaining enough information for routing and verification. As LongFi is a versioned specification, a "datagram kind" (DGK) field is used to provide for future extensions.
+Due to variations on packet transmission size and time imposed by various regulatory domains it is impossible to send payloads of arbitrary size over unlicensed spectrum. As a consequence LongFi aims to provide a generic mechanism to spread the arbitrary payload over a number of smaller Datagrams that are guaranteed to comply with any regulatory domain's restrictions. Additionally, smaller transmissions can significantly improve the packet error rate (PER) as they are less susceptible to noise and interference due to the shorter transmission duration. A Datagram's focus should be on imposing as little overhead as possible while retaining enough information for routing and verification. As LongFi is a versioned specification, a Datagram Kind (DGK) field is used to provide for future extensions.
 
-Any currently specified datagram must always include the following fields:
+A Datagram must always include the following fields:
 
-Datagram Key (DGK) - OUI - Device ID (DID) - Fingerprint (FP)
+Datagram Kind (DGK) - OUI - Device ID (DID) - Fingerprint (FP)
 
 | DGK | OUI | DID | FP |
 |-----|-----|-----|----|
 | 1   |  4  |  2  | 4  |
 
-This provides enough information to identify the type of the datagram and to parse the subsequent fields needed for routing/verification.
+This basic structure provides enough information to identify the type of Datagram and to parse the subsequent fields needed for routing and verification.
 
-TODO:
- * should we have a 'flags' field for things like ACK and ADR?
+> TODO:
+> - should we have a 'flags' field for things like ACK and ADR?
 
-The currently specified datagram kinds are as follows:
+The Datagram Kinds are as follows:
 
 #### Monolithic Datagram
 [monolithic-datagram]: #monolithic-datagram
 
-A monolithic datagram is expected to be the most common way to transmit data that can be fit within a single datagram.
+A Monolithic Datagram is expected to be the most common way to transmit data that can fit within a single Datagram. When sending or receiving small amounts of data, a Monolithic Datagram should be used.
 
 | DGK(0) | OUI | DID | FP | Payload |
 |--------|-----|-----|----|---------|
 | 1      |  4  |  2  |  4 |   N     |
 
-Because the Lora frame itself has length information, simply the remainder of the datagram is treated as the payload.
+Because the LoRa physical layer frame contains length information, the remainder of the Datagram is treated as the payload.
 
 #### Start of Frame Datagram
 [start-of-frame-datagram]: #start-of-frame-datagram
 
-A start of frame datagram is used to describe a series of following datagrams that contain a payload larger than a monolithic datagram can hold. In some cases, if there's room, some of the payload may appear at the end of this datagram.
+A Start of Frame Datagram is used to describe a series of following Datagrams that contain a payload larger than a Monolithic Datagram can hold. In some cases, if there's room, some of the payload may appear at the end of this Datagram.
 
 | DGK(1) | OUI | DID | FP | Frame ID | Datagram Count | Optional Payload |
 |--------|-----|-----|----|----------|----------------|------------------|
 
-A count of the subsequent datagrams is provided (*not* the length of the entire payload). The Frame ID is allocated by the client but it is recommended to be a strictly monotonic counter.
+A count of the subsequent Datagrams is provided (*not* the length of the entire payload). The Frame ID is allocated by the client but it is recommended to be a strictly monotonic counter.
 
 #### Frame Data Datagram
 [frame-data-datagram]: #frame-data-datagram
 
-The frame data datagram simply contains chunks of payload data that correspond to a previous start of frame datagram. The frame ID should be included in the fingerprint generation to avoid crosstalk between frames, but it is not needed to transmit it. The sequence number is used to determine the ordering of the payload fragments.
+The Frame Data Datagram contains chunks of payload data that correspond to a previous Start of Frame Datagram. The Frame ID should be included in the fingerprint generation to avoid crosstalk between frames, but it is not needed to transmit it. The sequence number is used to determine the ordering of the payload fragments.
 
 | DGK(2) | OUI | DID | FP | Seq # | Payload |
 |--------|-----|-----|----|-------|---------|
@@ -115,31 +125,31 @@ The frame data datagram simply contains chunks of payload data that correspond t
 ### Joining
 [joining]: #joining
 
-When device starts up, it is session-less, or not connected to its organization's router. The process of establishing a session is called joining.
+When a LongFi Device is powered on, it is session-less and not associated with its Organization's Router. The process of establishing a session is called joining.
 
-As LongFi is primarily concerned with the delivery of datagrams, it doesn't concretely specify how joins are done. Device and router implementors are free to choose how they want to establish, maintain and terminate sessions. Helium will provide a specification and a reference implementation that will be described below.
+As LongFi is primarily concerned with the delivery of Datagrams, a concrete requirement for how the join process should occur has been intentionally omitted. Device and Router implementors are free to choose how they want to establish, maintain and terminate sessions.
 
-In general, the goal of the joining procedure is to negotiate a shared secret both the router and the device know and agree on, but is not known to anyone else. This can be achieved in several different ways, including:
+In general, the goal of the joining procedure is to negotiate a shared secret both the Router and the Device know and agree on, but is not known to anyone else. This can be achieved in several different ways, including:
 
 * Pre shared keys
 * Out of band negotiation (eg. over cellular/wifi/bluetooth)
 * Elliptic Curve Diffie-Hellman key exchange (ECDH)
 
-Having a shared secret is important to producing tamper-proof datagram fingerprints so routers and devices can't be tricked into accepting forged or corrupt data.
+Having a shared secret is important to producing tamper-proof Datagram fingerprints so Routers and Devices cannot be tricked into accepting forged or corrupt Datagrams.
 
-#### Helium Joining
+#### Reference Joining Implementation
 [helium-joining]: #helium-joining
 
-In Helium's implementation, the shared secret will be negotiated over ECDH. This assumes the router knows the public key associated with the DID and the device knows some "root of trust" key associated with the router infrastructure. In addition a special public 'join key' also needs to be stored on the device. Finally, to reduce network traffic later, a 'key tree' with an associated trust epochcan be pre-loaded on the device. These pieces of information are assumed to have been exchanged and recorded at device provisioning. The specific elliptic curve used for the keys has also been pre-agreed upon but is expected to be NIST p-256 or Curve25519.
+In Helium's reference implementation, the shared secret will be negotiated over ECDH. This assumes the router knows the public key associated with the Device ID and the Device knows some "root of trust" key associated with the Router. In addition a special public "join key" also needs to be stored on the Device. Finally, to reduce subsequent network traffic, a "key tree" with an associated trust epoch can be pre-loaded on the Device. These pieces of information are assumed to have been exchanged and recorded at Device provisioning. The specific elliptic curve used for the keys must also be pre-negotiated, but is expected to be NIST p-256 or Curve25519.
 
-When a device does not have an active session (first time online, session expired, session lost) it sends, via datagrams as described above, a JOIN message:
+When a device does not have an active session (first time online, session expired, or session lost) it sends, via Datagrams as described above, a Join Ask. This Join Ask is a Monolithic Datagram with the following payload:
 
 | JOIN-ASK(1) | Trust Epoch | Session ID |
 |-------------|-------------|------------|
 
-At this point, however, the device does not have a session key to use in computing a fingerprint or to encrypt the payload with. Thus it should do an ECDH with the 'join' key. This is the ONLY context in which this key should be used. To prevent replay attacks, session IDs should not be reused within a trust epoch and the Session ID should be combined with the ECDH result to form the join AES key.
+At this point, however, the Device does not have a session key to use in computing a Fingerprint or to optionally encrypt the payload with. Thus it should do an ECDH exchange with the 'join' key. This is the ONLY context in which this key should be used. To prevent replay attacks, Session IDs should not be reused within a trust epoch and the Session ID should be combined with the ECDH result to form the join AES key.
 
-The router will then send back a join answer. Depending on the device's reported trust epoch, the router may need to deliver key-tree updates. A key tree update is of the following form
+The Router will then send back a join answer. Depending on the Device's reported trust epoch, the Router may need to deliver key-tree updates. A key tree update is of the following form
 
 | KeyID | Key      | Signature Trust Epoch | Signature |
 |-------|----------|-----------------------|-----------|
@@ -163,18 +173,18 @@ If the first 2 bytes are 00, that refers to the root key. Root keys can be updat
 
 A key in the key tree is assumed to be signed by the parent key in the tree. Thus Key 1.2 is signed by Key 1 and Key 1 is signed by the root key (which is the pre-provioned root of trust key). Keys that are replaced should have all their children in the tree deleted (and replaced by subsequent updates). Key tree updates should appear in an order from the root of the tree to the tips of the branches. A replacement key should have a signature trust epoch higher than the previous key (and the device's current trust epoch). A new key should have a signature trust epoch higher than the device's current trust epoch.
 
-Therefore, the join answer packet looks like:
+Therefore, the Join Answer payload looks like:
 
 | JOIN-ANS(2) | Trust Epoch | ECDH Key ID | Session ID | Payload Fingerprint | Key Updates |
 |-------------|-------------|-------------|------------|---------------------|-------------|
 
-The trust epoch MUST be equal to or greater than the device's trust epoch. If it is the same then no key updates should be attached. If the trust epoch is greater than the device has, the device should verify all the key updates and, if they're correct, it should store the new keys locally and increment its trust epoch. The trust epoch is effectively a monotonic counter describing the version of the chain of trust from a router key back to the trust root. Each time a router or intermediate key is rolled or added the trust epoch should increment.
+The trust epoch MUST be equal to or greater than the Device's trust epoch. If it is the same then no key updates should be attached. If the trust epoch is greater than that of the Device, the Device should verify all the key updates and, if they're correct, it should store the new keys locally and increment its trust epoch. The trust epoch is effectively a monotonic counter describing the version of the chain of trust from a Router key back to the trust root. Each time a Router or intermediate key is rolled or added the trust epoch should increment.
 
-The ECDH key ID field indicates which key should be used for the ECDH operation to negotiate a session key. This key should not have any keys under it in the key tree (it should be a leaf node).
+The ECDH Key ID field indicates which key should be used for the ECDH operation to negotiate a session key. This key should not have any keys under it in the key tree (it should be a leaf node).
 
-The session ID must match what the device sent in its join request. The session ID and trust epoch should be mixed in with the result of the ECDH to generate the session key.
+The Session ID must match what the device sent in its Join Ask. The Session ID and trust epoch should be mixed in with the result of the ECDH to generate the session key.
 
-The fingerprint for the datagrams should be constructed using the join AES key. Additionally a fingerprint over the preceeding payload should be constructed with the session key, so the device is sure that this join answer has not been forged by someone with access to the join key.
+The Fingerprint for the Datagrams should be constructed using the join AES key. Additionally a Fingerprint over the preceeding payload should be constructed with the session key, so the Device is sure that this join answer has not been forged by someone with access to the join key.
 
 If this step completes successfully the device and the router should agree on the following:
 
@@ -183,18 +193,92 @@ If this step completes successfully the device and the router should agree on th
 * Trust Epoch
 * All relevant key updates
 
-From this point normal datagrams can be constructed, fingerprinted, sent and authenticated by the far side.
+From this point normal Datagrams can be constructed, Fingerprinted, sent and authenticated by both ends of the communication.
 
 TODO:
  * What if the router has lost the session key?
 
+### Uplink
+[uplink]: #uplink
+
+> TODO
+> - complete this
+
+### Downlink
+[downlink]: #downlink
+
+> TODO
+> - complete this
+
 ### Fingerprints
 [fingerprints]: #fingerprints
 
-Fingerprints are a crucial mechanism for devices and routers to determine if the datagram they've received, or been offered, is valid. They resemble a HMAC with the twist that the message cannot be supplied in the clear. Instead, a hash of the message must be used. This allows for the hotspot to offer a datagram to the router by simply providing the hash of the contents and the fingerprint and allows the recipient to verify the authenticity and integrity of the packet without the hotspot having to reveal the packet up front.
+Fingerprints are a crucial mechanism for Devices and Routers to determine if the Datagram they've received, or been offered, is valid. They resemble a HMAC with the twist that the message cannot be supplied in the clear. Instead, a hash of the message must be used. This allows for the Hotspot to offer a Datagram to a Router by simply providing the hash of the contents and the Fingerprint and allows the Router to verify the authenticity and integrity of the packet without the Hotspot having to reveal the packet up front.
 
-TODO:
- * Specifiy this more formally and account for common attacks like length-extension, etc
+This layer of presentation allows a Hotspot to receive confirmation from a Router that it will be paid for the Datagram, without having to reveal the entire Datagram first and risk not being paid.
+
+> TODO:
+> - specifiy this more formally and account for common attacks like length-extension, etc
+
+### Fragmentation
+[fragmentation]: #fragmentation
+
+> TODO:
+> - is this section needed?
+
+### Channels
+[channels]: #channels
+
+LongFi operates in unlicensed subghz spectrum. The specific frequencies and channels vary by region, and are described in this section.
+
+#### United States (US915)
+
+In the United States the unlicensed frequency ranges from 902-928MHz.
+
+- Uplink: 64 125KHz wide uplink channels, with Channel 1 centered at 914.0MHz and subsequent channels incremented by 200KHz.
+
+- Downlink: ??????
+
+> TODO 
+> - complete this accurately
+
+#### Europe (EU868)
+
+> TODO
+> - etc etc
+
+## Regulatory
+[regulatory]: #regulatory
+
+Regulations on intentional radiators vary region by region. These regulations inform much of LongFi's design.
+
+### United States (FCC)
+
+The relevant regulation for the United States is described in FCC 15.247.
+
+There are three types of radiator (transmitter) described in 15.247 that are applicable to LongFi:
+
+- those employing frequency hopping spread spectrum (FHSS)
+- those employing digital modulation techniques, such as DSSS or CSS
+- those employing a hybrid of FHSS and digital modulation
+
+LongFi qualifies for the first and third of these modes.
+
+In either mode, a Device cannot transmit for longer than 400ms on a single channel. Given the low data rates available on LongFi - approximately 1000-5000bps - LongFi enforces that the maximum amount of data which can be sent fits this criteria. On the low-end of this is approximately 24bytes, and 250bytes at the fastest rate.
+
+> TODO:
+> - enforced at the router like LoRaWAN?
+> - is a specific type of "exceeding dwell time" Datagram needed?
+
+The maximum output power of the Device is limited depending on the mode of operation. If the Device hops between at least 50 channels and does not return to the same channel in a 20 second interval, the maximum power output is 30dBm (1 watt). If the Device hops over at least 25 channels but less than 50, the maximum power output is 26dBm. If the Device uses "hybrid" mode, which for practical purposes means hopping over greater than 4 channels but less than 25, the maximum power output is approximately 22dBm.
+
+It is important to note that a Device can can "simulate" hopping between 25+ channels by incorporating the appropriate dwell time between channels and use higher output power as a result, even if a Hotspot is only able to receive on fewer channels.
+
+### Europe (ETSI)
+
+> TODO:
+> - time on air
+> - duty cycle
 
 
 ## OLD
