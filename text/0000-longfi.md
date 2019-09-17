@@ -77,6 +77,9 @@ Datagram Key (DGK) - OUI - Device ID (DID) - Fingerprint (FP)
 
 This provides enough information to identify the type of the datagram and to parse the subsequent fields needed for routing/verification.
 
+TODO:
+ * should we have a 'flags' field for things like ACK and ADR?
+
 The currently specified datagram kinds are as follows:
 
 #### Monolithic Datagram
@@ -181,6 +184,20 @@ If this step completes successfully the device and the router should agree on th
 * All relevant key updates
 
 From this point normal datagrams can be constructed, fingerprinted, sent and authenticated by the far side.
+
+TODO:
+ * What if the router has lost the session key?
+
+### Fingerprints
+[fingerprints]: #fingerprints
+
+Fingerprints are a crucial mechanism for devices and routers to determine if the datagram they've received, or been offered, is valid. They resemble a HMAC with the twist that the message cannot be supplied in the clear. Instead, a hash of the message must be used. This allows for the hotspot to offer a datagram to the router by simply providing the hash of the contents and the fingerprint and allows the recipient to verify the authenticity and integrity of the packet without the hotspot having to reveal the packet up front.
+
+TODO:
+ * Specifiy this more formally and account for common attacks like length-extension, etc
+
+
+## OLD
 
 > TODO:
 > - Detail information on when ACK's can occur may be needed. Alternatively, should it be excluded for brevity in this doc?
