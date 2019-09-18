@@ -87,6 +87,8 @@ This basic structure provides enough information to identify the type of Datagra
 
 > TODO:
 > - should we have a 'flags' field for things like ACK and ADR?
+>   - if we're absolutely certain that some flags will be necessary, we should add them to the first release of longfi instead of just adding new Tags later on.
+>   - we should probably not add any flags that to base datagram layout that are not applicable to all datagram variants
 
 The Datagram Tags are as follows:
 
@@ -157,13 +159,32 @@ The signature field is a signature over all the previous fields.
 
 A KeyID is an 8 bit integer destructured into 4 2-bit tree identifiers. They address a tree with up to 81 nodes as follows (MSB order, only significant bytes are shown, 00 is the terminator):
 
-```
-                                      Root Key (00...)
-                                  /           |          \
-                       Key 1 (0100...)   Key 2 (1000...)  Key 3 (1100...)
-                   /        |          \                                |
-Key 1.1 (010100...)  Key 1.2 (011000...) Key 1.3 (011100...)       Key 3.1 (110100...)
-```
+![Key Tree](0000-longfi-key_tree.svg)
+
+<!--
+digraph KeyTree {
+  root[label = "Root Key\n00..."]
+
+  key_1[label = "Key 1\n0100..."]
+  key_2[label = "Key 2\n1000..."]
+  key_3[label = "Key 3\n1100..."]
+
+  key_1_1[label = "Key 1.1\n010100..."]
+  key_1_2[label = "Key 1.2\n011000..."]
+  key_1_3[label = "Key 1.3\n011100..."]
+  key_3_1[label = "Key 3.1\n110100..."]
+
+  root -> key_1
+  root -> key_2
+  root -> key_3
+
+  key_1 -> key_1_1
+  key_1 -> key_1_2
+  key_1 -> key_1_3
+
+  key_3 -> key_3_1
+}
+-->
 
 So, Key 3.2.1.3 would be 11 10 01 11. Keys that do not use all 4 layers of the tree would terminate the key address with the 00 bit sequence.
 
