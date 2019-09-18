@@ -151,28 +151,28 @@ At this point, however, the Device does not have a session key to use in computi
 
 The Router will then send back a join answer. Depending on the Device's reported trust epoch, the Router may need to deliver key-tree updates. A key tree update is of the following form
 
-| KeyID | Key      | Signature Trust Epoch | Signature |
-|-------|----------|-----------------------|-----------|
-|   1   |  32/64   |                       | 64        |
+| KeyID | Key   | Signature Trust Epoch | Signature |
+|-------|-------|-----------------------|-----------|
+| 1     | 32/64 |                       | 64        |
 
 The signature field is a signature over all the previous fields.
 
-A KeyID is an 8 bit integer destructured into 4 2-bit tree identifiers. They address a tree with up to 81 nodes as follows (MSB order, only significant bytes are shown, 00 is the terminator):
+A KeyID is an 8-bit integer destructured into four 2-bit tree identifiers. They address a tree with up to 81 nodes as follows (Most-significant-bit order, only significant bits are shown, `00` is the terminator):
 
 ![Key Tree](0000-longfi-key_tree.svg)
 
 <!--
 digraph KeyTree {
-  root[label = "Root Key\n00..."]
+  root[label = "Root Key\n00 ..."]
 
-  key_1[label = "Key 1\n0100..."]
-  key_2[label = "Key 2\n1000..."]
-  key_3[label = "Key 3\n1100..."]
+  key_1[label = "Key 1\n01 00 ..."]
+  key_2[label = "Key 2\n10 00 ..."]
+  key_3[label = "Key 3\n11 00..."]
 
-  key_1_1[label = "Key 1.1\n010100..."]
-  key_1_2[label = "Key 1.2\n011000..."]
-  key_1_3[label = "Key 1.3\n011100..."]
-  key_3_1[label = "Key 3.1\n110100..."]
+  key_1_1[label = "Key 1.1\n01 01 00 ..."]
+  key_1_2[label = "Key 1.2\n01 10 00 ..."]
+  key_1_3[label = "Key 1.3\n01 11 00 ..."]
+  key_3_1[label = "Key 3.1\n11 01 00 ..."]
 
   root -> key_1
   root -> key_2
@@ -186,9 +186,9 @@ digraph KeyTree {
 }
 -->
 
-So, Key 3.2.1.3 would be 11 10 01 11. Keys that do not use all 4 layers of the tree would terminate the key address with the 00 bit sequence.
+So, Key 3.2.1.3 would be `11 10 01 11`. Keys that do not use all four layers of the tree would terminate the key address with the `00` bit sequence.
 
-If the first 2 bytes are 00, that refers to the root key. Root keys can be updated if absolutely necessary if they're signed by the previous root key.
+If the first two bits are `00`, that refers to the root key. Root keys can be updated if absolutely necessary if they're signed by the previous root key.
 
 A key in the key tree is assumed to be signed by the parent key in the tree. Thus Key 1.2 is signed by Key 1 and Key 1 is signed by the root key (which is the pre-provioned root of trust key). Keys that are replaced should have all their children in the tree deleted (and replaced by subsequent updates). Key tree updates should appear in an order from the root of the tree to the tips of the branches. A replacement key should have a signature trust epoch higher than the previous key (and the device's current trust epoch). A new key should have a signature trust epoch higher than the device's current trust epoch.
 
