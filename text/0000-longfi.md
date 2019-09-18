@@ -23,7 +23,7 @@ Table of Contents
 
 This whitepaper introduces the high-level semantics of LongFi, the Helium network's wireless protocol.
 
-Existing wide-area wireless protocols suffer from a variety of drawbacks which create challenging circumstances for a ubiquitous wireless network. Our desired implementation would be open source, lightweight, secure, and provide a universal routing and payment mechanism that allows the network to be used anywhere in the world as long as Hotspots are paid for routing traffic. 
+Existing wide-area wireless protocols suffer from a variety of drawbacks which create challenging circumstances for a ubiquitous wireless network. Our desired implementation would be open source, lightweight, secure, and provide a universal routing and payment mechanism that allows the network to be used anywhere in the world as long as Hotspots are paid for routing traffic.
 
 Providing wide-area wireless connectivity in a manner that is implementable by both Helium and third-parties requires a free and open protocol that Devices, Hotspots, and Routers understand.
 
@@ -41,16 +41,16 @@ LongFi is built on top of the LoRa modulation format and physical layer. Any LoR
 
 LoRa is a _Chirp Spread Spectrum_ modulation scheme which encodes symbols as _upchirps_ and _downchirps_. It is extremely resilient to interference, and due to the relatively unique occurrence of the chirps in radio spectrum, packets can be locked on to at very low data rates and long durations of time.
 
-The speed of the transmissions, in bits per second, is determined by the _spreading factor_ of the transmission. The spreading factor is the duration of each chirp, and ranges from SF12 (approximately 250bps) to SF5 (approximately 20,000bps). Longer chirp durations increase the ability of the receiver to lock on to the packet, and receive sensitivities as low as -138dBm are possible using the LongFi specified 125khz channels. 
+The speed of the transmissions, in bits per second, is determined by the _spreading factor_ of the transmission. The spreading factor is the duration of each chirp, and ranges from SF12 (approximately 250bps) to SF5 (approximately 20,000bps). Longer chirp durations increase the ability of the receiver to lock on to the packet, and receive sensitivities as low as -138dBm are possible using the LongFi specified 125khz channels.
 
 ## Protocol
 [protocol]: #protocol
 
 LongFi is a session-oriented protocol. However, unlike most wireless protocols which typically operate within a network of trusted base stations owned by a single operator, Devices in the Helium communicate _through_ untrusted Hotspots owned by many decentralized operators. Therefore, sessions in the Helium network are between Devices, typically a physical sensor, and Routers, which exist on the internet, that are owned by the same operator. Sessions persist regardless of which or how many Hotspots receive their packets.
 
-_Routers_ are internet-connected application servers that communicate with Hotspots and the Helium blockchain via [libp2p](https://github.com/helium/erlang-libp2p). 
+_Routers_ are internet-connected application servers that communicate with Hotspots and the Helium blockchain via [libp2p](https://github.com/helium/erlang-libp2p).
 
-It is expected that _Organizations_ deploying one or mode _Devices_ will operate their own Router as the endpoint for [Datagrams](#datagrams) transmitted by their Devices. _Hotspots_, which are libp2p-connected TCP/IP to LongFi bridges, rely on an _Organizationally Unique Identifier (OUI)_ contained in the header of Device transmissions to determine which Router to deliver Datagrams. 
+It is expected that _Organizations_ deploying one or mode _Devices_ will operate their own Router as the endpoint for [Datagrams](#datagrams) transmitted by their Devices. _Hotspots_, which are libp2p-connected TCP/IP to LongFi bridges, rely on an _Organizationally Unique Identifier (OUI)_ contained in the header of Device transmissions to determine which Router to deliver Datagrams.
 
 In this sense LongFi combined with the Helium blockchain provides VPN-like functionality for an Organization; any Device whose Datagrams are heard by any Hotspot anywhere in the world will always be delivered to the correct Router.
 
@@ -75,13 +75,11 @@ In this sense LongFi combined with the Helium blockchain provides VPN-like funct
 ### Datagrams
 [datagrams]: #datagrams
 
-Due to variations on packet transmission size and time imposed by various regulatory domains it is impossible to send payloads of arbitrary size over unlicensed spectrum. As a consequence LongFi aims to provide a generic mechanism to spread the arbitrary payload over a number of smaller Datagrams that are guaranteed to comply with any regulatory domain's restrictions. Additionally, smaller transmissions can significantly improve the packet error rate (PER) as they are less susceptible to noise and interference due to the shorter transmission duration. A Datagram's focus should be on imposing as little overhead as possible while retaining enough information for routing and verification. As LongFi is a versioned specification, a Datagram Kind (DGK) field is used to provide for future extensions.
+Due to variations on packet transmission size and time imposed by various regulatory domains it is impossible to send payloads of arbitrary size over unlicensed spectrum. As a consequence LongFi aims to provide a generic mechanism to spread the arbitrary payload over a number of smaller Datagrams that are guaranteed to comply with any regulatory domain's restrictions. Additionally, smaller transmissions can significantly improve the packet error rate (PER) as they are less susceptible to noise and interference due to the shorter transmission duration. A Datagram's focus should be on imposing as little overhead as possible while retaining enough information for routing and verification. As LongFi is a versioned specification, a Datagram Tag (Tag) field is used to provide for future extensions.
 
 A Datagram must always include the following fields:
 
-Datagram Kind (DGK) - OUI - Device ID (DID) - Fingerprint (FP)
-
-| DGK | OUI | DID | FP |
+| Tag | OUI | DID | FP |
 |-----|-----|-----|----|
 | 1   |  4  |  2  | 4  |
 
@@ -90,14 +88,14 @@ This basic structure provides enough information to identify the type of Datagra
 > TODO:
 > - should we have a 'flags' field for things like ACK and ADR?
 
-The Datagram Kinds are as follows:
+The Datagram Tags are as follows:
 
 #### Monolithic Datagram
 [monolithic-datagram]: #monolithic-datagram
 
 A Monolithic Datagram is expected to be the most common way to transmit data that can fit within a single Datagram. When sending or receiving small amounts of data, a Monolithic Datagram should be used.
 
-| DGK(0) | OUI | DID | FP | Payload |
+| Tag(0) | OUI | DID | FP | Payload |
 |--------|-----|-----|----|---------|
 | 1      |  4  |  2  |  4 |   N     |
 
@@ -108,7 +106,7 @@ Because the LoRa physical layer frame contains length information, the remainder
 
 A Start of Frame Datagram is used to describe a series of following Datagrams that contain a payload larger than a Monolithic Datagram can hold. In some cases, if there's room, some of the payload may appear at the end of this Datagram.
 
-| DGK(1) | OUI | DID | FP | Frame ID | Datagram Count | Optional Payload |
+| Tag(1) | OUI | DID | FP | Frame ID | Datagram Count | Optional Payload |
 |--------|-----|-----|----|----------|----------------|------------------|
 
 A count of the subsequent Datagrams is provided (*not* the length of the entire payload). The Frame ID is allocated by the client but it is recommended to be a strictly monotonic counter.
@@ -118,7 +116,7 @@ A count of the subsequent Datagrams is provided (*not* the length of the entire 
 
 The Frame Data Datagram contains chunks of payload data that correspond to a previous Start of Frame Datagram. The Frame ID should be included in the fingerprint generation to avoid crosstalk between frames, but it is not needed to transmit it. The sequence number is used to determine the ordering of the payload fragments.
 
-| DGK(2) | OUI | DID | FP | Seq # | Payload |
+| Tag(2) | OUI | DID | FP | Seq # | Payload |
 |--------|-----|-----|----|-------|---------|
 
 
@@ -239,7 +237,7 @@ In the United States the unlicensed frequency ranges from 902-928MHz.
 
 - Downlink: ??????
 
-> TODO 
+> TODO
 > - complete this accurately
 
 #### Europe (EU868)
@@ -296,9 +294,9 @@ It is important to note that a Device can can "simulate" hopping between 25+ cha
 > - explanations of each field
 
 ---
-**DGK**
+**Tag**
 
-Datagram kind. A tag value indicating this datagram's variant type.
+Datagram tag. A tag value indicating this datagram's variant type.
 
 > **TODO:**
 > - How many variants are needed?
