@@ -133,6 +133,8 @@ The Datagram Type for this datagram shall be defined as 1. Available flags are a
 | 4 | LDPC | The packet, beyond the Tag field, is encoded with a [Low Density Parity Code](https://en.wikipedia.org/wiki/Low-density_parity-check_code). The specific code used depends on the maximum datagram size for the current region and spreading factor |
 | 5 | Reserved | Reserved for future use |
 
+Note that Should ACK is distinct from receiving unsolicited downlink data. If Should ACK is set and CTS is not set the Router should not follow the Ack Frame with further packets.
+
 #### Start of Frame Datagram
 [start-of-frame-datagram]: #start-of-frame-datagram
 
@@ -146,6 +148,8 @@ A count of the subsequent Datagrams is provided (*not* the length of the entire 
 
 The Datagram Type for this datagram shall be defined as 2. The Flags are the same as for the monolithic datagram.
 
+The Should ACK and CTS/RTS flags should take effect after all the subsequent Frame Data datagrams have been sent.
+
 #### Frame Data Datagram
 [frame-data-datagram]: #frame-data-datagram
 
@@ -155,7 +159,35 @@ The Frame Data Datagram contains chunks of payload data that correspond to a pre
 |-----|-----|-----|----|------------|---------|
 |  3  |  1+ | 1+  | 4  | 0+         |   N     |
 
-The Datagram Type for this datagram shall be defined as 3. The Flags in this case are used as a 6 bit variable length integer that _may_ spill over into the Fragment Number field as needed. Thus, 32 fragments can be sent before overflowing necessitates the use of an extra byte.
+The Datagram Type for this datagram shall be defined as 3. The Flags in this case are a single flag LDPC followed by a 5 byte variable integer that tracks the fragment ID and spills over into the Fragment ID field.
+
+Because any hotspot can receive the datagram, the LDPC flag needs to be present on all fragements because the hotspot needs to know if it must do any error correction itself before offering the packet along.
+
+#### Ack Datagram
+[ack-datagram]: #ack-datagram
+
+The Ack datagram is used to indicate success/failure of a prior transmission, in response to the prior transmission having the `Should ACK` flag set. The Ack datagram can indicate success or failure and request retransmits.
+
+| Tag | OUI | DID | FP | Seq # | Payload |
+|-----|-----|-----|----|-------|---------|
+|  3  |  1+ | 1+  | 4  | 1+    |   N     |
+
+| Bit | Flag | Description |
+|-|-|-|
+| 0 | Failure | The receiver was unable to receive the previous message |
+| 1 | Session expired | Downlink only; the receiver requests the sender to renegotiate a session key |
+| 2 | CTS/RTS | On uplink this bit indicates the device is ready to receive, on downlink it indicates further information follows |
+| 3 | Retransmit | Retransmit requested |
+| 4 | LDPC | The packet, beyond the Tag field, is encoded with a [Low Density Parity Code](https://en.wikipedia.org/wiki/Low-density_parity-check_code). The specific code used depends on the maximum datagram size for the current region and spreading factor |
+| 5 | Reserved | Reserved for future use |
+
+The Datagram Type for this datagram shall be defined as 4. The Failure indicator should not be taken as an invitation to retransmit merely that the recipient was unable to receive the data. The Failure flag left at 0 indicates success.
+
+Session Expired, only on downlink, indicates that the session key currently being used should be renegotiated. This may or may not be paired with the Failure flag.
+
+An explicit Retransmit field indicates that the data should be retransmitted. In the case the prior packet was a Monolithic Datagram, the Seq # indicates the requested packet to retransmit. When the prior transmission was a Data Frame the particular fragment IDs that should be retransmitted should appear in the payload (TODO how to encode this). The Failure flag _must_ also be set for this field to be meaningful.
+
+Following data, or the willingness to receive more data, is denoted with the CTS/RTS flag. This can be used, for example, to keep the Device awake for more data. The CTS/RTS flag _may_ be set even if the previous transmission did not have the CTS/RTS flag, but if the device did not indicate it was Clear To Send more packets should not be sent.
 
 ### Uplink
 [uplink]: #uplink
