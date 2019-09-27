@@ -46,11 +46,11 @@ The speed of the transmissions, in bits per second, is determined by the _spread
 ## Protocol
 [protocol]: #protocol
 
-LongFi is a session-oriented protocol. However, unlike most wireless protocols which typically operate within a network of trusted base stations owned by a single operator, Devices in the Helium communicate _through_ untrusted Hotspots owned by many decentralized operators. Therefore, sessions in the Helium network are between Devices, typically a physical sensor, and Routers, which exist on the internet, that are owned by the same operator. Sessions persist regardless of which or how many Hotspots receive their packets.
+LongFi is a connectionless datagram protocol, similar to the [IP protocol](https://en.wikipedia.org/wiki/Internet_Protocol). However, unlike most wireless protocols which typically operate within a network of trusted base stations owned by a single operator, Devices in the Helium communicate _through_ untrusted Hotspots owned by many decentralized operators. Therefore, sessions in the Helium network are between Devices, typically a physical sensor, and Routers, which exist on the internet, that are owned by the same operator. Sessions persist regardless of which or how many Hotspots receive their packets.
 
 _Routers_ are internet-connected application servers that communicate with Hotspots and the Helium blockchain via [libp2p](https://github.com/helium/erlang-libp2p).
 
-It is expected that _Organizations_ deploying one or mode _Devices_ will operate their own Router as the endpoint for [Datagrams](#datagrams) transmitted by their Devices. _Hotspots_, which are libp2p-connected TCP/IP to LongFi bridges, rely on an _Organizationally Unique Identifier (OUI)_ contained in the header of Device transmissions to determine which Router to deliver Datagrams.
+It is expected that _Organizations_ deploying one or more _Devices_ will operate their own Router as the endpoint for [Datagrams](#datagrams) transmitted by their Devices. _Hotspots_, which are libp2p-connected TCP/IP to LongFi bridges, rely on an _Organizationally Unique Identifier (OUI)_ contained in the header of Device transmissions to determine which Router to deliver Datagrams.
 
 In this sense LongFi combined with the Helium blockchain provides VPN-like functionality for an Organization; any Device whose Datagrams are heard by any Hotspot anywhere in the world will always be delivered to the correct Router.
 
@@ -77,18 +77,35 @@ In this sense LongFi combined with the Helium blockchain provides VPN-like funct
 
 Due to variations on packet transmission size and time imposed by various regulatory domains it is impossible to send payloads of arbitrary size over unlicensed spectrum. As a consequence LongFi aims to provide a generic mechanism to spread the arbitrary payload over a number of smaller Datagrams that are guaranteed to comply with any regulatory domain's restrictions. Additionally, smaller transmissions can significantly improve the packet error rate (PER) as they are less susceptible to noise and interference due to the shorter transmission duration. A Datagram's focus should be on imposing as little overhead as possible while retaining enough information for routing and verification. As LongFi is a versioned specification, a Datagram Tag (Tag) field is used to provide for future extensions.
 
-A Datagram must always include the following fields:
+A datagram, in a given regulatory region, for a particular spreading factor, has a fixed size. The LoRa physical layer length field _may_ be used to denote a datagram of a shorter length but for maximum reliability it is recommended to transmit short payloads with padding such that the datagram is of the maximum size. Oversize datagrams _must_ be treated as length field corruption and truncated to the maximum allowed size.
+
+The LoRa CRC option should be disabled and the code rate should be set to the minimum of 4/5.
+
+A Datagram must always include the following fields (sizes in bytes):
 
 | Tag | OUI | DID | FP |
 |-----|-----|-----|----|
-| 1   |  4  |  2  | 4  |
+|  3  | 1+  | 1+  | 4  |
 
 This basic structure provides enough information to identify the type of Datagram and to parse the subsequent fields needed for routing and verification.
 
-> TODO:
-> - should we have a 'flags' field for things like ACK and ADR?
->   - if we're absolutely certain that some flags will be necessary, we should add them to the first release of longfi instead of just adding new Tags later on.
->   - we should probably not add any flags that to base datagram layout that are not applicable to all datagram variants
+Fields denoted _1+_ indicate that the field is an unsigned [variable length integer field](https://en.wikipedia.org/wiki/Variable-length_quantity) and grows in size as needed.
+
+The Tag is a [Golay 24,12](https://en.wikipedia.org/wiki/Binary_Golay_code) encoded 12 bits with an additional 12 bits of error correction information. The Golay code is chosen for several reasons:
+
+* It has a small block size
+* It can correct any 3 bits of errors and detect any 7 bits of errors
+* It is suitable for low-end microcontrollers
+* It can be avoided entirely on extremely low-end microcontrollers
+* It can encode enough information to describe the remainder of the packet, including the use of other error corrections schemes over the remainder of the datagram
+
+The 12 bits of Tag data is divided into 3 regions (sizes in bits):
+
+| Extension bit | Datagram Type | Flags |
+|---------------|---------------|-------|
+|       1       |       5       |   6   |
+
+This provides for 32 different datagram types, each with 6 bits of type specific information or options.
 
 The Datagram Tags are as follows:
 
@@ -97,11 +114,26 @@ The Datagram Tags are as follows:
 
 A Monolithic Datagram is expected to be the most common way to transmit data that can fit within a single Datagram. When sending or receiving small amounts of data, a Monolithic Datagram should be used.
 
-| Tag(0) | OUI | DID | FP | Payload |
-|--------|-----|-----|----|---------|
-| 1      |  4  |  2  |  4 |   N     |
+| Tag | OUI | DID | FP | Seq # | Payload |
+|-----|-----|-----|----|-------|---------|
+| 3   |  1+ | 1+  |  4 |  1+   |   N     |
 
-Because the LoRa physical layer frame contains length information, the remainder of the Datagram is treated as the payload.
+The length of the payload can be up to the maximum datagram size minus the length of the other fields.
+
+The Datagram Type for this datagram shall be defined as 1. Available flags are as follows
+
+| 0 | Downlink | This packet is destined for a Device if this bit is set |
+|-|-|-|
+| 1 | Should ACK | The receiver of this packet should acknowledge receipt |
+|-|-|-|
+| 2 | CTS/RTS | On uplink this bit indicates the device is ready to receive, on downlink it indicates further information follows |
+|-|-|-|
+| 3 | Priority | This indicates to the receiver that the packet is deemed urgent by the sender and the receiver can choose to act accordingly |
+|-|-|-|
+| 4 | LDPC | The packet, beyond the Tag field, is encoded with a [Low Density Parity Code](https://en.wikipedia.org/wiki/Low-density_parity-check_code) |
+|-|-|-|
+| 5 | Reserved | Reserved for future use |
+
 
 #### Start of Frame Datagram
 [start-of-frame-datagram]: #start-of-frame-datagram
