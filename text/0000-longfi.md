@@ -122,16 +122,13 @@ The length of the payload can be up to the maximum datagram size minus the lengt
 
 The Datagram Type for this datagram shall be defined as 1. Available flags are as follows
 
+| Bit | Flag | Description |
+|-|-|-|
 | 0 | Downlink | This packet is destined for a Device if this bit is set |
-|-|-|-|
 | 1 | Should ACK | The receiver of this packet should acknowledge receipt |
-|-|-|-|
 | 2 | CTS/RTS | On uplink this bit indicates the device is ready to receive, on downlink it indicates further information follows |
-|-|-|-|
 | 3 | Priority | This indicates to the receiver that the packet is deemed urgent by the sender and the receiver can choose to act accordingly |
-|-|-|-|
 | 4 | LDPC | The packet, beyond the Tag field, is encoded with a [Low Density Parity Code](https://en.wikipedia.org/wiki/Low-density_parity-check_code) |
-|-|-|-|
 | 5 | Reserved | Reserved for future use |
 
 
