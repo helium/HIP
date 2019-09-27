@@ -149,13 +149,13 @@ The Datagram Type for this datagram shall be defined as 2. The Flags are the sam
 #### Frame Data Datagram
 [frame-data-datagram]: #frame-data-datagram
 
-The Frame Data Datagram contains chunks of payload data that correspond to a previous Start of Frame Datagram. The Sequence ID should be included in the fingerprint generation to avoid crosstalk between frames, but it is not needed to transmit it. The sequence number is used to determine the ordering of the payload fragments.
+The Frame Data Datagram contains chunks of payload data that correspond to a previous Start of Frame Datagram. The Sequence ID should be included in the fingerprint generation to avoid crosstalk between frames, but it is not needed to transmit it. The fragment number is used to determine the ordering of the payload fragments.
 
 | Tag | OUI | DID | FP | Fragment # | Payload |
 |-----|-----|-----|----|------------|---------|
 |  3  |  1+ | 1+  | 4  | 0+         |   N     |
 
-The Datagram Type for this datagram shall be defined as 3. The Flags in this case are used as a 6 bit variable length integer that _may_ spill over into the Fragment Number field as needed.
+The Datagram Type for this datagram shall be defined as 3. The Flags in this case are used as a 6 bit variable length integer that _may_ spill over into the Fragment Number field as needed. Thus, 32 fragments can be sent before overflowing necessitates the use of an extra byte.
 
 ### Uplink
 [uplink]: #uplink
