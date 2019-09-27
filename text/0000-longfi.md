@@ -118,6 +118,8 @@ A Monolithic Datagram is expected to be the most common way to transmit data tha
 |-----|-----|-----|----|-------|---------|
 | 3   |  1+ | 1+  |  4 |  1+   |   N     |
 
+The Sequence Number should be a non-repeating number. When the payload is encrypted with AES it is recommended to use the Sequence Number as the initialization vector.
+
 The length of the payload can be up to the maximum datagram size minus the length of the other fields.
 
 The Datagram Type for this datagram shall be defined as 1. Available flags are as follows
@@ -128,123 +130,32 @@ The Datagram Type for this datagram shall be defined as 1. Available flags are a
 | 1 | Should ACK | The receiver of this packet should acknowledge receipt |
 | 2 | CTS/RTS | On uplink this bit indicates the device is ready to receive, on downlink it indicates further information follows |
 | 3 | Priority | This indicates to the receiver that the packet is deemed urgent by the sender and the receiver can choose to act accordingly |
-| 4 | LDPC | The packet, beyond the Tag field, is encoded with a [Low Density Parity Code](https://en.wikipedia.org/wiki/Low-density_parity-check_code) |
+| 4 | LDPC | The packet, beyond the Tag field, is encoded with a [Low Density Parity Code](https://en.wikipedia.org/wiki/Low-density_parity-check_code). The specific code used depends on the maximum datagram size for the current region and spreading factor |
 | 5 | Reserved | Reserved for future use |
-
 
 #### Start of Frame Datagram
 [start-of-frame-datagram]: #start-of-frame-datagram
 
 A Start of Frame Datagram is used to describe a series of following Datagrams that contain a payload larger than a Monolithic Datagram can hold. In some cases, if there's room, some of the payload may appear at the end of this Datagram.
 
-| Tag(1) | OUI | DID | FP | Frame ID | Datagram Count | Optional Payload |
-|--------|-----|-----|----|----------|----------------|------------------|
+| Tag | OUI | DID | FP | Seq # | Datagram Count | Payload |
+|-----|-----|-----|----|-------|----------------|---------|
+| 3   |  1+ | 1+  |  4 |  1+   |       1+       |    N    |
 
-A count of the subsequent Datagrams is provided (*not* the length of the entire payload). The Frame ID is allocated by the client but it is recommended to be a strictly monotonic counter.
+A count of the subsequent Datagrams is provided (*not* the length of the entire payload).
+
+The Datagram Type for this datagram shall be defined as 2. The Flags are the same as for the monolithic datagram.
 
 #### Frame Data Datagram
 [frame-data-datagram]: #frame-data-datagram
 
-The Frame Data Datagram contains chunks of payload data that correspond to a previous Start of Frame Datagram. The Frame ID should be included in the fingerprint generation to avoid crosstalk between frames, but it is not needed to transmit it. The sequence number is used to determine the ordering of the payload fragments.
+The Frame Data Datagram contains chunks of payload data that correspond to a previous Start of Frame Datagram. The Sequence ID should be included in the fingerprint generation to avoid crosstalk between frames, but it is not needed to transmit it. The sequence number is used to determine the ordering of the payload fragments.
 
-| Tag(2) | OUI | DID | FP | Seq # | Payload |
-|--------|-----|-----|----|-------|---------|
+| Tag | OUI | DID | FP | Fragment # | Payload |
+|-----|-----|-----|----|------------|---------|
+|  3  |  1+ | 1+  | 4  | 0+         |   N     |
 
-
-### Joining
-[joining]: #joining
-
-When a LongFi Device is powered on, it is session-less and not associated with its Organization's Router. The process of establishing a session is called joining.
-
-As LongFi is primarily concerned with the delivery of Datagrams, a concrete requirement for how the join process should occur has been intentionally omitted. Device and Router implementors are free to choose how they want to establish, maintain and terminate sessions.
-
-In general, the goal of the joining procedure is to negotiate a shared secret both the Router and the Device know and agree on, but is not known to anyone else. This can be achieved in several different ways, including:
-
-* Pre shared keys
-* Out of band negotiation (eg. over cellular/wifi/bluetooth)
-* Elliptic Curve Diffie-Hellman key exchange (ECDH)
-
-Having a shared secret is important to producing tamper-proof Datagram fingerprints so Routers and Devices cannot be tricked into accepting forged or corrupt Datagrams.
-
-#### Reference Joining Implementation
-[helium-joining]: #helium-joining
-
-In Helium's reference implementation, the shared secret will be negotiated over ECDH. This assumes the router knows the public key associated with the Device ID and the Device knows some "root of trust" key associated with the Router. In addition a special public "join key" also needs to be stored on the Device. Finally, to reduce subsequent network traffic, a "key tree" with an associated trust epoch can be pre-loaded on the Device. These pieces of information are assumed to have been exchanged and recorded at Device provisioning. The specific elliptic curve used for the keys must also be pre-negotiated, but is expected to be NIST p-256 or Curve25519.
-
-When a device does not have an active session (first time online, session expired, or session lost) it sends, via Datagrams as described above, a Join Ask. This Join Ask is a Monolithic Datagram with the following payload:
-
-| JOIN-ASK(1) | Trust Epoch | Session ID |
-|-------------|-------------|------------|
-
-At this point, however, the Device does not have a session key to use in computing a Fingerprint or to optionally encrypt the payload with. Thus it should do an ECDH exchange with the 'join' key. This is the ONLY context in which this key should be used. To prevent replay attacks, Session IDs should not be reused within a trust epoch and the Session ID should be combined with the ECDH result to form the join AES key.
-
-The Router will then send back a join answer. Depending on the Device's reported trust epoch, the Router may need to deliver key-tree updates. A key tree update is of the following form
-
-| KeyID | Key   | Signature Trust Epoch | Signature |
-|-------|-------|-----------------------|-----------|
-| 1     | 32/64 |                       | 64        |
-
-The signature field is a signature over all the previous fields.
-
-A KeyID is an 8-bit integer destructured into four 2-bit tree identifiers. They address a tree with up to 81 nodes as follows (Most-significant-bit order, only significant bits are shown, `00` is the terminator):
-
-![Key Tree](0000-longfi-key_tree.svg)
-
-<!--
-digraph KeyTree {
-  root[label = "Root Key\n00 ..."]
-
-  key_1[label = "Key 1\n01 00 ..."]
-  key_2[label = "Key 2\n10 00 ..."]
-  key_3[label = "Key 3\n11 00..."]
-
-  key_1_1[label = "Key 1.1\n01 01 00 ..."]
-  key_1_2[label = "Key 1.2\n01 10 00 ..."]
-  key_1_3[label = "Key 1.3\n01 11 00 ..."]
-  key_3_1[label = "Key 3.1\n11 01 00 ..."]
-
-  root -> key_1
-  root -> key_2
-  root -> key_3
-
-  key_1 -> key_1_1
-  key_1 -> key_1_2
-  key_1 -> key_1_3
-
-  key_3 -> key_3_1
-}
--->
-
-So, Key 3.2.1.3 would be `11 10 01 11`. Keys that do not use all four layers of the tree would terminate the key address with the `00` bit sequence.
-
-If the first two bits are `00`, that refers to the root key. Root keys can be updated if absolutely necessary if they're signed by the previous root key.
-
-A key in the key tree is assumed to be signed by the parent key in the tree. Thus Key 1.2 is signed by Key 1 and Key 1 is signed by the root key (which is the pre-provioned root of trust key). Keys that are replaced should have all their children in the tree deleted (and replaced by subsequent updates). Key tree updates should appear in an order from the root of the tree to the tips of the branches. A replacement key should have a signature trust epoch higher than the previous key (and the device's current trust epoch). A new key should have a signature trust epoch higher than the device's current trust epoch.
-
-Therefore, the Join Answer payload looks like:
-
-| JOIN-ANS(2) | Trust Epoch | ECDH Key ID | Session ID | Payload Fingerprint | Key Updates |
-|-------------|-------------|-------------|------------|---------------------|-------------|
-
-The trust epoch MUST be equal to or greater than the Device's trust epoch. If it is the same then no key updates should be attached. If the trust epoch is greater than that of the Device, the Device should verify all the key updates and, if they're correct, it should store the new keys locally and increment its trust epoch. The trust epoch is effectively a monotonic counter describing the version of the chain of trust from a Router key back to the trust root. Each time a Router or intermediate key is rolled or added the trust epoch should increment.
-
-The ECDH Key ID field indicates which key should be used for the ECDH operation to negotiate a session key. This key should not have any keys under it in the key tree (it should be a leaf node).
-
-The Session ID must match what the device sent in its Join Ask. The Session ID and trust epoch should be mixed in with the result of the ECDH to generate the session key.
-
-The Fingerprint for the Datagrams should be constructed using the join AES key. Additionally a Fingerprint over the preceeding payload should be constructed with the session key, so the Device is sure that this join answer has not been forged by someone with access to the join key.
-
-If this step completes successfully the device and the router should agree on the following:
-
-* Session ID
-* Session Key
-* Trust Epoch
-* All relevant key updates
-
-From this point normal Datagrams can be constructed, Fingerprinted, sent and authenticated by both ends of the communication.
-
-TODO:
- * What if the router has lost the session key?
+The Datagram Type for this datagram shall be defined as 3. The Flags in this case are used as a 6 bit variable length integer that _may_ spill over into the Fragment Number field as needed.
 
 ### Uplink
 [uplink]: #uplink
@@ -267,12 +178,6 @@ This layer of presentation allows a Hotspot to receive confirmation from a Route
 
 > TODO:
 > - specifiy this more formally and account for common attacks like length-extension, etc
-
-### Fragmentation
-[fragmentation]: #fragmentation
-
-> TODO:
-> - is this section needed?
 
 ### Channels
 [channels]: #channels
