@@ -192,14 +192,12 @@ Following data, or the willingness to receive more data, is denoted with the CTS
 ### Uplink
 [uplink]: #uplink
 
-> TODO
-> - complete this
+Uplink data - data sent *from* a device - is broadcast in [ALOHA](https://en.wikipedia.org/wiki/ALOHAnet) fashion. Devices transmit data at any time and on any supported channel, without having to synchronize with any nearby Hotspots and without any coordination with their Router on the internet. Because LongFi compatible Hotspots are capable of listening to all LongFi channels simultaneously, one or more Hotspots within range will hear the transmission and begin the delivery process to the appropriate Router. This system allows Devices to remain simple, and for the LongFi protocol overhead to be kept to a minimum. 
 
 ### Downlink
 [downlink]: #downlink
 
-> TODO
-> - complete this
+Downlink data - data sent *to* a a device - is only delivered to a Device in response to an uplink message. Following each uplink transmission the end-device opens a short receive window. The receive window start time is a fixed protocol value. The downlink channel is a function of the upstream channel used in the initial transmission, represented as: _uplinkChannel_ % 8. 
 
 ### Fingerprints
 [fingerprints]: #fingerprints
@@ -220,17 +218,15 @@ LongFi operates in unlicensed subghz spectrum. The specific frequencies and chan
 
 In the United States the unlicensed frequency ranges from 902-928MHz.
 
-- Uplink: 64 125KHz wide uplink channels, with Channel 1 centered at 914.0MHz and subsequent channels incremented by 200KHz.
+- Uplink: 8 uplink channels utilizing LoRa 125 kHz bandwidth using coding rate 4/5. Numbered 1-8, with Channel 1 centered at 916.0MHz and incrementing linearly by 200 kHz to 917.4 MHz.
 
-- Downlink: ??????
-
-> TODO
-> - complete this accurately
+- Downlink: 8 downlink channels utilizing LoRa 500 kHz bandwidth using coding rate 4/5. Numbered 1 to 8 with Channel 1 centered starting at 918.0 MHz and incrementing linearly by 600 kHz to 922.2 MHz.
 
 #### Europe (EU868)
 
+Coming soon.
+
 > TODO
-> - etc etc
 
 ## Regulatory
 [regulatory]: #regulatory
@@ -260,6 +256,8 @@ The maximum output power of the Device is limited depending on the mode of opera
 It is important to note that a Device can can "simulate" hopping between 25+ channels by incorporating the appropriate dwell time between channels and use higher output power as a result, even if a Hotspot is only able to receive on fewer channels.
 
 ### Europe (ETSI)
+
+Coming soon.
 
 > TODO:
 > - time on air
