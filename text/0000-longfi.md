@@ -197,7 +197,7 @@ Uplink data - data sent *from* a device - is broadcast in [ALOHA](https://en.wik
 ### Downlink
 [downlink]: #downlink
 
-Downlink data - data sent *to* a a device - is only delivered to a Device in response to an uplink message. Following each uplink transmission the end-device opens a short receive window. The receive window start time is a fixed protocol value. The downlink channel is a function of the upstream channel used in the initial transmission, represented as: _uplinkChannel_ % 8. 
+Downlink data - data sent *to* a a device - is only delivered to a Device in response to an uplink message. Following each uplink transmission the end-device opens a short receive window. The receive window start time is a fixed protocol value. The downlink channel is a function of the upstream channel used in the initial transmission, represented as: _uplinkChannel % 8_. 
 
 ### Fingerprints
 [fingerprints]: #fingerprints
