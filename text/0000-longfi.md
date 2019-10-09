@@ -135,6 +135,8 @@ The Datagram Type for this datagram shall be defined as 1. Available flags are a
 
 Note that Should ACK is distinct from receiving unsolicited downlink data. If Should ACK is set and CTS is not set the Router should not follow the Ack Frame with further packets.
 
+Fingerprints should be over the fields `DecodedTag | OUI | DID | Seq# | Hash(Payload)`.
+
 #### Start of Frame Datagram
 [start-of-frame-datagram]: #start-of-frame-datagram
 
@@ -150,6 +152,8 @@ The Datagram Type for this datagram shall be defined as 2. The Flags are the sam
 
 The Should ACK and CTS/RTS flags should take effect after all the subsequent Frame Data datagrams have been sent.
 
+Fingerprints should be over the fields `DecodedTag | OUI | DID | Seq# | Datagram Count | Hash(Payload)`.
+
 #### Frame Data Datagram
 [frame-data-datagram]: #frame-data-datagram
 
@@ -162,6 +166,8 @@ The Frame Data Datagram contains chunks of payload data that correspond to a pre
 The Datagram Type for this datagram shall be defined as 3. The Flags in this case are a single flag LDPC followed by a 5 byte variable integer that tracks the fragment ID and spills over into the Fragment ID field.
 
 Because any hotspot can receive the datagram, the LDPC flag needs to be present on all fragements because the hotspot needs to know if it must do any error correction itself before offering the packet along.
+
+Fingerprints should be over the fields `DecodedTag | OUI | DID | Seq# | Fragment# | Hash(Payload)`.
 
 #### Ack Datagram
 [ack-datagram]: #ack-datagram
@@ -188,6 +194,8 @@ Session Expired, only on downlink, indicates that the session key currently bein
 An explicit Retransmit field indicates that the data should be retransmitted. In the case the prior packet was a Monolithic Datagram, the Seq # indicates the requested packet to retransmit. When the prior transmission was a Data Frame the particular fragment IDs that should be retransmitted should appear in the payload (TODO how to encode this). The Failure flag _must_ also be set for this field to be meaningful.
 
 Following data, or the willingness to receive more data, is denoted with the CTS/RTS flag. This can be used, for example, to keep the Device awake for more data. The CTS/RTS flag _may_ be set even if the previous transmission did not have the CTS/RTS flag, but if the device did not indicate it was Clear To Send more packets should not be sent.
+
+Fingerprints should be over the fields `DecodedTag | OUI | DID | Seq# | Hash(Payload)`.
 
 ### Uplink
 [uplink]: #uplink
