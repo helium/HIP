@@ -228,7 +228,7 @@ In the United States the unlicensed frequency ranges from 902-928MHz.
 
 - Uplink: 8 uplink channels utilizing LoRa 125 kHz bandwidth using coding rate 4/5. Numbered 1-8, with Channel 1 centered at 916.0MHz and incrementing linearly by 200 kHz to 917.4 MHz.
 
-- Downlink: 8 downlink channels utilizing LoRa 500 kHz bandwidth using coding rate 4/5. Numbered 1 to 8 with Channel 1 centered starting at 918.0 MHz and incrementing linearly by 600 kHz to 922.2 MHz.
+- Downlink: 64 downlink channels utilizing LoRa 500 kHz bandwidth using coding rate 4/5. Numbered 1 to 64 with Channel 1 the frequencies are to be determined.
 
 #### Europe (EU868)
 
