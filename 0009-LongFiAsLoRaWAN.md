@@ -68,9 +68,11 @@ source: LoRaWAN Specification 6.2.5
 
 Combined with the AppKey, these fields allow the Device and Router/NetworkServer to derive the same NwkSKey and AppSKey (LoRaWAN Specification 6.2.5). Henceforth, payloads are encrypted using NwkSkey and AppSkey (LoRaWAN Specification 4.3.3).
 
-Note: the DevAddr is used by LongFi to indicate the OUI and this will be part of the Frame Header Structure (FHDR) of all messages after the successful Join; this enables hotspots to continue forwarding packets to the appropriate Router/NetworkServer.
+The DevAddr is used by LongFi to indicate the OUI and this will be part of the Frame Header Structure (FHDR) of all messages after the successful Join; this enables hotspots to continue forwarding packets to the appropriate Router/NetworkServer.
 
 The Router/NetworkServer derives the DeviceID by bruteforcing the MIC.
+
+The Channel Frequency List (CFList) is included to configure devices only to use the Helium sub-band 7.
 
 # Drawbacks
 [drawbacks]: #drawbacks
