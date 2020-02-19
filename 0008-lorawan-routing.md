@@ -241,12 +241,12 @@ than xor16+xxhash64 and require a more complicated implementation. Simply
 storing a complete routing table, as discussed before, is not reasonable
 because of size constraints.
 
-##What other designs have been considered and what is the rationale for not choosing them?
+## What other designs have been considered and what is the rationale for not choosing them?
 
 Suggestions for other designs are welcome, routing arbitrary addresses without
 being able to use prefix routing seems hard.
 
-- What is the impact of not doing this?
+## What is the impact of not doing this?
 
 We will be unable to support routing join packets for arbitrary LoRaWAN
 join packets and thus unable to support LoRaWAN devices that are
@@ -255,19 +255,19 @@ already provisioned or unable to have their credentials modified.
 # Unresolved Questions
 [unresolved]: #unresolved-questions
 
-##What parts of the design do you expect to resolve through the HIP process before this gets merged?
+## What parts of the design do you expect to resolve through the HIP process before this gets merged?
 
 We need to nail down the permissible sizes of the XOR filters we want to store.
 
 We need to decide if these routing table entries also contain a range of
 DevAddr entries to be used for routing of non-join packets.
 
-##What parts of the design do you expect to resolve through the implementation of this feature?
+## What parts of the design do you expect to resolve through the implementation of this feature?
 
 We need to define where/how these routing entries are stored, how they're
 created/updated and if they can be transferred (like IP space can be traded).
 
-##What related issues do you consider out of scope for this HIP that could be addressed in the future independently of the solution that comes out of this HIP?
+## What related issues do you consider out of scope for this HIP that could be addressed in the future independently of the solution that comes out of this HIP?
 
 Pricing and availability of routing table entries for organizations operating
 their own OUI.
@@ -275,12 +275,12 @@ their own OUI.
 # Deployment Impact
 [deployment-impact]: #deployment-impact
 
-##How will current users be impacted?
+## How will current users be impacted?
 
 All existing LoRaWAN devices will either have to have their credentials added
 to the routing table, or they will need new credentials.
 
-##How will existing documentation/knowlegebase need to be supported?
+## How will existing documentation/knowlegebase need to be supported?
 
 We don't have a lot of documentation for the existing thing, so we can probably
 forego this.
@@ -295,7 +295,7 @@ DB, for the devices we know the DevEUI for.
 
 What metrics can be used to measure the success of this design?
 
-##What should we measure to prove an acceptance of this by it's users?
+## What should we measure to prove an acceptance of this by it's users?
 
 A user should be able to onboard any arbitrary LoRaWAN device without altering
 its DevEUI/AppEUI/AppKey.
