@@ -108,7 +108,8 @@ is a downlink message (ie: not a Join-Response).
 # Drawbacks
 [drawbacks]: #drawbacks
 
-- Devices are requried to update their AppKey and AppEui
+- Devices are required to update their AppKey and AppEUI to join the Helium
+Network
 - There is no "Fingerprint" mechanism. That is to say, there no way for a
 Router to validate a message before accepting it from a Hotspot; therefore,
 Hotspot will forward packets without any negotiation with Routers.
