@@ -56,13 +56,13 @@ ___________________________________________________________
 source: LoRaWAN Specification 6.2.4 
 
 The LongFi primitives of Organizational Unique Identifier (OUI) and DeviceId
-are mapped into AppEUI. The most significant 2 octets are OUI while the least
-significant octets are DeviceId.
+are mapped into AppEUI. The most significant 4 octets are OUI while the least
+significant 4 octets are DeviceId.
 
 ```
 _______________________________________________
 |               AppEUI (8 octets)             |
-|     OUI (4 octets)   | Device_ID (2 octets) |
+|     OUI (4 octets)   | Device_ID (4 octets) |
 ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 ```
 
