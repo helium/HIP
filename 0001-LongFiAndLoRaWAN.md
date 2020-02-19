@@ -62,7 +62,7 @@ significant 4 octets are DeviceId.
 ```
 _______________________________________________
 |               AppEUI (8 octets)             |
-|     OUI (4 octets)   | Device_ID (4 octets) |
+|     OUI (4 octets)   | DeviceId (4 octets) |
 ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 ```
 
