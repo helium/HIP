@@ -98,12 +98,12 @@ enables hotspots to continue forwarding packets to the appropriate Router.
 The Router/NetworkServer derives the DeviceID by bruteforcing the MIC against
 its list of active session keys.
 
-According to the LoRaWAN Regional Parameters 2.24: US902-928 JoinAccept CFList,
-the optional CFList parameter is ignored by the device if appended. For this
-reason, the MAC Command (LoRaWAN Specification 5) LinkADRReq is used to set a
-channel mask appropriate for the Helium Network. MAC commands can only be
-piggybacked onto a MACPayload, therefore, these will only be send when there
-is a downlink message (ie: not a Join-Response).
+According to "LoRaWAN Regional Parameters 2.24: US902-928 JoinAccept CFList",
+the optional CFList parameter is ignored by the device if appended to the
+Join-Response. For this reason, the MAC Command (LoRaWAN Specification 5)
+LinkADRReq is used to set a channel mask appropriate for the Helium Network.
+MAC commands can only be piggybacked onto a MACPayload, therefore, these will
+only be send when there is a downlink message (ie: not a Join-Response).
 
 # Drawbacks
 [drawbacks]: #drawbacks
