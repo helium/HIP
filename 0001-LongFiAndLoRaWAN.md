@@ -76,7 +76,7 @@ Assuming the OUI is registered in the blockchain appropriately, hotspots will
 route the JoinRequest packet to the appropriate Router. The Router will use
 the Message Integrity Check (MIC) to authenticate the JoinRequest and, if
 successful, an unencrypted JoinAccept message will be communicated down to the
-hotspot and then the device, providing a NetId, DevAddr, and AppNonce. 
+hotspot which transmits to the device, providing a NetId, DevAddr, and AppNonce. 
 
 ```
 _______________________________________________________________________________________________
