@@ -45,7 +45,7 @@ Channel 55, 913.300 Mhz
 ```
 
 In OTAA, DevEUI, AppEUI, and AppKey are all the unencrypted LoRaWAN primitives
-used in the Join Request; DevEUI is currently ignored by LongFi.
+used in the Join Request:
 
 ```
 ___________________________________________________________
@@ -61,14 +61,16 @@ significant octets are DeviceId.
 
 ```
 _______________________________________________
-|               AppEui (8 octets)             |
+|               AppEUI (8 octets)             |
 |     OUI (4 octets)   | Device_ID (2 octets) |
 ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 ```
 
 Thus Helium miners receiving these unencrypted Join messages are able to route
 the request to the appropriate Router (ie: a NetworkServer) by deriving the OUI
-from the AppEui and then looking up the OUI route from the blockchain records.
+from the AppEUI and then looking up the OUI route from the blockchain records.
+
+DevEUI is currently ignored by LongFi.
 
 Assuming the OUI is registered in the blockchain appropriately, hotspots will
 route the JoinRequest packet to the appropriate Router. The Router will use
@@ -84,8 +86,8 @@ ________________________________________________________________________________
 ```
 source: LoRaWAN Specification 6.2.5 
 
-Combined with the AppKey, these fields allow the Device and Router to derive
-the same NwkSKey and AppSKey (LoRaWAN Specification 6.2.5). Henceforth,
+Thanks to the AppKey, these fields allow the Device and Router to privately
+derive the same NwkSKey and AppSKey (LoRaWAN Specification 6.2.5). Henceforth,
 payloads are encrypted using NwkSkey and AppSkey (LoRaWAN Specification 4.3.3).
 
 The DevAddr is used by LongFi to indicate the OUI and this will be part of the
