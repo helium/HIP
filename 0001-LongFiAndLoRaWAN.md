@@ -31,7 +31,7 @@ This initial implementation of LongFi on LoRaWAN focuses on a single method of
 end-device activation: Over-the-Air Activation (OTAA). Activation by
 Personalization (ABP) is currently not supported.
 
-in the US902-928 regulatory domain the Helium network will operate on LoRaWAN
+In the US902-928 regulatory domain, the Helium network will operate on LoRaWAN
 channels 48-55 (sub-band 7):
 ```
 Channel 48, 911.900 Mhz
