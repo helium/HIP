@@ -13,7 +13,7 @@ connect to the Helium network if you can update its AppKey and AppEui.
 
 There are many LoRaWAN compatible devices already out there and LoRaWAN already
 has many desirable protocol features (ACK, downlink, FCC certified,
-international definition). In order to accelerate adoption of the Helium
+international specification). In order to accelerate adoption of the Helium
 network and to lower technical barriers, LongFi is no longer a distinct
 protocol from LoRaWAN but instead a layering of some blockchain components on
 top of LoRaWAN. 
