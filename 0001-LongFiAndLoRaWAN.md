@@ -70,7 +70,7 @@ Thus Helium miners receiving these unencrypted Join messages are able to route
 the request to the appropriate Router (ie: a NetworkServer) by deriving the OUI
 from the AppEUI and then looking up the OUI route from the blockchain records.
 
-DevEUI is currently plays no role in LongFi, but remains improtant for LoRaWAN
+DevEUI currently plays no role in LongFi, but remains improtant for LoRaWAN
 functions.
 
 Assuming the OUI is registered in the blockchain appropriately, hotspots will
@@ -95,7 +95,7 @@ The DevAddr is used by LongFi to indicate the OUI and this will be part of the
 Frame Header Structure (FHDR) of all messages after the successful Join; this
 enables hotspots to continue forwarding packets to the appropriate Router.
 
-The Router/NetworkServer derives the DeviceID by bruteforcing the MIC against
+The Router/NetworkServer derives the DeviceId by bruteforcing the MIC against
 its list of active session keys.
 
 According to "LoRaWAN Regional Parameters 2.24: US902-928 JoinAccept CFList",
