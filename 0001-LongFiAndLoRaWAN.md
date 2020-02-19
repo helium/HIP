@@ -70,11 +70,11 @@ Thus Helium miners receiving these unencrypted Join messages are able to route
 the request to the appropriate Router (ie: a NetworkServer) by deriving the OUI
 from the AppEui and then looking up the OUI route from the blockchain records.
 
-Assuming the OUI is registered appropriately, hotspots will route the
-JoinRequest packet to the appropriate Router. The Router will use the Message
-Integrity Check (MIC) to authenticate the JoinRequest and, if successful, an
-unencrypted JoinAccept message will be communicated down to the hotspot and
-then the device, providing a NetId, DevAddr, and AppNonce. 
+Assuming the OUI is registered in the blockchain appropriately, hotspots will
+route the JoinRequest packet to the appropriate Router. The Router will use
+the Message Integrity Check (MIC) to authenticate the JoinRequest and, if
+successful, an unencrypted JoinAccept message will be communicated down to the
+hotspot and then the device, providing a NetId, DevAddr, and AppNonce. 
 
 ```
 _______________________________________________________________________________________________
