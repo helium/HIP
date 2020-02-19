@@ -2,11 +2,13 @@
 - HIP PR:
 - Tracking Issue:
 
-# Summary [summary]: #summary
+# Summary
+[summary]: #summary
 
 How to grow the network with non-helium hotspots
 
-# Motivation [motivation]: #motivation
+# Motivation
+[motivation]: #motivation
 
 - Why are we doing this?
 
@@ -28,12 +30,14 @@ join and/or grow the network is establishing trust.
 Any hotspot builder and/or manufacturer other than Helium should be able
 to join the network and help it grow.
 
-# Stakeholders [stakeholders]: #stakeholders
+# Stakeholders
+[stakeholders]: #stakeholders
 
 - 3rd party hotspot manufacturers
 - DIY hotspot builders
 
-# Detailed Explanation [detailed-explanation]: #detailed-explanation
+# Detailed Explanation
+[detailed-explanation]: #detailed-explanation
 
 - Introduction
 
@@ -68,13 +72,15 @@ connected to an anchor hotspot, it gains full PoC priviledges and
 transitions from probationary mode to active mode.
 
 
-# Drawbacks [drawbacks]: #drawbacks
+# Drawbacks
+[drawbacks]: #drawbacks
 
 - This proposal requires external input in the form of "external
   agents", that's a manual process, which may hinder fast network
   growth.
 
-# Rationale and Alternatives [alternatives]: #rationale-and-alternatives
+# Rationale and Alternatives
+[alternatives]: #rationale-and-alternatives
 
 - Why an external agent?
 
@@ -115,18 +121,21 @@ LetsEncrypt as long as they adhere to the standard.
     - Any new hotspot which joins such a network and can witness an
       active hotspot is automatically promoted to active mode.
 
-# Unresolved Questions [unresolved]: #unresolved-questions
+# Unresolved Questions
+[unresolved]: #unresolved-questions
 
 - Who acts as external agents?
 
 - Can we build a web-of-trust by perusing the external agent and anchor
   hotspots?
 
-# Deployment Impact [deployment-impact]: #deployment-impact
+# Deployment Impact
+[deployment-impact]: #deployment-impact
 
 - Current users may be downgraded to probationary status, if they are
   part of a sub-network where there is no anchor hotspot.
 
-# Success Metrics [success-metrics]: #success-metrics
+# Success Metrics
+[success-metrics]: #success-metrics
 
 NA
