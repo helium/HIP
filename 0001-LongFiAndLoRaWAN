@@ -70,7 +70,7 @@ Combined with the AppKey, these fields allow the Device and Router/NetworkServer
 
 The DevAddr is used by LongFi to indicate the OUI and this will be part of the Frame Header Structure (FHDR) of all messages after the successful Join; this enables hotspots to continue forwarding packets to the appropriate Router/NetworkServer.
 
-The Router/NetworkServer derives the DeviceID by bruteforcing the MIC.
+The Router/NetworkServer derives the DeviceID by bruteforcing the MIC against its list of active session keys.
 
 According to the LoRaWAN Regional Parameters 2.24: US902-928 JoinAccept CFList, the optional CFList parameter is ignored by the device if appended. For this reason, the MAC Command (LoRaWAN Specification 5) LinkADRReq is used to set a channel mask appropriate for the Helium Network. MAC commands can only be piggybacked onto a MACPayload, therefore, these will only be send when there is a downlink message (ie: not a Join-Response).
 
