@@ -285,7 +285,7 @@ to the routing table, or they will need new credentials.
 We don't have a lot of documentation for the existing thing, so we can probably
 forego this.
 
-#Is this backwards compatible?
+## Is this backwards compatible?
 
 It can be made to be, we can probably generate routing tables out of console's
 DB, for the devices we know the DevEUI for.
