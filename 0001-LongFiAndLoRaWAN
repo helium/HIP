@@ -72,7 +72,7 @@ The DevAddr is used by LongFi to indicate the OUI and this will be part of the F
 
 The Router/NetworkServer derives the DeviceID by bruteforcing the MIC.
 
-According to the LoRaWAN Regional Parameters 2.24: US902-928 JoinAccept CFList, the optional CFList is ignored if not appended. For this reason, the MAC Command (LoRaWAN Specification 5) LinkADRReq is used to set a channel mask appropriate for the Helium Network. MAC commands can only be piggybacked onto a MACPayload, therefore, these will only be send when there is a downlink message (ie: not a Join-Response).
+According to the LoRaWAN Regional Parameters 2.24: US902-928 JoinAccept CFList, the optional CFList parameter is ignored by the device if appended. For this reason, the MAC Command (LoRaWAN Specification 5) LinkADRReq is used to set a channel mask appropriate for the Helium Network. MAC commands can only be piggybacked onto a MACPayload, therefore, these will only be send when there is a downlink message (ie: not a Join-Response).
 
 # Drawbacks
 [drawbacks]: #drawbacks
