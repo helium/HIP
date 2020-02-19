@@ -92,9 +92,9 @@ privately derive the same NwkSKey and AppSKey (LoRaWAN Specification 6.2.5).
 Henceforth, payloads are encrypted using NwkSkey and AppSkey (LoRaWAN 
 Specification 4.3.3).
 
-The DevAddr is used by LongFi to indicate the OUI and this will be part of the
-Frame Header Structure (FHDR) of all messages after the successful Join; this
-enables hotspots to continue forwarding packets to the appropriate Router.
+The DevAddr is used by LongFi to indicate the OUI and this is part of the Frame
+Header Structure (FHDR) of all messages after the successful Join; this enables
+hotspots to continue forwarding packets to the appropriate Router.
 
 The Router/NetworkServer derives the DeviceId by bruteforcing the MIC against
 its list of active session keys.
