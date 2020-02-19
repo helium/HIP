@@ -87,9 +87,10 @@ ________________________________________________________________________________
 ```
 <sub>source: LoRaWAN Specification 6.2.5</sub>
 
-Thanks to the AppKey, these fields allow the Device and Router to privately
-derive the same NwkSKey and AppSKey (LoRaWAN Specification 6.2.5). Henceforth,
-payloads are encrypted using NwkSkey and AppSkey (LoRaWAN Specification 4.3.3).
+Thanks to the shared secret AppKey, these fields allow the Device and Router to
+privately derive the same NwkSKey and AppSKey (LoRaWAN Specification 6.2.5). 
+Henceforth, payloads are encrypted using NwkSkey and AppSkey (LoRaWAN 
+Specification 4.3.3).
 
 The DevAddr is used by LongFi to indicate the OUI and this will be part of the
 Frame Header Structure (FHDR) of all messages after the successful Join; this
