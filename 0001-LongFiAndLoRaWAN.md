@@ -70,7 +70,8 @@ Thus Helium miners receiving these unencrypted Join messages are able to route
 the request to the appropriate Router (ie: a NetworkServer) by deriving the OUI
 from the AppEUI and then looking up the OUI route from the blockchain records.
 
-DevEUI is currently ignored by LongFi.
+DevEUI is currently plays no role in LongFi, but remains improtant for LoRaWAN
+functions.
 
 Assuming the OUI is registered in the blockchain appropriately, hotspots will
 route the JoinRequest packet to the appropriate Router. The Router will use
