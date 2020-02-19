@@ -53,7 +53,7 @@ ___________________________________________________________
 |   Join Request   |   AppEUI   |   DevEUI   |  DevNonce  |
 ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 ```
-source: LoRaWAN Specification 6.2.4 
+<sub>source: LoRaWAN Specification 6.2.4</sub>
 
 The LongFi primitives of Organizational Unique Identifier (OUI) and DeviceId
 are mapped into AppEUI. The most significant 4 octets are OUI while the least
@@ -84,7 +84,7 @@ ________________________________________________________________________________
 |   Join Accept    |   AppNonce |  NetId  | DevAddr |  DLSettings  | RxDelay  |   CFList      |
 ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 ```
-source: LoRaWAN Specification 6.2.5 
+<sub>source: LoRaWAN Specification 6.2.5</sub>
 
 Thanks to the AppKey, these fields allow the Device and Router to privately
 derive the same NwkSKey and AppSKey (LoRaWAN Specification 6.2.5). Henceforth,
