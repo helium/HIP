@@ -211,7 +211,7 @@ to be done on the Pi).
 # Drawbacks
 [drawbacks]: #drawbacks
 
-- Why should we *not* do this?
+## Why should we *not* do this?
 
 No matter how you slice it, this adds quite a lot of information to the ledger.
 However, storing every possible DevEUI in a list would be 32Gb ( 2^32 * 8 bytes)
