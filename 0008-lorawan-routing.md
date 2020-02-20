@@ -4,7 +4,9 @@
 
 # Summary
 [summary]: #summary
+Many LoRaWAN sensors come pre-provisioned and as such AppEUI and AppKey cannot be updated. [Our current LoRaWAN implementation](https://github.com/helium/HIP/commit/8e233ac37b9c39c3083be014d7f4b25aa40b1a18) requires updating these fields for a device to work on the Helium network.
 
+We would like to implement a scheme that takes AppEUI, AppKey, and DevEUI as fixed parameters, but still enables hotspots to route data to the proper endpoint.
 This HIP proposes to add [XOR filter](https://lemire.me/blog/2019/12/19/xor-filters-faster-and-smaller-than-bloom-filters/)
 based routing tables to the blockchain ledger to aid in routing LoRaWAN join
 packets to the correct destination. Additionally once the device has joined, it
