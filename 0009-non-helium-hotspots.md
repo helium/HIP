@@ -63,13 +63,13 @@ including challening and being a challengee.
 
 When a new hotspot joins the network, it does so in "probationary mode".
 While this mode is active the PoC activity a hotspot is limited to only
-witnessing other hotspots.
+being a PoC challengee for paths which include an anchor hotspot.
 
 - Active Mode
 
-Once a hotspot witnesses any other hotspot directly or indirectly
-connected to an anchor hotspot, it gains full PoC priviledges and
-transitions from probationary mode to active mode.
+Once a hotspot has participated in a pre-determined number of challenges
+which include the anchor hotspot, it transitions from probationary mode
+to active mode, allowing full PoC priviledges.
 
 
 # Drawbacks
