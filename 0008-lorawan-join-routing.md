@@ -9,8 +9,8 @@ Many LoRaWAN sensors come pre-provisioned and as such AppEUI and AppKey cannot b
 We would like to implement a scheme that takes AppEUI, AppKey, and DevEUI as fixed parameters, but still enables hotspots to route data to the proper endpoint.
 This HIP proposes to add [XOR filter](https://lemire.me/blog/2019/12/19/xor-filters-faster-and-smaller-than-bloom-filters/)
 based routing tables to the blockchain ledger to aid in routing LoRaWAN join
-packets to the correct destination. Additionally once the device has joined, it
-can be assigned a DevAddr corresponding to an address allocation the OUI controls.
+packets to the correct destination. A related HIP describes the routing of
+packets once the device has joined.
 
 # Motivation
 [motivation]: #motivation
@@ -24,12 +24,6 @@ is much closer to internet routing. Additionally, it turns out many LoRaWAN devi
 do not allow end-user configuration of DevEUI/AppEUI/AppKey. Thus the existing
 model of co-opting the AppEUI to route the join packet is unsuitable and
 something new is needed.
-
-In addition, the current scheme for DevAddr allocation (the session address,
-essentially) is not ideal because we map the 32 bit OUI to the DevAddr directly.
-This will cause problems for large OUIs at the expense of small ones. It would
-be good for OUIs to be able to obtain more address space for their DevAddrs if
-they're willing to pay for it.
 
 # Stakeholders
 [stakeholders]: #stakeholders
@@ -51,7 +45,7 @@ compared against the XOR filter. We propose the use of
 [xxhash](http://cyan4973.github.io/xxHash/)'s 64 bit mode. This is one of the
 fastest hash functions available and seems to provide good distribution for the
 XOR filter. Both the DevEUI and the AppEUI (totaling 128 bits together) would be
-hashed to a 64 bit key, this should help in cases of DevAddr collisions.
+hashed to a 64 bit key, this should help in cases of DevEUI collisions.
 
 A new ledger entity would be added to the blockchain, a 'routing entry'. These
 would have a total ordering (assigned by the order they are added to the chain)
@@ -261,13 +255,10 @@ already provisioned or unable to have their credentials modified.
 
 We need to nail down the permissible sizes of the XOR filters we want to store.
 
-We need to decide if these routing table entries also contain a range of
-DevAddr entries to be used for routing of non-join packets.
-
 ## What parts of the design do you expect to resolve through the implementation of this feature?
 
 We need to define where/how these routing entries are stored, how they're
-created/updated and if they can be transferred (like IP space can be traded).
+created/updated, etc.
 
 ## What related issues do you consider out of scope for this HIP that could be addressed in the future independently of the solution that comes out of this HIP?
 
