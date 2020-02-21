@@ -29,6 +29,17 @@ on an Intel i7-7700HQ), an OUI with a very large number of active devices will
 have to do this, as a linear search, a lot. We consider this will be a
 scalability problem in the future.
 
+Even a small amount of addresses could be used, in combination with geographic
+information, to disambiguate devices very efficently. The maximum amount of
+addresses an organization would need would likely be roughly the number of
+distinct devices they expect to have in a geographic area at once. For example,
+8 addresses would be able to disambiguate between thousands of devices as long
+as no more than 8 of those devices were in the same geographic region at once.
+Devices moving between regions regularly would probably require falling back on
+the brute force lookup, or those devices could be re-addressed by forcing a
+re-join (or they may re-join automatically after a period of being out of Helium
+network coverage).
+
 # Stakeholders
 [stakeholders]: #stakeholders
 
@@ -105,7 +116,8 @@ average, than the XOR routing scheme for joins, but it is still not free.
 # Drawbacks
 [drawbacks]: #drawbacks
 
-
+This is yet another piece of data to store in the ledger, although the size is
+quite small (64 bits per address block). It also involves seeking on the disk.
 
 # Rationale and Alternatives
 [alternatives]: #rationale-and-alternatives
