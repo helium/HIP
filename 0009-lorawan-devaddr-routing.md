@@ -13,6 +13,9 @@ packets to their destination OUI. These address ranges should be transferrable
 and splittable (down to some minimum size) to allow for address reconfiguration
 in the future. A related HIP describes the routing of LoRaWAN join packets.
 
+Range routing refers to finding which range an address falls into, eg 5 is
+between 0 and 9.
+
 # Motivation
 [motivation]: #motivation
 
@@ -127,10 +130,23 @@ space. This is probably the most important section!
 
 - Why is this design the best in the space of possible designs?
 
+Mapping all devices in an OUI to a single address has aliasing problems, prefix
+routing is harder to sequentially allocate and manage. I'm not sure what else is
+suitable.
+
 - What other designs have been considered and what is the rationale for not
   choosing them?
 
+As mentioned above, aliasing all devices to one address (the OUI number) and
+prefix routing are the only two candidates I can think of.
+
+Range addressing also allows us to punt on the 33.5 million DevAddr problem for
+a while (32 bits of DevAddr minus 7 bits of 'NetID' in the lorawan spec).
+
 - What is the impact of not doing this?
+
+We end up with thousands or more devices aliased to a single address and have to
+perform expensive brute force lookups to resolve DevAddrs to DevEUIs.
 
 # Unresolved Questions
 [unresolved]: #unresolved-questions
@@ -153,11 +169,17 @@ current users of this project.
 
 - How will current users be impacted?
 
+Existing DevAddr addressing will have to be replaced the next time the devices
+authenticate to the network.
+
 - How will existing documentation/knowlegebase need to be supported?
+
+This HIP should provide the foundation for the LoRaWAN routing documentation.
 
 - Is this backwards compatible?
 
-        - If not, what is the procedure to migrate?
+This change should be fairly transparent, we just need to force all the existing
+devices to re-authenticate.
 
 # Success Metrics
 [success-metrics]: #success-metrics
