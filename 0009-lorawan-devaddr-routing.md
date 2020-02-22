@@ -113,8 +113,8 @@ Average lookup 0.03s, max 0.4s, min 0.0001s
 Lookup misses 0
 ```
 
-The good news is that, on average, this is orders of magnitude faster, on
-average, than the XOR routing scheme for joins, but it is still not free.
+The good news is that, on average, this is orders of magnitude fasterthan the
+XOR routing scheme for joins, but it is still not free.
 
 # Drawbacks
 [drawbacks]: #drawbacks
