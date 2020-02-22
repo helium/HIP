@@ -47,9 +47,10 @@ fastest hash functions available and seems to provide good distribution for the
 XOR filter. Both the DevEUI and the AppEUI (totaling 128 bits together) would be
 hashed to a 64 bit key, this should help in cases of DevEUI collisions.
 
-A new ledger entity would be added to the blockchain, a 'routing entry'. These
-would have a total ordering (assigned by the order they are added to the chain)
-and an XOR filter built from the set of active DevEUI/AppEUIs for the owning OUI.
+A list of XOR filters would be attached to the OUI record in the ledger that
+would contain the routing filters for that OUI. A single filter would suffice
+for small OUIs, only larger OUIs whose amount of devices could exceed the
+maximum filter size would require more than one routing filter.
 
 XOR16 filters for a range of sizes are presented below for illustration purposes:
 
@@ -203,6 +204,12 @@ generate the routing tables, run a second time to use the generated routing
 tables, and then the tables were copied to the Pi to run the test with the same
 databases (generating the tables can be quite RAM intensive, so it is unsuitable
 to be done on the Pi).
+
+The process of generating the filter is roughly as follows: the complete list of
+{DevEUI, AppEUI} pairs are hashed into a 64 bit keys and then fed into the XOR
+filter generator. The filter then does some bit twiddling to set some bits in a
+list of 'fingerprints'. A fairly readable example can be found
+[here](https://github.com/juanbono/xor-filter/blob/master/src/lib.rs).
 
 # Drawbacks
 [drawbacks]: #drawbacks
