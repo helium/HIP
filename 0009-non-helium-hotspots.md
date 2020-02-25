@@ -93,10 +93,11 @@ hotspots, with the lines representing RF visibility between hotspots.
 
 There exists no possible way to ensure that these hotspots do not form
 part of a virtual network, since they can easily fake locations and RF
-coverage and verify each other via the existing PoC mechanism.
+coverage and verify each other via the existing PoC mechanism. Therefore
+these remain in probation mode with limited PoC priviledges.
 
 Until and unless there is a helium (or an authorized retailer)
-manufatured hotspot introduced in the above network, we cannot make any
+manufactured hotspot introduced in the above network, we cannot make any
 conclusions regarding the claim of location of any hotspot A - F.
 
 Reimagining the above network with the introduction of a helium hotspot,
@@ -142,7 +143,53 @@ However, we still cannot make logical conclusions about C and F since
 they have not had any PoC activity with X. Therefore both C and F remain
 in probation mode but A, B, D and E can transition to full PoC activity
 once they all successfully complete `N` PoC challenges successfully
-involvind hotspot X.
+involving hotspot X.
+
+## High-Level Workflow
+
+All the below actions would happen behind chain var `diy` (or
+something). Setting `diy` to true, triggers all of the below:
+
+Another chain var, `probation_height_limit`, set to 2000 or whatever will
+be set to allow witness collection for hotspots in probation mode.
+
+Yet another chain var, `probabtion_required_pocs`, set to 100 or
+whatever will be set to count down whether a probationary hotspot has
+completed enough successful pocs with non-probationary hotspots.
+
+- Add `probation` flag to gateway entries in the ledger. This would help
+  us identify which hotspots have full/limited PoC priviledges.
+
+- Add `added_at_block_height` to gateway entries in the ledger. This
+  would help identify how long to keep collecting witnesses for hotspots
+  in probation mode. Also helpful in general. Not quite sure what to set
+  this for existing hotspots when upgrading the ledger gateway entries.
+
+- Add `count_golden_pocs` to gateway entries in the ledger. This is the
+  count of pocs which a probationary hotspot maintains every time it
+  successfully and verifiably transmits a receipt with an active hotspot.
+
+- Modify existing ledger gateway entries to have `probation` flag set to
+  false.
+
+- When a new hotspot is added to the network, `probation` is set to
+  true.
+
+- Hotspots with `probation` set to true are prohibited from creating
+  `poc_request` transactions.
+
+- Hotspots with `probation` set to true are allowed to be witnesses,
+  however, they do not earn any tokens for being witnesses. This allows
+  such hotspots to potentially witness helium manufactured hotspots
+  opening chances of eventually getting pathed through those.
+
+- At each `poc_receipt`, after all the existing validity checks, if a
+  probationary hotspot successfully transmitted and received packets
+  from a non-probationary hotspot, the probationary hotspot gains +1
+  `golden_poc` count in its ledger entry. Furthermore, as soon as the
+  total `golden_poc` count for the probationary hotspot reaches
+  `probabtion_required_pocs` count, it transitions to `active` mode by
+  setting the `probation` mode to false.
 
 
 # Drawbacks
