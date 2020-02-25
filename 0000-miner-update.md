@@ -1,6 +1,6 @@
 - Start Date: 2020-02-13
-- HIP PR: <!-- leave this empty -->
-- Tracking Issue: <!-- leave this empty -->
+- HIP PR: #11
+- Tracking Issue: #5318
 
 # Summary
 [summary]: #summary
@@ -11,6 +11,12 @@ excludes do-it-yourself Hotspots which Helium is under no obligation to support.
 It also excludes the non-miner-related bits of the Hotspot firmware image which
 Helium will solely continue to update using our existing nextgate/nexthaul
 client-server mechanism.
+
+This feature can be enabled in one of two ways: image overlays or Docker images.
+The first method requires users to stand up and run their own OTA servers (aka
+minerhaul) for deploying their own custom miner packages from a cloud storage
+service like AWS S3. The second approach requires users to stand up and maintain
+their own Docker registries to store and distribute their own custom miner images.
 
 # Motivation
 [motivation]: #motivation
@@ -83,6 +89,16 @@ commands to fetch new miner images from their designated registries. A Docker
 runtime and client-side scripts will need to be added to nextgate for automatic
 teardown and setup of miner images on the Hotspots.
 
+The only way to configure a consumer Hotspot right now is through Helium's
+mobile app. That means some write-only characteristics (MinerUpdateSourceUrl,
+SslPublicCert and SignifyPublicKey) will need to be added to the BLE GATT server
+so that users can switch from ota.helium.com to an alternative OTA server for
+miner updates. Similar write-only characteristics will need to be added if we
+decide to let users fetch their miner updates from a Docker registry of their
+choosing. Docker supports signing and verification of images from a specific
+registry using a feature known as Docker Content Trust. Runtime enforcement of
+signed image verification requires Docker Enterprise Engine.
+
 # Drawbacks
 [drawbacks]: #drawbacks
 
@@ -142,8 +158,8 @@ or diminishing the user experience?
 - What parts of the design do you expect to resolve through the implementation
 of this feature?
 
-With the exception of image overlays all of the approaches being considered are
-new so the only way to assess them is through rapid prototyping.
+Deploying Docker images to Hotspots is a new and unproven technique so the only
+way to evaluate that approach is through rapid prototyping.
 
 - What related issues do you consider out of scope for this HIP that could be
 addressed in the future independently of the solution that comes out of this HIP?
@@ -152,7 +168,7 @@ How does a third party package and sign a miner release for download and
 verification by a consumer Hotspot?
 
 How do we facilitate the deployment of miner instances in the cloud that receive
-LoRa packets from third party edge radio gateways?
+LoRa packets from third party radio gateways?
 
 # Deployment Impact
 [deployment-impact]: #deployment-impact
@@ -170,14 +186,16 @@ select an unreliable miner package or image supplier.
 - How will existing documentation/knowledgebase need to be supported?
 
 The final solution will need to include clear step-by-step instructions for
-miner package or image maintainers. This documentation will likely take the form
-of a GitHub project README for a Helium minerhaul repo that miner package
-maintainers will need to fork to deliver their updates.
+miner package or image maintainers. This documentation can take the form of a
+GitHub project README for a Helium minerhaul repo that miner package maintainers
+will need to fork to deliver their updates.
 
 UI for entering the URL of an alternative miner package repository will need to
-be added to the Hotspot Settings page of the Helium mobile app. A related help
-article will also need to be added to the support section of Helium's website
-for end users.
+be added to the Hotspot Settings page of the Helium mobile app. Because a
+malfunctioning miner can prevent a user from pairing with a Hotspot over
+Bluetooth we need some way of determining who owns a Hotspot in the absence of a
+working miner. A related help article will also need to be added to the support
+section of Helium's website for end users.
 
 - Is this backwards compatible?
 
