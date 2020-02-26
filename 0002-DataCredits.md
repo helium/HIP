@@ -9,7 +9,9 @@ Data Credits have a fixed value of $.00001 per 24 bytes. There were original
 consideration to charge for Time-on-Air, but a fixed price for data usage was
 settled upon to simplify the experience of network users.
 
-However, how are bytes counted? Between the LoRa Physical Header, the LoRaWAN/MAC header, and the Application/MAC Payload, there are several ways of slicing it.
+However, how are bytes counted? Between the LoRa Physical Header, the 
+LoRaWAN/MAC header, and the Application/MAC Payload, there are several ways 
+of slicing it.
 
 This proposal here is to charge for Application/MAC Payload exclusively, but to
 charge 1 DC per Join uplink and 1 DC per JoinAccept downlink.
