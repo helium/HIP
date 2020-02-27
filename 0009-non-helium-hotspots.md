@@ -147,15 +147,17 @@ involving hotspot X.
 
 ## High-Level Workflow
 
-All the below actions would happen behind chain var `diy` (or
-something). Setting `diy` to true, triggers all of the below:
+Chain Vars:
 
-Another chain var, `probation_height_limit`, set to 2000 or whatever will
-be set to allow witness collection for hotspots in probation mode.
+- `diy`: boolean. All the changes would be hidden behind the activation
+  of this chain variable.
 
-Yet another chain var, `probabtion_required_pocs`, set to 100 or
-whatever will be set to count down whether a probationary hotspot has
-completed enough successful pocs with non-probationary hotspots.
+- `required_pocs`: pos_integer. Number of PoCs a porobationary hotspot
+  must complete before it can transition to active mode. Note that this
+  count only increments if a probationary hotspot completes a PoC
+  successfully with a non-probationary hotspot.
+
+TODO:
 
 - Add `probation` flag to gateway entries in the ledger. This would help
   us identify which hotspots have full/limited PoC priviledges.
@@ -165,9 +167,9 @@ completed enough successful pocs with non-probationary hotspots.
   in probation mode. Also helpful in general. Not quite sure what to set
   this for existing hotspots when upgrading the ledger gateway entries.
 
-- Add `count_golden_pocs` to gateway entries in the ledger. This is the
-  count of pocs which a probationary hotspot maintains every time it
-  successfully and verifiably transmits a receipt with an active hotspot.
+- Add `count_required_pocs` to gateway entries in the ledger. This is
+  the count of pocs which a probationary hotspot maintains every time it
+  successfully transmits a receipt with an active hotspot.
 
 - Modify existing ledger gateway entries to have `probation` flag set to
   false.
