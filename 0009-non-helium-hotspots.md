@@ -51,14 +51,14 @@ join the network we have no verifiable way of being able to separate a
 virtual network from a real one.
 
 To mitigate that, we propose introducing a probationary mode. Every
-single hotspot which will join the network (including helium
-manufactured) will do so in "probation". In probation mode, the PoC
-activity of a hotspot would be limited to only participate in challenges
-which involve the external device.
+single hotspot which will join the network will do so in "probation". In
+probation mode, the PoC activity of a hotspot would be limited to only
+participate in challenges as witnessees with no PoC request priviledges.
 
-To gain full PoC priviledges, a hotspot must complete a pre-determined
-number of successful challenges involving the external device. This
-number can be set via chain variable on the blockchain.
+To gain full PoC priviledges, a hotspot must complete a chain variable
+controlled maximum number of successful challenges involving either a
+helium manufactured hotspot or an authorized 3rd party manufactured
+hotspots.
 
 Consider the below network where hotspot A-F are non-helium manufactured
 hotspots, with the lines representing RF visibility between hotspots.
@@ -106,31 +106,31 @@ consider the graph below:
 
                      +------+
                      |      |
-                     |  A   +---------------+                      
-                     |      |               |                      
-                     +------+               |                      
-                                         +--+---+                  
-    +------+                             |      |                  
+                     |  A   +---------------+
+                     |      |               |
+                     +------+               |
+                                         +--+---+
+    +------+                             |      |
     |      |                             |  X   +<--+Helium Hotspot
-    |  F   |             +---------------+      |                 
-    |      |             |               +------+                 
-    +------+             |                                        
-                     +---+--+                                     
-                     |      |                                     
-                     |  B   |                                     
-                     |      |                                     
-                     +---+--+            +------+                 
-    +------+             |               |      |                 
-    |      |             |               |  C   |                 
-    |  E   |             |               |      |                 
-    |      |             |               +------+                 
-    +---+--+             |                                        
-        |                |                                        
-        |             +--+---+                                    
-        |             |      |                                    
-        +-------------+  D   |                                    
-                      |      |                                    
-                      +------+                                    
+    |  F   |             +---------------+      |
+    |      |             |               +------+
+    +------+             |
+                     +---+--+
+                     |      |
+                     |  B   |
+                     |      |
+                     +---+--+            +------+
+    +------+             |               |      |
+    |      |             |               |  C   |
+    |  E   |             |               |      |
+    |      |             |               +------+
+    +---+--+             |
+        |                |
+        |             +--+---+
+        |             |      |
+        +-------------+  D   |
+                      |      |
+                      +------+
 
 We can verifiably prove that A, B, D and E can successfully complete
 PoC challenges which involve hotspot X. Since we know that hotspot X is
@@ -206,7 +206,7 @@ TBD
 
 The helium hotspot solves the problem of seeding trust in a new network
 by serving as a "trust authority". Furthermore, this authority can be
-delegated to other 3rd party manufacturers. 
+delegated to other 3rd party manufacturers.
 
 # Unresolved Questions
 [unresolved]: #unresolved-questions
