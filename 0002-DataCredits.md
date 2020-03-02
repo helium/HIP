@@ -10,11 +10,19 @@ consideration to charge for Time-on-Air, but a fixed price for data usage was
 settled upon to simplify the experience of network users.
 
 However, how are bytes counted? Between the LoRa Physical Header, the 
-LoRaWAN/MAC header, and the Application/MAC Payload, there are several ways 
-of slicing it.
+LoRaWAN/MAC header, and the MAC Payload, FOpts and FRMPayload there are several
+ways of deciding how to meter bytes.
 
-This proposal here is to charge for Application/MAC Payload exclusively, but to
-charge 1 DC per Join uplink and 1 DC per JoinAccept downlink.
+This proposal here is to charge for **FOpts** and **FRMPayload** exclusively,
+but to charge 1 DC per Join uplink and 1 DC per Join-Accept downlink.
+
+FOpts are fifteen optional bytes used almost exclusiveely for MAC Commands.
+
+FRMPayload are essentially the application data.
+
+By defining things this way, we can keep the data calculations very simple for
+network users, while also protecting against simple ways to move additional
+data "for free".
 
 In addition, we propose to round up DC costs. Therefore, if I transmit a DataUp
 frame with 55 bytes: `55/24.0 ~= 2.3 DCs => 3 DCs` burned on behalf of the
@@ -37,16 +45,23 @@ Operators.
 
 When an Operator transmits or receives a packet, they are unable to transmit 
 and/or receive packets. As such, we must fight against exploits and charge a fee
-for Join and JoinAccept frames.
+for Join and Join-Accept frames.
 
 When a User considers the Helium Network, they know about their application, and
 so have ideas of how large their payloads are, but may not know of the nuances
 of LoRa or LoRaWAN versus other modulations or protocols. To help them make the
-business decision to use the Helium Network, we believe it to be best to discuss
-data costs in terms of Application/MAC payloads.
+business decision to use the Helium Network, we believe it to simply the data cost
+calculations as much as possible so that cost may be derived almost exclusively
+from knowing the size of the application payloads.
 
 By charging essentially 2 DC to "make the initial connection" and 1 DC per 24
-bytes of application data, we can resolve both points.
+bytes of application data (ie: FRMPayload), we can resolve both points.
+
+In addition, we charge for FOpts which is only used when issuing MAC Commands;
+these are generally advanced networking messages which fine tune how the device
+operates within the LoRaWAN stack. It is assumed that only sophisticated users
+would be using and thus would need to account for these. Not charging for these
+opens up an easy to manipulate field.
 
 The 2 DC (1 up, 1 down) to make the connection can almost be ignored from a
 costing perspective, as devices can use a Sessions as long as they can preserve
@@ -61,7 +76,7 @@ in value), so rounding up per 24 bytes used seems fair. But combined with
 Time-on-Air restrictions due to regulatory bodies such as FCC and ETSI,
 the estimated cost of data may lead to unexpected results.
 
-For example, running in SF9, a device can only send 55 bytes in the MACPayload.
+For example, running in SF9, a device can only send 55 bytes in the FRMPayload.
 `55/24.0 ~= 2.3 DCs` and I would be expected to pay 3 DCs.
 
 But to construct a pathological example, if for some reason, I needed to
@@ -105,6 +120,22 @@ _______________________________________________________
 | MHDR | **MACPayload/JoinRequest/JoinResponse** |MIC |
 ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 ```
+
+MACPayload
+
+```
+________________________________
+| **FHDR **| FPort |FRMPayload |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+```
+
+FHDR
+
+```
+__________________________________
+| DevAddr | FCtrl | FCnt | FOpts |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+```
 ## Charge for Full PHY Layer
 
 It is possible to charge for everything sent in the PHY layer, but this would
@@ -121,3 +152,9 @@ packet fragment.These fields are negligible in size though and add complexity.
 This would be simplest but would make JoinRequest/Response free. This would
 open up a simple way to use the network for free by sending payloads in the
 JoinRequest/JoinResponse frames.
+
+## Charge for FRMPayload only
+
+This would make the entire FHDR free. Meanwhile, the FHDR has the FOpts field
+for MAC Command transport, which would be easy to exploit for free transmission
+of data.
