@@ -49,7 +49,7 @@ for Join and Join-Accept frames.
 
 When a User considers the Helium Network, they know about their application and
 likely can estimate how large and frequent their payloads are. On the other
-hand, they are not expected to know of LoRa or LoRaWAN many nuances. We believe
+hand, they are not expected to know of LoRa/LoRaWAN's many nuances. We believe
 the highest priority is to simplify their DC estimations as much as possible
 in order to lower the barriers of adoption.
 
