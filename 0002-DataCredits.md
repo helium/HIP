@@ -54,7 +54,7 @@ the highest priority is to simplify their DC estimations as much as possible
 in order to lower the barriers of adoption.
 
 By charging essentially 2 DC to "make the initial connection" and 1 DC per 24
-bytes of application data (ie: FRMPayload), we can resolve both points.
+bytes of application data (ie: FRMPayload) and network command data (ie: FOpts), we can resolve both points.
 
 In addition, we charge for FOpts which is only used when issuing MAC Commands;
 these are generally advanced networking messages which fine tune how the device
