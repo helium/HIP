@@ -47,12 +47,11 @@ When an Operator transmits or receives a packet, they are unable to transmit
 and/or receive packets. As such, we must fight against exploits and charge a fee
 for Join and Join-Accept frames.
 
-When a User considers the Helium Network, they know about their application, and
-so have ideas of how large their payloads are, but may not know of the nuances
-of LoRa or LoRaWAN versus other modulations or protocols. To help them make the
-business decision to use the Helium Network, we believe it to simply the data cost
-calculations as much as possible so that cost may be derived almost exclusively
-from knowing the size of the application payloads.
+When a User considers the Helium Network, they know about their application and
+likely can estimate how large and frequent their payloads are. On the other
+hand, they are not expected to know of LoRa or LoRaWAN many nuances. We believe
+the highest priority is to simplify their DC estimations as much as possible
+in order to lower the barriers of adoption.
 
 By charging essentially 2 DC to "make the initial connection" and 1 DC per 24
 bytes of application data (ie: FRMPayload), we can resolve both points.
