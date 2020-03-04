@@ -29,36 +29,8 @@ transmit/receive and claim that they are providing network coverage.
 - 3rd party hotspot manufacturers
 - DIY hotspot builders
 
-# Detailed Explanation
-[detailed-explanation]: #detailed-explanation
-
-In order to ensure organic network growth while still maintaining
-verifiable trust regarding the claim of location of newly joining 3rd
-party or DIY hotspots we propose that every hotspot joins the network in
-a probationary mode with limited PoC capability.
-
-In the current network onboarding a helium manufactured hotspot allows
-full proof-of-coverage priviledges as soon as the hotspots syncs fully
-with the blockchain, however this behavior is insufficient to ensure
-that non-helium manufactured hotspots or DIY hotspots by individual
-developers adhere to the consensus rules and also honestly provide RF
-coverage.
-
-Currently we know that every single hotspot being added to the network
-is manufactured by helium and has the required hardware to participate
-in proof-of-coverage challenges, as soon as we allow other hotspots to
-join the network we have no verifiable way of being able to separate a
-virtual network from a real one.
-
-To mitigate that, we propose introducing a probationary mode. Every
-single hotspot which will join the network will do so in "probation". In
-probation mode, the PoC activity of a hotspot would be limited to only
-participate in challenges as witnessees with no PoC request priviledges.
-
-To gain full PoC priviledges, a hotspot must complete a chain variable
-controlled maximum number of successful challenges involving either a
-helium manufactured hotspot or an authorized 3rd party manufactured
-hotspots.
+# Problem Deinifition
+[problem-definition]: #problem-definition
 
 Consider the below network where hotspot A-F are non-helium manufactured
 hotspots, with the lines representing RF visibility between hotspots.
@@ -93,15 +65,16 @@ hotspots, with the lines representing RF visibility between hotspots.
 
 There exists no possible way to ensure that these hotspots do not form
 part of a virtual network, since they can easily fake locations and RF
-coverage and verify each other via the existing PoC mechanism. Therefore
-these remain in probation mode with limited PoC priviledges.
+coverage and verify each other via the existing PoC mechanism.
 
-Until and unless there is a helium (or an authorized retailer)
-manufactured hotspot introduced in the above network, we cannot make any
-conclusions regarding the claim of location of any hotspot A - F.
+To correctly identify whether the above network is legitimate, we have
+the option of introducing a Helium (or authorized 3rd party reseller)
+hotspot in the network and learning more about the behavior of each
+hotspot. Only the real hotspots can successfully participate with
+eventual PoC challenges involving the Helium hotspots.
 
 Reimagining the above network with the introduction of a helium hotspot,
-consider the graph below:
+consider the updated graph below:
 
 
                      +------+
@@ -132,66 +105,128 @@ consider the graph below:
                       |      |
                       +------+
 
-We can verifiably prove that A, B, D and E can successfully complete
-PoC challenges which involve hotspot X. Since we know that hotspot X is
-bound to be trustworthy by design and any hotspot which can participate
-in a PoC challenge involving X can only do so if it's operating within
-the rules set by the consensus mechanism and also has an operating radio
-chip.
+With this information, we can verifiably prove that A, B, D and E can
+successfully complete PoC challenges which involve hotspot X. Since we
+know that hotspot X is bound to be trustworthy by design and any hotspot
+which can participate in a PoC challenge involving X can only do so if
+it's operating within the rules set by the consensus mechanism and also
+has an operating radio chip.
 
-However, we still cannot make logical conclusions about C and F since
-they have not had any PoC activity with X. Therefore both C and F remain
-in probation mode but A, B, D and E can transition to full PoC activity
-once they all successfully complete `N` PoC challenges successfully
-involving hotspot X.
+However, even with the above explained scheme, we still need a way to be
+able to allow hotspots not manufactured by Helium or authorized
+manufacturers to not only participate in PoC but also be candidates for
+consensus membership to build a truly decentralized permissionless
+network.
 
-## High-Level Workflow
+To counter that and allow any hotspot to participate in PoC and have
+consensus membership candidacy, we propose to introduce "Levels of
+Trust".
 
-Chain Vars:
+# Detailed Explanation
+[detailed-explanation]: #detailed-explanation
 
-- `diy`: boolean. All the changes would be hidden behind the activation
-  of this chain variable.
+## Current Network Behavior
 
-- `required_pocs`: pos_integer. Number of PoCs a porobationary hotspot
-  must complete before it can transition to active mode. Note that this
-  count only increments if a probationary hotspot completes a PoC
-  successfully with a non-probationary hotspot.
+In the current network onboarding a helium manufactured hotspot allows
+full proof-of-coverage priviledges as soon as the hotspot syncs fully
+with the blockchain, however this behavior is insufficient to ensure
+that non-helium manufactured hotspots or DIY hotspots by individual
+developers adhere to the consensus rules and also honestly provide RF
+coverage.
 
-TODO:
+As mentioned in the problem defintion, we cannot assume that every
+single DIY hotspot is going to incorporate a GPS chip or a radio chip.
+Malicious enttities may try to game the system by tweaking/removing
+hardware and yet be able to participate in PoC. Currently we _know_ that
+every single hotspot being added to the network is manufactured by
+helium and has the required hardware to participate in proof-of-coverage
+challenges, as soon as we allow other hotspots to join the network we
+have no verifiable way of being able to separate a virtual network from
+a real one.
 
-- Add `probation` flag to gateway entries in the ledger. This would help
-  us identify which hotspots have full/limited PoC priviledges.
+To mitigate that, we propose a new model for establishing trust among
+hotspots and subsequently change how hotspots earn HNT, perhaps aptly
+named "Levels of Trust".
 
-- Add `added_at_block_height` to gateway entries in the ledger. This
-  would help identify how long to keep collecting witnesses for hotspots
-  in probation mode. Also helpful in general. Not quite sure what to set
-  this for existing hotspots when upgrading the ledger gateway entries.
+## Levels of Trust
 
-- Add `count_required_pocs` to gateway entries in the ledger. This is
-  the count of pocs which a probationary hotspot maintains every time it
-  successfully transmits a receipt with an active hotspot.
+We introduce the concept of levels of trust, defining constraints,
+relationships and progress of what it means for a hotspot to be in a
+particular level and subsequently transition between levels. This is
+akin to a character leveling up in a game, except the characters are
+hotspots!
 
-- Modify existing ledger gateway entries to have `probation` flag set to
-  false.
+Below is a visual representation of the aforementioned levels, the most
+important takeaway here is that any higher level encompasses all the
+benefits and constraints of the lower levels.
 
-- When a new hotspot is added to the network, `probation` is set to
-  true.
 
-- Hotspots with `probation` set to true are prohibited from creating
-  `poc_request` transactions.
++--------------------------------------------------+
+|                                                  |
+|                                                  |
+|    +--------------------------------------+      |
+|    |                                      |      |
+|    |                                      |      |
+|    |    +--------------------------+      |      |
+|    |    |                          |      |      |
+|    |    |                          |      |      |
+|    |    |     +--------------+     |      |      |
+|    |    |     |              |     |      |      |
+|    |    |     |     Level I  |     |      |      |
+|    |    |     |              |     |      |      |
+|    |    |     +--------------+     |      |      |
+|    |    |                          |      |      |
+|    |    |                 Level II |      |      |
+|    |    |                          |      |      |
+|    |    +--------------------------+      |      |
+|    |                                      |      |
+|    |                            Level III |      |
+|    |                                      |      |
+|    +--------------------------------------+      |
+|                                                  |
+|                                        Level IV  |
+|                                                  |
++--------------------------------------------------+
 
-- Hotspots with `probation` set to true are allowed to be witnesses,
-  however, they do not earn any tokens for being witnesses. This allows
-  such hotspots to potentially witness helium manufactured hotspots
-  opening chances of eventually getting pathed through those.
 
-- At each `poc_receipt`, after all the existing validity checks, if a
-  probationary hotspot successfully transmitted and received packets
-  from a non-probationary hotspot, the probationary hotspot gains +1
-  `golden_poc` count in its ledger entry. Furthermore, as soon as the
-  total `golden_poc` count for the probationary hotspot reaches
-  `probabtion_required_pocs` count, it transitions to `active` mode by
-  setting the `probation` mode to false.
+### Level I
+
+- Any hotspot which aims to enter the helium network starts it
+  progressing at this level. The entry fee to gain access to this level
+  is burning data credits worth $X. Note that the market price of data
+  credits is not controlled by Helium.
+- The only PoC priviledge a hotspot has in this level, is that it can
+  add other hotspots in its witness list, given that it is successfully
+  witnessing nearby occuring PoCs.
+- A hotspot in this level can freely transmit data and earn HNT based
+  solely on transmitting network data.
+
+### Level 2
+
+- The minimum criteria to enter this level require that a hotspot must
+  have witnessed X% of nearby occuring PoCs involving a Level 3 hotspot
+  over the course of Y days (or Z block equivalent).
+- A hotspot can also be promoted to this level via a TBD governance
+  proposal.
+- In addition to the Level I priviledges, this level also grants the
+  ability to participate in PoCs.
+
+### Level 3
+
+- The minimum criteria to enter this level require that a hotspot must
+  have completed X successful PoC challenges involving other Level 3
+  hotspots.
+- In addition to the Level II priviledges, hotspots are granted the
+  ability to construct challenges. Constructing challenges is only
+  granted to hotspots which have been proven to be consistent and is
+  also the most reliable and regular way to gain a steady HNT influx,
+  therefore it's reserved as a priviledge for Level 3.
+
+### Level 4
+
+- This is the final, most coveted level.
+TBD....This is where hotspots gain consensus membership candidacy
+priviledge.
 
 
 # Drawbacks
@@ -202,11 +237,7 @@ TBD
 # Rationale and Alternatives
 [alternatives]: #rationale-and-alternatives
 
-- Why the limitation for PoC-ing with helium hotspots?
-
-The helium hotspot solves the problem of seeding trust in a new network
-by serving as a "trust authority". Furthermore, this authority can be
-delegated to other 3rd party manufacturers.
+TBD
 
 # Unresolved Questions
 [unresolved]: #unresolved-questions
