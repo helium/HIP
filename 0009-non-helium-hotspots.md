@@ -5,35 +5,37 @@
 # Summary
 [summary]: #summary
 
-Ensuring trust in the network when non-helium hotspots begin to
-participate in the network.
+A comprehensive set of improvements to Proof-of-Coverage, the scoring system, how Hotspots join the network, and participate in mining and the HBBFT consensus group.
 
 # Motivation
 [motivation]: #motivation
 
-Helium's primary objective has always been to establish a decentralized
-permissionless wireless network allowing anyone to be able to join and
-provide RF Coverage with off-the-shelf hardware and open source
-software.
+On the Helium network today, only Hotspot hardware purchased from Helium Inc. is considered trustworthy. These Hotspots are sold using a hardware key storage device (a secure element) that makes it reasonably challenging for an attacker to create a virtual network of Hotspots that have valid keys. The downside of this situation is that the tens of thousands of non-Helium Inc. LoRa gateways that exist in the world cannot join the network and participate in mining.
 
-This goal poses some interesting challenges specifically regarding
-network growth. Once we allow non-helium hotspots to be able to join the
-network, we lose the ability to verifiably prove that any sub-network
-created by such new hotspots truly exist physically since it's easily
-possible for dishonest actors to fake geographic locations and radio
-transmit/receive and claim that they are providing network coverage.
+The goal of this proposal is to propose a set of measures that make it safe for LoRa gateways of unknown origin to participate in Proofs-of-Coverage and earn tokens for that participation. This goal poses some interesting challenges, as in the current system the network loses the ability to verifiably prove that any sub-network created by such new gateways truly exists since it's possible for dishonest actors to fake geographic locations and radio activitity.
 
 # Stakeholders
 [stakeholders]: #stakeholders
 
-- 3rd party hotspot manufacturers
-- DIY hotspot builders
+- 3rd party Hotspot manufacturers
+- DIY miners
 
 # Problem Deinifition
 [problem-definition]: #problem-definition
 
-Consider the below network where hotspot A-F are non-helium manufactured
-hotspots, with the lines representing RF visibility between hotspots.
+There are a number of problems we hope to address with this proposal:
+
+1. Allow non-Helium Inc manufactured Hotspots to participate in Proof-of-Coverage and mining
+2. Provide a way for non-radio hardware to participate in consensus groups
+3. Increase the requirements for consensus group participation to improve the overall health of the network
+4. Introduce a number of penalties for failing to perform any of the roles required for earning HNT
+
+# Allowing non-Helium Inc manufactured Hotspots to participate in Proof-of-Coverage
+[non-helium-hotspots]: #non-helium-hotspots
+
+## The problem
+
+Consider the below network where Hotspots A through F are of unknown origin, with the lines representing reported RF connectivity between hotspots.
 
                      +------+
                      |      |
@@ -63,18 +65,11 @@ hotspots, with the lines representing RF visibility between hotspots.
                       |      |
                       +------+
 
-There exists no possible way to ensure that these hotspots do not form
-part of a virtual network, since they can easily fake locations and RF
-coverage and verify each other via the existing PoC mechanism.
+Since it is possible for RF data to be fabricated - there is no way to verify that data was sent via RF once it has been demodulated - the network does not know whether these Hotspots are part of a virtual network, or whether they are physically deployed at their claimed locations.
 
-To correctly identify whether the above network is legitimate, we have
-the option of introducing a Helium (or authorized 3rd party reseller)
-hotspot in the network and learning more about the behavior of each
-hotspot. Only the real hotspots can successfully participate with
-eventual PoC challenges involving the Helium hotspots.
+To correctly identify whether the above network is legitimate, we can introduce a Helium Inc (or authorized 3rd party reseller) 'trusted' Hotspot into the network and learn more about the behavior of the Hotspots A-F. Only real Hotspots will be able to successfully participate in PoC challenges involving the trusted Hotspot.
 
-Reimagining the above network with the introduction of a helium hotspot,
-consider the updated graph below:
+Reimagining the above network with the introduction of a trusted Hotspot, consider the below:
 
 
                      +------+
@@ -84,7 +79,7 @@ consider the updated graph below:
                      +------+               |
                                          +--+---+
     +------+                             |      |
-    |      |                             |  X   +<--+Helium Hotspot
+    |      |                             |  X   +<--+ Trusted Hotspot
     |  F   |             +---------------+      |
     |      |             |               +------+
     +------+             |
@@ -105,44 +100,17 @@ consider the updated graph below:
                       |      |
                       +------+
 
-With this information, we can verifiably prove that A, B, D and E can
-successfully complete PoC challenges which involve hotspot X. Since we
-know that hotspot X is bound to be trustworthy by design and any hotspot
-which can participate in a PoC challenge involving X can only do so if
-it's operating within the rules set by the consensus mechanism and also
-has an operating radio chip.
+With this information, we can verify that A, B, D and E can successfully complete PoC challenges which involve X. Since we know that Hotspot X is trustworthy, we can conclude that any Hotspot which can participate in a PoC challenge involving X can only do so if it's operating within the rules set by the consensus mechanism and also has an operating radio chip.
 
-However, even with the above explained scheme, we still need a way to be
-able to allow hotspots not manufactured by Helium or authorized
-manufacturers to not only participate in PoC but also be candidates for
-consensus membership to build a truly decentralized permissionless
-network.
+However, even with this scheme we still need a way to allow Hotspots not manufactured by Helium Inc or authorized manufacturers to not only participate in PoC but also be candidates for consensus membership.
 
-To counter that and allow any hotspot to participate in PoC and have
-consensus membership candidacy, we propose to introduce "Levels of
-Trust".
-
-# Detailed Explanation
-[detailed-explanation]: #detailed-explanation
+To counter that and allow any hotspot to participate in PoC and have consensus membership candidacy, we propose to introduce "Levels of Trust".
 
 ## Current Network Behavior
 
-In the current network onboarding a helium manufactured hotspot allows
-full proof-of-coverage priviledges as soon as the hotspot syncs fully
-with the blockchain, however this behavior is insufficient to ensure
-that non-helium manufactured hotspots or DIY hotspots by individual
-developers adhere to the consensus rules and also honestly provide RF
-coverage.
+In the current network, onboarding a Helium Inc manufactured Hotspot grants full Proof-of-Coverage priviledges. 
 
-As mentioned in the problem defintion, we cannot assume that every
-single DIY hotspot is going to incorporate a GPS chip or a radio chip.
-Malicious enttities may try to game the system by tweaking/removing
-hardware and yet be able to participate in PoC. Currently we _know_ that
-every single hotspot being added to the network is manufactured by
-helium and has the required hardware to participate in proof-of-coverage
-challenges, as soon as we allow other hotspots to join the network we
-have no verifiable way of being able to separate a virtual network from
-a real one.
+As mentioned in the problem defintion, we cannot assume that every single DIY hotspot is going to incorporate a GPS chip or a radio chip. Malicious enttities may try to game the system by tweaking/removing hardware and yet be able to participate in PoC. Currently we _know_ that every single hotspot being added to the network is manufactured by helium and has the required hardware to participate in proof-of-coverage challenges, as soon as we allow other hotspots to join the network we have no verifiable way of being able to separate a virtual network from a real one.
 
 To mitigate that, we propose a new model for establishing trust among
 hotspots and subsequently change how hotspots earn HNT, perhaps aptly
