@@ -5,14 +5,21 @@
 # Summary
 [summary]: #summary
 
-A comprehensive set of improvements to Proof-of-Coverage, the scoring system, how Hotspots join the network, and participate in mining and the HBBFT consensus group.
+A comprehensive set of improvements to Proof-of-Coverage, the scoring system, how Hotspots join the network, and
+participate in mining and the HBBFT consensus group.
 
 # Motivation
 [motivation]: #motivation
 
-On the Helium network today, only Hotspot hardware purchased from Helium Inc. is considered trustworthy. These Hotspots are sold using a hardware key storage device (a secure element) that makes it reasonably challenging for an attacker to create a virtual network of Hotspots that have valid keys. The downside of this situation is that the tens of thousands of non-Helium Inc. LoRa gateways that exist in the world cannot join the network and participate in mining.
+On the Helium network today, only Hotspot hardware purchased from Helium Inc. is considered trustworthy. These Hotspots
+are sold using a hardware key storage device (a secure element) that makes it reasonably challenging for an attacker to
+create a virtual network of Hotspots that have valid keys. The downside of this situation is that the tens of thousands
+of non-Helium Inc. LoRa gateways that exist in the world cannot join the network and participate in mining.
 
-The goal of this proposal is to propose a set of measures that make it safe for LoRa gateways of unknown origin to participate in Proofs-of-Coverage and earn tokens for that participation. This goal poses some interesting challenges, as in the current system the network loses the ability to verifiably prove that any sub-network created by such new gateways truly exists since it's possible for dishonest actors to fake geographic locations and radio activitity.
+The goal of this proposal is to propose a set of measures that make it safe for LoRa gateways of unknown origin to
+participate in Proofs-of-Coverage and earn tokens for that participation. This goal poses some interesting challenges,
+as in the current system the network loses the ability to verifiably prove that any sub-network created by such new
+gateways truly exists since it's possible for dishonest actors to fake geographic locations and radio activitity.
 
 # Stakeholders
 [stakeholders]: #stakeholders
@@ -20,7 +27,7 @@ The goal of this proposal is to propose a set of measures that make it safe for 
 - 3rd party Hotspot manufacturers
 - DIY miners
 
-# Problem Deinifition
+# Problem Definition
 [problem-definition]: #problem-definition
 
 There are a number of problems we hope to address with this proposal:
@@ -35,7 +42,8 @@ There are a number of problems we hope to address with this proposal:
 
 ## The problem
 
-Consider the below network where Hotspots A through F are of unknown origin, with the lines representing reported RF connectivity between hotspots.
+Consider the below network where Hotspots A through F are of unknown origin, with the lines representing reported RF
+connectivity between hotspots.
 
                      +------+
                      |      |
@@ -65,12 +73,15 @@ Consider the below network where Hotspots A through F are of unknown origin, wit
                       |      |
                       +------+
 
-Since it is possible for RF data to be fabricated - there is no way to verify that data was sent via RF once it has been demodulated - the network does not know whether these Hotspots are part of a virtual network, or whether they are physically deployed at their claimed locations.
+Since it is possible for RF data to be fabricated - there is no way to verify that data was sent via RF once it has been
+demodulated - the network does not know whether these Hotspots are part of a virtual network, or whether they are
+physically deployed at their claimed locations.
 
-To correctly identify whether the above network is legitimate, we can introduce a Helium Inc (or authorized 3rd party reseller) 'trusted' Hotspot into the network and learn more about the behavior of the Hotspots A-F. Only real Hotspots will be able to successfully participate in PoC challenges involving the trusted Hotspot.
+To correctly identify whether the above network is legitimate, we can introduce a Helium Inc (or authorized 3rd party
+reseller) 'trusted' Hotspot into the network and learn more about the behavior of the Hotspots A-F. Only real Hotspots
+will be able to successfully participate in PoC challenges involving the trusted Hotspot.
 
 Reimagining the above network with the introduction of a trusted Hotspot, consider the below:
-
 
                      +------+
                      |      |
@@ -100,102 +111,98 @@ Reimagining the above network with the introduction of a trusted Hotspot, consid
                       |      |
                       +------+
 
-With this information, we can verify that A, B, D and E can successfully complete PoC challenges which involve X. Since we know that Hotspot X is trustworthy, we can conclude that any Hotspot which can participate in a PoC challenge involving X can only do so if it's operating within the rules set by the consensus mechanism and also has an operating radio chip.
+With this information, we can verify that A, B, D and E can successfully complete PoC challenges which involve X. Since
+we know that Hotspot X is trustworthy, we can conclude that any Hotspot which can participate in a PoC challenge
+involving X can only do so if it's operating within the rules set by the consensus mechanism and also has an operating
+radio chip.
 
-However, even with this scheme we still need a way to allow Hotspots not manufactured by Helium Inc or authorized manufacturers to not only participate in PoC but also be candidates for consensus membership.
+However, even with this scheme we still need a way to allow Hotspots not manufactured by Helium Inc or authorized
+manufacturers to not only participate in PoC but also be candidates for consensus membership.
 
-To counter that and allow any hotspot to participate in PoC and have consensus membership candidacy, we propose to introduce "Levels of Trust".
+To counter that and allow any hotspot to participate in PoC and have consensus membership candidacy, we propose to
+introduce "Levels of Trust".
 
 ## Current Network Behavior
 
 In the current network, onboarding a Helium Inc manufactured Hotspot grants full Proof-of-Coverage priviledges. 
 
-As mentioned in the problem defintion, we cannot assume that every single DIY hotspot is going to incorporate a GPS chip or a radio chip. Malicious enttities may try to game the system by tweaking/removing hardware and yet be able to participate in PoC. Currently we _know_ that every single hotspot being added to the network is manufactured by helium and has the required hardware to participate in proof-of-coverage challenges, as soon as we allow other hotspots to join the network we have no verifiable way of being able to separate a virtual network from a real one.
+As mentioned in the problem defintion, we cannot assume that every single DIY hotspot is going to incorporate a GPS chip
+or a radio chip.  Malicious enttities may try to game the system by tweaking/removing hardware and yet be able to
+participate in PoC. Currently we _know_ that every single hotspot being added to the network is manufactured by helium
+and has the required hardware to participate in proof-of-coverage challenges, as soon as we allow other hotspots to join
+the network we have no verifiable way of being able to separate a virtual network from a real one.
 
-To mitigate that, we propose a new model for establishing trust among
-hotspots and subsequently change how hotspots earn HNT, perhaps aptly
-named "Levels of Trust".
+To mitigate that, we propose a new model for establishing trust among hotspots and subsequently change how hotspots earn
+HNT, perhaps aptly named "Levels of Trust".
 
 ## Levels of Trust
 
-We introduce the concept of levels of trust, defining constraints,
-relationships and progress of what it means for a hotspot to be in a
-particular level and subsequently transition between levels. This is
-akin to a character leveling up in a game, except the characters are
-hotspots!
+We introduce the concept of Levels of trust, defining constraints, relationships and progress of what it means for a
+hotspot to be in a particular Level and subsequently transition between Levels. This is akin to a character Leveling up
+in a game, except the characters are hotspots!
 
-Below is a visual representation of the aforementioned levels, the most
-important takeaway here is that any higher level encompasses all the
-benefits and constraints of the lower levels.
+Below is a visual representation of the aforementioned Levels, the most important takeaway here is that any higher Level
+encompasses all the benefits and constraints of the lower Levels (with a few exceptions).
 
+                                                        +------------+
+                                                        |            |
+                                                +-------+  Level 3A  +---------+
+                                                |       |            |         |
+    +-----------+         +-----------+         |       +------------+         |         +-----------+
+    |           |         |           |         |                              |         |           |
+    |  Level 1  +-------->+  Level 2  +-------->+                              +-------->+  Level 4  |
+    |           |         |           |         |                              |         |           |
+    +-----------+         +-----------+         |       +------------+         |         +-----------+
+                                                |       |            |         |
+                                                +-------+  Level 3B  +---------+
+                                                        |            |
+                                                        +------------+
 
-    +--------------------------------------------------+
-    |                                                  |
-    |                                                  |
-    |    +--------------------------------------+      |
-    |    |                                      |      |
-    |    |                                      |      |
-    |    |    +--------------------------+      |      |
-    |    |    |                          |      |      |
-    |    |    |                          |      |      |
-    |    |    |     +--------------+     |      |      |
-    |    |    |     |              |     |      |      |
-    |    |    |     |     Level I  |     |      |      |
-    |    |    |     |              |     |      |      |
-    |    |    |     +--------------+     |      |      |
-    |    |    |                          |      |      |
-    |    |    |                 Level II |      |      |
-    |    |    |                          |      |      |
-    |    |    +--------------------------+      |      |
-    |    |                                      |      |
-    |    |                            Level III |      |
-    |    |                                      |      |
-    |    +--------------------------------------+      |
-    |                                                  |
-    |                                        Level IV  |
-    |                                                  |
-    +--------------------------------------------------+
+### Level I: Getting on the network
 
+- Every hotspot which joins the helium network starts at Level 1 by issuing an `add_gateway` transaction.
+- The entry fee is set to burning data credits worth $10 USD.
+- A hotspot at Level 1 does not have any location asserted on the network, however, it is allowed to witness nearby PoC
+  challenges. This is to ensure that when the hotspot does assert a location via `assert_location` transaction, we can
+  be confident about its claim of location by analyzing its witness list.
+- A hotspot at Level 1 is allowed to transmit data and earn HNT based only on transmitting network data.
 
-### Level I
+### Level 2: Asserting location on the network
 
-- Any hotspot which aims to enter the helium network starts it
-  progressing at this level. The entry fee to gain access to this level
-  is burning data credits worth $X. Note that the market price of data
-  credits is not controlled by Helium.
-- The only PoC priviledge a hotspot has in this level, is that it can
-  add other hotspots in its witness list, given that it is successfully
-  witnessing nearby occuring PoCs.
-- A hotspot in this level can freely transmit data and earn HNT based
-  solely on transmitting network data.
+- A hotspot must satisfy the below minimum criteria to enter Level 2:
+    * It must be a Level 1 hotspot for X number of blocks.
+    * Issue an `assert_location` transaction by incurring a $40 USD data credit burn fee.
+    * Witness sufficient number of PoC challenges involving Level 3 hotspots.
+- A hotspot at Level 2 gains access to participate in PoC challenges (become a member in the PoC path).
 
-### Level 2
+### Level 3: Gaining PoC challenge priviledges
 
-- The minimum criteria to enter this level require that a hotspot must
-  have witnessed X% of nearby occuring PoCs involving a Level 3 hotspot
-  over the course of Y days (or Z block equivalent).
-- A hotspot can also be promoted to this level via a TBD governance
-  proposal.
-- In addition to the Level I priviledges, this level also grants the
-  ability to participate in PoCs.
+Level 3 is divided into two broad categories:
 
-### Level 3
+#### Level 3A: Organic network growth
 
-- The minimum criteria to enter this level require that a hotspot must
-  have completed X successful PoC challenges involving other Level 3
-  hotspots.
-- In addition to the Level II priviledges, hotspots are granted the
-  ability to construct challenges. Constructing challenges is only
-  granted to hotspots which have been proven to be consistent and is
-  also the most reliable and regular way to gain a steady HNT influx,
-  therefore it's reserved as a priviledge for Level 3.
+- A hotspot must satisfy the below minimum criteria to enter Level 3A:
+    * It must be a Level 2 hotspot for X number of blocks.
+    * Successfully participate in X number of PoC challenges involving other Level 3 hotspots.
+    * A successful challenge comprises of the hotspot being able to receive a PoC packet from a Level 3 hotspot,
+      successfully decrypt it and successfully transmit it to a Level 2 or above hotspot.
+- A hotspot at Level 3A gains access to construct PoC challenges.
 
-### Level 4
+#### Level 3B: On-chain governance
 
-- This is the final, most coveted level.
-TBD....This is where hotspots gain consensus membership candidacy
-priviledge.
+- A hotspot must satisfy the below minimum criteria to enter Level 3B:
+    * It must be a Level 1 hotspot for X number of blocks.
+    * It must be voted in via the on-chain governance mechanism (TBD) wherein either Helium (or an authorized 3rd party)
+      countersigns the `assert_location` transaction on the hotspot owner's behalf.
+- A hotspot at Level 3B gains access to construct PoC challenges.
 
+### Level 4: Consensus candidacy
+
+- A hotspot must satisfy the below minimum criteria to enter Level 4:
+    * It must be a Level 3 hotspot for X number of blocks.
+    * The hotspot owner or another miner in the network must stake 10000 HNT in order to claim Level 4 status for the
+      hotspot.
+- A hotspot at Level 4 gains access to consensus membership candidacy.
 
 # Drawbacks
 [drawbacks]: #drawbacks
@@ -217,6 +224,7 @@ TBD
 
 TBD
 
-# Success Metrics [success-metrics]: #success-metrics
+# Success Metrics
+[success-metrics]: #success-metrics
 
 TBD
