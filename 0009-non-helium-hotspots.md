@@ -204,6 +204,12 @@ Level 3 is divided into two broad categories:
       hotspot.
 - A hotspot at Level 4 gains access to consensus membership candidacy.
 
+## Level Demotion
+
+With the exception of Level 3B and Level 4 hotspots, any hotspot belonging to other levels is susceptible to level
+demotion governed by the hotspot's score. If the score for a hotspot drops by X for Y blocks, it will be demoted down to
+one previous level.
+
 # Drawbacks
 [drawbacks]: #drawbacks
 
@@ -217,14 +223,17 @@ TBD
 # Unresolved Questions
 [unresolved]: #unresolved-questions
 
-TBD
+1. Under what conditions do we remove the stake for Level 4 hotspots?
+2. Where does the removed stake go to? Does it just vanish?
+3. How do we actually remove the stake?
 
 # Deployment Impact
 [deployment-impact]: #deployment-impact
 
-TBD
+We need to ensure we transition the existing hotspots on the network in a meaningful way. Whether every single existing
+hotspot goes into the same level or not is yet to be determined.
 
 # Success Metrics
 [success-metrics]: #success-metrics
 
-TBD
+NA
