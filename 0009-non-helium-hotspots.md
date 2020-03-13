@@ -137,9 +137,6 @@ HNT, named "Levels of Trust".
 
 ## Levels of Trust
 
-We introduce the concept of Levels of trust, defining constraints, relationships and progress of what it means for a
-hotspot to be in a particular Level and subsequently transition between Levels. This is akin to a character Leveling up
-in a game, except the characters are hotspots!
 
 Below is a visual representation of the aforementioned Levels, the most important takeaway here is that any higher Level
 encompasses all the benefits and constraints of the lower Levels (with a few exceptions).
