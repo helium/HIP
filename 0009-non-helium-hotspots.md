@@ -133,7 +133,7 @@ and has the required hardware to participate in proof-of-coverage challenges, as
 the network we have no verifiable way of being able to separate a virtual network from a real one.
 
 To mitigate that, we propose a new model for establishing trust among hotspots and subsequently change how hotspots earn
-HNT, perhaps aptly named "Levels of Trust".
+HNT, named "Levels of Trust".
 
 ## Levels of Trust
 
