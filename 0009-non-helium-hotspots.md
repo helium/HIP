@@ -137,23 +137,35 @@ HNT, named "Levels of Trust".
 
 ## Levels of Trust
 
-
 Below is a visual representation of the aforementioned Levels, the most important takeaway here is that any higher Level
 encompasses all the benefits and constraints of the lower Levels (with a few exceptions).
 
+
                                                         +------------+
                                                         |            |
-                                                +-------+  Level 3A  +---------+
+                                                +------>+  Level 3A  +---------+
                                                 |       |            |         |
     +-----------+         +-----------+         |       +------------+         |         +-----------+
     |           |         |           |         |                              |         |           |
     |  Level 1  +-------->+  Level 2  +-------->+                              +-------->+  Level 4  |
     |           |         |           |         |                              |         |           |
-    +-----------+         +-----------+         |       +------------+         |         +-----------+
-                                                |       |            |         |
-                                                +-------+  Level 3B  +---------+
-                                                        |            |
-                                                        +------------+
+    +-----+-----+         +-----------+         |       +------------+         |         +-----------+
+          |                                     |       |            |         |
+          |                                     +------>+  Level 3B  +---------+
+          |                                             |            |
+          |                                             +------+-----+
+          |                                                    ^
+          |                                                    |
+          |                                                    |
+          +----------------------------------------------------+
+
+
+Before we get into the details and constraints of each level, we need to set some common ground:
+
+* Every hotspot joining the network starts at the first level.
+* Every successive level is granted the priviledges of all previous levels.
+* Organic network growth allows hotspots to get to level 3A. In order to reach level 4, the owner must stake HNT.
+* There is a path to get to level 3B from level 1 via on-chain governance mechanism (TBD).
 
 ### Level I: Getting on the network
 
