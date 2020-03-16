@@ -169,7 +169,7 @@ encompasses all the benefits and constraints of the lower Levels (with a few exc
 - A hotspot must satisfy the below minimum criteria to enter Level 2:
     * It must be a Level 1 hotspot for X number of blocks.
     * Issue an `assert_location` transaction by incurring a $40 USD data credit burn fee.
-    * Witness sufficient number of PoC challenges involving Level 3 hotspots.
+    * Witness sufficient number of PoC challenges involving Level 3 and above hotspots.
 - A hotspot at Level 2 gains access to participate in PoC challenges (become a member in the PoC path).
 
 ### Level 3: Gaining PoC challenge priviledges
@@ -180,7 +180,7 @@ Level 3 is divided into two broad categories:
 
 - A hotspot must satisfy the below minimum criteria to enter Level 3A:
     * It must be a Level 2 hotspot for X number of blocks.
-    * Successfully participate in X number of PoC challenges involving other Level 3 hotspots.
+    * Successfully participate in X number of PoC challenges involving other Level 3 and above hotspots.
     * A successful challenge comprises of the hotspot being able to receive a PoC packet from a Level 3 hotspot,
       successfully decrypt it and successfully transmit it to a Level 2 or above hotspot.
 - A hotspot at Level 3A gains access to construct PoC challenges.
