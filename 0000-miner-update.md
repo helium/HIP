@@ -12,11 +12,13 @@ It also excludes the non-miner-related bits of the Hotspot firmware image which
 Helium will solely continue to update using our existing nextgate/nexthaul
 client-server mechanism.
 
-This feature can be enabled in one of two ways: image overlays or Docker images.
-The first method requires users to stand up and run their own OTA servers (aka
-minerhaul) for deploying their own custom miner packages from a cloud storage
-service like AWS S3. The second approach requires users to stand up and maintain
-their own Docker registries to store and distribute their own custom miner images.
+This feature can be enabled in one of three ways: image overlays, Docker images
+or OCI images. The first method requires users to stand up and run their own OTA
+servers (aka minerhaul) for deploying their own custom miner packages from a
+cloud storage service like AWS S3. The second and third approaches require users
+to publish images to a container registry like AWS ECR in order to store and
+distribute their own custom miner images. OCI images are Docker-compatible but
+can also run on more lightweight tooling like bubblewrap.
 
 # Motivation
 [motivation]: #motivation
@@ -80,14 +82,25 @@ running on a newly-launched AWS EC2 instance. A new minerhaul OTA server will
 need to be open sourced and client-side scripts will need to be added to
 nextgate to download and apply miner updates.
 
-Another solution is to package miner releases in Docker containers for
-deployment to and execution on Hotspots. Instead of pointing their Hotspots at
-alternative minerhaul servers Hotspot owners would instead point them at
-alternative Docker registries. A miner package maintainer uses Docker push
-commands to publish new miner images to her registry. Hotspots use Docker pull
-commands to fetch new miner images from their designated registries. A Docker
-runtime and client-side scripts will need to be added to nextgate for automatic
-teardown and setup of miner images on the Hotspots.
+Another solution is to package miner releases as Docker images for deployment to
+and execution on Hotspots. Instead of pointing their Hotspots at alternative
+minerhaul servers Hotspot owners would instead point them at alternative Docker
+registries. A miner package maintainer uses Docker push commands to publish new
+miner images to her registry. Hotspots use Docker pull commands to fetch new
+miner images from their designated registries. A Docker runtime and client-side
+scripts will need to be added to nextgate for automatic teardown and setup of
+miner images on the Hotspots.
+
+The third and most promising solution is to package miner releases as OCI images
+for deployment to and execution on Hotspots. OCI images are published to
+container registries the same way Docker images are. An OCI image can be mounted
+and booted on a Hotspot using a containerization tool known as bubblewrap. A
+multilayered OCI approach is being adopted for containerization of cloud miners.
+This layering allows us to build an arm64 slim container that only contains the
+cross-compiled NIFs and BEAM bytecode files needed to populate /opt/miner. We
+would untar or mount this slim container through the needed system paths into
+the bubblewrap environment. Like the preceding image overlay approach this OCI
+image approach depends on a full Erlang/OTP runtime already being installed.
 
 The only way to configure a consumer Hotspot right now is through Helium's
 mobile app. That means some write-only characteristics (MinerUpdateSourceUrl,
@@ -126,8 +139,8 @@ miner updates.
 
 - Why is this design the best in the space of possible designs?
 
-The two miner update designs being considered can be retrofitted on top of our
-existing consumer Helium Hotspots.
+The three miner update designs being considered can all be retrofitted on top of
+our existing consumer Helium Hotspots.
 
 - What other designs have been considered and what is the rationale for not
 choosing them?
