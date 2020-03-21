@@ -24,9 +24,16 @@ By defining things this way, we can keep the data calculations very simple for
 network users, while also protecting against simple ways to move additional
 data "for free".
 
-In addition, we propose to round up DC costs. Therefore, if I transmit a DataUp
-frame with 55 bytes: `55/24.0 ~= 2.3 DCs => 3 DCs` burned on behalf of the
-Hotspot delivering the packet.
+Meanwhile, for network operators, there may be some confusion as "bytes on 
+[LoRaWAN] air" do not match 1:1 bytes over the Internet backhaul. Radio packet
+context is communicated (frequency, spreading factor, FCnt, etc). And should
+the miner be colocated on the Hotspot, the message delivery protocol between
+Miner and the Router/Network Server will create additional overhead.
+
+Finally, we do propose to round up DC costs; in a way this does mitigate this
+point above. Therefore, if I transmit a DataUp frame with 55 bytes: 
+   `55/24.0 ~= 2.3 DCs => 3 DCs`
+burned on behalf of the Hotspot delivering the packet.
 
 # Motivation
 [motivation]: #motivation
