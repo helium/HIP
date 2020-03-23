@@ -124,7 +124,7 @@ introduce "Levels of Trust".
 
 ## Current Network Behavior
 
-In the current network, onboarding a Helium Inc manufactured Hotspot grants full Proof-of-Coverage priviledges. 
+In the current network, onboarding a Helium Inc manufactured Hotspot grants full Proof-of-Coverage priviledges.
 
 As mentioned in the problem defintion, we cannot assume that every single DIY hotspot is going to incorporate a GPS chip
 or a radio chip.  Malicious enttities may try to game the system by tweaking/removing hardware and yet be able to
@@ -141,23 +141,23 @@ Below is a visual representation of the aforementioned Levels, the most importan
 encompasses all the benefits and constraints of the lower Levels (with a few exceptions).
 
 
-                                                        +------------+
-                                                        |            |
-                                                +------>+  Level 3A  +---------+
-                                                |       |            |         |
-    +-----------+         +-----------+         |       +------------+         |         +-----------+
-    |           |         |           |         |                              |         |           |
-    |  Level 1  +-------->+  Level 2  +-------->+                              +-------->+  Level 4  |
-    |           |         |           |         |                              |         |           |
-    +-----+-----+         +-----------+         |       +------------+         |         +-----------+
-          |                                     |       |            |         |
-          |                                     +------>+  Level 3B  +---------+
-          |                                             |            |
-          |                                             +------+-----+
-          |                                                    ^
-          |                                                    |
-          |                                                    |
-          +----------------------------------------------------+
+                                                        +-----------------------------+
+                                                        |                             |
+                                                  +---->+          Level 3A           +----+
+                                                  |     |    (Organic Challenger)     |    |
+    +--------------+       +---------------+      |     |                             |    |      +-----------------------+
+    |              |       |               |      |     +-----------------------------+    |      |                       |
+    |   Level 1    +------>+   Level 2     +------+                                        +----->+        Level 4        |
+    |  (Observer)  |       | (Participant) |      |                                        |      | (Consensus Candidate) |
+    |              |       |               |      |     +----------------------------+     |      |                       |
+    +---------+----+       +---------------+      |     |                            |     |      +-----------------------+
+              |                                   |     |          Level 3B          |     |
+              |                                   +---->+   (Governance Challenger)  +-----+
+              |                                         |                            |
+              |                                         +-----------------+----------+
+              |                                                           ^
+              |                                                           |
+              +-----------------------------------------------------------+
 
 
 Before we get into the details and constraints of each level, we need to set some common ground:
@@ -167,7 +167,7 @@ Before we get into the details and constraints of each level, we need to set som
 * Organic network growth allows hotspots to get to level 3A. In order to reach level 4, the owner must stake HNT.
 * There is a path to get to level 3B from level 1 via on-chain governance mechanism (TBD).
 
-### Level I: Getting on the network
+### Level I: Network Observer
 
 - Every hotspot which joins the helium network starts at Level 1 by issuing an `add_gateway` transaction.
 - The entry fee is set to burning data credits worth $10 USD.
@@ -176,7 +176,7 @@ Before we get into the details and constraints of each level, we need to set som
   be confident about its claim of location by analyzing its witness list.
 - A hotspot at Level 1 is allowed to transmit data and earn HNT based only on transmitting network data.
 
-### Level 2: Asserting location on the network
+### Level 2: Network Participant
 
 - A hotspot must satisfy the below minimum criteria to enter Level 2:
     * It must be a Level 1 hotspot for X number of blocks.
@@ -184,11 +184,11 @@ Before we get into the details and constraints of each level, we need to set som
     * Witness sufficient number of PoC challenges involving Level 3 and above hotspots.
 - A hotspot at Level 2 gains access to participate in PoC challenges (become a member in the PoC path).
 
-### Level 3: Gaining PoC challenge priviledges
+### Level 3: Network Challenger
 
 Level 3 is divided into two broad categories:
 
-#### Level 3A: Organic network growth
+#### Level 3A: Organic Network Challenger
 
 - A hotspot must satisfy the below minimum criteria to enter Level 3A:
     * It must be a Level 2 hotspot for X number of blocks.
@@ -197,7 +197,7 @@ Level 3 is divided into two broad categories:
       successfully decrypt it and successfully transmit it to a Level 2 or above hotspot.
 - A hotspot at Level 3A gains access to construct PoC challenges.
 
-#### Level 3B: On-chain governance
+#### Level 3B: Governance Network Challenger
 
 - A hotspot must satisfy the below minimum criteria to enter Level 3B:
     * It must be a Level 1 hotspot for X number of blocks.
@@ -205,7 +205,7 @@ Level 3 is divided into two broad categories:
       countersigns the `assert_location` transaction on the hotspot owner's behalf.
 - A hotspot at Level 3B gains access to construct PoC challenges.
 
-### Level 4: Consensus candidacy
+### Level 4: Consensus Candidates
 
 - A hotspot must satisfy the below minimum criteria to enter Level 4:
     * It must be a Level 3 hotspot for X number of blocks.
@@ -216,8 +216,29 @@ Level 3 is divided into two broad categories:
 ## Level Demotion
 
 With the exception of Level 3B and Level 4 hotspots, any hotspot belonging to other levels is susceptible to level
-demotion governed by the hotspot's score. If the score for a hotspot drops by X for Y blocks, it will be demoted down to
-one previous level.
+demotion governed by the hotspot's score.
+
+
+### Level 4 to Level 3A
+
+TBD
+
+### Level 3A to Level 2
+
+A hotspot operating at Level 3A may get demoted to Level 2 and lose challenger priviledges if its score continually
+drops below a chain-var configured threshold for X number of blocks.
+
+### Level 2 to Level 1
+
+* A hotspot operating at Level 2 may get demoted to Level 1 and lose challenging priviledges if its score continually
+drops below a chain-var configured threshold for X number of blocks.
+
+* Once this happens, the hotspot would lose its asserted location via an `unassert_location` transaction and would go
+  back to observer mode.
+
+* The hotspot owner must issue an `assert_location` and incur the onboarding fee to get back onto the network and
+  qualify for Level 2 and above organic network growth.
+
 
 # Drawbacks
 [drawbacks]: #drawbacks
@@ -239,8 +260,11 @@ TBD
 # Deployment Impact
 [deployment-impact]: #deployment-impact
 
-We need to ensure we transition the existing hotspots on the network in a meaningful way. Whether every single existing
+1. We need to ensure we transition the existing hotspots on the network in a meaningful way. Whether every single existing
 hotspot goes into the same level or not is yet to be determined.
+
+2. We would also need to determine which hotspots qualify for Level 4 access as we need an initial pool of consensus
+  members candidates which would continue to miner the blocks once this HIP goes live in production.
 
 # Success Metrics
 [success-metrics]: #success-metrics
