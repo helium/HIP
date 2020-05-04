@@ -1,38 +1,45 @@
-- Start Date: <!-- fill me in with today's date, YYYY-MM-DD -->
+- Start Date: 2020-02-18
 - HIP PR: <!-- leave this empty -->
 - Tracking Issue: <!-- leave this empty -->
 
 # Summary
 [summary]: #summary
 
-One paragraph explanation of the proposal.
+LongFi is not a full protocol from the ground up, but instead a blockchain layer on top of LoRaWAN. This allows any off-the-shelf LoRaWAN device to connect to the Helium network if you can update its AppKey and AppEui.
 
 # Motivation
 [motivation]: #motivation
 
-Why are we doing this? What use cases does it support? What problems does it
-solve? What is the expected outcome?
+There are many LoRaWAN compatible devices already out there and LoRaWAN already has many desirable protocol features (ACK, downlink, FCC certified, international definition). In order to accelerate adoption of the Helium network and to lower technical barriers, LongFi is no longer a distinct protocol from LoRaWAN but instead a layering of some blockchain components on top of LoRaWAN. 
+
 
 # Stakeholders
 [stakeholders]: #stakeholders
 
-* Who is affected by this HIP?
-
-* How are we soliciting feedback on this HIP from these stakeholders? Note that
-  they may not be watching the HIPs repository or even aren't directly active in
-  the Rust Async Ecosystem working group.
+* LoRaWAN device users
 
 # Detailed Explanation
 [detailed-explanation]: #detailed-explanation
 
-- Introduce and explain new concepts.
+This initial implementation of LongFi on LoRaWAN focuses on a single method of end-device activation: Over-the-Air Activation (OTAA). Activation by Personalization (ABP) is currently not supported.
 
-- It should be reasonably clear how the proposal would be implemented.
+In OTAA, DevEUI, AppEUI, and AppKey are all the LoRaWAN primitives used in the Join Request. The LongFi primitives of OUI and Device_ID are mapped into AppEUI:
 
-- Provide representative examples that show how this proposal would be commonly
-  used.
+```
+___________________________________________
+|             AppEui (32 bit)              |
 
-- Corner cases should be dissected by example.
+| OUI (16 bit)       | Device_ID (16 bit)  |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+```
+
+The AppEui (unique device identifier) and AppKey are used to accomplish a join, at which point the device is assigned a netid, a devaddr, and arkey, and nwkey
+07:53:01.544 -> netid: 3302728
+07:53:01.544 -> devaddr: 1000000
+07:53:01.544 -> artKey: E8-FB-23-2B-CA-41-D4-32-E0-F5-54-24-5F-FC-8A-DF
+07:53:01.544 -> nwkKey: C3-E6-6F-B-B1-84-1E-4A-79-6F-27-E-E9-74-D6-3B
+07:53:01.544 -> 733431: EV_TXCOMPLETE (includes waiting for RX windows)
+
 
 # Drawbacks
 [drawbacks]: #drawbacks
