@@ -20,7 +20,7 @@ solve? What is the expected outcome?
 
 * How are we soliciting feedback on this HIP from these stakeholders? Note that
   they may not be watching the HIPs repository or even aren't directly active in
-  the Rust Async Ecosystem working group.
+  the Helium Community Slack channels.
 
 # Detailed Explanation
 [detailed-explanation]: #detailed-explanation
