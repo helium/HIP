@@ -14,15 +14,20 @@ LoRaWAN/MAC header, and the MAC Payload, FOpts and FRMPayload there are several
 ways of deciding how to meter bytes.
 
 This proposal here is to charge for **FOpts** and **FRMPayload** exclusively,
-but to charge 1 DC per Join uplink and 1 DC per Join-Accept downlink.
+but to charge 1 DC per Join uplink and 1 DC per Join-Accept downlink. In
+addition, any packet up or down will cost at
+least 1 DC.
 
-FOpts are fifteen optional bytes used almost exclusiveely for MAC Commands.
+FOpts are fifteen optional bytes used almost exclusively for MAC Commands.
 
 FRMPayload are essentially the application data.
 
 By defining things this way, we can keep the data calculations very simple for
 network users, while also protecting against simple ways to move additional
 data "for free".
+
+Finally, the minimum charge of 1 DC for any packet assures that ACK packets
+are not free despite having potentially empty FOpt or FRMPayload fields. 
 
 Meanwhile, for network operators, there may be some confusion as "bytes on 
 [LoRaWAN] air" do not match 1:1 bytes over the Internet backhaul. Radio packet
