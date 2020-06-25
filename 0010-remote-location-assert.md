@@ -42,7 +42,7 @@ The Helium blockchain engineering team.
 
 ## Implement a new transaction, `assert_location_v2`, and optionally deprecate the previous `assert_location_v1`
 
-This new transaction would require the owner's private key, hotspot public key and lat/long coords of the new desired location. It would be submitted to the blockchain to replace the hotspot's existing location, and charge the same assert fee (in DC) as `assert_location_v1`.
+This new transaction would require the owner's private key, hotspot public key and h3 index of the new desired location. It would replace the hotspot's existing location, and charge the same assert fee (in DC) as `assert_location_v1`.
 
 ## Create a simple UI for asserting hotspot location in the Helium mobile app
 
@@ -67,13 +67,6 @@ Not making this change could deter current and future owners from making remote 
 Hotspot owners could be upset if they aren't able to update a far-away hotspot before the GPS assertion check is enforced and they lose their earnings until they can access it.
 
 It will generally reduce operational friction, and friction in the community.
-
-# Unresolved Questions
-[unresolved]: #unresolved-questions
-
-Are there any security, privacy or other implications of allowing location to be remotely asserted with only the account holder's private key and not the hotspot's signature?
-
-How will this be implemented? (Seriously, I don't know Erlang, help!) (...but I will do my best if nobody can help get this done quickly)
 
 # Deployment Impact
 [deployment-impact]: #deployment-impact
