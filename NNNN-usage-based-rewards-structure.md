@@ -22,7 +22,7 @@ On-the-record comments should be made on this HIP's {{to be made}}.
 [detailed-explanation]: #detailed-explanation
 
 ## Adjusted Reward Structure
-There would be three components to the reward structure. Including establishing the $0.0001 reward for DC transmission, setting a per hotspot per epoch cap and redistributing the rewards.
+There would be three components to the reward structure. Including establishing the maximum reward of $0.0001 per DC transmission (i.e. 1:10 reward), setting a per hotspot per epoch cap and redistributing the rewards.
 
 
 ### Establishing a $0.0001 reward for DC transmission
