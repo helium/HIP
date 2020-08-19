@@ -46,7 +46,7 @@ It would instead be in the networks best interest to grow the coverage footprint
 
 ## A new scheme
 
-Instead of issuing 32.5% HNT to the DC group regardless of how much data is transferred, I propose that we instead issue *up to* 32.5% of the HNT to that group. The HNT should be rewarded at a 1:1.1 rate with the value of DC delivered through that Hotspot, until the amount of DC being transferred over the network exceeds the 32.5% of HNT (1,625,000) at which point it should be distributed proportionally. The remainder of the unspent rewards shold be distributed pro-rata to the PoC Challengers, Witnesses, and Challengees to further encourage network growth
+Instead of issuing 32.5% HNT to the DC group regardless of how much data is transferred, I propose that we instead issue *up to* 32.5% of the HNT to that group. The HNT should be rewarded at a 1:1 rate with the value of DC delivered through that Hotspot, until the amount of DC being transferred over the network exceeds the 32.5% of HNT (1,625,000) at which point it should be distributed proportionally. The remainder of the unspent rewards shold be distributed pro-rata to the PoC Challengers, Witnesses, and Challengees to further encourage network growth
 
 To illustrate, here are a a couple of scenarios:
 
