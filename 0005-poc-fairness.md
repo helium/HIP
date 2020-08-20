@@ -7,7 +7,7 @@
 
 Proof of coverage challenge participation rewards are too concentrated for the top few hotspots. This has led to a concentration of mining rewards which are not ideal for the proliferation of the Helium Network. 
 
-I propose that we cap the number of challenges any given hotspot can participate in during a single Epoch. 
+I propose that we cap the number of challenges any given hotspot can rewarded for participating in during a single Epoch. 
 
 # Motivation
 [motivation]: #motivation
