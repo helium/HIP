@@ -30,15 +30,15 @@ On-the-record comments should be made on this HIP's [associated GitHub issue](ht
 
 On the Helium network new HNT is created at a rate of approximately 5 million HNT per month. This is a fixed number always emitted by the network every month, and it is distributed to stakeholders in the Helium network as follows:
 
-|                 | %     | HNT      |
-|-----------------|-------|----------|
-| PoC Challengers | 0.95  | 47,500   |
-| PoC Witnesses   | 8.55  | 427,500  |
-| Poc Challengees | 18    | 900,000  |
-| Consensus Group | 6     | 300,000  |
-| Data Credits    | 32.5  | 1,625,000|
-| HST Holders     | 34    | 1,700,000|
-| Total           | 100   | 5,000,000|
+|                 | %      | HNT       |
+|-----------------|--------|-----------|
+| PoC Challengers |   0.95 |    47,500 |
+| PoC Witnesses   |   8.55 |   427,500 |
+| Poc Challengees |  18.00 |   900,000 |
+| Consensus Group |   6.00 |   300,000 |
+| Data Credits    |  32.50 | 1,625,000 |
+| HST Holders     |  34.00 | 1,700,000 |
+| Total           | 100.00 | 5,000,000 |
 
 The problem with this scheme, as the Helium Community has very clearly articulated over the last several days, is that if there is insufficient natural Data Credit demand the 32.5% of tokens is actually acting as a disincentive to continue to grow the network. There is an enormous arbitrage opportunity, as sensor owners can buy Data Credits cheaply and reap an enormously inversely proportional reward. The most extreme example on the network today is a specific Hotspot which has earned approximately $21,000 worth of HNT by purchasing $145 worth of DC.
 
@@ -66,15 +66,15 @@ In this scenario the monthly allocation would look like this:
 
 * The HNT oracle price is still $2. 400,000,000,000 DC is transferred across the network. Because this amount of DC exceeds the value of the 1,625,000 HNT allocated to DC it is not possible to distribute rewards on a 1:1 basis, so the Hotspots who did the work receive a proportional share of the 1,625,000 HNT. Because the amount of DC spent exceeds the 32.5% allocation, the rewards table looks like as it does today:
 
-|                 | %     | HNT      |
-|-----------------|-------|----------|
-| PoC Challengers | 0.95  | 47,500   |
-| PoC Witnesses   | 8.55  | 427,500  |
-| Poc Challengees | 18    | 900,000  |
-| Consensus Group | 6     | 300,000  |
-| Data Credits    | 32.5  | 1,625,000|
-| HST Holders     | 34    | 1,700,000|
-| Total           | 100   | 5,000,000|
+|                 | %      | HNT       |
+|-----------------|--------|-----------|
+| PoC Challengers |   0.95 |    47,500 |
+| PoC Witnesses   |   8.55 |   427,500 |
+| Poc Challengees |  18.00 |   900,000 |
+| Consensus Group |   6.00 |   300,000 |
+| Data Credits    |  32.50 | 1,625,000 |
+| HST Holders     |  34.00 | 1,700,000 |
+| Total           | 100.00 | 5,000,000 |
 
 ## The outcome of the new scheme
 
