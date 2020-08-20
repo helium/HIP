@@ -54,15 +54,15 @@ To illustrate, here are a a couple of scenarios:
 
 In this scenario the monthly allocation would look like this:
 
-|                 | %     | HNT      |
-|-----------------|-------|----------|
-| PoC Challengers | 1.924 | 96,249   |
-| PoC Witnesses   | 18.627| 931,325  |
-| Poc Challengees | 39.123| 1,956,218|
-| Consensus Group | 6     | 300,000  |
-| Data Credits    | 0.001 | 50       |
-| HST Holders     | 34    | 1,700,000|
-| Total           | 100   | 5,000,000|
+|                 | %        | HNT       |
+|-----------------|----------|-----------|
+| PoC Challengers |   2.0727 |   103,635 |
+| PoC Witnesses   |  18.6542 |   932,710 |
+| Poc Challengees |  39.2721 |   193,605 |
+| Consensus Group |   6.0000 |   300,000 |
+| Data Credits    |   0.0010 |        50 |
+| HST Holders     |  34.0000 | 1,700,000 |
+| Total           | 100.0000 | 5,000,000 |
 
 * The HNT oracle price is still $2. 400,000,000,000 DC is transferred across the network. Because this amount of DC exceeds the value of the 1,625,000 HNT allocated to DC it is not possible to distribute rewards on a 1:1 basis, so the Hotspots who did the work receive a proportional share of the 1,625,000 HNT. Because the amount of DC spent exceeds the 32.5% allocation, the rewards table looks like as it does today:
 
