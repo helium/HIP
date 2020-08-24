@@ -21,5 +21,5 @@ If you have questions or feedback, please ask in [#helium-improvement-proposals 
 | 7  | [Process for managing Helium Improvement Proposals](https://github.com/helium/HIP/blob/a2e5561c9cacdd93c970f99029947895693d5aac/0007-managing-hip-process.md) | [Discussion](https://github.com/helium/HIP/issues/26) |
 | 8  | [LoRaWAN packet routing](https://github.com/helium/HIP/blob/c2f3ce61466b003731bb967959ca8b6e7706fca5/0008-lorawan-routing.md) | [Draft](https://github.com/helium/HIP/pull/9) |
 | 9  | [Ensuring trust for non-Helium hotspots](https://github.com/helium/HIP/blob/7b715a0614d4c529144e1d6c0083ee8b38c05b29/0009-non-helium-hotspots.md) | [Draft](https://github.com/helium/HIP/pull/15) |
- 10  | [Proportional reward scheme for data transfers](https://github.com/helium/HIP/blob/master/0010-usage-based-data-transfer-rewards.md) | Approved |
+ 10  | [Proportional reward scheme for data transfers](https://github.com/helium/HIP/blob/master/0010-usage-based-data-transfer-rewards.md) | Deployed |
 
