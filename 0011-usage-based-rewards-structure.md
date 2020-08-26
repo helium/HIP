@@ -1,8 +1,8 @@
 # Usage-based Data Transfer Rewards
 
 - Start Date: 2020/08/19
-- HIP PR: HIP11 
-- Tracking Issue: [Link](https://github.com/helium/HIP/issues/34)
+- Original HIP PR: [#33](https://github.com/helium/HIP/pull/33)
+- Tracking Issue: [#34](https://github.com/helium/HIP/issues/34)
 - Author: @JMFayal
 
 
