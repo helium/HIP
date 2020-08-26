@@ -1,3 +1,5 @@
+# HIP12: Remote Location Assert
+
 - Start Date: 2020-06-18
 - Original HIP PR: https://github.com/helium/HIP/pull/30
 - Tracking Issue: https://github.com/helium/HIP/issues/39
