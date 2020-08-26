@@ -15,7 +15,7 @@ If you have questions or feedback, please ask in [#helium-improvement-proposals 
 | 1  | [Longfi and LoRaWAN](https://github.com/helium/HIP/blob/master/0001-longfi-and-lorawan.md) | Deployed |
 | 2  | [Sign miner](https://github.com/helium/HIP/blob/master/0002-sign-miner.md) | Deployed |
 | 3  | [Over-the-air miner upates](https://github.com/helium/HIP/blob/master/0003-miner-update.md) | Deployed |
-| 4  | [Expensing Data Credits for LoRaWAN Traffic](https://github.com/helium/HIP/blob/master/0004-expensing-data-credits-for-lorawan.md) | Merged |
+| 4  | [Expensing Data Credits for LoRaWAN Traffic](https://github.com/helium/HIP/blob/master/0004-expensing-data-credits-for-lorawan.md) | Deployed |
 | 5  | [PoC fairness/epoch challenge limit](https://github.com/helium/HIP/blob/master/0005-poc-fairness.md) | [In Discussion](https://github.com/helium/HIP/issues/24) |
 | 6  | [Ramp-up period for data transfer rewards](https://github.com/helium/HIP/blob/master/0006-reward-ramp-for-packets.md) | [Closed](https://github.com/helium/HIP/pull/20) |
 | 7  | [Process for managing Helium Improvement Proposals](https://github.com/helium/HIP/blob/master/0007-managing-hip-process.md) | [In Discussion](https://github.com/helium/HIP/issues/26) |
