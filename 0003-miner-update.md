@@ -1,3 +1,5 @@
+# HIP3: Over-the-air miner updates
+
 - Start Date: 2020-02-13
 - HIP PR: #3
 - Tracking Issue: #5318

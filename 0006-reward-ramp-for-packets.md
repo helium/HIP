@@ -1,3 +1,5 @@
+# HIP6: Ramp-up period for data transfer rewards
+
 - Start Date: May 21 2020
 - HIP PR: 
 - Tracking Issue: 
@@ -5,7 +7,7 @@
 # Summary
 [summary]: #summary
 
-Data Packets are already transferring on the network. Once the price oracle is in place, users will be able too burn HNT and generate Data Credits, use DC to send packets on the network, and Hotspots routing those packets will earn a reward in the form of HNT.
+Data Packets are already transferring on the network. Once the price oracle is in place, users will be able to burn HNT and generate Data Credits, use DC to send packets on the network, and Hotspots routing those packets will earn a reward in the form of HNT.
 This share is expected to be 30% of HNT per month, which is a large amount and can be easily gamed. 
 
 This proposal is to recommend a ramp up to 30% over a period of time to prevent undesirably gaming behaviour.

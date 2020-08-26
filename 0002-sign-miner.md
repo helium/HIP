@@ -1,3 +1,5 @@
+# HIP2: Sign miner
+
 - Start Date: 2020-02-10
 - HIP PR: #2
 - Tracking Issue: #5318

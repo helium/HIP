@@ -1,5 +1,4 @@
-
-# Managing Helium Improvement Proposals
+# HIP7: Managing Helium Improvement Proposals
 
 - Start Date: 2020/05/28 
 - HIP PR: _TBD_ 

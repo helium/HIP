@@ -1,5 +1,4 @@
-
-# Usage-based Data Transfer Rewards
+# HIP10: Usage-based Data Transfer Rewards
 
 - Start Date: 2020/08/18 
 - HIP PR: [#31](https://github.com/helium/HIP/pull/31)

@@ -1,3 +1,5 @@
+# HIP1: Longfi and LoRaWAN
+
 - Start Date: 2020-02-18
 - HIP PR: [#10](https://github.com/helium/HIP/pull/10)
 

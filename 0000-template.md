@@ -1,3 +1,5 @@
+# HIP Template
+
 - Start Date: <!-- fill me in with today's date, YYYY-MM-DD -->
 - HIP PR: <!-- leave this empty -->
 - Tracking Issue: <!-- leave this empty -->

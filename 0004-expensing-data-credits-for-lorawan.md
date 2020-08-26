@@ -1,3 +1,5 @@
+# HIP4: Expensing data credits for LoRaWAN traffic
+
 - Start Date: 2020-02-26
 - HIP PR: <!-- leave this empty -->
 - Tracking Issue: <!-- leave this empty -->
