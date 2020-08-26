@@ -1,6 +1,6 @@
 - Start Date: 2020-06-18
-- HIP PR: <!-- leave this empty -->
-- Tracking Issue: <!-- leave this empty -->
+- Original HIP PR: https://github.com/helium/HIP/pull/30
+- Tracking Issue: https://github.com/helium/HIP/issues/39
 
 # Summary
 [summary]: #summary
