@@ -1,6 +1,7 @@
 # HIP NN: Consensus Group Challenges
 
 - Start Date: 2020-08-31
+- Author: [@evanmcc](https://github.com/evanmcc)
 - HIP PR: <!-- leave this empty -->
 - Tracking Issue: <!-- leave this empty -->
 
