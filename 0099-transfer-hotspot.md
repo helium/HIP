@@ -2,7 +2,7 @@
 
 - Start Date: 2020-09-22
 - Original HIP PR: [#42](https://github.com/helium/HIP/pull/42)
-- Author: [@abhay](https://github.com/abhay)
+- Author: [@mrallen1](https://github.com/mrallen1), [@abhay](https://github.com/abhay)
 - HIP Number: `TODO`
 - Tracking Issue: `TODO`
 
@@ -41,7 +41,7 @@ This new transaction would require two parties to sign the transaction in order 
 
 ## Implement the transaction in the helium-wallet client
 
-`TODO`
+The [Helium Wallet CLI](https://github.com/helium/helium-wallet-rs) currently supports exporting a partially completed transaction as either a QR code or a Base64-encoded text blob. Either of these formats would be useful for competing the transaction. 
 
 ## Implement the transfer UI in the Helium app
 
