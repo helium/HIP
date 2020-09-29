@@ -24,4 +24,4 @@ If you have questions or feedback, please ask in [#helium-improvement-proposals 
 | 10 | [Proportional reward scheme for data transfers](https://github.com/helium/HIP/blob/master/0010-usage-based-data-transfer-rewards.md) | Deployed |
 | 11 | [Amendment to proportional data transfer reward scheme](https://github.com/helium/HIP/blob/master/0011-usage-based-rewards-structure.md) | [In Discussion](https://github.com/helium/HIP/issues/34) |
 | 12 | [Remote location assertion](https://github.com/helium/HIP/blob/master/0012-remote-location-assert.md) | [In Discussion](https://github.com/helium/HIP/issues/39) |
-| 13 | [Transfer hotspot](https://github.com/helium/HIP/blob/master/0013-transfer-hotspot.md) | [Draft](https://github.com/helium/HIP/issues) |
+| 13 | [Transfer hotspot](https://github.com/helium/HIP/blob/master/0013-transfer-hotspot.md) | [In Discussion](https://github.com/helium/HIP/issues/43) |
