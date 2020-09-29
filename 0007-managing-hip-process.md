@@ -1,9 +1,9 @@
 # HIP7: Managing Helium Improvement Proposals
 
 - Start Date: 2020/05/28 
-- HIP PR: _TBD_ 
-- Tracking Issue: _TBD_ 
-- Author: [@jamiew](https://github.com/jamiew)
+- Original HIP PR: [#22](https://github.com/helium/HIP/pull/22)
+- Tracking Issue: [#26](https://github.com/helium/HIP/issues/26)
+- Authors: [@jamiew](https://github.com/jamiew)
 
 
 # Summary
