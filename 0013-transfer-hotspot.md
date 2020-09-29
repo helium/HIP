@@ -1,10 +1,10 @@
-# HIPxx: Transfer Hotspot
+# HIP13: Transfer Hotspot
 
 - Start Date: 2020-09-22
 - Original HIP PR: [#42](https://github.com/helium/HIP/pull/42)
 - Author: [@mrallen1](https://github.com/mrallen1), [@abhay](https://github.com/abhay)
-- HIP Number: `TODO`
-- Tracking Issue: `TODO`
+- HIP Number: 13
+- Tracking Issue: [#43](https://github.com/helium/HIP/issues/43)
 
 # Summary
 [summary]: #summary
