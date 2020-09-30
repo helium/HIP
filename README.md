@@ -6,7 +6,7 @@ _"How a bill becomes a law"_
 
 More details on process and how to participate can be found in HIP7, ["A Process For Managing Helium Improvement Proposals"](https://github.com/helium/HIP/blob/master/0007-managing-hip-process.md).
 
-If you have questions or feedback, please ask in [#helium-improvement-proposals in the community Slack](https://chat.helium.com/).
+If you have questions or feedback, please ask in [#hips in the community Discord](https://discord.gg/helium).
 
 ## Index of proposals
 
