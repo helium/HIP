@@ -119,11 +119,12 @@ Resources:
 #### How to submit a pull request:
 
 1. Fork this repository (e.g. using the GitHub "Fork" button top-right) and checkout your fork
-2. For making changes to the Running PR, all you need to do is make the changes to your fork and then skip to **step 5**.
-3. If your HIP is an Orignial HIP, add your file using the next available number in the existing filename convention, e.g. `0004-data-credits.md`
-4. The status of all inital PR will be *Draft*
-5. Commit your changes (`git commit [filename] -m "Description of your changes"`) and push them to your fork (`git push origin master`)
-6. Submit your change as a [pull request](https://github.com/helium/hip/pulls)
+2. Create a branch prior to adding your new HIP
+3. For making changes to the Running PR, all you need to do is make the changes to your HIP in the branch and then skip to **step 5**.
+4. If your HIP is an Orignial HIP, add your file using the next available number in the existing filename convention, e.g. `xxxx-your-hip-shortname.md`
+5. The status of all inital PR will be *Draft*
+6. Commit your changes (`git commit [filename] -m "Description of your changes"`) and push them to your fork (`git push origin master`)
+7. Submit your change as a [pull request](https://github.com/helium/hip/pulls)
 
 Within a reasonable timeframe after you've submitted your PR, a HIP Editor will review your pull request. 
 
