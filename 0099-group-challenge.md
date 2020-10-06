@@ -1,4 +1,4 @@
-# HIP NN: Consensus Group Challenges
+# HIP 17: Consensus Group Challenges
 
 - Start Date: 2020-08-31
 - Author: [@evanmcc](https://github.com/evanmcc)
@@ -9,7 +9,7 @@
 [summary]: #summary
 
 The current need to have challenges come from Hotspots limits the ability of lighter nodes to be productive members of the network.
-Some slower machines might still have good antennas and internet connections and could be "light nodes" that do not keep a chain, but still retain the ability to participate in PoC challenges.
+Some slower machines, or those with minimal storage, might still have good antennas and internet connections and could be "light nodes" that do not keep a chain, but still retain the ability to participate in PoC challenges.
 This proposal is to work through enabling these nodes by moving the challenge and receipt process onto the consensus group, which would presumably be made up of more powerful nodes that have the full chain.
 
 # Motivation
@@ -24,7 +24,7 @@ Having lighter gateways will allow people to participate more cheaply, since the
 
 **Who is affected by this HIP?**
 
-Everyone who uses or in the future might want to use the network.
+Everyone who uses or in the future might want to use the network.  Allowing people to use cheaper hardware as gateways should allow more rapid expansion of the network.
 
 **How are we soliciting feedback on this HIP from these stakeholders?**
 
@@ -35,31 +35,37 @@ This HIP process, initially the community, and reaching out to commercial partne
 
 ## Overview
 
-Currently, all Hotspots are required to validate the full chain block by block in order to participate in the PoC process.
-The run both sides of it, issuing challenges at regular intervals and then gathering up the replies.
+Currently, all Hotspots are required to validate the chain block by block in order to participate in the PoC process.
+They then run both sides of it, issuing challenges at regular intervals and then gathering up the replies.
 This works well enough currently, but requires some heavy work on the side of the challenging spot, and requires the presence of an up-to-date chain in several places.
+Additionally it puts a lot of pressure on the p2p network to keep important information in sync, as stale addresses are a common cause of failures.
 The first iteration of this change would add a new type of gateway that is a member of the p2p mesh but does not have access to the chain except via API calls to external services.
 These nodes would be expected to listen for challenge requests delivered from the consensus group via p2p and then execute them in a timely manner.
 These p2p request paths could include both light and full nodes.
-Challenges would instead come from members of the consensus group, who would divide up the responsibilities for communicating these requests amongst themselves (see the section on [request generation](#request-generation) for more details).
+Challenges would instead come from members of the consensus group, who would divide up the responsibilities for communicating these requests amongst themselves (see the section on [request origination](#request-origination) for more details).
 The members of the group would also keep track of the hops and witnesses much like current miner nodes.
 They would then submit, along with their regular transaction proposals, either a normal receipt or a [voting transaction](#voting-transactions) depending on what design we decide on.
 
 ## Challenge Generation
 
-This will likely remain the same as currently, but instead of generating a single challenge, we will generate the entire list of challenges for this particular block, the size of which will be governed by a new algorithm for automatically scaling the number of requests to the size of the network (see [Appendix B](#appendix-b) for details).
-We'll use the same "deterministically random" approach that we use now, just for more iterations.
+This will likely reuse the existing code, but instead of generating a single challenge, we will generate the entire list of challenges for this particular block, the size of which will be governed by a new algorithm for automatically scaling the number of requests to the size of the network (see [Appendix B](#appendix-b) for details).
 Once the list of targets is generated, group members will select a subset of which to construct and deliver requests to.
+This can be tricky, see the next section.
 
+The hard part here is that only the originating node is supposed to know the ephemeral key until the receipts are delivered.
+One approach here is the race approach: the first consensus member to reach a node to make the request "wins", everyone else gets a response that the PoC request has already started.
+Another would be for the nodes to validate the request via some simple math and only accept requests from nodes on their preference list (to prevent all consensus members spamming all of the target nodes all at once.
+There are other options that are substantially more involved if we're seeing bad behavior or think that this needs to be more Byzantine fault-resistant.
 
-## Request Generation
-[request-generation]: #request-generation
+## Request Origination
+[request-generation]: #request-origination
 
-In order to be resistant to byzantine failures, we need to make sure that at least F+1 nodes execute and report on any action.
+In order to be resistant to byzantine failures (which isn't always a firm requirement), we need to make sure that at least F+1 nodes execute and report on any action.
 There are two sides to this: 
  - Delivery: Each PoC participant needs to be able to receive requests over p2p specifying an onion packet.
  The participant needs to keep enough information about this around somewhere to ensure some level of idempotency; so that multiple onion packets aren't constructed and sent.
- - Reporting: Ideally each witness and poc path participant would report so F+1 nodes as well.  We currently do not do this, trusting the challenger to be an honest dealer.
+ This is easy enough, all requests have a single, deterministic PoC request id.
+ - Reporting: Ideally each witness and poc path participant would report to F+1 nodes as well.  We currently do not do this, trusting the challenger to be an honest dealer.
  It's entirely possible to do this in a trusting manner (in which case [voting transactions](#voting-transactions) are not needed), and do something like slashing for consensus members who fail to do their challenges (prompt removal for not signing many/any poc receipts).
  A major complication here is that all witnesses and path members will need to know about everyone that is keeping track of the transaction, which will quite likely be far too many addresses to put into the packet envelope, even in an extremely compressed form.
  We might be able to get around this by identifying the poc transaction by some sort of hash, then having a p2p network metadata query service (see [Appendix A](#appendix-a) for some thoughts on this).
@@ -144,6 +150,6 @@ Each node, despite knowing the size of the network, issues challenges at a unifo
 However, the PoC path length is not 1, so we should  be covering more than one node per challenge on average, which means that the interval should scale more slowly than its current linear scaling.
 The base assumption here is that the entire graph can be seen, effectively, as a tree.
 Since it's a tree, coverage is more accurately calculated via O(n log(k, n)), where k is the average relationship width (here, the median number of witnesses).
-The exact calculation can be covered in a different HIP, but this autoscaling should allow coverage to be more even without overwhelming the group due to linear scaling.The base assumption here is that the entire graph can be seen, effectively, as a tree.
+The exact calculation can be covered in a different HIP, but this auto-scaling should allow coverage to be more even without overwhelming the group due to linear scaling.The base assumption here is that the entire graph can be seen, effectively, as a tree.
 Since it's a tree, coverage is more accurately calculated via O(n log(k, n)), where k is the average relationship width (here, the median number of witnesses).
 The exact calculation can be covered in a different HIP, but this autoscaling should allow coverage to be more even without overwhelming the group due to linear scaling.
