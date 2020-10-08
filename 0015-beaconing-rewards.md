@@ -1,8 +1,10 @@
-# Proposal for Beaconing Rewards
+# HIP15: Beaconing Rewards
 
+- Author: [@Carniverous19](https://github.com/Carniverous19)
 - Start Date: 2020-10-07
-- HIP PR: <!-- leave this empty -->
-- Tracking Issue: <!-- leave this empty -->
+- Category: Technical
+- Original HIP PR: [#49](https://github.com/helium/HIP/pull/49)
+- Tracking Issue: [#51](https://github.com/helium/HIP/issues/51)
 
 # Summary
 [summary]: #summary
