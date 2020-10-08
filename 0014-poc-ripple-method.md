@@ -1,8 +1,8 @@
-# Proof of Coverage - Ripple Method
+# HIP14: Proof of Coverage - Ripple Method
 
 - Start Date: 10/01/2020
-- HIP PR: <!-- leave this empty -->
-- Tracking Issue: <!-- leave this empty -->
+- Initial HIP PR: [#47](https://github.com/helium/HIP/pull/47)
+- Tracking Issue: [#50](https://github.com/helium/HIP/issues/50)
 
 # Summary
 [summary]: #summary
