@@ -9,9 +9,14 @@
 # Summary
 [summary]: #summary
 
-The current Proof-of-Coverage allows for Virtual Machine (VM) farms or hotspot farms that have been engineered to get the maximum return of rewards. This HIP is proposing a completely different way to to determine Proof-of-Coverage than the current method. [PoC Documentation](https://developer.helium.com/blockchain/proof-of-coverage)
+The current Proof-of-Coverage allows for Virtual Machine (VM) farms or hotspot farms that have been engineered to maximize return of rewards without providing benefit to the network.
 
 The current PoC model also rewards those hotspots that are in the most dense part of the network more than the edges. Resulting in over-coverage of those areas and limited expansion to new areas.
+
+This HIP proposes a different method to to determine Proof-of-Coverage, by seperating the network into islands that are based on the geolocation of hotspots and their associated witness lists.
+
+![Initial Pebble Hop](https://github.com/anthonyra/HIP/blob/HIP14/0014-poc-ripple-method/initial.png?raw=true)
+
 
 # Motivation
 [motivation]: #motivation
