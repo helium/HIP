@@ -25,3 +25,4 @@ If you have questions or feedback, please ask in [#hips in the community Discord
 | 11 | [Amendment to proportional data transfer reward scheme](https://github.com/helium/HIP/blob/master/0011-usage-based-rewards-structure.md) | [In Discussion](https://github.com/helium/HIP/issues/34) |
 | 12 | [Remote location assertion](https://github.com/helium/HIP/blob/master/0012-remote-location-assert.md) | [In Discussion](https://github.com/helium/HIP/issues/39) |
 | 13 | [Transfer hotspot](https://github.com/helium/HIP/blob/master/0013-transfer-hotspot.md) | [In Discussion](https://github.com/helium/HIP/issues/43) |
+| 14 | [PoC Ripple Method](https://github.com/helium/HIP/blob/master/0014-poc-ripple-method.md) | [In Discussion](https://github.com/helium/HIP/issues/50) |
