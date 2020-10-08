@@ -14,10 +14,13 @@ This proposal suggests a change to proof-of-coverage (PoC) from multihop to beac
 # Motivation
 [motivation]: #motivation
 
-The first motivation is to eliminate Multi-hop PoC has many flaws both in complexity of implementation and imbalance of rewards.  This proposal wont focus on the flaws with multi-hop PoC because they are fairly well understood and agreed upon.  Some main flaws are complexity of path building and receipt verification, poor path reliability, and uneven challenge rates (and corresponding reward distribution) based on network topology.
+Beaconing with the modified reward structure outlined below does a much better job of rewarding desired coverage.
+The existing PoC method and reward structure heavily rewards transmitters with minimal rewards for receivers while the vast majority of LoRaWAN usage is for unconfirmed uplinks, meaning hotspots mostly receive data.
+This reward structure better rewards real coverage and encourages honest hotspot owners to see maximized rewards as they build towards efficient network topologies.
 
-Secondly, beaconing with the modified reward structure outlined below does a much better job of rewarding desired coverage.  The existing PoC method and reward structure heavily rewards transmitters with minimal rewards for receivers while the vast majority of LoRaWAN usage is for unconfirmed downlinks meaning hotspots mostly receive data.  Rewards should be biased towards hotspots that can receive well.
-
+Beaconing, reardless of reward structures allows the elminination of Multi-hop PoC.  Multihop PoC significantly more complex than beaconing requiring complex path building and path verification, 
+Significant overhread of building long paths that never complete (due to hop reliability being low).  Large payload sizes that are a-typical for many LoRa applications and require higher datarates, etc.
+A lot of implementation complexity is removed with beaconing and those CPU and ledger resources can be re-allocated to more beneficial purposes (like combating gaming/exploitation).
 
 # Stakeholders
 [stakeholders]: #stakeholders
@@ -36,7 +39,7 @@ Beaconing behaves a lot like a single hop of PoC but there is no intended target
 Beacons can be initiated in the same manner as PoC today, where challenger hotspots trigger a hotspot to beacon and gather witness receipts (this works fine if the challenger role is being moved to CG per [Consensus Group PoC Challenges](https://github.com/helium/HIP/pull/41)).
 I assume each active hotspot will be targeted uniformly randomly so on average, each hotspot will be challenged the same number of times.
 
-To determine the rewards given for a beacon I first define a term ***reward unit***.
+To determine the rewards given for a beacon, first define a term ***reward unit***.
 A reward unit is not a defined amount of HNT but a slice of the available PoC rewards for each epoch.
 So, for example if there are 1,000 HNT to be rewarded for PoC activity and there are 100 reward units from all PoC activity, each reward unit will get 10 HNT.
 If there are 5,000 reward units in an epoch, each unit will get 0.2 HNT.
@@ -48,7 +51,7 @@ The formulas below and example plot show how the number of reward units is calcu
 Definitions:
 
  - `w` = Number of witnesses to a transmission
- - `N` = Desired redundancy. `N`+1 hotspots cover an area
+ - `N` = Desired redundancy. `N`+1 hotspots cover an area (transmitter also covers area)
  - `r` = decay rate for additional transmitter reward if `w` > `N`.
  
  Reward formula for Transmitter:
@@ -57,7 +60,7 @@ Definitions:
  
  Reward Formula for each Receiver:
  
- ![image RewardRX formula](./0015-beaconing-rewards/RewardTX_equation.PNG)
+ ![image RewardRX formula](./0015-beaconing-rewards/RewardRX_equation.PNG)
 
 
  A chart showing reward distribution basd on the formulas listed above with example values of `N`=4 and `r`=0.8:
@@ -90,7 +93,7 @@ Overall, this method should encourage greedy transmitters to transmit as powerfu
 Thus each hotspot is motivated to provide as much coverage as possible without over-rewarding redundant coverage.
 This reward structure does a much better job of giving rewards to “good” coverage meaning coverage over many neighboring hotspots and over hotspots without many existing witnesses.
 
-Note I do not specify a maximum number of witnesses but one can be set as desired to limit transaction size and effort required to validate a beacon.
+Note: There is not a maximum number of witnesses but one can set a limit to cap the transaction size and effort required to validate a beacon.
 
 ### Example Reward Distribution
 The following tables list the reward distributed to transmitters and witnesses with example chain variables of `N`=4, `r`=0.8.  Note `r` of 0.8 was chosen so that 10 additional witnesses above `N` is ~0.9 reward credits.
@@ -147,8 +150,8 @@ This table gives examples of beacons with invalid witnesses
 |  Reward per witness |  0.26 | 0.26  | 1.00  | 1.00  |
 |  Total RewardRX issued | 2.65  | 0.53  | 3.00  | 1.00  |
 |  Tx Scale | 10/12 (0.83)  | 2/12 (0.17)  | 3/4 (0.75)  | 1/4 (0.25)  |
-|  RewardTX issued | 1.53  | 0.30  | 0.75  | 0.125  |
-| Total Reward issued | 4.18  | 0.83  | 3.75  | 1.13  |
+|  RewardTX issued | 1.53  | 0.30  | 0.75  | 0.25  |
+| Total Reward issued | 4.18  | 0.83  | 3.75  | 1.25  |
 
 
 # Drawbacks
@@ -160,9 +163,8 @@ Hotspot owners that optimized for the existing algorithm which has been largely 
 Note I think this is a benefit of the change since the existing system did not reward “good” topologies in favor of “dense” topologies.
 It will still cause disruption.
 
-It may appear that beaconing is less secure since there is no multi-level onion packet.
-
-I believe this was false security as it is just as easy to distribute raw data received over LoRa to miners whether that is an onion packet or a pseudorandom payload for beaconing.
+It may appear that beaconing is less secure since there is no multi-level onion packet.  I believe this was false security as it is just as easy to distribute raw data received over LoRa to miners whether that is an onion packet or a pseudorandom payload for beaconing.
+THe multi-level onion packet does not reduce the ability for hotspots to collude, completely virtualize or otherwise lie to increase earnings and in isolated gaming clusters this multihop worked to increase rewards.
 
 Having an intended target chosen from witnesses does not validate the PoC more than simple witnessing.
 
