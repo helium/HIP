@@ -1,6 +1,8 @@
 # HIP14: Proof of Coverage - Ripple Method
 
+- Authors: @anthonyra
 - Start Date: 10/01/2020
+- Category: Technical
 - Initial HIP PR: [#47](https://github.com/helium/HIP/pull/47)
 - Tracking Issue: [#50](https://github.com/helium/HIP/issues/50)
 
