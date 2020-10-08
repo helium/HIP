@@ -14,10 +14,13 @@ This proposal suggests a change to proof-of-coverage (PoC) from multihop to beac
 # Motivation
 [motivation]: #motivation
 
-The first motivation is to eliminate Multi-hop PoC has many flaws both in complexity of implementation and imbalance of rewards.  This proposal wont focus on the flaws with multi-hop PoC because they are fairly well understood and agreed upon.  Some main flaws are complexity of path building and receipt verification, poor path reliability, and uneven challenge rates (and corresponding reward distribution) based on network topology.
+Beaconing with the modified reward structure outlined below does a much better job of rewarding desired coverage.
+The existing PoC method and reward structure heavily rewards transmitters with minimal rewards for receivers while the vast majority of LoRaWAN usage is for unconfirmed uplinks, meaning hotspots mostly receive data.
+This reward structure better rewards real coverage and encourages honest hotspot owners to see maximized rewards as they build towards efficient network topologies.
 
-Secondly, beaconing with the modified reward structure outlined below does a much better job of rewarding desired coverage.  The existing PoC method and reward structure heavily rewards transmitters with minimal rewards for receivers while the vast majority of LoRaWAN usage is for unconfirmed uplinks meaning hotspots mostly receive data.  Rewards should be biased towards hotspots that can receive well.
-
+Beaconing, reardless of reward structures allows the elminination of Multi-hop PoC.  Multihop PoC significantly more complex than beaconing requiring complex path building and path verification, 
+Significant overhread of building long paths that never complete (due to hop reliability being low).  Large payload sizes that are a-typical for many LoRa applications and require higher datarates, etc.
+A lot of implementation complexity is removed with beaconing and those CPU and ledger resources can be re-allocated to more beneficial purposes (like combating gaming/exploitation).
 
 # Stakeholders
 [stakeholders]: #stakeholders
@@ -160,9 +163,8 @@ Hotspot owners that optimized for the existing algorithm which has been largely 
 Note I think this is a benefit of the change since the existing system did not reward “good” topologies in favor of “dense” topologies.
 It will still cause disruption.
 
-It may appear that beaconing is less secure since there is no multi-level onion packet.
-
-I believe this was false security as it is just as easy to distribute raw data received over LoRa to miners whether that is an onion packet or a pseudorandom payload for beaconing.
+It may appear that beaconing is less secure since there is no multi-level onion packet.  I believe this was false security as it is just as easy to distribute raw data received over LoRa to miners whether that is an onion packet or a pseudorandom payload for beaconing.
+THe multi-level onion packet does not reduce the ability for hotspots to collude, completely virtualize or otherwise lie to increase earnings and in isolated gaming clusters this multihop worked to increase rewards.
 
 Having an intended target chosen from witnesses does not validate the PoC more than simple witnessing.
 
