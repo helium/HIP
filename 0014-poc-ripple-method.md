@@ -151,11 +151,11 @@ To be accepted the `Pebble` hotspots chains need to match (but will be mirrored)
 
 #### Ideal `ripple` Illustrations
 
-![Initial Pebble Hop](https://github.com/anthonyra/HIP/blob/HIP14/0014-media/initial.png?raw=true)
+![Initial Pebble Hop](https://github.com/anthonyra/HIP/blob/HIP14/0014-poc-ripple-method/initial.png?raw=true)
 
 Figure 1-1 - Initial pebble hop
 
-![Longest Chain Example](https://github.com/anthonyra/HIP/blob/HIP14/0014-media/longest-chain-example-tall.png?raw=true)
+![Longest Chain Example](https://github.com/anthonyra/HIP/blob/HIP14/0014-poc-ripple-method/longest-chain-example-tall.png?raw=true)
 
 Figure 1-1 - Example of a Longest Chain, which results in a total 6 accepted chains
 
@@ -178,10 +178,10 @@ Hotspot: big-corduroy-jaguar
 
 Location: 8c2a32a0e5669ff
 
-![Current Network View](https://github.com/anthonyra/HIP/blob/HIP14/0014-media/bcj-lone-wolf.png?raw=true)
+![Current Network View](https://github.com/anthonyra/HIP/blob/HIP14/0014-poc-ripple-method/bcj-lone-wolf.png?raw=true)
 Figure 2-1 - The current network view of the target hotspot (big-corduroy-jaguar)
 
-![Ripple Island](https://github.com/anthonyra/HIP/blob/HIP14/0014-media/bcj-island.png?raw=true)
+![Ripple Island](https://github.com/anthonyra/HIP/blob/HIP14/0014-poc-ripple-method/bcj-island.png?raw=true)
 
 Figure 2-2 - The island that the target hotspot occupies
 
