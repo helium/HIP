@@ -55,7 +55,7 @@ Definitions:
  
  Reward Formula for each Receiver:
  
- ![image RewardRX formula](./00NN-beaconing-rewards/RewardTX_equation.PNG)
+ ![image RewardRX formula](./00NN-beaconing-rewards/RewardRX_equation.PNG)
 
 
  A chart showing reward distribution basd on the formulas listed above with example values of `N`=4 and `r`=0.8:
