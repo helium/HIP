@@ -2,7 +2,7 @@
 
 - Start Date: 2020/05/28 
 - Original HIP PR: [#22](https://github.com/helium/HIP/pull/22)
-- Tracking Issue: Pull Request (PR) comments <- This will be left blank for author submit of PR, HIP Editor will specify location ->
+- Tracking Issue: [#26](https://github.com/helium/HIP/issues/26)
 - Authors: [@jamiew](https://github.com/jamiew), [@anthonrya](https://github.com/anthonyra)
 
 - Category: Meta / Process
@@ -25,13 +25,13 @@ As Helium Inc begins to share control over the development and management of the
 
 This document aims to outline a process that is transparent and inclusive while remaining as efficient and pragmatic as possible.
 
-We do not aim to adjudicate routine technical changes to miner software or the day-to-day dealings of Helium Inc. We expect that any change that could have significant impact on the functioning of the Helium Network would be vetted through the HIP process. This will be discussed in more detail below in the categories of HIP.
+We do not aim to adjudicate routine technical changes to miner software or the day-to-day dealings of Helium Systems, Inc. We expect that any change that could have significant impact on the functioning of the Helium Network would be vetted through the HIP process. This will be discussed in more detail below in the categories of HIP.
 
 
 # Stakeholders
 [stakeholders]: #stakeholders
 
-We plan to circulate this proposal in [Discord #hips](https://discord.gg/helium) and on the [Helium community forum](https://community.helium.com). We will also solicit specific individuals for feedback, from both within the Helium community and other crypto and open-source projects. 
+We plan to circulate this proposal in [Discord #hips](https://discord.gg/helium). We will also solicit specific individuals for feedback, from both within the Helium community and other crypto and open-source projects. 
 
 Specifically we aim to achieve rough consensus around this process with Helium Inc (as the primary developer of nearly all core Helium software), hotspot owners, and the newly-formed [DeWi Alliance](https://dewi.org), which plans to commit time & money to community governance in the Helium ecosystem.
 
@@ -178,4 +178,3 @@ Since there relatively few HIPs and no clear members for any given committes, th
 * Who has the ability to deploy changes to the blockchain, and the related responsibility for its uptime?
 * How long should a HIP be allowed to remain in a given state?
 * Should we encourage people just to leave comments on GitHub, rather than trying to track GitHub, Slack and the forum?
-
