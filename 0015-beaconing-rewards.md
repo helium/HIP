@@ -189,13 +189,14 @@ The best way to address this concern is to discount beconing rewards based on so
 [drawbacks]: #drawbacks
 
 This will be a considerable implementation effort to change how PoC are constructed and verified.
-Also, this change to the reward structure may drastically change how rewards are distributed.
+Also, this change to the reward structure may drastically change how rewards are distributed for some hotspots.
 Hotspot owners that optimized for the existing algorithm which has been largely unchanged since Helium’s introduction may find their setups to be suboptimal with the new scheme.
-Note I think this is a benefit of the change since the existing system did not reward “good” topologies in favor of “dense” topologies.
-It will still cause disruption.
+The example topologies show small variations in rewards for most situations.
+There are some improvements to rewarding equal coverage equally but also some potential problems introduced where co-located hotspots may see increased rewards
+This beaconing reward proposal can be supplemented with other methods to account for these over-rewarded topologies.
 
 It may appear that beaconing is less secure since there is no multi-level onion packet.  I believe this was false security as it is just as easy to distribute raw data received over LoRa to miners whether that is an onion packet or a pseudorandom payload for beaconing.
-THe multi-level onion packet does not reduce the ability for hotspots to collude, completely virtualize or otherwise lie to increase earnings and in isolated gaming clusters this multihop worked to increase rewards.
+The multi-level onion packet does not reduce the ability for hotspots to collude, completely virtualize or otherwise lie to increase earnings and in isolated gaming clusters this multihop worked to increase rewards.
 
 Having an intended target chosen from witnesses does not validate the PoC more than simple witnessing.
 
