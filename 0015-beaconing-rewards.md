@@ -153,6 +153,37 @@ This table gives examples of beacons with invalid witnesses
 |  RewardTX issued | 1.53  | 0.30  | 0.75  | 0.25  |
 | Total Reward issued | 4.18  | 0.83  | 3.75  | 1.25  |
 
+### Example Topologies MultiHop vs Beaconing
+Below are five examples to compare how they would be rewarded with the current multihop PoC to this beaconing proposal.  To compare apples to apples, I will call the reward given for a full challenge (RF receive, p2p receipt, RF transmit witnessed) a reward unit for the current multihop PoC.  This is similar to a beacon in the new method.
+
+Note in the current system, the initial target can only earn 2/3 (0.67) of a Reward Unit since it cannot demonstrate the ability to receive RF (it receives over p2p which is not rewarded).
+
+ ![image Topology Examples](./0015-beaconing-rewards/TopologyExamples.svg)
+
+A description of each figure:
+
+ - **Figure (a)**: Two isolated hotspots that can witness only each other.  
+ - **Figure (b)**: a string of five hotspots A-E where the witness relationship is asymmetric.  B can witness A but A cannot witness B, C can witness B but B cannot witness C etc.
+ - **Figure (c)**: this figure is similar to (a) but with 100 hotspots collocated at each position.
+ - **Figure (d)**:  is a ring of 24 hotspots that can all witness each other.  Assume hotspots are still spaced beyond minimum distance to witness.
+ - **Figure (e)**: is six hotspots with a central hotspot A that can hear all other hotspots transmissions and all other hotspots can witness A’s transmissions.  Hotspots B-F cannot witness each other and can only communicate with A.
+ - **Figure (f)**: is a ring of five hotspots where all hotspots can witness each other.
+
+A table of expected rewards for MultiHop PoC (used today) vs this HIPs beaconing rewards
+
+
+| Figure | (a)  | (b)  | (c)  | (d)  | (e)  | (f) |
+|---:|---|---|---|---|---|---|
+| MultiHop Rewards  | A:1.67<br>B:1.67 |  A:0.67, B:1.67<br>C:2.67, D:3.67<br>E:2.67 |  A(ea):1.67<br>B(ea):1.67 |  each:4.67 | A:5.67<br>B:1.67 | A-E:4.67 |
+| Beaconing Rewards  | A:1.25<br>B:1.25 |  A:0.25<br>B-D:1.25<br>E:1.00 |  A(ea):5.00<br>B(ea):5.00 | each:5.00  | A:6.20<br>B:1.01 | A-E:5.00 |
+
+We can see rewards are fairly similar except for two figures **(b)** and **(c)**.
+
+In figure (b) we see how asymetric witnessing may cause rewards to be pushed towards certain hotspots.
+Hotspot D gets roughly 2.2 times hotspot B even though it has identical coverage.
+
+In figure (c) beaconing hotspots earn significantly more than those with multihop PoC.  This is because the bulk of rewards go to witnessing and although there are only two distinct locations, there are enough witnesses to give the transmitter full credit and the witnesses get to split the maximum rewards for receivers per transmission.
+The best way to address this concern is to discount beconing rewards based on some form of density (See *Method for Geographic Based Transmit Reward Scaling* proposal).
 
 # Drawbacks
 [drawbacks]: #drawbacks
