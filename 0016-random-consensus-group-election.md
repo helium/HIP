@@ -1,10 +1,10 @@
-# HIP
+# HIP16: Random Consensus Group (CG) Election
 
-- Author(s): realPaulM
+- Author(s): [@PaulVMo](https://github.com/PaulVMo) (@PaulM on Discord)
 - Start Date: 2020-10-14
 - Category: Economic
-- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
-- Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
+- Original HIP PR: https://github.com/helium/HIP/pull/54
+- Tracking Issue: https://github.com/helium/HIP/issues/55
 
 # Summary
 [summary]: #summary
