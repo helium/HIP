@@ -59,8 +59,11 @@ Additionally, it should be noted that PoC and CG have distinct portions of the H
 ### Alternative: Randomly assign hotspot score
 Equivalent functionality could be achieved by randomly assigning a value to the existing hotspot score. This approach would be simpler to implement than introducing a new CG score attribute. However, this HIP favors introducing a new CG score over modifying the existing hotspot score for a couple reasons. First, it introduces and emphasizes the concept of CG performance being separate and distinct from PoC performance. This will likely be an important concept as the CG is evolved overtime. Second, to the extent that the current hotspot score is useful for hotspots owners who do use it to help optimize their setup (hotspot placement, antenna, etc.), the proposed approach will avoid any impact to them.
 
+### Alternative: Remove score from CG election protocol entirely
+Removing score from the election process entirely could also be used to achieve similar results. Without score to rank hotspots, hotspots would need to be randomly voted on. However, this approach of removing score entirely is contradictory to the goal of creating a path to a CG election protocol that is more representative of CG performance. Additionally, it is possible that the changes to the blockchain required for this alternative are more complex/impactful and thus risky to make than the proposal.
+
 ### Alternative: Create new metric for hotspot CG score
-As noted above, CG performance is dictated by factors such as connectivity and CPU/memory performance. For that reason, the score could be computed based on these factors or past CG membership performance. For expediency of gaining alignment and adoption, this HIP proposes randomly assigning score and deferring a metric-based score for a later HIP. By taking the changes in multiple steps, it enables CG rewards to move toward greater fairness more quickly.
+As noted above, CG performance is dictated by factors such as connectivity and CPU/memory performance. For that reason, the score could be computed based on these factors or past CG membership performance. For expediency of gaining alignment and adoption, this HIP proposes randomly assigning score and deferring a metric-based score for a later HIP. By taking the changes in multiple steps, it enables CG rewards to move toward greater fairness more quickly while preserving the option to implement a more sophisticated metric.
 
 
 # Unresolved Questions
