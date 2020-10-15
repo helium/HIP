@@ -41,6 +41,8 @@ This HIP proposes the following changes to the CG election process:
 
 No other changes to how score and geography is used in elections are to be made as part of this HIP. 
 
+Due to the fact that CG score will be randomly assigned, there is no need to expose at his point to users of the Helium app or Explorer.
+
 # Drawbacks
 [drawbacks]: #drawbacks
 Randomized selection of CG members may lead to unexpected consequences and impact performance of the CG.
