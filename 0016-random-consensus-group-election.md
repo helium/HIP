@@ -52,7 +52,7 @@ Randomized selection of CG members may lead to unexpected consequences and impac
 # Rationale and Alternatives
 [alternatives]: #rationale-and-alternatives
 
-There are several alternatives to solving the core issue identified in HIP: the disconnect between current hotspot score and CG performance. This HIP attempts to balance simplicity of implementation with fairness and providing for a path to a more comprehensive solution. Several alternatives are outlined below.
+There are several alternatives to solving the core issue identified in this HIP: the disconnect between current hotspot score and CG performance. This HIP attempts to balance simplicity of implementation with fairness and providing for a path to a more comprehensive solution. Several alternatives are outlined below.
 
 By not taking up this proposal, CG rewards will continue to add incentive for hotspots to game PoC. Falsely asserting location and other gaming of PoC hurts the quality of the network and hurts honest hotspot owners. While this does not eliminate this gaming, it makes it slightly less profitable and starts to pave the way for a more robust CG approach.
 
