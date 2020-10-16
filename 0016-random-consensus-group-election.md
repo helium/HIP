@@ -1,4 +1,4 @@
-# HIP16: Random Consensus Group (CG) Election
+# HIP16: Remove Score from Consensus Group (CG) Election
 
 - Author(s): [@PaulVMo](https://github.com/PaulVMo) (@PaulM on Discord)
 - Start Date: 2020-10-14
@@ -41,7 +41,7 @@ This HIP proposes the following changes to the CG election process:
 
 No other changes to how score and geography is used in elections are to be made as part of this HIP. 
 
-Due to the fact that CG score will be randomly assigned, there is no need to expose at his point to users of the Helium app or Explorer.
+Due to the fact that CG score will be randomly assigned, there is no need to expose it at this point to users of the Helium app or Explorer.
 
 # Drawbacks
 [drawbacks]: #drawbacks
@@ -52,7 +52,7 @@ Randomized selection of CG members may lead to unexpected consequences and impac
 # Rationale and Alternatives
 [alternatives]: #rationale-and-alternatives
 
-There are several alternatives to solving the core issue identified in this HIP: the disconnect between current hotspot score and CG performance. This HIP attempts to balance simplicity of implementation with fairness and providing for a path to a more comprehensive solution. Several alternatives are outlined below.
+There are several alternatives to solving the core issue identified in HIP: the disconnect between current hotspot score and CG performance. This HIP attempts to balance simplicity of implementation with fairness and providing for a path to a more comprehensive solution. Several alternatives are outlined below.
 
 By not taking up this proposal, CG rewards will continue to add incentive for hotspots to game PoC. Falsely asserting location and other gaming of PoC hurts the quality of the network and hurts honest hotspot owners. While this does not eliminate this gaming, it makes it slightly less profitable and starts to pave the way for a more robust CG approach.
 
