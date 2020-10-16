@@ -1,4 +1,4 @@
-# HIP16: Random Consensus Group (CG) Election
+# HIP16: Remove Score from Consensus Group (CG) Election
 
 - Author(s): [@PaulVMo](https://github.com/PaulVMo) (@PaulM on Discord)
 - Start Date: 2020-10-14
@@ -41,7 +41,7 @@ This HIP proposes the following changes to the CG election process:
 
 No other changes to how score and geography is used in elections are to be made as part of this HIP. 
 
-Due to the fact that CG score will be randomly assigned, there is no need to expose at his point to users of the Helium app or Explorer.
+Due to the fact that CG score will be randomly assigned, there is no need to expose it at this point to users of the Helium app or Explorer.
 
 # Drawbacks
 [drawbacks]: #drawbacks
