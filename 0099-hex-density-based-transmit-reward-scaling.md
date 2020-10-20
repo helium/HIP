@@ -111,7 +111,7 @@ Densty_tgt.  This raises the clipping limit to 2 meaning the total density of th
 A lookup table including clipped and raw hex densities for each occupied hex will need to be built by the consensus group once per epoch or at whatever rate deemed necessary.
 To determine the reward scaling for a given hotspot, iterate through lower and lower resolution hexs taking a product of the clipped / unclipped density per the formula below.
 
-![hotspot scale formula](./0099-hex-density-based-transmit-reward-scaling/hotspot_scale.png)
+![hotspot scale formula](./0099-hex-density-based-transmit-reward-scaling/hotspot_scale.PNG)
 
 Important note, DexDensity_Unclipped is the unclipped sum of clipped child hexs meaning you clip the children, sum them and set the unclipped hex density.  An example of this operation for a specific hotspot is below:
 
@@ -129,7 +129,8 @@ Important note, DexDensity_Unclipped is the unclipped sum of clipped child hexs 
 For this analysis I used the example values for chain variables (N=2, R=8, tgt=1, max=4).
 
 The chart below shows violin plots of the transmit reward scaling for hotspots in larger metro areas or those especially effected by this proposal.
-![hotspot scale formula](./0099-hex-density-based-transmit-reward-scaling/city_violin.png)
+
+![hotspot violin](./0099-hex-density-based-transmit-reward-scaling/city_violin.png)
 
 Additionally, I mapped each interactive hotspot and its reward scale as well as drawing all resolution 8 and resolution 9, and 10 occupied hexs to get more detail on how this targeting will affect hotspots.
 
