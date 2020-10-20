@@ -8,7 +8,12 @@
 
 # Summary
 [summary]: #summary
-
+This HIP suggests an change to PoC rewarding that better rewards areas of coverage.
+This is done by reducing the rewards earned by transmitting or witnessing hotspots in close proximity of eachother.
+The logic here is that very little additional coverage is demonstrated by being able to witness multiple hotspots that are 
+co-located or in close proxmity of eachother.
+On the other hand, being able to witness many hotspots that are in distinct locations demonstrates a hotspot is providing a large area of coverage.
+This is in contrast to the current PoC reward structure where transmitters and high density areas see a significant portion of PoC rewards.
 
 
 # Motivation
@@ -27,14 +32,16 @@ You can also see some dense urban areas such as SF and NYC have a very high dens
 # Stakeholders
 [stakeholders]: #stakeholders
 
-* Who is affected by this HIP?
+All hotspot owners or potential owners will be effected by this HIP as it affects the method by which earnings are calculated for all proof-of-coverage based rewards.
+Owners or Patreons who have setup hotspots to optimize for the existing PoC method and reward structure may be especially affected.
 
-* How are we soliciting feedback on this HIP from these stakeholders? Note that
-  they may not be watching the HIPs repository or even aren't directly active in
-  the Helium Community Slack channels.
+Additionally the Helium development team will have considerable work implementing the proposed algorithms on the blockchain.
+
+Due to the nature of the change, its likely an app push notification, engineering blog post, and other social media outreach may be needed to ensure effected stakeholders are notified and can voice support or concerns.
 
 # Detailed Explanation
 [detailed-explanation]: #detailed-explanation
+The following subsctions describe the reward scaling methodology and implementation.
 
 ## Definitions:
 To better describe the proposal, I will introduce some terms and variable names.
@@ -107,7 +114,7 @@ Densty_tgt.  This raises the clipping limit to 2 meaning the total density of th
 
 **Example 4**: There are now 7 occupied hexs.  Since the Density_max is set to 4 times target density, the new threshold is  Density_max or 4 even though the parent occupancy is 5 hexs above N.  We can also see how such a dense parent is affected by its siblings in the same manner, if the siblings of the parent are not sufficiently occupied then the density of the parent is clipped. 
 
-#### Determing Transmit Reward Scaling for a Hotspot
+#### Determining Transmit Reward Scaling for a Hotspot
 A lookup table including clipped and raw hex densities for each occupied hex will need to be built by the consensus group once per epoch or at whatever rate deemed necessary.
 To determine the reward scaling for a given hotspot, iterate through lower and lower resolution hexs taking a product of the clipped / unclipped density per the formula below.
 
@@ -178,66 +185,58 @@ There are two topologies from the “motivation” section that show an area wit
 |:---:|:---:|
 | ![modesto scaling](./0099-hex-density-based-transmit-reward-scaling/example_rew_3a.png) | ![austin scaling](./0099-hex-density-based-transmit-reward-scaling/example_rew_3b.png) |
 
-
-We can see that although the per-hex earnings do go up, they only see a 35-65% increase vs 2,000% increase with existing PoC or a PoC reward structure that does not take density into account.  
+We can see that although the per-hex earnings do go up with increased density, they only see a 35-65% increase vs 2,000% increase with existing PoC or a PoC reward structure that does not take density into account.  
 
 #### Lessons From Examples
 Hopefully these examples demonstrate that transmit reward scaling factor does not fully describe earnings, and the way to increase earnings is to provide coverage to as many hexes (or just general area) as possible, especially hex’s without a large amount of coverage already. 
 
+
 # Drawbacks
 [drawbacks]: #drawbacks
 
-- Why should we *not* do this?
+This proposal will drastically effect earnings across the board as it is a significant change to how earnings are calculated and distributed.  There wil be many hotspots in dense areas that will see significantly reduced earnings.
+
+This method also does not consider first movers to an area who are penalized for over-density just as much as newcomers.  I think this is appropriate as from the device perspective, all coverage is equal.
+Additionally if a new hotspot can be deployed in a more optimal location that makes many existing hotspots redunant, what is healthiest for the network is if the old hotspots move to more ideal locations, not to discourage placement of hoptsots that offer better coverage than existing deployments. 
+
+This proposal is also a considerable development effort requiring a change in reward calculation, new code to determine hex densities, etc.
 
 # Rationale and Alternatives
 [alternatives]: #rationale-and-alternatives
 
-This is your chance to discuss your proposal in the context of the whole design
-space. This is probably the most important section!
+This design is a step towards rewarding areas of coverage and encouraging network breadth (spreading out) as well as depth (redundant coverage).
+There are many other methods that can reward this type of coverage with different levels of accuracy or effort.
 
-- Why is this design the best in the space of possible designs?
-
-- What other designs have been considered and what is the rationale for not
-  choosing them?
-
-- What is the impact of not doing this?
+Some alternatives are:
+ - manually assign reward weights to each hex based on seperately determined value of each area.  This requires a lot of manual work to determine appropriate rewards per area and will cause a lot of pushback as each hex is debated.
+ - Increase fidelity of density calculation by not relying on hexs and using more direct density measurements.  Each hotspot can be modeled as a gaussian to determine density, or heuristics from real-world observations can determine the information gained by each hotspots transmission compared to their neighbor and scale rewards accordingly
+ - Ideal density can be encouraged by adjusting staking fees according to local density.  One problem with this method is the density assessment can only be evaluated once.
 
 # Unresolved Questions
 [unresolved]: #unresolved-questions
 
-- What parts of the design do you expect to resolve through the HIP process
-  before this gets merged?
+Integrating this design with a beaconing / receive focused reward structure is required.
+This could be HIP 15 or an alternative.
 
-- What parts of the design do you expect to resolve through the implementation
-  of this feature?
+Tuning of the chain variables, specifically per H3 resolution target and maximum densities.  Initial analysis shows that scaling target/max densities linearly with area means only the highest resolution thresholds actually apply. 
+Its suggested to consider a set of (N, Density_tgt, Density_max) for atleast resolution 8-3.
 
-- What related issues do you consider out of scope for this HIP that could be
-  addressed in the future independently of the solution that comes out of this
-  HIP?
+Tuning of these variables allows a lot of flexibility in how rewards are distributed and periodic updates may be required.
+
+This proposal does not directly effect gaming and methods for discouraging hotspots to lie about their location or the coverage they provided is needed to supplement this proposal which is meant to encourage healthy growth of the nework by honest hotspots.
+By penalizing density, this proposal encourages hotspots to spread out which may make some anti-gaming methods more affective.
 
 # Deployment Impact
 [deployment-impact]: #deployment-impact
 
-Describe how this design will be deployed and any potential imapact it may have on
-current users of this project.
+This method will need to be deployed along with or soon after Beaconing.  It assumes an existing reward structure that biases PoC rewards towards receivers vs transmitters.
+One such method is described in [HIP 15](https://github.com/helium/HIP/blob/master/0015-beaconing-rewards.md).
+This deployment will effect all hotspot owners.  Current hotspot owners will likely see a significant change in earnings (either up or down) based on the new reward methodology.
+It will also require significant documentation update on how proof-of-coverage is performed and rewarded.
 
-- How will current users be impacted?
-
-- How will existing documentation/knowlegebase need to be supported?
-
-- Is this backwards compatible?
-
-        - If not, what is the procedure to migrate?
 
 # Success Metrics
 [success-metrics]: #success-metrics
 
-What metrics can be used to measure the success of this design?
+Success will be determined if rewards encourage breadth and depth of coverage resulting a faster buildout of a ubuiquitous, redundant and reliable network.
 
-- What should we measure to prove a performance increase?
-
-- What should we measure to prove an improvement in stability?
-
-- What should we measure to prove a reduction in complexity?
-
-- What should we measure to prove an acceptance of this by it's users?
