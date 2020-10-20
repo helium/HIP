@@ -27,3 +27,4 @@ If you have questions or feedback, please ask in [#hips in the community Discord
 | 13 | [Transfer hotspot](https://github.com/helium/HIP/blob/master/0013-transfer-hotspot.md) | [In Discussion](https://github.com/helium/HIP/issues/43) |
 | 14 | [PoC Ripple Method](https://github.com/helium/HIP/blob/master/0014-poc-ripple-method.md) | [In Discussion](https://github.com/helium/HIP/issues/50) |
 | 15 | [Beaconing Rewards](https://github.com/helium/HIP/blob/master/0015-beaconing-rewards.md) | [In Discussion](https://github.com/helium/HIP/issues/51) |
+| 16 | [Random Consensus Group Elections](https://github.com/helium/HIP/blob/master/0016-random-consensus-group-election.md) | [In Discussion](https://github.com/helium/HIP/issues/55) |
