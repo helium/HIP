@@ -149,7 +149,7 @@ The interactive map can be found: https://carniverous19.github.io/para1_geohip_U
 
 | Modesto, CA  |  Austin, TX  |
 |:---:|:---:|
-| ![modesto scaling](./0099-hex-density-based-transmit-reward-scaling/nyc_scaling.png) | ![austin scaling](./0099-hex-density-based-transmit-reward-scaling/austin_scaling.png) |
+| ![modesto scaling](./0099-hex-density-based-transmit-reward-scaling/modesto_scaling.png) | ![austin scaling](./0099-hex-density-based-transmit-reward-scaling/austin_scaling.png) |
 
 ### How Transmit Reward Scaling is Used
 Its very important to understand that this is not a reward scaling for ALL rewards a hotspot will receive, it is scaling for a specific transmission and it effects the witnesses and transmitter.
