@@ -28,4 +28,4 @@ If you have questions or feedback, please ask in [#hips in the community Discord
 | 14 | [PoC Ripple Method](https://github.com/helium/HIP/blob/master/0014-poc-ripple-method.md) | [In Discussion](https://github.com/helium/HIP/issues/50) |
 | 15 | [Beaconing Rewards](https://github.com/helium/HIP/blob/master/0015-beaconing-rewards.md) | [In Discussion](https://github.com/helium/HIP/issues/51) |
 | 16 | [Random Consensus Group Elections](https://github.com/helium/HIP/blob/master/0016-random-consensus-group-election.md) | [In Discussion](https://github.com/helium/HIP/issues/55) |
-| 17 | [Hex Density-based Transmit Reward Scaling](https://github.com/helium/HIP/issues/60) | [In Discussion](https://github.com/helium/HIP/issues/60) |
+| 17 | [Hex Density-based Transmit Reward Scaling](https://github.com/helium/HIP/blob/master/0017-hex-density-based-transmit-reward-scaling.md) | [In Discussion](https://github.com/helium/HIP/issues/60) |
