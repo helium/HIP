@@ -8,17 +8,19 @@
 
 # Summary
 [summary]: #summary
-This HIP suggests an change to PoC rewarding that better rewards areas of coverage.
-This is done by reducing the rewards earned by transmitting or witnessing hotspots in close proximity of eachother.
-The logic here is that very little additional coverage is demonstrated by being able to witness multiple hotspots that are
-co-located or in close proxmity of eachother.
+This HIP suggests a change to PoC rewarding to better rewards areas of coverage.
+This is done by reducing the rewards earned by transmitting or witnessing hotspots in close proximity to each other.
+
+Very little additional coverage is demonstrated by being able to witness multiple hotspots that are  co-located or in close proximity to each other.
 On the other hand, being able to witness many hotspots that are in distinct locations demonstrates a hotspot is providing a large area of coverage.
-This is in contrast to the current PoC reward structure where transmitters and high density areas see a significant portion of PoC rewards.
+This is in contrast to the current PoC reward structure, where transmitters and high density areas see a significant portion of PoC rewards.
 
 
 # Motivation
 [motivation]: #motivation
-Rewards are dominated by PoC activity (challenge and witness) with the growth of interest in Helium and the number of hotspots coming online, it’s important that rewards encourage “optimal” hotpsot deployment and density.  The current PoC, which rewards all challenge hops equally and targets hotspots roughly uniformly, does not account for density.  For example, you could have 5 hotspots in unique locations all >300m apart and able to do a PoC path.  This is healthy, but someone could place multiple hotspots at each of these locations and they will, multiply their earnings.
+Rewards are dominated by PoC activity (challenge and witness). With the growth of interest in Helium and the number of hotspots coming online, it’s important that rewards encourage “optimal” hotspot deployment and density.  The current PoC, which rewards all challenge hops equally and targets hotspots roughly uniformly, does not account for density.
+
+For example, you could have 5 hotspots in unique locations all >300m apart and able to do a PoC path.  This is healthy, but someone could place multiple hotspots at each of these locations and they will multiply their earnings.
 
 ![image Initial Topology Example](./0099-hex-density-based-transmit-reward-scaling/initial_topo_example.svg)
 
@@ -26,7 +28,6 @@ Rewards are dominated by PoC activity (challenge and witness) with the growth of
 The two topologies shown above cover an equal area with coverage.  The topology on the right will have each hex targeted 20 times as often as the topology on the left and earn around 20 times the reward.  This is undesirable behavior as the increased reward is not going to providing any meaningful increase in coverage.
 
 You can also see some dense urban areas such as SF and NYC have a very high density of hotspots.  These areas may be over-saturated and if not, will likely reach over saturation with the number of hotspots coming online and hotspot-based reward targeting overly benefiting dense areas.
-
 
 
 # Stakeholders
@@ -38,6 +39,7 @@ Owners or Patreons who have setup hotspots to optimize for the existing PoC meth
 Additionally the Helium development team will have considerable work implementing the proposed algorithms on the blockchain.
 
 Due to the nature of the change, its likely an app push notification, engineering blog post, and other social media outreach may be needed to ensure effected stakeholders are notified and can voice support or concerns.
+
 
 # Detailed Explanation
 [detailed-explanation]: #detailed-explanation
