@@ -1,10 +1,10 @@
-# Hex Density Based Transmit Reward Scaling
+# HIP17: Hex Density Based Transmit Reward Scaling
 
-- Author(s): <!-- your GitHub @username -->
-- Start Date: <!-- fill me in with today's date, YYYY-MM-DD -->
-- Category: <!-- economic, technical, meta -->
-- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
-- Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
+- Author: [@Carniverous19](https://github.com/Carniverous19)
+- Start Date: 2020-10-20
+- Category: Technical
+- Original HIP PR: [#59](https://github.com/helium/HIP/pull/59)
+- Tracking Issue: [#60](https://github.com/helium/HIP/issues/60)
 
 # Summary
 [summary]: #summary
