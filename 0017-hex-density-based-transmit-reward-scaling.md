@@ -22,7 +22,7 @@ Rewards are dominated by PoC activity (challenge and witness). With the growth o
 
 For example, you could have 5 hotspots in unique locations all >300m apart and able to do a PoC path.  This is healthy, but someone could place multiple hotspots at each of these locations and they will multiply their earnings.
 
-![image Initial Topology Example](./0099-hex-density-based-transmit-reward-scaling/initial_topo_example.svg)
+![image Initial Topology Example](./0017-hex-density-based-transmit-reward-scaling/initial_topo_example.svg)
 
 
 The two topologies shown above cover an equal area with coverage.  The topology on the right will have each hex targeted 20 times as often as the topology on the left and earn around 20 times the reward.  This is undesirable behavior as the increased reward is not going to providing any meaningful increase in coverage.
@@ -90,8 +90,8 @@ The density limit follows the following criteria:
 
 |  |    |
 |---:|:---|
-|  **Occupied Count** | ![image n formula](./0099-hex-density-based-transmit-reward-scaling/n_formula.PNG)  |
-| **Hex Density Limit** |  ![image limit formula](./0099-hex-density-based-transmit-reward-scaling/limit_formula.PNG)  |
+|  **Occupied Count** | ![image n formula](./0017-hex-density-based-transmit-reward-scaling/n_formula.PNG)  |
+| **Hex Density Limit** |  ![image limit formula](./0017-hex-density-based-transmit-reward-scaling/limit_formula.PNG)  |
 |   |
 
 Example thresholds for N=2, Density_tgt = 1
@@ -104,7 +104,7 @@ Example Topologies, assume we are looking at R=8, N=2, Density_tgt=1, Density_ma
 
 | Example 1  | Example 2  | Example 3  | Example 4  |
 |:---:|:---:|:---:|:---:|
-| ![1 Hex occupied](./0099-hex-density-based-transmit-reward-scaling/example_1_hex.svg)  | ![1 Hex occupied](./0099-hex-density-based-transmit-reward-scaling/example_2_hex.svg)  | ![1 Hex occupied](./0099-hex-density-based-transmit-reward-scaling/example_3_hex.svg)  | ![1 Hex occupied](./0099-hex-density-based-transmit-reward-scaling/example_7_hex.svg)  |
+| ![1 Hex occupied](./0017-hex-density-based-transmit-reward-scaling/example_1_hex.svg)  | ![1 Hex occupied](./0017-hex-density-based-transmit-reward-scaling/example_2_hex.svg)  | ![1 Hex occupied](./0017-hex-density-based-transmit-reward-scaling/example_3_hex.svg)  | ![1 Hex occupied](./0017-hex-density-based-transmit-reward-scaling/example_7_hex.svg)  |
 | parent density=1  | parent density=2  | parent density=5  | parent density=7, 14, 16  |
 
 **Example 1**: there is one occupied hex that has 5 interactive hotspots in it.  Since this is the only occupied hex among its children, its count is limited to Density_tgt which is 1.
@@ -120,7 +120,7 @@ Densty_tgt.  This raises the clipping limit to 2 meaning the total density of th
 A lookup table including clipped and raw hex densities for each occupied hex will need to be built by the consensus group once per epoch or at whatever rate deemed necessary.
 To determine the reward scaling for a given hotspot, iterate through lower and lower resolution hexs taking a product of the clipped / unclipped density per the formula below.
 
-![hotspot scale formula](./0099-hex-density-based-transmit-reward-scaling/hotspot_scale.PNG)
+![hotspot scale formula](./0017-hex-density-based-transmit-reward-scaling/hotspot_scale.PNG)
 
 Important note, DexDensity_Unclipped is the unclipped sum of clipped child hexs meaning you clip the children, sum them and set the unclipped hex density.  An example of this operation for a specific hotspot is below:
 
@@ -139,7 +139,7 @@ For this analysis I used the example values for chain variables (N=2, R=8, tgt=1
 
 The chart below shows violin plots of the transmit reward scaling for hotspots in larger metro areas or those especially effected by this proposal.
 
-![hotspot violin](./0099-hex-density-based-transmit-reward-scaling/city_violin.png)
+![hotspot violin](./0017-hex-density-based-transmit-reward-scaling/city_violin.png)
 
 Additionally, I mapped each interactive hotspot and its reward scale as well as drawing all resolution 8 and resolution 9, and 10 occupied hexs to get more detail on how this targeting will affect hotspots.
 
@@ -147,11 +147,11 @@ The interactive map can be found: https://carniverous19.github.io/para1_geohip_U
 
 | Manhattan, NY  |  San Fransisco, CA  |
 |:---:|:---:|
-| ![myc scaling](./0099-hex-density-based-transmit-reward-scaling/nyc_scaling.png) | ![sf scaling](./0099-hex-density-based-transmit-reward-scaling/sf_scaling.png) |
+| ![myc scaling](./0017-hex-density-based-transmit-reward-scaling/nyc_scaling.png) | ![sf scaling](./0017-hex-density-based-transmit-reward-scaling/sf_scaling.png) |
 
 | Modesto, CA  |  Austin, TX  |
 |:---:|:---:|
-| ![modesto scaling](./0099-hex-density-based-transmit-reward-scaling/modesto_scaling.png) | ![austin scaling](./0099-hex-density-based-transmit-reward-scaling/austin_scaling.png) |
+| ![modesto scaling](./0017-hex-density-based-transmit-reward-scaling/modesto_scaling.png) | ![austin scaling](./0017-hex-density-based-transmit-reward-scaling/austin_scaling.png) |
 
 ### How Transmit Reward Scaling is Used
 Its very important to understand that this is not a reward scaling for ALL rewards a hotspot will receive, it is scaling for a specific transmission and it effects the witnesses and transmitter.
@@ -166,7 +166,7 @@ The Topology below is taken from real-world transmit scaling factors.  The norma
 
 | Topology  | Reward Distribution  |
 |---|---|
-| ![ex 1 topo](./0099-hex-density-based-transmit-reward-scaling/example_topo_1.png)  |  ![ex 2 topo](./0099-hex-density-based-transmit-reward-scaling/example_rew_1.png) |
+| ![ex 1 topo](./0017-hex-density-based-transmit-reward-scaling/example_topo_1.png)  |  ![ex 2 topo](./0017-hex-density-based-transmit-reward-scaling/example_rew_1.png) |
 
 This is an over-simplification of real-word data, but we can see that although D-H have a transmit reward scale of less than ¼ those of A, B, C they only see a 20% reduction in earnings compared to A-C.  This is because they can all witness A-C’s transmissions earning a large chunk of rewards for those witnesses.
 
@@ -175,7 +175,7 @@ Here we look at a slightly more complex topology.  Same beaconing reward method.
 
 | Topology  | Reward Distribution  |
 |---|---|
-| ![ex 2 topo](./0099-hex-density-based-transmit-reward-scaling/example_topo_2.png)  |  ![ex 2 topo](./0099-hex-density-based-transmit-reward-scaling/example_rew_2.png) |
+| ![ex 2 topo](./0017-hex-density-based-transmit-reward-scaling/example_topo_2.png)  |  ![ex 2 topo](./0017-hex-density-based-transmit-reward-scaling/example_rew_2.png) |
 
 
 Based on this example we can see D and E earn the most even though they have half the transmit reward scaling factor as F and G.  A earns the least but it can only witness hotspots with low reward scaling factor and in proximity.  It is not providing significantly less coverage than D or E and the coverage it is providing is already well saturated.
@@ -185,7 +185,7 @@ There are two topologies from the “motivation” section that show an area wit
 
 | 1 hotspot per Hex  |  20 hotspots per Hex  |
 |:---:|:---:|
-| ![modesto scaling](./0099-hex-density-based-transmit-reward-scaling/example_rew_3a.png) | ![austin scaling](./0099-hex-density-based-transmit-reward-scaling/example_rew_3b.png) |
+| ![modesto scaling](./0017-hex-density-based-transmit-reward-scaling/example_rew_3a.png) | ![austin scaling](./0017-hex-density-based-transmit-reward-scaling/example_rew_3b.png) |
 
 We can see that although the per-hex earnings do go up with increased density, they only see a 35-65% increase vs 2,000% increase with existing PoC or a PoC reward structure that does not take density into account.
 
