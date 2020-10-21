@@ -2,14 +2,14 @@
 
 - Author(s): [@PaulVMo](https://github.com/PaulVMo) (@PaulM on Discord)
 - Start Date: 2020-10-14
-- Category: Economic
+- Category: Economic, Technical
 - Original HIP PR: https://github.com/helium/HIP/pull/54
 - Tracking Issue: https://github.com/helium/HIP/issues/55
 
 # Summary
 [summary]: #summary
 
-Changes to the election process for Consensus Group (CG) members to make all active hotspots equally likely to be selected to the CG instead of the current functionality that favors hotspots with a higher hotspot score.
+Changes to the election process for Consensus Group (CG) members to make all active hotspots equally likely to be selected to the CG instead of the current functionality that favors hotspots with a higher hotspot PoC-based score.
 
 # Motivation
 [motivation]: #motivation
@@ -34,12 +34,11 @@ Currently, Consensus Group election are based on two major factors: score and ge
 
 This HIP proposes the following changes to the CG election process:
 - Score will no longer be considered.
-- A value between 0.0 and 1.0 will be randomly assigned for each active (defined as having a recent request) gateway.  This will replace the score in the selection process.
-- Score for deselection will also be assigned at random.
+- Active hotspots will be randomized and score will not be taken into account for potential election into the Consensus Group.
+- Current members of the Consensus Group will be randomly deselected as well.
+- Geography will continue to be used to prevent hotspots in the same area to be elected to the Consensus Group (no changes).
 
-No other changes to how score and geography is used in elections are to be made as part of this HIP. 
-
-Due to the fact that CG score will be randomly assigned, there is no need to expose it to users of the Helium app or Explorer.  We will consider removing score from the app and Explorer pending a full rework of the mechanism.
+Due to the fact that CG selection will be randomly assigned, there is no need to expose it to users of the Helium app or Explorer.  We will consider removing score from the app and Explorer pending a full rework of the mechanism.
 
 # Drawbacks
 [drawbacks]: #drawbacks
@@ -70,11 +69,11 @@ As noted above, CG performance is dictated by factors such as connectivity and C
 # Deployment Impact
 [deployment-impact]: #deployment-impact
 
-Due to the introduction of a new attribute, CG score, this change will need to be deployed with the help of a chain variable (i.e. deploy blockchain changes and then later set the `election_version` chain variable to enable it).
+Due to the introduction of a new selection criteria for Consensus Group election, this change will need to be deployed with the help of a chain variable (i.e. deploy blockchain changes and then later set the `election_version` chain variable to enable it).
 
 Once active, the new election process should apply to new CG members only. Existing members at the time of the implementation will remain in the CG and be removed over time as per the existing logic which targets to keep 12 of 16 members and remove the rest. The replacement members from the time of the implementation of this HIP would then be elected as per this proposal.
 
-Existing documentation describing the hotspot score should be updated to reflect the addition of CG score and how it is used in CG group election.
+Existing documentation describing the hotspot score should be removed.
 
 # Success Metrics
 [success-metrics]: #success-metrics
