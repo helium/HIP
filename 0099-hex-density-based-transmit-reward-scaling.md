@@ -10,7 +10,7 @@
 [summary]: #summary
 This HIP suggests an change to PoC rewarding that better rewards areas of coverage.
 This is done by reducing the rewards earned by transmitting or witnessing hotspots in close proximity of eachother.
-The logic here is that very little additional coverage is demonstrated by being able to witness multiple hotspots that are 
+The logic here is that very little additional coverage is demonstrated by being able to witness multiple hotspots that are
 co-located or in close proxmity of eachother.
 On the other hand, being able to witness many hotspots that are in distinct locations demonstrates a hotspot is providing a large area of coverage.
 This is in contrast to the current PoC reward structure where transmitters and high density areas see a significant portion of PoC rewards.
@@ -62,7 +62,7 @@ This could also be an array of hex resolutions corresponding to each entry in de
 
 **Occupied Hex**: hex where at least one interactive_hotspot is present.  This can apply to any resolution of interest.  It also implies that if we know a certain hex is occupied, all parents of that hex up to resolution 0 are also occupied.
 
-**Hex Whitelist**: a list of hex’s that are eligible for rewards, these could be specified at any level but in general should be as low a resolution (largest area) as possible.  If this feature is not desired, you can assume all resolution 0 hexs are in the whitelist.  This would be a chain variable. 
+**Hex Whitelist**: a list of hex’s that are eligible for rewards, these could be specified at any level but in general should be as low a resolution (largest area) as possible.  If this feature is not desired, you can assume all resolution 0 hexs are in the whitelist.  This would be a chain variable.
 
 ## Algorithm
 
@@ -72,7 +72,7 @@ A brief summary is that rewards for transmitting hotspots and witnesses to trans
 
 ### Getting interactive and losing interactive status
 
-There are many conditions that can be placed on hotspots before they are classified as “interactive”.  As a minimum they need to have an assert_location transaction and must be able to transmit with valid witnesses (300m+ distance, valid metadata, etc).  
+There are many conditions that can be placed on hotspots before they are classified as “interactive”.  As a minimum they need to have an assert_location transaction and must be able to transmit with valid witnesses (300m+ distance, valid metadata, etc).
 
 A hotspot should lose the status of interactive if its transmissions no longer have valid witness(es).  This can be a count of unwitnessed transmission or a period of blocks where the most recent witness must be within that range of blocks (something like 10 times the expected transmission period).
 
@@ -105,14 +105,14 @@ Example Topologies, assume we are looking at R=8, N=2, Density_tgt=1, Density_ma
 | ![1 Hex occupied](./0099-hex-density-based-transmit-reward-scaling/example_1_hex.svg)  | ![1 Hex occupied](./0099-hex-density-based-transmit-reward-scaling/example_2_hex.svg)  | ![1 Hex occupied](./0099-hex-density-based-transmit-reward-scaling/example_3_hex.svg)  | ![1 Hex occupied](./0099-hex-density-based-transmit-reward-scaling/example_7_hex.svg)  |
 | parent density=1  | parent density=2  | parent density=5  | parent density=7, 14, 16  |
 
-**Example 1**: there is one occupied hex that has 5 interactive hotspots in it.  Since this is the only occupied hex among its children, its count is limited to Density_tgt which is 1.  
+**Example 1**: there is one occupied hex that has 5 interactive hotspots in it.  Since this is the only occupied hex among its children, its count is limited to Density_tgt which is 1.
 
-**Example 2**: There are two occupied hexs this is equal to N meaning we are at the threshold of our density limit.  Still, because we do not exceed N, each hex is still limited to Density_tgt.  
+**Example 2**: There are two occupied hexs this is equal to N meaning we are at the threshold of our density limit.  Still, because we do not exceed N, each hex is still limited to Density_tgt.
 
-**Example 3**: There are now 3 occupied hexs meaning the occupied count is above N.  The new threshold is 200% 
+**Example 3**: There are now 3 occupied hexs meaning the occupied count is above N.  The new threshold is 200%
 Densty_tgt.  This raises the clipping limit to 2 meaning the total density of the parent jumps from 2 to 5.
 
-**Example 4**: There are now 7 occupied hexs.  Since the Density_max is set to 4 times target density, the new threshold is  Density_max or 4 even though the parent occupancy is 5 hexs above N.  We can also see how such a dense parent is affected by its siblings in the same manner, if the siblings of the parent are not sufficiently occupied then the density of the parent is clipped. 
+**Example 4**: There are now 7 occupied hexs.  Since the Density_max is set to 4 times target density, the new threshold is  Density_max or 4 even though the parent occupancy is 5 hexs above N.  We can also see how such a dense parent is affected by its siblings in the same manner, if the siblings of the parent are not sufficiently occupied then the density of the parent is clipped.
 
 #### Determining Transmit Reward Scaling for a Hotspot
 A lookup table including clipped and raw hex densities for each occupied hex will need to be built by the consensus group once per epoch or at whatever rate deemed necessary.
@@ -179,16 +179,16 @@ Here we look at a slightly more complex topology.  Same beaconing reward method.
 Based on this example we can see D and E earn the most even though they have half the transmit reward scaling factor as F and G.  A earns the least but it can only witness hotspots with low reward scaling factor and in proximity.  It is not providing significantly less coverage than D or E and the coverage it is providing is already well saturated.
 
 #### Example 3
-There are two topologies from the “motivation” section that show an area with near optimal coverage as well as that same area with 20 times the number of hotspots all covering the same geographic area.  The table on the left below gives an estimate of the rewards when there is only one hotspot per hex and the table on the right when there are 20 hotspots per hex. 
+There are two topologies from the “motivation” section that show an area with near optimal coverage as well as that same area with 20 times the number of hotspots all covering the same geographic area.  The table on the left below gives an estimate of the rewards when there is only one hotspot per hex and the table on the right when there are 20 hotspots per hex.
 
 | 1 hotspot per Hex  |  20 hotspots per Hex  |
 |:---:|:---:|
 | ![modesto scaling](./0099-hex-density-based-transmit-reward-scaling/example_rew_3a.png) | ![austin scaling](./0099-hex-density-based-transmit-reward-scaling/example_rew_3b.png) |
 
-We can see that although the per-hex earnings do go up with increased density, they only see a 35-65% increase vs 2,000% increase with existing PoC or a PoC reward structure that does not take density into account.  
+We can see that although the per-hex earnings do go up with increased density, they only see a 35-65% increase vs 2,000% increase with existing PoC or a PoC reward structure that does not take density into account.
 
 #### Lessons From Examples
-Hopefully these examples demonstrate that transmit reward scaling factor does not fully describe earnings, and the way to increase earnings is to provide coverage to as many hexes (or just general area) as possible, especially hex’s without a large amount of coverage already. 
+Hopefully these examples demonstrate that transmit reward scaling factor does not fully describe earnings, and the way to increase earnings is to provide coverage to as many hexes (or just general area) as possible, especially hex’s without a large amount of coverage already.
 
 
 # Drawbacks
@@ -197,7 +197,7 @@ Hopefully these examples demonstrate that transmit reward scaling factor does no
 This proposal will drastically effect earnings across the board as it is a significant change to how earnings are calculated and distributed.  There wil be many hotspots in dense areas that will see significantly reduced earnings.
 
 This method also does not consider first movers to an area who are penalized for over-density just as much as newcomers.  I think this is appropriate as from the device perspective, all coverage is equal.
-Additionally if a new hotspot can be deployed in a more optimal location that makes many existing hotspots redunant, what is healthiest for the network is if the old hotspots move to more ideal locations, not to discourage placement of hoptsots that offer better coverage than existing deployments. 
+Additionally if a new hotspot can be deployed in a more optimal location that makes many existing hotspots redunant, what is healthiest for the network is if the old hotspots move to more ideal locations, not to discourage placement of hoptsots that offer better coverage than existing deployments.
 
 This proposal is also a considerable development effort requiring a change in reward calculation, new code to determine hex densities, etc.
 
@@ -218,7 +218,7 @@ Some alternatives are:
 Integrating this design with a beaconing / receive focused reward structure is required.
 This could be HIP 15 or an alternative.
 
-Tuning of the chain variables, specifically per H3 resolution target and maximum densities.  Initial analysis shows that scaling target/max densities linearly with area means only the highest resolution thresholds actually apply. 
+Tuning of the chain variables, specifically per H3 resolution target and maximum densities.  Initial analysis shows that scaling target/max densities linearly with area means only the highest resolution thresholds actually apply.
 Its suggested to consider a set of (N, Density_tgt, Density_max) for atleast resolution 8-3.
 
 Tuning of these variables allows a lot of flexibility in how rewards are distributed and periodic updates may be required.
