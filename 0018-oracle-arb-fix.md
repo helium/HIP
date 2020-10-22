@@ -49,7 +49,6 @@ While only 2k HNT was cleared, another side-effect of the arbitrage is that the 
 
 It’s also worth noting that the mint back took roughly 24 hours, so should the market price and then the oracle price have snapped back, the Meerkat may have lost out. The severe price drop may also be an artifact due to manual entry of oracle prices. This will not be the focus of this HIP but remains noteworthy and perhaps the subject matter for future HIPs.
 
-
 # Winners and Losers as Is
 [winners-and-losers-as-is]: #winners-and-losers-as-is
 
@@ -68,6 +67,33 @@ Since transaction fees are relatively insignificant in the economics of the Heli
 For HNT to DC conversion, the dynamic price essentially means that any oracle price changes may change one’s conversion rate. In general, the DC burn transaction is only useful for OUI operators or facilitators of these parties. As such, we may expect a level of sophistication from these actors relative to regular wallet holders or miners who simply wish to transact funds.
 
 However, to mitigate the impact of the dynamic price, we suggest the ability for dc_transactions_v2 to also stipulate a maximum oracle conversion rate. This will afford a level of assurance for these transactions with regards to oracle and market price volatility.
+
+# Examples with Solution Implemented
+[examples-with-solution-implemented]: #examples-with-solution-implemented
+
+## Failed Burn
+
+* A user submits a token burn right after block 200 is forged. Oracle price at that time is $1 and the *maximum conversion price set is $1*.
+* At block 201, a new oracle price of $1.1. 
+* The token burn transaction is now invalid and will be dropped. It could theoretically be rebroadcast at a later time or the user could submit a new transaction with the same nonce to invalidate the transaction.
+
+## Successful Burn
+
+* A user submits a token burn right after block 200 is forged. Oracle price at that time is $1 and the *maximum conversion price set is $1.1*.
+* At block 201, enough oracle reports set an instantly new oracle price of $1.1. The token burn transaction remains valid.
+
+## Payment Transaction
+
+* Fees are set to allow the best price in the previous 100 blocks
+* A user submits a payment of 1 HNT to another address. Going back 100 blocks, the lowest oracle price is 50 blocks ago at $1 and current oracle price is $1.1.
+* If the transaction is processed within 50 blocks, the $1 oracle price is honored and 0.35 HNT is withdrawn from the account to cover the $0.35 fee
+
+## Payment Transaction with Surprise Discount
+
+* Fees are set to allow the best price in the previous 100 blocks
+* A user submits a payment of 1 HNT to another address. Going back 100 blocks, the lowest oracle price is 50 blocks ago at $1
+* After submission but before the transaction is processed, a new price of $0.5 is issued
+* The $0.5 oracle price is honored and 0.175 HNT is withdrawn from the account to cover the $0.35 fee
 
 # Impact
 [impact]: #impact
