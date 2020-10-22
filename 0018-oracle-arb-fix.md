@@ -58,7 +58,7 @@ So who gains what from this opportunity? As previously stated, the owner of the 
 [solution]: #solution
 The opportunity for arbitrage is that the oracle price is forecasted to change before it actually changes. As previously mentioned, oracle reporting and oracle price adjustment may be compounding factors but are not the concern of the solution to be proposed herein.
 
-**The proposed solution is to make HNT to DC conversion for transactions based on the minimum of previous prices and dynamic price and to force burn transactions to accept a dynamic conversion rate along with a maximum acceptable conversion rate.**
+**The proposed solution is to make HNT to DC conversion for transaction fees to be based on the minimum of (previous prices and dynamic price)  and to force burn transactions to accept a dynamic conversion rate, as long as it is below the transactions maximum acceptable conversion rate.**
 
 Since transaction fees are relatively insignificant in the economics of the Helium blockchain, allowing for “opportunistic” transactions should not affect things the way that burning HNT for DC does. Thus allowing a minimum of previous and dynamic previous gives the same desired ease of use. 
 
