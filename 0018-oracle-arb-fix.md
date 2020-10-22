@@ -30,8 +30,6 @@ A new oracle price takes effect one hour in the future. The reason for this is t
 # Example
 [example]: #example
 
-Example
-
 The Dapper-Hickory-Meerkat, managed by [wallet 13ZiB74TJNdV5D5VFehEH3oMSuFNusjkho4gJYmnRmLRnXrZbE5](https://explorer.helium.com/accounts/13ZiB74TJNdV5D5VFehEH3oMSuFNusjkho4gJYmnRmLRnXrZbE5), has recently exploited this opportunity.
 
 Here it is graphed from on-chain data showing HNT burn events, mining rewards from DC and what the oracle price was for all of these events:
