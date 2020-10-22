@@ -3,7 +3,7 @@
 - Author: [@lthiery](https://github.com/lthiery)
 - Start Date: 2020-10-22
 - Category: Technical
-- Original HIP PR: 
+- Original HIP PR: [#59](https://github.com/helium/HIP/pull/62)
 - Tracking Issue: 
 
 # Summary
