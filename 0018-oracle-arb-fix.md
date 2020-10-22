@@ -13,7 +13,7 @@ A new oracle price takes effect one hour in the future. The reason for this is t
  If one is trying to “sweep” all HNT from one wallet to another, one can leave just enough HNT to cover the transaction fee via implicit burn 
  If you are converting HNT into DC, you can know with relative certainty that your burn will yield a certain amount of DCs
  
- Unfortunately, this delay provides an on-chain arbitrage opportunity via state channels. Given the delay, an actor with HNT in-hand may see the forecasted drop in HNT price and thus convert HNT into DCs. Afterok the drop takes effect, the actor may then “spend” the DCs in a state channel, naming a colluding gateway of theirs as the beneficiary. Effectively, the actor is burning and minting HNT on-chain with very little risk. 
+ Unfortunately, this delay provides an on-chain arbitrage opportunity via state channels. Given the delay, an actor with HNT in-hand may see the forecasted drop in HNT price and thus convert HNT into DCs. After the drop takes effect, the actor may then “spend” the DCs in a state channel, naming a colluding gateway of theirs as the beneficiary. Effectively, the actor is burning and minting HNT on-chain with very little risk. 
  
  To demonstrate the “oracle arbitrage opportunity”, consider the following example:
  * At block 200, the current oracle price is $1.1 
