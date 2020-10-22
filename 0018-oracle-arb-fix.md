@@ -72,7 +72,7 @@ However, to mitigate the impact of the dynamic price, we suggest the ability for
 ## Failed Burn
 
 * A user submits a token burn right after block 200 is forged. Oracle price at that time is $1 and the *maximum conversion price set is $1*.
-* At block 201, a new oracle price of $1.1. 
+* At block 201, a new oracle price of $1.1 is established.
 * The token burn transaction is now invalid and will be dropped. It could theoretically be rebroadcast at a later time or the user could submit a new transaction with the same nonce to invalidate the transaction.
 
 ## Successful Burn
