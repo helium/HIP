@@ -80,13 +80,13 @@ One minor drawback here is that someone wishing to “sweep” the contents out 
 
 The biggest downside of this solution is an increase in complexity for the burn transaction as the user does not know ahead of time what the cost will be; the maximum conversion rate is added to the transaction, however, which provides a bounded conversion rate.
 
-#Alternate Solutions
+# Alternate Solutions
 [alternate-solutions]: #alternate-solutions
 
-##Delayed HNT Burn
+## Delayed HNT Burn
 Delayed burn is not logically that different from the proposal here, except instead of releasing the DC immediately, the DC would be held until the future oracle price takes effect. The downside of this approach is DCs cannot be created without the delay which may be considered 
 
-##1.1:1 DC to HNT Conversion
+## 1.1:1 DC to HNT Conversion
 Currently, DC rewards are determined by converting DC earned for a gateway into HNT at a 1:1 rate. Assuming the total HNT earned via DC rewards during the epoch is within the allocated percentage, the HNT rewarded is worth exactly the amount of DC earned by that gateway during the epoch. Recall that the 1:1 conversion was determined as a countermeasure to the DC spamming in August 2020, where traffic was low enough and so far below equilibrium, that every DC spent was effectively rewarding gateways 1:100 to 1:1000.
 
 While this solution would effectively negate the arbitrage opportunity, it has a secondary economic impact of decreasing the earning potential of gateways that forward network data, which is precisely the reason for the Helium Network to exist. In fact, before DC spamming made the flaw in incentives apparent, we very much wanted to reward a large slice to gateways that were forwarding data.
