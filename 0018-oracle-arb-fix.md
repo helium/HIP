@@ -1,4 +1,4 @@
-# HIPxx: Oracle Arbitrage Fix
+# HIP18: Oracle Arbitrage Fix
 
 - Author: [@lthiery](https://github.com/lthiery)
 - Start Date: 2020-10-22
