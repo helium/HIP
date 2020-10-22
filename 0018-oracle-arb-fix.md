@@ -1,4 +1,4 @@
-# HIP17: Hex Density Based Transmit Reward Scaling
+# HIPxx: Oracle Arbitrage Fix
 
 - Author: [@lthiery](https://github.com/lthiery)
 - Start Date: 2020-10-22
