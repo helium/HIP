@@ -89,27 +89,28 @@ rate. In general, the DC burn transaction is only useful for OUI operators or fa
 we may expect a level of sophistication from these actors relative to regular wallet holders or miners who simply wish 
 to transact funds.
 
-However, to mitigate the impact of the dynamic price, we suggest the ability for dc_transactions_v2 to also stipulate a
- maximum oracle conversion rate. This will afford a level of assurance for these transactions with regards to oracle and
-  market price volatility.
+However, to mitigate the impact of the dynamic price, we suggest the ability for blockchain_txn_token_burn_v2 to also 
+stipulate a minimum oracle conversion rate. This will afford minimum conversion rates for these transactions and protect
+against oracle and market price volatility.
 
 # Examples with Solution Implemented
 [examples-with-solution-implemented]: #examples-with-solution-implemented
 
 ## Failed Burn
 
-* A user submits a token burn right after block 200 is forged. Oracle price at that time is $1 and the *maximum 
-conversion price set is $1*.
-* At block 201, a new oracle price of $1.1 is established and the Burn transaction is not in this block.
-* At block 202, The token burn transaction is now invalid and will be dropped. It could theoretically be rebroadcast at 
+* A user submits a token burn right after block 200 is forged. Oracle price at that time is $1.1 and the *minimum 
+conversion price set is $1.1*.
+* At block 201, a new oracle price of $1 is established (with no delay) and the burn transaction is not in this block.
+* At block 202, the token burn transaction is now invalid and will be dropped. It could theoretically be rebroadcast at 
 a later time or the user could submit a new transaction with the same nonce to invalidate the transaction.
 
 ## Successful Burn
 
-* A user submits a token burn right after block 200 is forged. Oracle price at that time is $1 and the *maximum 
-conversion price set is $1.1*.
-* At block 201, enough oracle reports set an instantly new oracle price of $1.1. The token burn transaction remains 
-valid.
+* A user submits a token burn right after block 200 is forged. Oracle price at that time is $1.1 and the *minimum 
+conversion price set is $1*.
+* At block 201, a new oracle price of $1 is established (with no delay) and the burn transaction is not in this block.
+* At block 202, the token burn transaction remains valid and may be picked up as long as the accepted oracle price
+remains above $1.
 
 ## Payment Transaction
 
