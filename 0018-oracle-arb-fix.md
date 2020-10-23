@@ -150,10 +150,19 @@ bounded conversion rate.
 # Alternate Solutions
 [alternate-solutions]: #alternate-solutions
 
+## Reduced Delay on new Oracle Prices
+The Oracle delay could be reduce from 60 minutes to, perhaps 15 minutes. The effect would be that the arbitrageur would
+have ~15 blocks to burn DCs at and advantageous price instead of ~60 blocks. This would not logically close the arb and
+thus leaves a guaranteed on-chain profit for the arbitrageur; keep in mind, off-chain market data may be used to front-run
+prices as well.  In addition, as we reduce the delay, we introduce a higher probability that "something surprising" 
+happens to other actors, notably anyone using implicit burn. Regular users would have to time their transactions 
+carefully to avoid being at the cusp of a price change.
+
 ## Delayed HNT Burn
 Delayed burn is not logically that different from the proposal here, except instead of releasing the DC immediately, the
  DC would be held until the future oracle price takes effect. The downside of this approach is DCs cannot be created 
  without a delay and thus a user must wait for DCs when they may need them quickly.
+ 
 ## 1.1:1 DC to HNT Conversion
 Currently, DC rewards are determined by converting DC earned for a gateway into HNT at a 1:1 rate. Assuming the total 
 HNT earned via DC rewards during the epoch is within the allocated percentage, the HNT rewarded is worth exactly the 
