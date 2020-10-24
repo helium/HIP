@@ -18,7 +18,7 @@ Beaconing with the modified reward structure outlined below does a much better j
 The existing PoC method and reward structure heavily rewards transmitters with minimal rewards for receivers while the vast majority of LoRaWAN usage is for unconfirmed uplinks, meaning hotspots mostly receive data.
 This reward structure better rewards real coverage and encourages honest hotspot owners to see maximized rewards as they build towards efficient network topologies.
 
-Beaconing, reardless of reward structures allows the elminination of Multi-hop PoC.  Multihop PoC significantly more complex than beaconing requiring complex path building and path verification, 
+Beaconing, regardless of reward structures allows the eliminination of Multi-hop PoC.  Multihop PoC significantly more complex than beaconing requiring complex path building and path verification, 
 Significant overhread of building long paths that never complete (due to hop reliability being low).  Large payload sizes that are a-typical for many LoRa applications and require higher datarates, etc.
 A lot of implementation complexity is removed with beaconing and those CPU and ledger resources can be re-allocated to more beneficial purposes (like combating gaming/exploitation).
 
