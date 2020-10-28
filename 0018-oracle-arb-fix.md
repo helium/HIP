@@ -31,7 +31,7 @@ To demonstrate the “oracle arbitrage opportunity”, consider the following ex
     * the oracle price has not changed again
     * the DC reward pool has not been maxed out
  	
- 	⇒ the colluding gateway is awarded 1,100 HNT
+ 	⇒ the colluding gateway is awarded 1,100 HNT at the next epoch payout
  
 
 # Example
