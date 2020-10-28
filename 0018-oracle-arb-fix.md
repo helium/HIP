@@ -74,7 +74,7 @@ So who gains what from this opportunity? As previously stated, the owner of the 
 [solution]: #solution
 
 The opportunity for arbitrage is that the oracle price is forecasted to change before it actually changes. The only 
- transaction, however, that creates DC in a way that can become HNT again is `blockchain_txn_token_burn_v1`. All other
+ transaction that creates DC in a way that can become HNT again, however, is `blockchain_txn_token_burn_v1`. All other
  transactions that benefit from "implicit burn" do not create DCs that can be spent in a state channel and thus a
  circular arbitrage route (HNT->DC->HNT) is not available.
 
