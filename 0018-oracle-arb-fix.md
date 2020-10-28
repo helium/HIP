@@ -18,7 +18,7 @@ DCs
 Unfortunately, this delay provides an on-chain arbitrage opportunity via state channels. Given the delay, an actor with 
  HNT in-hand may see the forecasted drop in HNT price and thus convert HNT into DCs. After the drop takes effect, the 
  actor may then “spend” the DCs in a state channel, naming a colluding gateway of theirs as the beneficiary. Effectively, 
- the actor is burning and minting HNT on-chain with very little risk. 
+ the actor is burning and minting HNT on-chain at a profit with very little risk. 
  
 To demonstrate the “oracle arbitrage opportunity”, consider the following example:
  * At block 200, the current oracle price is $1.10 
