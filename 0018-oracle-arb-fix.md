@@ -87,7 +87,7 @@ In general, the DC burn transaction is only useful for OUI operators or facilita
  expect a level of sophistication from these actors relative to regular wallet holders or miners who simply wish to 
  transact funds.
 
-However, to mitigate the impact of the dynamic price, we stipulate the ability for to optionally indicate a minimum 
+However, to mitigate the impact of the dynamic price, we stipulate the ability to optionally indicate a minimum 
  oracle conversion rate. This would protect against oracle and market price volatility.
 
 As previously mentioned, oracle reporting and oracle price adjustment may be compounding factors but are not the concern
