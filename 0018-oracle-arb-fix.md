@@ -1,4 +1,4 @@
-# HIP18: Oracle Arbitrage Fix
+# HIP18: Remove Oracle Forecast for DC Burn
 
 - Author: [@lthiery](https://github.com/lthiery)
 - Start Date: 2020-10-22
