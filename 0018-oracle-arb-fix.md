@@ -41,7 +41,7 @@ The Dapper-Hickory-Meerkat, managed by [wallet 13ZiB74TJNdV5D5VFehEH3oMSuFNusjkh
 Here it is graphed from on-chain data showing HNT burn events, mining rewards from DC and what the oracle price was for 
  all of these events:
 
-![image MeerkatBurnAndMint](./0018-oracle-arb-fix/meerkat.png)
+![image MeerkatBurnAndMint](./0018-remove-oracle-forecast-for-dc-burn/meerkat.png)
 
 
 As you can see, “the big burn” of about 27k HNT was burned right before the oracle price dropped from about $1.20 to 
