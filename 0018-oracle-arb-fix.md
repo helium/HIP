@@ -21,12 +21,12 @@ Unfortunately, this delay provides an on-chain arbitrage opportunity via state c
  the actor is burning and minting HNT on-chain with very little risk. 
  
 To demonstrate the “oracle arbitrage opportunity”, consider the following example:
- * At block 200, the current oracle price is $1.1 
- * Submitted oracle prices will set the new oracle price to $1; this will take effect in one hour or roughly at block 
+ * At block 200, the current oracle price is $1.10 
+ * Submitted oracle prices will set the new oracle price to $1.00; this will take effect in one hour or roughly at block 
  260
- * Between block 200 and block 260, the actor may burn 1,000 HNT, yielding $1100 worth of DC
- * After block 260, the actor my close a state channel naming its colluding gateway as beneficiary of $1,100 worth of DC, 
- assuming:
+ * Between block 200 and block 260, the actor may burn 1,000 HNT, yielding $1,100.00 worth of DC
+ * After block 260, the actor my close a state channel naming its colluding gateway as beneficiary of $1,100.00 worth of
+ DC, assuming:
     * the grace period on the state channel has expired
     * the oracle price has not changed again
     * the DC reward pool has not been maxed out
@@ -45,19 +45,19 @@ Here it is graphed from on-chain data showing HNT burn events, mining rewards fr
 ![image MeerkatBurnAndMint](./0018-oracle-arb-fix/meerkat.png)
 
 
-As you can see, “the big burn” of about 27k HNT was burned right before the oracle price dropped from about $1.2 to $1.1. 
- Over time, the DC was “minted” back into HNT via the DC rewards.
+As you can see, “the big burn” of about 27k HNT was burned right before the oracle price dropped from about $1.20 to 
+$1.10. Over time, the DC was “minted” back into HNT via the DC rewards.
 
- It’s worth noting, despite the magnitude of burn and mint, at the time of this writing, only about 2k HNT was cleared by 
- the owner of the Meerkat. Therefore, you could approximate:
+It’s worth noting, despite the magnitude of burn and mint, at the time of this writing, only about 2k HNT was cleared
+ by the owner of the Meerkat. Therefore, you could approximate:
 * 27k HNT was burned
 * 29k HNT was minted
 
- While only 2k HNT was cleared, another side-effect of the arbitrage is that the Proof-of-Coverage (POC) earnings during 
+While only 2k HNT was cleared, another side-effect of the arbitrage is that the Proof-of-Coverage (POC) earnings during 
  the period of the mint back were severely impacted as when the DC reward pool grows, it grows at the expense of POC 
  rewards during that same epoch. 
 
- It’s also worth noting that the mint back took roughly 24 hours, so should the market price and then the oracle price 
+It’s also worth noting that the mint back took roughly 24 hours, so should the market price and then the oracle price 
  have snapped back, the Meerkat may have lost out. The severe price drop may also be an artifact due to manual entry of 
  oracle prices. This will not be the focus of this HIP but remains noteworthy and perhaps the subject matter for future 
  HIPs.
@@ -100,19 +100,19 @@ As previously mentioned, oracle reporting and oracle price adjustment may be com
 
 ## Failed Burn
 
-* A user submits a token burn right after block 200 is forged. Oracle price at that time is $1.1 and the *minimum 
- conversion price set is $1.1*.
-* At block 201, a new oracle price of $1 is established (with no delay) and the burn transaction is not in this block.
+* A user submits a token burn right after block 200 is forged. Oracle price at that time is $1.10 and the *minimum 
+ conversion price set is $1.10*.
+* At block 201, a new oracle price of $1.00 is established (with no delay) and the burn transaction is not in this block.
 * At block 202, the token burn transaction is now invalid and will be dropped. It could theoretically be rebroadcast at 
 a later time or the user could submit a new transaction with the same nonce to invalidate the transaction.
 
 ## Successful Burn
 
-* A user submits a token burn right after block 200 is forged. Oracle price at that time is $1.1 and the *minimum 
- conversion price set is $1*.
-* At block 201, a new oracle price of $1 is established (with no delay) and the burn transaction is not in this block.
+* A user submits a token burn right after block 200 is forged. Oracle price at that time is $1.10 and the *minimum 
+ conversion price set is $1.00*.
+* At block 201, a new oracle price of $1.00 is established (with no delay) and the burn transaction is not in this block.
 * At block 202, the token burn transaction remains valid and may be picked up as long as the accepted oracle price
-remains above $1.
+remains above $1.00.
 
 # Impact
 [impact]: #impact
