@@ -18,7 +18,7 @@ DCs
 Unfortunately, this delay provides an on-chain arbitrage opportunity via state channels. Given the delay, an actor with 
  HNT in-hand may see the forecasted drop in HNT price and thus convert HNT into DCs. After the drop takes effect, the 
  actor may then “spend” the DCs in a state channel, naming a colluding gateway of theirs as the beneficiary. Effectively, 
- the actor is burning and minting HNT on-chain with very little risk. 
+ the actor is burning and minting HNT on-chain at a profit with very little risk. 
  
 To demonstrate the “oracle arbitrage opportunity”, consider the following example:
  * At block 200, the current oracle price is $1.10 
@@ -28,10 +28,9 @@ To demonstrate the “oracle arbitrage opportunity”, consider the following ex
  * After block 260, the actor my close a state channel naming its colluding gateway as beneficiary of $1,100.00 worth of
  DC, assuming:
     * the grace period on the state channel has expired
-    * the oracle price has not changed again
     * the DC reward pool has not been maxed out
  	
- 	⇒ the colluding gateway is awarded 1,100 HNT
+ 	⇒ the colluding gateway is awarded 1,100 HNT at the next epoch payout
  
 
 # Example
@@ -75,7 +74,7 @@ So who gains what from this opportunity? As previously stated, the owner of the 
 [solution]: #solution
 
 The opportunity for arbitrage is that the oracle price is forecasted to change before it actually changes. The only 
- transaction, however, that creates DC in a way that can become HNT again is `blockchain_txn_token_burn_v1`. All other
+ transaction that creates DC in a way that can become HNT again, however, is `blockchain_txn_token_burn_v1`. All other
  transactions that benefit from "implicit burn" do not create DCs that can be spent in a state channel and thus a
  circular arbitrage route (HNT->DC->HNT) is not available.
 
@@ -88,7 +87,7 @@ In general, the DC burn transaction is only useful for OUI operators or facilita
  expect a level of sophistication from these actors relative to regular wallet holders or miners who simply wish to 
  transact funds.
 
-However, to mitigate the impact of the dynamic price, we stipulate the ability for to optionally indicate a minimum 
+However, to mitigate the impact of the dynamic price, we stipulate the ability to optionally indicate a minimum 
  oracle conversion rate. This would protect against oracle and market price volatility.
 
 As previously mentioned, oracle reporting and oracle price adjustment may be compounding factors but are not the concern
