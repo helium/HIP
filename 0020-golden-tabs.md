@@ -1,4 +1,4 @@
-# HIP18: Remove Oracle Forecast for DC Burn
+# HIP20: Golden Tabs
 
 - Author: [@lthiery](https://github.com/lthiery)
 - Start Date: 2020-10-29
