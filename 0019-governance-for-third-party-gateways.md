@@ -23,7 +23,7 @@ More ?
 
 * Hotspot owners as they will have more avenues for sourcing gateways.
 
-* Vendors / Manufactures of gateways as they want to provide onchain gateays for the Helium Network.
+* Vendors / Manufactures of gateways as they want to provide onchain gateways for the Helium Network.
 
 # Detailed Explanation
 [detailed-explanation]: #detailed-explanation
@@ -40,7 +40,8 @@ More ?
 # Drawbacks
 [drawbacks]: #drawbacks
 
-- Why should we *not* do this?
+- Possibility of more "gaming" on the network resulting from variety of 
+  hardware / software configurations.
 
 # Rationale and Alternatives
 [alternatives]: #rationale-and-alternatives
