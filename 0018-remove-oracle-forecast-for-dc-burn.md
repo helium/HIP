@@ -4,7 +4,7 @@
 - Start Date: 2020-10-22
 - Category: Technical
 - Original HIP PR: [#59](https://github.com/helium/HIP/pull/62)
-- Tracking Issue: 
+- Tracking Issue: [#65](https://github.com/helium/HIP/issues/65)
 
 # Summary
 [summary]: #summary
