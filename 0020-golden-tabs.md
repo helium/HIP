@@ -25,9 +25,12 @@ This strategy has thus far prevented large-scale attacks of â€œvirtual gatewaysâ
  the cost of each node is at least 4x the cost of the permissionless model.
 
 It is paramount to the network's growth in coverage to allow the permissionless adding of gateways to the network. In 
- other words, anybody must be able to source a standard LoRaWAN gateway (or use already deployed hardware) and pay the
- $40 staking fee.
-
+ other words, anybody must be able to on a standard LoRaWAN gateway (or use already deployed hardware) and pay the
+ $40 staking fee. With 1M deployed gateways worldwide (according to 
+ [Semtech marketing materials](https://www.semtech.com/lora)), the scale of the opportunity to convert existing 
+ infrastructure cannot be ignored.
+ 
+ 
 It is a general consensus in the community, including Helium and DeWi, that Proof-of-Coverage (POC) does not yet do 
  enough to instill confidence for permissionless adding of gateways to be enabled. There are many ideas for how to 
  improve POC, but they all boil down to concepts of circular trust validation between gateways. 
