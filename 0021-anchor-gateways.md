@@ -16,7 +16,7 @@ blockchain have one of the following origins:
 |Genesis Hotspots|$0|45|2019-07-29|File|
 |Helium Hospots|$500|~9k on-chain, 14.5k in staking server|2019-07-29-2020-10-01|ECC608|
 |RAK Hotspots|$250|   |2020-10|File|
-|Miner Pro Alpha|$0|339|2020-09|File|
+|DIY Alpha Program|$0|339|2020-09|File|
 
 
 This strategy has thus far prevented large-scale attacks of “virtual gateways” as permissionless adding has the proposed
