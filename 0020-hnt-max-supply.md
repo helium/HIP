@@ -29,7 +29,7 @@ The proposal is to have halvenings of net HNT issuance every 2 years on the anni
 
 The HNT mining split amongst stakeholders will not change from the [current schedule](https://dl.dropboxusercontent.com/s%2Ffyn62o2ea8k1l41%2FScreen%2520Shot%25202020-10-31%2520at%252009-46-50%2520The%2520New%2520Wireless%2520Economy.%2520.png):
 
-|Year|HNT at start of year | Total HNT Minted | % to Proof of Coverage (+ any extra from Data Transfer) | % to Data Transfer (excess to Proof of Coverage) | % to Founders Reward | % to Consensus |
+|Year|HNT at start of year | Total HNT Minted (Monthly) | % to Proof of Coverage (+ any extra from Data Transfer) | % to Data Transfer (excess to Proof of Coverage) | % to Founders Reward | % to Consensus |
 |-|-|-|-|-|-|-|
 | 1 | 0 | 5,000,000.0 | 29.00% | 30.00% | 35.00% | 6.00% |
 | 2 | 5,000,000 | 5,000,000.0 | 27.50% | 32.50% | 34.00% | 6.00% |
