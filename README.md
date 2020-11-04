@@ -30,8 +30,10 @@ If you have questions or feedback, please ask in [#hips in the community Discord
 | 16 | [Remove Score from Consensus Group Elections](https://github.com/helium/HIP/blob/master/0016-random-consensus-group-election.md) | [Approved](https://github.com/helium/HIP/issues/55) |
 | 17 | [Hex Density-based Transmit Reward Scaling](https://github.com/helium/HIP/blob/master/0017-hex-density-based-transmit-reward-scaling.md) | [Approved](https://github.com/helium/HIP/issues/60) |
 | 18 | [Remove Oracle Forecast for DC Burn](https://github.com/helium/HIP/blob/master/0018-remove-oracle-forecast-for-dc-burn.md) | [In Discussion](https://github.com/helium/HIP/issues/60) |
+| 20 | [HNT Max Supply](https://github.com/helium/HIP/blob/master/0020-hnt-max-supply.md) | [In Discussion](https://github.com/helium/HIP/issues/73) |
 
 ### Status key
+
 * Draft: HIP is in process of being written; author is not yet soliciting feedback from the community at large
 * In Discussion: HIP is under activity consideration by the community
 * Approved: HIP has been approved by rough consensus, and pending development and testing
