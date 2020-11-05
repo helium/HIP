@@ -27,7 +27,7 @@ All HNT holders, Hotspot owners, and HST holders will be affected by this HIP. U
 
 The proposal is to have halvenings of net HNT issuance every 2 years on the anniversary of genesis. This means the first halvening will be on 8/1/2021 and net HNT issuance will be reduced to 2.5M HNT per month.
 
-The HNT mining split amongst stakeholders will not change from the [current schedule](https://dl.dropboxusercontent.com/s%2Ffyn62o2ea8k1l41%2FScreen%2520Shot%25202020-10-31%2520at%252009-46-50%2520The%2520New%2520Wireless%2520Economy.%2520.png):
+The HNT mining split amongst stakeholders will not change from the [current schedule](https://www.helium.com/hnt#distribution):
 
 | Year| HNT at start of year | Total HNT Minted | % to Proof of Coverage (+ any extra from Data Transfer) | % to Data Transfer (excess to Proof of Coverage) | % to Founders Reward | % to Consensus |
 |-|-|-|-|-|-|-|
