@@ -78,8 +78,8 @@ The opportunity for arbitrage is that the oracle price is forecasted to change b
  transactions that benefit from "implicit burn" do not create DCs that can be spent in a state channel and thus a
  circular arbitrage route (HNT->DC->HNT) is not available.
 
-Therefore, **the proposed solution is to force burn transactions to accept a dynamic oracle price, but allow the 
- transaction to optionally specify a minimum acceptable conversion rate.**
+Therefore, **the proposed solution is to force burn transactions to accept the minimum of current and predicted prices,
+ but allow the transaction to optionally specify a minimum acceptable conversion rate.**
 
 Since all other fees do not have potential for circular arbitrage schemes, they remain unaffected.
 
@@ -87,8 +87,9 @@ In general, the DC burn transaction is only useful for OUI operators or facilita
  expect a level of sophistication from these actors relative to regular wallet holders or miners who simply wish to 
  transact funds.
 
-However, to mitigate the impact of the dynamic price, we stipulate the ability to optionally indicate a minimum 
- oracle conversion rate. This would protect against oracle and market price volatility.
+However, to mitigate the impact of the uncertain price for the emitter of a DC burn transaction, we stipulate the 
+ ability to optionally indicate a minimum oracle conversion rate. This would protect against oracle and market price
+ volatility.
 
 As previously mentioned, oracle reporting and oracle price adjustment may be compounding factors but are not the concern
  of the solution to be proposed herein. That being said, [a PR against helium-wallet](https://github.com/helium/helium-wallet-rs/pull/58)
@@ -104,6 +105,44 @@ As previously mentioned, oracle reporting and oracle price adjustment may be com
 * At block 201, a new oracle price of $1.00 is established (with no delay) and the burn transaction is not in this block.
 * At block 202, the token burn transaction is now invalid and will be dropped. It could theoretically be rebroadcast at 
 a later time or the user could submit a new transaction with the same nonce to invalidate the transaction.
+
+## Successful Burn
+
+* A user submits a token burn right after block 200 is forged. Oracle price at that time is $1.10 and the *minimum 
+ conversion price set is $1.00*.
+* At block 201, a new oracle price of $1.00 is established (with no delay) and the burn transaction is not in this block.
+* At block 202, the token burn transaction remains valid and may be picked up as long as the accepted oracle price
+remains above $1.00.
+
+# Arbitrage Attempts with Solution Implemented
+[arbitrage-attempts-with-solution-implemented]: #arbitrage-attempts-with-solution-implemented
+
+## Down Market
+
+* Oracle price is $1.10 and a user submits a token burn for 1 HNT right after block 200 is forged, with no specified 
+ minimum conversion price
+* At block 201, a new oracle price of $1.00 is predicted
+* At block 202, the token burn is processed and the $1 HNT has become $1.00 in DC
+* At block 203, a state channel opened 
+* At block 204, a state channel is closed burning $1.00 in DC for the arbiteur's gateways
+* At block 215 (after grace period of state channel), rewards are calculated and $1 in HNT is rewarded to the arbiteur's
+ gateways at the rate of $1.10 since none of the predicted prices have taken effect
+ 
+ 	⇒ the colluding gateway is awarded $1.00/$1.10 ~= 0.90 HNT, thus netting -0.10 HNT
+ 	
+ 	
+ ## Up Market
+ 
+* Oracle price is $0.90 and a user submits a token burn for 1 HNT right after block 200 is forged, with no specified 
+ minimum conversion price
+* At block 201, a new oracle price of $1.00 is predicted
+* At block 202, the token burn is processed and the $1 HNT has become $0.90 in DC, since the $0.90 price is still 
+ active
+* At block 203, a state channel opened 
+* At block 204, a state channel is closed burning $0.90 in DC for the arbiteur's gateways
+ 
+ 	⇒ the colluding gateway is awarded $0.90/$0.90 ~= 0.90 HNT, thus netting 0 HNT
+ 	 	
 
 ## Successful Burn
 
