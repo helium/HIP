@@ -62,8 +62,7 @@ sequence by a gateway involves it transmitting droplets continuously
 until it receives a single N/ACK from a gateway indicating the entire
 message was received correctly or not. An alternative to the N/ACK
 requirement could be to implement an expiry window. The expiry window
-should align with the time required to transmit the second (third?)
-standard deviation of data overhead for a given message.
+could align with a reasonable percentage overhead (200% - 250%). 
 
 # Drawbacks
 [drawbacks]: #drawbacks
