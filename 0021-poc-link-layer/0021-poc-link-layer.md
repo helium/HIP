@@ -160,3 +160,30 @@ Success: Statistics { cnt_droplets: 406, cnt_chunks: 107, overhead: 379.43924, u
 Success: Statistics { cnt_droplets: 643, cnt_chunks: 107, overhead: 600.9346, unknown_chunks: 0  } | Loss: 0.9 | EncodeType: RandLdpc(TC512, 0) | Decoder Type: Ms | Lost: 5624 | Total: 6267 | Percentage: 0.89739907
 test ldpc_test_enc_dec_random_lossy_minsum ... ok
 ```
+
+### Multi-Stream Test
+
+```bash
+listening on: 127.0.0.1:8080
+Make new decoder bucket ID: 1 | BufLen: 311
+Make new decoder bucket ID: 3 | BufLen: 681
+Make new decoder bucket ID: 2 | BufLen: 3414
+Stream: 1 | Success: Statistics { cnt_droplets: 10, cnt_chunks: 10, overhead: 100.0, unknown_chunks: 0 }
+" `That depends a good deal on where you want to get to,\' said the Cat.\n\n`I don\'t much care where--\' said Alice.\n\n`Then it doesn\'t matter which way you go,\' said the Cat.\n\n`--so long as I get somewhere,\' Alice added as an explanation.\n\n`Oh, you\'re sure to do that,\' said the Cat, `if you only walk long enough.\'\n"
+Stream: 2 | Status: working
+Stream: 1 | Status: complete
+Stream: 3 | Status: working
+Stream: 3 | Success: Statistics { cnt_droplets: 22, cnt_chunks: 22, overhead: 100.0, unknown_chunks: 0 }
+" `Well! I\'ve often seen a cat without a grin,\' thought Alice; `but a grin without a cat! It\'s the most curious thing I ever saw in my life!\'\n\nShe had not gone much farther before she came in sight of the house of the March Hare: she thought it must be the right house, because the chimneys were shaped like ears and the roof was thatched with fur. It was so large a house, that she did not like to go nearer till she had nibbled some more of the lefthand bit of mushroom, and raised herself to about two feet high: even then she walked up towards it rather timidly, saying to herself `Suppose it should be raving mad after all! I almost wish I\'d gone to see the Hatter instead!\'  \n"
+Stream: 2 | Status: working
+Stream: 1 | Status: complete
+Stream: 3 | Status: complete
+Stream: 2 | Success: Statistics { cnt_droplets: 107, cnt_chunks: 107, overhead: 100.0, unknown_chunks: 0 }
+" `That depends a good deal on where you want to get to,\' said the Cat.\n\n`I don\'t much care where--\' said Alice.\n\n`Then it doesn\'t matter which way you go,\' said the Cat.\n\n`--so long as I get somewhere,\' Alice added as an explanation.\n\n`Oh, you\'re sure to do that,\' said the Cat, `if you only walk long enough.\'\n\nAlice felt that this could not be denied, so she tried another question. `What sort of people live about here?\'\n\n`In that direction,\' the
+Cat said, waving its right paw round, `lives a Hatter: and in that direction,\' waving the other paw, `lives a March Hare. Visit either you like: they\'re both mad.\'\n\n`But I don\'t want to go among mad people,\' Alice remarked.\n\n`Oh, you can\'t help that,\' said the Cat: `we\'re all mad here. I\'m mad. You\'re mad.\'\n\n`How do you know I\'m mad?\' said Alice.\n\n`You must be,\' said the Cat, `or you wouldn\'t have come here.\'\n\nAlice didn\'t think that proved it at all; however, she went on `And how do you know that you\'re mad?\'\n\n`To begin with,\' said the Cat, `a dog\'s not mad. You grant that?\'\n\n`I suppose so,\' said Alice.\n\n`Well, then,\' the Cat went on, `you see, a dog growls when it\'s angry, and wags its tail when it\'s pleased. Now I growl when I\'m pleased, and wag my tail when I\'m angry. Therefore I\'m mad.\'\n\n`I call it purring, not growling,\' said Alice.\n\n`Call it what you like,\' said the Cat. `Do you play croquet with the Queen to-day?\'\n\n`I should like it very much,\' said Alice, `but I haven\'t been invited yet.\'\n\n`You\'ll see me there,\' said the Cat, and vanished.\n\nAlice was not much surprised at this, she was getting so used to queer things happening. While she was looking at the place where it had been, it suddenly appeared again.\n\n`By-the-bye, what became of the baby?\' said the Cat. `I\'d nearly forgotten to ask.\'\n\n`It turned into a pig,\' Alice quietly said, just as if it had come back in a natural way.\n\n`I thought it would,\' said the Cat, and vanished again.\n\nAlice waited a little, half expecting to see it again, but it did not appear, and after a minute or two she walked on in the direction in which the March Hare was said to live. `I\'ve seen hatters before,\' she said to herself; `the March Hare will be much the most interesting, and perhaps as this is May it won\'t be raving mad--at least not so mad as it was in March.\' As she said this, she looked up, and there was the Cat again, sitting on a branch of a tree.\n\n`Did you say pig, or fig?\' said the Cat.\n\n`I said pig,\' replied Alice; `and I wish you wouldn\'t keep appearing
+and vanishing so suddenly: you make one quite giddy.\'\n\n`All right,\' said the Cat; and this time it vanished quite slowly, beginning with the end of the tail, and ending with the grin, which remained some time after the rest of it had gone.\n\n`Well! I\'ve often seen a cat without a grin,\' thought Alice; `but a grin without a cat! It\'s the most curious thing I ever saw in my life!\'\n\nShe had not gone much farther before she came in sight of the house of the March Hare: she thought it must be the right house, because the chimneys were shaped like ears and the roof was thatched with fur. It was so large a house, that she did not like to go nearer till she had nibbled some more of the lefthand bit
+of mushroom, and raised herself to about two feet high: even then she walked up towards it rather timidly, saying to herself `Suppose it should be raving mad after all! I almost wish I\'d gone to see the Hatter instead!\'\n"
+Stream: 2 | Status: complete
+Stream: 1 | Status: complete
+Stream: 3 | Status: complete
+```
