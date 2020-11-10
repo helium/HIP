@@ -4,6 +4,11 @@
 
 # Summary
 [summary]: #summary
+The goals of these changes are to:
+
+1. Break up the PoC message to improve the reliability of PoC transmissions.
+2. Improve the quality of information gained from PoC transmissions in the RF layer.
+
 The link layer is the method by which information is send from one source to another. It sits directly above the PHY layer and below the MAC layer. For a
 specific definition, please see the OSI model.
 
