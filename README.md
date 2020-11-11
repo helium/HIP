@@ -29,14 +29,14 @@ If you have questions or feedback, please ask in [#hips in the community Discord
 | 15 | [Beaconing Rewards](https://github.com/helium/HIP/blob/master/0015-beaconing-rewards.md) | [Approved](https://github.com/helium/HIP/issues/51) |
 | 16 | [Remove Score from Consensus Group Elections](https://github.com/helium/HIP/blob/master/0016-random-consensus-group-election.md) | [Approved](https://github.com/helium/HIP/issues/55) |
 | 17 | [Hex Density-based Transmit Reward Scaling](https://github.com/helium/HIP/blob/master/0017-hex-density-based-transmit-reward-scaling.md) | [Approved](https://github.com/helium/HIP/issues/60) |
-| 18 | [Remove Oracle Forecast for DC Burn](https://github.com/helium/HIP/blob/master/0018-remove-oracle-forecast-for-dc-burn.md) | [In Discussion](https://github.com/helium/HIP/issues/60) |
+| 18 | [Remove Oracle Forecast for DC Burn](https://github.com/helium/HIP/blob/master/0018-remove-oracle-forecast-for-dc-burn.md) | [Approved](https://github.com/helium/HIP/issues/60) |
 | 20 | [HNT Max Supply](https://github.com/helium/HIP/blob/master/0020-hnt-max-supply.md) | [Approved](https://github.com/helium/HIP/issues/73) |
 | 21 | [PoC Link Layer Upgrades](https://github.com/helium/HIP/blob/master/0021-poc-link-layer.md) | [In Discussion](https://github.com/helium/HIP/issues/78) |
 
 ### Status key
 
 * Draft: HIP is in process of being written; author is not yet soliciting feedback from the community at large
-* In Discussion: HIP is under activity consideration by the community
+* In Discussion: HIP is under active consideration by the community
 * Approved: HIP has been approved by rough consensus, and pending development and testing
 * Deployed: Code to implement HIP has been merged and deployed to the network
 * Closed: HIP abandoned, render absolute by other changes, or otherwise withdrawn by the author
