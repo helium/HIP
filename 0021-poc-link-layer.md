@@ -1,6 +1,9 @@
-- Start Date: 06/26/2020
-- HIP PR: <!-- leave this empty -->
-- Tracking Issue: <!-- leave this empty -->
+# HIP21: PoC Link Layer Upgradeso
+
+- Author: [@refugeesus](https://github.com/refugeesus)
+- Start Date: November 11, 2020
+- Category: Technical
+- Tracking Issue: [#78](https://github.com/helium/HIP/issues/78)
 
 # Summary
 [summary]: #summary
