@@ -58,7 +58,7 @@ creation technique based on a normal probability distribution, and a
 decoding buffer to attempt decoding payloads as the receive buffers are
 filled via Gaussian reduction.
 
-![LT-LDPC Diagram](ltldpc-diag.png)
+![LT-LDPC Diagram](0021-poc-link-layer/ltldpc-diag.png)
 
 To begin, the Challengee braodcasts the PoC message stream and waits for
 a response from any gateways in range, expiring on a percentage of
