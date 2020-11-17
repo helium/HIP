@@ -27,7 +27,7 @@ There will be no change to the cost to transfer data because the cost of Data Cr
 
 # Detailed Explanation
 
-The proposal is to have halvenings of net HNT issuance every 2 years on the anniversary of genesis. This means the first halvening will be on August 1st, 2020 and net HNT issuance will be reduced to 2.5M HNT per month.
+The proposal is to have halvenings of net HNT issuance every 2 years on the anniversary of genesis. This means the first halvening will be on August 1st, 2021 and net HNT issuance will be reduced to 2.5M HNT per month.
 
 The HNT mining split amongst stakeholders will not change from the [current schedule](https://www.helium.com/hnt#distribution):
 
