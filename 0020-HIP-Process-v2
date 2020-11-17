@@ -1,0 +1,96 @@
+# HIP Template
+
+- Author(s): Community
+- Start Date: 2020-11-12
+- Category: Meta
+- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
+- Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
+
+# Summary
+Many flaws exist in the HIP process, highlighted by this HIP gaining some support whilst being the second proposal altering the same topic.
+
+HIPs = d(Helium Success)/ dt
+
+Helium Success is good. Therefore positive HIP is good. Let's ensure HIPs are positive.
+
+# Motivation
+Quality of a HIP, and therefore how well Helium improves itself, is driven by 3 factors:
+1) Effort towards HIPs
+      Poorly thought through HIPs that have minimal attention will be sub-par in their abililty to advance Helium, will likely need to be re-written (time               wasted) and at worst case, will be lacking enough in content that ambiguity allows variance from intention to implementation.
+2) HIP quality control
+      The looser the controling process on HIP implementation, the lower the quality of improvements. Low quality control can lead to HIPs implemented that are 
+      a waste of attention and do little, need to be rewritten and bloat the HIP process, are detrimental to a overall health of Helium, or maybe improve helium to 
+      such a small degree that their bloat and attention sink is not worth their benefit. Other harm to come from a HIP could missed target. Quality control is           good.
+3) The target
+      How do you measure if something has improved? Targets are needed to measure quality control. Targets come from values. Typically values are elected in a           representative democracy. What are the values Helium should achieve? Engineers always aspire to create an objective function of what is good and then               quantitatively measure their designs against that function of what is traditionally called "nonlinear programming" (https://en.wikipedia.org/wiki/Nonlinear_programming#:~:text=In%20mathematics%2C%20nonlinear%20programming%20(NLP,the%20objective%20function%20are%20nonlinear.)
+      
+Improvement Potentials :
+1) HIPs are created on a volunteer basis. Limits quality and quantity to something that directly, by definition, benefits the Helium network. Actions benefiting the helium network need to be incentivized to ensure their continuation in optimal fashion.
+2) Lack of formality in final approval process. To inhibit the creation of a HIP requires a formal process that can be contested, if need be. The losers of the change, those negatively affected, need more reasoning of why they are now less well off than 'their opinion was not the majority opinion.'
+3) Creating a HIP without defining an "improvement" gives the collective consensus vertigo as nobody knows which way is up or down, good or bad. Consensus is then largely a factor of collective confusion impeeding any single person from vehemently opposing a topic and tipping the soft scales of 'consensus not achieved.' Secondarily, what need 
+
+# Stakeholders
+Everyone with a stake in the success of Helium, inc wants to see a positive success derivative, disproportionately in likely order of ranking:
+1) Investors compensated with Helium stock and security tokens
+      Entire contribution is based on a positive HIP. Highly motivated stakholder
+2) Helium leadership
+      Most rewarded with stock options and HNT to ensure their actions align with the company's value
+3) Helium employees
+      Likely have both HNT and stock to a much lesser degree than helium leadership
+4) Network users
+      The end users of the network garnering utility from said network. Each user's utility may be less than employees or investors but collectively may outweigh         the utility garnered by either higher ranking stakeholders.
+5) Hotspot owners with many hotspots, commonly referred to as the deprecated 'patron'
+      Likely to own the most HNT and have a strong vested interest in their secondary reward structure
+6) General hotspot owners
+      Have HNT and bought some property in expectation of compensation
+7) Purchasers of HNT
+      Interest in HNT appreciation which may or may not align with collective benefit
+      
+Arguments are most welcomed in the HIP-22 channel. Shall be passed or rejected with current HIP0007 methodoloy
+
+# Detailed Explanation
+1) Incentive
+      Actions that benefit the Objective Function should be rewarded to ensure that the objective function is optimally followed
+           By definition, drafting a HIP is work towards a positive change to the objective function. As such, 1% of HNT monthly rewards that would have otherwise            gone to consensus group rewards will be retroactively distributed, pro rata, between each author of each HIP. 5x weight is given to HIPs that are                  approved.
+           
+2) Quality Control
+      A formal voting process is needed to distinctly determine the quality of a HIP
+      Voting processes requirements:
+        a) Values transferance. 
+              Values in a direct democracy are directly represented by voting. Voting is a time and attention consuming process. Thus directly are representatives               typically elected who stand for the values of the many and translate the values of the many into individual time consuming decisions such as the                   passing of laws. Therefore, each stakeholder should be represented in some form.
+        b-1) Stakeholder representation and weighting
+              Based on the number of HNT per the oracle price distributed to a user and the amount of DC used, a person can vote a representative into power. Said               representative will vote on passing or rejecting HIPs. There will be 2 representatives for HNT owned and 3 representatives for DC used. These                       representatives:
+                - Debate on and modify each HIP and vote yay or nay on each HIP until 4/5 representatives agree on the proposed HIP
+                - Paid 1% of monthly HNT distributions that would have otherwise been given to consensus rewards divided between represenatives
+                - Election process will have 1 month to present a campaign and and 2 weeks where each representative will be voted on in the Helium app and console
+                - Representatives will serve for 6 months and be re-elected on such schedule.
+        b-2) Stakeholder representation and weighting
+              Each stakeholder based on the number of HNT earned times current HNT price plus the number of DC earned in fiat equivalency will have a weighted vote               on each HIP. A selected fraction of weighted votes such as 2/3, 3/5, 3/4 will be required for a HIP to pass.
+                - Downside to b-2 over b-1 is requirement for attention. What percent of hotspot owners and DC users attend the community call? What percent speak                   at the community calls? Maybe a similar percent will pay enough attention to vote on HIPs. Low turnout to vote defeats the entire purpose and                       breaks the process of a democracy.
+        c) Secure, objective measure of bill passing
+              On-chain voting using the helium app and console. Technical to be implemented 
+        d) Nay voting toggle for b-2
+              A nay voted may toggle to upgrade to a reinforce nay. The reinforced nays will be presented at a community call where elaborated arguments against                 the HIPs. Somehow, if the argument causes a revote, revision or rejection of a HIP, the nay toggler will be rewarded with the rewards that would have               otherwise gone to the HIP drafter.
+      
+3) Objective Function
+      First start with some objective (debatable truths)
+        - More network usage means the world is a better place. Both more people generating utility from the network and more the stakeholders in the                       infrastructure are rewarded.
+        - More coverage over more places gives IoT customers using the network more value.
+            -> This includes: altitude, latitude, and longitude on earth's crust. May be expanded to other bodies inhabited by humans that need network coverage.
+        - Less redundant coverage
+        - what else?
+        
+        Next equation-it! Then take the derivative, set to zero
+        
+        Helium Objective = A*(data [bytes])^a+B*(surface area of earth crust surface covered)^b-C*(redundant hotspots per hex)^c+D*(Sum_hex(signal strength))^d
+
+# Drawbacks
+Plenty of drawbacks in each section. Please contribute to argue against each clause.
+
+# Deployment Impact
+Large development for on-chain voting?
+
+# Success Metrics
+If the objective function is satisfied at a higher rate, then 
+
+
