@@ -21,11 +21,13 @@ With the introduction of a hard cap on HNT supply, Helium’s token-economics wo
 
 # Stakeholders
 
-All HNT holders, Hotspot owners, and HST holders will be affected by this HIP. Users of the network will see no change to data transmission pricing.
+All HNT holders, Hotspot owners, and HST holders will be affected by this HIP. 
+
+There will be no change to the cost to transfer data because the cost of Data Credits is fixed in USD terms.
 
 # Detailed Explanation
 
-The proposal is to have halvenings of net HNT issuance every 2 years on the anniversary of genesis. This means the first halvening will be on 8/1/2021 and net HNT issuance will be reduced to 2.5M HNT per month.
+The proposal is to have halvenings of net HNT issuance every 2 years on the anniversary of genesis. This means the first halvening will be on August 1st, 2021 and net HNT issuance will be reduced to 2.5M HNT per month.
 
 The HNT mining split amongst stakeholders will not change from the [current schedule](https://www.helium.com/hnt#distribution):
 
@@ -94,7 +96,7 @@ Net Emissions is the solution to this problem. It allows the Helium protocol to 
 
 At the current 5M HNT/month issuance, there is a fixed 3,424 HNT minted per epoch. With Net Emissions, the system would target a net HNT mined per epoch, up to a cap. The key difference is targeting a fixed number of HNT minted per epoch vs targeting a net number of HNT minted per epoch.
 
-In its simplest implementation, this would mean that the system monitors how many HNT were burnt that epoch and adds them to the number of HNT to be minted that epoch. So in this simple implementation, if 10 HNT were burned in an epoch, the system would mint 3,434 HNT instead of 3,424 HNT.
+In its simplest implementation, this would mean that the system monitors how many HNT were burnt for Data Credits that epoch and adds them to the number of HNT to be minted that epoch. So in this simple implementation, if 10 HNT were burned for Data Credits in an epoch, the system would mint 3,434 HNT instead of 3,424 HNT.
 
 Net Emissions give the protocol enough HNT to reward consensus group members and reward data transmitters in perpetuity. Net Emissions make sure the Helium Protocol never runs out of HNT.
 
@@ -106,11 +108,13 @@ To allow BME and Net Emissions to work in harmony, the proposal introduces a cap
 
 Under this HIP, the cap on Net Emissions would be made a chain var which can be adjusted via subsequent HIPs as the Helium community gets more data about market conditions in the future.
 
-HNT burns are spiky and users of the Helium protocol often burn a large amount of HNT at once to build up a balance of data credits to use over time. To smooth out Net Emissions, the proposal also creates a “Net Emissions Pool,” which is increased by the amount of HNT that is burnt during an epoch. Then the Net Emissions Pool contributes 1/336th (there are 336 epochs per week) of its value to the next epoch’s mining rewards. This reduces the variability of HNT mining from epoch to epoch.
+HNT burns are spiky and users of the Helium protocol often burn a large amount of HNT at once to build up a balance of data credits to use over time. To smooth out Net Emissions, the proposal also creates a “Net Emissions Pool,” which is increased by the amount of HNT that is burnt during an epoch. Then the Net Emissions Pool contributes 1/336th (there are 336 epochs per week) of its value to the next epoch’s mining rewards. This reduces the variability of HNT mining from epoch to epoch. We propose that this emission rate from the Net Emissions Pool be governed by a chain variable which is initially set to 336.
 
 # Drawbacks
 
 Reduced HNT issuance might reduce further network growth if the HNT price does not increase by a commensurate amount to incentivize new miners.
+
+The Net Emissions Pool design may not adequately smooth rewards. It is impossible to forecast this until we have more real world data on HNT burning patterns, at which time the chain vars controlling the Net Emissions Pool can be adjusted.
 
 # Rationale and Alternatives
 
@@ -128,6 +132,8 @@ Another alternative to the proposed cap on Net Emissions is to make the Net Emis
 
 # Deployment Impact
 
-There will be no immediate impact on users of the network as the first halvening event would be 9 months away. Once the halvening occurs, there will be a meaningful impact on all Hotspot owners and HST holders equally.
+Once the halvening occurs, there will be a meaningful impact on all Hotspot owners and HST holders equally. There is no code deployment necessary until the first halvening which is on August 1st, 2021. 
+
+Net Emissions will impact HNT mining as soon as they are implemented. However the cap on Net Emissions is a very small percentage of the current HNT mining, therefore we expect this impact to be minimal. 
 
 This HIP would require changes to Helium Protocol documentation and education of the community regarding the new emissions schedule.
