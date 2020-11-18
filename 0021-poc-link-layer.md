@@ -1,4 +1,4 @@
-# HIP21: PoC Link Layer Upgradeso
+# HIP21: PoC Link Layer Upgrades
 
 - Author: [@refugeesus](https://github.com/refugeesus)
 - Start Date: November 11, 2020
