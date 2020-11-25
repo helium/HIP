@@ -1,10 +1,10 @@
-# HIPxx: Approval Process For Third-Party Manufacturers
+# HIP19: Approval Process For Third-Party Manufacturers
 
-- Author(s): @jamiedubs, @georgica, @philltran
+- Author(s): @jamiew (jamiedubs), @georgica, @philltran
 - Start Date: 2020-11-14
 - Category: Meta
-- Original HIP PR: TK
-- Tracking Issue: TK
+- Original HIP PR: https://github.com/helium/HIP/pull/86
+- Tracking Issue: https://github.com/helium/HIP/issues/87
 
 # Summary
 
