@@ -68,7 +68,7 @@ Note these may be formatted differently in formulas:
 
 ## Algorithm
 
-The goal if this algorithm is to limit density to a specific target while being flexible enough to reward areas that require density above this target.
+The goal of this algorithm is to limit density to a specific target while being flexible enough to reward areas that require density above this target.
 For example, nation capitals or other dense urban areas.
 It should also be flexible enough to recognize there are many areas that would require localized density to be best served (non-capital cities, college towns, tech centers, etc).
 
