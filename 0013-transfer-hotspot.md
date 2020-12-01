@@ -5,6 +5,7 @@
 - Author: [@mrallen1](https://github.com/mrallen1), [@abhay](https://github.com/abhay)
 - HIP Number: 13
 - Tracking Issue: [#43](https://github.com/helium/HIP/issues/43)
+- Status: Deployed ([audit](https://github.com/helium/miner/blob/master/audit/var-48.md) / [txn](https://explorer.helium.com/txns/DywtCExrXhTxv8VoDZl_hJDjQ2PUcov_AYrW98ZPpcg))
 
 # Summary
 [summary]: #summary
@@ -41,7 +42,7 @@ This new transaction would require two parties to sign the transaction in order 
 
 ## Implement the transaction in the helium-wallet client
 
-The [Helium Wallet CLI](https://github.com/helium/helium-wallet-rs) currently supports exporting a partially completed transaction as either a QR code or a Base64-encoded text blob. Either of these formats would be useful for competing the transaction. 
+The [Helium Wallet CLI](https://github.com/helium/helium-wallet-rs) currently supports exporting a partially completed transaction as either a QR code or a Base64-encoded text blob. Either of these formats would be useful for competing the transaction.
 
 ## Implement the transfer UI in the Helium app
 
