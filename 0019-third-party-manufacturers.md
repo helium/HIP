@@ -61,7 +61,14 @@ Prospective manufacturers would be expected to provide:
 - Proof of reliable software configuration for the devices. This would include remote updates and the ability for hosts to change wifi settings, via Helium's official app or otherwise.
 - A list of other potential risks and issues
 
-Additionally:
+Additionally, we want devices approved under this proposal to be reasonably secure and resistant to tampering. The original Helium hotspots used an ECC chip to house the  `swarm_key` using a secure ECC chip, which was significantly more secure than the external SD card and unencrypted file storage used by the current RAKspots. We propose that applicants are required to include:
+
+- Encrypted/locked-down firmware
+- Encrypted storage of the miner `swarm_key`, either via disk encryption or hardware measures like an ECC chip
+- Willingness to submit a prototype for audit, and sharing those audit results publicly (pass or fail)
+- Optionally, encrypted buses, potting and other anti-tampering meaures.
+
+Lastly, manufacturers are expected to provide:
 
 - Proof of identity for individuals owning 25% or more of the manufacturer, per typical KYC/AML procedure. This could be provided privately to trusted parties like Helium Inc employees or DeWi board members and publicly confirmed.
 - A production budget, to further demonstrate progress and expertise with manufacturing.
@@ -69,6 +76,9 @@ Additionally:
 - Willingness to engage with the community and provide ongoing customer support
 
 While we recognize that much of this information could be considered sensitive or proprietary, we believe it is imperative to build trust with the initial set of manufacturers that are brought in through this process. Thus we ask more of this initial set of manufacturers than we might from later approvals.
+
+
+
 
 ## Issuing Keys & Paying Staking Fees
 
