@@ -39,4 +39,4 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 * In Discussion: HIP is under active consideration by the community
 * Approved: HIP has been approved by rough consensus, and pending development and testing
 * Deployed: Code to implement HIP has been merged and deployed to the network
-* Closed: HIP abandoned, render absolute by other changes, or otherwise withdrawn by the author
+* Closed: HIP abandoned, rendered obsolete by other changes, or otherwise withdrawn by the author
