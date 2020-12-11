@@ -1,10 +1,10 @@
-# HIPxx: Anchor Gateways
+# HIP22: Anchor Gateways
 
 - Author(s): @georgica, @lthiery, @Carniverous19/para1
 - Start Date: 2020-11-16
 - Category: Technical
-- Original HIP PR: 
-- Tracking Issue: 
+- Original HIP PR: https://github.com/helium/HIP/pull/91
+- Tracking Issue: https://github.com/helium/HIP/issues/94
 
 # Problem Statement
 [probem-statement]: #problem-statement
@@ -20,7 +20,7 @@ In its current state, the Helium Blockchain does not allow permissionless adding
 
 This strategy has thus far prevented large-scale attacks of “virtual gateways” as permissionless adding has the proposed cost of $40 to add and $10 to assert location. Instead, attacks require buying the hardware listed above with their respective costs; this means being a good actor is slightly easier as you are guaranteed to have LoRaWAN hardware and the cost of each node is at least 4x the cost of the permissionless model.
 
-It is paramount to the network's growth in coverage to allow the permissionless adding of gateways to the network. In other words, anybody must be able to use a standard LoRaWAN gateway (or use already deployed hardware) and pay the $40 staking fee. 
+It is paramount to the network's growth in coverage to allow the permissionless adding of gateways to the network. In other words, anybody must be able to use a standard LoRaWAN gateway (or use already deployed hardware) and pay the $40 staking fee.
 
 With 1M deployed gateways worldwide (according to [Semtech marketing materials](https://www.semtech.com/lora)), the scale of the opportunity to convert existing infrastructure cannot be ignored.
 It is a general consensus in the community, including Helium and DeWi, that Proof-of-Coverage (POC) does not yet do enough to instill confidence for permissionless adding of gateways to be enabled. There are many ideas for how to improve POC, but they all boil down to concepts of circular trust validation between gateways.
@@ -75,7 +75,7 @@ This reduces all tampering to RF signals: GPS spoofing or LoRa attenuation or am
 # Golden Gateway Challenges
 [golden-gateway-challenges]: #golden-gateway-challenges
 
-A Golden Gateway creates challenges. Similar to Proof of Coverage, a GG challenge request is made where the approximate location is included. 
+A Golden Gateway creates challenges. Similar to Proof of Coverage, a GG challenge request is made where the approximate location is included.
 
 The packets are indistinguishable from other gateways on the network such as to mitigate special treatment of these packets by gateways. As such, gateways are truly proving that they provide coverage at this time. It’s worth noting that this only proves that a physical antenna has received the packet in the appropriate area and exploitation vectors where received packets are shared to many gateways are not mitigated.
 
@@ -94,5 +94,3 @@ To put it succinctly, the information from the GG Challenge is that an antenna e
 In addition with other efforts of limiting earnings per grid area, this would effectively reduce the earning potential of bad actors as they would be forced to provide a spread of real antennas to maximize earnings, thus providing true coverage.
 
 Finally, Trust Score would require some rate of decay and it is suggested that this rate of decay be proportional to earnings for that gateway or grid.
-
-
