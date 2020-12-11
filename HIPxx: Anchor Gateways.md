@@ -22,7 +22,7 @@ This strategy has thus far prevented large-scale attacks of “virtual gateways�
 
 It is paramount to the network's growth in coverage to allow the permissionless adding of gateways to the network. In other words, anybody must be able to use a standard LoRaWAN gateway (or use already deployed hardware) and pay the $40 staking fee. 
 
-With 1M deployed gateways worldwide (according to Semtech marketing materials), the scale of the opportunity to convert existing infrastructure cannot be ignored.
+With 1M deployed gateways worldwide (according to [Semtech marketing materials](https://www.semtech.com/lora)), the scale of the opportunity to convert existing infrastructure cannot be ignored.
 It is a general consensus in the community, including Helium and DeWi, that Proof-of-Coverage (POC) does not yet do enough to instill confidence for permissionless adding of gateways to be enabled. There are many ideas for how to improve POC, but they all boil down to concepts of circular trust validation between gateways.
 
 HIP-9 proposes a levelling scheme based on trustworthiness of the gateways based on origin; however, it is the opinion of this HIP that gateways, no matter the origin, carry no inherent trust. In particular, it is quite possible to “jailbreak” even a Helium Hotspot and have it run an arbitrary Miner on the hardware. And over the months we have seen many questionable deployments of Helium Hotspot clusters which have proven to be quite difficult to snuff out using circular validation logic.
@@ -62,7 +62,7 @@ The general idea of the Trust Score is that it will qualify whether and to what 
 
 The Golden Gateway will feature LoRa, BLE, & GPS radio modules, and a hardware key store.
 
-To make tampering near impossible, traces to the main chips will be buried in the 3rd and 4th layer while potting around chips will also be employed. The device will be calibrated upon certification and should anything change occur, the hardware key store will be invalidated.
+To make tampering near impossible, traces to the main chips will be buried in the 3rd and 4th layer while potting around chips will also be employed. The device will be calibrated upon certification and should any change occur, the hardware key store will be invalidated.
 
 The hardware key store will generate its on-chain identity and this identity will be certified by DeWi upon “blessing” these devices.
 
