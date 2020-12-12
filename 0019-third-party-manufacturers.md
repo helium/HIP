@@ -119,7 +119,7 @@ Interested manufacturers should:
 * Make a copy of the [TEMPLATE.md](./0019-third-party-manufacturers/TEMPLATE.md) file in this repository and put it in the same directory, i.e. `0019-third-party-manufacturers/name-of-your-company.md`
 * Fill it out; if you have questions or concerns about a particular question, just leave it blank and ask on GitHub or on Discord.
 * Submit a pull request
-* Discussio and approval would follow the same "rough consensus” process used by HIPs generally, as outlined in [HIP7](https://github.com/helium/HIP/blob/master/0007-managing-hip-process.md).
+* Discussion and approval would follow the same "rough consensus” process used by HIPs generally, as outlined in [HIP7](https://github.com/helium/HIP/blob/master/0007-managing-hip-process.md).
 
 Sensitive information like financials or proofs of identity could be furnished to members of both Helium Inc. and the Decentralized Wireless Alliance (DeWi) and attested publicly, via the HIP document, GitHub comments, or otherwise.
 
