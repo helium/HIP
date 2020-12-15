@@ -14,9 +14,6 @@ Changes the structure & process involved in forming consensus on the network - p
 # Motivation
 [motivation]: #motivation
 
-Why are we doing this? What use cases does it support? What problems does it
-solve? What is the expected outcome?
-
 In its current state, consensus takes place onboard miners, or in the cloud in the case of "light gateways" with cloud-based miners. This HIP proposes moving away from the former and toward the latter as a standard, by moving consensus away from miners and onto dedicated cloud-based or otherwise privately operated server farms. By separating the concerns of miners (involved in tandem with gateways/packet forwarders) and consensus group, the two can be better optimized to perform their respective duties.
 
 Presently, there is a compromise of optimization, as hardware and software needs are at odds with one another; the most optimized approach for gateways/miners (coverage providers) and consensus group (security / data integrity providers) are distinct and different. Considerations for each are as follows:
@@ -35,12 +32,12 @@ Consensus Group:
 
 # Stakeholders
 [stakeholders]: #stakeholders
+  
+All current and future hotspot owners will be affected by this change. Miner owners will be given a new option to opt-in to stake & participate in CG for a marginal staking fee (opted-out by default).
 
-* Who is affected by this HIP?
+There will also be a new class or "role" of operator created -- validator pools/nodes. These operators will obviously have stake, as they are brought into existence via this HIP.
 
-* How are we soliciting feedback on this HIP from these stakeholders? Note that
-  they may not be watching the HIPs repository or even aren't directly active in
-  the Helium Community Slack channels.
+Community debate / discussion will be solicited via Discord in the respective hip-xxxx-move-consensus-off-miners channel, and here in git comments.
 
 # Detailed Explanation
 [detailed-explanation]: #detailed-explanation
@@ -53,6 +50,8 @@ Consensus Group:
   used.
 
 - Corner cases should be dissected by example.
+
+
 
 # Drawbacks
 [drawbacks]: #drawbacks
