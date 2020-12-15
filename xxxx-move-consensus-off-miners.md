@@ -101,11 +101,15 @@ current users of this project.
 # Success Metrics
 [success-metrics]: #success-metrics
 
-What metrics can be used to measure the success of this design?
-
 Success for this HIP can be measured in several ways. First, improved consensus performance overall should be emphasized. This can be measured by improvement of CG participants dropping / timing out, material reduction in consensus group stalls, and perhaps even reduction in block times (if this is so desired...it is the author's understanding that there is a desire to hold block times as close to ~60s as possible, pending correction). Given there are also issues of individual miners crashing due to being underpowered and being elected to CG, it would follow that a successful implementation of cloud / distributed consensus would cause less of these problems to occur.
 
 It should also be considered that there are potential economic implications to this change, as well. HIP 16 implementing random consensus selection appears to be widely popular within the community due to more equity of opportunity and more widely distributed rewards. Among these considerations are lone wolves, who rightfully have concerns about any changes that would result in them being at an inherent disadvantage. A successful implementation of these changes to consensus should ensure that these concerns are considered and that consensus group election considerations do not adversely effect the changes implemented successfully in HIP 16.
+
+Fundamentally, success should be tightly-coupled with roughly the same metrics that this HIP proposes validator pools are judged by. Some potential metrics to collect/report on:
+
+- Uptime (% of the time pool is online and operational; this will obviously affect its ability to be elected and participate effectively in CG).
+- % or # of timeouts or otherwise failing to succesfully confirm a transaction / form blocks
+- Rewards paid to delegates (there are a couple of ways you could go with this...you could either base this on a formula from performance metrics to determine validator payout, which is in turn distributed accordingly 1:1 to constituent / delegate miners, or allow the flexibility to enable validators to model their own pay structures, which is yet another way for validator pools to politick and appeal to constituents / garner votes.
 
 - What should we measure to prove a performance increase?
 
