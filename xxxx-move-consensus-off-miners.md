@@ -1,21 +1,37 @@
 # HIP Template
 
-- Author(s): <!-- your GitHub @username -->
-- Start Date: <!-- fill me in with today's date, YYYY-MM-DD -->
-- Category: <!-- economic, technical, meta -->
+- Author(s): @cvolkernick
+- Start Date: 2020-12-15
+- Category: Economic, Technical
 - Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
 - Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
 
 # Summary
 [summary]: #summary
 
-One paragraph explanation of the proposal.
+Changes the structure & process involved in forming consensus on the network - primarily by separating concerns of miners (providing verifiable coverage) and consensus group (securing the network / block formation).
 
 # Motivation
 [motivation]: #motivation
 
 Why are we doing this? What use cases does it support? What problems does it
 solve? What is the expected outcome?
+
+In its current state, consensus takes place onboard miners, or in the cloud in the case of "light gateways" with cloud-based miners. This HIP proposes moving away from the former and toward the latter as a standard, by moving consensus away from miners and onto dedicated cloud-based or otherwise privately operated server farms. By separating the concerns of miners (involved in tandem with gateways/packet forwarders) and consensus group, the two can be better optimized to perform their respective duties.
+
+Presently, there is a compromise of optimization, as hardware and software needs are at odds with one another; the most optimized approach for gateways/miners (coverage providers) and consensus group (security / data integrity providers) are distinct and different. Considerations for each are as follows:
+
+Gateways (presumed as onboard miners):
+
+-Lightweight; both in form factor & complexity
+-Economic; lowest cost to achieve the same outcome optimally
+-Security; inability to compromise and/or repurpose hardware for malicious purposes (gaming)
+
+Consensus Group:
+
+-Performant; performs necessary compute tasks at peak efficacy/efficiency (fastest, low compute overhead, most energy/cost efficiency)
+-Reliability; maintains highest uptime, least timeouts, least dropped/failed transaction confirmations
+-Security; robust against potential gaming, attacks, etc., and does not allow for powerful and/or bad actors to compromise the system at scale or via brute force.
 
 # Stakeholders
 [stakeholders]: #stakeholders
@@ -72,7 +88,7 @@ space. This is probably the most important section!
 # Deployment Impact
 [deployment-impact]: #deployment-impact
 
-Describe how this design will be deployed and any potential imapact it may have on
+Describe how this design will be deployed and any potential impact it may have on
 current users of this project.
 
 - How will current users be impacted?
@@ -87,6 +103,10 @@ current users of this project.
 [success-metrics]: #success-metrics
 
 What metrics can be used to measure the success of this design?
+
+Success for this HIP can be measured in several ways. First, improved consensus performance overall should be emphasized. This can be measured by improvement of CG participants dropping / timing out, material reduction in consensus group stalls, and perhaps even reduction in block times (if this is so desired...it is the author's understanding that there is a desire to hold block times as close to ~60s as possible, pending correction). Given there are also issues of individual miners crashing due to being underpowered and being elected to CG, it would follow that a successful implementation of cloud / distributed consensus would cause less of these problems to occur.
+
+It should also be considered that there are potential economic implications to this change, as well. HIP 16 implementing random consensus selection appears to be widely popular within the community due to more equity of opportunity and more widely distributed rewards. Among these considerations are lone wolves, who rightfully have concerns about any changes that would result in them being at an inherent disadvantage. A successful implementation of these changes to consensus should ensure that these concerns are considered and that consensus group election considerations do not adversely effect the changes implemented successfully in HIP 16.
 
 - What should we measure to prove a performance increase?
 
