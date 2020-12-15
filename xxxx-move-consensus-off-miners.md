@@ -20,7 +20,7 @@ Presently, there is a compromise of optimization, as hardware and software needs
 
 Gateways (presumed as onboard miners):
 
-- Lightweight; both in form factor & complexity
+- Lightweight; both in form factor & design complexity
 - Economic; lowest cost to achieve the same outcome optimally
 - Security; inability to compromise and/or repurpose hardware for malicious purposes (gaming)
 
@@ -52,11 +52,35 @@ Community debate / discussion will be solicited via Discord in the respective hi
 - Corner cases should be dissected by example.
 
 
+Each miner on the network is a "constituent", with independent interests. Constituent miners can delegate their vote ("stake") in the collective network to a delegated pool entity "representative". There is no monetary cost to do so; the only potential cost is the net effect of your chosen delegate pool's election being less rewarding than another potential pool's. As an alternative approach, miners can be given the option to "opt-in" to a per-epoch stake, and then provided a list of available validator pools to delegate their votes to. From a UX standpoint this would look something like the following:
+
+1) User opens app to "Hotspots" page.
+2) User selects a particular miner's settings as currently exists (gear option on the miner panel).
+3) User is presented a toggle on this settings page, which opts-in/opts-out from staking to participate in CG.
+4) Any miners opted-out would not participate in CG nor receive CG awards as a result (opt-out is default when a new miner is onboarded or existing miner is transferred to a new owner).
+5) Any miners opted-in would be "billed" a staking fee from the owner wallet each epoch, which would in turn be delegated to the consensus pool of chosing (explanation follows).
+6) When opting-in, user would be presented a list of available staking pools, along with any relevant metrics for making the delegation decision. Some examples might be:
+
+- Average Rewards Paid Per Epoch
+- Pool Uptime (% of the time actively available to participate in elections)
+- Success Rate (% of elected cycles without dropping due to performance-related reasons, e.g. timeouts, stalls, dropped transactions, etc).
+
+Reallocation of delegate votes is allowed once per epoch, but you are not eligible for election in the epoch you change your vote in, for obvious reasons.
+
+Alternatively, a user could be presented a "global configuration" page for stake, such that they select which miners are opted-in and which aren't, and can even delegate some miners to one pool and other miners to another.
+
+Delegate pools represent their constituents interests (to the degree they wish to continue to maintain and/or expand their constituency), and therefore are free to incentivize staking with rewards distributions as they see fit. This creates competitive forces within the market of available delegate pools and incentivizes each pool to be the most generous, performant, and reliable.
+
+Each delegate pool stakes an amount to be determined more or less arbitrarily (say here e.g. 10,000 HNT) to enter the Validator Congress (Consensus Group). These pools would operate similarly to how "scores" previously did; the delegate pool would be heavily incentivized to operate on more high-compute machines, as important factors such as uptime, successful consensus (not timing out, etc.), and other reliability metrics can be used to score a pool's performance and hence determine it's likelihood to enter the Validator Congress and participate in consensus "duties".
+
+Slashing techniques (partial or full loss of stake) may be employed, if this reliability score falls below a certain threshold, or for other reasons not considered here.
+
 
 # Drawbacks
 [drawbacks]: #drawbacks
 
-- Why should we *not* do this?
+- There has been concern around consensus as a whole that it may become "exclusive", in the sense that the "average Joe" miner may lose the ability to be competitive in a stake-based pool where earning opportunity is closely correlated to earning capacity (i.e. the more miners one has, the more influence they have on the ability to join CG).
+- There may be unforeseen opportunities to game CG introduced not covered or considered here. It is the author's perspective that because delegate votes are tightly coupled 1:1 with miner population, this should provide a check on concentration of influence, as there is a material cost to acquiring and operating additional miners required to obtain additional "directly-controlled" votes (as opposed to needing to "pitch" or "campaign" to delegate voters to obtain others' vote(s)).
 
 # Rationale and Alternatives
 [alternatives]: #rationale-and-alternatives
@@ -70,6 +94,8 @@ space. This is probably the most important section!
   choosing them?
 
 - What is the impact of not doing this?
+
+Decoupling of consensus from miners is likely inevitable, as there are a variety of negative impacts caused by running consensus on low-powered devices (primarily raspberry pis). There is also a great deal of discussion around light gateways, and of course the existing implementations of semi-light gateways ("regular" gateways with their miners decoupled away in the cloud). These two likely evolutions are quite synergistic when considered together, and there are other proposals which would further enhance this architecture design, e.g. [Move PoC challenge construction to Consensus Group](https://github.com/helium/HIP/pull/41).
 
 # Unresolved Questions
 [unresolved]: #unresolved-questions
