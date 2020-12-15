@@ -20,15 +20,15 @@ Presently, there is a compromise of optimization, as hardware and software needs
 
 Gateways (presumed as onboard miners):
 
--Lightweight; both in form factor & complexity
--Economic; lowest cost to achieve the same outcome optimally
--Security; inability to compromise and/or repurpose hardware for malicious purposes (gaming)
+- Lightweight; both in form factor & complexity
+- Economic; lowest cost to achieve the same outcome optimally
+- Security; inability to compromise and/or repurpose hardware for malicious purposes (gaming)
 
 Consensus Group:
 
--Performant; performs necessary compute tasks at peak efficacy/efficiency (fastest, low compute overhead, most energy/cost efficiency)
--Reliability; maintains highest uptime, least timeouts, least dropped/failed transaction confirmations
--Security; robust against potential gaming, attacks, etc., and does not allow for powerful and/or bad actors to compromise the system at scale or via brute force.
+- Performant; performs necessary compute tasks at peak efficacy/efficiency (fastest, low compute overhead, most energy/cost efficiency)
+- Reliability; maintains highest uptime, least timeouts, least dropped/failed transaction confirmations
+- Security; robust against potential gaming, attacks, etc., and does not allow for powerful and/or bad actors to compromise the system at scale or via brute force.
 
 # Stakeholders
 [stakeholders]: #stakeholders
