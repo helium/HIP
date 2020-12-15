@@ -1,4 +1,4 @@
-# HIP Template
+# HIP XXXX: Move Consensus Off Miners
 
 - Author(s): @cvolkernick
 - Start Date: 2020-12-15
