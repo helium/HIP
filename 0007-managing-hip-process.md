@@ -26,7 +26,7 @@ We do not aim to adjudicate routine technical changes to miner software or the d
 # Stakeholders
 [stakeholders]: #stakeholders
 
-We plan to circulate this proposal in [Slack #helium-improvement-proposals](https://chat.helium.com), [Discord #hips](https://discord.gg/helium), and on the [Helium community forum](https://community.helium.com). We will also solicit specific individuals for feedback, from both within the Helium community and other crypto and open-source projects. 
+We plan to circulate this proposal in [Discord #hips channel](https://discord.gg/helium). We will also solicit specific individuals for feedback, from both within the Helium community and other crypto and open-source projects.
 
 Specifically we aim to achieve rough consensus around this process with Helium Inc (as the primary developer of nearly all core Helium software), hotspot owners, and the newly-formed [DeWi Alliance](https://dewi.org), which plans to commit time & money to community governance in the Helium ecosystem.
 
