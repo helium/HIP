@@ -74,7 +74,7 @@ Each delegate pool stakes an amount to be determined more or less arbitrarily (s
 
 Slashing techniques (partial or full loss of stake) may be employed, if this reliability score falls below a certain threshold, or for other reasons not considered here.
 
-Staking Elaboration
+**Staking Elaboration**
 
 There are technically two separate and distinct stakes here:
 
@@ -102,6 +102,9 @@ Without this decoupling of miners and CG, the network performance is likely to s
   - Technical implementation details : The considerations herein ane mainly from a "brainstorming" perspective that takes place at a high conceptual level. These considerations are made in the macro sense, but are inadequate for technical level implementation details. More expert knowledge on the current technical workings of Consensus and it's compatibility with the suggested methods is desired / welcome.
   - There are many potential second and third order effects / changes that may be inspired or caused / necessary with this large-scale and quite fundamental change to the system-level design of consensus group functioning. Some examples have been cited above -- light gateways, moving certain responsibilties to CG (such as challenge construction).
   - Staking : Staking is not necessarily a monolith, so alternative methods could be proposed or supplemented/exchanged in place of the methods briefly discussed here.
+  - Effects on Consensus Group Rewards : CG rewards currently account for 6% of all reward distributions per epoch. It's to be determined how the rewards pool will be impacted.
+
+Consensus Group currently 
 
 # Deployment Impact
 [deployment-impact]: #deployment-impact
