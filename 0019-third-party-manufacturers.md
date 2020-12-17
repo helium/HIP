@@ -86,15 +86,19 @@ In order to join the blockchain, every hotspot requires an onboarding code. This
 
 Currently, RAK Wireless acquires codes from Helium Inc via a proprietary, manual process, with records of serial numbers or MAC addresses presumably kept by Helium Inc.
 
-We propose Helium Inc move RAK and other third-party manufacturers to a new key issuance system that includes public record-keeping. The specifics of this system are largely to-be-determined, and some initial ideas are mentioned below.
-
 For the time being, we strongly recommend Helium Inc continue to keep control of issuing onboarding codes. Trusting third-parties with key issuance is a complex and potentially dangerous issue and deserves its own independent proposal.
 
-Several ideas for how a manufacturer could acquire onboarding codes from Helium Inc (FIXME: this needs help)
+We suggest that Helium Inc move RAK and other third-party manufacturers to a new key issuance system that includes public record-keeping on the blockchain. The specifics of this system are still to be determined. We believe this proposal could be approved and a solution developed independently. Applicants that would otherwise be approved should be able to move forward with the process
 
-1.  Manufacturer could submit a $40 blockchain payment (equivalent to the staking fee) to a known Helium Inc wallet address, with the manufacturer name and serial number as a memo. Helium Inc would then separately transmit the onboarding code back to the manufacturer via a secure channel.
-2.  Helium Inc could provide a private Console-like dashboard where approved manufacturers can issue keys on-demand. This dashboard would submit a signed transaction to the blockchain, publicly memorializing the serial number and which manufacturer received it.
-3.  TODO: a better idea that requires a minimum of code and no private handshake services
+
+## Revoking Manufacturer Approvals
+
+We suggest a similar HIP-style "rough consensus" process in the case that the community wants to cease issuing codes to an approved manufacturer.
+
+Removing any hotspots associated with that manufacturer is not currently possible. Consideration and approval of this is left to a separate proposal, as it is both technically and philosophically complex.
+
+For consideration, there is not currently a way to unstake a hotspot on the Helium network. There is also no denylist support, which could be used as to implement community-led blocking of known bad actors. A mechanism for revoking access could potentially be built alongside the key-issuance system mentioned above, but again, this is explicitly left to a future proposal.
+
 
 ## Apps, Software Updates & Customer Support
 
@@ -138,8 +142,7 @@ Sensitive information like financials or proofs of identity could be furnished t
 
 # Unresolved Questions
 
-- How are manufacturers who fail to live up to expectations kicked out of the program? Just stop key issuance? Who decides?
-
+- Details of key issuance and/or revocation systems, as highlighted above. These are deferred to future proposals.
 
 # Deployment Impact
 
