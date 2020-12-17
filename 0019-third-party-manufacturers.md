@@ -142,8 +142,7 @@ Sensitive information like financials or proofs of identity could be furnished t
 
 # Unresolved Questions
 
-- How are manufacturers who fail to live up to expectations kicked out of the program? Just stop key issuance? Who decides?
-
+- Details of key issuance and/or revocation systems, as highlighted above. These are deferred to future proposals.
 
 # Deployment Impact
 
