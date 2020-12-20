@@ -5,6 +5,7 @@
 - Category: Meta
 - Original HIP PR: https://github.com/helium/HIP/pull/86
 - Tracking Issue: https://github.com/helium/HIP/issues/87
+- Status: Approved
 
 # Summary
 
