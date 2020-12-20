@@ -29,7 +29,7 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | 16 | [Remove Score from Consensus Group Elections](https://github.com/helium/HIP/blob/master/0016-random-consensus-group-election.md) | [Deployed](https://github.com/helium/HIP/issues/55) ([audit](https://github.com/helium/miner/blob/master/audit/var-48.md) / [txn](https://explorer.helium.com/txns/DywtCExrXhTxv8VoDZl_hJDjQ2PUcov_AYrW98ZPpcg)) |
 | 17 | [Hex Density-based Transmit Reward Scaling](https://github.com/helium/HIP/blob/master/0017-hex-density-based-transmit-reward-scaling.md) | [Approved](https://github.com/helium/HIP/issues/60) |
 | 18 | [Remove Oracle Forecast for DC Burn](https://github.com/helium/HIP/blob/master/0018-remove-oracle-forecast-for-dc-burn.md) | [Approved](https://github.com/helium/HIP/issues/60) |
-| 19 | [Approval Process For Third-Party Manufacturers](https://github.com/helium/HIP/blob/master/0019-third-party-manufacturers.md) | [In Discussion](https://github.com/helium/HIP/issues/87) |
+| 19 | [Approval Process For Third-Party Manufacturers](https://github.com/helium/HIP/blob/master/0019-third-party-manufacturers.md) | [Approved](https://github.com/helium/HIP/issues/87) |
 | 20 | [HNT Max Supply](https://github.com/helium/HIP/blob/master/0020-hnt-max-supply.md) | [Approved](https://github.com/helium/HIP/issues/73) |
 | 21 | [PoC Link Layer Upgrades](https://github.com/helium/HIP/blob/master/0021-poc-link-layer.md) | [In Discussion](https://github.com/helium/HIP/issues/78) |
 | 22 | [Anchor/Golden Gateways](https://github.com/helium/HIP/blob/master/0022-anchor-gateways.md) | [In Discussion](https://github.com/helium/HIP/issues/94) |
