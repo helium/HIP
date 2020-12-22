@@ -37,7 +37,7 @@ All current and future hotspot owners will be affected by this change. Miner own
 
 There will also be a new class or "role" of operator created -- validator pools/nodes. These operators will obviously have stake, as they are brought into existence via this HIP.
 
-Community debate / discussion will be solicited via Discord in the respective hip-xxxx-move-consensus-off-miners channel, and here in git comments.
+Community debate / discussion will be solicited via Discord in the respective hip-23-move-consensus-off-miners channel, and here in git comments.
 
 # Detailed Explanation
 [detailed-explanation]: #detailed-explanation
