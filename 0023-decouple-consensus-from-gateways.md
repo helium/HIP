@@ -1,10 +1,10 @@
-# HIP XXXX: Move Consensus Off Miners
+# HIP 23: Decouple Consensus From Gateways
 
 - Author(s): @cvolkernick
 - Start Date: 2020-12-15
-- Category: Economic, Technical
-- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
-- Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
+- Category: Technical
+- Original HIP PR: https://github.com/helium/HIP/pull/97
+- Tracking Issue: https://github.com/helium/HIP/issues/101
 
 # Summary
 [summary]: #summary
