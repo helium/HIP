@@ -20,7 +20,7 @@ Similarly to transfer_gateway_v1, this transaction can have an optional amount o
 
 There are various repetitive tasks associated with the host-owner relationship
 that could be automated with percentage transfer of hotspot ownership. For example,
-owners have to calculate payouts for each of their hosts and pay each host
+owners have to calculate payouts for each of their hosts and pay out each host
 manually. Likewise, hosts have to cross-reference the performance of their hotspots
 with their payments in order to ensure they are getting fair payouts.
 Automating these tasks by allowing for a percentage transfer of hotspot ownership
