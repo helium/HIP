@@ -103,10 +103,6 @@ An alternative design would be to allow owners to allocate a percentage of HNT e
 hotspot to a different address. We believe this to be the inferior option as it does not
 provide hosts with a sense of legitimate ownership of their hotspot.
 
-# Unresolved Questions
-[unresolved]: #unresolved-questions
-
-N/A
 
 # Deployment Impact
 [deployment-impact]: #deployment-impact
