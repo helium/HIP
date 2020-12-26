@@ -22,9 +22,9 @@ There are various repetitive tasks associated with the host-owner relationship
 that could be automated with percentage transfer of hotspot ownership. For example,
 owners have to calculate payouts for each of their hosts and pay out each host
 manually. Likewise, hosts have to cross-reference hotspot earnings tracker platforms
-with their payments in order to ensure they are getting fair payouts and that their hotspots
-are currently functioning properly. Automating these tasks by allowing for a percentage 
-transfer of hotspot ownership would benefit the Helium network as it would reduce the 
+with their payments in order to ensure they are getting fair payouts. Hosts must also
+reference earnings tracker platforms in order to ensure their hotspots are alive and well.
+Automating these tasks would benefit the Helium network as it would reduce the 
 time and energy needed to maintain host-owner relationships, as well as by giving 
 rise to a new type of relationship, the owner-owner relationship.
 
