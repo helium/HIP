@@ -1,4 +1,4 @@
-# HIP Template
+# HIP 24: Transfer Percentage of Hotspot
 
 - Author(s): @ericmheilman
 - Start Date: 2020-12-26
