@@ -30,8 +30,8 @@ This new transaction would automate these tasks by allowing HNT earnings to auto
 be routed to their intended addresses, as opposed to being manually rerouted at set intervals
 by hotspot owners.
 
-This automation would benefit the Helium network as it would greatly reduce the 
-time and energy needed to maintain host-owner relationships.
+This automation would benefit the Helium network as it would facilitate less cumbersome
+host-owner relationships.
 
 
 # Stakeholders
