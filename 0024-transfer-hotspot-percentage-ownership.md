@@ -12,21 +12,26 @@
 This proposal introduces a new transaction, transfer_gateway_v2, which will
 allow a hotspot owner to transfer a percentage of hotspot ownership to another
 address. Percentage of hotspot ownership will be determinant in the payout of
-HNT rewards (i.e. 50% ownership -> 50% of HNT, 10% ownership -> 10% of HNT, etc.).
+HNT rewards (50% ownership -> 50% of HNT, 10% ownership -> 10% of HNT, etc.).
 Similarly to transfer_gateway_v1, this transaction can have an optional amount of HNT associated.
 
 # Motivation
 [motivation]: #motivation
 
 There are various repetitive tasks associated with the host-owner relationship
-that could be automated with percentage transfer of hotspot ownership. For example,
+that make the relationship more time and energy consuming than necessary. For example,
 owners have to calculate payouts for each of their hosts and pay out each host
 manually. Likewise, hosts have to cross-reference hotspot earnings tracker platforms
 with their payments in order to ensure they are getting fair payouts. Hosts must also
-reference earnings tracker platforms in order to ensure their hotspots are alive and well.
-Automating these tasks would benefit the Helium network as it would reduce the 
-time and energy needed to maintain host-owner relationships, as well as by giving 
-rise to a new type of relationship, the owner-owner relationship.
+reference earnings tracker platforms in order to ensure their hotspots are online and
+functioning properly.
+
+This new transaction would automate these tasks by allowing HNT earnings to automatically
+be routed to their intended addresses, as opposed to being manually rerouted at set intervals
+by hotspot owners.
+
+This automation would benefit the Helium network as it would greatly reduce the 
+time and energy needed to maintain host-owner relationships.
 
 
 # Stakeholders
@@ -61,8 +66,7 @@ owner and contains enough HNT to burn into DCs for the transaction, the transact
 is accepted and the gateway's owner is updated in the ledger.
 
 5. The hotspot appears in both the sender's hotspot list and as well as the recipient's
-hotspot list. The respective hotspot ownership percentages are reflected
-within the hotspot list.
+hotspot list. The respective hotspot ownership percentages are reflected accordingly.
 
 ## Implement the transaction in the helium-wallet client
 
