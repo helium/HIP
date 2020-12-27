@@ -65,11 +65,13 @@ hotspot list. The respective hotspot ownership percentages are reflected accordi
 
 ## Implement the transaction in the helium-wallet client
 
-The [Helium Wallet CLI](https://github.com/helium/helium-wallet-rs) currently supports exporting a partially completed transaction as either a QR code or a Base64-encoded text blob. Either of these formats would be useful for competing the transaction.
+The Helium Wallet CLI currently supports similar transactions that could be built upon for this implementation.
 
 ## Implement the transfer UI in the Helium app
 
-Not considered. The Helium blockchain team will implement the transaction and implementation via the command line client. Future work on integrating this transfer into the Helium mobile app will be prioritized but is out of scope of this HIP.
+The Helium Blockchain Engineering team will decide if adding this functionality to the Helium app is necessary.
+
+
 
 
 # Drawbacks
