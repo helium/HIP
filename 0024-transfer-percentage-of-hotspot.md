@@ -22,9 +22,7 @@ There are various repetitive tasks associated with the host-owner relationship
 that make the relationship more time and energy consuming than necessary. For example,
 owners have to calculate payouts for each of their hosts and pay out each host
 manually. Likewise, hosts have to cross-reference their payments with hotspot earnings
-tracker platforms in order to ensure they are getting fair payouts. Hosts must also
-reference earnings tracker platforms in order to ensure their hotspots are online and
-functioning properly on a regular basis.
+tracker platforms in order to ensure they are getting fair payouts.
 
 This new transaction would automate these tasks by allowing HNT earnings to automatically
 be routed to their intended addresses, as opposed to being manually rerouted at set intervals
