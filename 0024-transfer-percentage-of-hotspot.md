@@ -55,18 +55,18 @@ update the gateway's ownership percentages in the ledger.
 ### Steps
 
 1. Current owner creates a partially signed transaction with a proposed ownership
-percentage as well as an optional HNT amount that is required to complete the transaction.
+percentage as well as an optional HNT amount that is required to complete the transaction
 
-2. Current owner sends the partially signed transaction to the receiving owner.
+2. Current owner sends the partially signed transaction to the receiving owner
 
-3. Recipient signs the transaction and pays the DC fee to submit the transaction to the blockchain.
+3. Recipient signs the transaction and pays the DC fee to submit the transaction to the blockchain
 
 4. If the receiving account contains sufficient HNT balance as requested by the current
 owner and contains enough HNT to burn into DCs for the transaction, the transaction
-is accepted and the gateway's owner is updated in the ledger.
+is accepted and the gateway's owner is updated in the ledger
 
 5. The hotspot appears in both the sender's hotspot list and as well as the recipient's
-hotspot list. The respective hotspot ownership percentages are reflected accordingly.
+hotspot list. The respective hotspot ownership percentages are reflected accordingly
 
 ## Implement the transaction in the helium-wallet client
 
