@@ -25,10 +25,7 @@ manually. Likewise, hosts have to cross-reference their payments with hotspot ea
 tracker platforms in order to ensure they are getting fair payouts.
 
 This new transaction would automate these tasks by allowing HNT earnings to automatically
-be routed to their intended addresses, as opposed to being manually rerouted at set intervals
-by hotspot owners.
-
-This automation would benefit the Helium network as it would facilitate less cumbersome
+be routed to their intended addresses. This automation would benefit the Helium network as it would facilitate less cumbersome
 host-owner relationships.
 
 
