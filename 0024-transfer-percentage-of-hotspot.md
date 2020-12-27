@@ -91,7 +91,7 @@ investment and use in the network over time
 now, if a host only has time to perform 'x' payments, the host can only deploy
 'x' hotspots
 4. Remove the need for hosts to trust owners and hotspot earnings tracker platforms
-5. Allow users to see their HNT earnings in real-time
+5. Allow hosts to see their HNT earnings in real-time
 6. Remove the need for hotspot earnings tracker platforms
 
 An alternative design would be to allow owners to allocate a percentage of HNT earnings from a
