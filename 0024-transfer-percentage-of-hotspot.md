@@ -82,7 +82,6 @@ The only drawback consideration that has been raised so far is chain bloat.
 # Rationale and Alternatives
 [alternatives]: #rationale-and-alternatives
 
-Rationale
 
 The rationale for this change is six-fold.
 
