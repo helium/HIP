@@ -25,9 +25,9 @@ https://docs.rakwireless.com/Product-Categories/WisGate/RAK-Hotspot-Miner/Overvi
 Originally retailing at $249.99
 
 We are working on version 2, that will have the following upgrades:
-•	A configuration button
-•	New casing with closed access to the USB ports
-•	A secure chip built into the Concentrator HAT
+* A configuration button
+* New casing with closed access to the USB ports
+* A secure chip built into the Concentrator HAT
 
 The new RAK Hotspot Miner is to be released around Feb 2021, retailing at $299.99
 
@@ -35,8 +35,8 @@ Both of these products use the Helium app for configuration.
 
 We are also working on:
 
-•	Lower cost Light Hotspot
-•	High security Anchor Hotspot
+*	Lower cost Light Hotspot
+* High security Anchor Hotspot
 
 
 ## Customer Support
