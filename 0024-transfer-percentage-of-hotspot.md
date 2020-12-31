@@ -25,11 +25,12 @@ This ability will catalyze the growth of the Helium Network by allowing network
 participants to enter into trust mimimized co-ownership agreements.
 
 This ability will also catalyze the growth of the Helium Network by automating 
-various repetitive tasks necessary to maintain a host-owner relationship. For example, 
+various repetitive tasks that are currently necessary to maintain a host-owner relationship. For example, 
 owners have to calculate payouts for each of their hosts and pay out each host manually. 
 Likewise, hosts have to cross-reference their payments with hotspot earnings tracker platforms 
-in order to ensure they are getting fair payouts. This automation would benefit 
-the Helium network as it would facilitate less cumbersome co-ownership agreements.
+in order to ensure they are getting fair payouts. Automating these tasks would have a
+positive effect on the speed at which the Helium Network is able to grow as owners would be able
+to deploy more hotspots and hosts would be more willing to participate in host-owner relationships.
 
 
 # Stakeholders
