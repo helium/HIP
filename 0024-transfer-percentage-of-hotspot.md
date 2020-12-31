@@ -25,18 +25,14 @@ agreements will take the current decentralized nature of the network one step fu
 the ownership of the network nodes to be broken down into smaller pieces that can be transferred between
 network participants as necessary.
 
-This further decentralization will
-
-This further decentralization will catalyze the growth of the Helium Network by enabling trust 
-minimized co-ownership of hotspots. Currently,  
-
-This ability will also catalyze the growth of the Helium Network by automating 
-various repetitive tasks that are currently necessary to maintain a host-owner relationship. For example, 
-owners have to calculate payouts for each of their hosts and pay out each host manually. 
-Likewise, hosts have to cross-reference their payments with hotspot earnings tracker platforms 
-in order to ensure they are getting fair payouts. Automating these tasks would have a
-positive effect on the speed at which the Helium Network is able to grow as owners would be able
-to deploy more hotspots and hosts would be more willing to participate in host-owner relationships.
+This next step of decentralization will catalyze the growth of the Helium Network by removing the need
+for trust in host-owner relationships as well as by automating various repetitive tasks that are currently 
+necessary to maintain a host-owner relationship. For example, owners have to calculate payouts for each 
+of their hosts and pay out each host manually. Likewise, hosts have to cross-reference their payments 
+with hotspot earnings tracker platforms in order to ensure they are getting fair payouts. Automating 
+these tasks would have a positive effect on the speed at which the Helium Network is able to grow as 
+owners would be able to deploy more hotspots and hosts would be more willing to participate in 
+host-owner relationships.
 
 An additional motivation for this added functionality is the fact that this enables
 securitization of hotspots. For instance, an owner of a hotspot could sell off a percantage of his
