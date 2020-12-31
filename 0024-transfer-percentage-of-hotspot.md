@@ -26,7 +26,7 @@ the ownership of the network nodes to be broken down into smaller pieces that ca
 network participants as necessary.
 
 This further decentralization will catalyze the growth of the Helium Network in various ways. Primarily,
-growth will be catalyzed by actualizing the host-owner relationship at the blockchain level. 
+growth will be catalyzed by actualizing the host-owner relationship.
 
 This ability will also catalyze the growth of the Helium Network by automating 
 various repetitive tasks that are currently necessary to maintain a host-owner relationship. For example, 
