@@ -29,10 +29,9 @@ various repetitive tasks associated with the host-owner relationship
 that make the relationship more time and energy consuming than necessary. For example,
 owners have to calculate payouts for each of their hosts and pay out each host
 manually. Likewise, hosts have to cross-reference their payments with hotspot earnings
-tracker platforms in order to ensure they are getting fair payouts.
-
-Co-ownership would automate these tasks by allowing HNT earnings to automatically
-be routed proportionately to multiple addresses. This automation would benefit the Helium 
+tracker platforms in order to ensure they are getting fair payouts. Co-ownership would 
+automate these tasks by allowing HNT earnings to automatically be routed proportionately 
+to multiple addresses. This automation would benefit the Helium 
 network as it would facilitate less cumbersome host-owner relationships.
 
 
