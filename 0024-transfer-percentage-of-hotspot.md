@@ -25,7 +25,10 @@ agreements will take the decentralized nature of the network one step further by
 of the nodes within the network to be broken down into smaller pieces that can be transferred between
 network participants as necessary.
 
-This ability will catalyze the growth of the Helium Network by enabling trust minimized co-ownership of hotspots.
+Much of Helium's network growth is fueled by informal agreements in which hosting is exchanged for 
+a percentage of a hotspot's revenue stream. 
+This ability will catalyze the growth of the Helium Network by actualizing the host-owner relationship
+at the blockchain level. 
 
 This ability will also catalyze the growth of the Helium Network by automating 
 various repetitive tasks that are currently necessary to maintain a host-owner relationship. For example, 
@@ -99,7 +102,7 @@ The only drawback consideration that has been raised so far is chain bloat.
 The rationale for this change is six-fold.
 
 1. Enable trust minimized co-ownership of hotspots
-2. Reduce the time, energy, and level of trust necessary to maintain host-owner relationships
+2. Reduce the time and energy necessary to maintain host-owner relationships
 3. Enable the securitization of hotspots
 4. Allow hosts to see their hotspot and HNT earnings breakdowns in real-time within the Helium app
 5. Remove DC cost associated with owners regularly paying out HNT to hosts
