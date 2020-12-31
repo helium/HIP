@@ -99,7 +99,7 @@ The rationale for this change is six-fold.
 1. Enable trust minimized co-ownership of hotspots
 2. Reduce the time and energy necessary to maintain host-owner relationships
 3. Enable the securitization of hotspots
-4. Allow hosts to see their hotspot and HNT earnings breakdowns in real-time within the Helium app
+4. Allow hosts to see their hotspot and HNT earnings in real-time within the Helium app
 5. Remove DC cost associated with owners regularly paying out HNT to hosts
 6. Simplify tax reporting
 
