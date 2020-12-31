@@ -21,8 +21,8 @@ Similarly to transfer_gateway_v1, this transaction can have an optional amount o
 The goal of The People's Network is to create a communally owned telecommunications network. 
 This transaction facilitates that goal by allowing network participants to enter into 
 trust mimimized co-ownership agreements implemented at the blockchain level. These co-ownership
-agreements will take the current decentralized nature of the network one step further by allowing the ownership
-of the network nodes to be broken down into smaller pieces that can be transferred between
+agreements will take the current decentralized nature of the network one step further by allowing 
+the ownership of the network nodes to be broken down into smaller pieces that can be transferred between
 network participants as necessary.
 
 Much of Helium's network growth is fueled by informal agreements in which hosting is exchanged for 
@@ -39,11 +39,11 @@ positive effect on the speed at which the Helium Network is able to grow as owne
 to deploy more hotspots and hosts would be more willing to participate in host-owner relationships.
 
 An additional motivation for this added functionality is the fact that this enables
-securitization of hotspots. This securitization 
-...
-For example, an owner with 100 hotspots could sell off 10% ownership of their fleet in order to raise cash to deploy more hotspots.
+securitization of hotspots. For example, an owner of a hotspot could sell off a percantage of his
+hotspot in order to raise cash to purchase an additional hotspot. In a similar fashion, an owner 
+with 100 hotspots could auction off a bundled percentage ownership of their fleet on an exchange
+capable of supporting this new security.
 
-(TBD)
 
 # Stakeholders
 [stakeholders]: #stakeholders
