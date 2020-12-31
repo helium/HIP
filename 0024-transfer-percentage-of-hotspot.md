@@ -25,6 +25,8 @@ agreements will take the decentralized nature of the network one step further by
 of the nodes within the network to be broken down into smaller pieces that can be transferred between
 network participants as necessary.
 
+This ability will catalyze the growth of the Helium Network by enabling trust minimized co-ownership of hotspots.
+
 This ability will also catalyze the growth of the Helium Network by automating 
 various repetitive tasks that are currently necessary to maintain a host-owner relationship. For example, 
 owners have to calculate payouts for each of their hosts and pay out each host manually. 
@@ -35,10 +37,10 @@ to deploy more hotspots and hosts would be more willing to participate in host-o
 
 An additional motivation for this added functionality is the fact that this enables
 securitization of hotspots. This securitization 
+...
+For example, an owner with 100 hotspots could sell off 10% ownership of their fleet in order to raise cash to deploy more hotspots.
 
-Securitization could also simplif. For example, an owner with 100 hotspots could sell off 10% ownership of their fleet in order to raise cash to deploy more hotspots.
-
-
+(TBD)
 
 # Stakeholders
 [stakeholders]: #stakeholders
