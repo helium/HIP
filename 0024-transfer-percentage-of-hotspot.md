@@ -18,7 +18,13 @@ Similarly to transfer_gateway_v1, this transaction can have an optional amount o
 # Motivation
 [motivation]: #motivation
 
-There are various repetitive tasks associated with the host-owner relationship
+The goal of The People's Network is to create a communally owned 
+telecommunications network. Enabling the ability to split the ownership of a
+hotspot facilitates that goal by allowing co-ownership to be contracted
+at the blockchain level.
+
+This ability will also catalyze the growth of the Helium Network by automating 
+various repetitive tasks associated with the host-owner relationship
 that make the relationship more time and energy consuming than necessary. For example,
 owners have to calculate payouts for each of their hosts and pay out each host
 manually. Likewise, hosts have to cross-reference their payments with hotspot earnings
