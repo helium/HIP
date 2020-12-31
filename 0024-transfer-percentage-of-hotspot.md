@@ -25,14 +25,12 @@ at the blockchain level. This will catalyze the growth of the Helium Network by
 allowing network participants to enter into trust mimimized co-ownership agreements.
 
 This ability will also catalyze the growth of the Helium Network by automating 
-various repetitive tasks associated with the host-owner relationship
-that make the relationship more time and energy consuming than necessary. For example,
-owners have to calculate payouts for each of their hosts and pay out each host
-manually. Likewise, hosts have to cross-reference their payments with hotspot earnings
-tracker platforms in order to ensure they are getting fair payouts. Co-ownership would 
-automate these tasks by allowing HNT earnings to automatically be routed proportionately 
-to multiple addresses. This automation would benefit the Helium 
-network as it would facilitate less cumbersome host-owner relationships.
+various repetitive tasks associated with co-ownership that make the relationship 
+more time and energy consuming than necessary. For example, owners have to calculate 
+payouts for each of their hosts and pay out each host manually. Likewise, hosts 
+have to cross-reference their payments with hotspot earnings tracker platforms 
+in order to ensure they are getting fair payouts. This automation would benefit 
+the Helium network as it would facilitate less cumbersome co-ownership agreements.
 
 
 # Stakeholders
@@ -89,7 +87,7 @@ The only drawback consideration that has been raised so far is chain bloat.
 [alternatives]: #rationale-and-alternatives
 
 
-The rationale for this change is six-fold.
+The rationale for this change
 
 1. Save time for participants of host-owner relationships
 2. Give users a sense of legitimate ownership which will encourage further
@@ -97,9 +95,10 @@ investment and use in the network over time
 3. Remove the hard-cap of how many hotspots an owner can deploy to hosts. Right
 now, if a host only has time to perform 'x' payments, the host can only deploy
 'x' hotspots
-4. Remove the need for hosts to trust owners and hotspot earnings tracker platforms
 5. Allow hosts to see their HNT earnings in real-time
-6. Remove the need for hotspot earnings tracker platforms
+6. Remove the need for owners and hosts to constantly reference hotspot earnings tracker platforms
+7. Simplify tax reporting
+8. Remove DC cost associated with regularly paying out HNT
 
 An alternative design would be to allow owners to allocate a percentage of HNT earnings from a
 hotspot to a different address. We believe this to be the inferior option as it does not
