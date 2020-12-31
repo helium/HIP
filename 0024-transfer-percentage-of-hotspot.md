@@ -92,7 +92,7 @@ The only drawback consideration that has been raised so far is chain bloat.
 The rationale for this change is as follows.
 
 1. Enable trust-minimized co-ownership of hotspots
-2. Save time for participants of host-owner relationships
+2. Reduce the time and energy necessary to maintain host-owner relationships
 3. Allow hosts to see their hotspot and HNT earnings breakdowns within the Helium app
 4. Remove DC cost associated with regularly paying out HNT
 5. Simplify tax reporting
