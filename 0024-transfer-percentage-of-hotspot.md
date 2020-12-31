@@ -22,9 +22,9 @@ The goal of The People's Network is to create a communally owned
 telecommunications network. This transaction facilitates that goal 
 by allowing co-ownership of a hotspot to be contracted at the blockchain level. 
 
-This will catalyze the growth of the Helium Network by allowing network 
+This ability will catalyze the growth of the Helium Network by allowing network 
 participants to enter into trust mimimized co-ownership agreements. These agreements
-would benefit the network because -
+are superior to current agreements 
 
 This ability will also catalyze the growth of the Helium Network by automating 
 various repetitive tasks associated with co-ownership that make the relationship 
@@ -92,9 +92,9 @@ The only drawback consideration that has been raised so far is chain bloat.
 The rationale for this change is as follows.
 
 1. Enable trust-minimized co-ownership of hotspots
-2. Reduce the time and energy necessary to maintain host-owner relationships
-3. Allow hosts to see their hotspot and HNT earnings breakdowns within the Helium app
-4. Remove DC cost associated with regularly paying out HNT
+2. Reduce the time, energy, and level of trust necessary to maintain host-owner relationships
+3. Allow hosts to see their hotspot and HNT earnings breakdowns in real-time within the Helium app
+4. Remove DC cost associated with owners regularly paying out HNT to hosts
 5. Simplify tax reporting
 
 An alternative design would be to allow owners to allocate a percentage of HNT earnings from a
