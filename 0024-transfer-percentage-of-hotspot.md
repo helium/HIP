@@ -19,10 +19,12 @@ Similarly to transfer_gateway_v1, this transaction can have an optional amount o
 [motivation]: #motivation
 
 The goal of The People's Network is to create a communally owned 
-telecommunications network. Enabling the ability to split the ownership of a
-hotspot facilitates that goal by allowing co-ownership to be contracted
-at the blockchain level. This will catalyze the growth of the Helium Network by 
-allowing network participants to enter into trust mimimized co-ownership agreements.
+telecommunications network. This transaction facilitates that goal 
+by allowing co-ownership of a hotspot to be contracted at the blockchain level. 
+
+This will catalyze the growth of the Helium Network by allowing network 
+participants to enter into trust mimimized co-ownership agreements. These agreements
+would benefit the network because -
 
 This ability will also catalyze the growth of the Helium Network by automating 
 various repetitive tasks associated with co-ownership that make the relationship 
