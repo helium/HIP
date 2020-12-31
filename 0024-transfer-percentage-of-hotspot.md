@@ -25,8 +25,9 @@ agreements will take the current decentralized nature of the network one step fu
 the ownership of the network nodes to be broken down into smaller pieces that can be transferred between
 network participants as necessary.
 
-This further decentralization will catalyze the growth of the Helium Network by enabling trust 
-minimized co-ownership of hotspots. 
+This further decentralization will catalyze the growth of the Helium Network by creating a way in which
+co-ownership relationships can be easily contracted and formally legitimized on a technical level. This will
+negate the need for legal contracts to 
 
 This ability will also catalyze the growth of the Helium Network by automating 
 various repetitive tasks that are currently necessary to maintain a host-owner relationship. For example, 
