@@ -37,7 +37,7 @@ securitization of hotspots. For instance, an owner of a hotspot could sell off a
 hotspot in order to raise cash to purchase an additional hotspot. In a similar fashion, an owner 
 with 100 hotspots could auction off a bundled percentage ownership of their fleet on a market place
 for profit share in order to buy and deploy more hotspots. This will benefit the Helium Network as 
-it will enable outside investment in network infrastructure.
+it will encourage further investment in network infrastructure.
 
 
 # Stakeholders
