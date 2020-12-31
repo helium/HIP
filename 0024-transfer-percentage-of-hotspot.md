@@ -22,7 +22,7 @@ The goal of The People's Network is to create a communally owned telecommunicati
 This transaction facilitates that goal by allowing network participants to enter into 
 trust mimimized co-ownership agreements implemented at the blockchain level. These co-ownership
 agreements will take the decentralized nature of the network one step further by allowing the ownership
-of the nodes within the network to be broken down into fractional pieces that can be transferred between
+of the nodes within the network to be broken down into smaller pieces that can be transferred between
 network participants as necessary.
 
 This ability will also catalyze the growth of the Helium Network by automating 
