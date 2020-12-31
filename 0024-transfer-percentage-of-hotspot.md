@@ -41,7 +41,7 @@ to deploy more hotspots and hosts would be more willing to participate in host-o
 An additional motivation for this added functionality is the fact that this enables
 securitization of hotspots. For example, an owner of a hotspot could sell off a percantage of his
 hotspot in order to raise cash to purchase an additional hotspot. In a similar fashion, an owner 
-with 100 hotspots could auction off a bundled percentage ownership of their fleet on market place
+with 100 hotspots could auction off a bundled percentage ownership of their fleet on a market place
 for profit share in order to buy and deploy more hotspots. This will benefit the Helium Network as 
 it will be more attractive to investors. A trust minimized royalty stream is much better than equity from a risk 
 management perspective - especially for international capital markets.
