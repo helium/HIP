@@ -21,10 +21,10 @@ Similarly to transfer_gateway_v1, this transaction can have an optional amount o
 The goal of The People's Network is to create a communally owned 
 telecommunications network. This transaction facilitates that goal 
 by allowing co-ownership of a hotspot to be contracted at the blockchain level. 
-
 This ability will catalyze the growth of the Helium Network by allowing network 
-participants to enter into trust mimimized co-ownership agreements. These agreements
-are superior to current agreements 
+participants to enter into trust mimimized co-ownership agreements which will reduce
+the friction
+
 
 This ability will also catalyze the growth of the Helium Network by automating 
 various repetitive tasks associated with co-ownership that make the relationship 
@@ -98,8 +98,8 @@ The rationale for this change is as follows.
 5. Simplify tax reporting
 
 An alternative design would be to allow owners to allocate a percentage of HNT earnings from a
-hotspot to a different address. We believe this to be the inferior option as it does not
-provide hosts with a sense of legitimate ownership of their hotspot.
+hotspot to a different address. We believe this to be an inferior / unrelated option as the owner could revoke
+the allocation at any time.
 
 
 # Deployment Impact
@@ -108,7 +108,7 @@ provide hosts with a sense of legitimate ownership of their hotspot.
 We believe that many helium hotspots will have a percentage of their ownership
 transferred after this functionality is deployed. We also believe that this deployed
 functionality will have a notable impact on the positive-feedback loop that is driving
-helium network deployment, as it will reduce the friction associated with establishing
+helium network deployment as it will reduce the friction associated with establishing
 relationships between hotspot owners and hotspot hosts.
 
 
