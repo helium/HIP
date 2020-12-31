@@ -29,9 +29,8 @@ for trust in host-owner relationships as well as by automating various repetitiv
 necessary to maintain a host-owner relationship. For example, owners have to calculate payouts for each 
 of their hosts and pay out each host manually. Likewise, hosts have to either trust their owners or
 cross-reference their payments with hotspot earnings tracker platforms in order to ensure they are getting 
-fair payouts. Automating these tasks would have a positive effect on the speed at which the Helium Network 
-is able to grow as owners would have more time to deploy more hotspots and hosts would be more willing to participate in 
-host-owner relationships.
+fair payouts. Removing the necessity for these inconveniences would have a positive effect on the speed 
+at which the Helium Network is able to grow as the host-owner relationship would become less cumbersome.
 
 An additional motivation for this added functionality is the fact that this enables
 securitization of hotspots. For instance, an owner of a hotspot could sell off a percantage of his
