@@ -18,12 +18,11 @@ Similarly to transfer_gateway_v1, this transaction can have an optional amount o
 # Motivation
 [motivation]: #motivation
 
-The goal of The People's Network is to create a communally owned telecommunications network. 
-This transaction facilitates that goal by allowing network participants to enter into 
-trust mimimized co-ownership agreements implemented at the blockchain level. These co-ownership
-agreements will take the current decentralized nature of the network one step further by allowing 
-the ownership of the network nodes to be broken down into smaller pieces that can be transferred between
-network participants as necessary.
+The goal of The People's Network is to create a telecom network that is owned by the same people
+that operate it. This transaction facilitates that goal by allowing network participants 
+to enter into trust mimimized co-ownership agreements. These co-ownership agreements will take the 
+current decentralized nature of the network one step further by allowing the ownership of the network 
+nodes to be broken down into smaller pieces that can be transferred between network participants as necessary.
 
 This next step of decentralization will catalyze the growth of the Helium Network by removing the need
 for trust in host-owner relationships as well as by automating various repetitive tasks that are currently 
