@@ -91,8 +91,8 @@ The only drawback consideration that has been raised so far is chain bloat.
 
 The rationale for this change is seven-fold.
 
-1. Enable the trust-minimized co-ownership of hotspots
-2. Save time for participants of host-owner or owner-owner relationships
+1. Enable trust-minimized co-ownership of hotspots
+2. Save time for participants of host-owner relationships
 3. Remove the hard-cap of how many hotspots an owner can deploy to hosts. Right
 now, if a host only has time to perform 'x' payments, the host can only deploy
 'x' hotspots
