@@ -22,9 +22,8 @@ The goal of The People's Network is to create a communally owned
 telecommunications network. This transaction facilitates that goal 
 by allowing co-ownership of a hotspot to be contracted at the blockchain level. 
 This ability will catalyze the growth of the Helium Network by allowing network 
-participants to enter into trust mimimized co-ownership agreements which will reduce
-the friction
-
+participants to enter into trust mimimized co-ownership agreements which will
+reduce various points of friction associated with network growth.
 
 This ability will also catalyze the growth of the Helium Network by automating 
 various repetitive tasks associated with co-ownership that make the relationship 
