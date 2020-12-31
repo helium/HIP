@@ -25,10 +25,8 @@ agreements will take the current decentralized nature of the network one step fu
 the ownership of the network nodes to be broken down into smaller pieces that can be transferred between
 network participants as necessary.
 
-Much of Helium's network growth is fueled by informal agreements in which hosting is exchanged for 
-a percentage of a hotspot's revenue stream. 
-This ability will catalyze the growth of the Helium Network by actualizing the host-owner relationship
-at the blockchain level. 
+This further decentralization will catalyze the growth of the Helium Network in various ways. Primarily,
+growth will be catalyzed by actualizing the host-owner relationship at the blockchain level. 
 
 This ability will also catalyze the growth of the Helium Network by automating 
 various repetitive tasks that are currently necessary to maintain a host-owner relationship. For example, 
@@ -63,7 +61,7 @@ Feedback will be gathered by sharing this HIP in various Discord channels.
 ## Implement a new transaction, `transfer_gateway_v2`
 
 This new transaction would require two parties to sign the transaction in order to
-update the gateway's ownership percentages in the ledger.
+update the gateway's ownership percentages in the ledger. 
 
 ### Steps
 
