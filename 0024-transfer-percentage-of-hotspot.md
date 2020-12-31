@@ -89,18 +89,17 @@ The only drawback consideration that has been raised so far is chain bloat.
 [alternatives]: #rationale-and-alternatives
 
 
-The rationale for this change
+The rationale for this change is seven-fold.
 
-1. Save time for participants of host-owner relationships
-2. Give users a sense of legitimate ownership which will encourage further
-investment and use in the network over time
+1. Enable the trust-minimized co-ownership of hotspots
+2. Save time for participants of host-owner or owner-owner relationships
 3. Remove the hard-cap of how many hotspots an owner can deploy to hosts. Right
 now, if a host only has time to perform 'x' payments, the host can only deploy
 'x' hotspots
-5. Allow hosts to see their HNT earnings in real-time
-6. Remove the need for owners and hosts to constantly reference hotspot earnings tracker platforms
-7. Simplify tax reporting
-8. Remove DC cost associated with regularly paying out HNT
+4. Allow hosts to see their HNT earnings in real-time in the Helium app
+5. Reduce the need for hotspot earnings tracker platforms
+6. Simplify tax reporting
+7. Remove DC cost associated with regularly paying out HNT
 
 An alternative design would be to allow owners to allocate a percentage of HNT earnings from a
 hotspot to a different address. We believe this to be the inferior option as it does not
