@@ -20,7 +20,7 @@ an optional amount of HNT associated.
 
 The goal of The People's Network is to create a telecom network that is owned by the same people
 that operate it. This new transaction facilitates that goal by allowing network participants 
-to enter into trust mimimized co-ownership agreements. These agreements will take the current 
+to enter into trust minimized co-ownership agreements. These agreements will take the current 
 decentralized nature of the network one step further by allowing the ownership of network nodes 
 to be broken down into smaller pieces that can be transferred between network participants as 
 necessary. This will catalyze the growth of the Helium Network by reducing the need for trust 
