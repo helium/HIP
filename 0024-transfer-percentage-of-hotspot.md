@@ -24,7 +24,7 @@ to enter into trust mimimized co-ownership agreements. These agreements will tak
 current decentralized nature of the network one step further by allowing the ownership of the network 
 nodes to be broken down into smaller pieces that can be transferred between network participants as necessary.
 
-This will catalyze the growth of the Helium Network by removing the need
+This will catalyze the growth of the Helium Network by reducing the need
 for trust in host-owner relationships as well as by automating various repetitive tasks that are currently 
 necessary to maintain a host-owner relationship. For example, owners have to calculate payouts for each 
 of their hosts and pay out each host manually. Likewise, hosts have to either trust their owners or
