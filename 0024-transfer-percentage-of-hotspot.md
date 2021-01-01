@@ -9,30 +9,30 @@
 # Summary
 [summary]: #summary
 
-This proposal introduces a new transaction, transfer_gateway_v2, which will
-allow a hotspot owner to irrevocably transfer a percentage of their hotspot 
-ownership to another owner. Percentage of hotspot ownership will be determinant in the payout of
-HNT rewards in perpetuity (50% ownership -> 50% of HNT, 10% ownership -> 10% of HNT, etc.).
-This transaction can have an optional amount of HNT associated.
+This proposal introduces a new transaction, transfer_gateway_v2, which will allow a hotspot 
+owner to irrevocably transfer a percentage of their hotspot ownership to another owner. 
+Percentage of hotspot ownership will be determinant in the payout of HNT rewards in perpetuity 
+(50% ownership -> 50% of HNT, 10% ownership -> 10% of HNT, etc.). This transaction can have 
+an optional amount of HNT associated.
 
 # Motivation
 [motivation]: #motivation
 
 The goal of The People's Network is to create a telecom network that is owned by the same people
 that operate it. This new transaction facilitates that goal by allowing network participants 
-to enter into trust mimimized co-ownership agreements. These agreements will take the 
-current decentralized nature of the network one step further by allowing the ownership of network 
-nodes to be broken down into smaller pieces that can be transferred between network participants as necessary.
-This will catalyze the growth of the Helium Network by reducing the need
-for trust in host-owner relationships as well as by automating various repetitive tasks that are currently 
+to enter into trust mimimized co-ownership agreements. These agreements will take the current 
+decentralized nature of the network one step further by allowing the ownership of network nodes 
+to be broken down into smaller pieces that can be transferred between network participants as 
+necessary. This will catalyze the growth of the Helium Network by reducing the need for trust 
+in host-owner relationships as well as by automating various repetitive tasks that are currently 
 necessary to maintain a host-owner relationship.
 
-An additional motivation for this functionality is the fact that this enables
-the securitization of hotspots. For instance, an owner could sell off a percantage of their
-hotspot in order to raise cash to purchase an additional hotspot. In a similar fashion, an owner 
-with 100 hotspots could auction off a bundled percentage ownership of their fleet on a market place
-for profit share in order to buy and deploy more hotspots. This will benefit the Helium Network as 
-it will encourage further investment in network infrastructure.
+An additional motivation for this functionality is the fact that this enables the securitization 
+of hotspots. For instance, an owner could sell off a percantage of their hotspot in order to 
+raise cash to purchase an additional hotspot. In a similar fashion, an owner with 100 hotspots 
+could auction off a bundled percentage ownership of their fleet on a market place for profit 
+share in order to buy and deploy more hotspots. This will benefit the Helium Network as it 
+will encourage further investment in network infrastructure.
 
 
 # Stakeholders
@@ -99,8 +99,8 @@ The rationale for this change is six-fold.
 6. Simplify tax reporting
 
 An alternative design would be to allow owners to allocate a percentage of HNT earnings from a
-hotspot to a different address. We believe this to be an inferior / unrelated option as the owner could revoke
-the allocation at any time.
+hotspot to a different address. We believe this to be an inferior / unrelated option as the owner 
+could revoke the allocation at any time.
 
 
 # Deployment Impact
