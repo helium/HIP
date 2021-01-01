@@ -32,7 +32,7 @@ cross-reference their payments with hotspot earnings tracker platforms in order 
 fair payouts. This change would have a positive effect on the speed 
 at which the Helium Network is able to grow as the host-owner relationship would become less cumbersome.
 
-An additional motivation for this added functionality is the fact that this enables
+An additional motivation for this functionality is the fact that this enables
 securitization of hotspots. For instance, an owner of a hotspot could sell off a percantage of his
 hotspot in order to raise cash to purchase an additional hotspot. In a similar fashion, an owner 
 with 100 hotspots could auction off a bundled percentage ownership of their fleet on a market place
