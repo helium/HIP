@@ -29,7 +29,7 @@ for trust in host-owner relationships as well as by automating various repetitiv
 necessary to maintain a host-owner relationship. For example, owners have to calculate payouts for each 
 of their hosts and pay out each host manually. Likewise, hosts have to either trust their owners or
 cross-reference their payments with hotspot earnings tracker platforms in order to ensure they are getting 
-fair payouts. This change would have a positive effect on the speed 
+fair payouts. This change will have a positive effect on the speed 
 at which the Helium Network is able to grow as the host-owner relationship would become less cumbersome.
 
 An additional motivation for this functionality is the fact that this enables
