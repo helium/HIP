@@ -23,14 +23,9 @@ that operate it. This new transaction facilitates that goal by allowing network 
 to enter into trust mimimized co-ownership agreements. These agreements will take the 
 current decentralized nature of the network one step further by allowing the ownership of network 
 nodes to be broken down into smaller pieces that can be transferred between network participants as necessary.
-
 This will catalyze the growth of the Helium Network by reducing the need
 for trust in host-owner relationships as well as by automating various repetitive tasks that are currently 
-necessary to maintain a host-owner relationship. For example, owners have to calculate payouts for each 
-of their hosts and pay out each host manually. Likewise, hosts have to either trust their owners or
-cross-reference their payments with hotspot earnings tracker platforms in order to ensure they are getting 
-fair payouts. This change will have a positive effect on the speed 
-at which the Helium Network is able to grow as the host-owner relationship would become less cumbersome.
+necessary to maintain a host-owner relationship.
 
 An additional motivation for this functionality is the fact that this enables
 securitization of hotspots. For instance, an owner of a hotspot could sell off a percantage of his
