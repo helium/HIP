@@ -33,10 +33,15 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | 20 | [HNT Max Supply](https://github.com/helium/HIP/blob/master/0020-hnt-max-supply.md) | [Approved](https://github.com/helium/HIP/issues/73) |
 | 21 | [PoC Link Layer Upgrades](https://github.com/helium/HIP/blob/master/0021-poc-link-layer.md) | [In Discussion](https://github.com/helium/HIP/issues/78) |
 
-### Status key
+## HIP19 third-party manufacturers
+
+| [Nebra Ltd](https://github.com/helium/HIP/blob/master/0019-third-party-manufacturers/nebra-ltd.md) | 2020-12-10 | [In Discussion](https://github.com/helium/HIP/pull/93)
+
+## Status key
 
 * Draft: HIP is in process of being written; author is not yet soliciting feedback from the community at large
 * In Discussion: HIP is under active consideration by the community
 * Approved: HIP has been approved by rough consensus, and pending development and testing
 * Deployed: Code to implement HIP has been merged and deployed to the network
 * Closed: HIP abandoned, rendered obsolete by other changes, or otherwise withdrawn by the author
+
