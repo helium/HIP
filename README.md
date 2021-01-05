@@ -36,10 +36,15 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | 23 | [Decouple Consensus From Gateways](https://github.com/helium/HIP/blob/master/0023-decouple-consensus-from-gateways.md) | [In Discussion](https://github.com/helium/HIP/issues/101) |
 | 24 | [Transfer Percentage of Hotspot](https://github.com/helium/HIP/blob/master/0024-transfer-percentage-of-hotspot.md) | [In Discussion](https://github.com/helium/HIP/issues/105) |
 
-### Status key
+## HIP19 third-party manufacturers
+
+| [Nebra Ltd](https://github.com/helium/HIP/blob/master/0019-third-party-manufacturers/nebra-ltd.md) | 2020-12-10 | [In Discussion](https://github.com/helium/HIP/pull/93)
+
+## Status key
 
 * Draft: HIP is in process of being written; author is not yet soliciting feedback from the community at large
 * In Discussion: HIP is under active consideration by the community
 * Approved: HIP has been approved by rough consensus, and pending development and testing
 * Deployed: Code to implement HIP has been merged and deployed to the network
 * Closed: HIP abandoned, rendered obsolete by other changes, or otherwise withdrawn by the author
+
