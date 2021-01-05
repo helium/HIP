@@ -34,6 +34,7 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | 21 | [PoC Link Layer Upgrades](https://github.com/helium/HIP/blob/master/0021-poc-link-layer.md) | [In Discussion](https://github.com/helium/HIP/issues/78) |
 | 22 | [Anchor/Golden Gateways](https://github.com/helium/HIP/blob/master/0022-anchor-gateways.md) | [In Discussion](https://github.com/helium/HIP/issues/94) |
 | 23 | [Decouple Consensus From Gateways](https://github.com/helium/HIP/blob/master/0023-decouple-consensus-from-gateways.md) | [In Discussion](https://github.com/helium/HIP/issues/101) |
+| 24 | [Transfer Percentage of Hotspot](https://github.com/helium/HIP/blob/master/0024-transfer-percentage-of-hotspot.md) | [In Discussion](https://github.com/helium/HIP/issues/105) |
 
 ### Status key
 

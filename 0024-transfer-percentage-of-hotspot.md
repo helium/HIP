@@ -3,8 +3,8 @@
 - Author(s): @ericmheilman
 - Start Date: 2020-12-26
 - Category: Technical
-- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
-- Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
+- Original HIP PR: https://github.com/helium/HIP/pull/104
+- Tracking Issue: https://github.com/helium/HIP/issues/105
 
 # Summary
 [summary]: #summary
