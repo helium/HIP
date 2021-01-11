@@ -10,10 +10,13 @@
 [summary]: #summary
 
 This proposal introduces a new transaction, transfer_gateway_v2, which will allow a hotspot 
-owner to irrevocably transfer a percentage of their hotspot ownership to another owner. 
-Percentage of hotspot ownership will be determinant in the payout of HNT rewards
-(50% ownership -> 50% of HNT, 10% ownership -> 10% of HNT, etc.). This transaction can have 
-an optional amount of HNT associated.
+owner to transfer a percentage share of their hotspot to another owner. Once a percentage share
+is transferred, the only way to reverse the transfer would be for the new owner to voluntarily transfer
+it back to the original owner. Percentage of hotspot ownership will be determinant in the payout of 
+HNT rewards (50% ownership -> 50% of HNT, 10% ownership -> 10% of HNT, etc.). This percentage 
+share is 'non-voting' as the ability to assert location will still be available exclusively 
+to the original owner. This transaction can have an optional amount of HNT associated.
+
 
 # Motivation
 [motivation]: #motivation
