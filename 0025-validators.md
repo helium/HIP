@@ -3,7 +3,7 @@
 - Author(s): @evanmcc, Helium Team
 - Start Date: 2021-01-11
 - Category: economic, technical
-- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
+- Original HIP PR: [#110](https://github.com/helium/HIP/pull/110)
 - Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
 
 ## Summary
