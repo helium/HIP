@@ -80,7 +80,7 @@ Realistically, there is no alternative that allows for large network growth othe
 
 Other designs:
   * Cloud Miners: Each Hotspot has a proxy in the cloud that is responsible for running its block production responsibilities and watching the chain for PoC responsibilities.  Since each cloud validator is rarely in the consensus group, this leads to weird provisioning scenarios and multi-tenancy issues.  If a miner can assume that it will be in the group relatively regularly, it's easier to cost out and simpler to do capacity planning for (and avoids collisions where an overcommitted cloud miner cluster gets too many members at once).
-  * Most DYI Hotspot setups follow the same model as Cloud Miners
+  * Most DIY Hotspot setups follow the same model as Cloud Miners
   * Switching to another chain to run on has been determined to be currently infeasible due to limitations on storage and private computation 
 
 - Why is this design the best in the space of possible designs?
