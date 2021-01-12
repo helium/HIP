@@ -40,9 +40,10 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 
 | Name | Date | Status |
 | ---- | ---- | ------ |
-| [Nebra Ltd](https://github.com/helium/HIP/blob/master/0019-third-party-manufacturers/nebra-ltd.md) | 2020-12-10 | [Approved](https://github.com/helium/HIP/pull/93)
-| [SyncroB.it](https://github.com/helium/HIP/blob/master/0019-third-party-manufacturers/syncrobit.md) | 2020-12-14 | [Approved](https://github.com/helium/HIP/pull/96)
-| [RAK Wireless](https://github.com/helium/HIP/blob/master/0019-third-party-manufacturers/rak-wireless.md) | 2020-12-29 | [Approved](https://github.com/helium/HIP/pull/103)
+| [Nebra Ltd](https://github.com/helium/HIP/blob/master/0019-third-party-manufacturers/nebra-ltd.md) | 2020-12-10 | [Approved](https://github.com/helium/HIP/pull/93) |
+| [SyncroB.it](https://github.com/helium/HIP/blob/master/0019-third-party-manufacturers/syncrobit.md) | 2020-12-14 | [Approved](https://github.com/helium/HIP/pull/96) |
+| [RAK Wireless](https://github.com/helium/HIP/blob/master/0019-third-party-manufacturers/rak-wireless.md) | 2020-12-29 | [Approved](https://github.com/helium/HIP/pull/103) |
+| [EasyLinkin](https://github.com/helium/HIP/blob/master/0019-third-party-manufacturers/easylinkin.md) | 2021-01-12 | [Approved](https://github.com/helium/HIP/pull/107) |
 
 
 ## Status key
