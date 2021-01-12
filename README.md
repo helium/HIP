@@ -35,6 +35,7 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | 22 | [Anchor/Golden Gateways](https://github.com/helium/HIP/blob/master/0022-anchor-gateways.md) | [In Discussion](https://github.com/helium/HIP/issues/94) |
 | 23 | [Decouple Consensus From Gateways](https://github.com/helium/HIP/blob/master/0023-decouple-consensus-from-gateways.md) | [In Discussion](https://github.com/helium/HIP/issues/101) |
 | 24 | [Transfer Percentage of Hotspot](https://github.com/helium/HIP/blob/master/0024-transfer-percentage-of-hotspot.md) | [In Discussion](https://github.com/helium/HIP/issues/105) |
+| 25 | [Validators](https://github.com/helium/HIP/blob/master/0025-validators.md) | [In Discussion](https://github.com/helium/HIP/issues/111) |
 
 ## HIP19 third-party manufacturers
 
