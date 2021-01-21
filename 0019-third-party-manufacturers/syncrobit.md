@@ -81,7 +81,7 @@ Submitted privately to DeWi.
 
 ## Budget & Capital
 
-We intend to produce 20,000 units as our 1st batch, and there after 10,000 each week in order to keep up with the current demand. We have secured all the capital needed in order to bring the first batch to market. By owning part of the factory production delays because of capital will not be an issue.  
+We intend to produce 20,000 units as our 1st batch, and there after 10,000 each week in order to keep up with the current demand. We have secured all the capital needed in order to bring the first batch to market. By owning part of the factory production delays due to lack of capital will not be an issue.  
 
 
 ## Risks & Challenges
