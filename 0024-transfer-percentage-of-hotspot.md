@@ -16,7 +16,7 @@ would be for the new owner to voluntarily transfer it back to the original owner
 would be directly determinant in the payout of HNT rewards  (50% share -> 50% of HNT rewards, 
 10% share -> 10% of HNT rewards, etc.). Transfers would range from 1 to 100%.
 
-This transaction would solely be about rewards splitting on-chain and how people figure out hotspot ownership 
+This transaction would solely be about rewards splitting on-chain. Legal hotspot ownership 
 would remain an off-chain responsibility. Percentage share would be 'non-voting' as the ability to assert 
 location would still be available exclusively to the original owner and would still be subject to the 
 current hotspot transfer process. This transaction would have an optional amount of HNT associated.
