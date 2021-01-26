@@ -9,15 +9,15 @@
 # Problem Statement
 [probem-statement]: #problem-statement
 
-Bad actors may lie about radio packets. This is a problem as this enables various _POC gaming strategies_; that is to 
-say efforts by bad actors may choose to spend time abusing POC reward mechanisms rather than providing useful coverage. 
+Bad actors may lie about radio packets. This is a problem because it enables various _POC gaming strategies_; that is to 
+say, efforts by bad actors may choose to spend time abusing POC reward mechanisms rather than providing useful coverage. 
 
 Virtually all POC gaming strategies revolve around intercepting or entirely fabricating packets over the 
 [Semtech GWMP Protocol over UDP](https://github.com/Lora-net/packet_forwarder/blob/master/PROTOCOL.TXT). 
 
 ![image GWMP Miner](./0022-anchor-gateways/miner_packet_forwarder.jpg)
 
-It is hardly much work to put software between the packet forwarder and the Helium Miner, 
+It is not difficult to put software between the packet forwarder and the Helium Miner to manipulated packets, 
 [as demonstrated by community member, para1](https://github.com/Carniverous19/helium-DIY-middleman).
 
 This makes it easy for bad actors to feed packets that have no bearing to the Physical RF world to Miners.
@@ -27,20 +27,20 @@ In addition, it is easy for bad actors to share a single real packet to many oth
 [physical-root-of-trust-value-and-incentives]: #physical-root-of-trust-value-and-incentives
 
 By this end of January, 2021, the Helium Network consists of over 17,000 hotspots. These hotspots are all capable of 
-being manipulated in the manner detailed above. 
+being manipulated in the manner discussed above. 
 
 We propose to create a special category of packet forwarders which cannot lie about what they physically perceive. As 
 such, they provide the network with a **Physical Root of Trust**. They can still be "gamed" in various ways which will 
 be detailed here, but these attack vectors all end up existing at the physical RF level instead of simply intercepting 
-UDP packets.
+or fabricating UDP packets.
 
 Gateways equipped with these protected packet forwarders will be special citizens on the Helium Network, called **Anchor
 Gateways**. Their name is such because they anchor the network's understanding of the physical RF world. We do not 
 expect the network to ever consist 100% of such packet forwarders, but we believe having a proportion of the network 
-with trustworthy packet forwarders provides value.
+with trustworthy packet forwarders is valuable to the network.
 
 While they're role may grow and change as we gain confidence in their trustworthiness and as the network evolves, we 
-propose their novel hardware design and trustworthyness should entitle them to a 3x multiple 
+propose their novel hardware design and inherent trustworthiness should entitle them to a 3x multiple 
 [to normal beaconing reward units](./0015-beaconing-rewards.md).
 
 We believe this approach to be complementary to many other approaches to improving POC. What is unique about it is its 
