@@ -54,17 +54,12 @@ Feedback will be gathered by sharing this HIP in various Discord channels.
 # Detailed Explanation
 [detailed-explanation]: #detailed-explanation
 
-This change will necessitate the addition of new field to the ledger that is a map of 
-wallet account and percentage ownership. It must add up to 100 or the remaining percentage 
-will go to the owner field.
 
 ## Implement a new transaction, `transfer_gateway_v2`
 
-This new transaction would require two parties to sign the transaction in order to
-update the gateway's ownership percentages in the ledger. The only way to reverse
-a transfer will be for the new owner to transfer the ownership percentage back to the
-original address.
-
+This new transaction will necessitate the addition of a new field to the ledger that is a map of 
+wallet account and percentage share. A transfer would require two parties to sign the transaction 
+in order to update the gateway's share percentages in the ledger.
 
 
 ### Steps
