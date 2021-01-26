@@ -14,7 +14,7 @@ owner to transfer a percentage share of a hotspot's revenue stream to another ow
 would be 'stable' as once a percentage share is transferred, the only way to reverse the transfer 
 would be for the new owner to voluntarily transfer it back to the original owner. Percentage share 
 would be directly determinant in the payout of HNT rewards  (50% share -> 50% of HNT rewards, 
-10% share -> 10% of HNT rewards, etc.). 
+10% share -> 10% of HNT rewards, etc.). Transfers would range from 1 to 100%.
 
 This transaction would solely be about rewards splitting on-chain and how people figure out hotspot ownership 
 would remain an off-chain responsibility. Percentage share would be 'non-voting' as the ability to assert 
