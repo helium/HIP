@@ -11,12 +11,13 @@
 
 This proposal introduces a new transaction, transfer_gateway_v2, which would allow a hotspot 
 owner to transfer a percentage share of a hotspot's revenue stream to another owner. This transfer
-would be 'stable' as reversal would require the agreement of both parties. Percentage share 
+would be 'stable' as once a percentage share is transferred, the only way to reverse the transfer 
+would be for the new owner to voluntarily transfer it back to the original owner. Percentage share 
 would be directly determinant in the payout of HNT rewards  (50% share -> 50% of HNT rewards, 
 10% share -> 10% of HNT, etc.). 
 
-This transaction is solely about rewards splitting on-chain and how people figure out hotspot ownership 
-is an off-chain responsibility. Percentage share would be 'non-voting' as the ability to assert 
+This transaction would solely be about rewards splitting on-chain and how people figure out hotspot ownership 
+would remain an off-chain responsibility. Percentage share would be 'non-voting' as the ability to assert 
 location would still be available exclusively to the original owner and would still be subject to the 
 current hotspot transfer process. This transaction would have an optional amount of HNT associated.
 
