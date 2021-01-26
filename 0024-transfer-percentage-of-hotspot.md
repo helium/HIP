@@ -27,7 +27,7 @@ current hotspot transfer process. This transaction would have an optional amount
 The goal of The People's Network is to create a telecom network that is owned by the people
 that operate it. This new transaction facilitates that goal by allowing network participants 
 to enter into trust minimized revenue share agreements. These agreements will take the current 
-decentralized nature of the network one step further by allowing the earnings of network nodes 
+decentralized nature of the network one step further by allowing the revenue streams of network nodes 
 to be broken down into smaller pieces that can be transferred between network participants as 
 necessary. This will catalyze the growth of the Helium Network by reducing the need for trust 
 in host-owner relationships as well as by automating various repetitive tasks that are currently 
