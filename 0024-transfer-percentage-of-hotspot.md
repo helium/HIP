@@ -9,30 +9,36 @@
 # Summary
 [summary]: #summary
 
-This proposal introduces a new transaction, transfer_gateway_v2, which will allow a hotspot 
-owner to transfer a percentage share of their hotspot to another owner. Once a percentage share
-is transferred, the only way to reverse the transfer would be for the new owner to voluntarily transfer
-it back to the original owner. Percentage of hotspot ownership will be determinant in the payout of 
-HNT rewards (50% ownership -> 50% of HNT, 10% ownership -> 10% of HNT, etc.). This percentage 
-share is 'non-voting' as the ability to assert location will still be available exclusively 
-to the original owner. This transaction can have an optional amount of HNT associated.
+This proposal introduces a new transaction, transfer_gateway_v2, which would allow a hotspot 
+owner to transfer a percentage share of a hotspot's revenue stream to another owner. This transfer
+would be 'stable' as once a percentage share is transferred, the only way to reverse the transfer 
+would be for the new owner to voluntarily transfer it back to the original owner. Percentage share 
+would be directly determinant in the payout of HNT rewards  (50% share -> 50% of HNT rewards, 
+10% share -> 10% of HNT rewards, etc.). Transfers would range from 1 to 100%.
+
+This transaction would solely be about rewards splitting on-chain. Legal hotspot ownership 
+would remain an off-chain responsibility. Percentage share of a hotspot's revenue stream would be 
+'non-voting' as the ability to assert location would still be available exclusively to the original 
+owner and would still be subject to the current hotspot transfer process. This transaction would 
+have an optional amount of HNT associated.
+
 
 # Motivation
 [motivation]: #motivation
 
-The goal of The People's Network is to create a telecom network that is owned by the same people
-that operate it. This new transaction facilitates that goal by allowing network participants 
-to enter into trust minimized co-ownership agreements. These agreements will take the current 
-decentralized nature of the network one step further by allowing the ownership of network nodes 
-to be broken down into smaller pieces that can be transferred between network participants as 
-necessary. This will catalyze the growth of the Helium Network by reducing the need for trust 
+The goal of The People's Network is to create a telecom network that is owned by the people
+that operate it. This new transaction would facilitate that goal by allowing network participants 
+to enter into trust minimized revenue share agreements. These agreements would take the current 
+decentralized nature of the network one step further by allowing the revenue streams of network nodes 
+to be broken down into smaller pieces that could be transferred between network participants as 
+necessary. This would catalyze the growth of the Helium Network by reducing the need for trust 
 in host-owner relationships as well as by automating various repetitive tasks that are currently 
-necessary to maintain a host-owner relationship.
+necessary to maintain host-owner relationships.
 
-An additional motivation for this functionality is the fact that this enables the securitization 
-of hotspots. For instance, an owner could sell off a percentage of their hotspot in order to 
+An additional motivation for this functionality is the fact that this would enable the securitization 
+of hotspots. For instance, an owner could sell a percentage of their hotspot in order to 
 raise cash to purchase an additional hotspot. In a similar fashion, an owner with 100 hotspots 
-could auction off a bundled percentage ownership of their fleet on a market place for profit 
+could auction off a bundled percentage share of their fleet on a market place for profit 
 share in order to buy and deploy more hotspots. This will benefit the Helium Network as it 
 will encourage further investment in network infrastructure.
 
