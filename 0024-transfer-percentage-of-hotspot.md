@@ -10,10 +10,10 @@
 [summary]: #summary
 
 This proposal introduces a new transaction, transfer_gateway_v2, which would allow a hotspot 
-owner to transfer a percentage share (1% -> 100%) of a hotspot's earnings to another owner. This transfer
-would be considered 'lasting' as once a percentage share is transferred the only way to reverse it 
-would be for the new owner to voluntarily transfer it back to the original owner. Percentage share would be directly 
-determinant in the payout of HNT rewards (50% ownership -> 50% of HNT, 10% ownership -> 10% of HNT, etc.). 
+owner to transfer a percentage share of a hotspot's revenue stream to another owner. Once a percentage share
+is transferred, the only way to reverse the transfer would be for the new owner to voluntarily transfer
+it back to the original owner. Percentage share would be directly determinant in the payout of HNT rewards 
+(50% ownership -> 50% of HNT, 10% ownership -> 10% of HNT, etc.). 
 
 This transaction is solely about rewards splitting on-chain and how people figure out hotspot ownership 
 is an off-chain responsibility. Percentage share would be 'non-voting' as the ability to assert 
@@ -59,7 +59,7 @@ Feedback will be gathered by sharing this HIP in various Discord channels.
 
 This new transaction will necessitate the addition of a new field to the ledger that is a map of 
 wallet account and percentage share. A transfer would require two parties to sign the transaction 
-in order to update the gateway's share percentages in the ledger.
+in order to update the gateway's share percentages in the ledger.  
 
 
 ### Steps
