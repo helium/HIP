@@ -3,8 +3,8 @@
 - Author(s): @ericmheilman
 - Start Date: 2020-12-26
 - Category: Technical
-- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
-- Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
+- Original HIP PR: https://github.com/helium/HIP/pull/104
+- Tracking Issue: https://github.com/helium/HIP/issues/105
 
 # Summary
 [summary]: #summary
@@ -56,13 +56,12 @@ Feedback will be gathered by sharing this HIP in various Discord channels.
 # Detailed Explanation
 [detailed-explanation]: #detailed-explanation
 
-
 ## Implement a new transaction, `transfer_gateway_v2`
 
-This new transaction will necessitate the addition of a new field to the ledger that is a map of 
-wallet account and percentage share. A transfer would require two parties to sign the transaction 
-in order to update the gateway's share percentages in the ledger.  
-
+This new transaction would require two parties to sign the transaction in order to
+update the gateway's ownership percentages in the ledger. The only way to reverse
+a transfer will be for the new owner to transfer the ownership percentage back to the
+original address.
 
 ### Steps
 

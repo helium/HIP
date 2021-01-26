@@ -42,15 +42,6 @@ Community debate / discussion will be solicited via Discord in the respective hi
 # Detailed Explanation
 [detailed-explanation]: #detailed-explanation
 
-- Introduce and explain new concepts.
-
-- It should be reasonably clear how the proposal would be implemented.
-
-- Provide representative examples that show how this proposal would be commonly
-  used.
-
-- Corner cases should be dissected by example.
-
 Each miner on the network is a "constituent", with independent interests. Constituent miners can delegate their vote ("stake") in the collective network to a delegated pool entity "representative". There is no monetary cost to do so; the only potential cost is the net effect of your chosen delegate pool's election being less rewarding than another potential pool's. As an alternative approach, miners can be given the option to "opt-in" to a per-epoch stake, and then provided a list of available validator pools to delegate their votes to. From a UX standpoint this would look something like the following:
 
 1) User opens app to "Hotspots" page.

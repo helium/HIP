@@ -34,11 +34,25 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | 21 | [PoC Link Layer Upgrades](https://github.com/helium/HIP/blob/master/0021-poc-link-layer.md) | [In Discussion](https://github.com/helium/HIP/issues/78) |
 | 22 | [Anchor/Golden Gateways](https://github.com/helium/HIP/blob/master/0022-anchor-gateways.md) | [In Discussion](https://github.com/helium/HIP/issues/94) |
 | 23 | [Decouple Consensus From Gateways](https://github.com/helium/HIP/blob/master/0023-decouple-consensus-from-gateways.md) | [In Discussion](https://github.com/helium/HIP/issues/101) |
+| 24 | [Transfer Percentage of Hotspot](https://github.com/helium/HIP/blob/master/0024-transfer-percentage-of-hotspot.md) | [In Discussion](https://github.com/helium/HIP/issues/105) |
+| 25 | [Validators](https://github.com/helium/HIP/blob/master/0025-validators.md) | [In Discussion](https://github.com/helium/HIP/issues/111) |
 
-### Status key
+
+## HIP19 third-party manufacturers
+
+| Name | Date | Status |
+| ---- | ---- | ------ |
+| [Nebra Ltd](https://github.com/helium/HIP/blob/master/0019-third-party-manufacturers/nebra-ltd.md) | 2020-12-10 | [Approved](https://github.com/helium/HIP/pull/93) |
+| [SyncroB.it](https://github.com/helium/HIP/blob/master/0019-third-party-manufacturers/syncrobit.md) | 2020-12-14 | [Approved](https://github.com/helium/HIP/pull/96) |
+| [RAK Wireless](https://github.com/helium/HIP/blob/master/0019-third-party-manufacturers/rak-wireless.md) | 2020-12-29 | [Approved](https://github.com/helium/HIP/pull/103) |
+| [EasyLinkin](https://github.com/helium/HIP/blob/master/0019-third-party-manufacturers/easylinkin.md) | 2021-01-12 | [Approved](https://github.com/helium/HIP/pull/107) |
+
+
+## Status key
 
 * Draft: HIP is in process of being written; author is not yet soliciting feedback from the community at large
 * In Discussion: HIP is under active consideration by the community
 * Approved: HIP has been approved by rough consensus, and pending development and testing
 * Deployed: Code to implement HIP has been merged and deployed to the network
 * Closed: HIP abandoned, rendered obsolete by other changes, or otherwise withdrawn by the author
+
