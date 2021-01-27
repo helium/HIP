@@ -1,6 +1,7 @@
 # HIP 24: Transfer Percentage of Hotspot
 
 - Author(s): @ericmheilman
+- Reviewer: @abhay
 - Start Date: 2020-12-26
 - Category: Technical
 - Original HIP PR: https://github.com/helium/HIP/pull/104
