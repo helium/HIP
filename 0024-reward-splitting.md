@@ -29,8 +29,8 @@ The following use cases illustrate some of the many use cases this transaction w
 3.  Owners could incentivize hosts to upgrade their hotspot in exchange for a more favorable reward split
 4.  Manufacturers could offer hotspots at a discounted rate in exchange for a % stake
 5.  Co-inhabitants could enter into trust-minimized agreements to split the cost and earnings of a hotspot
-6.  A large group of people could pool their money for an otherwise cost-prohibitive premium hotspot placement and split the 
-7.  Hotspot owners could sell off a % of their hotspot in order to raise cash for additional hotspot deployments
+6.  A large group of people could pool their money for an otherwise cost-prohibitive premium hotspot placement and split the earnings
+7.  Hotspot owners could sell off a % of their hotspot in order to raise cash for updraded / additional hotspot deployments
 8.  Companies could sell off a bundled % of a fleet's earnings before they are deployed to hedge deployment risk
 9.  Companies could sell of a bundled % of a deployed fleet's earnings to raise cash for more hotspots
 10. Hotspot owners could sell off a % of their hotspots earnings to hedge against price risk
