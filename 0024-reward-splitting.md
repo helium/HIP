@@ -18,9 +18,9 @@ This transaction would solely be about rewards splitting on-chain. Reward splitt
 # Motivation
 [motivation]: #motivation
 
-The goal of The People's Network is to create a telecom network that is owned by the people that operate it. This new transaction would facilitate that goal by allowing network participants  to enter into trust minimized revenue split agreements. These agreements would take the current decentralized nature of the network one step further by allowing the revenue stream of network nodes to be split between network participants as necessary. This would catalyze the growth of the Helium Network by reducing the need for trust in host-owner relationships as well as by automating various repetitive tasks that are currently necessary to maintain host-owner relationships.
+The Helium blockchain is currently designed to pay out HNT rewards to a single wallet. This design is problematic whenever the work to deploy a hotspot is done by multiple people as the HNT needs to be split up equitably between several wallets. The current workarounds for this problem require more trust, time, energy, and resources (data credits) than necessary which is inherently detrimental to the Helium Network's growth. The ability to split rewards on-chain would resolve this issue by eliminating the need for these workarounds entirely.
 
-This transaction would also catalyze network growth by enabling increased network investment by means of hotspot securitization. Hotspot owners would be able to sell a percentage of their hotspot to investors in order to raise cash to either upgrade their current hotspot or to purchase an additional hotspot. In a similar fashion, an owner with 100 hotspots that are yet to be deployed could sell a bundled percentage of their fleet in order to hedge their deployment risk.
+This transaction would also catalyze network growth by enabling increased network investment by means of hotspot securitization. If implemented, hotspot owners would have the option to sell off a percentage of their hotspot to investors in order to raise cash to either upgrade their current hotspot or to purchase an additional one. In a similar fashion, an owner with 100 hotspots that are yet to be deployed could sell off a bundled percentage of their fleet's future earnings in order to hedge their deployment risk.
 
 
 # Stakeholders
@@ -66,8 +66,6 @@ The Helium Wallet CLI currently supports similar transactions that could be buil
 ## Implement the transfer UI in the Helium app
 
 The Helium Blockchain Engineering team will decide if adding this functionality to the Helium app is necessary.
-
-
 
 
 # Drawbacks
