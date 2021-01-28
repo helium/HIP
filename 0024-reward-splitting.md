@@ -12,7 +12,7 @@
 
 This proposal introduces a new transaction, rewards_split_v1, which would allow a hotspot's revenue stream to be split between multiple addresses. This split would be 'stable' as once a percentage of a revenue stream is transferred from address A to address B, the only way to reverse the transfer would be for B to voluntarily transfer it back to A. Transfers would range from 1 to 100% and would have an optional amount of HNT associated.
 
-This transaction would solely be about rewards splitting on-chain. Reward splitting would be in no way indicative of hotspot ownership and legal hotspot ownership would remain an off-chain responsibility. The ability to perform transactions such as location assertions and hotspot transfers would continue to beexclusively available to the hotspot owner regardless of how the hotspot's rewards are split.
+This transaction would solely be about rewards splitting on-chain. Reward splitting would be in no way indicative of hotspot ownership and legal hotspot ownership would remain an off-chain responsibility. The ability to perform transactions such as location assertions and hotspot transfers would continue to be exclusively available to the hotspot owner regardless of how the hotspot's rewards are split.
 
 
 # Motivation
