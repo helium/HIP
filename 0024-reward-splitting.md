@@ -40,10 +40,15 @@ The following list illustrates some of the use cases this transaction would faci
 [stakeholders]: #stakeholders
 
 Hotspot Owners
+
+Hotspot Hosts
+
 Helium Investors
+
 Manufacturers
+
 SaaS Companies
-Current and future participants in host-owner relationships.
+
 The Helium blockchain engineering team.
 
 Feedback will be gathered by sharing this HIP in various Discord channels.
