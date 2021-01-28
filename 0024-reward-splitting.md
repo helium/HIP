@@ -14,7 +14,7 @@ This proposal introduces a new transaction, rewards_split_v1, which would allow 
 
 This transaction would solely be about rewards splitting on-chain. Reward splitting would be in no way indicative of hotspot ownership and legal hotspot ownership would remain an off-chain responsibility. The ability to perform transactions such as location assertions and hotspot transfers would continue to be exclusively available to the hotspot owner regardless of how the hotspot's revenue stream is split.
 
-o
+
 # Motivation
 [motivation]: #motivation
 
