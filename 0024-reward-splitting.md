@@ -22,7 +22,7 @@ The Helium blockchain is currently designed to pay out HNT rewards to a single w
 
 An additional motivation for this transcation is the added possibility of hotspot securitization. Hotspot securitization could offer various benefits to both hotspot owners ('sellers') and hotspot investors ('buyers'). Sellers would be able to access advantages such as lower capital requirements, reduced deployment risk, and the ability to access various goods and services that would otherwise be unattainable. Buyers would be able to access advantages such as increased portfolio diversification, the ability to invest solely in high-value hotspot placements, and the ability to mine HNT with relatively little effort.
 
-The following list illustrates some of the many use cases this transaction would facilitate.
+The following list illustrates some of the use cases this transaction would facilitate.
 
 1.  Owners could offer hosts a more favorable reward split as a referral bonus
 2.  SaaS companies could offer services for as little as 1% of earnings
