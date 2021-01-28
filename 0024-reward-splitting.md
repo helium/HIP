@@ -60,7 +60,7 @@ update the gateway's reward split in the ledger.
 1. Hotspot owner creates a partially signed transaction with a proposed reward split
 as well as an optional HNT amount that is required to complete the transaction.
 The transaction would perform a validity check of the proposed split by
-ensuring the proposed split is
+ensuring the proposed split meets the following criteria
 
     A. An integer between 1 -> 100 (This range would be defined by a chain variable)
   
@@ -68,7 +68,7 @@ ensuring the proposed split is
 
 2. Hotspot owner sends the partially signed transaction to the reward split receiver
 
-3. On receipt, the recipient ensures the proposed split is valid by checking if
+3. On receipt, the recipient ensures the proposed split is valid by verifying the following criteria
 
     A. The sum of all splits on the ledger add up to 100
     
