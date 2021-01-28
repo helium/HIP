@@ -82,7 +82,8 @@ The Helium Blockchain Engineering team will decide if adding this functionality 
 # Drawbacks
 [drawbacks]: #drawbacks
 
-The only drawback consideration that has been raised so far is chain bloat.
+Drawback considerations include potential chain bloat, the added legal complexities associated with securitization,
+and the risk of rewards splitting implying true ownership of a hotspot.
 
 # Rationale and Alternatives
 [alternatives]: #rationale-and-alternatives
@@ -116,6 +117,7 @@ relationships between hotspot owners and hotspot hosts.
 # Success Metrics
 [success-metrics]: #success-metrics
 
-The Helium blockchain team will not be explicitly tracking success metrics for this
-transaction type addition but we expect that host-owner relationships will proliferate
-as they are now simpler to maintain for both parties.
+This HIP will be considered successful if the following two metrics true 1 year after implementation.
+
+1. A reduction in the average DC's burned per hotspot by at least 20%
+2. At least 10% of the hotspots in the Helium network have a reward mapping to a hotspot that is < 100%
