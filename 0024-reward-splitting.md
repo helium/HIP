@@ -10,18 +10,17 @@
 # Summary
 [summary]: #summary
 
-This proposal introduces a new transaction, transfer_gateway_v2, which would allow a hotspot 
-owner to transfer a percentage share of a hotspot's revenue stream to another owner. This transfer
-would be 'stable' as once a percentage share is transferred, the only way to reverse the transfer 
-would be for the new owner to voluntarily transfer it back to the original owner. Percentage share 
-would be directly determinant in the payout of HNT rewards  (50% share -> 50% of HNT rewards, 
-10% share -> 10% of HNT rewards, etc.). Transfers would range from 1 to 100%.
+This proposal introduces a new transaction, rewards_split_v1, which would allow a hotspot's 
+revenue stream to be split between multiple addresses. This split would be 'stable' as once a 
+percentage of a revenue stream is transferred from address A to address B, the only way to reverse 
+the transfer would be for B to voluntarily transfer it back to A. Reward percentage would be directly 
+determinant in the payout of HNT rewards. Transfers would range from 1 to 100% and would have an 
+optional amount of HNT associated.
 
-This transaction would solely be about rewards splitting on-chain. Legal hotspot ownership 
-would remain an off-chain responsibility. Percentage share of a hotspot's revenue stream would be 
-'non-voting' as the ability to assert location would still be available exclusively to the original 
-owner and would still be subject to the current hotspot transfer process. This transaction would 
-have an optional amount of HNT associated.
+This transaction would solely be about rewards splitting on-chain. Reward splitting is in no way
+indicative of hotspot ownership and legal hotspot ownership would remain an off-chain responsibility.
+The ability to perform actions such as location assertions and hotspot transfers would continue to be
+exclusively available to the hotspot owner regardless of how the hotspot's rewards are split.
 
 
 # Motivation
@@ -29,17 +28,16 @@ have an optional amount of HNT associated.
 
 The goal of The People's Network is to create a telecom network that is owned by the people
 that operate it. This new transaction would facilitate that goal by allowing network participants 
-to enter into trust minimized revenue share agreements. These agreements would take the current 
-decentralized nature of the network one step further by allowing the revenue streams of network nodes 
-to be broken down into smaller pieces that could be transferred between network participants as 
-necessary. This would catalyze the growth of the Helium Network by reducing the need for trust 
-in host-owner relationships as well as by automating various repetitive tasks that are currently 
-necessary to maintain host-owner relationships.
+to enter into trust minimized revenue split agreements. These agreements would take the current 
+decentralized nature of the network one step further by allowing the revenue stream of network nodes 
+to be split between network participants as necessary. This would catalyze the growth of the Helium 
+Network by reducing the need for trust in host-owner relationships as well as by automating various 
+repetitive tasks that are currently necessary to maintain host-owner relationships.
 
-An additional motivation for this functionality is the fact that this would enable the securitization 
-of hotspots. For instance, an owner could sell a percentage of their hotspot in order to 
-raise cash to purchase an additional hotspot. In a similar fashion, an owner with 100 hotspots 
-could auction off a bundled percentage share of their fleet on a market place for profit 
+An additional motivation for rewards_split_v1 is the potential securitization of hotspots. 
+For instance, an owner could sell a percentage of their hotspot in order to raise cash to 
+purchase an additional hotspot. In a similar fashion, an owner with 100 hotspots could 
+auction off a bundled percentage share of their fleet on a market place for profit 
 share in order to buy and deploy more hotspots. This will benefit the Helium Network as it 
 will encourage further investment in network infrastructure.
 
