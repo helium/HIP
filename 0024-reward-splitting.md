@@ -10,34 +10,17 @@
 # Summary
 [summary]: #summary
 
-This proposal introduces a new transaction, rewards_split_v1, which would allow a hotspot's
-revenue stream to be split between multiple addresses. This split would be 'stable' as once 
-a percentage of a revenue stream is transferred from address A to address B, the only way to
-reverse the transfer would be for B to voluntarily transfer it back to A. Transfers would 
-range from 1 to 100% and would have an optional amount of HNT associated.
+This proposal introduces a new transaction, rewards_split_v1, which would allow a hotspot's revenue stream to be split between multiple addresses. This split would be 'stable' as once a percentage of a revenue stream is transferred from address A to address B, the only way to reverse the transfer would be for B to voluntarily transfer it back to A. Transfers would range from 1 to 100% and would have an optional amount of HNT associated.
 
-This transaction would solely be about rewards splitting on-chain. Reward splitting would be 
-in no way indicative of hotspot ownership and legal hotspot ownership would remain an off-chain
-responsibility. The ability to perform actions such as location assertions and hotspot transfers 
-would continue to beexclusively available to the hotspot owner regardless of how the hotspot's rewards are split.
+This transaction would solely be about rewards splitting on-chain. Reward splitting would be in no way indicative of hotspot ownership and legal hotspot ownership would remain an off-chain responsibility. The ability to perform actions such as location assertions and hotspot transfers would continue to beexclusively available to the hotspot owner regardless of how the hotspot's rewards are split.
 
 
 # Motivation
 [motivation]: #motivation
 
-The goal of The People's Network is to create a telecom network that is owned by the people
-that operate it. This new transaction would facilitate that goal by allowing network participants 
-to enter into trust minimized revenue split agreements. These agreements would take the current 
-decentralized nature of the network one step further by allowing the revenue stream of network nodes 
-to be split between network participants as necessary. This would catalyze the growth of the Helium 
-Network by reducing the need for trust in host-owner relationships as well as by automating various 
-repetitive tasks that are currently necessary to maintain host-owner relationships.
+The goal of The People's Network is to create a telecom network that is owned by the people that operate it. This new transaction would facilitate that goal by allowing network participants  to enter into trust minimized revenue split agreements. These agreements would take the current decentralized nature of the network one step further by allowing the revenue stream of network nodes to be split between network participants as necessary. This would catalyze the growth of the Helium Network by reducing the need for trust in host-owner relationships as well as by automating various repetitive tasks that are currently necessary to maintain host-owner relationships.
 
-This transaction would also catalyze network growth by enabling increased network investment by means 
-of hotspot securitization. Hotspot owners would be able to sell a percentage of their hotspot to 
-investors in order to raise cash to either upgrade their current hotspot or to purchase an additional 
-hotspot. In a similar fashion, an owner with 100 hotspots that are yet to be deployed could sell a bundled
-percentage of their fleet in order to hedge their deployment risk.
+This transaction would also catalyze network growth by enabling increased network investment by means of hotspot securitization. Hotspot owners would be able to sell a percentage of their hotspot to investors in order to raise cash to either upgrade their current hotspot or to purchase an additional hotspot. In a similar fashion, an owner with 100 hotspots that are yet to be deployed could sell a bundled percentage of their fleet in order to hedge their deployment risk.
 
 
 # Stakeholders
