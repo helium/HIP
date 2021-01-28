@@ -13,11 +13,10 @@
 This proposal introduces a new transaction, rewards_split_v1, which would allow a hotspot's 
 revenue stream to be split between multiple addresses. This split would be 'stable' as once a 
 percentage of a revenue stream is transferred from address A to address B, the only way to reverse 
-the transfer would be for B to voluntarily transfer it back to A. Reward percentage would be directly 
-determinant in the payout of HNT rewards. Transfers would range from 1 to 100% and would have an 
-optional amount of HNT associated.
+the transfer would be for B to voluntarily transfer it back to A. Transfers would range from 
+1 to 100% and would have an optional amount of HNT associated.
 
-This transaction would solely be about rewards splitting on-chain. Reward splitting is in no way
+This transaction would solely be about rewards splitting on-chain. Reward splitting would be in no way
 indicative of hotspot ownership and legal hotspot ownership would remain an off-chain responsibility.
 The ability to perform actions such as location assertions and hotspot transfers would continue to be
 exclusively available to the hotspot owner regardless of how the hotspot's rewards are split.
@@ -34,12 +33,11 @@ to be split between network participants as necessary. This would catalyze the g
 Network by reducing the need for trust in host-owner relationships as well as by automating various 
 repetitive tasks that are currently necessary to maintain host-owner relationships.
 
-An additional motivation for rewards_split_v1 is the potential securitization of hotspots. 
-For instance, an owner could sell a percentage of their hotspot in order to raise cash to 
-purchase an additional hotspot. In a similar fashion, an owner with 100 hotspots could 
-auction off a bundled percentage share of their fleet on a market place for profit 
-share in order to buy and deploy more hotspots. This will benefit the Helium Network as it 
-will encourage further investment in network infrastructure.
+This transaction would also catalyze network growth by enabling increased network investment by means 
+of hotspot securitization. Hotspot owners would be able to sell a percentage of their hotspot to 
+investors in order to raise cash to either upgrade their current hotspot or to purchase an additional 
+hotspot. In a similar fashion, an owner with 100 hotspots that are yet to be deployed could sell a bundled
+percentage of their fleet in order to hedge their deployment risk.
 
 
 # Stakeholders
@@ -55,7 +53,7 @@ Feedback will be gathered by sharing this HIP in various Discord channels.
 # Detailed Explanation
 [detailed-explanation]: #detailed-explanation
 
-## Implement a new transaction, `transfer_gateway_v2`
+## Implement a new transaction, `rewards_split_v1`
 
 This new transaction would require two parties to sign the transaction in order to
 update the gateway's ownership percentages in the ledger. The only way to reverse
