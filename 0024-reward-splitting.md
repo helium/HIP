@@ -52,10 +52,7 @@ Feedback will be gathered by sharing this HIP in various Discord channels.
 ## Implement a new transaction, `rewards_split_v1`
 
 This transaction would necessitate the addition of a new field to the ledger, 'rewards_addresses', which
-would be a map of addresses and splits. A successful execution of `rewards_split_v1` would
-
-
-This transaction would require two parties to sign the transaction in order to
+would be a map of addresses and splits. This transaction would require two parties to sign the transaction in order to
 update the gateway's reward split in the ledger. 
 
 ### Steps
