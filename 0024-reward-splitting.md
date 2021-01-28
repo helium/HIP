@@ -71,7 +71,7 @@ perform a validity check of the proposed percentage transfer by ensuring the % m
 
 3. On receipt, the recipient ensures the proposed split is valid by verifying the following criteria
 
-        A. The sum of all splits on the ledger add up to 100
+        A. The sum of all splits on the ledger would add up to 100 after the transaction
     
         B. The number of splits on the ledger does not exceed 10 (This limit would be defined by a chain variable)
 
