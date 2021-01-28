@@ -73,7 +73,7 @@ perform a validity check of the proposed percentage transfer by ensuring the % m
   
         B. 1 <= % <= 100 (This range would be defined by a chain variable)
         
-        C. % >= the hotspot owners currently allocated reward %
+        C. % <= the hotspot owners currently allocated reward %
 
 2. Hotspot owner sends the partially signed transaction to the reward split receiver
 
