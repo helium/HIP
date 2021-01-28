@@ -123,7 +123,7 @@ The rationale for this change is six-fold.
 
 An alternative design would be to give hotspot owners the ability to revoke
 a rewards split at any time. We believe this to be an inferior design as it
-would not be trust-minimized
+would not be trust-minimized.
 
 
 # Deployment Impact
