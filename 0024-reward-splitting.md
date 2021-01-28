@@ -131,5 +131,5 @@ relationships between hotspot owners and hotspot hosts.
 
 This HIP will be considered successful if the following two metrics true 1 year after implementation.
 
-1. A reduction in the average DC's burned per hotspot by at least 20%
+1. A reduction in the average DC's burned per hotspot by at least 10%
 2. At least 10% of the hotspots in the Helium network have a reward mapping to a hotspot that is < 100%
