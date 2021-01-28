@@ -57,14 +57,14 @@ update the gateway's reward split in the ledger.
 
 ### Steps
 
-1. Hotspot owner creates a partially signed transaction with a proposed reward split
+1. Hotspot owner creates a partially signed transaction with a proposed reward percentage to transfer
 as well as an optional HNT amount that is required to complete the transaction.
-The transaction would perform a validity check of the proposed split by
-ensuring the proposed split meets the following criteria
+The transaction would perform a validity check of the proposed percentage transfer by
+ensuring the % meets the following criteria
 
-        A. An integer between 1 -> 100 (This range would be defined by a chain variable)
+        A. 1 <= % <= 100 (This range would be defined by a chain variable)
   
-        B. >= The hotspot owners currently allocated reward split
+        B. % >= the hotspot owners currently allocated reward %
 
 2. Hotspot owner sends the partially signed transaction to the reward split receiver
 
