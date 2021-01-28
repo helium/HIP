@@ -39,8 +39,11 @@ The following use cases illustrate some of the many use cases this transaction w
 # Stakeholders
 [stakeholders]: #stakeholders
 
+Hotspot Owners
+Helium Investors
+Manufacturers
+SaaS Companies
 Current and future participants in host-owner relationships.
-
 The Helium blockchain engineering team.
 
 Feedback will be gathered by sharing this HIP in various Discord channels.
