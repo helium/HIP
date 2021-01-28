@@ -39,15 +39,15 @@ The following list illustrates some of the use cases this transaction would faci
 # Stakeholders
 [stakeholders]: #stakeholders
 
-Hotspot Owners
+Hotspot owners
 
-Hotspot Hosts
+Hotspot hosts
 
-Helium Investors
+Helium investors
 
 Manufacturers
 
-SaaS Companies
+SaaS companies
 
 The Helium blockchain engineering team.
 
