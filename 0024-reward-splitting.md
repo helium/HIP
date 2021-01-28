@@ -22,15 +22,18 @@ The Helium blockchain is currently designed to pay out HNT rewards to a single w
 
 An additional motivation for this transcation is the added possibility of hotspot securitization. This possibility would offer various benefits to both hotspot owners ('sellers') and hotspot investors ('buyers'). Sellers would be able to access advantages such as lower capital requirements, reduced deployment risk, and the ability to access various goods and services that would otherwise be unattainable. Buyers would able to access advantages such as increased portfolio diversification, the ability to invest solely in high-value hotspot placements, and the ability to mine Helium with relatively little effort.
 
+The following use cases illustrate some of the many use cases this transaction would facilitate.
 
-The following use cases illustrate the benefits 
-
-1. SaaS companies could offer Helium related services for as little as 1% of a hotspots earnings
-2. Owners could offer a 5% referral bonus to their hosts
-3. Owners could incentivize hosts to upgrade their hotspot deployment with an antenna / outdoor installation with a more favorable reward split
-4. Manufacturers could offer hotspots at a discounted rate in exchange for a % stake
-5. Co-inhabitants could split the cost of a hotspot and split the HNT rewards 50-50
-6. A large group of people could pool their money for an otherwise cost-prohibitive premium hotspot placement and split the 
+1.  Owners could offer hosts a 5% referral bonus
+2.  Hardware manufactures could do SaaS models with the hardware they sell for as little as 1%
+3.  Owners could incentivize hosts to upgrade their hotspot in exchange for a more favorable reward split
+4.  Manufacturers could offer hotspots at a discounted rate in exchange for a % stake
+5.  Co-inhabitants could enter into trust-minimized agreements to split the cost and earnings of a hotspot
+6.  A large group of people could pool their money for an otherwise cost-prohibitive premium hotspot placement and split the 
+7.  Hotspot owners could sell off a % of their hotspot in order to raise cash for additional hotspot deployments
+8.  Companies could sell off a bundled % of a fleet's earnings before they are deployed to hedge deployment risk
+9.  Companies could sell of a bundled % of a deployed fleet's earnings to raise cash for more hotspots
+10. Hotspot owners could sell off a % of their hotspots earnings to hedge against price risk
 
 
 # Stakeholders
