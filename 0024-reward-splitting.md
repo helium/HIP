@@ -18,13 +18,9 @@ This transaction would solely be about rewards splitting on-chain. Reward splitt
 # Motivation
 [motivation]: #motivation
 
-The Helium blockchain is currently designed to pay out HNT rewards to a single wallet. This design is problematic whenever the work to deploy a hotspot is done by multiple people as the HNT needs to be split up equitably between several wallets. The current workarounds for this problem require more trust, time, energy, and resources than necessary which is detrimental to the Helium Network's growth. The ability to split rewards on-chain would resolve this issue by eliminating the need for these workarounds entirely.
+The Helium blockchain is currently designed to pay out HNT rewards to a single wallet. This design can be problematic whenever the work or resources necessary to deploy a hotspot are provided by multiple people as the HNT may need to be split up equitably between several wallets. Many of the workarounds for this problem require more trust, time, energy, technical expertise, or resources than is desirable. The ability to split rewards on-chain would resolve this issue by eliminating the need for these workarounds entirely.
 
-This transaction would also catalyze network growth by enabling increased network investment by means 
-of hotspot securitization. Hotspot owners would be able to sell a percentage of their hotspot to 
-investors in order to raise cash to either upgrade their current hotspot or to purchase an additional 
-hotspot. In a similar fashion, an owner with 100 hotspots that are yet to be deployed could sell a bundled
-percentage of their fleet in order to hedge their deployment risk.
+An additional motivation for rewards_split_v1 is the potential securitization of hotspots. Hotspot owners would be able to sell a percentage of their hotspot to investors in order to raise cash to either upgrade their current hotspot or to purchase an additional hotspot. In a similar fashion, an owner with 100 hotspots that are yet to be deployed could sell a bundled percentage of their fleet in order to hedge their deployment risk.
 
 
 # Stakeholders
