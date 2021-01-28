@@ -82,7 +82,7 @@ owner and contains enough HNT to burn into DCs for the transaction, the transact
 is accepted and the rewards_address field is updated in the ledger
 
 6. The hotspot appears in both the sender's hotspot list and as well as the recipient's
-hotspot list. The respective hotspot's rewards_address field is reflected accordingly
+hotspot list. The respective hotspot's rewards_address fields are reflected accordingly
 
 ## Implement the transaction in the helium-wallet client
 
