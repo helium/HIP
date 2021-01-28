@@ -97,7 +97,7 @@ The Helium Blockchain Engineering team will decide if adding this functionality 
 [drawbacks]: #drawbacks
 
 Drawback considerations include potential chain bloat, the added legal complexities associated with securitization,
-and the risk of rewards splitting implying true ownership of a hotspot.
+and the risk of network participants interpreting rewards split as determinant in ownership.
 
 # Rationale and Alternatives
 [alternatives]: #rationale-and-alternatives
@@ -106,7 +106,8 @@ and the risk of rewards splitting implying true ownership of a hotspot.
 The rationale for this change is six-fold.
 
 1. Enable trust minimized reward splitting of hotspots
-2. Reduce the time and energy necessary to maintain host-owner relationships
+2. Reduce the time, energy, technical expertise and resources 
+   necessary to maintain host-owner relationships
 3. Enable the securitization of hotspots
 4. Allow hosts to see their HNT earnings in real-time within the Helium app
 5. Remove DC cost associated with owners regularly paying out HNT to hosts
