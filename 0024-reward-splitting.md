@@ -52,16 +52,14 @@ Feedback will be gathered by sharing this HIP in various Discord channels.
 ## Implement a new transaction, `rewards_split_v1`
 
 This new transaction would require two parties to sign the transaction in order to
-update the gateway's ownership percentages in the ledger. The only way to reverse
-a transfer will be for the new owner to transfer the ownership percentage back to the
-original address.
+update the gateway's reward split in the ledger.
 
 ### Steps
 
-1. Current owner creates a partially signed transaction with a proposed ownership
-percentage as well as an optional HNT amount that is required to complete the transaction
+1. Hotspot owner creates a partially signed transaction with a proposed reward split
+as well as an optional HNT amount that is required to complete the transaction
 
-2. Current owner sends the partially signed transaction to the receiving owner
+2. Hotspot owner sends the partially signed transaction to the receiving owner
 
 3. Recipient signs the transaction and pays the DC fee to submit the transaction to the blockchain
 
@@ -70,7 +68,7 @@ owner and contains enough HNT to burn into DCs for the transaction, the transact
 is accepted and the gateway's owner is updated in the ledger
 
 5. The hotspot appears in both the sender's hotspot list and as well as the recipient's
-hotspot list. The respective hotspot ownership percentages are reflected accordingly
+hotspot list. The respective hotspot's reward map is reflected accordingly
 
 ## Implement the transaction in the helium-wallet client
 
@@ -92,10 +90,10 @@ The only drawback consideration that has been raised so far is chain bloat.
 
 The rationale for this change is six-fold.
 
-1. Enable trust minimized co-ownership of hotspots
+1. Enable trust minimized reward splitting of hotspots
 2. Reduce the time and energy necessary to maintain host-owner relationships
 3. Enable the securitization of hotspots
-4. Allow hosts to see their hotspot and HNT earnings in real-time within the Helium app
+4. Allow hosts to see their HNT earnings in real-time within the Helium app
 5. Remove DC cost associated with owners regularly paying out HNT to hosts
 6. Simplify tax reporting
 
@@ -107,8 +105,8 @@ could revoke the allocation at any time.
 # Deployment Impact
 [deployment-impact]: #deployment-impact
 
-We believe that many helium hotspots will have a percentage of their ownership
-transferred after this functionality is deployed. We also believe that this deployed
+We believe that many hotspots will have their rewards split between multiple
+addresses after this functionality is deployed. We also believe that this deployed
 functionality will have a notable impact on the positive-feedback loop that is driving
 helium network deployment as it will reduce the friction associated with establishing
 relationships between hotspot owners and hotspot hosts.
