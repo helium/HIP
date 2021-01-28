@@ -53,7 +53,7 @@ Feedback will be gathered by sharing this HIP in various Discord channels.
 
 This transaction would necessitate the addition of a new field to the ledger, 'rewards_addresses', which 
 would be a map of addresses and splits. This transaction would require two parties to sign the transaction 
-in order toupdate the gateway's reward split in the ledger. 
+in order to update the gateway's reward split in the ledger. 
 
 ### Steps
 
