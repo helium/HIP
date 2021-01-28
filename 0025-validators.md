@@ -114,3 +114,63 @@ We should see an increase in the stability of block times.
 We should be able to increase the number of validators in the block production group without disruption.
 
 We should see people eagerly staking new validators as a measure of the appeal of the idea.
+
+## Frequently Asked Questions
+[faq]: #faq
+
+### Q: How will Validators impact existing Hotspot owner rewards?
+
+A: In the current proposal Validator nodes will earn the 6% rewards for consensus group participation. This is the same percentage that Hotspots/Gateways currently earn for performing the same work. 
+
+### Q: Does this mean as a regular Hotspot owner I'm losing out of those 6% rewards?
+
+A: Technically yes, but practically it is increasingly unlikely your Hotspot would have been chosen among the 16 out of the entire pool of Hotspots. With the current pool there's a 0.0009% chance and this percentage decreases as the network continues to grow. Also, with the Validators block production becomes more stable which means mining rewards are allocated on a more consistent basis.  
+
+### Q: What’s the minimum number of Validators needed? Is there a cap?
+
+A: The current proposal is 100 with no cap to the maximum number of Validators that can participate.
+
+### Q: How much HNT does it require to stake and become a Validator?
+
+A: The current proposal is 10,000 HNT. 
+
+### Q: Is overstaking permitted? If so, what’s the benefit?
+
+A: Initially there will be no overstaking. we'll decide later, and via the community process, what kind of overstaking we'd like to allow and what it will mean.
+
+### Q: How long is the cooldown period (the length of time the staking amount is locked)?
+
+A: The current proposal is for 250,000 blocks which is approximately 5 months.
+
+### Q: How many HNT rewards can a Validator earn?
+
+A: It depends on the number of Validators and how often a Validator is randomly chosen to participate in the consensus group. 
+
+### Q: After staking and the block cooldown period would the validator need to restake the 10k HNT to keep operating?
+
+A: Unless you deliberately unstake the HNT stays locked up. Once you unstake, the countdown starts but you can no longer participate in the consensus group and can no longer earn rewards.  but the rewards accrue immediately upon earning, with no lockup
+
+### Q: How quickly will I receive rewards from staking?
+
+A: Rewards are not locked up and if your Validator node participates in the consensus group the rewards will be allocated at the end of the epoch.
+
+### Q: How will Validators be chosen to participate in the consensus group? How many?
+
+A: Validators will be randomly chosen similarly to how Hotspots/Gateways are chosen. For the initial mainnet launch there will be 16 but this number will increase. 
+
+### Q: Can multiple Validators be associated with a single wallet?
+
+A: Yes.
+
+### Q: How can I participate and become a Validator? Join the testnet?
+
+A: Stay tuned we will have signup and instructions in the coming weeks.
+
+### Q: What do I need to run a Validator node, DIY process or hardware from Helium?
+
+A: Running a Validator node will be up to the user to choose to DIY, either on premise or in the cloud. We will learn more after running the testnet, but based on early tests at least:
+- an AWS EC2 instance T2 large or xlarge
+- State IP and few ports (currently 2154 and eventually port 443) open to internet
+- DNS resolvable URL strongly recommend
+- Running on stable network connections (without things like proxies, NAT, firewalls, etc.), load is largely symmetrical when producing blocks, so good upstream recommended. 
+- It is not suitable or recommended to attempt to run from a home internet connection.
