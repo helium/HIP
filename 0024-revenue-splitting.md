@@ -1,4 +1,4 @@
-# HIP 24: Transfer Percentage of Hotspot
+# HIP 24: Revenue Splitting
 
 - Author(s): @ericmheilman
 - Reviewer: @abhay
