@@ -25,7 +25,7 @@ An additional motivation for this transcation is the added possibility of hotspo
 The following use cases illustrate some of the many use cases this transaction would facilitate.
 
 1.  Owners could offer hosts a more favorable reward split as a referral bonus
-2.  Hardware manufactures could do SaaS models with the hardware they sell for as little as 1%
+2.  SaaS companies could offer services for as little as 1% of earnings
 3.  Owners could incentivize hosts to upgrade their hotspot in exchange for a more favorable reward split
 4.  Manufacturers could offer hotspots at a discounted rate in exchange for a % stake
 5.  Co-inhabitants could enter into trust-minimized agreements to split the cost and earnings of a hotspot
