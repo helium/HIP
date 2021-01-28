@@ -12,15 +12,25 @@
 
 This proposal introduces a new transaction, rewards_split_v1, which would allow a hotspot's revenue stream to be split between multiple addresses. This split would be 'stable' as once a revenue stream is transferred from address A to address B the only way to reverse the transfer would be for B to voluntarily transfer it back to A. Transfers would range from 1 to 100% and would have an optional amount of HNT associated.
 
-This transaction would solely be about rewards splitting on-chain. Reward splitting would be in no way indicative of hotspot ownership and legal hotspot ownership would remain an off-chain responsibility. The ability to perform transactions such as location assertions and hotspot transfers would continue to be exclusively available to the hotspot owner regardless of how the hotspot's revenue stream is split.
+The sole purpose of this transaction would be to enable rewards splitting on-chain. Reward splitting would be in no way indicative of hotspot ownership and legal hotspot ownership would remain an off-chain responsibility. The ability to perform transactions such as location assertions and hotspot transfers would continue to be exclusively available to the hotspot owner regardless of how the hotspot's revenue stream is split.
 
 
 # Motivation
 [motivation]: #motivation
 
-The Helium blockchain is currently designed to pay out HNT rewards to a single wallet. This design can be problematic whenever the work or resources necessary to deploy a hotspot are provided by multiple people as the HNT may need to be split up equitably between several wallets. Many of the workarounds for this problem require more trust, time, energy, technical expertise, or resources than is desirable. The ability to split rewards on-chain would resolve this issue by eliminating the need for these workarounds entirely.
+The Helium blockchain is currently designed to pay out HNT rewards to a single wallet. This design can be problematic whenever the work or resources necessary to deploy a hotspot are provided by multiple people as the HNT must be split up equitably between several wallets. Many of the common workarounds for this problem require more trust, time, energy, technical expertise, or resources than is desirable. The ability to split rewards on-chain would resolve this issue by eliminating the need for these workarounds entirely.
 
-An additional motivation for rewards_split_v1 is the potential securitization of hotspots. Hotspot owners would be able to sell a percentage of their hotspot to investors in order to raise cash to either upgrade their current hotspot or to purchase an additional hotspot. In a similar fashion, an owner with 100 hotspots that are yet to be deployed could sell a bundled percentage of their fleet in order to hedge their deployment risk.
+An additional motivation for this transcation is the added possibility of hotspot securitization. This possibility would offer various benefits to both hotspot owners ('sellers') and hotspot investors ('buyers'). Sellers would be able to access advantages such as lower capital requirements, reduced deployment risk, and the ability to access various goods and services that would otherwise be unattainable. Buyers would able to access advantages such as increased portfolio diversification, the ability to invest solely in high-value hotspot placements, and the ability to mine Helium with relatively little effort.
+
+
+The following use cases illustrate the benefits 
+
+1. SaaS companies could offer Helium related services for as little as 1% of a hotspots earnings
+2. Owners could offer a 5% referral bonus to their hosts
+3. Owners could incentivize hosts to upgrade their hotspot deployment with an antenna / outdoor installation with a more favorable reward split
+4. Manufacturers could offer hotspots at a discounted rate in exchange for a % stake
+5. Co-inhabitants could split the cost of a hotspot and split the HNT rewards 50-50
+6. A large group of people could pool their money for an otherwise cost-prohibitive premium hotspot placement and split the 
 
 
 # Stakeholders
