@@ -51,20 +51,21 @@ Feedback will be gathered by sharing this HIP in various Discord channels.
 
 ## Implement a new transaction, `rewards_split_v1`
 
-This transaction would necessitate the addition of a new field to the ledger, 'rewards_addresses', which
-would be a map of addresses and splits. This transaction would require two parties to sign the transaction in order to
-update the gateway's reward split in the ledger. 
+This transaction would necessitate the addition of a new field to the ledger, 'rewards_addresses', which 
+would be a map of addresses and splits. This transaction would require two parties to sign the transaction 
+in order toupdate the gateway's reward split in the ledger. 
 
 ### Steps
 
 1. Hotspot owner creates a partially signed transaction with a proposed reward percentage to transfer
-as well as an optional HNT amount that is required to complete the transaction.
-The transaction would perform a validity check of the proposed percentage transfer by
-ensuring the % meets the following criteria
+as well as an optional HNT amount that is required to complete the transaction. The transaction would 
+perform a validity check of the proposed percentage transfer by ensuring the % meets the following criteria
 
-        A. 1 <= % <= 100 (This range would be defined by a chain variable)
+        A. % is an integer
   
-        B. % >= the hotspot owners currently allocated reward %
+        B. 1 <= % <= 100 (This range would be defined by a chain variable)
+        
+        C. % >= the hotspot owners currently allocated reward %
 
 2. Hotspot owner sends the partially signed transaction to the reward split receiver
 
