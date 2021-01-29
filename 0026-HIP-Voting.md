@@ -60,6 +60,9 @@
 
 - You can keep the status quo and it would be fine as dewi is a non-profit, but it still a small group, and not full democratic system.
 
+- One miner can only get a vote. This is one of the only real particpatents in the network. The other groups use the network on top of this, they are important. But I don't think the miner network will disregrad the other aspects of the network. This really gives the people who run the network the power, because without the network users there is no reason to run the network. I am certain the miners will not cut the arm that feeds them.
+
+
 # Unresolved Questions
 [unresolved]: #unresolved-questions
 
