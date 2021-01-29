@@ -148,7 +148,7 @@ A: It depends on the number of Validators and how often a Validator is randomly 
 
 ### Q: After staking and the block cooldown period would the validator need to restake the 10k HNT to keep operating?
 
-A: Unless you deliberately unstake the HNT stays locked up. Once you unstake, the countdown starts but you can no longer participate in the consensus group and can no longer earn rewards.  but the rewards accrue immediately upon earning, with no lockup
+A: Unless you deliberately unstake the staked HNT stays locked up. Once you unstake, the countdown starts but you can no longer be elected to the the Consensus Group and can no longer earn new rewards for participating.
 
 ### Q: How quickly will I receive rewards from staking?
 
