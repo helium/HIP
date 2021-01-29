@@ -28,7 +28,7 @@
 [detailed-explanation]: #detailed-explanation
 
 - This hip will propose a few changes to the blockchain. The way I propose the block chain to move is making a new token called voting. Which can be generated when a new type of transaction of a change is proposed, all the miners on the network will get a token awared to them. 
- -The transaction done by the miner will have to inclued the proposal, and a github link to the the hip. And then they will burn 10 hnt to send the transaction. Then the blockchain will then make 2 wallets that can only accept the voting tokens, and distrubute 1 voting token per miner to all the wallets. 
+- The transaction done by the miner will have to inclued the proposal, and a github link to the the hip. And then they will burn 10 hnt to send the transaction. Then the blockchain will then make 2 wallets that can only accept the voting tokens, and distrubute 1 voting token per miner to all the wallets. 
   
 - One wallet will be for the chain, and another wallet against the proposed change. 
 
