@@ -56,7 +56,7 @@
 
 - Currently if you really want to change something you have to make a hip, get a dewi call approval and get the helium team on board. It is slow, and it allows a minority to control the direction of the network.
 
-- You can keep the status quo and it would be fine as dewi is a non-profit, but it still a small group, and not full democratic system.
+- You can keep the status quo and it would be fine as DEWI is a non-profit, but it still a small group, and not a fully democratic system.
 
 # Unresolved Questions
 [unresolved]: #unresolved-questions
@@ -73,7 +73,7 @@ current users of this project.
 
 - There will be a need to educate people on how a hip works and how it could help them.
 
-- This should be able to added in to the blockchain pretty easily with the sidechain functionality. Also as it is a new token, it can only be used for a particular vote. You can't take token and vote for another HIP.
+- This should be able to added in to the blockchain pretty easily with the sidechain functionality. Also as it is a new token, it can only be used for a particular vote. You can't take token and vote for another HIP. 
 
 # Success Metrics
 [success-metrics]: #success-metrics
