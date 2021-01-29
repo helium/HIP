@@ -30,7 +30,7 @@
 [detailed-explanation]: #detailed-explanation
 - There will be some changes need to the blockchain
 
-- The first thing will be a new type of transcation called `votingProposal`. It will include the propsed changes to the blockchain, time to vote (a minimum of 2 weeks), and time to implment. With this being a new type of transaction, there will be a cost assoiated with this. I propose it to be 10 HNT to be burned to prevent the network from being spamed with constant new transcation. This will be a permenant burn. No new HNT can replace this.
+- The first thing will be a new type of transcation called `votingProposal`. It will include the propsed changes to the blockchain, time to vote (a minimum of 2 weeks which is 20k blocks), and time to implment. With this being a new type of transaction, there will be a cost assoiated with this. I propose it to be 10 HNT to be burned to prevent the network from being spamed with constant new transcation. This will be a permenant burn. No new HNT can replace this.
 
 - To vote there will be a new type of token needed called `votingNetworkToken` also that can be called `VNT`. Once a transcation of `votingProposal` is posted the conseous group will genrate 2 new wallets. One of the wallets will be for implenting the change, and one against. And then they will distrbute tokens 1 per owner of a hotspot to all the wallets. The tokens can be given to others to vote on your behalf called `votingTokenTransfer`. But for a wallet to transfer to another wallet it will cost the same as a normal HNT transaction of 35,000 data credits. 
 
