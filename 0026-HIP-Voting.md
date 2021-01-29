@@ -15,7 +15,7 @@
 # Motivation
 [motivation]: #motivation
 
-  Allow more people to have a more democratised voting to everyone on the blockchain.
+  Allow more people to have a more democratised voting to everyone on the blockchain. And let more people particpate have the ablitiy to voice there opinion. 
 
 # Stakeholders
 [stakeholders]: #stakeholders
@@ -42,7 +42,7 @@
 [drawbacks]: #drawbacks
 
 - People with more helium tokens then miners will lose out. They can't vote as much. They will have less of a stake then someone who has more miners.
-- Lora device makers may feel that they have no power. This is true, however currently anyone can get a few hundred people to join the dewi's zoom call and flood the discord and make changes they want. However, if the miners are not happy with the network there will be less coverage overall.
+- Lora device makers may feel that they have no power. This is true, however currently anyone can get a few hundred people to join the dewi's zoom call and flood the discord and make changes they want. However, if the miners are not happy with the network there will be less coverage overall and people leaving the ecosytem.
 
 # Rationale and Alternatives
 [alternatives]: #rationale-and-alternatives
@@ -64,7 +64,7 @@ current users of this project.
 
 - There will be a need to educate people on how a hip works and how it could help them.
 
-- This should be able to added in to the blockchain pretty easily with the sidechain functionality. 
+- This should be able to added in to the blockchain pretty easily with the sidechain functionality. Also as it is a new token, it can only be used for a particular vote. You can't take token and vote for another HIP.
 
 # Success Metrics
 [success-metrics]: #success-metrics
