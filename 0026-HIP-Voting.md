@@ -1,5 +1,5 @@
 
-# HIP Template
+# HIP Voting
 
 - Author(s): maco2035
 - Start Date: 2020-01-26
