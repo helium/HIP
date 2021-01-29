@@ -37,7 +37,9 @@
 - At the end of the voting period the mesure will only pass if there is 60% of the voting tokens are in favor of the changes. This will be easily auditable from the blockchain to see how many `VNT` are for and against. 
 
 -`votingNetworkToken` new token for voting
+
 -`votingBurn` New transcation to burn hnt to peose the transcation
+
 -`votingTransaction` New transcation to vote for or against a hip
 
 # Drawbacks
