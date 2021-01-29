@@ -32,15 +32,17 @@
 
 - The first thing will be a new type of transcation called `votingProposal`. It will include the propsed changes to the blockchain, time to vote (a minimum of 2 weeks), and time to implment. With this being a new type of transaction, there will be a cost assoiated with this. I propose it to be 10 HNT to be burned to prevent the network from being spamed with constant new transcation. This will be a permenant burn. No new HNT can replace this.
 
-- To vote there will be a new type of token needed called `votingNetworkToken` also that can be called `VNT`. Once a transcation of `votingProposal` is posted the conseous group will genrate 2 new wallets. One of the wallets will be for implenting the change, and one against. And then they will distrbute tokens 1 per owner of a hotspot to all the wallets. The tokens can be given to others to vote on your behalf. But for a wallet to transfer to another wallet it will cost the same as a normal HNT transaction of 35,000 data credits. 
+- To vote there will be a new type of token needed called `votingNetworkToken` also that can be called `VNT`. Once a transcation of `votingProposal` is posted the conseous group will genrate 2 new wallets. One of the wallets will be for implenting the change, and one against. And then they will distrbute tokens 1 per owner of a hotspot to all the wallets. The tokens can be given to others to vote on your behalf called `votingTokenTransfer`. But for a wallet to transfer to another wallet it will cost the same as a normal HNT transaction of 35,000 data credits. 
 
 - At the end of the voting period the mesure will only pass if there is 60% of the voting tokens are in favor of the changes. This will be easily auditable from the blockchain to see how many `VNT` are for and against. 
 
--`votingNetworkToken` new token for voting
+-`votingNetworkToken` New token for voting  on the network
 
--`votingBurn` New transcation to burn hnt to peose the transcation
+-`votingBurn` New transcation to burn hnt to propose the transcation. This cost 10 HNT, and contains the info about the new hip.
 
--`votingTransaction` New transcation to vote for or against a hip
+-`votingTransaction` New transcation to vote for or against a hip. This is a free tranasctions
+
+-`votingTokenTransfer` New transcation to transfer your voting token from one wallet to another. This costs 35,000 DC's
 
 # Drawbacks
 [drawbacks]: #drawbacks
