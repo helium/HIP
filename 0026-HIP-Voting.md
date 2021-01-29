@@ -34,9 +34,9 @@
 
 - Then at the end of the time limit there will either be a consesous to move forward, or there will not be. I propose the limit to be 65% This is not a simple majority but it is not extreamly high to make changes imposible. 
 
-`voting` new token for voting
-`votingBurn` New transcation to burn hnt to peose the transcation
-`votingTransactoin` New transcation to vote for or against a hip
+-`voting` new token for voting
+-`votingBurn` New transcation to burn hnt to peose the transcation
+-`votingTransactoin` New transcation to vote for or against a hip
 
 # Drawbacks
 [drawbacks]: #drawbacks
