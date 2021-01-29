@@ -27,12 +27,16 @@
 # Detailed Explanation
 [detailed-explanation]: #detailed-explanation
 
-- This hip will propose a few changes to the blockchain. The way I propose the block chain to move is making a new token called voting. Which can be generated when a transaction of a change is proposed, all the miners on the network will get a token awared to them. 
-  The transaction done by the miner will have to inclued the proposal, and a github link to the the hip. And then they will burn 10 hnt to send the transaction. Then the blockchain will then make 2 wallets that can only accept the voting tokens, and distrubute 1 voting token per miner to all the wallets. 
+- This hip will propose a few changes to the blockchain. The way I propose the block chain to move is making a new token called voting. Which can be generated when a new type of transaction of a change is proposed, all the miners on the network will get a token awared to them. 
+ -The transaction done by the miner will have to inclued the proposal, and a github link to the the hip. And then they will burn 10 hnt to send the transaction. Then the blockchain will then make 2 wallets that can only accept the voting tokens, and distrubute 1 voting token per miner to all the wallets. 
   
-- One wallet will be 
+- One wallet will be for the chain, and another wallet against the proposed change. 
 
 - Then at the end of the time limit there will either be a consesous to move forward, or there will not be. I propose the limit to be 65% This is not a simple majority but it is not extreamly high to make changes imposible. 
+
+`voting` new token for voting
+`votingBurn` New transcation to burn hnt to peose the transcation
+`votingTransactoin` New transcation to vote for or against a hip
 
 # Drawbacks
 [drawbacks]: #drawbacks
