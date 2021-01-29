@@ -56,7 +56,7 @@
 
 - Currently if you really want to change something you have to make a hip, get a dewi call approval and get the helium team on board. It is slow, and it allows a minority to control the direction of the network.
 
-- You can keep the status and it would be fine as dewi is a non-profit, but it still a small group, and not full democratic system.
+- You can keep the status quo and it would be fine as dewi is a non-profit, but it still a small group, and not full democratic system.
 
 # Unresolved Questions
 [unresolved]: #unresolved-questions
