@@ -10,7 +10,7 @@
 # Summary
 [summary]: #summary
 
-  This proposal is used for helping gaining conseous on the blockchain for HIPs. Currently it is done by a few people who can say I want to do this. As observed from the DEWI calls it is mainly the helium team, and less then 50 others. With this, evey miner on the blockchain can vote if they would like changes to the blockchain. This will give more power to the people who are currently running the blockchain.
+  This proposal is used for helping gaining conseous on the blockchain for HIPs. Currently it is done by a few people who can say I want to do this. As observed from the DEWI calls it is mainly the helium team, and less then 50 others. With this, evey miner on the blockchain can vote if they would like changes to the blockchain. This will give more power to the people who are currently running the blockchain and underpining the network.
 
 # Motivation
 [motivation]: #motivation
@@ -40,7 +40,7 @@
 
 -`votingBurn` New transcation to burn hnt to propose the transcation. This cost 10 HNT, and contains the info about the new hip.
 
--`votingTransaction` New transcation to vote for or against a hip. This is a free tranasctions
+-`votingTransaction` New transcation to vote for or against a hip. This is a free tranasctions to the 2 wallets generated for it.
 
 -`votingTokenTransfer` New transcation to transfer your voting token from one wallet to another. This costs 35,000 DC's
 
