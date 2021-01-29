@@ -24,30 +24,35 @@
 
 * Everyone who is actively supporting the network can have a say, unlike today where there is few amount of people who can make a change.
 
+* DEWI, job is not paid, and there is going to be more HIP's where they are going to have to deal with.
+
 # Detailed Explanation
 [detailed-explanation]: #detailed-explanation
+- There will be some changes need to the blockchain
 
-- This hip will propose a few changes to the blockchain. The way I propose the block chain to move is making a new token called voting. Which can be generated when a new type of transaction of a change is proposed, all the miners on the network will get a token awared to them. 
-- The transaction done by the miner will have to inclued the proposal, and a github link to the the hip. And then they will burn 10 hnt to send the transaction. Then the blockchain will then make 2 wallets that can only accept the voting tokens, and distrubute 1 voting token per miner to all the wallets. 
-  
-- One wallet will be for the chain, and another wallet against the proposed change. 
+- The first thing will be a new type of transcation called `votingProposal`. It will include the propsed changes to the blockchain, time to vote (a minimum of 2 weeks), and time to implment. With this being a new type of transaction, there will be a cost assoiated with this. I propose it to be 10 HNT to be burned to prevent the network from being spamed with constant new transcation. This will be a permenant burn. No new HNT can replace this.
 
-- Then at the end of the time limit there will either be a consesous to move forward, or there will not be. I propose the limit to be 65% This is not a simple majority but it is not extreamly high to make changes imposible. 
+- To vote there will be a new type of token needed called `votingNetworkToken` also that can be called `VNT`. Once a transcation of `votingProposal` is posted the conseous group will genrate 2 new wallets. One of the wallets will be for implenting the change, and one against. And then they will distrbute tokens 1 per owner of a hotspot to all the wallets. The tokens can be given to others to vote on your behalf. But for a wallet to transfer to another wallet it will cost the same as a normal HNT transaction of 35,000 data credits. 
 
--`voting` new token for voting
+- At the end of the voting period the mesure will only pass if there is 60% of the voting tokens are in favor of the changes. This will be easily auditable from the blockchain to see how many `VNT` are for and against. 
+
+-`votingNetworkToken` new token for voting
 -`votingBurn` New transcation to burn hnt to peose the transcation
--`votingTransactoin` New transcation to vote for or against a hip
+-`votingTransaction` New transcation to vote for or against a hip
 
 # Drawbacks
 [drawbacks]: #drawbacks
 
 - People with more helium tokens then miners will lose out. They can't vote as much. They will have less of a stake then someone who has more miners.
+
 - Lora device makers may feel that they have no power. This is true, however currently anyone can get a few hundred people to join the dewi's zoom call and flood the discord and make changes they want. However, if the miners are not happy with the network there will be less coverage overall and people leaving the ecosytem.
 
 # Rationale and Alternatives
 [alternatives]: #rationale-and-alternatives
 
-Currently if you really want to change something you have to make a hip, get a dewi call approval and get the helium team on board. It is slow, and it allows a minority to control the direction of the network.
+- Currently if you really want to change something you have to make a hip, get a dewi call approval and get the helium team on board. It is slow, and it allows a minority to control the direction of the network.
+
+- You can keep the status and it would be fine as dewi is a non-profit, but it still a small group, and not full democratic system.
 
 # Unresolved Questions
 [unresolved]: #unresolved-questions
