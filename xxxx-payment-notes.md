@@ -9,8 +9,8 @@
 # Summary
 [summary]: #summary
 
-This change proposal suggests the addition of a new command option for the helium wallet PAY command, an optional (likely length/size restricted) alphanumeric
-field included with a wallet to wallet HNT payment transaction.
+This proposal suggests the addition of a new option for the Helium wallet PAY command: an optional (likely length/size restricted) alphanumeric
+memo/note field included with a wallet-to-wallet HNT payment transaction.
 
 # Motivation
 [motivation]: #motivation
@@ -24,7 +24,7 @@ others, either for accounting / documentation purposes (e.g. what was the paymen
 # Stakeholders
 [stakeholders]: #stakeholders
 
-* Anyone using the helium wallet in any capacity will be affected by this change -- indivdiduals, orgs, etc. -- whether through the wallet CLI or app UI.
+* Anyone using the Helium wallet in any capacity will be affected by this change -- individuals, orgs, etc. -- whether through the wallet CLI or app UI.
 
 Feedback and discussion on this change will be solicited & heard through the existing HIP discussion channel(s) (primarily Discord, in the respective channel),
 and as usual through any git repo commentary.
