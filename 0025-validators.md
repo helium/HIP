@@ -170,7 +170,7 @@ A: Stay tuned we will have signup and instructions in the coming weeks.
 
 A: Running a Validator node will be up to the user to choose to DIY, either on premise or in the cloud. We will learn more after running the testnet, but based on early tests at least:
 - an AWS EC2 instance T2 large or xlarge
-- State IP and few ports (currently 2154 and eventually port 443) open to internet
+- Stable IP and few ports (currently 2154 and eventually port 443) open to internet
 - DNS resolvable URL strongly recommend
 - Running on stable network connections (without things like proxies, NAT, firewalls, etc.), load is largely symmetrical when producing blocks, so good upstream recommended. 
 - It is not suitable or recommended to attempt to run from a home internet connection.
