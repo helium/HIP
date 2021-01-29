@@ -152,7 +152,7 @@ A: Unless you deliberately unstake the staked HNT stays locked up. Once you unst
 
 ### Q: How quickly will I receive rewards from staking?
 
-A: Rewards are not locked up and if your Validator node participates in the consensus group the rewards will be allocated at the end of the epoch.
+A: Rewards are not locked up and, if your Validator node is elected into the Consensus Group, the rewards will be allocated at the end of the epoch.
 
 ### Q: How will Validators be chosen to participate in the consensus group? How many?
 
