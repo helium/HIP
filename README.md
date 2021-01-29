@@ -36,6 +36,7 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | 23 | [Decouple Consensus From Gateways](https://github.com/helium/HIP/blob/master/0023-decouple-consensus-from-gateways.md) | [In Discussion](https://github.com/helium/HIP/issues/101) |
 | 24 | [Transfer Percentage of Hotspot](https://github.com/helium/HIP/blob/master/0024-reward-splitting.md) | [In Discussion](https://github.com/helium/HIP/issues/105) |
 | 25 | [Validators](https://github.com/helium/HIP/blob/master/0025-validators.md) | [In Discussion](https://github.com/helium/HIP/issues/111) |
+| 26 | [Payment Notes](https://github.com/helium/HIP/blob/master/0026-payment-notes.md) | [In Discussion](https://github.com/helium/HIP/issues/125) |
 
 
 ## HIP19 third-party manufacturers
