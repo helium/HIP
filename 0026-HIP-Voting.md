@@ -42,7 +42,7 @@
 
 -`votingBurn` New transcation to burn hnt to propose the transcation. This cost 10 HNT, and contains the info about the new hip.
 
--`votingTransaction` New transcation to vote for or against a hip. This is a free tranasctions to the 2 wallets generated for it.
+-`votingTransaction` New transcation to vote for or against a hip. This is a free tranasctions that sends it to one of the 2 wallets generated for it.
 
 -`votingTokenTransfer` New transcation to transfer your voting token from one wallet to another. This costs 35,000 DC's
 
@@ -75,7 +75,7 @@ current users of this project.
 
 - There will be a need to educate people on how a hip works and how it could help them.
 
-- This should be able to added in to the blockchain pretty easily with the sidechain functionality. Also as it is a new token, it can only be used for a particular vote. You can't take token and vote for another HIP.
+- This should be able to added in to the blockchain pretty easily with the sidechain functionality.
 
 # Success Metrics
 [success-metrics]: #success-metrics
