@@ -128,7 +128,7 @@ A: Technically yes, but practically it is increasingly unlikely your Hotspot wou
 
 ### Q: What’s the minimum number of Validators needed? Is there a cap?
 
-A: The current proposal is 100 with no cap to the maximum number of Validators that can participate.
+A: The current proposal is 100 with no cap to the maximum number of Validators that can participate. We will have a separate chain var that we will activate Consensus Group election via Validator that can be manually activated after we reach the proposed threshold.
 
 ### Q: How much HNT does it require to stake and become a Validator?
 
