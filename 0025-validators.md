@@ -158,7 +158,7 @@ A: Rewards are not locked up and, if your Validator node is elected into the Con
 
 A: Validators will be randomly chosen similarly to how Hotspots/Gateways are chosen. For the initial mainnet launch there will be 16 but this number will increase. 
 
-### Q: Can multiple Validators be associated with a single wallet?
+### Q: Can multiple Validators be associated with (staked from) a single wallet?
 
 A: Yes.
 
