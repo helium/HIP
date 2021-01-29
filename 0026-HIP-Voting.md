@@ -10,7 +10,7 @@
 # Summary
 [summary]: #summary
 
-  This proposal is used for helping gaining conseous on the blockchain for HIPs. Currently it is done by a few people who can say I want to do this. As observed from the DEWI calls it is mainly the helium team, and less then 50 others. With this, evey miner on the blockchain can vote if they would like changes to the blockchain. This will give more power to the people who are currently running the blockchain and underpining the network.
+  This proposal is used for helping gain consensus on the blockchain for HIPs. Currently it is done by a few people who can say I want to do this. As observed from the DEWI calls it is mainly the helium team, and less then 50 others. With this, evey miner on the blockchain can vote if they would like changes to the blockchain. This will give more power to the people who are currently running the blockchain and underpining the network.
 
 # Motivation
 [motivation]: #motivation
@@ -36,6 +36,8 @@
 
 - At the end of the voting period the mesure will only pass if there is 60% of the voting tokens are in favor of the changes. This will be easily auditable from the blockchain to see how many `VNT` are for and against. 
 
+- Then the proposed blockchain changes can be added to the network at a future time, after testing with testnests, and a smooth impmentation.
+
 -`votingNetworkToken` New token for voting  on the network
 
 -`votingBurn` New transcation to burn hnt to propose the transcation. This cost 10 HNT, and contains the info about the new hip.
@@ -56,7 +58,7 @@
 
 - Currently if you really want to change something you have to make a hip, get a dewi call approval and get the helium team on board. It is slow, and it allows a minority to control the direction of the network.
 
-- You can keep the status quo and it would be fine as DEWI is a non-profit, but it still a small group, and not a fully democratic system.
+- You can keep the status quo and it would be fine as dewi is a non-profit, but it still a small group, and not full democratic system.
 
 # Unresolved Questions
 [unresolved]: #unresolved-questions
@@ -73,7 +75,7 @@ current users of this project.
 
 - There will be a need to educate people on how a hip works and how it could help them.
 
-- This should be able to added in to the blockchain pretty easily with the sidechain functionality. Also as it is a new token, it can only be used for a particular vote. You can't take token and vote for another HIP. 
+- This should be able to added in to the blockchain pretty easily with the sidechain functionality. Also as it is a new token, it can only be used for a particular vote. You can't take token and vote for another HIP.
 
 # Success Metrics
 [success-metrics]: #success-metrics
