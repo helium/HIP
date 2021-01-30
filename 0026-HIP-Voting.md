@@ -30,13 +30,17 @@
 [detailed-explanation]: #detailed-explanation
 - There will be some changes need to the blockchain
 
-- The first thing will be a new type of transcation called `votingProposal`. It will include the propsed changes to the blockchain, time to vote (a minimum of 2 weeks which is 20k blocks), and time to implement. With this being a new type of transaction, there will be a cost assoiated with this. I propose it to be 10 HNT to be burned to prevent the network from being spamed with constant new transcation. This will be a permenant burn. No new HNT can replace this.
+- The first thing will be a new type of transcation called `votingProposal`. It will include the propsed changes to the blockchain (in a markdown editor format & git), time to vote (a minimum of 2 weeks which is 20k blocks), and time to implement the changes to the codebase (between 0 and 250k blocks). With this being a new type of transaction, there will be a cost assoiated with this. I propose it to be 10 HNT to be burned to prevent the network from being spamed with constant new transcation. This will be a permenant burn. No new HNT can replace this.
 
 - To vote there will be a new type of token needed called `votingNetworkToken` also that can be called `VNT`. Once a transcation of `votingProposal` is posted the conseous group will genrate 2 new wallets. One of the wallets will be for implenting the change, and one against. And then they will distrbute tokens 1 per owner of a hotspot to all the wallets. The tokens can be given to others to vote on your behalf called `votingTokenTransfer`. But for a wallet to transfer to another wallet it will cost the same as a normal HNT transaction of 35,000 data credits. 
 
 - At the end of the voting period the mesure will only pass if there is 60% of the voting tokens are in favor of the changes. This will be easily auditable from the blockchain to see how many `VNT` are for and against. 
 
-- Then the proposed blockchain changes can be added to the network at a future time, after testing with testnests, and a smooth impmentation.
+- After that there be a special token generator called `changeToken`. This token will be awarded to the person who made the proposal which has passed to the network, and now can submit the code they would like to change for the blockchain with the token, number of block need to vote (a minium 10,000 blocks),and number of blocks in the future this change will go in effect after the vote (between 1,000 and 20,000). This will triger another voting round. This token must be used from the time it was generated and till the time to implent in the first `votingProposal`. This token will contain the nessery changes to the codebase for the nodes.
+
+- The consenous group will again distrabute a `votingNetworkToken` and two new addresses for to depostit the tokens. This is to verify that the network can support these changes. And everyone can audit them. This can also be transfered from one wallet to another wallet to allow for vote by proxy. This will allow everyone transpancy on the changes to the blockchain. And after the voting period
+
+- Then the proposed blockchain changes can be added to the network after there was another 60% of the voting tokens were in favor of the changes of the blockchain and it's code. The change will be made to the time after the vote.
 
 -`votingNetworkToken` New token for voting  on the network
 
@@ -45,6 +49,8 @@
 -`votingTransaction` New transcation to vote for or against a hip. This is a free tranasctions that sends it to one of the 2 wallets generated for it.
 
 -`votingTokenTransfer` New transcation to transfer your voting token from one wallet to another. This costs 35,000 DC's
+
+- `changeToken` New token that has a one time use for editing the codebase, however still needs a vote to verify the changes.
 
 # Drawbacks
 [drawbacks]: #drawbacks
