@@ -72,7 +72,7 @@
 # Unresolved Questions
 [unresolved]: #unresolved-questions
 
-- How will making a change actually work. Do you make the code changes before, or will it have to be done at a later date. And if the code changes were not done if it was a later date who is reposnsible for it.
+- How will making a change actually work. How will all the miners will be updated? Will it be helium who does it? Or will it be built into the new blockchain core.
 
 # Deployment Impact
 [deployment-impact]: #deployment-impact
