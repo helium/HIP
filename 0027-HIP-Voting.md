@@ -36,11 +36,11 @@
 
 - At the end of the voting period the mesure will only pass if there is 60% of the voting tokens are in favor of the changes. This will be easily auditable from the blockchain to see how many `VNT` are for and against. 
 
-- After that there be a special token generator called `changeToken`. This token will be awarded to the person who made the proposal which has passed to the network, and now can submit the code they would like to change for the blockchain with the token, number of block need to vote (a minium 10,000 blocks),and number of blocks in the future this change will go in effect after the vote (between 1,000 and 20,000). This will triger another voting round. This token must be used from the time it was generated and till the time to implent in the first `votingProposal`. This token will contain the nessery changes to the codebase for the nodes.
+- After that there be a special token generator called `changeToken`. This token will be awarded to the person who made the proposal which has passed to the network, and now can submit the code they would like to change for the blockchain with the token, number of block need to vote (a minium 10,000 blocks), and number of blocks in the future this change will go in effect after the vote (between 1,000 and 20,000). This will triger another voting round. This token must be used from the time it was generated and till the time to implent in the first `votingProposal`. This token will contain the nessery changes to the codebase for the nodes.
 
 - The consenous group will again distrabute a `votingNetworkToken` and two new addresses for to depostit the tokens. This is to verify that the network can support these changes. And everyone can audit them. This can also be transfered from one wallet to another wallet to allow for vote by proxy. This will allow everyone transpancy on the changes to the blockchain. And after the voting period
 
-- Then the proposed blockchain changes can be added to the network after there was another 60% of the voting tokens were in favor of the changes of the blockchain and it's code. The change will be made to the time after the vote.
+- Then the proposed blockchain changes can be added to the network after there was another 60% of the voting tokens were in favor of the changes of the blockchain and it's code. The change will be made to the time after the vote specifed in the `changeToken` transaction.
 
 -`votingNetworkToken` New token for voting  on the network
 
