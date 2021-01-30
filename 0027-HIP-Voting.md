@@ -57,7 +57,7 @@
 
 - People with more helium tokens then miners will lose out. They can't vote as much. They will have less of a stake then someone who has more miners.
 
-- Lora device makers may feel that they have no power. This is true, however currently anyone can get a few hundred people to join the dewi's zoom call and flood the discord and make changes they want. However, if the miners are not happy with the network there will be less coverage overall and people leaving the ecosytem.
+- Lora device makers may feel that they have no power. This is sort of true; however, currently anyone can get a few hundred people to join the dewi's zoom call and flood the discord and make any changes they feel fit. Howerver, if the miners are not happy with the network there will be less coverage overall and people leaving the ecosytem.
 
 # Rationale and Alternatives
 [alternatives]: #rationale-and-alternatives
