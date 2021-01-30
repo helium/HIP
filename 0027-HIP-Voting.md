@@ -68,6 +68,8 @@
 
 - One miner can only get a vote. This is one of the only real particpatents in the network. The other groups use the network on top of this, they are important. But I don't think the miner network will disregrad the other aspects of the network. This really gives the people who run the network the power, because without the network users there is no reason to run the network. I am certain the miners will not cut the arm that feeds them.
 
+- Many people will have the objection, if a company starts using the network, and they see that code changes can affect the whole network by a vote. I think it is something they should not worry on. The big code changes will be thoroughly audited by almost eveyone. This is the same thing that happens today. There can be a vote that can changes the network in big ways by a hip, this allows for more transprancy.
+
 
 # Unresolved Questions
 [unresolved]: #unresolved-questions
