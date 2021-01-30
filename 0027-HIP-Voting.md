@@ -52,6 +52,8 @@
 
 -`changeToken` New token that has a one time use for editing the codebase, however still needs a vote to verify the changes.
 
+![image flowchart](./0027-HIP-Voting/flowchart.png)
+
 # Drawbacks
 [drawbacks]: #drawbacks
 
