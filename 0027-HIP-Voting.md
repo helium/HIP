@@ -50,7 +50,7 @@
 
 -`votingTokenTransfer` New transcation to transfer your voting token from one wallet to another. This costs 35,000 DC's
 
-- `changeToken` New token that has a one time use for editing the codebase, however still needs a vote to verify the changes.
+-`changeToken` New token that has a one time use for editing the codebase, however still needs a vote to verify the changes.
 
 # Drawbacks
 [drawbacks]: #drawbacks
