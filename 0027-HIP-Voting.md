@@ -48,7 +48,7 @@
 
 -`votingTransaction` New transcation to vote for or against a hip. This is a free tranasctions that sends it to one of the 2 wallets generated for it.
 
--`votingTokenTransfer` New transcation to transfer your voting token from one wallet to another. This costs 35,000 DC's
+-`votingTokenTransfer` New transcation to transfer your voting token (`votingNetworkToken`) from one wallet to another. This costs 35,000 DC's
 
 -`changeToken` New token that has a one time use for editing the codebase, however still needs a vote to verify the changes.
 
