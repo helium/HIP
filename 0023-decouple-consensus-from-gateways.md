@@ -1,52 +1,38 @@
-# HIP 23: Decouple Consensus From Gateways
+# HIP 23: Staking
 
 - Author(s): @cvolkernick
 - Start Date: 2020-12-15
-- Category: Technical
+- Category: Economic / Governance
 - Original HIP PR: https://github.com/helium/HIP/pull/97
 - Tracking Issue: https://github.com/helium/HIP/issues/101
 
 # Summary
 [summary]: #summary
 
-Changes the structure & process involved in forming consensus on the network - primarily by separating concerns of miners (providing verifiable coverage) and consensus group (securing the network / block formation).
+As the community has reached general rough consensus around acceptance of HIP 25 : Validators, this proposal aims to further flesh out implementation of validator staking, both for validators proper and "validators by proxy", or "delegated stakers" (DPoS). This proposal seeks to retain some gateway stake in consensus by means of delegating their implied stake (potentially onboard stake by default, or supplemental stake via wallet staking) in the network (as gateway actors) to Validator "pools".
 
 # Motivation
 [motivation]: #motivation
 
-In its current state, consensus takes place onboard miners, or in the cloud in the case of "light gateways" with cloud-based miners. This HIP proposes moving away from the former and toward the latter as a standard, by moving consensus away from miners and onto dedicated cloud-based or otherwise privately operated server farms. By separating the concerns of miners (involved in tandem with gateways/packet forwarders) and consensus group, the two can be better optimized to perform their respective duties.
-
-Presently, there is a compromise of optimization, as hardware and software needs are at odds with one another; the most optimized approach for gateways/miners (coverage providers) and consensus group (security / data integrity providers) are distinct and different. Considerations for each are as follows:
-
-Gateways (presumed as onboard miners):
-
-- Lightweight; both in form factor & design complexity
-- Economic; lowest cost to achieve the same outcome optimally
-- Security; inability to compromise and/or repurpose hardware for malicious purposes (gaming)
-
-Consensus Group:
-
-- Performant; performs necessary compute tasks at peak efficacy/efficiency (fastest, low compute overhead, most energy/cost efficiency)
-- Reliability; maintains highest uptime, least timeouts, least dropped/failed transaction confirmations
-- Security; robust against potential gaming, attacks, etc., and does not allow for powerful and/or bad actors to compromise the system at scale or via brute force.
+As HIP 25 prepares to move away from gateways with onboard ledgers/miners, toward light gateways (gateway rs) which act as more simple PoC relays, and by extension miners are removed from the consensus process, there has been a great deal of controversey around whether a large validator stake requirement (as suggested in HIP 25 discussions) will disenfranchise network participants who are less capitalized. This HIP attempts to address these concerns in a way that satisfies most if not all of the concerns raised in this debate.
 
 # Stakeholders
 [stakeholders]: #stakeholders
   
 All current and future hotspot owners will be affected by this change. Miner owners will be given a new option to opt-in to stake & participate in CG for a marginal staking fee (opted-out by default).
 
-There will also be a new class or "role" of operator created -- validator pools/nodes. These operators will obviously have stake, as they are brought into existence via this HIP.
+There will also be a new class or "role" of network participant created -- delegators. A delegator is any wallet which is delegating stake to a Validator pool.
 
-Community debate / discussion will be solicited via Discord in the respective hip-23-move-consensus-off-miners channel, and here in git comments.
+Community debate / discussion will be solicited via Discord in the respective hip-23-staking channel, and here in git comments.
 
 # Detailed Explanation
 [detailed-explanation]: #detailed-explanation
 
-Each miner on the network is a "constituent", with independent interests. Constituent miners can delegate their vote ("stake") in the collective network to a delegated pool entity "representative". There is no monetary cost to do so; the only potential cost is the net effect of your chosen delegate pool's election being less rewarding than another potential pool's. As an alternative approach, miners can be given the option to "opt-in" to a per-epoch stake, and then provided a list of available validator pools to delegate their votes to. From a UX standpoint this would look something like the following:
+Each miner on the network is a "constituent", with independent interests. Constituent miners can delegate their vote ("stake") in the collective network to a delegated pool entity "representative" (a Validator a la HIP 25). There is no monetary cost to do so (outside of the amount staked); the only potential cost is the net effect of your chosen delegate pool's election being less rewarding than another potential pool's. Delegates can be given the option to "opt-in" to a per-epoch stake, and then be provided a list of available validator pools to delegate their votes to. From a UX standpoint this would look something like the following:
 
-1) User opens app to "Hotspots" page.
-2) User selects a particular miner's settings as currently exists (gear option on the miner panel).
-3) User is presented a toggle on this settings page, which opts-in/opts-out from staking to participate in CG.
+1) User opens app to "Network" tab.
+2) User selects the "Validators" or "Staking" (exact copy text / terminology TBD) option
+3) User is presented a toggle on this landing page, which opts-in/opts-out from staking to participate in CG.
 4) Any miners opted-out would not participate in CG nor receive CG awards as a result (opt-out is default when a new miner is onboarded or existing miner is transferred to a new owner).
 5) Any miners opted-in would be "billed" a staking fee from the owner wallet each epoch, which would in turn be delegated to the consensus pool of chosing (explanation follows).
 6) When opting-in, user would be presented a list of available staking pools, along with any relevant metrics for making the delegation decision. Some examples might be:
@@ -69,7 +55,7 @@ Slashing techniques (partial or full loss of stake) may be employed, if this rel
 
 There are technically two separate and distinct stakes here:
 
-1) Validator Pool (Node) Entry Stake - this is required of a new pool to begin obtaining delegates and participating in CG. This pool is not involved in rewards; it simply is "locked" for as long as the validator wishes to participate in CG elections. It may also be desired to layer on some complexity here to incentivize pool operators to be consistent, reliable, and predictable (such as a "cool down" period required once a stake has been placed, so they are required to participate a certain duration before recalling stake, or requiring a waiting period before re-staking).
+1) Validator Pool (Node) Entry Stake - this is required of a new pool to begin obtaining delegates and participating in CG. This pool is not involved in rewards; it simply is "locked" for as long as the validator wishes to participate in CG elections. It may also be desired to layer on some complexity here to incentivize pool operators to be consistent, reliable, and predictable (such as a "cool down" period required once a stake has been placed, so they are required to participate a certain duration before recalling stake, or requiring a waiting period before re-staking). This has been discussed in principle around HIP 25, and this HIP attempts to further that discussion.
 
 2) Constituent / Delegate Stake - this is required of individual constituent miners who are opting-in to staking and delegating their stake to validator pools / nodes. If a miner does not opt-in, they will not be charged a staking fee each epoch, and will not be eligible to receive CG rewards as a result. If miners opt-in, they will be billed the epoch stake at the initiation of each epoch period, and paid out any respective reward if their delegated stake is elected to and successfully participates in CG. These collections will constitute the reward pool for the elected pools (and by extension, their constituent delegator miners). Because of this, the rewards pool will grow and shrink respectively according on participation levels. If more miners stake, there is a greater stake at play. If less, then the opposite. This allows the reward pool to remain scaled to the current level of involvment and reward appropriately relative to "risk" or "chance".
 
