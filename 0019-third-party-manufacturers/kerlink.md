@@ -25,7 +25,10 @@ _Figure 3: Wirnet<sup>TM</sup> iFemtocell (indoor, Ethernet/Wifi)_
 References:
 *   [https://www.kerlink.com/product/wirnet-istation/](https://www.kerlink.com/product/wirnet-istation/)
 *   [https://www.kerlink.com/product/wirnet-ifemtocell-evolution/](https://www.kerlink.com/product/wirnet-ifemtocell-evolution/)
-*   [https://www.kerlink.com/product/wirnet-ifemtocell/](https://www.kerlink.com/product/wirnet-ifemtocell/) 
+*   [https://www.kerlink.com/product/wirnet-ifemtocell/](https://www.kerlink.com/product/wirnet-ifemtocell/)
+
+Kerlink will release miner software to run inside the gateways (full miner), but that requires the HIP25 (Validators) to be in production (to eliminate the high CPU usage on the gateways due to the Consensus Group work).  
+Kerlink will eventually switch to light gateways, as any other manufacturer.
 
 ## Company Information
 
