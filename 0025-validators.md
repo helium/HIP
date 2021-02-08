@@ -164,11 +164,17 @@ A: Validators will be randomly chosen similarly to how Hotspots/Gateways are cho
 
 A: Yes.
 
-### Q: How can I participate and become a Validator? Join the testnet?
+### Q: How can I participate and host a Validator node? Join the testnet?
 
 A: Stay tuned we will have signup and instructions in the coming weeks.
 
-### Q: What do I need to run a Validator node, DIY process or hardware from Helium?
+### Q: How can I prepare to run a Validator node on the testnet?
+
+A: Check out the miner software and run it on the server you want to use. Note you'll also need a recent Rust and a C/C++ tool chain. 
+- Miner software [here](https://github.com/helium/miner#installing-miner-from-source). 
+- Instructions on how to run a miner [here](https://docs.helium.com/mine-hnt/build-a-packet-forwarder/#run-the-miner).
+
+### Q: What do I need to run a Validator node?
 
 A: Running a Validator node will be up to the user to choose to DIY, either on premise or in the cloud. We will learn more after running the testnet, but based on early tests at least:
 - an AWS EC2 instance T2 large or xlarge
