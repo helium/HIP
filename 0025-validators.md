@@ -170,7 +170,7 @@ A: Stay tuned we will have signup and instructions in the coming weeks.
 
 ### Q: How can I prepare to run a Validator node on the testnet?
 
-A: Check out the miner software and run it on the server you want to use. Note you'll also need a recent Rust and a C/C++ tool chain. 
+A: Check out the miner software and run it on the server you want to use. Note you'll also need a recent Rust and a C/C++ tool chain. Currently supported erlang version, OTP 22.
 - Miner software [here](https://github.com/helium/miner#installing-miner-from-source). 
 - Instructions on how to run a miner [here](https://docs.helium.com/mine-hnt/build-a-packet-forwarder/#run-the-miner).
 
