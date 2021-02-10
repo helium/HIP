@@ -57,7 +57,7 @@ We would also add 7 new transactions (the exact details of which are likely to c
 
 #### Staking in depth ...
 
-Stake is unlimited, and any stake over the threshold adds to the chance that a spot gets elected as a block producer.  In order to reduce the ability of overstakers to dominate block production, additional stake will need to have diminishing returns.  Eventually a mechanism will be added to delegate Hotspots credibility to Validators which will also influence elections.
+Stake is unlimited, however in the current proposal there are no benefits to overstaking. Overstaking and other features such as delegation will be subject to the HIP community approval process.
 
 Please see open questions for how overstake may be applied to returns. We expect a discussion in the community to help resolve exactly how this should work and will update the HIP to reflect that discussion.
 
