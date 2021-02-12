@@ -52,7 +52,7 @@ We would also add 7 new transactions (the exact details of which are likely to c
   * Activation Threshold: minimum number of staked Validators to start using them for elections. After the Activation Threshold is met, the next election will produce a list of Validators rather than draw from the full Hotspot pool. After the Threshold is reached and the chain variable is active, we will no longer go back to selecting from the Hotspot pool.  The initial proposed value here is 100 Validators.
   * Activation Delay: the number of blocks after which (once the above threshold has been met) the group will start moving to the Validator pool.  Unstaking to below the activation threshold during the delay period will cancel activation.
   * Minimum Stake: the minimum number of HNT that need to be staked before the Validator can be created and considered for Block Producer elections.  The proposed initial value for the minimum stake is 10,000 HNT.
-  * Cooldown Period:  The number of blocks after staking when the stake is returned to the owner's account.  Proposed initial value is 250,000 blocks, approximately 5 months.
+  * Cooldown Period: The number of blocks after unstaking when the stake will be returned to the owner's account.  Proposed initial value is 250,000 blocks, approximately 5 months.
 
 
 #### Staking in depth ...
@@ -150,7 +150,7 @@ A: It depends on the number of Validators and how often a Validator is randomly 
 
 ### Q: After staking and the block cooldown period would the Validator need to restake the 10k HNT to keep operating?
 
-A: Unless you deliberately unstake the staked HNT stays locked up. Once you unstake, the countdown starts but you can no longer be elected to the the Consensus Group and can no longer earn new rewards for participating.
+A: The stake for a validator is perpetual rather than periodically renewed. Unstaking requires submitting an unstake transaction, after which the cooldown period begins.  After the cooldown period, the initial stake is returned to the owners account.
 
 ### Q: How quickly will I receive rewards from staking?
 
