@@ -1,7 +1,8 @@
 # HIP19: Approval Process For Third-Party Manufacturers
 
-- Author(s): @jamiew (jamiedubs), @georgica, @philltran
+- Author(s): @jamiew (jamiedubs), @georgica, @philltran, @cokes
 - Start Date: 2020-11-14
+- Amended Date: 2021-02-16
 - Category: Meta
 - Original HIP PR: https://github.com/helium/HIP/pull/86
 - Tracking Issue: https://github.com/helium/HIP/issues/87
@@ -10,6 +11,8 @@
 # Summary
 
 This proposal seeks to lay out requirements for third-party manufacturers to be approved by the community, and a process by which onboarding keys can be issued by Helium, Inc to those manufacturers.
+
+For Light Hotspots to be added to the Network, Validators must be a network participant to handle consensus. Shipping to consumers cannot happen until HIP25 is implemented in production.
 
 
 # Motivation
@@ -23,6 +26,7 @@ Additional hotspot manufacturers would provide redundancy, competition, and the 
 Helium Inc is currently the only party that can issue the keys required to add a new hotspot to the blockchain. They've indicated they would be willing to follow the community's lead for approving new manufacturers and issuing them onboarding keys, and this proposal attempts to outline a process for that community approval.
 
 Importantly, this proposal does not contemplate granting direct key issuance authority to any third-parties. While desirable, we believe that proposal and its potential consequences should be evaluated in a separate HIP.
+
 
 # Stakeholders
 
@@ -39,7 +43,7 @@ Almost everyone involved in the Helium ecosystem, but especially:
 
 This document attempts to outline:
 
-1. Requirements and process for applications by third-party manufacturers
+1. Requirements and process for applications by third-party manufacturers (including Light Hotspot manufacturers)
 2. A rough process for Helium Inc to issue onboarding codes to those manufacturers
 3. Expectations for software maintenance and customer support from those manufacturers
 
@@ -69,6 +73,8 @@ Additionally, we want devices approved under this proposal to be reasonably secu
 - Willingness to submit a prototype for audit, and sharing those audit results publicly (pass or fail)
 - Optionally, encrypted buses, potting and other anti-tampering meaures.
 
+Applicants wishing to manufacture Light Hotspots with packet forwarding capability-only will not need to fulfill the secured chip requirement.
+
 Lastly, manufacturers are expected to provide:
 
 - Proof of identity for individuals owning 25% or more of the manufacturer, per typical KYC/AML procedure. This could be provided privately to trusted parties like Helium Inc employees or DeWi board members and publicly confirmed.
@@ -79,7 +85,14 @@ Lastly, manufacturers are expected to provide:
 While we recognize that much of this information could be considered sensitive or proprietary, we believe it is imperative to build trust with the initial set of manufacturers that are brought in through this process. Thus we ask more of this initial set of manufacturers than we might from later approvals.
 
 
+### Light Hotspot Requirements (Amendment)
+With the incoming launch of Validators (HIP25), the network no longer requires compute-intensive Hotspots to run consensus groups. This reduces the requirements for Hotspots such that they become "Light Hotspots". Light Hotspots are a new subclass of trusted Hotspots on the Network, able to participate in PoC, Witness, and create Challenges. In addition to PoC activities, they can transfer Data Packets. Light Hotspots will earn HNT for these activities. 
 
+Light Hotspots will **not** participate in Consensus and will be flagged as such on the Blockchain. They will not mine HNT for participating in Consensus.
+
+The reduced compute requirements will enable a new class of lower-cost Hotspots to enter the market.
+
+Light Hotspots will not be expected to pass the Audit and  Compute requirements to run and participate in consensus.
 
 ## Issuing Keys & Paying Staking Fees
 
