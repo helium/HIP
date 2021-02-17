@@ -73,7 +73,7 @@ Additionally, we want devices approved under this proposal to be reasonably secu
 - Willingness to submit a prototype for audit, and sharing those audit results publicly (pass or fail)
 - Optionally, encrypted buses, potting and other anti-tampering meaures.
 
-Applicants wishing to manufacture Light Hotspots with packet forwarding capability-only will not need to fulfill the secured chip requirement.
+Applicants wishing to manufacture Light Hotspots with packet forwarding capability-only will not need to fulfill the secured chip requirement. **Light Hotspots participating in PoC, Witnessing, and Challenging will be subject to the ECC chip requirement.**
 
 Lastly, manufacturers are expected to provide:
 
@@ -92,7 +92,7 @@ Light Hotspots will **not** participate in Consensus and will be flagged as such
 
 The reduced compute requirements will enable a new class of lower-cost Hotspots to enter the market.
 
-Light Hotspots will not be expected to pass the Audit and  Compute requirements to run and participate in consensus.
+Light Hotspots will not be expected to pass the Audit and Compute requirements to run and participate in consensus.
 
 ## Issuing Keys & Paying Staking Fees
 
