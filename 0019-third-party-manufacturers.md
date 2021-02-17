@@ -92,7 +92,7 @@ Light Hotspots will **not** participate in Consensus and will be flagged as such
 
 The reduced compute requirements will enable a new class of lower-cost Hotspots to enter the market.
 
-Light Hotspots will not be expected to pass the Audit and Compute requirements to run and participate in consensus.
+Light Hotspots will not be expected to pass the Audit and Compute requirements to run and participate in consensus. Their block absorption rate may be documented as a comparison to other blockchain following miners. 
 
 ## Issuing Keys & Paying Staking Fees
 
