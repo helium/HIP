@@ -33,6 +33,7 @@ and as usual through any git repo commentary.
 ___
 [detailed-explanation]: #detailed-explanation
 
+- **LOS**: Line Of Sight, Rx visible from Tx.
 - **GW**: Short for gateway aka. hotspot, miner, etc.
 - **Tx**: Transmitting gateway.
 - **Fade Margin**: Calculation artifact for potential environmental obsticles and other conditions
@@ -44,19 +45,23 @@ ___
 - **Hex Whitelist**: a list of hex’s that are eligible for rewards, these could be specified at any level but in general should be as low a resolution (largest area) as possible. If this feature is not desired, you can assume all resolution 0 hexs are in the whitelist. This would be a chain variable.
 - **Region Scaling** TBD...
 
-## Detailed Explanation
+## Description
 
 ___
 [detailed-explanation]: #detailed-explanation
 
 This proposal will build upon [Hip-17] and introduce scaling in regards to signal fading at different Tx. The [Jan 27 firmware update] revealed a greate inequality in the network deployment incitament. The current effect difference of 27 dBm vs 14 dBm is equivalent to Tx of 500 mW vs 25 mW, which is a 20 fold difference.
-In terms of signal range this is
-![signal range](/0027-regional-reward-adjustments/signal-range.png)
-<!-- TODO: Build native table -->
 
-Signal Range
-![signal area](/0027-regional-reward-adjustments/signal-area.png)
-<!-- TODO: Build native table -->
+The following table shows the different signal range  and area coveragefor Europe and USA for different fade margins at receiver sensitivity -126 dBm ([SF8125kHz]):
+
+| Fade margin (dB) | Range @14dBm/🇪🇺  (km) | Range @27dBm/🇺🇸  (km) | Range difference factor | Area Coverage @14dBm/🇪🇺  (km^2) | Area Coverage @27dBm/🇺🇸  (km^2) | Area difference factor | Comments |
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| 0 | 273 | 1220 | 4.5 | 234 140 | 4 675 947 | 20 | LOS, no building or obstacles |
+| 25 | 15.4 | 68.6 | 4.5 | 745 | 14 784 | 20 | ~1 obscuring building (Tx on rooftop, Rx inside a building) |
+| 40 | 2.7 | 12.2 | 4.5 | 23.4 | 468 | 20 | - |
+| 50 | 3.86 | 3.89 | 3.2 | 2.3 | 46.8 | 20 | ~2 obscuring building (Tx in building, Rx inside a building) |
+
+With a range factor of 4.5 and an area coverage factor of 20 this gives the Helium Gateway owners vastly mixed signals about 
 
 ## Drawbacks
 
@@ -105,3 +110,4 @@ that result from the new abilities. It would also be of note to monitor performa
 [scale-fading-n-net-deployment]: http://www.sis.pitt.edu/prashk/inf1072/Fall16/lec5.pdf
 [hip-17]: https://github.com/helium/HIP/blob/master/0017-hex-density-based-transmit-reward-scaling.md
 [Jan 27 firmware update]: https://engineering.helium.com/2021/01/27/hotspot-firmware-power-updates.html
+[SF8125kHz]: https://www.semtech.com/products/wireless-rf/lora-transceivers/sx1276
