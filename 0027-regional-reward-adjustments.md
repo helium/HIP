@@ -35,21 +35,22 @@ ___
 
 - **GW**: Short for gateway aka. hotspot, miner, etc.
 - **Tx**: Transmitting gateway.
+- **Fade Margin**: Calculation artifact for potential environmental obsticles and other conditions
 - **Density_tgt**: Target number of hotspots in target hex resolution (example = 1).  Density in a target resolution hex will be clipped at this number unless certain conditions are met. This would be a chain variable for each resolution of interest.
 - **Density_max**: maximum number of hotspots to consider for target resolution any density beyond this will be clipped under any conditions. (Example= 4) This would be a chain variable for each resolution of interest.
 - **N**: number of neighboring hex’s that must meet **Density_tgt** before clipping will be raised above **Density_tgt**. (Example =2). This would be a chain variable for each resolution of interest.
 - *Interactive Hotspot**: an active hotspot that has also recently had a transmission witnessed. Lone wolves are active but not interactive.
 - **Occupied Hex**: hex where at least one interactive hotspot is present. This can apply to any resolution of interest.  It also implies that if we know a certain hex is occupied, all parents of that hex up to resolution 0 are also occupied.
 - **Hex Whitelist**: a list of hex’s that are eligible for rewards, these could be specified at any level but in general should be as low a resolution (largest area) as possible. If this feature is not desired, you can assume all resolution 0 hexs are in the whitelist. This would be a chain variable.
+- **Region Scaling** TBD...
 
 ## Detailed Explanation
 
 ___
 [detailed-explanation]: #detailed-explanation
 
-This proposal will build upon [Hip-17] and introduce scaling in regards to signal fading at different Tx. This issue was introduced
-
-Signal Range
+This proposal will build upon [Hip-17] and introduce scaling in regards to signal fading at different Tx. The [Jan 27 firmware update] revealed a greate inequality in the network deployment incitament. The current effect difference of 27 dBm vs 14 dBm is equivalent to Tx of 500 mW vs 25 mW, which is a 20 fold difference.
+In terms of signal range this is
 ![signal range](/0027-regional-reward-adjustments/signal-range.png)
 <!-- TODO: Build native table -->
 
@@ -103,3 +104,4 @@ that result from the new abilities. It would also be of note to monitor performa
 
 [scale-fading-n-net-deployment]: http://www.sis.pitt.edu/prashk/inf1072/Fall16/lec5.pdf
 [hip-17]: https://github.com/helium/HIP/blob/master/0017-hex-density-based-transmit-reward-scaling.md
+[Jan 27 firmware update]: https://engineering.helium.com/2021/01/27/hotspot-firmware-power-updates.html
