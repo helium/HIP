@@ -37,7 +37,7 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | 24 | [Transfer Percentage of Hotspot](https://github.com/helium/HIP/blob/master/0024-reward-splitting.md) | [In Discussion](https://github.com/helium/HIP/issues/105) |
 | 25 | [Validators](https://github.com/helium/HIP/blob/master/0025-validators.md) | [Approved](https://github.com/helium/HIP/issues/111) |
 | 26 | [Payment Notes](https://github.com/helium/HIP/blob/master/0026-payment-notes.md) | [In Discussion](https://github.com/helium/HIP/issues/125) |
-| 27 | [Support CBRS 5G](https://github.com/helium/HIP/blob/master/0027-cbrs-5g-support.md) | In Discussion |
+| 27 | [Support CBRS 5G](https://github.com/helium/HIP/blob/master/0027-cbrs-5g-support.md) | [In Discussion](https://github.com/helium/HIP/pull/133) |
 
 
 ## HIP19 third-party manufacturers
