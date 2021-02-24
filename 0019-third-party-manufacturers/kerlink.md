@@ -12,7 +12,7 @@ Below are the Wirnet<sup>TM</sup> iStation (ethernet + 4G), Wirnet<sup>TM</sup> 
 
 <img src="kerlink/istation.png" alt="iStation" width=200 />
 
-_Figure 1: Wirnet<sup>TM</sup> iStation (Outdoor, Ethernet/4G)_
+_Figure 1: Wirnet<sup>TM</sup> iStation (Outdoor, Ethernet/4G) — $899_
 
 <img src="kerlink/fevo.png" alt="iFemtoCell Evolution" width=200 />
 
@@ -20,7 +20,7 @@ _Figure 2: Wirnet<sup>TM</sup> iFemtocell Evolution (indoor, Ethernet/4G)_
 
 <img src="kerlink/wifc.png" alt="iFemtoCell Evolution" width=64 />
 
-_Figure 3: Wirnet<sup>TM</sup> iFemtocell (indoor, Ethernet/Wifi)_
+_Figure 3: Wirnet<sup>TM</sup> iFemtocell (indoor, Ethernet/Wifi) — $449_
 
 References:
 *   [https://www.kerlink.com/product/wirnet-istation/](https://www.kerlink.com/product/wirnet-istation/)
