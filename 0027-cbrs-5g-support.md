@@ -2,8 +2,9 @@
 
 - Author: FreeedomFi @zer0tweets 
 - Start Date: February 23th, 2021
-- Category: Economic
-- Tracking Issue: N/A
+- Category: Technical
+- Tracking Issue: https://github.com/helium/HIP/issues/134
+- Status: In Discussion
 
 ## Summary
 This proposal suggests an economic mechanism to support higher new wireless protocols on Helium network, starting with LTE and 5G in CBRS spectrum band
@@ -34,10 +35,10 @@ To make it possible to redeem Data Credits towards different types of wireless d
 
 In the future, as we grow and expand the network, we may want to have different conversion ratios, but for the purposes of the initial contemplated pilot, we’d like to focus on introducing just a conversion ratio that would denominate economics of a CBRS network. To figure out the initial cost of CBRS Data Credit we looked at the following guiding factors: 
 
-- Cheap prepaid LTE data plans in US sell for $1.50/Gb (Mint Mobile 15Gb bundle) 
-- Comcast charges $10 for each $50Gb 
+- Cheap prepaid LTE data plans in US sell for $1.50/GB (Mint Mobile 15GB bundle)
+- Comcast charges $10 for each $50GB
 
-While it is clear that we’ll need to tweak the pricing for CBRS data as we get more data and better understand the market economics, it is suggested that we initially set the price of passing 1Gb of CBRS data through Helium network at $1 per Gb or $.00000006 per LTE packet of 66 bytes.
+While it is clear that we’ll need to tweak the pricing for CBRS data as we get more data and better understand the market economics, it is suggested that we initially set the price of passing 1GB of CBRS data through Helium network at $1 per GB or $.00000006 per LTE packet of 66 bytes.
 
 ## Proof-of-Coverage for LTE/5G  
 
@@ -112,9 +113,9 @@ Scenario #2: Little data going through network and many CBRS nodes on network.
 
 [This model](https://docs.google.com/spreadsheets/d/1-ARuH5-JQveDk_yd0Dn3JrTTrD6f6xUSD7MkhZJkHC0/edit?usp=sharing) enables us to play with various scenarios for above: 
 
-##Outcome of new scheme
+## Outcome of new scheme
 
-- Introduces general framework and system variables (new DC vars and new economic model) for expanding Helium network beyond LoRoWan use case
+- Introduces general framework and system variables (new DC vars and new economic model) for expanding Helium network beyond LoRaWAN use case
 - Introduces a concept of supporting multiple Proof of Coverage models, aligned with various wireless protocols and use cases 
 - Provides specific implementation approach for 5G/LTE proof of coverage  
 - Protects existing network by utilizing only a small portion of HNT unused for data credits towards community innovation, aimed at bringing more data usage for the network (vs. redistributing everything back to LoRa PoC rewards) 
