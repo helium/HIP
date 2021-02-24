@@ -112,7 +112,7 @@ Scenario #2: Little data going through network and many CBRS nodes on network.
 
 [This model](https://docs.google.com/spreadsheets/d/1-ARuH5-JQveDk_yd0Dn3JrTTrD6f6xUSD7MkhZJkHC0/edit?usp=sharing) enables us to play with various scenarios for above: 
 
-##Outcome of new scheme
+## Outcome of new scheme
 
 - Introduces general framework and system variables (new DC vars and new economic model) for expanding Helium network beyond LoRaWAN use case
 - Introduces a concept of supporting multiple Proof of Coverage models, aligned with various wireless protocols and use cases 
