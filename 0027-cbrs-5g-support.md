@@ -114,7 +114,7 @@ Scenario #2: Little data going through network and many CBRS nodes on network.
 
 ##Outcome of new scheme
 
-- Introduces general framework and system variables (new DC vars and new economic model) for expanding Helium network beyond LoRoWan use case
+- Introduces general framework and system variables (new DC vars and new economic model) for expanding Helium network beyond LoRaWAN use case
 - Introduces a concept of supporting multiple Proof of Coverage models, aligned with various wireless protocols and use cases 
 - Provides specific implementation approach for 5G/LTE proof of coverage  
 - Protects existing network by utilizing only a small portion of HNT unused for data credits towards community innovation, aimed at bringing more data usage for the network (vs. redistributing everything back to LoRa PoC rewards) 
