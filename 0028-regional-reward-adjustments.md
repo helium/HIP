@@ -59,7 +59,7 @@ The following table shows the different signal range  and area coveragefor Europ
 | 0 | 273 | 1220 | 4.5 | 234 140 | 4 675 947 | 20 | LOS, no building or obstacles |
 | 25 | 15.4 | 68.6 | 4.5 | 745 | 14 784 | 20 | ~1 obscuring building (Tx on rooftop, Rx inside a building) |
 | 40 | 2.7 | 12.2 | 4.5 | 23.4 | 468 | 20 | - |
-| 50 | 3.86 | 3.89 | 3.2 | 2.3 | 46.8 | 20 | ~2 obscuring building (Tx in building, Rx inside a building) |
+| 50 | 0.86 | 3.89 | 4.5 | 2.3 | 46.8 | 20 | ~2 obscuring building (Tx in building, Rx inside a building) |
 
 With a range factor of 4.5 and an area coverage factor of 20 this gives the Helium Gateway owners vastly mixed signals about 
 
