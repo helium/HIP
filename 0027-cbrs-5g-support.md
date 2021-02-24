@@ -2,7 +2,7 @@
 
 - Author: FreeedomFi @zer0tweets 
 - Start Date: February 23th, 2021
-- Category: Economic
+- Category: Technical
 - Tracking Issue: N/A
 
 ## Summary
