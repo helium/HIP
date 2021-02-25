@@ -8,7 +8,8 @@
 
 ## Summary
 This proposal suggests an economic mechanism to support higher new wireless protocols on Helium network, starting with LTE and 5G in CBRS spectrum band
-Motivation
+
+## Motivation
 
 The long term goal for Helium network is to go beyond LoRaWan and to make it possible to build wireless networks using other wireless protocols like Wi-Fi, LTE, 5G etc. Data pricing and, as well as, algorithm and economic model for verifying RF coverage (aka proof-of-coverage) that works well for LoRaWan isn’t an ideal fit for other wireless protocols like 5G, LTE, Wi-Fi etc. 
 
