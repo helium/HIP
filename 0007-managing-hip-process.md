@@ -26,7 +26,7 @@ We do not aim to adjudicate routine technical changes to miner software or the d
 # Stakeholders
 [stakeholders]: #stakeholders
 
-We plan to circulate this proposal in [Slack #helium-improvement-proposals](https://chat.helium.com) and on the [Helium community forum](https://community.helium.com). We will also solicit specific individuals for feedback, from both within the Helium community and other crypto and open-source projects. 
+We plan to circulate this proposal in [Discord #hip-open-discussion channel](https://discord.gg/helium). We will also solicit specific individuals for feedback, from both within the Helium community and other crypto and open-source projects.
 
 Specifically we aim to achieve rough consensus around this process with Helium Inc (as the primary developer of nearly all core Helium software), hotspot owners, and the newly-formed [DeWi Alliance](https://dewi.org), which plans to commit time & money to community governance in the Helium ecosystem.
 
@@ -52,7 +52,7 @@ We propose the creation of several roles to help facilitate this process: *HIP E
 
 ## Submitting a HIP
 
-In the earliest phases it's best to vet an idea with the Helium community [via Slack](https://TODO.slack.link) or on the [Helium community forum](https://community.helium.com). This is a good way to see if there is initial support for the idea, or if it's been discussed before. Currently Slack is the more active of the two. 
+In the earliest phases it's best to vet an idea with the Helium community [via Discord](https://discord.gg/helium). This is a good way to see if there is initial support for the idea, or if it's been discussed before.
 
 After vetting the idea, please write it up using this markdown-formatted [HIP template](https://github.com/helium/HIP/blob/master/0000-template.md) and submit it as a pull request to this repository (`helium/hip`). The current template is geared towards technical proposals, but can be adapted for economic or meta proposals.
 
@@ -74,7 +74,7 @@ If there are issues, the HIP editor will provide feedback. The feedback at this 
 _TODO this could use more detail; feedback & contributions very welcome_
 
 - When ready, HIP is scheduled for discussion on a community call.
-- Comments should be put on the HIP's associated GitHub issue, the [Helium Community Slack](https://chat.helium.com) and/or on the [Helium community forum](https://community.helium.com)
+- Comments should be put on the HIP's associated GitHub issue, and/or [Helium Discord Community](https://discord.gg/helium)
 - Approval is achieved through [rough consensus and running code.](https://en.wikipedia.org/wiki/Rough_consensus)
 - HIPs have a status: *Draft, In Discussion, Approved, Deployed, Rejected*
 - If a HIP goes stale and discussion is dormant, it should be closed.
@@ -111,5 +111,5 @@ Since there relatively few HIPs and no clear members for any given committes, th
 * Who are the current core developers? Who has the ability to merge code into core repositories? What are those core repositories?
 * Who has the ability to deploy changes to the blockchain, and the related responsibility for its uptime?
 * How long should a HIP be allowed to remain in a given state?
-* Should we encourage people just to leave comments on GitHub, rather than trying to track GitHub, Slack and the forum?
+* Should we encourage people just to leave comments on GitHub, rather than trying to track GitHub or Discord?
 
