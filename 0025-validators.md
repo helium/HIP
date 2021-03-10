@@ -65,7 +65,7 @@ Please see open questions for how overstake may be applied to returns. We expect
 
 Validator nodes will need large disks for storing the chain and the ledger, and strong (but relatively modest by modern server standards) CPUs and RAM.  An AWS T2.large or xlarge should work fine.
 
-The node will need to have a static IP and few ports (currently 2154 and eventually port 443) open to the internet.  A DNS resolvable URL is strongly recommended.   Networking speed is variable, but load is largely symmetrical when producing blocks, so good upstream is recommended.  Most cloud machines will be fine, but e.g. a cable modem might struggle.  We don't recommend running these machines on consumer network connections.
+The node will need to have a static IP and few ports (currently 2154 and eventually port 443) open to the internet.  A DNS resolvable hostname is strongly recommended.   Networking speed is variable, but load is largely symmetrical when producing blocks, so good upstream is recommended.  Most cloud machines will be fine, but e.g. a cable modem might struggle.  We don't recommend running these machines on consumer network connections.
 
 ## Drawbacks
 [drawbacks]: #drawbacks
@@ -179,6 +179,6 @@ A: Check out the miner software and run it on the server you want to use. Note y
 A: Running a Validator node will be up to the user to choose to DIY, either on premise or in the cloud. We will learn more after running the testnet, but based on early tests at least:
 - an AWS EC2 instance T2 large or xlarge
 - Stable IP and few ports (currently 2154 and eventually port 443) open to internet
-- DNS resolvable URL strongly recommend
+- DNS resolvable hostname strongly recommended
 - Running on stable network connections (without things like proxies, NAT, firewalls, etc.), load is largely symmetrical when producing blocks, so good upstream recommended. 
 - It is not suitable or recommended to attempt to run from a home internet connection.
