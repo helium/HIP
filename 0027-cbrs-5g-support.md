@@ -11,11 +11,11 @@ This proposal suggests an economic mechanism to support higher new wireless prot
 
 ## Motivation
 
-The long term goal for Helium network is to go beyond LoRaWan and to make it possible to build wireless networks using other wireless protocols like Wi-Fi, LTE, 5G etc. Data pricing and, as well as, algorithm and economic model for verifying RF coverage (aka proof-of-coverage) that works well for LoRaWan isn’t an ideal fit for other wireless protocols like 5G, LTE, Wi-Fi etc. 
+The long term goal for Helium network is to go beyond LoRaWAN and to make it possible to build wireless networks using other wireless protocols like Wi-Fi, LTE, 5G etc. Data pricing and, as well as, algorithm and economic model for verifying RF coverage (aka proof-of-coverage) that works well for LoRaWAN isn’t an ideal fit for other wireless protocols like 5G, LTE, Wi-Fi etc. 
 
 ## Stakeholders
 - People looking to transmit the data across Helium network 
-- Miners looking to deploy non-LoRaWan wireless nodes 
+- Miners looking to deploy non-LoRaWAN wireless nodes 
 
 ## Detailed Explanation
 To experiment with Helium’s expansion towards support for high throughput wireless protocols, we are looking to pilot a Helium-based neutral host CBRS network, where HNT miners can be attached to CBRS small cells. The goal of the experiment is to build a few clusters of CBRS infrastructure around a handful of urban locations and open such network to MNOs and MVNOs to offload their existing data traffic. It is important to note that to make such a network useful to MNOs and MVNOs, it is not required to completely blanket a particular area with CBRS wireless coverage. It is expected that operators roaming into Helium neutral host network will have existing wireless coverage within the area and will use Helium network for augmenting cellular capacity indoors or in highly trafficked areas.   
@@ -43,7 +43,7 @@ While it is clear that we’ll need to tweak the pricing for CBRS data as we get
 
 ## Proof-of-Coverage for LTE/5G  
 
-We believe proof-of-coverage in Helium is about wireless radios performing tasks that are useful in validating network readiness to cater to a particular use case. In the case of the original Helium LoRaWan build-out that use case was to act as a stand-alone LoRaWan network provider to end users. As we expand into CBRS, the initial use case we aim to tackle is to augment existing network footprint of MNOs and MVNOs by adding capacity indoors and in urban areas. Because the use case is different, so is the definition of network readiness. Consequently, a new variant of proof coverage must be added to augment the established and well-working LoRaWan model. 
+We believe proof-of-coverage in Helium is about wireless radios performing tasks that are useful in validating network readiness to cater to a particular use case. In the case of the original Helium LoRaWAN build-out that use case was to act as a stand-alone LoRaWAN network provider to end users. As we expand into CBRS, the initial use case we aim to tackle is to augment existing network footprint of MNOs and MVNOs by adding capacity indoors and in urban areas. Because the use case is different, so is the definition of network readiness. Consequently, a new variant of proof coverage must be added to augment the established and well-working LoRaWAN model. 
 
 ### Portability of Implementation 
 
@@ -63,9 +63,9 @@ To effectively validate network readiness for CBRS data offload use case, proof-
 
 #### Validating that CBRS Cell is Radiating Signal and Estimating Usefulness of Location 
 
-Unlike LoRaWan access points, cellular radios do not have the ability to challenge and witness each other in the same way. Cellular networks are architected to facilitate communication exclusively between a base station and a UE (user equipment) with a sim card in it. Base stations themselves do not have a sim card and cannot emulate a UE, which makes it impossible for one base station to “witness” the RF “challenge” issued by another base station.  
+Unlike LoRaWAN access points, cellular radios do not have the ability to challenge and witness each other in the same way. Cellular networks are architected to facilitate communication exclusively between a base station and a UE (user equipment) with a sim card in it. Base stations themselves do not have a sim card and cannot emulate a UE, which makes it impossible for one base station to “witness” the RF “challenge” issued by another base station.  
 
-The good news, however, is that unlike in LoRaWan networks, cellular networks already have a large number of devices that are continuously seeking for a cell tower to attach to. To validate that the CBRS cell is on and, at the same time, to estimate the usefulness of a particular CBRS cell on the network, Helium miner attached to the cell will need to perform the following tasks: 
+The good news, however, is that unlike in LoRaWAN networks, cellular networks already have a large number of devices that are continuously seeking for a cell tower to attach to. To validate that the CBRS cell is on and, at the same time, to estimate the usefulness of a particular CBRS cell on the network, Helium miner attached to the cell will need to perform the following tasks: 
 
 - Continuously collect data on the unique number of IMSIs attempting to attach to the PLMN(s) broadcasted by the cell. 
 - Continuously collect information on other cells within the Helium network competing for the UEs (potentially also getting pinged by UEs with the same IMSIs in the neighborhood) 
@@ -73,14 +73,14 @@ The good news, however, is that unlike in LoRaWan networks, cellular networks al
 Based on the above data points we can derive if a) a particular cell is deployed in a location with likely high concentration of UEs; b) whether or not this location is potentially already overserved by the abundance of competing cells. Using this information each CBRS cell within the Helium network will get a usefulness score, which can then be used to determine the final amount of proof-of-coverage rewards that a cell will receive. I.e. cells deployed in locations with no demand will have low usefulness score, as well as cells deployed in locations with oversupply of other cells will also have low usefulness score. 
 
 #### Estimating reliability of backhaul  
-Unlike with LoRaWan networks, where data transfer rate and latency are generally not a significant consideration, operating an LTE or 5G cell requires that the cell is connected to a relatively high throughput and low latency backhaul link. Quality of backhaul is directly relevant to usefulness of the LTE/5G node on the network. To determine the quality of backhaul, a Helium miner attached to the cell can perform a periodic backhaul latency and throughput test and adjust that cell’s usefulness score accordingly by multiplying it by some number ranging from 0-1. If the backhaul capacity of the cell is 150Mbs or better (a safe upper limit for a commodity CBRS small cell) and ping latency to 8.8.8.8 (google dns) is 30ms or less -  backhaul multiplier will be 1. As averages for these metrics deteriorate, the multiplier will proportionately move closer to zero. 
+Unlike with LoRaWAN networks, where data transfer rate and latency are generally not a significant consideration, operating an LTE or 5G cell requires that the cell is connected to a relatively high throughput and low latency backhaul link. Quality of backhaul is directly relevant to usefulness of the LTE/5G node on the network. To determine the quality of backhaul, a Helium miner attached to the cell can perform a periodic backhaul latency and throughput test and adjust that cell’s usefulness score accordingly by multiplying it by some number ranging from 0-1. If the backhaul capacity of the cell is 150Mbs or better (a safe upper limit for a commodity CBRS small cell) and ping latency to 8.8.8.8 (google dns) is 30ms or less -  backhaul multiplier will be 1. As averages for these metrics deteriorate, the multiplier will proportionately move closer to zero. 
 
 At the end of each epoch, rewards allotted to proof of coverage of the Helium CBRS network will then be ratably distributed between all cells in the network based on the total score of cell usefulness multiplied by backhaul reliability score. 
 
 ### Economic Model for Experimental Proof-of-Coverage Implementations
-Today on the Helium network, all HNT minted per epoch and NOT burned by purchases of data credits simply gets ratably redistributed towards LoRaWan proof of coverage. To incentivize experimentation with new wireless protocols and new proof-of-coverage models that such protocols may require we propose to allocate up to 30% of HNT minted per epoch and NOT burned by purchases of data credits towards proof-of-coverage rewards for new wireless networks, starting with CBRS network. 
+Today on the Helium network, all HNT minted per epoch and NOT burned by purchases of data credits simply gets ratably redistributed towards LoRaWAN proof of coverage. To incentivize experimentation with new wireless protocols and new proof-of-coverage models that such protocols may require we propose to allocate up to 30% of HNT minted per epoch and NOT burned by purchases of data credits towards proof-of-coverage rewards for new wireless networks, starting with CBRS network. 
 
-This approach protects existing operators of LoRaWan network nodes, yet at the same time incentivizes experimentation with new wireless protocols that are likely to bring more data usage to the Helium network.  
+This approach protects existing operators of LoRaWAN network nodes, yet at the same time incentivizes experimentation with new wireless protocols that are likely to bring more data usage to the Helium network.  
 
 Over time, as more data usage comes to the Helium network and the pool of “HNT minted and not burned by DCs” shrinks to zero, community can explore introducing additional HIPs to properly balance the Proof-of-Coverage rewards between nodes using different types of wireless protocols. 
 
@@ -97,9 +97,9 @@ Scenario #1: Little data going through network and only 5 CBRS nodes on network.
 - The HNT oracle price is $2.
 - Total HNT value of DC being transferred is 50 HNT (10,000,000 DC * $0.00001 DC fixed priced divided by the $2 oracle price).
 - There are 5 CBRS nodes on the network.  
-- 50 HNT would be split proportionally to the CBRS and LoRaWan Hotspots who did the work of passing data, and the remaining 1,624,950 HNT from the DC allocation would be distributed into two buckets:
+- 50 HNT would be split proportionally to the CBRS and LoRaWAN Hotspots who did the work of passing data, and the remaining 1,624,950 HNT from the DC allocation would be distributed into two buckets:
   - $1500 (ceiling) * 5 (number of CBRS nodes on network)  / $2 (oracle price) = 3750 HNT will be distributed ratably among the operators of the CBRS LTE network 
-  - 1,624,950 - 3750 = 1,621,200 will be distributed ratably among the Challengers, Witnesses and Challengees of the LoRaWan network 
+  - 1,624,950 - 3750 = 1,621,200 will be distributed ratably among the Challengers, Witnesses and Challengees of the LoRaWAN network 
 
 
 Scenario #2: Little data going through network and many CBRS nodes on network.  
@@ -108,9 +108,9 @@ Scenario #2: Little data going through network and many CBRS nodes on network.
 - The HNT oracle price is $2.
 - Total HNT value of DC being transferred is 50 HNT (10,000,000 DC * $0.00001 DC fixed priced divided by the $2 oracle price).
 - There are 2,000 CBRS nodes on the network.  
-- 50 HNT would be split proportionally to the CBRS and LoRaWan Hotspots who did the work of passing data and the remaining 1,624,950 HNT from the DC allocation would be distributed wit
+- 50 HNT would be split proportionally to the CBRS and LoRaWAN Hotspots who did the work of passing data and the remaining 1,624,950 HNT from the DC allocation would be distributed wit
   - 1,624,950 - (1,624,950*30%) = 487,470 will be distributed ratably among the operators the CBRS LTE network 
-  - 1,624,950 - 487,470 = 1,137,480 will be distributed ratably among the Challengers, Witnesses and Challengees of the LoRaWan network 
+  - 1,624,950 - 487,470 = 1,137,480 will be distributed ratably among the Challengers, Witnesses and Challengees of the LoRaWAN network 
 
 [This model](https://docs.google.com/spreadsheets/d/1-ARuH5-JQveDk_yd0Dn3JrTTrD6f6xUSD7MkhZJkHC0/edit?usp=sharing) enables us to play with various scenarios for above: 
 
