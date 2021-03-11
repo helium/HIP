@@ -48,7 +48,7 @@ Lastly, there is precedent for this sort of reallocation of rewards. Data transf
 [stakeholders]: #stakeholders
 
 As an economic change, this proposal has far reaching impacts: 
-- Consensus group members will see an increase in rewards, both absolute and as a percentage of total rewards.	
+- Consensus group members will see an increase in rewards to more closely meet the original agreement of 6% of HNT mined.	
 - Hotspot owners will see a change of rewards dependent on epoch lengths. Adding the grace period will reduce the relative percentage of rewards given to PoC while the change to reallocate unearned consensus rewards will add to the PoC rewards.
 - Securities holders will see a decrease in percentage of total rewards (absolute securities rewards are unaffected; however, percentage of total rewards will decline due to increased consensus rewards)
 
