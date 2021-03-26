@@ -59,12 +59,9 @@ We carry the necessary insurance, either directly or via relevant contracted par
 
 ## Hardware Security
 
-The community is concerned about devices that can be easily hacked, specifically by copying their `swarm_key` files. Applications should include plan for how the devices will be secured, potentially including:
+Smart Mimic, along with our partner Sagem has prioritized secure designs and secure manufacturing from the very beginning. The Finestra gateways are no different. Our product has integrated ECC608 Crypto Authorization Cell to securely contain swarm-key.  And is planned to be sealed with epoxy to make it harder to reach internal electronics.
 
-* Encrypted/locked-down firmware
-* Encrypted storage of the miner swarm_key, either via disk encryption or hardware measures like an ECC chip
-* Encrypted buses, potting and other anti-tampering measures.
-* Willingness to submit a prototype for audit, and sharing those audit results publicly (pass or fail)
+Our partner Sagem Teknoloji has been a trusted subcontractor for primes supplying Western military and govt entities. They have years of experience in highly secure manufacturing, physical and in-process protection of keys and in fabrication of tamper-resistant hardware electronic products as well as working with partners who specialize in the end to end secure transport of components for the same.
 
 ## Manufacturing, Budget & Capital
 
