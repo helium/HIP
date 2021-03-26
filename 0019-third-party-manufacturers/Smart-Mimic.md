@@ -85,10 +85,8 @@ The risk of consumer market entry and adoption usual for many companies is much 
 
 ## Other information
 
-●	Website - https://www.smartmimic.com
-
-●	Online E-Commerce either at Smartmimic.com and/or other partner sites.
-
-●	Will ship worldwide to regions where product is certified
+* Website - https://www.smartmimic.com
+* Online E-Commerce either at Smartmimic.com and/or other partner sites.
+* Will ship worldwide to regions where product is certified
 
 
