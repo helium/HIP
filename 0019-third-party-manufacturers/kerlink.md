@@ -146,8 +146,8 @@ But These Application need to become real. And Kerlink, as a Pioneer and Pure pl
 
 * Desired Discord support channel name: Kerlink
 * Twitter profile: https://twitter.com/kerlink_news
-* Facebook profile: https://www.facebook.com/pages/Kerlink/1289247241168460
-* Other social profiles: -
+* Facebook profile: -
+* Other social profiles: https://www.linkedin.com/company/kerlink/ — https://www.instagram.com/kerlink_news/ — https://www.youtube.com/channel/UCXR60-5v1ksOD3r4NW-lLyw
 * Website: https://kerlink.com
 * Payment methods available: -
 * Regions covered / shipped to: worldwide
