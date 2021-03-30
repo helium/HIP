@@ -1,10 +1,11 @@
-# Validator Rewards Changes
+# HIP28: Consensus Rewards Adjustments
 
 - Author(s): @PaulVMo (@PaulM on Discord)
 - Start Date: 2021-03-11
 - Category: economic
-- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
-- Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
+- Original HIP PR: https://github.com/helium/HIP/pull/136
+- Tracking Issue: https://github.com/helium/HIP/issues/140
+- Status: In Discussion
 
 # Summary
 [summary]: #summary
@@ -21,8 +22,8 @@ This proposal includes two changes to address the under rewarding of the consens
 [motivation]: #motivation
 
 The motivation behind this proposal is fairly simple – to correct the under rewarding of consensus members relative to the target of 6% of total earnings. The current approach is suboptimal for several reasons:
-1. Penalizes all validators not just poor performers - Long epochs can result for several reasons including the poor performance of one or more CG members, a software bug, or external factors such as reliability of Internet connections. While there should be penalties for poor performance of consensus group members, the current rewards calculation unfairly penalizes the entire consensus group/pool. 
-2. Results in fewer total HNT minted - The current system creates variability in the monthly amount of HNT minted. While minting less HNT on a monthly basis may have positive effect due to lower supply, it is not predictable and also continuously impacts the max supply since the halvings are tied to blocks not epochs. 
+1. Penalizes all validators not just poor performers - Long epochs can result for several reasons including the poor performance of one or more CG members, a software bug, or external factors such as reliability of Internet connections. While there should be penalties for poor performance of consensus group members, the current rewards calculation unfairly penalizes the entire consensus group/pool.
+2. Results in fewer total HNT minted - The current system creates variability in the monthly amount of HNT minted. While minting less HNT on a monthly basis may have positive effect due to lower supply, it is not predictable and also continuously impacts the max supply since the halvings are tied to blocks not epochs.
 3. Over rewards other network participants - The relative allocation of rewards to community members (hotspot owners and consensus members) is reduced relative to investors (HST holders) any time epochs go long. The success of Helium depends on the cooperation of both groups and as such the relative earnings between the two should remain consistent.
 
 In February 2021, for example, consensus group members received only 4.7% of all rewards – nearly 25% less rewards than expected. Additionally, securities (HST) holders earned 34.5% of mined HNT which is 0.5% higher than the HST percentage.
@@ -47,8 +48,8 @@ Lastly, there is precedent for this sort of reallocation of rewards. Data transf
 # Stakeholders
 [stakeholders]: #stakeholders
 
-As an economic change, this proposal has far reaching impacts: 
-- Consensus group members will see an increase in rewards to more closely meet the original agreement of 6% of HNT mined.	
+As an economic change, this proposal has far reaching impacts:
+- Consensus group members will see an increase in rewards to more closely meet the original agreement of 6% of HNT mined.
 - Hotspot owners will see a change of rewards dependent on epoch lengths. Adding the grace period will reduce the relative percentage of rewards given to PoC while the change to reallocate unearned consensus rewards will add to the PoC rewards.
 - Securities holders will see a decrease in percentage of total rewards (absolute securities rewards are unaffected; however, percentage of total rewards will decline due to increased consensus rewards)
 
@@ -60,14 +61,14 @@ Currently, consensus rewards per epoch are calculated using the Election Interva
 
 Election Interval is defined in blocks and Block Time is defined in Seconds.
 
-You will note in this formula, the Consensus Rewards do not change when the epoch length varies. As such, consensus rewards will be below their monthly target whenever there are fewer Epochs in a monthly due to long epoch durations. 
+You will note in this formula, the Consensus Rewards do not change when the epoch length varies. As such, consensus rewards will be below their monthly target whenever there are fewer Epochs in a monthly due to long epoch durations.
 
 This proposal introduces a new chain var `election_grace_period`. This grace period is added to the election interval and allows for rewards to be calculated on the actual epoch length up to this limit.
 
 The revised calculation for consensus rewards will work as follows:
 >Epoch Consensus Rewards = (Monthly Rewards x Consensus Percentage) x ( min(Actual Epoch Length, Election Interval + Grace Period) x Block Time / Seconds in a month)
 
-Additionally, this proposal adds rewards to PoC in the case that an epoch is longer than the election interval plus the grace period. This compensates for the rewards part of the monthly mining target that would otherwise be unmined. 
+Additionally, this proposal adds rewards to PoC in the case that an epoch is longer than the election interval plus the grace period. This compensates for the rewards part of the monthly mining target that would otherwise be unmined.
 
 The amount added to the PoC reward pool is determined as follows, if and, only if, Actual Epoch Length > Election Interval + Grace Period:
 
@@ -97,11 +98,11 @@ It is possible to adjust rewards based on the actual duration of an epoch. This 
 Another alternative is to change PoC and securities rewards to no longer adjust them based on epoch duration. Instead, they would be calculated much like consensus rewards today, assuming that an epoch is always 30 blocks. This would have significant impacts to the token economics of HNT as it would alter the month mining totals as well as the max supply. And, for these reasons, I do not a recommend this as an option.
 
 ### Reallocate slashed stakes to other consensus members
-An ideal solution to consensus rewards both protects the 6% consensus reward pool while also penalizing poor consensus performers. It may be possible to design a reward structure that slashes poor performers and reallocates the slashed amount to the validator pool such that it compensates for lost rewards due to long epochs. However, as mentioned above, there are factors beyond any individual consensus members performance that could impact epoch duration. This means that slashing rewards alone may not be able to fully compensate under rewarding. 
+An ideal solution to consensus rewards both protects the 6% consensus reward pool while also penalizing poor consensus performers. It may be possible to design a reward structure that slashes poor performers and reallocates the slashed amount to the validator pool such that it compensates for lost rewards due to long epochs. However, as mentioned above, there are factors beyond any individual consensus members performance that could impact epoch duration. This means that slashing rewards alone may not be able to fully compensate under rewarding.
 
 Additionally, by reallocating slashed rewards to other consensus group members, this may create an incentive to attacking validators to force slashing at the benefit of current consensus group members.
 
-Finally, slashings will likely be a complex topic that will only be brought up after validators go live. Given the criticality of fairly rewarding validators, I believe that this proposal shall be implemented irrespective of slashing. 
+Finally, slashings will likely be a complex topic that will only be brought up after validators go live. Given the criticality of fairly rewarding validators, I believe that this proposal shall be implemented irrespective of slashing.
 
 
 # Unresolved Questions
