@@ -38,6 +38,7 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | 25 | [Validators](https://github.com/helium/HIP/blob/master/0025-validators.md) | [Approved](https://github.com/helium/HIP/issues/111) |
 | 26 | [Payment Notes](https://github.com/helium/HIP/blob/master/0026-payment-notes.md) | [In Discussion](https://github.com/helium/HIP/issues/125) |
 | 27 | [Support CBRS 5G](https://github.com/helium/HIP/blob/master/0027-cbrs-5g-support.md) | [In Discussion](https://github.com/helium/HIP/pull/133) |
+| 28 | [Consensus Reward Adjustments](https://github.com/helium/HIP/blob/master/0028-consensus-reward-adjustments.md) | [In Discussion](https://github.com/helium/HIP/issues/140) |
 
 
 ## HIP19 third-party manufacturers
@@ -58,4 +59,3 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 * Approved: HIP has been approved by rough consensus, and pending development and testing
 * Deployed: Code to implement HIP has been merged and deployed to the network
 * Closed: HIP abandoned, rendered obsolete by other changes, or otherwise withdrawn by the author
-
