@@ -15,7 +15,7 @@ We have done projects where we had 100s of devices in the field managed by us an
 
 ## Product Information
 ### LongAP One
-**Status**: Fully functional production sample.
+**Status**: Fully functional production samples, CE testing passed.
 
 **Expected release date**: Q2-Q3 2021
 
@@ -38,15 +38,26 @@ It's fully based on x64-hardware with reliable products such as Intel-interface-
 - 12V DC-plug adapter
 - 5-10W power-consumption
 - Fully metal case
+- CE declaration of conformity available
 
 We are considering providing a variant with 4G/LTE connectivity instead of WiFi/LAN. However, this only becomes interesting once mining is moved from the gateways
 to validators.
 
 ## Customer Support
 
-Support will be provided over e-mail and Discord and general troubleshooting will be available on our website. 
+Support will be provided over e-mail and Discord and general troubleshooting will be available on our website. We aim 
+to respond to questions within 1 business-day.
+
+On our website we will provide clear information on the production status of our product, and the batches to be expected. The ordering process for our first product will collect payment-details 
+during pre-ordering, but we will only charge the payment-method just before we ship out the devices.
 
 Full product warranty will be provided on **LongAP One** for 2 years for customers and 1 year for businesses. 
+
+## Hotspot Fleet Management
+
+We are using an internal update-management-system based on Puppet that we use for all our devices. It allows us to push 
+updates (and rollbacks) over-the-air for all our components securely. Additionally, we have a pro-active
+monitoring system to monitor the devices and to allow us to troubleshoot remotely if agreed by the owner. 
 
 ## Hardware Security
 
@@ -60,7 +71,7 @@ The **LongAP One** is based on readily available components we have been using f
 
 ## Proof of Identity
 
-Will be submitted to Helium Inc and/or DeWi.
+Submitted and verified by DeWi.
 
 ## Budget & Capital
 
@@ -77,7 +88,7 @@ We have identified a number of risks and challenges:
 
 Please note HeNet B.V. has just been founded and many of the following items are in progress.
 
-* Desired Discord support channel name - #LongAP (to be created)
+* Desired Discord support channel name - #longap (to be created)
 * Twitter profile - [@LongAPcom](https://twitter.com/longapcom) 
 * Website - [longap.com](https://longap.com) (in progress)
 * Payment methods available - All generally accepted payment methods (local European schemes, credit-card), cryptocurrencies and looking into accepting HNT.
