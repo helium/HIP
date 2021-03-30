@@ -26,16 +26,16 @@ The motivation behind this proposal is fairly simple – to correct the under re
 2. Results in fewer total HNT minted - The current system creates variability in the monthly amount of HNT minted. While minting less HNT on a monthly basis may have positive effect due to lower supply, it is not predictable and also continuously impacts the max supply since the halvings are tied to blocks not epochs.
 3. Over rewards other network participants - The relative allocation of rewards to community members (hotspot owners and consensus members) is reduced relative to investors (HST holders) any time epochs go long. The success of Helium depends on the cooperation of both groups and as such the relative earnings between the two should remain consistent.
 
-In February 2021, for example, consensus group members received only 4.7% of all rewards – nearly 25% less rewards than expected. Additionally, securities (HST) holders earned 34.5% of mined HNT which is 0.5% higher than the HST percentage.
-| Reward Type | Feb 2021 Total (HNT) | Percentage |
-| -- | ----- | ------ |
-|securities|1,557,743.05|34.5%|
-|poc_witnesses|2,123,097.89|47.0%|
-|data_credits|125.74|0.0%|
-|consensus|212,291.67|4.7%|
-|poc_challengers|94,959.66|2.1%|
-|poc_challengees|530,774.47|11.7%|
-|**Total**|**4,518,992.48**|**100.0%**|
+In February 2021, for example, consensus group members received only 4.7% of all rewards – nearly 25% less rewards than expected. Other reward categories also varied from their target. Note, data credit rewards that are above the HNT value of the data transferred in the period are realllocated to PoC rewards per [HIP10](https://github.com/helium/HIP/blob/master/0010-usage-based-data-transfer-rewards.md) which accounts for the majority of the overage in PoC reward types
+| Reward Type | Feb 2021 Total (HNT) | Percentage | Target Percentage | Difference |
+| -- | ----- | ------ | ------ | ------- |
+|securities|1,557,743.05|34.5%| 34.0% | +0.5% |
+|poc_witnesses|2,123,097.89|47.0%| 21.24% | +25.76% |
+|poc_challengers|94,959.66|2.1%| 0.95% | +1.15% |
+|poc_challengees|530,774.47|11.7%| 5.31% | 6.39% |
+|data_credits|125.74|0.0%| 32.5% | -32.5% |
+|consensus|212,291.67|4.7%|6.0%|**-1.3%**|
+|**Total**|**4,518,992.48**|**100.0%**|**100.0%**|**0%**|
 
 While these metrics are likely to improve with the move to validators (see [HIP25](https://github.com/helium/HIP/blob/master/0025-validators.md) for more rationale behind validators and the expect improvements to block times and elections), it will not entirely correct for or ensure full consensus rewards. Epoch length is determined by the time it takes to elect a new consensus group. A new election is attempted after 30 blocks. Elections take time. Even successful elections may take more than a single block to complete, leading to greater than 30 block epochs. And, if an election fails for any reason, it is reattempted only after 5 blocks.
 
