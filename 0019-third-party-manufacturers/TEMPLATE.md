@@ -3,7 +3,7 @@
 
 ## Summary
 
-Two sentences about who you are and what you’d like to build. Bonus points to include photos and links. 
+Two sentences about who you are and what you’d like to build. Indicate if you are building a Light Hotspot, or a regular Hotspot. Bonus points to include photos and links. 
 
 ## Company Information
 
