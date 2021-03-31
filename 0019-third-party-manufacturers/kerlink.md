@@ -113,11 +113,9 @@ Kerlink plans to use this security to store the swarm_key, generated in producti
 
 ## Manufacturing Information
 
-Kerlink is a major player in the LoRaWAN ecosystem and has shipped more than 75 000 gateways to more than 330 customers across the world. The biggest LoRaWAN network in the world, in India, is built with Kerlink gateways.
+Kerlink Group is a leading global provider of connectivity solutions for designing, launching, and operating public & private Internet of Things networks. Its comprehensive product portfolio includes industrial-grade network equipment, best-of-breed network core, operations and management software, value-added applications and expert professional services, backed by strong R&D capabilities. Kerlink specializes in enabling future-proof intelligent IoT connectivity for three major domains: Smart Cities – metering, parking, street lighting, waste management, air quality & pollution, building & facilities, assets monitoring… Smart Industries – fleet & asset tracking, energy & utilities, oil, gas & mining, airports, harbors, infrastructure, manufacturing, retail… and  Smart Territories – precision agriculture, environment protection and rural towns & areas. More than 120,000 Kerlink installations have been rolled out with more than 330 clients in 69 countries. Based in France, with subsidiaries in the US, Singapore, India, and Japan, Kerlink is a co-founder and board member of the LoRa Alliance® and the uCIFI Alliance™. It is listed on Euronext Growth Paris under the symbol ALKLK.
 
-Kerlink has a worldwide presence and has been a leading gateway provider since the existence of LoRaWAN. Kerlink has a network of resellers and distributors across the globe that provide stock, local support and importation convenience to many customers.
-
-As an Industrial fabless company, Kerlink can easily scale its production lines on-demand through its EMS partnership.
+For more information, visit https://www.kerlink.com/ or follow us on Twitter @kerlink_news.
 
 
 ## Proof of Identity
@@ -148,8 +146,8 @@ But These Application need to become real. And Kerlink, as a Pioneer and Pure pl
 
 * Desired Discord support channel name: Kerlink
 * Twitter profile: https://twitter.com/kerlink_news
-* Facebook profile: https://www.facebook.com/pages/Kerlink/1289247241168460
-* Other social profiles: -
+* Facebook profile: -
+* Other social profiles: https://www.linkedin.com/company/kerlink/ — https://www.instagram.com/kerlink_news/ — https://www.youtube.com/channel/UCXR60-5v1ksOD3r4NW-lLyw
 * Website: https://kerlink.com
 * Payment methods available: -
 * Regions covered / shipped to: worldwide
