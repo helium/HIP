@@ -9,14 +9,14 @@ https://www.rakwireless.com/
 
 ## Company Information
 
-Shenzhen RAKwireless Technology Co., Ltd. was established in June 2014. It is based in Shenzhen, China with an R&D center in Shanghai and an office in Beijing. Our collaborators span the planet from Asia (India, Philippines, Taiwan), Europe (Bulgaria and UK) and Americas (U.S.A., Colombia and Brazil)
+Shenzhen RAKwireless Technology Co., Ltd. was established in June 2014. It is based in Shenzhen, China with an office in Beijing. Our collaborators span the planet from Asia (India, Philippines, Taiwan), Europe (Bulgaria and UK) and Americas (U.S.A., Colombia and Brazil)
 We are an industry-leading connectivity provider building our own infrastructure and modular edge products all around Low Power, Wide Area (LPWAN) technologies.
 
 ## Product Information
 
 Our main product areas are in IoT modules, LoRa gateways and node devices. We have over 50 products currently in active production. Please consult https://www.rakwireless.com/en-us/products for the full list.
 
-RAK Wireless has manufactured and shipped over one million devices including over 100,000 LoRa gateways. Amongst those are the original Helium Hotspot as well as our own current RAK Hotspot Miner.
+RAKwireless has manufactured and shipped over one million devices including over 100,000 LoRa gateways. Amongst those are the original Helium Hotspot as well as our own current RAK Hotspot Miner.
 
 We have collaborated with Helium from very early stage. Please see https://news.rakwireless.com/why-we-believe-helium-was-right-from-the-very-beginning/
 
@@ -41,7 +41,7 @@ We are also working on:
 
 ## Customer Support
 
-For Helium products RAK Wireless works in close collaboration with Cal-Chip Connected Devices to handle sales and first line support with more complex technical enquiries escalated to us.
+For Helium products RAKwireless works in close collaboration with Cal-Chip Connected Devices to handle sales and first line support with more complex technical enquiries escalated to us.
 
 We are also present on the Helium Discord on channel #rak-wireless as well as our traditional support mechanisms including our forum and e-mail support.
 
@@ -59,7 +59,7 @@ For future products we are evaluating more options including other security elem
 
 ## Manufacturing Information
 
-RAK Wireless is a major hardware manufacturer with good reputation for Service and Quality. Our R&D center, located in Beijing and Xi’an of China and manufacturing plants in Shenzhen offer a complete product development. Our suppliers include some of the biggest names in the industry, we only use major component suppliers with full part traceability.
+RAKwireless is a major hardware manufacturer with good reputation for Service and Quality. Our R&D center, located in Beijing and Xi’an of China and manufacturing plants in Shenzhen offer a complete product development. Our suppliers include some of the biggest names in the industry, we only use major component suppliers with full part traceability.
 In terms of Helium hotspots we have already built over 25000 units.
 
 ## Proof of Identity
@@ -68,7 +68,7 @@ To be submitted privately to DeWi.
 
 ## Budget & Capital
 
-RAK Wireless and Cal-Chip Connected Devices are well capitalized companies and established track record of delivering products. We aim to ship 28000 hotspots by February.
+RAKwireless and Cal-Chip Connected Devices are well capitalized companies and established track record of delivering products. We aim to ship 28000 hotspots by February.
 
 ## Risks & Challenges
 
@@ -76,12 +76,12 @@ Sourcing components continues to be challenging in the current market – severa
 
 ## Other information
 
-* Desired Discord support channel name - #rakwireless
+* Desired Discord support channel name - #rak-wireless
 * Twitter profile - https://twitter.com/RAKwireless
 * Facebook profile -  https://www.facebook.com/RAKwirelessIoT
 * Other social profiles -  
 	Instagram https://www.instagram.com/rak_wireless/
-	Pinterest https://www.pinterest.com.com/rakwireless/
+	Pinterest https://www.pinterest.com/rakwireless/
 	LinkedIn https://www.linkedin.com/company/rakwireless/
 	YouTube: [RAKwireless YouTube](https://www.youtube.com/channel/UCy47vnqsUPxd9fn9RP5z54w)
 * Website - https://www.rakwireless.com and https://www.calchipconnect.com

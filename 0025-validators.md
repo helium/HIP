@@ -5,6 +5,8 @@
 - Category: economic, technical
 - Original HIP PR: [#110](https://github.com/helium/HIP/pull/110)
 - Tracking Issue: [#111](https://github.com/helium/HIP/issues/111)
+- Frequently Asked Questions: [FAQ](https://github.com/helium/HIP/blob/master/0025-validators.md#frequently-asked-questions)
+- Status: Approved
 
 ## Summary
 [summary]: #summary
@@ -50,12 +52,12 @@ We would also add 7 new transactions (the exact details of which are likely to c
   * Activation Threshold: minimum number of staked Validators to start using them for elections. After the Activation Threshold is met, the next election will produce a list of Validators rather than draw from the full Hotspot pool. After the Threshold is reached and the chain variable is active, we will no longer go back to selecting from the Hotspot pool.  The initial proposed value here is 100 Validators.
   * Activation Delay: the number of blocks after which (once the above threshold has been met) the group will start moving to the Validator pool.  Unstaking to below the activation threshold during the delay period will cancel activation.
   * Minimum Stake: the minimum number of HNT that need to be staked before the Validator can be created and considered for Block Producer elections.  The proposed initial value for the minimum stake is 10,000 HNT.
-  * Cooldown Period:  The number of blocks after staking when the stake is returned to the owner's account.  Proposed initial value is 250,000 blocks, approximately 5 months.
+  * Cooldown Period: The number of blocks after unstaking when the stake will be returned to the owner's account.  Proposed initial value is 250,000 blocks, approximately 5 months.
 
 
 #### Staking in depth ...
 
-Stake is unlimited, and any stake over the threshold adds to the chance that a spot gets elected as a block producer.  In order to reduce the ability of overstakers to dominate block production, additional stake will need to have diminishing returns.  Eventually a mechanism will be added to delegate Hotspots credibility to Validators which will also influence elections.
+Stake is unlimited, however in the current proposal there are no benefits to overstaking. Overstaking and other features such as delegation will be subject to the HIP community approval process.
 
 Please see open questions for how overstake may be applied to returns. We expect a discussion in the community to help resolve exactly how this should work and will update the HIP to reflect that discussion.
 
@@ -63,7 +65,7 @@ Please see open questions for how overstake may be applied to returns. We expect
 
 Validator nodes will need large disks for storing the chain and the ledger, and strong (but relatively modest by modern server standards) CPUs and RAM.  An AWS T2.large or xlarge should work fine.
 
-The node will need to have a static IP and few ports (currently 2154 and eventually port 443) open to the internet.  A DNS resolvable URL is strongly recommended.   Networking speed is variable, but load is largely symmetrical when producing blocks, so good upstream is recommended.  Most cloud machines will be fine, but e.g. a cable modem might struggle.  We don't recommend running these machines on consumer network connections.
+The node will need to have a static IP and few ports (currently 2154 and eventually port 443) open to the internet.  A DNS resolvable hostname is strongly recommended.   Networking speed is variable, but load is largely symmetrical when producing blocks, so good upstream is recommended.  Most cloud machines will be fine, but e.g. a cable modem might struggle.  We don't recommend running these machines on consumer network connections.
 
 ## Drawbacks
 [drawbacks]: #drawbacks
@@ -114,3 +116,69 @@ We should see an increase in the stability of block times.
 We should be able to increase the number of validators in the block production group without disruption.
 
 We should see people eagerly staking new validators as a measure of the appeal of the idea.
+
+## Frequently Asked Questions
+[faq]: #faq
+
+### Q: How will Validators impact existing Hotspot owner rewards?
+
+A: In the current proposal Validator nodes will earn the 6% rewards for consensus group participation. This is the same percentage that Hotspots/Gateways currently earn for performing the same work. 
+
+### Q: Does this mean as a Hotspot owner I'm losing out of those 6% rewards?
+
+A: Technically yes, but practically it is increasingly unlikely your Hotspot would have been chosen among the 16 out of the entire pool of Hotspots. With the current pool there's a 0.0009% chance and this percentage decreases as the network continues to grow. Also, with the Validators block production becomes more stable which means mining rewards are allocated on a more consistent basis.  
+
+### Q: What’s the minimum number of Validators needed? Is there a cap?
+
+A: The current proposal is 100 with no cap to the maximum number of Validators that can participate. We will have a separate chain var that we will activate Consensus Group election via Validator that can be manually activated after we reach the proposed threshold.
+
+### Q: How much HNT does it require to stake and become a Validator?
+
+A: The current proposal is 10,000 HNT. 
+
+### Q: Is overstaking permitted? If so, what’s the benefit?
+
+A: Initially there will be no overstaking. We'll decide at a later time via the community process if there's overstaking, what kind we'd allow, and what it will mean.
+
+### Q: How long is the cooldown period (the length of time the staking amount is locked)?
+
+A: The current proposal is for 250,000 blocks which is approximately 5 months.
+
+### Q: How many HNT rewards can a Validator earn?
+
+A: It depends on the number of Validators and how often a Validator is randomly chosen to participate in the consensus group. 
+
+### Q: After staking and the block cooldown period would the Validator need to restake the 10k HNT to keep operating?
+
+A: The stake for a validator is perpetual rather than periodically renewed. Unstaking requires submitting an unstake transaction, after which the cooldown period begins.  After the cooldown period, the initial stake is returned to the owners account.
+
+### Q: How quickly will I receive rewards from staking?
+
+A: Rewards are not locked up and if your Validator node is elected into the Consensus Group, the rewards will be allocated at the end of the epoch.
+
+### Q: How will Validators be chosen to participate in the consensus group? How many?
+
+A: Validators will be randomly chosen similarly to how Hotspots/Gateways are chosen. For the initial mainnet launch there will be 16 but this number will quickly increase. 
+
+### Q: Can multiple Validators be associated with (staked from) a single wallet?
+
+A: Yes.
+
+### Q: How can I participate and host a Validator node? Join the testnet?
+
+A: Stay tuned we will have signup and instructions in the coming weeks.
+
+### Q: How can I prepare to run a Validator node on the testnet?
+
+A: Check out the miner software and run it on the server you want to use. Note you'll also need a recent Rust and a C/C++ tool chain. Currently supported erlang version, OTP 22.
+- Miner software [here](https://github.com/helium/miner#installing-miner-from-source). 
+- Instructions on how to run a miner [here](https://docs.helium.com/mine-hnt/build-a-packet-forwarder/#run-the-miner).
+
+### Q: What do I need to run a Validator node?
+
+A: Running a Validator node will be up to the user to choose to DIY, either on premise or in the cloud. We will learn more after running the testnet, but based on early tests at least:
+- an AWS EC2 instance T2 large or xlarge
+- Stable IP and few ports (currently 2154 and eventually port 443) open to internet
+- DNS resolvable hostname strongly recommended
+- Running on stable network connections (without things like proxies, NAT, firewalls, etc.), load is largely symmetrical when producing blocks, so good upstream recommended. 
+- It is not suitable or recommended to attempt to run from a home internet connection.

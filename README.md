@@ -34,8 +34,11 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | 21 | [PoC Link Layer Upgrades](https://github.com/helium/HIP/blob/master/0021-poc-link-layer.md) | [In Discussion](https://github.com/helium/HIP/issues/78) |
 | 22 | [Anchor/Golden Gateways](https://github.com/helium/HIP/blob/master/0022-anchor-gateways.md) | [In Discussion](https://github.com/helium/HIP/issues/94) |
 | 23 | [Decouple Consensus From Gateways](https://github.com/helium/HIP/blob/master/0023-decouple-consensus-from-gateways.md) | [In Discussion](https://github.com/helium/HIP/issues/101) |
-| 24 | [Transfer Percentage of Hotspot](https://github.com/helium/HIP/blob/master/0024-transfer-percentage-of-hotspot.md) | [In Discussion](https://github.com/helium/HIP/issues/105) |
-| 25 | [Validators](https://github.com/helium/HIP/blob/master/0025-validators.md) | [In Discussion](https://github.com/helium/HIP/issues/111) |
+| 24 | [Transfer Percentage of Hotspot](https://github.com/helium/HIP/blob/master/0024-reward-splitting.md) | [In Discussion](https://github.com/helium/HIP/issues/105) |
+| 25 | [Validators](https://github.com/helium/HIP/blob/master/0025-validators.md) | [Approved](https://github.com/helium/HIP/issues/111) |
+| 26 | [Payment Notes](https://github.com/helium/HIP/blob/master/0026-payment-notes.md) | [In Discussion](https://github.com/helium/HIP/issues/125) |
+| 27 | [Support CBRS 5G](https://github.com/helium/HIP/blob/master/0027-cbrs-5g-support.md) | [In Discussion](https://github.com/helium/HIP/pull/133) |
+| 28 | [Consensus Reward Adjustments](https://github.com/helium/HIP/blob/master/0028-consensus-reward-adjustments.md) | [In Discussion](https://github.com/helium/HIP/issues/140) |
 
 
 ## HIP19 third-party manufacturers
@@ -46,6 +49,10 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | [SyncroB.it](https://github.com/helium/HIP/blob/master/0019-third-party-manufacturers/syncrobit.md) | 2020-12-14 | [Approved](https://github.com/helium/HIP/pull/96) |
 | [RAK Wireless](https://github.com/helium/HIP/blob/master/0019-third-party-manufacturers/rak-wireless.md) | 2020-12-29 | [Approved](https://github.com/helium/HIP/pull/103) |
 | [EasyLinkin](https://github.com/helium/HIP/blob/master/0019-third-party-manufacturers/easylinkin.md) | 2021-01-12 | [Approved](https://github.com/helium/HIP/pull/107) |
+| [Kerlink](https://github.com/BenoitDuffez/HIP/blob/hip19-kerlink/0019-third-party-manufacturers/kerlink.md) | 2021-02-24 | [Approved](https://github.com/helium/HIP/pull/121) |
+| [HeNet BV/LongAP](https://github.com/HeNet/HIP/blob/feature/hip19-henet-application/0019-third-party-manufacturers/henet.md) | 2021-03-16 | [In Discussion](https://github.com/helium/HIP/pull/137) |
+| [Smart Mimic](https://github.com/onterferon/HIP/blob/master/0019-third-party-manufacturers/Smart-Mimic.md) | 2021-03-25 | [In Discussion](https://github.com/helium/HIP/pull/138) |
+| [Browan](https://github.com/browanofficial/HIP/blob/patch-1/0019-third-party-manufacturers/Browan-Cellular-Gateway.md) | 2021-03-26 | [In Discussion](https://github.com/helium/HIP/pull/139) |
 
 
 ## Status key
@@ -55,4 +62,3 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 * Approved: HIP has been approved by rough consensus, and pending development and testing
 * Deployed: Code to implement HIP has been merged and deployed to the network
 * Closed: HIP abandoned, rendered obsolete by other changes, or otherwise withdrawn by the author
-
