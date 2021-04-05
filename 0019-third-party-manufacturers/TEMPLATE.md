@@ -24,8 +24,7 @@ How are you planning to handle customer support for your products? For how long?
 
 Please include how you plan on supporting the ongoing e-commerce store and community feedback in Discord.
 
-Makers are required to maintain and staff a Discord channel to communicate with the community, respond in a timely manner (1 business day), able to provide detailed updates during pre-order period, and communicate in an official capacity on manufacturing status (blog post, website, store page are examples of “official” outlets).
-
+Manufacturers are required to maintain and staff a Discord channel to communicate with the community and respond in a timely manner (1 business day). Additionally, manufacturers are expected to provide detailed updates during any pre-order periods, and communicate in an official capacity on manufacturing status. Blog posts, official website, or store pages are examples of "official" outlets for sharing updates.
 
 ## Hardware Security
 
@@ -41,7 +40,8 @@ The community is concerned about devices that can be easily hacked, specifically
 Have you built and delivered hardware projects before? If yes, how did it go, and how many did you make? If not, from whom will you get help? This is the single largest risk with most hardware ventures. If possible please provide information about your manufacturing partners and supply chain.
 
 ## Hotspot Fleet Management
-Please include a new section titled “Hotspot Fleet management plan” and outline how you plan on supporting Hotspot firmware updates, deployment, and rollback. In addition to a plan, please include how you plan on accomplishing/creating this dashboard. This can be a Maker-supplied support dashboard, or a compatible Hotspot fleet management dashboard.
+
+Please describe how you plan on supporting firmware updates, deployment, and rollback. In addition to a plan, please include how you plan on accomplishing/creating this dashboard. This can be a Maker-supplied support dashboard, or a compatible Hotspot fleet management dashboard.
 
 
 ## Proof of Identity
