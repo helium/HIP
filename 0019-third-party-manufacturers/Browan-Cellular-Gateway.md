@@ -81,10 +81,7 @@ We will provide ID photos shortly.
 September 2021
 - Country / region support 
 US/ EU/ AU
-- expected price point
-US$150~ US$125 based on quantity -> LTE version
-US$110 ~ US$89 based on quantity -> LTE-M version
-
+- expected price point(Please contact with Browan sale Moha mohd@browan.com)
 - likely production quantities: 10,000 units in 2021. 
 
 
