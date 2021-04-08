@@ -15,7 +15,7 @@ We have done projects where we had 100s of devices in the field managed by us an
 
 ## Product Information
 ### LongAP One
-**Status**: Fully functional production samples, CE testing passed.
+**Status**: Ready to start production, CE testing passed.
 
 **Expected release date**: Q2-Q3 2021
 
@@ -40,8 +40,35 @@ It's fully based on x64-hardware with reliable products such as Intel-interface-
 - Fully metal case
 - CE declaration of conformity available
 
-We are considering providing a variant with 4G/LTE connectivity instead of WiFi/LAN. However, this only becomes interesting once mining is moved from the gateways
-to validators.
+### LongAP Pro
+**Status**: Ongoing development
+
+**Expected release date**: Q3-Q4 2021 (after gateway-rs is ready)
+
+**Estimated price**: TBD. 
+
+LongAP Pro will be a light-gateway in an outdoor IP65 housing ready to be installed in the harshest conditions.
+
+**Specs**:
+- 800 MHz Dual-Core MIPS processor
+- 256 MB of RAM
+- Gigabit ethernet with PoE
+- LoRa concentrator (EU868 and US912 initially)
+- Fiberglass +3dBi LoRa Antenna with N-type connector
+- Fully metal case (pole and wall mount supported)
+- Powered over PoE
+
+Option LTE:
+- 4G/LTE Cat 1 interface
+- 2 Fiberglass LTE antennas with N-type connector
+- World-wide SIM with data installed that can be enabled in our dashboard
+
+Option WiFi:
+- WiFi interface
+- 2 WiFi antennas with N-type connector
+
+Option Solar:
+- Kit to run LongAP Pro on solar and batteries. 
 
 ## Customer Support
 
@@ -49,9 +76,10 @@ Support will be provided over e-mail and Discord and general troubleshooting wil
 to respond to questions within 1 business-day.
 
 On our website we will provide clear information on the production status of our product, and the batches to be expected. The ordering process for our first product will collect payment-details 
-during pre-ordering, but we will only charge the payment-method just before we ship out the devices.
+during pre-ordering, but we will only charge the payment-method just before we ship out the devices. We will limit pre-orders based on the batches
+we have planned. 
 
-Full product warranty will be provided on **LongAP One** for 2 years for customers and 1 year for businesses. 
+Full product warranty will be provided on **LongAP One** and **LongAP Pro** for 2 years for customers and 1 year for businesses. 
 
 ## Hotspot Fleet Management
 
@@ -63,11 +91,13 @@ monitoring system to monitor the devices and to allow us to troubleshoot remotel
 
 Our devices contain an ATEC608A security-chip for key-storage and cryptographic operations.
 Keys are non-exportable ensuring a high level of security.
-We are happy to provide a  **LongAP One** for audit and answer questions. 
+We are happy to provide a **LongAP One** and **LongAP Pro** for audit and answer questions. 
 
 ## Manufacturing Information
 
-The **LongAP One** is based on readily available components we have been using for several years with great success when it comes to reliability and stability.
+**LongAP One** and **LongAP Pro** are based on readily available components we have been using for several years with great success when it comes to reliability and stability.
+
+Together with our suppliers we are planning to provide a combined volume (LongAP One and LongAP Pro) of 10.000+ units this year.
 
 ## Proof of Identity
 
@@ -75,7 +105,7 @@ Submitted and verified by DeWi.
 
 ## Budget & Capital
 
-We have enough funds available to produce 1000s of devices. This is eased by the fact that we don't have to manufacture a custom hardware platform. 
+We have enough funds available to produce large volumes. This is eased by the fact that we don't have to manufacture a custom hardware platform. 
 
 ## Risks & Challenges
 
