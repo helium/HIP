@@ -48,7 +48,7 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | [Nebra Ltd](https://github.com/helium/HIP/blob/master/0019-third-party-manufacturers/nebra-ltd.md) | 2020-12-10 | [Approved](https://github.com/helium/HIP/pull/93) |
 | [SyncroB.it](https://github.com/helium/HIP/blob/master/0019-third-party-manufacturers/syncrobit.md) | 2020-12-14 | [Approved](https://github.com/helium/HIP/pull/96) |
 | [RAK Wireless](https://github.com/helium/HIP/blob/master/0019-third-party-manufacturers/rak-wireless.md) | 2020-12-29 | [Approved](https://github.com/helium/HIP/pull/103) |
-| [EasyLinkin](https://github.com/helium/HIP/blob/master/0019-third-party-manufacturers/easylinkin.md) | 2021-01-12 | [Approved](https://github.com/helium/HIP/pull/107) |
+| [EasyLinkin (Bobcat)](https://github.com/helium/HIP/blob/master/0019-third-party-manufacturers/easylinkin.md) | 2021-01-12 | [Approved](https://github.com/helium/HIP/pull/107) |
 | [Kerlink](https://github.com/BenoitDuffez/HIP/blob/hip19-kerlink/0019-third-party-manufacturers/kerlink.md) | 2021-02-24 | [Approved](https://github.com/helium/HIP/pull/121) |
 | [HeNet BV/LongAP](https://github.com/HeNet/HIP/blob/feature/hip19-henet-application/0019-third-party-manufacturers/henet.md) | 2021-03-16 | [In Discussion](https://github.com/helium/HIP/pull/137) |
 | [Smart Mimic](https://github.com/onterferon/HIP/blob/master/0019-third-party-manufacturers/Smart-Mimic.md) | 2021-03-25 | [In Discussion](https://github.com/helium/HIP/pull/138) |
