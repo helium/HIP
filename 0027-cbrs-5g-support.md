@@ -34,7 +34,7 @@ To make it possible to redeem Data Credits towards different types of wireless d
 In the future, as we grow and expand the network, we may want to have different conversion ratios, but for the purposes of the initial contemplated pilot, we’d like to focus on introducing just a conversion ratio that would denominate economics of a CBRS network. To figure out the initial cost of CBRS Data Credit we looked at the following guiding factors: 
 
 - Cheap prepaid LTE data plans in US sell for $1.50/GB (Mint Mobile 15GB bundle)
-- Comcast charges $10 for each $50GB
+- Comcast charges $10 for each 50GB
 
 While it is clear that we’ll need to tweak the pricing for CBRS data as we get more data and better understand the market economics, it is suggested that we initially set the price of passing 1GB of CBRS data through Helium network at $.50 per GB or $.00000003 per LTE packet of 66 bytes.
 
