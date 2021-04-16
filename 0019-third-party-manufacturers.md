@@ -141,7 +141,8 @@ Interested manufacturers should:
 
 Sensitive information like financials or proofs of identity could be furnished to members of both Helium Inc. and the Decentralized Wireless Alliance (DeWi) and attested publicly, via the HIP document, GitHub comments, or otherwise.
 
-## Process Summary
+## Summary of Application Process
+
 1. Submit application
 2. Hardware audit
 3. Onboarding integration
