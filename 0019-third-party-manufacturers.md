@@ -141,6 +141,16 @@ Interested manufacturers should:
 
 Sensitive information like financials or proofs of identity could be furnished to members of both Helium Inc. and the Decentralized Wireless Alliance (DeWi) and attested publicly, via the HIP document, GitHub comments, or otherwise.
 
+## Process Summary
+1. Submit application
+2. Hardware audit
+3. Onboarding integration
+4. FCC/CE or other application radio certification
+5. Community approval
+6. Pre-orders
+
+*note: items 2-4 can occur simultaneously*
+
 # Drawbacks
 
 - Third-party manufacturers could fail to deliver devices as-promised
