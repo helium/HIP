@@ -4,7 +4,7 @@
 - Start Date: February 23th, 2021
 - Category: Technical
 - Tracking Issue: https://github.com/helium/HIP/issues/134
-- Status: In Discussion
+- Status: Approved
 
 ## Summary
 This proposal suggests an economic mechanism to support higher new wireless protocols on Helium network, starting with LTE and 5G in CBRS spectrum band
