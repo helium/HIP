@@ -1,26 +1,36 @@
-# HIP 29: Multisig transactions
+# HIP 29: Multi-signature Keys
 
 - Author(s): @xandkar, Helium Team; @Vagabond, Helium Team.
 - Start Date: 2021-04-19
-- Category: economic, technical
-- Original HIP PR:
-- Tracking Issue:
+- Category: technical
+- Original HIP PR: [#154](https://github.com/helium/HIP/pull/154)
+- Tracking Issue:  <!-- TODO -->
 
 # Summary
 [summary]: #summary
 
-Add  a new type of public key and a new type of signature, which are composites
-of the scalar public keys and signatures combined with a specification for the
-minimal subset of signatures required to make a transaction.
+Helium Hotspot owners and HNT holders have different ways to organize assets.
+This HIP proposes a multi-signature key whihch can be used to authorize a
+transaction on the Helium blockchain. This key is a composite of the scalar
+keys which can be combined to generate a minimal subset of signatures required
+to make a valid transaction.
 
 # Motivation
 [motivation]: #motivation
 
-New ways and interesting ways to organize asset ownership, such as:
-- joint account
-- backup in case of key loss
-- additional security via multi-factor verification
-- ...
+We have already seen that Hotspot owners are already engaging in interesting
+ways to own their Hotspots off-chain. This HIP proposes a way to allow for the
+following:
+
+- Dividing up the responsiblity of Hotspots, OUIs, and HNT across multiple
+  participants. This enables joint accounts and shared custody.
+- Making it substantially more difficult for a compromise of an entire wallet
+  due to a single key. This improves security via multi-owner verification.
+- Creating a M of N backup where a loss of a single key does not cause a loss
+  of the entire wallet.
+
+Multi-signature keys are seen in many other blockchains and enable security
+applications not listed above.
 
 # Stakeholders
 [stakeholders]: #stakeholders
