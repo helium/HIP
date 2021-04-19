@@ -1,8 +1,8 @@
 # HIP 29: Multi-signature Keys
 
-- Author(s): @xandkar, Helium Team; @Vagabond, Helium Team.
+- Author(s): [@xandkar](http://github.com/xandkar), Helium Team; [@Vagabond](http://github.com/Vagabond), Helium Team.
 - Start Date: 2021-04-19
-- Category: technical
+- Category: Technical
 - Original HIP PR: [#154](https://github.com/helium/HIP/pull/154)
 - Tracking Issue:  <!-- TODO -->
 
@@ -92,7 +92,7 @@ requires knowledge of:
 2. length of each scalar key type (type itself is encoded, but the length
    corresponding to type is not, so must be known in advance).
 
-### verification
+### Verification
 
 After parsing the scalar components of the multi-pub-key and multi-signature,
 we consider the signature to be valid if all of the following is true:
