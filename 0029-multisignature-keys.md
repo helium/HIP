@@ -10,7 +10,7 @@
 [summary]: #summary
 
 Helium Hotspot owners and HNT holders have different ways to organize assets.
-This HIP proposes a multi-signature key whihch can be used to authorize a
+This HIP proposes a multi-signature key which can be used to authorize a
 transaction on the Helium blockchain. This key is a composite of the scalar
 keys which can be combined to generate a minimal subset of signatures required
 to make a valid transaction.
