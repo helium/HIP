@@ -22,7 +22,7 @@ We have already seen that Hotspot owners are already engaging in interesting
 ways to own their Hotspots off-chain. This HIP proposes a way to allow for the
 following:
 
-- Dividing up the responsiblity of Hotspots, OUIs, and HNT across multiple
+- Dividing up the responsiblity of Hotspots, OUIs, HST, and HNT across multiple
   participants. This enables joint accounts and shared custody.
 - Making it substantially more difficult for a compromise of an entire wallet
   due to a single key. This improves security via multi-owner verification.
@@ -35,41 +35,49 @@ applications not listed above.
 # Stakeholders
 [stakeholders]: #stakeholders
 
+This change should not affect any current Hotspot owners or HNT holders as it
+is a purely additive change to existing key types.
+
+We believe that this feature will enable new ownership organization of HST, HNT and
+Hotspots on the network.
 
 # Detailed Explanation
 [detailed-explanation]: #detailed-explanation
 
-Currently an address is a single public key owned my a single private key.
-The single owner is required to sign a transaction involving the address.
+Currently, a wallet address is derived from a single public key owned by a
+single private key. This private key is required to sign any transaction
+involving the address.
 
 We propose:
 
-1. address scheme composed of a multihash digest of `N` public keys and a
+1. an address scheme composed of a multihash digest of `N` public keys and a
    specification of the number of signatures required to approve a transaction:
    `M` such that `0 < M <= N`;
-2. signature scheme composed of `N` public keys and `M` corresponding signatures;
-3. algorithm for verification of the above composite signature, given the above
-   composite public key.
+2. a signature scheme composed of `N` public keys and `M` corresponding
+   signatures;
+3. an algorithm for verification of the above composite signature, given the
+   above composite public key.
 
-### format
+### Format
+
 Roughly, the schemes are:
-1. Multi-pub-key: `| net-type | key-type | m | n | multihash-digest-of-n-pub-keys |`;
-2. Multi-signature: `| pub-key[0]..pub-key[n-1] | isig[1]..isig[m] |`.
+1. Multi-signature public key: `| net-type | key-type | m | n | multihash-digest-of-n-public-keys |`;
+2. Multi-signature: `| public-key[0]..public-key[n-1] | isig[1]..isig[m] |`.
 
-More-precisely, given a sequence N public keys: `pub-key[0]..pub-key[n-1]`,
-a `multihash-digest-of-n-pub-keys` is its multihash digest and `isig[1]..isig[m]`
+More precisely, given a sequence `n` public keys: `public-key[0]..public-key[n-1]`,
+a `multihash-digest-of-n-public-keys` is its multihash digest and `isig[1]..isig[m]`
 is a sequence of triples: `i | len | sig` where `i` is the index into the
 preceding sequence of public keys, `len` is the length of the following
 signature (in bytes) and `sig` is the signature.
 
 #### Illustration:
 
-##### Multi-pub-key
+##### Multi-signature public key
 
-      net type   key type   M        N        multihash-digest-of-N-pub-keys
-    +----------+----------+--------+--------+--------------------------------+
-    | 4 bits   | 4 bits   | 8 bits | 8 bits | variable length                |
-    +----------+----------+--------+--------+--------------------------------+
+      net-type   key-type   m        n        multihash-digest-of-n-public-keys
+    +----------+----------+--------+--------+-----------------------------------+
+    | 4 bits   | 4 bits   | 8 bits | 8 bits | variable length                   |
+    +----------+----------+--------+--------+-----------------------------------+
 
 ##### Multi-signature
 
@@ -88,17 +96,24 @@ requires knowledge of:
 
 After parsing the scalar components of the multi-pub-key and multi-signature,
 we consider the signature to be valid if all of the following is true:
-1. we have at least M scalar signatures within the composite multi-signature;
-2. _all_ of the provided signatures _uniquely_ point to a public key within 0..N-1;
-3. at least M of the scalar signatures pass verification.
+1. we have at least `M` scalar signatures within the composite multi-signature;
+2. _all_ of the provided signatures _uniquely_ point to a public key within
+   `0..N-1`;
+3. at least `M` of the scalar signatures pass verification.
 
 # Drawbacks
 [drawbacks]: #drawbacks
 
+We don't believe there are any drawbacks to this approach. In fact, it is an
+in-place upgrade to the existing supported key types.
 
 # Rationale and Alternatives
 [alternatives]: #rationale-and-alternatives
 
+An alternative that was considered, but rejected, was to have separate on-chain
+multisignature transactions as we do for the `vars_v1` transaction. This
+approach to multisignature keys makes approach unnecessary. We do not, at this
+time, intend to update `vars_v1` but may do so at a later date.
 
 # Unresolved Questions
 [unresolved]: #unresolved-questions
@@ -107,6 +122,11 @@ we consider the signature to be valid if all of the following is true:
 # Deployment Impact
 [deployment-impact]: #deployment-impact
 
+We don't believe there is any deployment impact as this approach is additive
+to existing key types.
 
 # Success Metrics
 [success-metrics]: #success-metrics
+
+This will be a successful feature if we see applications of multi-signature
+keys for Hotspot ownership or HNT and HST bearing accounts.
