@@ -1,6 +1,6 @@
 # HIP 30: Switch to BLS12-381 for Threshold Cryptography
 
-- Author(s): [@vihu](http://github.com/vihu), [@Vagabond](https://github.com/vagabond/)
+- Author(s): [@vihu](http://github.com/vihu) - Helium Engineer, [@Vagabond](https://github.com/vagabond/) - Helium VP of Engineering
 - Start Date: 2021-04-19
 - Category: Technical
 - Original HIP PR: #155
