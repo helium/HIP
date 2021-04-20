@@ -14,7 +14,7 @@ Helium [Distributed Key Generation](https://github.com/helium/erlang-dkg) and [H
 Curve SS512 is a very old curve and is not commonly used anymore. In addition the library we used to do pairing based cryptography, Ben Lynn's `pbc` library, has not seen major maintenance since 2013.
 This HIP proposes switching to an industry standard curve BLS12-381 for doing threshold cryptography.
 The underlying implementation for BLS12-381 is security audited, faster and more secure than curve SS512.
-
+We present a complete and functional implementation of a system to switch the fundamental threshold cryptography library that has been tested and has been in use on the validator testnet for several weeks.
 # Motivation
 [motivation]: #motivation
 
