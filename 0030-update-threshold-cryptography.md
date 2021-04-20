@@ -63,7 +63,13 @@ We don't believe there are any drawbacks to this approach. In fact, we believe t
 # Rationale and Alternatives
 [alternatives]: #rationale-and-alternatives
 
-None
+In attempting to grow the size of the consensus group on the testnet we were unable to exceed 40 nodes as elections would fail after that point.
+
+Alternatives include simply doing nothing and continuing to use our existing code, implementing a new library ourselves from scratch or finding an alternative library.
+
+We believe this library to be the best choice as it's already been written and has been audited.
+
+On the testnet, with these changes, we were able to exceed a group size of 60 and are able to run stably with a group size in the mid 50s. Since these protocols do not scale linearly (it's more like cubic scaling), this is a more significant improvement than it would appear.
 
 # Unresolved Questions
 [unresolved]: #unresolved-questions
