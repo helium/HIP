@@ -1,6 +1,6 @@
 # HIP 29: Multi-signature Keys
 
-- Author(s): [@xandkar](http://github.com/xandkar), Helium Team; [@Vagabond](http://github.com/Vagabond), Helium Team.
+- Author(s): [@xandkar](http://github.com/xandkar), [@Vagabond](http://github.com/Vagabond), Helium Systems, Inc. team
 - Start Date: 2021-04-19
 - Category: Technical
 - Original HIP PR: [#154](https://github.com/helium/HIP/pull/154)
@@ -9,11 +9,11 @@
 # Summary
 [summary]: #summary
 
-Helium Hotspot owners and HNT holders have different ways to organize assets.
-This HIP proposes a multi-signature key which can be used to authorize a
-transaction on the Helium blockchain. This key is a composite of the scalar
-keys which can be combined to generate a minimal subset of signatures required
-to make a valid transaction.
+Hotspot owners, HNT holders, and other Helium participants, have different ways
+to organize assets. This HIP proposes a multi-signature key which can be used
+to authorize a transaction on the Helium blockchain. This key is a composite of
+the scalar keys which can be combined to generate a minimal subset of
+signatures required to make a valid transaction.
 
 # Motivation
 [motivation]: #motivation
@@ -22,8 +22,9 @@ We have already seen that Hotspot owners are already engaging in interesting
 ways to own their Hotspots off-chain. This HIP proposes a way to allow for the
 following:
 
-- Dividing up the responsibility of Hotspots, OUIs, HST, and HNT across multiple
-  participants. This enables joint accounts and shared custody.
+- Dividing up the responsibility of various assets (Hotspots, Validators, OUIs,
+  HST, HNT, etc.) across multiple participants. This enables joint accounts and
+  shared custody.
 - Making it substantially more difficult for a compromise of an entire wallet
   due to a single key. This improves security via multi-owner verification.
 - Creating a M of N backup where a loss of a single key does not cause a loss
@@ -35,11 +36,11 @@ applications not listed above.
 # Stakeholders
 [stakeholders]: #stakeholders
 
-This change should not affect any current Hotspot owners or HNT holders as it
-is a purely additive change to existing key types.
+This change should not affect any current asset owners as it is a purely
+additive change to existing key types.
 
-We believe that this feature will enable new ownership organization of HST, HNT
-and Hotspots on the network.
+We believe that this feature will enable new ownership organization of assets
+like Hotspots, Validators, OUIs, HNT, HST, etc.
 
 # Detailed Explanation
 [detailed-explanation]: #detailed-explanation
@@ -131,4 +132,4 @@ to existing key types.
 [success-metrics]: #success-metrics
 
 This will be a successful feature if we see applications of multi-signature
-keys for Hotspot ownership or HNT and HST bearing accounts.
+keys on chain.
