@@ -3,7 +3,7 @@
 - Author(s): [@vihu](http://github.com/vihu), [@Vagabond](https://github.com/vagabond/)
 - Start Date: 2021-04-19
 - Category: Technical
-- Original HIP PR: TBD
+- Original HIP PR: #155
 - Tracking Issue: TBD
 
 # Summary
