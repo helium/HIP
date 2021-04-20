@@ -10,6 +10,8 @@
 [summary]: #summary
 
 Helium [Distributed Key Generation](https://github.com/helium/erlang-dkg) and [Honeybadger Consensus Protocol](https://github.com/helium/erlang-hbbft) both rely on curve SS512 for pairing based cryptography.
+
+Curve SS512 is a very old curve and is not commonly used anymore. In addition the library we used to do pairing based cryptography, Ben Lynn's `pbc` library, has not seen major maintenance since 2013.
 This HIP proposes switching to an industry standard curve BLS12-381 for doing threshold cryptography.
 The underlying implementation for BLS12-381 is security audited, faster and more secure than curve SS512.
 
