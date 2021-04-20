@@ -45,7 +45,7 @@ An outline of the changes required to make BLS12-381 work with the existing netw
 
 - Add support for BLS12-381 based threshold cryptography to DKG
 
-    In parallel the team has been working on adding BLS12-381 compatibility to [erlang-dkg](https://github.com/helium/erlang-dkg). Most of this work is already being done in [erlang-dkg#36](https://github.com/helium/erlang-dkg/pull/36).
+    In parallel the team has been working on adding BLS12-381 compatibility to [erlang-dkg](https://github.com/helium/erlang-dkg). This work has been done in [erlang-dkg#36](https://github.com/helium/erlang-dkg/pull/36).
 
 - Add support for BLS12-381 based threshold cryptography to HBBFT
 
