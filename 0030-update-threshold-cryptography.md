@@ -3,7 +3,7 @@
 - Author(s): [@vihu](http://github.com/vihu) - Helium Engineer, [@Vagabond](https://github.com/vagabond/) - Helium VP of Engineering
 - Start Date: 2021-04-19
 - Category: Technical
-- Original HIP PR: #155
+- Original HIP PR: [#155](https://github.com/helium/HIP/pull/155)
 - Tracking Issue: TBD
 
 # Summary
@@ -11,7 +11,7 @@
 
 Helium [Distributed Key Generation](https://github.com/helium/erlang-dkg) and [Honeybadger Consensus Protocol](https://github.com/helium/erlang-hbbft) both rely on curve SS512 for pairing based cryptography.
 
-Curve SS512 is a very old curve and is not commonly used anymore. In addition the library we used to do pairing based cryptography, Ben Lynn's `pbc` library, has not seen major maintenance since 2013.
+Curve SS512 is a very old curve and is not commonly used anymore. In addition the library we used to do pairing based cryptography, Ben Lynn's [pbc library](https://crypto.stanford.edu/pbc/thesis.html), has not seen major maintenance since 2013.
 This HIP proposes switching to an industry standard curve BLS12-381 for doing threshold cryptography.
 The underlying implementation for BLS12-381 is security audited, faster and more secure than curve SS512.
 We present a complete and functional implementation of a system to switch the fundamental threshold cryptography library that has been tested and has been in use on the validator testnet for several weeks.
