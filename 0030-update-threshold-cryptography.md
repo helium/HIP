@@ -53,7 +53,7 @@ An outline of the changes required to make BLS12-381 work with the existing netw
 
 - Update miner to use new HBBFT and DKG
 
-    In order to actually make the switch to BLS12-381 actually work the team has begun working on miner compatibility layer, the progress can be followed in [miner#733](https://github.com/helium/miner/pull/733).
+    In order to make the switch to BLS12-381, the team has implemented a miner compatibility layer, the progress of which can be followed in [miner#733](https://github.com/helium/miner/pull/733).
 
 # Drawbacks
 [drawbacks]: #drawbacks
