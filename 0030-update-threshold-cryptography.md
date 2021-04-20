@@ -39,19 +39,19 @@ The explanation of curve BLS12-381 itself is beyond the scope of this HIP. Howev
 
 An outline of the changes required to make BLS12-381 work with the existing network looks like the following:
 
-- Add support for understanding BLS12-381 curve in erlang
+- **Add support for understanding BLS12-381 curve in erlang**
 
     The team has been building a compatibility layer [erlang-tc]() to use in erlang for [poanetwork/threshold_crypto](https://github.com/poanetwork/threshold_crypto) which provides bindings to BLS12-381 curve functions. The rust code has been security audited.
 
-- Add support for BLS12-381 based threshold cryptography to DKG
+- **Add support for BLS12-381 based threshold cryptography to DKG**
 
     In parallel the team has been working on adding BLS12-381 compatibility to [erlang-dkg](https://github.com/helium/erlang-dkg). This work has been done in [erlang-dkg#36](https://github.com/helium/erlang-dkg/pull/36).
 
-- Add support for BLS12-381 based threshold cryptography to HBBFT
+- **Add support for BLS12-381 based threshold cryptography to HBBFT**
 
     Simultaneously the team has been working on adding BLS12-381 compatibility to [erlang-hbbft](). The progress of this work is available in [hbbft#66](https://github.com/helium/erlang-hbbft/pull/66).
 
-- Update miner to use new HBBFT and DKG
+- **Update miner to use new HBBFT and DKG**
 
     In order to make the switch to BLS12-381, the team has implemented a miner compatibility layer, the progress of which can be followed in [miner#733](https://github.com/helium/miner/pull/733).
 
