@@ -71,7 +71,9 @@ None
 # Deployment Impact
 [deployment-impact]: #deployment-impact
 
-TBD
+We've written a compatibility layer that allows hbbft to handle either kind of key. The network will continue to use the current SS512 key during an upgrade to BLS12-381. Once all nodes are updated with the new DKG elections will start producing BLS12-381 keys and hbbft will seamlessly switch over to using them instead.
+
+Thus we do not expect any deployment impact beyond a potentially long election epoch as the network upgrades.
 
 # Success Metrics
 [success-metrics]: #success-metrics
