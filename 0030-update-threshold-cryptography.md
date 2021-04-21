@@ -13,7 +13,7 @@ Helium [Distributed Key Generation](https://github.com/helium/erlang-dkg) and [H
 
 This HIP proposes switching to an industry standard curve BLS12-381 for doing threshold cryptography. The underlying implementation for BLS12-381 is security-audited, faster, and more secure than curve SS512.
 
-We have been testing a new threshold cryptography library that has been tested and been in use on the Validator Testnet for several weeks and believe it is ready for Mainnet.
+We have been testing a new threshold cryptography library that has been in use on the Validator Testnet for several weeks and believe it is ready for Mainnet.
 
 # Motivation
 [motivation]: #motivation
