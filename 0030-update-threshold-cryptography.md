@@ -62,13 +62,13 @@ We don't believe there are any drawbacks to this approach. In fact, we believe t
 # Rationale and Alternatives
 [alternatives]: #rationale-and-alternatives
 
-We were unable to expand the Testnet Consensus Group past 40 nodes as elections would begin to fail around that group size. We found that the existing DKG with curve SS512 will not allow us to scale past this number of Consensus Group members. this becomes a greater risk to network security as the network grows to 100s of thousands of nodes and more users expect network stability and security.
-
-We don't believe that the alternative of doing nothing makes sense. We also don't believe that implementing a new library ourselves from scratch makes sense and haven't been successful in finding an alternative library.
-
-We believe this library to be the best choice as it's already been written and has passed a security audit.
+We were unable to expand the Testnet Consensus Group past 40 nodes as elections would begin to fail around that group size. We found that the existing DKG with curve SS512 is the primary culprit here. This becomes a greater risk to network security as the network grows to 100s of thousands of nodes and more users expect network stability and security.
 
 On the Testnet, with these changes, we were able to exceed a group size of 60 and are able to run stably with a group size in the mid 50s. Since these protocols do not scale linearly (it's more like cubic scaling), this is a significant improvement.
+
+We don't believe that the alternative of doing nothing makes sense either. We also would like to avoid creating a new library ourselves and haven't been successful in finding an an acceptable alternative that meets all of our criteria.
+
+We believe this library and this implementation is the best choice for the Helium network as it has already been written and has passed a security audit.
 
 # Unresolved Questions
 [unresolved]: #unresolved-questions
@@ -78,9 +78,9 @@ None
 # Deployment Impact
 [deployment-impact]: #deployment-impact
 
-We've written a compatibility layer that allows hbbft to handle either kind of key. The network will continue to use the current SS512 key during an upgrade to BLS12-381. Once all nodes are updated with the new DKG, elections will start producing BLS12-381 keys and hbbft will seamlessly switch over to using them instead.
+We've written a compatibility layer that allows HBBFT to handle either kind of key. The network will continue to use the current SS512 key during an upgrade to BLS12-381. Once all nodes are updated with the new DKG, elections will start producing BLS12-381 keys and HBBFT will seamlessly switch over to using them instead.
 
-Thus we do not expect any deployment impact beyond a potentially long election epoch as the network upgrades.
+Thus, we do not expect any deployment impact beyond a potentially long election epoch as the network upgrades.
 
 # Success Metrics
 [success-metrics]: #success-metrics
