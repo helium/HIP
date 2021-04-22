@@ -57,6 +57,7 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | [Browan](https://github.com/browanofficial/HIP/blob/patch-1/0019-third-party-manufacturers/Browan-Cellular-Gateway.md) | 2021-03-26 | [In Discussion](https://github.com/helium/HIP/pull/139) |
 | [Dragino](https://github.com/dragino/HIP/blob/master/0019-third-party-manufacturers/dragino.md) | 2021-04-02 | [In Discussion](https://github.com/helium/HIP/pull/145) |
 | [ClodPi](https://github.com/clodpi/HIP/blob/master/0019-third-party-manufacturers/clodpi.md) | 2021-04-11 | [In Discussion](https://github.com/helium/HIP/pull/147) |
+| [FreedomFi](https://github.com/zer0tweets/HIP/blob/patch-5/0019-third-party-manufacturers/freedomfi.md) | 2021-04-20 | [In Discussion](https://github.com/helium/HIP/pull/156) |
 
 ## Status key
 
