@@ -4,7 +4,7 @@
 
 ## Summary
 
-FreedomFi will produce a version of FreedomFi Gateway (currently available for sale on [it’s website]([http://www.freedomfi.com/product/](http://www.freedomfi.com/product/))]) that will be compatible with Helium blockchain. FreedomFi gateways will have the capability to mine helium for providing LoRaWan coverage via an integrated LoRaWan concentrator module, but will also offer the capability for end users to plug in any commodity CBRS small cell into the gateway to earn additional HNT rewards for providing network offload service to MNO and MVNO roaming partners.
+FreedomFi will produce a version of FreedomFi Gateway (currently available for sale on [it’s website](http://www.freedomfi.com/product/) that will be compatible with Helium blockchain. FreedomFi gateways will have the capability to mine HNT for providing LoRaWan coverage via an integrated LoRaWan concentrator module, but will also offer the capability for end users to plug in any commodity CBRS small cell into the gateway to earn additional HNT rewards for providing network offload service to MNO and MVNO roaming partners.
 
 FreedomFi is the open 5G company that offers the easiest path towards open source Private LTE or 5G networks.
 
