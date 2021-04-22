@@ -55,6 +55,7 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | [HeNet BV/LongAP](https://github.com/HeNet/HIP/blob/feature/hip19-henet-application/0019-third-party-manufacturers/henet.md) | 2021-03-16 | [Approved](https://github.com/helium/HIP/pull/137) |
 | [Smart Mimic](https://github.com/onterferon/HIP/blob/master/0019-third-party-manufacturers/smart-mimic.md) | 2021-03-25 | [Approved](https://github.com/helium/HIP/pull/138) |
 | [Browan](https://github.com/browanofficial/HIP/blob/patch-1/0019-third-party-manufacturers/Browan-Cellular-Gateway.md) | 2021-03-26 | [In Discussion](https://github.com/helium/HIP/pull/139) |
+| [Dragino](https://github.com/dragino/HIP/blob/master/0019-third-party-manufacturers/dragino.md) | 2021-04-02 | [In Discussion](https://github.com/helium/HIP/pull/145) |
 
 
 ## Status key
