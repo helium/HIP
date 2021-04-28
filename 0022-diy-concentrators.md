@@ -1,6 +1,6 @@
 # HIP22: DIY Concentrators
 
-- Author(s): @georgica, @lthiery, @Carniverous19/para1
+- Author(s): @georgica, @lthiery
 - Start Date: 2020-11-16
 - Category: Technical
 - Original HIP PR: https://github.com/helium/HIP/pull/91
