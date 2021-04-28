@@ -169,4 +169,4 @@ degree of trust in witness receipts from gateways while also reducing the overhe
 [success-metrics]: #success-metrics
 
 If this HIP is successful, we should see the continued proliferation of a variety of gateways on the network while also
-increasing trust in POC reports.in anti-gaming strategies.
+increasing trust in POC reports.
