@@ -5,6 +5,7 @@
 ## Generalize
 
 ​	At present, LoraWan has become a solution for large-scale IoT data transmission. As its application area becomes wider and wider, more and more access schemes adopt LoraWan. At present, our Pisces mining machine and our suppliers have many years of experience in the development of Lora and NbIOT. We hope to help the community further optimize the functional logic of HNT through our years of experience in developing the Internet of Things.
+   The types of HNT Miner working outdoors are not rich enough, and their corresponding parameters and specifications are not enough to adapt to more diverse outdoor environmental conditions. **Pisces Miner** focuses on solving the problem of outdoor mining machines, and has many years of experience in the development and production of outdoor gateways. At the same time, it provides Miner solutions that are suitable for work without wired networks and no power supply.
 
 ## Company Information
 
