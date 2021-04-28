@@ -66,10 +66,15 @@ Finally, we believe this approach to have high extensibility in improving POC au
 
 A DIY Concentrator provides additional hardware security insofar as only secure firmware may operate the SX130x packet
 forwarder and sign the packets, thus proving packets have not been manipulated in software. As such, suitable processors
-must:
-* provide a hardware key store, guaranteeing that a key generated within may not be extracted (similar to the ECC608)
-* provide secure boot features, guaranteeing that only firmware signed by DeWi may executed (unlike ECC608, which does
-  not execute firmware)
+must provide:
+* a tamper-proof hardware key store, guaranteeing that a key generated within may not be extracted (similar to the 
+  ECC608)
+* secure boot features, guaranteeing that only firmware signed by DeWi may executed (unlike ECC608, which does not 
+  execute firmware)
+* authentication of received packets from the SX130x by using the trusted firmware and tamper-proof hardware. Only 
+  actually received packets should receive a valid signature using the key stored.
+* tamper-resistant non-removable binding of the secure processor to the SX130x such that simulating the RF-side is only 
+  possible by soldering or destruction.
 
 Additional efforts should be made to reduce ease of tampering with the radio inputs, although these solutions will be
 evaluated on a case-by-case basis.
