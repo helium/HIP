@@ -89,7 +89,7 @@ In the future, we believe an enhanced DIY concentrator with fine GPS timestampin
 
 The following onboarding specification requires no blockchain features.
 
-DIY concentrators will be subject to the same onboarding fees as regular hotspots. The `swarm_key` must shall be stored
+DIY concentrators will be subject to the same onboarding fees as regular hotspots. The `swarm_key` shall be stored
 in the secure firmware and will be the entity signing the transactions. As such, the secure firmware will be responsible
 for signing the `add_gateway` transaction.
 
