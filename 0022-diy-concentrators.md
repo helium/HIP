@@ -119,14 +119,16 @@ similar to the RAK2287), allowing it to be a potential retrofit for nearly every
 
 
 These "concentrator cards" are effectively one of Semtech's SX130x front-ends paired with a secure MCU. Over SPI, they
-communicate back to the main processor, such as a Raspberry Pi. Should this HIP pass, a "DIY concentrator" will be
-available for purchase.
+communicate back to the main processor, such as a Raspberry Pi. Should this HIP pass, a "DIY concentrator" could be
+available for purchase, pending DeWi review of the proposal.
 
 Should existing gateway vendors provide software support, they could adopt these radio front-ends, either after-market
 or in future products.
 
 While Syncrob.it initially proposes this design, this HIP in no way precludes other vendors from certifying designs
-that fit the definition above.
+that fit the definition above. Moreover, this HIP is not an implicit approval for the Syncrob.it design, but it only
+details it as an example implementation which would appear to fit the HIP22 specification. Final judgement of the
+suitability of the design will be made at a later date by DeWi.
 
 # Hardware and Firmware Summary
 [hardware-and-firmware-summary]: #hardware-and-firmware-summary
