@@ -77,9 +77,31 @@ evaluated on a case-by-case basis.
 Firmware will need to be released to DeWi for audit and signing of releases. Ideally, it should be open-sourced.
 
 Manufacturers may be trusted to provision the concentrators themselves (ie: load the firmware which starts the chain of
-trust) if and only if they have staked 5 or more validators. They will prove ownership of these validators to DeWi.
+trust) if and only if they have staked 5 or more validators. 
+
+Alternatively, another party who meets the staking requirements could be engaged. In either case, ownership of these 
+validators must be proven to DeWi.
 
 In the future, we believe an enhanced DIY concentrator with fine GPS timestamping should be considered.
+
+# Onboarding
+[onboarding]: #onboarding
+
+The following onboarding specification requires no blockchain features.
+
+DIY concentrators will be subject to the same onboarding fees as regular hotspots. The `swarm_key` must shall be stored
+in the secure firmware and will be the entity signing the transactions. As such, the secure firmware will be responsible
+for signing the `add_gateway` transaction.
+
+The downside of this approach is that retrofits of existing gateways will essentially replace the previous identity with
+a new HIP22 identity (ie: careful-pickel-squirrel will be replaced with long-fuchsia-sloth).
+
+Provisioned concentrators will be provided to the DeWi-managed staking server, similar to HIP19-approved hotspots. As
+such, the vendor of a DIY concentrator remains responsible for onboarding fees and must have these priced in for the
+customer.
+
+Vendors who are already approved via HIP19 shall manage a separate account for HIP22 concentrators, so that we have
+some on-chain transparency of the different security models used for on-chain hotspots.
 
 # Syncrob.it Product Summary
 [product-summary]: #product-summary
