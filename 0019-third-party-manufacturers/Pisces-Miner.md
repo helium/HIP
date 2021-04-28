@@ -157,7 +157,7 @@ We will provide service support in the following **ways:**
 
 ## Hardware Security
 
- 	At present, our product provides the ATECC608A chip in the model design, which is used to encrypt critical user key information and other dangerous data to further improve product security.
+ At present, our product provides the ATECC608A chip in the model design, which is used to encrypt critical user key information and other dangerous data to further improve product security.
 
 ## personal I.D
 
@@ -165,9 +165,9 @@ Private delivery of DeWi
 
 ## Budget and Capital
 
- 	We plan to produce 5000 in the first batch, but if the pre-order demand is large enough, we can expand the scale.
+ We plan to produce 5000 in the first batch, but if the pre-order demand is large enough, we can expand the scale.
 
- 	At the same time, **Green Palm Technology Co., Ltd.**, as a company that has been manufacturing IoT products for more than ten years, has sufficient cash flow to ensure the normal operation of the supply chain
+ At the same time, **Green Palm Technology Co., Ltd.**, as a company that has been manufacturing IoT products for more than ten years, has sufficient cash flow to ensure the normal operation of the supply chain
 
 ## Risks and Challenges
 
