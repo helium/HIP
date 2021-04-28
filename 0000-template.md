@@ -72,7 +72,7 @@ space. This is probably the most important section!
 # Deployment Impact
 [deployment-impact]: #deployment-impact
 
-Describe how this design will be deployed and any potential imapact it may have on
+Describe how this design will be deployed and any potential impact it may have on
 current users of this project.
 
 - How will current users be impacted?
