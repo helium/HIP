@@ -39,6 +39,8 @@ Features:
 - Simple
 - Stable
 
+Expected price:
+459$-559$
 
 
 **Standard outdoor version**
@@ -58,6 +60,8 @@ Features:
 
 - Anti-static
 
+Expected price:
+499$-599$
 
 
 **Generalizate user indoor version**
@@ -79,7 +83,8 @@ Features:
 - Provide PPOE and other functions, and run OpenWrt open source routing operating system.
 - Packaging becomes "a router for placing money"
 
-
+Expected price:
+Still in agreement
 
 **Wireless outdoor version**
 
@@ -103,6 +108,9 @@ Features:
 - Equipped with outdoor power generation functions and unattended functions.
 
 
+Expected price:
+499$-599$ are base price  
+Batteries, solar systems, and wind power generation systems each cost 50$
 
 **Standard Cluster Edition (BETA)**
 
@@ -132,6 +140,9 @@ Features:
 - Build a clustered solution. Increase the rate of return in the unit coverage rate.
 - By reducing the cost of wireless hotspots. Improve the price/performance ratio of wireless hotspots.
 
+
+Expected price:
+Still in agreement
 
 
 ## Customer Support
