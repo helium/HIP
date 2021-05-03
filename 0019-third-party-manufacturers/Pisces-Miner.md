@@ -40,7 +40,7 @@ Features:
 - Stable
 
 Expected price:
-459$-559$
+299$-349$
 
 
 **Standard outdoor version**
@@ -61,7 +61,7 @@ Features:
 - Anti-static
 
 Expected price:
-499$-599$
+349$-399$
 
 
 **Generalizate user indoor version**
@@ -109,7 +109,7 @@ Features:
 
 
 Expected price:
-499$-599$ are base price  
+349$-399$ are base price  
 Batteries, solar systems, and wind power generation systems each cost 50$
 
 **Standard Cluster Edition (BETA)**
