@@ -235,7 +235,7 @@ Private delivery of DeWi
 
 ## Risks and Challenges
 
-	 Our suppliers have decades of experience in the production and quality control of lora gateways. At present, our main production risk lies in the shortage of various chips in 2021 and the decline in the output value of Lora chips. We expect to solve this problem in the following two ways:
+  Our suppliers have decades of experience in the production and quality control of lora gateways. At present, our main production risk lies in the shortage of various chips in 2021 and the decline in the output value of Lora chips. We expect to solve this problem in the following two ways:
 
 - Prepare inventory in advance
 - Improve the performance of a single device
