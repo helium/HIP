@@ -41,7 +41,10 @@ Features:
 - Stable
 
 Expected price:
-99$-149$
+99$-149$  
+First pre production quantity:  
+10000
+
 
 **Light Outdoor Version**
 
@@ -62,7 +65,8 @@ Features:
 
 Expected price:
 149$-199$
-
+First pre production quantity:  
+5000
 
 **Standard Indoor Version**
 
@@ -83,6 +87,8 @@ Features:
 Expected price:
 249$-299$
 
+First pre production quantity:  
+3000
 
 **Standard outdoor version**
 
@@ -103,7 +109,8 @@ Features:
 
 Expected price:
 349$-399$
-
+First pre production quantity:  
+2000
 
 **Generalizate user indoor version**
 
@@ -125,6 +132,8 @@ Features:
 - Packaging becomes "a router for placing money"
 
 Expected price:
+Still in agreement
+First pre production quantity:  
 Still in agreement
 
 **Wireless outdoor version**
@@ -151,7 +160,9 @@ Features:
 
 Expected price:
 349$-399$ are base price  
-Batteries, solar systems, and wind power generation systems each cost 50$
+Batteries, solar systems, and wind power generation systems each cost 50$  
+First pre production quantity:  
+Still in agreement
 
 **Standard Cluster Edition (BETA)**
 
