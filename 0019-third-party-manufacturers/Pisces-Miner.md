@@ -20,9 +20,9 @@
 
 ## Product Information
 
-	The specific parameters and design styles of the company's products can be found on the following official website:
+  The specific parameters and design styles of the company's products can be found on the following official website:
 	
-	Currently we provide the following solutions:
+  Currently we provide the following **solutions**:
 
 **Light Indoor Version**
 
