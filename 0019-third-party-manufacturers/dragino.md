@@ -19,11 +19,11 @@ Some of the LoRaWAN gateways are already been tested and used as light hotspot i
 * LPS8: http://www.dragino.com/products/lora-lorawan-gateway/item/148-lps8.html 
 * DLOS: http://www.dragino.com/products/lora-lorawan-gateway/item/160-dlos8.html 
 
-We will prototype a new gateway version with the ECC chip , aiming to use as a hotspot in Helium. Any idea for the easy use in Helium is welcome. 
+We will prototype a new gateway version with the ECC chip , aiming to provide Hotspot & Light Hotspot version in Helium. Any idea for the easy use in Helium is welcome. 
 
 The new prototype will have similiar function as LPS8 with the add on ECC chip as the main difference. 
 
-The plan for the release of new prototype is 2021, April. 
+The plan for the release of new prototype is 2021, April. Delay to May. 
 
 As per the concept of Helium, we will try to make the device retail cost to lower than or similiar to $100 so to help the spreading the network in large scale. 
 
