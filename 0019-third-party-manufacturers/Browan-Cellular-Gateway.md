@@ -18,8 +18,11 @@ BROWAN Communications, as a Gemtek Group’s Company, builds on the pioneering f
 ## Product Information
 
 Our main product areas are in WiFi, LoRaWAN gateways and IoT node devices. Please check https://www.browan.com/product/XP/VJ for the full list.
-We are building a new Cellular Gateway which use Ethernet and LTE as the backhaul.
+We are building a new Cellular Gateway (PicoNext) which use Ethernet and LTE as the backhaul.
 Please find the preliminary HW interfaces:
+
+![2021-04-12](https://user-images.githubusercontent.com/47768386/117094000-22c4fe80-ad95-11eb-8694-53746782d98a.png)
+
 1. LED x4
 2. Reset Button
 3. LTE/LTE-M
@@ -75,13 +78,14 @@ Sourcing components continues to be challenging in the current market – severa
 
 * Regions covered / shipped to – Worldwide
 
-- gateway photos 
-We will provide ID photos shortly.
+- Gateway photos
+![2021-04-12](https://user-images.githubusercontent.com/47768386/117093961-045f0300-ad95-11eb-9b4d-02450daf4e25.png)
+
 - expected ship date
 September 2021
 - Country / region support 
 US/ EU/ AU
 - expected price point(Please contact with Browan sale Moha mohd@browan.com)
-- likely production quantities: 10,000 units in 2021. 
+- likely production quantities: 25,000 units in 2021. 
 
 
