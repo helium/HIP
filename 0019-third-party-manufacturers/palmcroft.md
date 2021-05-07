@@ -20,7 +20,9 @@ Concepts recognized the value of helping build the network.
 ## Product Information
 ### Palm Crown
 **Status:** Ready to product
+
 **Expected Release Date:** Q4 2021 - Q1 2022
+
 **Estimated Price:** $450 USB
 
 This initial system is designed to be put on buildings or existing infrastructure. This system is designed to
@@ -31,20 +33,21 @@ assistance for 5 years including OTA updates. This system will be completed with
 instructions, and a company referral for installation. See product below.
 
 **Specs**:
-- Raspberry Pi 4B
--- 64 Bit Quad Core Cortex-A72(ARM V8)
--- 8GB LPDDR4-3200 SDRAM
--- 2.4 GHz and 5.0 GHz IEEE 802.11ac wireless, Bluetooth 5.0, BLE
--- Gigabit Ethernet
--- Raspberry Pi standard 40 pin GPIO header
--- Micro-SD card slot for loading operating system and data storage
--- RoHS Compliant
-- Palm Pi Hat w/ built in LoRa concentrator
--- ATEC608A Security Chip
--- GPS Module
--- Semtech SX1302
--- Supports Global Frequency Bands
--- RoHS Compliant
+*Raspberry Pi 4B*
+- 64 Bit Quad Core Cortex-A72(ARM V8)
+- 8GB LPDDR4-3200 SDRAM
+- 2.4 GHz and 5.0 GHz IEEE 802.11ac wireless, Bluetooth 5.0, BLE
+- Gigabit Ethernet
+- Raspberry Pi standard 40 pin GPIO header
+- Micro-SD card slot for loading operating system and data storage
+- RoHS Compliant
+
+*Palm Pi Hat w/ built in LoRa concentrator*
+- ATEC608A Security Chip
+- GPS Module
+- Semtech SX1302
+- Supports Global Frequency Bands
+- RoHS Compliant
 
 ## Customer Support System
 We will be responding to customer support requests via email, live chat services, our company website,
