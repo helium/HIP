@@ -33,6 +33,7 @@ assistance for 5 years including OTA updates. This system will be completed with
 instructions, and a company referral for installation. See product below.
 
 **Specs**:
+
 *Raspberry Pi 4B*
 - 64 Bit Quad Core Cortex-A72(ARM V8)
 - 8GB LPDDR4-3200 SDRAM
