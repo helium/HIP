@@ -23,7 +23,7 @@ Concepts recognized the value of helping build the network.
 
 **Expected Release Date:** Q4 2021 - Q1 2022
 
-**Estimated Price:** $450 USB
+**Estimated Price:** $450 USD
 
 This initial system is designed to be put on buildings or existing infrastructure. This system is designed to
 be extremely weatherproof, able to broadcast signals far, and help businesses and municipalities receive
