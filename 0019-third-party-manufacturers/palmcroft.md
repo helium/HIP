@@ -19,7 +19,7 @@ Concepts recognized the value of helping build the network.
 
 ## Product Information
 ### Palm Crown
-**Status:** Ready to product
+**Status:** Ready to produce
 
 **Expected Release Date:** Q4 2021 - Q1 2022
 
