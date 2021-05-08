@@ -97,5 +97,5 @@ The biggest challenge that we see now is the production of SX130x. Several core 
 
 * Desired Discord support channel name - #risinghf
 * Website - http://risinghf.com
-* Payment methods available - PayPay, Wire Transfer
+* Payment methods available - PayPal, Wire Transfer
 * Regions covered / shipped to - WorldWide
