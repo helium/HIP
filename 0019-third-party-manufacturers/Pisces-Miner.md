@@ -15,8 +15,11 @@
 
    **Green Palm Technology Co., Ltd.** was established in 2012 and has many years of Internet of Things technology accumulation. It is a company specializing in the research and development, production and sales of AC and DC smart meters, smart water meters, smart charging terminals and power information collection system terminals high-tech enterprises. Electric energy metering boxes, circuit breakers, cable branch boxes and other products.
    The company's products cover almost all electric meters in the world, such as single-phase, three-phase electronic energy meters, single-phase, three-phase intelligent energy meters, and meter accessories. For product capacity, it provides 3 million meters to owners around the world every year. The company’s AMI smart meter reading solution provides solutions for the traditional power industry, including long manual meter reading cycles, insufficient data accuracy, high meter reading and operating costs, difficulty in power quality monitoring, difficulty in power quality monitoring, and ultra High commercial lines lose. It is suitable for residents and large users.
-
+   
  The company's customers are mainly distributed in Southeast Asia and Africa. And participated in smart meter renovation projects in Pakistan, Thailand, Nepal, Ukraine, and Russia. Recently, it is bidding for smart meter projects in the Middle East.
+ 
+![工厂3](https://user-images.githubusercontent.com/83175310/117687546-7b0f5c80-b1ea-11eb-941b-eb29dacf69e7.png)
+
 
 ## Product Information
 
@@ -57,6 +60,7 @@ First pre production quantity:
 | ATECC608 secret key storage    | No special requirements                        |                                   |
 | Enclosure peripherals          | NEMA-67 grade waterproof enclosure is required |                                   |
 
+
 Features:
 
 - Waterproof and rainproof
@@ -79,6 +83,10 @@ First pre production quantity:
 | ATECC608 secret key storage | No special requirements |                                   |
 | Shell peripherals           | No special requirements | Routing appearance                |
 
+
+![室内1](https://user-images.githubusercontent.com/83175310/117687670-97ab9480-b1ea-11eb-8c61-5f23cc4f6bf8.png)
+![室内3](https://user-images.githubusercontent.com/83175310/117687733-a5f9b080-b1ea-11eb-8fac-4c0a441e2499.png)
+
 Features:
 
 - Simple
@@ -100,6 +108,10 @@ First pre production quantity:
 | GPS module                  | No special requirements                        |                                   |
 | ATECC608 secret key storage | No special requirements                        |                                   |
 | Enclosure peripherals       | NEMA-67 grade waterproof enclosure is required |                                   |
+
+![基站1](https://user-images.githubusercontent.com/83175310/117687832-c3c71580-b1ea-11eb-9722-76afd968abdb.png)
+![基站4](https://user-images.githubusercontent.com/83175310/117687863-cd507d80-b1ea-11eb-9455-0a9a6fd1c085.png)
+![基站5](https://user-images.githubusercontent.com/83175310/117687855-ca558d00-b1ea-11eb-9b66-a86d4d720e9e.png)
 
 Features:
 
@@ -124,6 +136,7 @@ First pre production quantity:
 | Extra Ethernet Port         | 4 LAN Port                                     | Gigabit Ethernet/10 Gigabit Ethernet |
 | Independent AP              | 2.4GHZ/5GHZ                                    | Enterprise Routing AP                |
 | Enclosure peripherals       | NEMA-67 grade waterproof enclosure is required |                                      |
+
 
 Features:
 
@@ -150,6 +163,9 @@ Still in agreement
 | Photovoltaic panels         | Above 280w                                     | [Optional] Direct battery connection                   |
 | Small wind turbine          | Above 400w                                     | [Optional] Direct battery connection                   |
 | Enclosure peripherals       | NEMA-67 grade waterproof enclosure is required |                                                        |
+
+![室外4](https://user-images.githubusercontent.com/83175310/117687774-b1e57280-b1ea-11eb-8a24-7adea9f4ad9d.jpg)
+![室外1](https://user-images.githubusercontent.com/83175310/117687781-b4e06300-b1ea-11eb-854c-df5d742a82f0.png)
 
 Features:
 
