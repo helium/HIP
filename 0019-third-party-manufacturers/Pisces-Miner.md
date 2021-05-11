@@ -263,3 +263,4 @@ Private delivery of DeWi
 - Official website:[Pisces Miner](http://www.piscesminer.com/)
 - Partner's official website:[GreenPalm](http://greenpalm.sidcloud.cn/)
 - Currently supports most of the world's credit card payments, and supports **USDT,WeChat, Alipay, Octopus** and other methods of payment
+- Email:carzyg@outlook.com
