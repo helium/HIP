@@ -261,6 +261,6 @@ Private delivery of DeWi
 - Discord supports channel : [Pisces](https://discord.gg/MkbVWeh9)
 - Twitter profile:@Pisceminer
 - Official website:[Pisces Miner](http://www.piscesminer.com/)
-- Partner's official website:[GreenPalm](http://greenpalm.sidcloud.cn/)
+- Partner's official website:[GreenPalm](http://www.greenpalm.cn/)
 - Currently supports most of the world's credit card payments, and supports **USDT,WeChat, Alipay, Octopus** and other methods of payment
 - Email:carzyg@outlook.com
