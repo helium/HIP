@@ -29,7 +29,7 @@ This initial system is designed to be put on buildings or existing infrastructur
 be extremely weatherproof, able to broadcast signals far, and help businesses and municipalities receive
 sizable blockchain income. This system comes with full hardware support for up to one year and software
 
-assistance for 5 years including OTA updates. This system will be completed with 18dBi antennas, setup
+assistance for 5 years including OTA updates. This system will be completed with 8dBi antennas, setup
 instructions, and a company referral for installation. See product below.
 
 **Specs**:
