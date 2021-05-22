@@ -3,7 +3,7 @@
 - Author(s): [@timcooijmans](http://github.com/timcooijmans) HeNet B.V.
 - Start Date: 2021-05-22
 - Category: Technical
-- Original HIP PR: 
+- Original HIP PR: [#180](https://github.com/helium/HIP/pull/180)
 - Tracking Issue:
 - Status: In Discussion (2021-05-22)
 
