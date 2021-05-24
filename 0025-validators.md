@@ -36,7 +36,7 @@ We also expect the Testnet process, wherein we will stand up a separate network 
 
 
 #### Ledger changes
-To make this happen, we would make a new ledger entry type for the Validators.  This entry would have the Validator's stake level and the owning account, and any other required metadata.  All HNT earned by the Validator will go into the owning account.
+To make this happen, we would make a new ledger entry type for the Validators.  This entry would have the Validator's stake level and the owning account, and any other required metadata.  All HNT earned by the Validator will automatically go into the owning account and is immediately liquid.
 
 #### Transactions
 We will add 5 new transactions:
