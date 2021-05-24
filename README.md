@@ -58,7 +58,7 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | [Dragino](https://github.com/dragino/HIP/blob/master/0019-third-party-manufacturers/dragino.md) | 2021-04-02 | [In Discussion](https://github.com/helium/HIP/pull/145) |
 | [ClodPi](https://github.com/clodpi/HIP/blob/master/0019-third-party-manufacturers/clodpi.md) | 2021-04-11 | [In Discussion](https://github.com/helium/HIP/pull/147) |
 | [FreedomFi](https://github.com/zer0tweets/HIP/blob/patch-5/0019-third-party-manufacturers/freedomfi.md) | 2021-04-20 | [In Discussion](https://github.com/helium/HIP/pull/156) |
-
+The most up to date status of manufacturers in progress can be [viewed here](https://docs.google.com/spreadsheets/d/1pOmrMV_oiF0FtR1NOX_pqykKOBsb_QghiNkTlF644DU/edit?usp=sharing)
 ## Status key
 
 * Draft: HIP is in process of being written; author is not yet soliciting feedback from the community at large
