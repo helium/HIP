@@ -1,6 +1,6 @@
 # HIP22: DIY Concentrators
 
-- Author(s): @georgica, @lthiery
+- Author(s): @lthiery, @georgica
 - Start Date: 2020-11-16
 - Category: Technical
 - Original HIP PR: https://github.com/helium/HIP/pull/91
@@ -16,14 +16,24 @@ mining rewards without truly providing coverage.
 
 Initially, only gateways sold by Helium could be added to the blockchain, but [HIP19](0019-third-party-manufacturers.md)
 expands this ability to approved vendors. One of the principal requirements of HIP19 is that the hotspot identity be
-contained with a hardware security module.
+contained with a hardware security module. Following the lead of the Helium "OG Hotspot", every hotspot on the market
+has the following architecture:
 
-While this does not prevent bad actors from lying about the packets they have seen, it does require bad actors to
-acquire hardware and to maintain physical access to the hardware security module; thus the overhead of such operations
-is increased and the scalability is hindered.
+![image Current Architecture](0022-diy-concentrators/current_hardware_architecture.jpg)
 
-The fact remains though, bad actors may lie about radio packets. Virtually all POC gaming strategies revolve around
-intercepting or entirely fabricating packets over the [Semtech GWMP Protocol over UDP](https://github.com/Lora-net/packet_forwarder/blob/master/PROTOCOL.TXT).
+The Hotspots identity, ie: the `swarm_key`, is contained in a secure element which is controlled by the Host CPU. 
+Therefore, the Host CPU pulls data from the SX130x concentrator, requests the secure element (generally an ECC608) sign
+the transaction and then submits the transaction to the blockchain.
+
+The strength of this approach is that it requires bad actors to acquire hotspots and their secure element and to 
+maintain physical access to the hardware security module; thus the overhead of such operations is increased and the 
+scalability is hindered. However, this does not prevent bad actors from lying about the packets they have seen.
+
+The weakness of this approach is that it allows the Host CPU to request the secure element sign anything it wants. A 
+bad actor can "jailbreak" the Host CPU and run whatever software they want and ask the ECC608 to sign anything.
+
+Therefore, there is a plethora of POC gaming strategies revolve around intercepting or entirely fabricating packets over
+the [Semtech GWMP Protocol over UDP](https://github.com/Lora-net/packet_forwarder/blob/master/PROTOCOL.TXT).
 
 ![image GWMP Miner](0022-diy-concentrators/miner_packet_forwarder.jpg)
 
@@ -34,22 +44,30 @@ It is not difficult to put software between the packet forwarder and the Helium 
 [physical-root-of-trust-value-and-incentives]: #physical-root-of-trust-value-and-incentives
 
 We propose to create a special category of packet forwarders which cannot lie about what they physically perceive. As
-such, they provide the network with a **Physical Root of Trust**. They can still be "gamed" in various ways which will
-be detailed here, but these attack vectors all end up existing at the physical RF level instead of simply intercepting
-or fabricating UDP packets.
+such, they provide the network with a **Physical Root of Trust**. The new hardware architecture would be as follows:
+
+![image New Architecture](0022-diy-concentrators/new_hardware_architecture.jpg)
+
+The change in this approach is that the SX130x data passes through a secure MCU which contains the Hotspots identity
+(ie: `swarm_key`) and, therefore, signs the packets. Therefore, we are not vulnerable to the Host CPU being compromised
+(ie: "jailbroken") and we can therefore trust packets with these signatures.
+
+This approach is not a silver bullet to end all of POC gaming, but it removes all purely software based attack vectors.
+Instead, POC gamers will be forced to attack at the physical level, increasing both the cost & complexity of gaming
+while also greatly hindering its scalability.
 
 ## Enabling DIY
 [enabling-diy]: #enabling-diy
 
 Currently, every single gateway design must pass through [HIP19](0019-third-party-manufacturers.md). However, DIY
-concentrators go above and beyond the security requirements detailed in HIP19. Therefore, we propose that any gateway
-assembly that features a DIY concentrator be allowed on-chain.
+concentrators as detailed herein go above and beyond the security requirements detailed in HIP19. Therefore, we propose
+that _any_ gateway assembly that features a DIY concentrator be allowed on-chain.
 
 ## A Foundation for Improved Trust
 [a-foundation-for-improved-trust]: #a-foundation-for-improved-trust
 
 While this proposal does not impact blockchain incentives at this point, we believe this approach should be considered
-for a network-wide transition. We encourage approved vendors in considering adopting HIP22 complaint designs moving
+for a network-wide transition. We encourage approved vendors in considering adopting HIP22 compliant designs moving
 forward.
 
 Not only does this hardware module provide many potential avenues for preventing POC auditing, we believe that
@@ -58,6 +76,7 @@ Merkle roots in state channels, network users can already verify that a specific
 the Helium Network at a certain time. With DIY concentrators, we may certify a location in a much stronger way.
 
 Finally, we believe this approach to have high extensibility in improving POC auditing:
+* statistical models may use this data as "known good actors" and use it to compare to potentially dishonest actors
 * actors capable of mobile auditing could be derived from this hardware
 * more complex "trust score" and POC auditing approaches could derive itself from this data (eg: GPS timestamping)
 
@@ -89,6 +108,17 @@ validators must be proven to DeWi.
 
 In the future, we believe an enhanced DIY concentrator with fine GPS timestamping should be considered.
 
+# Secure Firmware Requirements
+
+The strength of this security model is that the Miner's `swarm_key` cannot be compelled to sign arbitrary radio transactions.
+In particular, the Miner will only sign POC packets (`poc_witness_v1`) if and only if the packet is something it read
+directly from the SX130x; this is why this physical connection is the only physical tampering requirement specified herein.
+
+A host processor (such as a Raspberry Pi) may still submit transactions for signing to the DIY concentrator. Similar to
+a Ledger Hardware wallet, the signing request protocol will only enable specific transactions to be signed (such as 
+`add_gateway`). In other words, the protocol **must not allow the arbitrary signing of transactions** as that would put
+this security on par with the existing HIP19 secure element approach.
+
 # Onboarding
 [onboarding]: #onboarding
 
@@ -99,7 +129,7 @@ in the secure firmware and will be the entity signing the transactions. As such,
 for signing the `add_gateway` transaction.
 
 The downside of this approach is that retrofits of existing gateways will essentially replace the previous identity with
-a new HIP22 identity (ie: careful-pickel-squirrel will be replaced with long-fuchsia-sloth).
+a new HIP22 identity (ie: `careful-pickel-squirrel` will be replaced with `long-fuchsia-sloth`).
 
 Provisioned concentrators will be provided to the DeWi-managed staking server, similar to HIP19-approved hotspots. As
 such, the vendor of a DIY concentrator remains responsible for onboarding fees and must have these priced in for the
@@ -117,7 +147,6 @@ similar to the RAK2287), allowing it to be a potential retrofit for nearly every
 ![image RAK2287](0022-diy-concentrators/rak2287.png)
 ![image Syncro](0022-diy-concentrators/syncrobit.jpg)
 
-
 These "concentrator cards" are effectively one of Semtech's SX130x front-ends paired with a secure MCU. Over SPI, they
 communicate back to the main processor, such as a Raspberry Pi. Should this HIP pass, a "DIY concentrator" could be
 available for purchase, pending DeWi review of the proposal.
@@ -128,7 +157,7 @@ or in future products.
 While Syncrob.it initially proposes this design, this HIP in no way precludes other vendors from certifying designs
 that fit the definition above. Moreover, this HIP is not an implicit approval for the Syncrob.it design, but it only
 details it as an example implementation which would appear to fit the HIP22 specification. Final judgement of the
-suitability of the design will be made at a later date by DeWi.
+suitability of the design would be made at a later date by DeWi.
 
 # Hardware and Firmware Summary
 [hardware-and-firmware-summary]: #hardware-and-firmware-summary
