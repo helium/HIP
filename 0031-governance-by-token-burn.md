@@ -1,11 +1,11 @@
-## HIP xx: Governance by token burn
+## HIP31: Governance by token burn
 
-- Authors: [@tjmcc] (Tushar#5143), Shayon Sengupta
+- Authors: [@tjmcc](Tushar#5143), Shayon Sengupta
 - Start Date: November 14, 2020
 - Category: Governance
-- Original HIP PR: TBD
+- Original HIP PR: https://github.com/helium/HIP/pull/182
 - Tracking Issue: TBD
-- Status: Draft
+- Status: In Discussion
 
 # Summary
 [summary]: #summary
