@@ -41,6 +41,7 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | 28 | [Consensus Reward Adjustments](https://github.com/helium/HIP/blob/master/0028-consensus-reward-adjustments.md) | [In Discussion](https://github.com/helium/HIP/issues/140) |
 | 29 | [Multi-signature Keys](https://github.com/helium/HIP/blob/master/0029-multisignature-keys.md) | [Approved](https://github.com/helium/HIP/issues/157) |
 | 30 | [BLS12-381 for Threshold Cryptography](https://github.com/helium/HIP/blob/master/0030-update-threshold-cryptography.md) | [Approved](https://github.com/helium/HIP/issues/158) |
+| 31 | [Governance by Token Burn](https://github.com/helium/HIP/blob/master/0031-governance-by-token-burn.md) | [In Discussion](https://github.com/helium/HIP/issues/159) |
 
 
 ## HIP19 third-party manufacturers
