@@ -10,7 +10,7 @@
 # Summary
 [summary]: #summary
 
-This proposal suggests a governance mechanism for on chain voting for chain variables and protocol upgrades.
+This proposal suggests a governance mechanism for on chain voting for chain variables.
 
 # Motivation
 [motivation]: #motivation
@@ -31,7 +31,7 @@ All Helium Network stakeholders are affected by this HIP.
 # Detailed Explanation
 [detailed-explanation]: #detailed-explanation
 
-Anyone can bring a HIP to a vote by posting a bond of 1% of outstanding HNT. This will create 2 burn addresses, one to accept the HIP and one to reject it. The voting period will be 1,008 epochs (21 days). During this time anyone can send HNT to either address.
+Anyone can bring a chain var update to a vote by posting a bond of 1% of staked HNT. This will create 2 burn addresses, one to accept the HIP and one to reject it. The voting period will be 1,008 epochs (21 days). During this time anyone can send staked HNT to either address. Only staked HNT is eligible to vote.
 
 At the end of the voting period the protocol determines the winner by seeing which address received the most tokens. Addresses which voted for the winner get a refund of their winning margin. For example if there were 200k votes for yes and 50k votes for no, the voters for yes would get 75% (150M) of their tokens back distributed pro rata amongst them.
 
@@ -47,13 +47,14 @@ For any vote in the opposite direction of the current winning side, EV increases
 
 The state channel should not be capped at any amount prior to deposit, since EV for voting against the winning direction increases with a significant winning margin not only in outcome terms (deciding the outcome of the actual vote), but also payoff terms (the higher the winning margin, the higher the portion of staked HNT is returned to the voter)
 
-The bond amount must be fixed, such that no high balance HNT holder can create a vote with a very high ‘amount to beat’, and the cost of putting a contentious proposal to vote is the same for each participant in the network.
+The initial bond amount must be fixed, such that no high balance HNT holder can create a vote with a very high ‘amount to beat’, and the cost of putting a contentious proposal to vote is the same for each participant in the network.
 
 The benefits of this proposal are:
 
 - Expensive to vote so you only vote if you really care
 - Having a contentious vote is extremely expensive so it is worth building consensus on a proposal so others don’t block you
 - Voting creates deflationary pressure on HNT supply for all network participants
+- Further increases incentives for staking HNT
 - Naturally decentralizes over time. Right now there are only a handful of people who care enough about the system to burn a bunch of money to have a voice in governance. As the system gets more important to more stakeholders, more people will care enough to vote despite the cost
 - State channels minimize expected loss of participation by turning this voting exercise into a mixed strategy game with linear payoffs, and also prevent outcomes where an outcome is decided without a significant margin of victory i.e. no side can win by submitting 1 HNT more than the other side
 - Much less oligarchic than 1 token 1 vote like tezos or compound. 1 token 1 vote which just means early whales control governance forever. In governance by burn, if whales try to control governance against others they start losing tokens and stop being whales.
@@ -102,7 +103,7 @@ The benefits of this proposal are:
 
 5. What are the conditions for proposing a vote
     1. Minimum bond amount
-        1. At a current 1% of circulating supply, we would need state channels to allow voters to
+        1. 1% of staked HNT may be too high
     2. Minimum engagement on HIP forums
         1. Should there be a threshold amount of prior discussion before a vote is proposed, as this ensures clear discussion of the ramifications of approving or rejecting the change
 6. What can we assume about voters
