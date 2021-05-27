@@ -92,7 +92,9 @@ Milesight IoT provides worldwide support and replacements through our distributi
 
 Milesight IoT gateways have an embedded hardware security built in the CPU, which is NXP Cryptographic Acceleration and Assurance Module (CAAM)，CAAM is built-in hardware module that implements secure RAM and a dedicated AES cryptographic engine for encryption/decryption operations，A device specific random 256-bit OTPMK key is fused in each SoC at manufacturing time, this key is unreadable and can only be used by the CAAM for AES encryption/decryption of user data, through the Secure Non-Volatile Storage (SNVS) companion block. The behavior is very similar to an ECC chip. 
 
-When customer try to upgrade the firmware, the bootloader will verify the signature and the burned key encrypted by the CAAM before load it or refuse it. The bootloader itself cannot be modified (locked).
+In addition, Milesight IoT gateways supports RPMB partition to store the secrets and process security functions using private keys, the key is ciphered there and it's not reachable from the Linux Kernel or userland, and this key cannot be recovered as well
+
+When try to upgrade the firmware, the bootloader will verify the signature and the burned key before load it or refuse it. The bootloader itself cannot be modified (locked).
 
 Milesight IoT can provide more information upon demand and is willing to comply to any third party audit.
 
