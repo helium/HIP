@@ -19,7 +19,7 @@ Milesight IoT is a well reputed manufacturer of LoRaWAN gateways and sensors. Af
  [LoRaWAN Gateway UG67](https://www.milesight-iot.com/lorawan/gateway/ug67/) (Ethernet+4G+WIFI, IP67)
 
 ![image-20210527144556761](http://harry-image-md.oss-cn-hongkong.aliyuncs.com/img/2021/05/27/f431b0b04177866e37e6d19bcc61e46c-image-20210527144556761-5e8fe4.png)
- 
+
 
 ## Company Information
 
@@ -57,7 +57,7 @@ UG65: [Live Video Introduction](https://www.youtube.com/watch?v=RMozMVlZQQc&list
 - Dimensions: 180 x 110 x 56.5 mm
 
 
- 
+
 
 UG67:  [Live Video Introduction](https://www.youtube.com/watch?v=yO7YfnvWJtQ&list=PLb33srEEYIJbcm5VfG5PGRFy-XgTN6jEG&index=2)
 
@@ -90,9 +90,9 @@ Milesight IoT provides worldwide support and replacements through our distributi
 
 ## Hardware Security
 
-Milesight IoT gateways have an embedded hardware security built in the CPU, provided by NXP. The behavior is very similar to an ECC chip. This has a dedicated processing and storage unit that can store secrets and process security functions (signature, encryption) using private keys. The key is stored ciphered in a hardware partition called 'ramboot', which is not reachable from the Linux Kernel or userland. Even if the hardware is physically compromised, the key cannot be recovered. When the hardware performs signatures or encryptions, the key is never loaded into the RAM or other flash partition.
+Milesight IoT gateways have an embedded hardware security built in the CPU, which is NXP Cryptographic Acceleration and Assurance Module (CAAM)，CAAM is built-in hardware module that implements secure RAM and a dedicated AES cryptographic engine for encryption/decryption operations，A device specific random 256-bit OTPMK key is fused in each SoC at manufacturing time, this key is unreadable and can only be used by the CAAM for AES encryption/decryption of user data, through the Secure Non-Volatile Storage (SNVS) companion block. The behavior is very similar to an ECC chip. 
 
-When customer try to upgrade the firmware, the bootloader will refuse to load the it unless the signature matches the key burned there. The bootloader itself cannot be modified (locked).
+When customer try to upgrade the firmware, the bootloader will verify the signature and the burned key encrypted by the CAAM before load it or refuse it. The bootloader itself cannot be modified (locked).
 
 Milesight IoT can provide more information upon demand and is willing to comply to any third party audit.
 
