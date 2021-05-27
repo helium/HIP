@@ -12,13 +12,13 @@ Milesight IoT is a well reputed manufacturer of LoRaWAN gateways and sensors. Af
 
 [LoRaWAN Gateway UG67](https://www.milesight-iot.com/lorawan/gateway/ug67/) (Ethernet+4G+WIFI, IP67)
 
-<img src="http://harry-image-md.oss-cn-hongkong.aliyuncs.com/img/2021/05/27/f271e2ab61b6601b7afc69101bcbed69-image-20210527134150219-6a905e.png" alt="image-20210527134150219" style="zoom: 50%;" />
+![image-20210527144556761](http://harry-image-md.oss-cn-hongkong.aliyuncs.com/img/2021/05/27/f431b0b04177866e37e6d19bcc61e46c-image-20210527144556761-5e8fe4.png)
 
  
 
 [LoRaWAN Gateway UG65](https://www.milesight-iot.com/lorawan/gateway/ug65/)(Ethernet+4G+WIFI, IP65)
 
-<img src="http://harry-image-md.oss-cn-hongkong.aliyuncs.com/img/2021/05/27/dfb6bc36515342479e18aa5e70be2b64-image-20210527134056768-ed2832.png" alt="image-20210527134056768" style="zoom: 25%;" />
+![image-20210527144606345](http://harry-image-md.oss-cn-hongkong.aliyuncs.com/img/2021/05/27/0fc2ec934c3fb66bfa016d55b608a480-image-20210527144606345-72264b.png)
 
  
 
