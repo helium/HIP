@@ -33,7 +33,7 @@ All Helium Network stakeholders are affected by this HIP.
 
 Anyone can bring a chain var update to a vote by posting a bond of 1% of staked HNT. This will create 2 burn addresses, one to accept the HIP and one to reject it. The voting period will be 1,008 epochs (21 days). During this time anyone can send staked HNT to either address. Only staked HNT is eligible to vote.
 
-At the end of the voting period the protocol determines the winner by seeing which address received the most tokens. Addresses which voted for the winner get a refund of their winning margin. For example if there were 200k votes for yes and 50k votes for no, the voters for yes would get 75% (150M) of their tokens back distributed pro rata amongst them.
+At the end of the voting period the protocol determines the winner by seeing which address received the most tokens. Addresses which voted for the winner get a refund of their winning margin. For example if there were 200k votes for yes and 50k votes for no, the voters for yes would get 75% (150k) of their tokens back distributed pro rata amongst them.
 
 Votes earlier in the process get higher weight to incentivize people to vote early rather than wait for the last minute. For the first three days of voting, each HNT will have equal voting weight (so as to not immediately provide an advantage to the proposer of the vote), but the decay in voting power begins after this point. The “decay” of vote strength should be a chain variable. The initially proposed value of this chain variable is 3.33% per day – meaning that 1 HNT deposited on the third day of voting counts as 1 HNT but if it was deposited on the fourth day of voting it counts at 0.967 HNT and the other 0.033 HNT is burned.
 
