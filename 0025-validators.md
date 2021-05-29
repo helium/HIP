@@ -138,7 +138,7 @@ A: In the current proposal Validator nodes will earn the 6% rewards for consensu
 
 ### Q: Does this mean as a Hotspot owner I'm losing out of those 6% rewards?
 
-A: Technically yes, but practically it is increasingly unlikely your Hotspot would have been chosen among the 16 out of the entire pool of Hotspots. With the current pool there's a 0.0009% chance and this percentage decreases as the network continues to grow. Also, with the Validators block production becomes more stable which means mining rewards are allocated on a more consistent basis.  
+A: Technically yes, but practically it is increasingly unlikely your Hotspot would have been chosen among the 16 out of the entire pool of Hotspots. With the current pool there's a 0.034% chance and this percentage decreases as the network continues to grow. Also, with the Validators block production becomes more stable which means mining rewards are allocated on a more consistent basis.  
 
 ### Q: What’s the minimum number of Validators needed? Is there a cap?
 
