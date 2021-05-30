@@ -31,7 +31,7 @@
 
 | Chip                           | Specifications          | Remarks                           |
 | ------------------------------ | ----------------------- | --------------------------------- |
-| 4/8-channel LORA module        | SX1308                  | Best to use SX1308                |
+| 4/8-channel LORA module        | SX1302                  | Best to use SX1302                |
 | ARM32 core board(Pi zero like) | 512MB+8G                | The best custom board can be used |
 | WIFI module                    | No special requirements |                                   |
 | GPS module                     | No special requirements |                                   |
@@ -53,7 +53,7 @@ First pre production quantity:
 
 | Chip                           | Specifications                                 | Remarks                           |
 | ------------------------------ | ---------------------------------------------- | --------------------------------- |
-| 4/8-channel LORA module        | SX1308                                         | Best to use SX1308                |
+| 4/8-channel LORA module        | SX1302                                         | Best to use SX1302                |
 | ARM32 core board(Pi zero like) | 512MB+16G                                      | The best custom board can be used |
 | WIFI module                    | No special requirements                        |                                   |
 | GPS module                     | No special requirements                        |                                   |
@@ -76,7 +76,7 @@ First pre production quantity:
 
 | Chip                        | Specifications          | Remarks                           |
 | --------------------------- | ----------------------- | --------------------------------- |
-| 8-channel LORA module       | SX1301/SX1302/SX1308    | Best to use SX1302                |
+| 8-channel LORA module       | SX1301/SX1302    	| Best to use SX1302                |
 | ARM64 core board            | 1GB+32G                 | The best custom board can be used |
 | WIFI module                 | No special requirements |                                   |
 | GPS module                  | No special requirements |                                   |
@@ -86,6 +86,10 @@ First pre production quantity:
 
 ![室内1](https://user-images.githubusercontent.com/83175310/117687670-97ab9480-b1ea-11eb-8c61-5f23cc4f6bf8.png)
 ![室内3](https://user-images.githubusercontent.com/83175310/117687733-a5f9b080-b1ea-11eb-8fac-4c0a441e2499.png)
+  
+newly image:  
+![miner1](https://user-images.githubusercontent.com/83175310/120105065-03e63c00-c18a-11eb-9bdd-46e68b16686d.png)  
+![miner](https://user-images.githubusercontent.com/83175310/120105070-0a74b380-c18a-11eb-9e9e-db80cd0a8741.png)
 
 Features:
 
@@ -102,7 +106,7 @@ First pre production quantity:
 
 | Chip                        | Specifications                                 | Remarks                           |
 | --------------------------- | ---------------------------------------------- | --------------------------------- |
-| 8-channel LORA module       | SX1301/SX1302/SX1308                           | Best to use SX1302                |
+| 8-channel LORA module       | SX1301/SX1302                           	| Best to use SX1302                |
 | ARM64 core board            | 1GB+32G                                        | The best custom board can be used |
 | WIFI module                 | No special requirements                        |                                   |
 | GPS module                  | No special requirements                        |                                   |
@@ -128,7 +132,7 @@ First pre production quantity:
 
 | Chip                        | Specifications                                 | Remarks                              |
 | --------------------------- | ---------------------------------------------- | ------------------------------------ |
-| 8-channel LORA module       | SX1301/SX1302/SX1308                           | Best to use SX1302                   |
+| 8-channel LORA module       | SX1301/SX1302                           	| Best to use SX1302                   |
 | ARM64 core board            | 1GB+32G                                        | The best custom board can be used    |
 | WIFI module                 | No special requirements                        |                                      |
 | GPS module                  | No special requirements                        |                                      |
@@ -153,7 +157,7 @@ Still in agreement
 
 | Chip                        | Specifications                                 | Remarks                                                |
 | --------------------------- | ---------------------------------------------- | ------------------------------------------------------ |
-| 8-channel LORA module       | SX1301/SX1302/SX1308                           | Best to use SX1302                                     |
+| 8-channel LORA module       | SX1301/SX1302                           	| Best to use SX1302                                     |
 | ARM64 core board            | 1GB+32G                                        | The best custom board can be used                      |
 | WIFI module                 | No special requirements                        |                                                        |
 | GPS module                  | No special requirements                        |                                                        |
