@@ -54,5 +54,6 @@ Please tell us about some of the challenges that would prevent these products fr
 * Facebook profile - 
 * Other social profiles - 
 * Website -
+* Contact info -
 * Payment methods available - 
 * Regions covered / shipped to - 
