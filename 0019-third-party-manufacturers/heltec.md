@@ -52,7 +52,7 @@ This is a brand new product for the Helium community. For the indoor deployment,
 | Wi-Fi                    | IEEE 802.11a/b/g/n/ac 2.4G/5G double frequency with internal antenna |
 | BlueTooth                | BT V5.0 EDR with internal antenna                            |
 | Ethernet                 | 10/100M with PoE function (need external converter)          |
-| Security                 | First choice ATECC608, if it's not enough in the market, use RJGT102WDP8 / RJGT102WDT6 instead |
+| Security                 | First choice ATECC608, if it's not enough in the market, use ATECC508, RJGT102WDP8 / RJGT102WDT6 instead |
 | LoRa Baseband Chip       | SX1308 + SX1255/7, 8 channels                                |
 | LoRa Supported Bands     | RU864, IN865, EU868, US915, AU915, KR920, AS923, CN470.      |
 | Cooling Fan <sup>1</sup> | System temperature detection and cooling fan management system. |
@@ -118,7 +118,7 @@ We will improve the above issues in this upgrade. In addition to the circuit upg
 | Wi-Fi                | IEEE 802.11a/b/g/n/ac 2.4G/5G double frequency with internal antenna |
 | BlueTooth            | BT V5.0 EDR with internal antenna                            |
 | LTE & GNSS           | SIM7600G-H with global LTE network support, and GNSS including BeiDou, Galileo, GLONASS, GPS |
-| Security             | First choice ATECC608, if it's not enough in the market, use RJGT102WDP8 / RJGT102WDT6 instead |
+| Security             | First choice ATECC608, if it's not enough in the market, use ATECC508, RJGT102WDP8 / RJGT102WDT6 instead |
 | LoRa Baseband Chip   | SX1302 + SX1250, 8 channels                                  |
 | LoRa Supported Bands | RU864, IN865, EU868, US915, AU915, KR920, AS923, CN470.      |
 | Host Size (mm)       | 125 * 125 * 52                                               |
