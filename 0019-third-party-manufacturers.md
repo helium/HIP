@@ -144,9 +144,9 @@ Sensitive information like financials or proofs of identity could be furnished t
 ## Summary of Application Process
 
 1. Submit application
-2. Hardware audit
-3. Onboarding integration
-4. FCC/CE or other application radio certification
+2. FCC/CE or other application radio certification
+3. Hardware audit
+4. Onboarding integration
 5. Community approval
 6. Pre-orders
 

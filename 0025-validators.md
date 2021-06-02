@@ -36,24 +36,36 @@ We also expect the Testnet process, wherein we will stand up a separate network 
 
 
 #### Ledger changes
-To make this happen, we would make a new ledger entry type for the Validators.  This entry would have the Validator's stake level and the owning account, and any other required metadata.  All HNT earned by the Validator will go into the owning account.
+To make this happen, we would make a new ledger entry type for the Validators.  This entry would have the Validator's stake level and the owning account, and any other required metadata.  All HNT earned by the Validator will automatically go into the owning account and is immediately liquid.
 
 #### Transactions
-We would also add 7 new transactions (the exact details of which are likely to change):
-  * `gen_stake`: validator pubkey, owner pubkey, initial stake, description: genesis-only txn creating a validator for testing.
-  * `stake_validator`: validator pubkey, owner pubkey, initial stake, description. Owner account is the funding account and description is a short public string that can be used to identify the validator., creates the validator
-  * `change_description`: validator pubkey, new description.  Changes the validator's public description string.  
-  * `add_stake`: validator pubkey, amount.  adds stake to the validator, requires the owner's signature, funds come from the owner's account.
-  * `reduce_stake`: validator pubkey, amount.  removes stake from the validator, cannot bring it below the threshold.  The removed stake will be returned to the owner's account after the cooldown period; requires the owner's signature.
-  * `transfer_stake`: new validator pubkey, old validator pubkey: moves a stake from key to key, keeping the same owner and metadata, in the case a key gets compromised.
-  * `unstake_validator`: validator pubkey: this starts the unlock process for the stake, returning it to the owner's account after some cooldown period.  the validator is immediately unable to join block production groups, but re-staking will restore the validator to eligibility.
+We will add 5 new transactions:
+  * `gen_validator_v1`: validator pubkey, owner pubkey, stake: genesis-only txn creating a validator for testing.
+  * `stake_validator_v1`: validator pubkey, owner pubkey, stake. Owner account is the funding account and description is a short public string that can be used to identify the validator., creates the validator
+  * `transfer_validator_stake_v1`: new validator pubkey, old validator pubkey, old owner pubkey, new owner pubkey, stake, payment: moves a stake from validator to validator and optionally a new owner and payment
+  * `unstake_validator_v1`: validator pubkey, owner pubkey, stake, release height: this starts the unlock process for the stake, returning it to the owner's account after some withdrawal period.  The validator is immediately unable to join block production groups
+  * `validator_heartbeat_v1`: validator pubkey, height, version: this provides the participants in the chain information about an individual validator's version and online status
   
-#### Chain Variables:
-  * Activation Threshold: minimum number of staked Validators to start using them for elections. After the Activation Threshold is met, the next election will produce a list of Validators rather than draw from the full Hotspot pool. After the Threshold is reached and the chain variable is active, we will no longer go back to selecting from the Hotspot pool.  The initial proposed value here is 100 Validators.
-  * Activation Delay: the number of blocks after which (once the above threshold has been met) the group will start moving to the Validator pool.  Unstaking to below the activation threshold during the delay period will cancel activation.
-  * Minimum Stake: the minimum number of HNT that need to be staked before the Validator can be created and considered for Block Producer elections.  The proposed initial value for the minimum stake is 10,000 HNT.
-  * Cooldown Period: The number of blocks after unstaking when the stake will be returned to the owner's account.  Proposed initial value is 250,000 blocks, approximately 5 months.
+#### Primary Chain Variables
 
+These chain variables are used to govern the qualifications of validators on the Helium blockchain:
+
+  * Validator Version (`validator_version`): This version variable will be used to control the roll out of validators. Initially this value will be `1` in order to allow staking transactions to be accepted by the blockchain in advance of activating validators. When this version is updated to `2`, validators will be selected as Block Producers and this HIP is officially launched. We propose that the transition from version `1` to version `2` be the _longer_ of 2 weeks or the period needed to have at least 100 validators staked and producing heartbeats.
+  * Stake (`validator_minimum_stake`): the amount of HNT that needs to be staked for the Validator to be considered for Block Producer elections. This value will initially be fixed at **10,000 HNT** and there will be no benefit of over or under staking.
+  * Stake Withdrawal Period (`stake_withdrawal_cooldown`): This will be the minimum number of blocks after unstaking when the stake will be returned to the owner's account. This will be set to **250,000 blocks** at the launch of staking (at `validator_version` = `1`) and a block height deadline needs to be provided by the validator owner at unstaking. An additional variable (`stake_withdrawal_max`) will also be available to prevent validator operators to set their withdrawal deadline too far in the future.
+
+#### Operational Chain Variables
+
+These variables are tuning parameters that will be used to manage validators during and after launch. They primarily manage liveness and penalties for poor performance that will be taken into account during elections:
+
+* `validator_liveness_interval`
+* `validator_liveness_grace_period`
+* `validator_penalty_probability_factor`
+* `penalty_history_limit`
+* `dkg_penalty`
+* `tenure_penalty`
+
+Details about these variables will be provided in [developer documentation](https://docs.helium.com).
 
 #### Staking in depth ...
 
@@ -126,7 +138,7 @@ A: In the current proposal Validator nodes will earn the 6% rewards for consensu
 
 ### Q: Does this mean as a Hotspot owner I'm losing out of those 6% rewards?
 
-A: Technically yes, but practically it is increasingly unlikely your Hotspot would have been chosen among the 16 out of the entire pool of Hotspots. With the current pool there's a 0.0009% chance and this percentage decreases as the network continues to grow. Also, with the Validators block production becomes more stable which means mining rewards are allocated on a more consistent basis.  
+A: Technically yes, but practically it is increasingly unlikely your Hotspot would have been chosen among the 16 out of the entire pool of Hotspots. With the current pool there's a 0.034% chance and this percentage decreases as the network continues to grow. Also, with the Validators block production becomes more stable which means mining rewards are allocated on a more consistent basis.  
 
 ### Q: What’s the minimum number of Validators needed? Is there a cap?
 
