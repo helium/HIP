@@ -88,7 +88,7 @@ once we hurdled this it has been smooth sailing.
 ## Other Information
 - **Discord Link** - https://discord.gg/FYPgC2Fy
 -- **Discord Support:** #palmcrofthelp
-- **Twitter Profile:** @PalmcroftIndus1
+- **Twitter Profile:** @Palmhotspot
 - **Website:** palmcroftindustries.com
 - **Payment Methods:** USD via Credit/Debit Card Shopify Payments
 - **Regions Covered:** Global
