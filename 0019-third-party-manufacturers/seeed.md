@@ -45,7 +45,7 @@ SenseCAP M1 LoRaWAN Indoor Gateway is our new gateway product of SenseCAP series
 | Frequency                        | EU868 / US915 / IN865 / AU915 / AS923 / KR920                    |
 | TX Power                         | 25 dBm                                                              |
 | Antenna Gain                     | 1.2 dBi                                                             |
-| SD Card                          | 32GB                                                                |
+| SD Card                          | 64GB                                                                |
 | Wireless                           | 2.4 GHz and 5.0 GHz IEEE 802.11ac wireless;  Bluetooth 5.0, BLE |
 | LAN                        | High-speed Gigabit Ethernet                                               |
 | Input Voltage                    | DC 5V / 3A                                                          |
