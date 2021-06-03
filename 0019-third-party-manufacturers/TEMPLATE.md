@@ -1,13 +1,13 @@
-# Manufacturer test
+# Manufacturer name
 ### Application to become an approved third party manufacturer as per [HIP19](https://github.com/helium/HIP/blob/master/0019-third-party-manufacturers.md)
 
 ## Summary
 
-Test:: Two sentences about who you are and what you’d like to build. Indicate if you are building a Light Hotspot, or a regular Hotspot. Bonus points to include photos and links. 
+Two sentences about who you are and what you’d like to build. Indicate if you are building a Light Hotspot, or a regular Hotspot. Bonus points to include photos and links. 
 
 ## Company Information
 
-Test:: Who are you? How long have you been in business? What kind of products have you created? How many have you sold? What brought you to Helium etc?
+Who are you? How long have you been in business? What kind of products have you created? How many have you sold? What brought you to Helium etc?
 
 ## Product Information
 
