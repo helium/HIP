@@ -15,7 +15,7 @@ Currently, validator node IPs are public and the testnet explorer show not only 
 # Motivation
 [motivation]: #motivation
 
-As validators will take over all activities regarding consensus on the Helium network, the pool of actors in charge of validating transactions and creating blocks is significantly reduced from the current situation (46K+ hotspots and growing fast) to a small pool of (expected) several hundreds of nodes, which significantly decreases the targets that need to be interfered with in order to impact consensus in one's own favor. Having these nodes be publicly visible, traceable and targetable on the Helium network therefore poses a significantly increased security risk compared to the current situation. 
+As validators will take over all activities regarding consensus on the Helium network, the pool of actors in charge of validating transactions and creating blocks is significantly reduced from the current situation (46K+ hotspots and growing fast) to a small pool of (expected) several hundreds of nodes, which significantly decreases the targets that need to be interfered with in order to impact consensus in one's own favor. Having these nodes be publicly visible, traceable and targetable on the Helium network therefore poses a significantly increased security risk compared to the current situation. If the validator nodes are compromised, so is the progress of the chain. The chain could stall, blocks containing falsified transactions could be inserted or the chain could completely (and perhaps unrecoverably) stall. 
 
 # Stakeholders
 [stakeholders]: #stakeholders
@@ -25,38 +25,51 @@ This change will not affect any current Hotspot owners or HNT holders as it is a
 # Detailed Explanation
 [detailed-explanation]: #detailed-explanation
 
+## Option 1: Sentry Nodes
+
 The risk of sharing node IP addresses is well documented, a large number of different chains (DPoS & PoS) have approached protecting the delegate/validator nodes IP address from being published.  A validator node can be attacked using the Distributed Denial of Service method. The validator node has a fixed IP address and it opens a XXXXX port facing the Internet.
 
-One recommended way to mitigate these risks is for validators to carefully structure their network topology in a so-called sentry node architecture.
+One recommended way to mitigate these risks is for validators to carefully structure their network topology in a so-called single- or dual-layer sentry node architecture.
 
-Validator nodes should only connect to full-nodes they trust because they operate them themselves or are run by other validators they know socially. A validator node will typically run in a data center. Most data centers provide direct links the networks of major cloud providers. The validator can use those links to connect to sentry nodes in the cloud. This shifts the burden of denial-of-service from the validator's node directly to its sentry nodes, and may require new sentry nodes be spun up or activated to mitigate attacks on existing ones.
+![image single-layer](0032-validator-node-security-implementation/0032-singlelayersentrynodes.jpg)
+
+![image dual-layer](0032-validator-node-security-implementation/0032-duallayersentrynodes.jpg)
+
+Validator nodes should only connect to full-nodes they trust because they operate them themselves or are run by other validators they know socially. The validator is only going to talk to the sentry nodes, while sentry nodes have the ability to talk to the validator node on the private channel and talk to public nodes elsewhere on the Internet. A validator node will typically run in a data center. Most data centers provide direct links the networks of major cloud providers. The validator can use those links to connect to sentry nodes in the cloud. This shifts the burden of denial-of-service from the validator's node directly to its sentry nodes, and may require new sentry nodes be spun up or activated to mitigate attacks on existing ones.
 
 Sentry nodes can be quickly spun up or change their IP addresses. Because the links to the sentry nodes are in private IP space, an internet based attacked cannot disturb them directly. This will ensure validator block proposals and votes always make it to the rest of the network.
+
+## Option 2: Obfuscation through TOR
+
+Using TOR circuits: all validator nodes should route their connections through a set of TOR circuits, obfuscating their IP whilst closing access to their P2P port. They should actively pull data from the network in order to stay in sync. The advantage here is that it is highly unlikely validator IP addresses are ever known to anyone besides their operator.
+
+This solution provides a powerful way of hiding the IP address from the network, enabled the validator nodes to fully focus on validation blocks and transactions.
+
+An example implementation of this for a series of decentralised proof-of-stake networks can be found here: [Core Chameleon](https://github.com/alessiodf/core-chameleon). This implemenation is actively 
 
 # Drawbacks
 [drawbacks]: #drawbacks
 
-The implementation of security improvements to the current protocol and codebase can incur a delay in the projected release of validators on mainnet, which was slated for Q2 2021. The importance of having a solid and secure implementation outweighs this aspect, in our opinion.
-
-In case of sentry nodes, operator cost may increase due to the fact of having to setup several nodes instead of just one. However, earnings should still outweigh these costs and validators should be aware that downtime due to SVs or malicious actors will mean they would earn far less rewards, or none at all.
+## Option 1: Sentry Nodes
 
 While sentry nodes can improve validator security, there are multiple trade-offs involved.
 
-The notion of sentry nodes adds complexity to both the node implementation itself as well as the overall network topology. One example concerns any component using the DHT. When publishing a validators addresses the authority discovery module on a validator node can not do so directly, but has to forward the signed addresses to one of its sentry nodes for it to publish them on the DHT.
+The implementation of security improvements to the current protocol and codebase can incur a delay in the projected release of validators on mainnet, which was slated for Q2 2021. The importance of having a solid and secure implementation outweighs this aspect, in our opinion.
+
+The notion of sentry nodes adds complexity to both the node implementation itself as well as the overall network topology, and operator cost may increase due to the fact of having to setup several nodes instead of just one. However, earnings should still outweigh these costs and validators should be aware that downtime due to SVs or malicious actors will mean they would earn far less rewards, or none at all.
+
+## Option 2: Obfuscation through TOR
+
+A possible drawback is that miners in the network can no longer reach the validator nodes to submit RF data. We are not sure if this would be an issue as the validators can still pull data from hotspots; however a remedy for this should be found in case the Helium RF implemenation would not function properly when validator node IPs are obscured.
 
 # Rationale and Alternatives
 [alternatives]: #rationale-and-alternatives
 
-Use of Sentry Nodes: 
-The validator is only going to talk to the sentry nodes, while sentry nodes have the ability to talk to the validator node on the private channel and talk to public nodes elsewhere on the Internet. However, they could be set up to talk to each other on the private network too.
+Unchanged architecture: all operators of validator nodes are required to make the TCP port of the P2P protocol of their validator nodes routable via the public internet, with the TCP port of the RPC endpoint unchanged and protected. While the P2P protocol port of a validator node needs to be publicly routable, one can still protect the endpoint on layer 4 (TCP) and downwards. Depending on your required security level you might want to put a mature TCP proxy in-front of your validator (e.g. Nginx). You can operate a stateful firewall yourself or use a hosted firewall / DOS protection service by your favorite cloud provider. You can consider reaching out to a large CDN. Follow operational best practices. Only expose a minimal amount of ports. Make sure to record logs. Setup monitoring for each machine and application involved. Configure alerting software, et cetera.
 
-TCP proxy front end: All operators of validator nodes are required to make the TCP port of the P2P protocol of their validator nodes routable via the public internet. The TCP port of the RPC endpoint should stay unchanged and protected.
+![image unchanged](0032-validator-node-security-implementation/0032-unchangedarchitecture.jpg)
 
-While the P2P protocol port of a validator node needs to be publicly routable, one can still protect the endpoint on layer 4 (TCP) and downwards. Depending on your required security level you might want to put a mature TCP proxy in-front of your validator (e.g. Nginx). You can operate a stateful firewall yourself or use a hosted firewall / DOS protection service by your favorite cloud provider. You can consider reaching out to a large CDN. ...
-
-Once supported, we recommend using remote signing, doing all relevant cryptographic operations not on the validator node itself, but on a separate node. There might be an intermediate feature version allowing cryptographic operations to happen in a different OS process on the same machine.
-
-Follow operational best practices. Only expose a minimal amount of ports. Make sure to record logs. Setup monitoring for each machine and application involved. Configure alerting software. ...
+The issue with moving on without a security implementation to protect the validator node IPs from being publicly sourceable, the alternative of leaving security in the hands of validators themselves is less desireable as the network will be at the mercy of the skill and knowledge of validator operators. One should assume this is far below the average skill of a malicious actor, and therefore is not sufficient to prevent attacks.
 
 # Unresolved Questions
 [unresolved]: #unresolved-questions
@@ -74,4 +87,4 @@ The extra hop for all traffic destined for a validator behind sentry nodes adds 
 .......
 
 # Sources
-Links to various articles..
+[1](https://build.scrt.network/validators-and-full-nodes/sentry-nodes.html), [2](https://forum.cosmos.network/t/sentry-node-architecture-overview/454), [3](https://medium.com/@kidinamoto/tech-choices-for-cosmos-validators-27c7242061ea), [4](https://docs.binance.org/smart-chain/validator/security.html), [5](https://github.com/paritytech/substrate/issues/6845)
