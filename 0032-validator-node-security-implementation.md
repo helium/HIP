@@ -45,7 +45,7 @@ Using TOR circuits: all validator nodes should route their connections through a
 
 This solution provides a powerful way of hiding the IP address from the network, enabled the validator nodes to fully focus on validation blocks and transactions.
 
-An example implementation of this for a series of decentralised proof-of-stake networks can be found here: [Core Chameleon](https://github.com/alessiodf/core-chameleon). This implemenation is actively 
+An example implementation of this for a series of decentralised proof-of-stake networks can be found here: [Core Chameleon](https://github.com/alessiodf/core-chameleon). This implemenation is currently actively deployed by many validator node operators in several decentralized proof-of-stake networks and has a proven track record of keeping validator node IPs properly hidden from the network. 
 
 # Drawbacks
 [drawbacks]: #drawbacks
