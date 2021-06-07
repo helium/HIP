@@ -65,16 +65,25 @@ A possible drawback is that miners in the network can no longer reach the valida
 # Rationale and Alternatives
 [alternatives]: #rationale-and-alternatives
 
-Unchanged architecture: all operators of validator nodes are required to make the TCP port of the P2P protocol of their validator nodes routable via the public internet, with the TCP port of the RPC endpoint unchanged and protected. While the P2P protocol port of a validator node needs to be publicly routable, one can still protect the endpoint on layer 4 (TCP) and downwards. Depending on your required security level you might want to put a mature TCP proxy in-front of your validator (e.g. Nginx). You can operate a stateful firewall yourself or use a hosted firewall / DOS protection service by your favorite cloud provider. You can consider reaching out to a large CDN. Follow operational best practices. Only expose a minimal amount of ports. Make sure to record logs. Setup monitoring for each machine and application involved. Configure alerting software, et cetera.
+## Option 1: Unchanged Architecture
+
+All operators of validator nodes are required to make the TCP port of the P2P protocol of their validator nodes routable via the public internet, with the TCP port of the RPC endpoint unchanged and protected. While the P2P protocol port of a validator node needs to be publicly routable, one can still protect the endpoint on layer 4 (TCP) and downwards. Depending on your required security level you might want to put a mature TCP proxy in-front of your validator (e.g. Nginx). You can operate a stateful firewall yourself or use a hosted firewall / DOS protection service by your favorite cloud provider. You can consider reaching out to a large CDN. Follow operational best practices. Only expose a minimal amount of ports. Make sure to record logs. Setup monitoring for each machine and application involved. Configure alerting software, et cetera.
 
 ![image unchanged](0032-validator-node-security-implementation/0032-unchangedarchitecture.jpg)
 
 The issue with moving on without a security implementation to protect the validator node IPs from being publicly sourceable, the alternative of leaving security in the hands of validators themselves is less desireable as the network will be at the mercy of the skill and knowledge of validator operators. One should assume this is far below the average skill of a malicious actor, and therefore is not sufficient to prevent attacks.
 
+## Option 2: Research Other Solutions
+
+What may be important to understand, is that we do not necessarily want the network to pick either of the suggested options - we feel the issue of private validator IPs should be addressed, ideally sooner rather than later, but there may be other solutions available. By submitting this HIP, we hope to start a discussion within the community and team about having a proper implementation to safeguard the operations of validator nodes. If there were to be a different solution available that remedies this issue, which is not listed in this HIP, we welcome its application.
+
 # Unresolved Questions
 [unresolved]: #unresolved-questions
 
-.......
+There are several questions still open, some of which have already been discussed:
+1. What is the impact of the submission of RF data to validator nodes by the obfuscation of IPs?
+2. What other alternatives would there be, to sentry nodes or obfuscation through TOR, to mitigate security risks for validators?
+3. In what way can the participation in testing of any implementation be made as high as possible? Would a grant or security bounties be needed?
 
 # Deployment Impact
 [deployment-impact]: #deployment-impact
@@ -84,7 +93,7 @@ The extra hop for all traffic destined for a validator behind sentry nodes adds 
 # Success Metrics
 [success-metrics]: #success-metrics
 
-.......
+The implementation will be considered succesful if it properly mitigates the described attack vectors on validator nodes and increases chain security in the coming months and years. A revision to keep up with industry standards may be required.
 
 # Sources
-[1](https://build.scrt.network/validators-and-full-nodes/sentry-nodes.html), [2](https://forum.cosmos.network/t/sentry-node-architecture-overview/454), [3](https://medium.com/@kidinamoto/tech-choices-for-cosmos-validators-27c7242061ea), [4](https://docs.binance.org/smart-chain/validator/security.html), [5](https://github.com/paritytech/substrate/issues/6845)
+[[1]](https://build.scrt.network/validators-and-full-nodes/sentry-nodes.html), [[2]](https://forum.cosmos.network/t/sentry-node-architecture-overview/454), [[3]](https://medium.com/@kidinamoto/tech-choices-for-cosmos-validators-27c7242061ea), [[4]](https://docs.binance.org/smart-chain/validator/security.html), [[5]](https://github.com/paritytech/substrate/issues/6845)
