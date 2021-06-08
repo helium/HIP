@@ -192,7 +192,7 @@ This is because they can all witness A-C’s transmissions earning a large chunk
 #### Example 2
 Here we look at a slightly more complex topology.  Same beaconing reward method.
 There are 3 sets of hotspots circled, assume transmissions can be heard by everyone in the set(s) the hotpot belongs to.
-So for example D and e can witness all hotspots but A can only witness C-E, not F or G.
+So for example D and E can witness all hotspots but A can only witness C-E, not F or G.
 
 | Topology  | Reward Distribution  |
 |---|---|
