@@ -5,7 +5,7 @@
 - Category: Technical
 - Original HIP PR: not filed yet
 - Tracking Issue: not filed yet
-- Status: to be filed
+- Status: draft
 
 # Summary
 [summary]: #summary
@@ -37,7 +37,7 @@ One recommended way to mitigate these risks is for validators to carefully struc
 
 Validator nodes should only connect to full-nodes they trust because they operate them themselves or are run by other validators they know socially. The validator is only going to talk to the sentry nodes, while sentry nodes have the ability to talk to the validator node on the private channel and talk to public nodes elsewhere on the Internet. A validator node will typically run in a data center. Most data centers provide direct links the networks of major cloud providers. The validator can use those links to connect to sentry nodes in the cloud. This shifts the burden of denial-of-service from the validator's node directly to its sentry nodes, and may require new sentry nodes be spun up or activated to mitigate attacks on existing ones.
 
-Sentry nodes can be quickly spun up or change their IP addresses. Because the links to the sentry nodes are in private IP space, an internet based attacked cannot disturb them directly. This will ensure validator block proposals and votes always make it to the rest of the network.
+Sentry nodes can be quickly spun up or change their IP addresses as they do not require to have the full blockchain in sync; rather, they operate solely as a public node for the private validator, making them easily replaceable. Because the links to the sentry nodes are in private IP space, an internet based attacked cannot disturb them directly. This will ensure validator block proposals and votes always make it to the rest of the network.
 
 ## Option 2: Obfuscation through TOR
 
