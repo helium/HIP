@@ -17,10 +17,6 @@ Founded in 2017, Fox IoT is a company focused on IoT solutions, primarily using 
 
 We've been working with LoRa products for a few years and actively participate in the LoRa local community as part of The Things Network and various industry-related events. 
 
-**Some useful company info**
-* Address: Av. Roraima, 1000. ED02-Sala 23 - Camobi. CEP: 97105-900. Santa Maria, RS - Brazil;
-* Contact: contato@foxiot.com.br
-
 ## Product Information
 
 **Helium Indoor Hotspot Miner**
@@ -44,7 +40,7 @@ The Miner has the following features:
 * Wi-Fi (2.4 and 5 GHz), Bluetooth & Ethernet Connectivity;
 * Uses a Scobi’s AN915-ART-RPSMAM-JS 3dBi High Performance Antenna for LoRa communication;
 
-**Helium Indoor Hotspot Miner**
+**Helium Outdoor Hotspot Miner**
 
 It has the same specifications from the Indoor Miner, but with an IP67 case and a fiberglass antenna with 5dbi gain. The product will be launched after the indoor version, as mentioned before.
 
@@ -79,9 +75,9 @@ We can send a device for an audit to test the hardware security.
 
 ## Manufacturing Information
 
-All technical and engineering development goes through the company, as well as all supplier evaluation processes, in order to maintain the same level of quality in all products placed on the market. Our production process will take place with partner companies in Brazil specialized in electronics assembly, which have high production capacity and technical excellence.
+The company manages all technical and engineering development, as well as all supplier evaluation processes, to maintain the same level of quality in all products placed on the market. Our production process will take place with partner companies in Brazil, specialized in electronics assembly, presenting high production capacity and technical excellence. 
 
-This partner will be responsible for the assembly and testing of the devices, and the entire process will undergo thorough evaluation processes before the products go to market.
+This partner will be responsible for assembling and testing the devices, and the entire process will undergo thorough evaluation processes before the products go to market.
 
 ## Proof of Identity
 
@@ -89,11 +85,15 @@ The proof of identity will be sent in private.
 
 ## Budget & Capital
 
-We plan to proceed with a first batch of 1000 to 2000 units, but we can ramp up if pre-order demand requires it. We have investment partners that we can leverage if necessary, but we currently have the capacity to produce up to 5000 units without external resources.
+We plan to proceed with a first batch of 2000 to 5000 units, but we can ramp up if pre-order demand requires it. We have investment partners that we can leverage if necessary, but we currently have the capacity to produce up to 5000 units without external resources.
 
 ## Risks & Challenges
 
+We have seen a growing interest in cryptocurrency mining alternatives in the region over the past six months. Hundreds of influencers, with thousands of followers, investing large sums in GPUs for an average return of 12 months. Due to high taxes on imported goods, we believe it's quite strategic to have a local hotspots manufacturer in Latam. Brazil also has a local trade agreement: Mercosul, formed by Brazil, Argentina, Uruguay, Paraguay, and other countries, which is very important for distribution and to mitigate the cost of gateways purchased from other countries, reducing the friction for the adoption of the Helium network in the region. 
 
+The product design and all technical parts of the project are nearly done. The main risks and challenges are the supply of Semtech’s SX1301 concentrator and assembly of the associated electronics. Fortunately, Fox IoT works with a local manufacturer which has a great throughput capability and knows and trusts they can deliver on schedule. 
+
+We will place the first production order immediately when we get manufacturer approval.
 
 ## Other information
 
