@@ -47,7 +47,7 @@ This is a brand new product for the Helium community. For the indoor deployment,
 | Resource                 | Description                                                  |
 | ------------------------ | ------------------------------------------------------------ |
 | CPU                      | Quad core Cortex-A53 64-bit CPU 1.5GHz                       |
-| RAM                      | 1G DDR4                                                      |
+| RAM                      | 2G DDR4                                                      |
 | ROM                      | 32G eMMC 5.1                                                 |
 | Wi-Fi                    | IEEE 802.11a/b/g/n/ac 2.4G/5G double frequency with internal antenna |
 | BlueTooth                | BT V5.0 EDR with internal antenna                            |
@@ -113,7 +113,7 @@ We will improve the above issues in this upgrade. In addition to the circuit upg
 | Resource             | Description                                                  |
 | -------------------- | ------------------------------------------------------------ |
 | CPU                  | Quad core Cortex-A53 64-bit CPU 1.5GHz                       |
-| RAM                  | 1G DDR4                                                      |
+| RAM                  | 2G DDR4                                                      |
 | ROM                  | 32G eMMC 5.1                                                 |
 | Wi-Fi                | IEEE 802.11a/b/g/n/ac 2.4G/5G double frequency with internal antenna |
 | BlueTooth            | BT V5.0 EDR with internal antenna                            |
