@@ -75,9 +75,7 @@ We can send a device for an audit to test the hardware security.
 
 ## Manufacturing Information
 
-The company manages all technical and engineering development, as well as all supplier evaluation processes, to maintain the same level of quality in all products placed on the market. Our production process will take place with partner companies in Brazil, specialized in electronics assembly, presenting high production capacity and technical excellence. 
-
-This partner will be responsible for assembling and testing the devices, and the entire process will undergo thorough evaluation processes before the products go to market.
+The company manages all technical and engineering development, as well as all supplier evaluation processes, to maintain the same level of quality in all products placed on the market. Our production process will take place with partner companies in Brazil, specialized in electronics assembly, presenting high production capacity and technical excellence. This partner will be responsible for assembling and testing the devices, and the entire process will undergo thorough evaluation processes before the products go to market.
 
 ## Proof of Identity
 
@@ -89,15 +87,16 @@ We plan to proceed with a first batch of 2000 to 5000 units, but we can ramp up 
 
 ## Risks & Challenges
 
-We have seen a growing interest in cryptocurrency mining alternatives in the region over the past six months. Hundreds of influencers, with thousands of followers, investing large sums in GPUs for an average return of 12 months. Due to high taxes on imported goods, we believe it's quite strategic to have a local hotspots manufacturer in Latam. Brazil also has a local trade agreement: Mercosul, formed by Brazil, Argentina, Uruguay, Paraguay, and other countries, which is very important for distribution and to mitigate the cost of gateways purchased from other countries, reducing the friction for the adoption of the Helium network in the region. 
+We have seen a growing interest in cryptocurrency mining alternatives in the region over the past six months. Hundreds of influencers, with thousands of followers, investing large sums in GPUs for an average return of 12 months. Due to high taxes on imported goods, we believe it's quite strategic to have a local hotspots manufacturer in Latam. Brazil also has a local trade agreement: Mercosul, formed by Brazil, Argentina, Uruguay, Paraguay, and other countries, which is very important for distribution and to mitigate the cost of gateways purchased from other countries, reducing the friction for the adoption of the Helium network in the region.  
 
-The product design and all technical parts of the project are nearly done. The main risks and challenges are the supply of Semtech’s SX1301 concentrator and assembly of the associated electronics. Fortunately, Fox IoT works with a local manufacturer which has a great throughput capability and knows and trusts they can deliver on schedule. 
+The product design and all technical parts of the project are nearly done. The main risks and challenges are the supply of Semtech’s SX1301 concentrator and assembly of the associated electronics. Fortunately, Fox IoT works with a local manufacturer which has a great throughput capability and knows and trusts they can deliver on schedule.
 
 We will place the first production order immediately when we get manufacturer approval.
 
 ## Other information
 
 * Desired Discord support channel name - #BrDot
+* We also have our own Discord Channel at - https://discord.gg/pv3y5HVWTW
 * Social profiles:
    * Facebook - https://www.facebook.com/FoxIoT
    * Instagram - https://www.instagram.com/foxiot/
@@ -106,5 +105,6 @@ We will place the first production order immediately when we get manufacturer ap
 * Contact info:
    * Address: Av. Roraima, 1000. ED02-Sala 23 - Camobi. CEP: 97105-900. Santa Maria, RS - Brazil.
    * Email: contato@foxiot.com.br
-* Payment methods available - credit/debit card, PayPal, bitcoin, various other crypto payments, Amazon pay, Apple pay, Google pay, bank transfer for large payments
+   * Email: junco@brdot.co
+* Payment methods available - credit/debit card, PIX, PayPal, USDT and bank transfer for large payments
 * Regions covered / shipped to - Brazil primarily
