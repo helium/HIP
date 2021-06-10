@@ -50,13 +50,11 @@ An example implementation of this for a series of decentralised proof-of-stake n
 # Drawbacks
 [drawbacks]: #drawbacks
 
-## Option 1: Sentry Nodes
-
-While sentry nodes can improve validator security, there are multiple trade-offs involved.
-
 The implementation of security improvements to the current protocol and codebase can incur a delay in the projected release of validators on mainnet, which was slated for Q2 2021. The importance of having a solid and secure implementation outweighs this aspect, in our opinion.
 
-The notion of sentry nodes adds complexity to both the node implementation itself as well as the overall network topology, and operator cost may increase due to the fact of having to setup several nodes instead of just one. However, earnings should still outweigh these costs and validators should be aware that downtime due to SVs or malicious actors will mean they would earn far less rewards, or none at all.
+## Option 1: Sentry Nodes
+
+While sentry nodes can improve validator security, there are multiple trade-offs involved. The notion of sentry nodes adds complexity to both the node implementation itself as well as the overall network topology, and operator cost may increase due to the fact of having to setup several nodes instead of just one. However, earnings should still outweigh these costs and validators should be aware that downtime due to SVs or malicious actors will mean they would earn far less rewards, or none at all.
 
 ## Option 2: Obfuscation through TOR
 
@@ -96,4 +94,4 @@ The extra hop for all traffic destined for a validator behind sentry nodes adds 
 The implementation will be considered succesful if it properly mitigates the described attack vectors on validator nodes and increases chain security in the coming months and years. A revision to keep up with industry standards may be required.
 
 # Sources
-[[1]](https://build.scrt.network/validators-and-full-nodes/sentry-nodes.html), [[2]](https://forum.cosmos.network/t/sentry-node-architecture-overview/454), [[3]](https://medium.com/@kidinamoto/tech-choices-for-cosmos-validators-27c7242061ea), [[4]](https://docs.binance.org/smart-chain/validator/security.html), [[5]](https://github.com/paritytech/substrate/issues/6845)
+[[1]](https://build.scrt.network/validators-and-full-nodes/sentry-nodes.html), [[2]](https://forum.cosmos.network/t/sentry-node-architecture-overview/454), [[3]](https://medium.com/@kidinamoto/tech-choices-for-cosmos-validators-27c7242061ea), [[4]](https://docs.binance.org/smart-chain/validator/security.html), [[5]](https://github.com/paritytech/substrate/issues/6845).
