@@ -20,7 +20,9 @@ As validators will take over all activities regarding consensus on the Helium ne
 # Stakeholders
 [stakeholders]: #stakeholders
 
-This change will not affect any current Hotspot owners or HNT holders as it is aimed at the validator node CG implementation. For testnet validator operators, a series of private and/or public tests should be considered. If it is needed to increase activity or participation, it may be possible to consider bounties for finding security vulnerabilities in the implementation.
+This change will not affect any current Hotspot owners or HNT holders as it is aimed to be implemented together with the release of the validator node CG implementation on mainnet. 
+
+For testnet validator operators, a series of private and/or public tests should be considered. If it is needed to increase activity or participation, it may be possible to consider bounties for finding security vulnerabilities in the implementation as this may help to attract security auditors or community developers to the private and/or public tests.
 
 # Detailed Explanation
 [detailed-explanation]: #detailed-explanation
