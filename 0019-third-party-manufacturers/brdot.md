@@ -101,7 +101,7 @@ We will place the first production order immediately when we get manufacturer ap
    * Facebook - https://www.facebook.com/FoxIoT
    * Instagram - https://www.instagram.com/foxiot/
    * LinkedIn - https://www.linkedin.com/company/foxiot/
-* Website - https://www.foxiot.info
+* Website - http://brdot.com.br/
 * Contact info:
    * Address: Av. Roraima, 1000. ED02-Sala 23 - Camobi. CEP: 97105-900. Santa Maria, RS - Brazil.
    * Email: contato@foxiot.com.br
