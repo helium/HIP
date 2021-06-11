@@ -9,7 +9,7 @@
 
 ## Company Information
 
-  **AirBit Technology** is an IoT technology company in Shenzhen, China. We also have apply an US EIN number, so we have US address & phone on our website. It focuses on the development of Internet of Things technology and also has certain research on blockchain technology. We are currently trying to combine IoT technology with blockchain to introduce fresh blood to the Helium community.
+  **AirBit Technology** is an IoT technology company in Shenzhen, China. We also have apply an US EIN, so we also have US address & phone on our website. It focuses on the development of Internet of Things technology and also has certain research on blockchain technology. We are currently trying to combine IoT technology with blockchain to introduce fresh blood to the Helium community.
 
 ## Manufacturer Information
 
