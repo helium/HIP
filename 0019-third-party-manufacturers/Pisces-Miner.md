@@ -87,9 +87,10 @@ First pre production quantity:
 ![室内1](https://user-images.githubusercontent.com/83175310/117687670-97ab9480-b1ea-11eb-8c61-5f23cc4f6bf8.png)
 ![室内3](https://user-images.githubusercontent.com/83175310/117687733-a5f9b080-b1ea-11eb-8fac-4c0a441e2499.png)
   
-newly image:  
-![miner1](https://user-images.githubusercontent.com/83175310/120105065-03e63c00-c18a-11eb-9bdd-46e68b16686d.png)  
-![miner](https://user-images.githubusercontent.com/83175310/120105070-0a74b380-c18a-11eb-9e9e-db80cd0a8741.png)
+**newly image:**  
+![indoor-图片2](https://user-images.githubusercontent.com/83175310/121832927-ccd16800-ccfd-11eb-9ed0-53252a70d1bc.png)
+![indoor-图片3](https://user-images.githubusercontent.com/83175310/121832932-cf33c200-ccfd-11eb-9ce9-a65ea067499c.png)
+![indoor-图片1](https://user-images.githubusercontent.com/83175310/121832935-d1961c00-ccfd-11eb-9798-6a84be153112.png)
 
 Features:
 
@@ -101,6 +102,10 @@ Expected price:
 
 First pre production quantity:  
 3000
+  
+**Download product brochure:  **
+[piscesMiner-indoor.pdf](https://github.com/piscesminer/HIP/files/6645310/piscesMiner-indoor.pdf)
+
 
 **Standard outdoor version**
 
@@ -116,7 +121,12 @@ First pre production quantity:
 ![基站1](https://user-images.githubusercontent.com/83175310/117687832-c3c71580-b1ea-11eb-9722-76afd968abdb.png)
 ![基站4](https://user-images.githubusercontent.com/83175310/117687863-cd507d80-b1ea-11eb-9455-0a9a6fd1c085.png)
 ![基站5](https://user-images.githubusercontent.com/83175310/117687855-ca558d00-b1ea-11eb-9b66-a86d4d720e9e.png)
-
+**newly image:  **
+![图片1](https://user-images.githubusercontent.com/83175310/121833032-099d5f00-ccfe-11eb-9c94-f51aaa40d26e.png)
+![图片2](https://user-images.githubusercontent.com/83175310/121833037-0ace8c00-ccfe-11eb-9ecf-5a8fd43361b9.png)
+![图片3](https://user-images.githubusercontent.com/83175310/121833041-0bffb900-ccfe-11eb-8e45-abc39a528ec3.png)
+  
+  
 Features:
 
 - Waterproof and rainproof
@@ -127,7 +137,11 @@ Expected price:
 349$-399$
 First pre production quantity:  
 2000
-
+  
+**Download product brochure:  **
+[piscesMiner-outdoor.pdf](https://github.com/piscesminer/HIP/files/6645313/piscesMiner-outdoor.pdf)
+  
+  
 **Generalizate user indoor version**
 
 | Chip                        | Specifications                                 | Remarks                              |
