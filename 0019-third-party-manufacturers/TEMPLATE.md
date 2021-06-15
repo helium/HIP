@@ -18,6 +18,10 @@ Your time to shine! What are you building? What’s so great about it? Do you ha
 * Your plan for software setup and configuration for the devices. This would presumably include remote updates and the ability for hosts to change wifi settings, via Helium's official app or otherwise.
 * What is your expected production and delivery timeline?
 
+## Previous shipments
+
+Startups welcome! Which countries have you previously shipped regulatory FCC or CE approved products? Which countries do you plan to ship to? 
+
 ## Customer Support
 
 How are you planning to handle customer support for your products? For how long? How are you planning to handle repairs and replacements?
@@ -30,6 +34,15 @@ The community is concerned about devices that can be easily hacked, specifically
 * Encrypted storage of the miner swarm_key, either via disk encryption or hardware measures like an ECC chip
 * Encrypted buses, potting and other anti-tampering measures.
 * Willingness to submit a prototype for audit, and sharing those audit results publicly (pass or fail)
+
+## Hardware Information
+
+Please let us know:
+* Which security (swarm) chip are you using?
+* Which LoRa chipset are you planning to use in your gateway (ie SX1302/03 & SX1250s or SX1301/08 & SX1255/57)
+* We recommend you don't use the SX1301 in new designs
+* Where are you sourcing your components?
+* How many radio modules/ concentrators can you procure?
 
 ## Manufacturing Information
 
