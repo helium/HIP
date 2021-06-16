@@ -52,7 +52,7 @@ Full-featured LoRaWAN gateway based on modular concepts.
 
 # Software solution 
 
-* Our software is 64 bit RaspiOS for RPi CM3+. 
+* Our software is 64 bit RaspiOS for RPi CM3+
 * We provide a web dashboard (GUI) for configuration and administration, including also firmware updates.
 * More advanced OTA is planned for future upgrades.
 * QR code onboarding via local web dashboard
