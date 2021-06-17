@@ -45,6 +45,7 @@ Features:
 
 Expected price:
 99$-149$  
+(The global chip supply is tight, and the actual price is determined by the production situation)  
 First pre production quantity:  
 10000
 
@@ -68,7 +69,8 @@ Features:
 - Cheap
 
 Expected price:
-149$-199$
+149$-199$  
+(The global chip supply is tight, and the actual price is determined by the production situation)  
 First pre production quantity:  
 5000
 
@@ -98,8 +100,8 @@ Features:
 - Stable
 
 Expected price:
-249$-299$
-
+449$-699$  
+(The global chip supply is tight, and the actual price is determined by the production situation)  
 First pre production quantity:  
 3000
   
@@ -134,7 +136,8 @@ Features:
 - Anti-static
 
 Expected price:
-349$-399$
+549$-799$  
+(The global chip supply is tight, and the actual price is determined by the production situation)  
 First pre production quantity:  
 2000
   
@@ -193,8 +196,9 @@ Features:
 
 
 Expected price:
-349$-399$ are base price  
+549$-799$  
 Batteries, solar systems, and wind power generation systems each cost 50$  
+(The global chip supply is tight, and the actual price is determined by the production situation)  
 First pre production quantity:  
 Still in agreement
 
