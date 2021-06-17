@@ -66,7 +66,7 @@ Full-featured LoRaWAN gateway based on modular concepts.
 * Device will provide a better temperature range than typical RPi based hotspots which operate from 0 degrees Celsius.
 * Good hardware security will be provided by using the encrypted filesystem, EMMC storage, and ECC608A chip on board.
 * LoRaWAN antenna options will be 6dBi and 3dBi fiberglass antennas for pole mounting, providing better performance than typical hotspot antennas.
-* We target regional (EU and South-East Europe) customers. In this area, our shipping options are already solved or no customs are a good advantage.
+* We target regional (EU and South-East Europe) customers. In this area, our shipping options are already solved and no customs are a good advantage.
 * CE/RED certification is already in progress for the standard XGW1 gateway.
 * Images of current gateway hardware are provided. Images of new redesigned hardware targeted for Helium hotspot miner shall be provided soon. Hardware documentation will be shared on request.
 * New hardware for Helium hotspot miner will be running in X-LOGIC by 07/2021. 
