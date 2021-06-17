@@ -10,7 +10,7 @@
 
 ___
 [summary]: #summary
-This porposal suggests the addition of a regional reward scaling chain variables to deal with different regional output regulation for the LoRa protocol in order to create an equal deployment incentive over the world.
+This proposal suggests the addition of a regional reward scaling chain variables to deal with different regional output regulation for the LoRa protocol in order to create an equal deployment incentive over the world.
 
 ## Motivation
 
