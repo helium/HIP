@@ -131,7 +131,7 @@ To determine the reward scaling for a given hotspot, iterate through lower and l
 
 ![hotspot scale formula](./0017-hex-density-based-transmit-reward-scaling/hotspot_scale.PNG)
 
-Important note, DexDensity_Unclipped is the unclipped sum of clipped child hexs meaning you clip the children, sum them and set the unclipped hex density.  An example of this operation for a specific hotspot is below:
+Important note, HexDensity_Unclipped is the unclipped sum of clipped child hexs meaning you clip the children, sum them and set the unclipped hex density.  An example of this operation for a specific hotspot is below:
 
     8828361563fffff h3res:8 has density clipped/unclipped of   4/ 61, scale reduced: 1.000 to 0.066
     872836156ffffff h3res:7 has density clipped/unclipped of  27/ 27, scale reduced: 0.066 to 0.066
@@ -192,7 +192,7 @@ This is because they can all witness A-C’s transmissions earning a large chunk
 #### Example 2
 Here we look at a slightly more complex topology.  Same beaconing reward method.
 There are 3 sets of hotspots circled, assume transmissions can be heard by everyone in the set(s) the hotpot belongs to.
-So for example D and e can witness all hotspots but A can only witness C-E, not F or G.
+So for example D and E can witness all hotspots but A can only witness C-E, not F or G.
 
 | Topology  | Reward Distribution  |
 |---|---|

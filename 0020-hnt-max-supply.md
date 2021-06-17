@@ -105,7 +105,7 @@ These Net Emissions do not add to the amount of HNT outstanding and therefore do
 
 There is a downside to uncapped Net Emissions. Uncapped Net Emissions do not allow for the net burning of HNT, and therefore eliminate deflationary pressure. The Helium protocol uses Burn-and-Mint Economics (BME), which depends on deflationary pressure to support HNT value. Without deflation, BME ceases to function as an effective token economic system.
 
-To allow BME and Net Emissions to work in harmony, the proposal introduces a cap to Net Emissions of 34.24 HNT per epoch (1% of current issuance). This is implemented by capping out how much the Net Emissions Pool can be increased per epoch. This means that if greater than 34.24 HNT are burned in a given epoch, the BME system can kick in again to deflate HNT supply and increase its price back to equilibrium.
+To allow BME and Net Emissions to work in harmony, the proposal introduces a cap to Net Emissions of 34.24 HNT per epoch (1% of current issuance). This is implemented by capping out how much the Net Emissions Pool can be increased per epoch. This means that if greater than 34.24 HNT are burned in a given epoch, the BME system can kick in again to deflate HNT supply and increase its price back to equilibrium. This rate will be set via a chain variable expressing the limit in bones and will not be affected by halving events.  If the rate is found too be too high or too low, it can be adjusted later via standard governance mechanisms.
 
 Under this HIP, the cap on Net Emissions would be made a chain var which can be adjusted via subsequent HIPs as the Helium community gets more data about market conditions in the future.
 
