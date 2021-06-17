@@ -90,15 +90,29 @@ Milesight IoT provides worldwide support and replacements through our distributi
 
 ## Hardware Security
 
-Milesight IoT gateways have an embedded hardware security built in the CPU, which is NXP Cryptographic Acceleration and Assurance Module (CAAM)，CAAM is built-in hardware module that implements secure RAM and a dedicated AES cryptographic engine for encryption/decryption operations，A device specific random 256-bit OTPMK key is fused in each SoC at manufacturing time, this key is unreadable and can only be used by the CAAM for AES encryption/decryption of user data, through the Secure Non-Volatile Storage (SNVS) companion block. The behavior is very similar to an ECC chip. 
+Milesight IoT gateways have an embedded hardware security built in the CPU, which is NXP Cryptographic Acceleration and Assurance Module (CAAM)，CAAM is built-in hardware module that implements secure RAM and a dedicated AES cryptographic engine for encryption/decryption operations，A device specific random 256-bit OTPMK key is fused in each SoC at manufacturing time, this key is unreadable and can only be used by the CAAM for AES encryption/decryption of user data, through the Secure Non-Volatile Storage (SNVS) companion block. 
 
-In addition, Milesight IoT gateways supports RPMB partition to store the secrets and process security functions using private keys, the key is ciphered there and it's not reachable from the Linux Kernel or userland, and this key cannot be recovered as well
+In addition, Milesight IoT gateways supports RPMB partition within e-MMC to store the secrets keys (swarm_key) , the key is ciphered by HMAC SHA-256 and protected by write Counter, it's not reachable from the Linux Kernel or userland, the key cannot be recovered as well. The behavior is very similar to an ECC chip. RPMB partition is also used to store the finger print and critical modem data of smart phones widely.
 
 When try to upgrade the firmware, the bootloader will verify the signature and the burned key before load it or refuse it. The bootloader itself cannot be modified (locked).
 
 Milesight IoT can provide more information upon demand and is willing to comply to any third party audit.
 
 
+
+## Hardware Information
+
+**Processor/CPU**: NXP's  i.MX 8M nano (ARM-Cortex-4*A53, 1.5Ghz)
+
+**RAM**: 512MB, DDR4
+
+**Flash**: 8GB eMMC
+
+**LoRa Chipset**: SX1302+SX1250+SX1262(for LBT), One gateway produces one concentrator only. 
+
+**Security Chip**: RPMB (Replay Protected Memory Block) Partition within e-MMC, which is encrypted by HMAC SHA-256 and protected by Write Counter.
+
+  
 
 ## Manufacturing Information
 
