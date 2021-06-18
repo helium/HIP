@@ -3,9 +3,9 @@
 - Author(s): [@BFX](http://github.com/Bx64/), [@cryptomaniac](https://github.com/cryptomaniac79/)
 - Start Date: 2021-06-01
 - Category: Technical
-- Original HIP PR: not filed yet
+- Original HIP PR: [211](https://github.com/helium/HIP/pull/211)
 - Tracking Issue: not filed yet
-- Status: draft
+- Status: ready for discussion
 
 # Summary
 [summary]: #summary
