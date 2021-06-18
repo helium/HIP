@@ -16,7 +16,7 @@ We are building Hotspot Miner and Light Hotspots with the following specificatio
 
 Rasberry Pi 4 
 
-RAK 831 Concentrator with frequency IN865/RU864/AU915/KR920/EU443/CN470
+RAK 831 Concentrator with frequency IN865/RU864/AU915/KR920/EU443/CN470 or iC880A-SPI LoRa Concentrator will be based on the availability
 
 Compact Size
 
