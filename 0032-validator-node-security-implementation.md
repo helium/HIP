@@ -58,7 +58,7 @@ The implementation of security improvements to the current protocol and codebase
 
 ## Option 1: Sentry Nodes
 
-While sentry nodes can improve validator security, there are multiple trade-offs involved. The notion of sentry nodes adds complexity to both the node implementation itself as well as the overall network topology, and operator cost may increase due to the fact of having to setup several nodes instead of just one. However, earnings should still outweigh these costs and validators should be aware that downtime due to SVs or malicious actors will mean they would earn far less rewards, or none at all.
+While sentry nodes can improve validator security, there are multiple trade-offs involved. The notion of sentry nodes adds complexity to both the node implementation itself as well as the overall network topology, and operator cost may increase due to the fact of having to setup several nodes instead of just one. However, the improved security and the validators' earnings should still outweigh these costs as validators should be aware that downtime due to SVs or malicious actors will mean they would earn far less rewards, or none at all.
 
 ## Option 2: Obfuscation through TOR
 
