@@ -15,7 +15,7 @@ Currently, validator node IPs are public and the testnet explorer show not only 
 # Motivation
 [motivation]: #motivation
 
-As validators will take over all activities regarding consensus on the Helium network, the pool of actors in charge of validating transactions and creating blocks is significantly reduced from the current situation (46K+ hotspots and growing fast) to a small pool of (expected) several hundreds of nodes, which significantly decreases the targets that need to be interfered with in order to impact consensus in one's own favor. Having these nodes be publicly visible, traceable and targetable on the Helium network therefore poses a significantly increased security risk compared to the current situation. If the validator nodes are compromised, so is the progress of the chain. The chain could stall, blocks containing falsified transactions could be inserted or the chain could completely (and perhaps unrecoverably) stall. 
+As validators will take over all activities regarding consensus on the Helium network, the pool of actors in charge of validating transactions and creating blocks is significantly reduced from the current situation (46K+ hotspots and growing fast) to a small pool of (expected) several hundreds of nodes, which significantly decreases the targets that need to be interfered with in order to impact consensus in one's own favor. Having these nodes be publicly visible, traceable and targetable on the Helium network therefore poses a significantly increased security risk compared to the current situation. If the validator nodes are compromised, so is the progress of the chain meaning the chain could completely (and perhaps unrecoverably) stall. 
 
 # Stakeholders
 [stakeholders]: #stakeholders
