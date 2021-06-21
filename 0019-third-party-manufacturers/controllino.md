@@ -5,7 +5,7 @@
 
 ![alt text](https://www.controllino.com/wp-content/uploads/2021/06/HIP19_Logo.png "Controllino Logo")
 
-Controllino is an industry-leading manufacturer of industrial control and automation systems based on open hardware. Our customers range from small startups and hobbyists, to large enterprises like Google, Boeing, Volkswagen, The Boring Company and many more.
+Controllino is an industry-leading manufacturer of industrial control and automation systems based on open hardware. Our customers range from small startups and hobbyists, to large enterprises like **Google, Boeing, Volkswagen, The Boring Company** and many more.
 
 ## Company Information
 
