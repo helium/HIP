@@ -82,7 +82,7 @@ Furthermore, physical anti tampering measures as known from other industry hardw
 
 ## Manufacturing Information
 
-Have you built and delivered hardware projects before? If yes, how did it go, and how many did you make? If not, from whom will you get help? This is the single largest risk with most hardware ventures. If possible please provide information about your manufacturing partners and supply chain.
+We have produced over 100.000 devices and shipped them to 140+ countries worldwide since our founding year. We are very experienced in producing and delivering industry-ready hardware, from gathering supplies to shipping. Manufacturing happens directly in-house at our production facility in Austria, as well as in a partnered production facility in Taiwan. Each and every device goes through a strict QA process before it gets shipped out, as our hardware is mostly used in critical industrial environments.
 
 ## Proof of Identity
 
