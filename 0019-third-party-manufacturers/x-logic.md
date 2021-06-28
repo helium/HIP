@@ -31,7 +31,7 @@ Full-featured LoRaWAN gateway based on modular concepts.
 # Gateway (indoor/outdoor) specification:
 * RPi CM 3+, Quad-core ARM Cortex-A53 @ 1.2 GHz, 16 or 32GB eMMC storage
 * Future version with RPi CM 4 already planned
-* Semtech SX1301 concetrator or SX1302* concetrator *(when available in volume)
+* Semtech SX1301 concentrator or SX1302* concentrator *(when available in volume)
 * Ethernet 10/100 with surge protection
 * GPS and LTE options
 * ECC608A encryption chip
