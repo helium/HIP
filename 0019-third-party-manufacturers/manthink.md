@@ -23,7 +23,7 @@ We provide two stable and compact gateway prototypes.
 * Concentrator based on the Semtech SX1302
 * Cortex-A53 CPU with 8G eMMC Flash and 1G DDR3 RAM in Miner
 * Cortex-A53 CPU with 4G eMMC Flash and 512M DDR3 RAM in Light Gateway
-* RJGT102WDP8 encryption chip for storage of swarm keys and other important informations
+* ECC608 encryption chip for storage of swarm keys and other important informations
 * Wi-Fi: BCM4339 IEEE802.11a/b/g/n/ac double frequency, Ethernet Connectivity
 * Bluetooth: BT V4.1 EDR
 * Frequency band: 470MHz/868MHz/915MHz/923MHz and other
@@ -54,7 +54,7 @@ To be submitted privately to DeWi.
 
 ## Budget & Capital
 
-We have efficient cash flow to provide devices as many as possible,at least 10000 uints per month in the case of efficient electronic components supply.
+We intend to produce 20,000 units as our 1st batch.And we have efficient cash flow to provide devices as many as possible,at least 10000 uints per month in the case of efficient electronic components supply.
 
 ## Risks & Challenges
 
@@ -65,5 +65,5 @@ Sourcing components continues to be challenging in the current market – severa
 * Desired Discord support channel name - #ManThink
 * Twitter profile -  https://twitter.com/ManThinkTech 
 * Website - http://www.manthink.cn
-* Payment methods available – Most credit cards including Visa, Mastercard, AMEX, Apple Pay, JCB, AliPay, UnionPay, Wechat Pay 
-* Regions covered / shipped to – Worldwide
+* Payment methods available – Most credit cards including Visa, Mastercard, AliPay, UnionPay, Wechat Pay 
+* Regions covered / shipped to – Asia or EU.
