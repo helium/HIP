@@ -15,23 +15,23 @@ Currently, validator node IPs are public and the testnet explorer show not only 
 # Motivation
 [motivation]: #motivation
 
-As validators will take over all activities regarding consensus on the Helium network, the pool of actors in charge of validating transactions and creating blocks is significantly reduced from the current situation (46K+ hotspots and growing fast) to a small pool of (expected) several hundreds of nodes, which significantly decreases the targets that need to be interfered with in order to impact consensus in one's own favor. Having these nodes be publicly visible, traceable and targetable on the Helium network therefore poses a significantly increased security risk compared to the current situation. If the validator nodes are compromised, so is the progress of the chain meaning the chain could completely (and perhaps unrecoverably) stall. 
+As validators will take over all activities regarding consensus on the Helium network, the pool of actors in charge of validating transactions and creating blocks is significantly reduced from the current situation (72K+ hotspots and growing fast) to a small pool of (expected) several hundreds of nodes, which significantly decreases the targets that need to be interfered with in order to impact consensus in one's own favor. Having these nodes be publicly visible, traceable and targetable on the Helium network therefore poses a significantly increased security risk compared to the current situation. If the validator nodes are compromised, so is the progress of the chain meaning the chain could completely (and perhaps unrecoverably) stall. 
 
 # Stakeholders
 [stakeholders]: #stakeholders
 
 This change will not affect any current Hotspot owners or HNT holders as it is aimed to be implemented together with the release of the validator node CG implementation on mainnet. 
 
-For testnet validator operators, a series of private and/or public tests should be considered. If it is needed to increase activity or participation, it may be possible to consider bounties for finding security vulnerabilities in the implementation as this may help to attract security auditors or community developers to the private and/or public tests.
+For (testnet) validator operators, a series of private and/or public tests should be considered. If it is needed to increase activity or participation, it may be possible to consider bounties for finding security vulnerabilities in the implementation as this may help to attract security auditors or community developers to the private and/or public tests.
 
 # Detailed Explanation
 [detailed-explanation]: #detailed-explanation
 
 ## Option 1: Sentry Nodes
 
-The risk of sharing node IP addresses is well documented, a large number of different chains (DPoS & PoS) have approached protecting the delegate/validator nodes IP address from being published.  A validator node can be attacked using the Distributed Denial of Service method. The validator node has a fixed IP address and it opens a XXXXX port facing the Internet.
+The risk of sharing node IP addresses (with validator nodesa additionally opening port XXXXX to the internet) is well documented and a large number of different chains (DPoS & PoS) have approached protecting the delegate/validator nodes IP address from being published. A validator node could for example be attacked using the Distributed Denial of Service method, be the victim of a targeted hack attempt or its operator could see false charges made to their hosting privoder in an attempt to have their nodes taken offline. 
 
-One recommended way to mitigate these risks is for validators to carefully structure their network topology in a so-called single- or dual-layer sentry node architecture.
+One recommended way to mitigate these risks is for validators to carefully structure their network topology in a so-called single- or dual-layer sentry node architecture, which can be generalised as a sentry node operating as a proxy for its validator node.
 
 ![image single-layer](0032-validator-node-security-implementation/0032-singlelayersentrynodes.jpg)
 
@@ -54,7 +54,7 @@ An example implementation of this for a series of decentralised proof-of-stake n
 # Drawbacks
 [drawbacks]: #drawbacks
 
-The implementation of security improvements to the current protocol and codebase can incur a delay in the projected release of validators on mainnet, which was slated for Q2 2021. The importance of having a solid and secure implementation outweighs this aspect, in our opinion.
+The implementation of security improvements to the current protocol and codebase can incur a delay in the projected release of validators on mainnet, which was slated for Q2 2021. The importance of having a solid and secure implementation outweighs this aspect, in our opinion. As of the 29th of June, it has been announced that validators will activate on mainnet on the 7th of July. This drawback is therefore no longer relevant and can be replaced with requiring a set of private or public tests on testnet).
 
 ## Option 1: Sentry Nodes
 
