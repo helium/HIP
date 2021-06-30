@@ -44,6 +44,7 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | 31 | [Governance by Token Burn](https://github.com/helium/HIP/blob/master/0031-governance-by-token-burn.md) | [In Discussion](https://github.com/helium/HIP/issues/183) |
 | 32 | [Split DCs Among All Transferers](https://github.com/helium/HIP/blob/master/0032-dc-split.md) | [In Discussion](https://github.com/helium/HIP/issues/221) |
 | 33 | [Regional Reward Adjustments](https://github.com/helium/HIP/blob/master/0033-regional-reward-adjustments.md) | [In Discussion](https://github.com/helium/HIP/issues/222) |
+| 34 | [Validator Node Security](https://github.com/helium/HIP/blob/master/0034-validator-node-security.md) | [In Discussion](https://github.com/helium/HIP/issues/223) |
 
 
 ## HIP19 third-party manufacturers
