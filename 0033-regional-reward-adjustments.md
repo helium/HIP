@@ -9,19 +9,16 @@
 
 ## Summary
 
-___
 [summary]: #summary
 This proposal suggests the addition of a regional reward scaling chain variables to deal with different regional output regulation for the LoRa protocol in order to create an equal deployment incentive over the world.
 
 ## Motivation
 
-___
 [motivation]: #motivation
 Much of the work done by Helium and the community has been made to optimize the network development. Recent changes in the RAK miner firmware have revealed that the current PoC system and token allocation lacks resolution in taking regional LoRa band regulations into account. This leads to an unequal deployment incentive comparing regions with different TX Max Power. The US 27dBm Tx Max Power to covers 20 times the area compared to the EU output of 24dBm.
 
 ## Stakeholders
 
-___
 [stakeholders]: #stakeholders
 
 Anyone hosting a Helium gateway/miner and anyone using the network will be affected by this change.
@@ -31,7 +28,6 @@ and as usual through any git repo commentary.
 
 ## Definitions
 
-___
 [detailed-explanation]: #detailed-explanation
 
 - **LOS**: Line Of Sight, Rx visible from Tx
@@ -50,7 +46,6 @@ ___
 
 ## Description
 
-___
 [detailed-explanation]: #detailed-explanation
 
 ### Current situation
@@ -69,11 +64,11 @@ The following table shows the theoretical different signal range and area covera
 With an area coverage factor of 20  this gives the Helium Gateway owners vastly mixed signals about how and where to deploy hotspots optimaly and for what purpose.
 
 ### PoC Purpose
+
 The Helium Network is not build for the sake of just building it, but mainly using it. PoC should reflect the coverage and usage for devices and nothing else. The attempt ([Miner PR #613]) to make EU GWs use the 9th 27 dBm channel simply does not reflect the fact that there is only one (?Source) Semtech chip supporting a Tx of up to 20 dBm. This proposal 
 
 ## Drawbacks
 
-___
 [drawbacks]: #drawbacks
 
 - This does not Take into account 
@@ -81,7 +76,6 @@ ___
 
 ## Rationale and Alternatives
 
-___
 [alternatives]: #rationale-and-alternatives§
 
 - Not caring about regional differences: Adopting the **Keeping It Stupid, Simply** instead of the **Keep It Simple, Stupid** principle.
@@ -90,7 +84,6 @@ ___
 
 ## Unresolved Questions
 
-___
 [unresolved]: #unresolved-questions
 
 - Balancing scaling factor for each resolution
@@ -98,7 +91,6 @@ ___
 
 ## Deployment Impact
 
-___
 [deployment-impact]: #deployment-impact
 
 This deployment will effect all hotspot owners. Hotspot owners in EU will likely see a significant change in earnings (either up or down) based on the new reward methodology.
@@ -106,7 +98,6 @@ It will also require significant documentation update on how proof-of-coverage i
 
 ## Success Metrics
 
-___
 [success-metrics]: #success-metrics
 
 
