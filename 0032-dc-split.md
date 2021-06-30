@@ -9,13 +9,13 @@
 # Summary
 [summary]: #summary
 
-The current reward structure incentivises companies too much to install a 50$ light hotspot for the use-cases they are installing even in well covered areas, since the following will always be true with the current structure:
+The current reward structure incentivises companies too much to install a $50 light hotspot for the use-cases they are installing even in well covered areas, since the following will always be true with the current structure:
 If it is profitable for any hotspot to be in the area, it is even more profitable for a company to bring in a new cheap hotspot 1m next to the use-case that they install.
 **Thus I propose to change the DC reward from the fastest responder to all hotspots that could have performed this duty in a timely fashion.**
 # Motivation
 [motivation]: #motivation
 
-The price of Hotspots will see a drastical reduce over time due to Light Hotspots having much lower requirements and economics of scale factoring in. The latest estimation on this that I saw put it at 50$ for hotspots somewhere around 2022/23.
+The price of Hotspots will see a drastical reduce over time due to Light Hotspots having much lower requirements and economics of scale factoring in. The latest estimation on this that I saw put it at $50 for hotspots somewhere around 2022/23.
 As it currently stands most use-cases are very static in nature.
 From the parkmeters, to parking spot counters, various environmental sensors, water leakage things and so on.
 
