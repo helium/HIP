@@ -33,9 +33,9 @@ The risk of sharing node IP addresses (with validator nodes additionally opening
 
 One recommended way to mitigate these risks is for validators to carefully structure their network topology in a so-called single- or dual-layer sentry node architecture, which can be generalised as a sentry node operating as a proxy for its validator node.
 
-![image single-layer](0034-validator-node-security/0032-singlelayersentrynodes.jpg)
+![image single-layer](0034-validator-node-security/0034-singlelayersentrynodes.jpg)
 
-![image dual-layer](0034-validator-node-security/0032-duallayersentrynodes.jpg)
+![image dual-layer](0034-validator-node-security/0034-duallayersentrynodes.jpg)
 
 Validator nodes should only connect to full-nodes they trust because they operate them themselves or are run by other validators they know socially. The validator is only going to talk to the sentry nodes, while sentry nodes have the ability to talk to the validator node on the private channel and talk to public nodes elsewhere on the Internet. A validator node will typically run in a data center. Most data centers provide direct links the networks of major cloud providers. The validator can use those links to connect to sentry nodes in the cloud. This shifts the burden of denial-of-service from the validator's node directly to its sentry nodes, and may require new sentry nodes be spun up or activated to mitigate attacks on existing ones.
 
@@ -71,7 +71,7 @@ A possible drawback is that miners in the network can no longer reach the valida
 
 All operators of validator nodes are required to make the TCP port of the P2P protocol of their validator nodes routable via the public internet, with the TCP port of the RPC endpoint unchanged and protected. While the P2P protocol port of a validator node needs to be publicly routable, one can still protect the endpoint on layer 4 (TCP) and downwards. Depending on your required security level you might want to put a mature TCP proxy in-front of your validator (e.g. Nginx). You can operate a stateful firewall yourself or use a hosted firewall / DOS protection service by your favorite cloud provider. You can consider reaching out to a large CDN. Follow operational best practices. Only expose a minimal amount of ports. Make sure to record logs. Setup monitoring for each machine and application involved. Configure alerting software, et cetera.
 
-![image unchanged](0034-validator-node-security/0032-unchangedarchitecture.jpg)
+![image unchanged](0034-validator-node-security/0034-unchangedarchitecture.jpg)
 
 The issue with moving on without a security implementation to protect the validator node IPs from being publicly sourceable, the alternative of leaving security in the hands of validators themselves is less desireable as the network will be at the mercy of the skill and knowledge of validator operators. One should assume this is far below the average skill of a malicious actor, and therefore is not sufficient to prevent attacks.
 
