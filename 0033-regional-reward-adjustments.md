@@ -1,4 +1,4 @@
-# HIP33: Regional reward adjustments
+# HIP33: Regional Reward Adjustments
 
 - Author(s): @mj0lken (Malcolm Horal | Galiot) + XYZ.
 - Start Date: 2021-02-06
