@@ -18,7 +18,7 @@ Palm Hotspot is a subsidiary of Palmcroft Industries LLC. Palm Hotspot will be f
 
 This initial system is designed to be put on buildings or existing infrastructure. This system is designed to
 be extremely weatherproof, able to broadcast signals far, and help businesses and municipalities receive
-sizable blockchain income. This system comes with full hardware support for up to one year and software assistance for 5 years including OTA updates. This system will be completed with 8dBi antennas, setup instructions, and a company referral for installation. See product below.
+sizable blockchain income. This system comes with full hardware support for up to one year and software assistance for 5 years including OTA updates. This system will be completed with a 5.8dbi antenna, setup instructions, and a company referral for installation. See product below.
 
 **Specs**:
 
@@ -42,11 +42,11 @@ sizable blockchain income. This system comes with full hardware support for up t
 We will be responding to customer support requests via email, live chat services, our company website,
 and discord. There will be multiple avenues for the consumer to get support questions answered directly
 from us or directly from other consumers via discord. We will provide clear information on our website
-about made-on-demand systems and how they work. Once a order is placed a bi-weekly update will be
+about made-on-demand systems and how they work. Once an order is placed, a bi-weekly update will be
 sent to the client informing them of how quickly we are moving on getting their product to them.
 
 ## Hotspot Fleet Management
-We will be utilizing our in-house fleet management software: PalmConnect, to send updates and rollbacks with this system. The Palm Dashboard will have the ability to manage each hotspot from the cloud. This will be done securely and frequently.
+We will be utilizing our in-house fleet management software: PalmConnect, to send updates and rollbacks with this system. The Palm Dashboard will have the ability to manage each hotspot from the cloud.
 
 ## Hardware Security
 Our system contains an ECC608A security-chip for key-storage. This system has been tested and has the
@@ -54,7 +54,7 @@ highest levels of security on the market. It will be integrated onto our custom 
 
 ## Manufacturing Information
 The Palm Hotspot will have items designed using a custom Pi hat and custom LoRa concentrator. We will have both of these components built into one chip;
-the hat. Our PCB design team is working closely with MJS Design Inc. in Tempe, AZ to create these items. MJS Design Inc. is a trusted name in PCB design and Manufacturing and has experience in creating LoRa Gateways from the ground up. We plan to have 2,000 units ready for shipment by mid to late Q4 2021.
+the hat. Our PCB design team is working closely with MJS Design Inc. in Tempe, AZ to create these items. MJS Design Inc. is a trusted name in PCB design and Manufacturing and has experience in creating LoRa Gateways from the ground up. We plan to have 2,000 units ready for shipment by mid to late Q1 2022.
 
 ## Proof of Identity
 Submitted to DeWi
@@ -74,5 +74,5 @@ once we hurdled this it has been smooth sailing.
 -- **Discord Support:** #palmcrofthelp
 - **Twitter Profile:** @Palmhotspot
 - **Website:** palmhotspot.com
-- **Payment Methods:** USD via Credit/Debit Card Shopify Payments
+- **Payment Methods:** USD via Credit/Debit Card Shopify Payments, Coinbase Commerce
 - **Regions Covered:** 915 MHz
