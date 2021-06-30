@@ -1,11 +1,11 @@
-# HIP 32: Validator Node Security Implementation(s)
+# HIP 34: Validator Node Security Implementation(s)
 
 - Author(s): [@BFX](http://github.com/Bx64/), [@cryptomaniac](https://github.com/cryptomaniac79/)
 - Start Date: 2021-06-01
 - Category: Technical
 - Original HIP PR: [211](https://github.com/helium/HIP/pull/211)
-- Tracking Issue: not filed yet
-- Status: ready for discussion
+- Tracking Issue: https://github.com/helium/HIP/issues/223
+- Status: In Discussion
 
 # Summary
 [summary]: #summary
@@ -15,12 +15,12 @@ Currently, validator node IPs are public and the testnet explorer show not only 
 # Motivation
 [motivation]: #motivation
 
-As validators will take over all activities regarding consensus on the Helium network, the pool of actors in charge of validating transactions and creating blocks is significantly reduced from the current situation (72K+ hotspots and growing fast) to a small pool of (expected) several hundreds of nodes, which significantly decreases the targets that need to be interfered with in order to impact consensus in one's own favor. Having these nodes be publicly visible, traceable and targetable on the Helium network therefore poses a significantly increased security risk compared to the current situation. If the validator nodes are compromised, so is the progress of the chain meaning the chain could completely (and perhaps unrecoverably) stall. 
+As validators will take over all activities regarding consensus on the Helium network, the pool of actors in charge of validating transactions and creating blocks is significantly reduced from the current situation (72K+ hotspots and growing fast) to a small pool of (expected) several hundreds of nodes, which significantly decreases the targets that need to be interfered with in order to impact consensus in one's own favor. Having these nodes be publicly visible, traceable and targetable on the Helium network therefore poses a significantly increased security risk compared to the current situation. If the validator nodes are compromised, so is the progress of the chain meaning the chain could completely (and perhaps unrecoverably) stall.
 
 # Stakeholders
 [stakeholders]: #stakeholders
 
-This change will not affect any current Hotspot owners or HNT holders as it is aimed to be implemented together with the release of the validator node CG implementation on mainnet. 
+This change will not affect any current Hotspot owners or HNT holders as it is aimed to be implemented together with the release of the validator node CG implementation on mainnet.
 
 For (testnet) validator operators, a series of private and/or public tests should be considered. If it is needed to increase activity or participation, it may be possible to consider bounties for finding security vulnerabilities in the implementation as this may help to attract security auditors or community developers to the private and/or public tests.
 
@@ -29,13 +29,13 @@ For (testnet) validator operators, a series of private and/or public tests shoul
 
 ## Option 1: Sentry Nodes
 
-The risk of sharing node IP addresses (with validator nodes additionally opening port XXXXX to the internet) is well documented and a large number of different chains (DPoS & PoS) have approached protecting the delegate/validator nodes IP address from being published. A validator node could for example be attacked using the Distributed Denial of Service method, be the victim of a targeted hack attempt or its operator could see false charges made to their hosting privoder in an attempt to have their nodes taken offline. 
+The risk of sharing node IP addresses (with validator nodes additionally opening port XXXXX to the internet) is well documented and a large number of different chains (DPoS & PoS) have approached protecting the delegate/validator nodes IP address from being published. A validator node could for example be attacked using the Distributed Denial of Service method, be the victim of a targeted hack attempt or its operator could see false charges made to their hosting privoder in an attempt to have their nodes taken offline.
 
 One recommended way to mitigate these risks is for validators to carefully structure their network topology in a so-called single- or dual-layer sentry node architecture, which can be generalised as a sentry node operating as a proxy for its validator node.
 
-![image single-layer](0032-validator-node-security-implementation/0032-singlelayersentrynodes.jpg)
+![image single-layer](0034-validator-node-security/0032-singlelayersentrynodes.jpg)
 
-![image dual-layer](0032-validator-node-security-implementation/0032-duallayersentrynodes.jpg)
+![image dual-layer](0034-validator-node-security/0032-duallayersentrynodes.jpg)
 
 Validator nodes should only connect to full-nodes they trust because they operate them themselves or are run by other validators they know socially. The validator is only going to talk to the sentry nodes, while sentry nodes have the ability to talk to the validator node on the private channel and talk to public nodes elsewhere on the Internet. A validator node will typically run in a data center. Most data centers provide direct links the networks of major cloud providers. The validator can use those links to connect to sentry nodes in the cloud. This shifts the burden of denial-of-service from the validator's node directly to its sentry nodes, and may require new sentry nodes be spun up or activated to mitigate attacks on existing ones.
 
@@ -49,7 +49,7 @@ Using TOR circuits: all validator nodes should route their connections through a
 
 This solution provides a powerful way of hiding the IP address from the network, enabling the validator nodes to fully focus on validation blocks and transactions.
 
-An example implementation of this for a series of decentralised proof-of-stake networks can be found here: [Core Chameleon](https://github.com/alessiodf/core-chameleon). This implemenation is currently actively deployed by many validator node operators in several decentralized proof-of-stake networks and has a proven track record of keeping validator node IPs properly hidden from the network. 
+An example implementation of this for a series of decentralised proof-of-stake networks can be found here: [Core Chameleon](https://github.com/alessiodf/core-chameleon). This implemenation is currently actively deployed by many validator node operators in several decentralized proof-of-stake networks and has a proven track record of keeping validator node IPs properly hidden from the network.
 
 # Drawbacks
 [drawbacks]: #drawbacks
@@ -71,7 +71,7 @@ A possible drawback is that miners in the network can no longer reach the valida
 
 All operators of validator nodes are required to make the TCP port of the P2P protocol of their validator nodes routable via the public internet, with the TCP port of the RPC endpoint unchanged and protected. While the P2P protocol port of a validator node needs to be publicly routable, one can still protect the endpoint on layer 4 (TCP) and downwards. Depending on your required security level you might want to put a mature TCP proxy in-front of your validator (e.g. Nginx). You can operate a stateful firewall yourself or use a hosted firewall / DOS protection service by your favorite cloud provider. You can consider reaching out to a large CDN. Follow operational best practices. Only expose a minimal amount of ports. Make sure to record logs. Setup monitoring for each machine and application involved. Configure alerting software, et cetera.
 
-![image unchanged](0032-validator-node-security-implementation/0032-unchangedarchitecture.jpg)
+![image unchanged](0034-validator-node-security/0032-unchangedarchitecture.jpg)
 
 The issue with moving on without a security implementation to protect the validator node IPs from being publicly sourceable, the alternative of leaving security in the hands of validators themselves is less desireable as the network will be at the mercy of the skill and knowledge of validator operators. One should assume this is far below the average skill of a malicious actor, and therefore is not sufficient to prevent attacks.
 
