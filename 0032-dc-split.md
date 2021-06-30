@@ -1,9 +1,9 @@
-# HIP Template
+# HIP32: Split DCs Among All Transferers
 
-- Author(s): @PapaOwl <!-- your GitHub @PapaOwl -->
-- Start Date: 2021-06-03<!-- fill me in with today's date, 2021-06-03 -->
-- Category: economic<!-- economic -->
-- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
+- Author(s): @PapaOwl 
+- Start Date: 2021-06-03
+- Category: Economic
+- Original HIP PR: https://github.com/helium/HIP/pull/194
 - Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
 
 # Summary
