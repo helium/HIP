@@ -42,6 +42,7 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | 29 | [Multi-signature Keys](https://github.com/helium/HIP/blob/master/0029-multisignature-keys.md) | [Approved](https://github.com/helium/HIP/issues/157) |
 | 30 | [BLS12-381 for Threshold Cryptography](https://github.com/helium/HIP/blob/master/0030-update-threshold-cryptography.md) | [Approved](https://github.com/helium/HIP/issues/158) |
 | 31 | [Governance by Token Burn](https://github.com/helium/HIP/blob/master/0031-governance-by-token-burn.md) | [In Discussion](https://github.com/helium/HIP/issues/183) |
+| 32 | [Split DCs Among All Transferers](https://github.com/helium/HIP/blob/master/0032-dc-split.md) | [In Discussion](https://github.com/helium/HIP/issues/221) |
 
 
 ## HIP19 third-party manufacturers
