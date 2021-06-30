@@ -1,10 +1,11 @@
-# HIP28: Regional reward adjustments
+# HIP33: Regional reward adjustments
 
 - Author(s): @mj0lken (Malcolm Horal | Galiot) + XYZ.
 - Start Date: 2021-02-06
-- Category: Technical/RF
-- Original HIP PR: <https://github.com/helium/HIP/pull/HIP-32>
-- Tracking Issue: <https://github.com/helium/HIP/issues/HIP-32>
+- Category: Technical, Economic
+- Original HIP PR: https://github.com/helium/HIP/pull/210
+- Tracking Issue: https://github.com/helium/HIP/issues/222
+- Status: In Discussion
 
 ## Summary
 
