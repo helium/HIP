@@ -29,7 +29,7 @@ For (testnet) validator operators, a series of private and/or public tests shoul
 
 ## Option 1: Sentry Nodes
 
-The risk of sharing node IP addresses (with validator nodesa additionally opening port XXXXX to the internet) is well documented and a large number of different chains (DPoS & PoS) have approached protecting the delegate/validator nodes IP address from being published. A validator node could for example be attacked using the Distributed Denial of Service method, be the victim of a targeted hack attempt or its operator could see false charges made to their hosting privoder in an attempt to have their nodes taken offline. 
+The risk of sharing node IP addresses (with validator nodes additionally opening port XXXXX to the internet) is well documented and a large number of different chains (DPoS & PoS) have approached protecting the delegate/validator nodes IP address from being published. A validator node could for example be attacked using the Distributed Denial of Service method, be the victim of a targeted hack attempt or its operator could see false charges made to their hosting privoder in an attempt to have their nodes taken offline. 
 
 One recommended way to mitigate these risks is for validators to carefully structure their network topology in a so-called single- or dual-layer sentry node architecture, which can be generalised as a sentry node operating as a proxy for its validator node.
 
