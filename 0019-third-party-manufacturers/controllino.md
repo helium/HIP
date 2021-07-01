@@ -77,7 +77,7 @@ Furthermore, physical anti tampering measures as known from other industry hardw
 ## Hardware Information
 
 * Raspberry Pi 3B+ or 4
-* 868/915 MHz LoRa PCIe Module based on SX1301 (SX1302 & 08 are also available, we are open to discussion which chipsets are preferred), SX1272 & 2x SX1257
+* 868/915 MHz LoRa PCIe Module based on SX1302
 * Sourcing: our components are sourced over European manufacturers and distributors with readily available stock that is already reserved for our products
 
 ## Manufacturing Information
