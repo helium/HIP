@@ -46,7 +46,6 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | 33 | [Regional Reward Adjustments](https://github.com/helium/HIP/blob/master/0033-regional-reward-adjustments.md) | [In Discussion](https://github.com/helium/HIP/issues/222) |
 | 34 | [Validator Node Security](https://github.com/helium/HIP/blob/master/0034-validator-node-security.md) | [In Discussion](https://github.com/helium/HIP/issues/223) |
 
-
 ## HIP19 third-party manufacturers
 
 | Name | Date | Status |
