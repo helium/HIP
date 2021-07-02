@@ -86,7 +86,7 @@ We have produced over 100.000 devices and shipped them to 140+ countries worldwi
 
 ## Proof of Identity
 
-Details will be submitted privately to Dewi after application submission, as per HIP 19 guideline.
+Details have been submitted privately to DeWi, as per HIP 19 guideline.
 
 ## Budget & Capital
 
@@ -103,6 +103,7 @@ The current chip sourcing crisis is affecting almost every company that uses ele
 * Facebook profile: facebook.com/Controllino
 * Linkedin profile:  linkedin.com/company/controllino
 * Website: www.controllino.com
+* Join the Waitlist: https://hotspot.controllino.com
 * Contact info: helium@controllino.com and controllino.com/contact 
 * Payment methods available: Credit Card, PayPal, Cryptocurrency (Bitcoin, Bitcoin Cash, Ethereum, Dogecoin & Stablecoins (USDC, BUSD, GUSD, PAX, DAI))
 * Regions covered / shipped to: EU & North America, other supported regions coming soon
