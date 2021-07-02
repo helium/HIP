@@ -46,7 +46,7 @@ Level 3: Base on Level 2, add firmware signature support, do not support third-p
 
 ## Hardware Information
 
-Which security (swarm) chip are you using? ——ATECC508A compatible ECC chips
+Which security (swarm) chip are you using? ——ATECC508A compatible ECC chips;
 Which LoRa chipset are you planning to use in your gateway (ie SX1302/03 & SX1250s or SX1301/08 & SX1255/57)——SX1302
 
 ## Manufacturing Information
