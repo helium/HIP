@@ -34,7 +34,7 @@ Full-featured LoRaWAN gateway based on modular concepts.
 * Semtech SX1301 concentrator or SX1302* concentrator *(when available in volume)
 * Ethernet 10/100 with surge protection
 * GPS and LTE options
-* ECC608A encryption chip
+* ATECC608A encryption chip
 * POE or 5V DC power supply
 * Temperature range -25°C ~ +60°C
 
