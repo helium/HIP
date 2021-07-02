@@ -8,7 +8,7 @@ Inspired by the peoples network and helium block chain we are delighted to becom
 
 ## Company Information
 
-I'm Gopal from Chennai,India with a masters degree in Electrical Engineering from University of Leicester,UK. Inspired by helium blockchain and LoRaWAN technology we have launched a new branch LakshmiIO to our company Lakshmi Builders Warehouse which is manufaccturing Foam Concrete machines and light weight concrete building elements. I have gained experience in IOT in South Africa in Smart Electrical amd Smart Water Meters by working in projects related to smart grid and technology. We would like to manufacture the gateways rapidy as we are having all the facilities in Chennai for the supply chain including the logistics
+I'm Gopal from Chennai,India with a masters degree in Electrical Engineering from University of Leicester,UK. Inspired by helium blockchain and LoRaWAN technology we have launched a new branch LakshmiIO to our company Lakshmi Builders Warehouse which is manufaccturing Foam Concrete machines and light weight concrete building elements. I have gained experience in IOT in South Africa in Smart Electrical amd Smart Water Meters by working in projects related to smart grid and technology. We would like to manufacture the gateways rapidly as we are having all the facilities in Chennai for the supply chain including the logistics
 
 ## Product Information
 
@@ -16,7 +16,7 @@ We are building Hotspot Miner and Light Hotspots with the following specificatio
 
 Rasberry Pi 4 
 
-RAK 831 Concentrator with frequency IN865/RU864/AU915/KR920/EU443/CN470 or iC880A-SPI LoRa Concentrator will be based on the availability
+RAK 831 or  iC880A-SPI LoRa Concentrator with frequency IN865/RU864/AU915/KR920/EU443 will be used subject to availability of the concentrator
 
 Compact Size
 
@@ -28,9 +28,9 @@ Wifi,4G/5G,BLE Enabled
 
 SSH will be enabled to connect to the server
 
-ATECC608 will secure the crypto authentication
+ATECC608 or ATECC508 will be used to secure the crypto authentication
 
-Software will be provided Docker along with OS and remote assistance will be provided round the clock
+Software will be provided in Docker along with OS and remote assistance will be provided round the clock
 
 Can start producing once the prototype is approved and it can be done rapidly
 
@@ -38,7 +38,7 @@ Can start producing once the prototype is approved and it can be done rapidly
 
 As mentioned we are startup with technical brilliance and global experience in various sectors to meet the demand
 
-All the products will be CE certified
+All the products will be marked by WPC-ETA for India, CE for Europe, EAC for Russia, ICASA for South Africa, KC for Korea, RCM for Australia and NewZealand 
 
 We would like supply to Asian, Africa and European countries
 
@@ -51,13 +51,15 @@ Hardware will be provided with 1 year manufacturer warranty and repairing can be
 
 ## Hardware Security
 
-ATECC608B will provide the secure crypto transacions
+ATECC608/508 will provide the secure crypto transacions
 
-We will be using SX1302/8 digital base band chip
+We are in discussion with Microchip to increase the production of ECC 608 and 508 to build the modules rapidly 
+
+We will be using SX1302/SX1301 digital base band chip
 
 IP67 certified with tamper prof and to be used in harh environments
 
-We are sourcing harware from semtech, RAK wireless and Microchip
+We are sourcing harware from Semtech, RAK wireless, Microchip and IMST
 
 We can procure the modules based on the demand and pre orders
 
