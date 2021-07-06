@@ -13,8 +13,8 @@ Founded in July 2021, BorIoT is an IoT technology company based in Bangkok, Thai
 
 We provide 2 SKUs gateway prototypes.
 
-- Pi4 Helium Hotspot Miner for Outdoor (A brand new product, in development)
-- Pi Compute Module 3, for In-door Version (A brand new product, in development)
+- Pi4 Helium Hotspot Miner for In-Door Version (A brand new product, in development)
+- Pi Compute Module 3, for Out-Door Version (A brand new product, in development)
 
 Expected Release Date: Q4 2021
 More LoRa gateways, including the Helium light hotspot, are developed in progress and will be released soon.
