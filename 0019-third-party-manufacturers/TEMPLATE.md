@@ -3,7 +3,7 @@
 
 ## Summary
 
-Two sentences about who you are and what you’d like to build. Indicate if you are building a Light Hotspot, or a regular Hotspot. Bonus points to include photos and links. 
+Two sentences about who you are and what you’d like to build. Indicate if you are building a Light Gateway, or a Full Gateway. Bonus points to include photos and links. 
 
 ## Company Information
 
@@ -11,7 +11,8 @@ Who are you? How long have you been in business? What kind of products have you 
 
 ## Product Information
 
-Your time to shine! What are you building? What’s so great about it? Do you have an approximate price point? Photos and videos welcome.
+Your time to shine! What are you building? What’s so great about it? 
+* Do you have an approximate price point? Photos and videos welcome.
 
 * Detailed hardware designs, including relevant parts
 * Evidence of a functioning prototype - photos, videos. Renderings are OK but physical prototypes are much, much better.
@@ -20,13 +21,16 @@ Your time to shine! What are you building? What’s so great about it? Do you ha
 
 ## Previous shipments
 
-Startups welcome! Which countries have you previously shipped regulatory FCC or CE approved products? Which countries do you plan to ship to? 
+Startups welcome! 
+* Which countries have you previously shipped regulatory FCC or CE approved products? 
+* Which countries do you plan to ship to? 
 
-## Customer Support
+## Customer Support (required)
 
-How are you planning to handle customer support for your products? For how long? How are you planning to handle repairs and replacements?
+* How will your customers be able to contact you for support for your products?
+* For how long? How are you planning to handle repairs and replacements?
 
-## Hardware Security
+## Hardware Security Element
 
 The community is concerned about devices that can be easily hacked, specifically by copying their `swarm_key` files. Applications should include plan for how the devices will be secured, potentially including:
 
@@ -35,26 +39,31 @@ The community is concerned about devices that can be easily hacked, specifically
 * Encrypted buses, potting and other anti-tampering measures.
 * Willingness to submit a prototype for audit, and sharing those audit results publicly (pass or fail)
 
-## Hardware Information
+## Hardware Information (required)
 
 Please let us know:
-* Which security (swarm) chip are you using?
+* Which security (swarm) element are you using?
 * Which LoRa chipset are you planning to use in your gateway (ie SX1302/03 & SX1250s or SX1301/08 & SX1255/57)
 * We recommend you don't use the SX1301 in new designs
 * Where are you sourcing your components?
 * How many radio modules/ concentrators can you procure?
 
-## Manufacturing Information
+## Manufacturing Information (required)
 
-Have you built and delivered hardware projects before? If yes, how did it go, and how many did you make? If not, from whom will you get help? This is the single largest risk with most hardware ventures. If possible please provide information about your manufacturing partners and supply chain.
+* Have you built and delivered radio hardware products before? 
+* Have you built gateways before?
+* How many gateways did you make? 
+* If you have not built gateways before, are you using a third party manufacturer?
+This is the single largest risk with most hardware ventures. If possible please provide information about your manufacturing partners and supply chain.
 
 ## Proof of Identity
 
 Per typical KYC/AML procedures, proof of identity for major shareholders (25%+ ownership) will be expected to be provided privately to representatives from Helium Inc or DeWi board members. This will be attested and publicly confirmed by those representatives, e.g. as GitHub comments. Contact details for this will be provided after your application is submitted on GitHub.
 
-## Budget & Capital
+## Budget & Capital (required)
 
-How many of these are you hoping to make and sell? How much money will be required up-front? How much money do you have on-hand, and how much do you have access to? What is your plan for additional financing if required? This is the second biggest risk in new hardware ventures -- getting almost over the line and then running out of cash.
+* How many of these are you hoping to make and sell? 
+* How much money will be required up-front? How much money do you have on-hand, and how much do you have access to? What is your plan for additional financing if required? This is the second biggest risk in new hardware ventures -- getting almost over the line and then running out of cash.
 
 ## Risks & Challenges
 
@@ -62,10 +71,10 @@ Please tell us about some of the challenges that would prevent these products fr
 
 ## Other information
  
+* Contact info (* required) -
 * Twitter profile - 
 * Facebook profile - 
 * Other social profiles - 
 * Website -
-* Contact info -
 * Payment methods available - 
 * Regions covered / shipped to - 
