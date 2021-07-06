@@ -61,8 +61,7 @@ How many of these are you hoping to make and sell? How much money will be requir
 Please tell us about some of the challenges that would prevent these products from becoming a reality, and how you might address them.
 
 ## Other information
-
-* Desired Discord support channel name - 
+ 
 * Twitter profile - 
 * Facebook profile - 
 * Other social profiles - 
