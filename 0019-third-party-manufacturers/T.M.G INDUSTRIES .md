@@ -30,12 +30,12 @@ What is your approximate price point?
  * Power Source: 5V DC USB OTG
  * Low level peripheral: 40 Pin Header
  * LoRa: LoRaWAN® multichannel concentrator module based on SX1308
-* Evidence of a functioning prototype - photos, videos. Renderings are OK but physical prototypes are much, much better.
-* We are currently working on the prototype and will be able to provide photos etc
-* 
+ * Evidence of a functioning prototype - photos, videos. Renderings are OK but physical prototypes are much, much better.
+ * We are currently working on the prototype and will be able to provide photos etc
+ 
 # Your plan for software setup and configuration for the devices. This would presumably include remote updates and the ability for hosts to change wifi settings, via Helium's official app or otherwise.
 * We intend to fully integrate our hotspots with the helium app allowing users to use all the features the app offers and apply OTA updates. 
-* 
+ 
 # What is your expected production and delivery timeline? Photos and videos welcome.
 * Our aim will be to produce and ship 2500-3000 units a week. Currently sourcing the components have not been much of an issue and we think that would be more than reasonable. Once we have the components in stock it will not take long to program and assemble. 
 
