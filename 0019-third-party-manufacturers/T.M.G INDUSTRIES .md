@@ -22,7 +22,6 @@ LoRa: LoRaWAN® multichannel concentrator module based on SX1308
 The plan is to set realistic expectations from the start and to release units in “drops” so first drop 100 to 250 units to fully see the exact required time to manufacture 100-250 units our aim is to be able to assemble and ship 1000 units a week and that is very realistic and reasonable as we plan to grow significantly after the first drop and will be able to streamline everything. we will provide prototype shortly. our current price point is aroud 500-600$ as the cost for sourcing the required components are high once we can get them for a lower price we will lower the price goal is to be around 350-400$ by the end of 2021. We plan to fully integrate to the helium app to offer all features the app has to offer OTA updates WiFi changes ect 
 
 
-
 ## Customer Support
 
 wWe will provide 24/7 support via email and discord directly through our channels and through helium. and will offer a warranty on all  hotspots sold 
