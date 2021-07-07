@@ -6,25 +6,25 @@
 ** We are T.M.G INDUSTRIES we are a startup looking to build helium Gateways from what I understand we are technically building a light hotspot. We will be using the same components as a full hotspot to ensure all features work the same and that they will be more than capable for handling the required tasks.
 
 # Company Information (required)
-* What is your company name?
-** T.M.G INDUSTRIES INC
-* How long have you been in business?
-** We have been officially operating for 1 month 
-* What kind of products have you created?
-** We have not created products from scratch in the past
-* How many have you sold?
-** We are a startup and haven’t sold anything as of yet 
-* What brought you to Helium etc?
-** I was recently getting into everything crypto and trying to understand it and start trading when I stumbled upon helium and started researching and found that helium is much more than a crypto currency and has great potential to become something huge while offering real benefit.
+• What is your company name?
+>T.M.G INDUSTRIES INC
+• How long have you been in business?
+>We have been officially operating for 1 month 
+• What kind of products have you created?
+>We have not created products from scratch in the past
+• How many have you sold?
+>We are a startup and haven’t sold anything as of yet 
+• What brought you to Helium etc?
+>I was recently getting into everything crypto and trying to understand it and start trading when I stumbled upon helium and started researching and found that helium is much more than a crypto currency and has great potential to become something huge while offering real benefit.
  
 # Product Information (required)
 Your time to shine! What are you building? What’s so great about it?
-* What is your approximate price point?
+• What is your approximate price point?
 Currently the approximate price is around 550-600usd as components are more expensive. However once we are able to reduce the price for components we will reduce the price our goal is to get the price to 350-400usd
 
 # Detailed hardware designs, including relevant parts.
- * CPU:  
- Quad-Core Cortex-A7 1.6GhZ
+ • CPU:  
+ >Quad-Core Cortex-A7 1.6GhZ
  * Memory (SDRAM): 
  2GB DDR3
  * Onboard Storage: 
