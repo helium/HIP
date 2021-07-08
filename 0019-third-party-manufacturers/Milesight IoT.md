@@ -137,7 +137,7 @@ Here are the details:
 
 - What are your plans for software integration with Full Hotspot (miner) and Light Hotspot (gateway-rs) codebases?
 
-We may prefer to finish the Light Hotspot first, then the Full Hotspot later.
+We may prefer to finish the Light Hotspot first, then the Full Hotspot later. If it's possible to apply both at the same time, that's better.
 
   
 
