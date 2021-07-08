@@ -111,17 +111,33 @@ Milesight IoT will consider adopting the ECC608 into the device in future releas
 
 
 
-## Hardware Information
+## HIP19 amendments for alternate security implementations
 
-**Processor/CPU**: NXP's  i.MX 8M nano (ARM-Cortex-4*A53, 1.5Ghz)
+- What is the key's security model? 
 
-**RAM**: 512MB, DDR4
+The key's security model is the CAAM module inside the CPU SoC, the difference between the CAAM and the ECC608 is CAAM cannot used to keep the swarm_key in side, while the ECC608 can keep the key in slot0.
 
-**Flash**: 8GB eMMC
+- How/where is the key generated? 
 
-**LoRa Chipset**: SX1302+SX1250+SX1262(for LBT), One gateway produces one concentrator only. 
+The swarm_key will be generated randomly inside the gateway by OpenSSL(RSA), it will be 256bit, the private key will be encrypted again using CAAM and stored in RPMB. The public part will be transmitted to on-boarding server.
 
-**Security Chip**: RPMB (Replay Protected Memory Block) Partition within e-MMC, which is encrypted by HMAC SHA-256 and protected by Write Counter.
+- What guarantees do we have about the key being extracted? 
+
+The key has been encrypted by CAAM using the burned key inside the CPU(SoC), then saved in RPMB of eMMC to be protected by another secured key in OPT and the write counter. This encrypted swarm_key can be used by this gateway's CPU only.
+
+- Please provide datasheet and or link to relevant datasheet(s) when citing hardware based security features 
+
+Here are the details:
+
+​	Full Security Block Diagram ([i.MX8 guide](http://resource.milesight-iot.com/files/IMX8MNSRM.pdf)-Page68)
+
+​	CAAM Block Diagram ([i.MX8 guide](http://resource.milesight-iot.com/files/IMX8MNSRM.pdf)-Page266),
+
+​	High-Assurance Boot (HAB): ( [i.MX8 guide](http://resource.milesight-iot.com/files/IMX8MNSRM.pdf)-Page150)
+
+- What are your plans for software integration with Full Hotspot (miner) and Light Hotspot (gateway-rs) codebases?
+
+We may prefer to finish the Light Hotspot first, then the Full Hotspot later.
 
   
 
