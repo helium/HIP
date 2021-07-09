@@ -34,7 +34,7 @@ Full-featured LoRaWAN gateway based on modular concepts.
 * Semtech SX1301 concentrator or SX1302* concentrator *(when available in volume)
 * Ethernet 10/100 with surge protection
 * GPS and LTE options
-* ATECC608A encryption chip
+* ATECC608A encryption chip or SLB9670 TPM2.0 (if ATEC608A not available in volume)
 * POE or 5V DC power supply
 * Temperature range -25°C ~ +60°C
 
@@ -64,7 +64,7 @@ Full-featured LoRaWAN gateway based on modular concepts.
 * Webshop is created but not released to the public yet. It shall be released immediately after hotspot miner approval.
 * Device will be capable of outdoor installation with high-quality IP66 polycarbonate or aluminum (option) enclosure and sealed antenna, power, and ethernet connectors.
 * Device will provide a better temperature range than typical RPi based hotspots which operate from 0 degrees Celsius.
-* Good hardware security will be provided by using the encrypted filesystem, EMMC storage, and ECC608A chip on board.
+* Good hardware security will be provided by using the encrypted filesystem, EMMC storage, and ATECC608A or SLB9670 TPM2.0 chip on board.
 * LoRaWAN antenna options will be 6dBi and 3dBi fiberglass antennas for pole mounting, providing better performance than typical hotspot antennas.
 * We target regional (EU and South-East Europe) customers. In this area, our shipping options are already solved and no customs are a good advantage.
 * CE/RED certification is already in progress for the standard XGW1 gateway.
@@ -85,7 +85,7 @@ Full-featured LoRaWAN gateway based on modular concepts.
 
 ## Hardware Security
 
-* LUKS disk encryption with swarm keys stored in ECC608A encryption chip.
+* LUKS disk encryption with swarm keys stored in ATECC608A or SLB9670 TPM2.0 encryption chip.
 * Further solutions to lock firmware completely are currently being considered.
 * We are willing to submit a prototype device for audit and share the audit results publicly (pass or fail).
 
