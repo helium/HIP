@@ -50,8 +50,17 @@ Website: [smart-host.com.tr](https://smart-host.com.tr)
 
 ## Hardware Security
 
-Our Helium miner security will be relying on a VPN System to protect The swarm_key. For double authentication with our servers, after verification the server will send out the swarm key which has been pre-encrypted using the associated VPN. The encrypted swarm key is sent to the miner and the miner then decrypts and loads the swarm key into memory to begin mining.
-Our Helium miner system provides better security since our systems can revoke the swarm key should the miner not be authorized, authenticated, or other fraud and tampering is detected.
+Hotspot via VPN will connect to our servers to be able to access swarm_key. Comes encrypted with decryption key. The decryption key can only be accessed by the device because the key will be a combination of the processor ID number in the device with some random words The key can only be known by the VPN server and the key will be changed constantly because it can only be accessed once
+The VPN server can only be connected through the hotspot because the caller can only be identified if they have a MAC address, processor ID and password that will be changed every time the hotspot connects to the VPN server
+The programming of the metal will be modified to comply with the above so that the encryption key is provided through some files that we will include in the device in an encrypted form also so that no one can know the algorithm used in the encryption and decryption
+
+If a hotspot performs a suspicious action, an unauthorized or suspicious connection attempt, subsequent attempts will be automatically blocked and the team will be alerted to review the process and monitor what is happening
+And if there is any error or malfunction, the team can address it remotely
+If we find out that there is an attempt to hack or tamper, it will be banned immediately
+
+swarm_key will not be saved in hotspot on memory card or RAM
+
+Some code files will be added encrypted in the metal that I can share via e-mail to the helium team in unencrypted formats to see the working method followed
 
 
 ## Manufacturing Information
