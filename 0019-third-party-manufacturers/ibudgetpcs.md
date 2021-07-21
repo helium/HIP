@@ -112,7 +112,7 @@ Please tell us about some of the challenges that would prevent these products fr
 
 ## Other information (required)
  
-* Contact info (* required) -
+* Contact info (Cell - 954-305-1013) -
 * Tiktok Profile - @ibudgetpcs
 * Other social profiles - 
 * Website - www.ibudgetpcs.com
