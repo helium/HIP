@@ -1,0 +1,36 @@
+# HIP19  amendments for alternate security implementations
+
+- Author: FreeedomFi @zer0tweets 
+- Start Date: July 22nd, 2021
+- Category: Technical
+
+## Summary
+This proposal suggests adding TPM (trusted platform module) as a means for storing miner security keys, in addition to the current ECC chip implementation.
+
+## Motivation
+Support for additional, proven technologies for storing security keys will expand platform/hardware options for 3rd party manufacturers. TPM is the common, broadly used standard for storing security keys in x86 based hardware, which is what we use for FreedomFi 5G Gateway. Enabling Helium ecosystem to utilize the x86 ecosystem for building miners will alleviate pressure on the supply chain and foster innovation. 
+
+## Stakeholders
+- Hardware manufacturers
+
+## Detailed Explanation
+
+**Trusted Platform Module**  (**TPM**, also known as  **ISO/IEC 11889**) is an international standard for a  [secure cryptoprocessor](https://en.wikipedia.org/wiki/Secure_cryptoprocessor "Secure cryptoprocessor"), a dedicated microcontroller designed to secure hardware through integrated cryptographic keys.
+
+More detailed information on TPM can be found here: 
+
+ - [TPM2 Architecture](https://trustedcomputinggroup.org/wp-content/uploads/TCG_TPM2_r1p59_Part1_Architecture_pub.pdf)
+ - [TPM2 Commands](https://trustedcomputinggroup.org/wp-content/uploads/TCG_TPM2_r1p59_Part3_Commands_pub.pdf)
+ - [FAPI Spec](https://trustedcomputinggroup.org/wp-content/uploads/TSS_FAPI_v0.94_r04_pubrev.pdf)
+
+### How/where is the key generated?
+
+Key is generated inside the TPM chip using Fapi_CreateKey command (refer to FAPI spec). That uses TPM2_Create command inside (refer TPM2 Commands). TPM2_Create Commands stores data outside on Non-Volatile memory (path to storage folders can be customized in FAPI). Data is stored inside "shielded location" which means only TPM can load, decrypt and access it. Decrypted sensitive data never goes outside TPM chip.
+
+### What guarantees do we have about the key being extracted?
+
+The very purpose of TPM chip is to provide hardware based mechanism for securely storing the keys inside of the chip without the possibility of extraction. Impossibility of extraction is guaranteed by TPM spec. However user can either reset the whole TPM chip effectively erasing all the keys or remove individual keys using TPM commands directly.
+
+### What are your plans for software integration with Full Hotspot (miner) and Light Hotspot (gateway-rs) codebases?
+
+We have completed the integration with the full hotspot miner (miner code base) for use by the upcoming launch of the FreedomFi 5G Gateways and submitted the code (awaiting PR approval) for the use by the broader Helium community.  No plans for integration into Hotspot (gateway-rs) for now, but FreedomFi is happy to support others looking adopt the code accordingly.
