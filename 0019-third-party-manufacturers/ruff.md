@@ -19,7 +19,7 @@ We provide two stable and compact gateway prototypes.
 RWI8280 for Helium Hotspot Miner, Black Box, Estimated Price: $399.99
 
 -   Concentrator based on the Semtech SX1302(Outdoor)/SX1308(Indoor) with ADR
--   Quad-core Cortex-A53/Cortex-A72 processor, CPU with 64G SD Flash and 2G DDR RAM
+-   Quad-core Cortex-A53/Cortex-A72 processor, CPU with 32G SD Flash and 2G DDR RAM
 -   ECC608/RJGT102WDP8 encryption chip for swarm keys storage
 -   Network Connectivity 2.4 GHz and 5.0 GHz IEEE 802.11ac wireless
 -   Device Connectivity Bluetooth 5
@@ -74,3 +74,22 @@ Another thing to concern is the scale of our customer service with the growth of
 -   Website – www.ruff.io
 -   Payment methods available – By individual project discussion
 -   Regions covered / shipped to – Support worldwide shipment
+
+## RUFF Hotspot Seller
+
+Kunshan Luoyi  Intelligent Technology Co., Ltd.
+
+### Abount Kunshan Luoyi  Intelligent Technology Co., Ltd.
+- About, who is in charge?  
+  The founder of ruff is in change of Kunshan Luoyi  Intelligent Technology Co., Ltd.
+- How long have they been in business?  
+ ~ 3 months
+- Do they distribute other products? What products?  
+  Yes
+  IoT Gateways
+- Website link  
+  ruff.io
+- Contact info   
+  roy@nanchao.org
+- Who is handling support for the RUFF gateway?  
+  Kunshan Luoyi  Intelligent Technology Co., Ltd.
