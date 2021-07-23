@@ -144,13 +144,14 @@ Sensitive information like financials or proofs of identity could be furnished t
 ## Summary of Application Process
 
 1. Submit application
-2. FCC/CE or other application radio certification
-3. Hardware audit
-4. Onboarding integration
-5. Community approval
-6. Pre-orders
+2. DeWi KYC/B
+3. FCC/CE or other application radio certification
+4. Hardware audit
+5. Onboarding integration
+6. Manufacturing Oversight Committee approval
+7. Pre-orders
 
-*note: items 2-4 can occur simultaneously*
+*note: items 3-4 can occur simultaneously*
 
 # Drawbacks
 
