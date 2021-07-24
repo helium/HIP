@@ -85,10 +85,10 @@ Kunshan Luoyi  Intelligent Technology Co., Ltd.
 - How long have they been in business?  
  ~ 3 months
 - Do they distribute other products? What products?  
-  Yes
+  Yes  
   IoT Gateways
 - Website link  
-  ruff.io
+  www.ruff.io
 - Contact info   
   roy@nanchao.org
 - Who is handling support for the RUFF gateway?  
