@@ -62,7 +62,7 @@ Additionally, looking at epoch times for a 200 epoch period, we see that a typic
 
 ![image Epoch Length (Blocks 933238 to 939821)](./0028-consensus-reward-adjustments/epoch-lengths.png)
 
-Based on this data, we can also perform a comparison of earnings between current and what they would have been with HIP 28 implemented. The actual number of blocks covered by these 200 epoch is 6616 blocks (note, rewards/election blocks are not considered to be within an epoch per the rewards calculations). Based on current implementation, validators received rewards based on 6000 of those blocks (90.1%). Under HIP 28, 6598 (99.7%) blocks would have been rewarded. Only 8 blocks that were part of the six epochs that took more than 35 blocks were not rewarded.
+Based on this data, we can also perform a comparison of earnings between current and what they would have been with HIP 28 implemented. The actual number of blocks covered by these 200 epoch is 6616 blocks (note, rewards/election blocks are not considered to be within an epoch per the rewards calculations). Based on current implementation, validators received rewards based on 6000 of those blocks (90.1%). Under HIP 28, 6598 (99.7%) blocks would have been rewarded. Only 18 blocks that were part of the six epochs that took more than 35 blocks were not rewarded.
 
 
 # Stakeholders
