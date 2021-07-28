@@ -1,4 +1,4 @@
-# KS TEchnologies, LLC
+# KS Technologies, LLC
 ### Application to become an approved third party manufacturer as per [HIP19](https://github.com/helium/HIP/blob/master/0019-third-party-manufacturers.md)
 
 ## Summary
@@ -7,7 +7,7 @@ KS Technologies, LLC (KST) has built both the Light and regular Helium Hotspot. 
 
 ## Company Information
 
-KST is an 18-year-old company located in Colorado Springs, Colorado. KS Technologies (KST) specializes in IoT products, test and measurement, private label products, and engineering services. Founded by a former Agilent IC engineer, KST utilizes Fortune 50 processes and procedures when developing both private label and in-house products. We bring a multidisciplinary approach to design and engineering. We have system architecture, hardware, firmware, mechanical, and UI/UX engineers on staff. KST develops products for other companies and ourselves. KST’s current product portfolio consists of IoT sensors and measurement products. We have sold thousands of products to Fortune 50 companies as well as small businesses and municipalities. Helium is well known to KST, we have participated in joint webinars together. KST recognized the need for a Helium hotspot that is more attuned toward business clients with multiple locations and hotspots. 
+KST is an 18-year-old company located in Colorado Springs, Colorado. KS Technologies specializes in IoT products, test and measurement, private label products, and engineering services. Founded by a former Agilent IC engineer, KST utilizes Fortune 50 processes and procedures when developing both private label and in-house products. We bring a multidisciplinary approach to design and engineering. We have system architecture, hardware, firmware, mechanical, and UI/UX engineers on staff. KST develops products for other companies and ourselves. KST’s current product portfolio consists of IoT sensors and measurement products. We have sold thousands of products to Fortune 50 companies as well as small businesses and municipalities. Helium is well known to KST, we have participated in joint webinars together. KST recognized the need for a Helium hotspot that is more attuned toward business clients with multiple locations and hotspots. 
 
 ## Product Information
 
@@ -25,9 +25,9 @@ The Affinity Gateway includes:
 
 The Affinity Gateway is tamper-proof, offers tamper-detect, and can be wall-mounted securely.
 
-![Affinity View One](https://kstechnologies.com/assets/img/products/affinity/HLC_Ren1_WEink.png)
-![Affinity View Two](https://kstechnologies.com/assets/img/products/affinity/HLC_Ren2_WEink.png)
-![Affinity View Three](https://kstechnologies.com/assets/img/products/affinity/HLC_Ren3_WEink.png)
+![Affinity View One](kstechnologies/HLC_Ren1_WEink.png)
+![Affinity View Two](kstechnologies/HLC_Ren2_WEink.png)
+![Affinity View Three](kstechnologies/HLC_Ren3_WEink.png)
 
 The Affinity Gateway allows for:
 * Enterprise-level commissioning and wallet aggregation for Affinity Fleets of Devices
@@ -101,6 +101,7 @@ This biggest challenge is key component availability. KST engineered Affinity us
 
 ## Other information
  
+* Contact info - info@kstechnologies.com
 * Desired Discord support channel name: #KSTechnologies
 * Twitter profile: [@kstechnologies](https://twitter.com/kstechnologies)
 * Facebook profile: [KS Technologies, LLC](https://www.facebook.com/pages/KS-Technologies-LLC/107015177588)
