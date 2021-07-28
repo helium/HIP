@@ -29,14 +29,14 @@ Light Gateway:
 
 Product renders:
 
-<img src="systems4you/front.png" alt="Render front" width=140 />
-<img src="systems4you/back.png" alt="Render back" width=140 />
+<img src="systems4you/front.png" alt="Render front" width=300 />
+<img src="systems4you/back.png" alt="Render back" width=300 />
 
 
 Product photos:
 
-<img src="systems4you/photo.jpeg" alt="Box photo" width=140 />
-<img src="systems4you/pcb.jpeg" alt="PCB" width=140 />
+<img src="systems4you/photo.jpeg" alt="Box photo" width=300 />
+<img src="systems4you/pcb.jpeg" alt="PCB" width=300 />
 
 
 
