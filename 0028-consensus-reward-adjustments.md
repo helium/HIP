@@ -51,10 +51,10 @@ Looking at blocks 923722 (switch to 43 member Consensus Group) to 940522 (time o
 | Reward Type | Total HNT | Percentage | Target Percentage | Difference |
 | -- | ----- | ------ | ------ | ------- |
 |securities|596928.24|34.09%|34.00%|0.09%
-|poc_witnesses|813590.00|46.46%	21.24%|25.22%|
+|poc_witnesses|813590.00|46.46%|21.24%|25.22%|
 |poc_challengees|203397.50|11.61%|5.31%|6.30%|
 |poc_challengers|36389.38|2.08%|0.95%|1.13%|
-|data_credits|25.87|0.00%	32.50%|-32.50%|
+|data_credits|25.87|0.00%|32.50%|-32.50%|
 |consensus|100833.33|5.76%|6.00%|-0.24%|
 |**Total**|**1,751,164.33**|**100.00%**|**100.00%**|**0.00%**|
 
