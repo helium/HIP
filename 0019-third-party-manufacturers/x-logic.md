@@ -28,7 +28,7 @@ We were introduced to Helium by Glamos, a LoRa device creator.
 
 Full-featured LoRaWAN gateway based on modular concepts.
 
-# Gateway (indoor/outdoor) specification:
+## Gateway (indoor/outdoor) specification:
 * RPi CM 3+, Quad-core ARM Cortex-A53 @ 1.2 GHz, 16 or 32GB eMMC storage
 * Future version with RPi CM 4 already planned
 * Semtech SX1301 concentrator or SX1302* concentrator *(when available in volume)
@@ -38,7 +38,7 @@ Full-featured LoRaWAN gateway based on modular concepts.
 * POE or 5V DC power supply
 * Temperature range -25°C ~ +60°C
 
-# Outdoor variant:
+## Outdoor variant:
 * IP66 aluminum enclosure or polycarbonate enclosure
 * Mountable on a wall
 * N-type sealed antenna connectors
@@ -50,14 +50,14 @@ Full-featured LoRaWAN gateway based on modular concepts.
 
 * Hardware is ready for production. Estimated price: 550EUR with 6dBi antenna and POE injector
 
-# Software solution 
+## Software solution 
 
 * Our software is 64 bit RaspiOS for RPi CM3+
 * We provide a web dashboard (GUI) for configuration and administration, including also firmware updates.
 * More advanced OTA is planned for future upgrades.
 * QR code onboarding via local web dashboard
 
-# Production and delivery timeline
+## Production and delivery timeline
 
 * First batch of 100 pcs can be ready for shipment in 5 weeks after kick-off.
 * Following successful preorders, a new batch will be started, with double the quantity. This way we ensure stability in production and gradual ramp-up
@@ -85,8 +85,7 @@ Full-featured LoRaWAN gateway based on modular concepts.
 
 ## Hardware Security
 
-* LUKS disk encryption with swarm keys stored in ATECC608A or SLB9670 TPM2.0 encryption chip.
-* Further solutions to lock firmware completely are currently being considered.
+* Swarm keys stored on an encrypted disk storage protected by the SLB9670 TPM2.0 encryption chip.
 * We are willing to submit a prototype device for audit and share the audit results publicly (pass or fail).
 
 ## Manufacturing Information
@@ -126,3 +125,42 @@ We are prepared to share proof of owners identity. The company is owned by three
 * Website - https://www.x-logic.net
 * Payment methods available - PayPal, credit cards and wire transfer
 * Regions covered / shipped to - Europe and later worldwide
+
+# HIP19 amendments for alternate security implementations
+
+## What is the key's security model?
+
+Swarm key is located on an encrypted disk partition protected by the SLB9670 TPM2.0 chip. The encryption is done by using cryptsetup block-level encryption, with encryption algorithm: aes-xts-plain64:sha256. Partition can be decrypted with the partition key stored in the SLB9670 non-volatile memory. The partition key can only be obtained if PCR (Platform Configuration Registers) are in a specific state. A PCR is a volatile memory location in the TPM chip. The PCR states are used as authentication for obtaining the partition key stored in the TPM chip. Every time the key is obtained, the PCR state is reset, which secures the partition key from nonauthorized access. Encrypted sessions are used to obtain the key - they protect the SPI data lines from physical attacks and reading plaintext. Additional partition key can be made, known only to us and DeWi, so the swarm key could be obtained in the case of SLB9670 malfunction.
+
+For remote access, we will use ECDSA encryption keys protected with passwords. That way only users with private key pairs and passwords will have remote access to the miner. SSH default port will be changed to add an extra layer of security. All other unused ports will be blocked.
+
+## How/where is the key generated?
+
+After a successful authentication session, the partition key is generated in the TPM chip and piped to the cryptsetup command for decrypting the partition with the swarm key. The swarm key is located in a default folder with the rest of the miner data.
+
+## What guarantees do we have about the key being extracted?
+
+The TPM2.0 chip is a standardized hardware for securely storing data. Some of the certifications according to the [SLB9670 datasheet](https://www.infineon.com/dgdl/Infineon-SLB%209670VQ2.0-DataSheet-v01_04-EN.pdf?fileId=5546d4626fc1ce0b016fc78270350cd6):
+
+* Hardware and firmware are validated according to FIPS 140-2 Level 2
+* Meeting Intel TXT, Microsoft Windows and Google Chromebook certification criteria for successful platform
+qualification
+* CC EAL4+ certification
+
+## Please provide datasheet and or link to relevant datasheet(s) when citing hardware based security features 
+
+More about TPM2.0 can be read here:
+
+https://trustedcomputinggroup.org/resource/tpm-library-specification/
+
+TPM2.0 commands:
+
+https://tpm2-tools.readthedocs.io/en/latest/
+
+SLB9670 datasheet:
+
+https://www.infineon.com/dgdl/Infineon-SLB%209670VQ2.0-DataSheet-v01_04-EN.pdf?fileId=5546d4626fc1ce0b016fc78270350cd6
+
+## What are your plans for software integration with Full Hotspot (miner) and Light Hotspot (gateway-rs) codebases?
+
+Software integration and updates will be handled via SSH remote access to the miners. Another option is to to create a docker image with possibility of automatic updates.
