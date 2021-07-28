@@ -163,4 +163,4 @@ https://www.infineon.com/dgdl/Infineon-SLB%209670VQ2.0-DataSheet-v01_04-EN.pdf?f
 
 ## What are your plans for software integration with Full Hotspot (miner) and Light Hotspot (gateway-rs) codebases?
 
-Software integration and updates will be handled via SSH remote access to the miners. Another option is to to create a docker image with possibility of automatic updates.
+Software integration and updates will be handled via SSH remote access to the miners. Another option is to create a docker image with possibility of automatic updates.
