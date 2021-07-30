@@ -1,10 +1,10 @@
-# HIP XX: Safe RF Meta-Data Side Channel
+# HIP 35: Safe RF Meta-Data Side Channel
 
 - Author(s): [@wavesoft](https://github.com/wavesoft/), [@dmamalis](https://github.com/dmamalis)
 - Start Date: 2021-07-28
 - Category: Technical
-- Original HIP PR: -
-- Tracking Issue: -
+- Original HIP PR: https://github.com/helium/HIP/pull/249
+- Tracking Issue: https://github.com/helium/HIP/issues/250
 - Status: In Discussion
 
 # Safe extraction of RF Meta-Data
