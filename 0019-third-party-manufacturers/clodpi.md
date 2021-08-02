@@ -8,9 +8,8 @@ At ClodPi Labs, we have been exploring and pioneering this space over the last 5
 
 We are proposing our expertise to build light hotspots and miners (Indoor and Outdoor).
 
-ClodPi Pro Hotspot
-
-<img src="clodpi/indoor-hotspot.png" alt="ClodPi Pro Hotspot (Indoor)" width=600 />
+ClodPi Pro Hotspot (Indoor)
+<img src="clodpi/indoor-hotspot-1.png" alt="ClodPi Pro Hotspot (Indoor)" width=600 />
 
 
 ## Company Information
@@ -35,6 +34,8 @@ We are planning to make both Hotspot Miner and Light Hotspots - (Indoor/Outdoor)
 * Ethernet 
 * WiFi 
 * 12V Power adapter
+* 3.5 dBi Rubber Duct Antenna 
+
 
 **Hotspots Miner - Outdoor** - In Development
 * LoRa Concentrator (SX1302/1303)
