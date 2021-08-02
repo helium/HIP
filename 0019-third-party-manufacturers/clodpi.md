@@ -10,7 +10,7 @@ We are proposing our expertise to build light hotspots and miners (Indoor and Ou
 
 ClodPi Pro Hitspot
 
-<img src="clodpi/indoor-hotspot.png" alt="ClodPi Pro Hotspot (Indoor)" width=200 />
+<img src="clodpi/indoor-hotspot.png" alt="ClodPi Pro Hotspot (Indoor)" width=600 />
 
 
 ## Company Information
