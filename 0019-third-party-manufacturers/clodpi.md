@@ -8,7 +8,7 @@ At ClodPi Labs, we have been exploring and pioneering this space over the last 5
 
 We are proposing our expertise to build light hotspots and miners (Indoor and Outdoor).
 
-ClodPi Pro Hitspot
+ClodPi Pro Hotspot
 
 <img src="clodpi/indoor-hotspot.png" alt="ClodPi Pro Hotspot (Indoor)" width=600 />
 
