@@ -8,6 +8,10 @@ At ClodPi Labs, we have been exploring and pioneering this space over the last 5
 
 We are proposing our expertise to build light hotspots and miners (Indoor and Outdoor).
 
+ClodPi Pro Hitspot
+
+<img src="clodpi/indoor-hotspot.png" alt="ClodPi Pro Hotspot (Indoor)" width=200 />
+
 
 ## Company Information
 
@@ -24,40 +28,40 @@ https://www.semtech.com/company/press/semtechs-lora-devices-reduce-energy-waste-
 
 We are planning to make both Hotspot Miner and Light Hotspots - (Indoor/Outdoor)
 
-Our existing gateways are suitable for Light Hotspots.
-
-
-
-**Light Hotspots - Indoor** (Estimated Price : 190 USD)
+**Hotspots Miner - Indoor**
 * LoRa Concentrator (SX1302/1303)
-* MIPS24KEc (575/580 MHz) with   64 KB I-Cache and 32 KB D-Cache
-* Ethernet and Optional 4G Backhaul
-* WiFi (AP/STA)
+* ARM 64 Bit Hexa-core (Quad-core ARM Cortex-A53 up to 1.4G Dual-core ARM Cortex-A72 up to 1.8G)
+* 4GB Ram /64GB eMMC 
+* Ethernet 
+* WiFi 
 * 12V Power adapter
 
-**Light Hotspots - Outdoor** 
+**Hotspots Miner - Outdoor** - In Development
 * LoRa Concentrator (SX1302/1303)
-* MIPS24KEc (575/580 MHz) with   64 KB I-Cache and 32 KB D-Cache
+* ARM 64 Bit Hexa-core (Quad-core ARM Cortex-A53 up to 1.4G Dual-core ARM Cortex-A72 up to 1.8G)
+* 4GB Ram /64GB eMMC 
 * Ethernet and  4G Backhaul
-* WiFi (AP/STA)
+* WiFi 
 * GPS
 * POE 802.3at
 * IP67
 * Lightning surge protection
 * Outdoor fiberglass LoRa Antenna
 
-**Hotspots Miner - Indoor** - In Development (Estimated Price : 290 USD)
+Our existing gateways are suitable for Light Hotspots.
+
+**Light Hotspots - Indoor** 
 * LoRa Concentrator (SX1302/1303)
-* ARM 64 Bit, 1GB Ram / 4 GB emmc
-* Ethernet and Optional 4G Backhaul
-* WiFi (AP/STA)
+* MIPS24KEc (575/580 MHz) with   64 KB I-Cache and 32 KB D-Cache
+* Ethernet
+* WiFi 
 * 12V Power adapter
 
-**Hotspots Miner - Outdoor** - In Development
+**Light Hotspots - Outdoor** 
 * LoRa Concentrator (SX1302/1303)
-* ARM 64 Bit, 1GB Ram / 4 GB emmc
-* Ethernet and  4G Backhaul
-* WiFi (AP/STA)
+* MIPS24KEc (575/580 MHz) with   64 KB I-Cache and 32 KB D-Cache
+* Ethernet and 4G Backhaul
+* WiFi
 * GPS
 * POE 802.3at
 * IP67
@@ -97,10 +101,9 @@ With our established network, we can supply 10000 units within 8 to 12 weeks of 
 
 
 ## Other information
-* Desired Discord support channel name - clodpi
+* Desired Discord channel - https://discord.gg/kP6u6pMGvT
 * Twitter profile - https://twitter.com/clodpilabs
-* Facebook profile - 
-* Other social profiles - 
+* Other social profiles - https://www.linkedin.com/company/clodpi-labs  /  https://www.youtube.com/channel/UCwvz3DAqbbXpYOY1laHBuUQ / https://t.me/ClodPiOfficial
 * Website - https://clodpi.io/
-* Payment methods available - Banks Transfer
-* Regions covered / shipped to - India, EU and Asia
+* Payment methods available - Banks Transfer, Debit/Credit Card, Net Banking, UPI(Only for India)
+* Regions covered / shipped to - India, EU, US, AS, AU and Asia
