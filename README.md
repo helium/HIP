@@ -38,7 +38,7 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | 25 | [Validators](https://github.com/helium/HIP/blob/master/0025-validators.md) | [Approved](https://github.com/helium/HIP/issues/111) |
 | 26 | [Payment Notes](https://github.com/helium/HIP/blob/master/0026-payment-notes.md) | [In Discussion](https://github.com/helium/HIP/issues/125) |
 | 27 | [Support CBRS 5G](https://github.com/helium/HIP/blob/master/0027-cbrs-5g-support.md) | [Approved](https://github.com/helium/HIP/pull/133) |
-| 28 | [Consensus Reward Adjustments](https://github.com/helium/HIP/blob/master/0028-consensus-reward-adjustments.md) | [In Discussion](https://github.com/helium/HIP/issues/140) |
+| 28 | [Consensus Reward Adjustments](https://github.com/helium/HIP/blob/master/0028-consensus-reward-adjustments.md) | [Approved](https://github.com/helium/HIP/issues/140) |
 | 29 | [Multi-signature Keys](https://github.com/helium/HIP/blob/master/0029-multisignature-keys.md) | [Approved](https://github.com/helium/HIP/issues/157) |
 | 30 | [BLS12-381 for Threshold Cryptography](https://github.com/helium/HIP/blob/master/0030-update-threshold-cryptography.md) | [Approved](https://github.com/helium/HIP/issues/158) |
 | 31 | [Governance by Token Lock](https://github.com/helium/HIP/blob/master/0031-governance-by-token-lock.md) | [In Discussion](https://github.com/helium/HIP/issues/183) |
