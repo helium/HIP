@@ -1,12 +1,13 @@
 # HIP 31: Governance by Token Lock
 
-- Authors: Tushar Jain, Shayon Sengupta
+- Authors: [Tushar Jain](https://github.com/@tjmcc), Shayon Sengupta
 - Start Date: November 14, 2020
 - Category: Governance
-- Original PR: TBD
-- Tracking Issue: TBD
+- Original HIP PR: https://github.com/helium/HIP/pull/182
+- Tracking Issue: https://github.com/helium/HIP/issues/183
+- Status: In Discussion
 
-## Summary
+# Summary
 [summary]: #summary
 
 This proposal suggests on-chain governance voting for implementations of chain variables and protocol upgrades.
