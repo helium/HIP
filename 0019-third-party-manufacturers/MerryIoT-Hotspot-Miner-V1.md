@@ -22,7 +22,7 @@ We started working with Helium in early 2020 with the introduction of our tabs o
 The MerryIot Hotspot Miner V1 is designed for edge computing applications in IoT, Smart Manufacturing, Automation, Blockchain and etc, to support high performance, high reliability and high throughput for the heavy data processing demand. 
 The MerryIot Hotspot Miner V1 is targeting at AIoT applications with quad A55 cores, G52 GPU hardware, based on Linux distribution. IoT solution providers can easily integrate advanced and stable functions for their application-centric development on their own IoT projects.
 
-Product Status: In Development. First prototypes to be built shortly. Mass production starting in Mid-October 2021 with 10K units quantity per month for Oct, Nov and December 2021.  Estimated Price: $399
+Product Status: In Development. First prototypes to be built shortly. Mass production starting in Mid-October 2021 with 10K units quantity per month for Oct, Nov and December 2021.  Estimated Price: $499
 
 ![untitled 391](https://user-images.githubusercontent.com/29647730/126925021-0c57f70a-1bbb-4518-b108-f6eb1d550ddb.jpg)
 
