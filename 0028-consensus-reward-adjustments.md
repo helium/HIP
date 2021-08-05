@@ -5,7 +5,8 @@
 - Category: economic
 - Original HIP PR: https://github.com/helium/HIP/pull/136
 - Tracking Issue: https://github.com/helium/HIP/issues/140
-- Status: In Discussion
+- Code PR: https://github.com/helium/blockchain-core/pull/922
+- Status: [Approved](https://github.com/helium/HIP/issues/140#issuecomment-892848351)
 
 # Summary
 [summary]: #summary
@@ -14,15 +15,15 @@ This proposal updates the way that consensus rewards are calculated to reduce th
 
 While this was a deliberate design decision as rewarding consensus based on length of epoch (like with PoC and Securities) incentivizes consensus group members to delay elections, it can be improved upon.
 
-This proposal includes two changes to address the under rewarding of the consensus pool:
-1. Add a grace period (controllable through a chain var) to the election interval to account for the time it takes for even successful elections to occur. This will avoid penalizing consensus rewards in most cases.
-2. Reallocate unearned consensus rewards to the PoC rewards pool to help maintain the target HNT mined per month and the ratio of community rewards (PoC and Consensus) to Securities/HST.
+This proposal includes a change to address the under rewarding of the consensus pool:
+Add a grace period equal to the election restart interval to account for the time it takes for even successful elections to occur. This will avoid a shortfall in consensus rewards in most cases.
+
 
 # Motivation
 [motivation]: #motivation
 
 The motivation behind this proposal is fairly simple – to correct the under rewarding of consensus members relative to the target of 6% of total earnings. The current approach is suboptimal for several reasons:
-1. Penalizes all validators not just poor performers - Long epochs can result for several reasons including the poor performance of one or more CG members, a software bug, or external factors such as reliability of Internet connections. While there should be penalties for poor performance of consensus group members, the current rewards calculation unfairly penalizes the entire consensus group/pool.
+1. Reduces rewards for all validators not just poor performers - Long epochs can result for several reasons including the poor performance of one or more CG members, a software bug, or external factors such as reliability of Internet connections. While there should be penalties for poor performance of consensus group members, the current rewards calculation unfairly hurts the entire consensus group/pool.
 2. Results in fewer total HNT minted - The current system creates variability in the monthly amount of HNT minted. While minting less HNT on a monthly basis may have positive effect due to lower supply, it is not predictable and also continuously impacts the max supply since the halvings are tied to blocks not epochs.
 3. Over rewards other network participants - The relative allocation of rewards to community members (hotspot owners and consensus members) is reduced relative to investors (HST holders) any time epochs go long. The success of Helium depends on the cooperation of both groups and as such the relative earnings between the two should remain consistent.
 
@@ -43,7 +44,26 @@ Even with validators, consensus elections can and will fail, leading to an avera
 
 With high investments required to become a validator, it will become more critical for the Helium Network to reward consensus accurately and fully.
 
-Lastly, there is precedent for this sort of reallocation of rewards. Data transfer rewards are capped based on the HNT value of the DC burned in any given epoch. The extra rewards in the data transfer share are then reallocated to PoC.
+## UPDATE: Actual results from Validators. 
+
+Looking at blocks 923722 (switch to 43 member Consensus Group) to 940522 (time of HIP update, approx 1pm PT July 27 2021), validators were under rewarded relative to the target percentage by ~4% (.24% short of 6% target).
+
+| Reward Type | Total HNT | Percentage | Target Percentage | Difference |
+| -- | ----- | ------ | ------ | ------- |
+|securities|596928.24|34.09%|34.00%|0.09%
+|poc_witnesses|813590.00|46.46%|21.24%|25.22%|
+|poc_challengees|203397.50|11.61%|5.31%|6.30%|
+|poc_challengers|36389.38|2.08%|0.95%|1.13%|
+|data_credits|25.87|0.00%|32.50%|-32.50%|
+|consensus|100833.33|5.76%|6.00%|-0.24%|
+|**Total**|**1,751,164.33**|**100.00%**|**100.00%**|**0.00%**|
+
+Additionally, looking at epoch times for a 200 epoch period, we see that a typical epoch is ~33 blocks long with a shortest of 32 blocks and longest of 38. Only six epochs took more than 35 blocks to complete. This supports the rational that consensus rewards should be given a grace period. The 200 block period was choose as it represented more stable epoch times after initial validator issues and chain var settings were worked out.
+
+![image Epoch Length (Blocks 933238 to 939821)](./0028-consensus-reward-adjustments/epoch-lengths.png)
+
+Based on this data, we can also perform a comparison of earnings between current and what they would have been with HIP 28 implemented. The actual number of blocks covered by these 200 epoch is 6616 blocks (note, rewards/election blocks are not considered to be within an epoch per the rewards calculations). Based on current implementation, validators received rewards based on 6000 of those blocks (90.1%). Under HIP 28, 6598 (99.7%) blocks would have been rewarded. Only 18 blocks that were part of the six epochs that took more than 35 blocks were not rewarded.
+
 
 # Stakeholders
 [stakeholders]: #stakeholders
@@ -63,25 +83,18 @@ Election Interval is defined in blocks and Block Time is defined in Seconds.
 
 You will note in this formula, the Consensus Rewards do not change when the epoch length varies. As such, consensus rewards will be below their monthly target whenever there are fewer Epochs in a monthly due to long epoch durations.
 
-This proposal introduces a new chain var `election_grace_period`. This grace period is added to the election interval and allows for rewards to be calculated on the actual epoch length up to this limit.
+This proposal introduces uses the `election_restart_interval` which is currently `5` blocks as the grace period. This grace period is added to the election interval and allows for rewards to be calculated on the actual epoch length up to this limit.
 
 The revised calculation for consensus rewards will work as follows:
->Epoch Consensus Rewards = (Monthly Rewards x Consensus Percentage) x ( min(Actual Epoch Length, Election Interval + Grace Period) x Block Time / Seconds in a month)
-
-Additionally, this proposal adds rewards to PoC in the case that an epoch is longer than the election interval plus the grace period. This compensates for the rewards part of the monthly mining target that would otherwise be unmined.
-
-The amount added to the PoC reward pool is determined as follows, if and, only if, Actual Epoch Length > Election Interval + Grace Period:
-
->Additional PoC Rewards = (Monthly Rewards x Consensus Percentage) x (Actual Epoch Length - Election Interval -  Grace Period) x Block Time / Seconds in a month)
+>Epoch Consensus Rewards = (Monthly Rewards x Consensus Percentage) x ( min(Actual Epoch Length, Election Interval + Election Resart Interval) x Block Time / Seconds in a month)
 
 
 # Drawbacks
 [drawbacks]: #drawbacks
 
 There are a couple drawbacks to the proposal however none so significant as to outweigh the benefits:
-1. This proposal may add processing complexity to rewards transactions as well as potentially require additional information to be maintain in the blockchain and/or ledger leading to some bloat. With the change to validators, I believe this will be less significant and thus worth the additional resources.
-2. Any change to rewards / token economics can be challenging from an adoption perspective. People do not like change. However, given that this proposal aims to correct rewards which most of the community already believe to be at 6%, I am confident in support of this proposal.
-3. This proposal further deviates from the original token allocation defined at [https://helium.com/tokens](https://helium.com/tokens).
+1. Any change to rewards / token economics can be challenging from an adoption perspective. People do not like change. However, given that this proposal aims to correct rewards which most of the community already believe to be at 6%, I am confident in support of this proposal.
+2. This proposal may slightly decrease the incentives for validator operators to maintain well performing validators. However, given that the incentive are already misaligned, namely the decrease in rewards for long epochs affects all validators and not just poor performers, this effect is expected to be minimal if at all.
 
 # Alternatives
 [alternatives]: #alternatives
@@ -97,6 +110,9 @@ It is possible to adjust rewards based on the actual duration of an epoch. This 
 ### Don’t Adjust PoC and Securities Rewards for epoch
 Another alternative is to change PoC and securities rewards to no longer adjust them based on epoch duration. Instead, they would be calculated much like consensus rewards today, assuming that an epoch is always 30 blocks. This would have significant impacts to the token economics of HNT as it would alter the month mining totals as well as the max supply. And, for these reasons, I do not a recommend this as an option.
 
+### Reallocate unearned consensus rewards
+Reallocate unearned consensus rewards to the PoC rewards pool to help maintain the target HNT mined per month and the ratio of community rewards (PoC and Consensus) to Securities/HST. While I originally favored this approach in addition to the grace period, it was removed from this change due to the fact that it adds more complexity to the implementation and also there were other ideas shared by community members and core developers on how to handle when the epoch goes beyond the grace period.
+
 ### Reallocate slashed stakes to other consensus members
 An ideal solution to consensus rewards both protects the 6% consensus reward pool while also penalizing poor consensus performers. It may be possible to design a reward structure that slashes poor performers and reallocates the slashed amount to the validator pool such that it compensates for lost rewards due to long epochs. However, as mentioned above, there are factors beyond any individual consensus members performance that could impact epoch duration. This means that slashing rewards alone may not be able to fully compensate under rewarding.
 
@@ -109,14 +125,14 @@ Finally, slashings will likely be a complex topic that will only be brought up a
 [unresolved]: #unresolved-questions
 
 I seek input from the community on a couple open questions:
-1. Technical feasibility of the proposal and any alternatives to achieve the same result based on what information is available on chain to adjust for long epoch times.
-2. Value to set the grace period at. I believe testing with the validator testnet will provide insight into this.
+1. Any additional alternatives to achieve the same result based on what information is available on chain to adjust for long epoch times, especially when the epoch goes beyond the grace period.
 
 # Deployment Impact
 [deployment-impact]: #deployment-impact
 
-This proposal will require a new version of the blockchain rewards calculation as the proposal is not compatible with the existing one. Enabling this new rewards transaction will need to be controlled behind a blockchain variable.
-Given the impact of this on validators, I propose timing the implementation to coincide with or preceded the switch from hotspots as consensus members to validators as consensus members.
+Since this change is not backwards compatible with previous rewards calculations, this change will be implemented through incrementing of the `reward_version` chain variable to 6 or more. As such, all validators, hotspots, and other chain followers will need to be updated before enabling the change via chain variable.
+
+Given the impact of this on return expected by operators of validators, I propose implementing this chain as quickly as possible once approved by the community.
 
 # Success Metrics
 [success-metrics]: #success-metrics
