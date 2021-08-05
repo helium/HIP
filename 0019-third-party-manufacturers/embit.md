@@ -59,6 +59,22 @@ We are making available our technology to the Helium network by proposing multip
 *	**Antenna:** N-Type Antenna Connector
 *	**Dimensions:** L:165mm W:165mm H:53mm
 
+**EMB-LR-PICOCELL Miner:**
+
+![immagine](https://user-images.githubusercontent.com/77483392/128351355-e6741405-72f1-436f-9532-3e708352e8c5.png)
+
+*	**Indoor** 
+*	**Raspberry Pi 3 B+**
+*	**LAN Connection:** Gigabit Ethernet over USB 2.0 (maximum throughput 300 Mbps)
+*	**LoRaWAN® connectivity:** EMB-LR1302/3-mPCIe both EU (863-870 MHz) and US (902-928) – 8 LoRaWAN® Channels
+*	**Backhaul connectivity:** Wi-Fi IEEE 802.11 b/g/n/ac
+*	**Bluetooth:** Yes (Bluetooth 4.2)
+*	**GPS:** U-Box Neo M8Q
+*	**OS:** RaspiOS 64 bit
+*	**Crypto Unit:** ECC608A
+*	**Power Supply:** 5V/2.5A DC supply via USB-Micro
+*	**Antenna:** SMA Connector
+*	**Dimensions:** L:100mm W:70mm H:40mm
 
 ## Previous shipments
 
