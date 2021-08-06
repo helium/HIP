@@ -44,7 +44,7 @@ We plan to ship to North America to start. Will consider expanding to global ava
 - 8 channel SX1302 LoRa concentrator
 - External LoRa antenna (3dBi)
 - Microchip ATECC608 secure element for swarm key storage
-- Ublox-7 GPS
+- Ublox Max-7 GPS
 - USB-C port (5V) for Power
 - Approximate price point: $300 to $400
 - Expected production timeline: Late 2021
