@@ -130,6 +130,13 @@ The official Helium mobile app is the primary interface for onboarding a new hot
 
 Both Helium and RAK hotspots are (presumably) running the same miner software as available on GitHub, but software updates are handled by a proprietary process. Additionally, there is remote access that can be used by Helium staff to diagnose and resolve issues. Both of these are closed-source and undocumented. If not open-sourced, third-party manufacturers would need to develop their own provably-reliable alternative.
 
+
+## Customer Refunds
+
+All manufacturers must offer an avenue of a refund in the orginal currency paid (excluding crypto) up until the item has been shipped to customer.  
+This encompasses the traditonal creditcard or paypal options for customers.  Wire Transfers for B2B may remain as-is per the sellers policies.  
+
+
 ## How To Apply
 
 Interested manufacturers should:
