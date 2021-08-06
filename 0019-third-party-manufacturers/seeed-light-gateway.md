@@ -43,7 +43,6 @@ SenseCAP M2 LoRaWAN Indoor Gateway is a light hotspot that gets reward for PoC a
 | Input Voltage                    | DC 12V / 1A                                                          |
 | Antenna Type | RP-SMA connector |
 | LTE | Optional |
-| Connector                        | USB Type-C(power supply)\*1; RJ45\*1; RP-SMA Female                 |
 | Operating Temperature            | -20°C to 60°C                                                       |
 | Certification                    | FCC / CE, will release more info for other certificates                                                         |
 | Part List                        | SenseCAP M2 LoRaWAN Indoor Gateway*1，Power Adapter*1, Antenna*1 |y
