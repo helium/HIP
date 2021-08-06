@@ -5,12 +5,14 @@
 ## Summary
 
 Happy to be back here in HIP 19 application!
+
 Seeed had launched a full hotspot SenseCAP M1 LoRaWAN Indoor Gateway in July. Thanks to all the voices from the community, we have many feasible feedback and now we are going to build a light hotspot - SenseCAP M2 LoRaWAN Indoor Gateway. Can't wait to share more.
 
 ## Company Information
 
 Founded in 2008, Seeed is among the world's Top3 open-source hardware providers located in Shenzhen, China.
 Seeed is a hardware-focused technology company serving global developers and system integrators with best-in-class IoT hardware products and turn-key services. Seeed has been working on the Internet of Things for years and has mature equipment production and maintenance capability.
+
 Seeed has 1k+ products being distributed by 200+ distributors across 150+ countries and regions to serve more than a million customers. In 2020, we sold millions of products to customers worldwide.
 
 With extensive experience in developing LoRa devices from Seeed, we are glad to introduce SenseCAP M2 LoRaWAN Indoor Gateway to the Helium community.
