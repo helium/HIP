@@ -134,7 +134,7 @@ Both Helium and RAK hotspots are (presumably) running the same miner software as
 ## Customer Refunds
 
 All manufacturers must offer an avenue of a refund in the orginal currency paid (excluding crypto) up until the item has been shipped to customer.  
-This encompasses the traditonal creditcard or paypal options for customers.  Wire Transfers for B2B may remain as-is per the sellers policies.  
+This encompasses the traditional creditcard or paypal options for customers.  Wire Transfers for B2B may remain as-is per the sellers policies.  
 
 
 ## How To Apply
