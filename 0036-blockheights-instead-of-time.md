@@ -44,10 +44,11 @@ None at this time.
 # Deployment Impact
 [deployment-impact]: #deployment-impact
 
-Existing chain variables may need to be re-coded to allow for blockheight activation. Current (non-closed) HIPs are not affected, with the exception of HIP 20. Adjustments to this HIP should be (not accounting for leap years):
+Existing chain variables may need to be re-coded to allow for blockheight activation. Current (non-closed) HIPs are not affected, with the exception of HIP 20. Adjustments to this HIP should be (not accounting for leap years, which could be ignored completely):
 ```
 'Yearly minted amount'   to   'minted each 525600 blocks' 
-'Halving each 2 years'   to   'halving each 1051200 blocks, from block '
+'Halving each 2 years'   to   'halving each 1051200 blocks'
+Start of block-based halving schedule at block 1997932 (which is 1051200 blocks after the most recent halving at block 946732)
 ```
 
 # Success Metrics
