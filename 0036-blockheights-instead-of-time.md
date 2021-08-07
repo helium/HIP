@@ -3,7 +3,7 @@
 - Author(s): [@BFX](http://github.com/Bx64/)
 - Start Date: 2021-08-06
 - Category: Technical
-- Original HIP PR: not filed yet
+- Original HIP PR: [257](https://github.com/helium/HIP/pull/257)
 - Tracking Issue: not filed yet
 - Status: Draft
 
