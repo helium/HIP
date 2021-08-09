@@ -1,7 +1,7 @@
 # HIP Template
 
 - Author(s): @BFGNeil
-- Start Date: 2021-07-30 <!-- fill me in with today's date, YYYY-MM-DD -->
+- Start Date: 2021-07-30
 - Category: Economic
 - Original HIP PR:
 - Tracking Issue:
@@ -9,7 +9,7 @@
 # Summary
 [summary]: #summary
 
-Enable mappers to earn from mapping based on the new 5g PoC methods allowing phones to map coverage.
+Enable Lorawan coverage mappers to earn, in the same spirit as proposed plans for 5g PoC (witness events being based off a phone app)
 
 # Motivation
 [motivation]: #motivation
@@ -17,6 +17,18 @@ Enable mappers to earn from mapping based on the new 5g PoC methods allowing pho
 Mappers has always been a volunteer program because of complexities with trusting the data. Currently anyone can submit data to the mappers system so it cannot be trusted. 
 
 5G PoC calls for Proof of Coverage that includes witnessing being done by mobile phones, and that it is vital to prove coverage for companies to move over. My belief is this same requirement is needed for LoRaWan coverage.
+
+
+# Stakeholders
+[stakeholders]: #stakeholders
+
+* Who is affected by this HIP?
+
+* How are we soliciting feedback on this HIP from these stakeholders? Note that
+  they may not be watching the HIPs repository or even aren't directly active in
+  the Helium Community Slack channels.
+
+# Detailed Explanation
 
 The LR1110 chipset is in suggestion for a method of proving hostspots in the wild, and at the same time, this could be used for trusted mapping data.
 
@@ -36,29 +48,6 @@ I Propose via a hip19 style aproval process, that manufacturers can submit desig
 5G PoC calls for a 9% share of the pool, of which 5.35% goes to phones for witnessing. This works out to around 12,000HNT per month, 0.48% of monthly supply. 
 
 This is to be reduced from the DC pool, taken from the spillover from overages in DC to witnessing
-
-
-
-# Stakeholders
-[stakeholders]: #stakeholders
-
-* Who is affected by this HIP?
-
-* How are we soliciting feedback on this HIP from these stakeholders? Note that
-  they may not be watching the HIPs repository or even aren't directly active in
-  the Helium Community Slack channels.
-
-# Detailed Explanation
-[detailed-explanation]: #detailed-explanation
-
-- Introduce and explain new concepts.
-
-- It should be reasonably clear how the proposal would be implemented.
-
-- Provide representative examples that show how this proposal would be commonly
-  used.
-
-- Corner cases should be dissected by example.
 
 # Drawbacks
 [drawbacks]: #drawbacks
