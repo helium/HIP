@@ -29,13 +29,14 @@ More detailed information on TPM can be found here:
 
 ### How/where is the key generated?
 
-Key is generated inside the TPM chip using Fapi_CreateKey command (refer to FAPI spec). 
-That uses TPM2_Create command inside (refer TPM2 Commands). 
-TPM2_Create Commands stores data outside on Non-Volatile memory (path to storage folders can be customized in FAPI). 
-Data is stored inside "shielded location" which means only TPM can load, decrypt and access it. Decrypted sensitive data never goes outside TPM chip.
+Key is generated inside the TPM chip using Fapi_CreateKey command (refer to FAPI spec).
+Then it's encrypted with Primary TPM key which is unique for each TMP and is regenerated each time you reset the TPM chip. 
+Then this encrypted blob is stored on external media. It is then possible to use generated key only inside this TPM module. 
+Prior to use TPM loads it inside itself and decrypts. Decrypted key never leaves TPM chip.
 
 ### What guarantees do we have about the key being extracted?
 
+Primary key is unique for each TPM module, making it impossible impossible to use blob with key on any other TPM module.
 The very purpose of TPM chip is to provide hardware based mechanism for securely storing the keys 
 inside of the chip without the possibility of extraction. Impossibility of extraction is guaranteed by TPM spec. 
 However user can either reset the whole TPM chip effectively erasing all the keys or remove individual keys using TPM commands directly.
