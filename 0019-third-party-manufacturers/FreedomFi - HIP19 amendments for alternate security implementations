@@ -27,6 +27,11 @@ More detailed information on TPM can be found here:
  - [TPM2 Commands](https://trustedcomputinggroup.org/wp-content/uploads/TCG_TPM2_r1p59_Part3_Commands_pub.pdf)
  - [FAPI Spec](https://trustedcomputinggroup.org/wp-content/uploads/TSS_FAPI_v0.94_r04_pubrev.pdf)
 
+### What TPM chip family is used inside FreedomFi Gateways
+
+[Infineon SLB9665TT20](https://www.infineon.com/cms/en/product/security-smart-card-solutions/optiga-embedded-security-solutions/optiga-tpm/slb-9665tt2.0/)
+Infineon’s Trusted Platform Module (TPM 2.0) SLB 9665 is a fully standard compliant TPM based on the latest Trusted Computing Group (TCG) specification 2.0.
+
 ### How/where is the key generated?
 
 Key is generated inside the TPM chip using Fapi_CreateKey command (refer to FAPI spec).
