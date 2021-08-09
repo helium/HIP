@@ -42,24 +42,14 @@ Network disconnection self-test repair function: When the device is off the publ
 
 ## Previous shipments (required)
 
-Startups welcome! Answer No if that's the answer.
-* Have you shipped anything in the past?
-* Which countries have you previously shipped regulatory FCC or CE approved products? 
-* Which countries do you plan to ship to? 
+We manufacture many 4G Routers every year. Most of the customers are from China. We are vigorously exploring overseas markets.
 
 ## Customer Support (required)
-
-* How will your customers be able to contact you for support for your products?
-* For how long? How are you planning to handle repairs and replacements?
+Our technical staff will provide users with the best technical support and services. Users can call us to solve after-sales problems through the contact number on the official website. We have opened a 24-hour service hotline.
 
 ## Hardware Security Element (required)
 
-The community is concerned about devices that can be easily hacked, specifically by copying their `swarm_key` files. Applications should include plan for how the devices will be secured, potentially including:
-
-* Encrypted/locked-down firmware
-* Encrypted storage of the miner swarm_key, either via disk encryption or hardware measures like an ECC chip
-* Encrypted buses, potting and other anti-tampering measures.
-* Willingness to submit a prototype for audit, and sharing those audit results publicly (pass or fail)
+ The performance and production technology of passive anti-pet infrared detectors, intelligent dual detectors, and intelligent anti-theft alarm hosts independently developed by Weimaisi Technology Co., Ltd have reached the international advanced level. Products have passed CCC, CCCF, CE, FCC, ROHS, BSCI and other certifications.
 
 ## Hardware Information (required)
 
@@ -72,11 +62,8 @@ Please let us know:
 
 ## Manufacturing Information (required)
 
-* Have you built and delivered radio hardware products before? 
-* Have you built gateways before?
-* How many gateways did you make? 
-* If you have not built gateways before, are you using a third party manufacturer?
-This is the single largest risk with most hardware ventures. If possible please provide information about your manufacturing partners and supply chain.
+  Shenzhen Weimaisi Technology Co., Ltd.  is a global provider of hardware and software solutions for the Internet of Things (IoT) and out-of-band management (OOBM). Bailingjia Technology enables customers to provide smart, reliable and secure IoT and OOBM solutions while accelerating time to market. Bailingjia Technology greatly simplifies the creation, development, deployment, and management of IoT projects while providing quality, reliability, and security across hardware, software, and solutions.
+Lantronix's services and solutions provide a comprehensive approach to satisfy customers through integrated software and application development, SaaS management platform, intelligent edge computing, wired, Wi-Fi, cellular embedded modules and external devices, and a wide range of products Demand sensors and trackers. Lantronix's service and product portfolio covers every layer of the IoT stack, including collection, connection, calculation, control, and understanding, enabling its customers to deliver successful IoT and OOBM solutions.
 
 ## Proof of Identity
 
@@ -85,8 +72,7 @@ Per typical KYC/AML procedures, proof of identity for major shareholders (25%+ o
 
 ## Budget & Capital (required)
 
-* How many of these are you hoping to make and sell? 
-* How much money will be required up-front? How much money do you have on-hand, and how much do you have access to? What is your plan for additional financing if required? This is the second biggest risk in new hardware ventures -- getting almost over the line and then running out of cash.
+Shenzhen Weimaisi Technology Co., Ltd. is a high-tech enterprise integrating R & D, production, sales and service; it is one of the earliest, largest and most powerful security high-tech enterprises in China.
 
 ## Risks & Challenges (required)
 
