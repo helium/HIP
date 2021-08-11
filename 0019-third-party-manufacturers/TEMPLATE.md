@@ -3,20 +3,20 @@
 
 ## Summary
 
-Two sentences about who you are and what you’d like to build. Indicate if you are building a Light Gateway, or a Full Gateway. Bonus points to include photos and links. 
+Two sentences about who you are and what you’d like to build. Indicate if you are building a Light Gateway, or a Full Gateway. Bonus points to include photos and links.
 
 ## Company Information (required)
 
-* What is your company name? 
-* How long have you been in business? 
-* What kind of products have you created? 
-* How many have you sold? 
+* What is your company name?
+* How long have you been in business?
+* What kind of products have you created?
+* How many have you sold?
 * What brought you to Helium etc?
 
 ## Product Information (required)
 
-Your time to shine! What are you building? What’s so great about it? 
-* What is your approximate price point? 
+Your time to shine! What are you building? What’s so great about it?
+* What is your approximate price point?
 * Detailed hardware designs, including relevant parts
 * Evidence of a functioning prototype - photos, videos. Renderings are OK but physical prototypes are much, much better.
 * Your plan for software setup and configuration for the devices. This would presumably include remote updates and the ability for hosts to change wifi settings, via Helium's official app or otherwise.
@@ -27,8 +27,8 @@ Photos and videos welcome.
 
 Startups welcome! Answer No if that's the answer.
 * Have you shipped anything in the past?
-* Which countries have you previously shipped regulatory FCC or CE approved products? 
-* Which countries do you plan to ship to? 
+* Which countries have you previously shipped regulatory FCC or CE approved products?
+* Which countries do you plan to ship to?
 
 ## Customer Support (required)
 
@@ -55,20 +55,20 @@ Please let us know:
 
 ## Manufacturing Information (required)
 
-* Have you built and delivered radio hardware products before? 
+* Have you built and delivered radio hardware products before?
 * Have you built gateways before?
-* How many gateways did you make? 
+* How many gateways did you make?
 * If you have not built gateways before, are you using a third party manufacturer?
 This is the single largest risk with most hardware ventures. If possible please provide information about your manufacturing partners and supply chain.
 
 ## Proof of Identity
 
-Per typical KYC/AML procedures, proof of identity for major shareholders (25%+ ownership) will be expected to be provided privately to representatives from Helium Inc or DeWi board members. This will be attested and publicly confirmed by those representatives, e.g. as GitHub comments. 
+Per typical KYC/AML procedures, proof of identity for major shareholders (25%+ ownership) will be expected to be provided privately to representatives from Helium Inc or DeWi board members. This will be attested and publicly confirmed by those representatives, e.g. as GitHub comments.
 * Contact details for this will be provided after your application is submitted on GitHub.
 
 ## Budget & Capital (required)
 
-* How many of these are you hoping to make and sell? 
+* How many of these are you hoping to make and sell?
 * How much money will be required up-front? How much money do you have on-hand, and how much do you have access to? What is your plan for additional financing if required? This is the second biggest risk in new hardware ventures -- getting almost over the line and then running out of cash.
 
 ## Risks & Challenges (required)
@@ -76,11 +76,11 @@ Per typical KYC/AML procedures, proof of identity for major shareholders (25%+ o
 Please tell us about some of the challenges that would prevent these products from becoming a reality, and how you might address them.
 
 ## Other information (required)
- 
+
 * Contact info (* required) -
-* Twitter profile - 
-* Facebook profile - 
-* Other social profiles - 
+* Twitter profile -
+* Facebook profile -
+* Other social profiles -
 * Website -
-* Payment methods available - 
-* Regions covered / shipped to - 
+* Payment methods available -
+* Regions covered / shipped to -
