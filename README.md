@@ -46,6 +46,7 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | 33 | [Regional Reward Adjustments](https://github.com/helium/HIP/blob/master/0033-regional-reward-adjustments.md) | [In Discussion](https://github.com/helium/HIP/issues/222) |
 | 34 | [Validator Node Security](https://github.com/helium/HIP/blob/master/0034-validator-node-security.md) | [In Discussion](https://github.com/helium/HIP/issues/223) |
 | 35 | [RF Metadata Sidechannel](https://github.com/helium/HIP/blob/master/0035-safe-rf-metadata-side-channel.md) | [In Discussion](https://github.com/helium/HIP/issues/250) |
+| 36 | [Blockheight Chainvar Activation](https://github.com/helium/HIP/blob/master/0036-blockheights-instead-of-time.md) | [In Discussion](https://github.com/helium/HIP/issues/260) |
 
 ## HIP19 third-party manufacturers
 
