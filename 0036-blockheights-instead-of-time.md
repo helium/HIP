@@ -4,8 +4,8 @@
 - Start Date: 2021-08-06
 - Category: Technical
 - Original HIP PR: [257](https://github.com/helium/HIP/pull/257)
-- Tracking Issue: not filed yet
-- Status: Draft
+- Tracking Issue: [260](https://github.com/helium/HIP/issues/260)
+- Status: In Discussion
 
 # Summary
 [summary]: #summary
