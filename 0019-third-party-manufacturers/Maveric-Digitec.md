@@ -37,9 +37,9 @@ We acknowledge that the he prevalent electronic component shortage for manufactu
 We would work to the best of our abilities to ensure that there are no delays in shipment etc., in addition to ensuring that our customers always get the best overall experience possible
 
 ## Other information
-Contact Info – Support@maveric.ai
-Desired Discord support channel name: Maveric Digitec
-Twitter profile - https://twitter.com/Maveric_Digitec
-Website – https://maveric.ai
-Region covered – India to start with, coverage for more regions including US & Canada to be added upon receiving certifying body approvals that our manufacturers  
+* Contact Info – Support@maveric.ai
+* Desired Discord support channel name: Maveric Digitec
+* Twitter profile - https://twitter.com/Maveric_Digitec
+* Website – https://maveric.ai
+* Region covered – India to start with, coverage for more regions including US & Canada to be added upon receiving certifying body approvals that our manufacturers  
 
