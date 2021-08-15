@@ -42,3 +42,4 @@ Desired Discord support channel name: Maveric Digitec
 Twitter profile - https://twitter.com/Maveric_Digitec
 Website – https://maveric.ai
 Region covered – India to start with, coverage for more regions including US & Canada to be added upon receiving certifying body approvals that our manufacturers 
+
