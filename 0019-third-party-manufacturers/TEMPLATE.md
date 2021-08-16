@@ -77,9 +77,9 @@ Per typical KYC/AML procedures, proof of identity for major shareholders (25%+ o
 
 Please tell us about some of the challenges that would prevent these products from becoming a reality, and how you might address them.
 
-## Please read Helium's [brand guidelines?](https://www.helium.com/brand) (required)
+## Please read Helium's [brand guidelines](https://www.helium.com/brand) (required)
 
-Have you read and understand the brand guidelines? Please answer yes or no.
+Have you read and understand the brand guidelines? A yes or no answer is sufficient.
 
 ## Other information (required)
 
