@@ -16,6 +16,7 @@ Two sentences about who you are and what you’d like to build. Indicate if you 
 ## Product Information (required)
 
 Your time to shine! What are you building? What’s so great about it?
+* Is this a Light Hotspot or a Full Hotspot? (required)
 * What is your approximate price point?
 * Detailed hardware designs, including relevant parts
 * Evidence of a functioning prototype - photos, videos. Renderings are OK but physical prototypes are much, much better.
@@ -50,6 +51,7 @@ Please let us know:
 * Which security (swarm) element are you using?
 * Which LoRa chipset are you planning to use in your gateway (ie SX1302/03 & SX1250s or SX1301/08 & SX1255/57)
 * We recommend you don't use the SX1301 in new designs
+* If you have been approved by the MOC for a previous Hotspot, how is your new design different, if at all?
 * Where are you sourcing your components from?
 * How many radio modules/ concentrators can you procure?
 
