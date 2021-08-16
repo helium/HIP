@@ -39,7 +39,7 @@ We would work to the best of our abilities to ensure that there are no delays in
 ## Other information
 * Contact Info – Support@maveric.ai
 * Desired Discord support channel name: Maveric Digitec
-* Twitter profile - https://twitter.com/Maveric_Digitec
+* Twitter profile - https://twitter.com/MavericDigitec
 * Website – https://maveric.ai
 * Region covered – India to start with, coverage for more regions including US & Canada to be added upon receiving certifying body approvals that our manufacturers  
 
