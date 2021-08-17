@@ -8,7 +8,7 @@ More details on process and how to participate can be found in HIP7, ["A Process
 
 If you have questions or feedback, please ask in [#hip-open-discussion in the community Discord](https://discord.gg/helium). Each proposal in discussion also has its own dedicated channel.
 
-Looking for hotspot manufacturer applications? Those have moved to their own dedicated repository: [dewi-alliance/hotspot-manufacturers](https://github.com/dewi-alliance/hotspot-manufacturers)
+**Looking for HIP19 hotspot manufacturer applications?** Those have moved to their own dedicated repository: [dewi-alliance/hotspot-manufacturers](https://github.com/dewi-alliance/hotspot-manufacturers)
 
 ## Index of proposals
 
