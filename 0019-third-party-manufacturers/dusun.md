@@ -46,13 +46,13 @@ The community is concerned about devices that can be easily hacked, specifically
 * Encrypted buses, potting and other anti-tampering measures.
 * Willingness to submit a prototype for audit, and sharing those audit results publicly (pass or fail)
 
-1. We will protect and encrypt storage of the swarm_key by HW security chip.
-2. We will use ARM trustzone technology to protect all our security operation. 
+1. We will protect and encrypt storage of the swarm_key by ECC608 chip.
+2. We will submit a prototype for audit, and sharing those audit results publicly. 
 
 ## Hardware Information (required)
 
 Please let us know:
-* Which security (swarm) element are you using?  It's with NCJ38A
+* Which security (swarm) element are you using?  It's with ATECC608A
 * Which LoRa chipset are you planning to use in your gateway (ie SX1302/03 & SX1250s or SX1301/08 & SX1255/57)   we use the sx1302 LoRa chip 
 * We recommend you don't use the SX1301 in new designs     Yes, we use the sx1302 chip 
 * Where are you sourcing your components from?             Chip agent
