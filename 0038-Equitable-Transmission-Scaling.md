@@ -7,7 +7,7 @@ Summary
 Equitable Transmission Scaling. 
 
 Motivation
-While HIP-17 made vast improvements to the equity of rewards distribution it also penalizes optimal coverage in suburban areas.
+While HIP-17 made vast improvements to the equity of rewards distribution it also penalizes movement twords optimal coverage in suburban areas.
 
 Stakeholders
 Everyone would be effected by this HIP but would benefit those at the currently scaled resolution 4 boundaries the most. This benefit would be felt
@@ -21,16 +21,16 @@ Having an equitable scaling solution that scales both directions at each resolut
 each hex down scaling to only affect the most agregious sections inside that hex while allowing optimal distributions to remain or even regain some of their downscaling. 
 This requires the scaling to be calculated form largest resoultion to smallest though.
 
-The new scaling would be the smaller of the two values of 1 or the parents scaling multiplied by the unclipped hex density divided by the clipped hex density 
+The new scaling would be the smaller of the two values of 1 or the parents scaling multiplied by the hex density divided by the target hex density 
 
-scaling = MIN( parent_scaling() * (unclipped / clipped) , 1)
+scaling = MIN( parent_scaling() * ( density / target density) , 1)
 
-res   | clipped | unclipped | scaling
-res 4 |     250 |       375 | 0.66
-res 5 |     100 |       150 | 0.44
-res 6 |      25 |        20 | 0.55
-res 7 |       5 |         3 | 0.6875
-res 8 |       1 |         1 | 0.6875
+res   | target | density | scaling
+res 4 |    250 |     375 | 0.66
+res 5 |    100 |     150 | 0.44
+res 6 |     25 |      20 | 0.55
+res 7 |      5 |       3 | 0.6875
+res 8 |      1 |       1 | 0.6875
 
 Drawbacks
 This does add a higher degree of difficulty calculating each scaling multiplier.
