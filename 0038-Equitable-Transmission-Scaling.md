@@ -37,15 +37,6 @@ This does add a higher degree of difficulty calculating each scaling multiplier.
 
 Rationale and Alternatives
 The main complaint is that it is possible to have a lone wolf that is transmission scaled by 30-50% due to a natural barrier such as a mountain.
-It is also possible for a single hex to theoretically create scaling to each resolution they belong to. 
-If a single hex activated 1000 hotspots we would see the following impact to those around them.
-
-res 4 | 250 | 1000 | 0.25
-res 5 | 100 | 1000 | 0.025
-res 6 |  25 | 1000 | 0.0005
-res 7 |   5 | 1000 | 0.00000025
-
-While this example is a dramatization, it proves the point that everyone inside a resolution can be greatly affected by a single res 10 hex.
 This typically happens in densly populated areas surrounded by rural areas that have no chance of increasing the resolution 4 maximum. 
 These densly populated areas may not even subjected to large amounts of scaling beyond resoultion 8 or 9 but are affecting hotspots 50 miles away.
 The sheer size and arbitray boundaries of res 4 make scaling based on it untenable. 
