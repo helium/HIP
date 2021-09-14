@@ -37,7 +37,7 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | 22 | [DIY Concentrators (f/k/a Golden or Anchor Gateways)](https://github.com/helium/HIP/blob/master/0022-diy-concentrators.md) | [In Discussion](https://github.com/helium/HIP/issues/94) |
 | 23 | [Decouple Consensus From Gateways](https://github.com/helium/HIP/blob/master/0023-decouple-consensus-from-gateways.md) | [Closed](https://github.com/helium/HIP/issues/101) |
 | 24 | [Transfer Percentage of Hotspot](https://github.com/helium/HIP/blob/master/0024-reward-splitting.md) | [In Discussion](https://github.com/helium/HIP/issues/105) |
-| 25 | [Validators](https://github.com/helium/HIP/blob/master/0025-validators.md) | [Approved](https://github.com/helium/HIP/issues/111) |
+| 25 | [Validators](https://github.com/helium/HIP/blob/master/0025-validators.md) | [Deployed](https://github.com/helium/HIP/issues/111) ([audit](https://github.com/helium/miner/blob/master/audit/var-70.md)) |
 | 26 | [Payment Notes](https://github.com/helium/HIP/blob/master/0026-payment-notes.md) | [In Discussion](https://github.com/helium/HIP/issues/125) |
 | 27 | [Support CBRS 5G](https://github.com/helium/HIP/blob/master/0027-cbrs-5g-support.md) | [Approved](https://github.com/helium/HIP/pull/133) |
 | 28 | [Consensus Reward Adjustments](https://github.com/helium/HIP/blob/master/0028-consensus-reward-adjustments.md) | [Approved](https://github.com/helium/HIP/issues/140) |

@@ -6,7 +6,7 @@
 - Original HIP PR: [#110](https://github.com/helium/HIP/pull/110)
 - Tracking Issue: [#111](https://github.com/helium/HIP/issues/111)
 - Frequently Asked Questions: [FAQ](https://github.com/helium/HIP/blob/master/0025-validators.md#frequently-asked-questions)
-- Status: Approved
+- Status: Deployed ([audit](https://github.com/helium/miner/blob/master/audit/var-70.md))
 
 ## Summary
 [summary]: #summary
