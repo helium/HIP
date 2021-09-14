@@ -32,7 +32,7 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | 17 | [Hex Density-based Transmit Reward Scaling](https://github.com/helium/HIP/blob/master/0017-hex-density-based-transmit-reward-scaling.md) | [Deployed](https://github.com/helium/blockchain-core/pull/677) ([audit](https://github.com/helium/miner/blob/master/audit/var-50.md) / [txn](https://explorer.helium.com/txns/vnEqwbKtFfFxXgYI_9L5Th0LRVkpJlsX-sQzZTh2VwY)) |
 | 18 | [Remove Oracle Forecast for DC Burn](https://github.com/helium/HIP/blob/master/0018-remove-oracle-forecast-for-dc-burn.md) | [Approved](https://github.com/helium/HIP/issues/60) |
 | 19 | [Approval Process For Third-Party Manufacturers](https://github.com/helium/HIP/blob/master/0019-third-party-manufacturers.md) | [Approved](https://github.com/helium/HIP/issues/87) |
-| 20 | [HNT Max Supply](https://github.com/helium/HIP/blob/master/0020-hnt-max-supply.md) | [Approved](https://github.com/helium/HIP/issues/73) |
+| 20 | [HNT Max Supply](https://github.com/helium/HIP/blob/master/0020-hnt-max-supply.md) | [Deployed](https://github.com/helium/HIP/issues/73) ([audit](https://github.com/helium/miner/blob/master/audit/var-79.md)) |
 | 21 | [PoC Link Layer Upgrades](https://github.com/helium/HIP/blob/master/0021-poc-link-layer.md) | [Closed](https://github.com/helium/HIP/issues/78) |
 | 22 | [DIY Concentrators (f/k/a Golden or Anchor Gateways)](https://github.com/helium/HIP/blob/master/0022-diy-concentrators.md) | [In Discussion](https://github.com/helium/HIP/issues/94) |
 | 23 | [Decouple Consensus From Gateways](https://github.com/helium/HIP/blob/master/0023-decouple-consensus-from-gateways.md) | [Closed](https://github.com/helium/HIP/issues/101) |
