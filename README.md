@@ -33,7 +33,7 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | 18 | [Remove Oracle Forecast for DC Burn](https://github.com/helium/HIP/blob/master/0018-remove-oracle-forecast-for-dc-burn.md) | [Approved](https://github.com/helium/HIP/issues/60) |
 | 19 | [Approval Process For Third-Party Manufacturers](https://github.com/helium/HIP/blob/master/0019-third-party-manufacturers.md) | [Approved](https://github.com/helium/HIP/issues/87) |
 | 20 | [HNT Max Supply](https://github.com/helium/HIP/blob/master/0020-hnt-max-supply.md) | [Approved](https://github.com/helium/HIP/issues/73) |
-| 21 | [PoC Link Layer Upgrades](https://github.com/helium/HIP/blob/master/0021-poc-link-layer.md) | [In Discussion](https://github.com/helium/HIP/issues/78) |
+| 21 | [PoC Link Layer Upgrades](https://github.com/helium/HIP/blob/master/0021-poc-link-layer.md) | [Closed](https://github.com/helium/HIP/issues/78) |
 | 22 | [DIY Concentrators (f/k/a Golden or Anchor Gateways)](https://github.com/helium/HIP/blob/master/0022-diy-concentrators.md) | [In Discussion](https://github.com/helium/HIP/issues/94) |
 | 23 | [Decouple Consensus From Gateways](https://github.com/helium/HIP/blob/master/0023-decouple-consensus-from-gateways.md) | [In Discussion](https://github.com/helium/HIP/issues/101) |
 | 24 | [Transfer Percentage of Hotspot](https://github.com/helium/HIP/blob/master/0024-reward-splitting.md) | [In Discussion](https://github.com/helium/HIP/issues/105) |
