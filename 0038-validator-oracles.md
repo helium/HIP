@@ -1,10 +1,10 @@
-# HIP Template
+# HIP38: Validator Oracles
 
 - Author(s): @cvolkernick
 - Start Date: 2021-09-06
 - Category: Economic / Technical
-- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
-- Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
+- Original HIP PR: https://github.com/helium/HIP/pull/272
+- Tracking Issue: https://github.com/helium/HIP/issues/282
 
 # Summary
 [summary]: #summary
