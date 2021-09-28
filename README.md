@@ -51,7 +51,7 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | 36 | [Blockheight Chainvar Activation](https://github.com/helium/HIP/blob/master/0036-blockheights-instead-of-time.md) | [In Discussion](https://github.com/helium/HIP/issues/260) |
 | 37 | [Omni-Protocol PoC](https://github.com/helium/HIP/blob/master/0037-omni-protocol-poc.md) | [In Discussion](https://github.com/helium/HIP/issues/271) |
 | 38 | [Validator Oracles](https://github.com/helium/HIP/blob/master/0038-validator-oracles.md) | [In Discussion](https://github.com/helium/HIP/issues/282) |
-
+| 39 | [HNT Redenomination](https://github.com/helium/HIP/blob/master/0039-hnt-redenomination.md) | [In Discussion](https://github.com/helium/HIP/issues/283) |
 
 ## Status key
 

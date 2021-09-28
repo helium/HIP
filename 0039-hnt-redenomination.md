@@ -1,9 +1,10 @@
 # HIP 39: HNT Redenomination
 
 - Author: @JMF
-- Start Date: TBD
+- Start Date: September 14, 2021
 - Category: Economic
-- Tracking Issue:
+- Original PR: https://github.com/helium/HIP/pull/275
+- Tracking Issue: https://github.com/helium/HIP/issues/283
 - Status: In Discussion
 
 ## ​​Summary
