@@ -1,0 +1,46 @@
+# Validator Denylist
+
+- Author(s): ????
+- Start Date: 2021-09-27
+- State: Proposed
+- Original HIP PR: ????
+- Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
+
+## Summary and Motivation
+[motivation]: #motivation
+
+While the situation with regards to Proof-of-Coverage gaming has improved and additional enhancements are intended, we need a backstop prevention mechanism that allows us to quickly allow the network to grow and deal with obvious gaming and spoofing situations as they materialize. 
+
+This plan proposes that *validators* would maintain a denylist file of Hotspot addresses which the community-at-large have determined are "gaming" the PoC system and not providing coverage where they claim to be.
+
+This proposal has two consensus mechanisms:
+
+1. how Hotspots are added or removed from the denylist
+2. whether validators choose to adopt the community blacklist
+
+## Semi-Detailed Implementation Plan
+[detailed-explanation]: #detailed-explanation
+
+- A public JSON or YAML file of denylisted Hotspot unique addresses will be included in the *validator* software
+
+- Community members will be able to submit pull requests against this file to add/remove addresses from the list with some explanation for the request
+
+- When PoC transactions are submitted to the consensus group, if a majority of consensus group members agree that a given Hotspot address is on the denylist, any witness receipts from that address will be marked as invalid with a reason of `denylist`
+
+- Only witness receipts are affected by the denylist. Hotspots on the denylist can still transmit and be witnessed by others, and be rewarded for that activity. This also allows Hotspots to justify being removed from the denylist in the future
+
+- Validators do not have to use the community denylist file, or any denylist at all. Only if a majority of consensus group members both have a denylist and have common Hotspots on the denylist would any action be taken. This puts consensus decision making in the hands of a) the entity that approves/denies pull requests to the community denylist, and b) validators who choose whether to adopt the denylist
+
+## Open Questions
+[unresolved]: #open-questions
+
+- Who decides which denylist PR's to accept or reject?
+
+- Should a majority of validators be required to denylist a witness receipt, or should it be unanimous?
+
+- Should Hotspots on the denylist still get transmission (aka. challengee) rewards?
+
+## Success Metrics
+[success-metrics]: #success-metrics
+
+Success here means that a Hotspot address contained on a majority of validators' denylist have their PoC witness receipts rejected as invalid.
