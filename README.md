@@ -32,17 +32,17 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | 17 | [Hex Density-based Transmit Reward Scaling](https://github.com/helium/HIP/blob/master/0017-hex-density-based-transmit-reward-scaling.md) | [Deployed](https://github.com/helium/blockchain-core/pull/677) ([audit](https://github.com/helium/miner/blob/master/audit/var-50.md) / [txn](https://explorer.helium.com/txns/vnEqwbKtFfFxXgYI_9L5Th0LRVkpJlsX-sQzZTh2VwY)) |
 | 18 | [Remove Oracle Forecast for DC Burn](https://github.com/helium/HIP/blob/master/0018-remove-oracle-forecast-for-dc-burn.md) | [Approved](https://github.com/helium/HIP/issues/60) |
 | 19 | [Approval Process For Third-Party Manufacturers](https://github.com/helium/HIP/blob/master/0019-third-party-manufacturers.md) | [Approved](https://github.com/helium/HIP/issues/87) |
-| 20 | [HNT Max Supply](https://github.com/helium/HIP/blob/master/0020-hnt-max-supply.md) | [Approved](https://github.com/helium/HIP/issues/73) |
-| 21 | [PoC Link Layer Upgrades](https://github.com/helium/HIP/blob/master/0021-poc-link-layer.md) | [In Discussion](https://github.com/helium/HIP/issues/78) |
+| 20 | [HNT Max Supply](https://github.com/helium/HIP/blob/master/0020-hnt-max-supply.md) | [Deployed](https://github.com/helium/HIP/issues/73) ([audit](https://github.com/helium/miner/blob/master/audit/var-79.md)) |
+| 21 | [PoC Link Layer Upgrades](https://github.com/helium/HIP/blob/master/0021-poc-link-layer.md) | [Closed](https://github.com/helium/HIP/issues/78) |
 | 22 | [DIY Concentrators (f/k/a Golden or Anchor Gateways)](https://github.com/helium/HIP/blob/master/0022-diy-concentrators.md) | [In Discussion](https://github.com/helium/HIP/issues/94) |
-| 23 | [Decouple Consensus From Gateways](https://github.com/helium/HIP/blob/master/0023-decouple-consensus-from-gateways.md) | [In Discussion](https://github.com/helium/HIP/issues/101) |
+| 23 | [Decouple Consensus From Gateways](https://github.com/helium/HIP/blob/master/0023-decouple-consensus-from-gateways.md) | [Closed](https://github.com/helium/HIP/issues/101) |
 | 24 | [Transfer Percentage of Hotspot](https://github.com/helium/HIP/blob/master/0024-reward-splitting.md) | [In Discussion](https://github.com/helium/HIP/issues/105) |
-| 25 | [Validators](https://github.com/helium/HIP/blob/master/0025-validators.md) | [Approved](https://github.com/helium/HIP/issues/111) |
+| 25 | [Validators](https://github.com/helium/HIP/blob/master/0025-validators.md) | [Deployed](https://github.com/helium/HIP/issues/111) ([audit](https://github.com/helium/miner/blob/master/audit/var-70.md)) |
 | 26 | [Payment Notes](https://github.com/helium/HIP/blob/master/0026-payment-notes.md) | [In Discussion](https://github.com/helium/HIP/issues/125) |
 | 27 | [Support CBRS 5G](https://github.com/helium/HIP/blob/master/0027-cbrs-5g-support.md) | [Approved](https://github.com/helium/HIP/pull/133) |
 | 28 | [Consensus Reward Adjustments](https://github.com/helium/HIP/blob/master/0028-consensus-reward-adjustments.md) | [Approved](https://github.com/helium/HIP/issues/140) |
-| 29 | [Multi-signature Keys](https://github.com/helium/HIP/blob/master/0029-multisignature-keys.md) | [Approved](https://github.com/helium/HIP/issues/157) |
-| 30 | [BLS12-381 for Threshold Cryptography](https://github.com/helium/HIP/blob/master/0030-update-threshold-cryptography.md) | [Approved](https://github.com/helium/HIP/issues/158) |
+| 29 | [Multi-signature Keys](https://github.com/helium/HIP/blob/master/0029-multisignature-keys.md) | [Deployed](https://github.com/helium/HIP/issues/157) ([commit](https://github.com/helium/miner/commit/b038f24c8ea801c2062644c7cd682832919b25b0)) |
+| 30 | [BLS12-381 for Threshold Cryptography](https://github.com/helium/HIP/blob/master/0030-update-threshold-cryptography.md) | [Deployed](https://github.com/helium/HIP/issues/158) ([commit](https://github.com/helium/miner/commit/b038f24c8ea801c2062644c7cd682832919b25b0)) |
 | 31 | [Governance by Token Lock](https://github.com/helium/HIP/blob/master/0031-governance-by-token-lock.md) | [In Discussion](https://github.com/helium/HIP/issues/183) |
 | 32 | [Split DCs Among All Transferers](https://github.com/helium/HIP/blob/master/0032-split-dcs.md) | [In Discussion](https://github.com/helium/HIP/issues/221) |
 | 33 | [Regional Reward Adjustments](https://github.com/helium/HIP/blob/master/0033-regional-reward-adjustments.md) | [In Discussion](https://github.com/helium/HIP/issues/222) |
@@ -50,6 +50,7 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | 35 | [RF Metadata Sidechannel](https://github.com/helium/HIP/blob/master/0035-safe-rf-metadata-side-channel.md) | [In Discussion](https://github.com/helium/HIP/issues/250) |
 | 36 | [Blockheight Chainvar Activation](https://github.com/helium/HIP/blob/master/0036-blockheights-instead-of-time.md) | [In Discussion](https://github.com/helium/HIP/issues/260) |
 | 37 | [Omni-Protocol PoC](https://github.com/helium/HIP/blob/master/0037-omni-protocol-poc.md) | [In Discussion](https://github.com/helium/HIP/issues/271) |
+| 38 | [Validator Oracles](https://github.com/helium/HIP/blob/master/0038-validator-oracles.md) | [In Discussion](https://github.com/helium/HIP/issues/282) |
 
 
 ## Status key
