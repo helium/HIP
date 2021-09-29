@@ -16,18 +16,18 @@ This plan proposes that *validators* would maintain a denylist file of Hotspot a
 This proposal has two consensus mechanisms:
 
 1. how Hotspots are added or removed from the denylist
-2. whether validators choose to adopt the community blacklist
+2. whether validators choose to adopt the community denylist
 
 ## Semi-Detailed Implementation Plan
 [detailed-explanation]: #detailed-explanation
 
 - A public JSON or YAML file of denylisted Hotspot unique addresses will be included in the *validator* software
 
-- When PoC transactions are submitted to the consensus group, if a super majority of consensus group members agree that a given Hotspot address is on the denylist, any witness receipts from that address will be marked as invalid with a reason of `denylist`
+- When PoC transactions are submitted to the consensus group, if a super majority (66.6%) of consensus group members agree that a given Hotspot address is on the denylist, any witness receipts from that address will be marked as invalid with a reason of `denylist`
 
 - Only witness receipts are affected by the denylist. Hotspots on the denylist can still transmit and be witnessed by others, and be rewarded for that activity. This also allows Hotspots to justify being removed from the denylist in the future
 
-- Validators do not have to use the community denylist file, or any denylist at all. Only if a super majority of consensus group members both have a denylist and have common Hotspots on the denylist would any action be taken. This puts consensus decision making in the hands of a) the entity that approves/denies pull requests to the community denylist, and b) validators who choose whether to adopt the denylist
+- Validators do not have to use the community denylist file, or any denylist at all. Only if a super majority (66.6%) of consensus group members both have a denylist and have common Hotspots on the denylist would any action be taken. This puts consensus decision making in the hands of a) the entity that approves/denies pull requests to the community denylist, and b) validators who choose whether to adopt the denylist
 
 - A pattern with quite a few of these extreme earners is that they have no listen address, because of this we feel its best to also deny them from chalengee rewards.
 
