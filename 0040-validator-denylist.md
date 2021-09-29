@@ -29,8 +29,6 @@ This proposal has two consensus mechanisms:
 
 - Validators do not have to use the community denylist file, or any denylist at all. Only if a super majority (66.6%) of consensus group members both have a denylist and have common Hotspots on the denylist would any action be taken. This puts consensus decision making in the hands of a) the entity that approves/denies pull requests to the community denylist, and b) validators who choose whether to adopt the denylist
 
-- A pattern with quite a few of these extreme earners is that they have no listen address, because of this we feel its best to also deny them from chalengee rewards.
-
 - To prevent the abuse of this reporting system there needs to be minimum set of requirements that need to be met before a case can be considered for investigation. The first suggested minimum requirement is around the amount of HNT the accused miner is being rewarded in a 24 hour period. If this amount is greater than the average HNT rewarded to a hotspot in a 24hr period times 14 days it can be flagged for investigation.
 
 - Hotspots selected by this floor can be seen here: https://etl.dewi.org/public/question/54f5138b-b7ec-47c7-9da3-6a8c94ffe0eb
@@ -44,11 +42,11 @@ This proposal has two consensus mechanisms:
 
 - Who decides which denylist PR's to accept or reject?
 
+- Do hotspots earn chalengee rewards?
+
 - What other methods if any, should be applied to this basic floor to help define gamed hotspots vs legitimate coverage
 
 - How often is the deny list updated?
-
-- When on the denylist does a hotspot still count as interactive for HIP17 calculations?
 
 - How often is this list checked for hotspots returning to normal function, and removal, or is this only done via an appeal process.
 
