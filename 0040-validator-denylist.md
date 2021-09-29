@@ -31,7 +31,7 @@ This proposal has two consensus mechanisms:
 
 - A pattern with quite a few of these extreme earners is that they have no listen address, because of this we feel its best to also deny them from chalengee rewards.
 
-- To prevent the abuse this reporting system there needs to be minimum set of requirements that need to be met before a case can be considered for investigation. The first suggested minimum requirement is around the amount of HNT the accused miner is being rewarded in a 24 hour period. If this amount is greater than the average HNT rewarded to a hotspot in a 24hr period times 7 days it can be flagged as suspicious.
+- To prevent the abuse of this reporting system there needs to be minimum set of requirements that need to be met before a case can be considered for investigation. The first suggested minimum requirement is around the amount of HNT the accused miner is being rewarded in a 24 hour period. If this amount is greater than the average HNT rewarded to a hotspot in a 24hr period times 7 days it can be flagged as suspicious.
 
 - Hotspots selected by this floor can be seen here: https://etl.dewi.org/public/question/54f5138b-b7ec-47c7-9da3-6a8c94ffe0eb
 
