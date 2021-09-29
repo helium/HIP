@@ -3,7 +3,7 @@
 - Author(s): @BFGNeil, @Anthonyra, @ElonTusk
 - Start Date: 2021-09-27
 - State: Proposed
-- Original HIP PR: ????
+- Original HIP PR: https://github.com/BFGNeil/HIP/blob/master/0040-validator-denylist.md
 - Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
 
 ## Summary and Motivation
@@ -35,12 +35,17 @@ This proposal has two consensus mechanisms:
 
 - To prevent the abuse this reporting system there needs to be minimum set of requirements that need to meet before a case can be considered for investigation. The suggest first suggested minimum requirement is around the amount of HNT the accused miner is being rewarded in a 24 hour period. If this amount is greater than the average HNT rewarded to a hotspot in a 24hr period times 7 days it can be flagged as suspicious.
 
-- Hotspots selected at this point can be seen here: https://etl.dewi.org/public/question/54f5138b-b7ec-47c7-9da3-6a8c94ffe0eb
+- Hotspots selected by this floor can be seen here: https://etl.dewi.org/public/question/54f5138b-b7ec-47c7-9da3-6a8c94ffe0eb
 
 ## Open Questions
 [unresolved]: #open-questions
 
 - Who decides which denylist PR's to accept or reject?
+
+- What other methods if any, should be applied to this feature list
+
+- How often is the deny list updated?
+
 
 ## Success Metrics
 [success-metrics]: #success-metrics
