@@ -31,7 +31,7 @@ This proposal has two consensus mechanisms:
 
 - A pattern with quite a few of these extreme earners is that they have no listen address, because of this we feel its best to also deny them from chalengee rewards.
 
-- To prevent the abuse of this reporting system there needs to be minimum set of requirements that need to be met before a case can be considered for investigation. The first suggested minimum requirement is around the amount of HNT the accused miner is being rewarded in a 24 hour period. If this amount is greater than the average HNT rewarded to a hotspot in a 24hr period times 7 days it can be flagged as suspicious.
+- To prevent the abuse of this reporting system there needs to be minimum set of requirements that need to be met before a case can be considered for investigation. The first suggested minimum requirement is around the amount of HNT the accused miner is being rewarded in a 24 hour period. If this amount is greater than the average HNT rewarded to a hotspot in a 24hr period times 14 days it can be flagged for investigation.
 
 - Hotspots selected by this floor can be seen here: https://etl.dewi.org/public/question/54f5138b-b7ec-47c7-9da3-6a8c94ffe0eb
 
@@ -44,11 +44,15 @@ This proposal has two consensus mechanisms:
 
 - Who decides which denylist PR's to accept or reject?
 
-- What other methods if any, should be applied to this basic floor to help define it more?
+- What other methods if any, should be applied to this basic floor to help define gamed hotspots vs legitimate coverage
 
 - How often is the deny list updated?
 
 - When on the denylist does a hotspot still count as interactive for HIP17 calculations?
+
+- How often is this list checked for hotspots returning to normal function, and removal, or is this only done via an appeal process.
+
+- Does this comittee have the power to choose hotspots out of scope of this floor on earnings, as an emergency procedure?
 
 
 ## Success Metrics
