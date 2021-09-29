@@ -1,10 +1,11 @@
-# Validator Denylist
+# HIP 40: Validator Denylist
 
 - Author(s): @BFGNeil, @Anthonyra, @ElonTusk
 - Start Date: 2021-09-27
-- State: Proposed
-- Original HIP PR: 
-- Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
+- Category: Economic, Technical
+- Original HIP PR: https://github.com/helium/HIP/pull/284
+- Tracking Issue: https://github.com/helium/HIP/issues/285
+- Status: In Discussion
 
 ## Summary and Motivation
 [motivation]: #motivation
