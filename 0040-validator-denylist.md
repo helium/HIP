@@ -23,8 +23,6 @@ This proposal has two consensus mechanisms:
 
 - A public JSON or YAML file of denylisted Hotspot unique addresses will be included in the *validator* software
 
-- Community members will be able to submit pull requests against this file to remove addresses from the list with some explanation for the request. a chosen party will review (who exactly is unanswered)
-
 - When PoC transactions are submitted to the consensus group, if a super majority of consensus group members agree that a given Hotspot address is on the denylist, any witness receipts from that address will be marked as invalid with a reason of `denylist`
 
 - Only witness receipts are affected by the denylist. Hotspots on the denylist can still transmit and be witnessed by others, and be rewarded for that activity. This also allows Hotspots to justify being removed from the denylist in the future
@@ -33,18 +31,22 @@ This proposal has two consensus mechanisms:
 
 - A pattern with quite a few of these extreme earners is that they have no listen address, because of this we feel its best to also deny them from chalengee rewards.
 
-- To prevent the abuse this reporting system there needs to be minimum set of requirements that need to meet before a case can be considered for investigation. The suggest first suggested minimum requirement is around the amount of HNT the accused miner is being rewarded in a 24 hour period. If this amount is greater than the average HNT rewarded to a hotspot in a 24hr period times 7 days it can be flagged as suspicious.
+- To prevent the abuse this reporting system there needs to be minimum set of requirements that need to be met before a case can be considered for investigation. The first suggested minimum requirement is around the amount of HNT the accused miner is being rewarded in a 24 hour period. If this amount is greater than the average HNT rewarded to a hotspot in a 24hr period times 7 days it can be flagged as suspicious.
 
 - Hotspots selected by this floor can be seen here: https://etl.dewi.org/public/question/54f5138b-b7ec-47c7-9da3-6a8c94ffe0eb
+
+- Community members will be able to submit pull requests against this file to remove addresses from the list with some explanation for the request. A chosen party will review (who exactly is unanswered)
 
 ## Open Questions
 [unresolved]: #open-questions
 
 - Who decides which denylist PR's to accept or reject?
 
-- What other methods if any, should be applied to this feature list
+- What other methods if any, should be applied to this basic floor to help define it more?
 
 - How often is the deny list updated?
+
+- When on the denylist does a hotspot still count as interactive for HIP17 calculations?
 
 
 ## Success Metrics
