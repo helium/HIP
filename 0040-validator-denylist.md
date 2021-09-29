@@ -31,8 +31,6 @@ This proposal has two consensus mechanisms:
 
 - Validators do not have to use the community denylist file, or any denylist at all. Only if a super majority of consensus group members both have a denylist and have common Hotspots on the denylist would any action be taken. This puts consensus decision making in the hands of a) the entity that approves/denies pull requests to the community denylist, and b) validators who choose whether to adopt the denylist
 
-- Hotspots are selected based on a formala of 24hr > avg*31 of a hotspots earnings, a sample can be seen here:
-
 - A pattern with quite a few of these extreme earners is that they have no listen address, because of this we feel its best to also deny them from chalengee rewards.
 
 - To prevent the abuse this reporting system there needs to be minimum set of requirements that need to meet before a case can be considered for investigation. The suggest first suggested minimum requirement is around the amount of HNT the accused miner is being rewarded in a 24 hour period. If this amount is greater than the average HNT rewarded to a hotspot in a 24hr period times 7 days it can be flagged as suspicious.
