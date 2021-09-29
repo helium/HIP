@@ -37,6 +37,8 @@ This proposal has two consensus mechanisms:
 
 - Community members will be able to submit pull requests against this file to remove addresses from the list with some explanation for the request. A chosen party will review (who exactly is unanswered)
 
+- Hotspots chosen by the selected party to be added, will be given a notice period where they can submit an issue to appeal the denylist before it happens. This notice should be public, giving owners chance to appeal, with the outcome of the appeal also being made public
+
 ## Open Questions
 [unresolved]: #open-questions
 
