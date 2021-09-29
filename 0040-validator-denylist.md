@@ -3,7 +3,7 @@
 - Author(s): @BFGNeil, @Anthonyra, @ElonTusk
 - Start Date: 2021-09-27
 - State: Proposed
-- Original HIP PR: https://github.com/BFGNeil/HIP/blob/master/0040-validator-denylist.md
+- Original HIP PR: 
 - Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
 
 ## Summary and Motivation
