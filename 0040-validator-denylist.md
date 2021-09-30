@@ -17,7 +17,7 @@ This plan proposes that *validators* would maintain a denylist file of Hotspot a
 ## Semi-Detailed Implementation Plan
 [detailed-explanation]: #detailed-explanation
 
-[Identification]: #Identification
+Identification
 
 The first thing to note is this is not to catch all gaming. The denylist is to catch the most extreme gamers and not a method to report and block all gaming. For this reason we believe a basic identification query should be run on all hotspots, and select the worse based on a floor function.
 
@@ -25,21 +25,21 @@ This function looks at a hotspots average daily earnings, and if this amount is 
 
 Hotspots selected by this floor can be seen here: https://etl.dewi.org/public/question/54f5138b-b7ec-47c7-9da3-6a8c94ffe0eb
 
-[analysis-of-results]: #Analysis
+Analysis
 
 
-[appeal-period] #Appealing
+Appealing
 
 
-[list-generation]: #List Generation / Publishing
+List Generation / Publishing
 
 - A public JSON or YAML file of denylisted Hotspot unique addresses will be included in the *validator* software. This list is meant to be the first of its kind, but not the only one validators could use.
 
-[list-usage]: #List Usagae
+List Usagae
 
 - Validators do not have to use the same denylist file, or any denylist at all. Only if all consensus group members both have a denylist and have a matching records for a Hotspot on the denylist would any action be taken. 
 
-[invalidating-transactions]: #Invalidating Transactions
+Invalidating Transactions
 
 - When PoC transactions are submitted to the consensus group, if all consensus group members agree that a given Hotspot address is on the denylist, any transaction from that address will be marked as invalid with a reason of `denylist`
 
