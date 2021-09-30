@@ -12,47 +12,41 @@
 
 While the situation with regards to Proof-of-Coverage gaming has improved and additional enhancements are intended, we need a backstop prevention mechanism that allows us to quickly allow the network to grow and deal with obvious gaming and spoofing situations as they materialize. 
 
-This plan proposes that *validators* would maintain a denylist file of Hotspot addresses which are selected from a basic floor function, selecting the hotspots where earnings are abnormal, and then this is likey followed up with more metrics (see unresolved questions)
-
-This proposal has two consensus mechanisms:
-
-1. how Hotspots are added or removed from the denylist
-2. whether validators choose to adopt the community denylist
+This plan proposes that *validators* would maintain a denylist file of Hotspot addresses.
 
 ## Semi-Detailed Implementation Plan
 [detailed-explanation]: #detailed-explanation
 
-- A public JSON or YAML file of denylisted Hotspot unique addresses will be included in the *validator* software
+[Identification]: #Identification
 
-- When PoC transactions are submitted to the consensus group, if a super majority (66.6%) of consensus group members agree that a given Hotspot address is on the denylist, any witness receipts from that address will be marked as invalid with a reason of `denylist`
+The first thing to note is this is not to catch all gaming. The denylist is to catch the most extreme gamers and not a method to report and block all gaming. For this reason we believe a basic identification query should be run on all hotspots, and select the worse based on a floor function.
 
-- Only witness receipts are affected by the denylist. Hotspots on the denylist can still transmit and be witnessed by others, and be rewarded for that activity. This also allows Hotspots to justify being removed from the denylist in the future
+This function looks at a hotspots average daily earnings, and if this amount is greater than what an average hotspot earns in a 14 day period, they are selected.
 
-- Validators do not have to use the community denylist file, or any denylist at all. Only if a super majority (66.6%) of consensus group members both have a denylist and have common Hotspots on the denylist would any action be taken. This puts consensus decision making in the hands of a) the entity that approves/denies pull requests to the community denylist, and b) validators who choose whether to adopt the denylist
+Hotspots selected by this floor can be seen here: https://etl.dewi.org/public/question/54f5138b-b7ec-47c7-9da3-6a8c94ffe0eb
 
-- To prevent the abuse of this reporting system there needs to be minimum set of requirements that need to be met before a case can be considered for investigation. The first suggested minimum requirement is around the amount of HNT the accused miner is being rewarded in a 24 hour period. If this amount is greater than the average HNT rewarded to a hotspot in a 24hr period times 14 days it can be flagged for investigation.
+[analysis-of-results]: #Analysis
 
-- Hotspots selected by this floor can be seen here: https://etl.dewi.org/public/question/54f5138b-b7ec-47c7-9da3-6a8c94ffe0eb
 
-- Community members will be able to submit pull requests against this file to remove addresses from the list with some explanation for the request. A chosen party will review (who exactly is unanswered)
+[appeal-period] #Appealing
 
-- Hotspots chosen by the selected party to be added, will be given a notice period where they can submit an issue to appeal the denylist before it happens. This notice should be public, giving owners chance to appeal, with the outcome of the appeal also being made public
+
+[list-generation]: #List Generation / Publishing
+
+- A public JSON or YAML file of denylisted Hotspot unique addresses will be included in the *validator* software. This list is meant to be the first of its kind, but not the only one validators could use.
+
+[list-usage]: #List Usagae
+
+- Validators do not have to use the same denylist file, or any denylist at all. Only if all consensus group members both have a denylist and have a matching records for a Hotspot on the denylist would any action be taken. 
+
+[invalidating-transactions]: #Invalidating Transactions
+
+- When PoC transactions are submitted to the consensus group, if all consensus group members agree that a given Hotspot address is on the denylist, any transaction from that address will be marked as invalid with a reason of `denylist`
 
 ## Open Questions
 [unresolved]: #open-questions
 
-- Who decides which denylist PR's to accept or reject?
-
-- Do hotspots earn chalengee rewards?
-
-- What other methods if any, should be applied to this basic floor to help define gamed hotspots vs legitimate coverage
-
-- How often is the deny list updated?
-
-- How often is this list checked for hotspots returning to normal function, and removal, or is this only done via an appeal process.
-
-- Does this comittee have the power to choose hotspots out of scope of this floor on earnings, as an emergency procedure?
-
+TTLs, implementation of list fetching (dns vs websites with json/yaml vs chain vars, etc.
 
 ## Success Metrics
 [success-metrics]: #success-metrics
