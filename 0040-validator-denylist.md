@@ -25,6 +25,14 @@ This function looks at a hotspots average daily earnings, and if this amount is 
 
 This floor currently selects *18 hotspots*, which can be seen here: https://etl.dewi.org/public/question/54f5138b-b7ec-47c7-9da3-6a8c94ffe0eb
 
+The Committee 
+
+A new board will be selected under the DEWI banner, name ideas will need to be confirmed.
+
+- A new election is done every 6 months.
+- Public can vote and the top voted 10 are selected to join
+- Each case under review gets assigned to a random 7 people within the committee to investigate.
+
 Analysis
 
 Anaysis will be done by an elected committee at dewi, members of this committee should be selected by the community and voted on. they would also need defined term lengths.
@@ -32,7 +40,6 @@ Anaysis will be done by an elected committee at dewi, members of this committee 
 This committe will analyise hotspots, patterns of gaming, and then submit evidence to to committee to discuss and vote on.
 
 There is no golden bullet here with gaming, a multitude of factors go into defining if a hotspot is gaming the system, and so defining what is gaming will always change, we need a trusted, elected committee that is focused on whats best for the network.
-
 
 Appealing
 
