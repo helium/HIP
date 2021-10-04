@@ -1,4 +1,4 @@
-# HIP Beacon/Witness Ratio - Witness Scaling
+# HIP Beacon/Witness Ratio - Witness Reward Limit
 
 - Author(s): @anthonyra#2034 <!-- your GitHub @username -->
 - Start Date: 9/30/2021 <!-- fill me in with today's date, YYYY-MM-DD -->
