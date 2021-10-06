@@ -10,7 +10,7 @@
 ## Summary and Motivation
 [motivation]: #motivation
 
-While the situation with regards to Proof-of-Coverage gaming has improved and additional enhancements are intended, we need a backstop prevention mechanism that allows us to quickly allow the network to grow and deal with obvious gaming and spoofing situations as they materialize. 
+While the situation with regards to Proof-of-Coverage gaming has improved and additional enhancements are intended, we need a backstop prevention mechanism that allows us to quickly allow the network to grow and deal with obvious gaming and spoofing situations as they materialise. 
 
 This plan proposes that *validators* would maintain a denylist of Hotspot addresses.
 
@@ -29,7 +29,7 @@ A new board will be selected under the DEWI banner, name ideas will need to be d
 
 Analysis
 
-This committe will analyise hotspots, patterns of gaming, and then submit evidence to to committee to discuss and vote on.
+This committee will analyse hotspots, patterns of gaming, and then submit evidence to to committee to discuss and vote on.
 
 There is no golden bullet here with gaming, a multitude of factors go into defining if a hotspot is gaming the system, and so defining what is gaming will always change. We need a trusted, elected committee that is focused on whats best for the network.
 
@@ -49,7 +49,7 @@ List Generation / Publishing
 
 - Stored in chain var, the chosen lists can be voted on and updated by the Security Committee, and a version chain var shall be used to update it.
 
-List Usagae
+List Usage
 
 - Validators do not have to use the same denylist file, or any denylist at all. Only if all consensus group members both have a denylist and have a matching records for a Hotspot on the denylist would any action be taken. 
 
@@ -66,3 +66,4 @@ how is the list published? (dns vs websites with json/yaml vs chain vars)
 [success-metrics]: #success-metrics
 
 Success here means that a Hotspot address contained on a majority of validators' denylist have their PoC witness receipts rejected as invalid.
+
