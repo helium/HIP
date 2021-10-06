@@ -17,29 +17,21 @@ This plan proposes that *validators* would maintain a denylist of Hotspot addres
 ## Semi-Detailed Implementation Plan
 [detailed-explanation]: #detailed-explanation
 
-Identification
-
-The first thing to note is this is not to catch all gaming. The denylist is to catch the most extreme gamers and not a method to report and block all gaming. For this reason we believe a basic identification query should be run on all hotspots, and select the worse based on a floor function.
-
-This function looks at a hotspots average daily earnings, and if this amount is greater than what an average hotspot earns in a 14 day period, they are selected.
-
-This floor currently selects *18 hotspots*, which can be seen here: https://etl.dewi.org/public/question/54f5138b-b7ec-47c7-9da3-6a8c94ffe0eb
-
 The Committee 
 
-A new board will be selected under the DEWI banner, name ideas will need to be confirmed.
+A new board will be selected under the DEWI banner, name ideas will need to be decided, working title Security Committee
 
-- A new election is done every 6 months.
-- Public can vote and the top voted 10 are selected to join
-- Each case under review gets assigned to a random 7 people within the committee to investigate.
+- Committee members are voted on by the community and term lengths will be defined
+- Public can vote and the top voted 11 are selected to join
+- Each case under review gets assigned to a random 5 people within the committee to investigate.
+- The committee has the power to select what lists are used, as well as publish the first list of its kind.
+- Because of the appeal process, a whitelist should also be used, so that the appeal process can override external lists.
 
 Analysis
 
-Anaysis will be done by an elected committee at dewi, members of this committee should be selected by the community and voted on. they would also need defined term lengths.
-
 This committe will analyise hotspots, patterns of gaming, and then submit evidence to to committee to discuss and vote on.
 
-There is no golden bullet here with gaming, a multitude of factors go into defining if a hotspot is gaming the system, and so defining what is gaming will always change, we need a trusted, elected committee that is focused on whats best for the network.
+There is no golden bullet here with gaming, a multitude of factors go into defining if a hotspot is gaming the system, and so defining what is gaming will always change. We need a trusted, elected committee that is focused on whats best for the network.
 
 Appealing
 
@@ -47,9 +39,15 @@ When this action is decided on by the committee, the information should be made 
 
 From there hosts can choose to appeal, and submit evidence the committee would need to vote if they accept (super majority).
 
+If a new list has been chosen for use, said list must be published and notified to give hotspot owners chance to appeal.
+
 List Generation / Publishing
 
-- A public JSON or YAML file of denylisted Hotspot unique addresses will be included in the *validator* software. This list is meant to be the first of its kind, but not the only one validators could use.
+- Lists for use are stored in a chain var, with a seperate versioning chain var applied so the list can be updated.
+
+- Lists will automatically be used by validators, with the process being opt-out with a env flag.
+
+- Stored in chain var, the chosen lists can be voted on and updated by the Security Committee, and a version chain var shall be used to update it.
 
 List Usagae
 
@@ -60,7 +58,7 @@ List Usagae
 ## Open Questions
 [unresolved]: #open-questions
 
-Should there be a decay rate to denys?
+Should there be a decay rate to deny's?
 
 how is the list published? (dns vs websites with json/yaml vs chain vars)
 
