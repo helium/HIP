@@ -23,12 +23,10 @@ A new board will be selected under the DeWI banner, working title Security Commi
  
 - Committee members are voted on by the community.
 - The committee will produce the first list of its kind to be automatically included with the validator software. 
+- This committee will analyse hotspots, patterns of gaming, and then submit evidence to the committee to discuss and vote on.
+- The Committee will generate a list of hotspot addresses and publish it.
  
 Analysis / generation
- 
-Validator usage
- 
-This committee will analyse hotspots, patterns of gaming, and then submit evidence to the committee to discuss and vote on.
  
 There is no golden bullet here with gaming, a multitude of factors go into defining if a hotspot is gaming the system, and so defining what is gaming will always change. We need a trusted, elected committee that is focused on what's best for the network.
  
@@ -40,9 +38,7 @@ When action against a hotspot is decided on by the committee, the information sh
  
 At this point hosts can submit evidence, and a committee will vote (super majority) to accept or deny this evidence.
  
-List Generation & Usage
- 
-- The Committee will generate a list of hotspot addresses and publish it.
+List usage
  
 - Validators will use the committee list by default which is set in the config file of the validator. Validators can add other lists here or opt out by removing the default list url.
  
