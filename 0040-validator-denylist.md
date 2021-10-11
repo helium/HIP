@@ -24,6 +24,7 @@ A new board will be selected under the DeWI banner, working title Security Commi
 - Committee members are voted on by the community.
 - The committee will produce the first list of its kind to be automatically included with the validator software. 
 - This committee will analyse hotspots, patterns of gaming, and then submit evidence to the committee to discuss and vote on.
+- A Super majority vote (66%+) is needed for a hotspot to be added to the denylist
 - The Committee will generate a list of hotspot addresses and publish it.
  
 Analysis / generation
@@ -40,15 +41,15 @@ At this point hosts can submit evidence, and a committee will vote (super majori
  
 List usage
  
-- Validators will use the committee list by default which is set in the config file of the validator. Validators can add other lists here or opt out by removing the default list url.
+Validators will use the committee list by default which is set in the config file of the validator. Validators can add other lists here or opt out by removing the default list url.
  
 Additional lists can be created by the community and validators can choose to opt-in to additional lists.
  
 Lists are polled and collected regularly allowing quick updates and removals by the committee or from other lists.
  
-- Validators do not have to use the same denylist file, or any denylist at all. Only if all consensus group members both have a denylist and have matching records for a Hotspot on the denylist would any action be taken.
+Validators do not have to use the same denylist file, or any denylist at all. Only if all consensus group members both have a denylist and have matching records for a Hotspot on the denylist would any action be taken.
  
-- When any transactions are submitted to the consensus group, if all consensus group members agree that a given Hotspot address is on the denylist, any transaction from that address will be marked as invalid with the reason of `denylist`.
+When any transactions are submitted to the consensus group, if all consensus group members agree that a given Hotspot address is on the denylist, any transaction from that address will be marked as invalid with the reason of `denylist`.
  
  
 ## Open Questions
