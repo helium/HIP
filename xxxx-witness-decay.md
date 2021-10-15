@@ -43,7 +43,7 @@ At `20` witness events, the Hotspot would only be elgible for `12.66` reward uni
 
 Seen differently across the network, 5% of the network would be scaled by almost 92% on their witnesses and this would incentivize the remainder of the network to grow and expand organically. This is based on analysis of all witness receipts between blocks 1032738 and 1040915. [data](https://gist.github.com/abhay/8b75824c3b7cc27009f2a76f56fa9bc1)
 
-![population-graph](xxxx-witness-decay/population-graph.png)
+![population-graph](xxxx-witness-decay/focused-population-graph.png)
 ![focused-population-graph](xxxx-witness-decay/focused-population-graph.png)
 
 The fortunate coincidence about this feature is that it's already built and is just two chain variable away from being activated. We are able to enable it at the same time as PoCv11 is activated (or sooner).
