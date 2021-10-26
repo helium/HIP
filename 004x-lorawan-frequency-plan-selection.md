@@ -1,6 +1,6 @@
 # HIP 4x: LoRaWAN Frequency Plan Selection
 
-- Author(s): @lthiery
+- Author(s): @lthiery, @ivandigiusto
 - Start Date: 2021-10-25
 - Category: Technical
 - Original HIP PR: 
@@ -62,20 +62,28 @@ contributing (and founding) members of the LoRaWAN Alliance and as such,
 includes deep technical and business knowledge of the ecosystem.
 
 **This HIP proposes that the DeWi LoRaWAN Committee may call for an initial
-assignment or change of frequency plan per region**.
+assignment or change of frequency plan per region and/or country**.
 
 1. Upon doing so, the DeWi LoRaWAN Committee will open a Pull Request (PR)
 to the [`helium/miner`](https://github.com/helium/miner) repository (or 
 some other publicly accessible repository) marking the change and providing the
-reasoning for the change. 
-2. There will be a minimum two-week window during which a public commentary 
-will be open under the PR. 
-3. Should the discussion have _any_ dissent, a live virtual public forum will
-be in attempt to reach consensus.
+reasoning for the change. The announcement should also be made on the local
+Discord channel(s) and any other standard DeWi announcement channels. 
+2. There will be a minimum four-week window during which a public commentary 
+will be open under the PR. During this period, anyone can propose a formal
+dissenting opinion with counter-arguments to the proposed change and must 
+provide alternate solutions if possible.
+3. Should the discussion have any _formal_ dissent, a live virtual public 
+forum will be in attempt to reach consensus. The author of the dissenting
+opinion must be ready to take the floor to represent their position.
 4. If the change remains contentious, the decision will go to on-chain
 voting. Currently, that would be implemented using [Helium Vote](https://www.heliumvote.com/)
 mechanism where 1 hotspot in the concerned region equals 1 vote. Votes
-are cast by doing a DC burn transcation towards the appropriate wallet.
+are cast by doing a DC burn transaction towards the appropriate wallet.
+
+After steps 2 and 3, before proceeding to the next escalation, DeWi's LoRaWAN
+Committee may withdraw their proposal and reissue a new proposal at anytime.
+This would effectively restart the process at step 1.
 
 # Rationale and Alternatives
 [alternatives]: #rationale-and-alternatives
