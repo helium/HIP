@@ -43,7 +43,7 @@ At this point hosts can submit evidence, and a committee will vote (super majori
  
 ### Validators & List Usage
 
-Validators will use the committee list by default which is set in the config file of the validator. Validators can add other lists here or opt out by removing the default list url.
+Validators will use the committee list by default which is set in the config file of the validator. Validators can add other lists here or opt-out by removing the default list url.
  
 Additional lists can be created by the community and validators can choose to opt-in to additional lists.
  
@@ -55,8 +55,8 @@ When any transactions are submitted to the consensus group, if all consensus gro
 
 ## Benefits
 
-1. standard practise for secops is to mitigate (deny), investigate, report and then release a fix, deny is a part of that.
-2. previous reactions via HIP mechanisms are slow, for example Meerkat https://etl.dewi.org/question/518-dapper-hickory-meerkat-timeline shows how much HNT they took between when the HIP was proposed to when it was implemented.
+1. Once implemented the sole goal is to no longer require any action. This is due to a standard security practice of Detection & Analysis, Containment, Eradication / Recovery by reporting the findings to help improve the overall network via new release fixes, HIPs and/or subsequent POC changes.
+2. Previous reactions via HIP mechanisms are slow, for example, Meerkat https://etl.dewi.org/question/518-dapper-hickory-meerkat-timeline shows how much HNT they took between when the HIP was proposed to when it was implemented.
 3. Currently theres a public perception issue that Gamers can get away with it, and the feel is if they're doing it why shouldn't I - something this HIP would stop, both reducing current and future gaming attempts.
 
 
