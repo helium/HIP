@@ -1,20 +1,14 @@
-HIP 41: Governance by Token Lock V2
-
-Authors: @tushar
-
-Start Date: September 17, 2021
-
-Category: Governance
-
-Status: In Discussion
-
-Original HIP PR: N/A
-
-Tracking Issue: N/A
+# HIP 41: Governance by Token Lock V2
+- Authors: @tushar
+- Start Date: September 17, 2021
+- Category: Governance
+- Status: In Discussion
+- Original HIP PR: N/A
+- Tracking Issue: N/A
 
 Discord Channel:
 
-In direct response to[“Rewrite HIP31 with Token Lock rather than Token Burn mechanism”](https://github.com/helium/HIP/pull/252)
+In direct response to [“Rewrite HIP31 with Token Lock rather than Token Burn mechanism”](https://github.com/helium/HIP/pull/252)
 
 
 # Summary
@@ -40,8 +34,7 @@ This proposal creates a system that imposes enough of a cost on voting that only
 All Helium Network stakeholders are affected by this HIP because on-chain governance impacts key parameters in the network.
 
 
-#   
-Detailed Explanation
+# Detailed Explanation
 
 **Vote Power by Lock**
 
@@ -79,17 +72,11 @@ The result of this should be maximal participation for important decisions becau
 
 In this structure, the minimum threshold to win a vote is 66%. We believe that chain variables in networks should only change when there is broad consensus amongst stakeholders and seek to avoid giving too much power to narrow majorities. There are three classes of variables going forward:
 
-- **Network Controlled Variables: These, typically economic or social variables, are controlled by this HIP. This is the default class for most chain variables.**
-- **Operational Variables: These variables are issued dynamically by the core developers and primarily control chain performance.**
-- **Longer-term Operational Variables: These variables are potentially hard-coded and height activated for non-economic protocol evolution. For example, activating a new transaction type.**
+- **Network Controlled Variables**: These, typically economic or social variables, are controlled by this HIP. This is the default class for most chain variables.
+- **Operational Variables**: These variables are issued dynamically by the core developers and primarily control chain performance.
+- **Long-term Operational Variables**: These variables are potentially hard-coded and height activated for non-economic protocol evolution. For example, activating a new transaction type.
 
-The voting mechanism described in this HIP should result in binding decisions.
-
-- HIPs without code, signaling mechansim - HIP39
-- Something 6 month period before binding
-- HIP41 binding HIPs with code
-
-
+Voting by token lock has meaningful implications, thus the results should be binding and easily implemented. It's further proposed that HIPs must have code in order to be eligible for a token lock vote. HIPs without code can employ an alternative non-binding voting system (e.g. one token = one vote) as a means to signal community sentiment. 
 
 
 # Drawbacks
