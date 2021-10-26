@@ -17,7 +17,7 @@ This plan proposes that *validators* would use deny lists of Hotspot addresses.
 ## Detailed Implementation Plan
 [detailed-explanation]: #detailed-explanation
  
-The Committee
+### The Committee
  
 A new board will be selected under the DeWI banner, working title Security Committee.
  
@@ -26,21 +26,23 @@ A new board will be selected under the DeWI banner, working title Security Commi
 - This committee will analyse hotspots, patterns of gaming, and then submit evidence to the committee to discuss and vote on.
 - A Super majority vote (66%+) is needed for a hotspot to be added to the denylist
 - The Committee will generate a list of hotspot addresses and publish it.
+
+DeWi should also have the power to call for this committee and power to be disbanded, we feel a regular review on the need for such a committee is important for the decentralisation of the network. As the network moves towards more trusted data (hip22, secure mappers for example) we feel this power might be far too reaching, but needed at this time.
  
-Analysis / generation
+### Analysis / Generation
  
 There is no golden bullet here with gaming, a multitude of factors go into defining if a hotspot is gaming the system, and so defining what is gaming will always change. We need a trusted, elected committee that is focused on what's best for the network.
  
 Data from the analysis will be passed to Helium Inc to provide a feedback mechanism to help improve anti-gaming methods.
  
-Appealing
+### Appealing
  
-When action against a hotspot is decided on by the committee, the information should be made public and a notice period should be given publicly so hotspot owners can appeal.
+When action against a hotspot is decided on by the committee, the information should be made public and a notice period should be given so hotspot owners can appeal.
  
 At this point hosts can submit evidence, and a committee will vote (super majority) to accept or deny this evidence.
  
-List usage
- 
+### Validators & List Usage
+
 Validators will use the committee list by default which is set in the config file of the validator. Validators can add other lists here or opt out by removing the default list url.
  
 Additional lists can be created by the community and validators can choose to opt-in to additional lists.
@@ -50,18 +52,30 @@ Lists are polled and collected regularly allowing quick updates and removals by 
 Validators do not have to use the same denylist file, or any denylist at all. Only if all consensus group members both have a denylist and have matching records for a Hotspot on the denylist would any action be taken.
  
 When any transactions are submitted to the consensus group, if all consensus group members agree that a given Hotspot address is on the denylist, any transaction from that address will be marked as invalid with the reason of `denylist`.
+
+## Benefits
+
+1. standard practise for secops is to mitigate (deny), investigate, report and then release a fix, deny is a part of that.
+2. previous reactions via HIP mechanisms are slow, for example Meerkat https://etl.dewi.org/question/518-dapper-hickory-meerkat-timeline shows how much HNT they took between when the HIP was proposed to when it was implemented.
+3. Currently theres a public perception issue that Gamers can get away with it, and the feel is if they're doing it why shouldn't I - something this HIP would stop, both reducing current and future gaming attempts.
+
+
+## Drawbacks
+1. Centralisation of control who can't use the network.
+2. Impossible to have 100% proof of gaming, can lead in extreme cases to blocking legitimate coverage.
+3. cost vs reward - the % of the network this targets does not equate to the time needed to investigate and implement.
+4. Improvements to PoC and anti gaming methods to automatically find hacks would be a better solution in the long run.
  
  
 ## Open Questions
-[unresolved]: #open-questions
  
-Who will be on the DeWi committee?
-Term lengths of those on the committee?
-How many people are on the committee?
-Public voting / selection of members?
+- Who will be on the DeWi committee?
+- Term lengths of those on the committee?
+- How many people are on the committee?
+- Public voting / selection of members?
+- How long should the notice period be?
  
 ## Success Metrics
-[success-metrics]: #success-metrics
  
 Success here means that a Hotspot address contained on a majority of validators' denylist have their transactions rejected as invalid.
 
