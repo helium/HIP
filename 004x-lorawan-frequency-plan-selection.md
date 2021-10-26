@@ -100,4 +100,11 @@ additional subbands.
 
 A change in frequency plan could potentially cause certain devices to not be 
 eligible for operation under the new frequency plan, either due to  hardware
-or legislative contraints.
+or legislative constraints (ie: lack of certification to transmit on the new
+frequencies).
+
+Assuming a device is physically and legally capable of adopting the new plan,
+the adjustment will only be possible if the vendor's firmware reads the
+frequency plan indicated from the Miner or Light Gateway client and applies
+the new frequency plan to the packet forwarder utility which configures the
+SX130x front-end.
