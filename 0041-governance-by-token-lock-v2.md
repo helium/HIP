@@ -27,8 +27,6 @@ One token, one vote also concentrates voting power in the hands of whales and ea
 This proposal creates a system that imposes enough of a cost on voting that only committed participants would vote to influence the direction of the network, while large holders may be disincentivized to participate. Simultaneously, our methodology ensures that the barrier to entry is low enough for all small holders to participate should they choose.
 
 
-
-
 # Stakeholders
 
 All Helium Network stakeholders are affected by this HIP because on-chain governance impacts key parameters in the network.
@@ -58,6 +56,7 @@ As the lockup burns down, so does the voting power. For example, if Charlie lock
 
 At the time of a vote, the voting contract looks at how many tokens a holder has locked up and how long they are locked for. Voting holders can always extend their lockup period just prior to voting. Locked tokens can be used to vote on as many proposals as the holder wants, and there is no change for the holder in earnings from staking.
 
+
 **Commit-and-Reveal**
 
 One of the challenges with the locking mechanism proposed here is that most participants will wait until the last minute to vote. This is because there is a cost—namely, giving up liquidity—to vote. As such, if a vote is going someone’s way, they may not want to participate and lock up tokens.
@@ -68,6 +67,7 @@ Commit-and-reveal can be implemented by having voters hash together their addres
 
 The result of this should be maximal participation for important decisions because voters won’t know whether their vote will matter or not.
 
+
 **Voting Mechanics**
 
 In this structure, the minimum threshold to win a vote is 66%. We believe that chain variables in networks should only change when there is broad consensus amongst stakeholders and seek to avoid giving too much power to narrow majorities. There are three classes of variables going forward:
@@ -76,29 +76,27 @@ In this structure, the minimum threshold to win a vote is 66%. We believe that c
 - **Operational Variables**: These variables are issued dynamically by the core developers and primarily control chain performance.
 - **Long-term Operational Variables**: These variables are potentially hard-coded and height activated for non-economic protocol evolution. For example, activating a new transaction type.
 
-Voting by token lock has meaningful implications, thus the results should be binding and easily implemented. It's further proposed that HIPs must have code in order to be eligible for a token lock vote. HIPs without code can employ an alternative non-binding voting system (e.g. one token = one vote) as a means to signal community sentiment. 
+Vote results should be binding and simple to deploy quickly given the meaningful implications for holders. In addition to Network Controlled Variables as explained above, there would be a mandatory code requirement for any HIPs that seek a binding vote via token-lock.
+
+HIPs without code can employ an alternative non-binding voting system as a means to signal community sentiment. 
 
 
 # Drawbacks
 
-1. **High barrier to entry:**Network participants must part with liquidity to vote, so the barrier to entry is higher than one-token, one-vote systems  
-     
+1. **High barrier to entry:** Network participants must part with liquidity to vote, so the barrier to entry is higher than one-token, one-vote systems.  
 
 2. **Incentives:** For a holder to vote against a proposal, the expected cost of the passed proposal must exceed their cost of voting, and they must have conviction that their votes will lead to the proposal failing  
-     
 
 3. **Change inertia:** We assume all voters prioritize winning a proposal over their HNT staked in voting. This may limit the development of the protocol as minor changes may be contentious, and therefore expensive and unlikely to be proposed in the first place  
-     
 
 4. **Payoff ambiguity:** It is difficult to calculate the payoff for participation in any given vote.
 
 
 # Rationale
 
-1. **Incentivizes consensus:**In this structure, having a contentious vote is expensive (in terms of lost liquidity) if a network participant is on the losing side, so it is worth building consensus on a proposal  
-     
+1. **Incentivizes consensus:** In this structure, having a contentious vote is expensive (in terms of lost liquidity) if a network participant is on the losing side, so it is worth building consensus on a proposal.
 
-2. **Fights concentration of governance power via concentration of economic power:** This structure is much less oligarchic than one token, one vote, partially preventing whales from de facto control of governance proposals because votes are private and one side cannot take the lead publicly thereby dissuading the other side from voting
+2. **Fights concentration of governance power via concentration of economic power:** This structure is much less oligarchic than one token, one vote, partially preventing whales from de facto control of governance proposals because votes are private and one side cannot take the lead publicly thereby dissuading the other side from voting.
 
 
 # Alternatives
