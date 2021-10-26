@@ -65,10 +65,10 @@ includes deep technical and business knowledge of the ecosystem.
 assignment or change of frequency plan per region and/or country**.
 
 1. Upon doing so, the DeWi LoRaWAN Committee will open a Pull Request (PR)
-to the [`helium/miner`](https://github.com/helium/miner) repository (or 
-some other publicly accessible repository) marking the change and providing the
-reasoning for the change. The announcement should also be made on the local
-Discord channel(s) and any other standard DeWi announcement channels. 
+to the [`helium/docs`](https://github.com/helium/docs) repository marking the
+change and providing the reasoning for the change. The announcement should
+also be made on the local Discord channel(s) and any other standard DeWi
+announcement channels. 
 2. There will be a minimum four-week window during which a public commentary 
 will be open under the PR. During this period, anyone can propose a formal
 dissenting opinion with counter-arguments to the proposed change and must 
