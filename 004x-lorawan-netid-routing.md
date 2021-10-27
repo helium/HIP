@@ -73,6 +73,7 @@ purchasing Data frames from another network.** The existing mechanism for Join
 frames requires no changes.
 
 ## Solution
+[solution]: #solution
 
 We propose to create a new `chain_var` that maps NetID to OUI. This mapping
 will be maintained by the DeWi LoRaWAN Committee who can receive requests from
@@ -82,10 +83,11 @@ NetID registry, which DeWi has access to as a LoRaWAN Alliance Contributor. The
 OUI operator(s) need not be the same as the entity making the request.
 
 ## Alternate Solutions
+[alternate-solutions]: #alternate-solutions
 
 We could conceive of a system where any OUI operator could submit interest in
-purchasing packets for a NetID. However, this is a direct violation of LoRaWAN
-Alliance requirements agreed upon by DeWi upon joining the LoRaWAN Alliance and
-receiving a LoRaWAN NetID. Furthermore, bad actors could exploit this mechanism
-to harvest data from the Helium Network without even compensating hotspot 
-operators.
+purchasing packets for a NetID via a permissionless transaction. However, this
+is a direct violation of LoRaWAN Alliance requirements agreed by DeWi upon 
+joining the LoRaWAN Alliance and receiving a LoRaWAN NetID allocation. 
+Furthermore, bad actors could exploit this mechanism to harvest data from the
+Helium Network without even compensating hotspot operators.
