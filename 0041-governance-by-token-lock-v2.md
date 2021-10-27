@@ -1,14 +1,14 @@
 # HIP 41: Governance by Token Lock V2
-- Authors: @tushar
+
+- Authors: @tjain-mcc (tushar)
 - Start Date: September 17, 2021
 - Category: Governance
 - Status: In Discussion
-- Original HIP PR: N/A
-- Tracking Issue: N/A
+- Original HIP PR: https://github.com/helium/HIP/pull/299
+- Tracking Issue: TODO
+- Discord Channel: TODO
 
-Discord Channel:
-
-In direct response to [“Rewrite HIP31 with Token Lock rather than Token Burn mechanism”](https://github.com/helium/HIP/pull/252)
+In direct response to ["Rewrite HIP31 with Token Lock rather than Token Burn mechanism"](https://github.com/helium/HIP/pull/252)
 
 
 # Summary
