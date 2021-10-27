@@ -1,10 +1,12 @@
-# HIP Beacon/Witness Ratio - Witness Reward Limit
+# HIP 42: Beacon/Witness Ratio - Witness Reward Limit
 
-- Author(s): @anthonyra <!-- your GitHub @username -->
-- Start Date: 9/30/2021 <!-- fill me in with today's date, YYYY-MM-DD -->
+- Author(s): @anthonyra 
+- Start Date: 9/30/2021 
 - Category: Technical
-- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
-- Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
+- Original HIP PR: https://github.com/helium/HIP/pull/289
+- Tracking Issue: https://github.com/helium/HIP/issues/303
+- Discord channel: #hip-42-beacon-witness-ratio
+- Status: In Discussion
   
 # Motivation
 [motivation]: #motivation
