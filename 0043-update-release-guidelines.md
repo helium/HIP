@@ -27,7 +27,9 @@ Sometimes this has been on Fridays or weekends, at this time a significant part 
 
 - Certain updates can be released any time (such as zero-day, widespread hotspot issues or significant data transmission failure)
 
-- All other updates such as hotspot GA's should be released on a weekday e.g: Monday, Tuesday, Wednesday or Thursday, this gives manufacturers/vendors time to test and release the updates
+- All other updates such as hotspot GA's should be released on a weekday e.g: Monday, Tuesday, Wednesday or Thursday, this gives manufacturers/vendors time to test and release the updates. 
+
+- Alternatively, all updates could have a timeframe to be implemented. This could be ASAP for emergency patches, or a few weeks for less critical changes. (Some updates may be optional and not need any vendor involvement)
 
 - The network will have better reliability, manufacturers have more time to test updates rather than rushing out updates last thing on a Friday, which could leave devices broken or poorly functioning all weekend
 
@@ -45,8 +47,6 @@ Recently several GA's have been released at the end of the week, requiring vendo
 [unresolved]: #unresolved-questions
 
 - How much of the network should be affected before an update is considered critical?
-
-- Which public holidays would be reasonable to also not release updates on? e.g New Years Day, Chinese new year etc
 
 # Deployment Impact
 [deployment-impact]: #deployment-impact
