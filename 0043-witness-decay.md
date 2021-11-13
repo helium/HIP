@@ -4,7 +4,7 @@
 * Start Date: 2021-10-07
 * Category: Technical, Economic
 * Original HIP PR: https://github.com/helium/HIP/pull/292
-* Tracking Issue: `#TODO`
+* Tracking Issue: https://github.com/helium/HIP/issues/310
 
 ## Summary and Motivation
 
