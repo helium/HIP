@@ -1,6 +1,6 @@
 # HIP 47: Increase DKG failure penalty
 
-- Author(s): @PaulVMo
+- Author(s): [@PaulVMo](https://github.com/PaulVMo)
 - Start Date: 2021-10-26
 - Category: Technical
 - Original HIP PR: https://github.com/helium/HIP/pull/306
@@ -30,7 +30,7 @@ First, from a network perspective, long epoch times lead to less frequent rotati
 
 Second, from validators’ perspective, failed elections lead to fewer rewards for the validator pool which will decrease the incentive to run a validator. In general, more validators are better because it increases the barrier to a single, malicious actor controlling a large portion of the consensus groups as well as great reliability. However, rewards for validators in the consensus group are capped at 35 blocks (which is the 30 block interval plus one 5 block election interval). If the election fails on the first try, then validators stop being rewarded until an election succeeds. This can be seen in the spikes above 35 blocks in the graph of epoch length (source: DeWi ETL).
 
-![Epoch length in blocks](XXXX-increase-dkg-penalty/epochlengthinblocks.png)
+![Epoch length in blocks](0047-increase-dkg-penalty/epochlengthinblocks.png)
 
 # Stakeholders
 [stakeholders]: #stakeholders
