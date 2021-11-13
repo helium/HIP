@@ -1,9 +1,9 @@
-# HIP XX: Witness Reward Decay
+# HIP 44: Witness Reward Decay
 
 * Author(s): [@abhay](https://github.com/abhay)
 * Start Date: 2021-10-07
-* Category: Technical and Economic
-* Original HIP PR: `#TODO`
+* Category: Technical, Economic
+* Original HIP PR: https://github.com/helium/HIP/pull/292
 * Tracking Issue: `#TODO`
 
 ## Summary and Motivation
