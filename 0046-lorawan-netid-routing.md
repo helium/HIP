@@ -1,10 +1,10 @@
-# HIP 4x: LoRaWAN NetID Routing
+# HIP 46: LoRaWAN NetID Routing
 
-- Author(s): @lthiery
+- Author(s): [@lthiery](https://github.com/lthiery)
 - Start Date: 2021-10-26
 - Category: Technical
-- Original HIP PR: 
-- Tracking Issue: https://github.com/helium/HIP/issues/285
+- Original HIP PR: https://github.com/helium/HIP/pull/300
+- Tracking Issue: TBD
 - Status: In Discussion
 
 ## Summary and Motivation
