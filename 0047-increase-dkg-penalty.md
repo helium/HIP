@@ -1,4 +1,4 @@
-# HIP 47: Increase DKG failure penalty
+# HIP 47: Increase DKG Failure Penalty
 
 - Author(s): [@PaulVMo](https://github.com/PaulVMo)
 - Start Date: 2021-10-26
