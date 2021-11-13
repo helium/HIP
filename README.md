@@ -55,6 +55,11 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | 40 | [Validator Denylist](https://github.com/helium/HIP/blob/master/0040-validator-denylist.md) | [In Discussion](https://github.com/helium/HIP/issues/285) |
 | 41 | [Governance by Token Lock V2](https://github.com/helium/HIP/blob/master/0041-governance-by-token-lock-v2.md) | [In Discussion](https://github.com/helium/HIP/issues/302) |
 | 42 | [Beacon/Witness Ratio - Witness Reward Limit](https://github.com/helium/HIP/blob/master/0042-beacon-witness-ratio-witness-reward-limit.md) | [In Discussion](https://github.com/helium/HIP/issues/303) |
+| 43 | [Software Release Guidelines](https://github.com/helium/HIP/blob/master/0043-software-release-guidelines.md) | [In Discussion](https://github.com/helium/HIP/issues/309) |
+| 44 | [Witness Reward Decay](https://github.com/helium/HIP/blob/master/0044-witness-decay.md) | [In Discussion](https://github.com/helium/HIP/issues/310 |
+| 45 | [LoRaWAN Frequency Plan Selection](https://github.com/helium/HIP/blob/master/0045-lorawan-frequency-plan-selection.md) | [In Discussion](https://github.com/helium/HIP/issues/311) |
+| 46 | [LoRaWAN NetID Routing](https://github.com/helium/HIP/blob/master/0046-lorawan-netid-routing.md) | [In Discussion](https://github.com/helium/HIP/issues/312) |
+| 47 | [Increase DKG Failure Penalty](https://github.com/helium/HIP/blob/master/0047-increase-dkg-penalty.md) | [In Discussion](https://github.com/helium/HIP/issues/313) |
 
 ## Status key
 
