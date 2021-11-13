@@ -1,10 +1,10 @@
 # HIP 45: LoRaWAN Frequency Plan Selection
 
-- Author(s): @lthiery, @ivandigiusto
+- Author(s): [@lthiery](https://github.com/lthiery), [@ivandigiusto](https://github.com/ivandigiusto)
 - Start Date: 2021-10-25
 - Category: Technical
-- Original HIP PR:
-- Tracking Issue:
+- Original HIP PR: https://github.com/helium/HIP/pull/298
+- Tracking Issue: https://github.com/helium/HIP/issues/311
 - Status: In Discussion
 
 
