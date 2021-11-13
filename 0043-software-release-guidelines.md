@@ -1,20 +1,21 @@
-# HIP43: Update Release Guidelines
+# HIP43: Software Release Guidelines
 
 - Author(s): @ganey
 - Start Date: 2021/10/13
 - Category: Meta
-- Original HIP PR: 
+- Original HIP PR: https://github.com/helium/HIP/pull/290
 - Tracking Issue: 
 
 # Summary
 [summary]: #summary
 
-This proposal intends improve the rollout process of new updates / changes to the network by ensuring they are released in a period where all vendors/involved parties can make software changes (such as GA's) in a timely manner.
+This proposal intends to improve the rollout process of new software updates to the network by ensuring they are released in a period where all vendors/involved parties can roll out software changes (such as GA's) in a timely manner.
 
 # Motivation
 [motivation]: #motivation
 
 Helium GA releases can be quite frequent at times, and cause downtime on the network and for hotspot owners while thier devices download the updates. With an increasing number of third party vendors, less and less devices will automatically download a new GA and will require the manufacturer/vendor to release a software update.
+
 Sometimes this has been on Fridays or weekends, at this time a significant part of the US/Europe would not be working, or ready to develop and test a new hotspot software update. This leaves third party devices with less rewards or even security issues until the following Monday. If this happened to be a public holiday, a significant part of the network could be vulnerable for 4 or more days.
 
 # Stakeholders
