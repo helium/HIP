@@ -4,7 +4,7 @@
 - Start Date: 2021/10/13
 - Category: Meta
 - Original HIP PR: https://github.com/helium/HIP/pull/290
-- Tracking Issue: 
+- Tracking Issue: https://github.com/helium/HIP/issues/309
 
 # Summary
 [summary]: #summary
