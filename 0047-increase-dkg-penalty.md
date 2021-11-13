@@ -1,11 +1,11 @@
-# HIP XXXX Increase DKG failure penalty
+# HIP 47: Increase DKG failure penalty
 
 - Author(s): @PaulVMo
 - Start Date: 2021-10-26
 - Category: Technical
-- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
-- Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
-
+- Original HIP PR: https://github.com/helium/HIP/pull/306
+- Tracking Issue: https://github.com/helium/HIP/issues/313
+- Status: In Discussion
 
 # Summary
 [summary]: #summary
