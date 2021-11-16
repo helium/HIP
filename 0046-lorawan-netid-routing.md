@@ -75,12 +75,17 @@ frames requires no changes.
 ## Solution
 [solution]: #solution
 
-We propose to create a new `chain_var` that maps NetID to OUI. This mapping
-will be maintained by the DeWi LoRaWAN Committee who can receive requests from
-NetID owners to route these frames to one or many OUIs. The entity making the
-request must be confirmed by the contact person listed in the LoRaWAN Alliance
-NetID registry, which DeWi has access to as a LoRaWAN Alliance Contributor. The
-OUI operator(s) need not be the same as the entity making the request.
+We propose to create a new `chain_var` that maps NetID to OUI. It will be of
+the following type:
+```
+[{<<netid:32/integer>>, <<oui:64/integer>>}]
+```
+This mapping will be maintained by the DeWi LoRaWAN Committee who can receive
+requests from NetID owners to route these frames to one or many OUIs. The
+entity making the request must be confirmed by the contact person listed in the
+LoRaWAN Alliance NetID registry, which DeWi has access to as a LoRaWAN Alliance
+Contributor. The OUI operator(s) need not be the same as the entity making the
+request.
 
 ## Alternate Solutions
 [alternate-solutions]: #alternate-solutions
