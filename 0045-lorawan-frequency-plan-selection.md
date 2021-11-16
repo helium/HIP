@@ -78,8 +78,10 @@ forum will be in attempt to reach consensus. The author of the dissenting
 opinion must be ready to take the floor to represent their position.
 4. If the change remains contentious, the decision will go to on-chain
 voting. Currently, that would be implemented using [Helium Vote](https://www.heliumvote.com/)
-mechanism where 1 hotspot in the concerned region equals 1 vote. Votes
-are cast by doing a DC burn transaction towards the appropriate wallet.
+mechanism where 1 hotspot in the concerned region equals 1 vote. Votes are 
+cast by doing a DC burn transaction towards the appropriate wallet. A hotspot
+must be asserted in the concerned region for the entire duration of the vote,
+which must last at least seven days.
 
 After steps 2 and 3, before proceeding to the next escalation, DeWi's LoRaWAN
 Committee may withdraw their proposal and reissue a new proposal at anytime.
