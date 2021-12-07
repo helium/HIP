@@ -1,10 +1,10 @@
-# HIP Template
+# HIP 48: IP Support
 
 - Author(s): @ivelin
 - Start Date: Dec 6, 2021
 - Category: Technical, Economic
-- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
-- Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
+- Original HIP PR: https://github.com/helium/HIP/pull/320
+- Tracking Issue: https://github.com/helium/HIP/issues/319
 
 # Summary
 [summary]: #summary
@@ -13,7 +13,6 @@ It appears that as of Dec 2021, Helium supports only simple Class A broadcast me
 
 # Motivation
 [motivation]: #motivation
-
 
 IP support would open up application for IoT devices using MQTT, WebRTC, HTTP and other widely used protocols that majority of developers are familiar with. Note that IP support does not necessarily mean broadband speeds. In many cases smart IoT devices do not need to constantly stream large amounts of data.
 
@@ -48,73 +47,27 @@ https://airbus-cyber-security.com/ip2lora-a-diverted-use-of-lora-to-build-your-w
 https://changelog.complete.org/archives/10048-tcp-ip-over-lora-radios
 
 
-- Introduce and explain new concepts.
-
-- It should be reasonably clear how the proposal would be implemented.
-
-- Provide representative examples that show how this proposal would be commonly
-  used.
-
-- Corner cases should be dissected by example.
-
 # Drawbacks
 [drawbacks]: #drawbacks
 
-- Why should we *not* do this?
+TBD
 
 # Rationale and Alternatives
 [alternatives]: #rationale-and-alternatives
 
-This is your chance to discuss your proposal in the context of the whole design
-space. This is probably the most important section!
-
-- Why is this design the best in the space of possible designs?
-
-- What other designs have been considered and what is the rationale for not
-  choosing them?
-
-- What is the impact of not doing this?
+TBD
 
 # Unresolved Questions
 [unresolved]: #unresolved-questions
 
-- What parts of the design do you expect to resolve through the HIP process
-  before this gets merged?
-
-- What parts of the design do you expect to resolve through the implementation
-  of this feature?
-
-- What related issues do you consider out of scope for this HIP that could be
-  addressed in the future independently of the solution that comes out of this
-  HIP?
+TBD
 
 # Deployment Impact
 [deployment-impact]: #deployment-impact
 
-Describe how this design will be deployed and any potential impact it may have on
-current users of this project.
-
-- How will current users be impacted?
-
-- How will existing documentation/knowlegebase need to be supported?
-
-- Is this backwards compatible?
-
-        - If not, what is the procedure to migrate?
+TBD
 
 # Success Metrics
 [success-metrics]: #success-metrics
 
-What metrics can be used to measure the success of this design?
-
-Possible success metrics:
-- Short term (1-3 months): user staking on this proposal with commitment to deploy IP devices on Helium when available.
-- Longer term (12-18 months): number of new IP devices deployed on Helium.
-
-- What should we measure to prove a performance increase?
-
-- What should we measure to prove an improvement in stability?
-
-- What should we measure to prove a reduction in complexity?
-
-- What should we measure to prove an acceptance of this by it's users?
+TBD
