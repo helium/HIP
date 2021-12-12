@@ -1,81 +1,70 @@
 # HIP 40: Validator Denylist
- 
+
 - Author(s): @BFGNeil, @Anthonyra, @ElonTusk, @AP
 - Start Date: 2021-09-27
 - Category: Economic, Technical
 - Original HIP PR: https://github.com/helium/HIP/pull/284
 - Tracking Issue: https://github.com/helium/HIP/issues/285
 - Status: In Discussion
- 
+
 ## Summary and Motivation
+
 [motivation]: #motivation
- 
+
 While the situation with regards to Proof-of-Coverage gaming has improved and additional enhancements are intended, we need a backstop prevention mechanism that allows us to quickly allow the network to grow and mitigate obvious gaming and spoofing situations as they materialise.
- 
-This plan proposes that *validators* would use deny lists of Hotspot addresses.
- 
+
+This plan proposes that _validators_ would deny lists of Hotspot addresses.
+
 ## Detailed Implementation Plan
+
 [detailed-explanation]: #detailed-explanation
- 
+
 ### The Committee
- 
-A new board will be selected under the DeWI banner, working title Security Committee.
- 
-- Committee members are voted on by the community.
-- The committee will produce the first list of its kind to be automatically included with the validator software. 
-- This committee will analyse hotspots, patterns of gaming, and then submit evidence to the committee to discuss and vote on.
-- A Super majority vote (66%+) is needed for a hotspot to be added to the denylist
+
+A new board will be selected under the DeWI banner, working title Proof of Coverage Committee.
+
+- Known community members with demonstrated experience in the following areas, POC mechanisms, Cyber security, Onchain analysis and gateway development, as well as publicly trusted community members to secure openness.
+- The committee will produce the first list of its kind to be automatically included with the validator software.
+
+### Validator Usage
+
+This committee will analyse hotspots, patterns of gaming, and then submit evidence to the committee to discuss and vote on.
+
+There is no golden bullet here with gaming, a multitude of factors go into defining if a hotspot is gaming the system, and so defining what is gaming will always change. We need a trusted, elected committee that is focused on what's best for the network.
+
+Data from the analysis will be passed to Helium Inc to provide a feedback mechanism to help improve anti-gaming methods.
+
+### Appealing
+
+When action against a hotspot is decided on by the committee, the information should be made public and a notice period should be given publicly so hotspot owners can appeal.
+
+At this point hosts can submit evidence, and a committee will vote (super majority) to accept or deny this evidence.
+
+### List Generation & Usage
+
 - The Committee will generate a list of hotspot addresses and publish it.
 
-DeWi should also have the power to call for this committee and power to be disbanded, we feel a regular review on the need for such a committee is important for the decentralisation of the network. As the network moves towards more trusted data (hip22, secure mappers for example) we feel this power might be far too reaching, but needed at this time.
- 
-### Analysis / Generation
- 
-There is no golden bullet here with gaming, a multitude of factors go into defining if a hotspot is gaming the system, and so defining what is gaming will always change. We need a trusted, elected committee that is focused on what's best for the network.
- 
-Data from the analysis will be passed to Helium Inc to provide a feedback mechanism to help improve anti-gaming methods.
- 
-### Appealing
- 
-When action against a hotspot is decided on by the committee, the information should be made public and a notice period should be given so hotspot owners can appeal.
- 
-At this point hosts can submit evidence, and a committee will vote (super majority) to accept or deny this evidence.
- 
-### Validators & List Usage
+- Validators will use the committee list by default which is set in the config file of the validator. Validators can add other lists here or opt out by removing the default list url.
 
-Validators will use the committee list by default which is set in the config file of the validator. Validators can add other lists here or opt-out by removing the default list url.
- 
 Additional lists can be created by the community and validators can choose to opt-in to additional lists.
- 
+
 Lists are polled and collected regularly allowing quick updates and removals by the committee or from other lists.
- 
-Validators do not have to use the same denylist file, or any denylist at all. Only if all consensus group members both have a denylist and have matching records for a Hotspot on the denylist would any action be taken.
- 
-When any transactions are submitted to the consensus group, if all consensus group members agree that a given Hotspot address is on the denylist, any transaction from that address will be marked as invalid with the reason of `denylist`.
 
-## Benefits
+- Validators do not have to use the same denylist file, or any denylist at all. Only if all consensus group members both have a denylist and have matching records for a Hotspot on the denylist would any action be taken.
 
-1. Once implemented the sole goal is to no longer require any action. This is due to a standard security practice of Detection & Analysis, Containment, Eradication / Recovery by reporting the findings to help improve the overall network via new release fixes, HIPs and/or subsequent POC changes.
-2. Previous reactions via HIP mechanisms are slow, for example, Meerkat https://etl.dewi.org/question/518-dapper-hickory-meerkat-timeline shows how much HNT they took between when the HIP was proposed to when it was implemented.
-3. Currently theres a public perception issue that Gamers can get away with it, and the feel is if they're doing it why shouldn't I - something this HIP would stop, both reducing current and future gaming attempts.
+- When any transactions are submitted to the consensus group, if all consensus group members agree that a given Hotspot address is on the denylist, any transaction from that address will be marked as invalid with the reason of `denylist`.
 
-
-## Drawbacks
-1. Centralisation of control who can't use the network.
-2. Impossible to have 100% proof of gaming, can lead in extreme cases to blocking legitimate coverage.
-3. cost vs reward - the % of the network this targets does not equate to the time needed to investigate and implement.
-4. Improvements to PoC and anti gaming methods to automatically find hacks would be a better solution in the long run.
- 
- 
 ## Open Questions
- 
-- Who will be on the DeWi committee?
-- Term lengths of those on the committee?
-- How many people are on the committee?
-- Public voting / selection of members?
-- How long should the notice period be?
- 
-## Success Metrics
- 
-Success here means that a Hotspot address contained on a majority of validators' denylist have their transactions rejected as invalid.
 
+[unresolved]: #open-questions
+
+Who will be on the DeWi committee?
+Term lengths of those on the committee?
+How many people are on the committee?
+Public voting / selection of members?
+
+## Success Metrics
+
+[success-metrics]: #success-metrics
+
+Success here means that a Hotspot address contained on a majority of validators' denylist has their transactions rejected as invalid.
