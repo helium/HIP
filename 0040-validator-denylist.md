@@ -23,7 +23,7 @@ This plan proposes that _validators_ would deny lists of Hotspot addresses.
 
 A new board will be selected under the DeWI banner, working title Proof of Coverage Committee.
 
-- Known community members with demonstrated experience in the following areas, POC mechanisms, Cyber security, Onchain analysis and gateway development, as well as publicly trusted community members to secure openness.
+- Known community members with demonstrated experience in the following areas, POC mechanisms, Cyber security, Onchain analysis and gateway development, as well as publicly trusted community members to secure openness will be chosen to form the committee and vote on action.
 - The committee will produce the first list of its kind to be automatically included with the validator software.
 
 ### Validator Usage
@@ -46,9 +46,9 @@ At this point hosts can submit evidence, and a committee will vote (super majori
 
 - Validators will use the committee list by default which is set in the config file of the validator. Validators can add other lists here or opt out by removing the default list url.
 
-Additional lists can be created by the community and validators can choose to opt-in to additional lists.
+- Additional lists can be created by the community and validators can choose to opt-in to additional lists.
 
-Lists are polled and collected regularly allowing quick updates and removals by the committee or from other lists.
+- Lists are polled and collected regularly allowing quick updates and removals by the committee or from other lists.
 
 - Validators do not have to use the same denylist file, or any denylist at all. Only if all consensus group members both have a denylist and have matching records for a Hotspot on the denylist would any action be taken.
 
@@ -58,10 +58,10 @@ Lists are polled and collected regularly allowing quick updates and removals by 
 
 [unresolved]: #open-questions
 
-Who will be on the DeWi committee?
-Term lengths of those on the committee?
-How many people are on the committee?
-Public voting / selection of members?
+- Who will be on the DeWi committee?
+- Term lengths of those on the committee?
+- How many people are on the committee?
+- Public voting / selection of members?
 
 ## Success Metrics
 
