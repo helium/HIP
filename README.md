@@ -40,7 +40,7 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | 25 | [Validators](https://github.com/helium/HIP/blob/master/0025-validators.md) | [Deployed](https://github.com/helium/HIP/issues/111) ([audit](https://github.com/helium/miner/blob/master/audit/var-70.md)) |
 | 26 | [Payment Notes](https://github.com/helium/HIP/blob/master/0026-payment-notes.md) | [In Discussion](https://github.com/helium/HIP/issues/125) |
 | 27 | [Support CBRS 5G](https://github.com/helium/HIP/blob/master/0027-cbrs-5g-support.md) | [Approved](https://github.com/helium/HIP/pull/133) |
-| 28 | [Consensus Reward Adjustments](https://github.com/helium/HIP/blob/master/0028-consensus-reward-adjustments.md) | [Approved](https://github.com/helium/HIP/issues/140) |
+| 28 | [Consensus Reward Adjustments](https://github.com/helium/HIP/blob/master/0028-consensus-reward-adjustments.md) | [Deployed](https://github.com/helium/HIP/issues/140) ([audit](https://github.com/helium/miner/blob/master/audit/var-84.md) / [txn](https://explorer.helium.com/txns/siOPX2IFSh9ey2U0X18BiDsPJHrgxQ0_YKleY4Vyew4)) |
 | 29 | [Multi-signature Keys](https://github.com/helium/HIP/blob/master/0029-multisignature-keys.md) | [Deployed](https://github.com/helium/HIP/issues/157) ([commit](https://github.com/helium/miner/commit/b038f24c8ea801c2062644c7cd682832919b25b0)) |
 | 30 | [BLS12-381 for Threshold Cryptography](https://github.com/helium/HIP/blob/master/0030-update-threshold-cryptography.md) | [Deployed](https://github.com/helium/HIP/issues/158) ([commit](https://github.com/helium/miner/commit/b038f24c8ea801c2062644c7cd682832919b25b0)) |
 | 31 | [Governance by Token Lock](https://github.com/helium/HIP/blob/master/0031-governance-by-token-lock.md) | [In Discussion](https://github.com/helium/HIP/issues/183) |
@@ -53,6 +53,14 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | 38 | [Validator Oracles](https://github.com/helium/HIP/blob/master/0038-validator-oracles.md) | [In Discussion](https://github.com/helium/HIP/issues/282) |
 | 39 | [HNT Redenomination](https://github.com/helium/HIP/blob/master/0039-hnt-redenomination.md) | [In Discussion](https://github.com/helium/HIP/issues/283) |
 | 40 | [Validator Denylist](https://github.com/helium/HIP/blob/master/0040-validator-denylist.md) | [In Discussion](https://github.com/helium/HIP/issues/285) |
+| 41 | [Governance by Token Lock V2](https://github.com/helium/HIP/blob/master/0041-governance-by-token-lock-v2.md) | [In Discussion](https://github.com/helium/HIP/issues/302) |
+| 42 | [Beacon/Witness Ratio - Witness Reward Limit](https://github.com/helium/HIP/blob/master/0042-beacon-witness-ratio-witness-reward-limit.md) | [In Discussion](https://github.com/helium/HIP/issues/303) |
+| 43 | [Software Release Guidelines](https://github.com/helium/HIP/blob/master/0043-software-release-guidelines.md) | [In Discussion](https://github.com/helium/HIP/issues/309) |
+| 44 | [Witness Reward Decay](https://github.com/helium/HIP/blob/master/0044-witness-decay.md) | [In Discussion](https://github.com/helium/HIP/issues/310) |
+| 45 | [LoRaWAN Frequency Plan Selection](https://github.com/helium/HIP/blob/master/0045-lorawan-frequency-plan-selection.md) | [In Discussion](https://github.com/helium/HIP/issues/311) |
+| 46 | [LoRaWAN NetID Routing](https://github.com/helium/HIP/blob/master/0046-lorawan-netid-routing.md) | [In Discussion](https://github.com/helium/HIP/issues/312) |
+| 47 | [Increase DKG Failure Penalty](https://github.com/helium/HIP/blob/master/0047-increase-dkg-penalty.md) | [Approved](https://github.com/helium/HIP/issues/313) |
+| 48 | [IP-over-LoRaWAN](https://github.com/helium/HIP/blob/master/0048-ip-support.md) | [In Discussion](https://github.com/helium/HIP/issues/319) |
 
 ## Status key
 
