@@ -71,9 +71,20 @@ witness_limit_cap = 360 * (1440 / 360) / 5 * 2
 witness_limit_cap = 576
 ```
 
-**Edge Cases:** Recently asserted hotspots on the network start with a zero witness list. For this reason, I suggest that the blockchain brings back "test beacons", during multi-hop PoC they were called "0-hop beacons", to initially populate the witness list. The recently asserted hotspot will perform a beacon upon being asserted however this beacon isn't elgible for PoC rewards it would simply allow them to receive witness rewards while they wait to populate their witness list via normal beacons.
+---
+You can also use the following tools built with the DeWi ETL Metabase website. You'll need to have an account which requires a gmail.com email address to login.
 
-**Alternatives:** Set a minimum other than 0 for the daily limit currently proposed value is 24 for this.
+> [Check HIP-42 using Hotspot Name](https://etl.dewi.org/question/624-poc-witness-scaling-by-name-hip-42)
+
+>[Check HIP-42 using Hotspots Public Address](https://etl.dewi.org/question/461-poc-witness-scaling-hip-42)
+
+---
+
+## Edge Case Concerns
+
+Recently asserted hotspots on the network start with a zero witness list. For this reason, I suggest that the blockchain brings back "test beacons", during multi-hop PoC they were called "0-hop beacons", to initially populate the witness list. The recently asserted hotspot will perform a beacon upon being asserted however this beacon isn't elgible for PoC rewards it would simply allow them to receive witness rewards while they wait to populate their witness list via normal beacons.
+
+> **Alternatives:** Set a minimum other than 0 for the daily limit currently proposed value is 24 for this.
 ## Implementation
 
 When a witness is added to the witness list of a hotspot the daily limit will be calculated with the equation stated above.
