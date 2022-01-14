@@ -16,7 +16,7 @@ To ensure that hotspot owners are motivated to not just prioritize witnessing bu
 # Summary
 [summary]: #summary
 
-This proposal intends to enforce a hard limit on the number of witness receipts a hotspot is capable of claiming based on how well the hotspot is able to perform all functions related to Proof of Coverage (PoC). The two major components of PoC are the hotspot's ability to beacon and witness. Beaconing is the mechanism used by the blockchain to determine if a hotspot has the capability to perform downlinks and also provides a means to determine coverage without the need for devices. Downlinks are integral for a LoRa based Internet of Things (IoT) network since they wouldn't be able to join if they couldn't receive downlinks for example.
+This proposal intends to enforce a hard limit on the number of witness receipts a hotspot is capable of claiming based on how well the hotspot is able to perform all functions related to Proof of Coverage (PoC). The two major components of PoC are the hotspot's abilities to beacon and witness. Beaconing is the mechanism used by the blockchain to determine if a hotspot has the capability to perform downlinks and also provides a means to determine coverage without the need for devices. Downlinks are integral for a LoRa based Internet of Things (IoT) network since they wouldn't be able to join if they couldn't receive downlinks for example.
 
 The primary function of this proposal is to tie beacons to witness receipts to ensure that setups benefit the network and not just the individual hotspot. 
 
