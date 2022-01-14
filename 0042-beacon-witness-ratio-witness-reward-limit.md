@@ -11,7 +11,10 @@
 # Motivation
 [motivation]: #motivation
 
-To ensure that hotspot owners are motivated to not just prioritize witnessing but also to beacon.
+Twofold: 
+
+1. To ensure that hotspot owners are motivated to build a fully working IoT network. Both witnessing and beaconing are essential.
+2. To combat recent gaming that has been observed.
 
 # Summary
 [summary]: #summary
