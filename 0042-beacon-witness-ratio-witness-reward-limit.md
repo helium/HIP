@@ -29,7 +29,7 @@ A secondary function of this proposal is to combat the most recent gaming associ
 [stakeholders]: #stakeholders
 
 * All hotspots who currently get rewarded more for witnessing than they do for beacons
-* Setups that rely on cellular backhaul (CGNAT setups), sector antennas on mountains with high gain antennas, or even hotspots that aren't port forwarded can be affected. Relayed hotspots are capable of beaconing and witnessing however can have degragated performance when compared to hotspot that are setup properly. Due to the setups listed here there will be added wiggle room to ensure the impact is minimized while incentivizing PoC optimized setups. Most of these concerns will be allieviated when light hotspots are released since hotspots will only perform outbound connections and won't need inbound connections.
+* Setups that rely on cellular backhaul (CGNAT setups), sector antennas on mountains with high gain antennas, or even hotspots that aren't port forwarded can be affected. Relayed hotspots are capable of beaconing and witnessing. However, they can have lower performance than properly set up hotspots. Due to the setups listed here there will be added wiggle room to ensure the impact is minimized while incentivizing PoC optimized setups. Most of these concerns will be allieviated when light hotspots are released since hotspots will only perform outbound connections and won't need inbound connections.
 
 # Detailed Explanation
 [detailed-explanation]: #detailed-explanation
