@@ -11,12 +11,15 @@
 # Motivation
 [motivation]: #motivation
 
-To ensure that hotspot owners are motivated to not just prioritize witnessing but also to beacon.
+Twofold: 
+
+1. To ensure that hotspot owners are motivated to build a fully working IoT network. Both witnessing and beaconing are essential.
+2. To combat recent gaming that has been observed.
 
 # Summary
 [summary]: #summary
 
-This proposal intends to enforce a hard limit on the number of witness receipts a hotspot is capable of claiming based on how well the hotspot is able to perform all functions related to Proof of Coverage (PoC). The two major componets to PoC, is the hotspots ability to beacon and witness. Beaconing is the mechanism used by the blockchain to determine if a hotspot has the capability to perform downlinks and also provides a means to determine coverage without the need for devices. Downlinks are integral for a LoRa based Internet of Things (IoT) network since they wouldn't be able to join if they couldn't receive downlinks for example.
+This proposal intends to enforce a hard limit on the number of witness receipts a hotspot is capable of claiming based on how well the hotspot is able to perform all functions related to Proof of Coverage (PoC). The two major components of PoC are a hotspot's abilities to both beacon and witness. Beaconing is the mechanism used by the blockchain to determine if a hotspot has the capability to perform downlinks and also provides a means to determine coverage without the need for devices. Downlinks are integral for a LoRa based Internet of Things (IoT) network since they wouldn't be able to join if they couldn't receive downlinks for example.
 
 The primary function of this proposal is to tie beacons to witness receipts to ensure that setups benefit the network and not just the individual hotspot. 
 
@@ -26,7 +29,7 @@ A secondary function of this proposal is to combat the most recent gaming associ
 [stakeholders]: #stakeholders
 
 * All hotspots who currently get rewarded more for witnessing than they do for beacons
-* Setups that rely on cellular backhaul (CGNAT setups), sector antennas on mountains with high gain antennas, or even hotspots that aren't port forwarded can be affected. Relayed hotspots are capable of beaconing and witnessing however can have degragated performance when compared to hotspot that are setup properly. Due to the setups listed here there will be added wiggle room to ensure the impact is minimized while incentivizing PoC optimized setups. Most of these concerns will be allieviated when light hotspots are released since hotspots will only perform outbound connections and won't need inbound connections.
+* Setups that rely on cellular backhaul (CGNAT setups), sector antennas on mountains with high gain antennas, or even hotspots that aren't port forwarded can be affected. Relayed hotspots are capable of beaconing and witnessing. However, they can have lower performance than properly set up hotspots. Due to the setups listed here there will be added wiggle room to ensure the impact is minimized while incentivizing PoC optimized setups. Most of these concerns will be allieviated when light hotspots are released since hotspots will only perform outbound connections and won't need inbound connections.
 
 # Detailed Explanation
 [detailed-explanation]: #detailed-explanation
