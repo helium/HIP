@@ -1,10 +1,10 @@
-# HIP 49: Display All Potential Beacon Witnesses
+# HIP 50: Record All Potential Beacon Witnesses
 
 - Author(s): @captainhindsite
-- Start Date: 2021-12-09<!-- fill me in with today's date, YYYY-MM-DD -->
-- Category: technical
-- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
-- Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
+- Start Date: 2021-12-09
+- Category: Technical
+- Original HIP PR: https://github.com/helium/HIP/pull/322
+- Tracking Issue: https://github.com/helium/HIP/issues/331
 
 # Summary
 [summary]: #summary
