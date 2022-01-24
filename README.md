@@ -61,6 +61,7 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | 46 | [LoRaWAN NetID Routing](https://github.com/helium/HIP/blob/master/0046-lorawan-netid-routing.md) | [In Discussion](https://github.com/helium/HIP/issues/312) |
 | 47 | [Increase DKG Failure Penalty](https://github.com/helium/HIP/blob/master/0047-increase-dkg-penalty.md) | [Approved](https://github.com/helium/HIP/issues/313) |
 | 48 | [IP-over-LoRaWAN](https://github.com/helium/HIP/blob/master/0048-ip-support.md) | [In Discussion](https://github.com/helium/HIP/issues/319) |
+| 49 | [LoRaWAN Sub-region Max EIRP Limit](https://github.com/helium/HIP/blob/master/0049-max-eirp-adjustment.md) | [In Discussion](https://github.com/helium/HIP/issues/327) |
 
 ## Status key
 
