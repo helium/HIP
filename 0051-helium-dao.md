@@ -5,7 +5,7 @@
 - Start Date: 2022-01-26
 - Category: Economic / Technical
 - Original HIP PR: [#334](https://github.com/helium/HIP/pull/334)
-- Tracking Issue: `TODO`
+- Tracking Issue: [#336](https://github.com/helium/HIP/issues/336)
 - Status: Draft
 
 # Summary
