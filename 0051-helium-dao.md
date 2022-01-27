@@ -191,7 +191,7 @@ Once each protocol has a score, the % of total Epoch PoC rewards assigned to
 each WNP will be assessed by comparing the individual score to the sum of all
 scores:
 
-![\textup{Percentage of POC Rewards per WNP} = \textup{WNP Specific Score} \div \sum (\textup{All WNP Scores})](https://latex.codecogs.com/svg.image\textup{Percentage&space;of&space;POC&space;Rewards&space;per&space;WNP}&space;=&space;\textup{WNP&space;Specific&space;Score}&space;\div&space;\sum&space;(\textup{All&space;WNP&space;Scores}))
+![\textup{Percentage of POC Rewards per WNP} = \textup{WNP Specific Score} \div \sum (\textup{All WNP Scores})](https://latex.codecogs.com/png.image?\dpi{110}%20\textup{Percentage%20of%20POC%20Rewards%20per%20WNP}%20=%20\textup{WNP%20Specific%20Score}%20\div%20\sum%20(\textup{All%20WNP%20Scores}))
 
 To put this into context, if you have two networks with 50,000 and 500,000
 devices each, the smaller network would need approximately 3 times the DC burn
