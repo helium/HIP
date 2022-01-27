@@ -6,7 +6,7 @@
 - Category: Economic / Technical
 - Original HIP PR: [#334](https://github.com/helium/HIP/pull/334)
 - Tracking Issue: `TODO`
-- Status: Work In Progress
+- Status: Draft
 
 # Summary
 [summary]: #summary
@@ -83,13 +83,13 @@ There are three key drivers for proposing that consensus and execution for each
 WNP occur at some base layer chain, while the economic and governance layer for
 that WNP is separated from the native token of the overall Helium Network
 
-1. *Scalability -* Each WNP has the ability to run its own code for WNP specific
+1. *Scalability:* Each WNP has the ability to run its own code for WNP specific
    items
-2. *Native Tokens Provide Separation of Governance Each WNP effectively governs
+2. *Native Tokens:* Provide Separation of Governance Each WNP effectively governs
    its Proof-of-Coverage rules, data pricing, and rewards distribution
    mechanisms. This structure provides significantly more self-sovereignty over
    the structure and direction of the WNP.*
-3. *Composability Implies Utility -* If the overall Helium DAO base-chain is
+3. *Composability Implies Utility:*  If the overall Helium DAO base-chain is
    able to support smart contracts, it is possible to imagine a variety of novel
    use cases for HNT as well as each of the WNT tokens. Some examples here are
    signaling strategies (yield aggregator DAOs that take HNT from passive
@@ -100,12 +100,12 @@ that WNP is separated from the native token of the overall Helium Network
 There are two key drivers for WNPs to operate as sub-DAOs beneath the overall
 Helium Network through their corresponding WNTs
 
-1. *Curation and risk expression* WNTs allow network participants and
+1. *Curation and risk expression:* WNTs allow network participants and
    speculators to indicate support for a given network, which can inform
    distribution of emissions and developer resources. For example, if HNT
    holders bond a large number of HNT to a particular WNP, the HNT denominated
    rewards for that WNP increase and help accelerate the flywheel for that WNP.
-2. *Onboarding new protocols* WNP DAOs provide an easy framework for addition of
+2. *Onboarding new protocols:* WNP DAOs provide an easy framework for addition of
    new wireless protocols where the broader Helium DAO delegates some portion of
    HNT emissions to each WNP DAO.
 
