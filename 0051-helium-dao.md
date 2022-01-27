@@ -18,7 +18,7 @@ network protocols.
 We propose that each wireless network supported by Helium (LoRaWAN, Wifi, 5G —
 referred to as wireless network protocols or WNPs) has its own subDAO with its
 own token (referred to as wireless network tokens or WNTs). The key
-specifications of the WNT such as proof-of-coverage rules, data credits rewards,
+specifications of the WNT such as Proof-of-Coverage rules, data credits rewards,
 and consensus mechanisms are governed by each WNT DAO.
 
 The aim is to create an economy such that the underlying HNT-Data Credit
@@ -30,9 +30,9 @@ The technical model requires that the entire Helium Network lives at some
 proposed base layer (L1). All accounts and transaction activity happens at this
 L1. All subDAOs operate as economic and governance layers (L2) with their
 respective WNTs acting as native tokens for this purpose. Each L2 also runs
-software to calculate WNP specific items (eg: all the proof of coverage code
-that exists on the current LoRaWAN network to determine hotspot rewards) and the
-L2 validators who have staked WNTs come to consensus on these calculations.
+software to calculate WNP specific items (e.g.: all the Proof-of-Coverage code
+that exists on the current LoRaWAN network to determine Hotspot rewards) and the
+L2 Validators who have staked WNTs come to consensus on these calculations.
 
 # Background
 [background]: #background
@@ -48,7 +48,7 @@ three-part proposal that builds on such existing work with two primary aims:
 
 1. Provide a general structure for onboarding new WNPs to the broader Helium
    Network, with mechanisms in place to ensure that protocol-specific attributes
-   such as proof-of-coverage rules, data credits pricing, and block validation
+   such as Proof-of-Coverage rules, data credits pricing, and block validation
    are within control of the emergent WNT DAO.
 2. Specify the implementation of the structure proposed through detailed
    onboarding proposals for the LoRaWAN and 5G networks, described in [HIP 52:
@@ -62,19 +62,18 @@ support new networks and devices, there are two core problems to be addressed:
 This proposal outlines two constructions to address the aforementioned core
 problems:
 
-1. *Blockchain Scalability* We propose that each WNP has validators who operate
-   software to calculate WNP specific items (eg: all the proof of coverage code
-   that exists on the current LoRaWAN network to determine hotspot rewards).
+1. *Blockchain Scalability*: We propose that each WNP has Validators who operate
+   software to calculate WNP specific items (eg: all the Proof-of-Coverage code
+   that exists on the current LoRaWAN network to determine Hotspot rewards).
    Validators stake WNTs and are rewarded by WNT inflation.
 
-All non WNP specific transactions (simple transfers, burning HNT to DC, etc)
-occur at some high throughput, low latency base layer chain on which the overall
-Helium Network lives.
-
-1. *WNP Specific Incentive Alignment We propose that each WNP operate as its own
-   sub-DAO within the broader umbrella of the Helium DAO. WNP Sub-DAOs are able
-   to issue WNTs to their stakeholders and WNT denominated governance controls
-   WNP specific attributes.*
+   All non WNP specific transactions (simple transfers, burning HNT to DC, etc)
+   occur at some high throughput, low latency base layer chain on which the
+   overall Helium Network lives.   
+2. *WNP Specific Incentive Alignment*: We propose that each WNP operate as its
+   own sub-DAO within the broader umbrella of the Helium DAO. WNP Sub-DAOs are
+   able to issue WNTs to their stakeholders and WNT denominated governance
+   controls WNP specific attributes.
 
 # Motivation
 [motivation]: #motivation
@@ -88,13 +87,13 @@ that WNP is separated from the native token of the overall Helium Network
 2. *Native Tokens:* Provide Separation of Governance Each WNP effectively governs
    its Proof-of-Coverage rules, data pricing, and rewards distribution
    mechanisms. This structure provides significantly more self-sovereignty over
-   the structure and direction of the WNP.*
+   the structure and direction of the WNP.
 3. *Composability Implies Utility:*  If the overall Helium DAO base-chain is
    able to support smart contracts, it is possible to imagine a variety of novel
    use cases for HNT as well as each of the WNT tokens. Some examples here are
    signaling strategies (yield aggregator DAOs that take HNT from passive
    holders and stake to specific WNPs based on market conditions) or money
-   markets (liquid borrow-lend markets for greater delegation to validators or
+   markets (liquid borrow-lend markets for greater delegation to Validators or
    leveraged staking).
 
 There are two key drivers for WNPs to operate as sub-DAOs beneath the overall
@@ -133,7 +132,9 @@ Before we can define the WNP specific economic structures, we need to outline
 how the rewards are split between WNPs and how to fund the earliest stages of
 development for new WNPs.
 
-## PoC Model Background
+## Proof-of-Coverage Rewards Model
+
+### Background
 
 HIP 27 originally introduced a concept to allocate a portion of unrewarded Data
 Transfer rewards (up to 30% of the DC Bonus Pool) towards Proof-of-Coverage
@@ -145,8 +146,6 @@ we chose to truncate HIP 27 to focus on implementation of a chain variable for
 DC / cellular data conversion ratio and revisit economics and implementation of
 PoC for non-LoRaWan wireless network types to a future HIP.
 
-## PoC Incentive Model for HIP 50
-
 Currently, under HIP-27, non-LoRaWAN gateways are only rewarded based on data
 transfer and those rewards are based on the 1 DC burn = 1 DC equivalent earning
 principle laid out in HIP-10. That reward bucket is currently, as of January
@@ -154,7 +153,7 @@ principle laid out in HIP-10. That reward bucket is currently, as of January
 that is not allocated to Data Transfer rewards is reallocated to LoRaWAN PoC
 rewards.
 
-**We propose three significant changes to the reward bucket structure**
+**We propose three significant changes to the reward buckets**
 
 ### 1. Remove division between PoC and DC reward buckets
 
@@ -171,7 +170,7 @@ Existing reward curve by reward type:
 ![existing reward curve][existing-reward-curve]
 
 The new reward bucket would be a combination of the “Network Data Transfer” and
-“Proof of Coverage” rewards above.
+“Proof-of-Coverage” rewards above.
 
 ### 2. Split PoC rewards between wireless protocols based on a quadratic equation that accounts for DCs burned and active devices per WNP
 
@@ -185,13 +184,13 @@ propose the quadratic equation below:
 
 Each protocol would be assigned a ‘score’ per epoch:
 
-![\textup{Protocol Score} = \textup{WNP DCs Burner} * {\sqrt{\textup{WNP Active Device Count}}}](https://latex.codecogs.com/svg.image?\textup{Protocol&space;Score}&space;=&space;\textup{WNP&space;DCs&space;Burner}&space;*&space;{\sqrt{\textup{WNP&space;Active&space;Device&space;Count}}})
+![\textup{Protocol Score} = \textup{WNP DCs Burned} * {\sqrt{\textup{WNP Active Device Count}}}](https://latex.codecogs.com/svg.image?\textup{Protocol&space;Score}&space;=&space;\textup{WNP&space;DCs&space;Burned}&space;*&space;{\sqrt{\textup{WNP&space;Active&space;Device&space;Count}}})
 
 Once each protocol has a score, the % of total Epoch PoC rewards assigned to
 each WNP will be assessed by comparing the individual score to the sum of all
 scores:
 
-![\textup{Percentage of POC Rewards per WNP} = \textup{WNP Specific Score} \div \sum (\textup{All WNP Scores})](https://latex.codecogs.com/svg.image\textup{Percentage&space;of&space;POC&space;Rewards&space;per&space;WNP}&space;=&space;\textup{WNP&space;Specific&space;Score}&space;\div&space;\sum&space;(\textup{All&space;WNP&space;Scores}))
+![\textup{Percentage of POC Rewards per WNP} = \frac{\textup{WNP Specific Score}}{\sum (\textup{All WNP Scores})}](https://latex.codecogs.com/png.image?\dpi{110}%20\textup{Percentage%20of%20POC%20Rewards%20per%20WNP}%20=%20\frac{\textup{WNP%20Specific%20Score}}{\sum%20(\textup{All%20WNP%20Scores})})
 
 To put this into context, if you have two networks with 50,000 and 500,000
 devices each, the smaller network would need approximately 3 times the DC burn
@@ -200,14 +199,14 @@ to have a comparable protocol score to the larger network.
 Most importantly, this model gives us a framework to add new WNPs in the future
 without having to design reward splits on an ad-hoc basis.
 
-### 3. Implementing a ‘cold start’ bucket to help fund early stage networks that don’t yet have meaningful DC burn
+### 3. Implement a ‘cold start’ bucket to help fund early stage networks that don’t yet have meaningful DC burn
 
 The Lorawan protocol on Helium benefitted from having a built in ‘cold start’
 reward system via PoC rewards to help fund the growth of the network. Under the
 new model, a network that doesn’t have any DC burn would not have any way of
 rewarding it’s early users, so we are proposing a 10% ‘cold start’ reward bucket
 that is carved out from the combined PoC/data rewards bucket. Under this system,
-any WNP that has been live for sub 1 million epochs (approximately 2 years)
+any WNP that has been live for sub 1 million blocks (approximately 2 years)
 would evenly split 10% of all HNT rewards. Additionally, if a specific WNP had
 enough devices or was burning enough DCs to receive 10% of the larger PoC/data
 rewards bucket, it would be excluded from the ‘cold start’ rewards bucket.
@@ -241,8 +240,8 @@ WNT are issued against a bonding curve with issuance, redemption, and
 transaction fee parameters set by WNT governance. Each WNT can set the shape of
 its curve.
 
-We suggest that all WNT bonding curves take the shape P = S^k where k > 1, and P
-represents Price and S represents Supply. The quote currency is the WNT and the
+We suggest that all WNT bonding curves take the shape P = S^k where k > 1, P
+represents Price, and S represents Supply. The quote currency is the WNT and the
 base currency is HNT.
 
 For a given amount of HNT deposited to or withdrawn from a given WNP bonding
@@ -262,7 +261,7 @@ those issues.
 
 ## Rewards Distribution Mechanism
 
-We provide an end-to-end description of data transfer, proof-of-coverage, and
+We provide an end-to-end description of data transfer, Proof-of-Coverage, and
 consensus rewards for a given WNP under the Helium Network.
 
 *Data Transfer Process*
@@ -270,31 +269,31 @@ consensus rewards for a given WNP under the Helium Network.
 For each WNP, we propose that a device looking to receive coverage across the
 network purchase Data Credits by **purchasing and burning HNT**.
 
-The device **subsequently burns those Data Credits** in the name of the hotspot
-or set of hotspots once data has been transferred.
+The device **subsequently burns those Data Credits** in the name of the Hotspot
+or set of Hotspots once data has been transferred.
 
 The device then **relays the receipt of this transaction** to the set of
-validators for the WNP.
+Validators for the WNP.
 
-The WNP validator set then **relays this information to the HNT emissions
+The WNP Validator set then **relays this information to the HNT emissions
 contract** in order to determine the HNT amount to be distributed to the WNP
 subDAO for all rewards distribution.
 
-At the end of each epoch, the **WNP validator set prepares the distribution for
-mining rewards** denominated in the WNT to each hotspot based on coverage
+At the end of each epoch, the **WNP Validator set prepares the distribution for
+mining rewards** denominated in the WNT to each Hotspot based on coverage
 provided.
 
 *Proof-of-Coverage Process*
 
-The WNP subDAO defines the rules for proof-of-coverage challenges. In a given
+The WNP subDAO defines the rules for Proof-of-Coverage challenges. In a given
 epoch, Challengers, Challenges, and Witnesses **relay the results of challenges
-to the WNP validator set** in order to distribute proof-of-coverage rewards
+to the WNP Validator set** in order to distribute Proof-of-Coverage rewards
 denominated in WNT to relevant devices.
 
 *Consensus Process*
 
 The WNP subDAO defines the rules for consensus, and **distributes a portion of
-WNT emissions in a given epoch for WNP validators.**
+WNT emissions in a given epoch for WNP Validators.**
 
 ![subDAO governance][subdao-governance]
 
@@ -303,21 +302,21 @@ WNT emissions in a given epoch for WNP validators.**
 At the end of a given epoch, the HNT emissions contract **performs a tally of
 the data credits transferred across WNPs**. The emissions contract subsequently
 distributes the determined amount of HNT to a **WNP subDAO multi-signature
-wallet**, the addresses of which comprise the set of validators of that WNP.
+wallet**, the addresses of which comprise the set of Validators of that WNP.
 
 *WNT Issuance*
 
 Each WNP DAO then **submits the entire amount of HNT into its bonding curve** in
-order to mint new WNT for hotspots and validators participating in data transfer
-and proof-of-coverage.
+order to mint new WNT for Hotspots and Validators participating in data transfer
+and Proof-of-Coverage.
 
 In a given epoch, if the WNP Hotspots were to receive some amount of HNT from
 the Helium DAO, the WNP subDAO multi-signature wallet distributes a
 **corresponding amount of newly minted WNT of equal market value** as per the
-bonding curve to the hotspots in its network based on its mining rules.
+bonding curve to the Hotspots in its network based on its mining rules.
 
 *Note that all new issuance in the WNP bonding curve through HNT emissions are
-distributed to hotspots and validators. External capital entering or exiting the
+distributed to Hotspots and Validators. External capital entering or exiting the
 bonding curve does not post any liquidity risk to WNP devices.*
 
 *WNT Issuance*
@@ -329,7 +328,7 @@ The transaction involves sending the required amount of WNT tokens to a **burn
 address**, and receiving the determined amount of HNT tokens from the **WNP
 subDAO multi-signature wallet**.
 
-The address **relays the message of the sale to the set of WNP validators**,
+The address **relays the message of the sale to the set of WNP Validators**,
 which then adjust the position of the bonding curve in the following epoch after
 adjusting for all other sales and any new issuance.
 
@@ -366,7 +365,7 @@ within each subDAO and the overall network
 1. HNT remains the unit of buy-and-burn in order to maintain the HNT flywheel.
    Data Credits are universal, in that they can be created by burning HNT and
    are usable across any WNP.
-2. Mining rewards for hotspots in a given WNP are distributed in the
+2. Mining rewards for Hotspot in a given WNP are distributed in the
    corresponding WNT
 3. WNTs can be traded on secondary markets but are redeemable for HNT as per the
    primary market defined by its bonding curve. New WNTs can be minted by
@@ -375,7 +374,7 @@ within each subDAO and the overall network
 
 # Open Questions
 
-1. Should the subDAO multisig be composed of WNP validators or some delegation
+1. Should the subDAO multisig be composed of WNP Validators or some delegation
    chosen by WNT holders through governance?
 2. What does a migration process look like for the existing implementation onto
    the new structure outlined?
