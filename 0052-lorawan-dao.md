@@ -286,7 +286,7 @@ As a simple example, let’s imagine Alice, Bob, and Charlie all have 100 LRW:
 3. Charlie commits to locking up his tokens for 2,500,000 blocks, and thus his
    voting power is 50 * 100 = 5,000
 
-![voting power](voting-power)
+![voting power][voting-power]
 
 As the lockup burns down, so does the voting power. For example, if Charlie
 locked up his 100 tokens for 2,500,000 blocks and 1,125,000 blocks have passed
