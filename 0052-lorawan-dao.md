@@ -1,8 +1,10 @@
 # HIP 52: LoRaWAN subDAO
 
-- Authors: Tushar, Shayon
+- Authors: Tushar @tjain-mcc, Shayon
 - Start Date: 2022-01-04
-- Category: Economic / Technical
+- Category: Economic, Technical
+- Original PR: https://github.com/helium/HIP/pull/335
+- Tracking Issue: https://github.com/helium/HIP/issues/338
 - Status: Draft
 
 # Summary
