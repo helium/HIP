@@ -1,6 +1,7 @@
 # HIP51: Helium DAO
 
-- Author: [@tjain-mcc](https://github.com/tjain-mcc), Shayon,
+- Author: [@tjain-mcc](https://github.com/tjain-mcc),
+  [@shayons297](htts://github.com/shayons297),
   [@jmfayal](https://github.com/jmfayal)
 - Start Date: 2022-01-26
 - Category: Economic / Technical
