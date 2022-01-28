@@ -93,7 +93,18 @@ The curve looks as follows:
 For an approximation of this curve in terms of HNT deposited and issuance of
 newly minted LRW tokens, the following table and graph are helpful:
 
-**[TODO table goes here]**
+| Supply of LoRaWAN Tokens | Price of LoRaWAN Tokens in HNT | HNT in Curve         |
+| ------------------------ | ------------------------------ | -------------------- |
+| 1                        | 0.00000001                     | 0.000000004761904762 |
+| 101                      | 0.000001602335708              | 0.00007706471741     |
+| 201                      | 0.000003415982705              | 0.0003269583446      |
+| 301                      | 0.000005326269597              | 0.0007634319756      |
+| 401                      | 0.00000730228552               | 0.001394388806       |
+| 501                      | 0.000009328707981              | 0.00222556319        |
+| ...                      |                                |                      |
+| 1001                     | 0.00001997457213               | 0.009521212716       |
+| ...                      |                                |                      |
+| 5001                     | 0.0001172094262                | 0.2791258765         |
 
 ![lrw token supply][lrw-token-supply]
 
