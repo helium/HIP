@@ -5,7 +5,7 @@
 - Start Date: 2022-02-02
 - Category: Technical
 - Original HIP PR: https://github.com/helium/HIP/pull/342
-- Tracking Issue: TODO
+- Tracking Issue: https://github.com/helium/HIP/issues/347
 - Status: In Discussion
 
 # Summary
