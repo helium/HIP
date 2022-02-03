@@ -1,12 +1,12 @@
-# HIPXX: H3Dex-based PoC Targeting
+# HIP 54: H3Dex-based PoC Targeting
 
 - Author(s): [@Vagabond](https://github.com/Vagabond),
-  [@vihu](https://github.com/vihu), et al
+  [@vihu](https://github.com/vihu), [@abhay](https://github.com/abhay) (hashc0de), et al
 - Start Date: 2022-02-02
 - Category: Technical
-- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
-- Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
-- Status: Draft
+- Original HIP PR: https://github.com/helium/HIP/pull/342
+- Tracking Issue: TODO
+- Status: In Discussion
 
 # Summary
 [summary]: #summary
