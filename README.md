@@ -65,6 +65,7 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | 50 | [Display All Potential Witness Beacons](https://github.com/helium/HIP/blob/master/0050-display-all-potential-beacon-witnesses.md) | [In Discussion](https://github.com/helium/HIP/issues/331) |
 | 51 | [Helium DAO](https://github.com/helium/HIP/blob/master/0051-helium-dao.md) | [In Discussion](https://github.com/helium/HIP/issues/336) |
 | 52 | [LoRaWAN subDAO](https://github.com/helium/HIP/blob/master/0052-lorawan-dao.md) | [In Discussion](https://github.com/helium/HIP/issues/338) |
+| 53 | [5G subDAO](https://github.com/helium/HIP/blob/main/0053-5g-dao.md) | [In Discussion](https://github.com/helium/HIP/issues/345) |
 
 ## Status key
 
