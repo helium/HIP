@@ -28,7 +28,7 @@ targeting skew in hexes with many inactive Hotspots.
 
 An example of such mis-targeting is here.
 
-<!-- TODO: insert link to hex in india with 400 dead Hotspots -->
+![image](https://user-images.githubusercontent.com/75/152433601-9bcfc625-0eb6-4489-a651-ce00901522d3.png)
 
 The goal of this proposed work is to maintain the existing targeting semantics
 as closely as possible but rework them to operate on a more scalable data
