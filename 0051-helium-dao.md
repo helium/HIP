@@ -129,6 +129,9 @@ All subDAO specific addresses across all WNPs on the network will live on this
 L1 chain. All tokens exist on the L1 chain. The L2 is for calculation and
 computation purposes only.
 
+New WNPs are added to the network through Helium Improvement Proposals with HNT 
+denominated voting as per governance by token lock standards defined in HIP 41. 
+
 Before we can define the WNP specific economic structures, we need to outline
 how the rewards are split between WNPs and how to fund the earliest stages of
 development for new WNPs.
