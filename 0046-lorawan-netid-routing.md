@@ -5,7 +5,7 @@
 - Category: Technical
 - Original HIP PR: https://github.com/helium/HIP/pull/300
 - Tracking Issue: TBD
-- Status: In Discussion
+- Status: Approved
 
 ## Summary and Motivation
 [motivation]: #motivation
