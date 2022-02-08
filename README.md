@@ -57,7 +57,7 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | 42 | [Beacon/Witness Ratio - Witness Reward Limit](https://github.com/helium/HIP/blob/main/0042-beacon-witness-ratio-witness-reward-limit.md) | [In Discussion](https://github.com/helium/HIP/issues/303) |
 | 43 | [Software Release Guidelines](https://github.com/helium/HIP/blob/main/0043-software-release-guidelines.md) | [In Discussion](https://github.com/helium/HIP/issues/309) |
 | 44 | [Witness Reward Decay](https://github.com/helium/HIP/blob/main/0044-witness-decay.md) | [In Discussion](https://github.com/helium/HIP/issues/310) |
-| 45 | [LoRaWAN Frequency Plan Selection](https://github.com/helium/HIP/blob/main/0045-lorawan-frequency-plan-selection.md) | [In Discussion](https://github.com/helium/HIP/issues/311) |
+| 45 | [LoRaWAN Frequency Plan Selection](https://github.com/helium/HIP/blob/main/0045-lorawan-frequency-plan-selection.md) | [Approved](https://github.com/helium/HIP/issues/311) |
 | 46 | [LoRaWAN NetID Routing](https://github.com/helium/HIP/blob/main/0046-lorawan-netid-routing.md) | [In Discussion](https://github.com/helium/HIP/issues/312) |
 | 47 | [Increase DKG Failure Penalty](https://github.com/helium/HIP/blob/main/0047-increase-dkg-penalty.md) | [Approved](https://github.com/helium/HIP/issues/313) |
 | 48 | [IP-over-LoRaWAN](https://github.com/helium/HIP/blob/main/0048-ip-support.md) | [In Discussion](https://github.com/helium/HIP/issues/319) |
