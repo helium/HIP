@@ -96,9 +96,11 @@ connections will be ephemeral in nature and typically for unary requests.
 
 All message types sent to a Light Hotspot from a Validator will be wrapped in a
 top level message of the type `gateway_resp_v1` (Protocol buffer schema provied
-below).  This message type includes a signed payload of the message and in
-addition the block height at which the message contents were valid.  Together
-these two fields serve as an attestation on behalf of the sending Validator.
+below).  This message type includes metadata which serves as an attestation on
+behalf of the sending Validator. The attestation data includes:
+
+- Signed payload of the message
+- Block age, height, and time when the payload was signed
 
 ### PoC Challenge Creation and the Consensus Group
 
