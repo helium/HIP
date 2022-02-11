@@ -115,9 +115,7 @@ will meet this target. Assuming there are a minimum of `2f+1` nodes
 participating in a block, we are able to reach `poc_challenge_rate` if each
 Validator in the Group generates enough challenges to fulfill this formula:
 
-```
-\frac{\text{PoC Challenge Rate}}{\frac{N-1}{3}* 2}
-```
+![\frac{\text{PoC Challenge Rate}}{\frac{N-1}{3}* 2}][poc-challenge-rate]
 
 The set of agreed on public keys hashes will then be deterministically truncated
 (in case there are more than `2f+1` participating to `poc_challenge_rate` and
@@ -281,3 +279,4 @@ users) and this HIP needs to be ratified.
 [hip53]: https://github.com/helium/HIP/blob/main/0054-h3dex-targeting.md
 [proto]: https://github.com/helium/proto/blob/andymck/poc-grpc-msg-defs-WIP/src/service/gateway.proto#L101
 [message-sequence]: https://docs.google.com/drawings/d/1eVTK89ob66vlcEwwoVNi0BFaCEaU2DYki8778LIRWpA/edit
+[poc-challenge-rate]: https://user-images.githubusercontent.com/75/153673071-550eb970-4ab6-44e0-b9fc-e9b04e1b4dad.png
