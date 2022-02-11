@@ -60,8 +60,8 @@ the Hotspot attempts to connect to it over p2p (potential failure point #1). If
 successful it sends the challengee the data to transmit. The Challengee then
 consults its ledger to see if the PoC is active. This is another potential
 failure point (#2) if the Challengee is not synced. The Challengee then
-transmits the packet and sends a receipt to the Challengeer over the same
-connection the Challenger dialed on. Tthis avoids another potential p2p failure.
+transmits the packet and sends a receipt to the Challenger over the same
+connection the Challenger dialled on. Tthis avoids another potential p2p failure.
 Any Hotspots observing the challenge packet then consults their ledger to see if
 they can resolve the challenge to a Challenger. This is another potential
 failure point (#3) if the witness is not in sync with the chain. If the
