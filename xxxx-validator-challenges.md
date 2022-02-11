@@ -40,7 +40,7 @@ Challenges. In brief, Validator Challenges move the role of generating
 Challenges to the Consensus Group. This not only allows us to free Hotspots from
 the burden of following the blockchain but it also moves the entities initiating
 Challenges to machines with much more stable and predictable networking which
-reduces the likihood of connectivity failures. Hotspots can become clients of
+reduces the likelihood of connectivity failures. Hotspots can become clients of
 Validators to learn about blockchain updates in general, whether or not they're
 currently being challenged, and where to deliver Witness receipts.
 
@@ -65,7 +65,7 @@ how a challenge is constructed and submitted to the blockchain.
    active. This is another potential failure point if the Challengee is not
    synced.
 3. The Challengee then transmits the packet and sends a receipt to the
-   Challenger over the same connection from the Challenger. Tthis avoids another
+   Challenger over the same connection from the Challenger. This is another
    potential p2p failure.
 4. Any Hotspots observing the challenge packet then consults their local
    blockchain ledger to see if they can resolve the challenge to a Challenger.
@@ -75,7 +75,7 @@ how a challenge is constructed and submitted to the blockchain.
    dial that Challenger over p2p, another potential failure point.
 6. Once the Challenger has decided enough blocks have passed it submits the
    `poc_receipt` transaction to the blockchain to report on the information
-   gathered (if any. The final, potential failure point is if the Challenger is
+   gathered (if any). The final, potential failure point is if the Challenger is
    lagging behind the blockchain and takes so long to submit the receipt that
    the PoC has expired.
 
@@ -91,13 +91,13 @@ observe the actual data from the Challenger to correctly respond to the
 challenge and prevents poisoning attacks. However Hotspots can verify the
 challenge information against the blockchain once they see it.
 
-## Light Hotspots & GRPC
+## Light Hotspots & gRPC
 
-Light Hotspots will maintain a durable GRPC connection to one (or many)
+Light Hotspots will maintain a durable gRPC (Google Remote Procedure Call) connection to one (or many)
 Validators.  The target Validator(s) could be random or specified.  Via the
 first durable connection, Light Hotspots will be streamed chain related data,
 events and notifications. Additional connections can be considered ephermeral
-and used for lookup requests if neded.
+and used for lookup requests if needed.
 
 All messages sent to a Light Hotspot from a Validator will be wrapped in a top
 level message (Protocol buffer schema provied below).  This message includes
@@ -131,13 +131,13 @@ serve the capacity needs of the network. This avoids the need for periodic
 changes to `poc_challenge_interval` as we do today in order to reduce load on
 the network.
 
-Upon handling a block, each CG member will inspect the public keys in the block,
-identify any of their own keys, and for each, initiate a new PoC. The public key
-hash will be used with the block hash to generate entropy to generate an H3
-region for the Challenge.  Entropy from a combination of the associated private
-key hash and the block hash will then be used to identify the target within the
-region to generate the Challenge itself. The region, challenge, and target will
-be persisted locally on the Challenger Validator.
+Upon handling a block, each Consensus Group member will inspect the public keys
+in the block, identify any of their own keys, and for each, initiate a new PoC.
+The public key hash will be used with the block hash to generate entropy to
+generate an H3 region for the Challenge.  Entropy from a combination of the
+associated private key hash and the block hash will then be used to identify the
+target within the region to generate the Challenge itself. The region,
+challenge, and target will be persisted locally on the Challenger Validator.
 
 ### Validators & Light Hotspot Communication
 
@@ -152,7 +152,7 @@ the Challenge and, more importantly, the necessary routing data (public key and
 IP) to enable the Light Hotspot to connect to the Challenger Validator.
 
 All Hotspots, upon receipt of a challenge notification, will send a request over
-GRPC to the Challenger Validator to check if they are the target.
+gRPC to the Challenger Validator to check if they are the target.
 
 The request will be signed by the Challengee and also include the onion key hash
 it received from their Validator.  The Challenger will verify the signature of
@@ -290,7 +290,7 @@ possible.
 [deployment-impact]: #deployment-impact
 
 Overall users should see more reliable Challenge behaviour, less data use on the
-Hotspot (which makes cellular/satellite backhaul hotspots more feasible) and
+Hotspot (which makes cellular/satellite backhaul Hotspots more feasible) and
 effectively immediate onboarding of new Hotspots (no need to sync the chain or
 load a snapshot in order to participate in PoC or transfer Data on the Helium
 Network).
