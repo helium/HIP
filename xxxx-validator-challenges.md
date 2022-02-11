@@ -144,9 +144,8 @@ region. The notification provides the onion key hash of the Challenge and, more
 importantly, the necessary routing data (public key and IP) to enable the Light
 Hotspot to connect to the challenging Validator.
 
-All gateways upon receipt of a challenge notification will respond with a unary
-GRPC request of type `gateway_poc_check_challenge_target_req_v1` to the
-challenging CG member to check if they are the target.
+All gateways upon receipt of a challenge notification will send a request over
+GRPC to the challenging Validator to check if they are the target.
 
 The request will be signed by the challengee and also include the onion key hash
 it received from their Validator.  The challenger will verify the signature of
