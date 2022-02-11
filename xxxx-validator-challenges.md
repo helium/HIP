@@ -140,7 +140,7 @@ generate the same entropy as the Consensus Group members to identify the target
 h3 region. The Validators will then pull a list of all Hotspots within that
 region and send each gateway connected to them a notification message of type
 `poc_challenge_notification_resp_v1` informing them of a challenge within their
-region. The payload provides the onion key hash of the Challenge and, more
+region. The notification provides the onion key hash of the Challenge and, more
 importantly, the necessary routing data (public key and IP) to enable the Light
 Hotspot to connect to the challenging Validator.
 
