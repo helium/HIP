@@ -138,11 +138,10 @@ keep up with the blockchain. As a part of normal processing, they will pull the
 public key hashes from the block metadata and, with the block hash, are able to
 generate the same entropy as the Consensus Group members to identify the target
 h3 region. The Validators will then pull a list of all Hotspots within that
-region and send each gateway connected to them a notification message of type
-`poc_challenge_notification_resp_v1` informing them of a challenge within their
-region. The notification provides the onion key hash of the Challenge and, more
-importantly, the necessary routing data (public key and IP) to enable the Light
-Hotspot to connect to the challenging Validator.
+region and send each gateway connected to them a notification message informing
+them of a challenge within their region. The notification provides the onion key
+hash of the Challenge and, more importantly, the necessary routing data (public
+key and IP) to enable the Light Hotspot to connect to the challenging Validator.
 
 All gateways upon receipt of a challenge notification will send a request over
 GRPC to the challenging Validator to check if they are the target.
