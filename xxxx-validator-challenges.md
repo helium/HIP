@@ -299,12 +299,12 @@ Hardware costs for Hotspots could potentially go down as the hardware
 requirements can be relaxed to reflect the lower demands of the new challenge
 model.
 
-- How will existing documentation/knowlegebase need to be supported?
+## How will existing documentation/knowlegebase need to be supported?
 
 Documentation will need to be updated to explain the new model, this HIP can
 serve as a reference.
 
-- Is this backwards compatible?
+## Is this backwards compatible?
 
 The activation would be done via a set of chain variables which would switch the
 system over to this new model, before that happens we need the new code to be
