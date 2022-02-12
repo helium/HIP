@@ -68,11 +68,11 @@ how a challenge is constructed and submitted to the blockchain.
    Challenger over the same connection from the Challenger. This is another
    potential p2p failure.
 4. Any Hotspots observing the challenge packet then consults their local
-   blockchain ledger to see if they can resolve the challenge to a Challenger.
-   This is another potential failure point if the witness is not in sync with
-   the blockchain.
-5. If the challenge can be resolved to a Challenger then the Witness attempts to
-   dial that Challenger over p2p, another potential failure point.
+   blockchain ledger to see if they can find the Challenger based on the packet
+   they received and Challenge data on the blockchain. This is another potential
+   failure point if the witness is not in sync with the blockchain.
+5. If the Challenger is found, the Witnessing Hotspot attempts to dial them over
+   p2p, another potential failure point.
 6. Once the Challenger has decided enough blocks have passed it submits the
    `poc_receipt` transaction to the blockchain to report on the information
    gathered (if any). The final, potential failure point is if the Challenger is
