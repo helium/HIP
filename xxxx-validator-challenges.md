@@ -1,12 +1,12 @@
-# Validator Challenges
+# HIP 55:  Validator Challenges
 
 - Author(s): [@Vagabond](https://github.com/Vagabond),
   [@andymck](https://github.com/andymck), [@abhay](https://github.com/abhay)
 - Start Date: 2022-02-03
 - Category: Technical
-- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
-- Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
-- Status: Draft
+- Original HIP PR: https://github.com/helium/HIP/pull/359
+- Tracking Issue: TODO
+- Status: In Discussion
 
 # Summary
 [summary]: #summary
