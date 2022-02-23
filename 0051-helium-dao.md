@@ -332,7 +332,7 @@ within each subDAO and the overall network
 [hip53]: https://docs.google.com/document/d/1rg9VK28S8bWOeKNiKXUipsLsBxLjuHH7AnVe6TjKw4I/edit
 [subdaos]: https://lh4.googleusercontent.com/KYORnsFb3X0X42t64FscUArcDZBjXyopik_AaZTN7tLvxYRL5-s1nvd1WY3X4vJA5mWe1_XN_miwDoRXhU70YV_txsO5Y_mWFbVrx6byNinT--khit2AEAYl4GMO0Vm_lL49BB05
 [existing-reward-curve]: https://lh4.googleusercontent.com/aCKlXePHuivkp8IFK5-VLifO-xw8WKOpArn9OCiobOW0WjpHcPBtogNqvDBLofH8q4lcMFtnP0XZZlGq3v247AA3Syqq6RKK0Pr6-_xKjv4DTPmmbSAJ5XIrSNaLHt9Y3py8My_v
-[bonding-curve]: https://lh3.googleusercontent.com/9BO0qb90HKiWDHreSWemmZhEmjSiPKJKsiEi1lMENNzV2StUtx1qiwYFPg5NDR4JZux5YgmL_ia99yjgY0O1-QUbnjvDo0qgq8G0TJTWq53AAF8XNI4xaYKKBjqpW2Y5eq7NbvuS
-[subdao-governance]: https://lh3.googleusercontent.com/VIycvHCtq1nZtXyAC8haZw6xF1sBHcs8GVRPFX3-lAFtsR-HflGQyGUc7tAjs8R4VPS7HP_5A0rJRsAr_G0kiOZJSxM80t3_ukgdutd15XdQerDkrx0IZH27BJjQRbLP2oVQjZ8_
+[bonding-curve]: https://i.ibb.co/bLfjw20/Screen-Shot-2022-02-23-at-11-28-32-AM.png
+[subdao-governance]: https://i.ibb.co/pLTCDnf/Screen-Shot-2022-02-23-at-11-28-44-AM.png
 [strata]: https://www.strataprotocol.com/docs/learn/fair_launch
 [fair-launch-graph]: https://lh4.googleuserco
