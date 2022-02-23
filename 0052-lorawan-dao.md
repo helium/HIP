@@ -10,13 +10,13 @@
 # Summary
 [summary]: #summary
 
-This proposal includes a specification of the LoRaWAN Wireless Network Protocol
+This proposal includes a specification of the LoRaWAN Decentralized Network Protocol
 as per the DAO model and L2 implementation outlined in [HIP 51][hip51].
 
-In HIP 51, we provide a general structure for onboarding new WNPs to the broader
+In HIP 51, we provide a general structure for onboarding new DNPs to the broader
 Helium Network, with mechanisms in place to ensure that protocol-specific
 attributes such as Proof-of-Coverage rules, data credits pricing, and block
-validation are within control of the emergent WNT DAO.
+validation are within control of the emergent DNT DAO.
 
 In this proposal, we specify the implementation of the structure proposed
 through a detailed onboarding proposal for the LoRaWAN Network. We propose
@@ -32,10 +32,10 @@ Community.
 # Detailed Description
 [detailed-description]: #detailed-description
 
-We proposed in HIP 51 that each WNP subDAO operate as a sovereign economics and
+We proposed in HIP 51 that each DNP subDAO operate as a sovereign economics and
 governance layer. The LoRaWAN subDAO has five core functions
 
-1. *Economics*: The LoRaWAN subDAO handles all bonding curve operations, and by
+1. *Economics*: The LoRaWAN subDAO handles all Programmatic Treasury operations, and by
    extension all LRW emissions to hotspots and purchases or sales from
    third-parties. The economic responsibilities around this involve parameter
    selection for the curve and all associated fees, as well as liquidity risk
@@ -74,7 +74,9 @@ In the notation provided below, P represents Price and S represents Supply. The
 quote currency is LRW (LoRaWAN Token) and the base currency is HNT (Helium
 Token).
 
-We propose that the LoRaWAN bonding curves take the following shape:
+In HIP 51, we proposed that programmatic treasuries are designed to be one-way i.e. only DNT token holders can interact with the programmatic treasury with intent to sell. Network participants cannot purchase DNT tokens against HNT, although non-profit actors like DeWi can “donate” tokens into the programmatic treasury without receiving any assets in return. The intended effect of this is to mitigate speculation that could be harmful for DNP miners.
+
+We propose that the LoRaWAN Programmatic Treasury takes the following shape:
 
 ![P = S^{1.1} \times
 10^{-8}](https://latex.codecogs.com/png.image?\dpi{110}%20P%20=%20S^{1.1}%20\times%2010^{-8})
@@ -114,9 +116,22 @@ subsequently distributes the determined amount of HNT to the LoRaWAN subDAO
 multi-signature wallet, the addresses of which comprise the set of Validators of
 the LoRaWAN Network.
 
-For more background on interpreting bonding curves, [Strata protocol
-documentation](https://www.strataprotocol.com/docs/learn/bonding_curves) is
-extremely instructive.
+There is a 0.3% transaction fee on all inflows and outflows within the programmatic treasury. For example, if emissions into the curve in a given epoch amount to 100 HNT, 99.7 HNT worth of LRW tokens will be allocated for stakeholder rewards (miners, validators) and 0.3 HNT worth of LRW tokens will be placed into a subDAO reserve.
+
+The subDAO reserve is intended to allow the DNT to perform bespoke operations to create and sustain network growth. The primary use case of the reserve is to fund all state transition transaction fees to the L1, but can be deployed in any manner of ways as per subDAO governance. Such incentives could include
+ 
+1. One-time DNT or HNT bonuses for hotspots providing continuous coverage in new regions deemed to be economically valuable by governance 
+
+2. Bonus rewards for hotspots and OUIs that are consistent in network activity and meet certain good actor conditions
+
+3. Surge-pricing style dynamic multipliers based on data transfer activity for individual regions
+
+4. Bespoke incentives for validators and manufacturers on the basis of changing network demands
+
+
+DAOs are responsible for managing risk within their protocols in that they define programmatic treasury issuance formulas and set transaction fees. They inherently handle the implied effect of DNT market capitalization 
+
+Note that a given DNP subDAO is not necessarily required to distribute the entirety of HNT it receives into the programmatic treasury, or distribute the entirety of DNTs minted in the process to stakeholders. The subDAO can manage and allocate HNT inflows from the overall network as it sees fit in order to support growth in bespoke areas through incentives for new stakeholders. 
 
 ## Validator Operations
 
@@ -191,6 +206,13 @@ both obtaining the original PoC request and for encrypting each layer of the
 challenge packet. This crucial information, which has been hidden until the
 receipt is published, allows the re-creation of the deterministic entropy.
 
+HIP-17 specified a rewards mechanism to incentivize hotspots in distinct locations representing a larger area of network coverage as opposed to devices in close proximity to each other. In order to incentivize greater land coverage of hotspots in new areas, we propose that for each new H7 hex in which a set of hotspots is deployed, a one-time 1500 LRW bonus is allocated for the first hotspot that successfully responds to 150 consecutive challenges. Note that this bonus is funded by the subDAO reserve.Note that this bonus is funded by the subDAO reserve. If the hotspot goes offline at any time prior to the completion of 150 challenges, the counter is reset and any other hotspot may complete the task to receive the bonus.
+For example, consider three hotspots deployed simultaneously in a hex that has not previously been covered by the LoRaWan network. Each hotspot to be deployed in that hex is eligible to receive the bonus. 
+If there is an interruption in coverage in two of the hotspots at a time prior to the completion of the 150 consecutive challenges, the remaining hotspot receives the bonus. 
+If there is an interruption in coverage in one of the hotspots at a time prior to the completion of the 150 consecutive challenges, the remaining hotspots split the bonus equally. If all three hotspots complete the 150 consecutive challenges, they split the bonus equally.
+If all three hotspots experience interruptions prior to the completion of the challenge, the counter resets and the first hotspot to complete 150 consecutive challenges receives the bonus. 
+
+
 ## Data Transfer and Pricing Specification
 
 Data Credits are utilized in asserting new hotspots and their location on the
@@ -222,11 +244,7 @@ Tokens Allocated to Hotspots.
 
 ![lrw distribution above market value][lrw-distribution-above-market-value]
 
-Note that all manufacturers within the network must stake a minimum of
-1,000,000 LRW tokens in order to be whitelisted to receive rewards. If at any
-point, a manufacturer gives ownership of maintenance and firmware upgrades to a
-third party, all future manufacturer rewards flow to this new entity. The new
-hotspot onboarding fee and location assertion fee should remain the same.
+Note that all manufacturers within the LoRaWAN networksubDAO must stake a minimum of 10,000,000 HNTLRWin order to be whitelisted to receive rewards. The intention of this requirement is to increase the security of the network. In exchange for this stake, manufacturers earn 2% of LRW mined by hotspots they sold and maintain. The intention is to create incentives for manufacturers to build high quality hotspots which maximize mining output and to continue to support previously sold hotspots into the future. If at any point, a manufacturer gives ownership of maintenance and firmware upgrades to a third party, all future manufacturer rewards flow to this new entity. 
 
 At present, every 24 bytes sent in a packet cost 1 DC, priced at $0.00001. Data
 Credits are generated by burning the requisite amount of HNT as per the Helium
@@ -249,12 +267,12 @@ credits per minute, and attribution to hotspots after consumption occurs pro
 rata network traffic under the unmetered plan.*
 
 A subDAO governed transaction fee is placed on issuance and redemption of LRW
-tokens on the bonding curve. This fee is charged in HNT and we propose starting
+tokens on the Programmatic Treasury. This fee is charged in HNT and we propose starting
 it at 0.3% of all transactions. This HNT fee is immediately submitted to the LRW
-bonding curve.
+Programmatic Treasury.
 
-*Note that a given WNP subDAO is not necessarily required to distribute the
-entirety of HNT it receives into the curve, or distribute the entirety of WNTs
+*Note that a given DNP subDAO is not necessarily required to distribute the
+entirety of HNT it receives into the curve, or distribute the entirety of DNTs
 minted in the process to stakeholders. The subDAO can manage and allocate HNT
 inflows from the overall network as it sees fit in order to support growth in
 bespoke areas through incentives for new stakeholders.*
