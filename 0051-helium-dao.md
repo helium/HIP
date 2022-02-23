@@ -97,17 +97,6 @@ that DNP is separated from the native token of the overall Helium Network
    markets (liquid borrow-lend markets for greater delegation to Validators or
    leveraged staking).
 
-There are two key drivers for DNPs to operate as sub-DAOs beneath the overall
-Helium Network through their corresponding DNTs
-
-1. *Curation and risk expression:* DNTs allow network participants and
-   speculators to indicate support for a given network, which can inform
-   distribution of emissions and developer resources. For example, if HNT
-   holders bond a large number of HNT to a particular DNP, the HNT denominated
-   rewards for that DNP increase and help accelerate the flywheel for that DNP.
-2. *Onboarding new protocols:* DNP DAOs provide an easy framework for addition of
-   new wireless protocols where the broader Helium DAO delegates some portion of
-   HNT emissions to each DNP DAO.
 
 # Stakeholders
 [stakeholders]: #stakeholders
@@ -136,19 +125,9 @@ Before we can define the DNP specific economic structures, we need to outline
 how the rewards are split between DNPs and how to fund the earliest stages of
 development for new DNPs.
 
-## Proof-of-Coverage Rewards Model
+## Proof-of-Coverage Incentive Model for HIP 51
 
 ### Background
-
-HIP 27 originally introduced a concept to allocate a portion of unrewarded Data
-Transfer rewards (up to 30% of the DC Bonus Pool) towards Proof-of-Coverage
-rewards for new wireless networks, such as 5G and Wi-Fi. The approach was
-presented and discussed at the DeWi Community Call and Discord. While the
-concept was generally well received, we fell short of coming up with a technical
-implementation that would be sufficiently difficult to arbitrage. As a result,
-we chose to truncate HIP 27 to focus on implementation of a chain variable for
-DC / cellular data conversion ratio and revisit economics and implementation of
-PoC for non-LoRaWan wireless network types to a future HIP.
 
 Currently, under HIP-27, non-LoRaWAN gateways are only rewarded based on data
 transfer and those rewards are based on the 1 DC burn = 1 DC equivalent earning
@@ -157,7 +136,7 @@ principle laid out in HIP-10. That reward bucket is currently, as of January
 that is not allocated to Data Transfer rewards is reallocated to LoRaWAN PoC
 rewards.
 
-**We propose three significant changes to the reward buckets**
+**We propose two significant changes to the reward buckets**
 
 ### 1. Remove division between PoC and DC reward buckets
 
@@ -188,7 +167,7 @@ propose the quadratic equation below:
 
 Each protocol would be assigned a ‘score’ per epoch:
 
-![\textup{Protocol Score} = \textup{DNP DCs Burned} * {\sqrt{\textup{DNP Active Device Count} * \textup{Unit DC Onboarding Cost}}} *](https://latex.codecogs.com/svg.image?\textup{Protocol&space;Score}&space;=&space;\textup{DNP&space;DCs&space;Burned}&space;*&space;{\sqrt{\textup{DNP&space;Active&space;Device&space;Count}*\textup{Unit&space;Cost&space;DCs&space;Onboarding}}&space;)
+![\textup{Protocol Score} = \sqrt\textup{{DNP DCs Burned}} * {\sqrt[4]{\textup{DNP Active Device Count} * \textup{Unit DC Onboarding Cost}}} *](https://latex.codecogs.com/gif.latex?%5Ctextup%7BProtocol%20Score%7D%20%3D%20%5Csqrt%5Ctextup%7B%7BDNP%20DCs%20Burned%7D%7D%20*%20%7B%5Csqrt%5B4%5D%7B%5Ctextup%7BDNP%20Active%20Device%20Count%7D%20*%20%5Ctextup%7BUnit%20DC%20Onboarding%20Cost%7D%7D%7D)
 
 Once each protocol has a score, the % of total Epoch PoC rewards assigned to
 each DNP will be assessed by comparing the individual score to the sum of all
@@ -196,9 +175,7 @@ scores:
 
 ![\textup{Percentage of POC Rewards per DNP} = \frac{\textup{DNP Specific Score}}{\sum (\textup{All DNP Scores})}](https://latex.codecogs.com/png.image?\dpi{110}%20\textup{Percentage%20of%20POC%20Rewards%20per%20DNP}%20=%20\frac{\textup{DNP%20Specific%20Score}}{\sum%20(\textup{All%20DNP%20Scores})})
 
-To put this into context, if you have two networks with 50,000 and 500,000
-devices each, the smaller network would need approximately 3 times the DC burn
-to have a comparable protocol score to the larger network.
+To put this into context, if you have two networks with 50,000 and 500,000 devices each, the smaller network would need approximately 3.16 o r (10^(¼))^2 times the DC burn to have a comparable protocol score to the larger network. 
 
 Most importantly, this model gives us a framework to add new DNPs in the future
 without having to design reward splits on an ad-hoc basis.
@@ -238,13 +215,12 @@ reallocated to the regular PoC/data reward bucket.
 - **Active Device**: Active devices are the subDAO's definition of devices
   creating valid coverage during the epoch
 
-## Bonding Curve Specification
+## Programmatic Treasury Specification
 
-DNT are issued against a bonding curve with issuance, redemption, and
-transaction fee parameters set by DNT governance. Each DNT can set the shape of
-its curve.
+DNT are issued against a Programmatic Treasury with issuance, redemption, and
+transaction fee parameters set by DNT governance. Each DNT can set the shape of the curve which governs its programmatic treasury.
 
-We suggest that all DNT bonding curves take the shape P = S^k where k > 1, P
+We suggest that all DNT Programmatic Treasurys take the shape P = S^k where k > 1, P
 represents Price, and S represents Supply. The quote currency is the DNT and the
 base currency is HNT.
 
@@ -256,12 +232,12 @@ in the area under the curve. The integral is given by
 
 The shape of the curve for k only slightly larger than 1 is as follows
 
-![bonding curve][bonding-curve]
+![Programmatic Treasury][bonding-curve]
 
-The main consideration  in designing this bonding curve is that it’s difficult
-to balance the positives of reflexivity with potential sharp price movements in
-either direction — this shape is close enough to linear to mitigate some of
-those issues.
+It is \textbf{critical to note that the programmatic treasury proposed is one-way for all network stakeholders other than the HNT minting contract at the L1}. This implies that inflows into a given subDAO’s programmatic treasury are only possible through epochal HNT emissions, and no other participant can deposit HNT into the curve. TokenDNT holders can, however, withdraw from the curve at any time.
+
+Since DNTs are fungible assets that can be listed on secondary markets, miners will have multiple sources of liquidity for their earned tokens at any time. This mechanism ensures that miners receive a steady, predictable stream of revenues as per the shape of the programmatic treasury instead of being subject to compounding forms of market risk through speculation driven inflows into the curve. 
+
 
 ## Rewards Distribution Mechanism
 
@@ -310,46 +286,45 @@ wallet**, the addresses of which comprise the set of Validators of that DNP.
 
 *DNT Issuance*
 
-Each DNP DAO then **submits the entire amount of HNT into its bonding curve** in
+Each DNP DAO then **submits the entire amount of HNT into its Programmatic Treasury** in
 order to mint new DNT for Hotspots and Validators participating in data transfer
 and Proof-of-Coverage.
 
 In a given epoch, if the DNP Hotspots were to receive some amount of HNT from
 the Helium DAO, the DNP subDAO multi-signature wallet distributes a
 **corresponding amount of newly minted DNT of equal market value** as per the
-bonding curve to the Hotspots in its network based on its mining rules.
+Programmatic Treasury to the Hotspots in its network based on its mining rules.
 
-*Note that all new issuance in the DNP bonding curve through HNT emissions are
-distributed to Hotspots and Validators. External capital entering or exiting the
-bonding curve does not post any liquidity risk to DNP devices.*
+*Note that all new issuance in the DNP Programmatic Treasury through HNT emissions are
+distributed to Hotspots and Validators.*
 
 *DNT Issuance*
 
 If a given address wishes to redeem their DNT, they can **“sell” against the
-bonding curve** to receive the market rate of underlying HNT.
+Programmatic Treasury** to receive the market rate of underlying HNT.
 
 The transaction involves sending the required amount of DNT tokens to a **burn
 address**, and receiving the determined amount of HNT tokens from the **DNP
 subDAO multi-signature wallet**.
 
 The address **relays the message of the sale to the set of DNP Validators**,
-which then adjust the position of the bonding curve in the following epoch after
+which then adjust the position of the Programmatic Treasury in the following epoch after
 adjusting for all other sales and any new issuance.
 
 *Transaction Fee*
 
-A DNP **subDAO governed transaction fee** is placed on issuance and redemption
-of DNT tokens on the bonding curve. This fee is charged in HNT and we suggest
+A DNP **subDAO governed transaction fee** is placed on redemption
+of DNT tokens on the Programmatic Treasury. This fee is charged in HNT and we suggest
 starting it at 0.3% of all transactions. This HNT fee is immediately submitted
-to the DNT bonding curve.
+to the DNT Programmatic Treasury.
 
-For example in a given epoch, if the 5G bonding curve had trading volume of
+For example in a given epoch, if the 5G Programmatic Treasury had trading volume of
 100,000 HNT and brought in 300 HNT worth of transaction fees, that 300 HNT is
-resubmitted to the curve increasing the price of DNT according to the equation.
+resubmitted to the Treasury increasing the price of DNT according to the equation.
 
 ## *Fair-Launch Mechanism*
 
-The bonding curve mechanism is susceptible to bot frontrunning. We borrow from
+The Programmatic Treasury mechanism is susceptible to bot frontrunning. We borrow from
 [Strata protocol’s fair launch mechanism][strata] to ensure that early
 participants in any DNP DAO are protected from this attack vector.
 
@@ -372,17 +347,15 @@ within each subDAO and the overall network
 2. Mining rewards for Hotspot in a given DNP are distributed in the
    corresponding DNT
 3. DNTs can be traded on secondary markets but are redeemable for HNT as per the
-   primary market defined by its bonding curve. New DNTs can be minted by
-   depositing HNT into the bonding curves as well.
+   primary market defined by its Programmatic Treasury. New DNTs can be minted by
+   depositing HNT into the Programmatic Treasurys as well.
 4. Each DNP can set their own DNT emission schedule and distribution.
 
 # Open Questions
 
-1. Should the subDAO multisig be composed of DNP Validators or some delegation
-   chosen by DNT holders through governance?
-2. What does a migration process look like for the existing implementation onto
+1. What does a migration process look like for the existing implementation onto
    the new structure outlined?
-3. What governance procedure should be used to whitelist specific DNP DAOs?
+2. What governance procedure should be used to whitelist specific DNP DAOs?
 
 [hip27]: https://github.com/helium/HIP/blob/master/0027-cbrs-5g-support.md
 [hip37]: https://github.com/helium/HIP/blob/master/0037-omni-protocol-poc.md
@@ -393,4 +366,4 @@ within each subDAO and the overall network
 [bonding-curve]: https://lh3.googleusercontent.com/9BO0qb90HKiWDHreSWemmZhEmjSiPKJKsiEi1lMENNzV2StUtx1qiwYFPg5NDR4JZux5YgmL_ia99yjgY0O1-QUbnjvDo0qgq8G0TJTWq53AAF8XNI4xaYKKBjqpW2Y5eq7NbvuS
 [subdao-governance]: https://lh3.googleusercontent.com/VIycvHCtq1nZtXyAC8haZw6xF1sBHcs8GVRPFX3-lAFtsR-HflGQyGUc7tAjs8R4VPS7HP_5A0rJRsAr_G0kiOZJSxM80t3_ukgdutd15XdQerDkrx0IZH27BJjQRbLP2oVQjZ8_
 [strata]: https://www.strataprotocol.com/docs/learn/fair_launch
-[fair-launch-graph]: https://lh4.googleusercontent.com/CDZiML8YFE5BOwSbjT5GUjejATCIqUpLF85XDfIjjm_semkSZOklnj9cMMG1Kd4yoGjoLbw-Gelvj4M-XI7bM77gOe6yVXRS22jxv-UZlHHIV1hF-Il15AZOPSd_1Si9ouAGb0Yp
+[fair-launch-graph]: https://lh4.googleuserco
