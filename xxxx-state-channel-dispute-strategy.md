@@ -1,4 +1,4 @@
-# HIP XX: Improved State Channel Disputes
+# HIP 56: Improved State Channel Disputes
 
 - Author(s): [@macpie](https://github.com/macpie),
   [@michaeldjeffrey](https://github.com/michaeldjeffrey),
@@ -6,9 +6,9 @@
   et al
 - Start Date: 2022-02-21
 - Category: Technical
-- Original HIP PR: <!-- TODO -->
-- Tracking Issue: <!-- TODO -->
-- Status: Draft
+- Original HIP PR: https://github.com/helium/HIP/pull/366
+- Tracking Issue: TODO 
+- Status: In Discussion
 
 # Summary
 [summary]: #summary
