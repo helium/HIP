@@ -37,7 +37,7 @@ requirements.
 To address these issues the core developers have been working on design and
 implementation of an alternative PoC Challenge mechanism we call Validator
 Challenges. In brief, Validator Challenges move the role of generating
-Challenges to the Consensus Group. This not only allows us to free Hotspots from
+Challenges to the Validator pool. This not only allows us to free Hotspots from
 the burden of following the blockchain but it also moves the entities initiating
 Challenges to machines with much more stable and predictable networking which
 reduces the likelihood of connectivity failures. Hotspots can become clients of
@@ -96,11 +96,11 @@ challenge information against the blockchain once they see it.
 Light Hotspots will maintain a durable gRPC (Google Remote Procedure Call) connection to one (or many)
 Validators.  The target Validator(s) could be random or specified.  Via the
 first durable connection, Light Hotspots will be streamed chain related data,
-events and notifications. Additional connections can be considered ephermeral
+events and notifications. Additional connections can be considered ephemeral
 and used for lookup requests if needed.
 
 All messages sent to a Light Hotspot from a Validator will be wrapped in a top
-level message (Protocol buffer schema provied below).  This message includes
+level message (Protocol buffer schema provided below).  This message includes
 metadata which serves as an attestation on behalf of the sending Validator. The
 attestation data includes:
 
@@ -110,28 +110,30 @@ attestation data includes:
 ### PoC Challenge Creation and the Consensus Group
 
 Today, each block on the blockchain includes metadata (BBA seen, timestamps, etc) and
-transactions. With this change, each member of the Consensus Group will generate
-a set of ephemeral key pairs.  A hash of the public keys will be included in
-block proposals, whilst the private key will be saved to local state on the generating
-Validator. We propose a fixed `poc_challenge_rate` parameter to be added to the
+transactions. With this change, each Validator will generate
+a set of ephemeral key pairs and a hash of the public keys will be included in Validator heartbeat txns 
+whilst the private key will be saved to local state on the generating Validator.
+During absorb of a heartbeat txn, if the proposed keys do not belong to a Consensus Group member they will be added to a local cache 'poc_key_proposals'.
+We propose a fixed `poc_challenge_rate` parameter to be added to the
 chain that defines the target number of Challenges per block. Each Consensus
-Group member will propose a certain number of keys in order to ensure that we
+Group member will deterministically select a certain number of keys from the 'poc_key_proposals' cache in order to ensure that we
 will meet this target. Assuming there are a minimum of `2f+1` nodes
 participating in a block, we are able to reach `poc_challenge_rate` if each
-Validator in the Group generates enough Challenges to fulfill this formula:
+Validator in the Group can select enough Challenges to fulfill this formula:
 
 ![\frac{\text{PoC Challenge Rate}}{\frac{N-1}{3}* 2}][poc-challenge-rate]
 
 The set of agreed on public keys hashes will then be deterministically truncated
 (in case there are more than `2f+1` participating to `poc_challenge_rate` and
-form part of the block metadata. The advantage of a fixed `poc_challenge_rate`
+form part of the block metadata. Selected keys will be removed from the 'poc_key_proposals' cache.
+The advantage of a fixed `poc_challenge_rate`
 is that regardless of Hotspot growth, this value can remain fixed unless changed
 through governance and can be adjusted based on the ability for Validators to
 serve the capacity needs of the network. This avoids the need for periodic
 changes to `poc_challenge_interval` as we do today in order to reduce load on
 the network.
 
-Upon handling a block, each Consensus Group member will inspect the public keys
+Upon handling a block, each Validator will inspect the public keys
 in the block, identify any of their own keys, and for each, initiate a new PoC.
 The public key hash will be used with the block hash to generate entropy to
 generate an H3 region for the Challenge.  Entropy from a combination of the
@@ -144,7 +146,7 @@ challenge, and target will be persisted locally on the Challenger Validator.
 All Validators, whether they are in consensus or not, sync blocks normally to
 keep up with the blockchain. As a part of normal processing, they will pull the
 public key hashes from the block metadata and, with the block hash, generate the
-same entropy as the Consensus Group members to identify the target H3 region.
+same entropy as the Challenger Validator to identify the target H3 region.
 The Validators will then pull a list of all Hotspots within that region and send
 each Hotspot connected to them a notification message informing them of a
 challenge within their region. The notification provides the onion key hash of
@@ -176,7 +178,7 @@ Light Hotspots can be verified.
 
 The Challenger, after the `poc_timeout` number of blocks, will create a
 `blockchain_txn_poc_receipts_v2` transaction, using received Challengee receipts
-and Witness reports, and publish it to the blockchain thereby completing the PoC
+and Witness reports, and submit it to the blockchain thereby completing the PoC
 challenge.
 
 ### Attestation and Slashing enablement
@@ -186,15 +188,14 @@ blockchain will be attested. This includes messages not described in this
 document.
 
 If a Light Hotspot receives a message from a Validator and needs to act on it
-(e.g., contacting a Consensus Group member to submit receipts) the Light Hotspot
-will include the attestation in its request to that Consensus Group member. The
-attestation provides evidence on behalf of the Light Hotspot to the Consensus
-Group member that it received the instruction and/or data that resulted in the
-said action.
+(e.g., contacting a Challenger Validator to submit receipts) the Light Hotspot
+will include the attestation in its request to that Challenger Validator. The
+attestation provides evidence on behalf of the Light Hotspot to the Challenger Validator
+that it received the instruction and/or data that resulted in the said action.
 
-If the Consensus Group member determines the instruction/data was spurious in
+If the Challenger Validator member determines the instruction/data was spurious in
 nature, unsolicited, or otherwise untrustworthy then the member can decide to
-act on this. This allows for future implementations where the verifably false
+act on this. This allows for future implementations where the verifiably false
 assertion is published, with the malicious Validator's attestation, to allow for
 slashing of the Validator's stake.
 
@@ -205,15 +206,15 @@ a Validator is untrustworthy, can build their own untrusted list of Validators.
 
 Today, the Hotspots creating PoC Challenges and submitting receipts to the
 blockchain are rewarded with 0.9% of HNT rewarded per epoch. We propose that
-this subsidy be moved to the Validator Challenger (member of the Consensus
-Group) that is creating and collecting Challenge data and submitting this
-information to the blockchain. We don't recommend any other changes at this time
+this subsidy be moved to the Validator Challenger that is creating and collecting 
+Challenge data and submitting this information to the blockchain. We don't recommend 
+any other changes at this time
 as it would increase the scope of implementation. Please refer to [HIP
 10][hip10] or [docs.helium.com][docs] for the details of the current reward
 scheme for PoC and specifically for Challengers.
 
 We believe that there could be a future iteration of Validator Challengers that
-could introduce a separate Consensus Group responsible for Challenges only but
+could introduce a separate group responsible for Challenges only but
 this is also too complex as an initial design. This would also remove the
 ability to piggy back Challenges onto existing block production (which will
 massively lower the blockchain's transaction rate).
@@ -268,8 +269,8 @@ are transmitted.
 [unresolved]: #unresolved-questions
 
 This plan *does* consider and allow for Validator slashing to the extent the
-data payloads exchanged between the Light Hotspots, the Validators, and the
-Consensus Group will include attestation data. This can can enable a slashing
+data payloads exchanged between the Light Hotspots and the Validators will include 
+attestation data. This can enable a slashing
 mechanism.  It does not however propose the slashing implementation itself, that
 could be proposed in a future HIP.
 
