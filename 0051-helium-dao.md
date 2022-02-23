@@ -138,24 +138,7 @@ rewards.
 
 **We propose two significant changes to the reward buckets**
 
-### 1. Remove division between PoC and DC reward buckets
-
-After HIP-10, the vast majority of DC rewards are reallocated to the LoRaWAN
-PoC, which has made the distinction between the buckets nominal. Given this
-reality, we propose a merging of the two rewards buckets.
-
-The value of the bucket will equal the combined value of the existing DC and PoC
-buckets and will be adjusted along with all other rewards buckets on the
-existing rewards schedule.
-
-Existing reward curve by reward type:
-
-![existing reward curve][existing-reward-curve]
-
-The new reward bucket would be a combination of the “Network Data Transfer” and
-“Proof-of-Coverage” rewards above.
-
-### 2. Split PoC rewards between wireless protocols based on a quadratic equation that accounts for DCs burned and active devices per DNP
+### Split PoC rewards between wireless protocols based on a formula that accounts for DCs burned and active devices per DNP
 
 The success of the Helium network is contingent on its ability to find real
 world applications that burn data credits via data transfer activity. Therefore,
@@ -180,33 +163,19 @@ To put this into context, if you have two networks with 50,000 and 500,000 devic
 Most importantly, this model gives us a framework to add new DNPs in the future
 without having to design reward splits on an ad-hoc basis.
 
-### 3. Implement a ‘cold start’ bucket to help fund early stage networks that don’t yet have meaningful DC burn
+### Implement a ‘cold start’ bucket to help fund early stage networks that don’t yet have meaningful DC burn
 
-The Lorawan protocol on Helium benefitted from having a built in ‘cold start’
-reward system via PoC rewards to help fund the growth of the network. Under the
-new model, a network that doesn’t have any DC burn would not have any way of
-rewarding it’s early users, so we are proposing a 10% ‘cold start’ reward bucket
-that is carved out from the combined PoC/data rewards bucket. Under this system,
-any DNP that has been live for sub 1 million blocks (approximately 2 years)
-would evenly split 10% of all HNT rewards. Additionally, if a specific DNP had
-enough devices or was burning enough DCs to receive 10% of the larger PoC/data
-rewards bucket, it would be excluded from the ‘cold start’ rewards bucket.
+The Lorawan protocol on Helium benefitted from having a built in ‘cold start’ reward system via PoC rewards to help fund the growth of the network. Under the new model, a network that doesn’t have any DC burn would not have any way of rewarding it’s early users, so we are proposing a 10% ‘cold start’ reward bucket that is carved out from the PoC rewards bucket. 
 
-If no DNP ‘qualifies’ for the cold start bucket, those rewards would be
-reallocated to the regular PoC/data reward bucket.
+Under this system, any DNP that has been live for sub 1 million epochs (approximately 2 years) would evenly split 10% of all HNT POC rewards. Additionally, if a specific DNP had enough devices or was burning enough DCs to receive 10% of the larger PoC/data rewards bucket, it would be excluded from the ‘cold start’ rewards bucket. 
+
+If no DNP ‘qualifies’ for the cold start bucket, those rewards would be reallocated to the regular PoC/data reward bucket. 
 
 ## Definitions and calculations for Omni-Protocol PoC incentive model
 
-- **DC burn used in PoC split calculation**: DC burn is not limited to data
-  transfers per DNP. The calculation also includes fees associated with other
-  actions, including, but not limited to, gateway assertions, token transfers,
-  and gateway relocation fees.
+- **DC burn used in PoC split calculation**: DC burn is limited to data transfers per DNP. The calculation does not include fees associated with other actions, including, but not limited to, gateway assertions, token transfers, and gateway relocation fees.
 
-- **Decentralized Network Protocol (DNP)**: Wireless network type is a computer
-  network that uses wireless data connections between network nodes and utilizes
-  a uniform, standard set of rules that determine how data is transmitted
-  between different devices in the same network. (i.e. LoRaWan, 5G, Wi-Fi,
-  NB-IoT etc. all different Decentralized Network Protocols).
+- **Decentralized Network Protocol (DNP)**: Wireless network type is a computer network that uses wireless data connections between network nodes and utilizes a uniform, standard set of rules that determine how data is transmitted between different devices in the same network. (i.e. LoRaWan, 5G, Wi-Fi, NB-IoT etc. all different Decentralized Network Protocols).
 
 - **Frequency of PoC reward split recalculation**: Manually adjusted on a
   frequency at the discretion of DeWi unless and until an auto recalculation
