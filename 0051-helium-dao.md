@@ -71,6 +71,7 @@ problems:
    All non DNP specific transactions (simple transfers, burning HNT to DC, etc)
    occur at some high throughput, low latency base layer chain on which the
    overall Helium Network lives.   
+   
 2. *DNP Specific Incentive Alignment*: We propose that each DNP operate as its
    own sub-DAO within the broader umbrella of the Helium DAO. DNP Sub-DAOs are
    able to issue DNTs to their stakeholders and DNT denominated governance
@@ -158,7 +159,7 @@ scores:
 
 ![\textup{Percentage of POC Rewards per DNP} = \frac{\textup{DNP Specific Score}}{\sum (\textup{All DNP Scores})}](https://latex.codecogs.com/png.image?\dpi{110}%20\textup{Percentage%20of%20POC%20Rewards%20per%20DNP}%20=%20\frac{\textup{DNP%20Specific%20Score}}{\sum%20(\textup{All%20DNP%20Scores})})
 
-To put this into context, if you have two networks with 50,000 and 500,000 devices each, the smaller network would need approximately 3.16 o r (10^(¼))^2 times the DC burn to have a comparable protocol score to the larger network. 
+To put this into context, if you have two networks with 50,000 and 500,000 devices each, the smaller network would need approximately 3.16 or ![(10^{1/4}^2] times the DC burn to have a comparable protocol score to the larger network. 
 
 Most importantly, this model gives us a framework to add new DNPs in the future
 without having to design reward splits on an ad-hoc basis.
@@ -203,7 +204,7 @@ The shape of the curve for k only slightly larger than 1 is as follows
 
 ![Programmatic Treasury][bonding-curve]
 
-It is \textbf{critical to note that the programmatic treasury proposed is one-way for all network stakeholders other than the HNT minting contract at the L1}. This implies that inflows into a given subDAO’s programmatic treasury are only possible through epochal HNT emissions, and no other participant can deposit HNT into the curve. TokenDNT holders can, however, withdraw from the curve at any time.
+It is **critical to note that the programmatic treasury proposed is one-way for all network stakeholders other than the HNT minting contract at the L1**. This implies that inflows into a given subDAO’s programmatic treasury are only possible through epochal HNT emissions, and no other participant can deposit HNT into the curve. TokenDNT holders can, however, withdraw from the curve at any time.
 
 Since DNTs are fungible assets that can be listed on secondary markets, miners will have multiple sources of liquidity for their earned tokens at any time. This mechanism ensures that miners receive a steady, predictable stream of revenues as per the shape of the programmatic treasury instead of being subject to compounding forms of market risk through speculation driven inflows into the curve. 
 
@@ -290,20 +291,6 @@ to the DNT Programmatic Treasury.
 For example in a given epoch, if the 5G Programmatic Treasury had trading volume of
 100,000 HNT and brought in 300 HNT worth of transaction fees, that 300 HNT is
 resubmitted to the Treasury increasing the price of DNT according to the equation.
-
-## *Fair-Launch Mechanism*
-
-The Programmatic Treasury mechanism is susceptible to bot frontrunning. We borrow from
-[Strata protocol’s fair launch mechanism][strata] to ensure that early
-participants in any DNP DAO are protected from this attack vector.
-
-The fair launch mechanism described involves a gradually steepening bonding
-curve such that the area underneath remains fixed with each unit increment in
-time.
-
-![fair-launch-graph][fair-launch-graph]
-
-This ensures that bots are unable to atomically frontrun network participants. .
 
 # Clarifications
 
