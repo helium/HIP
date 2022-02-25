@@ -55,7 +55,7 @@ Hotspot and Validator owners/operators.
 ## Description of Current Implementation
 
 It is useful to recapitulate the current challenge process. First refer to the
-Detailed Explanation section of [HIP53: H3Dex Targeting][hip53] which describes
+Detailed Explanation section of [HIP 54: H3Dex-based PoC Targeting][hip54] which describes
 how a challenge is constructed and submitted to the blockchain.
 
 1. Once the PoC Request has appeared on the blockchain and the Challengee has
@@ -312,7 +312,7 @@ system over to this new model, before that happens we need the new code to be
 merged, deployed to the fleet (routers, hotspots, validators, node users) and
 this HIP needs to be ratified.
 
-[hip53]: https://github.com/helium/HIP/blob/main/0054-h3dex-targeting.md
+[hip54]: https://github.com/helium/HIP/blob/main/0054-h3dex-targeting.md
 [proto]: https://github.com/helium/proto/blob/andymck/poc-grpc-msg-defs-WIP/src/service/gateway.proto#L101
 [message-sequence]: https://docs.google.com/drawings/d/1eVTK89ob66vlcEwwoVNi0BFaCEaU2DYki8778LIRWpA/edit
 [poc-challenge-rate]: https://user-images.githubusercontent.com/75/153673071-550eb970-4ab6-44e0-b9fc-e9b04e1b4dad.png
