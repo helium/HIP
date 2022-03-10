@@ -87,6 +87,9 @@ After steps 2 and 3, before proceeding to the next escalation, DeWi's LoRaWAN
 Committee may withdraw their proposal and reissue a new proposal at anytime.
 This would effectively restart the process at step 1.
 
+## Live Virtual Public Forum
+
+
 # Rationale and Alternatives
 [alternatives]: #rationale-and-alternatives
 
