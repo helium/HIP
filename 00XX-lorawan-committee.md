@@ -32,8 +32,9 @@ Which is the reason why selection and governance of this committee are so crucia
 
 * Community and stakeholder engagement
 We are reaching out to members
-  they may not be watching the HIPs repository or even aren't directly active in
-  the Helium Community Slack channels.
+ - Github repository feedback
+ - Helium Community HIP Discord channel
+ - Other relevant Helium Community Discord channels.
 
 # Detailed Explanation
 [detailed-explanation]: #detailed-explanation
@@ -44,11 +45,12 @@ The committee will:
  - operate in a transparent, timely and accountable manner at all times
  - communicate clearly and regularly with stakeholders and the DEWI as appropriate
  - adopt existing LoRa Alliance standards where applicable
+ - act in conformance with the relevant regulatory bodies in each region
  - endeavour to reach consensus within the committee, taking into account the views of all members.
 
 
 The committee’s recommendations must:
- - not be inconsistent with LoRa Alliance standards and directives
+ - not be inconsistent with LoRa Alliance standards and directives by regional regulators
  - be based on the best available scientific information, evidence based policy and encourage best practice in the Helium ecosystem
  - balance the technical implications and impacts of changes with the practicalities of operators in the wider Helium ecosystem
  - be clear, logical and verifiable
