@@ -142,10 +142,14 @@ Poor decision making and unneccesary disruption of the ecosystem due to such dec
 # Unresolved Questions
 [unresolved]: #unresolved-questions
 
-Do any decisions made by the LoRaWAN committee prior to the approval of this HIP need to be reviewed?
+- How does this governance proposal for the LoRaWAN committee fit in with an overall DEWI governance structure
+
+- Do any decisions made by the LoRaWAN committee prior to the approval of this HIP need to be reviewed? Details of existing documentation has been sought.
 
 
-- What related issues do you consider out of scope for this HIP that could be addressed in the future independently of the solution that comes out of this HIP?
+What related issues do you consider out of scope for this HIP that could be addressed in the future independently of the solution that comes out of this HIP?
+
+-[TODO]
 
 # Deployment Impact
 [deployment-impact]: #deployment-impact
@@ -163,3 +167,5 @@ There are no backwards compatibility issues. The only potential issue is how to 
 [success-metrics]: #success-metrics
 
 What metrics can be used to measure the success of this design?
+
+-[TODO]
