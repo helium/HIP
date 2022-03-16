@@ -133,10 +133,11 @@ space. This is probably the most important section!
 
 - Why is this design the best in the space of possible designs?
 
-- What other designs have been considered and what is the rationale for not
-  choosing them?
+No other proposals have been available. Widest possible community feedback will be sought to consider in this proposal
 
 - What is the impact of not doing this?
+
+Poor decision making and unneccesary disruption of the ecosystem due to such decisions.
 
 # Unresolved Questions
 [unresolved]: #unresolved-questions
@@ -144,17 +145,14 @@ space. This is probably the most important section!
 Do any decisions made by the LoRaWAN committee prior to the approval of this HIP need to be reviewed?
 
 
-
-- What related issues do you consider out of scope for this HIP that could be
-  addressed in the future independently of the solution that comes out of this
-  HIP?
+- What related issues do you consider out of scope for this HIP that could be addressed in the future independently of the solution that comes out of this HIP?
 
 # Deployment Impact
 [deployment-impact]: #deployment-impact
 
 There is no deployment impact. This HIP purely describes poper governance and procedures in the decision making process
 
-It will improve the 
+It will create a proper governance structure ensuring that decisions are made with proper consideration of all stakeholders and ensures that conflicts of interest have to be declared.
 
 Documentation on this process should be made available via Helium Docs
 
@@ -165,11 +163,3 @@ There are no backwards compatibility issues. The only potential issue is how to 
 [success-metrics]: #success-metrics
 
 What metrics can be used to measure the success of this design?
-
-- What should we measure to prove a performance increase?
-
-- What should we measure to prove an improvement in stability?
-
-- What should we measure to prove a reduction in complexity?
-
-- What should we measure to prove an acceptance of this by it's users?
