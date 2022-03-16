@@ -21,19 +21,19 @@ This HIP suggests a number of improvements in the following areas
 # Motivation
 [motivation]: #motivation
 
-Wide-ranging (technical) changes that affect whole countries and regions should never be decided without informed debate and input from the region(s) which will have to live with the effects of such decisions. Proper governance procedures are required to ensure that due care is taken
+Wide-ranging (technical) changes that affect whole countries and regions should never be decided without informed debate and input from the region(s) which will have to live with the effects of such decisions. Proper governance procedures are required to ensure that due care is taken making such decisions.
 
 # Stakeholders
 [stakeholders]: #stakeholders
 
 There are two (2) stakeholder groups with this HIP:
  - DEWI LoRaWAN Committee
-    - A clear governance structure will support the DEWI LoRaWAN committee to ensure strong objective,sustainable and inclusive growth, without bias and conflict.
+    - A clear governance structure will support the DEWI LoRaWAN committee to ensure strong, objective, sustainable and inclusive growth, without bias and conflict.
  - Wider Helium Ecosystem
     - Without a clear articulated governance structure decisions made will inadvertedly create unintended consequeces. Such decisions without adequate consultation have the potential to create critical user issues and harm growth, which is the reason why selection and governance of this committee are so crucial.
 
 
-* Community and stakeholder engagement
+## Community and stakeholder engagement
 We are reaching out to members
  - Github repository feedback
  - Helium Community HIP Discord channel
@@ -67,7 +67,7 @@ Committee membership is critical to the transparency and capability of the commi
 
 The committee must consist of at least:
  - an independent chair (not connected to either DEWI or Helium Inc)
- - three LoRaWAN and/or RF engineering experts, to ensure appropriate technical expertise is maintained specific issues
+ - three LoRaWAN and/or RF engineering experts, to ensure appropriate technical expertise is maintained
  - one person with a practical understanding of the operational, technical and logistical facets
  - one standards development/regulation specialist.
 
@@ -80,7 +80,9 @@ The committee must consist of at least:
 Each member is required to make a declaration confirming they met the eligibility requirements upon their appointment to the committee. As part of each contract, members must continue to comply with eligibility requirements.
 
 During the operation of the committee, members are to declare to the chair all known actual or potential conflicts of interest as soon as they become aware of the conflict. Each meeting should contain a standard agenda item to allow for actual and percieved acknowledgement.
+
 The initial declaration of eligibility made to the DEWI prior to joining the committee and subsequent statements of personal interest will be deemed to be a ‘standing statement’ for all meetings of the committee.
+
 At each meeting, members are to advise of any new actual or potential conflicts of interest arising in respect of issues on the meeting agenda. These should be recorded in the minutes of the meeting,
 along with the course of action taken in relation to managing the conflict of interest.
 Where a conflict of interest is declared by a member on a particular agenda item, the chair and remaining committee members are to consider the nature and extent of the conflict and adopt one of
@@ -136,18 +138,15 @@ The Helium ecosystem can not afford the fact that important governance procedure
 # Rationale and Alternatives
 [alternatives]: #rationale-and-alternatives
 
-This is your chance to discuss your proposal in the context of the whole design
-space. This is probably the most important section!
-
 - Why is this design the best in the space of possible designs?
 
-No other proposals have been available. Widest possible community feedback will be sought to consider in this proposal
+No other proposals are currently available. Widest possible community feedback will be sought to consider in this proposal.
+
 Best practice governance provides strong platform for growth and sustainablity
 
 - What is the impact of not doing this?
 
-Poor decision making and unneccesary disruption of the ecosystem due to such decisions.
-Regional disruption and potential disconnect 
+Poor decision making and unneccesary disruption of the ecosystem due to such decisions. Regional disruptions and potential disconnect 
 
 # Unresolved Questions
 [unresolved]: #unresolved-questions
@@ -178,8 +177,6 @@ There are no backwards compatibility issues. The only potential issue is how to 
 
 What metrics can be used to measure the success of this design?
 
-- Future decision making and the metrics to engage in these processes
-- Future opportunties for growth
 - Faith of current Helium investors in regions
 - Engagement by community in future decisions
 - Alignment to best practice and possibility to lead by example
