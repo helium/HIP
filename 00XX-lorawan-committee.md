@@ -135,7 +135,7 @@ will also be published on these pages.
 
 None.
 
-The Helium ecosystem can not afford the fact that important governance procedures are not in existence at DEWI and their related committees.
+The Helium ecosystem can not afford the fact that there are no publicly available terms of reference or a governance framework in existence for this important committee.
 
 # Rationale and Alternatives
 [alternatives]: #rationale-and-alternatives
