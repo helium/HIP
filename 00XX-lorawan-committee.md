@@ -14,21 +14,23 @@ The proposed change of frequency plan for Australia has highlighted some major d
 This HIP suggests a number of improvements in the following areas
 1. Selection of members
 2. Declaration of conflict of interest
-3. Governance procedures
+3. Governance framework
 4. Ethics guidelines
 5. Process of including the affected regions in the decision-making process
 
 # Motivation
 [motivation]: #motivation
 
-Wide-ranging (technical) changes that affect whole countries and regions should never be decided without informed debate and input from the region(s) which will have to live with the effects of such decisions. Proper governance procedures are required to ensure that due care is taken making such decisions.
+Currently there are no publicly available terms of reference for the DEWI LoRaWAN committee.
+
+ Wide-ranging (technical) changes that affect whole countries and regions should never be decided without informed debate and input from the region(s) which will have to live with the effects of such decisions. A governance framework and procedures are required to ensure that due care is taken making such decisions.
 
 # Stakeholders
 [stakeholders]: #stakeholders
 
 There are two (2) stakeholder groups with this HIP:
  - DEWI LoRaWAN Committee
-    - A clear governance structure will support the DEWI LoRaWAN committee to ensure strong, objective, sustainable and inclusive growth, without bias and conflict.
+    - A clear governance structure will support the DEWI LoRaWAN committee to ensuThis will form a HIP to create a governance framework for the LoRaWAN committeere strong, objective, sustainable and inclusive growth, without bias and conflict.
  - Wider Helium Ecosystem
     - Without a clear articulated governance structure decisions made will inadvertedly create unintended consequeces. Such decisions without adequate consultation have the potential to create critical user issues and harm growth, which is the reason why selection and governance of this committee are so crucial.
 
