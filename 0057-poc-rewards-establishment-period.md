@@ -4,8 +4,8 @@
   [@starwatcher](https://github.com/mrpatrick1991), [@jthiller](https://github.com/jthiller)
 - Start Date: 2022-03-16
 - Category: Technical
-- Original HIP PR: –
-- Tracking Issue: –
+- Original HIP PR: https://github.com/helium/HIP/pull/375
+- Tracking Issue: TODO
 - Status: In Discussion
 
 # Summary
