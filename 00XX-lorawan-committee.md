@@ -162,11 +162,11 @@ Poor decision making and unnecessary disruption of the ecosystem due to such dec
 
 What related issues do you consider out of scope for this HIP that could be addressed in the future independently of the solution that comes out of this HIP?
 
--Issue escalation procedure with Alliance
--Positive mental health of members (including reduction of burnout)
--Risk management.
+- Issue escalation procedure with Alliance
+- Positive mental health of members (including reduction of burnout)
+- Risk management.
 
--[TODO] add some more. 
+- [TODO] add some more. 
 
 # Deployment Impact
 [deployment-impact]: #deployment-impact
