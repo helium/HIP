@@ -154,13 +154,16 @@ Poor decision making and unnecessary disruption of the ecosystem due to such dec
 # Unresolved Questions
 [unresolved]: #unresolved-questions
 
-- How does this governance proposal for the LoRaWAN committee fit in with an overall DEWI governance structure? 
-
 - Do any decisions made by the LoRaWAN committee prior to the approval of this HIP need to be reviewed? Details of existing documentation has been sought?
 
 - Does cyber security have enough representation within the committees?
 
 What related issues do you consider out of scope for this HIP that could be addressed in the future independently of the solution that comes out of this HIP?
+
+- How does this governance proposal for the LoRaWAN committee fit in with an overall DEWI governance structure? 
+
+Since there is no current DEWI Governance Structure (although there appears to be work under way) this can not be tied into the overall DEWI structures.
+See [BYLAWS OF LoRa Alliance, Inc.](https://lora-alliance.org/wp-content/uploads/2021/01/LoRa-Alliance-Bylaws_Approved_01.31.2020-1.pdf) as a reference document.
 
 - Issue escalation procedure with Alliance
 - Positive mental health of members (including reduction of burnout)
