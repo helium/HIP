@@ -108,6 +108,14 @@ threshold. This effect increases if the percentage of gaming at these distances
 is higher than we assumed. Ordinary hotspots, who witness beacons at shorter
 distances, will be unaffected. 
 
+The hotspots that are most impacted in terms of the relative loss on their POC rewards are those that have a significant percentage of witness receipts surpassing the distance threshold. As shown in the following figure, only about 7,000 gateways (out of nearly 700,000 at the time of writing) garner more than 10% of their witness activity from beacons further than 100km away. It also turns out that [denylisted](https://github.com/helium/denylist/releases/tag/2022040101) hotspots show a disproportionately high rate of extraordinarily far witness paths; of the gateways that stand to lose more than 50% of their witness activity, nearly a third are already on the denylist.
+
+![image](https://user-images.githubusercontent.com/37876940/161453891-f712991d-3d6b-44c5-bf09-e9a4a5fcf394.png)
+
+Further, if we consider the potential effect of the HIP in absolute terms, the difference between legitimate and gamed deployments is even more stark. The below figure plots each hotspot's total number of witness receipts against the number of witness receipts exceeding the distance threshold (using a 4,000-block sample of network-wide POC activity). Clearly, a relatively small number of denylisted hotspots mine a significant amount of POC rewards by reporting extreme witness events. It is unrealistic for real-world gateways to witness at such a high rate, *almost exclusively* at 100km+ distances. While these illegitimate actors can be placed on the denylist, it is more efficient for anti-gaming purposes to build this hard limit directly into the POC algorithm.
+
+![image](https://user-images.githubusercontent.com/37876940/161453445-9e908283-585e-482b-92a0-ec40ae805b96.png)
+
 # Drawbacks
 
 This proposal realigns Proof of Coverage closer to effective distances of
