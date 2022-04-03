@@ -69,7 +69,7 @@ deployments. This can be seen in the following graph, which shows a cumulative
 histogram of witness distances for a random sample of 10,000 current (< 1 week
 old) witness receipts from the blockchain.
 
-![image](https://user-images.githubusercontent.com/75/161405374-bed2c516-8be4-4bb2-b6ef-231eab0f9981.png)
+![image](https://user-images.githubusercontent.com/75/161450340-268091ce-793a-4c4a-bd1c-0155146ca035.png)
 
 Almost all of the valid witnesses occur over distances of less than 50
 kilometers. The selection of an upper limit can be balanced against the
@@ -80,7 +80,7 @@ n=10000) expressed as a percentage as a function of the distance to the received
 beaconer. Lines are drawn at a distance of 100 kilometers and a percentage 0.5
 percent. 
 
-![image](https://user-images.githubusercontent.com/75/161405407-402970bb-6c7b-4c96-8779-f5779327a03b.png)
+![image](https://user-images.githubusercontent.com/75/161450359-824ad2d1-08d1-4ddc-974a-c358560990b3.png)
 
 Fewer than 1.6 percent of beacons are witnessed at distances of greater than 100
 kilometers based on this sample. The y axis is shown on a log scale to make the
@@ -94,7 +94,7 @@ Define a high performing hotspot as one which is in the top 20 percent of total
 witnessers in the sample. The histogram of witness distances for these hotspots
 is:
 
-![image](https://user-images.githubusercontent.com/75/161405425-28f54eb0-83f5-4df4-a8c1-98c181b30aa3.png)
+![image](https://user-images.githubusercontent.com/75/161450371-71b40b33-c0b1-455f-9446-89a23fe394ee.png)
 
 Of the total number of beacons received by this high performing group, only 1.4
 percent were from distances of greater than the threshold of 100 kilometers. 
