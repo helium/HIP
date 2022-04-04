@@ -1,12 +1,11 @@
-# HIP XX: PoC Distance Limit
+# HIP 58: PoC Distance Limit
 
-- Author(s): [@abhay](https://github.com/abhay),
-  [@mrpatrick1991](https://github.com/mrpatrick1991), et al
+- Author(s): [@abhay](https://github.com/abhay), [@mrpatrick1991](https://github.com/mrpatrick1991), et al
 - Start Date: 2022-04-02
 - Category: Technical
-- Original HIP PR: TODO
+- Original HIP PR: https://github.com/helium/HIP/pull/381
 - Tracking Issue: TODO
-- Status: Draft
+- Status: In Discussion
 
 # Summary
 
