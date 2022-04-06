@@ -15,7 +15,13 @@ In order to combat PoC rewards gaming, the process of ‘spoofing’ or ‘gamin
 
 If approved, this proposal would introduce a Hotspot ‘establishment period’ such that the network can better learn about a Hotspot’s deployment immediately following a location assertion. This period would be defined initially as 15 days and 10 successful witnesses, as set by a chain variable. A Hotspot’s PoC rewards and witnesses of its beacons would be throttled to 10% of what would be its normal earnings until both of these conditions are met. Data rewards would be unaffected. As the network improves its ability to understand a Hotspot’s location or as reliance on denylists are reduced, these chain variables could be adjusted. 
 
-This establishment period would only have a short-term impact on a host’s overall payback period. This proposed change to the rewards scheme would have a significantly negative impact on gaming economics thus redirecting the disproportionate gamed rewards back to hosts providing legitimate coverage. This also meaningfully improves coverage integrity for existing and prospective network users – core to the thesis of the ‘Helium Flywheel’. Further details on the implications to the Helium Flywheel are detailed below.
+This establishment period would only have a short-term impact on a host’s overall payback period. This proposed change to the rewards scheme would have a significantly negative impact on gaming economics thus redirecting the disproportionate gamed rewards back to hosts providing legitimate coverage. This also meaningfully improves coverage integrity for existing and prospective network users – core to the thesis of the ‘Helium Flywheel’. Further details on the implications to the Helium Flywheel are detailed in the following section.
+
+| **Precise Rosewood Urchin**                                                                                       	|
+|-------------------------------------------------------------------------------------------------------------------	|
+|<img src="0057-poc-rewards-establishment-period/precise-rosewood-urchin.png" style="max-width: 400px">                	|
+|In this example, a Hotspot has arbitraged delays in denylist action in order to accrue disproportionate gamed rewards. |
+
 
 # Background
 [background]: #background
