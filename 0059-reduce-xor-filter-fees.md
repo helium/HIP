@@ -1,4 +1,4 @@
-# HIP-XX Reduce XOR filter fees
+# HIP-59 Reduce XOR filter fees
 
 - Author(s): [@macpie](https://github.com/macpie), [@jdgemm](https://github.com/jdgemm)
 - Start Date: 2022-04-19
