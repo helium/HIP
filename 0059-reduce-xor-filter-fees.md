@@ -1,11 +1,11 @@
-# HIP-XX Reduce XOR filter fees
+# HIP-59 Reduce XOR filter fees
 
 - Author(s): [@macpie](https://github.com/macpie), [@jdgemm](https://github.com/jdgemm)
 - Start Date: 2022-04-19
 - Category: Technical
 - Original HIP PR: [https://github.com/helium/blockchain-core/pull/1303](https://github.com/helium/blockchain-core/pull/1303)
 - Tracking Issue: [https://github.com/helium/HIP/issues/391](https://github.com/helium/HIP/issues/391)
-- Status: Draft
+- Status: In Discussion
 
 # Summary
 
