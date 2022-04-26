@@ -9,7 +9,7 @@
 
 # Summary
 
-Helium community members that host a Router instance use on-chain XOR filters to  process traffic from known devices in order to  significantly improve performance. This is an integrated component of a Router instance, and allows Routers and Packet Purchasers on the network to avoid spending resources on join packets from unknown devices. 
+Helium community members who host a Router instance use on-chain XOR filters to  process traffic from known devices in order to significantly improve performance. This is an integrated component of a Router instance, and allows Routers and Packet Purchasers on the network to avoid spending resources on join packets from unknown devices. 
 
 This HIP proposes a change for how fees are calculated when doing a XOR filter update with the goal of reducing these fees and enabling more updates to XOR filters.
 
