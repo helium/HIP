@@ -5,7 +5,7 @@
 - Category: Technical
 - Original HIP PR: [https://github.com/helium/blockchain-core/pull/1303](https://github.com/helium/blockchain-core/pull/1303)
 - Tracking Issue: [https://github.com/helium/HIP/issues/391](https://github.com/helium/HIP/issues/391)
-- Status: In Discussion
+- Status: Draft
 
 # Summary
 
