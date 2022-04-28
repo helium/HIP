@@ -55,7 +55,7 @@ This proposal impacts all current and future stakeholders in the Helium Communit
 We propose that each DNP operates its own subDAO and submits information to the broader Helium Network via Oracles. Each DNP has its own economic and governance layer through its subDAO, which comprises all its DNT holders.
 
 ![https://lh5.googleusercontent.com/vsPbCgYmMYEfNIomievnmgqD29bN2XCUMoF3FYb0ukKwtdKWofdVAZ2fe3_iRylEF8SpHHW8jj0-IUq2z5LXk5IdOtcYCgEuKVpOlxQ2BlChdagv7oAbQr0Gu_gIh6631QZzwApv]
-!(https://lh5.googleusercontent.com/vsPbCgYmMYEfNIomievnmgqD29bN2XCUMoF3FYb0ukKwtdKWofdVAZ2fe3_iRylEF8SpHHW8jj0-IUq2z5LXk5IdOtcYCgEuKVpOlxQ2BlChdagv7oAbQr0Gu_gIh6631QZzwApv)
+(https://lh5.googleusercontent.com/vsPbCgYmMYEfNIomievnmgqD29bN2XCUMoF3FYb0ukKwtdKWofdVAZ2fe3_iRylEF8SpHHW8jj0-IUq2z5LXk5IdOtcYCgEuKVpOlxQ2BlChdagv7oAbQr0Gu_gIh6631QZzwApv)
 
 New DNPs are added to the Helium DAO through the veHNT denominated governance process as defined below.
 
@@ -66,7 +66,7 @@ Helium operates as a network of networks under HIP 51, and as such requires its 
 A user’s voting power is determined by 1) the amount of HNT they lock up with, and 2) the amount of time they commit to locking up their HNT. The structure applies a linear multiplier of time to the amount of HNT locked up in the voting contract. For the maximum amount of four years, users receive 100x the veHNT. For the minimum amount of a six month lockup, users receive 1x the veHNT. Note that veHNT is **fully non-transferable**, and represented as a non-fungible coupon in the user’s HNT address.
 
 ![https://lh3.googleusercontent.com/LATKH662thw4KQsDwrJuvc6w6sASSXytd6Izunvdsaco_8yH6r6dP0nYdEEAJFp_vkYHP_KR2nE1O748VcpnD7zjtY6XIF-y8qCATyB0o8K4FRqSodjlAUAif6RG_wDojxxasrdB]
-!(https://lh3.googleusercontent.com/LATKH662thw4KQsDwrJuvc6w6sASSXytd6Izunvdsaco_8yH6r6dP0nYdEEAJFp_vkYHP_KR2nE1O748VcpnD7zjtY6XIF-y8qCATyB0o8K4FRqSodjlAUAif6RG_wDojxxasrdB)
+(https://lh3.googleusercontent.com/LATKH662thw4KQsDwrJuvc6w6sASSXytd6Izunvdsaco_8yH6r6dP0nYdEEAJFp_vkYHP_KR2nE1O748VcpnD7zjtY6XIF-y8qCATyB0o8K4FRqSodjlAUAif6RG_wDojxxasrdB)
 
 For example, suppose A, B, and C all choose to lock up 1000 HNT:
 
