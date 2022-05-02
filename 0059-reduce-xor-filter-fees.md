@@ -27,6 +27,10 @@ All Console/Router open-source operators are directly affected by this proposal.
 
 ## Detailed Explanation
 
+On the Helium blockchain fees are calculated based on the `byte_size` of the transaction. See [here](https://github.com/helium/blockchain-core/blob/master/include/blockchain_txn_fees.hrl) for more info.
+
+As more devices get added to the filter, it grows. Meaning that any update is calculated based on the full size of the filter. This can increase the cost of an XOR filter update to tens of thousands of Data Credits (DC). This is obviously not sustainable as the network grows.
+
 The proposal is to not account for the full size of the XOR filter every time but only the difference compared to the previous update. For example: if the previous XOR had a size of 100 bytes and the update is 110 bytes then fees would be calculated on the difference: (`110 - 100 = 10`) 10 bytes.
 
 This approach increases the commercial viability for community members to host a Console/Router instance, only the difference of the XOR filter will be calculated vs paying for the entire amount each time.
@@ -47,11 +51,6 @@ Hotspots use device `app_eui`, `dev_eui` to query the blockchain via XOR filter 
 Router which belongs to the OUI receives the  join request, sends down a join accept, and assigns the NwkAddr.
 
 For future uplinks, gateways use a device’s devaddr to identify which router/oui to send to which is significantly quicker.
-
-On the Helium blockchain fees are calculated based on the `byte_size` of the transaction. See [here](https://github.com/helium/blockchain-core/blob/master/include/blockchain_txn_fees.hrl) for more info.
-
-As more devices get added to the filter, it grows. Meaning that any update is calculated based on the full size of the filter. This can increase the cost of an XOR filter update to tens of thousands of Data Credits (DC). This is obviously not sustainable as the network grows.
-
 
 ## Drawbacks
 
