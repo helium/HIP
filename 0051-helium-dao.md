@@ -54,7 +54,7 @@ This proposal impacts all current and future stakeholders in the Helium Communit
 
 We propose that each DNP operates its own subDAO and submits information to the broader Helium Network via Oracles. Each DNP has its own economic and governance layer through its subDAO, which comprises all its DNT holders.
 
-![https://lh3.googleusercontent.com/sluRVsYUKoRqnXd5T3s6XqIQSlogUTuXM6j6ewuplOz5xSBE4JzrUEnzvIDBJqm_qhTc7utL7AI6dkxFipgD9nveSV0g5bwx9wLiqaua4NEtplCRpEUQYjGfv2hwhx4Br3gn1cntCkCBGoaD3g](https://lh3.googleusercontent.com/sluRVsYUKoRqnXd5T3s6XqIQSlogUTuXM6j6ewuplOz5xSBE4JzrUEnzvIDBJqm_qhTc7utL7AI6dkxFipgD9nveSV0g5bwx9wLiqaua4NEtplCRpEUQYjGfv2hwhx4Br3gn1cntCkCBGoaD3g)
+[https://lh3.googleusercontent.com/sluRVsYUKoRqnXd5T3s6XqIQSlogUTuXM6j6ewuplOz5xSBE4JzrUEnzvIDBJqm_qhTc7utL7AI6dkxFipgD9nveSV0g5bwx9wLiqaua4NEtplCRpEUQYjGfv2hwhx4Br3gn1cntCkCBGoaD3g](https://lh3.googleusercontent.com/sluRVsYUKoRqnXd5T3s6XqIQSlogUTuXM6j6ewuplOz5xSBE4JzrUEnzvIDBJqm_qhTc7utL7AI6dkxFipgD9nveSV0g5bwx9wLiqaua4NEtplCRpEUQYjGfv2hwhx4Br3gn1cntCkCBGoaD3g)
 
 New DNPs are added to the Helium DAO through the veHNT denominated governance process as defined below.
 
@@ -64,7 +64,7 @@ Helium operates as a network of networks under HIP 51, and as such requires its 
 
 A user’s voting power is determined by 1) the amount of HNT they lock up with, and 2) the amount of time they commit to locking up their HNT. The structure applies a linear multiplier of time to the amount of HNT locked up in the voting contract. For the maximum amount of four years, users receive 100x the veHNT. For the minimum amount of a six month lockup, users receive 1x the veHNT. Note that veHNT is **fully non-transferable**, and represented as a non-fungible coupon in the user’s HNT address.
 
-![https://lh6.googleusercontent.com/ikebMGiY7wqmny0-p3tX0FyYLKVonll2rYgTGHJf7RYNWbuBL8byEgzQYsDLRbSySOZwY3pgrK8XeRFL2fqN4uadKIWBkdMILAZR6OzXJv3pUGvk3crfGBQPvZrM2bIwxVGsHHKbDScbbPWbrQ](https://lh6.googleusercontent.com/ikebMGiY7wqmny0-p3tX0FyYLKVonll2rYgTGHJf7RYNWbuBL8byEgzQYsDLRbSySOZwY3pgrK8XeRFL2fqN4uadKIWBkdMILAZR6OzXJv3pUGvk3crfGBQPvZrM2bIwxVGsHHKbDScbbPWbrQ)
+[https://lh6.googleusercontent.com/ikebMGiY7wqmny0-p3tX0FyYLKVonll2rYgTGHJf7RYNWbuBL8byEgzQYsDLRbSySOZwY3pgrK8XeRFL2fqN4uadKIWBkdMILAZR6OzXJv3pUGvk3crfGBQPvZrM2bIwxVGsHHKbDScbbPWbrQ](https://lh6.googleusercontent.com/ikebMGiY7wqmny0-p3tX0FyYLKVonll2rYgTGHJf7RYNWbuBL8byEgzQYsDLRbSySOZwY3pgrK8XeRFL2fqN4uadKIWBkdMILAZR6OzXJv3pUGvk3crfGBQPvZrM2bIwxVGsHHKbDScbbPWbrQ)
 
 For example, suppose A, B, and C all choose to lock up 1000 HNT:
 
@@ -76,9 +76,9 @@ Note that durations are defined in blocks on the basis of the settlement time of
 
 Note that only proposals with code attached can be formally voted on. There are broadly three ways to use voting power within the Helium DAO:
 
-1. **Protocol Score Curation Users can choose to delegate their veHNT in the name of an existing subDAO, thereby positively impacting that subnetwork’s protocol score. This leads to increased emissions for the DNP subDAO treasury reserve, and ultimately increases the value of the corresponding DNT. This is effectively a mechanism to allow stakeholders to signal ongoing support for subnetworks.veHNT stakers towards a DNP are rewarded a fixed 6% of DNT emissions every epoch. This is fixed across DNPs and cannot be changed by the DNP. The reason to keep this fixed is to avoid a scenario where DNPs compete to give more rewards to veHNT stakers at the expense of hotspot hosts.**
+1. **DAO Utility Score Curation Users can choose to delegate their veHNT in the name of an existing subDAO, thereby positively impacting that subnetwork’s DAO utility score. This leads to increased emissions for the DNP subDAO treasury reserve, and ultimately increases the value of the corresponding DNT. This is effectively a mechanism to allow stakeholders to signal ongoing support for subnetworks.veHNT stakers towards a DNP are rewarded a fixed 6% of DNT emissions every epoch. This is fixed across DNPs and cannot be changed by the DNP. The reason to keep this fixed is to avoid a scenario where DNPs compete to give more rewards to veHNT stakers at the expense of hotspot hosts.**
 2. **New Subnetwork Proposals Proposals for new decentralized network protocol to become a part of the Helium Network as a subDAO must be voted on by veHNT.**
-3. **Helium DAO Proposals All proposals that impact global Helium DAO parameters including protocol score parameters, subDAO structuring, communications architecture etc. can be voted on through this process.**
+3. **Helium DAO Proposals All proposals that impact global Helium DAO parameters including DAO utility score parameters, subDAO structuring, communications architecture etc. can be voted on through this process.**
 
 Further details on the vote-escrow weighted governance model can be found in [Curve governance documentation](https://resources.curve.fi/governance/understanding-governance) and [https://docs.tribeca.so/electorate/voting-escrow](https://docs.tribeca.so/electorate/voting-escrow).
 
@@ -94,7 +94,7 @@ The success of the Helium network is contingent on its ability to find real worl
 
 Each protocol would be assigned a ‘score’ per epoch:
 
-![https://lh3.googleusercontent.com/dGtzz-mdiKGBFdT-YjOaEm4UgHoffE-WDl-Vrp7WRF8GgCYdmvVKBBSA_SmDZ1sAHNllPjg7jFHNsWZ5kwxprYhoXxC4JKQHIVHmxxeLgHeet8JTsQOcwCUxr2MxomiK-KokUR0-5gaCDivqrQ](https://lh3.googleusercontent.com/dGtzz-mdiKGBFdT-YjOaEm4UgHoffE-WDl-Vrp7WRF8GgCYdmvVKBBSA_SmDZ1sAHNllPjg7jFHNsWZ5kwxprYhoXxC4JKQHIVHmxxeLgHeet8JTsQOcwCUxr2MxomiK-KokUR0-5gaCDivqrQ)
+![https://lh6.googleusercontent.com/K-UeUtSvHv-X0am6W0yTNOcVAr2H10KV8JwTrTH3OwJHB83-7cnnHvnQVAopplLcJrCWDpNVufxD4w1WXypRx84d0UvPc8_bGr74ofeaQVO8H9w5M_gO8wXP63ljCEf53uOI6lO48VOTFKYcSA](https://lh6.googleusercontent.com/K-UeUtSvHv-X0am6W0yTNOcVAr2H10KV8JwTrTH3OwJHB83-7cnnHvnQVAopplLcJrCWDpNVufxD4w1WXypRx84d0UvPc8_bGr74ofeaQVO8H9w5M_gO8wXP63ljCEf53uOI6lO48VOTFKYcSA)
 
 where
 
@@ -110,7 +110,7 @@ Once each protocol has a score, the % of total Epoch PoC rewards assigned to eac
 
 Please refer to this model [spreadsheet](https://docs.google.com/spreadsheets/d/1up7-jJt3eM5Fn9K0NTnDA50ZzIDqV-bznbnwej1y3R4/edit#gid=2099369137) to review the parameters of this model.
 
-Most importantly, this model gives us a framework to add new DNPs in the future without having to design reward splits on an ad-hoc basis. It is critical to note that if a subDAO is found to be artificially inflating core metrics to manipulate the protocol score, that subDAOs HNT reserves can be slashed via governance at the Helium Network layer.
+Most importantly, this model gives us a framework to add new DNPs in the future without having to design reward splits on an ad-hoc basis. It is critical to note that if a subDAO is found to be artificially inflating core metrics to manipulate the DAO utility score, that subDAOs HNT reserves can be slashed via governance at the Helium Network layer.
 
 ### **Key definitions and calculations for Omni-Protocol PoC incentive model**
 
@@ -130,7 +130,7 @@ DNT are issued according to a predefined **emission schedule**. This must be def
 
 All subDAOs have full control over DNT issuance parameters including overall emission schedules, inflation rates, bonus carve-outs, and stakeholder distributions (hotspots, oracles, etc.). The only exception to this is the fixed 6% DNT rewards going to veHNT stakers. The reason to keep this fixed is to avoid a scenario where DNPs compete to give more rewards to veHNT stakers at the expense of hotspot hosts.
 
-In each epoch, DNP subDAOs under the Helium network earn some amount of HNT as per the protocol score defined in the previous section. This HNT is deposited directly into the DNP subDAO treasury reserve.
+In each epoch, DNP subDAOs under the Helium network earn some amount of HNT as per the DAO utility score defined in the previous section. This HNT is deposited directly into the DNP subDAO treasury reserve.
 
 HNT deposited to the treasury reserve can only be used to provide buy-side liquidity to DNT holders. In practice, the subDAO treasury reserve provides a continuous resting bid on an orderbook for DNT/HNT liquidity.
 
@@ -184,7 +184,7 @@ Every epoch, DNP Oracles calculate each miners’ rewards based on proof of cove
 
 *HNT Emissions Calculation to subDAO Treasury Reserve*
 
-At the end of a given epoch, the HNT emissions contract at the Helium DAO L1 calculates the amount of HNT to reward each DNP as per the protocol score in that given epoch. The emissions contract subsequently distributes the determined amount of HNT to the DNP subDAO treasury which is controlled by the DNP oracles.
+At the end of a given epoch, the HNT emissions contract at the Helium DAO L1 calculates the amount of HNT to reward each DNP as per the DAO utility score in that given epoch. The emissions contract subsequently distributes the determined amount of HNT to the DNP subDAO treasury which is controlled by the DNP oracles.
 
 *Oracle Process*
 
@@ -211,4 +211,4 @@ We set the following economic constraints in order to ensure an equilibrium with
 
 # **Open Questions**
 
-1. What does a migration process look like for the existing implementation onto the
+1. What does a migration process look like for the existing implementation onto the new structure outlined?
