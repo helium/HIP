@@ -7,366 +7,160 @@
 - Tracking Issue: https://github.com/helium/HIP/issues/338
 - Status: Draft
 
-# Summary
-[summary]: #summary
+**Summary**
 
-This proposal includes a specification of the LoRaWAN Decentralized Network Protocol
-as per the DAO model and L2 implementation outlined in [HIP 51][hip51].
+In [HIP 51: Helium DAOs](https://docs.google.com/document/d/1ibFE2DI8fkd4uOSnIT00C7JiRYsZExg164_KtDzz-YI/edit#), we provide a general structure for onboarding new Decentralized Network Protocols (DNPs) to the broader Helium Network, with mechanisms in place to ensure that protocol-specific attributes such as proof-of-coverage rules and data transfer pricing are within control of the DNT DAOs.
 
-In HIP 51, we provide a general structure for onboarding new DNPs to the broader
-Helium Network, with mechanisms in place to ensure that protocol-specific
-attributes such as Proof-of-Coverage rules, data credits pricing, and block
-validation are within control of the emergent DNT DAO.
+In this proposal, we specify the implementation of the structure proposed through a detailed onboarding proposal for the Helium LoRaWAN Network. We propose initial configurations of the Helium LoRaWAN economics layer as well as governance mechanisms within the DAO through Helium LoRaWAN (HLT) token voting.
 
-In this proposal, we specify the implementation of the structure proposed
-through a detailed onboarding proposal for the LoRaWAN Network. We propose
-initial configurations of the LoRaWAN economics layer as well as governance
-mechanisms within the DAO through LoRaWAN (LRW) token voting.
+# **Stakeholders**
 
-# Stakeholders
-[stakeholders]: #stakeholders
+This proposal impacts all current and future participants in the Helium LoRaWAN Community.
 
-This proposal impacts all current and future participants in the Helium LoRaWAN
-Community.
+# **LoRaWAN subDAO core jobs-to-be-done**
 
-# Detailed Description
-[detailed-description]: #detailed-description
+We proposed in HIP 51 that each DNP subDAO operate as a sovereign economics and governance layer. The Helium LoRaWAN subDAO has six core functions
 
-We proposed in HIP 51 that each DNP subDAO operate as a sovereign economics and
-governance layer. The LoRaWAN subDAO has five core functions
+1. **Emissions Curve** The HeliumLoRaWAN subDAO handles all HLT emissions, mining rewards, and programmatic treasury operations. The economic responsibilities around this involve managing the token issuance and distribution.
+2. **Treasury Reserve DNT Market Making Curve** subDAOs have full control over the prices at which the subDAO treasury provides quotes to holders of DNT who wish to redeem their holdings for underlying HNT. This can be a flat bid or a more complex curve.**
+3. **Oracle Specification** perform work including verifying proof of coverage and data transfer. The oracles are also responsible for distributing DNT mining rewards to the appropriate parties. Responsibilities here include definition of oracle software, minimum stake amounts, and rewards for participation.
+4. **Data Transfer Mechanism and Pricing** Data transfer within subnetworks occurs via the process of procuring and burning data credits in the name of the hotspot or set of hotspots that provide coverage. Responsibilities here include Organizationally Unique Identifier (OUI) registration, state channel creation, and bandwidth capacity per data credit definition.
+5. **Proof-of-Coverage Mechanism** Most subnetworks will utilize a Proof of Coverage algorithm to verify on an ongoing basis that hotspots are accurately representing their location and the wireless network coverage they are creating from that location. Responsibilities here include Proof-of-Coverage challenge construction, target selection, reward scaling, and verification. Note that subnetworks can choose to skip this mechanism, but must provide reasoning in their subDAO proposal as to why it is not necessary for proper functioning of the subnetwork.
+6. **Governance Structure** subDAOs retain control over critical components of the network, and subDAO members can propose and vote for changes to core parameters and mechanisms. Responsibilities here include specification of a formal on-chain voting process that is resistant to attacks.
 
-1. *Economics*: The LoRaWAN subDAO handles all Programmatic Treasury operations, and by
-   extension all LRW emissions to hotspots and purchases or sales from
-   third-parties. The economic responsibilities around this involve parameter
-   selection for the curve and all associated fees, as well as liquidity risk
-   management.
+The remainder of this proposal defines initial values for the subDAO given the aforementioned set of responsibilities.
 
-2. *Validator Operations*: LoRaWAN Validators perform consensus group work
-   including verifying Proof-of-Coverage and adding new blocks to the Lorawan L2
-   chain. Responsibilities here include definition of Validator software,
-   minimum stake amounts, and rewards for participation.
+### *Emissions Curve*
 
-3. *Proof-of-Coverage Mechanisms*: The LoRaWAN network utilizes a Proof of
-   Coverage work algorithm to verify on an ongoing basis that hotspots are
-   accurately representing their location and the wireless network coverage they
-   are creating from that location. Responsibilities here include
-   Proof-of-Coverage challenge construction, target selection, reward scaling,
-   and verification.
+There will be a max supply of 200B HLT.
 
-4. *Data Transfer Mechanism and Pricing*: Data transfer across the LoRaWAN
-   network occurs via the process of procuring and burning data credits in the
-   name of the hotspot or set of hotspots that provide coverage.
-   Responsibilities here include Organizationally Unique Identifier (OUI)
-   registration, state channel creation, and bandwidth capacity per data credit
-   definition.
+The proposal is to have halvenings of HLT issuance every 2 years aligned with the HNT issuance halvenings. This requires a 1 year “stub” period from August 1, 2022 to August 1, 2023. We also propose a veHLT airdrop to Helium Validators as of the date of launch. This airdrop is required to transition the current Helium Validators into LoRaWAN subDAO Oracles.
 
-5. *Governance*: The LoRaWAN subDAO retains full control over all components of
-   the network, and DAO members can propose and vote for changes to core
-   parameters and mechanisms. Responsibilities here include specification of a
-   formal on-chain voting process that is resistant to attacks.
+For clarity, the emission schedule is as follows:
 
-The remainder of this proposal defines initial values for the subDAO given the
-aforementioned set of responsibilities.
+[Untitled](https://www.notion.so/95976353ebc54565a6d58bd85c89bfd4)
 
-## Economics Specification
+At launch of the LoRaWAN subnetwork, 2.5% of the total supply of HLT tokens (5B tokens) are issued and airdropped to oracles and hotspots on the existing LoRaWAN network. This airdrop is intended to bootstrap the network, and is distributed to oracles and validators in the following proportion:
 
-In the notation provided below, P represents Price and S represents Supply. The
-quote currency is LRW (LoRaWAN Token) and the base currency is HNT (Helium
-Token).
+Oracles: 50% of 5B tokens, distributed in proportion to HNT staked at the snapshot
 
-In HIP 51, we proposed that programmatic treasuries are designed to be one-way i.e. only DNT token holders can interact with the programmatic treasury with intent to sell. Network participants cannot purchase DNT tokens against HNT, although non-profit actors like DeWi can “donate” tokens into the programmatic treasury without receiving any assets in return. The intended effect of this is to mitigate speculation that could be harmful for DNP miners.
+Hotspots: 50% of 5B tokens, distributed to all active hotspots (rewarded in the past 30 days) and not on the denylist at the time of snapshot
 
-We propose that the LoRaWAN Programmatic Treasury issuance formula is given by 
+At the end of a given epoch, the LoRaWAN subnetwork oracles relay start balance, current balance, and total amount of HLT Data Credits created and relay to the L1 HNT emissions contract. The emissions contract subsequently distributes the determined amount of HNT as per the Protocol Score to the LoRaWAN subDAO multi-signature wallet, the addresses of which comprise the set of oracles of the LoRaWAN Network.
 
-![P = S^{1.1} \times
-10^{-8}](https://latex.codecogs.com/png.image?\dpi{110}%20P%20=%20S^{1.1}%20\times%2010^{-8})
+The subDAO operations fund is intended to allow the DNP to perform bespoke operations to create and sustain network growth. The primary use case of the operations fund is to fund all state transition transaction fees to the L1, but can be deployed in any manner of ways as per subDAO governance. Such incentives could include
 
-For a given amount of HNT deposited to or withdrawn from the LoRaWAN bonding
-curve, the increase or decrease in LRW supply and price is given by resulting
-change in the area under the curve. The integral is given by
-
-![\int_{S_a}^{S_b} S^{1.1}\times 10^{-8} = \frac{1}{2.1\times10^8}(S_b^{2.1} -
-S_a^{2.1})](https://latex.codecogs.com/png.image?\dpi{110}%20\int_{S_a}^{S_b}%20S^{1.1}\times%2010^{-8}%20=%20\frac{1}{2.1\times10^8}(S_b^{2.1}%20-%20S_a^{2.1}))
-
-The curve looks as follows:
-
-![lrw token price][lrw-token-price]
-
-For an approximation of this curve in terms of HNT deposited and issuance of
-newly minted LRW tokens, the following table and graph are helpful:
-
-| Supply of LoRaWAN Tokens | Price of LoRaWAN Tokens in HNT | HNT in Curve         |
-| ------------------------ | ------------------------------ | -------------------- |
-| 1                        | 0.00000001                     | 0.000000004761904762 |
-| 101                      | 0.000001602335708              | 0.00007706471741     |
-| 201                      | 0.000003415982705              | 0.0003269583446      |
-| 301                      | 0.000005326269597              | 0.0007634319756      |
-| 401                      | 0.00000730228552               | 0.001394388806       |
-| 501                      | 0.000009328707981              | 0.00222556319        |
-| ...                      |                                |                      |
-| 1001                     | 0.00001997457213               | 0.009521212716       |
-| ...                      |                                |                      |
-| 5001                     | 0.0001172094262                | 0.2791258765         |
-
-![lrw token supply][lrw-token-supply]
-
-At the end of a given epoch, the L1 HNT emissions contract **performs a tally of
-the data credits** transferred across the LoRaWAN Network. The emissions contract
-subsequently distributes the determined amount of HNT to **the LoRaWAN subDAO
-multi-signature wallet**, the addresses of which comprise the set of Validators of
-the LoRaWAN Network.
-
-There is a 0.3% transaction fee on all inflows and outflows within the programmatic treasury. For example, if emissions into the curve in a given epoch amount to 100 HNT, 99.7 HNT worth of LRW tokens will be allocated for stakeholder rewards (miners, validators) and 0.3 HNT worth of LRW tokens will be placed into a **subDAO reserve**.
-
-The subDAO reserve is intended to allow the DNT to perform bespoke operations to create and sustain network growth. The primary use case of the reserve is to fund all state transition transaction fees to the L1, but can be deployed in any manner of ways as per subDAO governance. Such incentives could include
- 
-1. One-time DNT or HNT bonuses for hotspots providing continuous coverage in new regions deemed to be economically valuable by governance 
-
+1. One-time DNT bonuses for hotspots providing continuous coverage in new regions deemed to be economically valuable by governance
 2. Bonus rewards for hotspots and OUIs that are consistent in network activity and meet certain good actor conditions
 
-3. Surge-pricing style dynamic multipliers based on data transfer activity for individual regions
+# Surge-pricing style dynamic multipliers based on data transfer activity for individual regions
 
-4. Bespoke incentives for validators and manufacturers on the basis of changing network demands
+# Bespoke incentives for oracles and manufacturers on the basis of changing network demands
 
+Once emissions are distributed to hotspots and oracles, HLT owners can either redeem their holdings for underlying HNT against the treasury reserve automatically, hold for redemptions at a later time, or lock up their HLT for veHLT in a process similar to the veHNT mechanism described in HIP 51.
 
-DAOs are responsible for managing risk within their protocols in that they define programmatic treasury issuance formulas and set transaction fees. They inherently handle the implied effect of DNT market capitalization 
+A user’s veHLT lockup power is determined by 1) the amount of HLT they lock up with, and 2) the amount of time they commit to locking up their HLT. The structure applies a linear multiplier of time to the amount of HNT locked up in the voting contract. For the maximum period of four years, users receive 100x the veHLT. For the minimum period of six months, users receive 1x the veHLT. Note that veLRW is **non-transferable**, and represented as a non-fungible coupon in the user’s HLT address.
 
-Note that a given DNP subDAO is not necessarily required to distribute the entirety of HNT it receives into the programmatic treasury, or distribute the entirety of DNTs minted in the process to stakeholders. The subDAO can manage and allocate HNT inflows from the overall network as it sees fit in order to support growth in bespoke areas through incentives for new stakeholders. 
+Users can choose to delegate their veHLT for three core purposes:
 
-## Validator Operations
+1. Hotspot Self-Staking: Hotspots are able to delegate veHLT in their own name in order to increase the frequency of challenges to that hotspot.
+2. Oracle Delegation: veHLT holders can delegate their holdings to oracles as per the reward agreements set in order to earn future emissions.
+3. Governance: veHLT can be used to participate in subDAO proposals that impact core protocol parameters, mechanisms, and operating procedures.
 
-LoRaWAN Validators confirm transactions and add blocks to the Lorawan L2 chain.
-They serve state data around Proof-of-Coverage challenges and data transfer
-events to light and data only hotspots.
+### *Treasury Reserve DNT Market Making Curve*
 
-Validation is performed by a set of rotating nodes known as the consensus group,
-which verifies transactions and ordering prior to forming a block and proposing
-it to the L2 chain. Consensus groups are elected once per epoch, and the number
-of members is given by the num_consensus_members chain variable (currently set
-at 40).
+The LoRaWAN subDAO sets the programmatic treasury formula in order to provide quotes to holders of DNT who wish to redeem their holdings for underlying HNT. Note that at launch of the subnetwork prior to any HNT emissions from the minting contract as per the protocol score, the Helium Foundation will make a donation of 50,000 HNT into the subDAO treasury reserve in order to collateralize the airdrop specified in the emissions section.
 
-The Helium Consensus Protocol is based on a variant of the HoneyBadgerBFT
-(HBBFT) protocol. HBBFT is based on a body of research originally kicked off by
-Andrew Miller and the team at the University of Illinois, Urbana-Champaign.
+We propose a constant function market making formula for the LoRaWAN subDAO programmatic treasury defined as per the following specification.
 
-HBBFT is an asynchronous atomic broadcast protocol designed to enable a group of
-known nodes to achieve consensus over unreliable links. In Helium’s
-implementation, a consensus group of [elected Validators][elected-validators]
-receives encrypted transactions as inputs and proceeds to reach common agreement
-on the ordering of these transactions before forming a block and adding it to
-the blockchain.
+$[https://lh6.googleusercontent.com/nzEaWc5B055nckKgEIv-kFyNwP9dG3O2pZIfA_yJlwM6Q4XpqP-RTWA9lehb1yXRV7aRD-U0Isq_0p8hYHEyzDU_J6UHOB_sk5skER-k04VGsQ3DrDeKGnJdiWw86zWvHNX8qWCA](https://lh6.googleusercontent.com/nzEaWc5B055nckKgEIv-kFyNwP9dG3O2pZIfA_yJlwM6Q4XpqP-RTWA9lehb1yXRV7aRD-U0Isq_0p8hYHEyzDU_J6UHOB_sk5skER-k04VGsQ3DrDeKGnJdiWw86zWvHNX8qWCA)
 
-HBBFT relies on a scheme known as threshold encryption. Using this scheme,
-transactions are encrypted using a shared public key, and are only decryptable
-when the elected consensus group works together to decrypt them. The usage of
-threshold encryption enables the Helium Consensus Protocol to achieve
-censorship-resistant transactions.
+At epoch T, we denote the value of H, S, and P as HT, ST,  and PT. The programmatic treasury formula at epoch T is a function in two variables, HT, ST defined as follows:
 
-At the end of each epoch, mining rewards are distributed by the consensus group
-to the wallet addresses that have earned them.
+$[https://lh3.googleusercontent.com/7P_5Bha1KNPmQl2wWBHPoB6ojHfFKdnSaD208DR1vFUE2ybnAopqA6X-sVMzhHqiH5DeeDDKMY5hxKOe74j_PVcEBCoXjwetlytpeS241lgrEy_TmapfPiWUjEzyhp72kyvLiEJA](https://lh3.googleusercontent.com/7P_5Bha1KNPmQl2wWBHPoB6ojHfFKdnSaD208DR1vFUE2ybnAopqA6X-sVMzhHqiH5DeeDDKMY5hxKOe74j_PVcEBCoXjwetlytpeS241lgrEy_TmapfPiWUjEzyhp72kyvLiEJA)
 
-Each one of the above activities is recorded in a block using the reward
-transaction. At the completion of each epoch, all the individual reward
-transactions are grouped in a rewards transaction at which point all HNT mined
-in that epoch are distributed.
+For example, consider at epoch #125, the total outstanding supply of tokens for the LoRaWAN subDAO is 3.275B HLT and the total amount in the treasury reserve is 2M HNT. The programmatic treasury formula is given as follows
 
-## Proof-of-Coverage Specification
+$[https://lh6.googleusercontent.com/J_34HUWBuZl_YxNOnMv_fVkgvJKVeWtNLdZ9eZfKjYOFVjvv9LqjyB-pMmBaqpgFykNb4YcKfE7CuHDC6aX1WQORR2vlyyg4hyb_38ACZqDMjUrwVKHUhYeZYVj1QYceVwL-z3gR](https://lh6.googleusercontent.com/J_34HUWBuZl_YxNOnMv_fVkgvJKVeWtNLdZ9eZfKjYOFVjvv9LqjyB-pMmBaqpgFykNb4YcKfE7CuHDC6aX1WQORR2vlyyg4hyb_38ACZqDMjUrwVKHUhYeZYVj1QYceVwL-z3gR)
 
-The LoRaWAN subDAO is required to constantly interrogate hotspots using the
-Proof-of-Coverage challenge mechanism to ensure that hotspots are representing
-their locations accurately. The net results of each of these challenges are
-relayed to the Helium L1 after being validated by their respective consensus
-groups.
+This implies that at epoch #125, any number of HLT tokens can be redeemed at a unit price of 0.00061068702 HNT.
+
+Now consider at epoch #225, the total outstanding supply of tokens for the LoRaWAN subDAO is 3.5B HLT and the total amount in the treasury reserve is 2.025M HNT. The programmatic treasury formula is given as follows
+
+$[https://lh5.googleusercontent.com/JzoHFD4OcK-YbK8aqiR2VjsBtN8mxRK6oEae_57KhoeoXp1TGKbRWGF7NkfRByITdTcfEAAkPSkKPMfz604aTcqhNlBJ2o7YJ6TjpAUxvGJSBcUgyH4o8iDmJRQ8ejcqaa8kvK9e](https://lh5.googleusercontent.com/JzoHFD4OcK-YbK8aqiR2VjsBtN8mxRK6oEae_57KhoeoXp1TGKbRWGF7NkfRByITdTcfEAAkPSkKPMfz604aTcqhNlBJ2o7YJ6TjpAUxvGJSBcUgyH4o8iDmJRQ8ejcqaa8kvK9e)
+
+This implies that at 100 epochs after #125 at #225, any number of HLT tokens can be redeemed at a unit price of 0.00057857142 HNT.
+
+In epoch #225, the total outstanding supply of HLT has increased, and given inflows to the treasury reserve in HNT the resulting unit price has decreased. If the rate at which HNT flows into the treasury reserve outpaces the emission of HLT tokens, the unit price of HLT increases.
+
+Between epoch #125 and #225, a similar repricing takes place in each individual epoch given the amount of HNT in the treasury reserve and the outstanding supply of HLT tokens.
+
+It is possible to represent the programmatic treasury formula as a surface in euclidean space using the following vector notation in two variables:
+
+$[https://lh3.googleusercontent.com/PNzok9G-6EnVEVVWri06NcbbRffoF_f9M5eHo9ain25TT4OoG9zAFnIAowTtWqTNyI9RFC98lICBCONmQqS6uqlQXpDcXXzieywg1IXizx9YgLpzAtOUGTvDXde5Qb0U6ds-7smt](https://lh3.googleusercontent.com/PNzok9G-6EnVEVVWri06NcbbRffoF_f9M5eHo9ain25TT4OoG9zAFnIAowTtWqTNyI9RFC98lICBCONmQqS6uqlQXpDcXXzieywg1IXizx9YgLpzAtOUGTvDXde5Qb0U6ds-7smt)
+
+Where
+
+$[https://lh6.googleusercontent.com/UqiNgjY8LVN6lzT1zgM4D-J3GJfxAeYomOjFirG4YION8tF0ZvrJmWQWKl2kL6XTAPWUhGMJnv_SZHIhXyvST7TJy4vm9AuRUy_a686QbT1gLoHpwhTZauml3G20FBw_qM1XCeX6](https://lh6.googleusercontent.com/UqiNgjY8LVN6lzT1zgM4D-J3GJfxAeYomOjFirG4YION8tF0ZvrJmWQWKl2kL6XTAPWUhGMJnv_SZHIhXyvST7TJy4vm9AuRUy_a686QbT1gLoHpwhTZauml3G20FBw_qM1XCeX6)
+
+Clarifications:
+
+- The supply of HLT tokens for the purposes of calculating the HLT/HNT price includes all locked veHLT tokens.
+- The subDAO updates the limit order price every epoch **before** any new HLT are distributed out to stakeholders for their activity during that epoch.
+
+### *Oracle Operations*
+
+LoRaWAN oracles confirm proof of coverage, data transfer, and add blocks to the LoRaWAN subnetwork. They serve state data around Proof-of-Coverage challenges and data transfer events to light and data only hotspots.
+
+Validation is performed by a set of rotating nodes known as the consensus group, which verifies transactions and ordering prior to forming a block and proposing it to the subnetwork chain. Consensus groups are elected once per epoch, and the number of members is given by the num_consensus_members chain variable (currently set at 43).
+
+*The Helium Consensus Protocol is based on a variant of the HoneyBadgerBFT (HBBFT) protocol. HBBFT is based on a body of research originally kicked off by Andrew Miller and the team at the University of Illinois, Urbana-Champaign.*
+
+*HBBFT is an asynchronous atomic broadcast protocol designed to enable a group of known nodes to achieve consensus over unreliable links. In Helium’s implementation, a consensus group of [elected Validators](https://explorer-beta.helium.com/validators) receives encrypted transactions as inputs and proceeds to reach common agreement on the ordering of these transactions before forming a block and adding it to the blockchain.*
+
+*HBBFT relies on a scheme known as threshold encryption. Using this scheme, transactions are encrypted using a shared public key, and are only decryptable when the elected consensus group works together to decrypt them. The usage of threshold encryption enables the Helium Consensus Protocol to achieve censorship-resistant transactions.*
+
+*At the end of each epoch, mining rewards are distributed by the consensus group to the wallet addresses that have earned them.*
+
+*Each one of the above activities is recorded in a block using the reward transaction. At the completion of each epoch, all the individual reward transactions are grouped in a rewards transaction at which point all HNT mined in that epoch are distributed.*
+
+veHLT holders can choose to delegate their holdings to oracles of their choice or run their own oracles.
+
+### *Proof-of-Coverage Specification*
+
+The LoRaWAN subDAO is required to constantly interrogate hotspots using the Proof-of-Coverage challenge mechanism to ensure that hotspots are representing their locations accurately. The net results of each of these challenges are relayed to the Helium L1 after being validated by their respective consensus groups.
 
 LoRaWAN Challenges involve three distinct roles:
 
-1. Challenger - The Hotspot that constructs and issues the POC Challenge.
-   Hotspots issue challenges approximately once per every 360 blocks. We propose
-   moving this role to LoRaWAN Validators.
-2. Transmitter - Sometimes called "Challengee". This Hotspot is the target of
-   the POC challenge and is responsible for transmitting (or "beaconing")
-   challenge packets to potentially be witnessed by geographically proximate
-   Hotspots.
-3. Witness - Hotspots that are geographically proximate to the Transmitter and
-   report the existence of the challenge packet after it has been transmitted.
+1. Challenger - The Hotspot that constructs and issues the POC Challenge. Hotspots issue challenges approximately once per every 360 blocks. We propose moving this role to LoRaWAN oracles.
+2. Transmitter - Sometimes called "Challengee". This Hotspot is the target of the POC challenge and is responsible for transmitting (or "beaconing") challenge packets to potentially be witnessed by geographically proximate Hotspots.
+3. Witness - Hotspots that are geographically proximate to the Transmitter and report the existence of the challenge packet after it has been transmitted.
 
-HIP 15 and 17 defined rules for scaling rewards to hotspots based on placement
-as per target density of hotspots in a given geographic area as well as number
-of witnesses to challenges participated in.
+### *Data Transfer and Pricing Specification*
 
-Once the Challenger has the complete set of receipts from the POC Witnesses and
-Transmitter, or the elapsed time since the challenge was issued has passed the
-upper time bound, the POC Challenge is considered complete. At this point, the
-Challenger then submits the proof receipt as a transaction to the blockchain to
-be verified by the current consensus group. Because the steps taken by the
-Challenger to construct and complete the proof are deterministic and easily
-reproduced, members of the consensus group can verify the legitimacy of the
-proof. Specifically the Challenger reveals the secret ephemeral key it used for
-both obtaining the original PoC request and for encrypting each layer of the
-challenge packet. This crucial information, which has been hidden until the
-receipt is published, allows the re-creation of the deterministic entropy.
+Data Credits are utilized in asserting new hotspots and their location on the chain, registering OUIs and associated devices, and as payment for packet transfers.
 
-HIP-17 specified a rewards mechanism to incentivize hotspots in distinct locations representing a larger area of network coverage as opposed to devices in close proximity to each other. In order to incentivize greater land coverage of hotspots in new areas, we propose that for each new H7 hex in which a set of hotspots is deployed, a one-time 1500 LRW bonus is allocated for the first hotspot that successfully responds to 150 consecutive challenges. Note that this bonus is funded by the subDAO reserve.Note that this bonus is funded by the subDAO reserve. If the hotspot goes offline at any time prior to the completion of 150 challenges, the counter is reset and any other hotspot may complete the task to receive the bonus.
-For example, consider three hotspots deployed simultaneously in a hex that has not previously been covered by the LoRaWan network. Each hotspot to be deployed in that hex is eligible to receive the bonus. 
-If there is an interruption in coverage in two of the hotspots at a time prior to the completion of the 150 consecutive challenges, the remaining hotspot receives the bonus. 
-If there is an interruption in coverage in one of the hotspots at a time prior to the completion of the 150 consecutive challenges, the remaining hotspots split the bonus equally. If all three hotspots complete the 150 consecutive challenges, they split the bonus equally.
-If all three hotspots experience interruptions prior to the completion of the challenge, the counter resets and the first hotspot to complete 150 consecutive challenges receives the bonus. 
+With the activation of [HIP 10](https://github.com/helium/HIP/blob/master/0010-usage-based-data-transfer-rewards.md), hotspot operators receive HNT emissions up to 32.5% per epoch and are rewarded at 1:1 rate based on dollar value of Data Credits transfers as per the [HNT Price Oracle](https://docs.helium.com/blockchain/oracles)**.** This proposal scales Data Credits rewards based on actual activity on the network, and disincentivizes arbitrageurs from taking advantage of more arbitrary distribution mechanisms for rewards.
 
+# [HIP 37](https://github.com/helium/HIP/blob/master/0037-omni-protocol-poc.md) proposed the removal of a division between proof-of-coverage and data credits rewards entirely at the date of the second HNT halving (8/1/2023). We propose this removal happen from the launch of the Lorawan subDAO. As shown in the emissions schedule, this is reflected in the HLT subDAO.
 
-## Data Transfer and Pricing Specification
-
-Data Credits are utilized in asserting new hotspots and their location on the
-chain, registering OUIs and associated devices, and as payment for packet
-transfers.
-
-With the activation of [HIP 10][hip10], hotspot operators receive HNT emissions
-up to 32.5% per epoch and are rewarded at 1:1 rate based on dollar value of Data
-Credits transfers as per the [HNT Price Oracle][oracles]. This proposal scales
-Data Credits rewards based on actual activity on the network, and
-disincentivizes arbitrageurs from taking advantage of more arbitrary
-distribution mechanisms for rewards.
-
-[HIP 37][hip37] proposed the removal of a division between Proof-of-Coverage and
-data credits rewards entirely at the date of the second HNT halving (8/1/2023).
-We propose this removal happen from the launch of the LoRaWAN subDAO.
-
-We propose that the LoRaWAN DAO distributes LRW in the following proportion
-after minting the given number of tokens per epoch if the Notional Value of Data
-Credits burned (X% of Hotspot emissions) across the LoRaWAN Network is Less than
-Market Value of LRW Tokens Allocated to Hotspots/Validators.
-
-![lrw distribution below market value][lrw-distribution-below-market-value]
-
-We propose that the LoRaWAN DAO distributes LRW in the following proportion
-after minting the given number of tokens per epoch if the Notional Value of Data
-Credits Transfer across the LoRaWAN Network is Greater than Market Value of LRW
-Tokens Allocated to Hotspots.
-
-![lrw distribution above market value][lrw-distribution-above-market-value]
-
-Note that all manufacturers within the LoRaWAN networksubDAO must stake a minimum of 10,000 HNT in order to be whitelisted to receive rewards. The intention of this requirement is to increase the security of the network. In exchange for this stake, manufacturers earn 2% of LRW mined by hotspots they sold and maintain. The intention is to create incentives for manufacturers to build high quality hotspots which maximize mining output and to continue to support previously sold hotspots into the future. If at any point, a manufacturer gives ownership of maintenance and firmware upgrades to a third party, all future manufacturer rewards flow to this new entity. 
-
-At present, every 24 bytes sent in a packet cost 1 DC, priced at $0.00001. Data
-Credits are generated by burning the requisite amount of HNT as per the Helium
-price oracle.
+At present, every 24 bytes sent in a packet cost 1 DC, priced at $0.00001. Data Credits are generated by burning the requisite amount of HNT as per the Helium price oracle.
 
 The transaction is as follows:
 
 1. A Miner receives a packet and determines who it belongs to
-2. The Miner reaches the appropriate Helium LoRaWAN Network Server and offers
-   the packet
-3. The Helium LoRaWAN Network Server expresses interest in the packet and
-   accepts delivery
-4. The Miner provides the packet under the promise that the LoRaWAN Network
-   Server will “burn a DC” in the name of the Miner
+2. The Miner reaches the appropriate Helium LoRaWAN Network Server and offers the packet
+3. The Helium LoRaWAN Network Server expresses interest in the packet and accepts delivery
+4. The Miner provides the packet under the promise that the LoRaWAN Network Server will “burn a DC” in the name of the Miner
 
-*Note that it is possible to support both metered and unmetered networks. For an
-unmetered network, an OUI can choose to pay a fixed rate for an indefinite
-period of time which involves the purchase and burn of some number of data
-credits per minute, and attribution to hotspots after consumption occurs pro
-rata network traffic under the unmetered plan.*
+Note that it is possible to support both metered and unmetered networks. For an unmetered network, an OUI can choose to pay a fixed rate for an indefinite period of time which involves the purchase and burn of some number of data credits per minute, and attribution to hotspots after consumption occurs pro rata network traffic under the unmetered plan.
 
-A subDAO governed transaction fee is placed on issuance and redemption of LRW
-tokens on the Programmatic Treasury. This fee is charged in HNT and we propose starting
-it at 0.3% of all transactions. This HNT fee is immediately submitted to the LRW
-Programmatic Treasury.
+### *Governance Specification*
 
-*Note that a given DNP subDAO is not necessarily required to distribute the
-entirety of HNT it receives into the curve, or distribute the entirety of DNTs
-minted in the process to stakeholders. The subDAO can manage and allocate HNT
-inflows from the overall network as it sees fit in order to support growth in
-bespoke areas through incentives for new stakeholders.*
+# LoRaWAN Network is under the control of the subDAO. All subDAO proposals must come attached with code to be approved.
 
-## Governance Specification
+We propose that veHLT governance is constructed in a manner identical to veHNT governance as specified in HIP51.
 
-Every aspect of the LoRaWAN Network is under the control of the subDAO. All
-subDAO proposals must come attached with code to be approved.
+Users can choose to delegate their lockup power in veHLT to all LoRaWAN DAO governance proposals. Proposals are assessed using majority and quorum thresholds defined in veHLT terms, initially proposed to be 67% and 100M HLT respectively.
 
-We propose the following governance mechanism borrowed from HIP-41 in order to
-impose enough of a cost on voting that only committed participants would vote to
-influence the direction of the network, while ensuring that the barrier to entry
-is low enough for all small holders to participate should they choose.
-
-The core primitive of this proposal is “voting power”, the unit of support for
-either side in a given vote.
-
-Network participants can deposit LRW tokens to a “governance staking contract”,
-which are locked and delegated to one or many Validators of their choosing.
-Users have control over the number of tokens they choose to stake, and the
-period they choose to stake them for.
-
-The minimum lockup period is 250,000 blocks (roughly 87 days) and the maximum
-lockup period is 2,500,000 blocks (roughly 870 days). Note that these values can
-be changed retroactively via this governance mechanism.
-
-A user’s voting power is determined by 1) the amount of LRW they vote with, and
-2) the amount of time they commit to locking up their tokens. The structure
-applies a linear multiplier of time to the amount of HNT locked up in the voting
-contract. For the maximum amount of 2,500,000 blocks, users receive 50x the
-voting power. For the minimum amount of a 250,000 block lockup, users receive 1x
-the voting power.
-
-As a simple example, let’s imagine Alice, Bob, and Charlie all have 100 LRW:
-
-1. Alice chooses to lock up her tokens for the minimum required 250,000 blocks,
-   and thus her voting power is 100
-2. Bob commits to locking up his tokens for 1,375,000 blocks, and thus his
-   voting power is 25 * 100 = 2,500
-3. Charlie commits to locking up his tokens for 2,500,000 blocks, and thus his
-   voting power is 50 * 100 = 5,000
-
-![voting power][voting-power]
-
-As the lockup burns down, so does the voting power. For example, if Charlie
-locked up his 100 tokens for 2,500,000 blocks and 1,125,000 blocks have passed
-then Charlie would have 2,500 vote power.
-
-Governance proposals can be called to a formal vote with a minimum of 1,000,000
-voting power (“vote minimum”), and users will be able to participate in each
-vote for a period of 7 days (“voting period”). These thresholds are placed to
-mitigate risk of DDoS attacks, but both parameters will be tunable by this same
-voting process at any time.
-
-Note that the voting power used to call a vote is eligible to vote, so the user
-that calls for a proposal to be voted upon can allocate their stake to either
-side. At the end of the voting period, the governance staking contract looks at
-how many tokens a voter has and how long they are locked for. Voters can always
-extend their lockup period just prior to voting. Locked tokens can vote as many
-times as they want, and all earnings from staking are earned by voters as normal
-staking rewards.
-
-One of the challenges with the locking mechanism proposed here is that most
-participants will wait until the last minute to vote. This is because there is a
-cost—namely, giving up liquidity—to vote. As such, if a vote is going someone’s
-way, they may not want to participate and lock up tokens.
-
-In order to incentivize honest voting and maximal participation, we propose that
-LoRaWAN DAO governance adopt a commit-and-reveal scheme. With this feature,
-votes would be submitted in a concealed fashion. Upon the completion of the
-voting period, we propose a 3 day reveal period in which voters can review the
-results of the vote, including who voted.
-
-Commit-and-reveal can be implemented by having voters hash together their
-address, vote, and salt. Once the reveal period begins, voters can reveal their
-votes by publishing the unhashed data. If voters don’t reveal their vote before
-the reveal period, their vote is not counted.
-
-The result of this should be maximal participation for important decisions
-because voters won’t know whether their vote will matter or not.
-
-# Open Questions
-[open-questions]: #open-questions
-
-1. What does a migration process look like for the existing implementation onto
-   the new structure outlined?
-
-[hip51]: https://github.com/helium/HIP/blob/master/0051-helium-dao.md
-[lrw-token-price]: https://lh5.googleusercontent.com/eXGVDYw39LrYXrkZDw7MHeE3XOdzALq3iSmjaaRE_AzMn1Pm0GGljBdAc5xgJZU45vKn9KMGebNVKF-UoYWhfindhLXlXU00aKyjxU-7VF7yUr9v3sWWd3b5Ie-C-OxQPrdkPKRW
-[lrw-token-supply]: https://lh6.googleusercontent.com/mKQssPALS7ztV7oAKGLDffCx104YGpffvmGMvlaaXa58936ALYkFulvg0rI_8Ym4AMuVnqoWp5zxzs0ohlhrzf_scml-EWII_bcEVG-fXuYVVnbPPvrWtR3ynWEeaNHqc6_I-reG
-[elected-validators]: https://explorer.helium.com/validators
-[hip10]: https://github.com/helium/HIP/blob/master/0010-usage-based-data-transfer-rewards.md
-[oracles]: https://docs.helium.com/blockchain/oracles
-[hip37]: https://github.com/helium/HIP/blob/master/0037-omni-protocol-poc.md
-[lrw-distribution-below-market-value]: https://lh3.googleusercontent.com/j_W1yuRMJS2pr-2dVWtravgfKBdasFU8PxD8cmS_IaUTJrKXbcd5wyuJNPcPnGYtJtuqVIAle8CUyoyRj-5l0FOHbHPmZKivcSMsRJuY0TReUXp1aJWCU2JnqfT1kmZPmeRGFFVm
-[lrw-distribution-above-market-value]: https://lh5.googleusercontent.com/_ptVDTD-lYzqEQJYDU_5iY6Agwnu2bhNJWfarDIQ5xqR5uqoCvv9ooEbtDynkRaN_-7UMZnDlBvJ5mXx5UgSUGLxZJBLyHXusBdEt8QLutil9CmIA1bLZYPv_8eTVaZSaUzaCKY0
-[voting-power]: https://lh5.googleusercontent.com/P1ceqD0x7A6cFUW1KbLuqvjZdmbCKrgeWdgU4LNLbEL-zUBXjy14PReOn-j_bSKO--4CvZdyS1iQxhyHoCJCGA-wlrDp4-DlG84NMJ9SofZhQscrwOfjBwdPRTxB3uqw9VF6GwJF
+Note that only proposals with code attached can be voted on.
