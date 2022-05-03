@@ -1,8 +1,9 @@
 # HIP51: Helium DAO
 
 - Author: [@tjain-mcc](https://github.com/tjain-mcc),
-  [@shayons297](htts://github.com/shayons297),
-  [@jmfayal](https://github.com/jmfayal)
+  [@shayons297](https://github.com/shayons297),
+  [@jmfayal](https://github.com/jmfayal),
+  [@abhay](https://github.com/abhay)
 - Start Date: 2022-01-26
 - Category: Economic / Technical
 - Original HIP PR: [#334](https://github.com/helium/HIP/pull/334)
@@ -66,7 +67,7 @@ Helium operates as a network of networks under HIP 51, and as such requires its 
 
 A user’s voting power is determined by 1) the amount of HNT they lock up with, and 2) the amount of time they commit to locking up their HNT. The structure applies a linear multiplier of time to the amount of HNT locked up in the voting contract. For the maximum amount of four years, users receive 100x the veHNT. For the minimum amount of a six month lockup, users receive 1x the veHNT. Note that veHNT is **fully non-transferable**, and represented as a non-fungible coupon in the user’s HNT address.
 
-![https://lh6.googleusercontent.com/ikebMGiY7wqmny0-p3tX0FyYLKVonll2rYgTGHJf7RYNWbuBL8byEgzQYsDLRbSySOZwY3pgrK8XeRFL2fqN4uadKIWBkdMILAZR6OzXJv3pUGvk3crfGBQPvZrM2bIwxVGsHHKbDScbbPWbrQ](https://lh6.googleusercontent.com/ikebMGiY7wqmny0-p3tX0FyYLKVonll2rYgTGHJf7RYNWbuBL8byEgzQYsDLRbSySOZwY3pgrK8XeRFL2fqN4uadKIWBkdMILAZR6OzXJv3pUGvk3crfGBQPvZrM2bIwxVGsHHKbDScbbPWbrQ)
+![https://lh4.googleusercontent.com/-mE8SN23AZi8gWyUaUfAjgTvhiWlGAfKHgBRYtO9s6mkGDYu1QvIDH98MkXIPVpzLnTddZv-QOOVx3NsQFshnzzSleuGbYa4QsBJZQBZqGIJ1YhRA9yWh2EHdxEBPAZLcInUvAPlCzbOUnlHHg](https://lh4.googleusercontent.com/-mE8SN23AZi8gWyUaUfAjgTvhiWlGAfKHgBRYtO9s6mkGDYu1QvIDH98MkXIPVpzLnTddZv-QOOVx3NsQFshnzzSleuGbYa4QsBJZQBZqGIJ1YhRA9yWh2EHdxEBPAZLcInUvAPlCzbOUnlHHg)
 
 For example, suppose A, B, and C all choose to lock up 1000 HNT:
 
