@@ -6,7 +6,7 @@
 - Original PR: https://github.com/helium/HIP/pull/335
 - Tracking Issue: https://github.com/helium/HIP/issues/338
 - Status: Draft
-- 
+
 # **Summary**
 
 This proposal outlines economic and technical constructions with the aim of scaling the Helium Network to support new users, devices, and types of Decentralized Network Protocols.
@@ -100,9 +100,9 @@ where
 
 ![https://lh3.googleusercontent.com/-5_TwRRXXS-wrt-vc66M5i5IEprAeMBIBRN6EEVzljpqJeIueFQLytVnW5DRg0G1RN7-tXcJRCLegqD9C78DEgFfzzmvR3CtEJmzE6EFt1iOLaoWs99uPsYIxUK-BS3Opl0ELXgff_lnFxM8Gg](https://lh3.googleusercontent.com/-5_TwRRXXS-wrt-vc66M5i5IEprAeMBIBRN6EEVzljpqJeIueFQLytVnW5DRg0G1RN7-tXcJRCLegqD9C78DEgFfzzmvR3CtEJmzE6EFt1iOLaoWs99uPsYIxUK-BS3Opl0ELXgff_lnFxM8Gg)
 
-![https://lh4.googleusercontent.com/kwBJhMyXchk2fSuNX3ovLa3hVD412r-uACvT5SGYjFv5LMIv35KJ_JKh0ANjKow7tEQ8sI9YESydQBB19_VrYn6-Ov8elbargNvLbaQFiq0T1eT1FzJNCwrVHMejqbMZw67YzF5f](https://lh4.googleusercontent.com/kwBJhMyXchk2fSuNX3ovLa3hVD412r-uACvT5SGYjFv5LMIv35KJ_JKh0ANjKow7tEQ8sI9YESydQBB19_VrYn6-Ov8elbargNvLbaQFiq0T1eT1FzJNCwrVHMejqbMZw67YzF5f)
+![https://lh6.googleusercontent.com/UIEi40KyskHBt3uLRiw5wufqHXvtGLN2C1hDqrQbc9xGoZzgt9rfoCxyn7omMUit54DnKFUHrHw-Hr-fqWYvnVpFeQ5fo29wte0gLyLXk17pS3F_BqntNYTrWNLsKcMj_gYtLkSf](https://lh6.googleusercontent.com/UIEi40KyskHBt3uLRiw5wufqHXvtGLN2C1hDqrQbc9xGoZzgt9rfoCxyn7omMUit54DnKFUHrHw-Hr-fqWYvnVpFeQ5fo29wte0gLyLXk17pS3F_BqntNYTrWNLsKcMj_gYtLkSf)
 
-![https://lh3.googleusercontent.com/q8WdrGYo5hVP0m9hWP8_OuKSC2iOfpZMJSKnD-TWw9_-eDRIeyKQpzScvO54LTxpTajNAHGE2m-EzarxIKuTzBF7MlN1J-2FrsBDMZ-VJSh2gRyL0KAZYCWIheWAcM2IbQDHohRtcU5Lr4J10w](https://lh3.googleusercontent.com/q8WdrGYo5hVP0m9hWP8_OuKSC2iOfpZMJSKnD-TWw9_-eDRIeyKQpzScvO54LTxpTajNAHGE2m-EzarxIKuTzBF7MlN1J-2FrsBDMZ-VJSh2gRyL0KAZYCWIheWAcM2IbQDHohRtcU5Lr4J10w)
+![https://lh5.googleusercontent.com/bFFa_kkjFdD51doMAk4W4yyv8I2EOfDN9q9mv-OY8ktxqXuJI6a0Pj4TfTXepA5IsSnVHz3y5J1are5JFQeIIFm34GIVRK8rR0xtPSSUBwtw6oSd-tNeEy_TsxX5tIiCr6xPSmDdBVn108AjCg](https://lh5.googleusercontent.com/bFFa_kkjFdD51doMAk4W4yyv8I2EOfDN9q9mv-OY8ktxqXuJI6a0Pj4TfTXepA5IsSnVHz3y5J1are5JFQeIIFm34GIVRK8rR0xtPSSUBwtw6oSd-tNeEy_TsxX5tIiCr6xPSmDdBVn108AjCg)
 
 Once each protocol has a score, the % of total Epoch PoC rewards assigned to each DNP will be assessed by comparing the individual score to the sum of all scores:
 
@@ -211,4 +211,4 @@ We set the following economic constraints in order to ensure an equilibrium with
 
 # **Open Questions**
 
-1. What does a migration process look like for the existing implementation onto the new structure outlined?
+1. What does a migration process look like for the existing implementation onto the
