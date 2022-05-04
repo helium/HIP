@@ -92,7 +92,7 @@ Tallying both scores, we have a net score of 6M veHLT “for” hotspot A and -2
 
 In this epoch, hotspot A is expected to receive 6x the challenges it would be eligible for under normal circumstances, and hotspot B is expected to receive 0.8x the challenges it would be eligible for under normal circumstances.
 
-If hotspot A were to receive 120K HLT through proof-of-coverage emissions in an epoch, we could expect that it would have received 20K HLT under normal circumstances. User X would receive 1/6 of the incremental amount (16.67K HLT) and the hotspot owner would receive 5/6 of the incremental amount (83.33K HLT).
+If hotspot A were to receive 120K HLT through proof-of-coverage emissions in an epoch, we could expect that it would have received 20K HLT under normal circumstances. User X would receive 50% of 1/6 of the incremental amount (8.34K HLT) and the hotspot owner would receive 50% of 5/6 of the incremental amount (41.665K HLT), while the remaining 50K is distributed to hotspot A.
 
 If hotspot B were convicted of gaming proof-of-coverage rewards, 3M of the total veHLT would be sent to a burn address, whereas the underlying HLT within the 3M veHLT would be distributed to user X. If there were other users who staked against Hotspot B, this would be distributed pro-rata.
 
