@@ -32,7 +32,7 @@ The remainder of this proposal defines initial values for the subDAO given the a
 
 ### *Emissions Curve*
 
-There will be a max supply of 200B HLT.
+There will be a max supply of 200,000,000,000 HLT.
 
 The proposal is to have halvenings of HLT issuance every 2 years aligned with the HNT issuance halvenings. This requires a 1 year “stub” period from August 1, 2022 to August 1, 2023. We also propose a veHLT airdrop to Helium Validators as of the date of launch. This airdrop is required to transition the current Helium Validators into LoRaWAN subDAO Oracles.
 
