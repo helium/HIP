@@ -72,6 +72,7 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | 57 | [PoC Rewards Establishment Period](https://github.com/helium/HIP/blob/main/0057-poc-rewards-establishment-period.md) | [In Discussion](https://github.com/helium/HIP/issues/376) |
 | 58 | [PoC Distance Limit](https://github.com/helium/HIP/blob/main/0058-poc-distance-limit.md) | [Approved](https://github.com/helium/HIP/issues/384) |
 | 59 | [Reduce XOR filter fees](https://github.com/helium/HIP/blob/main/0059-reduce-xor-filter-fees.md) | [In Discussion](https://github.com/helium/HIP/issues/391) |
+| 60 | [One Miner, One Vote](https://github.com/helium/HIP/blob/main/0060-one-miner-one-vote.md) | [In Discussion](https://github.com/helium/HIP/issues/399) |
 
 ## Status key
 
