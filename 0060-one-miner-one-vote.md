@@ -1,4 +1,4 @@
-# HIP-60 : One Miner, One Vote
+# HIP 60 : One Miner, One Vote
 
 - Author(s): @cvolkernick
 - Start Date: 2022-04-28
