@@ -105,7 +105,7 @@ where
 
 ![data-credit-score](https://lh6.googleusercontent.com/UIEi40KyskHBt3uLRiw5wufqHXvtGLN2C1hDqrQbc9xGoZzgt9rfoCxyn7omMUit54DnKFUHrHw-Hr-fqWYvnVpFeQ5fo29wte0gLyLXk17pS3F_BqntNYTrWNLsKcMj_gYtLkSf)
 
-![active-devices](https://lh5.googleusercontent.com/bFFa_kkjFdD51doMAk4W4yyv8I2EOfDN9q9mv-OY8ktxqXuJI6a0Pj4TfTXepA5IsSnVHz3y5J1are5JFQeIIFm34GIVRK8rR0xtPSSUBwtw6oSd-tNeEy_TsxX5tIiCr6xPSmDdBVn108AjCg)
+![active-device-score](https://lh5.googleusercontent.com/bFFa_kkjFdD51doMAk4W4yyv8I2EOfDN9q9mv-OY8ktxqXuJI6a0Pj4TfTXepA5IsSnVHz3y5J1are5JFQeIIFm34GIVRK8rR0xtPSSUBwtw6oSd-tNeEy_TsxX5tIiCr6xPSmDdBVn108AjCg)
 
 Once each protocol has a score, the % of total Epoch PoC rewards assigned to each DNP will be assessed by comparing the individual score to the sum of all scores:
 
