@@ -9,7 +9,7 @@
 
 **Summary**
 
-In [HIP 51: Helium DAOs](https://docs.google.com/document/d/1ibFE2DI8fkd4uOSnIT00C7JiRYsZExg164_KtDzz-YI/edit#), we provide a general structure for onboarding new Decentralized Network Protocols (DNPs) to the broader Helium Network, with mechanisms in place to ensure that protocol-specific attributes such as proof-of-coverage rules and data transfer pricing are within control of the DNT DAOs.
+In [HIP 51: Helium DAOs](https://github.com/helium/HIP/blob/main/0051-helium-dao.md), we provide a general structure for onboarding new Decentralized Network Protocols (DNPs) to the broader Helium Network, with mechanisms in place to ensure that protocol-specific attributes such as proof-of-coverage rules and data transfer pricing are within control of the DNT DAOs.
 
 In this proposal, we specify the implementation of the structure proposed through a detailed onboarding proposal for the Helium LoRaWAN Network. We propose initial configurations of the Helium LoRaWAN economics layer as well as governance mechanisms within the DAO through Helium LoRaWAN (HLT) token voting.
 
