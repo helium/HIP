@@ -1,6 +1,6 @@
 # HIP 52: LoRaWAN subDAO
 
-- Authors: [@tjain-mcc](https://github.com/tjain-mcc), [@shayons297](htts://github.com/shayons297), [jamiew](https://github.com/jamiew), [abhay](https://github.com/abhay)
+- Author: [@tjain-mcc](https://github.com/tjain-mcc), [@shayons297](https://github.com/shayons297), [@jmfayal](https://github.com/jmfayal), [@abhay](https://github.com/abhay)
 - Start Date: 2022-01-04
 - Category: Economic, Technical
 - Original PR: https://github.com/helium/HIP/pull/335
