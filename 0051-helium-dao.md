@@ -1,9 +1,6 @@
 # HIP51: Helium DAO
 
-- Author: [@tjain-mcc](https://github.com/tjain-mcc),
-  [@shayons297](https://github.com/shayons297),
-  [@jmfayal](https://github.com/jmfayal),
-  [@abhay](https://github.com/abhay)
+- Author: [@tjain-mcc](https://github.com/tjain-mcc), [@shayons297](https://github.com/shayons297), [@jmfayal](https://github.com/jmfayal), [@abhay](https://github.com/abhay)
 - Start Date: 2022-01-26
 - Category: Economic / Technical
 - Original HIP PR: [#334](https://github.com/helium/HIP/pull/334)
