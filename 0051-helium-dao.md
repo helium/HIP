@@ -14,13 +14,13 @@
 
 This proposal outlines economic and technical constructions with the aim of scaling the Helium Network to support new users, devices, and types of Decentralized Network Protocols.
 
-We propose that each communications network built on top of the Helium Network (LoRaWAN, WiFi, 5G, CDN, VPN — referred to as Decentralized Network Protocols or DNPs) has its own subDAO with its own token (referred to as Decentralized Network Tokens or DNTs). The key specifications of the DNT such as Proof-of-Coverage rules, mining rewards, and Data Transfer pricing are governed by each DNT subDAO.
+We propose that each communications network built on top of the Helium Network (LoRaWAN, WiFi, 5G, CDN, VPN — referred to as Decentralized Network Protocols or DNPs) has its own subDAO with its own token (referred to as Decentralized Network Tokens or DNTs). The key specifications of the DNP such as Proof-of-Coverage rules, mining rewards, and Data Transfer pricing are governed by each DNP subDAO.
 
 The aim is to create an economy such that the underlying HNT-Data Credit burn-and-mint equilibrium continues to power the Helium Flywheel, while Proof-of-Coverage rules and earnings are dictated by the corresponding subDAO.
 
 The technical model requires that the entire Helium Network (tokens, hotspots, emissions rules, governance, etc.) lives at some proposed base layer blockchain (L1). All accounts and transaction activity happens at this L1. The decision on which L1 to use will be based on the technical and economical evaluation of the requirements of this proposal.
 
-All subDAOs must operate Oracles for their networks. Each subDAO Oracle runs software to calculate DNP specific items (eg: all the Proof-of-Coverage code that exists on the current LoRaWAN network to determine Hotspot rewards) and the subDAO Oracles who have staked DNTs come to consensus on these calculations and submit them to the Helium Network.
+All subDAOs must operate Oracles for their networks. Each subDAO Oracle runs software to calculate DNP specific items (e.g., all the Proof-of-Coverage code that exists on the current LoRaWAN network to determine Hotspot rewards) and the subDAO Oracles who have staked DNTs come to consensus on these calculations and submit them to the Helium Network.
 
 # **Background**
 
@@ -29,24 +29,24 @@ For the Helium Network to grow to global scale in number of active devices and u
 [HIP 27: CBRS 5G Support](https://github.com/helium/HIP/blob/master/0027-cbrs-5g-support.md) provides a broad discussion of 5G DNP specific Data Credits mechanisms, and [HIP 37: Omni-Protocol PoC](https://github.com/helium/HIP/blob/master/0037-omni-protocol-poc.md) proposes an incentive model as well as Proof-of-Coverage rules for the 5G Network. This is a three-part proposal that builds on such existing work with two primary aims:
 
 1. Provide a general structure for onboarding new DNPs to the broader Helium Network, with mechanisms in place to ensure that protocol-specific attributes such as Proof-of-Coverage rules, Data Transfer pricing, and miner rewards are within control of the DNT subDAO.
-2. Specify the implementation of the structure proposed through detailed onboarding proposals for the LoRaWAN and 5G networks, described in [HIP 52: LoRaWAN DAO](https://docs.google.com/document/d/1fqy3JLdoP8YgOULx-sE_24xOL1UL9esHu_Ctju4iGcg/edit) and [HIP 53: 5G DAO](https://docs.google.com/document/d/1rg9VK28S8bWOeKNiKXUipsLsBxLjuHH7AnVe6TjKw4I/edit).
+2. Specify the implementation of the structure proposed through detailed onboarding proposals for the LoRaWAN and 5G networks, described in [HIP 52: LoRaWAN DAO](https://github.com/helium/HIP/blob/main/0052-lorawan-dao.md) and [HIP 53: 5G DAO](https://github.com/helium/HIP/blob/main/0053-5g-dao.md).
 
 The technical and economic design decisions of the Helium Network historically have been made around the first LoRaWAN Decentralized Network Protocol. In order to support new networks and devices, there are two core problems to be addressed: **blockchain scalability** and **DNP specific incentive alignment.**
 
 This proposal outlines two constructions to address the aforementioned core problems:
 
-1. *Blockchain Scalability* We propose that each DNP has oracles who operate software to calculate DNP specific items (eg: all the Proof-of-Coverage code that exists on the current LoRaWAN network to determine Hotspot rewards) and make DNT payments to DNP stakeholders (eg: miners, stakers, etc). Oracles stake DNTs and are rewarded by a portion of DNT inflation.
+1. *Blockchain Scalability* We propose that each DNP has oracles who operate software to calculate DNP specific items (eg: all the Proof-of-Coverage code that exists on the current LoRaWAN network to determine Hotspot rewards) and make DNT payments to DNP stakeholders (e.g., miners, stakers, etc). Oracles stake DNTs and are rewarded by a portion of DNT inflation.
 
 These oracles share a set of network rules and submit independent attestations (through signatures or proofs) or come to consensus on their calculations and submit them in aggregate to the Helium Network.
 
-1. *DNP Specific Incentive Alignment We propose that each DNP operate as its own subDAO within the broader umbrella of the Helium Network. DNP subDAOs are able to issue DNTs to their stakeholders and DNT denominated governance controls DNP specific attributes.*
+1. *DNP Specific Incentive Alignment* We propose that each DNP operate as its own subDAO within the broader umbrella of the Helium Network. DNP subDAOs are able to issue DNTs to their stakeholders and DNT denominated governance controls DNP specific attributes.
 
 # **Motivation**
 
 There are three key drivers for proposing that DNP specific calculations are done by DNP oracles and then submitted to the the overall Helium Network:
 
 1. *Scalability -* Each DNP has the ability to run its own code for DNP specific items. This enables multiple parallel developer teams to work on advancing the Helium Network. This design also allows for the complex Proof-of-Coverage calculations to be done off chain and therefore minimizes state bloat and transaction costs on the L1.
-2. *Native Tokens Provide Separation of Governance Each DNP effectively governs its Proof-of-Coverage rules, Data Transfer pricing, and rewards distribution mechanisms through DNT voting. This structure provides significantly more flexibility over the structure of the DNP and allows those who are closest to a network to drive its own governance.*
+2. *Native Tokens -* Provide Separation of Governance Each DNP effectively governs its Proof-of-Coverage rules, Data Transfer pricing, and rewards distribution mechanisms through DNT voting. This structure provides significantly more flexibility over the structure of the DNP and allows those who are closest to a network to drive its own governance.
 3. *Composability Implies Utility -* If the overall Helium Network L1 is able to support smart contracts, it is possible to imagine a variety of novel use cases for HNT as well as each of the DNT tokens. Some examples here are decentralized exchanges, money markets (liquid borrow-lend markets for greater delegation to validators or leveraged staking), and token reward splitting (mining rewards being sent to multiple addresses).
 
 # **Stakeholders**
@@ -57,7 +57,7 @@ This proposal impacts all current and future stakeholders in the Helium Communit
 
 We propose that each DNP operates its own subDAO and submits information to the broader Helium Network via Oracles. Each DNP has its own economic and governance layer through its subDAO, which comprises all its DNT holders.
 
-![https://lh3.googleusercontent.com/sluRVsYUKoRqnXd5T3s6XqIQSlogUTuXM6j6ewuplOz5xSBE4JzrUEnzvIDBJqm_qhTc7utL7AI6dkxFipgD9nveSV0g5bwx9wLiqaua4NEtplCRpEUQYjGfv2hwhx4Br3gn1cntCkCBGoaD3g](https://lh3.googleusercontent.com/sluRVsYUKoRqnXd5T3s6XqIQSlogUTuXM6j6ewuplOz5xSBE4JzrUEnzvIDBJqm_qhTc7utL7AI6dkxFipgD9nveSV0g5bwx9wLiqaua4NEtplCRpEUQYjGfv2hwhx4Br3gn1cntCkCBGoaD3g)
+![hnt-emissions](https://lh3.googleusercontent.com/sluRVsYUKoRqnXd5T3s6XqIQSlogUTuXM6j6ewuplOz5xSBE4JzrUEnzvIDBJqm_qhTc7utL7AI6dkxFipgD9nveSV0g5bwx9wLiqaua4NEtplCRpEUQYjGfv2hwhx4Br3gn1cntCkCBGoaD3g)
 
 New DNPs are added to the Helium DAO through the veHNT denominated governance process as defined below.
 
@@ -67,7 +67,7 @@ Helium operates as a network of networks under HIP 51, and as such requires its 
 
 A user’s voting power is determined by 1) the amount of HNT they lock up with, and 2) the amount of time they commit to locking up their HNT. The structure applies a linear multiplier of time to the amount of HNT locked up in the voting contract. For the maximum amount of four years, users receive 100x the veHNT. For the minimum amount of a six month lockup, users receive 1x the veHNT. Note that veHNT is **fully non-transferable**, and represented as a non-fungible coupon in the user’s HNT address.
 
-![https://lh4.googleusercontent.com/-mE8SN23AZi8gWyUaUfAjgTvhiWlGAfKHgBRYtO9s6mkGDYu1QvIDH98MkXIPVpzLnTddZv-QOOVx3NsQFshnzzSleuGbYa4QsBJZQBZqGIJ1YhRA9yWh2EHdxEBPAZLcInUvAPlCzbOUnlHHg](https://lh4.googleusercontent.com/-mE8SN23AZi8gWyUaUfAjgTvhiWlGAfKHgBRYtO9s6mkGDYu1QvIDH98MkXIPVpzLnTddZv-QOOVx3NsQFshnzzSleuGbYa4QsBJZQBZqGIJ1YhRA9yWh2EHdxEBPAZLcInUvAPlCzbOUnlHHg)
+![voting-power-multiplier](https://lh4.googleusercontent.com/-mE8SN23AZi8gWyUaUfAjgTvhiWlGAfKHgBRYtO9s6mkGDYu1QvIDH98MkXIPVpzLnTddZv-QOOVx3NsQFshnzzSleuGbYa4QsBJZQBZqGIJ1YhRA9yWh2EHdxEBPAZLcInUvAPlCzbOUnlHHg)
 
 For example, suppose A, B, and C all choose to lock up 1000 HNT:
 
@@ -97,19 +97,19 @@ The success of the Helium network is contingent on its ability to find real worl
 
 Each protocol would be assigned a ‘score’ per epoch:
 
-![https://lh6.googleusercontent.com/K-UeUtSvHv-X0am6W0yTNOcVAr2H10KV8JwTrTH3OwJHB83-7cnnHvnQVAopplLcJrCWDpNVufxD4w1WXypRx84d0UvPc8_bGr74ofeaQVO8H9w5M_gO8wXP63ljCEf53uOI6lO48VOTFKYcSA](https://lh6.googleusercontent.com/K-UeUtSvHv-X0am6W0yTNOcVAr2H10KV8JwTrTH3OwJHB83-7cnnHvnQVAopplLcJrCWDpNVufxD4w1WXypRx84d0UvPc8_bGr74ofeaQVO8H9w5M_gO8wXP63ljCEf53uOI6lO48VOTFKYcSA)
+![dao-utility-score](https://lh6.googleusercontent.com/K-UeUtSvHv-X0am6W0yTNOcVAr2H10KV8JwTrTH3OwJHB83-7cnnHvnQVAopplLcJrCWDpNVufxD4w1WXypRx84d0UvPc8_bGr74ofeaQVO8H9w5M_gO8wXP63ljCEf53uOI6lO48VOTFKYcSA)
 
 where
 
-![https://lh3.googleusercontent.com/-5_TwRRXXS-wrt-vc66M5i5IEprAeMBIBRN6EEVzljpqJeIueFQLytVnW5DRg0G1RN7-tXcJRCLegqD9C78DEgFfzzmvR3CtEJmzE6EFt1iOLaoWs99uPsYIxUK-BS3Opl0ELXgff_lnFxM8Gg](https://lh3.googleusercontent.com/-5_TwRRXXS-wrt-vc66M5i5IEprAeMBIBRN6EEVzljpqJeIueFQLytVnW5DRg0G1RN7-tXcJRCLegqD9C78DEgFfzzmvR3CtEJmzE6EFt1iOLaoWs99uPsYIxUK-BS3Opl0ELXgff_lnFxM8Gg)
+![vote-score](https://lh3.googleusercontent.com/-5_TwRRXXS-wrt-vc66M5i5IEprAeMBIBRN6EEVzljpqJeIueFQLytVnW5DRg0G1RN7-tXcJRCLegqD9C78DEgFfzzmvR3CtEJmzE6EFt1iOLaoWs99uPsYIxUK-BS3Opl0ELXgff_lnFxM8Gg)
 
 ![https://lh6.googleusercontent.com/UIEi40KyskHBt3uLRiw5wufqHXvtGLN2C1hDqrQbc9xGoZzgt9rfoCxyn7omMUit54DnKFUHrHw-Hr-fqWYvnVpFeQ5fo29wte0gLyLXk17pS3F_BqntNYTrWNLsKcMj_gYtLkSf](https://lh6.googleusercontent.com/UIEi40KyskHBt3uLRiw5wufqHXvtGLN2C1hDqrQbc9xGoZzgt9rfoCxyn7omMUit54DnKFUHrHw-Hr-fqWYvnVpFeQ5fo29wte0gLyLXk17pS3F_BqntNYTrWNLsKcMj_gYtLkSf)
 
-![https://lh5.googleusercontent.com/bFFa_kkjFdD51doMAk4W4yyv8I2EOfDN9q9mv-OY8ktxqXuJI6a0Pj4TfTXepA5IsSnVHz3y5J1are5JFQeIIFm34GIVRK8rR0xtPSSUBwtw6oSd-tNeEy_TsxX5tIiCr6xPSmDdBVn108AjCg](https://lh5.googleusercontent.com/bFFa_kkjFdD51doMAk4W4yyv8I2EOfDN9q9mv-OY8ktxqXuJI6a0Pj4TfTXepA5IsSnVHz3y5J1are5JFQeIIFm34GIVRK8rR0xtPSSUBwtw6oSd-tNeEy_TsxX5tIiCr6xPSmDdBVn108AjCg)
+![active-devices](https://lh5.googleusercontent.com/bFFa_kkjFdD51doMAk4W4yyv8I2EOfDN9q9mv-OY8ktxqXuJI6a0Pj4TfTXepA5IsSnVHz3y5J1are5JFQeIIFm34GIVRK8rR0xtPSSUBwtw6oSd-tNeEy_TsxX5tIiCr6xPSmDdBVn108AjCg)
 
 Once each protocol has a score, the % of total Epoch PoC rewards assigned to each DNP will be assessed by comparing the individual score to the sum of all scores:
 
-![https://lh6.googleusercontent.com/LjMmGCO4OWvbfCO96KEioJVNbEyYjRmn7Fy-K0pOps52M5d3ACVEVmHLEbTlLRyiGtAgOrXtDHQKTDPkX9w2dFgClInr-LQdifPESQeiVJh7oL-zo0_KzMmo2oVW6O25wqDHG1_ocATqZqM5Nw](https://lh6.googleusercontent.com/LjMmGCO4OWvbfCO96KEioJVNbEyYjRmn7Fy-K0pOps52M5d3ACVEVmHLEbTlLRyiGtAgOrXtDHQKTDPkX9w2dFgClInr-LQdifPESQeiVJh7oL-zo0_KzMmo2oVW6O25wqDHG1_ocATqZqM5Nw)
+![percentage-rewards](https://lh6.googleusercontent.com/LjMmGCO4OWvbfCO96KEioJVNbEyYjRmn7Fy-K0pOps52M5d3ACVEVmHLEbTlLRyiGtAgOrXtDHQKTDPkX9w2dFgClInr-LQdifPESQeiVJh7oL-zo0_KzMmo2oVW6O25wqDHG1_ocATqZqM5Nw)
 
 Please refer to this model [spreadsheet](https://docs.google.com/spreadsheets/d/1up7-jJt3eM5Fn9K0NTnDA50ZzIDqV-bznbnwej1y3R4/edit#gid=2099369137) to review the parameters of this model.
 
@@ -175,7 +175,7 @@ The device subsequently uses those Data Credits with a DNP specific State Channe
 
 The hotspot may dispute the State Channel summaries by submitting signed attestations to the DNP Oracles.
 
-Every epoch, DNP Oracles calculate each miners’ rewards based on data transferred in State Channels and distributes it to accounts on the L1 according to the emissions schedule for the subDAO.
+Every epoch, DNP Oracles calculate each miner's rewards based on data transferred in State Channels and distributes it to accounts on the L1 according to the emissions schedule for the subDAO.
 
 *Proof-of-Coverage Process*
 
