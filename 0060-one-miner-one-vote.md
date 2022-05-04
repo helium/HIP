@@ -3,8 +3,9 @@
 - Author(s): @cvolkernick
 - Start Date: 2022-04-28
 - Category: Governance
-- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
-- Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
+- Original HIP PR: https://github.com/helium/HIP/pull/395
+- Tracking Issue: TODO
+- Status: In Discussion
 
 # Summary
 [summary]: #summary
