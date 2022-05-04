@@ -4,7 +4,7 @@
 - Start Date: 2022-04-28
 - Category: Governance
 - Original HIP PR: https://github.com/helium/HIP/pull/395
-- Tracking Issue: TODO
+- Tracking Issue: https://github.com/helium/HIP/issues/399
 - Status: In Discussion
 
 # Summary
