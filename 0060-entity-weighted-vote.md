@@ -1,6 +1,6 @@
 # HIP 60 : Entity-Weighted Vote
 
-- Author(s): @cvolkernick
+- Author(s): [@cvolkernick](https://github.com/cvolkernick)
 - Start Date: 2022-04-28
 - Category: Governance
 - Original HIP PR: https://github.com/helium/HIP/pull/395
