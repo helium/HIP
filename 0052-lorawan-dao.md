@@ -1,4 +1,4 @@
-# HIP 52: LoRaWAN subDAO
+# HIP 52: IOT subDAO
 
 - Author: [@tjain-mcc](https://github.com/tjain-mcc), [@shayons297](https://github.com/shayons297), [@jmfayal](https://github.com/jmfayal), [@abhay](https://github.com/abhay)
 - Start Date: 2022-01-04
@@ -11,17 +11,17 @@
 
 In [HIP 51: Helium DAOs](https://github.com/helium/HIP/blob/main/0051-helium-dao.md), we provide a general structure for onboarding new Decentralized Network Protocols (DNPs) to the broader Helium Network, with mechanisms in place to ensure that protocol-specific attributes such as proof-of-coverage rules and data transfer pricing are within control of the DNT DAOs.
 
-In this proposal, we specify the implementation of the structure proposed through a detailed onboarding proposal for the Helium LoRaWAN Network. We propose initial configurations of the Helium LoRaWAN economics layer as well as governance mechanisms within the DAO through Helium LoRaWAN (IOT) token voting.
+In this proposal, we specify the implementation of the structure proposed through a detailed onboarding proposal for the Helium Network. We propose initial configurations of the Helium IoT economics layer as well as governance mechanisms within the DAO through Helium IoT (IOT) token voting.
 
 ## Stakeholders
 
-This proposal impacts all current and future participants in the Helium LoRaWAN Community.
+This proposal impacts all current and future participants in the Helium IoT Community.
 
-## LoRaWAN subDAO core jobs-to-be-done
+## IoT subDAO core jobs-to-be-done
 
-We proposed in HIP 51 that each DNP subDAO operate as a sovereign economics and governance layer. The Helium LoRaWAN subDAO has six core functions
+We proposed in HIP 51 that each DNP subDAO operate as a sovereign economics and governance layer. The Helium IoT subDAO has six core functions
 
-1. **Emissions Curve** The HeliumLoRaWAN subDAO handles all IOT emissions, mining rewards, and programmatic treasury operations. The economic responsibilities around this involve managing the token issuance and distribution.
+1. **Emissions Curve** The Helium IoT subDAO handles all IOT emissions, mining rewards, and programmatic treasury operations. The economic responsibilities around this involve managing the token issuance and distribution.
 2. **Treasury Reserve DNT Market Making Curve** subDAOs have full control over the prices at which the subDAO treasury provides quotes to holders of DNT who wish to redeem their holdings for underlying HNT. This can be a flat bid or a more complex curve.**
 3. **Oracle Specification** perform work including verifying proof of coverage and data transfer. The oracles are also responsible for distributing DNT mining rewards to the appropriate parties. Responsibilities here include definition of oracle software, minimum stake amounts, and rewards for participation.
 4. **Data Transfer Mechanism and Pricing** Data transfer within subnetworks occurs via the process of procuring and burning data credits in the name of the hotspot or set of hotspots that provide coverage. Responsibilities here include Organizationally Unique Identifier (OUI) registration, state channel creation, and bandwidth capacity per data credit definition.
@@ -34,7 +34,7 @@ The remainder of this proposal defines initial values for the subDAO given the a
 
 There will be a max supply of 200,000,000,000 IOT.
 
-The proposal is to have halvenings of IOT issuance every 2 years aligned with the HNT issuance halvenings. This requires a 1 year “stub” period from August 1, 2022 to August 1, 2023. We also propose a veIOT airdrop to Helium Validators as of the date of launch. This airdrop is required to transition the current Helium Validators into LoRaWAN subDAO Oracles.
+The proposal is to have halvenings of IOT issuance every 2 years aligned with the HNT issuance halvenings. This requires a 1 year “stub” period from August 1, 2022 to August 1, 2023. We also propose a veIOT airdrop to Helium Validators as of the date of launch. This airdrop is required to transition the current Helium Validators into IoT subDAO Oracles.
 
 For clarity, the emission schedule is as follows:
 
@@ -48,13 +48,13 @@ For clarity, the emission schedule is as follows:
 | 6    | 167.5B                       | 8.125B     | 22.5%                                                   | 57.5%                                            | 7%           | 7%              | 6%            |
 | 7    | 175.625B                     | 8.125B     | 21%                                                     | 59%                                              | 7%           | 7%              | 6%            |
 
-At launch of the LoRaWAN subnetwork, 2.5% of the total supply of IOT tokens (5B tokens) are issued and airdropped to oracles and hotspots on the existing LoRaWAN network. This airdrop is intended to bootstrap the network, and is distributed to oracles and validators in the following proportion:
+At launch of the IoT subnetwork, 2.5% of the total supply of IOT tokens (5B tokens) are issued and airdropped to oracles and hotspots on the existing IoT network. This airdrop is intended to bootstrap the network, and is distributed to oracles and validators in the following proportion:
 
 Oracles: 50% of 5B tokens, distributed in proportion to HNT staked at the snapshot
 
 Hotspots: 50% of 5B tokens, distributed to all active hotspots (rewarded in the past 30 days) and not on the denylist at the time of snapshot
 
-At the end of a given epoch, the LoRaWAN subnetwork oracles relay start balance, current balance, and total amount of IOT Data Credits created and relay to the L1 HNT emissions contract. The emissions contract subsequently distributes the determined amount of HNT as per the Protocol Score to the LoRaWAN subDAO multi-signature wallet, the addresses of which comprise the set of oracles of the LoRaWAN Network.
+At the end of a given epoch, the IoT subnetwork oracles relay start balance, current balance, and total amount of IOT Data Credits created and relay to the L1 HNT emissions contract. The emissions contract subsequently distributes the determined amount of HNT as per the Protocol Score to the IoT subDAO multi-signature wallet, the addresses of which comprise the set of oracles of the IoT Network.
 
 The subDAO operations fund is intended to allow the DNP to perform bespoke operations to create and sustain network growth. The primary use case of the operations fund is to fund all state transition transaction fees to the L1, but can be deployed in any manner of ways as per subDAO governance. Such incentives could include
 
@@ -102,9 +102,9 @@ If hotspot B were convicted of gaming proof-of-coverage rewards, 3M of the total
 
 ### Treasury Reserve DNT Market Making Curve
 
-The LoRaWAN subDAO sets the programmatic treasury formula in order to provide quotes to holders of DNT who wish to redeem their holdings for underlying HNT. Note that at launch of the subnetwork prior to any HNT emissions from the minting contract as per the protocol score, the Helium Foundation will make a donation of 50,000 HNT into the subDAO treasury reserve in order to collateralize the airdrop specified in the emissions section.
+The IoT subDAO sets the programmatic treasury formula in order to provide quotes to holders of DNT who wish to redeem their holdings for underlying HNT. Note that at launch of the subnetwork prior to any HNT emissions from the minting contract as per the protocol score, the Helium Foundation will make a donation of 50,000 HNT into the subDAO treasury reserve in order to collateralize the airdrop specified in the emissions section.
 
-We propose a constant function market making formula for the LoRaWAN subDAO programmatic treasury defined as per the following specification.
+We propose a constant function market making formula for the IoT subDAO programmatic treasury defined as per the following specification.
 
 ![https://lh4.googleusercontent.com/33sRG_aBd-LCoU4i2q9-UiCNu-7G6KPuT4-N6RHSRwGmY5ENiHxU8hPHSxA0iCk47OHICv5yUMARNQAvvVGczQxewuVhxP0pNAHe29F-BmHEQAxPSoJVpJIrbOIcyMUVf3oPgofkbEgVSTw2Og](https://lh4.googleusercontent.com/33sRG_aBd-LCoU4i2q9-UiCNu-7G6KPuT4-N6RHSRwGmY5ENiHxU8hPHSxA0iCk47OHICv5yUMARNQAvvVGczQxewuVhxP0pNAHe29F-BmHEQAxPSoJVpJIrbOIcyMUVf3oPgofkbEgVSTw2Og)
 
@@ -112,13 +112,13 @@ At epoch T, we denote the value of H, S, and P as HT, ST, and PT. The programma
 
 ![market-making-formula](https://lh3.googleusercontent.com/7P_5Bha1KNPmQl2wWBHPoB6ojHfFKdnSaD208DR1vFUE2ybnAopqA6X-sVMzhHqiH5DeeDDKMY5hxKOe74j_PVcEBCoXjwetlytpeS241lgrEy_TmapfPiWUjEzyhp72kyvLiEJA)
 
-For example, consider at epoch #125, the total outstanding supply of tokens for the LoRaWAN subDAO is 3.275B IOT and the total amount in the treasury reserve is 2M HNT. The programmatic treasury formula is given as follows
+For example, consider at epoch #125, the total outstanding supply of tokens for the IoT subDAO is 3.275B IOT and the total amount in the treasury reserve is 2M HNT. The programmatic treasury formula is given as follows
 
 ![example-redemption](https://lh6.googleusercontent.com/J_34HUWBuZl_YxNOnMv_fVkgvJKVeWtNLdZ9eZfKjYOFVjvv9LqjyB-pMmBaqpgFykNb4YcKfE7CuHDC6aX1WQORR2vlyyg4hyb_38ACZqDMjUrwVKHUhYeZYVj1QYceVwL-z3gR)
 
 This implies that at epoch #125, any number of IOT can be redeemed at a unit price of 0.00061068702 HNT.
 
-Now consider at epoch #225, the total outstanding supply of tokens for the LoRaWAN subDAO is 3.5B IOT and the total amount in the treasury reserve is 2.025M HNT. The programmatic treasury formula is given as follows
+Now consider at epoch #225, the total outstanding supply of tokens for the IoT subDAO is 3.5B IOT and the total amount in the treasury reserve is 2.025M HNT. The programmatic treasury formula is given as follows
 
 ![example-redemption-2](https://lh5.googleusercontent.com/JzoHFD4OcK-YbK8aqiR2VjsBtN8mxRK6oEae_57KhoeoXp1TGKbRWGF7NkfRByITdTcfEAAkPSkKPMfz604aTcqhNlBJ2o7YJ6TjpAUxvGJSBcUgyH4o8iDmJRQ8ejcqaa8kvK9e)
 
@@ -143,7 +143,7 @@ Clarifications:
 
 ### Oracle Operations
 
-LoRaWAN oracles confirm proof of coverage, data transfer, and add blocks to the LoRaWAN subnetwork. They serve state data around Proof-of-Coverage challenges and data transfer events to light and data only hotspots.
+IoT oracles confirm proof of coverage, data transfer, and add blocks to the IoT subnetwork. They serve state data around Proof-of-Coverage challenges and data transfer events to light and data only hotspots.
 
 Validation is performed by a set of rotating nodes known as the consensus group, which verifies transactions and ordering prior to forming a block and proposing it to the subnetwork chain. Consensus groups are elected once per epoch, and the number of members is given by the num_consensus_members chain variable (currently set at 43).
 
@@ -158,11 +158,11 @@ veIOT holders can choose to delegate their holdings to oracles of their choice o
 
 ### Proof-of-Coverage Specification
 
-The LoRaWAN subDAO is required to constantly interrogate hotspots using the Proof-of-Coverage challenge mechanism to ensure that hotspots are representing their locations accurately. The net results of each of these challenges are relayed to the Helium L1 after being validated by their respective consensus groups.
+The IoT subDAO is required to constantly interrogate hotspots using the Proof-of-Coverage challenge mechanism to ensure that hotspots are representing their locations accurately. The net results of each of these challenges are relayed to the Helium L1 after being validated by their respective consensus groups.
 
-LoRaWAN Challenges involve three distinct roles:
+IoT Challenges involve three distinct roles:
 
-1. Challenger - The Hotspot that constructs and issues the POC Challenge. Hotspots issue challenges approximately once per every 360 blocks. We propose moving this role to LoRaWAN oracles.
+1. Challenger - The Hotspot that constructs and issues the POC Challenge. Hotspots issue challenges approximately once per every 360 blocks. We propose moving this role to IoT oracles.
 2. Transmitter - Sometimes called "Challengee". This Hotspot is the target of the POC challenge and is responsible for transmitting (or "beaconing") challenge packets to potentially be witnessed by geographically proximate Hotspots.
 3. Witness - Hotspots that are geographically proximate to the Transmitter and report the existence of the challenge packet after it has been transmitted.
 
@@ -172,14 +172,14 @@ Data Credits are utilized in asserting new hotspots and their location on the ch
 
 With the activation of [HIP 10](https://github.com/helium/HIP/blob/master/0010-usage-based-data-transfer-rewards.md), hotspot operators receive HNT emissions up to 32.5% per epoch and are rewarded at 1:1 rate based on dollar value of Data Credits transfers as per the [HNT Price Oracle](https://docs.helium.com/blockchain/oracles). This proposal scales Data Credits rewards based on actual activity on the network, and disincentivizes arbitrageurs from taking advantage of more arbitrary distribution mechanisms for rewards.
 
-**[HIP 37](https://github.com/helium/HIP/blob/master/0037-omni-protocol-poc.md) proposed the removal of a division between proof-of-coverage and data credits rewards entirely at the date of the second HNT halving (8/1/2023). We propose this removal happen from the launch of the Lorawan subDAO. As shown in the emissions schedule, this is reflected in the IOT subDAO.**
+**[HIP 37](https://github.com/helium/HIP/blob/master/0037-omni-protocol-poc.md) proposed the removal of a division between proof-of-coverage and data credits rewards entirely at the date of the second HNT halving (8/1/2023). We propose this removal happen from the launch of the IoT subDAO. As shown in the emissions schedule, this is reflected in the IOT subDAO.**
 
 At present, every 24 bytes sent in a packet cost 1 DC, priced at $0.00001. Data Credits are generated by burning the requisite amount of HNT as per the Helium price oracle.
 
 The transaction is as follows:
 
 1. A Miner receives a packet and determines who it belongs to
-2. The Miner reaches the appropriate Helium LoRaWAN Network Server / Router and offers the packet
+2. The Miner reaches the appropriate Helium IoT Network Server / Router and offers the packet
 3. The Helium Router expresses interest in the packet and accepts delivery
 4. The Miner provides the packet under the promise that the Helium Router will spend a Data Credit in the name of the Miner
 
@@ -187,8 +187,8 @@ Note that it is possible to support both metered and unmetered networks. For an 
 
 ### Governance Specification
 
-The LoRaWAN Network is under the control of the subDAO. All subDAO proposals must come attached with code to be approved.
+The IoT Network is under the control of the subDAO. All subDAO proposals must come attached with code to be approved.
 
 We propose that veIOT governance is constructed in a manner identical to veHNT governance as specified in HIP51.
 
-Users can choose to delegate their lockup power in veIOT to all LoRaWAN DAO governance proposals. Proposals are assessed using majority and quorum thresholds defined in veIOT terms, initially proposed to be 67% and 100M IOT respectively.
+Users can choose to delegate their lockup power in veIOT to all IoT DAO governance proposals. Proposals are assessed using majority and quorum thresholds defined in veIOT terms, initially proposed to be 67% and 100M IOT respectively.
