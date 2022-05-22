@@ -64,7 +64,7 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | 49 | [LoRaWAN Sub-region Max EIRP Limit](https://github.com/helium/HIP/blob/main/0049-max-eirp-adjustment.md) | [In Discussion](https://github.com/helium/HIP/issues/327) |
 | 50 | [Display All Potential Witness Beacons](https://github.com/helium/HIP/blob/main/0050-display-all-potential-beacon-witnesses.md) | [In Discussion](https://github.com/helium/HIP/issues/331) |
 | 51 | [Helium DAO](https://github.com/helium/HIP/blob/main/0051-helium-dao.md) | [In Discussion](https://github.com/helium/HIP/issues/336) |
-| 52 | [LoRaWAN subDAO](https://github.com/helium/HIP/blob/main/0052-lorawan-dao.md) | [In Discussion](https://github.com/helium/HIP/issues/338) |
+| 52 | [IoT subDAO](https://github.com/helium/HIP/blob/main/0052-iot-dao.md) | [In Discussion](https://github.com/helium/HIP/issues/338) |
 | 53 | [5G subDAO](https://github.com/helium/HIP/blob/main/0053-5g-dao.md) | [In Discussion](https://github.com/helium/HIP/issues/345) |
 | 54 | [H3Dex-based PoC Targeting](https://github.com/helium/HIP/blob/main/0054-h3dex-targeting.md) | [Approved](https://github.com/helium/HIP/issues/347) |
 | 55 | [Validator Challenges](https://github.com/helium/HIP/blob/main/0055-validator-challenges.md) | [Approved](https://github.com/helium/HIP/issues/362) |
