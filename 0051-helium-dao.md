@@ -36,7 +36,7 @@ This proposal outlines two constructions to address the aforementioned core prob
 
 These oracles share a set of network rules and submit independent attestations (through signatures or proofs) or come to consensus on their calculations and submit them in aggregate to the Helium Network.
 
-1. *DNP Specific Incentive Alignment* We propose that each DNP operate as its own subDAO within the broader umbrella of the Helium Network. DNP subDAOs are able to issue DNTs to their stakeholders and DNT denominated governance controls DNP specific attributes.
+2. *DNP Specific Incentive Alignment* We propose that each DNP operate as its own subDAO within the broader umbrella of the Helium Network. DNP subDAOs are able to issue DNTs to their stakeholders and DNT denominated governance controls DNP specific attributes.
 
 # **Motivation**
 
@@ -49,6 +49,27 @@ There are three key drivers for proposing that DNP specific calculations are don
 # **Stakeholders**
 
 This proposal impacts all current and future stakeholders in the Helium Community.
+
+# **Implementation**
+
+HIP 51 is to be implemented in three phases, each of which is contingent upon approval via governance across three separate voting procedures. Note that each vote, and therefore phase, must necessarily have code attached for consideration.
+
+The phases are defined as follows:
+
+1. Phase I (Q2 2022) : As per HIP 53: Helium Mobile subDAO, MOBILE token is issued on the existing Helium blockchain. This will immediately allow any online 5G radio to mine MOBILE tokens.
+    1. The pre-mine amount specified in the Economics Overview section of the proposal is assigned to a multi-signature wallet held by the Helium Foundation. For the purposes of this HIP, we propose that 50B of 250B MOBILE is pre-mined and deposited to the Foundation.
+    2. The Helium Foundation then utilizes this reserve of MOBILE tokens to immediately perform market activities critical to the functioning of the Mobile network, including rewards for hotspots and community or business development efforts. 
+
+2. Phase II (August 1, 2022) : On the third anniversary of the Helium Network, the IOT token is issued on the working Helium blockchain as per HIP 52: IoT subDAO,
+    1. The specified emissions curve and treasury reserve redemption contract (one-way implementation of the market making curve) is deployed to the network such that core subDAO economic structures are in place. This will allow MOBILE and IOT holders to redeem for HNT in their respective treasuries if they choose or continue to hold the DNT. At this point, all HNT emissions are deposited to subDAO treasuries, existing Helium Validators, and HST holders. Each subnetwork rewards Hotspots through DNTs for data transfer and Proof-of-Coverage.
+    2. Remaining portions of the HIP 52 and HIP 53 specifications that are deemed to be within scope by Helium Foundation are bundled. This will likely include updates to the proof-of-coverage mechanism for the Mobile subDAO.
+
+3. Phase III (TBD) : After conducting a complete evaluation of all available Layer-1 blockchains to serve as the base layer of the Helium Network, a migration of the systems built until this point is actioned.
+    1. All accounts and transaction activity on the Helium Network is settled on this Layer-1 blockchain.
+    2. Bridges to migrate state from the prior chain are fully developed. Bridges that pass arbitrary messages for important state transitions from subDAO chains to the main chain are specified or on testnet. 
+    3. Oracle mechanisms for subDAOs are precisely defined, and a secure transition process is proposed.  
+    4. veHNT and veDNT governance mechanisms are put in place.
+
 
 # **Construction**
 
@@ -76,7 +97,7 @@ Note that durations are defined in blocks on the basis of the settlement time of
 
 Note that only proposals with code attached can be formally voted on. There are broadly three ways to use voting power within the Helium DAO:
 
-1. **DAO Utility Score Curation** Users can choose to delegate their veHNT in the name of an existing subDAO, thereby positively impacting that subnetwork’s DAO utility score. This leads to increased emissions for the DNP subDAO treasury reserve, and ultimately increases the value of the corresponding DNT. This is effectively a mechanism to allow stakeholders to signal ongoing support for subnetworks.veHNT stakers towards a DNP are rewarded a fixed 6% of DNT emissions every epoch. This is fixed across DNPs and cannot be changed by the DNP. The reason to keep this fixed is to avoid a scenario where DNPs compete to give more rewards to veHNT stakers at the expense of hotspot hosts.
+1. **DAO Utility Score Curation** Users can choose to delegate their veHNT in the name of an existing subDAO, thereby positively impacting that subnetwork’s DAO utility score. This leads to increased emissions for the DNP subDAO treasury reserve, and ultimately increases the value of the corresponding DNT. This is effectively a mechanism to allow stakeholders to signal ongoing support for subnetworks. veHNT stakers towards a DNP are rewarded up to a fixed cap of 6% DNT emissions every epoch. This is fixed across DNPs and cannot be changed by the DNP. The reason to keep this fixed is to avoid a scenario where DNPs compete to give more rewards to veHNT stakers at the expense of hotspot hosts.
 2. **New Subnetwork Proposals** Proposals for new decentralized network protocol to become a part of the Helium Network as a subDAO must be voted on by veHNT.**
 3. **Helium DAO Proposals** All proposals that impact global Helium DAO parameters including DAO utility score parameters, subDAO structuring, communications architecture etc. can be voted on through this process.
 
@@ -128,7 +149,7 @@ Each subDAO is governed using its DNT, which acts as the core economic and gover
 
 DNT are issued according to a predefined **emission schedule**. This must be defined in the HIP to approve the DNP subDAO joining the Helium Network.
 
-All subDAOs have full control over DNT issuance parameters including overall emission schedules, inflation rates, bonus carve-outs, and stakeholder distributions (hotspots, oracles, etc.). The only exception to this is the fixed 6% DNT rewards going to veHNT stakers. The reason to keep this fixed is to avoid a scenario where DNPs compete to give more rewards to veHNT stakers at the expense of hotspot hosts.
+All subDAOs have full control over DNT issuance parameters including overall emission schedules, inflation rates, bonus carve-outs, and stakeholder distributions (hotspots, oracles, etc.). The only exception to this is the fixed cap of 6% DNT rewards going to veHNT stakers. The reason to keep this fixed is to avoid a scenario where DNPs compete to give more rewards to veHNT stakers at the expense of hotspot hosts.
 
 In each epoch, DNP subDAOs under the Helium network earn some amount of HNT as per the DAO utility score defined in the previous section. This HNT is deposited directly into the DNP subDAO treasury reserve.
 
