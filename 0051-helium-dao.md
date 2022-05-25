@@ -57,7 +57,7 @@ HIP 51 is to be implemented in three phases, each of which is contingent upon ap
 The phases are defined as follows:
 
 1. Phase I (Q2 2022) : As per HIP 53: Helium Mobile subDAO, MOBILE token is issued on the existing Helium blockchain. This will immediately allow any online 5G radio to mine MOBILE tokens.
-    1. The pre-mine amount specified in the Economics Overview section of the proposal is assigned to a multi-signature wallet held by the Helium Foundation.
+    1. The pre-mine amount specified in the Economics Overview section of the proposal is assigned to a multi-signature wallet held by the Helium Foundation. For the purposes of this HIP, we propose that 20B of 200B MOBILE is pre-mined and deposited to the Foundation.
     2. The Helium Foundation then utilizes this reserve of MOBILE tokens to immediately perform market activities critical to the functioning of the Mobile network, including rewards for hotspots and community or business development efforts. 
 
 2. Phase II (August 1, 2022) : On the third anniversary of the Helium Network, the IOT token is issued on the working Helium blockchain as per HIP 52: IoT subDAO,
