@@ -56,18 +56,19 @@ HIP 51 is to be implemented in three phases, each of which is contingent upon ap
 
 The phases are defined as follows:
 
-1. Phase I (May 27, 2022) : As per HIP 53: Helium Mobile subDAO, MOBILE token is issued on the working Helium blockchain. 
-    1. The pre-mine amount specified in the Economics Overview section of the proposal is actioned and held with the Helium Foundation.
+1. Phase I (June 9, 2022) : As per HIP 53: Helium Mobile subDAO, MOBILE token is issued on the working Helium blockchain. 
+    1. The pre-mine amount specified in the Economics Overview section of the proposal is assigned to a multi-signature wallet held by the Helium Foundation.
     2. The Helium Foundation then utilizes this reserve of MOBILE tokens to immediately perform market activities critical to the functioning of the Mobile network, including rewards for hotspots and community or business development efforts. 
 
-2. Phase II (August 1, 2022) : As per HIP 52: IoT subDAO, IOT is issued on the working Helium blockchain.
-    1. The specified emissions curve and treasury reserve market making curve is deployed to the network such that core subDAO economic structured are in place
+2. Phase II (August 1, 2022) : On the third anniversary of the Helium Network, the IOT token is issued on the working Helium blockchain as per HIP 52: IoT subDAO,
+    1. The specified emissions curve and treasury reserve redemption contract (one-way implementation of the market making curve) is deployed to the network such that core subDAO economic structures are in place. At this point, all HNT emissions are deposited to subDAO treasuries, and subnetwork hotspots, oracles, and ops funds receive DNTs.
     2. Remaining portions of the HIP 52 and HIP 53 specifications that are deemed to be within scope by Helium Foundation are bundled. This will likely include updates to the proof-of-coverage mechanism and unmetered pricing models for the Mobile subDAO.
 
 3. Phase III (TBD) : After conducting a complete evaluation of all available Layer-1 blockchains to serve as the base layer of the Helium Network, a migration of the systems built until this point is actioned.
     1. All accounts and transaction activity on the Helium Network is settled on this Layer-1 blockchain.
     2. Bridges to migrate state from the prior chain are fully developed. Bridges that pass arbitrary messages for important state transitions from subDAO chains to the main chain are specified or on testnet. 
     3. Oracle mechanisms for subDAOs are precisely defined, and a secure transition process is proposed.  
+    4. veHNT and veDNT governance mechanisms are put in place.
 
 
 # **Construction**
