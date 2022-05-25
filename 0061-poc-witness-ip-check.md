@@ -29,7 +29,7 @@ This HIP aims to solve both of these problems.
 
 **balanced** : An irregular witness is balanced when the presence of a valid witness for the same beacon allows it to be considered valid itself.
 
-A witness sharing its IP with the beacon it witnessing OR with another witness of the beacon they are witnessing is considered
+A witness sharing its IP with the beacon it is witnessing OR with another witness of the beacon it is witnessing is considered
 **irregular**.
 In order to be considered valid, an irregular witness needs to be **balanced** with a valid witness of the same beacon sharing their IP address with neither the beacon or another witness of that beacon.
 Each valid witness can only balance one irregular witness. If a beacon has X valid witnesses, only X irregular witnesses will be considered valid (chosen randomly).
@@ -111,6 +111,10 @@ The impact of not implementing this HIP would be a gradual decrease in rewards f
 - Are there cases of honest miners being poorly affected by this HIP that were not thought of ?
 
 - Will this be enough to prevent spoofing ?
+
+- How will this affect spoofing farms that attribute a different IP to each miner ?
+
+- Is it acceptable to combat spoofing at the cost of possibliy penalizing a few honest miners that don't fall within the precautions introduced in this proposal ?
 
 # Deployment Impact
 [deployment-impact]: #deployment-impact
