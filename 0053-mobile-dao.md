@@ -115,7 +115,7 @@ Tokens related to data credit burn are distributed in direct proportion to the n
 
 ### *Emissions Curve*
 
-There will be a max supply of 200B MOBILE.
+There will be a max supply of 250B MOBILE.
 
 The proposal is to have halvenings of MOBILE issuance every 2 years aligned with the HNT issuance halvenings. This requires a 1 year “stub” period from August 1, 2022 to August 1, 2023.
 
