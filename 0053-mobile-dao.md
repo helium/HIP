@@ -119,21 +119,19 @@ There will be a max supply of 200B MOBILE.
 
 The proposal is to have halvenings of MOBILE issuance every 2 years aligned with the HNT issuance halvenings. This requires a 1 year “stub” period from August 1, 2022 to August 1, 2023.
 
-We also propose that 10B MOBILE are pre-mined at the launch of the network, and distributed to the subDAO operations fund administered by the Helium Foundation. This allocation is distributed over the course of the stub period to live Mobile Network hotspots on an epochal basis in roughly equal proportion (akin to universal basic income).
+We also propose that 50B MOBILE are pre-mined at the launch of the network, and distributed to the subDAO operations fund administered by the Helium Foundation. This allocation is distributed over the course of the stub period to live Mobile Network hotspots on an epochal basis in roughly equal proportion (akin to universal basic income).
 
 For clarity, the emission schedule is as follows:
-
-| Year | MOBILE at the start of the year | MOBILE minted | Hotspot PoC  | Hotspot Data (excess to PoC) | Mappers | Service Providers | Oracles | veHNT Stakers | Operations Fund |
-|------|------------------------------|------------|--------------|------------------------------|---------|-------------------|---------|---------------|-----------------|
-| 1    | 10B                          | 65B        | 20%*         | 40%*                         | 10%*    | 20%*              | 4%*     | 3%*           | 3%*             |
-| 2    | 70B                          | 32.5B      | 20%          | 40%                          | 10%     | 20%               | 4%      | 3%            | 3%              |
-| 3    | 102.5B                       | 32.5B      | 20%          | 40%                          | 10%     | 20%               | 4%      | 3%            | 3%              |
-| 4    | 135B                         | 16.25B     | 20%          | 40%                          | 10%     | 20%               | 4%      | 3%            | 3%              |
-| 5    | 151.25B                      | 16.25B     | 20%          | 40%                          | 10%     | 20%               | 4%      | 3%            | 3%              |
-| 6    | 167.5B                       | 8.125B     | 20%          | 40%                          | 10%     | 20%               | 4%      | 3%            | 3%              |
-| 7    | 175.625B                     | 8.125B     | 20%          | 40%                          | 10%     | 20%               | 4%      | 3%            | 3%              |
-
-*of post UBI reserve of yearly supply (65B - 10B) = 55B
+| Year | MOBILE at the start of the year | MOBILE minted | Hotspot PoC  | Hotspot Data (excess to PoC) | Mappers | Service Providers | Oracles | veHNT Stakers |
+|------|---------------------------------|---------------|--------------|------------------------------|---------|-------------------|---------|---------------|
+| 1    | 50B                             | 116B*         | 20%          | 40%                          | 10%     | 20%               | 4%      | 6%            |
+| 2    | 116B                            | 33B           | 20%          | 40%                          | 10%     | 20%               | 4%      | 6%            |
+| 3    | 1495B                           | 33B           | 20%          | 40%                          | 10%     | 20%               | 4%      | 6%            |
+| 4    | 182B                            | 16.5B         | 20%          | 40%                          | 10%     | 20%               | 4%      | 6%            |
+| 5    | 198.5B                          | 16.5B         | 20%          | 40%                          | 10%     | 20%               | 4%      | 6%            |
+| 6    | 215B                            | 8.25B         | 20%          | 40%                          | 10%     | 20%               | 4%      | 6%            |
+| 7    | 223.25B                         | 8.25B         | 20%          | 40%                          | 10%     | 20%               | 4%      | 6%            |
+	*50B pre-mine, 66B emitted in year 1
 
 At the end of a given epoch, MOBILE oracles relay start balance, current balance, and total amount of MOBILE Data Credits created and relay to the L1 HNT emissions contract. The emissions contract subsequently distributes the determined amount of HNT as per the Protocol Score to the Mobile subDAO multi-signature wallet, the addresses of which comprise the set of oracles of the Helium Mobile Network.
 
