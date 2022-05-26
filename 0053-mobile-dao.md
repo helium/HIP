@@ -107,9 +107,8 @@ Total number of tokens distributed specifically for PoC events will vary from 20
 
 1. Hotspot receives 1 point for each 4 consecutive hours of remaining eligible
 2. Hotspot receives 3 points every time it was witnessed by a mapper
-    
+
 ![https://lh4.googleusercontent.com/C-qT_FXuoqgiiQVfj29PUEtMI7G1SKIPHh1wWHJOUn2ykffTRR0TXyUgBkGFYNAnh01FogvbHStLq6KPfaz-1imYEFT8L9JMGH4ACiaSLth-XLwWYgUVdFtFpBqXJ0pO073at5zNOx1za7SLKQ](https://lh4.googleusercontent.com/C-qT_FXuoqgiiQVfj29PUEtMI7G1SKIPHh1wWHJOUn2ykffTRR0TXyUgBkGFYNAnh01FogvbHStLq6KPfaz-1imYEFT8L9JMGH4ACiaSLth-XLwWYgUVdFtFpBqXJ0pO073at5zNOx1za7SLKQ)
-    
 
 Tokens related to data credit burn are distributed in direct proportion to the number of DCs burned and are a function of amount of data offloaded by a particular hotspot and price of DC set by the DAO. See Data Transfer Mechanism and Pricing section for more details.
 
@@ -189,21 +188,25 @@ The Mobile subDAO sets the programmatic treasury formula in order to provide quo
 
 We propose a constant function market making formula for the Mobile subDAO programmatic treasury defined as per the following specification.
 
-![https://lh3.googleusercontent.com/E2RFzWF4IwlC3Vz33lWjDpJe8y9ZnHD2mWaUhRn541jicqxEbPqC1-Mt3-IZsLk0WfcelDGhrGt1hbuXUjp_CMgqMuHSZDky4RKPwiWA8Tg0dPr2IhG1lUAp-gVcaNptXbcuvLrxcC4DGQcTgg](https://lh3.googleusercontent.com/E2RFzWF4IwlC3Vz33lWjDpJe8y9ZnHD2mWaUhRn541jicqxEbPqC1-Mt3-IZsLk0WfcelDGhrGt1hbuXUjp_CMgqMuHSZDky4RKPwiWA8Tg0dPr2IhG1lUAp-gVcaNptXbcuvLrxcC4DGQcTgg)
+$H: \text{HNT in Reserve}$
+
+$S: \text{Outstanding Supply of MOBILE}$
+
+$H: \text{Price of MOBILE in HNT Terms}$
 
 At epoch T, we denote the value of H, S, and P as HT, ST,  and PT. The programmatic treasury formula at epoch T is a function in two variables, HT, ST defined as follows:
 
-![https://lh3.googleusercontent.com/LDSGfLuE1FiCT0Fau-Ub05gqxFzr4xgX0wKsIhBw1Ghxvb3TOZZUpRRVwWGDgw92eKw62WNzjq8rrzLqiDdhhBlTup9RqGMvLE760qnMj76HI-Sgts-9F4pzrGspZBW6-DNm2_g69HsQnvhB8g](https://lh3.googleusercontent.com/LDSGfLuE1FiCT0Fau-Ub05gqxFzr4xgX0wKsIhBw1Ghxvb3TOZZUpRRVwWGDgw92eKw62WNzjq8rrzLqiDdhhBlTup9RqGMvLE760qnMj76HI-Sgts-9F4pzrGspZBW6-DNm2_g69HsQnvhB8g)
+$y_T = k_T = \frac{H_T}{S_T}$
 
 For example, consider at epoch #125, the total outstanding supply of tokens for the Mobile subDAO is 3.275B MOBILE and the total amount in the treasury reserve is 2M HNT. The programmatic treasury formula is given as follows
 
-![https://lh4.googleusercontent.com/CBx8hTnPuS-zaW-AAxZPP1hKZzt82oZlNzuEeYXRF0Wg2kJ1UKtCO0g8xoqvWU1bZvTITYUeM8FSpvDPPtU9xwSkYmleoFoilYdoEwXTF3fFBpLVkNnRa4AT6AK-NcfBWb1Y3VlR_L2Kir2Qrg](https://lh4.googleusercontent.com/CBx8hTnPuS-zaW-AAxZPP1hKZzt82oZlNzuEeYXRF0Wg2kJ1UKtCO0g8xoqvWU1bZvTITYUeM8FSpvDPPtU9xwSkYmleoFoilYdoEwXTF3fFBpLVkNnRa4AT6AK-NcfBWb1Y3VlR_L2Kir2Qrg)
+$$y_{125} = k_{125} = \frac{H_{125}}{S_{125}} = \frac{2,000,000}{3,275,000,000} = 0.00061068702$$
 
 This implies that at epoch #125, any number of MOBILE tokens can be redeemed at a unit price of 0.00061068702 HNT.
 
 Now consider at epoch #225, the total outstanding supply of tokens for the Mobile subDAO is 3.5B MOBILE and the total amount in the treasury reserve is 2.025M HNT. The programmatic treasury formula is given as follows
 
-![https://lh3.googleusercontent.com/iFAF8EuGVpEUOc-Vb-rl9lxkJ7jjqsiyAo4q3VtqmUPhCGj4WEkdTDwlnqomQv5lmWP1QPUge_r4-JGFjE5JvPfCj2mXS3IC4L1yH5n6NNYTsbzbhkfyM7Ng80b0TEkCP9sfi9ASfZEgjjiuAg](https://lh3.googleusercontent.com/iFAF8EuGVpEUOc-Vb-rl9lxkJ7jjqsiyAo4q3VtqmUPhCGj4WEkdTDwlnqomQv5lmWP1QPUge_r4-JGFjE5JvPfCj2mXS3IC4L1yH5n6NNYTsbzbhkfyM7Ng80b0TEkCP9sfi9ASfZEgjjiuAg)
+$$y_{225} = k_{225} = \frac{H_{225}}{S_{225}} = \frac{2,025,000}{3,500,000,000} = 0.00057857142$$
 
 This implies that at 100 epochs after #125 at #225, any number of MOBILE tokens can be redeemed at a unit price of 0.00057857142 HNT.
 
@@ -224,7 +227,7 @@ Service Providers operating in the Helium Mobile DAO will be required to either 
 
 Helium Mobile Network Dao will operate a chain variable that will dictate the conversion ratio between Data Credits and MOBILE tokens, denominated in oracle USD price. Changes to the conversion ratios will be conducted following Sub DAO governance specification.
 
-The initial price per GB of Mobile Network data is suggested to be set at $0.5 per Gigabyte, which means that 1 Helium data credit, when used for data on Mobile Helium DAO will convert to $.00000003 per LTE packet of 66 bytes.
+The initial price per GB of Mobile Network data is suggested to be set at <span>$</span>0.5 per Gigabyte, which means that 1 Helium data credit, when used for data on Mobile Helium DAO will convert to <span>$</span>0.00000003 per LTE packet of 66 bytes.
 
 ## *Oracle Operations*
 
