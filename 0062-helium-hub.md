@@ -9,7 +9,7 @@
 # Summary
 [summary]: #summary
 
-This HIP is an alternative to the one being presented as [HIP-51 Helium DAO](0051-helium-dao.md). This HIP will take the goverance proposal from that HIP but drastically changes the economic and technical implementation. As Helium Hub the Helium blockchain will become the center/hub of a web of wireless protocols all of which have the ability to leverage the Helium Ecosystem.
+This HIP is an alternative to the one being presented as [HIP-51 Helium DAO](0051-helium-dao.md). This HIP will take the goverance proposal with slight modifications from that HIP but drastically changes the economic and technical implementation. As Helium Hub the Helium blockchain will become the center/hub of a web of wireless protocols all of which have the ability to leverage the Helium Ecosystem.
 
 # Motivation
 [motivation]: #motivation
