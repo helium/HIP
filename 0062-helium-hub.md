@@ -50,20 +50,22 @@ This explaination will describe the following in regards to Helium Hub and sub-p
 
     - Data Credit (DC) Usage
 
-3) Must use DC's for data transfer. DC's can only be minted upon burning HNT. The HNT being burnt is from the sub-protocols bonding pool. This pool includes the initial 3MM HNT bonded for sub-protocol creation. As a coldstart bucket the sub-protocol is able to burn up to 10% of this initial bond. This 10% will be replenished with the HNT rewarded per epoch to the sub-protocol (if necessary).
+3) Must operate a bonding pool. This bonding pool is made up of two parts HNT and DC like a "normal" Helium wallet. 
+   - DC is used to fund the DC usage (data transfer) of the sub-DAO
+   - HNT is used to back the sub-protocol token via the programmatic treasury
 
-4) All sub-protocol tokens need to be backed by HNT via the bonding pool. The ratio is up to the sub-protocol and set upon creation. For example, 1 HNT can equal 1 sub-protocol tokens (SPT) or 1 HNT can equal 1000 SPT. This is used for SPT to HNT conversions.
+4) Must use DC's for data transfer. DC's can only be minted upon burning HNT. The HNT being burnt is from the sub-protocols bonding pool.
+
+5) All sub-protocol tokens need to be backed by HNT via the bonding pool. The ratio is up to the sub-protocol and set upon creation. For example, 1 HNT can equal 1 sub-protocol tokens (SPT) or 1 HNT can equal 1000 SPT. This is used for SPT to HNT conversions.
 
 For the sub-protocol to be eligible for Proof-of-Protocol-Service (PoPS) it also needs to;
 
-1) Bond 21,000,000 USD in DC to the wallet controlled by the sub-protocol. This bond can be funded by one entity or crowdfunded. The fund accumulates as HNT until the 21,000,000 USD valuation is reached. At which point the HNT is burnt to DC and the sub-protocol then becomes eligible for PoPS. If the sub-protocol doesn't reach this valuation those who bonded HNT to this can redeem there HNT.
+1) Must maintain 21,000,000 USD in DC in the bonding pool. There's a 10% buffer to act as a cold start bucket. This bond can be crowdfunded. In the funding phase, HNT accumulates until the 21,000,000 USD valuation is reached. At this point the HNT is burnt to DC and the sub-protocol then becomes eligible for PoPS. If the sub-protocol doesn't reach this valuation within the set timeframe those who bonded HNT to this fund can redeem their HNT.
 
 ## Helium Hub - Rewards
 [hub-rewards]: #helium-hub---rewards
 
-Each sub-protocol will be created and must meet the above requirements. The first of these requirements creates the sub-protocols bonding pool. The suggested initial bond cost is set at 3MM HNT. As noted above, this bonding pool can be leveraged as the cold start bucket, up to 10%.
-
-The bonding pool functions both as an eligibility requirement and as the source of the HNT that's burnt to mint DC's used for the sub-protocol. In doing so it's also the location where the Helium Hub will deposit any epoch rewards based on the following alogrithms.
+The bonding pool functions both as an eligibility requirement and as the source of the HNT for the programmatic treasury and the DC's used for the sub-protocol. In doing so it's also the location where the Helium Hub will deposit any epoch rewards based on the following alogrithms.
 
 The amount of rewards that a sub-protocol will receive per epoch is based on two factors;
 
@@ -125,9 +127,9 @@ The base equation for PoPS is an equal distribution between all eligible sub-pro
 | Maturity Date | Jul 29th, 2022 | May 25th, 2025 |
 | PoPS % | 0% | 94% |
 
-Once the amount of HNT based on PoPS above is calculated the amount of HNT needed to be rewarded for DC usaged is calculated. If the sub-protocol reported DC usage > 1.5x the amount of PoPS that was going to be rewarded for that epoch the amount of PoPS is reduced propotionally from 100% - 0% (1.5x - 3x) PoPS reward. The PoPS would be redistributed equally among the remaining eligible sub-protocols.
+Once the amount of HNT based on PoPS above is calculated the amount of HNT needed to be rewarded for DC usaged is calculated. If the sub-protocol reported DC usage > 1.5x the amount of PoPS that was going to be rewarded for that epoch the amount of PoPS is reduced propotionally from 100% - 0% (1.5x - 3x). The removed/reduced PoPS would be redistributed equally among the remaining eligible sub-protocols.
 
-| | $IOT | $MOBILE |
+| Today | $IOT | $MOBILE |
 | --- | --- | --- |
 | Initial PoPS | 217.88 | 217.88 |
 | DC usage | 0.32 | 132.86 |
@@ -137,7 +139,7 @@ Once the amount of HNT based on PoPS above is calculated the amount of HNT neede
 
 ### ⬇
 
-| | $IOT | $MOBILE |
+| Today | $IOT | $MOBILE |
 | --- | --- | --- |
 | Initial PoPS | 217.88 | 217.88 |
 | DC usage | 0.17 | 607.47 |
@@ -147,7 +149,7 @@ Once the amount of HNT based on PoPS above is calculated the amount of HNT neede
 
 This reward structures sets an age on how long a sub-protocol is rewarded for building it's network. This reward is dependant on the sub-protocols age and amount of data the sub-protocol is moving. Which in turn will ensure no one is incentived to move dummy data to affect rewards thus preventing "Data Races".
 
-To help make sense of how this all works together, I created a spreadsheet that shows how the network would react if the switch was flipped this second. [spreadsheet](https://docs.google.com/spreadsheets/d/1fRZvUAvp6WfAhHx4TDVpsNDs7vndtAHqfTFiPbqiklM/edit#gid=462165445)
+To help make sense of how this all works together, I've created a spreadsheet that shows how the network would react if the switch was flipped this second. [spreadsheet](https://docs.google.com/spreadsheets/d/1fRZvUAvp6WfAhHx4TDVpsNDs7vndtAHqfTFiPbqiklM/edit#gid=462165445)
 
 ## Helium Hub - Goverance
 [goverance]: #helium-hub---goverance
@@ -158,7 +160,7 @@ Entities that can have custody of veHNT:
 
 - Individual HNT owners
 
-- Sub-protocols and the HNT used for their bond to Helium Hub. This HNT is considered to be equal to a maximum lockup as described below.
+- Sub-protocols and the HNT used for their bond to Helium Hub. The DC amount is converted to HNT via current Oracle Price. The "total" HNT is considered to be equal to a maximum lockup as described below.
 
 ### Examples
 
@@ -169,9 +171,9 @@ The amount of veHNT received is determined by:
 
 A linear multiplier is applied based on the amount of time the HNT is locked up for;
 
-- For the maximum amount, 2,102,400 blocks ~four years, users receive 100 times the HNT they locked up as veHNT.
+- For the maximum veHNT amount you must lock up your HNT for 2,102,400 blocks ~four years, users receive 100 times the HNT they locked up
 
-- For the minimum amount, 267,840 blocks ~ six months, users receive 1 times the HNT they locked up as veHNT.
+- For the minimum veHNT amount you must lock up your HNT for 267,840 blocks ~ six months, users receive 1 times the HNT they locked up
 
 ![voting-power-multiplier](https://lh4.googleusercontent.com/-mE8SN23AZi8gWyUaUfAjgTvhiWlGAfKHgBRYtO9s6mkGDYu1QvIDH98MkXIPVpzLnTddZv-QOOVx3NsQFshnzzSleuGbYa4QsBJZQBZqGIJ1YhRA9yWh2EHdxEBPAZLcInUvAPlCzbOUnlHHg)
 
@@ -189,7 +191,7 @@ veHNT is used during the goverance of the Helium Hub. The only control the Hub h
 
 ### Sub-protocols
 
-As stated above, one of the requirements for becoming a sub-protocol is the initial bonding of 3MM HNT. This is the bare minimum requirement, that being said this HNT is considered to be the veHNT in regards to the sub-protocol voting power. The individuals making up the sub-protocol will form a yes or no vote based on their own governance. This vote will be backed with the sub-protocols voting power.
+As stated above, one of the requirements for becoming a sub-protocol is to maintain 21,000,000 USD worth of DC in their bonding pool. This is the bare minimum requirement, that being said the sub-protocols "total" HNT is considered to be equivalent to the sub-protocols veHNT in regards to voting power. The individuals making up the sub-protocol will form a yes or no vote based on their own governance. This vote will be backed with the sub-protocols voting power.
 
 Further details on the vote-escrow weighted governance model can be found in [Curve governance documentation](https://resources.curve.fi/governance/understanding-governance) and [https://docs.tribeca.so/electorate/voting-escrow](https://docs.tribeca.so/electorate/voting-escrow).
 
