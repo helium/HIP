@@ -52,7 +52,7 @@ This explaination will describe the following in regards to Helium Hub and sub-p
 
 3) Must use DC's for data transfer. DC's can only be minted upon burning HNT. The HNT being burnt is from the sub-protocols bonding pool. This pool includes the initial 3MM HNT bonded for sub-protocol creation. As a coldstart bucket the sub-protocol is able to burn up to 10% of this initial bond. This 10% will be replenished with the HNT rewarded per epoch to the sub-protocol (if necessary).
 
-4) All sub-protocol tokens need to be backed by HNT via the bonding pool. The ratio is up to the sub-protocol and set upon creation. For example, 1 HNT can equal 1 SPT or 1 HNT can equal 1000 SPT. This is used for PST to HNT conversions.
+4) All sub-protocol tokens need to be backed by HNT via the bonding pool. The ratio is up to the sub-protocol and set upon creation. For example, 1 HNT can equal 1 sub-protocol tokens (SPT) or 1 HNT can equal 1000 SPT. This is used for SPT to HNT conversions.
 
 For the sub-protocol to be eligible for Proof-of-Protocol-Service (PoPS) it also needs to;
 
