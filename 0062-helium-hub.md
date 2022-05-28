@@ -44,17 +44,19 @@ This explaination will describe the following in regards to Helium Hub and sub-p
 ### Minimum Requirements
 [minimum-requirements]: #minimum-requirements
 
-1) Bond 3,000,000 HNT to the wallet controlled by the sub-protocol
+1) Have a public immutable ledger for attestation purposes with Helium Hub
 
-2) Have a public immutable ledger for attestation purposes with Helium Hub
+2) Have the capability to inform Helium Hub of it's epoch statistics (Oracles/Validators/IBC/etc) as a minimum would be the following;
 
-3) Have the capability to inform Helium Hub of it's epoch statistics (Oracles/Validators/IBC/etc) as a minimum would be the following;
+    - Data Credit (DC) Usage
 
-    - DC usage
+3) Must use DC's for data transfer. DC's can only be minted upon burning HNT. The HNT being burnt is from the sub-protocols bonding pool. This pool includes the initial 3MM HNT bonded for sub-protocol creation. As a coldstart bucket the sub-protocol is able to burn up to 10% of this initial bond. This 10% will be replenished with the HNT rewarded per epoch to the sub-protocol (if necessary).
 
-4) Must use DC's for data transfer. DC's can only be minted upon burning HNT. The HNT being burnt is from the sub-protocols bonding pool. This pool includes the initial 3MM HNT bonded for sub-protocol creation. As a coldstart bucket the sub-protocol is able to burn up to 10% of this initial bond. This 10% will be replenished with the HNT rewarded per epoch to the sub-protocol (if necessary).
+4) All sub-protocol tokens need to be backed by HNT via the bonding pool. The ratio is up to the sub-protocol and set upon creation. For example, 1 HNT can equal 1 SPT or 1 HNT can equal 1000 SPT. This is used for PST to HNT conversions.
 
-5) All sub-protocol tokens need to be backed by HNT via the bonding pool. The ratio is up to the sub-protocol and set upon creation. For example, 1 HNT can equal 1 SPT or 1 HNT can equal 1000 SPT. This is used for PST to HNT conversions.
+For the sub-protocol to be eligible for Proof-of-Protocol-Service (PoPS) it also needs to;
+
+1) Bond 21,000,000 USD in DC to the wallet controlled by the sub-protocol. This bond can be funded by one entity or crowdfunded. The fund accumulates as HNT until the 21,000,000 USD valuation is reached. At which point the HNT is burnt to DC and the sub-protocol then becomes eligible for PoPS. If the sub-protocol doesn't reach this valuation those who bonded HNT to this can redeem there HNT.
 
 ## Helium Hub - Rewards
 [hub-rewards]: #helium-hub---rewards
