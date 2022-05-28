@@ -16,7 +16,7 @@ This HIP is an alternative to the one being presented as [HIP-51 Helium DAO](005
 
 The purpose of this HIP is to simplify the proposal of Helium becoming the center of multiple wireless protocols (omniprotocol access layer).
 
-- Provide the minimum requirements needed for a sub-protocol to earn rewards from the Helium blockchain
+- Provide the minimum requirements needed become a sub-protocol and what's needed to earn none data transfer rewards from the Helium blockchain
 
 - Describe the reward structure provided to all eligible sub-protocols
 
