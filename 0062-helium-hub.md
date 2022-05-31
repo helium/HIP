@@ -16,7 +16,9 @@ This HIP is an alternative to the one being presented as [HIP-51 Helium DAO](005
 
 The purpose of this HIP is to simplify the proposal of Helium becoming the center of multiple wireless protocols (omniprotocol access layer).
 
-- Provide the minimum requirements needed become a sub-protocol and what's needed to earn none data transfer rewards from the Helium blockchain
+- Provide the minimum requirements needed for the sub-protocol to earn data transfer rewards
+
+- Provide the minimum requirements needed for the sub-protocol to earn Proof-of-Protocol-Service (PoPS)
 
 - Describe the reward structure provided to all eligible sub-protocols
 
@@ -44,6 +46,8 @@ This explaination will describe the following in regards to Helium Hub and sub-p
 ### Minimum Requirements
 [minimum-requirements]: #minimum-requirements
 
+For the sub-protocol to be eligible for data transfer rewards it needs to;
+
 1) Have a public immutable ledger for attestation purposes with Helium Hub
 
 2) Have the capability to inform Helium Hub of it's epoch statistics (Oracles/Validators/IBC/etc) as a minimum would be the following;
@@ -60,7 +64,7 @@ This explaination will describe the following in regards to Helium Hub and sub-p
 
 For the sub-protocol to be eligible for Proof-of-Protocol-Service (PoPS) it also needs to;
 
-1) Must maintain 21,000,000 USD in DC in the bonding pool. There's a 10% buffer to act as a cold start bucket. This bond can be crowdfunded. In the funding phase, HNT accumulates until the 21,000,000 USD valuation is reached. At this point the HNT is burnt to DC and the sub-protocol then becomes eligible for PoPS. If the sub-protocol doesn't reach this valuation within the set timeframe those who bonded HNT to this fund can redeem their HNT.
+1) Must maintain 21,000,000 USD in DC in the bonding pool. There's a 10% buffer to act as a cold start bucket. This bond can be crowdfunded. In the funding phase, HNT accumulates until the 21,000,000 USD valuation is reached. At this point the HNT is burnt to DC and the sub-protocol then becomes eligible for PoPS. If the sub-protocol doesn't reach this valuation within the set timeframe those who bonded HNT to this fund are able redeem their HNT.
 
 ## Helium Hub - Rewards
 [hub-rewards]: #helium-hub---rewards
