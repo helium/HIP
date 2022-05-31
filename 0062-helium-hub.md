@@ -16,15 +16,14 @@ This HIP is an alternative to the one being presented as [HIP-51 Helium DAO](005
 
 The purpose of this HIP is to simplify the proposal of Helium becoming the center of multiple wireless protocols (omniprotocol access layer).
 
-- Provide the minimum requirements needed for the sub-protocol to earn data transfer rewards
-
-- Provide the minimum requirements needed for the sub-protocol to earn Proof-of-Protocol-Service (PoPS)
-
-- Describe the reward structure provided to all eligible sub-protocols
-
-- Describe goverance used within the Helium Hub
+- Provide the minimum requirements needed for the sub-protocol to earn;
+  - data transfer rewards
   
-- Describe the migration process from Helium to Helium as a sub-protocol hub.
+  - Proof-of-Protocol-Service (PoPS) rewards
+
+- Describe how rewards are distributed to eligible sub-protocols
+
+- Describe how goverance is used within the Helium Hub to include scope
 
 # Stakeholders
 [stakeholders]: #stakeholders
