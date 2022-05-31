@@ -202,7 +202,7 @@ Further details on the vote-escrow weighted governance model can be found in [Cu
 # Drawbacks
 [drawbacks]: #drawbacks
 
-This drastically changes how Helium as a blockchain functions. The amount of development work is far greater then anything proposed to date. If Helium and all sub-protocols decide to use the Cosmos SDK it'd also shift the programming language of Helium to Go and Rust. Making most Erlang work to date obsolete. The migration process proposed above provides an option to maintain the current chain as the LoRa sub-protocol but that sub-protocol wouldn't be locked into such an agreement. It's just proposed for an easier transitional period.
+This drastically changes how Helium as a blockchain functions. The amount of development work is far greater then anything proposed to date. If Helium and all sub-protocols decide to use the Cosmos SDK it'd also shift the programming language of Helium to Go and Rust. Making most Erlang work to date obsolete. The migration process that will be proposed later will try to maintain the current chain as the LoRa sub-protocol but that sub-protocol wouldn't be locked into such an agreement. It's just proposed for an easier transition.
 
 # Rationale and Alternatives
 [alternatives]: #rationale-and-alternatives
