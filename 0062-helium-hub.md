@@ -18,7 +18,6 @@ The purpose of this HIP is to simplify the proposal of Helium becoming the cente
 
 - Provide the minimum requirements needed for the sub-protocol to earn;
   - data transfer rewards
-  
   - Proof-of-Protocol-Service (PoPS) rewards
 
 - Describe how rewards are distributed to eligible sub-protocols
@@ -28,7 +27,7 @@ The purpose of this HIP is to simplify the proposal of Helium becoming the cente
 # Stakeholders
 [stakeholders]: #stakeholders
 
-- The Helium Community as a whole. This will drastically changes the way Helium functions.
+- The Helium Community as a whole. This will drastically change the way Helium operates.
 
 # Detailed Explaination
 [detailed-explanation]: #detailed-explanation
@@ -53,22 +52,22 @@ For the sub-protocol to be eligible for data transfer rewards it needs to;
 
     - Data Credit (DC) Usage
 
-3) Must operate a bonding pool. This bonding pool is made up of two parts HNT and DC like a "normal" Helium wallet. 
+3) Must operate a bonding pool. This bonding pool is made up of two parts HNT and DC like a "normal" Helium wallet
    - DC is used to fund the DC usage (data transfer) of the sub-DAO
    - HNT is used to back the sub-protocol token via the programmatic treasury
 
 4) Must use DC's for data transfer. DC's can only be minted upon burning HNT. The HNT being burnt is from the sub-protocols bonding pool.
 
-5) All sub-protocol tokens need to be backed by HNT via the bonding pool. The ratio is up to the sub-protocol and set upon creation. For example, 1 HNT can equal 1 sub-protocol tokens (SPT) or 1 HNT can equal 1000 SPT. This is used for SPT to HNT conversions.
+5) All sub-protocol tokens need to be backed by HNT via the bonding pool. The ratio is up to the sub-protocol and set upon creation. For example, 1 HNT can equal 1 sub-protocol token (SPT) or 1 HNT can equal 1000 SPT. This is used for SPT to HNT exchanges via the treasury.
 
 For the sub-protocol to be eligible for Proof-of-Protocol-Service (PoPS) it also needs to;
 
-1) Must maintain 21,000,000 USD in DC in the bonding pool. There's a 10% buffer to act as a cold start bucket. This bond can be crowdfunded. In the funding phase, HNT accumulates until the 21,000,000 USD valuation is reached. At this point the HNT is burnt to DC and the sub-protocol then becomes eligible for PoPS. If the sub-protocol doesn't reach this valuation within the set timeframe those who bonded HNT to this fund are able redeem their HNT.
+1) Maintain 21,000,000 USD of DC in its bonding pool. Up to 10% of this amount can be used as a cold start bucket. This bond can be crowdfunded. In the funding phase, HNT accumulates until the 21,000,000 USD valuation is reached. At this point the HNT is burnt to DC and the sub-protocol then becomes eligible for PoPS. If the sub-protocol doesn't reach this valuation within the set timeframe those who bonded HNT to this fund are allowed to redeem their HNT.
 
 ## Helium Hub - Rewards
 [hub-rewards]: #helium-hub---rewards
 
-The bonding pool functions both as an eligibility requirement and as the source of the HNT for the programmatic treasury and the DC's used for the sub-protocol. In doing so it's also the location where the Helium Hub will deposit any epoch rewards based on the following alogrithms.
+The bonding pool functions both as an eligibility requirement and as the source of the HNT for the programmatic treasury and the DC's used for the sub-protocol. In doing so it's also the location where the Helium Hub will deposit any epoch rewards.
 
 The amount of rewards that a sub-protocol will receive per epoch is based on two factors;
 
@@ -76,7 +75,11 @@ The amount of rewards that a sub-protocol will receive per epoch is based on two
 
 2) The amount of DC being used by the sub-protocol
 
-The current network relies on Proof-of-Coverage and Data Transfers to reward hotspot operators for the service that they provide. This HIP will keep these reward pools and percentages the same but will suggest that Proof-of-Coverage to be renamed to Proof-of-Protocol-Service (for LoRa this is done using PoC but for a future sub-protocol it might not be coverage based).
+The current network relies on Proof-of-Coverage and Data Transfers to reward hotspot operators for the service that they provide. This HIP will keep these reward pools and percentages the same but will suggest that Proof-of-Coverage to be renamed to Proof-of-Protocol-Service (for LoRa this is done using PoC but for a future sub-protocol it might not be coverage based). 
+
+> **NOTE** DC overage ([HIP-10](0010-usage-based-data-transfer-rewards.md)) and the current schedule for % allocation changes will also remain the same as described in the graphic below.
+
+![HNT Distribution Over Time](0062-helium-hub/hnt-distribution.svg)
 
 ### Current Reward Models
 
@@ -100,11 +103,9 @@ The current network relies on Proof-of-Coverage and Data Transfers to reward hot
 | Consensus Group | 6% | 104.1666 |
 | Security Tokens | 33% | 572.9166 |
 
-> **NOTE** Still includes Data Transfer Overage
-
 With the reward pools adequately redefined each sub-protocol will be rewarded per epoch based on it's age and amount of DC it submits (this value can be attested by the Helium Hub at anytime).
 
-The base equation for PoPS is an equal distribution between all eligible sub-protocols. This distribution is affected by the age of the sub-protocol. The reward percentage is reduced upon exceeding the maturity date of the sub-protocol, 3 years after creation. The reduction will be equally distributed to the remaining sub-protocols that haven't reached their maturity date yet.
+The base equation for PoPS is an equal distribution between all eligible sub-protocols. This distribution is affected by the age of the sub-protocol. The reward percentage is reduced upon exceeding the maturity date of the sub-protocol, 3 years after creation. The reduction will be equally redistributed to the remaining sub-protocols that haven't reached their maturity date yet.
 
 3 years after reaching maturity date the sub-protocol will earn 0% of the PoPS reward pool per epoch.
 
