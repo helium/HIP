@@ -12,7 +12,7 @@
 
 [HIP 51: Helium DAO](https://github.com/helium/HIP/blob/main/0051-helium-dao.md) provides a general structure for onboarding new Decentralized Network Protocols (DNPs) to the broader Helium Network.
 
-In this proposal, we describe the structure for the Helium WiFi subDAO, also henceforth referred to as WiFi subDAO. The aim of the WiFi SubDAO is to bring online Wifi routers to the Helium Network. The subDAO token is proposed to be named WDT.
+In this proposal, we describe the structure for the Helium WiFi subDAO, also henceforth referred to as WiFi subDAO. The aim of the WiFi SubDAO is to bring online Wifi routers to the Helium Network. The subDAO token is proposed to be named HWIFI.
 
 Wifi is one of the most widely used network protocols for large amounts of data consumption. It has a high level of penetration in developed nations worldwide and has ample room to grow in developing nations. Upcoming Wifi standards provide a roadmap for greater data transfer rates paving the way for even higher rates of consumption as new applications take advantage of new bandwidth.
 
@@ -29,8 +29,8 @@ This proposal impacts all current and future participants in the Helium Communit
 We propose to inherit the same core structure from [HIP 53: Mobile subDAO](https://github.com/helium/HIP/blob/main/0053-mobile-dao.md).
 
 1. **Emissions Curve**The WiFi subDAO is responsible for all emissions, mining rewards, and programmatic treasury operations. The economic responsibilities around this involve managing the token issuance and distribution.
-2. **The Treasury** The WiFi SubDao provides the prices at which the subDAO treasury provides quotes to holders of WDT who wish to redeem their holdings for underlying HNT.
-3. **Oracle Specification** Oracles perform work including verifying proof of coverage and data transfer. The oracles are also responsible for distributing WDT mining rewards to the appropriate parties. Responsibilities here include definition of oracle software, minimum stake amounts, and rewards for participation.
+2. **The Treasury** The WiFi SubDao provides the prices at which the subDAO treasury provides quotes to holders of HWIFI who wish to redeem their holdings for underlying HNT.
+3. **Oracle Specification** Oracles perform work including verifying proof of coverage and data transfer. The oracles are also responsible for distributing HWIFI mining rewards to the appropriate parties. Responsibilities here include definition of oracle software, minimum stake amounts, and rewards for participation.
 4. **Data Transfer Mechanism and Pricing** Data transfer within subnetworks occurs via the process of procuring and burning data credits in the name of the hotspot or set of hotspots that provide coverage. Responsibilities here include Organizationally Unique Identifier (OUI) registration, state channel creation, and bandwidth capacity per data credit definition.
 5. **Proof-of-Coverage Mechanism** The WiFi SubDao will use a Proof of Coverage algorithm to verify on an ongoing basis that hotspots are accurately representing their location and the wireless network coverage they are creating from that location. Responsibilities here include Proof-of-Coverage challenge construction, target selection, reward scaling, and verification.
 6. **Network participants** The types of network & economic participants on the WiFi SubDao will initially be largely the same as those of the [HIP 53: Mobile subDAO](https://docs.google.com/document/u/1/d/1WvldI9gyhuouK2o2nquvIZaFK3dSfQIePRx5M5ssu9g/edit).
@@ -39,15 +39,15 @@ The remainder of this proposal defines initial values for the subDAO given the a
 
 ### *Emissions Curve*
 
-There will be a max supply of 250B WDT.
+There will be a max supply of 250B HWIFI.
 
-The proposal is to have halvenings of WDT issuance every 2 years aligned with the HNT issuance halvenings. This requires a 1 year “stub” period from August 1, 2022 to August 1, 2023.
+The proposal is to have halvenings of HWIFI issuance every 2 years aligned with the HNT issuance halvenings. This requires a 1 year “stub” period from August 1, 2022 to August 1, 2023.
 
-We also propose that 50B WDT are pre-mined at the launch of the network, and distributed to the subDAO operations fund administered by WiFi subDAO. This allocation is distributed over the course of the stub period to live WiFi hotspots on an epochal basis in roughly equal proportion (akin to universal basic income).
+We also propose that 50B HWIFI are pre-mined at the launch of the network, and distributed to the subDAO operations fund administered by WiFi subDAO. This allocation is distributed over the course of the stub period to live WiFi hotspots on an epochal basis in roughly equal proportion (akin to universal basic income).
 
 For clarity, the emission schedule is as follows:
 
-| Year | WDT at the start of the year | WDT minted | Hotspot PoC  | Hotspot Data (excess to PoC) | Mappers | Service Providers | Oracles | veHNT Stakers |
+| Year | HWIFI at the start of the year | HWIFI minted | Hotspot PoC  | Hotspot Data (excess to PoC) | Mappers | Service Providers | Oracles | veHNT Stakers |
 |------|------------------------------|------------|--------------|------------------------------|---------|-------------------|---------|---------------|
 | 1    | 50B                          | 116B*      | 20%          | 40%                          | 10%     | 20%               | 4%      | 6%            |
 | 2    | 116B                         | 33B        | 20%          | 40%                          | 10%     | 20%               | 4%      | 6%            |
@@ -59,16 +59,16 @@ For clarity, the emission schedule is as follows:
 
 *50B pre-mine, 66B emitted in year 1
 
-At the end of a given epoch, WiFi subDAO oracles relay start balance, current balance, and total amount of WDT Data Credits created and relay to the L1 HNT emissions contract. The emissions contract subsequently distributes the determined amount of HNT as per the Protocol Score to the WiFi subDAO multi-signature wallet, the addresses of which comprise the set of oracles of the WiFi Network.
+At the end of a given epoch, WiFi subDAO oracles relay start balance, current balance, and total amount of HWIFI Data Credits created and relay to the L1 HNT emissions contract. The emissions contract subsequently distributes the determined amount of HNT as per the Protocol Score to the WiFi subDAO multi-signature wallet, the addresses of which comprise the set of oracles of the WiFi Network.
 
 The subDAO operations fund is intended to allow the DNP to perform bespoke operations to create and sustain network growth. The primary use case of the operations fund is to fund all state transition transaction fees to the L1, but can be deployed in any manner of ways as per subDAO governance. Such incentives could include
 
 1. Surge-pricing style dynamic multipliers based on data transfer activity for individual regions
 2. Bespoke incentives for oracles and manufacturers on the basis of changing network demands
 
-Once emissions are distributed to hotspots and oracles, WDT owners can either redeem their holdings for underlying HNT against the treasury reserve automatically, hold for redemptions at a later time, or lock up their WDT for veWDT in a process similar to the veHNT mechanism described in HIP 51.
+Once emissions are distributed to hotspots and oracles, HWIFI owners can either redeem their holdings for underlying HNT against the treasury reserve automatically, hold for redemptions at a later time, or lock up their HWIFI for veHWIFI in a process similar to the veHNT mechanism described in HIP 51.
 
-Users can choose to delegate their veWDT for three core purposes:
+Users can choose to delegate their veHWIFI for three core purposes:
 
 1. Stakeholder staking to specific hotspots or service providers.
 2. Oracle delegation in order to earn future emissions.
@@ -78,9 +78,9 @@ We propose to use a points and incentive structure largely similar to [HIP 53: M
 
 ### *Treasury Reserve DNT Market Making Curve*
 
-The subDAO sets the programmatic treasury formula in order to provide quotes to holders of WDT who wish to redeem their holdings for underlying HNT.
+The subDAO sets the programmatic treasury formula in order to provide quotes to holders of HWIFI who wish to redeem their holdings for underlying HNT.
 
-![https://lh6.googleusercontent.com/71pPK1UOwsrnep53Wd4GBqAO5yd4-wkTZhMrNyZROP1Jo4vqyBN-l071i2px51m0AdQvs9IrCm4Px8CgMj743h-QzTOX1rK5GJosx8hnaaTt6N_1ceEG8SPKhHD3Omz9wizdXa839EShTtKXjg](https://lh6.googleusercontent.com/71pPK1UOwsrnep53Wd4GBqAO5yd4-wkTZhMrNyZROP1Jo4vqyBN-l071i2px51m0AdQvs9IrCm4Px8CgMj743h-QzTOX1rK5GJosx8hnaaTt6N_1ceEG8SPKhHD3Omz9wizdXa839EShTtKXjg)
+![https://lh3.googleusercontent.com/XNJECOJF0YU9p4ywoVOjhHuqbL0Uw_u5WyvVTDsCajRFAGHb4SfFUtFOygRuCB6-5l5J89E0-Jon_470OeUjc_sbd00zPBjNLe4hoZgzmWe-BlDqKzvhHWIFIM1vHG4eEIqlD5Um4Meyc_2Ajwyw](https://lh3.googleusercontent.com/XNJECOJF0YU9p4ywoVOjhHuqbL0Uw_u5WyvVTDsCajRFAGHb4SfFUtFOygRuCB6-5l5J89E0-Jon_470OeUjc_sbd00zPBjNLe4hoZgzmWe-BlDqKzvhHWIFIM1vHG4eEIqlD5Um4Meyc_2Ajwyw)
 
 ### *Oracle Operations*
 
@@ -107,7 +107,7 @@ During initial launch stages, when network density is low, to combat gaming, the
 1. Same mapper can witness the same hotspot no more than once every 4 hours
 2. Same cell can be witnessed by a maximum of 6 unique mappers every hour
 
-During consequent launch stages, as the density of mappers grows, WiFi SubDao will look to implement a more robust algorithm, similar to Helium LoRa PoC, whereby only randomly challenged hotspots can be witnessed. We also propose that some of the WDT that are pre-mined at the launch of the network, and distributed to the subDAO operations fund is distributed over the course of the stub period to live hotspots on an epochal basis in roughly equal proportion (akin to universal basic income).
+During consequent launch stages, as the density of mappers grows, WiFi SubDao will look to implement a more robust algorithm, similar to Helium LoRa PoC, whereby only randomly challenged hotspots can be witnessed. We also propose that some of the HWIFI that are pre-mined at the launch of the network, and distributed to the subDAO operations fund is distributed over the course of the stub period to live hotspots on an epochal basis in roughly equal proportion (akin to universal basic income).
 
 ### *Data Transfer and Pricing Specification*
 
@@ -119,9 +119,9 @@ WiFi SubDao will operate a chain variable that will dictate the conversion ratio
 
 # The WiFi network is under the control of the subDAO. All subDAO proposals must come attached with code to be approved.
 
-We propose that veWDT governance is constructed in a manner largely identical to veMOBILE governance as specified in [HIP 51: Helium DAO](https://github.com/helium/HIP/blob/main/0051-helium-dao.md).
+We propose that veHWIFI governance is constructed in a manner largely identical to veMOBILE governance as specified in [HIP 51: Helium DAO](https://github.com/helium/HIP/blob/main/0051-helium-dao.md).
 
-Users can choose to delegate their lockup power in veWDT to all subDAO governance proposals. Proposals are assessed using majority and quorum thresholds defined in veWDT terms. Note that only proposals with code attached can be voted on.
+Users can choose to delegate their lockup power in veHWIFI to all subDAO governance proposals. Proposals are assessed using majority and quorum thresholds defined in veHWIFI terms. Note that only proposals with code attached can be voted on.
 
 *Activation fee*
 
@@ -134,17 +134,17 @@ There are a number of real world physical entities that comprise the network and
 | Name              | Functional Role                                                                                                                                                                                                                                                                                         | Economic Role                                                                                                                            |
 |-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
 | Subscriber        | Uses the network                                                                                                                                                                                                                                                                                        | Pays service providers to access data on the network                                                                                     |
-| Mapper            | Runs a network mapping app on the phone or uses a dedicated mapper device to verify coverage provided by the hotspot hosts.  Mappers are required to be a subscriber.                                                                                                                                   | Receives WDT mining rewards for mapping networking coverage                                                                              |
+| Mapper            | Runs a network mapping app on the phone or uses a dedicated mapper device to verify coverage provided by the hotspot hosts.  Mappers are required to be a subscriber.                                                                                                                                   | Receives HWIFI mining rewards for mapping networking coverage                                                                              |
 | Service Provider  | Promotes network service to subscribers and mappers  Runs subscriber database and authenticates inbound subscribers and mappers into the network    Records data transfer transactions to state channels Maintains their flavor of the witnessing app Responds to subscriber and mapper support queries | Receives payments for data access from subscribers and mappers  Burns HNT into Data Credits and settles data usage with hotspot hosts    |
-| Hotspot Host      | Operates a wifi hotspot and pays for backhaul.                                                                                                                                                                                                                                                          | Receives WDT mining rewards for providing coverage  Receives WDT mining rewards for providing data access to subscribers                 |
-| Oracles           | Relay data to L1 emission contract Calculate incentive points for service providers and mappers                                                                                                                                                                                                         | Stake WDT  Receive % of rewards from emissions contract                                                                                  |
-| Hotspot Vendor    | Builds and sells hotspots  Supports hotspot hosts  Runs software to provide  updates of hotspots Maintain integrations with service providers                                                                                                                                                           | Stakes WDT Receive % of rewards mined by hotspot hosts                                                                                   |
+| Hotspot Host      | Operates a wifi hotspot and pays for backhaul.                                                                                                                                                                                                                                                          | Receives HWIFI mining rewards for providing coverage  Receives HWIFI mining rewards for providing data access to subscribers                 |
+| Oracles           | Relay data to L1 emission contract Calculate incentive points for service providers and mappers                                                                                                                                                                                                         | Stake HWIFI  Receive % of rewards from emissions contract                                                                                  |
+| Hotspot Vendor    | Builds and sells hotspots  Supports hotspot hosts  Runs software to provide  updates of hotspots Maintain integrations with service providers                                                                                                                                                           | Stakes HWIFI Receive % of rewards mined by hotspot hosts                                                                                   |
 
-![https://lh3.googleusercontent.com/hieDuv6xFAXkK5qZH8lRyVxcol06sUAXxCZj3TMOmymwA0Ygsxs6bpYPrat7GlixGVbxfe058Nvt8fxOLPYUuKGpye_YyB6VfuyucFBxzJ_Rfv3dywT_lSY415w1cDPvYJ4TlLI8-jJMxWrnwQ](https://lh3.googleusercontent.com/hieDuv6xFAXkK5qZH8lRyVxcol06sUAXxCZj3TMOmymwA0Ygsxs6bpYPrat7GlixGVbxfe058Nvt8fxOLPYUuKGpye_YyB6VfuyucFBxzJ_Rfv3dywT_lSY415w1cDPvYJ4TlLI8-jJMxWrnwQ)
+![https://lh3.googleusercontent.com/G2Ii7fH3R81A7ff69C3MxvdX-1ROtEOc_LiHQhcjTpsIirIKsLomKEvufhCRB2mEd7gzeFIibUP_Qq0ssIp-j_GU4BKMxDKahd6Lyo67o0ya4iNJcTVtt77bb1A8zR0vlUjGnCK9EG06V0cEgQ](https://lh3.googleusercontent.com/G2Ii7fH3R81A7ff69C3MxvdX-1ROtEOc_LiHQhcjTpsIirIKsLomKEvufhCRB2mEd7gzeFIibUP_Qq0ssIp-j_GU4BKMxDKahd6Lyo67o0ya4iNJcTVtt77bb1A8zR0vlUjGnCK9EG06V0cEgQ)
 
-Rewards from the emissions contract are distributed between service providers, mappers and hotspot hosts as a function of the incentive points earned during a period of time. Service providers are allowed (and encouraged) to use the pool of WDT emissions they get towards growing their subscriber base by either sharing WDT directly with subscribers for usage via a witnessing app or discounting data plans.
+Rewards from the emissions contract are distributed between service providers, mappers and hotspot hosts as a function of the incentive points earned during a period of time. Service providers are allowed (and encouraged) to use the pool of HWIFI emissions they get towards growing their subscriber base by either sharing HWIFI directly with subscribers for usage via a witnessing app or discounting data plans.
 
-Reward calculations that trigger distribution of tokens between service providers, mappers and hotspot operators in the WiFi SubDao are performed by Oracles. Oracles continuously witness a stream of events coming from various DAO participants (such as mapper/hotspot events, data offload events, etc.) and perform reward distribution calculation. At the end of an epoch, Oracles come to consensus on proper distribution of WDT based on events witnessed during the last epoch.
+Reward calculations that trigger distribution of tokens between service providers, mappers and hotspot operators in the WiFi SubDao are performed by Oracles. Oracles continuously witness a stream of events coming from various DAO participants (such as mapper/hotspot events, data offload events, etc.) and perform reward distribution calculation. At the end of an epoch, Oracles come to consensus on proper distribution of HWIFI based on events witnessed during the last epoch.
 
 **Appendix**
 
