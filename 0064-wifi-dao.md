@@ -5,10 +5,9 @@
 - Category: Economic, Technical
 - Status: In Discussion
 
-
 ![https://lh6.googleusercontent.com/KStfb4K7ODMe4EmsovQbrzkzm7gp7YI30dw5-Y5RRsGksHyD-rg-FHgEDrC7V5ISRbHRdD7SoHOVqZ1uylbJMJf6SDtBG-bcRCNe2jjj22VBjFLMGerSJIhgUNlFAqe8GWvTDT4FeWXgwTGMNA](https://lh6.googleusercontent.com/KStfb4K7ODMe4EmsovQbrzkzm7gp7YI30dw5-Y5RRsGksHyD-rg-FHgEDrC7V5ISRbHRdD7SoHOVqZ1uylbJMJf6SDtBG-bcRCNe2jjj22VBjFLMGerSJIhgUNlFAqe8GWvTDT4FeWXgwTGMNA)
 
-**Summary**
+# Summary
 
 [HIP 51: Helium DAO](https://github.com/helium/HIP/blob/main/0051-helium-dao.md) provides a general structure for onboarding new Decentralized Network Protocols (DNPs) to the broader Helium Network.
 
@@ -20,11 +19,11 @@ Today all WiFi networks operate as siloed and independent hotspots. A user canno
 
 [HIP 53: Mobile DAO](https://github.com/helium/HIP/blob/main/0053-mobile-dao.md) proposes an offload use case for WiFi along with its 5G implementation, wherein cellular traffic is offloaded to WiFi hotspots. In this proposal we expand the focus of WiFi beyond offload and to direct data consumption from consumers and devices. Users will be able to connect to and use the Helium WiFi network just as they use any other WiFi network but with the added benefits of roaming and using a single data credit system across the entire network globally. Users or devices on the Mobile DAO will also be able to roam onto hotspots from the WiFi subDAO seamlessly.
 
-# **Stakeholders**
+# Stakeholders
 
 This proposal impacts all current and future participants in the Helium Community.
 
-# **WiFi SubDao core functions**
+# WiFi SubDao core functions
 
 We propose to inherit the same core structure from [HIP 53: Mobile subDAO](https://github.com/helium/HIP/blob/main/0053-mobile-dao.md).
 
@@ -37,7 +36,7 @@ We propose to inherit the same core structure from [HIP 53: Mobile subDAO](https
 
 The remainder of this proposal defines initial values for the subDAO given the aforementioned set of responsibilities.
 
-### *Emissions Curve*
+### Emissions Curve
 
 There will be a max supply of 250B HWIFI.
 
@@ -76,13 +75,13 @@ Users can choose to delegate their veHWIFI for three core purposes:
 
 We propose to use a points and incentive structure largely similar to [HIP 53: Mobile DAO](https://github.com/helium/HIP/blob/main/0053-mobile-dao.md)
 
-### *Treasury Reserve DNT Market Making Curve*
+### Treasury Reserve DNT Market Making Curve
 
 The subDAO sets the programmatic treasury formula in order to provide quotes to holders of HWIFI who wish to redeem their holdings for underlying HNT.
 
 ![https://lh3.googleusercontent.com/XNJECOJF0YU9p4ywoVOjhHuqbL0Uw_u5WyvVTDsCajRFAGHb4SfFUtFOygRuCB6-5l5J89E0-Jon_470OeUjc_sbd00zPBjNLe4hoZgzmWe-BlDqKzvhHWIFIM1vHG4eEIqlD5Um4Meyc_2Ajwyw](https://lh3.googleusercontent.com/XNJECOJF0YU9p4ywoVOjhHuqbL0Uw_u5WyvVTDsCajRFAGHb4SfFUtFOygRuCB6-5l5J89E0-Jon_470OeUjc_sbd00zPBjNLe4hoZgzmWe-BlDqKzvhHWIFIM1vHG4eEIqlD5Um4Meyc_2Ajwyw)
 
-### *Oracle Operations*
+### Oracle Operations
 
 WiFi SubDao oracles confirm proof of coverage, data transfer, and add blocks to the WD subnetwork. They serve state data around Proof-of-Coverage challenges and data transfer events to hotspots.
 
@@ -94,7 +93,7 @@ At the end of each epoch, mining rewards are distributed by the consensus group 
 
 Each one of the above activities is recorded in a block using the reward transaction. At the completion of each epoch, all the individual reward transactions are grouped in a rewards transaction at which point all HNT mined in that epoch are distributed.
 
-### *Proof-of-Coverage Specification*
+### Proof-of-Coverage Specification
 
 The WiFi SubDao is required to constantly interrogate hotspots using the Proof-of-Coverage challenge mechanism to ensure that hotspots are representing their locations and uptime accurately. The net results of each of these challenges are relayed to the Helium L1 after being validated by their respective consensus groups.
 
@@ -109,13 +108,13 @@ During initial launch stages, when network density is low, to combat gaming, the
 
 During consequent launch stages, as the density of mappers grows, WiFi SubDao will look to implement a more robust algorithm, similar to Helium LoRa PoC, whereby only randomly challenged hotspots can be witnessed. We also propose that some of the HWIFI that are pre-mined at the launch of the network, and distributed to the subDAO operations fund is distributed over the course of the stub period to live hotspots on an epochal basis in roughly equal proportion (akin to universal basic income).
 
-### *Data Transfer and Pricing Specification*
+### Data Transfer and Pricing Specification
 
 Data Credits are utilized in asserting new hotspots and their location on the chain, registering OUIs and associated devices, and as payment for packet transfers. We propose 1GB of data at $0.01 as the initial value price consumers will pay to access the Wifi network. We propose to use a similar pricing mechanism defined as per [HIP 53: Mobile subDAO](https://github.com/helium/HIP/blob/main/0053-mobile-dao.md).
 
 WiFi SubDao will operate a chain variable that will dictate the conversion ratio between Data Credits and WD tokens, denominated in oracle USD price. Changes to the conversion ratios will be conducted following Sub DAO governance specification
 
-### *Governance Specification*
+### Governance Specification
 
 # The WiFi network is under the control of the subDAO. All subDAO proposals must come attached with code to be approved.
 
