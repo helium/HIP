@@ -3,7 +3,8 @@
 - Authors: Karam Lakshman, Shubhendu Sharma,[@tjain-mcc](https://github.com/tjain-mcc), [@shayons297](https://github.com/shayons297)
 - Start Date: 2022-06-01
 - Category: Economic, Technical
-- Status: In Discussion
+- Original PR: https://github.com/helium/HIP/pull/420
+- Tracking Issue: https://github.com/helium/HIP/issues/424
 
 ![https://lh6.googleusercontent.com/KStfb4K7ODMe4EmsovQbrzkzm7gp7YI30dw5-Y5RRsGksHyD-rg-FHgEDrC7V5ISRbHRdD7SoHOVqZ1uylbJMJf6SDtBG-bcRCNe2jjj22VBjFLMGerSJIhgUNlFAqe8GWvTDT4FeWXgwTGMNA](https://lh6.googleusercontent.com/KStfb4K7ODMe4EmsovQbrzkzm7gp7YI30dw5-Y5RRsGksHyD-rg-FHgEDrC7V5ISRbHRdD7SoHOVqZ1uylbJMJf6SDtBG-bcRCNe2jjj22VBjFLMGerSJIhgUNlFAqe8GWvTDT4FeWXgwTGMNA)
 
