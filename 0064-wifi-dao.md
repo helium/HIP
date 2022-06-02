@@ -80,7 +80,7 @@ We propose to use a points and incentive structure largely similar to [HIP 53: M
 
 The subDAO sets the programmatic treasury formula in order to provide quotes to holders of HWIFI who wish to redeem their holdings for underlying HNT.
 
-![https://lh3.googleusercontent.com/XNJECOJF0YU9p4ywoVOjhHuqbL0Uw_u5WyvVTDsCajRFAGHb4SfFUtFOygRuCB6-5l5J89E0-Jon_470OeUjc_sbd00zPBjNLe4hoZgzmWe-BlDqKzvhHWIFIM1vHG4eEIqlD5Um4Meyc_2Ajwyw](https://lh3.googleusercontent.com/XNJECOJF0YU9p4ywoVOjhHuqbL0Uw_u5WyvVTDsCajRFAGHb4SfFUtFOygRuCB6-5l5J89E0-Jon_470OeUjc_sbd00zPBjNLe4hoZgzmWe-BlDqKzvhHWIFIM1vHG4eEIqlD5Um4Meyc_2Ajwyw)
+![https://lh3.googleusercontent.com/XNJECOJF0YU9p4ywoVOjhHuqbL0Uw_u5WyvVTDsCajRFAGHb4SfFUtFOygRuCB6-5l5J89E0-Jon_470OeUjc_sbd00zPBjNLe4hoZgzmWe-BlDqKzvhWdTM1vHG4eEIqlD5Um4Meyc_2Ajwyw](https://lh3.googleusercontent.com/XNJECOJF0YU9p4ywoVOjhHuqbL0Uw_u5WyvVTDsCajRFAGHb4SfFUtFOygRuCB6-5l5J89E0-Jon_470OeUjc_sbd00zPBjNLe4hoZgzmWe-BlDqKzvhWdTM1vHG4eEIqlD5Um4Meyc_2Ajwyw)
 
 ### Oracle Operations
 
