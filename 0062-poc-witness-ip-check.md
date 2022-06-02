@@ -1,10 +1,10 @@
-# HIP 61 : PoC Witness IP Check
+# HIP62: PoC Witness IP Check
 
 - Author(s): [@H-Baguette](https://github.com/h-baguette)
 - Start Date: 2022-05-24
 - Category: Technical
-- Original HIP PR:
-- Tracking Issue:
+- Original HIP PR: https://github.com/helium/HIP/pull/414
+- Tracking Issue: https://github.com/helium/HIP/issues/422
 
 # Summary
 [summary]: #summary
@@ -120,7 +120,7 @@ Other ideas which involve GPS tracking are both too complex to implement and too
 
 The impact of not implementing this HIP would be a gradual decrease in rewards for honest miners, and therefore also a decrease of the spread of the network's coverage, as well as a decline in the reputation of the Helium network as spoofers keep filling their pockets cheating the system.
 
-Regarding VPN restrictions, another, more restricting method, would be to check the distance between the IP's estimated location and the hotspot's location on the explorer, and invalidate the witness if the distance is greater than a fixed value, say 100km. However, this is highly imperfect, as locating a device based solely on its IP is far from precise. Even harder, CGNAT connections would result in constantly invalid witnesses, as the IP could direct to a location hundreds of kilometers away from the hotspot, even though it is neither spoofing or using a VPN. Checking only the country greatly limits the risk of wrongfully invalidating witnesses, while still 
+Regarding VPN restrictions, another, more restricting method, would be to check the distance between the IP's estimated location and the hotspot's location on the explorer, and invalidate the witness if the distance is greater than a fixed value, say 100km. However, this is highly imperfect, as locating a device based solely on its IP is far from precise. Even harder, CGNAT connections would result in constantly invalid witnesses, as the IP could direct to a location hundreds of kilometers away from the hotspot, even though it is neither spoofing or using a VPN. Checking only the country greatly limits the risk of wrongfully invalidating witnesses, while still
 
 # Unresolved Questions
 [unresolved]: #unresolved-questions
