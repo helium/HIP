@@ -1,4 +1,4 @@
-# HIP 61: Helium WiFi subDAO
+# HIP 64: Helium WiFi subDAO
 
 - Authors: Karam Lakshman, Shubhendu Sharma,[@tjain-mcc](https://github.com/tjain-mcc), [@shayons297](https://github.com/shayons297)
 - Start Date: 2022-06-01
