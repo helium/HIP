@@ -1,10 +1,10 @@
-# HIP61 Rewards Distribution Change
+# HIP61: Increase Challenger Rewards
 
 - Author(s): @Wazzy95
 - Start Date: 2022-05-24
 - Category: Economic
-- Original HIP PR: 
-- Tracking Issue: 
+- Original HIP PR: https://github.com/helium/HIP/pull/413
+- Tracking Issue: https://github.com/helium/HIP/issues/421
 
 # Summary
 [summary]: #summary
