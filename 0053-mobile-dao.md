@@ -107,33 +107,30 @@ Total number of tokens distributed specifically for PoC events will vary from 20
 
 1. Hotspot receives 1 point for each 4 consecutive hours of remaining eligible
 2. Hotspot receives 3 points every time it was witnessed by a mapper
-    
+
 ![https://lh4.googleusercontent.com/C-qT_FXuoqgiiQVfj29PUEtMI7G1SKIPHh1wWHJOUn2ykffTRR0TXyUgBkGFYNAnh01FogvbHStLq6KPfaz-1imYEFT8L9JMGH4ACiaSLth-XLwWYgUVdFtFpBqXJ0pO073at5zNOx1za7SLKQ](https://lh4.googleusercontent.com/C-qT_FXuoqgiiQVfj29PUEtMI7G1SKIPHh1wWHJOUn2ykffTRR0TXyUgBkGFYNAnh01FogvbHStLq6KPfaz-1imYEFT8L9JMGH4ACiaSLth-XLwWYgUVdFtFpBqXJ0pO073at5zNOx1za7SLKQ)
-    
 
 Tokens related to data credit burn are distributed in direct proportion to the number of DCs burned and are a function of amount of data offloaded by a particular hotspot and price of DC set by the DAO. See Data Transfer Mechanism and Pricing section for more details.
 
 ### *Emissions Curve*
 
-There will be a max supply of 200B MOBILE.
+There will be a max supply of 250B MOBILE.
 
 The proposal is to have halvenings of MOBILE issuance every 2 years aligned with the HNT issuance halvenings. This requires a 1 year “stub” period from August 1, 2022 to August 1, 2023.
 
-We also propose that 10B MOBILE are pre-mined at the launch of the network, and distributed to the subDAO operations fund administered by the Helium Foundation. This allocation is distributed over the course of the stub period to live Mobile Network hotspots on an epochal basis in roughly equal proportion (akin to universal basic income).
+We also propose that 50B MOBILE are pre-mined at the launch of the network, and distributed to the subDAO operations fund administered by the Helium Foundation. This allocation is distributed over the course of the stub period to live Mobile Network hotspots on an epochal basis in roughly equal proportion (akin to universal basic income).
 
 For clarity, the emission schedule is as follows:
-
-| Year | MOBILE at the start of the year | MOBILE minted | Hotspot PoC  | Hotspot Data (excess to PoC) | Mappers | Service Providers | Oracles | veHNT Stakers | Operations Fund |
-|------|------------------------------|------------|--------------|------------------------------|---------|-------------------|---------|---------------|-----------------|
-| 1    | 10B                          | 65B        | 20%*         | 40%*                         | 10%*    | 20%*              | 4%*     | 3%*           | 3%*             |
-| 2    | 70B                          | 32.5B      | 20%          | 40%                          | 10%     | 20%               | 4%      | 3%            | 3%              |
-| 3    | 102.5B                       | 32.5B      | 20%          | 40%                          | 10%     | 20%               | 4%      | 3%            | 3%              |
-| 4    | 135B                         | 16.25B     | 20%          | 40%                          | 10%     | 20%               | 4%      | 3%            | 3%              |
-| 5    | 151.25B                      | 16.25B     | 20%          | 40%                          | 10%     | 20%               | 4%      | 3%            | 3%              |
-| 6    | 167.5B                       | 8.125B     | 20%          | 40%                          | 10%     | 20%               | 4%      | 3%            | 3%              |
-| 7    | 175.625B                     | 8.125B     | 20%          | 40%                          | 10%     | 20%               | 4%      | 3%            | 3%              |
-
-*of post UBI reserve of yearly supply (65B - 10B) = 55B
+| Year | MOBILE at the start of the year | MOBILE minted | Hotspot PoC  | Hotspot Data (excess to PoC) | Mappers | Service Providers | Oracles | veHNT Stakers |
+|------|---------------------------------|---------------|--------------|------------------------------|---------|-------------------|---------|---------------|
+| 1    | 50B                             | 116B*         | 20%          | 40%                          | 10%     | 20%               | 4%      | 6%            |
+| 2    | 116B                            | 33B           | 20%          | 40%                          | 10%     | 20%               | 4%      | 6%            |
+| 3    | 1495B                           | 33B           | 20%          | 40%                          | 10%     | 20%               | 4%      | 6%            |
+| 4    | 182B                            | 16.5B         | 20%          | 40%                          | 10%     | 20%               | 4%      | 6%            |
+| 5    | 198.5B                          | 16.5B         | 20%          | 40%                          | 10%     | 20%               | 4%      | 6%            |
+| 6    | 215B                            | 8.25B         | 20%          | 40%                          | 10%     | 20%               | 4%      | 6%            |
+| 7    | 223.25B                         | 8.25B         | 20%          | 40%                          | 10%     | 20%               | 4%      | 6%            |
+	*50B pre-mine, 66B emitted in year 1
 
 At the end of a given epoch, MOBILE oracles relay start balance, current balance, and total amount of MOBILE Data Credits created and relay to the L1 HNT emissions contract. The emissions contract subsequently distributes the determined amount of HNT as per the Protocol Score to the Mobile subDAO multi-signature wallet, the addresses of which comprise the set of oracles of the Helium Mobile Network.
 
@@ -191,21 +188,25 @@ The Mobile subDAO sets the programmatic treasury formula in order to provide quo
 
 We propose a constant function market making formula for the Mobile subDAO programmatic treasury defined as per the following specification.
 
-![https://lh3.googleusercontent.com/E2RFzWF4IwlC3Vz33lWjDpJe8y9ZnHD2mWaUhRn541jicqxEbPqC1-Mt3-IZsLk0WfcelDGhrGt1hbuXUjp_CMgqMuHSZDky4RKPwiWA8Tg0dPr2IhG1lUAp-gVcaNptXbcuvLrxcC4DGQcTgg](https://lh3.googleusercontent.com/E2RFzWF4IwlC3Vz33lWjDpJe8y9ZnHD2mWaUhRn541jicqxEbPqC1-Mt3-IZsLk0WfcelDGhrGt1hbuXUjp_CMgqMuHSZDky4RKPwiWA8Tg0dPr2IhG1lUAp-gVcaNptXbcuvLrxcC4DGQcTgg)
+$H: \text{HNT in Reserve}$
+
+$S: \text{Outstanding Supply of MOBILE}$
+
+$H: \text{Price of MOBILE in HNT Terms}$
 
 At epoch T, we denote the value of H, S, and P as HT, ST,  and PT. The programmatic treasury formula at epoch T is a function in two variables, HT, ST defined as follows:
 
-![https://lh3.googleusercontent.com/LDSGfLuE1FiCT0Fau-Ub05gqxFzr4xgX0wKsIhBw1Ghxvb3TOZZUpRRVwWGDgw92eKw62WNzjq8rrzLqiDdhhBlTup9RqGMvLE760qnMj76HI-Sgts-9F4pzrGspZBW6-DNm2_g69HsQnvhB8g](https://lh3.googleusercontent.com/LDSGfLuE1FiCT0Fau-Ub05gqxFzr4xgX0wKsIhBw1Ghxvb3TOZZUpRRVwWGDgw92eKw62WNzjq8rrzLqiDdhhBlTup9RqGMvLE760qnMj76HI-Sgts-9F4pzrGspZBW6-DNm2_g69HsQnvhB8g)
+$y_T = k_T = \frac{H_T}{S_T}$
 
 For example, consider at epoch #125, the total outstanding supply of tokens for the Mobile subDAO is 3.275B MOBILE and the total amount in the treasury reserve is 2M HNT. The programmatic treasury formula is given as follows
 
-![https://lh4.googleusercontent.com/CBx8hTnPuS-zaW-AAxZPP1hKZzt82oZlNzuEeYXRF0Wg2kJ1UKtCO0g8xoqvWU1bZvTITYUeM8FSpvDPPtU9xwSkYmleoFoilYdoEwXTF3fFBpLVkNnRa4AT6AK-NcfBWb1Y3VlR_L2Kir2Qrg](https://lh4.googleusercontent.com/CBx8hTnPuS-zaW-AAxZPP1hKZzt82oZlNzuEeYXRF0Wg2kJ1UKtCO0g8xoqvWU1bZvTITYUeM8FSpvDPPtU9xwSkYmleoFoilYdoEwXTF3fFBpLVkNnRa4AT6AK-NcfBWb1Y3VlR_L2Kir2Qrg)
+$$y_{125} = k_{125} = \frac{H_{125}}{S_{125}} = \frac{2,000,000}{3,275,000,000} = 0.00061068702$$
 
 This implies that at epoch #125, any number of MOBILE tokens can be redeemed at a unit price of 0.00061068702 HNT.
 
 Now consider at epoch #225, the total outstanding supply of tokens for the Mobile subDAO is 3.5B MOBILE and the total amount in the treasury reserve is 2.025M HNT. The programmatic treasury formula is given as follows
 
-![https://lh3.googleusercontent.com/iFAF8EuGVpEUOc-Vb-rl9lxkJ7jjqsiyAo4q3VtqmUPhCGj4WEkdTDwlnqomQv5lmWP1QPUge_r4-JGFjE5JvPfCj2mXS3IC4L1yH5n6NNYTsbzbhkfyM7Ng80b0TEkCP9sfi9ASfZEgjjiuAg](https://lh3.googleusercontent.com/iFAF8EuGVpEUOc-Vb-rl9lxkJ7jjqsiyAo4q3VtqmUPhCGj4WEkdTDwlnqomQv5lmWP1QPUge_r4-JGFjE5JvPfCj2mXS3IC4L1yH5n6NNYTsbzbhkfyM7Ng80b0TEkCP9sfi9ASfZEgjjiuAg)
+$$y_{225} = k_{225} = \frac{H_{225}}{S_{225}} = \frac{2,025,000}{3,500,000,000} = 0.00057857142$$
 
 This implies that at 100 epochs after #125 at #225, any number of MOBILE tokens can be redeemed at a unit price of 0.00057857142 HNT.
 
@@ -226,7 +227,7 @@ Service Providers operating in the Helium Mobile DAO will be required to either 
 
 Helium Mobile Network Dao will operate a chain variable that will dictate the conversion ratio between Data Credits and MOBILE tokens, denominated in oracle USD price. Changes to the conversion ratios will be conducted following Sub DAO governance specification.
 
-The initial price per GB of Mobile Network data is suggested to be set at $0.5 per Gigabyte, which means that 1 Helium data credit, when used for data on Mobile Helium DAO will convert to $.00000003 per LTE packet of 66 bytes.
+The initial price per GB of Mobile Network data is suggested to be set at <span>$</span>0.5 per Gigabyte, which means that 1 Helium data credit, when used for data on Mobile Helium DAO will convert to <span>$</span>0.00000003 per LTE packet of 66 bytes.
 
 ## *Oracle Operations*
 

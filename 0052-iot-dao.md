@@ -106,21 +106,25 @@ The IoT subDAO sets the programmatic treasury formula in order to provide quotes
 
 We propose a constant function market making formula for the IoT subDAO programmatic treasury defined as per the following specification.
 
-![https://lh4.googleusercontent.com/33sRG_aBd-LCoU4i2q9-UiCNu-7G6KPuT4-N6RHSRwGmY5ENiHxU8hPHSxA0iCk47OHICv5yUMARNQAvvVGczQxewuVhxP0pNAHe29F-BmHEQAxPSoJVpJIrbOIcyMUVf3oPgofkbEgVSTw2Og](https://lh4.googleusercontent.com/33sRG_aBd-LCoU4i2q9-UiCNu-7G6KPuT4-N6RHSRwGmY5ENiHxU8hPHSxA0iCk47OHICv5yUMARNQAvvVGczQxewuVhxP0pNAHe29F-BmHEQAxPSoJVpJIrbOIcyMUVf3oPgofkbEgVSTw2Og)
+$H: \text{HNT in Reserve}$
+
+$S: \text{Outstanding Supply of IOT}$
+
+$H: \text{Price of IOT}$
 
 At epoch T, we denote the value of H, S, and P as HT, ST, and PT. The programmatic treasury formula at epoch T is a function in two variables, HT, ST defined as follows:
 
-![market-making-formula](https://lh3.googleusercontent.com/7P_5Bha1KNPmQl2wWBHPoB6ojHfFKdnSaD208DR1vFUE2ybnAopqA6X-sVMzhHqiH5DeeDDKMY5hxKOe74j_PVcEBCoXjwetlytpeS241lgrEy_TmapfPiWUjEzyhp72kyvLiEJA)
+$y_T = k_T = \frac{H_T}{S_T}$
 
 For example, consider at epoch #125, the total outstanding supply of tokens for the IoT subDAO is 3.275B IOT and the total amount in the treasury reserve is 2M HNT. The programmatic treasury formula is given as follows
 
-![example-redemption](https://lh6.googleusercontent.com/J_34HUWBuZl_YxNOnMv_fVkgvJKVeWtNLdZ9eZfKjYOFVjvv9LqjyB-pMmBaqpgFykNb4YcKfE7CuHDC6aX1WQORR2vlyyg4hyb_38ACZqDMjUrwVKHUhYeZYVj1QYceVwL-z3gR)
+$$y_{125} = k_{125} = \frac{H_{125}}{S_{125}} = \frac{2,000,000}{3,275,000,000} = 0.00061068702$$
 
 This implies that at epoch #125, any number of IOT can be redeemed at a unit price of 0.00061068702 HNT.
 
 Now consider at epoch #225, the total outstanding supply of tokens for the IoT subDAO is 3.5B IOT and the total amount in the treasury reserve is 2.025M HNT. The programmatic treasury formula is given as follows
 
-![example-redemption-2](https://lh5.googleusercontent.com/JzoHFD4OcK-YbK8aqiR2VjsBtN8mxRK6oEae_57KhoeoXp1TGKbRWGF7NkfRByITdTcfEAAkPSkKPMfz604aTcqhNlBJ2o7YJ6TjpAUxvGJSBcUgyH4o8iDmJRQ8ejcqaa8kvK9e)
+$$y_{225} = k_{225} = \frac{H_{225}}{S_{225}} = \frac{2,025,000}{3,500,000,000} = 0.00057857142$$
 
 This implies that at 100 epochs after #125 at #225, any number of IOT can be redeemed at a unit price of 0.00057857142 HNT.
 
@@ -130,11 +134,13 @@ Between epoch #125 and #225, a similar repricing takes place in each individual 
 
 It is possible to represent the programmatic treasury formula as a surface in euclidean space using the following vector notation in two variables:
 
-![programmatic-treasury-formula](https://lh3.googleusercontent.com/PNzok9G-6EnVEVVWri06NcbbRffoF_f9M5eHo9ain25TT4OoG9zAFnIAowTtWqTNyI9RFC98lICBCONmQqS6uqlQXpDcXXzieywg1IXizx9YgLpzAtOUGTvDXde5Qb0U6ds-7smt)
+$$\mathbf{r}(u,v) = \text{<}v, \frac{u}{v}, u\text{>} = v \cdot \mathbf{\hat{i}} + \frac{u}{v} \cdot \mathbf{\hat{j}} + u \cdot \mathbf{\hat{k}}$$
 
 Where
 
-![programmatic-treasury-formula-components](https://lh6.googleusercontent.com/UqiNgjY8LVN6lzT1zgM4D-J3GJfxAeYomOjFirG4YION8tF0ZvrJmWQWKl2kL6XTAPWUhGMJnv_SZHIhXyvST7TJy4vm9AuRUy_a686QbT1gLoHpwhTZauml3G20FBw_qM1XCeX6)
+$u: \text{HNT in Treasury Reserve}$
+
+$v: \text{Outstanding supply of IOT}$
 
 Clarifications:
 
