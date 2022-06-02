@@ -115,19 +115,19 @@ The success of the Helium network is contingent on its ability to find real worl
 
 Each protocol would be assigned a ‘score’ per epoch:
 
-![dao-utility-score](https://lh6.googleusercontent.com/K-UeUtSvHv-X0am6W0yTNOcVAr2H10KV8JwTrTH3OwJHB83-7cnnHvnQVAopplLcJrCWDpNVufxD4w1WXypRx84d0UvPc8_bGr74ofeaQVO8H9w5M_gO8wXP63ljCEf53uOI6lO48VOTFKYcSA)
+$\text{DAO Utility Score} = V \times D \times A$
 
 where
 
-![vote-score](https://lh3.googleusercontent.com/-5_TwRRXXS-wrt-vc66M5i5IEprAeMBIBRN6EEVzljpqJeIueFQLytVnW5DRg0G1RN7-tXcJRCLegqD9C78DEgFfzzmvR3CtEJmzE6EFt1iOLaoWs99uPsYIxUK-BS3Opl0ELXgff_lnFxM8Gg)
+$V = \text{max}(1, veHNT_{DNP})$
 
-![data-credit-score](https://lh6.googleusercontent.com/UIEi40KyskHBt3uLRiw5wufqHXvtGLN2C1hDqrQbc9xGoZzgt9rfoCxyn7omMUit54DnKFUHrHw-Hr-fqWYvnVpFeQ5fo29wte0gLyLXk17pS3F_BqntNYTrWNLsKcMj_gYtLkSf)
+$D = \text{max}(1, \sqrt{\text{DNP DCs burned in USD}})$
 
-![active-device-score](https://lh5.googleusercontent.com/bFFa_kkjFdD51doMAk4W4yyv8I2EOfDN9q9mv-OY8ktxqXuJI6a0Pj4TfTXepA5IsSnVHz3y5J1are5JFQeIIFm34GIVRK8rR0xtPSSUBwtw6oSd-tNeEy_TsxX5tIiCr6xPSmDdBVn108AjCg)
+$A = \text{max}(1, \sqrt[4]{\text{DNP Active Device Count} \times \text{DNP Device Activation Fee}})$
 
 Once each protocol has a score, the % of total Epoch PoC rewards assigned to each DNP will be assessed by comparing the individual score to the sum of all scores:
 
-![percentage-rewards](https://lh6.googleusercontent.com/LjMmGCO4OWvbfCO96KEioJVNbEyYjRmn7Fy-K0pOps52M5d3ACVEVmHLEbTlLRyiGtAgOrXtDHQKTDPkX9w2dFgClInr-LQdifPESQeiVJh7oL-zo0_KzMmo2oVW6O25wqDHG1_ocATqZqM5Nw)
+$$\text{Percentage of PoC Rewards per DNP} = \frac{\text{DNP Specific Score}}{\sum(\text{All DNP Scores})}$$
 
 Please refer to this model [spreadsheet](https://docs.google.com/spreadsheets/d/1up7-jJt3eM5Fn9K0NTnDA50ZzIDqV-bznbnwej1y3R4/edit#gid=2099369137) to review the parameters of this model.
 
