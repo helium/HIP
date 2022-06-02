@@ -1,6 +1,6 @@
 # HIP63: Helium Hub
 
-- Author(s): anthonyra.eth#2034
+- Author(s): @anthonyra
 - Start Date: 2022-05-26
 - Category: Economic
 - Original HIP PR: https://github.com/helium/HIP/pull/419
