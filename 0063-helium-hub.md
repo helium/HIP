@@ -79,7 +79,7 @@ The current network relies on Proof-of-Coverage and Data Transfers to reward hot
 
 > **NOTE** DC overage ([HIP-10](0010-usage-based-data-transfer-rewards.md)) and the current schedule for % allocation changes will also remain the same as described in the graphic below.
 
-![HNT Distribution Over Time](0062-helium-hub/hnt-distribution.svg)
+![HNT Distribution Over Time](0063-helium-hub/hnt-distribution.svg)
 
 ### Current Reward Models
 
