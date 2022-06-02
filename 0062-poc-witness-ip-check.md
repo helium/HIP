@@ -10,7 +10,7 @@
 [summary]: #summary
 
 Prevent spoofing by checking each witness's IP address against the beacon's IP address and other witnesses' IP addresses, while still allowing witnesses sharing the same IP address as the beacon to be considered valid under specific yet rather accessible conditions.
-Additionally, prevent spoofing farms from hiding their miners behind VPNs by heavily restricting the use of VPNs on Helium hotspots.
+Additionally, prevent spoofing farms from hiding a miner's IP behind a VPN by heavily restricting the use of VPNs on Helium hotspots.
 
 # Motivation
 [motivation]: #motivation
@@ -50,12 +50,12 @@ This chain variable could then be modified through future HIP to fit the needs o
 
 - # VPN restrictions
 
-IP checking can be a powerful tool against spoofing. However, this solution alone comes with a major weakness. Indeed, spoofing farms can easily hide their miners behind VPNs, allowing them to show different IPs while still being connected to the same internet connection. This proposal thus comes with a second part, focused around the restriction of VPN usage.
+IP checking can be a powerful tool against spoofing. However, on its own, this solution comes with a major weakness. Indeed, spoofing farms can easily hide their miners behind VPNs, allowing them to show different IPs while still being connected to the same internet connection. This proposal thus comes with a second part, focused around the restriction of VPN usage.
 
-Prior to the light hotspot update, many hotspots owners were **required** to use a VPN in order to open their 44158 port. Restricting the use of VPNs back then was therefore absolutely out of the question.
-The light hotspot update removed this necessity entirely, as port forwarding is no longer required.
+Prior to the light hotspot update, many hotspots owners were *required* to use a VPN in order to open their 44158 port. Restricting the use of VPNs back then was therefore absolutely out of the question.
+The light hotspot update removed this necessity entirely, as port forwarding is no longer required, making VPN restrictions a viable solution.
 
-In addition to checking whether a hotspot shares its IP with another hotspot within the same beaconing event, a hotspot's IP should be checked against its alleged location on the explorer. If a witness's IP's country does not match the registered location on the explorer, then that witness must be invalidated.
+In addition to checking whether a hotspot shares its IP with another hotspot within the same beaconing event, a hotspot's IP should be checked against its alleged location on the explorer. If a witness's IP's **country** does not match the registered location on the explorer, then that witness must be invalidated.
 
 - # Example
 
@@ -120,7 +120,7 @@ Other ideas which involve GPS tracking are both too complex to implement and too
 
 The impact of not implementing this HIP would be a gradual decrease in rewards for honest miners, and therefore also a decrease of the spread of the network's coverage, as well as a decline in the reputation of the Helium network as spoofers keep filling their pockets cheating the system.
 
-Regarding VPN restrictions, another, more restricting method, would be to check the distance between the IP's estimated location and the hotspot's location on the explorer, and invalidate the witness if the distance is greater than a fixed value, say 100km. However, this is highly imperfect, as locating a device based solely on its IP is far from precise. Even harder, CGNAT connections would result in constantly invalid witnesses, as the IP could direct to a location hundreds of kilometers away from the hotspot, even though it is neither spoofing or using a VPN. Checking only the country greatly limits the risk of wrongfully invalidating witnesses, while still
+Regarding VPN restrictions, another, more restricting method, would be to check the distance between the IP's estimated location and the hotspot's location on the explorer, and invalidate the witness if the distance is greater than a fixed value, say 100km. However, this is highly imperfect, as locating a device solely on its IP is far from being precise. Additionally, CGNAT connections would result in constantly invalid witnesses, as the IP could direct to a location hundreds of kilometers away from the hotspot, even though it is neither spoofing or using a VPN. Checking only the country greatly limits the risk of wrongfully invalidating witnesses, while still impacting spoofing farms.
 
 # Unresolved Questions
 [unresolved]: #unresolved-questions
@@ -129,11 +129,11 @@ Regarding VPN restrictions, another, more restricting method, would be to check 
 
 - Are there cases of honest miners being poorly affected by this HIP that were not thought of ?
 
-- Will this be enough to prevent spoofing ?
+- Will this be enough to prevent spoofing ? Could spoofing farms still use VPNs while conforming to this proposal's requirements ?
 
 - Is it acceptable to combat spoofing at the cost of possibliy penalizing a few honest miners that don't fall within the precautions introduced in this proposal ?
 
-- How could we better restrict VPNs without risking honest miners losing their rewards ?
+- How could we better restrict VPNs without risking honest miners losing their rewards, especially CGNAT connections ?
 
 # Deployment Impact
 [deployment-impact]: #deployment-impact
