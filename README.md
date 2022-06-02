@@ -75,6 +75,8 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | 60 | [Entity-Weighted Vote](https://github.com/helium/HIP/blob/main/0060-entity-weighted-vote.md) | [In Discussion](https://github.com/helium/HIP/issues/399) |
 | 61 | [Increase Challenger Rewards](https://github.com/helium/HIP/blob/main/0061-increase-challenger-rewards.md) | [In Discussion](https://github.com/helium/HIP/issues/421) |
 | 62 | [PoC Witness IP Check](https://github.com/helium/HIP/blob/main/0062-poc-witness-ip-check.md) | [In Discussion](https://github.com/helium/HIP/issues/422) |
+| 63 | [Helium Hub](https://github.com/helium/HIP/blob/main/0063-helium-hub.md) | [In Discussion](https://github.com/helium/HIP/issues/423) |
+
 
 ## Status key
 

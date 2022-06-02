@@ -1,10 +1,10 @@
 # HIP - Helium Hub
 
-- Author(s): anthonyra.eth#2034 <!-- your GitHub @username -->
-- Start Date: 2022-05-26 <!-- fill me in with today's date, YYYY-MM-DD -->
-- Category: Economic <!-- economic, technical, meta -->
-- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
-- Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
+- Author(s): anthonyra.eth#2034
+- Start Date: 2022-05-26
+- Category: Economic
+- Original HIP PR: https://github.com/helium/HIP/pull/419
+- Tracking Issue: https://github.com/helium/HIP/issues/423
 
 # Summary
 [summary]: #summary
@@ -75,7 +75,7 @@ The amount of rewards that a sub-protocol will receive per epoch is based on two
 
 2) The amount of DC being used by the sub-protocol
 
-The current network relies on Proof-of-Coverage and Data Transfers to reward hotspot operators for the service that they provide. This HIP will keep these reward pools and percentages the same but will suggest that Proof-of-Coverage to be renamed to Proof-of-Protocol-Service (for LoRa this is done using PoC but for a future sub-protocol it might not be coverage based). 
+The current network relies on Proof-of-Coverage and Data Transfers to reward hotspot operators for the service that they provide. This HIP will keep these reward pools and percentages the same but will suggest that Proof-of-Coverage to be renamed to Proof-of-Protocol-Service (for LoRa this is done using PoC but for a future sub-protocol it might not be coverage based).
 
 > **NOTE** DC overage ([HIP-10](0010-usage-based-data-transfer-rewards.md)) and the current schedule for % allocation changes will also remain the same as described in the graphic below.
 
@@ -226,7 +226,7 @@ Describe how this design will be deployed and any potential impact it may have o
 current users of this project.
 
 - This HIP will have a follow up HIP that will describe an means of switching to this model with the use of the Cosmos SDK. Since the technical implementation is not important it's not included here.
-  
+
 # Success Metrics
 [success-metrics]: #success-metrics
 
