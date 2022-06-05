@@ -26,7 +26,7 @@ For the Helium Network to grow to global scale in number of active devices and u
 [HIP 27: CBRS 5G Support](https://github.com/helium/HIP/blob/master/0027-cbrs-5g-support.md) provides a broad discussion of 5G DNP specific Data Credits mechanisms, and [HIP 37: Omni-Protocol PoC](https://github.com/helium/HIP/blob/master/0037-omni-protocol-poc.md) proposes an incentive model as well as Proof-of-Coverage rules for the 5G Network. This is a three-part proposal that builds on such existing work with two primary aims:
 
 1. Provide a general structure for onboarding new DNPs to the broader Helium Network, with mechanisms in place to ensure that protocol-specific attributes such as Proof-of-Coverage rules, Data Transfer pricing, and miner rewards are within control of the DNT subDAO.
-2. Specify the implementation of the structure proposed through detailed onboarding proposals for the LoRaWAN and 5G networks, described in [HIP 52: LoRaWAN DAO](https://github.com/helium/HIP/blob/main/0052-lorawan-dao.md) and [HIP 53: 5G DAO](https://github.com/helium/HIP/blob/main/0053-5g-dao.md).
+2. Specify the implementation of the structure proposed through detailed onboarding proposals for the LoRaWAN and 5G networks, described in [HIP 52: LoRaWAN DAO](https://github.com/helium/HIP/blob/main/0052-iot-dao.md) and [HIP 53: 5G DAO](https://github.com/helium/HIP/blob/main/0053-mobile-dao.md).
 
 The technical and economic design decisions of the Helium Network historically have been made around the first LoRaWAN Decentralized Network Protocol. In order to support new networks and devices, there are two core problems to be addressed: **blockchain scalability** and **DNP specific incentive alignment.**
 
