@@ -9,7 +9,7 @@
 # Summary
 [summary]: #summary
 
-There is no single way to determine whether a hotspot is spoofing. This HIP looks at several types of data that are typically looked at when looking for spoofers and combines them into a score, the Trust Score, which is supposedly designed to tell how likely a hotspot is to be spoofing, in order for them to be manually added to the denylist later.
+There is no single way to determine whether a hotspot is spoofing. This HIP therefore looks at several types of data that are typically looked at when looking for spoofers and combines them into a score, the Trust Score, which is designed to tell how likely a hotspot is to be spoofing, in order for them to be manually added to the denylist later.
 
 The HIP doesn't make any automatic additions to the denylist, nor does it invalidate witnesses that it deems to be spoofing ; it only attributes a Trust Score to each hotspot.
 
@@ -18,9 +18,9 @@ Additionally, the HIP provides convenient ways for hotspot owners to report hots
 # Motivation
 [motivation]: #motivation
 
-Despite the different updates introduced to limit spoofing (PoCv11, the denylist, HIP 58, Crowdspot, ...), spoofers are still thriving, as only a small portion of them end up on the denylist. This HIP aims to facilitate the addition of spoofing hotspots to the denylist by giving users a easier way to find them and report them.
+Despite the different updates introduced to limit spoofing (PoCv11, the denylist, HIP 58, Crowdspot, ...), spoofers are still thriving, as only a small portion of them end up on the denylist. This HIP aims to facilitate the addition of spoofing hotspots to the denylist by giving users an easier way to find them, investigate them, and report them.
 
-I previously tried to automate the invalidation of spoofing witnesses by using the hotspot's IP, but it turned out to be unseccussful, as there are too many cases of honest miners having an IP situation that I deemed irregular. This made evident that no single data is enough to determine whether a hotspot is spoofing. This HIP works differently, by taking into account different types of data that are typically looked at before adding a hotspot to the denylist.
+I previously tried to automate the invalidation of spoofing witnesses by using the hotspot's IP, but it turned out to be unsuccessful, as there are too many cases of honest miners having an IP situation that I deemed irregular. This made evident that no single data is enough to determine whether a hotspot is spoofing. This HIP works differently, by taking into account different types of data that are typically looked at before adding a hotspot to the denylist.
 
 # Stakeholders
 [stakeholders]: #stakeholders
@@ -81,7 +81,7 @@ Spoofing hotspots belonging to the same owner are likely to send their rewards t
 
 We follow the money trail and make a list of every address that HNT was sent to, starting from the hotspot whose Trust Score is being calculated. Two hotspots sharing an address in that list and interacting with each other are likely to be spoofing hotspots belonging to the same person.
 
-**Impact on Trust Score** : **-1** per unique hotspot that was interacted with in the last 30 days and who shares an address in their money trail.
+**Impact on Trust Score** : **-1** per unique hotspot that was interacted with in the last 30 days and that shares an address in their money trail.
 
 - # SNR
 
@@ -91,7 +91,7 @@ SNR values for spoofing hotspots are often found to be higher than average, whic
 
 Although it is certainly possible for some witness events registering a higher than average SNR even though both hotspots are physically separated by several kilometers, a high SNR value is more likely to be caused by spoofing activity.
 
-**Impact on the Trust Score** : from **-0 to -1** for each interaction in the last 30 days showing an SNR value above a certain threshold, ranging from an SNR value of n to n+5, with n = 16.204e^(-0.086d) - 2, with d the registered distance between both hotspots.
+**Impact on the Trust Score** : from **-0 to -1** for each interaction in the last 30 days showing an SNR value above a certain threshold, ranging from an SNR value of n to n+5, with n = 16.204e^(-0.086d) - 2, with d the registered distance between both hotspots (in kilometers).
 
 - # RSSI
 
@@ -101,13 +101,13 @@ Additionally, even if an RSSI is low enough that a witness is not automatically 
 
 **Impact on the Trust Score** :
 - **-1** per witness at least 2 hexes away in the last 60 days being invalid for having an RSSI too high.
-- from **-1 to -0** per valid witness at least 2 hexes away in the last 60 days whose RSSI is close to the maximum allowed value, ranging from a difference of 0 to 15 between the recorde RSSI value and the maximum allowed value.
+- from **-1 to -0** per valid witness at least 2 hexes away in the last 60 days whose RSSI is close to the maximum allowed value, ranging from a difference of 0 to 15 between the recorded RSSI value and the maximum allowed value.
 
 - # IP address
 
-Spoofers often either use a CPN to conceal their IP in order to appear legit, or assert their location in a different country than their physical location.
+Spoofers often either use a VPN to conceal their IP in order to appear legit, or assert their location in a different country than their physical location.
 
-There are cases of honest hotspots having an IP in a different country than their assert location. Some owners are using VPNs either for convenience, or to hide their mining activity from their ISP *(Internet Service Provider)*. ISP can also be using CGNAT, with the registered IPv4 eing located in a different country. However, the former can use a VPN located in their country, while the latter is rare enough that we can consider the case of IP addresses being located in a different country than the asserted location of a hotspot to be more likely to belong to a spoofing hotspot.
+There are cases of honest hotspots having an IP in a different country than their asserted location. Some owners are using VPNs either for convenience, or to hide their mining activity from their ISP *(Internet Service Provider)*. ISP can also be using CGNAT, with the hotspot's IPv4 being located in a different country. However, the former can use a VPN located in their country, while the latter is rare enough that we can consider the case of IP addresses being located in a different country than the asserted location of a hotspot to be more likely to belong to a spoofing hotspot.
 
 **Impact on the Trust Score** :
 - **-5** for a hotspot whose IP is located in a different country than its asserted location.
