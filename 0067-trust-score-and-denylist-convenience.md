@@ -95,6 +95,8 @@ Although it is certainly possible for some witness events to register a higher t
 
 **Impact on the Trust Score** : from **-0 to -1** for each interaction in the last 30 days showing an SNR value above a certain threshold, ranging from an SNR value of n to n+5, with n = 16.204e^(-0.086d) - 2, with d the registered distance between both hotspots (in kilometers).
 
+(The values were chosen *somewhat* arbitrarily, from the study of a small data set, for the sake of this first draft. It should definitely be improved upon before being implemented)
+
 ![image](https://user-images.githubusercontent.com/106159694/173186803-36f81096-b20c-47fb-85f3-bfbcccc26b48.png)
 
 SNR below green line : ✔️
