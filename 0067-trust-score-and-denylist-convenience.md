@@ -91,7 +91,7 @@ The SNR value (Signal to Noise Ratio) tells us how clean a radio signal is when 
 
 SNR values for spoofing hotspots are often found to be higher than average, which makes sense, because spoofing hotspots are barely a few meters appart in a safe environment in the same room, instead of being outside, kilometers appart.
 
-Although it is certainly possible for some witness events to register a higher than average SNR value even though both hotspots are physically separated by several kilometers, a high SNR value is more likely to be caused by spoofing activity.
+Although it is certainly possible for some witness events to register a higher than average SNR value even though both hotspots are physically separated by several kilometers, a high SNR value is more likely to be caused by spoofing activity than sheer luck.
 
 **Impact on the Trust Score** : from **-0 to -1** for each interaction in the last 30 days showing an SNR value above a certain threshold, ranging from an SNR value of n to n+5, with n = 16.204e^(-0.086d) - 2, with d the registered distance between both hotspots (in kilometers).
 
