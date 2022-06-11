@@ -1,4 +1,4 @@
-# HIP62: Trust Score & Denylist Convenience
+# HIP67: Trust Score & Denylist Convenience
 
 - Author(s): [@H-Baguette](https://github.com/h-baguette)
 - Start Date: 2022-06-10
