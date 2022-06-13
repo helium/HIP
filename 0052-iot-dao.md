@@ -91,7 +91,7 @@ In this epoch, hotspot A is expected to receive 6x the challenges it would be el
 
 If hotspot A were to receive 120K IOT through proof-of-coverage emissions in an epoch, we could expect that it would have received 20K IOT under normal circumstances. User X would receive 50% of 1/6 of the incremental amount (8.34K IOT) and the hotspot owner would receive 50% of 5/6 of the incremental amount (41.665K IOT), while the remaining 50K is distributed to hotspot A.
 
-If hotspot B were convicted of gaming proof-of-coverage rewards, 3M of the total veIOT would be sent to a burn address, whereas the underlying IOT within the 3M veIOT would be distributed to user X. If there were other users who staked against Hotspot B, this would be distributed pro-rata.
+If hotspot B were convicted of gaming proof-of-coverage rewards, 6M veIOT would be distributed to user X. If there were other users who staked against Hotspot B, this would be distributed pro-rata.
 
 
 2. *Oracle Delegation*: veIOT holders can delegate their holdings to oracles as per the reward agreements set in order to earn future emissions.
