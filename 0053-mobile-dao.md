@@ -182,7 +182,7 @@ Note that users also have the option of burning MOBILE in the name of stakeholde
 
 ### *Treasury Reserve DNT Market Making Curve*
 
-The Mobile subDAO sets the programmatic treasury formula in order to provide quotes to holders of DNT who wish to redeem their holdings for underlying HNT. The programmatic treasury defines the floor price for IOT, but holders always retain the ability to exchange at the prevailing rate on open markets.
+The Mobile subDAO sets the programmatic treasury formula in order to provide quotes to holders of DNT who wish to redeem their holdings for underlying HNT. The programmatic treasury defines the floor price for MOBILE, but holders always retain the ability to exchange at the prevailing rate on open markets.
 
 We propose a constant function market making formula for the Mobile subDAO programmatic treasury defined as per the following specification.
 
