@@ -145,7 +145,8 @@ A user’s veMOBILE lockup power is determined by 1) the amount of MOBILE they l
 
 Users can choose to delegate their veMOBILE for three core purposes:
 
-1. Stakeholder Staking: Users are able to delegate veMOBILE in the name of:
+1. Stakeholder Staking: Users are able to delegate veMOBILE to
+
     1. Specific hotspots in order to increase their hourly incentive points multiplier
     2. Specific service providers in order to increase their hourly incentive points multiplier
 
@@ -158,10 +159,7 @@ Users that delegate veMOBILE to stakeholders receive 50% of any incremental earn
 ![https://lh5.googleusercontent.com/GnNkPkShSi3HFf2fwDLaXNXh8xk5LSinMETkSPFaCPKQflhtj-LPwADe3CuRW_jYUxpsefw7kQOobn4xMpAmrRnTTqhlawUyeh_9rZLlD_L0T5LA7zOqxu65CZuC6JHVTFWkOE3120E4nKvisw](https://lh5.googleusercontent.com/GnNkPkShSi3HFf2fwDLaXNXh8xk5LSinMETkSPFaCPKQflhtj-LPwADe3CuRW_jYUxpsefw7kQOobn4xMpAmrRnTTqhlawUyeh_9rZLlD_L0T5LA7zOqxu65CZuC6JHVTFWkOE3120E4nKvisw)
 
 
-Stakeholders that are found to be gaming or cheating rewards are blacklisted from the network, and delegated veMOBILE is distributed as follows:
-
-1. 50% of delegated veMOBILE is burned
-2. 50% of delegated veMOBILE is distributed to users who staked against the hotspot
+Stakeholders that are found to be gaming or cheating rewards are blacklisted from the network, and delegated veMOBILE is distributed pro-rata to users who staked against the hotspot
 
 For example, consider the following closed system with Stakeholder A, Stakeholder B, User X, and User Y.
 
@@ -175,16 +173,16 @@ In this epoch, stakeholder A is expected to receive 6x the incentive multiplier 
 
 If stakeholder A were to receive 120K MOBILE through rewards in an epoch, we could expect that it would have received 20K MOBILE under normal circumstances. User X would receive 1/6 of the incremental amount (8.33K MOBILE) and the hotspot owner would receive 5/6 of the incremental amount (41.67K MOBILE).
 
-If hotspot B were convicted by governance of gaming rewards, 3M of the total veMOBILE would be sent to a burn address, whereas the underlying MOBILE within the 3M veMOBILE would be distributed to user X. If there were other users who staked against stakeholder B, this would be distributed pro-rata.
+If hotspot B were convicted by governance of gaming rewards, 6M veMOBILE would be distributed to user X. If there were other users who staked against stakeholder B, this would be distributed pro-rata.
 
-Note that users also have the option of burning MOBILE in the name of stakeholders, in order to receive an equivalent pro-rata share of staking rewards in perpetuity.
+Note that users also have the option of burning MOBILE in the name of stakeholders, in order to receive an equivalent pro-rata share of staking rewards in perpetuity. **Please note that this mechanic is reserved for implementation in Phase III of HIP-51**
 
-1. Oracle Delegation: veMOBILE holders can delegate their holdings to oracles in order to earn future emissions.
-2. Governance: veMOBILE can be used to participate in subDAO proposals that impact core protocol parameters, mechanisms, and operating procedures. veMOBILE that is staked to a hotspot or to an oracle can still vote on governance proposals.
+2. Oracle Delegation: veMOBILE holders can delegate their holdings to oracles in order to earn future emissions.
+3. Governance: veMOBILE can be used to participate in subDAO proposals that impact core protocol parameters, mechanisms, and operating procedures. veMOBILE that is staked to a hotspot or to an oracle can still vote on governance proposals.
 
 ### *Treasury Reserve DNT Market Making Curve*
 
-The Mobile subDAO sets the programmatic treasury formula in order to provide quotes to holders of DNT who wish to redeem their holdings for underlying HNT. Note that at launch of the subnetwork prior to any HNT emissions from the minting contract as per the protocol score, the Helium Foundation will make a donation of HNT into the subDAO treasury reserve in order to collateralize the airdrop specified in the emissions section.
+The Mobile subDAO sets the programmatic treasury formula in order to provide quotes to holders of DNT who wish to redeem their holdings for underlying HNT. The programmatic treasury defines the floor price for IOT, but holders always retain the ability to exchange at the prevailing rate on open markets.
 
 We propose a constant function market making formula for the Mobile subDAO programmatic treasury defined as per the following specification.
 
@@ -192,9 +190,9 @@ $H: \text{HNT in Reserve}$
 
 $S: \text{Outstanding Supply of MOBILE}$
 
-$H: \text{Price of MOBILE in HNT Terms}$
+$P: \text{Price of MOBILE in HNT Terms}$
 
-At epoch T, we denote the value of H, S, and P as HT, ST,  and PT. The programmatic treasury formula at epoch T is a function in two variables, HT, ST defined as follows:
+At epoch T, we denote the value of H, S, and P as $H_T$, $S_T$,  and $P_T$. The programmatic treasury formula at epoch T is a function in two variables, HT, ST defined as follows:
 
 $y_T = k_T = \frac{H_T}{S_T}$
 
