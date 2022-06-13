@@ -122,7 +122,7 @@ Spoofers often either use a VPN to conceal their IP in order to appear legit, or
 There are cases of honest hotspots having an IP in a different country than their asserted location. Some owners are using VPNs either for convenience, or to hide their mining activity from their ISP *(Internet Service Provider)*. ISP can also be using CGNAT, with the hotspot's IPv4 being located in a different country. However, the former can use a VPN located in their country, while the latter is rare enough that we can consider the case of IP addresses being located in a different country than the asserted location of a hotspot to be more likely to belong to a spoofing hotspot.
 
 **Impact on the Trust Score** :
-- **-5** for a hotspot whose IP is located in a different country than its asserted location.
+- **-5** for a hotspot whose IP is located in a different country than its asserted location, or whose IP cannot be located.
 - **-1** for each interaction in the last 7 days with a hotspot whose IP is located in a different country than its asserted location.
 
 - # Interactions with other hotspots
