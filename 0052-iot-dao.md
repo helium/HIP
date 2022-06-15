@@ -67,7 +67,7 @@ A user’s veIOT lockup power is determined by 1) the amount of IOT they lock up
 
 Users can choose to delegate their veIOT for three core purposes:
 
-1. *Hotspot Self-Staking*: Hotspots are able to delegate veIOT in their own name in order to increase the frequency of challenges to that hotspot.
+1. *Hotspot Self-Staking*: Hotspots are able to delegate veIOT in their own name in order to increase the frequency of challenges to that hotspot. **Please note that this mechanic is reserved for implementation in Phase III of HIP-51**
 
 Users are able to stake either “for” or “against” hotspots. At the end of each epoch, hotspots have a net veIOT score in which “for” staked amounts are added, and “against” staked amounts are subtracted from the running total.
 
@@ -77,10 +77,7 @@ Users that delegate veIOT to hotspots receive 50% of any incremental earnings th
 
 ![https://lh6.googleusercontent.com/6zoszBuKyWghz0tEaUBJrAYcBjltkjZkyHcjqRxwUppbkflSdUzmVJSkwD3x4nA3C81tuKc4MHTqjZM_AcapBvaJ0Cq2fLb3ns7Kv1hK_hpT6y4d5hLvmthqQB-5UxCpRfzSr-zZIP8ukqKOGA](https://lh6.googleusercontent.com/6zoszBuKyWghz0tEaUBJrAYcBjltkjZkyHcjqRxwUppbkflSdUzmVJSkwD3x4nA3C81tuKc4MHTqjZM_AcapBvaJ0Cq2fLb3ns7Kv1hK_hpT6y4d5hLvmthqQB-5UxCpRfzSr-zZIP8ukqKOGA)
 
-Hotspots that are found to be gaming or cheating proof-of-coverage rewards are blacklisted from the network, and delegated veIOT is distributed as follows:
-
-1. 50% of delegated veIOT is burned
-2. 50% of delegated veIOT is distributed to users who staked against the hotspot
+Hotspots that are found to be gaming or cheating proof-of-coverage rewards are blacklisted from the network, and delegated veIOT is distributed pro-rata to users who staked against the hotspot
 
 For example, consider the following closed system with Hotspot A, Hotspot B, User X, and User Y.
 
@@ -94,7 +91,7 @@ In this epoch, hotspot A is expected to receive 6x the challenges it would be el
 
 If hotspot A were to receive 120K IOT through proof-of-coverage emissions in an epoch, we could expect that it would have received 20K IOT under normal circumstances. User X would receive 50% of 1/6 of the incremental amount (8.34K IOT) and the hotspot owner would receive 50% of 5/6 of the incremental amount (41.665K IOT), while the remaining 50K is distributed to hotspot A.
 
-If hotspot B were convicted of gaming proof-of-coverage rewards, 3M of the total veIOT would be sent to a burn address, whereas the underlying IOT within the 3M veIOT would be distributed to user X. If there were other users who staked against Hotspot B, this would be distributed pro-rata.
+If hotspot B were convicted of gaming proof-of-coverage rewards, 6M veIOT would be distributed to user X. If there were other users who staked against Hotspot B, this would be distributed pro-rata.
 
 
 2. *Oracle Delegation*: veIOT holders can delegate their holdings to oracles as per the reward agreements set in order to earn future emissions.
@@ -102,7 +99,7 @@ If hotspot B were convicted of gaming proof-of-coverage rewards, 3M of the total
 
 ### Treasury Reserve DNT Market Making Curve
 
-The IoT subDAO sets the programmatic treasury formula in order to provide quotes to holders of DNT who wish to redeem their holdings for underlying HNT. Note that at launch of the subnetwork prior to any HNT emissions from the minting contract as per the protocol score, the Helium Foundation will make a donation of 50,000 HNT into the subDAO treasury reserve in order to collateralize the airdrop specified in the emissions section.
+The IoT subDAO sets the programmatic treasury formula in order to provide quotes to holders of DNT who wish to redeem their holdings for underlying HNT. The programmatic treasury defines the floor price for IOT, but holders always retain the ability to exchange at the prevailing rate on open markets.
 
 We propose a constant function market making formula for the IoT subDAO programmatic treasury defined as per the following specification.
 
@@ -110,9 +107,9 @@ $H: \text{HNT in Reserve}$
 
 $S: \text{Outstanding Supply of IOT}$
 
-$H: \text{Price of IOT}$
+$P: \text{Price of IOT}$
 
-At epoch T, we denote the value of H, S, and P as HT, ST, and PT. The programmatic treasury formula at epoch T is a function in two variables, HT, ST defined as follows:
+At epoch T, we denote the value of H, S, and P as $H_T$, $S_T$, and $P_T$. The programmatic treasury formula at epoch T is a function in two variables, HT, ST defined as follows:
 
 $y_T = k_T = \frac{H_T}{S_T}$
 
