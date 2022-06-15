@@ -110,7 +110,7 @@ $H: \text{HNT in Reserve}$
 
 $S: \text{Outstanding Supply of IOT}$
 
-$H: \text{Price of IOT}$
+$P: \text{Price of IOT}$
 
 At epoch T, we denote the value of H, S, and P as HT, ST, and PT. The programmatic treasury formula at epoch T is a function in two variables, HT, ST defined as follows:
 
