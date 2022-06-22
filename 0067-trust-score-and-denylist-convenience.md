@@ -191,6 +191,23 @@ This HIP introduces some changes to the Helium app and to the explorer :
 - The Helium app should allow users to prove their GPS localization directly from the Helium app.
 - The Helium app should be able to tell whether there are other apps running in the background, and whether a device is rooted.
 
+# All Trust Score calculations
+
+*A hotspot's Trust Score starts at 0. Then, points are either added or substracted depending on the hotspot's behavior in a given timeframe.*
+
+- From **-1 to -0** for each interaction in the last 15 days with a hotspot that was added to the blockchain on a similar date, depending on how close the dates are, ranging from a 0 to a 30-day difference  (-1 if both were added on the exact same date, -0 if they were added 30 days appart or more).
+- **-1** for each location assertion in the last 365 days *(the first location assertion in a hotspot's history doesn't count)*.
+- From **-1 to -0** for each interaction in the last 15 days with a hotspot whose latest location was asserted on a similar date, depending on how close the dates are, ranging from a 0 to a 30-day difference  (-1 if both were asserted on the exact same date, -0 if they were asserted 30 days appart or more).
+- **-1** for each interaction in the last 15 days with a hotspot that shares at least one address
+- **-1** per unique hotspot that was interacted with in the last 30 days and that shares an address in their money trail.
+- From **-0 to -1** for each interaction in the last 30 days showing an SNR value above a certain threshold, ranging from an SNR value of n to n+5, with n = 16.204e^(-0.086d) - 2, with d the registered distance between both hotspots (in kilometers).
+- **-1** per witness at least 2 hexes away in the last 60 days being invalid for having an RSSI too high.
+- From **-1 to -0** per valid witness at least 2 hexes away in the last 60 days whose RSSI is close to the maximum allowed value, ranging from a difference of 0 to 15 between the recorded RSSI value and the maximum allowed value.
+- **+n^0.5**, n being the number of unique hexes in the 7 day old web of the hotspot whose Trust Score is being calculated. **Capped at +20** *(reached at 400 hexes)*
+- **+10** for a hotspot with photo and video proof taken directly from the Helium app. If the proofs are then judged insufficent, the impact on the Trust Score would become **+0** until news proofs are provided and validated.
+- **+10** for a hotspot with GPS localization proof uploaded directly from the Helium app.
+- **-1** for each witness in the last 90 days that was invalid for being too far.
+
 # Drawbacks
 [drawbacks]: #drawbacks
 
