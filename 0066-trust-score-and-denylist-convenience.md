@@ -1,10 +1,11 @@
-# HIP67: Trust Score & Denylist Convenience
+# HIP 66: Trust Score & Denylist Convenience
 
 - Author(s): [@H-Baguette](https://github.com/h-baguette)
 - Start Date: 2022-06-10
 - Category: Technical
-- Original HIP PR: 
-- Tracking Issue: 
+- Original HIP PR: https://github.com/helium/HIP/pull/430
+- Tracking Issue: to do
+- Status: In Discussion 
 
 # Summary
 [summary]: #summary
