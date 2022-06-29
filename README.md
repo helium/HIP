@@ -76,7 +76,8 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | 61 | [Increase Challenger Rewards](https://github.com/helium/HIP/blob/main/0061-increase-challenger-rewards.md) | [In Discussion](https://github.com/helium/HIP/issues/421) |
 | 62 | [PoC Witness IP Check](https://github.com/helium/HIP/blob/main/0062-poc-witness-ip-check.md) | [In Discussion](https://github.com/helium/HIP/issues/422) |
 | 63 | [Helium Hub](https://github.com/helium/HIP/blob/main/0063-helium-hub.md) | [In Discussion](https://github.com/helium/HIP/issues/423) |
-| 63 | [WiFi subDAO](https://github.com/helium/HIP/blob/main/0064-wifi-dao.md) | [In Discussion](https://github.com/helium/HIP/issues/424) |
+| 64 | [WiFi subDAO](https://github.com/helium/HIP/blob/main/0064-wifi-dao.md) | [In Discussion](https://github.com/helium/HIP/issues/424) |
+| 65 | [Vendor HNT Lockup](https://github.com/helium/HIP/blob/main/0065-vendor-token-lockup.md) | [In Discussion](https://github.com/helium/HIP/issues/437) |
 
 
 ## Status key
