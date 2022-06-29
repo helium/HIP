@@ -1,8 +1,8 @@
 # HIP Template
 
-- Author(s): <!--@therealjohnmac50-->
-- Start Date: <!--2022-06-29-->
-- Category: <!--meta-->
+- Author(s): <@therealjohnmac50>
+- Start Date: <2022-06-29>
+- Category: < meta >
 - Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
 - Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
 
