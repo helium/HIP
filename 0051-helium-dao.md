@@ -206,7 +206,7 @@ The DNP subDAO defines the rules for oracles to come to consensus, and distribut
 
 If a given address wishes to redeem their DNT, they can “sell” against the subDAO treasury’s bid on the order book to receive the current rate of underlying HNT.
 
-The transaction involves selling the desired amount of DNT tokens on the order book, and receiving the determined amount of HNT tokens from the DEX. The sunDAO automatically burns any DNT it purchases through this method.
+The transaction involves selling the desired amount of DNT tokens on the order book, and receiving the determined amount of HNT tokens from the DEX. The subDAO automatically burns any DNT it purchases through this method.
 
 The address relays the message of the sale to the set of DNP oracles, which then adjust the position of the programmatic treasury in the following epoch after adjusting for all other sales and any new issuance.
 
