@@ -47,4 +47,4 @@
 # Success Metrics
 [success-metrics]: #success-metrics
 
-Success will be when there is another maker key ban, without any innocent people getting hurt as a result.
+Success will be when there is another permanent/long-term maker key ban, without any innocent people getting hurt as a result.
