@@ -186,6 +186,7 @@ This HIP introduces some changes to the Helium app and to the explorer :
 - Make the Trust Score for each hotspot visible on the explorer.
 - Users should be able to sort hotspots by they Trust Score or by specific parts on the Trust Score (for example sorting only by their score on SNR values) in the explorer.
 - The explorer should be able to display hotspot webs.
+- The explorer should be able to display manufacturer information of the witness hotspot directly.
 - Users should be able to report hotspots to the denylist directly from the Helium app / the explorer.
 - Hotspot owners can be contacted directly via the Helium app by people in charge of the denylist.
 - The Helium app should allow hotspot owners to take and upload pictures and videos directly from the Helium app.
