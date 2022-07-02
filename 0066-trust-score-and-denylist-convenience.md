@@ -116,6 +116,19 @@ Additionally, even if an RSSI is low enough that a witness is not automatically 
 - **-1** per witness at least 2 hexes away in the last 60 days being invalid for having an RSSI too high.
 - from **-1 to -0** per valid witness at least 2 hexes away in the last 60 days whose RSSI is close to the maximum allowed value, ranging from a difference of 0 to 15 between the recorded RSSI value and the maximum allowed value.
 
+- # RSSI to distance variance
+
+*This idea was taken directly from Crowdspot.*
+
+The RSSI shows the strength of the received signal. Normally, on average, the farther away the receiver is from the emitter, the lower the RSSI is. Even so, the relation between RSSI and distance is not constant. Every obstacle between both antennas affects the RSSI value. Outdoor obstacles include a variety of varying obstacles (humidity, swaying trees, smoke, tall moving vehicles like cranes, ...), meaning that even for a fixed distance between two hotspots, the RSSI should vary and be somewhat unpredictable. If the ratio of RSSI to distance seems to predictable, it could indicate a cluster of spoofing hotspots that are not actually exposed to the environment.
+
+*Explanation taken from Crowdspot :* ![image](https://user-images.githubusercontent.com/106159694/177018086-e09fd799-2dcd-4d5a-8b06-127c9f8043c3.png)
+
+**Impact on the Trust Score** :
+- **-(R²-0.1) * n**, R² being the variance (same value as on Crowdspot), and n being the number of interactions in the last 7 days.
+
+ *(A value R² < 0.1 results in a gain of points, a value R² > 0.1 results in a loss of points).*
+
 - # IP address
 
 Spoofers often either use a VPN to conceal their IP in order to appear legit, or assert their location in a different country than their physical location.
@@ -147,25 +160,6 @@ The other webs show hotspots that are too isolated to interact with the rest of 
 **Impact on the Trust Score** : **+n^0.5**, n being the number of unique hexes in the 7 day old web of the hotspot whose Trust Score is being calculated. **Capped at +20** *(reached at 400 hexes)*
 
 ![image](https://user-images.githubusercontent.com/106159694/173186557-4961e5de-becd-4595-b4fd-0387837497dc.png)
-
-
-- # Photo & Video proof
-
-Users should be able to prove that they have an actual setup by providing high quality photographs as well as a video of their setup. People could then investigate these proofs to determine whether the picture and the video are legit, by checking details like the time of day, the weather, the environment, the actual setup, the quality of the picture, whether the picture was taken from the internet, ...
-
-To limit cheating, **the photo and the video should be taken directly from the Helium app**, while ensuring that the device is not rooted and that no other apps are running in the background, in order to prevent people from using a third party app to tinker with the camera.
-
-A picture or video that was proven to be fake is a heavy indication of spoofing, which can disincentivize spoofers from trying to cheat.
-
-In order for genuine mistakes to be fixed, people responsible for denylist additions should be able to **contact hotspot owners directly via the Helium app**. Hotspot owners could then provide new and better proofs of their setup.
-
-**Impact on the Trust Score** : **+10** for a hotspot with photo and video proof taken directly from the Helium app. If the proofs are then judged insufficent, the impact on the Trust Score would become **+0** until news proofs are provided and validated.
-
-- # GPS localization
-
-Users should be able to prove their location through GPS localization directly from the Helium app. In order to limit cheating, the Helium app should ensure that the device is not rooted and that no other apps are running in the background while the Helium app is open, in order to prevent people from using third party apps to simulate another location.
-
-**Impact on the Trust Score** : **+10** for a hotspot with GPS localization proof uploaded directly from the Helium app.
 
 - # Invalid witnesses
 
@@ -205,9 +199,15 @@ This HIP introduces some changes to the Helium app and to the explorer :
 - **-1** per witness at least 2 hexes away in the last 60 days being invalid for having an RSSI too high.
 - From **-1 to -0** per valid witness at least 2 hexes away in the last 60 days whose RSSI is close to the maximum allowed value, ranging from a difference of 0 to 15 between the recorded RSSI value and the maximum allowed value.
 - **+n^0.5**, n being the number of unique hexes in the 7 day old web of the hotspot whose Trust Score is being calculated. **Capped at +20** *(reached at 400 hexes)*
-- **+10** for a hotspot with photo and video proof taken directly from the Helium app. If the proofs are then judged insufficent, the impact on the Trust Score would become **+0** until news proofs are provided and validated.
-- **+10** for a hotspot with GPS localization proof uploaded directly from the Helium app.
 - **-1** for each witness in the last 90 days that was invalid for being too far.
+
+# Other ideas
+
+Here are some more metrics that can be used to calculate the Trust Score. This category contains metrics that are either too complicated to implement right away (or at all), too easy to cheat in their current form, or not detailed enough to be added to the main chapters of the HIP yet.
+
+- GPS localization : uploading GPS localization directly from the Helium app. The Helium app would make sure that no other apps are running, and would take every precaution at its disposal to ensure that the uploaded location is not fake.
+- Photo & video proofs : uploading a photo and a video of the setup (hotspot, antenna and surroundings), taken directly from the Helium app. The Helium app should ensure that no other apps are running and that the uploaded photos and videos were taken directly from the app, at the same moment the GPS localization was uploaded.
+- Checking whether an IP is from China. As most cheaters are located in China, it would make sense to preemptively penalize all hotspots in this country. However, this comes with the obvious downside that all honest miners in China would also be penalized.
 
 # Drawbacks
 [drawbacks]: #drawbacks
