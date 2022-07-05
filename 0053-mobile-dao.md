@@ -118,7 +118,7 @@ There will be a max supply of 250B MOBILE.
 
 The proposal is to have halvenings of MOBILE issuance every 2 years aligned with the HNT issuance halvenings. This requires a 1 year “stub” period from August 1, 2022 to August 1, 2023.
 
-We also propose that 50B MOBILE are pre-mined at the launch of the network, and distributed to the subDAO operations fund administered by the Helium Foundation. This allocation is distributed over the course of the stub period to live Mobile Network hotspots on an epochal basis in roughly equal proportion (akin to universal basic income).
+We also propose that 50B MOBILE are pre-mined at the launch of the network, and distributed to the subDAO operations fund administered by the Helium Foundation. Some fraction of this allocation is distributed over the course of the genesis period to live Mobile Network hotspots on an epochal basis in roughly equal proportion (akin to universal basic income).
 
 For clarity, the emission schedule is as follows:
 | Year | MOBILE at the start of the year | MOBILE minted | Hotspot PoC  | Hotspot Data (excess to PoC) | Mappers | Service Providers | Oracles | veHNT Stakers |
