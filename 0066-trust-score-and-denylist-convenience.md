@@ -183,9 +183,6 @@ This HIP introduces some changes to the Helium app and to the explorer :
 - The explorer should be able to display manufacturer information of the witness hotspot directly.
 - Users should be able to report hotspots to the denylist directly from the Helium app / the explorer.
 - Hotspot owners can be contacted directly via the Helium app by people in charge of the denylist.
-- The Helium app should allow hotspot owners to take and upload pictures and videos directly from the Helium app.
-- The Helium app should allow users to prove their GPS localization directly from the Helium app.
-- The Helium app should be able to tell whether there are other apps running in the background, and whether a device is rooted.
 
 # All Trust Score calculations
 
