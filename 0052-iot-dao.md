@@ -63,7 +63,7 @@ The subDAO operations fund is intended to allow the DNP to perform bespoke opera
 
 Once emissions are distributed to hotspots and oracles, IOT owners can either redeem their holdings for underlying HNT against the treasury reserve automatically, hold for redemptions at a later time, or lock up their IOT for veIOT in a process similar to the veHNT mechanism described in HIP 51.
 
-A user’s veIOT lockup power is determined by 1) the amount of IOT they lock up with, and 2) the amount of time they commit to locking up their IOT. The structure applies a linear multiplier of time to the amount of HNT locked up in the voting contract. For the maximum period of four years, users receive 100x the veIOT. For the minimum period of six months, users receive 1x the veIOT. Note that veLRW is **non-transferable**, and represented as a non-fungible coupon in the user’s IOT address.
+A user’s veIOT lockup power is determined by 1) the amount of IOT they lock up with, and 2) the amount of time they commit to locking up their IOT. The structure applies a linear multiplier of time to the amount of HNT locked up in the voting contract. For the maximum period of four years, users receive 100x the veIOT. For the minimum period of six months, users receive 1x the veIOT. Note that veIOT is **non-transferable**, and represented as a non-fungible coupon in the user’s IOT address.
 
 Users can choose to delegate their veIOT for three core purposes:
 
