@@ -118,7 +118,7 @@ There will be a max supply of 250B MOBILE.
 
 The proposal is to have halvenings of MOBILE issuance every 2 years aligned with the HNT issuance halvenings. This requires a 1 year “stub” period from August 1, 2022 to August 1, 2023.
 
-We also propose that 50B MOBILE are pre-mined at the launch of the network, and distributed to the subDAO operations fund administered by the Helium Foundation. Some fraction of this allocation is distributed over the course of the genesis period to live Mobile Network hotspots on an epochal basis in roughly equal proportion (akin to universal basic income).
+We also propose that 50B MOBILE are pre-mined at the launch of the network, and distributed to the subDAO operations fund administered by the Helium Foundation. Some fraction of this allocation is distributed over the course of the genesis period to live Mobile Network hotspots on an epochal basis in roughly equal proportion (akin to universal basic income). 
 
 For clarity, the emission schedule is as follows:
 | Year | MOBILE at the start of the year | MOBILE minted | Hotspot PoC  | Hotspot Data (excess to PoC) | Mappers | Service Providers | Oracles | veHNT Stakers |
@@ -132,6 +132,9 @@ For clarity, the emission schedule is as follows:
 | 7    | 223.25B                         | 8.25B         | 20%          | 40%                          | 10%     | 20%               | 4%      | 6%            |
 	*50B pre-mine, 66B emitted in year 1
 
+Please note that if the genesis period extends beyond August 1, the emissions due in the stub period are not mined. Further, if a given stakeholder is not filly operational on the network at any given time, the corresponding tokens are not mined.
+
+
 At the end of a given epoch, MOBILE oracles relay start balance, current balance, and total amount of MOBILE Data Credits created and relay to the L1 HNT emissions contract. The emissions contract subsequently distributes the determined amount of HNT as per the Protocol Score to the Mobile subDAO multi-signature wallet, the addresses of which comprise the set of oracles of the Helium Mobile Network.
 
 The subDAO operations fund is intended to allow the DNP to perform bespoke operations to create and sustain network growth. The primary use case of the operations fund is to fund all state transition transaction fees to the L1, but can be deployed in any manner of ways as per subDAO governance. Such incentives could include
@@ -143,42 +146,10 @@ Once emissions are distributed to hotspots and oracles, MOBILE owners can either
 
 A user’s veMOBILE lockup power is determined by 1) the amount of MOBILE they lock up with, and 2) the amount of time they commit to locking up their MOBILE. The structure applies a linear multiplier of time to the amount of HNT locked up in the voting contract. For the maximum period of four years, users receive 100x the veMOBILE. For the minimum period of six months, users receive 1x the veMOBILE. Note that veMOBILE is **non-transferable**, and represented as a non-fungible coupon in the user’s MOBILE address.
 
-Users can choose to delegate their veMOBILE for three core purposes:
+Users can choose to delegate their veMOBILE for two core purposes:
 
-1. Stakeholder Staking: Users are able to delegate veMOBILE to
-
-    1. Specific hotspots in order to increase their hourly incentive points multiplier
-    2. Specific service providers in order to increase their hourly incentive points multiplier
-
-Users are able to stake either “for” or “against” hotspots or service providers. At the end of each epoch, stakeholders have a net veMOBILE score in which “for” staked amounts are added, and “against” staked amounts are subtracted from the running total.
-
-Stakeholder veMOBILE scores are considered within a range of -10M and 10M. For the maximum amount of 10M veMOBILE staked, stakeholders receive 10x the incentive points multiplier. For the default amount of zero veMOBILE staked, stakeholders receive 1x the incentive points For the minimum amount of -10M, stakeholders receive zero incentive points. In either direction across zero from the y-axis, the incentive point multiplier varies linearly with the veMOBILE staked.
-
-Users that delegate veMOBILE to stakeholders receive 50% of any incremental earnings through increased incentive multiplier points.
-
-![https://lh5.googleusercontent.com/GnNkPkShSi3HFf2fwDLaXNXh8xk5LSinMETkSPFaCPKQflhtj-LPwADe3CuRW_jYUxpsefw7kQOobn4xMpAmrRnTTqhlawUyeh_9rZLlD_L0T5LA7zOqxu65CZuC6JHVTFWkOE3120E4nKvisw](https://lh5.googleusercontent.com/GnNkPkShSi3HFf2fwDLaXNXh8xk5LSinMETkSPFaCPKQflhtj-LPwADe3CuRW_jYUxpsefw7kQOobn4xMpAmrRnTTqhlawUyeh_9rZLlD_L0T5LA7zOqxu65CZuC6JHVTFWkOE3120E4nKvisw)
-
-
-Stakeholders that are found to be gaming or cheating rewards are blacklisted from the network, and delegated veMOBILE is distributed pro-rata to users who staked against the hotspot
-
-For example, consider the following closed system with Stakeholder A, Stakeholder B, User X, and User Y.
-
-X delegates 1M veMOBILE “for” stakeholder A and 4M veMOBILE “against” stakeholder B.
-
-Y delegates 5M veMOBILE “for” stakeholder A and 2M veMOBILE “for” stakeholder B.
-
-Tallying both scores, we have a net score of 6M veMOBILE “for” stakeholder A and -2M veMOBILE “against” stakeholder B.
-
-In this epoch, stakeholder A is expected to receive 6x the incentive multiplier under normal circumstances, and stakeholder B is expected to receive 0.8x the incentive multiplier it would be eligible for under normal circumstances.
-
-If stakeholder A were to receive 120K MOBILE through rewards in an epoch, we could expect that it would have received 20K MOBILE under normal circumstances. User X would receive 1/6 of the incremental amount (8.33K MOBILE) and the hotspot owner would receive 5/6 of the incremental amount (41.67K MOBILE).
-
-If hotspot B were convicted by governance of gaming rewards, 6M veMOBILE would be distributed to user X. If there were other users who staked against stakeholder B, this would be distributed pro-rata.
-
-Note that users also have the option of burning MOBILE in the name of stakeholders, in order to receive an equivalent pro-rata share of staking rewards in perpetuity. **Please note that this mechanic is reserved for implementation in Phase III of HIP-51**
-
-2. Oracle Delegation: veMOBILE holders can delegate their holdings to oracles in order to earn future emissions.
-3. Governance: veMOBILE can be used to participate in subDAO proposals that impact core protocol parameters, mechanisms, and operating procedures. veMOBILE that is staked to a hotspot or to an oracle can still vote on governance proposals.
+1. Oracle Delegation: veMOBILE holders can delegate their holdings to oracles in order to earn future emissions.
+2. Governance: veMOBILE can be used to participate in subDAO proposals that impact core protocol parameters, mechanisms, and operating procedures. veMOBILE that is staked to a hotspot or to an oracle can still vote on governance proposals.
 
 ### *Treasury Reserve DNT Market Making Curve*
 
