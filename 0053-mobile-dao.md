@@ -132,7 +132,7 @@ For clarity, the emission schedule is as follows:
 | 7    | 223.25B                         | 8.25B         | 20%          | 40%                          | 10%     | 20%               | 4%      | 6%            |
 	*50B pre-mine, 66B emitted in year 1
 
-Please note that if the genesis period extends beyond August 1, the emissions due in the stub period are not mined. Further, if a given stakeholder is not filly operational on the network at any given time, the corresponding tokens are not mined.
+Please note that if the genesis period extends beyond August 1, the emissions due in the stub period are not mined. Further, if a given stakeholder is not fully operational on the network at any given time, the corresponding tokens are not mined.
 
 
 At the end of a given epoch, MOBILE oracles relay start balance, current balance, and total amount of MOBILE Data Credits created and relay to the L1 HNT emissions contract. The emissions contract subsequently distributes the determined amount of HNT as per the Protocol Score to the Mobile subDAO multi-signature wallet, the addresses of which comprise the set of oracles of the Helium Mobile Network.
@@ -194,7 +194,7 @@ Data Credits are a universal unit of payment across all Helium DAOs and will be 
 
 Service Providers operating in the Helium Mobile DAO will be required to either directly run an instance of the cellular settlement service or contract a third party entity, approved by the DAO to run an instance of the service for them. Detailed specification of the cellular settlement service and its interaction with service provider infrastructure and the Helium blockchain are [described here.](https://github.com/magma/grants/issues/14)
 
-Helium Mobile Network Dao will operate a chain variable that will dictate the conversion ratio between Data Credits and MOBILE tokens, denominated in oracle USD price. Changes to the conversion ratios will be conducted following Sub DAO governance specification.
+Helium Mobile Network Dao will operate a chain variable that will dictate the conversion ratio between Data Credits and MOBILE tokens, denominated in oracle USD price. Changes to the conversion ratios will be conducted following subDAO governance specification.
 
 The initial price per GB of Mobile Network data is suggested to be set at <span>$</span>0.5 per Gigabyte, which means that 1 Helium data credit, when used for data on Mobile Helium DAO will convert to <span>$</span>0.00000003 per LTE packet of 66 bytes.
 
@@ -218,11 +218,11 @@ Proof-of-Coverage Specification
 
 The Mobile Network subDAO is required to constantly interrogate Mobile Network hotspots using the Proof-of-Coverage mechanism to ensure that hotspots are representing their locations accurately and providing functional radio coverage.
 
-PoC implementation proposed in the Helium Mobile Network sub-dao is based on wireless coverage being verified through LoRa hotspots issuing “challenges” to “challengees” and “witnessing” over the air interface. However, for the 5G wireless protocol, radios cannot both challenge and witness the packets over the air, as the 5G/LTE and other cellular protocols are designed for the radio to interact with a UE (such as cell phone) vs another radio..
+PoC implementation proposed in the Helium Mobile Network subDAO is based on wireless coverage being verified through LoRa hotspots issuing “challenges” to “challengees” and “witnessing” over the air interface. However, for the 5G wireless protocol, radios cannot both challenge and witness the packets over the air, as the 5G/LTE and other cellular protocols are designed for the radio to interact with a UE (such as cell phone) vs another radio..
 
 For Mobile Network subDAO we propose to separate the challenge and witness function(s) between the operator of a hotspot and a mapper device (such as a phone or a dedicated mapper) with a sim card that has been authorized to perform the witness function. During the launch stages of the DAO we propose a simplified approach to mapping coverage as follows:
 
-The world is divided into hexes using the H3 geospatial [indexing system](https://h3geo.org/docs/). All hotspots exist as NFTs associated with their unique pub keys and will receive *Eligibility Rewards* and *Mapping Rewards*. All hotspots will receive eligibility rewards, hotspots mustas long as they meet the following minimum criteria:
+The world is divided into hexes using the H3 geospatial [indexing system](https://h3geo.org/docs/). All hotspots exist as NFTs associated with their unique pub keys and will receive *Eligibility Rewards* and *Mapping Rewards*. All hotspots will receive eligibility rewards as long as they meet the following minimum criteria:
 
 1. Stay registered in a Spectrum Access System (SAS), as evidenced by the Domain Proxy software that’s operated by a hotspot vendor
 2. Meet minimum backhaul QoS of 100Mps on the downlink and 10Mps on the uplink, as evidenced by the randomized backhaul challenges run by the hotspot firmware
