@@ -222,7 +222,7 @@ PoC implementation proposed in the Helium Mobile Network sub-dao is based on wir
 
 For Mobile Network subDAO we propose to separate the challenge and witness function(s) between the operator of a hotspot and a mapper device (such as a phone or a dedicated mapper) with a sim card that has been authorized to perform the witness function. During the launch stages of the DAO we propose a simplified approach to mapping coverage as follows:
 
-The world is divided into hexes using the H3 geospatial [indexing system](https://h3geo.org/docs/). All hotspots exist as NFTs associated with their unique pub keys and will receive *Eligibility Rewards* and *Mapping Rewards*. All hotspots will receive eligibility rewards, hotspots mustas long as they meet the following minimum criteria:
+The world is divided into hexes using the H3 geospatial [indexing system](https://h3geo.org/docs/). All hotspots exist as NFTs associated with their unique pub keys and will receive *Eligibility Rewards* and *Mapping Rewards*. All hotspots will receive eligibility rewards, hotspots as long as they meet the following minimum criteria:
 
 1. Stay registered in a Spectrum Access System (SAS), as evidenced by the Domain Proxy software that’s operated by a hotspot vendor
 2. Meet minimum backhaul QoS of 100Mps on the downlink and 10Mps on the uplink, as evidenced by the randomized backhaul challenges run by the hotspot firmware
@@ -237,7 +237,16 @@ During initial launch stages, when network density is low, to combat gaming, Hel
 1. Same mapper can witness the same hotspot no more than once every 4 hours
 2. Same cell can be witnessed by a maximum of 6 unique mappers every hour
 
-During consequent launch stages, as the density of mappers grows, Helium Mobile DAO will look to implement a more robust algorithm, similar to Helium LoRa PoC, whereby only randomly challenged hotspots can be witnessed. Details of this mechanism along with analysis of various attack vectors have been previously published and discussed with the community  in HIP37
+During consequent launch stages, as the density of mappers grows, Helium Mobile DAO will look to implement a more robust algorithm, similar to Helium LoRa PoC, whereby only randomly challenged hotspots can be witnessed. Details of this mechanism along with analysis of various attack vectors have been previously published and discussed with the community  in HIP37.
+
+Mobile radios will receive a QoS score between 0 and 1, similar to the transmit scale introduced in HIP 17 for LoRaWAN proof of coverage.  This QoS score will act as a multiplier of the radio's incentive score, as well as genesis rewards on an epochal basis.  
+
+1. All radios will start with a QoS score of .75.
+2. Radios will gain .01 for 48 consecutive epochs without a failed QoS standard test until the cap of 1.0 is reached. 
+3. If a radio fails 2 consecutive QoS standard tests it will have a reduction of .01 until the floor of 0.0 is reached.
+4. Radio owners have the option to burn MOBILE to recover the QoS score faster.  This burn rate will determined be by a chain var.
+
+We propose a linear burn rate of 20,000 MOBILE 
 
 ### *Governance Specification*
 
