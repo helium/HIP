@@ -29,7 +29,7 @@ This is healthy, but someone could place multiple hotspots at each of these loca
 
 The two topologies shown above cover an equal area with coverage.
 The topology on the right will have each hex targeted 20 times as often as the topology on the left and earn around 20 times the reward.
-This is undesirable behavior as the increased reward is not going to providing any meaningful increase in coverage.
+This is undesirable behavior as the increased reward is not going to provide any meaningful increase in coverage.
 
 You can also see some dense urban areas such as SF and NYC have a very high density of hotspots.
 These areas may be over-saturated and if not, will likely reach over saturation with the number of hotspots coming online and hotspot-based reward targeting overly benefiting dense areas.
@@ -236,7 +236,7 @@ This design is a step towards rewarding areas of coverage and encouraging networ
 There are many other methods that can reward this type of coverage with different levels of accuracy or effort.
 
 Some alternatives are:
- - manually assign reward weights to each hex based on seperately determined value of each area.  This requires a lot of manual work to determine appropriate rewards per area and will cause a lot of pushback as each hex is debated.
+ - Manually assign reward weights to each hex based on seperately determined value of each area.  This requires a lot of manual work to determine appropriate rewards per area and will cause a lot of pushback as each hex is debated.
  - Increase fidelity of density calculation by not relying on hexs and using more direct density measurements.  Each hotspot can be modeled as a gaussian to determine density, or heuristics from real-world observations can determine the information gained by each hotspots transmission compared to their neighbor and scale rewards accordingly
  - Ideal density can be encouraged by adjusting staking fees according to local density.  One problem with this method is the density assessment can only be evaluated once.
 
@@ -244,10 +244,10 @@ Some alternatives are:
 [unresolved]: #unresolved-questions
 
 Integrating this design with a beaconing / receive focused reward structure is required.
-This could be HIP 15 or an alternative.
+This could be [HIP 15](https://github.com/helium/HIP/blob/master/0015-beaconing-rewards.md) or an alternative.
 
 Tuning of the chain variables, specifically per H3 resolution target and maximum densities.  Initial analysis shows that scaling target/max densities linearly with area means only the highest resolution thresholds actually apply.
-Its suggested to consider a set of (N, Density_tgt, Density_max) for at least resolution 8-3. My proposed initial chain variables are as follows. Note keys under `res_vars` are the hex resolutions:
+It is suggested to consider a set of (N, Density_tgt, Density_max) for at least resolution 8-3. My proposed initial chain variables are as follows. Note keys under `res_vars` are the hex resolutions:
 
     "res_vars": {
       "4": {"N":  1, "density_tgt": 250, "density_max": 800},
