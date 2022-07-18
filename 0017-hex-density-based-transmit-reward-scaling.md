@@ -236,7 +236,7 @@ This design is a step towards rewarding areas of coverage and encouraging networ
 There are many other methods that can reward this type of coverage with different levels of accuracy or effort.
 
 Some alternatives are:
- - Manually assign reward weights to each hex based on seperately determined value of each area.  This requires a lot of manual work to determine appropriate rewards per area and will cause a lot of pushback as each hex is debated.
+ - Manually assign reward weights to each hex based on separately determined value of each area.  This requires a lot of manual work to determine appropriate rewards per area and will cause a lot of pushback as each hex is debated.
  - Increase fidelity of density calculation by not relying on hexs and using more direct density measurements.  Each hotspot can be modeled as a gaussian to determine density, or heuristics from real-world observations can determine the information gained by each hotspots transmission compared to their neighbor and scale rewards accordingly
  - Ideal density can be encouraged by adjusting staking fees according to local density.  One problem with this method is the density assessment can only be evaluated once.
 
