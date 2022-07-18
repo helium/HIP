@@ -1,6 +1,6 @@
 # HIP 53: Mobile subDAO
 
-- Authors: [Boris Renski](https://github.com/zer0tweets), [@tjain-mcc](https://github.com/tjain-mcc), [@shayons297](https://github.com/shayons297), [@abhay](https://github.com/abhay), Joey Padden
+- Authors: [Boris Renski](https://github.com/zer0tweets), [@tjain-mcc](https://github.com/tjain-mcc), [@shayons297](https://github.com/shayons297), [@abhay](https://github.com/abhay), Joey Padden, Max Gold
 - Start Date: 2022-01-04
 - Category: Economic, Technical
 - Orignal PR: https://github.com/helium/HIP/pull/341
