@@ -67,35 +67,8 @@ A user’s veIOT lockup power is determined by 1) the amount of IOT they lock up
 
 Users can choose to delegate their veIOT for three core purposes:
 
-1. *Hotspot Self-Staking*: Hotspots are able to delegate veIOT in their own name in order to increase the frequency of challenges to that hotspot. **Please note that this mechanic is reserved for implementation in Phase III of HIP-51**
-
-Users are able to stake either “for” or “against” hotspots. At the end of each epoch, hotspots have a net veIOT score in which “for” staked amounts are added, and “against” staked amounts are subtracted from the running total.
-
-Hotspot veIOT scores are considered within a range of -10M and 10M. For the maximum amount of 10M veIOT staked, hotspots receive 10x the probability of being selected for a challenge within an epoch. For the default amount of zero veIOT staked, hotspots receive 1x the probability of being selected for a challenge within an epoch. For the minimum amount of -10M, hotspots receive zero challenges. In either direction across zero from the y-axis, the challenge probability multiplier varies linearly with the veIOT staked.
-
-Users that delegate veIOT to hotspots receive 50% of any incremental earnings through increased challenge completion.
-
-![https://lh6.googleusercontent.com/6zoszBuKyWghz0tEaUBJrAYcBjltkjZkyHcjqRxwUppbkflSdUzmVJSkwD3x4nA3C81tuKc4MHTqjZM_AcapBvaJ0Cq2fLb3ns7Kv1hK_hpT6y4d5hLvmthqQB-5UxCpRfzSr-zZIP8ukqKOGA](https://lh6.googleusercontent.com/6zoszBuKyWghz0tEaUBJrAYcBjltkjZkyHcjqRxwUppbkflSdUzmVJSkwD3x4nA3C81tuKc4MHTqjZM_AcapBvaJ0Cq2fLb3ns7Kv1hK_hpT6y4d5hLvmthqQB-5UxCpRfzSr-zZIP8ukqKOGA)
-
-Hotspots that are found to be gaming or cheating proof-of-coverage rewards are blacklisted from the network, and delegated veIOT is distributed pro-rata to users who staked against the hotspot
-
-For example, consider the following closed system with Hotspot A, Hotspot B, User X, and User Y.
-
-X delegates 1M veIOT “for” hotspot A and 4M veIOT “against” hotspot B.
-
-Y delegates 5M veIOT “for” hotspot A and 2M veIOT “for” hotspot B.
-
-Tallying both scores, we have a net score of 6M veIOT “for” hotspot A and -2M veIOT “against” hotspot B.
-
-In this epoch, hotspot A is expected to receive 6x the challenges it would be eligible for under normal circumstances, and hotspot B is expected to receive 0.8x the challenges it would be eligible for under normal circumstances.
-
-If hotspot A were to receive 120K IOT through proof-of-coverage emissions in an epoch, we could expect that it would have received 20K IOT under normal circumstances. User X would receive 50% of 1/6 of the incremental amount (8.34K IOT) and the hotspot owner would receive 50% of 5/6 of the incremental amount (41.665K IOT), while the remaining 50K is distributed to hotspot A.
-
-If hotspot B were convicted of gaming proof-of-coverage rewards, 6M veIOT would be distributed to user X. If there were other users who staked against Hotspot B, this would be distributed pro-rata.
-
-
-2. *Oracle Delegation*: veIOT holders can delegate their holdings to oracles as per the reward agreements set in order to earn future emissions.
-3. *Governance*: veIOT can be used to participate in subDAO proposals that impact core protocol parameters, mechanisms, and operating procedures.
+1. *Oracle Delegation*: veIOT holders can delegate their holdings to oracles as per the reward agreements set in order to earn future emissions.
+2. *Governance*: veIOT can be used to participate in subDAO proposals that impact core protocol parameters, mechanisms, and operating procedures.
 
 ### Treasury Reserve DNT Market Making Curve
 
