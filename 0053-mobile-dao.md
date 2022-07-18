@@ -103,9 +103,9 @@ Individual hourly MOBILE earned by a mapper is calculated using the following fo
 
 Hotspot owners will earn 60% of all MOBILE tokens for proof of coverage (PoC) related events (staying eligible and getting mapped) and for burning Helium data credits.
 
-Total number of tokens distributed specifically for PoC events will vary from 20% to 60%, depending on the amount of data offloaded and number of tokens that went to data. PoC tokens PoC tokens are distributed to hotspot owners based on the number of incentive points accumulated by hotspot owners during a given epochhour. Incentive points are issued using the following rules:
+Total number of tokens distributed specifically for PoC events will vary from 20% to 60%, depending on the amount of data offloaded and number of tokens that went to data. PoC tokens PoC tokens are distributed to hotspot owners based on the number of incentive points accumulated by hotspot owners during a given epoch. Incentive points are issued using the following rules:
 
-1. Hotspot receives 1 point for each 4 consecutive hours of remaining eligible
+1. Hotspot receives 1 point for each 4 consecutive epochs of remaining eligible
 2. Hotspot receives 3 points every time it was witnessed by a mapper
 
 ![https://lh4.googleusercontent.com/C-qT_FXuoqgiiQVfj29PUEtMI7G1SKIPHh1wWHJOUn2ykffTRR0TXyUgBkGFYNAnh01FogvbHStLq6KPfaz-1imYEFT8L9JMGH4ACiaSLth-XLwWYgUVdFtFpBqXJ0pO073at5zNOx1za7SLKQ](https://lh4.googleusercontent.com/C-qT_FXuoqgiiQVfj29PUEtMI7G1SKIPHh1wWHJOUn2ykffTRR0TXyUgBkGFYNAnh01FogvbHStLq6KPfaz-1imYEFT8L9JMGH4ACiaSLth-XLwWYgUVdFtFpBqXJ0pO073at5zNOx1za7SLKQ)
@@ -228,25 +228,35 @@ The world is divided into hexes using the H3 geospatial [indexing system](https:
 2. Meet minimum backhaul QoS of 100Mps on the downlink and 10Mps on the uplink, as evidenced by the randomized backhaul challenges run by the hotspot firmware
 3. Be located in a hex that’s been whitelisted for rewards
 
-All hotspots that have remained eligible (i.e. received eligibility rewards) during the last 4 consecutive hours, will be eligible to receive mapper rewards.
+All hotspots that have remained eligible (i.e. received eligibility rewards) during the last 4 consecutive epochs, will be eligible to receive mapper rewards.
 
 Any device (first and foremost a phone) with the proper sim card can be a witnessing device on the network. To witness coverage a “mapper phone” must connect to a CBRS cell or Wi-Fi AP using sim based authentication with a sim card that has been granted mapping privileges by the service provider. Service providers will act as “validators of witness transactions” performed by mappers by authenticating mappers through their HSS via either s6a or sWx protocols.
 
 During initial launch stages, when network density is low, to combat gaming, Helium Mobile DAO implements a simple limiting algorithm:
 
-1. Same mapper can witness the same hotspot no more than once every 4 hours
-2. Same cell can be witnessed by a maximum of 6 unique mappers every hour
+1. Same mapper can witness the same hotspot no more than once every 4 epochs
+2. Same cell can be witnessed by a maximum of 6 unique mappers every epoch
 
 During consequent launch stages, as the density of mappers grows, Helium Mobile DAO will look to implement a more robust algorithm, similar to Helium LoRa PoC, whereby only randomly challenged hotspots can be witnessed. Details of this mechanism along with analysis of various attack vectors have been previously published and discussed with the community  in HIP37.
 
-Mobile radios will receive a QoS score between 0 and 1, similar to the transmit scale introduced in HIP 17 for LoRaWAN proof of coverage.  This QoS score will act as a multiplier of the radio's incentive score, as well as genesis rewards on an epochal basis.  
+Mobile radios will receive a QoS score between 0 and 1, similar to the transmit scale introduced in HIP 17 for LoRaWAN proof of coverage.  This QoS score will act as a multiplier of the radio's incentive score, as well as genesis rewards on an epochal basis.  Data transfer rewards will NOT be affected by the QoS score.
 
 1. All radios will start with a QoS score of .75.
-2. Radios will gain .01 for 48 consecutive epochs without a failed QoS standard test until the cap of 1.0 is reached. 
+2. Radios will gain .01 for 48 consecutive epochs (commencing at 05:00 UTC+0 each day) without a failed QoS standard test until the ceiling of 1.0 is reached. 
 3. If a radio fails 2 consecutive QoS standard tests it will have a reduction of .01 until the floor of 0.0 is reached.
-4. Radio owners have the option to burn MOBILE to recover the QoS score faster.  This burn rate will determined be by a chain var.
+4. Radio owners have the option to burn MOBILE to recover the QoS score faster.
+5. [Burn Rate](https://docs.google.com/spreadsheets/d/1-NqN5WiZoFJnZwIg15miETpAFjTJEsDr/edit?usp=sharing&ouid=107857050951529371929&rtpof=true&sd=true) will be set at 75% of the expected lost MOBILE rewards based on network averages and average network growth (capped at 10%) over the prior 30 days.  Burn rate percentage of expected lost MOBILE can be reduced to promote additional burn or increased to harshen penalties for downtime via MOBILE subDAO governance.
 
-We propose a linear burn rate of 20,000 MOBILE 
+Beginning January 1, 2023 (assuming mappers are readily available as determined by the MOBILE subDAO) radios will receive a MAP score between .25 and 1, similar to the QoS score.  This MAP score will act as a multiplier of the radio's incentive score, as well as genesis rewards on an epochal basis, in conjunction with the radio's QoS score.  Data transfer rewards will NOT be affected by the MAP score.
+
+1. All radios will start with a MAP score of .75.
+2. Radios will gain .1 if they are successfully mapped a minimum of 1 time in the preceeding day (between 05:00 and 04:59 UTC+0) until the ceiling of 1.0 is reached. 
+3. If a radio fails to be mapped for 2 consecutive days it will have a reduction of .05 until the floor of 0.25 is reached.
+4. Unlike QoS scores, radio owners will NOT have the option to burn MOBILE to recover the MAP score.
+5. Mappers will receive a bonus multiple for mapping radios that that have a suboptimal MAP score.  The formuala for determining this multiple will be 1 + (1 - MAP score).
+	
+	*For example: If a radio has a MAP score of .6 the mapper will receive a 1.4x multiple on its rewards for mapping that radio.*
+
 
 ### *Governance Specification*
 
