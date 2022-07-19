@@ -9,9 +9,9 @@
 
 ## Summary
 
-In [HIP 51: Helium DAOs](https://github.com/helium/HIP/blob/main/0051-helium-dao.md), we provide a general structure for onboarding new Decentralized Network Protocols (DNPs) to the broader Helium Network, with mechanisms in place to ensure that protocol-specific attributes such as proof-of-coverage rules and data transfer pricing are within control of the DNT DAOs.
+[HIP 51: Helium DAOs](https://github.com/helium/HIP/blob/main/0051-helium-dao.md) provides a general structure for onboarding new Decentralized Network Protocols (DNPs) to the broader Helium Network, with mechanisms in place to ensure that protocol-specific attributes such as Proof-of-Coverage rules, Data Credit pricing, and consensus-driven rules are within control of the emergent DNP DAO.
 
-In this proposal, we specify the implementation of the structure proposed through a detailed onboarding proposal for the Helium Network. We propose initial configurations of the Helium IoT economics layer as well as governance mechanisms within the DAO through Helium IoT (IOT) token voting.
+In this proposal, we specify the implementation of the structure proposed through a detailed onboarding proposal for the Helium IoT Network. We propose initial configurations of the Helium IoT economics layer as well as governance mechanisms within the DAO through Helium IoT (IOT) token voting.
 
 ## Stakeholders
 
