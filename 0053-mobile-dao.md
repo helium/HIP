@@ -166,17 +166,17 @@ $P: \text{Price of MOBILE in HNT Terms}$
 
 At epoch T, we denote the value of H, S, and P as $H_T$, $S_T$,  and $P_T$. The programmatic treasury formula at epoch T is a function in two variables, HT, ST defined as follows:
 
-$y_T = k_T = \frac{H_T}{S_T}$
+$P_T = \frac{H_T}{S_T}$
 
 For example, consider at epoch #125, the total outstanding supply of tokens for the Mobile subDAO is 3.275B MOBILE and the total amount in the treasury reserve is 2M HNT. The programmatic treasury formula is given as follows
 
-$$y_{125} = k_{125} = \frac{H_{125}}{S_{125}} = \frac{2,000,000}{3,275,000,000} = 0.00061068702$$
+$$P_{125} = \frac{H_{125}}{S_{125}} = \frac{2,000,000}{3,275,000,000} = 0.00061068702$$
 
 This implies that at epoch #125, any number of MOBILE tokens can be redeemed at a unit price of 0.00061068702 HNT.
 
 Now consider at epoch #225, the total outstanding supply of tokens for the Mobile subDAO is 3.5B MOBILE and the total amount in the treasury reserve is 2.025M HNT. The programmatic treasury formula is given as follows
 
-$$y_{225} = k_{225} = \frac{H_{225}}{S_{225}} = \frac{2,025,000}{3,500,000,000} = 0.00057857142$$
+$$P_{225} = \frac{H_{225}}{S_{225}} = \frac{2,025,000}{3,500,000,000} = 0.00057857142$$
 
 This implies that at 100 epochs after #125 at #225, any number of MOBILE tokens can be redeemed at a unit price of 0.00057857142 HNT.
 
