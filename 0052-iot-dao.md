@@ -9,9 +9,9 @@
 
 ## Summary
 
-In [HIP 51: Helium DAOs](https://github.com/helium/HIP/blob/main/0051-helium-dao.md), we provide a general structure for onboarding new Decentralized Network Protocols (DNPs) to the broader Helium Network, with mechanisms in place to ensure that protocol-specific attributes such as proof-of-coverage rules and data transfer pricing are within control of the DNT DAOs.
+[HIP 51: Helium DAOs](https://github.com/helium/HIP/blob/main/0051-helium-dao.md) provides a general structure for onboarding new Decentralized Network Protocols (DNPs) to the broader Helium Network, with mechanisms in place to ensure that protocol-specific attributes such as Proof-of-Coverage rules, Data Credit pricing, and consensus-driven rules are within control of the emergent DNP DAO.
 
-In this proposal, we specify the implementation of the structure proposed through a detailed onboarding proposal for the Helium Network. We propose initial configurations of the Helium IoT economics layer as well as governance mechanisms within the DAO through Helium IoT (IOT) token voting.
+In this proposal, we specify the implementation of the structure proposed through a detailed onboarding proposal for the Helium IoT Network. We propose initial configurations of the Helium IoT economics layer as well as governance mechanisms within the DAO through Helium IoT (IOT) token voting.
 
 ## Stakeholders
 
@@ -84,33 +84,23 @@ $P: \text{Price of IOT}$
 
 At epoch T, we denote the value of H, S, and P as $H_T$, $S_T$, and $P_T$. The programmatic treasury formula at epoch T is a function in two variables, HT, ST defined as follows:
 
-$y_T = k_T = \frac{H_T}{S_T}$
+$P_T = \frac{H_T}{S_T}$
 
 For example, consider at epoch #125, the total outstanding supply of tokens for the IoT subDAO is 3.275B IOT and the total amount in the treasury reserve is 2M HNT. The programmatic treasury formula is given as follows
 
-$$y_{125} = k_{125} = \frac{H_{125}}{S_{125}} = \frac{2,000,000}{3,275,000,000} = 0.00061068702$$
+$$P_{125} = \frac{H_{125}}{S_{125}} = \frac{2,000,000}{3,275,000,000} = 0.00061068702$$
 
 This implies that at epoch #125, any number of IOT can be redeemed at a unit price of 0.00061068702 HNT.
 
 Now consider at epoch #225, the total outstanding supply of tokens for the IoT subDAO is 3.5B IOT and the total amount in the treasury reserve is 2.025M HNT. The programmatic treasury formula is given as follows
 
-$$y_{225} = k_{225} = \frac{H_{225}}{S_{225}} = \frac{2,025,000}{3,500,000,000} = 0.00057857142$$
+$$P_{225} = \frac{H_{225}}{S_{225}} = \frac{2,025,000}{3,500,000,000} = 0.00057857142$$
 
 This implies that at 100 epochs after #125 at #225, any number of IOT can be redeemed at a unit price of 0.00057857142 HNT.
 
 In epoch #225, the total outstanding supply of IOT has increased, and given inflows to the treasury reserve in HNT the resulting unit price has decreased. If the rate at which HNT flows into the treasury reserve outpaces the emission of IOT tokens, the unit price of IOT increases.
 
 Between epoch #125 and #225, a similar repricing takes place in each individual epoch given the amount of HNT in the treasury reserve and the outstanding supply of IOT tokens.
-
-It is possible to represent the programmatic treasury formula as a surface in euclidean space using the following vector notation in two variables:
-
-$$\mathbf{r}(u,v) = \text{<}v, \frac{u}{v}, u\text{>} = v \cdot \mathbf{\hat{i}} + \frac{u}{v} \cdot \mathbf{\hat{j}} + u \cdot \mathbf{\hat{k}}$$
-
-Where
-
-$u: \text{HNT in Treasury Reserve}$
-
-$v: \text{Outstanding supply of IOT}$
 
 Clarifications:
 
