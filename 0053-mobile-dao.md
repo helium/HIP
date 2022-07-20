@@ -9,7 +9,7 @@
 
 **Summary**
 
-[HIP 51: Helium DAOs](https://github.com/helium/HIP/blob/main/0051-helium-dao.md) provides a general structure for onboarding new Decentralized Network Protocols (DNPs)  to the broader Helium Network, with mechanisms in place to ensure that protocol-specific attributes such as Proof-of-Coverage rules, Data Credit pricing, and block validation are within control of the emergent DNP DAO.
+[HIP 51: Helium DAOs](https://github.com/helium/HIP/blob/main/0051-helium-dao.md) provides a general structure for onboarding new Decentralized Network Protocols (DNPs) to the broader Helium Network, with mechanisms in place to ensure that protocol-specific attributes such as Proof-of-Coverage rules, Data Credit pricing, and consensus-driven rules are within control of the emergent DNP DAO.
 
 Today all mobile networks are built top down by service providers such as AT&T and Verizon. Future networks will likely be a hybrid combination of **macro operators** and **crowdsourced 5G/Wi-Fi hotspots** due to demands of consumer behavior (higher bandwidth and lower latency requirements) and the physics of wireless radio. More data on the wireless network requires higher frequency bands, which requires denser networks with more nodes, which further increases cost of site acquisition.
 
@@ -19,7 +19,7 @@ In this proposal, we specify the implementation of the structure proposed throug
 
 # **Mobile subDAO core jobs-to-be-done**
 
-We proposed in HIP 51 that each subDAO operate as a sovereign economics and governance layer. The Helium Mobile Network subDAO has seven core functions
+[HIP 51](https://github.com/helium/HIP/blob/main/0051-helium-dao.md) proposed that each subDAO operate as a sovereign economics and governance layer. The Helium Mobile Network subDAO has seven core functions
 
 1. **Economic Players**
 
@@ -103,9 +103,9 @@ Individual hourly MOBILE earned by a mapper is calculated using the following fo
 
 Hotspot owners will earn 60% of all MOBILE tokens for proof of coverage (PoC) related events (staying eligible and getting mapped) and for burning Helium data credits.
 
-Total number of tokens distributed specifically for PoC events will vary from 20% to 60%, depending on the amount of data offloaded and number of tokens that went to data. PoC tokens PoC tokens are distributed to hotspot owners based on the number of incentive points accumulated by hotspot owners during a given epochhour. Incentive points are issued using the following rules:
+Total number of tokens distributed specifically for PoC events will vary from 20% to 60%, depending on the amount of data offloaded and number of tokens that went to data. PoC tokens PoC tokens are distributed to hotspot owners based on the number of incentive points accumulated by hotspot owners during a given epoch. Incentive points are issued using the following rules:
 
-1. Hotspot receives 1 point for each 4 consecutive hours of remaining eligible
+1. Hotspot receives 1 point for each 4 consecutive epochs of remaining eligible
 2. Hotspot receives 3 points every time it was witnessed by a mapper
 
 ![https://lh4.googleusercontent.com/C-qT_FXuoqgiiQVfj29PUEtMI7G1SKIPHh1wWHJOUn2ykffTRR0TXyUgBkGFYNAnh01FogvbHStLq6KPfaz-1imYEFT8L9JMGH4ACiaSLth-XLwWYgUVdFtFpBqXJ0pO073at5zNOx1za7SLKQ](https://lh4.googleusercontent.com/C-qT_FXuoqgiiQVfj29PUEtMI7G1SKIPHh1wWHJOUn2ykffTRR0TXyUgBkGFYNAnh01FogvbHStLq6KPfaz-1imYEFT8L9JMGH4ACiaSLth-XLwWYgUVdFtFpBqXJ0pO073at5zNOx1za7SLKQ)
@@ -130,9 +130,10 @@ For clarity, the emission schedule is as follows:
 | 5    | 198.5B                          | 16.5B         | 20%          | 40%                          | 10%     | 20%               | 4%      | 6%            |
 | 6    | 215B                            | 8.25B         | 20%          | 40%                          | 10%     | 20%               | 4%      | 6%            |
 | 7    | 223.25B                         | 8.25B         | 20%          | 40%                          | 10%     | 20%               | 4%      | 6%            |
-	*50B pre-mine, 66B emitted in year 1
 
-Please note that if the genesis period extends beyond August 1, the emissions due in the stub period are not mined. Further, if a given stakeholder is not filly operational on the network at any given time, the corresponding tokens are not mined.
+_* 50B pre-mine, 66B emitted in year 1_
+
+Please note that if the genesis period extends beyond August 1, the emissions due in the stub period are not mined. Further, if a given stakeholder is not fully operational on the network at any given time, the corresponding tokens are not mined.
 
 
 At the end of a given epoch, MOBILE oracles relay start balance, current balance, and total amount of MOBILE Data Credits created and relay to the L1 HNT emissions contract. The emissions contract subsequently distributes the determined amount of HNT as per the Protocol Score to the Mobile subDAO multi-signature wallet, the addresses of which comprise the set of oracles of the Helium Mobile Network.
@@ -165,17 +166,17 @@ $P: \text{Price of MOBILE in HNT Terms}$
 
 At epoch T, we denote the value of H, S, and P as $H_T$, $S_T$,  and $P_T$. The programmatic treasury formula at epoch T is a function in two variables, HT, ST defined as follows:
 
-$y_T = k_T = \frac{H_T}{S_T}$
+$P_T = \frac{H_T}{S_T}$
 
 For example, consider at epoch #125, the total outstanding supply of tokens for the Mobile subDAO is 3.275B MOBILE and the total amount in the treasury reserve is 2M HNT. The programmatic treasury formula is given as follows
 
-$$y_{125} = k_{125} = \frac{H_{125}}{S_{125}} = \frac{2,000,000}{3,275,000,000} = 0.00061068702$$
+$$P_{125} = \frac{H_{125}}{S_{125}} = \frac{2,000,000}{3,275,000,000} = 0.00061068702$$
 
 This implies that at epoch #125, any number of MOBILE tokens can be redeemed at a unit price of 0.00061068702 HNT.
 
 Now consider at epoch #225, the total outstanding supply of tokens for the Mobile subDAO is 3.5B MOBILE and the total amount in the treasury reserve is 2.025M HNT. The programmatic treasury formula is given as follows
 
-$$y_{225} = k_{225} = \frac{H_{225}}{S_{225}} = \frac{2,025,000}{3,500,000,000} = 0.00057857142$$
+$$P_{225} = \frac{H_{225}}{S_{225}} = \frac{2,025,000}{3,500,000,000} = 0.00057857142$$
 
 This implies that at 100 epochs after #125 at #225, any number of MOBILE tokens can be redeemed at a unit price of 0.00057857142 HNT.
 
@@ -194,9 +195,9 @@ Data Credits are a universal unit of payment across all Helium DAOs and will be 
 
 Service Providers operating in the Helium Mobile DAO will be required to either directly run an instance of the cellular settlement service or contract a third party entity, approved by the DAO to run an instance of the service for them. Detailed specification of the cellular settlement service and its interaction with service provider infrastructure and the Helium blockchain are [described here.](https://github.com/magma/grants/issues/14)
 
-Helium Mobile Network Dao will operate a chain variable that will dictate the conversion ratio between Data Credits and MOBILE tokens, denominated in oracle USD price. Changes to the conversion ratios will be conducted following Sub DAO governance specification.
+Helium Mobile Network DAO will operate a chain variable that will dictate the conversion ratio between Data Credits and MOBILE tokens, denominated in oracle USD price. Changes to the conversion ratios will be conducted following subDAO governance specification.
 
-The initial price per GB of Mobile Network data is suggested to be set at <span>$</span>0.5 per Gigabyte, which means that 1 Helium data credit, when used for data on Mobile Helium DAO will convert to <span>$</span>0.00000003 per LTE packet of 66 bytes.
+The initial price per GB of Mobile Network data is suggested to be set at $0.5 per Gigabyte, which means that 1 Helium data credit, when used for data on Mobile Helium DAO will convert to $0.00000003 per LTE packet of 66 bytes.
 
 ## *Oracle Operations*
 
@@ -218,26 +219,26 @@ Proof-of-Coverage Specification
 
 The Mobile Network subDAO is required to constantly interrogate Mobile Network hotspots using the Proof-of-Coverage mechanism to ensure that hotspots are representing their locations accurately and providing functional radio coverage.
 
-PoC implementation proposed in the Helium Mobile Network sub-dao is based on wireless coverage being verified through LoRa hotspots issuing “challenges” to “challengees” and “witnessing” over the air interface. However, for the 5G wireless protocol, radios cannot both challenge and witness the packets over the air, as the 5G/LTE and other cellular protocols are designed for the radio to interact with a UE (such as cell phone) vs another radio..
+PoC implementation proposed in the Helium Mobile Network subDAO is based on wireless coverage being verified through LoRa hotspots issuing “challenges” to “challengees” and “witnessing” over the air interface. However, for the 5G wireless protocol, radios cannot both challenge and witness the packets over the air, as the 5G/LTE and other cellular protocols are designed for the radio to interact with a UE (such as cell phone) vs another radio..
 
 For Mobile Network subDAO we propose to separate the challenge and witness function(s) between the operator of a hotspot and a mapper device (such as a phone or a dedicated mapper) with a sim card that has been authorized to perform the witness function. During the launch stages of the DAO we propose a simplified approach to mapping coverage as follows:
 
-The world is divided into hexes using the H3 geospatial [indexing system](https://h3geo.org/docs/). All hotspots exist as NFTs associated with their unique pub keys and will receive *Eligibility Rewards* and *Mapping Rewards*. All hotspots will receive eligibility rewards, hotspots mustas long as they meet the following minimum criteria:
+The world is divided into hexes using the H3 geospatial [indexing system](https://h3geo.org/docs/). All hotspots exist as NFTs associated with their unique pub keys and will receive *Eligibility Rewards* and *Mapping Rewards*. All hotspots will receive eligibility rewards as long as they meet the following minimum criteria:
 
 1. Stay registered in a Spectrum Access System (SAS), as evidenced by the Domain Proxy software that’s operated by a hotspot vendor
 2. Meet minimum backhaul QoS of 100Mps on the downlink and 10Mps on the uplink, as evidenced by the randomized backhaul challenges run by the hotspot firmware
 3. Be located in a hex that’s been whitelisted for rewards
 
-All hotspots that have remained eligible (i.e. received eligibility rewards) during the last 4 consecutive hours, will be eligible to receive mapper rewards.
+All hotspots that have remained eligible (i.e. received eligibility rewards) during the last 4 consecutive epochs, will be eligible to receive mapper rewards.
 
 Any device (first and foremost a phone) with the proper sim card can be a witnessing device on the network. To witness coverage a “mapper phone” must connect to a CBRS cell or Wi-Fi AP using sim based authentication with a sim card that has been granted mapping privileges by the service provider. Service providers will act as “validators of witness transactions” performed by mappers by authenticating mappers through their HSS via either s6a or sWx protocols.
 
 During initial launch stages, when network density is low, to combat gaming, Helium Mobile DAO implements a simple limiting algorithm:
 
-1. Same mapper can witness the same hotspot no more than once every 4 hours
-2. Same cell can be witnessed by a maximum of 6 unique mappers every hour
+1. Same mapper can witness the same hotspot no more than once every 4 epochs
+2. Same cell can be witnessed by a maximum of 6 unique mappers every epoch
 
-During consequent launch stages, as the density of mappers grows, Helium Mobile DAO will look to implement a more robust algorithm, similar to Helium LoRa PoC, whereby only randomly challenged hotspots can be witnessed. Details of this mechanism along with analysis of various attack vectors have been previously published and discussed with the community  in HIP37
+During consequent launch stages, as the density of mappers grows, Helium Mobile DAO will look to implement a more robust algorithm, similar to Helium LoRa PoC, whereby only randomly challenged hotspots can be witnessed. Details of this mechanism along with analysis of various attack vectors have been previously published and discussed with the community in HIP37 but these implementations are subject to change as we gather more data about deployments.
 
 ### *Governance Specification*
 
