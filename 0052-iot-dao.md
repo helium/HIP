@@ -9,9 +9,9 @@
 
 ## Summary
 
-In [HIP 51: Helium DAOs](https://github.com/helium/HIP/blob/main/0051-helium-dao.md), we provide a general structure for onboarding new Decentralized Network Protocols (DNPs) to the broader Helium Network, with mechanisms in place to ensure that protocol-specific attributes such as proof-of-coverage rules and data transfer pricing are within control of the DNT DAOs.
+[HIP 51: Helium DAOs](https://github.com/helium/HIP/blob/main/0051-helium-dao.md) provides a general structure for onboarding new Decentralized Network Protocols (DNPs) to the broader Helium Network, with mechanisms in place to ensure that protocol-specific attributes such as Proof-of-Coverage rules, Data Credit pricing, and consensus-driven rules are within control of the emergent DNP DAO.
 
-In this proposal, we specify the implementation of the structure proposed through a detailed onboarding proposal for the Helium Network. We propose initial configurations of the Helium IoT economics layer as well as governance mechanisms within the DAO through Helium IoT (IOT) token voting.
+In this proposal, we specify the implementation of the structure proposed through a detailed onboarding proposal for the Helium IoT Network. We propose initial configurations of the Helium IoT economics layer as well as governance mechanisms within the DAO through Helium IoT (IOT) token voting.
 
 ## Stakeholders
 
@@ -67,35 +67,8 @@ A user’s veIOT lockup power is determined by 1) the amount of IOT they lock up
 
 Users can choose to delegate their veIOT for three core purposes:
 
-1. *Hotspot Self-Staking*: Hotspots are able to delegate veIOT in their own name in order to increase the frequency of challenges to that hotspot. **Please note that this mechanic is reserved for implementation in Phase III of HIP-51**
-
-Users are able to stake either “for” or “against” hotspots. At the end of each epoch, hotspots have a net veIOT score in which “for” staked amounts are added, and “against” staked amounts are subtracted from the running total.
-
-Hotspot veIOT scores are considered within a range of -10M and 10M. For the maximum amount of 10M veIOT staked, hotspots receive 10x the probability of being selected for a challenge within an epoch. For the default amount of zero veIOT staked, hotspots receive 1x the probability of being selected for a challenge within an epoch. For the minimum amount of -10M, hotspots receive zero challenges. In either direction across zero from the y-axis, the challenge probability multiplier varies linearly with the veIOT staked.
-
-Users that delegate veIOT to hotspots receive 50% of any incremental earnings through increased challenge completion.
-
-![https://lh6.googleusercontent.com/6zoszBuKyWghz0tEaUBJrAYcBjltkjZkyHcjqRxwUppbkflSdUzmVJSkwD3x4nA3C81tuKc4MHTqjZM_AcapBvaJ0Cq2fLb3ns7Kv1hK_hpT6y4d5hLvmthqQB-5UxCpRfzSr-zZIP8ukqKOGA](https://lh6.googleusercontent.com/6zoszBuKyWghz0tEaUBJrAYcBjltkjZkyHcjqRxwUppbkflSdUzmVJSkwD3x4nA3C81tuKc4MHTqjZM_AcapBvaJ0Cq2fLb3ns7Kv1hK_hpT6y4d5hLvmthqQB-5UxCpRfzSr-zZIP8ukqKOGA)
-
-Hotspots that are found to be gaming or cheating proof-of-coverage rewards are blacklisted from the network, and delegated veIOT is distributed pro-rata to users who staked against the hotspot
-
-For example, consider the following closed system with Hotspot A, Hotspot B, User X, and User Y.
-
-X delegates 1M veIOT “for” hotspot A and 4M veIOT “against” hotspot B.
-
-Y delegates 5M veIOT “for” hotspot A and 2M veIOT “for” hotspot B.
-
-Tallying both scores, we have a net score of 6M veIOT “for” hotspot A and -2M veIOT “against” hotspot B.
-
-In this epoch, hotspot A is expected to receive 6x the challenges it would be eligible for under normal circumstances, and hotspot B is expected to receive 0.8x the challenges it would be eligible for under normal circumstances.
-
-If hotspot A were to receive 120K IOT through proof-of-coverage emissions in an epoch, we could expect that it would have received 20K IOT under normal circumstances. User X would receive 50% of 1/6 of the incremental amount (8.34K IOT) and the hotspot owner would receive 50% of 5/6 of the incremental amount (41.665K IOT), while the remaining 50K is distributed to hotspot A.
-
-If hotspot B were convicted of gaming proof-of-coverage rewards, 6M veIOT would be distributed to user X. If there were other users who staked against Hotspot B, this would be distributed pro-rata.
-
-
-2. *Oracle Delegation*: veIOT holders can delegate their holdings to oracles as per the reward agreements set in order to earn future emissions.
-3. *Governance*: veIOT can be used to participate in subDAO proposals that impact core protocol parameters, mechanisms, and operating procedures.
+1. *Oracle Delegation*: veIOT holders can delegate their holdings to oracles as per the reward agreements set in order to earn future emissions.
+2. *Governance*: veIOT can be used to participate in subDAO proposals that impact core protocol parameters, mechanisms, and operating procedures.
 
 ### Treasury Reserve DNT Market Making Curve
 
@@ -111,33 +84,23 @@ $P: \text{Price of IOT}$
 
 At epoch T, we denote the value of H, S, and P as $H_T$, $S_T$, and $P_T$. The programmatic treasury formula at epoch T is a function in two variables, HT, ST defined as follows:
 
-$y_T = k_T = \frac{H_T}{S_T}$
+$P_T = \frac{H_T}{S_T}$
 
 For example, consider at epoch #125, the total outstanding supply of tokens for the IoT subDAO is 3.275B IOT and the total amount in the treasury reserve is 2M HNT. The programmatic treasury formula is given as follows
 
-$$y_{125} = k_{125} = \frac{H_{125}}{S_{125}} = \frac{2,000,000}{3,275,000,000} = 0.00061068702$$
+$$P_{125} = \frac{H_{125}}{S_{125}} = \frac{2,000,000}{3,275,000,000} = 0.00061068702$$
 
 This implies that at epoch #125, any number of IOT can be redeemed at a unit price of 0.00061068702 HNT.
 
 Now consider at epoch #225, the total outstanding supply of tokens for the IoT subDAO is 3.5B IOT and the total amount in the treasury reserve is 2.025M HNT. The programmatic treasury formula is given as follows
 
-$$y_{225} = k_{225} = \frac{H_{225}}{S_{225}} = \frac{2,025,000}{3,500,000,000} = 0.00057857142$$
+$$P_{225} = \frac{H_{225}}{S_{225}} = \frac{2,025,000}{3,500,000,000} = 0.00057857142$$
 
 This implies that at 100 epochs after #125 at #225, any number of IOT can be redeemed at a unit price of 0.00057857142 HNT.
 
 In epoch #225, the total outstanding supply of IOT has increased, and given inflows to the treasury reserve in HNT the resulting unit price has decreased. If the rate at which HNT flows into the treasury reserve outpaces the emission of IOT tokens, the unit price of IOT increases.
 
 Between epoch #125 and #225, a similar repricing takes place in each individual epoch given the amount of HNT in the treasury reserve and the outstanding supply of IOT tokens.
-
-It is possible to represent the programmatic treasury formula as a surface in euclidean space using the following vector notation in two variables:
-
-$$\mathbf{r}(u,v) = \text{<}v, \frac{u}{v}, u\text{>} = v \cdot \mathbf{\hat{i}} + \frac{u}{v} \cdot \mathbf{\hat{j}} + u \cdot \mathbf{\hat{k}}$$
-
-Where
-
-$u: \text{HNT in Treasury Reserve}$
-
-$v: \text{Outstanding supply of IOT}$
 
 Clarifications:
 
