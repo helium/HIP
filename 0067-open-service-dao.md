@@ -18,6 +18,11 @@ So here we suggest Helium start an open service list for the projects who have t
 And the services which could join the open list need to follow some standards made by the community.
 It could build the Open-Service subDAO just like the IoT subDAO, Mobile subDAO, and WiFi subDAO, working in the same structure under Helium Network.
 
+# Open-Service SubDao Core Functions
+- What is the Service List
+- How to join
+- How to ensure the security
+
 # Motivation
 [motivation]: #motivation
 
@@ -43,13 +48,7 @@ space. This is probably the most important section!
 
 # Unresolved Questions*
 [unresolved]: #unresolved-questions
-- What parts of the design do you expect to resolve through the HIP process
-  before this gets merged?
-- What parts of the design do you expect to resolve through the implementation
-  of this feature?
-- What related issues do you consider out of scope for this HIP that could be
-  addressed in the future independently of the solution that comes out of this
-  HIP?
+- Is that better 
 
 # Deployment Impact
 [deployment-impact]: #deployment-impact
