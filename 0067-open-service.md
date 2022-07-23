@@ -1,8 +1,8 @@
 # HIP Template
 
-- Author(s): <!-- your GitHub @username -->
-- Start Date: <!-- fill me in with today's date, YYYY-MM-DD -->
-- Category: <!-- economic, technical, meta -->
+- Author(s): @sndnsos
+- Start Date: 07/23/2022
+- Category: economic, technical
 - Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
 - Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
 
