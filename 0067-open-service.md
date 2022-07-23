@@ -1,6 +1,6 @@
 # HIP Template
 
-- Author(s): @sndnsos
+- Author(s): [@sndnsos](https://github.com/sndnsos)
 - Start Date: 07/23/2022
 - Category: economic, technical
 - Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
