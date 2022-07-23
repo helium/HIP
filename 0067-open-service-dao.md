@@ -28,22 +28,9 @@ As a case, for example, this HIP could give the choice for some Helium nodes to 
 
 # Stakeholders*
 [stakeholders]: #stakeholders
-* Who is affected by this HIP?
-* How are we soliciting feedback on this HIP from these stakeholders? Note that
-  they may not be watching the HIPs repository or even aren't directly active in
-  the Helium Community Slack channels.
-
-# Detailed Explanation
-[detailed-explanation]: #detailed-explanation
-- Introduce and explain new concepts.
-- It should be reasonably clear how the proposal would be implemented.
-- Provide representative examples that show how this proposal would be commonly
-  used.
-- Corner cases should be dissected by example.
-
-# Drawbacks*
-[drawbacks]: #drawbacks
-- Why should we *not* do this?
+- Helium Official
+- Helium Nodes Owener, as the service provider
+- Meson Network, as the service purchaser and the proposer
 
 # Rationale and Alternatives*
 [alternatives]: #rationale-and-alternatives
