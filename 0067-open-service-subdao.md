@@ -30,15 +30,18 @@ This proposal is trying to come up with a win-win solution, or probably a revolu
 
 # Explanation
 - What is the service list?
+
     The service list is for multiple services to easily join/use Helium Network.
     The Helium node owner could pick any services in the list, and install/uninstall the services.
     The project side needs to pay the Data Credits to use the services provided by Helium nodes.
     
 - For the project side, how to join the list?
+
     The project side should inform the usage scenarios, the resource it consumes, and publish the source codes, finishing the process to guarantee its security.
     The subDAO committee will examine and approve/reject the application.
 
 - For the helium node owners, what do they need to do?
+
     There need to update the service list, and be able to choose any services to install anytime, also be able to quit the services anytime.
 
 
