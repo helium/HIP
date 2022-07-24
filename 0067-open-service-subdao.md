@@ -43,8 +43,8 @@ Helium is growing to have its first million nodes soon, it aims to help differen
 
 # Launch
 
-Meson Network would like to be one of the start projects to launch the service list.
-As a bandwidth trading platform, [Meson Network](https://meson.network) makes use of idle bandwidth resources to help distribute files/data around the world.
+[Meson Network](https://meson.network) would like to be one of the start projects to launch the service list.
+As a bandwidth trading platform and the biggest web3 CDN supplier, Meson Network makes use of idle bandwidth resources to help distribute files/data around the world.
 The globally distributed Helium nodes could help Meson Newtowk to deliver the different kinds of files/data, and get the service fee in return for how much it contributes. 
 
 Meson Network is going to draft and finish the application form, proposing the charging standard form, giving the Helium Nodes a choice to share their bandwidth/space to install the Meson service. The team of Meson Network will help the different kinds of Helium to deploy Meson.
