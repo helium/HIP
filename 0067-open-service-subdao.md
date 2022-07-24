@@ -1,4 +1,4 @@
-# HIP Template
+# Open Service Subdao
 
 - Author(s): [@haihongS](https://github.com/haihongS) [@sndnsos](https://github.com/sndnsos)
 - Start Date: 07/23/2022
