@@ -9,7 +9,7 @@
 # Summary
 [summary]: #summary
 
-- The average daily mining reward per hotspot is currently 0.00000005 DC (0.05 HNT) , it costs 1,000,000 DC (equal to around 1 HNT) to reassert a hotspot's location. 
+- The average daily mining reward per hotspot is currently equal to around 50,000 DC; and it costs 1,000,000 DC to reassert a hotspot's location. 
 
 As a result, it would take nearly a month for the average hotspot to earn enough to pay for one location reassertion.
 
@@ -23,7 +23,7 @@ Therefore, if we are trying to expand the network (h3dex targeting) and want hot
 # Detailed Explanation
 [detailed-explanation]: #detailed-explanation
 
-- The average daily mining reward per hotspot is currently 0.00000005 DC, it costs 1,000,000 DC to reassert a hotspot's location. 
+- The average daily mining reward per hotspot is currently equal to around 50,000 DC; and it costs 1,000,000 DC to reassert a hotspot's location.
 
 As a result, it would take nearly a month for the average hotspot to earn enough to pay for one location reassertion. 
 
@@ -45,10 +45,10 @@ Therefore, if we are trying to expand the network (h3dex targeting) and want hot
 - Although reduced reassertion fees may also benefit location spoofers, how many people will actually move their hotspots and expand the network and how many gamers would it help as a result? Especially given the once per year per hotspot limit. In other words, the pros outweigh the cons.
 
 
-- With the reassertion fees reduced to 5 USD, it would still require the average hotspot to spend 10 days worth of mining for the reassertions. 
+- With the reassertion fees reduced to 500,000 DC, it would still require the average hotspot to spend 10 days worth of mining for the reassertions. 
 
 
- - Thus, the 5 USD fee is still preventing excessive/unnecessary reassertions, while also making it easier for those that want to expand the network and actually move their hotspots locations to that end.
+ - Thus, the 500,000 DC fee is still preventing excessive/unnecessary reassertions, while also making it easier for those that want to expand the network and actually move their hotspots locations to that end.
 
 # Drawbacks
 [drawbacks]: #drawbacks
@@ -58,7 +58,7 @@ Therefore, if we are trying to expand the network (h3dex targeting) and want hot
 # Rationale and Alternatives
 [alternatives]: #rationale-and-alternatives
 
-- Alternatives may be to the reduction amount. For example, instead of the reassertion fess being reduced to $5, an alternative may be to reduce the fee to $8.
+- Alternatives may be to the reduction amount. For example, instead of the reassertion fess being reduced to 500,000 DC, an alternative may be to reduce the fee to 800,000 DC.
 
 - Not doing this will result in people who may have moved from an over saturated areas to much less saturated areas, but will not do so on the notion that the reassertion fee in and of itself would cost many months (if not linger) worth of mining.
 
