@@ -46,6 +46,10 @@ Meson Network is going to draft and finish the application form, proposing the c
 They could install the patch to share some resources to help Meson Network, and quit anytime as their wish.
 
 
+# SubDao Govenance Design
+
+*TODO
+
 # Deployment Impact
 
  - Make Helium Network more commonly used for multiple purposes.
