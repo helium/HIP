@@ -21,7 +21,11 @@ We suggest starting the Open-Service subDAO under Helium Network which plays som
 
 # Background
 
-Helium is growing to have its first million nodes soon, it aims to help different communication networks build on Helium Network including LoRaWAN, Wifi, 5G, CDN, and VPN. Comparatively, for a miner to join Helium is pretty easy, while it would be kind of difficult for more services to use this global distributed network. Even the requirement for data delivery is growing fast every year and surely will grow much larger in the future. The traditional market is still not good enough for various projects to deploy their services globally, not to mention to use a cheaper but high-quality decentralized network. Many Helium nodes are used for Iot currently and will help the Cellular Network the most in the future, while still the bandwidth/space/performance of many helium nodes are not maken full used. This proposal is trying to come up with a win-win solution, or probably a revolution to help optimize the network structure or even market structure to start this Open Service subDao.
+Helium is growing to have its first million nodes soon, it aims to help different communication networks build on Helium Network including LoRaWAN, Wifi, 5G, CDN, and VPN. 
+
+In one hand, Comparatively, for a miner to join Helium is pretty easy, while it would be kind of difficult for more services to use this global distributed network. Even though the requirement for data delivery is growing fast every year and surely will grow much larger in the future, the traditional market is still not good enough for various projects to deploy their services globally, not to mention to use a cheaper but high-quality decentralized network. In other hand, Many Helium nodes are used for Iot currently and will help the Cellular Network the most in the future, while the bandwidth/space/performance of many helium nodes are still not maken full used for more different applications. 
+
+This proposal is trying to come up with a win-win solution, or probably a revolution to help optimize the network structure or even market structure to start this Open Service subDao.
 
 
 # Explanation
