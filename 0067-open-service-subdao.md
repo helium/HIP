@@ -38,6 +38,11 @@ Helium is growing to have its first million nodes soon, it aims to help differen
     There need to update the service list, and be able to choose any services to install anytime, also be able to quit the services anytime.
 
 
+# SubDao Governance
+
+Helium node owners and projects which wish to run their services on Helium Network are going to run this SubDao together. A committee is imperative to form to design an economic model and set specifications and approve projects which are qualified to use Helium Network. Also, an evaluation system is a pretty meaningful job to give enough references for the Helium node owners to choose the best services for their interests to run. The project side should purchase Data Credits to pay for the service expense, purchasing and burning HNT to help run the entire Helium Ecosystem.
+
+
 # Launch
 
 [Meson Network](https://meson.network) would like to be one of the start projects to launch the service list.
@@ -46,11 +51,6 @@ The globally distributed Helium nodes could help Meson Newtowk to deliver the di
 
 Meson Network is going to draft and finish the application form, proposing the charging standard form, giving the Helium Nodes a choice to share their bandwidth/space to install the Meson service. The team of Meson Network will help the different kinds of Helium to deploy Meson.
 They could install the patch to share some resources to help Meson Network, and quit anytime as their wish.
-
-
-# SubDao Governance
-
-Helium node owners and projects which wish to run their services on Helium Network are going to run this SubDao together. A committee is imperative to form to design an economic model and set specifications and approve projects which are qualified to use Helium Network. Also, an evaluation system is a pretty meaningful job to give enough references for the Helium node owners to choose the best services for their interests to run. The project side should purchase Data Credits to pay for the service expense, purchasing and burning HNT to help run the entire Helium Ecosystem.
 
 
 # Deployment Impact
