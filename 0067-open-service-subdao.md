@@ -12,7 +12,7 @@
 [HIP 51: Helium DAO](https://github.com/helium/HIP/blob/main/0051-helium-dao.md) proposed that each communications network built on top of the Helium Network (LoRaWAN, WiFi, 5G, CDN, VPN — referred to as Decentralized Network Protocols or DNPs) has its own subDAO with its own token (referred to as Decentralized Network Tokens or DNTs). The key specifications of the DNP such as Proof-of-Coverage rules, mining rewards, and Data Transfer pricing are governed by each DNP subDAO.
 
 For the services on CDN and VPN for example, there would be lots of projects that want to use Helium's Network to help run various services.
-We think for many Heliums nodes, their bandwidth resources, storage spaces, device performance, and all idle resources today, should be more fully taken used now and in the future. 
+We think for many Heliums nodes, their bandwidth resources, storage spaces, device performance, and all other idle resources, should be more fully taken used now and in the future. 
 So here we suggest Helium start an open service list for the projects who have the requirement to use Helium Network. And for the nodes of the helium network, they could choose to run any services in the list as their wish, getting extra motivation rewards in return.
 
 And the services which could join the open list need to follow some standards made by the community.
