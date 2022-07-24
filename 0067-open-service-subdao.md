@@ -16,7 +16,7 @@ We think for many Heliums nodes, their bandwidth resources, storage spaces, devi
 So here we suggest Helium start an open service list for the projects who have the requirement to use Helium Network. And for the nodes of the helium network, they could choose to run any services in the list as their wish, getting extra motivation rewards in return.
 
 And the services which could join the open list need to follow some standards made by the community.
-We suggest starting the Open-Service subDAO under Helium Network which plays some open and special roles in Helium Network.
+We suggest starting the Open-Service subDAO under Helium Network which plays some open and special roles, building a services supporting market in Helium Network.
 
 
 # Background
