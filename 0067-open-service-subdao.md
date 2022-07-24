@@ -53,10 +53,8 @@ They could install the patch to share some resources to help Meson Network, and 
 
 # SubDao Governance
 
-Helium nodes owners and projects which wish to run their services on Helium Network are going to run this SubDao together.
-A committee is imperative to form to design economic model and set specifications and approve projects which is qulified to use Helium Network.
-Also, an evaluation system is a pretty meaningful job to give enough reference for the Helium nodes owners to choose the best services for their interests to run.
-The project side should purchase Data Credits pay for the service expense, purchasing and burning HNT to help running the entire Helium Ecosystem.
+Helium node owners and projects which wish to run their services on Helium Network are going to run this SubDao together. A committee is imperative to form to design an economic model and set specifications and approve projects which are qualified to use Helium Network. Also, an evaluation system is a pretty meaningful job to give enough references for the Helium node owners to choose the best services for their interests to run. The project side should purchase Data Credits to pay for the service expense, purchasing and burning HNT to help run the entire Helium Ecosystem.
+
 
 # Deployment Impact
 
