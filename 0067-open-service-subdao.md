@@ -47,7 +47,13 @@ This proposal is trying to come up with a win-win solution, or probably a revolu
 
 # SubDao Governance
 
-Helium node owners and projects which wish to run their services on Helium Network are going to run this SubDao together. A committee is imperative to form to design an economic model and set specifications and approve projects which are qualified to use Helium Network. Also, an evaluation system is a pretty meaningful job to give enough references for the Helium node owners to choose the best services for their interests to run. The project side should purchase Data Credits to pay for the service expense, purchasing and burning HNT to help run the entire Helium Ecosystem.
+Helium node owners and projects which wish to run their services on Helium Network are going to run this SubDao together. 
+
+A committee is imperative to form to design an economic model and set specifications and approve projects which are qualified to use Helium Network. 
+
+Also, an evaluation system is a pretty meaningful job to give enough references for the Helium node owners to choose the best services for their interests to run. 
+
+The project side should purchase Data Credits to pay for the service expense, purchasing and burning HNT to help run the entire Helium Ecosystem. Most of the service fee would go to the node's owner directly, while a very tiny percentage of the service fee is gonna be used to help build and support the running of the committee.
 
 
 # Launch
