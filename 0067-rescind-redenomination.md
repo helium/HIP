@@ -75,17 +75,12 @@ The implementation of HIP 39 requires significant core developer and Helium Foun
     gaming, etc. In order to nimbly implement omni-protocol support,
     developers need HIPs 51-53 to protect protocol-specific changes and
     eliminate abstraction overhead.
-    
-- HIP 51
-
+ - [C] Other economic HIPs in process
+    1. HIP 51:
 [https://github.com/helium/HIP/blob/main/0051-helium-dao.md#construction](https://github.com/helium/HIP/blob/main/0051-helium-dao.md#construction)
-
-- HIP 52:
-
+    2. HIP 52:
 [https://github.com/helium/HIP/blob/main/0052-iot-dao.md#emissions-curve](https://github.com/helium/HIP/blob/main/0052-iot-dao.md#emissions-curve)
-
-- HIP 53:
-
+    3. HIP 53:
 [https://github.com/helium/HIP/blob/main/0053-mobile-dao.md#emissions-curve](https://github.com/helium/HIP/blob/main/0053-mobile-dao.md#emissions-curve)
 
 # Drawbacks
@@ -139,7 +134,7 @@ If redenomination of HNT specifically is still required it is proposed that a ne
 
 ### Unresolved Questions
 
-- Could a further HIP be created to implement a small or bigger scope of HIP 39
+- Could a further HIP be created to implement a small or bigger scope of HIP 39?
 
 # Deployment Impact
 
@@ -151,21 +146,3 @@ If redenomination of HNT specifically is still required it is proposed that a ne
 
 - HIP 39 is closed and the discord discussion channel archived
 - HIP XX is closed
-
-**HELIUMVOTE.COM CONTENT**
-
-# HIP 67 Rescind Redenomination
-
-On November 21st 2021 the Helium community voted with a consensus majority of 73.81% to a 1000:1 HNT token redenomination. HIP xx proposes to rescind this community vote for HIP39 to redenominate HNT.
-
-A delay on implementation of HIP 39 came about because of unseen complexities and complications to avoid undesired HNT Token arbitrage opportunities during the redenomination process. This work was completed but since then then many of the motivations behind HIP 39 will be implemented from HIP51 and other subDAO HIPs.
-
-This HIP discusses the reasons for this proposal to effectively reverse the community vote after the vote for HIP 51 and the subsequent HIP proposals that introduce new lower denominated tokens for IOT, MOBILE and other networks.
-
-A HIP 39 implementation expectation date on the HNT anniversary on 1st August needs to be confirmed or delayed but retaining HIP 39 but then not acting on it would further greatly increase the complexity of implementation and developer effort with the release of additional related Tokens. 
-
-Approving this HIP implies that the community has reviewed the proposal. We will consider this proposal as approved if it passes with 2/3 of the vote power by the deadline.
-
-HIP xx does not have its own Discord discussion channel as HIP 39 channel is still open
-
-Join the conversation on Discord and the #hip-39-hnt-redenomination for community discussion.
