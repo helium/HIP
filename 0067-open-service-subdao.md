@@ -1,29 +1,28 @@
 # HIP 67: Open Service Subdao
 
-- Author(s): [@haihongS](https://github.com/haihongS) [@sndnsos](https://github.com/sndnsos)
+- Author(s): [@sndnsos](https://github.com/sndnsos) [@haihongS](https://github.com/haihongS) 
 - Start Date: 07/23/2022
-- Category: economic, technical
+- Category: Economic, Technical
 - Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
 - Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
 
 
 # Summary
 
-[HIP 51: Helium DAO](https://github.com/helium/HIP/blob/main/0051-helium-dao.md) proposed that each communications network built on top of the Helium Network (LoRaWAN, WiFi, 5G, CDN, VPN — referred to as Decentralized Network Protocols or DNPs) has its own subDAO with its own token (referred to as Decentralized Network Tokens or DNTs). The key specifications of the DNP such as Proof-of-Coverage rules, mining rewards, and Data Transfer pricing are governed by each DNP subDAO.
+[HIP 51: Helium DAO](https://github.com/helium/HIP/blob/main/0051-helium-dao.md) proposed that each communications network built on top of the Helium Network has its own subDAO with its own token and governance. Till now, LoRaWAN subDAO, 5G subDAO, and WiFi subDAO are proposed. They are about communication networks. But another very significant subDAO that should be a next step,  is to help build the service market on Helium Network.
 
-For the services on CDN and VPN for example, there would be lots of projects that want to use Helium's Network to help run various services.
-We think for many Heliums nodes, their bandwidth resources, storage spaces, device performance, and all other idle resources, should be more fully taken used now and in the future. 
-So here we suggest Helium start an open service list for the projects who have the requirement to use Helium Network. And for the nodes of the helium network, they could choose to run any services in the list as their wish, getting extra motivation rewards in return.
+For the services on CDN and VPN for example, there would be lots of projects that want to use Helium's Network to help run various services. We think for many Heliums nodes, their bandwidth resources, storage spaces, device performance, and all other idle resources, should be more fully taken used now and in the future. 
 
-And the services which could join the open list need to follow some standards made by the community.
-We suggest starting the Open-Service subDAO under Helium Network which plays some open and special roles, building a services supporting market in Helium Network.
+So here we suggest Helium start an open service list for the projects who have the requirement to use Helium Network. The services which could join the open list need to follow some standards made by the community; And for the nodes of the helium network, they could choose to run any services in the list as their wish, getting extra motivation rewards in return.
+
+We suggest starting the Open-Service subDAO under Helium Network which plays some open and special roles, building a services-supporting market in Helium Network.
 
 
 # Background
 
 Helium is growing to have its first million nodes soon, it aims to help different communication networks build on Helium Network including LoRaWAN, Wifi, 5G, CDN, and VPN. 
 
-In one hand, Comparatively, for a miner to join Helium is pretty easy, while it would be kind of difficult for more services to use this global distributed network. Even though the requirement for data delivery is growing fast every year and surely will grow much larger in the future, the traditional market is still not good enough for various projects to deploy their services globally, not to mention to use a cheaper but high-quality decentralized network. In other hand, Many Helium nodes are used for Iot currently and will help the Cellular Network the most in the future, while the bandwidth/space/performance of many helium nodes are still not maken full used for more different applications. 
+On the one hand, Comparatively, for a miner to join Helium is pretty easy, while it would be kind of difficult for more services to use this global distributed network. Even though the requirement for data delivery is growing fast every year and surely will grow much larger in the future, the traditional market is still not good enough for various projects to deploy their services globally, not to mention to use a cheaper but high-quality decentralized network. On the other hand, Many Helium nodes are used for IoT currently and will help the Cellular Network the most in the future, while the bandwidth/space/performance of many helium nodes are still not made fully used f for more different applications. 
 
 This proposal is trying to come up with a win-win solution, or probably a revolution to help optimize the network structure or even market structure to start this Open Service subDao.
 
