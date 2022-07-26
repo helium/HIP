@@ -1,11 +1,11 @@
-# HIP 67: Open Service Subdao
+# HIP 68: Open Service Subdao
 
 - Author(s): [@sndnsos](https://github.com/sndnsos) [@haihongS](https://github.com/haihongS) 
 - Start Date: 2022/07/23
 - Category: Economic, Technical
-- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
-- Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
-
+- Original HIP PR: https://github.com/helium/HIP/pull/454
+- Tracking Issue: TO DO 
+- Status: In Discussion 
 
 # Summary
 
