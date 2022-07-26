@@ -1,10 +1,11 @@
-# HIPXX: Repeal Redenomination
+# HIP 67: Repeal Redenomination
 
 - Author(s): [@edballou](https://github.com/edballou)
 - Start Date: 2022-06-20
 - Category: Economic
-- Original HIP PR: [https://github.com/helium/HIP/pull/XXX](https://github.com/helium/HIP/pull/XXX)
-- Tracking Issue: [https://github.com/helium/HIP/issues/XXX](https://github.com/helium/HIP/issues/XXX)
+- Original HIP PR: https://github.com/helium/HIP/pull/455
+- Tracking Issue: TODO
+- Status: In Discussion 
 
 # Summary
 
