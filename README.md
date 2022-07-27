@@ -81,7 +81,7 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | 66 | [Trust Score & Denylist Convenience](https://github.com/helium/HIP/blob/main/0066-trust-score-and-denylist-convenience.md) | [In Discussion](https://github.com/helium/HIP/issues/438) |
 | 67 | [Repeal Redenomination](https://github.com/helium/HIP/blob/main/0067-repeal-redenomination.md) | [In Discussion](https://github.com/helium/HIP/issues/456) |
 | 68 | [Open Service Subdao](https://github.com/helium/HIP/blob/main/0068-open-service-subdao.md) | [In Discussion](https://github.com/helium/HIP/issues/457) |
-| 69 | [Re-assertion Fee Reduction](https://github.com/helium/HIP/edit/main/0069-reassertion-fee-reduction.md) | [In Discussion](https://github.com/helium/HIP/issues/458) |
+| 69 | [Re-assertion Fee Reduction](https://github.com/helium/HIP/blob/main/0069-reassertion-fee-reduction.md) | [In Discussion](https://github.com/helium/HIP/issues/458) |
 
 ## Status key
 
