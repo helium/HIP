@@ -17,7 +17,7 @@ In respect to the nature of difference between this potential SubDAO and existin
 
 # Background
 
-For the Helium Network to grow globally in number of active devices and users it is necessary to develop economic incentives and opportunitiesopportunity for the infrastructure operators participating in supporting the network. Adding utility and profitability to the hardware involved now and in the future will solidify the Helium network as a major player across many types of networks.
+For the Helium Network to grow globally in number of active devices and users it is necessary to develop economic incentives and opportunity for the infrastructure operators participating in supporting the network. Adding utility and profitability to the hardware involved now and in the future will solidify the Helium network as a major player across many types of networks.
 
 This proposal will require addition to the economic models set forth to further incentive individual participants' activity in new networks with the advantage of increasing profitability of said participants.
 
