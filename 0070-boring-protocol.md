@@ -1,4 +1,4 @@
-# HIP 69: Re-assertion Fee Reduction
+# HIP 70: Boring Protocol
 
 - Author(s): [@FOMOBY](https://github.com/FOMOBY) [@franswan](https://github.com/franswan) 
 - Start Date: 2022-07-31
