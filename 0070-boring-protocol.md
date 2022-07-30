@@ -9,6 +9,7 @@
 
 
 Summary
+
 The objective of this proposal is to outline a SubDAO dVPN facilitated by Boring Protocol and the Helium network as it pertains to privacy access for the broadcast layer, both entities' economic model and the ecosystem as a whole.
 In response to HIP-51, this proposal outlines construction for the integration of Boring Protocol dVPN into Helium network as a subDAO with its own DNT ( decentralized network token) known as BOP. In respect to the nature of difference between this potential SubDAO and existing SubDAOs many of the guidelines provided in HIP-51 will need to be considered for new solutions.
 Background
@@ -21,6 +22,7 @@ Boring Protocol operates currently on the token model envisioned by its team and
 The technical and economic design decisions of the Helium Network today have been made around the flagship LoRaWAN Decentralized Network Protocol. 
 
 Motivation
+
 The drivers for this proposal are as follows:
 Privacy and Security for Helium “subscribers” & internet users as a whole
 Security and Scalability of the L1 as proposed in HIP-51
@@ -31,6 +33,7 @@ Sustainability in manufacturing and distribution of hardware
 Increased Utility and Security for EVM mechanisms like wHNT
 
 Stakeholders
+
 This proposal impacts all HNT holders and their ecosystem as well as all BOP holders and their ecosystem. The objective is to provide greater growth to both networks while equally providing opportunity to the economics of Helium hardware operators,  simultaneously creating privacy access to Helium network infrastructure.
 The Helium token model is described in the HIP’s presented previous to this proposal. Borings tokenomics weigh several key factors to provide incentive for network growth and network strength. 
 The BOP token utility is mainly a settlement between “clients” of the dVPN and “operators” of nodes which are used to privately access the internet. Apart from this primary function the token is staked by node operators to present loyalty to the network and financial incentive to act in “good faith” as they operate exit nodes. As nodes remain connected they increase their opportunity for traffic/data to be directed through their node and increase their profitability as the token is settled on a data consumption rate. 
@@ -38,6 +41,7 @@ It is possible that the multi-chain interoperability may include a portion of Bo
 In researching and writing this HIP Boring has used our social forums to conduct numerous discussions within the Helium community to generate this proposal. Continued participation and discussion is greatly encouraged to ensure the proposal is in line with the needs of both communities.
 
 Detailed Description
+
 An initial integration may not include all economic requirements as described in HIP51 as the model for such only sets forth guidance for network structures that previously existed within the Helium ecosystem. As Boring is an entirely separate access layer network we propose that the Data Credit models proposed in other subDAOs be removed from the equation for this particular proposal. As Boring grows and the opportunity to use DC as a solution within our network model presents itself the community can propose and implement such changes. 
 
 Boring Protocol will instead add utility and value to the Helium token ecosystem by allowing customers to pay using SPL wrapped HNT and eventually HNT via cross chain bridges to fund their usage of the dVPN. This provides two distinct advantages to the Helium community: 
