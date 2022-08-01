@@ -94,4 +94,4 @@ What metrics can be used to measure the success of this design?
 
 - What should we measure to prove a reduction in complexity?
 
-- What should we measure to prove an acceptance of this by it's users?
+- What should we measure to prove an acceptance of this by its users?
