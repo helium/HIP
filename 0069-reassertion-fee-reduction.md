@@ -37,7 +37,7 @@ In addition, to prevent location spoofing as a result of reassertion fees deduct
 
 Furthermore, in order to help prevent abuse of the reassertion fee reduction, there will be a minimum distance of 10KM (between the original location to the reasserted location) requirement. 
 
-Finally, the reassertion fee reduction will only apply to those inserting their hotspots into Res8 hexes of >3 (less than 3) hotpots. 
+Finally, the reassertion fee reduction will only apply to those inserting their hotspots into Res8 hexes of < 3 (less than 3) hotpots. 
 
 With the reassertion fees reduced to 500,000 DC, it would still require the average hotspot to spend approximately 10 days worth of mining for the reassertions. 
 
