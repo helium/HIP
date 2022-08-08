@@ -4,7 +4,7 @@
 - Start Date: 2022-07-24
 - Category: Economy 
 - Original HIP PR: https://github.com/helium/HIP/pull/453
-- Tracking Issue: TO DO 
+- Tracking Issue: https://github.com/helium/HIP/issues/458
 - Status: In Discussion 
 
 # Summary
