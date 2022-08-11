@@ -33,7 +33,7 @@ In order to help expand the network and ease the burden on new people joining th
 
 Please note that I specifically chose 500,000 DC and not less (say 10,000 DC), to help prevent people from taking advantage of reduced reassertion fees. 
 
-In addition, to prevent location spoofing as a result of reassertion fees deduction, any given individual hotspot may only have its reassertion fees reduced once per year (about 525k blocks).
+In addition, to prevent location spoofing as a result of reassertion fees deduction, any given individual hotspot may only have its reassertion fees reduced every 525k blocks (approximately once per year).
 
 Furthermore, in order to help prevent abuse of the reassertion fee reduction, there will be a minimum distance of 10KM (between the original location to the reasserted location) requirement. 
 
