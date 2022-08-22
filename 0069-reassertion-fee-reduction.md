@@ -17,7 +17,7 @@ Therefore, if we are trying to expand the network and want hotspots in saturated
 
 # Stakeholders
 
-In reality, since less DC burned has an economic impact, this hip affects everyone. Directly, this hip affects everyone that is reasserting their hotspots. Additionally, since people will need to be able to see their reassertion fee amounts prior to submitting the reassertion fee DC burn transaction which is a function of the Vendor Apps, this HIP directly effects all owners of Vendor apps.
+In reality, since less DC burned has an economic impact, this hip affects everyone. Directly, this hip affects everyone that is reasserting their hotspots. Additionally, since people will need to be able to see their reassertion fee amounts prior to submitting the reassertion fee DC burn transaction which is a function of the Vendor Apps, this HIP directly affects all owners of Vendor apps.
 
 # Detailed Explanation
 
