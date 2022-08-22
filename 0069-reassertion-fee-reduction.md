@@ -17,7 +17,7 @@ Therefore, if we are trying to expand the network and want hotspots in saturated
 
 # Stakeholders
 
-In reality, since less DC burned has an economical impact, this hip effects everyone. Directly, this hip effects everyone that is reasserting their hotspots. Additionally, since people will need to be able to see their reassertion fee amounts prior to submitting the reassertion fee DC burn transaction which is a function of the Vendor Apps, this HIP directly effects all owners of Vendor apps.
+In reality, since less DC burned has an economic impact, this hip effects everyone. Directly, this hip effects everyone that is reasserting their hotspots. Additionally, since people will need to be able to see their reassertion fee amounts prior to submitting the reassertion fee DC burn transaction which is a function of the Vendor Apps, this HIP directly effects all owners of Vendor apps.
 
 # Detailed Explanation
 
@@ -50,7 +50,7 @@ To clarify in summary:
 
  - This HIP only applies to those who are REasserting their hotspots to a distance equal to or greater than 10km (away from the original location point that is being changed).
 
- - This HIP only applies to REassertions, equal to or greater than 10km away from the original location, and only to those who are reasserting their hotspots into Res8 hexes with less than 3 hotspots [equal to or less than 2 hotspots].
+ - This HIP only applies to REassertions, equal to or greater than 10km away from the original location, and only to those who are reasserting their hotspots into Res8 hexes with less than 3 hotspots (equal to or less than 2 hotspots).
 
  - The reassertion fee reduction will be limited to once per hotspot per year. Meaning, after a given hotspot's first reassertion fee reduction, said hotspot would need to wait one year (approximately 525k blocks) in order to be eligible for its second reassertion fee reduction.
 
@@ -73,17 +73,21 @@ Additionally, there will always be a minimum of 100,000 DC and maximum of 500,00
 
 # Drawbacks
 
-Although the aforementioned three gaming prevention methods will drastically reduce the chances of gaming as a result of the reassertion fee reduction, location spoofers may possibly benefit from reduced reassertion fees. 
+Although the aforementioned three gaming prevention methods will drastically reduce the chances of gaming as a result of the reassertion fee reduction, location spoofers may benefit from reduced reassertion fees. Nevertheless, it will be impossible for any given hotspot to benefit from the reasserton fee reduction more than once every 525k blocks (approximately once per year).
 
 # Rationale
 
-Not doing this will result in people who may have moved from an over saturated areas to much less saturated areas, but will not do so on the notion that the reassertion fee in and of itself would cost many months (if not longer) worth of mining. Additionally, without this HIP, the burden will not be lighter for those joining the network (for example people who purchase a second hand hotspot and need to reassert their location), and those who made human errors (such as "fat finger" mistake of placing their hotspots on the wrong location accidentally).
+Not doing this can possibly result in people who may have moved from an over saturated areas to much less saturated areas, but may not do so on the notion that the reassertion fee in and of itself would cost many months (if not longer) worth of mining. Additionally, without this HIP, the reassertion fee burden will not be lighter for those joining the network (for example people who purchase a second hand hotspot and need to reassert their location), and those who made human errors (such as "fat finger" mistakes of placing their hotspots into the wrong location accidentally).
 
 # Unresolved Questions
 
-Who will write the code for this HIP? 
+On the economic effect, burning less HNT as a result of reduced reassertion fees, has a negative economic impact. Therefore, to what degree will this HIP negatively impact the Network's economics? 
+
+On the UX side, the non-scoped factors are the work that is needed in various maker apps, ensuring that all Hotspots can use the variable rate (depending on the aforementioned equation/logic). Additionally, if a maker decides not to respect the reassertion fee reduction amount, the chain may accept the higher fee amount (which cannot be undone).
+
+As far as resourcing, who will build/write the code? 
 
 # Success Metrics
 
-Success may be measured, once we see hotspots in over saturated areas moving to less saturated areas.
+Success may be measured, once we see people being issued the reassertion fee reduction.
  
