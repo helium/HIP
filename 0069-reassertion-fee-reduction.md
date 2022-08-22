@@ -27,7 +27,6 @@ As a result, it would take nearly a month for the average hotspot to earn enough
 
 Therefore, if we are trying to expand the network and want hotspots in saturated areas to move into less saturated areas (or moreover in lone wolf like areas), want to ease the burden on new people joining the network, and ease the burden on people making human errors, the current reassertion price is not viable and needs to be reduced. 
 
-To clarify, the original/first location assertion price would not be changed, merely the reassertion prices (from the 2nd assertion and on.)
 
 In order to help expand the network and ease the burden on new people joining the network, I'm proposing that the reassertion price be reduced from 1,000,000 DC, to half which is 500,000 DC. 
 
@@ -44,20 +43,21 @@ With the reassertion fees reduced to 500,000 DC, it would still require the aver
 Thus, the 500,000 DC fee in addition to the three aforementioned gaming prevention methods are still preventing excessive/unnecessary reassertions, while also making it easier for those that want to expand the network and actually move their hotspots locations to that end.
 
 
-To clarify in summary:
 
- - This HIP only applies to REassertions. Not the first assertion/onboarding.
+**To clarify all methods provided to help prevent location spoofing as a result of the reassertion fees deduction in summary:**
 
- - This HIP only applies to those who are REasserting their hotspots to a distance equal to or greater than 10km (away from the original location point that is being changed).
+ - This HIP only applies to **RE**assertions. Not the first assertion/onboarding. To clarify, the original/first location assertion price would not be changed, merely the reassertion prices (from the 2nd assertion and on.)
 
- - This HIP only applies to REassertions, equal to or greater than 10km away from the original location, and only to those who are reasserting their hotspots into Res8 hexes with less than 3 hotspots (equal to or less than 2 hotspots).
+ - This HIP only applies to those who are REasserting their hotspots to a distance equal to or greater than 10km (away from the original location point that is being changed). As a direct result, this HIP will not help those trying to increase their TS scales. 
 
- - The reassertion fee reduction will be limited to once per hotspot per year. Meaning, after a given hotspot's first reassertion fee reduction, said hotspot would need to wait one year (approximately 525k blocks) in order to be eligible for its second reassertion fee reduction.
+ - This HIP only applies to REassertions, equal to or greater than 10km away from the original location, and only to those who are reasserting their hotspots into Res8 hexes with less than 3 hotspots (equal to or less than 2 hotspots). This gaming prevention method will help enforce the core goal of this HIP, which is to ease the burden on those that are trying to expand the network.
 
-All other location assertions, that do not meet the aforementioned requirements, will not have their assertions fee reduced.
+ - The reassertion fee reduction will be limited to once per hotspot per year. Meaning, after a given hotspot's first reassertion fee reduction, said hotspot would need to wait 525k blocks (approximately one year) in order to be eligible for its second reassertion fee reduction. This gaming prevention method will ultimtately limit any potential abuse of the reassertion fee reduction to no more than once per hotspot per year. 
+
+ - *All other location assertions, that do not meet the aforementioned requirements, will not have their assertions fee reduced.*
 
 
-This HIP will be implemented in two stages. 
+**This HIP will be implemented in two stages:** 
 
  1) Upon community vote approval, the current 1,000,000 DC reassertion fee amount will immediately be reduced to 500,000 DC.
  
