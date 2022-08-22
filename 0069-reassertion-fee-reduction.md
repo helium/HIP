@@ -17,7 +17,7 @@ Therefore, if we are trying to expand the network and want hotspots in saturated
 
 # Stakeholders
 
-In reality, since less DC burned has an economic impact, this hip effects everyone. Directly, this hip effects everyone that is reasserting their hotspots. Additionally, since people will need to be able to see their reassertion fee amounts prior to submitting the reassertion fee DC burn transaction which is a function of the Vendor Apps, this HIP directly effects all owners of Vendor apps.
+In reality, since less DC burned has an economic impact, this hip affects everyone. Directly, this hip effects everyone that is reasserting their hotspots. Additionally, since people will need to be able to see their reassertion fee amounts prior to submitting the reassertion fee DC burn transaction which is a function of the Vendor Apps, this HIP directly effects all owners of Vendor apps.
 
 # Detailed Explanation
 
@@ -73,7 +73,7 @@ Additionally, there will always be a minimum of 100,000 DC and maximum of 500,00
 
 # Drawbacks
 
-Although the aforementioned three gaming prevention methods will drastically reduce the chances of gaming as a result of the reassertion fee reduction, location spoofers may benefit from reduced reassertion fees. Nevertheless, it will be impossible for any given hotspot to benefit from the reasserton fee reduction more than once every 525k blocks (approximately once per year).
+Although the aforementioned gaming prevention methods will drastically reduce the chances of gaming as a result of the reassertion fee reduction, location spoofers may benefit from reduced reassertion fees. Nevertheless, it will be impossible for any given hotspot to benefit from the reasserton fee reduction more than once every 525k blocks (approximately once per year).
 
 # Rationale
 
