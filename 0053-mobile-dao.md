@@ -9,7 +9,7 @@
 
 **Summary**
 
-[HIP 51: Helium DAOs](https://github.com/helium/HIP/blob/main/0051-helium-dao.md) provides a general structure for onboarding new Decentralized Network Protocols (DNPs)  to the broader Helium Network, with mechanisms in place to ensure that protocol-specific attributes such as Proof-of-Coverage rules, Data Credit pricing, and block validation are within control of the emergent DNP DAO.
+[HIP 51: Helium DAOs](https://github.com/helium/HIP/blob/main/0051-helium-dao.md) provides a general structure for onboarding new Decentralized Network Protocols (DNPs) to the broader Helium Network, with mechanisms in place to ensure that protocol-specific attributes such as Proof-of-Coverage rules, Data Credit pricing, and consensus-driven rules are within control of the emergent DNP DAO.
 
 Today all mobile networks are built top down by service providers such as AT&T and Verizon. Future networks will likely be a hybrid combination of **macro operators** and **crowdsourced 5G/Wi-Fi hotspots** due to demands of consumer behavior (higher bandwidth and lower latency requirements) and the physics of wireless radio. More data on the wireless network requires higher frequency bands, which requires denser networks with more nodes, which further increases cost of site acquisition.
 
@@ -19,7 +19,7 @@ In this proposal, we specify the implementation of the structure proposed throug
 
 # **Mobile subDAO core jobs-to-be-done**
 
-We proposed in HIP 51 that each subDAO operate as a sovereign economics and governance layer. The Helium Mobile Network subDAO has seven core functions
+[HIP 51](https://github.com/helium/HIP/blob/main/0051-helium-dao.md) proposed that each subDAO operate as a sovereign economics and governance layer. The Helium Mobile Network subDAO has seven core functions
 
 1. **Economic Players**
 
@@ -103,9 +103,9 @@ Individual hourly MOBILE earned by a mapper is calculated using the following fo
 
 Hotspot owners will earn 60% of all MOBILE tokens for proof of coverage (PoC) related events (staying eligible and getting mapped) and for burning Helium data credits.
 
-Total number of tokens distributed specifically for PoC events will vary from 20% to 60%, depending on the amount of data offloaded and number of tokens that went to data. PoC tokens PoC tokens are distributed to hotspot owners based on the number of incentive points accumulated by hotspot owners during a given epochhour. Incentive points are issued using the following rules:
+Total number of tokens distributed specifically for PoC events will vary from 20% to 60%, depending on the amount of data offloaded and number of tokens that went to data. PoC tokens PoC tokens are distributed to hotspot owners based on the number of incentive points accumulated by hotspot owners during a given epoch. Incentive points are issued using the following rules:
 
-1. Hotspot receives 1 point for each 4 consecutive hours of remaining eligible
+1. Hotspot receives 1 point for each 4 consecutive epochs of remaining eligible
 2. Hotspot receives 3 points every time it was witnessed by a mapper
 
 ![https://lh4.googleusercontent.com/C-qT_FXuoqgiiQVfj29PUEtMI7G1SKIPHh1wWHJOUn2ykffTRR0TXyUgBkGFYNAnh01FogvbHStLq6KPfaz-1imYEFT8L9JMGH4ACiaSLth-XLwWYgUVdFtFpBqXJ0pO073at5zNOx1za7SLKQ](https://lh4.googleusercontent.com/C-qT_FXuoqgiiQVfj29PUEtMI7G1SKIPHh1wWHJOUn2ykffTRR0TXyUgBkGFYNAnh01FogvbHStLq6KPfaz-1imYEFT8L9JMGH4ACiaSLth-XLwWYgUVdFtFpBqXJ0pO073at5zNOx1za7SLKQ)
@@ -118,7 +118,7 @@ There will be a max supply of 250B MOBILE.
 
 The proposal is to have halvenings of MOBILE issuance every 2 years aligned with the HNT issuance halvenings. This requires a 1 year “stub” period from August 1, 2022 to August 1, 2023.
 
-We also propose that 50B MOBILE are pre-mined at the launch of the network, and distributed to the subDAO operations fund administered by the Helium Foundation. This allocation is distributed over the course of the stub period to live Mobile Network hotspots on an epochal basis in roughly equal proportion (akin to universal basic income).
+We also propose that 50B MOBILE are pre-mined at the launch of the network, and distributed to the subDAO operations fund administered by the Helium Foundation. Some fraction of this allocation is distributed over the course of the genesis period to live Mobile Network hotspots on an epochal basis in roughly equal proportion (akin to universal basic income). 
 
 For clarity, the emission schedule is as follows:
 | Year | MOBILE at the start of the year | MOBILE minted | Hotspot PoC  | Hotspot Data (excess to PoC) | Mappers | Service Providers | Oracles | veHNT Stakers |
@@ -130,7 +130,11 @@ For clarity, the emission schedule is as follows:
 | 5    | 198.5B                          | 16.5B         | 20%          | 40%                          | 10%     | 20%               | 4%      | 6%            |
 | 6    | 215B                            | 8.25B         | 20%          | 40%                          | 10%     | 20%               | 4%      | 6%            |
 | 7    | 223.25B                         | 8.25B         | 20%          | 40%                          | 10%     | 20%               | 4%      | 6%            |
-	*50B pre-mine, 66B emitted in year 1
+
+_* 50B pre-mine, 66B emitted in year 1_
+
+Please note that if the genesis period extends beyond August 1, the emissions due in the stub period are not mined. Further, if a given stakeholder is not fully operational on the network at any given time, the corresponding tokens are not mined.
+
 
 At the end of a given epoch, MOBILE oracles relay start balance, current balance, and total amount of MOBILE Data Credits created and relay to the L1 HNT emissions contract. The emissions contract subsequently distributes the determined amount of HNT as per the Protocol Score to the Mobile subDAO multi-signature wallet, the addresses of which comprise the set of oracles of the Helium Mobile Network.
 
@@ -143,48 +147,14 @@ Once emissions are distributed to hotspots and oracles, MOBILE owners can either
 
 A user’s veMOBILE lockup power is determined by 1) the amount of MOBILE they lock up with, and 2) the amount of time they commit to locking up their MOBILE. The structure applies a linear multiplier of time to the amount of HNT locked up in the voting contract. For the maximum period of four years, users receive 100x the veMOBILE. For the minimum period of six months, users receive 1x the veMOBILE. Note that veMOBILE is **non-transferable**, and represented as a non-fungible coupon in the user’s MOBILE address.
 
-Users can choose to delegate their veMOBILE for three core purposes:
-
-1. Stakeholder Staking: Users are able to delegate veMOBILE in the name of:
-    1. Specific hotspots in order to increase their hourly incentive points multiplier
-    2. Specific service providers in order to increase their hourly incentive points multiplier
-
-Users are able to stake either “for” or “against” hotspots or service providers. At the end of each epoch, stakeholders have a net veMOBILE score in which “for” staked amounts are added, and “against” staked amounts are subtracted from the running total.
-
-Stakeholder veMOBILE scores are considered within a range of -10M and 10M. For the maximum amount of 10M veMOBILE staked, stakeholders receive 10x the incentive points multiplier. For the default amount of zero veMOBILE staked, stakeholders receive 1x the incentive points For the minimum amount of -10M, stakeholders receive zero incentive points. In either direction across zero from the y-axis, the incentive point multiplier varies linearly with the veMOBILE staked.
-
-Users that delegate veMOBILE to stakeholders receive 50% of any incremental earnings through increased incentive multiplier points.
-
-![https://lh5.googleusercontent.com/GnNkPkShSi3HFf2fwDLaXNXh8xk5LSinMETkSPFaCPKQflhtj-LPwADe3CuRW_jYUxpsefw7kQOobn4xMpAmrRnTTqhlawUyeh_9rZLlD_L0T5LA7zOqxu65CZuC6JHVTFWkOE3120E4nKvisw](https://lh5.googleusercontent.com/GnNkPkShSi3HFf2fwDLaXNXh8xk5LSinMETkSPFaCPKQflhtj-LPwADe3CuRW_jYUxpsefw7kQOobn4xMpAmrRnTTqhlawUyeh_9rZLlD_L0T5LA7zOqxu65CZuC6JHVTFWkOE3120E4nKvisw)
-
-
-Stakeholders that are found to be gaming or cheating rewards are blacklisted from the network, and delegated veMOBILE is distributed as follows:
-
-1. 50% of delegated veMOBILE is burned
-2. 50% of delegated veMOBILE is distributed to users who staked against the hotspot
-
-For example, consider the following closed system with Stakeholder A, Stakeholder B, User X, and User Y.
-
-X delegates 1M veMOBILE “for” stakeholder A and 4M veMOBILE “against” stakeholder B.
-
-Y delegates 5M veMOBILE “for” stakeholder A and 2M veMOBILE “for” stakeholder B.
-
-Tallying both scores, we have a net score of 6M veMOBILE “for” stakeholder A and -2M veMOBILE “against” stakeholder B.
-
-In this epoch, stakeholder A is expected to receive 6x the incentive multiplier under normal circumstances, and stakeholder B is expected to receive 0.8x the incentive multiplier it would be eligible for under normal circumstances.
-
-If stakeholder A were to receive 120K MOBILE through rewards in an epoch, we could expect that it would have received 20K MOBILE under normal circumstances. User X would receive 1/6 of the incremental amount (8.33K MOBILE) and the hotspot owner would receive 5/6 of the incremental amount (41.67K MOBILE).
-
-If hotspot B were convicted by governance of gaming rewards, 3M of the total veMOBILE would be sent to a burn address, whereas the underlying MOBILE within the 3M veMOBILE would be distributed to user X. If there were other users who staked against stakeholder B, this would be distributed pro-rata.
-
-Note that users also have the option of burning MOBILE in the name of stakeholders, in order to receive an equivalent pro-rata share of staking rewards in perpetuity.
+Users can choose to delegate their veMOBILE for two core purposes:
 
 1. Oracle Delegation: veMOBILE holders can delegate their holdings to oracles in order to earn future emissions.
 2. Governance: veMOBILE can be used to participate in subDAO proposals that impact core protocol parameters, mechanisms, and operating procedures. veMOBILE that is staked to a hotspot or to an oracle can still vote on governance proposals.
 
 ### *Treasury Reserve DNT Market Making Curve*
 
-The Mobile subDAO sets the programmatic treasury formula in order to provide quotes to holders of DNT who wish to redeem their holdings for underlying HNT. Note that at launch of the subnetwork prior to any HNT emissions from the minting contract as per the protocol score, the Helium Foundation will make a donation of HNT into the subDAO treasury reserve in order to collateralize the airdrop specified in the emissions section.
+The Mobile subDAO sets the programmatic treasury formula in order to provide quotes to holders of DNT who wish to redeem their holdings for underlying HNT. The programmatic treasury defines the floor price for MOBILE, but holders always retain the ability to exchange at the prevailing rate on open markets.
 
 We propose a constant function market making formula for the Mobile subDAO programmatic treasury defined as per the following specification.
 
@@ -192,21 +162,21 @@ $H: \text{HNT in Reserve}$
 
 $S: \text{Outstanding Supply of MOBILE}$
 
-$H: \text{Price of MOBILE in HNT Terms}$
+$P: \text{Price of MOBILE in HNT Terms}$
 
-At epoch T, we denote the value of H, S, and P as HT, ST,  and PT. The programmatic treasury formula at epoch T is a function in two variables, HT, ST defined as follows:
+At epoch T, we denote the value of H, S, and P as $H_T$, $S_T$,  and $P_T$. The programmatic treasury formula at epoch T is a function in two variables, HT, ST defined as follows:
 
-$y_T = k_T = \frac{H_T}{S_T}$
+$P_T = \frac{H_T}{S_T}$
 
 For example, consider at epoch #125, the total outstanding supply of tokens for the Mobile subDAO is 3.275B MOBILE and the total amount in the treasury reserve is 2M HNT. The programmatic treasury formula is given as follows
 
-$$y_{125} = k_{125} = \frac{H_{125}}{S_{125}} = \frac{2,000,000}{3,275,000,000} = 0.00061068702$$
+$$P_{125} = \frac{H_{125}}{S_{125}} = \frac{2,000,000}{3,275,000,000} = 0.00061068702$$
 
 This implies that at epoch #125, any number of MOBILE tokens can be redeemed at a unit price of 0.00061068702 HNT.
 
 Now consider at epoch #225, the total outstanding supply of tokens for the Mobile subDAO is 3.5B MOBILE and the total amount in the treasury reserve is 2.025M HNT. The programmatic treasury formula is given as follows
 
-$$y_{225} = k_{225} = \frac{H_{225}}{S_{225}} = \frac{2,025,000}{3,500,000,000} = 0.00057857142$$
+$$P_{225} = \frac{H_{225}}{S_{225}} = \frac{2,025,000}{3,500,000,000} = 0.00057857142$$
 
 This implies that at 100 epochs after #125 at #225, any number of MOBILE tokens can be redeemed at a unit price of 0.00057857142 HNT.
 
@@ -225,9 +195,9 @@ Data Credits are a universal unit of payment across all Helium DAOs and will be 
 
 Service Providers operating in the Helium Mobile DAO will be required to either directly run an instance of the cellular settlement service or contract a third party entity, approved by the DAO to run an instance of the service for them. Detailed specification of the cellular settlement service and its interaction with service provider infrastructure and the Helium blockchain are [described here.](https://github.com/magma/grants/issues/14)
 
-Helium Mobile Network Dao will operate a chain variable that will dictate the conversion ratio between Data Credits and MOBILE tokens, denominated in oracle USD price. Changes to the conversion ratios will be conducted following Sub DAO governance specification.
+Helium Mobile Network DAO will operate a chain variable that will dictate the conversion ratio between Data Credits and MOBILE tokens, denominated in oracle USD price. Changes to the conversion ratios will be conducted following subDAO governance specification.
 
-The initial price per GB of Mobile Network data is suggested to be set at <span>$</span>0.5 per Gigabyte, which means that 1 Helium data credit, when used for data on Mobile Helium DAO will convert to <span>$</span>0.00000003 per LTE packet of 66 bytes.
+The initial price per GB of Mobile Network data is suggested to be set at $0.5 per Gigabyte, which means that 1 Helium data credit, when used for data on Mobile Helium DAO will convert to $0.00000003 per LTE packet of 66 bytes.
 
 ## *Oracle Operations*
 
@@ -249,26 +219,26 @@ Proof-of-Coverage Specification
 
 The Mobile Network subDAO is required to constantly interrogate Mobile Network hotspots using the Proof-of-Coverage mechanism to ensure that hotspots are representing their locations accurately and providing functional radio coverage.
 
-PoC implementation proposed in the Helium Mobile Network sub-dao is based on wireless coverage being verified through LoRa hotspots issuing “challenges” to “challengees” and “witnessing” over the air interface. However, for the 5G wireless protocol, radios cannot both challenge and witness the packets over the air, as the 5G/LTE and other cellular protocols are designed for the radio to interact with a UE (such as cell phone) vs another radio..
+PoC implementation proposed in the Helium Mobile Network subDAO is based on wireless coverage being verified through LoRa hotspots issuing “challenges” to “challengees” and “witnessing” over the air interface. However, for the 5G wireless protocol, radios cannot both challenge and witness the packets over the air, as the 5G/LTE and other cellular protocols are designed for the radio to interact with a UE (such as cell phone) vs another radio..
 
 For Mobile Network subDAO we propose to separate the challenge and witness function(s) between the operator of a hotspot and a mapper device (such as a phone or a dedicated mapper) with a sim card that has been authorized to perform the witness function. During the launch stages of the DAO we propose a simplified approach to mapping coverage as follows:
 
-The world is divided into hexes using the H3 geospatial [indexing system](https://h3geo.org/docs/). All hotspots exist as NFTs associated with their unique pub keys and will receive *Eligibility Rewards* and *Mapping Rewards*. All hotspots will receive eligibility rewards, hotspots mustas long as they meet the following minimum criteria:
+The world is divided into hexes using the H3 geospatial [indexing system](https://h3geo.org/docs/). All hotspots exist as NFTs associated with their unique pub keys and will receive *Eligibility Rewards* and *Mapping Rewards*. All hotspots will receive eligibility rewards as long as they meet the following minimum criteria:
 
 1. Stay registered in a Spectrum Access System (SAS), as evidenced by the Domain Proxy software that’s operated by a hotspot vendor
 2. Meet minimum backhaul QoS of 100Mps on the downlink and 10Mps on the uplink, as evidenced by the randomized backhaul challenges run by the hotspot firmware
 3. Be located in a hex that’s been whitelisted for rewards
 
-All hotspots that have remained eligible (i.e. received eligibility rewards) during the last 4 consecutive hours, will be eligible to receive mapper rewards.
+All hotspots that have remained eligible (i.e. received eligibility rewards) during the last 4 consecutive epochs, will be eligible to receive mapper rewards.
 
 Any device (first and foremost a phone) with the proper sim card can be a witnessing device on the network. To witness coverage a “mapper phone” must connect to a CBRS cell or Wi-Fi AP using sim based authentication with a sim card that has been granted mapping privileges by the service provider. Service providers will act as “validators of witness transactions” performed by mappers by authenticating mappers through their HSS via either s6a or sWx protocols.
 
 During initial launch stages, when network density is low, to combat gaming, Helium Mobile DAO implements a simple limiting algorithm:
 
-1. Same mapper can witness the same hotspot no more than once every 4 hours
-2. Same cell can be witnessed by a maximum of 6 unique mappers every hour
+1. Same mapper can witness the same hotspot no more than once every 4 epochs
+2. Same cell can be witnessed by a maximum of 6 unique mappers every epoch
 
-During consequent launch stages, as the density of mappers grows, Helium Mobile DAO will look to implement a more robust algorithm, similar to Helium LoRa PoC, whereby only randomly challenged hotspots can be witnessed. Details of this mechanism along with analysis of various attack vectors have been previously published and discussed with the community  in HIP37
+During consequent launch stages, as the density of mappers grows, Helium Mobile DAO will look to implement a more robust algorithm, similar to Helium LoRa PoC, whereby only randomly challenged hotspots can be witnessed. Details of this mechanism along with analysis of various attack vectors have been previously published and discussed with the community in HIP37 but these implementations are subject to change as we gather more data about deployments.
 
 ### *Governance Specification*
 
