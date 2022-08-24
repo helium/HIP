@@ -5,7 +5,7 @@
 - Category: Technical
 - Original HIP PR: https://github.com/helium/HIP/pull/298
 - Tracking Issue: https://github.com/helium/HIP/issues/311
-- Status: Approved
+- Status: Withdrawn
 
 
 # Problem Statement

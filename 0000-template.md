@@ -1,94 +1,106 @@
-# HIP Template
+# HIP Template (Give it a title here but do not allocate a number, maintainer will allocate a number)
 
-- Author(s): <@criptosaurios>
-- Start Date: <2022-06-08>
-- Category: <economic>
+- Author(s): <!-- your GitHub @username -->
+- Start Date: <!-- fill me in with today's date, YYYY-MM-DD -->
+- Category: <!-- economic, technical, meta -->
 - Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
 - Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
 
 # Summary
 [summary]: #summary
 
-This HIP proposes to reward those who have supported the current growth of HELIUM (Hotspot Owners, Validators and the top 20 richest HNT Wallets) 
-and provide additional encouragement to continue exercising that FUNDAMENTAL ROLE of support as they have done so far.
-  
+One paragraph explanation of the proposal.
+<!-- Read the content requests in all sections before starting to write any section. -->
+
 # Motivation
 [motivation]: #motivation
 
-Together, owners of Hotspots, Validators and investors in HNT, have made what is now Helium, and through this paid NFT it is intended to reward their support.
-We also want to prevent the current size of the LORA network from being reduced and putting at risk the deployment of IOT devices that will finally 
-provide the Data Credit for the support and maintenance of the Hotspots in the long term.
-  The implementation of HIP51 is a growth opportunity for Helium, but it also represents a threat to the incentive to continue participating in LORA, 
-since the growth in the consumption of Data Credits will be much higher and much faster in the 5G subDAO and the WIFI subDAO, since the devices that are 
-going to consume the Data Credits of these subDAOs ARE ALREADY in the hands of millions of people (Cell Phones).
-  The LORA network has a bright future, but it needs a little more time for the deployment of devices that Will use the network to make it self-sustaining 
-based only on Data Credits.
-  It is clear that the new subDAOs come to Helium because the only ecosystem that can support them and accelerate their growth exists here,  
-  as happened with LORA.
+Why are we doing this? What use cases does it support? What problems does it
+solve? What is the expected outcome?
 
 # Stakeholders
 [stakeholders]: #stakeholders
 
-* All ACTIVE Hotspots until the moment of capture (Snapshot). Hotspots that are activated after the capture will NOT be eligible.
-* All Validators ACTIVE until the moment of capture (Snapshot). Validators that are activated or created after capture will NOT be eligible.
-* The top 20 richest wallets in HNT at the time of capture (Snapshot). Wallets that advance to the top 20 after capture will NOT be eligible.
-  
+* Who is affected by this HIP? A stakeholder is any individual, group, or party
+  that has an interest in an organization and the outcomes of its actions.
+
+* How are we soliciting feedback on this HIP from these stakeholders? Note that
+  they may not be watching the HIPs repository or even aren't directly active in
+  the Helium Community Slack channels.
+
 # Detailed Explanation
 [detailed-explanation]: #detailed-explanation
 
-This HIP proposes taking a snapshot, one day before the remuneration in IOT begins in the LORA subDAO, established preliminarily on August 1st according to HIP51.
-This Snapshot applies to:
-* ACTIVE hotspots (those with valid activity in the last 30 days): Each wallet will receive ONE NFT FOR EACH HOTSPOT that effectively participated in the capture.  
-* ACTIVE Validator Nodes: Each active validator node (and with the latest updated software version) at the time of sanpshot will receive ONE NFT.
-* The top 20 richest wallets in HNT: Each of the top 20 richest wallets in HNT at the time of the snapshot will receive ONE NFT.
-  
-This proposal establishes that each subDAO that is incorporated into HELIUM after the approval of HIP51, must contribute 15% of the issuance of its tokens 
-(DNT) to assign rewards to NFTs in the following way:  
- 5% will be distributed among the NFTs assigned to Hotspots.
- 5% Will be distributed among the NFTs assigned to Validators.
- 5% will be distributed among the NFTs assigned to the 20 richest wallets in HNT.
-  
- This proposal also establishes the conditions for each NFT to be eligible to receive the reward in each eapoch: 
-Hotspots NFT: The Hotspot associated with the NFT must be active in order to participate in the reward distribution. The 5% reward will be shared only 
-among NFTs that meet this requirement.  
-  
-NFT of Validator Nodes: The Validator associated with the NFT must be active and updated in order to participate in the reward distribution. The 5%   
-reward will be shared only among NFTs that meet this requirement.
-  
-NFT of the 20 richest wallets in HNT: The Wallet associated with the NFT must maintain at least 75% of the balance registered in the capture in order 
-to participate in the reward distribution. The 5% reward will be shared only among NFTs that meet this requirement.  
+- Introduce and explain new concepts.
 
+- It should be reasonably clear how the proposal would be implemented.
+
+- Provide representative examples that show how this proposal would be commonly
+  used.
+
+- Corner cases should be dissected by example.
 
 # Drawbacks
 [drawbacks]: #drawbacks
 
-- It is necessary to modify the tokemonic that is being considered in HIP51 to 53 and HIP64
+- Why should we *not* do this?
+- What problems could occur if we do this?
 
 # Rationale and Alternatives
 [alternatives]: #rationale-and-alternatives
 
-Allow a new Hotspot to be associated in the future to replace the existing one associated with the NFT.
-Thus, there could be an evolution of the Hotspot hardware without losing the incentive for the current minimum size of the network.
+This is your chance to discuss your proposal in the context of the whole design
+space. This is probably the most important section!
+
+- Why is this design the best in the space of possible designs?
+
+- What other designs have been considered and what is the rationale for not
+  choosing them?
+
+- What is the impact of not doing this?
 
 # Unresolved Questions
 [unresolved]: #unresolved-questions
 
-Is there a simpler and safer mechanism than NFTs for the purposes of this proposal?
+- What parts of the design do you expect to resolve through the HIP process
+  before this gets merged?
 
+- What parts of the design do you expect to resolve through the implementation
+  of this feature?
+
+- What related issues do you consider out of scope for this HIP that could be
+  addressed in the future independently of the solution that comes out of this
+  HIP?
+  
+- Are there are dependencies, milestones or dates that need need to be met for
+  this HIP to succeed?
 
 # Deployment Impact
 [deployment-impact]: #deployment-impact
 
-This Founder´s NFT reward system will motivate to keep at least the current LORA network size.
+Describe how this design will be deployed and any potential impact it may have on
+current users of this project.
 
+- How will current users be impacted?
 
- # Success Metrics
+- How will existing documentation/knowlegebase need to be supported?
+  Any content to change at http://docs.helium.com ?
+
+- Is this backwards compatible?
+  Can this HIP be undone?
+
+        - If not, what is the procedure to migrate?
+
+# Success Metrics
 [success-metrics]: #success-metrics
 
-We can expect a surge in Hotspots deployment previous to the snapshot, and after snapshot we can expect that at least Hotspots captured in snapshot will continue active
+What metrics can be used to measure the success of this design?
+Are any new ETL reports needed to measure the success?
 
-Top 20 richest wallets will get an extra incentive to keep at least 75% of their balance at the snapshot.
-  
-Validators will get and extra incentive to keep their nodes updated at each epoch.
+- What should we measure to prove a performance increase?
 
+- What should we measure to prove an improvement in stability?
 
+- What should we measure to prove a reduction in complexity?
+
+- What should we measure to prove an acceptance of this by its users?
