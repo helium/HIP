@@ -32,7 +32,7 @@ Therefore, if we are trying to expand the network and want hotspots in saturated
 
 In order to help expand the network and ease the burden on new people joining the network, I'm proposing that the reassertion price be reduced from 1,000,000 DC, to half which is 500,000 DC. 
 
-Please note that I specifically chose 500,000 DC and not less (say 10,000 DC), to help prevent people from taking advantage of reduced reassertion fees. 
+Please note that I specifically chose 500,000 DC and not less (say 10,000 DC), to help prevent people from taking advantage of reduced reassertion fees, and to lesson the economical effect on the Network. 
 
 In addition, to prevent location spoofing as a result of reassertion fees deduction, any given individual hotspot may only have its reassertion fees reduced every 525k blocks (approximately once per year).
 
