@@ -77,7 +77,7 @@ Additionally, there will always be a minimum of 100,000 DC and maximum of 500,00
 
 (Average Daily Rewards Per Hotspots [HNT/day]) x OraclePrice[USD/HNT] x 8 [Days] x 100.000 [DC/USD] = Reassert Fee In DC.
 
-In stage two, the reassertion fee will be dynamically calculated by what an average hotspot earns. These earnings change, depending on the monthly rewards target set by the HIP 20 halvings schedule, the number of active hotspots, and the price of HNT. This notwithstanding, the reassertion fee shall never be higher than 500.000 DC (= 5 USD) and never lower than 100.000 DC (=1 USD).
+In stage two, the reassertion fee will be dynamically calculated by what an average hotspot earns. These earnings change, depending on the monthly rewards target set by the HIP 20 halvings schedule, the number of active hotspots, and the price of HNT. This notwithstanding, the reassertion fee shall never be higher than 500,000 DC (= 5 USD) and never lower than 100,000 DC (=1 USD).
 
 
 # Drawbacks
