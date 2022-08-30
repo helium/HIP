@@ -1,11 +1,11 @@
-# HIP XX: Scaling the Helium Network
+# HIP 70: Scaling the Helium Network
 
 - Author(s): Helium Core Developers
-- Start Date: 2022-08-29
+- Start Date: 2022-08-30
 - Category: Technical
-- Original HIP PR: [TODO](https://github.com/helium/blockchain-core/pulls)
+- Original HIP PR: https://github.com/helium/HIP/pull/470
 - Tracking Issue: [TODO](https://github.com/helium/HIP/issues)
-- Status: Draft
+- Status: In Discussion
 
 # Summary
 
