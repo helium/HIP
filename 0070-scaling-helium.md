@@ -145,17 +145,15 @@ The Helium Validator community is robust. At the time of writing, almost 38% of 
 
 In order to prepare for this change, however, we also propose a few necessary steps to enable this transition:
 
-**Convert all Staked HNT to veHNT**
+**Reduce the cooldown period of Staked Validators**
 
-All staked HNT at the time of the transition be automatically converted to veHNT with a minimum (as defined by [HIP 51][HIP 51]) six month lockup. This enables all staked HNT holders to continue to participate in the ecosystem by assigning their veHNT to a subDAO (IOT or MOBILE) in order to influence the DAO’s Utility Score, participate in new Subnetwork Proposals, or participate in overall governance of the Helium Network.
+At the time of HIP approval, we propose that the cooldown for staked HNT in Validators (`stake_withdrawal_cooldown`, as defined by [HIP 25][HIP 25]) immediately be reduced on the Helium blockchain to 125,000 blocks (currently set at 250,000). This would effectively reduce the cooldown period to less than 3 months. Any existing staked HNT holder or mining pool operator can release their stake if they choose to do so. Note that this is a one time adjustment and does not affect the minimum veHNT lockup of 6 months as defined in [HIP 51][HIP 51]. Our goal for completing this migration is the end of this year (2022) at the earliest so this should provide sufficient time for current Validators to unstake before this deadline.
 
-According to [HIP 52][HIP 52] and [HIP 53][HIP 53] veHNT stakers will earn both IOT and MOBILE tokens, respectively, by staking their veHNT in support of these subDAOs and participating in their governance. The IOT subDAO sets aside 6% of all emissions as does the MOBILE subDAO. A further elaboration of veHNT is also available in [HIP 51][HIP 51].
+At the time of transition a snapshot will be taken of the Helium blockchain state and any staked HNT, including any still in cooldown, will be immediately converted to veHNT with the minimum lockup period. This enables all staked HNT holders to continue to participate in the ecosystem by assigning their veHNT to a subDAO (IOT or MOBILE) in order to influence the DAO’s Utility Score, participate in new Subnetwork Proposals, or participate in overall governance of the Helium Network.
 
-We also believe that there should be an additional incentive for current staked HNT holders to become veHNT holders at the transition period but will defer our recommendations to a subsequent HIP. We also believe that this incentive should apply to any new veHNT holders as any amount of HNT can be locked in escrow. The current staking requirements of 10,000 HNT are no longer necessary for veHNT.
+According to [HIP 52][HIP 52] and [HIP 53][HIP 53] veHNT stakers will earn both IOT and MOBILE tokens, respectively, by staking their veHNT in support of these subDAOs and participating in their governance. The IOT subDAO sets aside 6% of all emissions as does the MOBILE subDAO. A further elaboration of veHNT is also available in [HIP 51][HIP 51]. It's important to note that the current minimum staking requirements of 10,000 HNT are no longer necessary for veHNT.
 
-**Staked HNT in cooldown**
-
-At the time of transition, any staked HNT that is in cooldown (as defined by [HIP 25][HIP 25]), will be converted to vesting SPL HNT. The Solana Token Program and ecosystem supports various forms of token vesting. The remaining cooldown period on the Helium blockchain will be converted to a timestamp at the time of transition and the remainder of the cooldown will continue on the Solana blockchain.
+We also believe that there should be an additional incentive for staked HNT holders to become veHNT holders at the transition period but will defer our recommendations to a subsequent HIP.
 
 ## Multiple Oracle Operators
 
