@@ -77,12 +77,12 @@ Additionally, there will always be a minimum of 100,000 DC and maximum of 500,00
 
 (Average Daily Rewards Per Hotspots [HNT/day]) x OraclePrice[USD/HNT] x 8 [Days] x 100.000 [DC/USD] = Reassert Fee In DC.
 
-In stage two, the reassertion fee will be dynamically calculated by what an average hotspot earns. These earnings change, depending on the monthly rewards target set by the HIP 20 halvings schedule, the number of active hotspots, and the price of HNT. This notwithstanding, the reassertion fee shall never be higher than 500,000 DC (= 5 USD) and never lower than 100,000 DC (=1 USD).
+In stage two, the reassertion fee will be dynamically calculated by what an average hotspot earns. These earnings change, depending on the monthly rewards target set by the HIP 20 halvings schedule, the number of active hotspots, and the price of HNT. This notwithstanding, the reassertion fee shall never be higher than 500,000 DC (5 USD) and never lower than 100,000 DC (1 USD).
 
 
 # Drawbacks
 
-Although the aforementioned gaming prevention methods will drastically reduce the chances of gaming as a result of the reassertion fee reduction, location spoofers may benefit from reduced reassertion fees. Nevertheless, it will be impossible for any given hotspot to benefit from the reassertion fee reduction more than once every 525k blocks (approximately once per year).
+Although the aforementioned gaming prevention methods will drastically reduce the possibilities of gaming as a result of the reassertion fee reduction, location spoofers may benefit from reduced reassertion fees. Nevertheless, it will be impossible for any given hotspot to benefit from the reassertion fee reduction more than once every 525k blocks (approximately once per year).
 
 
 # Rationale
@@ -92,7 +92,7 @@ Not doing this can possibly result in people who may have moved from an over sat
 
 # Unresolved Questions
 
-On the economic effect, burning less HNT as a result of reduced reassertion fees, has a negative economic impact. However, there may end up being more DC burned from more location assertions (than there were prior to the reassertion fee reduction.) Therefore, will this HIP impact the Network's economics negatively or positively? 
+On the economic effect, burning less HNT as a result of reduced reassertion fees, has a negative economic impact. However, there may end up being more DC burned from more location assertions (than there were prior to the reassertion fee reduction.) Therefore, will this HIP impact the Network's economics negatively or positively?
 
 On the UX side, the non-scoped factors are the work that is needed in various maker apps, ensuring that all hotspots can use the variable rate (depending on the aforementioned equation/logic). Additionally, if a maker decides not to respect the reassertion fee reduction amount, the chain may accept the higher fee amount (which cannot be undone).
 
@@ -102,4 +102,3 @@ As far as resourcing, who will build/write the code?
 # Success Metrics
 
 Success may be measured, once we see hotspots moving to a distance of 10km or greater, within Res8 hexes that contain less than 3 hotspots.
- 
