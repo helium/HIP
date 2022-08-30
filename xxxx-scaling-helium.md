@@ -66,7 +66,6 @@ By moving to this data pipeline of Proof-of-Coverage, we propose introducing a f
 
 A diagram of this new set of oracles is below.
 
-<div align = "center" markdown = 1 id="fig-offchain-poc">
 ```mermaid
 flowchart TB
     H1(Hotspot 1) --> |Beacon Report| LoadBalancer
@@ -89,7 +88,6 @@ flowchart TB
     end
     Rewards(Reward Server)
 ```
-</div>
 
 ## Data Transfer Accounting Oracles
 
@@ -107,7 +105,6 @@ These Packet Routers can stream packets directly to LNSs based on routing inform
 
 These architectural changes are summarized in the following diagram.
 
-<div align = "center" markdown = 1 id="fig-offchain-data">
 ```mermaid
 flowchart TB
     H1(Hotspot 1) --> |Packet| LoadBalancer
@@ -133,7 +130,6 @@ flowchart TB
         LNS(Lora Network Servers)
     end
 ```
-</div>
 
 ## Moving Chains and Removing Staked Validators
 
