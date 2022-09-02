@@ -151,9 +151,11 @@ All staked HNT at the time of the transition be automatically converted to veHNT
 
 According to [HIP 52][HIP 52] and [HIP 53][HIP 53] veHNT stakers will earn both IOT and MOBILE tokens, respectively, by staking their veHNT in support of these subDAOs and participating in their governance. The IOT subDAO sets aside 6% of all emissions as does the MOBILE subDAO. A further elaboration of veHNT is also available in [HIP 51][HIP 51].
 
-**Reduce the cool-down period of Staked Validators**
+We also believe that there should be an additional incentive for current staked HNT holders to become veHNT holders at the transition period but will defer our recommendations to a subsequent HIP. We also believe that this incentive should apply to any new veHNT holders as any amount of HNT can be locked in escrow. The current staking requirements of 10,000 HNT are no longer necessary for veHNT.
 
-We propose reducing the cool down period about a month before the chain migration. The proposed cool down period during this time would be two weeks which should give any existing staked HNT holder to release their stake if they choose to do so.
+**Staked HNT in cooldown**
+
+At the time of transition, any staked HNT that is in cooldown (as defined by [HIP 25][HIP 25]), will be converted to vesting SPL HNT. The Solana Token Program and ecosystem supports various forms of token vesting. The remaining cooldown period on the Helium blockchain will be converted to a timestamp at the time of transition and the remainder of the cooldown will continue on the Solana blockchain.
 
 ## Multiple Oracle Operators
 
@@ -167,6 +169,7 @@ While this process completes, the deployed oracle code and raw event data used b
 
 The primary drawbacks of this proposal are discussed above in the Moving Chains, Removing Staked Validators, and Multiple Oracle Operators sections. Although there are some concerns, we believe that this is the best move forward in order to scale the network, align incentives to Hotspot owners, and enable HNT, IOT, and MOBILE holders more utility in the future.
 
+[HIP 25]: https://github.com/helium/HIP/blob/main/0025-validators.md
 [HIP 51]: https://github.com/helium/HIP/blob/main/0051-helium-dao.md
 [HIP 52]: https://github.com/helium/HIP/blob/main/0052-iot-dao.md
 [HIP 53]: https://github.com/helium/HIP/blob/main/0053-mobile-dao.md
