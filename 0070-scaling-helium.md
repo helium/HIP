@@ -13,13 +13,13 @@ In this HIP, we propose a new approach to Proof-of-Coverage and Data Transfer Ac
 
 With the move to more “oracled” activity on chain, we believe that the simplification allows us to select a more scalable Layer 1 for the Helium community, specifically Solana. Integration of the Helium tokens (HNT, DC, IOT, and MOBILE, initially) into the Solana ecosystem additionally provides Helium wallet holders access to a variety of applications, governance mechanisms, and other utilities not available natively on our sovereign L1.
 
-We acknowledge that this change removes the need for staked validators operating block production and challenge creation as they do today. That said, we expect that HNT stakers will migrate their positions towards securing current and/or future subDAOs and participating in governance through the vote-escrow token based system proposed in [HIP 51](https://github.com/helium/HIP/blob/main/0051-helium-dao.md). Removal of the staked validator reward also returns the full 6.85% of HNT emissions back to the rewards pool, benefitting Hotspot owners on all subDAOs. In the first year alone, this is estimated to be over 2 million more HNT rewarded.
+We acknowledge that this change removes the need for staked validators operating block production and challenge creation as they do today. That said, we expect that HNT stakers will migrate their positions towards securing current and/or future subDAOs and participating in governance through the vote-escrow token based system proposed in [HIP 51][HIP 51]. Removal of the staked validator reward also returns the full 6.85% of HNT emissions back to the rewards pool, benefitting Hotspot owners on all subDAOs. In the first year alone, this is estimated to be over 2 million more HNT rewarded.
 
-We consider these changes as complementary to the changes proposed in HIP 51 and a necessary set of changes to more easily implement some of the redemption and governance mechanisms proposed in HIPs 51, [52](https://github.com/helium/HIP/blob/main/0052-iot-dao.md), and [53](https://github.com/helium/HIP/blob/main/0053-mobile-dao.md). We additionally expect that more protocols will be attracted to participate in the Helium ecosystem because of the move to a more widely used Layer 1 blockchain.
+We consider these changes as complementary to the changes proposed in [HIP 51][HIP 51] and a necessary set of changes to more easily implement some of the redemption and governance mechanisms proposed in [HIP 51][HIP 51], [HIP 52][HIP 52], and [HIP 53][HIP 53]. We additionally expect that more protocols will be attracted to participate in the Helium ecosystem because of the move to a more widely used Layer 1 blockchain.
 
 # Motivation
 
-The Helium Network has grown incredibly quickly with close to 1 million Hotspots deployed around the world, with increasing data usage through an ever expanding list of use cases. While scaling up the network, the core developers and members of the community have spent countless hours supporting this unprecedented growth. As we look towards the implementation of HIP 51 (and the subsequent subnetworks with new use cases), the core developers believe it’s important to evolve the design of the Helium Network to meet the demands of current and future users.
+The Helium Network has grown incredibly quickly with close to 1 million Hotspots deployed around the world, with increasing data usage through an ever expanding list of use cases. While scaling up the network, the core developers and members of the community have spent countless hours supporting this unprecedented growth. As we look towards the implementation of [HIP 51][HIP 51] (and the subsequent subnetworks with new use cases), the core developers believe it’s important to evolve the design of the Helium Network to meet the demands of current and future users.
 
 We believe that the two most important goals of the Network should be to ensure the following:
 
@@ -32,7 +32,7 @@ In the last several months of the network, both have been challenging for networ
 
 This HIP has a direct impact on all stakeholders on the network. We believe that overall, Hotspot owners and Users of the network will see more consistent and reliable data transfer as discussed above. 
 
-One set of stakeholders, namely validator stakers, staking pool operators, and validator-as-a-service providers, may be negatively impacted by this change but we believe these parties will continue to be able to participate in network activities. Stakers will be able to more actively participate in governance by staking their HNT into veHNT as described in HIP 51 and earn subDAO tokens like IOT or MOBILE by assigning their veHNT to a network they “vote” for.
+One set of stakeholders, namely validator stakers, staking pool operators, and validator-as-a-service providers, may be negatively impacted by this change but we believe these parties will continue to be able to participate in network activities. Stakers will be able to more actively participate in governance by staking their HNT into veHNT as described in [HIP 51][HIP 51] and earn subDAO tokens like IOT or MOBILE by assigning their veHNT to a network they “vote” for.
 
 # Detailed Explanation
 
@@ -139,7 +139,7 @@ There are a variety of advantages of integrating with the Solana ecosystem inclu
 
 A more thorough analysis of the variety of options considered is forthcoming but to briefly summarize our reasoning, we evaluated several options. We considered scaling our existing L1 and bridging to other ecosystems. This would involve continuing to invest in our Erlang-based architecture that currently doesn’t have support for bridging, smart contracts, and other important features that we’d need as the network grows to many millions of Hotspots and new cohorts of users. We also considered running a new app chain on another platform (like Cosmos or an EVM L2 chain) but this also comes with the burden of maintaining a chain. Ultimately, it’s important for the developers in this ecosystem to focus on the most important thing: enabling building of data networks. Specifically, the core innovation of this network is incentivization through Proof-of-Coverage and enabling data transfer. When we started this journey, there wasn’t a viable blockchain that would scale in costs and would support the primitives this network needed so we went down the road of building our own. Over the last few years, this community has managed chain halts, consensus rule updates, and a tremendous amount of firefighting.
 
-With the move to Solana, we propose that the Consensus and Challenge Construction Reward portions of HNT emissions (6.85%) are allocated to the subDAOs as proposed in HIP 51, increasing the allotment of rewards to Hotspot owners. This should continue to incentivize deployment of the IOT and MOBILE network.
+With the move to Solana, we propose that the Consensus and Challenge Construction Reward portions of HNT emissions (6.85%) are allocated to the subDAOs as proposed in [HIP 51][HIP 51], increasing the allotment of rewards to Hotspot owners. This should continue to incentivize deployment of the IOT and MOBILE network.
 
 The Helium Validator community is robust. At the time of writing, almost 38% of all HNT is staked in Validators. And the over 3,700 validator nodes are supported by a deep ecosystem of custodial (pooled) and non-custodial (dedicated) hosting providers. Though the transition to Solana would remove the need for staked HNT as we know it today, we believe the proposed subDAO structure allows for current HNT validators to redeploy their HNT and resources in ways that will earn comparable yield while playing a similarly important role in the growth of the network, with this role moving from mining blocks to subDAO governance. 
 
@@ -147,9 +147,9 @@ In order to prepare for this change, however, we also propose a few necessary st
 
 **Convert all Staked HNT to veHNT**
 
-All staked HNT at the time of the transition be automatically converted to veHNT with a minimum (as defined by HIP 51) six month lockup. This enables all staked HNT holders to continue to participate in the ecosystem by assigning their veHNT to a subDAO (IOT or MOBILE) in order to influence the DAO’s Utility Score, participate in new Subnetwork Proposals, or participate in overall governance of the Helium Network. 
+All staked HNT at the time of the transition be automatically converted to veHNT with a minimum (as defined by [HIP 51][HIP 51]) six month lockup. This enables all staked HNT holders to continue to participate in the ecosystem by assigning their veHNT to a subDAO (IOT or MOBILE) in order to influence the DAO’s Utility Score, participate in new Subnetwork Proposals, or participate in overall governance of the Helium Network.
 
-According to HIPs 52 and 53 veHNT stakers will earn both IOT and MOBILE tokens, respectively, by staking their veHNT in support of these subDAOs and participating in their governance. The IOT (HIP 52) subDAO sets aside 6% of all emissions as does the MOBILE (HIP 53) DAO. A further elaboration of veHNT is also available in HIP 51.
+According to [HIP 52][HIP 52] and [HIP 53][HIP 53] veHNT stakers will earn both IOT and MOBILE tokens, respectively, by staking their veHNT in support of these subDAOs and participating in their governance. The IOT subDAO sets aside 6% of all emissions as does the MOBILE subDAO. A further elaboration of veHNT is also available in [HIP 51][HIP 51].
 
 **Reduce the cool-down period of Staked Validators**
 
@@ -159,10 +159,14 @@ We propose reducing the cool down period about a month before the chain migratio
 
 Initially, we propose that the aforementioned oracles be built and operated by the Nova Labs team on behalf of the Helium Foundation. We believe that this will help the Helium network scale in the short term and immediately address concerns with scaling Proof-of-Coverage and Data Delivery. This will be revised in the long term to enable multiple Oracle operators to participate in these activities and ensure decentralization.
 
-We propose that as this infrastructure is deployed, the core developers and community introduce new HIPs that enable subDAOs to have multiple oracles, the specific coordination rules (consensus, etc), and discuss the potential of incentivizing these actors. Today, HIP 52 and 53 propose such oracle rewards but do not specify the responsibility of those oracles or how they come to agreement. We propose that until a time that multiple oracle providers are online, this reward is not issued to the single oracle, Nova Labs, or the Helium Foundation.
+We propose that as this infrastructure is deployed, the core developers and community introduce new HIPs that enable subDAOs to have multiple oracles, the specific coordination rules (consensus, etc), and discuss the potential of incentivizing these actors. Today, [HIP 52][HIP 52] and [HIP 53][HIP 53] propose such oracle rewards but do not specify the responsibility of those oracles or how they come to agreement. We propose that until a time that multiple oracle providers are online, this reward is not issued to the single oracle, Nova Labs, or the Helium Foundation.
 
 While this process completes, the deployed oracle code and raw event data used by the discussed data pipeline will be made available for analysis in order to replicate and verify rewardable Proof-of-Coverage and Data Transfer activity. This dataset and codebase(s), in conjuction with L1 chain data, can be used to construct an ETL framework that provides similar results to that seen in the Helium network today and is the same dataset used to generate on-chain Oracle output.
 
 # Drawbacks
 
 The primary drawbacks of this proposal are discussed above in the Moving Chains, Removing Staked Validators, and Multiple Oracle Operators sections. Although there are some concerns, we believe that this is the best move forward in order to scale the network, align incentives to Hotspot owners, and enable HNT, IOT, and MOBILE holders more utility in the future.
+
+[HIP 51]: https://github.com/helium/HIP/blob/main/0051-helium-dao.md
+[HIP 52]: https://github.com/helium/HIP/blob/main/0052-iot-dao.md
+[HIP 53]: https://github.com/helium/HIP/blob/main/0053-mobile-dao.md
