@@ -161,7 +161,7 @@ Initially, we propose that the aforementioned oracles be built and operated by t
 
 We propose that as this infrastructure is deployed, the core developers and community introduce new HIPs that enable subDAOs to have multiple oracles, the specific coordination rules (consensus, etc), and discuss the potential of incentivizing these actors. Today, HIP 52 and 53 propose such oracle rewards but do not specify the responsibility of those oracles or how they come to agreement. We propose that until a time that multiple oracle providers are online, this reward is not issued to the single oracle, Nova Labs, or the Helium Foundation.
 
-While this process completes, the deployed oracle code and raw event data used by the discussed data pipeline will be made available for analysis in order to replicate and verify proof-of-coverage. These data sets, in conjucntion with L1 chain data, can also be used to reconstruct an ETL similar to today's for data analysis of the network.
+While this process completes, the deployed oracle code and raw event data used by the discussed data pipeline will be made available for analysis in order to replicate and verify proof-of-coverage. These data sets, in conjunction with L1 chain data, can also be used to reconstruct an ETL similar to today's for data analysis of the network.
 
 # Drawbacks
 
