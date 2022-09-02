@@ -157,11 +157,11 @@ We propose reducing the cool down period about a month before the chain migratio
 
 ## Multiple Oracle Operators
 
-Initially, we propose that the aforementioned oracles be built and operated by the Nova Labs team on behalf of the Helium Foundation. We believe that this will help the Helium network scale in the short term and immediately address concerns with scaling Proof-of-Coverage and Data Delivery. We do acknowledge, however, that there needs to be a long term plan to enable multiple Oracle operators to participate in these activities. 
+Initially, we propose that the aforementioned oracles be built and operated by the Nova Labs team on behalf of the Helium Foundation. We believe that this will help the Helium network scale in the short term and immediately address concerns with scaling Proof-of-Coverage and Data Delivery. This will be revised in the long term to enable multiple Oracle operators to participate in these activities and ensure decentralization.
 
 We propose that as this infrastructure is deployed, the core developers and community introduce new HIPs that enable subDAOs to have multiple oracles, the specific coordination rules (consensus, etc), and discuss the potential of incentivizing these actors. Today, HIP 52 and 53 propose such oracle rewards but do not specify the responsibility of those oracles or how they come to agreement. We propose that until a time that multiple oracle providers are online, this reward is not issued to the single oracle, Nova Labs, or the Helium Foundation.
 
-While this process completes, however, the deployed oracle code and raw event data used by the discussed data pipeline will be made available for analysis in order to replicate.
+While this process completes, the deployed oracle code and raw event data used by the discussed data pipeline will be made available for analysis in order to replicate and verify rewardable Proof-of-Coverage and Data Transfer activity. This dataset and codebase(s), in conjuction with L1 chain data, can be used to construct an ETL framework that provides similar results to that seen in the Helium network today and is the same dataset used to generate on-chain Oracle output.
 
 # Drawbacks
 
