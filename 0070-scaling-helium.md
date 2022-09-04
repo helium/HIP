@@ -163,11 +163,11 @@ We propose that as this infrastructure is deployed, the core developers and comm
 
 While this process completes, however, the deployed oracle code and raw event data used by the discussed data pipeline will be made available for analysis in order to replicate.
 
-## PoC, Data Trasnfer, and Decentralization Milestones
+## Milestones
 
 In order to be accountable and transparent with progress towards oracle decentralization, we define a set of prioritized milestones based on network health regarding the stated goals and infrastructure proposals for PoC and Data Transfer.
 
-Once these have been achieved and appropriate success metrics reached, milestones towards oracle decentralization will the the immediate next priority. Any deviation from the decentralization milestones and priorities must be documented and updated in this HIP with relevant justification.
+Once these have been achieved and appropriate success metrics reached, milestones towards oracle decentralization will the the immediate next priority. Any deviation or addition of milestones and priorities must be documented and updated in this HIP with relevant justification.
 
 | # | Milestone description | Network benefit | Completion date |
 | - | - | - | - |
