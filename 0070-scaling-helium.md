@@ -163,6 +163,25 @@ We propose that as this infrastructure is deployed, the core developers and comm
 
 While this process completes, however, the deployed oracle code and raw event data used by the discussed data pipeline will be made available for analysis in order to replicate.
 
+## PoC, Data Trasnfer, and Decentralization Milestones
+
+In order to be accountable and transparent with progress towards oracle decentralization, we define a set of prioritized milestones based on network health regarding the stated goals and infrastructure proposals for PoC and Data Transfer.
+
+Once these have been achieved and appropriate success metrics reached, milestones towards oracle decentralization will the the immediate next priority. Any deviation from the decentralization milestones and priorities must be documented and updated in this HIP with relevant justification.
+
+| # | Milestone description | Completion date |
+| - | - | - |
+| 1 | PoC Oracles Deployed (Is it possible/preferable to decouple mainnet deployment of off-chain PoC from the new L1 deployment?) | |
+| 2 | Data Transfer Oracles Deployed | |
+| 3 | Deployment and migration to new L1 (are there any metrics we can define to measure success for improvements on PoC and Transfer rate? Beacon rate, transfer reliability, etc?)| |
+| 4 | PoC Improvements: Witness stuffing / Anti-gaming, other security etc (would like to break this up into a few concrete milestones, but need input on which high priority improvements supercede decentralization) |
+| 5 | Oracle Decentralization HIP Passage | |
+| 6 | Oracle Decentralization Proof-of-Concept on testnet with community run Oracles | |
+| 7 | Oracle Decentralization mainnet deployment | |
+
+The proposed timeline for achieving these milestones is 12 months from the passage of this HIP. (is this reasonable?) Any extension must be documented and updated in this HIP with relevant justification.
+
+
 # Drawbacks
 
 The primary drawbacks of this proposal are discussed above in the Moving Chains, Removing Staked Validators, and Multiple Oracle Operators sections. Although there are some concerns, we believe that this is the best move forward in order to scale the network, align incentives to Hotspot owners, and enable HNT, IOT, and MOBILE holders more utility in the future.
