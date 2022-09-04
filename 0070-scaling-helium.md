@@ -169,15 +169,14 @@ In order to be accountable and transparent with progress towards oracle decentra
 
 Once these have been achieved and appropriate success metrics reached, milestones towards oracle decentralization will the the immediate next priority. Any deviation from the decentralization milestones and priorities must be documented and updated in this HIP with relevant justification.
 
-| # | Milestone description | Completion date |
-| - | - | - |
-| 1 | PoC Oracles Deployed (Is it possible/preferable to decouple mainnet deployment of off-chain PoC from the new L1 deployment?) | |
-| 2 | Data Transfer Oracles Deployed | |
-| 3 | Deployment and migration to new L1 (are there any metrics we can define to measure success for improvements on PoC and Transfer rate? Beacon rate, transfer reliability, etc?)| |
-| 4 | PoC Improvements: Witness stuffing / Anti-gaming, other security etc (would like to break this up into a few concrete milestones, but need input on which high priority improvements supercede decentralization) |
-| 5 | Oracle Decentralization HIP Passage | |
-| 6 | Oracle Decentralization Proof-of-Concept on testnet with community run Oracles | |
-| 7 | Oracle Decentralization mainnet deployment | |
+| # | Milestone description | Network benefit | Completion date |
+| - | - | - | - |
+| 1 | PoC Oracles Deployed (Is it possible/preferable to decouple mainnet deployment of off-chain PoC from the new L1 deployment?) | POC Reliability | |
+| 2 | Data Transfer Oracles Deployed (are there any metrics we can define to measure success for improvements on PoC and Transfer rate? Beacon rate, transfer reliability, etc?) | Data transfer reliability | |
+| 3 | Migration to new L1 | Redirect developer resources to network differentiating features & tapping into more mature blockchain ecosystem | |
+| 4 | PoC Improvements: Witness stuffing / Anti-gaming, other security etc (would like to break this up into a few concrete milestones, but need input on which high priority improvements supercede decentralization) | Combating PoC gaming and making PoC more secure |  |
+| 5 | Oracle Decentralization HIP Passage | Signaling decentralization intent |  |
+| 6 | Oracle Decentralization mainnet deployment | Increasing security and integrity of a decentralized wireless network (no central point of failure/trust) |  |
 
 The proposed timeline for achieving these milestones is 12 months from the passage of this HIP. (is this reasonable?) Any extension must be documented and updated in this HIP with relevant justification.
 
