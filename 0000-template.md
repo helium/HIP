@@ -1,4 +1,4 @@
-# HIP Template
+# HIP Template (Give it a title here but do not allocate a number, maintainer will allocate a number)
 
 - Author(s): <!-- your GitHub @username -->
 - Start Date: <!-- fill me in with today's date, YYYY-MM-DD -->
@@ -10,6 +10,7 @@
 [summary]: #summary
 
 One paragraph explanation of the proposal.
+<!-- Read the content requests in all sections before starting to write any section. -->
 
 # Motivation
 [motivation]: #motivation
@@ -20,7 +21,8 @@ solve? What is the expected outcome?
 # Stakeholders
 [stakeholders]: #stakeholders
 
-* Who is affected by this HIP?
+* Who is affected by this HIP? A stakeholder is any individual, group, or party
+  that has an interest in an organization and the outcomes of its actions.
 
 * How are we soliciting feedback on this HIP from these stakeholders? Note that
   they may not be watching the HIPs repository or even aren't directly active in
@@ -42,6 +44,7 @@ solve? What is the expected outcome?
 [drawbacks]: #drawbacks
 
 - Why should we *not* do this?
+- What problems could occur if we do this?
 
 # Rationale and Alternatives
 [alternatives]: #rationale-and-alternatives
@@ -68,6 +71,9 @@ space. This is probably the most important section!
 - What related issues do you consider out of scope for this HIP that could be
   addressed in the future independently of the solution that comes out of this
   HIP?
+  
+- Are there are dependencies, milestones or dates that need need to be met for
+  this HIP to succeed?
 
 # Deployment Impact
 [deployment-impact]: #deployment-impact
@@ -78,8 +84,10 @@ current users of this project.
 - How will current users be impacted?
 
 - How will existing documentation/knowlegebase need to be supported?
+  Any content to change at http://docs.helium.com ?
 
 - Is this backwards compatible?
+  Can this HIP be undone?
 
         - If not, what is the procedure to migrate?
 
@@ -87,6 +95,7 @@ current users of this project.
 [success-metrics]: #success-metrics
 
 What metrics can be used to measure the success of this design?
+Are any new ETL reports needed to measure the success?
 
 - What should we measure to prove a performance increase?
 
@@ -94,4 +103,4 @@ What metrics can be used to measure the success of this design?
 
 - What should we measure to prove a reduction in complexity?
 
-- What should we measure to prove an acceptance of this by it's users?
+- What should we measure to prove an acceptance of this by its users?
