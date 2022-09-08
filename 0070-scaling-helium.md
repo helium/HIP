@@ -171,14 +171,14 @@ Once these have been achieved and appropriate success metrics reached, milestone
 
 | # | Milestone description | Network benefit | Completion date |
 | - | - | - | - |
-| 1 | PoC Oracles Deployed (Is it possible/preferable to decouple mainnet deployment of off-chain PoC from the new L1 deployment?) | POC Reliability | |
-| 2 | Data Transfer Oracles Deployed (are there any metrics we can define to measure success for improvements on PoC and Transfer rate? Beacon rate, transfer reliability, etc?) | Data transfer reliability | |
+| 1 | PoC Oracles Developed | POC Reliability | |
+| 2 | Data Transfer Oracles Developed | Data transfer reliability | |
 | 3 | Migration to new L1 | Redirect developer resources to network differentiating features & tapping into more mature blockchain ecosystem | |
-| 4 | PoC Improvements: Witness stuffing / Anti-gaming, other security etc (would like to break this up into a few concrete milestones, but need input on which high priority improvements supercede decentralization) | Combating PoC gaming and making PoC more secure |  |
+| 4 | PoC Improvements: Witness stuffing / Anti-gaming, other security enhancements, etc| Combating PoC gaming and making PoC more secure |  |
 | 5 | Oracle Decentralization HIP Passage | Signaling decentralization intent |  |
 | 6 | Oracle Decentralization mainnet deployment | Increasing security and integrity of a decentralized wireless network (no central point of failure/trust) |  |
 
-The proposed timeline for achieving these milestones is 12 months from the passage of this HIP. (is this reasonable?) Any extension must be documented and updated in this HIP with relevant justification.
+The proposed timeline for achieving these milestones is 12 months from the passage of this HIP. Any extension must be documented and updated in this HIP with relevant justification.
 
 
 # Drawbacks
