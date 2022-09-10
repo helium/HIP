@@ -161,7 +161,7 @@ In addition, the Helium core developers will "seed" every new address on the Sol
 
 ### Encourage initial veHNT staking
 
-We also believe that there should be an additional incentive for staked HNT holders to become veHNT holders at the transition. With veHNT staking, any holder of HNT can stake any amount of HNT and are not restricted to the 10,000 HNT limit imposed by current Validator staking. We propose that a 3x veHNT bonus is applied to any wallet that stakes HNT in the introductory period. This should apply to any wallet that has a staked HNT from a Validator and any new staker in the first seven days after the account state is transferred to the Solana blockchain.
+We believe that there should be an additional incentive for staked HNT holders to become veHNT holders at the transition. With veHNT staking, any holder of HNT can stake any amount of HNT and are not restricted to the 10,000 HNT limit imposed by current Validator staking. We propose that a 3x veHNT bonus is applied to any wallet that stakes HNT in the introductory period. This should apply to any wallet that has a staked HNT from a Validator and any new staker in the first seven days after the account state is transferred to the Solana blockchain. This bonus grants these "genesis" stakers an increased opportunity to earn subDAO tokens if they stake their veHNT to the IOT or MOBILE subDAO.
 
 The core developers will work with the community to build an application to help stakers signal intent to stake their HNT to veHNT. We will also explore ways to allow multiple staking periods as has been requested by community members.
 
