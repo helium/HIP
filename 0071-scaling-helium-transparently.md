@@ -9,21 +9,21 @@
 
 # Summary
 
-This HIP which builds on the work done by the creators of HIP-70 is focussed on delivering important structual changes to the Helium network as proposed in HIP-70. However it aims to improve on some of the shortcomings such as further centralisation (rather than decentralisation) of network activities. It also aims to introduce more formal governance structures which have been absent from prior proposals and will allow more predictable operation which is critical for enterprise adoption of the utility scale network we are all aiming to build.
+This HIP which builds on the excellent work done by the creators of [HIP-70][HIP-70] is focussed on delivering important structual changes to the Helium network as proposed in HIP-70. However it aims to improve on some of the shortcomings such as further centralisation (rather than decentralisation) of network activities. It also aims to introduce more formal governance structures which have been absent from prior proposals and will allow more predictable operation which is critical for enterprise adoption of the utility scale network we are all aiming to build.
 
 In this HIP, we propose an alternative architecture for the Helium network to use the Hedera network as a layer 1. The new architecture is built to meet the number of requirements that we believe are critical to the network’s success. Our new design goals include network scalability, strong network governance, transparency in data reporting and rewards distribution, and decentralization.
 
 Another difference to the original Helium Scaling Proposal is the use of an enterprise distributed ledger technology (DLT) as an alternative example. **It is important to note that unlike the original HIP-70 this is more as an example how this technology can be used. This HIP proposes a formal evaluation and comparison phase (and some evaluation criteria) to ensure the best tool is eventually chosen**.
 
-We acknowledge that this change removes the need for staked validators operating block production and challenge creation as they do today. That said, we expect that HNT stakers will migrate their positions towards securing current and/or future subDAOs and participating in governance through the vote-escrow token based system proposed in [HIP 51][hip 51]. Removal of the staked validator reward also returns the full 6.85% of HNT emissions back to the rewards pool, benefitting Hotspot owners on all subDAOs. In the first year alone, this is estimated to be over 2 million more HNT rewarded.
+We acknowledge that this change removes the need for staked validators operating block production and challenge creation as they do today. That said, we expect that HNT stakers will migrate their positions towards securing current and/or future subDAOs and participating in governance through the vote-escrow token based system proposed in [HIP-51][HIP-51]. Removal of the staked validator reward also returns the full 6.85% of HNT emissions back to the rewards pool, benefitting Hotspot owners on all subDAOs. In the first year alone, this is estimated to be over 2 million more HNT rewarded.
 
-Similar to the HIP-70 proposal these changes are complementary to the changes proposed in [HIP 51][hip 51] and a necessary set of changes to more easily implement some of the redemption and governance mechanisms proposed in [HIP 51][hip 51], [HIP 52][hip 52], and [HIP 53][hip 53]. We also expect that more protocols will be attracted to participate in the Helium ecosystem because of the move to a more widely used Layer 1 blockchain.
+Similar to the [HIP-70][HIP-70] proposal these changes are complementary to the changes proposed in [HIP-51][HIP-51] and a necessary set of changes to more easily implement some of the redemption and governance mechanisms proposed in [HIP 51][hip 51], [HIP-52][HIP-52], and [HIP-53][HIP-53]. We also expect that more protocols will be attracted to participate in the Helium ecosystem because of the move to a more widely used Layer 1 blockchain.
 
 # Motivation
 
 The Helium Network has grown incredibly quickly with close to 1 million Hotspots deployed around the world, with increasing data usage through an ever expanding list of use cases.
 
-During this expansion governance structures of the network have not kept pace with the technical developments. HIP-70 introduces serveral structural changes that are necessary and not contested at all.
+During this expansion governance structures of the network have not kept pace with the technical developments. [HIP-70][HIP-70] introduces serveral structural changes that are necessary and not contested at all.
 
 It fails however to improve on the governance side of the equation and in fact increases centralisation and reduces transparency (due to moving the most critical network functions off-chain).
 
@@ -40,7 +40,7 @@ In the last several months of the network, both have been challenging for networ
 
 This HIP has a direct impact on all stakeholders on the network. We believe that overall, Hotspot owners and Users of the network will see more consistent and reliable data transfer as discussed above.
 
-One set of stakeholders, namely validator stakers, staking pool operators, and validator-as-a-service providers, may be negatively impacted by this change but we believe these parties will continue to be able to participate in network activities. Stakers will be able to more actively participate in governance by staking their HNT into veHNT as described in [HIP 51][hip 51] and earn subDAO tokens like IOT or MOBILE by assigning their veHNT to a network they “vote” for.
+One set of stakeholders, namely validator stakers, staking pool operators, and validator-as-a-service providers, may be negatively impacted by this change but we believe these parties will continue to be able to participate in network activities. Stakers will be able to more actively participate in governance by staking their HNT into veHNT as described in [HIP-51][HIP-51] and earn subDAO tokens like IOT or MOBILE by assigning their veHNT to a network they “vote” for.
 
 # Detailed Explanation
 
@@ -85,11 +85,13 @@ The above architecture shows the high-level overview of components of a new Heli
 
 Re-designing PoC activity to be implemented as Oracles introduces some new services and changes the way beacons are constructed and report activity, as well as how witnessed beacons are detected and reported. Although the final design of this system is still in development, there are a few key concepts that are significant changes to the design of Proof-of-Coverage as it exists today.
 
-### Issues with Validators
+### Goodbye Validators - Hello (descentralised) Oracles
 
 Today, the Proof-of-Coverage system depends on Hotspots to be informed by their connected Validator that they are being challenged. This system depends on all Validators generating challenge keys, those keys selected by the Consensus Group, the connected Validator staying in sync and connected, and the Validator being reachable. This complexity was introduced to improve the on-chain scalability of Proof-of-Coverage and to limit the amount of activity on the Helium blockchain as the network grows (making it not need to scale as the number of Hotspots increases). While well-intentioned, the reduction of activity this causes makes it more difficult for individual Hotspot owners to understand their performance and usefulness to the network and reduces Proof-of-Coverage activity rates in the network at the scale of many millions of Hotspots.
 
 However, the valuable services of the Helium validator community could and should be used in running decentralised oracles (see below).
+
+As for any 'cooldown periods' and process of unstaking no changes would be needed from the original proposal in HIP-70.
 
 ### New PoC data reporting mechanism
 
@@ -204,7 +206,7 @@ One of the core reasons to use this DLT as the example is the long-term thinking
 
 Hedera separates Governance which is the act of making decisions on behalf of the network from Consensus.
 
-From a governance perspective, the Hedera Council which will ultimately be made of up to 39 blue chip companies oversees the evolution of Hedera as a public network, making decisions on roadmap, regulatory stance, marketing, crypto economics and membership.
+From a governance perspective, the [Hedera Global Governing Council](https://hedera.com/council) which will ultimately be made of up to 39 blue chip companies oversees the evolution of Hedera as a public network, making decisions on roadmap, regulatory stance, marketing, crypto economics and membership.
 The council is broken into several committees that look after specific verticals (TechCom considers the roadmap for example) which make recommendations to the council itself which then votes on decisions. All votes are equally weighted across council members making for a fair decision process.
 
 Council members are invited from many different industry verticals (with limits on membership from any one vertical, different countries or jurisdictions and include non profit organizations such as universities. This approach ensures that decision making is decentralized across various industries with no one industry having the lion’s share of decision making and also across geographies to ensure no single jurisdiction can unduly influence decision making.
@@ -363,10 +365,7 @@ There is no license fee associated with building on Hedera. Anyone can build ope
 
 Hedera’s vision for a 100 year public distributed network, built upon a best in class aBFT consensus algorithm from a security standpoint, which also happens to be fast, cheap, fair, energy efficient, carbon negative and capable of sharding to infinite throughput while maintaining the same aBFT security guarantees, coupled with the most decentralized and stable governance model there is appears on paper to be aligned with Helium’s long term objectives.
 
-# References
-
-* [HIP 70](https://github.com/helium/HIP/blob/main/0070-scaling-helium.md)
-* [HIP 51](https://github.com/helium/HIP/blob/main/0051-helium-dao.md)
-* [HIP 52](https://github.com/helium/HIP/blob/main/0052-iot-dao.md)
-* [HIP 53](https://github.com/helium/HIP/blob/main/0053-mobile-dao.md)
-* [Hedera Global Governing Council](https://hedera.com/council)
+[HIP-51]: https://github.com/helium/HIP/blob/main/0051-helium-dao.md
+[HIP-52]: https://github.com/helium/HIP/blob/main/0052-iot-dao.md
+[HIP-53]: https://github.com/helium/HIP/blob/main/0053-mobile-dao.md
+[HIP-70]: https://github.com/helium/HIP/blob/main/0070-scaling-helium.md
