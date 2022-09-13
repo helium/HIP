@@ -1,6 +1,6 @@
 # HIP 71: Scaling the Helium Network - Transparently
 
-- Author(s): [@leogaggl](https://github.com/leogaggl), [@gregscullard](https://github.com/gregscullard), [@pathornteng](https://github.com/pathornteng), [@jamesmeikle](https://github.com/jamesmeikle), [@tonysmith55](https://github.com/tonysmith55)
+- Author(s): [@leogaggl](https://github.com/leogaggl), [@gregscullard](https://github.com/gregscullard), [@pathornteng](https://github.com/pathornteng), [@jamesmeikle](https://github.com/jamesmeikle), [@tonysmith55](https://github.com/tonysmith55), [@nodlRob](https://github.com/nodlRob)
 - Start Date: 2022-09-13
 - Category: Technical
 - Original HIP PR:
