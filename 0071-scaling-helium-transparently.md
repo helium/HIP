@@ -13,6 +13,8 @@ This HIP which builds on the excellent work done by the creators of [HIP-70][HIP
 
 Another difference to the original Helium Scaling Proposal is the use of an enterprise distributed ledger technology (DLT) as an alternative example. **It is important to note that unlike the original HIP-70 this is more as an example how this technology can be used. This HIP proposes a formal evaluation and comparison phase (and some evaluation criteria) to ensure the best tool is eventually chosen** (see Governance section).
 
+This focus on governance has to be more than just superficial. By including representatives of all stakeholder groups - most importantly hotspot owners and operators that have put up their time and money to build this network - it will ensure a stable and sustainable network for all.
+
 In this HIP, we propose an alternative architecture for the Helium network to use the Hedera network as a layer 1. The new architecture is built to meet the number of requirements that we believe are critical to the network’s success. Our new design goals include network scalability, strong network governance, transparency in data reporting and rewards distribution, and decentralization.
 
 As per [HIP-70][HIP-70] we also acknowledge that this change removes the need for staked validators operating block production and challenge creation as they do today. However, we would expect (some) validators to be ideal candidates for operators of decentralised oracles.
@@ -37,6 +39,8 @@ We believe that the most important goals of the Network should be to ensure the 
 - Scalability - ensure the chosen architecture as well as the chosen L1 DLT can scale with the network
 
 In the last several months of the network, both have been challenging for network participants with much reduced Proof-of-Coverage activity due to network size and blockchain/validator load and packet delivery issues due to complexities related to managing routing and packet purchasing data on the Helium blockchain.
+
+In these last months it has become apparent that seperation of resposibilities and transparency on all fronts is a critical factor. Currently the separation between the Helium Foundation is at best a grey area with lots of vague statements over time in Discord or blog entries. But very little has actually documented, formally agreed upon and published. Let alone has progress on some of these things been tracked and reported.
 
 # Stakeholders
 
