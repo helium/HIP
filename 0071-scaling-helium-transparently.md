@@ -1,7 +1,7 @@
 # HIP 71: Scaling the Helium Network - Transparently
 
 - Author(s): [@leogaggl](https://github.com/leogaggl), [@gregscullard](https://github.com/gregscullard), [@pathornteng](https://github.com/pathornteng), [@jamesmeikle](https://github.com/jamesmeikle), [@tonysmith55](https://github.com/tonysmith55)
-- Start Date: 2022-09-12
+- Start Date: 2022-09-13
 - Category: Technical
 - Original HIP PR:
 - Tracking Issue:
@@ -9,7 +9,7 @@
 
 # Summary
 
-This HIP which builds on the excellent work done by the creators of [HIP-70][HIP-70] is focussed on delivering important structual changes to the Helium network as proposed in HIP-70. However it aims to improve on some of the shortcomings such as further centralisation (rather than decentralisation) of network activities. It also aims to introduce more formal governance structures which have been absent from prior proposals and will allow more predictable operation which is critical for enterprise adoption of the utility scale network we are all aiming to build.
+This HIP which builds on the excellent work done by the creators of [HIP-70][HIP-70] is focussed on delivering important structual changes to the Helium network as proposed in HIP-70. However it aims to improve on some of the shortcomings such as further centralisation (rather than decentralisation) of network activities. It also aims to introduce more formal governance structures which have been absent from prior proposals. This will allow for open, predictable and consistent governance of "the people's network" to ensure long-term enterprise adoption.
 
 Another difference to the original Helium Scaling Proposal is the use of an enterprise distributed ledger technology (DLT) as an alternative example. **It is important to note that unlike the original HIP-70 this is more as an example how this technology can be used. This HIP proposes a formal evaluation and comparison phase (and some evaluation criteria) to ensure the best tool is eventually chosen** (see Governance section).
 
