@@ -1,4 +1,4 @@
-# HIP Template
+# HIP Draft: [ title to be added ] 
 
 - Author(s): <@criptosaurios>
 - Start Date: <2022-06-08>
@@ -10,14 +10,13 @@
 [summary]: #summary
 
 This HIP proposes to open a wide dialogue, in the most used and easy access platforms (not only Discord), to discuss the need to find a way to bring a complementary (and may be temporary) reward  mechanism to those who have supported the current growth of LORAWAN network in HELIUM (Hotspot Owners, Validators/oracles and the richest HNT Wallets).
+
+# this needs to be rewritten. Discussions happen in the discord. You do not need a HIP to do this. Please only use the HIPs to propose code changes. Please specify what you are changing in the summary.
   
 # Motivation
 [motivation]: #motivation
-
-Through this reward mechanism is intended to prevent the current size of the LORAWAN network from being reduced in active hotspots size/coverage, and then putting at risk the deployment of IOT devices, that will finally provide the Data Credit´s consumption for the support and maintenance of the Hotspots in the long term.
   
-The LORAWAN network has a clear use case and bright future, but it needs more time for the deployment of devices that will use the network to make it self-sustaining based only on Data Credits. 
- 
+The LORAWAN network has a clear use case and bright future, but it needs more time for the deployment of devices that will use the network to make it self-sustaining. 
 
 # Stakeholders
 [stakeholders]: #stakeholders
@@ -34,7 +33,7 @@ In a date to be determinated during the dialogue, this HIP proposes taking a sna
 -	ACTIVE Validator/Oracle Nodes: Each active node and with the latest updated software version at the time of sanpshot. 
 -	The richest wallets in HNT.
   
-At first option to open the discusión, This HIP propose that each subDAO that is incorporated into HELIUM after LORAWAN, must contribute with 15% of the issuance of its tokens (DNT) in each epoch, to assign rewards in the following way. Based only in record obtained during the snapshot:
+At first option to open the discusión, This HIP propose that each subDAO that is incorporated into HELIUM after LORAWAN, must contribute with 15% of the issuance of its tokens (IOT, MOBILE) in each epoch, to assign rewards in the following way. Based only in record obtained during the snapshot:
  - 5% will be distributed among the Hotspots.
  - 5% Will be distributed among the Validators/Oracles.
  - 5% will be distributed among the richest wallets in HNT.
