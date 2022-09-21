@@ -5,7 +5,7 @@
 - Category: Technical
 - Original HIP PR:
 - Tracking Issue:
-- Status: Daft
+- Status: Draft
 
 # Summary
 
@@ -21,13 +21,13 @@ As per [HIP-70][HIP-70] we also acknowledge that this change removes the need fo
 
 That said, we expect that HNT stakers will migrate their positions towards securing current and/or future subDAOs and participating in governance through the vote-escrow token based system proposed in [HIP-51][HIP-51]. Removal of the staked validator reward also returns the full 6.85% of HNT emissions back to the rewards pool, benefitting Hotspot owners on all subDAOs. In the first year alone, this is estimated to be over 2 million more HNT rewarded.
 
-Similar to the [HIP-70][HIP-70] proposal these changes are complementary to the changes proposed in [HIP-51][HIP-51] and a necessary set of changes to more easily implement some of the redemption and governance mechanisms proposed in [HIP 51][hip 51], [HIP-52][HIP-52], and [HIP-53][HIP-53]. We also expect that more protocols will be attracted to participate in the Helium ecosystem because of the move to a more widely used Layer 1 blockchain.
+Similar to the [HIP-70][HIP-70] proposal these changes are complementary to the changes proposed in [HIP-51][HIP-51] and a necessary set of changes to more easily implement some of the redemption and governance mechanisms proposed in [HIP-51][HIP-51], [HIP-52][HIP-52], and [HIP-53][HIP-53]. We also expect that more protocols will be attracted to participate in the Helium ecosystem because of the move to a more widely used Layer 1 blockchain.
 
 # Motivation
 
 The Helium Network has grown incredibly quickly with close to 1 million Hotspots deployed around the world, with increasing data usage through an ever expanding list of use cases.
 
-During this expansion governance structures of the network have not kept pace with the technical developments. [HIP-70][HIP-70] introduces serveral structural changes that are necessary and not contested at all.
+During this expansion governance structures of the network have not kept pace with the technical developments. [HIP-70][HIP-70] introduces several structural changes that are necessary and not contested at all.
 
 It fails however to improve on the governance side of the equation and in fact increases centralisation and reduces transparency (due to moving the most critical network functions off-chain).
 
@@ -70,7 +70,7 @@ The new architecture must be decentralized to ensure that no single entity is re
 
 ## Formalising Governance Structures and Transparency
 
-Currently the network js supposedly governed by the Helium Foundation (after renaming from DEWI in March 2022). However the lines between the Helium Foundation and Nova Labs as the company behind the core development of the network are at best blurred as it stands. The Helium Foundation (unlike similar bodies) still has not published any bylaws and/or terms of reference.
+Currently the network is supposedly governed by the Helium Foundation (after renaming from DEWI in March 2022). However the lines between the Helium Foundation and Nova Labs as the company behind the core development of the network are at best blurred as it stands. The Helium Foundation (unlike similar bodies) still has not published any bylaws and/or terms of reference.
 There does not seem to be any transparency on who current office holders are and/or if any (perceived or real) conflict of interests are disclosed.
 
 ## Governance
@@ -215,7 +215,7 @@ Hedera separates Governance which is the act of making decisions on behalf of th
 From a governance perspective, the [Hedera Global Governing Council](https://hedera.com/council) which will ultimately be made of up to 39 blue chip companies oversees the evolution of Hedera as a public network, making decisions on roadmap, regulatory stance, marketing, crypto economics and membership.
 The council is broken into several committees that look after specific verticals (TechCom considers the roadmap for example) which make recommendations to the council itself which then votes on decisions. All votes are equally weighted across council members making for a fair decision process.
 
-Council members are invited from many different industry verticals (with limits on membership from any one vertical, different countries or jurisdictions and include non profit organizations such as universities. This approach ensures that decision making is decentralized across various industries with no one industry having the lion’s share of decision making and also across geographies to ensure no single jurisdiction can unduly influence decision making.
+Council members are invited from many different industry verticals (with limits on membership from any one vertical,) different countries or jurisdictions and include non profit organizations such as universities. This approach ensures that decision making is decentralized across various industries with no one industry having the lion’s share of decision making and also across geographies to ensure no single jurisdiction can unduly influence decision making.
 
 Finally, council positions are limited to three years (renewable once) to ensure that decentralization of decision making also happens across time.
 
@@ -333,7 +333,7 @@ Being energy efficient is good, being more energy efficient is better.
 
 ## Keys
 
-ECDSA keys are commonly used in public DLTs which would have been a challenge here since Helium uses ED25519 keys, fortunately Hedera also chose ED25519 keys for transaction signing meaning that transitioning wallets from Helium to Hedera is trivial and wany wallets are available.
+ECDSA keys are commonly used in public DLTs which would have been a challenge here since Helium uses ED25519 keys, fortunately Hedera also chose ED25519 keys for transaction signing meaning that transitioning wallets from Helium to Hedera is trivial and many wallets are available.
 
 ## Rust
 
@@ -357,7 +357,7 @@ The proposal also suggests the use of off-ledger Oracles (named consensus Oracle
 
 It is true that there are not many Hedera consensus nodes today, however you don’t need to run a consensus node to verify and persist the result of consensus.
 
-Hedera’s mirror nodes are open source transaction validators that can persist any or all of the transaction history, in fact Hedera not being a blockchain is a significant advantage here, every transaction reaches 100% finality in consensus meaning that in the context of a series of messages sent to the Hedera Consensus Service, anyone can operate a mirror node, persist just the messages related to the Helium topic(s) and optionally reward and usage token transactions and ignore the other 99.999% of the ledger data and transactions that are of no relevance to Helium, wh in y carry all that luggage if you don’t need to ?
+Hedera’s mirror nodes are open source transaction validators that can persist any or all of the transaction history, in fact Hedera not being a blockchain is a significant advantage here, every transaction reaches 100% finality in consensus meaning that in the context of a series of messages sent to the Hedera Consensus Service, anyone can operate a mirror node, persist just the messages related to the Helium topic(s) and optionally reward and usage token transactions and ignore the other 99.999% of the ledger data and transactions that are of no relevance to Helium, why carry all that luggage if you don’t need to?
 
 Hedera will soon release state proofs which will enable a periodic snapshot of any entity to be taken from the network (for example a topic and its running hash) such that the veracity of the state of the topic at the time of the state proof can be verified off ledger, forever.
 
@@ -369,7 +369,7 @@ A network such as Helium, seeking to become a building block of the future of te
 
 There is no license fee associated with building on Hedera. Anyone can build open source applications, closed source applications, or use any licensing model they choose. They don’t have to contact Hedera for a license, and Hedera won’t know what you’re building, unless you choose to tell them.
 
-Hedera’s vision for a 100 year public distributed network, built upon a best in class aBFT consensus algorithm from a security standpoint, which also happens to be fast, cheap, fair, energy efficient, carbon negative and capable of sharding to infinite throughput while maintaining the same aBFT security guarantees, coupled with the most decentralized and stable governance model there is appears on paper to be aligned with Helium’s long term objectives.
+Hedera’s vision for a 100 year public distributed network, built upon a best in class ABFT consensus algorithm from a security standpoint, which also happens to be fast, cheap, fair, energy efficient, carbon negative and capable of sharding to infinite throughput while maintaining the same ABFT security guarantees, coupled with the most decentralized and stable governance model there is appears on paper to be aligned with Helium’s long term objectives.
 
 [HIP-51]: https://github.com/helium/HIP/blob/main/0051-helium-dao.md
 [HIP-52]: https://github.com/helium/HIP/blob/main/0052-iot-dao.md
