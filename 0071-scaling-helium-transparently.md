@@ -109,7 +109,7 @@ flowchart TB
     G[Hotspot 2] -->|Witness|C(Hedera Consensus Service)
     A --> |Beacon report| C(Hedera Consensus Service)
     B -.->|Beacon report + Witness report| C[Hedera Consensus Service]
-    C -->|Beacon + Witness report| E[Decentralized Oracales]
+    C -->|Beacon + Witness report| E[Decentralized Oracles]
     E -->|Distribute rewards| F[Hedera Token Service]
 ```
 
