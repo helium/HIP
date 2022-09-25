@@ -1,4 +1,7 @@
-# HIP 71: Boring Protocol
+<p align="center">
+<img src="0071-dvpn-dao/boring-logo.png" alt="Rewards Emissions Graph Showing Exponential Decay" width=100">
+</p>
+<h1> # HIP 71: Boring Protocol </h1>
 
 - Author(s): [@FOMOBY](https://github.com/FOMOBY) [@franswan](https://github.com/franswan) [@vers_laLune](https://github.com/vers-laLune?tab=overview&from=2022-09-01&to=2022-09-22) [@tanny](https://github.com/ilovespectra)
 - Start Date: 2022-07-31
@@ -7,8 +10,6 @@
 - Tracking Issue: TO DO 
 - Status: In Discussion 
 
-
-## Summary
 <h2> Summary </h2>
 
 [HIP 51: Helium DAOs](https://github.com/helium/HIP/blob/main/0051-helium-dao.md) provides a general structure for onboarding new Decentralized Network Protocols (DNPs) to the broader Helium Network, with mechanisms in place to ensure that protocol-specific attributes such as Proof-of-Coverage rules, Data Credit pricing, and consensus-driven rules are within control of the emergent DNP DAO.
@@ -247,3 +248,5 @@ With the potential for a Helium 5G network to service the Solana Mobile phone or
 ## Drawbacks/Challenges
 
 The primary directive of the development team is currently to provide a secure and decentralized virtual private network. The current architecture does not account for absorbtion by the larger Helium ecosystem, and the team at Boring understands there may need to be a dVPN treasury established, and redenominate HNT emissions based on each network's relative DAO Utility Score. We do not intend to propose this HIP without the code required to implement it, and are working together with core developers within both ecosystems to build a bridge to onboard existing tokens into the flywheel proposed in HIP51.
+
+
