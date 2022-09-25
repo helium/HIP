@@ -197,7 +197,7 @@ Reward Emissions: 122,500,000 BOP tokens are allocated to reward nodes over 10 y
 Where y is the total emission per period, and x is the period number from 0 to 129. This is 130 two-week periods, for a total of five years.
 
 <p align="center">
-<img src="0071-dvpn-dao/Rewards_Emissions.jpeg" alt="Rewards Emissions Graph Showing Exponential Decay" width="800">
+<img src="0071-dvpn-dao/Rewards_Emissions.jpeg" alt="Rewards Emissions Graph Showing Exponential Decay" width=700">
 </p>
 
 Each node is then allocated a maximum portion of these emissions. If n is the number of nodes, and e is the number of BOP tokens emitted for a period, then each node has a maximum allocation of . This is the maximum number of tokens that a node can receive for that period.
