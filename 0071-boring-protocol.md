@@ -1,6 +1,6 @@
 # HIP 71: Boring Protocol
 
-- Author(s): [@FOMOBY](https://github.com/FOMOBY) [@franswan](https://github.com/franswan) [@tanny](https://github.com/ilovespectra)
+- Author(s): [@FOMOBY](https://github.com/FOMOBY) [@franswan](https://github.com/franswan) [@vers_laLune](https://github.com/vers-laLune?tab=overview&from=2022-09-01&to=2022-09-22) [@tanny](https://github.com/ilovespectra)
 - Start Date: 2022-07-31
 - Category: Economic, Technical 
 - Original HIP PR: 
