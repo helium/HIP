@@ -120,6 +120,8 @@ The technical and economic design decisions of the Helium Network today have bee
 
 ## Motivation
 
+A dVPN implementation would immediately and relevantly re-purposes the no longer needed processing power of the nearly one million LoRa Hotspots sitting online worldwide into the largest dVPN network right out of the box. Give the customer ability to switch client/ server modes right in the app and add the dVPN service and BOP/dVPN token as another SubDAO along with IoT, MOBILE. The Boring Protocol code should be able to be added as a firmware update to run along the kernel in a  container similar to the LoRa packet processing and forwarder. The existing miner network is ideal for supporting this type of tunneling traffic as most miners have gigabit ethernet connections with private IPs and have adequate bandwidth, processing power and storage already. The RAK and MNTD are based on PI4s and should make a perfect mirror to test run in our distributed environment.
+
 The drivers for this proposal are as follows:
 - Privacy and Security for Helium “subscribers” & internet users as a whole
 - Security and Scalability of the L1 as proposed in HIP-51
