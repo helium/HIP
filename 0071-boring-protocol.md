@@ -1,4 +1,4 @@
-# HIP 70: Boring Protocol
+# HIP 71: Boring Protocol
 
 - Author(s): [@FOMOBY](https://github.com/FOMOBY) [@franswan](https://github.com/franswan) [@tanny](https://github.com/ilovespectra)
 - Start Date: 2022-07-31
