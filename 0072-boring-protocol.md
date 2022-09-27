@@ -79,17 +79,17 @@ At epoch T, we denote the value of H, S, and P as $H_T$, $S_T$, and $P_T$. The p
 
 $P_T = \frac{H_T}{S_T}$
 
-For example, consider at epoch #125, the total outstanding supply of tokens for the DVPN subDAO is 200M BOP and the total amount in the treasury reserve is 100K HNT. The programmatic treasury formula is given as follows
+For example, consider at epoch #125, the total outstanding supply of tokens for the dVPN subDAO is 200M BOP and the total amount in the treasury reserve is 152,671.75 HNT. The programmatic treasury formula is given as follows
 
-$$P_{125} = \frac{H_{125}}{S_{125}} = \frac{100,000}{200,000,000} = 0.0005$$
+$$P_{125} = \frac{H_{125}}{S_{125}} = \frac{152,671}{225,000,000} = 0.00067854$$
 
-This implies that at epoch #125, any number of BOP can be redeemed at a unit price of 0.0005 HNT.
+This implies that at epoch #125, any number of BOP can be redeemed at a unit price of 0.000067854 HNT.
 
-Now consider at epoch #225, the total outstanding supply of tokens for the DVPN subDAO is 211M and the total amount in the treasury reserve is 120K HNT. The programmatic treasury formula is given as follows
+Now consider at epoch #225, the total outstanding supply of tokens for the dVPN subDAO is 200,025,000 and the total amount in the treasury reserve is 164,885 HNT. The programmatic treasury formula is given as follows
 
-$$P_{225} = \frac{H_{225}}{S_{225}} = \frac{120,000}{211,000,000} = 0.00056872$$
+$$P_{225} = \frac{H_{225}}{S_{225}} = \frac{154,579}{240,458,015} = 0.00064285$$
 
-This implies that at 100 epochs after #125 at #225, any number of BOP can be redeemed at a unit price of 0.00056872$$ HNT.
+This implies that at 100 epochs after #125 at #225, any number of BOP can be redeemed at a unit price of 0.00064285$$ HNT.
 
 In epoch #225, the total outstanding supply of BOP has increased, and given inflows to the treasury reserve in HNT the resulting unit price has decreased. If the rate at which HNT flows into the treasury reserve outpaces the emission of BOP tokens, the unit price of BOP increases.
 
