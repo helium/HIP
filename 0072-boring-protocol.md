@@ -79,7 +79,7 @@ At epoch T, we denote the value of H, S, and P as $H_T$, $S_T$, and $P_T$. The p
 
 $P_T = \frac{H_T}{S_T}$
 
-For example, consider at epoch #125, the total outstanding supply of tokens for the dVPN subDAO is 200M BOP and the total amount in the treasury reserve is 152,671.75 HNT. The programmatic treasury formula is given as follows
+For example, consider at epoch #125, the total outstanding supply of tokens for the dVPN subDAO is 225M BOP and the total amount in the treasury reserve is 152,671.75 HNT. The programmatic treasury formula is given as follows
 
 $$P_{125} = \frac{H_{125}}{S_{125}} = \frac{152,671}{225,000,000} = 0.00067854$$
 
