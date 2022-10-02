@@ -22,15 +22,12 @@ In response to HIP-51, this proposal outlines construction for the integration o
                                                                                                            
 This proposal impacts all current and future participants in the Helium Ecosystem as well as all current BOP holders.
 
-The objective is to provide greater growth to both networks while equally providing opportunity to the economics of Helium hardware operators, simultaneously creating privacy access to Helium network infrastructure. The Helium token model is described in the HIP’s presented previous to this proposal. Borings tokenomics weigh several key factors to provide incentive for network growth and network strength.
+The objective is to provide greater growth to both networks while equally providing opportunity to the economics of Helium hardware operators, simultaneously creating privacy access to Helium network infrastructure. The Helium token model is described in the HIP’s presented previous to this proposal. 
 
 The BOP token utility is mainly a settlement between “clients” of the dVPN and “operators” of nodes which are used to privately access the internet. Apart from this primary function the token is staked by node operators to present loyalty to the network and financial incentive to act in “good faith” as they operate exit nodes. As nodes remain connected they increase their opportunity for traffic/data to be directed through their node and increase their profitability as the token is settled on a data consumption rate.
 
-It is possible that the multi-chain interoperability may include a portion of BOP to be vested into contract to create a wrapped BOP on the Helium chain as well as liquidity. This proposal could be beneficial in the event Solana incurs an outage(s) and would allow Boring to continue operation and settlement from Helium. Though this is not ideal, it may be a greater measure for stability of the dVPN itself and allow for this continued profitability to node operators within the existing Boring Network and the Helium Network.
-
-In researching and writing this HIP, Boring has used our social forums to conduct numerous discussions within the Helium community to generate this proposal. Continued participation and discussion is greatly encouraged to ensure the proposal is in line with the needs of both communities.
+Continued participation and discussion is greatly encouraged to ensure the proposal is in line with the needs of both communities.
                                                                                                            
-
 ## Motivation
 
 The drivers for this proposal are as follows:
@@ -38,47 +35,28 @@ The drivers for this proposal are as follows:
 -   Privacy and Security for Helium “subscribers” and internet users as a whole
 -   Security and Scalability of the L1 as proposed in HIP-51
 -   Additional mechanisms for profitability to Helium Network infrastructure operators
--   Network growth to Boring Protocol to generate a viable and strong dVPN (more nodes = greater obfuscation opportunity)
 -   Proving a model of multi chain redundancy to further secure network economics and participant profitability
 -   Sustainability in manufacturing and distribution of hardware
 -   Increased Utility and Security for EVM mechanisms like wHNT
 
 A dVPN implementation would be an immediate and relevant re-purpose,  of the no longer needed processing power of ~1 million LoRa Hotspots sitting online, into the largest dVPN network right out of the box. Which provides the customer ability to switch client/ server modes in-app and add the dVPN service and BOP/dVPN token as another subDAO along with IoT and MOBILE. 
 
-The Boring Protocol code should be able to be added as a firmware update to run along the kernel in a container similar to the LoRa packet processing and forwarder. The existing miner network is ideal for supporting this type of tunneling traffic—as most miners have gigabit ethernet connections with private IPs and have adequate bandwidth, processing power and storage already. The RAK and MNTD are based on PI4s and should make a perfect mirror to test run in our distributed environment.
+The Boring Protocol code should be able to be added as a firmware update to run along the kernel in a container similar to the LoRa packet processing and forwarder. The existing hotspot network is ideal for supporting this type of tunneling traffic—as most hotspots have gigabit ethernet connections with private IPs and have adequate bandwidth, processing power and storage already. The RAK and MNTD are based on PI4s and should make a perfect mirror to test run in our distributed environment.
                                                                                                            
 
 ## Background
 
 For the Helium Network to grow globally in number of active devices and users it is necessary to develop economic incentives and opportunities for the infrastructure operators participating in supporting the network. Adding utility and profitability to the hardware involved now and in the future will solidify the Helium network as a major player across many types of networks. 
 
-This proposal will require addition to the economic models set forth to further incentive individual participants' activity in new networks with the advantage of increasing profitability of said participants.
-
-HIP 51 outlines basic requirements for existing models of the SubDAOs within the Helium Network. For the purpose of this HIP, the integration of two networks would need to omit some aspects of the economic model to procure the privacy and security that operators seek within both ecosystems. However, the pursuit of bringing value to the Helium token model must remain present. 
-
-The opportunity to have HIP-51 subDAO layer 1 migrated to Solana is present in this proposal for the purpose of allowing the DC/HNT/BOP mechanics to flourish as well as to capitalize on the potential for Helium with the Solana Mobile platform. While not necessary at this time the eventual growth and overflow of Helium's “Network of Networks” could mean a more robust layer 1 is needed. The advantage of Keeping Helium and Boring separate via Multi-chain interoperability is that node operators can still stand to profit in the event that one of the networks faces outage(s). 
-Boring Protocol is privacy and security at its foundation but can be grown to generate subDAOs of its own network models ie. Proxy networks, distributed storage etc. 
-
-Boring Protocol operates currently on the token model envisioned by its team and community and is discussed further in this proposal.
-
-The technical and economic design decisions of the Helium Network today have been made around the flagship LoRaWAN Decentralized Network Protocol. 
-                                                                                                           
+HIP 51 outlines basic requirements for existing models of the SubDAOs within the Helium Network.                                                                                           
 
 ## Detailed Description
 
-An initial integration may not include all economic requirements as described in HIP51 as the model for such only sets forth guidance for network structures that previously existed within the Helium ecosystem. As Boring is an entirely separate access layer network we propose that the Data Credit models proposed in other subDAOs be removed from the equation for this particular proposal. As Boring grows and the opportunity to use DC as a solution within our network model presents itself the community can propose and implement such changes. 
+Boring Protocol is privacy and security at its foundation but can be grown to generate subDAOs of its own network models ie. Proxy networks, distributed storage etc.
 
-Boring Protocol will instead add utility and value to the Helium token ecosystem by allowing customers to pay using SPL wrapped HNT and eventually HNT via cross chain bridges to fund their usage of the dVPN. This provides two distinct advantages to the Helium community: 
+Boring Protocol will add utility and value to the Helium token ecosystem by allowing customers to pay using SPL wrapped HNT and eventually HNT via cross chain bridges to fund their usage of the dVPN. This provides two distinct advantages to the Helium community: 
 - Potential further dispersal of HNT to the SPL wrapped HNT Liquidity pool and utility beyond market trading for the token itself. 
 - The ability for certain Helium infrastructure operators to continue profiting from their equipment in the event of a Helium network outage.
-
-As Boring implements cross-chain bridges the potential for added user payment types increases as well as the ability to access clients who may use these other blockchain based tokens. The ability to onramp such users will strengthen the network in driving further revenues to the operators who services said clients. To make this possible and continue with BOP token as the settlement, liquidity pools will be created as these client funding option types are added to the protocol. For instance, If Bob wishes to pay for the dVPN service using Monero (XMR) token, he can fund the usage contract and as he consumes data the settlement layer for Boring will use real time oracles and this new liquidity pool to produce a trade for the XMR to BOP. The settlement layer will then send the BOP to escrow to be withdrawn by the node operator servicing Bobs access to the network at the time the operator requests such. The same sort of process will take place as Helium(HNT) or the wrapped HNT is added as a funding option in regards to this proposal. 
-
-
-Implementation of this proposal requires some key factors be settled beyond tokenomics. Distribution being the primary potential drawback. Boring Protocol and it’s existing economic model is primarily dependent on a strategic balance between number of consumers and online nodes servicing them. Technical boundaries of the hardware we have developed for (Rasp Pi4b) and the bandwidth node operators can distribute to users have resulted in a series of tests. These tests, while initial, have generated a balance of 10 simultaneous clients per node operated. While this balance is impossible to ensure given the decentralized nature of the protocol it remains a good measure for the Boring Protocol model. Factors such as client needs in regional node selection, pricing of bandwidth and general quality of connection are to be considered. 
-
-It is important to fully understand the ways Boring Protocol node operators profit from the dvpn network to grasp the need to limit the number of total nodes on the network and how quickly the onboarding of dual mining HNT/BOP nodes should occur.
-
                                                                                                            
 <h2> DVPN subDAO core jobs-to-be-done </h2>
 
@@ -163,8 +141,6 @@ Clarifications:
 
 BOP oracles confirm proof of coverage, data transfer, and add blocks to the DVPN subnetwork. They serve state data around Proof-of-Coverage challenges and data transfer events between DVPN node providers and users.
 
-
-
 ## Platform Incentives
 
 45% of the total supply of Bop has been set aside for a 10 year distribution to node operators based on key factors that will reward uptime, specific region and bandwidth availability for node operators. This will subsidize growth of the network in key regions that have been identified as desirable to VPN users. This distribution is outlined in the [platform incentives documentation](#link) 
@@ -177,9 +153,7 @@ These nodes are identified for their rewards through a given transferable NFT th
 
 ### Bandwidth Exchange
 
-All node operators who incur dvpn customer traffic are paid 95% of the proceeds from consumed data measured in KB as data is consumed on the network.
-
-The remaining 5% flows back into the Boring treasury for future development and  operational costs.
+All node operators who incur dvpn customer traffic are rewarded 95% of the proceeds from consumed data measured in KB as data is consumed on the network, and 5% is delegated the Boring treasury.
 
 We have projected a single node with a standard internet connection of X can earn as much as $24-240 per month from this one earning method given consistent traffic and data consumption across their node. This projection is further detailed here: Basis & Core
 
@@ -190,7 +164,7 @@ veBOP holders can choose to delegate their holdings to oracles of their choice o
 BOP Transactions involve two distinct roles:
 
 1. Boperators (Providers) - The node that provides dVPN service to Users.
-2. Users - The individual or entity utilizing the anonymity provided by the decentralized virutal private network.
+2. Users - The individual or entity utilizing the anonymity provided by the decentralized virtual private network.
 
 
 <h2> Data Usage and Pricing Specification </h2>
@@ -240,30 +214,18 @@ Users can choose to delegate their lockup power in veBOP to all dVPN DAO governa
 
 ## Rationale and Alternatives
 
-As it stands, the dVPN space has a very limited alternative models and none of which run on Solana (as is the case with [HIP 70](https://github.com/helium/HIP/blob/main/0070-scaling-helium.md)). The closest competitor [Orchid Protocol](https://www.orchid.com/), built on the Ethereum blockchain, is plagued by the network issues it inherits from its L1. This leads us to the goal of this proposal, to work out the best method of implementation with the Helium Foundation given the unique challenges posed by this project.
-
-In addition to being the only Solana-native solution, we believe our implementation is in a position to define measures against spoofing. The Orchid Protocol has been associated with spoofing to hide latency issues. We are far enough along in our execution we can prove our dVPN implementation is resistant to spoofing.
-
-If this HIP is not approved, there is a serious looming security risk for users on the network. While there may be users who are perfectly okay with there real-time location being exposed to all people on the network, the opportunity for nefarious actors to exploit this information goes without saying. As the MOBILE network is rolled out there will simply be far too great of a risk for users without this subDAO.
+As it stands, the dVPN space has a very limited alternative models and none of which run on Solana (as is the case with [HIP 70](https://github.com/helium/HIP/blob/main/0070-scaling-helium.md)). The closest competitor [Orchid Protocol](https://www.orchid.com/), built on the Ethereum blockchain, is plagued by the network issues it inherits from its L1. 
 
 ## Unresolved Questions
 
 Prior to the merge of this HIP, we expect to have completely resolved economic questions regarding the best method for settlement. Currently, the alternatives are a DEX, CEX or a smart contract for easy HNT/USDC swaps. We also intend to make sure the economics of Boring are in-line with the values and goals of the Helium community. The economic incentives of Boring should benefit the community as well as reward early adopters.
 
-Beyond the economic questions, we need to resolve strategic deployment of the network. We hope to determine who from the Helium team will work alongside us in order to properly incorporate Boring as a Helium subDAO. Additioanlly, we need to determine the way we will test Boring on the Helium network. The strategic implementation of these network tests would need to be simple and effective as to not disrupt the current users of both networks. 
-
-On a technical level, countermeasures to prevent spoofing need to be finalized. We are far enough along in our architecture that we believe we can adequately prevent spoofing, but the final details need to be solidified.
-
-The implementation of this HIP would add simplicity for the end-user experience. The data credit system which we are proposing is waived reduces redundancy for users of our network. Beyond pure simplicity, the additional security for users will be a vast improvement over its current state in the Helium Network. As stated previously, there is a looming threat to the safety of users due to the location assertion of Nodes. This risk will only continue to increase as the MOBILE Network is deployed as this location assertion will be in real time with virtually zero latency (as stated in[ HIP-53](https://github.com/helium/HIP/blob/main/0053-mobile-dao.md)).
-
-Outside of the scope of this proposal, there is a dearth of properly implemented dVPNs. The current centralized model for dVPNs is quickly failing as the services exchange information on user traffic, fail to meet security standards (e.g. keeping users passwords in text files) and increasingly the cVPN IP addresses are being blacklisted. A functional dVPN in the marketplace would extend beyond the scope of the Helium Network and have far reaching positive consequences for privacy and security. 
+Beyond the economic questions, we need to resolve strategic deployment of the network. We hope to determine who from the Helium team will work alongside us in order to properly incorporate Boring as a Helium subDAO. The current centralized model for dVPNs is quickly failing as the services exchange information on user traffic, fail to meet security standards (e.g. keeping users passwords in text files) and increasingly the cVPN IP addresses are being blacklisted. A functional dVPN in the marketplace would extend beyond the scope of the Helium Network and have far reaching positive consequences for privacy and security. 
 
 
 ## Deployment Impact
 
-As it stands, the end-user faces a security risk due to location assertion. The hotspot from which a user telegraphs their location does so within a few hundred feet of their real-time location. This, especially as the MOBILE network continues its implementation, will pose a major real-time security risk for all users. The MOBILE network would telegraph real-time data of their exact location with zero latency. Boring Protocol acts as an obfuscation layer for the main Helium Network. 
-
-Our proposal is to explore the best method for implementaion alongside the Helium Foundation. Given the novel nature of this subDAO, the impact of our deployment would be heavily determined by the process with which we move forward. Our current objective is to work side-by-side with the Helium foundation in order to implement Boring Protocol in a manner that is aligned with the goals of L1 Security and Scalability as proposed in HIP-51. The goal of this would be to properly build layers alongside the Helium Foundation so that our network can co-exist for 3G, 5G and LoRaWAN. 
+Boring Protocol acts as an obfuscation layer for the main Helium Network. Our current objective is to work side-by-side with the Helium foundation in order to implement Boring Protocol in a manner that is aligned with the goals of L1 Security and Scalability as proposed in HIP-51. The goal of this would be to properly build layers alongside Helium to ensure the compatibility of our networks across 3G, 5G and LoRaWAN. 
 
 This proposal would primarily impact HIP-51 as we are altering the implementation of the subDAO. We are proposing a multi-chain interoperable solution with settlements in HNT as opposed to using the current Data Credit system. Since we will not be broadcasting to the Helium Network, there is no need for a Data Credit. Additionally, BOP already acts with the same functionality as a Data Credit eliminating the need. This change will simplify the process for the end-user as there will immediate settlement.  As previously stated we can either implement a DEX or CEX or run a smart contract with HNT/USDC settlement. This will also serve as on on-ramp for users to the Helium Network as there is a growing public need for a functional dVPN beyond the needs outlined in the scope of this proposal. 
 
@@ -278,7 +240,7 @@ The success of the design can be determined simply by the number of active nodes
 
 As stated earlier, our initial tests have generated a balance of 10 simultaneous clients per node operated. The number of nodes operated works as a good indication of total clients and the amount of bandwidth being trafficked on the subDAO serves to further solidify these estimates. The number of nodes operated additionally acts as a measure of network stability. More nodes provides more effective obfuscation. 
 
-For the sake of simplicity, we can discuss complexity as a measure of user friction and as a measure of technological misallocation of resources. The addition of nodes to the network while adding more complexity in a strict sense, allows for network redundancy and increased security. Additionally, the operation of Boring as a multinetwork interoperable subDAO allows for failsafe in the case of network outage(s). The increased network complexity in this case allows for decreased end-user complexity. Additionally, off-chain metrics such as customer service tickets and sales metrics for our simpler improved hardware serves as a proxy for end-user complexity being appopriately managed. These off-chain metrics as well as active holders of BOP, smart contract interactions and increases in number of operational nodes will serve as a metric of user acceptance of this HIP. 
+For the sake of simplicity, we can discuss complexity as a measure of user friction and as a measure of technological misallocation of resources. The addition of nodes to the network while adding more complexity in a strict sense, allows for network redundancy and increased security. Additionally, the operation of Boring as a multinetwork interoperable subDAO allows for failsafe in the case of network outage(s). The increased network complexity in this case allows for decreased end-user complexity. Additionally, off-chain metrics such as customer service tickets and sales metrics for our simpler improved hardware serves as a proxy for end-user complexity being appropriately managed. These off-chain metrics as well as active holders of BOP, smart contract interactions and increases in number of operational nodes will serve as a metric of user acceptance of this HIP. 
 
 To prove performance increase, you would measure the bandwidth being utilized on Boring Protocol as well as the amount of nodes currently implemented. Each additional node $n$ in the graph adds ${(n-1)}$ options for a user's traffic to be redirected through. For bandwidth usage $B$, the increase in performance would be:
 
@@ -311,12 +273,6 @@ With the potential for a Helium 5G network to service the Solana Mobile phone or
 
 ## Drawbacks/Challenges
 
-The primary directive of the development team is currently to provide a secure and decentralized virtual private network. The current architecture does not account for absorbtion by the larger Helium ecosystem, and the team at Boring understands there may need to be a dVPN treasury established, and redenominate HNT emissions based on each network's relative DAO Utility Score. We do not intend to propose this HIP without the code required to implement it, and are working together with core developers within both ecosystems to build a bridge to onboard existing tokens into the flywheel proposed in HIP51.
+The primary directive of the development team is currently to provide a secure and decentralized virtual private network. The current architecture does not account for absorption by the larger Helium ecosystem, and the team at Boring understands there may need to be a dVPN treasury established, and redenominate HNT emissions based on each network's relative DAO Utility Score. We do not intend to propose this HIP without the code required to implement it, and are working together with core developers within both ecosystems to build a bridge to onboard existing tokens into the flywheel proposed in HIP51.
 
-The implementation of this HIP would come with the changing of the subDAO structure and subsequently create precedent for other subDAOs to stray away from the initial model within HIP-51. Removing the Data Credits system from our implementation of Boring as a subDAO streamlines the user experience but also hinders the incentive structure the Data Credit system was designed to implement across multiple subDAOs. We believe that given BOP is already an SPL token, the Data Credit system is redundant in our implementation. However, in general this does create an avenue for future subDAO complication. 
-
-Another drawback lies in the fact that not everyone who runs a Helium node currently will be able to run a Boring Node. As it stands there are limitations to the network and we dont want to overload the network by scaling too quickly. At first, we will only offer a few thousand nodes. Additionally, our current software creates a hardware limitation. Not every Helium node runs on Raspberry Pi 4 and consequently they cannot run Boring Protocol. Future iterations of Boring should be able to account for this, but as it stands this is a limitation. 
-
-Lastly, as stated previously, BOP is a SPL token which means it operates on the Solana Network. Historically the Solana Network has had several network outages and Boring consequently inherents this drawback. These outages should become increasingly more rare or non-existent, but it is an inherent risk. 
-
-
+The implementation of this HIP would come with the changing of the subDAO structure and subsequently create precedent for other subDAOs to stray away from the initial model within HIP-51. Removing the Data Credits system from our implementation of Boring as a subDAO streamlines the user experience but also hinders the incentive structure the Data Credit system was designed to implement across multiple subDAOs. We believe that given BOP is already an SPL token, the Data Credit system is redundant in our implementation. 
