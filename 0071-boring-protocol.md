@@ -1,7 +1,7 @@
 <p align="center">
 <img src="0071-dvpn-dao/boring-logo.png" alt="Rewards Emissions Graph Showing Exponential Decay" width=100">
 </p>
-<h1> # HIP 72: dVPN subDAO: Boring Protocol </h1>
+<h1> # HIP 71: dVPN subDAO: Boring Protocol </h1>
 
 - Author(s): [@vers_laLune](https://github.com/vers-laLune?tab=overview&from=2022-09-01&to=2022-09-22) [@tanny](https://github.com/ilovespectra) [@FOMOBY](https://github.com/FOMOBY) [@franswan](https://github.com/franswan) 
 - Start Date: 2022-07-31
