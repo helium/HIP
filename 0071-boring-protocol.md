@@ -227,8 +227,6 @@ Beyond the economic questions, we need to resolve strategic deployment of the ne
 
 Boring Protocol acts as an obfuscation layer for the main Helium Network. Our current objective is to work side-by-side with the Helium foundation in order to implement Boring Protocol in a manner that is aligned with the goals of L1 Security and Scalability as proposed in HIP-51. The goal of this would be to properly build layers alongside Helium to ensure the compatibility of our networks across 3G, 5G and LoRaWAN. 
 
-This proposal would primarily impact HIP-51 as we are altering the implementation of the subDAO. We are proposing a multi-chain interoperable solution with settlements in HNT as opposed to using the current Data Credit system. Since we will not be broadcasting to the Helium Network, there is no need for a Data Credit. Additionally, BOP already acts with the same functionality as a Data Credit eliminating the need. This change will simplify the process for the end-user as there will immediate settlement.  As previously stated we can either implement a DEX or CEX or run a smart contract with HNT/USDC settlement. This will also serve as on on-ramp for users to the Helium Network as there is a growing public need for a functional dVPN beyond the needs outlined in the scope of this proposal. 
-
 ## Success Metrics
 
 The success of the design can be determined simply by the number of active nodes within the Boring Protocol as well as the amount of bandwidth being traded for HNT. 
