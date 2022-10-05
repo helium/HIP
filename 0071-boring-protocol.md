@@ -229,11 +229,6 @@ Boring Protocol acts as an obfuscation layer for the main Helium Network. Our cu
 
 This proposal would primarily impact HIP-51 as we are altering the implementation of the subDAO. We are proposing a multi-chain interoperable solution with settlements in HNT as opposed to using the current Data Credit system. Since we will not be broadcasting to the Helium Network, there is no need for a Data Credit. Additionally, BOP already acts with the same functionality as a Data Credit eliminating the need. This change will simplify the process for the end-user as there will immediate settlement.  As previously stated we can either implement a DEX or CEX or run a smart contract with HNT/USDC settlement. This will also serve as on on-ramp for users to the Helium Network as there is a growing public need for a functional dVPN beyond the needs outlined in the scope of this proposal. 
 
-This proposal would affect HIP-51 as it explicitly references the Data Credit system for subDAOs and we are proposing alterations to the subDAO implementation. Should HIP-70 pass there should be few continuity issues as Boring Protocol is currently on the Solana Network. However, should the proposal be rejected, a migration of Boring Protocol would be necessary. 
-
-Our proposal is largely backwards compatible outside of the incongruity with HIP-51.
-
-
 ## Success Metrics
 
 The success of the design can be determined simply by the number of active nodes within the Boring Protocol as well as the amount of bandwidth being traded for HNT. 
