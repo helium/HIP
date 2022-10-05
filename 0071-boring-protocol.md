@@ -1,7 +1,7 @@
 <p align="center">
 <img src="0071-dvpn-dao/boring-logo.png" alt="Rewards Emissions Graph Showing Exponential Decay" width=100">
 </p>
-<h1> # HIP 71: dVPN subDAO: Boring Protocol </h1>
+<h1> # HIP XX: dVPN subDAO: Boring Protocol </h1>
 
 - Author(s): [@vers_laLune](https://github.com/vers-laLune?tab=overview&from=2022-09-01&to=2022-09-22) [@tanny](https://github.com/ilovespectra) [@FOMOBY](https://github.com/FOMOBY) [@franswan](https://github.com/franswan) 
 - Start Date: 2022-07-31
@@ -37,7 +37,7 @@ The drivers for this proposal are as follows:
 -   Additional mechanisms for profitability to Helium Network infrastructure operators
 -   Proving a model of multi chain redundancy to further secure network economics and participant profitability
 -   Sustainability in manufacturing and distribution of hardware
--   Increased Utility and Security for EVM mechanisms like wHNT
+-   Increased Utility and Security for EVM mechanisms
 
 A dVPN implementation would be an immediate and relevant re-purpose,  of the no longer needed processing power of ~1 million LoRa Hotspots sitting online, into the largest dVPN network right out of the box. Which provides the customer ability to switch client/ server modes in-app and add the dVPN service and BOP/dVPN token as another subDAO along with IoT and MOBILE. 
 
@@ -46,7 +46,7 @@ The Boring Protocol code should be able to be added as a firmware update to run 
 
 ## Background
 
-For the Helium Network to grow globally in number of active devices and users it is necessary to develop economic incentives and opportunities for the infrastructure operators participating in supporting the network. Adding utility and profitability to the hardware involved now and in the future will solidify the Helium network as a major player across many types of networks. 
+For the Helium Network to grow globally in number of active devices and users it is necessary to develop economic incentives and opportunities for the infrastructure operators participating in supporting the network. Adding utility and profitability to the hardware involved now and in the future will solidify the Helium network as a major player across many types of networks. This proposal will require addition to the economic models set forth providing further incentive to participate in new networks with the advantage of increasing security and privacy for the end-user.
 
 HIP 51 outlines basic requirements for existing models of the SubDAOs within the Helium Network.                                                                                           
 
@@ -54,8 +54,8 @@ HIP 51 outlines basic requirements for existing models of the SubDAOs within the
 
 Boring Protocol is privacy and security at its foundation but can be grown to generate subDAOs of its own network models ie. Proxy networks, distributed storage etc.
 
-Boring Protocol will add utility and value to the Helium token ecosystem by allowing customers to pay using SPL wrapped HNT and eventually HNT via cross chain bridges to fund their usage of the dVPN. This provides two distinct advantages to the Helium community: 
-- Potential further dispersal of HNT to the SPL wrapped HNT Liquidity pool and utility beyond market trading for the token itself. 
+Boring Protocol will add utility and value to the Helium token ecosystem by allowing customers to pay using SPL native HNT to fund their usage of the dVPN. This provides two distinct advantages to the Helium community: 
+- Potential further dispersal of HNT amongst Solana Liquidity Pools and utility beyond market trading for the token itself.
 - The ability for certain Helium infrastructure operators to continue profiting from their equipment in the event of a Helium network outage.
                                                                                                            
 <h2> DVPN subDAO core jobs-to-be-done </h2>
