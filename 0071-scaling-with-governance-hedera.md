@@ -3,8 +3,8 @@
 - Author(s): [@leogaggl](https://github.com/leogaggl), [@gregscullard](https://github.com/gregscullard), [@pathornteng](https://github.com/pathornteng), [@jamesmeikle](https://github.com/jamesmeikle), [@tonysmith55](https://github.com/tonysmith55)
 - Start Date: 2022-09-12
 - Category: Technical
-- Original HIP PR: #480
-- Tracking Issue: #486
+- Original HIP PR: [#480] (https://github.com/helium/HIP/blob/main/0071-scaling-with-governance-hedera.md) 
+- Tracking Issue: [#486] (https://github.com/helium/HIP/issues/486)
 - Status: In Discussion
 
 # Summary
