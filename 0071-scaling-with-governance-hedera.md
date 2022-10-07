@@ -1,4 +1,4 @@
-# HIP 71: Scaling the Helium Network - Transparently
+# HIP 71: Scaling the Network with Governance & Hedera
 
 - Author(s): [@leogaggl](https://github.com/leogaggl), [@gregscullard](https://github.com/gregscullard), [@pathornteng](https://github.com/pathornteng), [@jamesmeikle](https://github.com/jamesmeikle), [@tonysmith55](https://github.com/tonysmith55)
 - Start Date: 2022-09-12
