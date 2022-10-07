@@ -12,6 +12,8 @@
 
 <h2> Summary </h2>
 
+<i> This draft is undergoing an overhaul to restructure the Boring Protocol payment/rewards mechanism to reflect a $VPN/DC payment, veVPN governance, and the dissolution of the BOP token into a subDAO treasury via 1-way BOP to $VPN or HNT transaction automated at the time of payment. Thanks to the Helium, Solana, and Boring communities for your participation in this draft. </i>
+
 [HIP 51: Helium DAOs](https://github.com/helium/HIP/blob/main/0051-helium-dao.md) provides a general structure for onboarding new Decentralized Network Protocols (DNPs) to the broader Helium Network, with mechanisms in place to ensure that protocol-specific attributes such as Proof-of-Coverage rules, Data Credit pricing, and consensus-driven rules are within control of the emergent DNP DAO.
 
 In this proposal, we specify the implementation of the structure proposed through a detailed onboarding proposal for the Boring DVPN Network. We propose initial configurations of the Boring Protocol economics layer as well as governance mechanisms within the DAO through Boring Protocol (BOP) token voting. The objective of this proposal is to outline a SubDAO dVPN facilitated by Boring Protocol and the Helium network as it pertains to privacy access for the broadcast layer, both entities' economic model and the ecosystem as a whole.
@@ -33,7 +35,7 @@ Continued participation and discussion is greatly encouraged to ensure the propo
 The drivers for this proposal are as follows:
 
 -   Privacy and Security for Helium “subscribers” and internet users as a whole
--   Security and Scalability of the L1 as proposed in HIP-51
+-   Security and Scalability of the Helium Network as proposed in HIP-51
 -   Additional mechanisms for profitability to Helium Network infrastructure operators
 -   Proving a model of multi chain redundancy to further secure network economics and participant profitability
 -   Sustainability in manufacturing and distribution of hardware
@@ -46,19 +48,15 @@ The Boring Protocol code should be able to be added as a firmware update to run 
 
 ## Background
 
-For the Helium Network to grow globally in number of active devices and users it is necessary to develop economic incentives and opportunities for the infrastructure operators participating in supporting the network. Adding utility and profitability to the hardware involved now and in the future will solidify the Helium network as a major player across many types of networks. This proposal will require addition to the economic models set forth providing further incentive to participate in new networks with the advantage of increasing security and privacy for the end user.
+The current mechanisms of IoT and Mobile increase network utility and would be complimented by additional services that have yet to be established, such as a dVPN or WiFi. For the Helium Network to grow globally in number of active devices and users it is necessary to develop economic incentives and opportunities for the infrastructure operators participating in supporting the network. Adding utility and profitability to the hardware involved now and in the future will solidify the Helium network as a major player across many types of networks. By allowing Helium Network users to opt-in at the moment of data use, "to obfuscate or not" using $VPN/DC, users are provided the choice of security and anonymity whether using 5G mobile data or wifi, which would increase DC expenditure, improving utility. 
 
 HIP 51 outlines basic requirements for existing models of the SubDAOs within the Helium Network.                                                                                           
 
 ## Detailed Description
 
-Boring Protocol is privacy and security at its foundation but can be grown to generate subDAOs of its own network models ie. Proxy networks, distributed storage etc.
-
-Boring Protocol will add utility and value to the Helium token ecosystem by allowing customers to pay using SPL native HNT to fund their usage of the dVPN. This provides two distinct advantages to the Helium community: 
-- Potential further dispersal of HNT amongst Solana Liquidity Pools and utility beyond market trading for the token itself.
-- The ability for certain Helium infrastructure operators to continue profiting from their equipment in the event of a Helium network outage.
+Boring Protocol is privacy and security at its foundation but can be grown to generate subDAOs of its own network models ie. Proxy networks, distributed storage etc. The implementation of Helium's premier subDAOs, IoT and Mobile, via HIPs 51/52/53 was achieved through months of discussion, community feedback, and problem solving. It is by these same methods we intend to scrutinize any potential sub-networks proposed to Boring, and would implement the same governance that applies to ourselves and the Helium Network.
                                                                                                            
-The addition of utility to the existing Helium Network furthers our goal of sustainability in manufacturing and distribution of hardware. Sustainability in this context can be divided in two parts: manufacturing and privacy.  Increasing utility for existing hardware rather than manufacturing our own hardware will lessen the contribution to the [chip shortage](https://hbr.org/2021/02/why-were-in-the-midst-of-a-global-semiconductor-shortage) which [continues](https://hbr.org/2022/05/the-semiconductor-crisis-should-change-your-long-term-supply-chain-strategy) and will continue to affect the tech and manufacturing landscape for the next couple of years. While we could deploy our own hardware, we ought to utilize the existing thriving and growing framework. From a business standpoint, we are a privacy product. Colloquially, sustainability refers to the ability to maintain at a certain rate or level. We would be failing in our duty to provide sustainable privacy to end users if we have a record of hardware purchases for every customer. We aim to know as little personal information about the end user as possible.
+The addition of utility to the existing Helium Network furthers our goal of sustainability in manufacturing and distribution of hardware. Sustainability in this context can be divided in two parts: manufacturing and privacy. Increasing utility for existing hardware rather than manufacturing our own hardware will lessen the contribution to the [chip shortage](https://hbr.org/2021/02/why-were-in-the-midst-of-a-global-semiconductor-shortage) which [continues](https://hbr.org/2022/05/the-semiconductor-crisis-should-change-your-long-term-supply-chain-strategy) and will continue to affect the tech and manufacturing landscape in the coming years. While we could deploy our own hardware, we ought to utilize the existing thriving and growing framework. From a business standpoint, we are a privacy product. Colloquially, sustainability refers to the ability to maintain at a certain rate or level. We would be failing in our duty to provide sustainable privacy to end users if we have a record of hardware purchases for every customer. We aim to know as little personal information about the end user as possible.
                                                                                                            
 <h2> DVPN subDAO core jobs-to-be-done </h2>
 
