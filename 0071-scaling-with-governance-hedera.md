@@ -3,9 +3,9 @@
 - Author(s): [@leogaggl](https://github.com/leogaggl), [@gregscullard](https://github.com/gregscullard), [@pathornteng](https://github.com/pathornteng), [@jamesmeikle](https://github.com/jamesmeikle), [@tonysmith55](https://github.com/tonysmith55)
 - Start Date: 2022-09-12
 - Category: Technical
-- Original HIP PR:
-- Tracking Issue:
-- Status: Draft
+- Original HIP PR: #480
+- Tracking Issue: #486
+- Status: In Discussion
 
 # Summary
 
