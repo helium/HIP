@@ -24,7 +24,8 @@ The entire IoT Helium network will be affected by this HIP as the introduction o
 
  * Increase security level of Helium's Proof-of-Coverage (I.E. make gaming much more difficult).
  * Ability to replace/upgrade existing Miner's concentrator card with secure concentrator card
- * Turn off-the-shelf LoRaWAN gateways into PoC Helium miner (DIY hotspot)
+ * Turn off-the-shelf LoRaWAN gateways into full PoC Helium miner (DIY hotspot)
+   * Secure Concentrators effectively replace the need for ECC806 security chip as mandated in HIP 19.
  * Enable new class of Helium nodes that can provide additional functionality (LoRa PoC Mapper? Mobile Hotspot?)
  * Enable new level of Proof-of-Coverage verification (possibly using Time Difference of Arrival (TDOA)) 
 
