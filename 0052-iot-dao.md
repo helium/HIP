@@ -3,8 +3,8 @@
 - Author: [@tjain-mcc](https://github.com/tjain-mcc), [@shayons297](https://github.com/shayons297), [@jmfayal](https://github.com/jmfayal), [@abhay](https://github.com/abhay)
 - Start Date: 2022-01-04
 - Category: Economic, Technical
-- Original PR: https://github.com/helium/HIP/pull/335
-- Tracking Issue: https://github.com/helium/HIP/issues/338
+- Original PR: <https://github.com/helium/HIP/pull/335>
+- Tracking Issue: <https://github.com/helium/HIP/issues/338>
 - Status: Draft
 
 ## Summary
@@ -113,12 +113,12 @@ IoT oracles confirm proof of coverage, data transfer, and add blocks to the IoT 
 
 Validation is performed by a set of rotating nodes known as the consensus group, which verifies transactions and ordering prior to forming a block and proposing it to the subnetwork chain. Consensus groups are elected once per epoch, and the number of members is given by the num_consensus_members chain variable (currently set at 43).
 
-* The Helium Consensus Protocol is based on a variant of the HoneyBadgerBFT (HBBFT) protocol. HBBFT is based on a body of research originally kicked off by Andrew Miller and the team at the University of Illinois, Urbana-Champaign.
-* HBBFT is an asynchronous atomic broadcast protocol designed to enable a group of known nodes to achieve consensus over unreliable links. In Helium’s implementation, a consensus group of [elected Validators](https://explorer-beta.helium.com/validators) receives encrypted transactions as inputs and proceeds to reach common agreement on the ordering of these transactions before forming a block and adding it to the blockchain.
+- The Helium Consensus Protocol is based on a variant of the HoneyBadgerBFT (HBBFT) protocol. HBBFT is based on a body of research originally kicked off by Andrew Miller and the team at the University of Illinois, Urbana-Champaign.
+- HBBFT is an asynchronous atomic broadcast protocol designed to enable a group of known nodes to achieve consensus over unreliable links. In Helium’s implementation, a consensus group of [elected Validators](https://explorer-beta.helium.com/validators) receives encrypted transactions as inputs and proceeds to reach common agreement on the ordering of these transactions before forming a block and adding it to the blockchain.
 
-* HBBFT relies on a scheme known as threshold encryption. Using this scheme, transactions are encrypted using a shared public key, and are only decryptable when the elected consensus group works together to decrypt them. The usage of threshold encryption enables the Helium Consensus Protocol to achieve censorship-resistant transactions.
-* At the end of each epoch, mining rewards are distributed by the consensus group to the wallet addresses that have earned them.
-* Each one of the above activities is recorded in a block using the reward transaction. At the completion of each epoch, all the individual reward transactions are grouped in a rewards transaction at which point all HNT mined in that epoch are distributed.
+- HBBFT relies on a scheme known as threshold encryption. Using this scheme, transactions are encrypted using a shared public key, and are only decryptable when the elected consensus group works together to decrypt them. The usage of threshold encryption enables the Helium Consensus Protocol to achieve censorship-resistant transactions.
+- At the end of each epoch, mining rewards are distributed by the consensus group to the wallet addresses that have earned them.
+- Each one of the above activities is recorded in a block using the reward transaction. At the completion of each epoch, all the individual reward transactions are grouped in a rewards transaction at which point all HNT mined in that epoch are distributed.
 
 veIOT holders can choose to delegate their holdings to oracles of their choice or run their own oracles.
 

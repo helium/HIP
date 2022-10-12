@@ -3,27 +3,24 @@
 - Author(s): @BFGNeil, @Anthonyra, @ElonTusk, @AP, @Joey, @jerm
 - Start Date: 2021-09-27
 - Category: Economic, Technical
-- Original HIP PR: https://github.com/helium/HIP/pull/284
-- Tracking Issue: https://github.com/helium/HIP/issues/285
+- Original HIP PR: <https://github.com/helium/HIP/pull/284>
+- Tracking Issue: <https://github.com/helium/HIP/issues/285>
 - Status: In Discussion
 
 ## Summary
-[summary]: #summary
 This HIP outlines a system of allowing Helium Network Validators to subscribe to one or many denylists for the purposes of blocking HNT rewards to dishonest Hotspots while recording on-chain records of the denied transactions. Proof of Coverage rewards have been, and continue to be, a viable economic incentive to bootstrap global wireless coverage. Rewards gaming by dishonest actors, even as a small percentage of the network, erodes network integrity. Ensuring that integrity requires a multi-pronged approach including protocol changes, increased accountability for Hotspot manufacturers, and increased security measures within the Hotspot itself. A denylist exists as another tool in a broader range of tools to ensure Hotspots on the network are incentivized to provide the most honest and accurate wireless coverage possible.
 
-In the interest of keeping the network decentralized, denylists will be sourced from the community. Credible decentralization ensures that no one entity can control the network. Any coordinated effort to game rewards, block data transfer, or censor information to benefit one party while harming another, undermines our mission of creating global, open wireless networks. 
+In the interest of keeping the network decentralized, denylists will be sourced from the community. Credible decentralization ensures that no one entity can control the network. Any coordinated effort to game rewards, block data transfer, or censor information to benefit one party while harming another, undermines our mission of creating global, open wireless networks.
 
 This proposal will not define the specifics of what “gaming” is. Helium Foundation’s role is to provide a framework for community led decision-making and implementation. How “gaming” is defined is left to denylist operators, members of the Helium Community, and ultimately the choice of inclusion by Validators. The Helium Foundation has not and will never run its own denylist out of the interest of decentralization.
 
 ## Motivation
-[motivation]: #motivation
 
-Enabling Validators to deny earnings to a selection of Hotspots is one approach of many in the effort to ensure proof of coverage security. Status quo in this domain is the [denylist](https://github.com/helium/denylist/) operated by Nova Labs. The current implementation is a carryover from the denylist that ran on Hotspots. As the current challenge creators, Validators follow the Nova Labs denylist and prevent challenge creation and receipt for included Hotspots. While effective, this method disallows continued analysis of Hotspots, since any record of their Proof of Coverage activity does not appear on-chain. Additionally, the inclusion of this functionality in Validators ensures that parties manipulating Hotspot software are not able to let challenges through. 
+Enabling Validators to deny earnings to a selection of Hotspots is one approach of many in the effort to ensure proof of coverage security. Status quo in this domain is the [denylist](https://github.com/helium/denylist/) operated by Nova Labs. The current implementation is a carryover from the denylist that ran on Hotspots. As the current challenge creators, Validators follow the Nova Labs denylist and prevent challenge creation and receipt for included Hotspots. While effective, this method disallows continued analysis of Hotspots, since any record of their Proof of Coverage activity does not appear on-chain. Additionally, the inclusion of this functionality in Validators ensures that parties manipulating Hotspot software are not able to let challenges through.
 
 This proposal seeks to decentralize the decision making to the trusted pool of Validators and a broader community of denylist authors. Previous drafts of this HIP called for a centralized authority in the Helium Foundation to maintain and publish a denylist. The HIP specified a singular committee to maintain and publish the denylist. This centralization was unpalatable and The Helium Foundation feels the decentralized approach in this proposal is mandatory.
 
 ## Stakeholders
-[stakeholders]: #stakeholders
 
 This specification affects all Hotspot owners, but particularly Validator operators and of course, bad actors on the network.
 
@@ -36,13 +33,10 @@ This specification affects all Hotspot owners, but particularly Validator operat
 ![warning-ya](0040-validator-denylist/warningya.png)
 
 ## Detailed Explanation
-[detailed-explanation]: #detailed-explanation
 
 For clarity, this HIP is defined in three parts; we define the mechanics of a denylist, it’s representation through the denylist aggregator, and ultimately how validators ingest the denylist and mark a transaction as denied.
 
-
 ### Denylist
-[denylist]: #denylist
 
 Conceptually, a denylist is a list of Hotspot public keys and a cryptographic signature over the list to ensure that it cannot be tampered with and will only be ingested if the list is properly signed by the operator. Because of this approach, a denylist can be distributed in any manner that the provider sees fit.
 
@@ -77,7 +71,6 @@ Denylist generation is handled by the open-source xorf-generator library. This t
 [https://github.com/helium/xorf-generator](https://github.com/helium/xorf-generator)
 
 ### Denylist Aggregator
-[denylist-aggregator]: #denylist-aggregator
 
 In the interest of allowing denied hotspot owners and community members alike to understand why a given hotspot was denied, we propose an aggregator of these distributed lists. In preparation for this HIP, the Helium Foundation has opted to build and host this community resource.
 
@@ -98,30 +91,30 @@ GET https://aggregator.domain.io/current/11xBfYCA24v9GpadmcP2ZQC4DVyfXsfSJ6J5983
 
 /* Response */
 [
-	{
-		"id": "11xBfYCA24v9GpadmcP2ZQC4DVyfXsfSJ6J5983xebtysR8ZPCR",
-		"name": "angry-purple-tiger",
-		"last_denied_time": 1641331810,
-		"last_denied_block": 810421,
-		"sources": [
-		    {
-		      "identifier": "https://denylist.tld",
-					"source": "https://api.denylist.tld/denylist.signed.bin",
-		      "last_ingest_time": 1641331705
-		    },
-		    {
-		      "identifier": "https://denylist.tld",
-		      "source": "http://d111111abcdef8.cloudfront.net/denylist.signed.bin",
-		      "last_ingest_time": 1641330491
-		    },
-		},
-		{...}
+ {
+  "id": "11xBfYCA24v9GpadmcP2ZQC4DVyfXsfSJ6J5983xebtysR8ZPCR",
+  "name": "angry-purple-tiger",
+  "last_denied_time": 1641331810,
+  "last_denied_block": 810421,
+  "sources": [
+      {
+        "identifier": "https://denylist.tld",
+     "source": "https://api.denylist.tld/denylist.signed.bin",
+        "last_ingest_time": 1641331705
+      },
+      {
+        "identifier": "https://denylist.tld",
+        "source": "http://d111111abcdef8.cloudfront.net/denylist.signed.bin",
+        "last_ingest_time": 1641330491
+      },
+  },
+  {...}
 ]
 ```
+
 _[Example request/response from the denylist aggregator.]_
 
 ### Validators
-[validators]: #validators
 
 As stated earlier, validators will have the ability to subscribe to one or many denylists and to add or remove a subscription at any time.
 
@@ -138,6 +131,7 @@ Each denylist subscription is composed of three parts:
 3. The denylist URL type for fetching purposes (currently only `github_release`)
 
 Example:
+
 ```erlang
 {miner,
   [
@@ -174,7 +168,7 @@ In the `github_release` type, the URL returns a JSON object (`application/json`)
 
 #### Update Cadence
 
-To get updated lists, Validators may perform an HTTP conditional get on some interval (defined in `sys.config`) using the `If-Modified-Since` HTTP header, minimizing overhead of processing unchanged files. Initially, The fetching and ingest of denylists should be recorded in logs or made otherwise visible to the operator. 
+To get updated lists, Validators may perform an HTTP conditional get on some interval (defined in `sys.config`) using the `If-Modified-Since` HTTP header, minimizing overhead of processing unchanged files. Initially, The fetching and ingest of denylists should be recorded in logs or made otherwise visible to the operator.
 
 In the event that a denylist becomes stale or cannot be fetched due to any number of reasons, Validators should clear the entries from that list. We propose Validators should clear these stale entries after a period of 40 days, allowing margin for denylist operators who may update their lists on a monthly cadence.
 
@@ -187,19 +181,16 @@ Only Validators in an active consensus group are eligible to vote on an individu
 As a last detail, the implementation of the denylist should exist with a controlling chain variable. The proposition of denylists (outside of this specification) makes many efforts to avoid avenues for exploitation or perverse incentives. However, if these issues should arise, the community should be able to vote to disable this functionality. The community should continue to explore more programmatic methods of network verification to minimize human subjectivity or opportunities for coordinated control of rewards. The Foundation is eager to deploy resources to the cause as we believe a denylist should be a temporary solution as the overall rewards scheme shifts to favor data transfer.
 
 ## Drawbacks
-[drawbacks]: #drawbacks
 
 Since the majority of Validators in consensus must agree to deny earnings, it is possible that a particular consensus group does not hold enough voting power due to participation in a particular Denylist. This would lead to a dishonest hotspot still being able to earn enough to make their falsified coverage financially attractive.
 
 ## Deployment Impact
-[deployment-impact]: #deployment-impact
 
 This proposal offers a migration path for previous denylist functionality, enabling more diversity in participation as well as greater visibility to the impact of denylists. Furthermore, because this denylist is executed on Validators, it will be impossible for gaming Hotspots or manufacturers to exclude the denylist from their devices.
 
-This proposal expects Validator operators to evaluate and include denylists in their deployments. At point of release, bundled deploys (Docker) would be updated to include at least the existing Nova-operated denylist. Large publicly known Validator operators have already been notified and they intend to support this functionality pending the approval of this HIP. For Validators leveraging VaaS, your provider will be able to accommodate your specific denylist inclusion requests. 
+This proposal expects Validator operators to evaluate and include denylists in their deployments. At point of release, bundled deploys (Docker) would be updated to include at least the existing Nova-operated denylist. Large publicly known Validator operators have already been notified and they intend to support this functionality pending the approval of this HIP. For Validators leveraging VaaS, your provider will be able to accommodate your specific denylist inclusion requests.
 
 ## Success Metrics
-[success-metrics]: #success-metrics
 
 A sufficient number of Validators subscribe to denylists in order to block rewards for known gaming Hotspots. Additionally, these denylists continue to be maintained with a minimal number of false-positive inclusions.
 
@@ -208,7 +199,6 @@ Statistically speaking, between 50-80% of the overall Validator pool must list a
 ![Chart of possible rewards vs denylist inclusion](0040-validator-denylist/rewards_chart.png)
 
 ## What If’s
-[bonus]: #bonus
 
 **What if a Validator blocks all but their own Hotspots?**
 

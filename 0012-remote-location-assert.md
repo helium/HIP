@@ -1,12 +1,11 @@
 # HIP12: Remote Location Assert
 
 - Start Date: 2020-06-18
-- Original HIP PR: https://github.com/helium/HIP/pull/30
-- Tracking Issue: https://github.com/helium/HIP/issues/39
+- Original HIP PR: <https://github.com/helium/HIP/pull/30>
+- Tracking Issue: <https://github.com/helium/HIP/issues/39>
 
 # Summary
 
-[summary]: #summary
 
 Hotspot owners, especially Patrons, have a frequent need to update hotspots' asserted locations when changing their physical locations. This can currently only be done when the hotspot owner has physical access to the hotspot.
 
@@ -14,7 +13,6 @@ This HIP proposes a new transaction, `assert_location_v2`, which will allow a ho
 
 # Motivation
 
-[motivation]: #motivation
 
 Asserting a new location with the `assert_location_v1` currently requires a signature from the hotspot, which requires physical access (Bluetooth connection) to obtain.
 
@@ -28,7 +26,6 @@ All of these options are costly and/or dangerous.
 
 # Stakeholders
 
-[stakeholders]: #stakeholders
 
 Any Helium hotspot owner who has deployed at least one remote hotspot.
 
@@ -36,7 +33,6 @@ The Helium blockchain engineering team.
 
 # Detailed Explanation
 
-[detailed-explanation]: #detailed-explanation
 
 ## Implement a new transaction, `assert_location_v2`, and optionally deprecate the previous `assert_location_v1`
 
@@ -52,13 +48,11 @@ If the hotspot's current asserted location is far (>1km) from the user's current
 
 # Drawbacks
 
-[drawbacks]: #drawbacks
 
 It will add a new type of transaction which will have to be maintained and considered in all parts of the codebase where the current `assert_location_v1` transaction is considered.
 
 # Rationale and Alternatives
 
-[alternatives]: #rationale-and-alternatives
 
 This is a simple and straightforwad solution that will save hotspot owners time, effort and frustration.
 
@@ -68,13 +62,11 @@ It will generally reduce operational friction.
 
 # Deployment Impact
 
-[deployment-impact]: #deployment-impact
 
 It can be deployed in a routine hotspot update. It will also need support in the Helium mobile app for the easiest and safest experience. However, if this requires too much bandwidth from the Helium team, it can be supported in the CLI as a temporary measure to at least make remote assertion possible. In this case, @rawrmaan could make a guide to help the less tech-savvy hotspot owners do some remote assertions in a safe way.
 
 # Success Metrics
 
-[success-metrics]: #success-metrics
 
 - Number of hotspot locations asserted with `assert_location_v2`
 - Hotspot owner & Patron complaints in chat channels reducing to zero

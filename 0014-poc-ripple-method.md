@@ -7,34 +7,33 @@
 - Tracking Issue: [#50](https://github.com/helium/HIP/issues/50)
 
 # Summary
-[summary]: #summary
 
 <!-- TODO: Link sections that resolve issues here !-->
 
 The current Proof-of-Coverage (PoC) - Onion Packet method has the following issues that this proposal is meant to resolve:
+
 1. The data used to validate coverage can be easily modified or spoofed
     1. RF - RSSI, SNR
     2. GPS
-    3. Assert Location 
+    3. Assert Location
 2. Current rewards associated to PoC is heavily favored in areas with high hotspot density (over-coverage)
     1. Modesto, CA
     2. New York City, NY
     3. Port Huron, MI
 3. The selection process even though based on randomness can be selective due to the nature of the witness list. Since a group of hotspots can be engineered or placed to only witness themselves this approach allows for isolated groups. This makes it easy to build Virtual Machine (VM) or RF based hotspot farms. [This issue will be resolved with how the Ripple Effect functions][rippleBenefits]
 
-
 # Motivation
-[motivation]: #motivation
 
 With a new day comes a new way "bad actors" attempt to profit from the current system. To fully understand this proposal you first need to grasp the basics of the current PoC system.
 
 #### Basics of Current PoC
+
 1. A challenger selects a target hotspot.
 2. Once selected the challenger creates a PoC proof
     1. Starting with the target hotspot the challenger selects the next hotspot in the PoC path based on witness list and [hex](https://h3geo.org/docs) location (how the 300m limit is enforced).
     2. The challenger repeats the above step (2.i) but starts with the hotspot selected to be the next hop.
     3. The PoC path is created containing 2 - 5 hotspots (hops)
-3. The initial challengee receives the PoC proof via the p2p network and decrypts the packet (envelope) it signs it and then returns it to the challenger 
+3. The initial challengee receives the PoC proof via the p2p network and decrypts the packet (envelope) it signs it and then returns it to the challenger
 4. The hotspot then broadcasts the new envelope that is now one layer less than the previous one via Radio Frequency (LoRa / RF).
 5. This signal is then picked up by neighboring hotspots. The receiving hotspots have two options.
     1. The hotspot is the next hop in the PoC proof so it's able to decrypt another layer of the envelope and perform steps (4-5.i).
@@ -43,27 +42,24 @@ With a new day comes a new way "bad actors" attempt to profit from the current s
 
 For more details go to: [PoC Documentation](https://developer.helium.com/blockchain/proof-of-coverage)
 
-
-
 # Stakeholders
-[stakeholders]: #stakeholders
 
-* If this HIP is implemented it will effect everyone who owns a hotspot due to reward changes based on the new PoC method.
-* Feedback will be received via the Github `Issues` discussion and on [Discord #hips](https://discord.gg/helium)
+- If this HIP is implemented it will effect everyone who owns a hotspot due to reward changes based on the new PoC method.
+- Feedback will be received via the Github `Issues` discussion and on [Discord #hips](https://discord.gg/helium)
 
 # Detailed Explanation - Ripple PoC Method
-[detailed-explanation]: #detailed-explanation
- 
+
 #### Definitions
+
 [definitions]: #definitions
 
-* `Island` - A hex-cluster that is created by the island construction method below which visualizes the coverage of an area.
-* `Island Hex` - The hex used to create the island ( h3 resolution 8 hex: ~0.45km2 [110 acres] )
-* `Hotspot Hex` - The hex associate with hotspot location currently in the blockchain
-* `Island Rating` - The overall rating of an island based on total # of chains received and longest chain in meters
-* `Challenger` - The hotspot that selects the `Island` to be targeted and the `Pebble` hotspots for the challenge
-* `Pebble (challengee)` - Selected by the challenger to start the *ripple*. There are two types of pebbles, the `initial` and `opposite`. The initial pebble receives the packet from challenger and the opposite pebble is the *target* for that packet. Each must be in a different `Island Hex`
-* `Accpeted Chain` - A chain that starts with a `Pebble` and ends with a `Pebble` hotspot with all hotspots signatures for each hop
+- `Island` - A hex-cluster that is created by the island construction method below which visualizes the coverage of an area.
+- `Island Hex` - The hex used to create the island ( h3 resolution 8 hex: ~0.45km2 [110 acres] )
+- `Hotspot Hex` - The hex associate with hotspot location currently in the blockchain
+- `Island Rating` - The overall rating of an island based on total # of chains received and longest chain in meters
+- `Challenger` - The hotspot that selects the `Island` to be targeted and the `Pebble` hotspots for the challenge
+- `Pebble (challengee)` - Selected by the challenger to start the *ripple*. There are two types of pebbles, the `initial` and `opposite`. The initial pebble receives the packet from challenger and the opposite pebble is the *target* for that packet. Each must be in a different `Island Hex`
+- `Accpeted Chain` - A chain that starts with a `Pebble` and ends with a `Pebble` hotspot with all hotspots signatures for each hop
 
 | Accepted Chains               |
 | :-:                           |
@@ -73,12 +69,10 @@ For more details go to: [PoC Documentation](https://developer.helium.com/blockch
 |                               |
 | pHi (blue) = Initial Pebble Hotspot <br /> pHo (orange) = Opposite Pebble Hotspot <br /> iH (green) = Island Hotspot |
 
-* `Witness List` - Will be generated from the `pHi => iH => pHi` chains. This list won't incorporate hotspots within the same `Island Hex` but is included in the PoC due to the island construction
-* `Cave` - A cluster of hotspots that are isolated from the rest of the island
-
+- `Witness List` - Will be generated from the `pHi => iH => pHi` chains. This list won't incorporate hotspots within the same `Island Hex` but is included in the PoC due to the island construction
+- `Cave` - A cluster of hotspots that are isolated from the rest of the island
 
 #### Island Construction
-[islandConstruction]: #islandConstruction
 
 The network will be seperated into islands that are based on the geolocation of hotspots and their associated witness lists initially. Once the network is divided into Islands any new hotspots will just be added to existing [`Island`][definitions]. If the hotspot is added to a location without a current `Island` or the `Island` is less than 7 hexs in size. The original founder (hotspot) for that `Island` will expand the `Island` based on it's witness list.
 
@@ -109,7 +103,6 @@ The network will be seperated into islands that are based on the geolocation of 
 
 !-->
 ## Ripple Effect
-[rippleEffect]: #rippleEffect
 
 1. The [`Challenger`][definitions] selects the [`Island`][definitions] to be challenged
 2. Then it selects the [`Pebble`][definitions] hotspots within that `Island`
@@ -122,6 +115,7 @@ The network will be seperated into islands that are based on the geolocation of 
 6. This "ripple" occurs for a set timeframe or when the `Challenger` receives the expected number of chains from the `Pebble` hotspots
 
 ##### Chain Limitations
+
 [chainLimitation]: #chainLimitation
 
 To simplify the process and lower the packets (envelopes) "broadcast storm" that the island experiences due to the `ripple` the following limitation will be set.
@@ -133,11 +127,12 @@ To simplify the process and lower the packets (envelopes) "broadcast storm" that
 An example for limitation 3 above, if the hotspot has seen and signed a packet with the following chain `pHo => iH1` it will then drop all following packets that have that same chain. Since it's possible for multiple hotspots to reside in the same hex. This limitation is meant to limit the size of the "broadcast storm" but if it's determined that it wouldn't be that constraining this could be removed.
 
 ##### Benefits
+
 [rippleBenefits]: #rippleBenefits
 
 1. Only the challenger will know which `Pebble` hotspots were selected
 2. Based on the island size constraint and the fact that the chain is terminated based on the above [`Chain Limitations`][chainLimitation] results in a max number of possible [`Accepted Chains`][definitions] with a specific max chain length
-3. Since it's assumed that all hotspots within an `Island` are able to communicate due to the size of the `Island Hex` and associated witness lists. Any seperation in the `ripple` and `ideal ripple` will indicate the presense of an isolated hotspot(s) a `Cave`. 
+3. Since it's assumed that all hotspots within an `Island` are able to communicate due to the size of the `Island Hex` and associated witness lists. Any seperation in the `ripple` and `ideal ripple` will indicate the presense of an isolated hotspot(s) a `Cave`.
 
 #### Validation Process
 
@@ -146,8 +141,9 @@ The validation comes from the fact that the `Pebble` hotspots will create the sa
 This is of course based on ideal conditions and an ideal `Island`, in fact there will be differences between the ideal and real results. Because of these difference an `Island Rating` will be implemented. The closer the `ripple` of a challenge gets to the `ideal ripple` the higher the rating.
 
 `Island Rating` Factors:
-  * Did the `ripple` create the max number of chains
-  * What's the longest chain received based on geolocation distance and not hop number
+
+- Did the `ripple` create the max number of chains
+- What's the longest chain received based on geolocation distance and not hop number
 
 ```
 (# of chains received / Max # of Chains) + (Longest Chain / Longest Chain That Block) = 2
@@ -197,9 +193,9 @@ Figure 2-2 - The island that the target hotspot occupies
 
 The island that big-corduroy-jaguar resides in contains 16 different hotspots.
 
-* Max Number of Accepted Chains = 240
-* Longest Chain = 5
-* Max Number of Longest Chain = 14
+- Max Number of Accepted Chains = 240
+- Longest Chain = 5
+- Max Number of Longest Chain = 14
 
 ## Rewards
 
@@ -239,35 +235,30 @@ Small Island Rating = (240 / 240) + ( 100m / 14000m ) = 1.007142857142857
 ## Bounties
 
 #### Island Bounties
-With the rewards structured to payout to the `Island` you're able to provide the ability for external sources to added additional funds to that `Island` to incentives it's growth. 
 
+With the rewards structured to payout to the `Island` you're able to provide the ability for external sources to added additional funds to that `Island` to incentives it's growth.
 
 # Drawbacks
-[drawbacks]: #drawbacks
 
 - It will require a lot of time coding the new model
 - This could create *new* ways to game the system
 - Current dense islands will not be rewarded as much
 
 # Rationale and Alternatives
-[alternatives]: #rationale-and-alternatives
 
 This is a drastic change to the current Proof-of-Coverage model. It will require extensive review and testing.
 
 HIP15 combined with HIP17 are alternatives to this proposal keeping to a lot of the same mechinisms that are in place.
 
 # Unresolved Questions
-[unresolved]: #unresolved-questions
 
 - Currently None
 
 # Deployment Impact
-[deployment-impact]: #deployment-impact
 
 This will impact everyone and turn all current documentations on end.
 
 # Success Metrics
-[success-metrics]: #success-metrics
 
 What metrics can be used to measure the success of this design?
 

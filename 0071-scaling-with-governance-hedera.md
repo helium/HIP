@@ -3,7 +3,7 @@
 - Author(s): [@leogaggl](https://github.com/leogaggl), [@gregscullard](https://github.com/gregscullard), [@pathornteng](https://github.com/pathornteng), [@jamesmeikle](https://github.com/jamesmeikle), [@tonysmith55](https://github.com/tonysmith55)
 - Start Date: 2022-09-12
 - Category: Technical
-- Original HIP PR: [#480](https://github.com/helium/HIP/blob/main/0071-scaling-with-governance-hedera.md) 
+- Original HIP PR: [#480](https://github.com/helium/HIP/blob/main/0071-scaling-with-governance-hedera.md)
 - Tracking Issue: [#486](https://github.com/helium/HIP/issues/486)
 - Status: In Discussion
 
@@ -202,9 +202,10 @@ We propose, instead, that Hotspots themselves are responsible for beaconing regu
 It’s equally important to scale data delivery and the associated rewards as the network grows. Today, the complexity of scaling Hotspots, Routers, and reimplementing LoRaWAN primitives has made it difficult to provide a usable network for the scale of activity we expect on the enormous network built by Hotspot owners.
 
 We introduce a very similar structure as the updates to Proof-of-Coverage with some additional details around what data needs to be tracked. The fundamental goal is that any existing LoRaWAN Network Server (an LNS, e.g., Chirpstack), can be brought to the Helium network and, once onboarded, immediately be able to receive data from Helium Hotspots. Instead of buying OUIs on chain, and writing transactions to the blockchain to specify routing rules, a coordination layer with configuration is maintained along with a scalable Load Balancers and Packet Routers that forward packets from Hotspot to LNSs.
+
 # Reasons for choosing Hedera Hashgraph as the DLT for this HIP
 
-Hedera is an enterprise grade network which was built upon several key foundations. If the Helium Network wants to achive enterprise adoption (ie. becoming the telecoms infrastructure of the future) it has to start acting like a stable and reliable partner. 
+Hedera is an enterprise grade network which was built upon several key foundations. If the Helium Network wants to achive enterprise adoption (ie. becoming the telecoms infrastructure of the future) it has to start acting like a stable and reliable partner.
 
 One of the core reasons to use this DLT as the example is the long-term thinking and focus on good governance along with stable technology.
 
@@ -220,11 +221,15 @@ Council members are invited from many different industry verticals (with limits 
 Finally, council positions are limited to three years (renewable once) to ensure that decentralization of decision making also happens across time.
 
 Hedera heralded this model of governance for a public network (others have copied it since) and believe that it provides the best model for the decentralization of decision making by experts in their respective fields (IT, Legal, etc…) and whose financial incentives are not tied to the network’s crypto economics or the speculative nature of crypto currencies.
+
 ## Security
-Hedera uses the Hashgraph consensus algorithm which provides proven (https://www.hedera.com/blog/coq-proof-completed-by-carnegie-mellon-professor-confirms-hashgraph-consensus-algorithm-is-asynchronous-byzantine-fault-tolerant), best-in-class asynchronous Byzantine fault tolerant (ABFT) security that's resistant to DDoS and Sybil attacks.
+
+Hedera uses the Hashgraph consensus algorithm which provides proven (<https://www.hedera.com/blog/coq-proof-completed-by-carnegie-mellon-professor-confirms-hashgraph-consensus-algorithm-is-asynchronous-byzantine-fault-tolerant>), best-in-class asynchronous Byzantine fault tolerant (ABFT) security that's resistant to DDoS and Sybil attacks.
 
 As public DLT networks grow to manage significant value - we expect this to grow from Billions to Trillions over time - security against all kinds of attacks will no longer be a feature for the future but an absolute requirement to ensure value secured on DLT is indeed safe.
+
 ## Scalability
+
 As usage of DLT grows beyond experimentation, networks will need to scale infinitely. Hedera and Hashgraph were designed from the ground up with sharding in mind. Sharding when implemented will not sacrifice security, indeed the ABFT properties of individual shards will carry over to the collection of shards. A sharded Hedera network will be as secure as a single shard Hedera network, not less.
 
 Hedera is currently throttled to 10,000 TPS for the types of transactions that matter to this HIP (Consensus and Token Services).
@@ -247,7 +252,7 @@ Hedera promises never to fork. Having seen the evolution of distributed ledger t
 
 Hedera recognizes that not all developers will want to build on a non-forking platform, but Hedera believes firmly in the value of stability for those who choose to spend significant time and effort to develop applications.
 
-Hedera believes there are fundamental developer concerns to address before distributed ledgers can be widely accepted and adopted. One of those concerns is the chaos and uncertainty caused by forking. Hedera’s goal is to provide a platform that provides industry-leading governance, and both technical and legal controls to ensure the stability of the platform, while concurrently providing full transparency. 
+Hedera believes there are fundamental developer concerns to address before distributed ledgers can be widely accepted and adopted. One of those concerns is the chaos and uncertainty caused by forking. Hedera’s goal is to provide a platform that provides industry-leading governance, and both technical and legal controls to ensure the stability of the platform, while concurrently providing full transparency.
 
 ## Fees
 
@@ -283,12 +288,12 @@ These examples assume that each report results in a payment and a single Oracle 
 | Description | Fee | Calculation |
 |-------------|-----|-------------|
 | 1M hourly beacon reports | $10 | 0.00001 * 1,000,000 |
-| Yearly (per hotspot) | $0.087 | 24 * 7 * 52 * 0.00001 |
+| Yearly (per hotspot) | $0.087 | 24 *7* 52 * 0.00001 |
 | 1M hourly individual payments | $100 | 0.0001 * 1,000,000 |
 | 1M daily individual payments | $4.1 | 100 / 24 |
 | 1M aggregated hourly payments (9 per transaction) | $78 | 0.0007 * 111,111 |
 | 1M aggregated daily payments (9 per transaction) | $2.24 | 78 / 24 |
- 
+
 In the event multiple Oracles are approving payments (assuming 2 of 3), there is an increase in the transaction fees owing to the multi-signature verification ($0.0001 for the schedule fee and  $0.0006 for the second signature per operation)
 
 | Description | Fee | Calculation |
@@ -297,7 +302,7 @@ In the event multiple Oracles are approving payments (assuming 2 of 3), there is
 | 1M daily individual payments | $34 | 800 / 24 |
 | 1M aggregated hourly payments (9 per transaction) | $155 | (0.0007 + 0.0001 + 0.0006) * 111,111 |
 | 1M aggregated daily payments (9 per transaction) | $6.45 | 155 / 24 |
- 
+
 ## Fairness
 
 Fixed transaction fees mean that for any given transaction type, being willing to pay more does not provide priority access to the network.
@@ -325,7 +330,7 @@ According to reports from 2021, Hedera’s network operation were less than 100 
 
 This compares favorably with Ethereum whereby one Ethereum transaction’s energy consumption corresponds to 787 529 Hedera transactions (133.88 / 0.00017).
 
-(https://hedera.com/blog/going-carbon-negative-at-hedera-hashgraph) 
+(<https://hedera.com/blog/going-carbon-negative-at-hedera-hashgraph>)
 
 Being energy efficient is good, being more energy efficient is better.
 
@@ -339,7 +344,7 @@ ECDSA keys are commonly used in public DLTs which would have been a challenge he
 
 Historically Hedera has focussed on mainstream language SDKs such as Java, Javascript and GoLang which while technically not an issue, this may seem like a hurdle to Helium developers with a Rust and Erlang background.
 
-Fortunately, Hedera has a Rust SDK (https://github.com/hashgraph/hedera-sdk-rust) which is in active development as a core component of the Hedera Swift SDK.
+Fortunately, Hedera has a Rust SDK (<https://github.com/hashgraph/hedera-sdk-rust>) which is in active development as a core component of the Hedera Swift SDK.
 
 In any case, there is no secret sauce in the Hedera APIs and the SDK is open source, community contributions to areas lacking support if any would be welcome by the SDK development team.
 

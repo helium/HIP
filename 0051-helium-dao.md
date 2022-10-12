@@ -58,7 +58,7 @@ The phases are defined as follows:
 
 1. Phase I (Q2 2022) : As per HIP 53: Helium Mobile subDAO, MOBILE token is issued on the existing Helium blockchain. This will immediately allow any online 5G radio to mine MOBILE tokens.
     1. The pre-mine amount specified in the Economics Overview section of the proposal is assigned to a multi-signature wallet held by the Helium Foundation. For the purposes of this HIP, we propose that 50B of 250B MOBILE is pre-mined and deposited to the Foundation.
-    2. The Helium Foundation then utilizes this reserve of MOBILE tokens to immediately perform market activities critical to the functioning of the Mobile network, including rewards for hotspots and community or business development efforts. 
+    2. The Helium Foundation then utilizes this reserve of MOBILE tokens to immediately perform market activities critical to the functioning of the Mobile network, including rewards for hotspots and community or business development efforts.
 
 2. Phase II (August 1, 2022) : On the third anniversary of the Helium Network, the IOT token is issued on the working Helium blockchain as per HIP 52: IoT subDAO,
     1. The specified emissions curve and treasury reserve redemption contract (one-way implementation of the market making curve) is deployed to the network such that core subDAO economic structures are in place. This will allow MOBILE and IOT holders to redeem for HNT in their respective treasuries if they choose or continue to hold the DNT. At this point, all HNT emissions are deposited to subDAO treasuries, existing Helium Validators, and HST holders. Each subnetwork rewards Hotspots through DNTs for data transfer and Proof-of-Coverage.
@@ -66,10 +66,9 @@ The phases are defined as follows:
 
 3. Phase III (TBD) : After conducting a complete evaluation of all available Layer-1 blockchains to serve as the base layer of the Helium Network, a migration of the systems built until this point is actioned.
     1. All accounts and transaction activity on the Helium Network is settled on this Layer-1 blockchain.
-    2. Bridges to migrate state from the prior chain are fully developed. Bridges that pass arbitrary messages for important state transitions from subDAO chains to the main chain are specified or on testnet. 
-    3. Oracle mechanisms for subDAOs are precisely defined, and a secure transition process is proposed.  
+    2. Bridges to migrate state from the prior chain are fully developed. Bridges that pass arbitrary messages for important state transitions from subDAO chains to the main chain are specified or on testnet.
+    3. Oracle mechanisms for subDAOs are precisely defined, and a secure transition process is proposed.
     4. veHNT and veDNT governance mechanisms are put in place.
-
 
 # **Construction**
 
@@ -188,7 +187,7 @@ Every epoch, DNP Oracles calculate each miner's rewards based on data transferre
 
 *Proof-of-Coverage Process*
 
-The DNP subDAO defines the rules for Proof-of-Coverage activity. In a given epoch, Challengers, Challenges, and Witnesses ****(in the case of a three party POC process) ****relay the results of challenges to DNP Oracles.
+The DNP subDAO defines the rules for Proof-of-Coverage activity. In a given epoch, Challengers, Challenges, and Witnesses ****(in the case of a three party POC process)****relay the results of challenges to DNP Oracles.
 
 Every epoch, DNP Oracles calculate each miners’ rewards based on proof of coverage data and distribute DNT to accounts on the L1 according to the emissions schedule for the subDAO.
 
