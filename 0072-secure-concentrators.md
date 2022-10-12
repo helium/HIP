@@ -1,10 +1,10 @@
-# HIP-??: Secure Concentators
+# HIP 72: Secure Concentrators
 
  * Author(s) @Dinocore
  * Start Date: Oct 1, 2022
  * Category: Technical
- * Original HIP PR: !!TODO!!
- * Tracking Issue: !!TODO!!
+ * Original HIP PR: #484
+ * Tracking Issue: #
 
 ## Summary
 In this HIP, we propose a new type of IoT network actor: the Secure Concentrator Card (SCC). Secure Concentrator Card is similar to standard LoRaWAN concentrator cards, but with additional Secure Microcontroller Unit (SMCU) and onboard GPS receiver. The SMCU digitally signs LoRa data packets as they are received from the radio. In this way, packet data and its corresponding metadata (RSSI, Frequency, GPS location and time) can be verified to be authentic.
