@@ -5,13 +5,12 @@
 - Tracking Issue: <!-- leave this empty -->
 
 # Summary
-[summary]: #summary
 
-Data Credits have a fixed value of $.00001 per 24 bytes. There were original 
+Data Credits have a fixed value of $.00001 per 24 bytes. There were original
 consideration to charge for Time-on-Air, but a fixed price for data usage was
 settled upon to simplify the experience of network users.
 
-However, how are bytes counted? Between the LoRa Physical Header, the 
+However, how are bytes counted? Between the LoRa Physical Header, the
 LoRaWAN/MAC header, and the MAC Payload, FOpts and FRMPayload there are several
 ways of deciding how to meter bytes.
 
@@ -29,35 +28,32 @@ network users, while also protecting against simple ways to move additional
 data "for free".
 
 Finally, the minimum charge of 1 DC for any packet assures that ACK packets
-are not free despite having potentially empty FOpt or FRMPayload fields. 
+are not free despite having potentially empty FOpt or FRMPayload fields.
 
-Meanwhile, for network operators, there may be some confusion as "bytes on 
+Meanwhile, for network operators, there may be some confusion as "bytes on
 [LoRaWAN] air" do not match 1:1 bytes over the Internet backhaul. Radio packet
 context is communicated (frequency, spreading factor, FCnt, etc). And should
 the miner be colocated on the Hotspot, the message delivery protocol between
 Miner and the Router/Network Server will create additional overhead.
 
 Finally, we do propose to round up DC costs; in a way this does mitigate this
-point above. Therefore, if I transmit a DataUp frame with 55 bytes: 
+point above. Therefore, if I transmit a DataUp frame with 55 bytes:
    `55/24.0 ~= 2.3 DCs => 3 DCs`
 burned on behalf of the Hotspot delivering the packet.
 
 # Motivation
-[motivation]: #motivation
 
 Striking the balance here means being fair to both sides of the market: Users and
 Operators.
 
 # Stakeholders
-[stakeholders]: #stakeholders
 
-* Helium Network Users
-* Helium Network Operators
+- Helium Network Users
+- Helium Network Operators
 
 # Detailed Explanation
-[detailed-explanation]: #detailed-explanation
 
-When an Operator transmits or receives a packet, they are unable to transmit 
+When an Operator transmits or receives a packet, they are unable to transmit
 and/or receive packets. As such, we must fight against exploits and charge a fee
 for Join and Join-Accept frames.
 
@@ -101,15 +97,14 @@ However, we believe that with an online calculator and spreadsheet resources,
 we can help Network Users understand and avoid this misunderstanding.
 
 # Drawbacks
-[drawbacks]: #drawbacks
 
 - We must establish a clear definition of how DCs are expensed. Not doing so
 will cause confusion amonst both Operators and Users.
 
 # Rationale and Alternatives
-[alternatives]: #rationale-and-alternatives
 
 ## Charge for Time-on-Air
+
 This solution requires too much low-level knowledge of Network Users, although
 it would perhaps be the most "fair" in terms of what resource is being used
 
@@ -149,6 +144,7 @@ __________________________________
 | DevAddr | FCtrl | FCnt | FOpts |
 ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 ```
+
 ## Charge for Full PHY Layer
 
 It is possible to charge for everything sent in the PHY layer, but this would

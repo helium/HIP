@@ -1,22 +1,20 @@
 # HIP32: Split DCs Among All Transferers
 
-- Author(s): @PapaOwl 
+- Author(s): @PapaOwl
 - Start Date: 2021-06-03
 - Category: Economic
-- Original HIP PR: https://github.com/helium/HIP/pull/194
-- Tracking Issue: https://github.com/helium/HIP/issues/221
+- Original HIP PR: <https://github.com/helium/HIP/pull/194>
+- Tracking Issue: <https://github.com/helium/HIP/issues/221>
 - Status: In Discussion
 
 # Summary
-[summary]: #summary
 
 Currently DCs are rewarded to the fastest responder which mostly comes down to internet speed. Redundancy that is available and just as capable goes unrewarded and thus has little reason to exist.
 **Thus I propose to change the DC reward from the fastest responder to all hotspots that could have performed this duty in a timely fashion.**
+
 # Motivation
-[motivation]: #motivation
 
 I want us to transition from this:
-
 
 ![Real Example](./0032-split-dcs/Real_Example.jpg)
 
@@ -32,16 +30,14 @@ So we go to something more like this:
 
 in one simple step that will naturally adapt to the current situation without much code necessary.
 
-This HIP does not have an affect to areas that have no other hotspots nearby. 
+This HIP does not have an affect to areas that have no other hotspots nearby.
 
 # Stakeholders
-[stakeholders]: #stakeholders
 All those already providing coverage
-* Who is affected by this HIP?
+- Who is affected by this HIP?
 All new "coverage" providers
 
 # Detailed Explanation
-[detailed-explanation]: #detailed-explanation
 
 Currently only the fastest responder of a DC packet is rewarded. Hotspot 2,3 or how many there are have no way of knowing that Hotspot 1 will be faster, so they aswell will at least have tried to resolve it. Currently only Hotspot 1 would be rewarded for resolving. All others would not receive anything and be declined.
 
@@ -53,9 +49,7 @@ As an example we have a use-case sending out a ping and there is 6 Hotspots that
 
 **No new rewards or price increase is happening here. The reward that would go to one guy in full before would now be equally split to all that could have handled the request well. If there is no other hotspot to begin with, then this changes nothing.**
 
-
 # Drawbacks
-[drawbacks]: #drawbacks
 
 The drawback is that the 6 dBi gangster on top of his highrise cannot farm an entire city by himself anymore. Although I believe that this never should have been allowed to happen to begin with. Helium needs growth and we can't have grwoth and redudancy as long as overlapping coverage is basically a latency war.
 
@@ -64,9 +58,7 @@ The drawback is that the 6 dBi gangster on top of his highrise cannot farm an en
 Honestly I see no reason. Good coverage is done by several miners and not by a single one.
 
 # Rationale and Alternatives
-[alternatives]: #rationale-and-alternatives
 Alternative 1 by disk91.com: Put in a 100 ms delay and then raffle the work to any of those that made it in time including the full reward.
-
 
 This is your chance to discuss your proposal in the context of the whole design
 space. This is probably the most important section!
@@ -77,16 +69,11 @@ The answer is no. Especially not when Helium is moving the reward scheme to be m
 
 I don't want to see an initial growth of helium to then collapse on the outskirts first down to very few devices that have supreme locations. If Helium is only after these supreme locations, then why bother asking the people? The people cannot all offer highrise & gigabyte connections. What about the people setting up in the outskirts with outdoor & LTE just to be deprieved from inside the city, because LongFi has tremendous range when you compare it to actual sized of cities including their outskirts.
 
-
 # Unresolved Questions
-[unresolved]: #unresolved-questions
 
 Should we maybe set a limit like a witnessing limit of 25 exists. Magic number for Helium is 4 so we can tie that in here aswell.
 
-
-
 # Success Metrics
-[success-metrics]: #success-metrics
 
 What metrics can be used to measure the success of this design?
 

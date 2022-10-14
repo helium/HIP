@@ -3,9 +3,9 @@
 - Author(s): [@edballou](https://github.com/edballou)
 - Start Date: 2022-06-20
 - Category: Economic
-- Original HIP PR: https://github.com/helium/HIP/pull/455
-- Tracking Issue: https://github.com/helium/HIP/issues/456
-- Status: In Discussion 
+- Original HIP PR: <https://github.com/helium/HIP/pull/455>
+- Tracking Issue: <https://github.com/helium/HIP/issues/456>
+- Status: In Discussion
 
 # Summary
 
@@ -18,17 +18,16 @@ As there was no timeline in HIP 39, the testing and proposed implementation took
 HIP 39’s authors stated three key motivations behind the introduction of HIP 39, some of which may be partially remedied by the subtokens introduced by HIPs 51-53:
 
 1. Incentive Unit Bias
-    
+
     The HIP 39 authors argued that, the massive growth in Helium LoRaWAN hotspot numbers and the resulting reduction of daily earnings to fractional amounts of HNT, hotspot operators were less content to earn part of a token rather than a whole token (actual value in bones or fiat aside). With the implementation of HIP 51, all new subDAOs will be able to set their token supply caps individually and can design their tokenomics with the incentive unit bias in mind going forward, since subDAO participant earnings are received as that subDAO’s token rather than HNT. HIP 52 (IoT subDAO) and HIP 52 (Mobile subDAO) already do this and use high subtoken max supply caps. HIP 52 proposes a max cap of 200 billion IOT tokens, and HIP 52 proposes a max cap of 250 billion MOBILE tokens.
-    
+
 2. Simplification of Unit Measurements
-    
-    HIP 39 aimed to address the frustration and confusion when dealing with excessively small fractions which is currently the case when discussing average daily HNT rewards 0.x or 0.0x, and smaller witness rewards of 0.00x-0.000x with many leading zeros for decimal places that need to be typed accurately when discussed. The majority of Helium miners and subDAO participants, however, will be primarily interacting with the subDAO tokens, so there is no longer as strong of a need to simplify HNT by redenominating it to a bigger number for most users. Data credit users and HNT holders may still benefit from the simplification of unit measurements by redenominating HNT. 
-    
+
+    HIP 39 aimed to address the frustration and confusion when dealing with excessively small fractions which is currently the case when discussing average daily HNT rewards 0.x or 0.0x, and smaller witness rewards of 0.00x-0.000x with many leading zeros for decimal places that need to be typed accurately when discussed. The majority of Helium miners and subDAO participants, however, will be primarily interacting with the subDAO tokens, so there is no longer as strong of a need to simplify HNT by redenominating it to a bigger number for most users. Data credit users and HNT holders may still benefit from the simplification of unit measurements by redenominating HNT.
+
 3. Small $ Investment Bias
-    
+
     The HIP 39 authors suggested that tokens priced at low $ amounts were more appealing to the market and sought to attract market interest in HNT by redenominating HNT. This may still be a valid reason to redenominate HNT, though the subDAO tokens could attract market interest independently of HNT through this mechanism.
-    
 
 The implementation of HIP 39 requires significant core developer and Helium Foundation resources to coordinate and execute. In addition to the development work required from the core developers and the Helium Foundation to implement redenomination, significant effort is also required to coordinate these changes across all parties interacting with HNT. These include but are not limited to: subDAO treasuries, Oracle operators, Console operators, Data Credit users, wallet providers, token exchanges, asset custodians, and Helium community application creators. It is proposed that these resources be spent on more network-critical tasks at the moment, especially since HIP 51 already solves some of the same challenges.
 

@@ -3,8 +3,8 @@
 - Authors: [Boris Renski](https://github.com/zer0tweets), [@tjain-mcc](https://github.com/tjain-mcc), [@shayons297](https://github.com/shayons297), [@abhay](https://github.com/abhay), Joey Padden
 - Start Date: 2022-01-04
 - Category: Economic, Technical
-- Orignal PR: https://github.com/helium/HIP/pull/341
-- Tracking Issue: https://github.com/helium/HIP/issues/345
+- Orignal PR: <https://github.com/helium/HIP/pull/341>
+- Tracking Issue: <https://github.com/helium/HIP/issues/345>
 - Status: In Discussion
 
 **Summary**
@@ -118,7 +118,7 @@ There will be a max supply of 250B MOBILE.
 
 The proposal is to have halvenings of MOBILE issuance every 2 years aligned with the HNT issuance halvenings. This requires a 1 year “stub” period from August 1, 2022 to August 1, 2023.
 
-We also propose that 50B MOBILE are pre-mined at the launch of the network, and distributed to the subDAO operations fund administered by the Helium Foundation. Some fraction of this allocation is distributed over the course of the genesis period to live Mobile Network hotspots on an epochal basis in roughly equal proportion (akin to universal basic income). 
+We also propose that 50B MOBILE are pre-mined at the launch of the network, and distributed to the subDAO operations fund administered by the Helium Foundation. Some fraction of this allocation is distributed over the course of the genesis period to live Mobile Network hotspots on an epochal basis in roughly equal proportion (akin to universal basic income).
 
 For clarity, the emission schedule is as follows:
 | Year | MOBILE at the start of the year | MOBILE minted | Hotspot PoC  | Hotspot Data (excess to PoC) | Mappers | Service Providers | Oracles | veHNT Stakers |
@@ -131,10 +131,9 @@ For clarity, the emission schedule is as follows:
 | 6    | 215B                            | 8.25B         | 20%          | 40%                          | 10%     | 20%               | 4%      | 6%            |
 | 7    | 223.25B                         | 8.25B         | 20%          | 40%                          | 10%     | 20%               | 4%      | 6%            |
 
-_* 50B pre-mine, 66B emitted in year 1_
+** 50B pre-mine, 66B emitted in year 1*
 
 Please note that if the genesis period extends beyond August 1, the emissions due in the stub period are not mined. Further, if a given stakeholder is not fully operational on the network at any given time, the corresponding tokens are not mined.
-
 
 At the end of a given epoch, MOBILE oracles relay start balance, current balance, and total amount of MOBILE Data Credits created and relay to the L1 HNT emissions contract. The emissions contract subsequently distributes the determined amount of HNT as per the Protocol Score to the Mobile subDAO multi-signature wallet, the addresses of which comprise the set of oracles of the Helium Mobile Network.
 
