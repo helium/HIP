@@ -20,12 +20,15 @@ members, performance penalties earned in the current epoch have a larger impact
 on the selection. This will help eject poor performers from the Consensus Group
 more quickly and maintain overall high performance of the chain.
 
-This chain var will be controllable at the discretion of the core developers as
-needed to promote performance of the blockchain. I propose starting with a
-value of 0 as the most effective way to measure success of this change. It is
-also suggested that the change be scheduled for early morning, i.e. 0800PST,
-early in the business week, to give the community and developers the ability to
-monitor actual impact and adjust the value up, if necessary.
+The core developers will have discretion to set this new chain var
+(`election_penalty_history_percentage`) as they see fit in order to promote 
+performance of the blockchain. Because it does change election dynamics which 
+have a direct impact on validator operators, the core devs and I fell it is best 
+to bring this change as a HIP with a vote amongst at least validator operators 
+as they are the ones primarily affected.
+
+The code for the change is already merged and tagged for release. However, it will
+be activated only upon HIP approval by setting of `election_version` >= 7.
 
 # Motivation
 
