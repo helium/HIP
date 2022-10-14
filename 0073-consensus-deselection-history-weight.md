@@ -1,4 +1,4 @@
-# HIP Consensus Deselection Weighting
+# HIP 73: Consensus Deselection Weighting
 
 - Author(s): @PaulM
 - Start Date: 2022-10-03
