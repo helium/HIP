@@ -3,28 +3,24 @@
 - Author(s): [@H-Baguette](https://github.com/h-baguette)
 - Start Date: 2022-05-24
 - Category: Technical
-- Original HIP PR: https://github.com/helium/HIP/pull/414
-- Tracking Issue: https://github.com/helium/HIP/issues/422
+- Original HIP PR: <https://github.com/helium/HIP/pull/414>
+- Tracking Issue: <https://github.com/helium/HIP/issues/422>
 
 # Summary
-[summary]: #summary
 
 Prevent spoofing by checking each witness's IP address against the beacon's IP address and other witnesses' IP addresses, while still allowing witnesses sharing the same IP address as the beacon to be considered valid under specific yet rather accessible conditions.
 Additionally, prevent spoofing farms from hiding a miner's IP behind a VPN by heavily restricting the use of VPNs on Helium hotspots.
 
 # Motivation
-[motivation]: #motivation
 
 Spoofed hotposts steal a share of honest hotspot owners by cheating the system, and thus disincentivise the spread of the network by new and existing users. This also poorly affects the reputation of the Helium network.
 This HIP aims to solve both of these problems.
 
 # Stakeholders
-[stakeholders]: #stakeholders
 
-* All hotspot owners are affected by this proposal (those using a VPN moreso than others)
+- All hotspot owners are affected by this proposal (those using a VPN moreso than others)
 
 # Detailed Explanation
-[detailed-explanation]: #detailed-explanation
 
 - # IP checking
 
@@ -40,6 +36,7 @@ Each valid witness can only balance one irregular witness. If a beacon has X val
 An irregular witness will be tagged as such on the explorer (whether ultimately considered valid or not) in order for hotspot owners to better understand their situation and fix it if necessary.
 
 This change would come with a new chain variable *irregular_to_valid_ratio*.
+
 - If set to 1 (its initial value), then each irregular witness would require a unique valid witness in order to become valid, as described above.
 - If set to 0.5, each irregular witness would require two valid witnesses in order to be considered valid.
 - If set to 2, each valid witness could balance two irregular witnesses.
@@ -104,15 +101,12 @@ With the initial value of the chain variable, if there were more valid witnesses
 
 *"irregular" can be changed to "redundant" or "suspicious".*
 
-
 # Drawbacks
-[drawbacks]: #drawbacks
 
 Despite all precautions introduced with the irregular status balancing mechanic, and despite the fact that solutions exist for affected miners (changing IP, changing location, adding new hotspots), it is still technically possible that some legit hotspots witnessing each other and sharing the same IP might have no solution to fix or balance their irregular status. Preventing people from cheating the system at the cost of a few honest isolated miners losing their rewards might be considered unfair by some.
 Additionally, some people (namely in the US) feel obligated to use a VPN in order to hide their mining activity from their internet provider. Some internet providers forbid the use of their connection for business-related purposes. Hotspot owners affected by this might need to find alternative solutions, like changing their internet provider, upgrading to a plan allowing business-related usage, or checking their local law to ensure that mining HNT does not fall in the business category.
 
 # Rationale and Alternatives
-[alternatives]: #rationale-and-alternatives
 
 A simpler design would have been to simply invalidate witnesses with the same IP as the beacon. This, however, would have had a much bigger impact on honest miners sharing the same IP. This HIP aims to reduce that impact to a minimum, while still affecting as many spoofers as possible.
 
@@ -123,7 +117,6 @@ The impact of not implementing this HIP would be a gradual decrease in rewards f
 Regarding VPN restrictions, another, more restricting method, would be to check the distance between the IP's estimated location and the hotspot's location on the explorer, and invalidate the witness if the distance is greater than a fixed value, say 100km. However, this is highly imperfect, as locating a device solely on its IP is far from being precise. Additionally, CGNAT connections would result in constantly invalid witnesses, as the IP could direct to a location hundreds of kilometers away from the hotspot, even though it is neither spoofing or using a VPN. Checking only the country greatly limits the risk of wrongfully invalidating witnesses, while still impacting spoofing farms.
 
 # Unresolved Questions
-[unresolved]: #unresolved-questions
 
 - Are honest miners who happen to share their IP address with others sufficiently protected by all the precautions introduced in this HIP ?
 
@@ -136,7 +129,6 @@ Regarding VPN restrictions, another, more restricting method, would be to check 
 - How could we better restrict VPNs without risking honest miners losing their rewards, especially CGNAT connections ?
 
 # Deployment Impact
-[deployment-impact]: #deployment-impact
 
 Who will it affect, and how ?
 
@@ -155,7 +147,6 @@ Who will it affect, and how ?
 This change is entirely backwards compatible.
 
 # Success Metrics
-[success-metrics]: #success-metrics
 
 - Rewards of hotspots on the denylist decreasing
 

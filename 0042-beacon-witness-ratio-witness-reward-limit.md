@@ -1,40 +1,37 @@
 # HIP 42: Beacon/Witness Ratio - Witness Reward Limit
 
-- Author(s): @anthonyra 
-- Start Date: 9/30/2021 
+- Author(s): @anthonyra
+- Start Date: 9/30/2021
 - Category: Technical
-- Original HIP PR: https://github.com/helium/HIP/pull/289
-- Tracking Issue: https://github.com/helium/HIP/issues/303
+- Original HIP PR: <https://github.com/helium/HIP/pull/289>
+- Tracking Issue: <https://github.com/helium/HIP/issues/303>
 - Discord channel: #hip-42-beacon-witness-ratio
 - Status: In Discussion
-  
-# Motivation
-[motivation]: #motivation
 
-Twofold: 
+# Motivation
+
+Twofold:
 
 1. To ensure that hotspot owners are motivated to build a fully working IoT network. Both witnessing and beaconing are essential.
 2. To combat recent gaming that has been observed.
 
 # Summary
-[summary]: #summary
 
 This proposal intends to enforce a hard limit on the number of witness receipts a hotspot is capable of claiming based on how well the hotspot is able to perform all functions related to Proof of Coverage (PoC). The two major components of PoC are a hotspot's abilities to both beacon and witness. Beaconing is the mechanism used by the blockchain to determine if a hotspot has the capability to perform downlinks and also provides a means to determine coverage without the need for devices. Downlinks are integral for a LoRa based Internet of Things (IoT) network since they wouldn't be able to join if they couldn't receive downlinks for example.
 
-The primary function of this proposal is to tie beacons to witness receipts to ensure that setups benefit the network and not just the individual hotspot. 
+The primary function of this proposal is to tie beacons to witness receipts to ensure that setups benefit the network and not just the individual hotspot.
 
 A secondary function of this proposal is to combat the most recent gaming associated to the following **[#poc-discussion on Discord](https://discord.com/channels/404106811252408320/730243594707009608/891400425968898099)**.
 
 # Stakeholders
-[stakeholders]: #stakeholders
 
-* All hotspots who currently get rewarded more for witnessing than they do for beacons
-* Setups that rely on cellular backhaul (CGNAT setups), sector antennas on mountains with high gain antennas, or even hotspots that aren't port forwarded can be affected. Relayed hotspots are capable of beaconing and witnessing. However, they can have lower performance than properly set up hotspots. Due to the setups listed here there will be added wiggle room to ensure the impact is minimized while incentivizing PoC optimized setups. Most of these concerns will be allieviated when light hotspots are released since hotspots will only perform outbound connections and won't need inbound connections.
+- All hotspots who currently get rewarded more for witnessing than they do for beacons
+- Setups that rely on cellular backhaul (CGNAT setups), sector antennas on mountains with high gain antennas, or even hotspots that aren't port forwarded can be affected. Relayed hotspots are capable of beaconing and witnessing. However, they can have lower performance than properly set up hotspots. Due to the setups listed here there will be added wiggle room to ensure the impact is minimized while incentivizing PoC optimized setups. Most of these concerns will be allieviated when light hotspots are released since hotspots will only perform outbound connections and won't need inbound connections.
 
 # Detailed Explanation
-[detailed-explanation]: #detailed-explanation
 
 ## Basics
+
 Proof of Coverage (PoC) has limitations on the frequency that a hotspot can create challenges which loosely ties to other hotspots being able to beacon. The current mechanism for targeting a hotspot for a challenge is also limited by an IP bloom filter which is reset based on the `poc_challenge_interval` chain variable. This in theory should cap beacons of a hotspot to `4` daily, but this isn't guaranteed.
 
 > **NOTE**
@@ -88,6 +85,7 @@ You can also use the following tools built with the DeWi ETL Metabase website. Y
 Recently asserted hotspots on the network start with a zero witness list. For this reason, I suggest that the blockchain brings back "test beacons", during multi-hop PoC they were called "0-hop beacons", to initially populate the witness list. The recently asserted hotspot will perform a beacon upon being asserted however this beacon isn't elgible for PoC rewards it would simply allow them to receive witness rewards while they wait to populate their witness list via normal beacons.
 
 > **Alternatives:** Set a minimum other than 0 for the daily limit currently proposed value is 24 for this.
+
 ## Implementation
 
 When a witness is added to the witness list of a hotspot the daily limit will be calculated with the equation stated above.
@@ -98,10 +96,9 @@ An alternative is to keep the witnesses and mark them as invalid with the reason
 
 Another concern, is with HIP-15 since an invalid witness actually hurts the rewards for the witnesses simply because a neighbor has exceeded their daily limit.
 
-[^1]: The following Metabase dashboard shows the overall network health centered around beaconing (https://etl.dewi.org/dashboard/208-beacons) you can see that the average beacon per day is around 2-3 beacons. The average however, doesn't take into account for "bad" days or "good" days.
+[^1]: The following Metabase dashboard shows the overall network health centered around beaconing (<https://etl.dewi.org/dashboard/208-beacons>) you can see that the average beacon per day is around 2-3 beacons. The average however, doesn't take into account for "bad" days or "good" days.
 
 # Drawbacks
-[drawbacks]: #drawbacks
 
 Hotspots could be limited depending on their setup:
 
@@ -112,15 +109,15 @@ Hotspots could be limited depending on their setup:
   - [rough-chili-bird](https://etl.dewi.org/question/461-poc-witness-scaling-2-proposal-check?address=112JbKk4fvYmoSqHR93vRYugjiduT1JrF8EyC86iMUWjUrmW95Mn)
 
 # Rationale and Alternatives
-[alternatives]: #rationale-and-alternatives
 
 @paulM on Discord
-> Every time a hotspot beacons, a counter is reset for the number of witnesses that hotspot can submit and it counts down until it is zero and stops being able to submit witnesses. The counter amount is based on how many witnesses the most recent beacon got. For example, if the challenge is acknowledged but there are no witnesses, then the counter is set to 2, but if the beacon had witnesses set it to some multiple of the number of witnesses it got. 
+> Every time a hotspot beacons, a counter is reset for the number of witnesses that hotspot can submit and it counts down until it is zero and stops being able to submit witnesses. The counter amount is based on how many witnesses the most recent beacon got. For example, if the challenge is acknowledged but there are no witnesses, then the counter is set to 2, but if the beacon had witnesses set it to some multiple of the number of witnesses it got.
+
 ## Concerns
+
 This would have the same results but will be less lenient when it comes to network performance. It's not unheard of a hotspot not beaconing for >24hours. Utilizing the witness list buffers those bad days with good ones. If there was a minimum beacon per day this wouldn't be an issue for this implementation.
 
 # Unresolved Questions
-[unresolved]: #unresolved-questions
 
 - Should hotspots be rewarded for simply being in a "good" location where they have the ability to hear 100's if not 1000's of other hotspots?
 
@@ -129,15 +126,13 @@ This would have the same results but will be less lenient when it comes to netwo
 - Would this result in more adverse results then what network stands to get as a result?
 
 # Deployment Impact
-[deployment-impact]: #deployment-impact
 
 It will require software updates and can be updated OTA. The actual development time will depend on the load currently on the core development team but could be sooner depending on community involvement.
 
-With a yes on the Temperature Check vote at https://www.heliumvote.com/13NyqFtVKsifrh6HQ7DjSBKXRDi7qLHDoATHogoSgvBh56oZJv8,
+With a yes on the Temperature Check vote at <https://www.heliumvote.com/13NyqFtVKsifrh6HQ7DjSBKXRDi7qLHDoATHogoSgvBh56oZJv8>,
 I will head the code required for this to be implemented.
 
 # Success Metrics
-[success-metrics]: #success-metrics
 
 What metrics can be used to measure the success of this design?
 

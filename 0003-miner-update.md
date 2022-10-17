@@ -5,7 +5,6 @@
 - Tracking Issue: #5318
 
 # Summary
-[summary]: #summary
 
 This proposal examines how Helium could allow consumer Hotspot owners to specify
 and deliver their own over-the-air miner updates. The scope of this proposal
@@ -23,7 +22,6 @@ distribute their own custom miner images. OCI images are Docker-compatible but
 can also run on more lightweight tooling like bubblewrap.
 
 # Motivation
-[motivation]: #motivation
 
 - Why are we doing this?
 - What use cases does it support?
@@ -38,18 +36,16 @@ away from any single entity and into the hands of the network stakeholders
 themselves.
 
 # Stakeholders
-[stakeholders]: #stakeholders
 
-* Who is affected by this HIP?
+- Who is affected by this HIP?
 
 Blockchain Engineering, Embedded Engineering
 
-* How are we soliciting feedback on this HIP from these stakeholders?
+- How are we soliciting feedback on this HIP from these stakeholders?
 
 Feedback will be gathered by sharing this HIP.
 
 # Detailed Explanation
-[detailed-explanation]: #detailed-explanation
 
 Helium's private nextgate build system builds Hotspot firmware, signs it and
 uploads it to a public AWS S3 bucket for downloading. The nexthaul OTA server
@@ -115,7 +111,6 @@ registry using a feature known as Docker Content Trust. Runtime enforcement of
 signed image verification requires Docker Enterprise Engine.
 
 # Drawbacks
-[drawbacks]: #drawbacks
 
 - Why should we *not* do this?
 
@@ -137,7 +132,6 @@ the blockchain forks and other user complaints resulting from their published
 miner updates.
 
 # Rationale and Alternatives
-[alternatives]: #rationale-and-alternatives
 
 - Why is this design the best in the space of possible designs?
 
@@ -162,7 +156,6 @@ software we eventually risk greater scrutiny by Hotspot operators, regulators
 and large cryptocurrency exchanges.
 
 # Unresolved Questions
-[unresolved]: #unresolved-questions
 
 - What parts of the design do you expect to resolve through the HIP process
 before this gets merged?
@@ -186,7 +179,6 @@ How do we facilitate the deployment of miner instances in the cloud that receive
 LoRa packets from third party radio gateways?
 
 # Deployment Impact
-[deployment-impact]: #deployment-impact
 
 - How will current users be impacted?
 
@@ -219,7 +211,6 @@ first generation of Helium Hotspots so any miner update approach we adopt will
 need to integrate with Buildroot.
 
 # Success Metrics
-[success-metrics]: #success-metrics
 
 - What should we measure to prove a performance increase or decrease?
 

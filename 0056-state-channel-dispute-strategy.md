@@ -6,12 +6,11 @@
   et al
 - Start Date: 2022-02-21
 - Category: Technical
-- Original HIP PR: https://github.com/helium/HIP/pull/366
-- Tracking Issue: https://github.com/helium/HIP/issues/369 
+- Original HIP PR: <https://github.com/helium/HIP/pull/366>
+- Tracking Issue: <https://github.com/helium/HIP/issues/369>
 - Status: In Discussion
 
 # Summary
-[summary]: #summary
 
 This HIP describes an update to the dispute mechanism for State Channels that
 would improve blockchain scaling, better reconcile Data Transfer activity and
@@ -44,7 +43,6 @@ where Routers are able to close State Channels promptly and Hotspots do not need
 to file disputes.
 
 # Motivation
-[motivation]: #motivation
 
 Failures in Routers closing State Channels within the network-specified block
 interval has caused participating Hotspots to file disputes on chain leading to
@@ -56,14 +54,12 @@ disputes. To improve the resiliency of the blockchain, we believe that it's
 appropriate to be intolerant to potentially misbehaving Routers and/or Hotspots.
 
 # Stakeholders
-[stakeholders]: #stakeholders
 
 All Router operators and Hotspot owners are directly affected by this HIP. When
 a State Channel is validly disputed, Router Operators will be slashed their Data
 Credits, and participating Hotspots will not be rewarded.
 
 # Detailed Explanation
-[detailed-explanation]: #detailed-explanation
 
 Routers open and close State Channels in order to buy packets on the LoRaWAN
 network. You can read more about how State Channels work in this [blog
@@ -110,13 +106,11 @@ This proposal is currently implemented in [blockchain-core#1229][core-1229] and
 [blockchain-core#1238][core-1238].
 
 # Drawbacks
-[drawbacks]: #drawbacks
 
 As soon as a State Channel close is disputed no rewards will be distributed for
 this Data Transfer activity.
 
 # Deployment Impact
-[deployment-impact]: #deployment-impact
 
 Normal users should not expect to see a measurable impact, other than
 improvements to chain performance.

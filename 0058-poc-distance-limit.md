@@ -3,8 +3,8 @@
 - Author(s): [@abhay](https://github.com/abhay), [@mrpatrick1991](https://github.com/mrpatrick1991), et al
 - Start Date: 2022-04-02
 - Category: Technical
-- Original HIP PR: https://github.com/helium/HIP/pull/381
-- Tracking Issue: https://github.com/helium/HIP/issues/384 
+- Original HIP PR: <https://github.com/helium/HIP/pull/381>
+- Tracking Issue: <https://github.com/helium/HIP/issues/384>
 - Status: In Discussion
 
 # Summary
@@ -17,7 +17,7 @@ witness packets to increase reported distances. This can make it appear that
 Hotspots provide coverage where they do not. An effective way to reduce the
 impact of this attack is to place an upper limit on the distance at which
 witnesses for hotspots will be considered valid by the blockchain and thus be
-considered for rewards. 
+considered for rewards.
 
 When PoCv11 was developed, a witness distance limit feature was written but
 never activated. If approved, this proposal would impose a `100 km` limit to
@@ -37,7 +37,7 @@ Hotspot falsely provides immense (hundreds, or thousands of kilometers) of
 coverage. In addition, it is harder to determine a realistic FSPL value at
 longer distances. This problem results in disproportionate rewards being given
 to those Hotspots, and subsequently fewer overall rewards sent to Hotspots which
-provide legitimate coverage. 
+provide legitimate coverage.
 
 A hard limit on the reported distances which generate rewards can be applied in
 a way which does not significantly affect legitimate hotspots. This is because
@@ -58,7 +58,7 @@ performers such as tower deployments.
 
 All Hotspot owners are affected by this proposal. Other network participants
 (Validators, Routers, etc) are not affected.
- 
+
 Data transfer remains unaffected.
 
 # Detailed Explanation
@@ -77,13 +77,13 @@ effect of hypothetical cutoffs on existing witness data. The following is a
 histogram showing the number of received beacons by given hotspot (sample size
 n=10000) expressed as a percentage as a function of the distance to the received
 beaconer. Lines are drawn at a distance of 100 kilometers and a percentage 0.5
-percent. 
+percent.
 
 ![image](https://user-images.githubusercontent.com/75/161450359-824ad2d1-08d1-4ddc-974a-c358560990b3.png)
 
 Fewer than 1.6 percent of beacons are witnessed at distances of greater than 100
 kilometers based on this sample. The y axis is shown on a log scale to make the
-small population at distances greater than 100 kilometers visible. 
+small population at distances greater than 100 kilometers visible.
 
 We show that of the highest performing hotspots, few of their rewards are due to
 witnessing beacons from distances above the 100 kilometer cutoff. This ensures
@@ -96,7 +96,7 @@ is:
 ![image](https://user-images.githubusercontent.com/75/161450371-71b40b33-c0b1-455f-9446-89a23fe394ee.png)
 
 Of the total number of beacons received by this high performing group, only 1.4
-percent were from distances of greater than the threshold of 100 kilometers. 
+percent were from distances of greater than the threshold of 100 kilometers.
 
 Suppose that 0.1 percent of rewards are currently being distributed to gaming
 hotspots who produce false witness reports with distances that fall above the
@@ -105,7 +105,7 @@ threshold. When these rewards are distributed to legitimate deployments, the
 they will not be rewarded for witnessing beacons at distances above the
 threshold. This effect increases if the percentage of gaming at these distances
 is higher than we assumed. Ordinary hotspots, who witness beacons at shorter
-distances, will be unaffected. 
+distances, will be unaffected.
 
 The hotspots that are most impacted in terms of the relative loss on their POC rewards are those that have a significant percentage of witness receipts surpassing the distance threshold. As shown in the following figure, only about 7,000 gateways (out of nearly 700,000 at the time of writing) garner more than 10% of their witness activity from beacons further than 100km away. It also turns out that [denylisted](https://github.com/helium/denylist/releases/tag/2022040101) hotspots show a disproportionately high rate of extraordinarily far witness paths; of the gateways that stand to lose more than 50% of their witness activity, nearly a third are already on the denylist.
 
@@ -126,19 +126,19 @@ affect them at all at lower ranges.
 # Rationale and Alternatives
 
 This adjustment to the network is one of many changes that should be made to
-continue to incentivize good LoRaWAN coverage creation. 
+continue to incentivize good LoRaWAN coverage creation.
 
 # Deployment Impact
 
-* The majority of current hotspot owners will see no effect.
-* The highest performing Hotspots may see an increase in rewards, and at
-  minimum, will not see a decrease. 
-* Gaming hotspots will be forced to work with falsely asserted distances under
+- The majority of current hotspot owners will see no effect.
+- The highest performing Hotspots may see an increase in rewards, and at
+  minimum, will not see a decrease.
+- Gaming hotspots will be forced to work with falsely asserted distances under
   100 kilometers. This will reduce their earnings, especially in the most
   egregious cases of witnesses being reported at multiple thousands of
-  kilometers. 
-* Existing documentation will need to reflect that an upper limit on witness
-  distance exists. 
+  kilometers.
+- Existing documentation will need to reflect that an upper limit on witness
+  distance exists.
 
 # Success Metrics
 
@@ -148,4 +148,4 @@ distances of greater than the threshold using explorer or the Helium API.
 Hotspot owners may compute their rewards specifically due to witnesses at larger
 than the threshold from before this HIP is implemented and verify that they are
 either zero, or insignificant compared to their rewards from witnesses at
-distances below the threshold. 
+distances below the threshold.

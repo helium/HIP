@@ -4,12 +4,11 @@
   [@andymck](https://github.com/andymck), [@abhay](https://github.com/abhay)
 - Start Date: 2022-02-03
 - Category: Technical
-- Original HIP PR: https://github.com/helium/HIP/pull/359
-- Tracking Issue: https://github.com/helium/HIP/issues/362
+- Original HIP PR: <https://github.com/helium/HIP/pull/359>
+- Tracking Issue: <https://github.com/helium/HIP/issues/362>
 - Status: In Discussion
 
 # Summary
-[summary]: #summary
 
 This HIP proposes a change to how Proof-of-Coverage (PoC) Challenges are
 generated and submitted to the Helium blockchain to allow for further network
@@ -19,7 +18,6 @@ consequently proposes moving the economic reward for creating Challenges to this
 group as well.
 
 # Motivation
-[motivation]: #motivation
 
 Originally Hotspots were the only kind of entity on the network; they were
 responsible for block production, Challenges/Witnesses, etc. With the switch to
@@ -45,12 +43,10 @@ Validators to learn about blockchain updates in general, whether or not they're
 currently being challenged, and where to deliver Witness receipts.
 
 # Stakeholders
-[stakeholders]: #stakeholders
 
 Hotspot and Validator owners/operators.
 
 # Detailed Explanation
-[detailed-explanation]: #detailed-explanation
 
 ## Description of Current Implementation
 
@@ -111,7 +107,7 @@ attestation data includes:
 
 Today, each block on the blockchain includes metadata (BBA seen, timestamps, etc) and
 transactions. With this change, each Validator will generate
-a set of ephemeral key pairs and a hash of the public keys will be included in Validator heartbeat txns 
+a set of ephemeral key pairs and a hash of the public keys will be included in Validator heartbeat txns
 whilst the private key will be saved to local state on the generating Validator.
 During absorb of a heartbeat txn, if the proposed keys do not belong to a Consensus Group member they will be added to a local cache 'poc_key_proposals'.
 We propose a fixed `poc_challenge_rate` parameter to be added to the
@@ -206,8 +202,8 @@ a Validator is untrustworthy, can build their own untrusted list of Validators.
 
 Today, the Hotspots creating PoC Challenges and submitting receipts to the
 blockchain are rewarded with 0.9% of HNT rewarded per epoch. We propose that
-this subsidy be moved to the Validator Challenger that is creating and collecting 
-Challenge data and submitting this information to the blockchain. We don't recommend 
+this subsidy be moved to the Validator Challenger that is creating and collecting
+Challenge data and submitting this information to the blockchain. We don't recommend
 any other changes at this time
 as it would increase the scope of implementation. Please refer to [HIP
 10][hip10] or [docs.helium.com][docs] for the details of the current reward
@@ -221,30 +217,28 @@ massively lower the blockchain's transaction rate).
 
 ### New Chain Variables
 
-* `poc_challenger_type`: This chain variable allows us to control if Validators
+- `poc_challenger_type`: This chain variable allows us to control if Validators
   are responsible for creating challenges on the network. Activating this HIP
   requires setting this value to `validator`.
-* `poc_challenge_rate`: This chain variable represents the target number of
+- `poc_challenge_rate`: This chain variable represents the target number of
   challenges per block. We propose an initial value of: `TODO`
-* `poc_timeout`: This chain variable represents the number of blocks a
+- `poc_timeout`: This chain variable represents the number of blocks a
   Challenger will wait before collecting all available Challengee and Witness
   data and submitting a receipt transaction to the blockchain. We propose an
   initial value of `TODO`
-* `poc_receipts_absorb_timeout`: This chain variable represents the number of
+- `poc_receipts_absorb_timeout`: This chain variable represents the number of
   blocks after the timeout where public PoC data will remain on the local ledger
   of Validators. This allows Validators to garbage collect this data so it can
   conserve space for future Challenges but ensures that the information is
   available to allow sufficient time for absorbing the transaction. We propose
   an initial value of `TODO`
 
-
 ### Additional Documentation
 
-* [Protocol Buffer definitions][proto]
-* [Message Sequence Diagram][message-sequence]
+- [Protocol Buffer definitions][proto]
+- [Message Sequence Diagram][message-sequence]
 
 # Drawbacks
-[drawbacks]: #drawbacks
 
 This is a fairly extensive change to the network and may be disruptive if not
 executed well. This also somewhat disturbs the economics of the system by moving
@@ -254,7 +248,6 @@ By moving PoC Challenges away from the Hotspots, we also lose a potential
 online and instead we must rely solely on Data Transfer and PoC activity.
 
 # Rationale and Alternatives
-[alternatives]: #rationale-and-alternatives
 
 Simpler designs would include retaining the Hotspot initiating the Challenge,
 just via information submitted/received via a Validator. This would involve less
@@ -266,10 +259,9 @@ Such a design also would not allow for further enhancements to how PoC packets
 are transmitted.
 
 # Unresolved Questions
-[unresolved]: #unresolved-questions
 
 This plan *does* consider and allow for Validator slashing to the extent the
-data payloads exchanged between the Light Hotspots and the Validators will include 
+data payloads exchanged between the Light Hotspots and the Validators will include
 attestation data. This can enable a slashing
 mechanism.  It does not however propose the slashing implementation itself, that
 could be proposed in a future HIP.
@@ -288,7 +280,6 @@ of scope for this HIP but we imagine future work in this direction could be
 possible.
 
 # Deployment Impact
-[deployment-impact]: #deployment-impact
 
 Overall users should see more reliable Challenge behaviour, less data use on the
 Hotspot (which makes cellular/satellite backhaul Hotspots more feasible) and

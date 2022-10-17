@@ -5,7 +5,6 @@
 - Tracking Issue: #5318
 
 # Summary
-[summary]: #summary
 
 This is a proposal to separate Helium's blockchain software from the rest of the
 Hotspot firmware image. Decoupling Helium's blockchain software from our
@@ -17,7 +16,6 @@ Hotspot owners to be able to securely deploy their own miner releases with
 modified code if they choose to.
 
 # Motivation
-[motivation]: #motivation
 
 - Why are we doing this?
 - What use cases does it support?
@@ -32,18 +30,16 @@ how the network develops away from any single entity and into the hands of the
 network stakeholders themselves.
 
 # Stakeholders
-[stakeholders]: #stakeholders
 
-* Who is affected by this HIP?
+- Who is affected by this HIP?
 
 Blockchain Engineering, Embedded Engineering
 
-* How are we soliciting feedback on this HIP from these stakeholders?
+- How are we soliciting feedback on this HIP from these stakeholders?
 
 Feedback will be gathered by sharing this HIP.
 
 # Detailed Explanation
-[detailed-explanation]: #detailed-explanation
 
 The Helium blockchain software and Hotspot firmware reside in separate GitHub
 repos. The blockchain software repo (helium/miner) is public while the Hotspot
@@ -86,7 +82,6 @@ signed after they have been built for deployment as part of a third party miner
 repo's CI/CD process.
 
 # Drawbacks
-[drawbacks]: #drawbacks
 
 - Why should we *not* do this?
 
@@ -113,10 +108,9 @@ adds complexity to the nextgate CI/CD pipeline. Running Docker images on a
 Hotspot requires adding a Docker runtime engine to the OTA firmware image which
 is limited to 240 MB in size. Unzipping binaries on top of the Hotspot's root
 file system is error prone and could result in bad updates without adequate
-testing. 
+testing.
 
 # Rationale and Alternatives
-[alternatives]: #rationale-and-alternatives
 
 There are four ways to sign a miner release:
 
@@ -143,7 +137,6 @@ If we do not separate miner from nextgate for signing we eventually risk greater
 scrutiny from Hotspot operators, regulators and large cryptocurrency exchanges.
 
 # Unresolved Questions
-[unresolved]: #unresolved-questions
 
 - What parts of the design do you expect to resolve through the HIP process
 before this gets merged?
@@ -157,7 +150,6 @@ addressed in the future independently of the solution that comes out of this HIP
 How will Hotspot owners deliver their own OTA updates?
 
 # Deployment Impact
-[deployment-impact]: #deployment-impact
 
 - How will current users be impacted?
 
@@ -167,7 +159,6 @@ cloud miners can choose to verify miner Git release tags or source tarballs as
 part of their software CI/CD pipeline if they feel so inclined.
 
 # Success Metrics
-[success-metrics]: #success-metrics
 
 Success is measured by:
 

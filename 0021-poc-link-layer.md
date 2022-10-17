@@ -7,7 +7,6 @@
 - Status: Closed
 
 # Summary
-[summary]: #summary
 The goals of these changes are to:
 
 1. Break up the PoC message to improve the reliability of PoC transmissions.
@@ -17,26 +16,22 @@ The link layer is the method by which information is send from one source to ano
 specific definition, please see the OSI model.
 
 # Motivation
-[motivation]: #motivation
-In our current implementation the link layer is extremely simple. We encode and transmit a single PoC payload with no redundancy or any additional 
-correction applied. We have an issue right now that a PoC packet is not very resistant to noise or collision. Additionally, and more importantly, 
+In our current implementation the link layer is extremely simple. We encode and transmit a single PoC payload with no redundancy or any additional
+correction applied. We have an issue right now that a PoC packet is not very resistant to noise or collision. Additionally, and more importantly,
 sending one packet with one signal reading infrequently (say twice a day) is not very descriptive. We are looking to better describe coverage quality,
-and a series of smaller packets to describe a larger payload will let us better know how strong a link is between many hotspots even if we are 
+and a series of smaller packets to describe a larger payload will let us better know how strong a link is between many hotspots even if we are
 technically PoC'ing twice a day or so.
 
 # Stakeholders
-[stakeholders]: #stakeholders
 
-* Hotspot owners
-* Network users
-* 3rd party Hotspot manufacturers
-* DIY miners
+- Hotspot owners
+- Network users
+- 3rd party Hotspot manufacturers
+- DIY miners
 
 # Detailed Explanation
-[detailed-explanation]: #detailed-explanation
 
 ## Link Layer Modification
-[link-layer-modification]: #link-layer-modification
 
 ### Modifications
 
@@ -71,42 +66,36 @@ sequence by a gateway involves it transmitting droplets continuously
 until it receives a single N/ACK from a gateway indicating the entire
 message was received correctly or not. An alternative to the N/ACK
 requirement could be to implement an expiry window. The expiry window
-could align with a reasonable percentage overhead (200% - 250%). 
+could align with a reasonable percentage overhead (200% - 250%).
 
 # Drawbacks
-[drawbacks]: #drawbacks
 
 - This method does require more spectrum utilization but at low impact to our regulatory ceiling.
 
 # Rationale and Alternatives
-[alternatives]: #rationale-and-alternatives
 
-- Implementing a noise resistant link layer is critical to succssful PoC transmissions in increasingly crowded or 
-  lossy environments. We will additionally be capable of increasing the data rate and lowering time on air without 
-  sacrificing sensitivity. The advantage of a builtin BER test gives us an accurate measure of link quality truely 
+- Implementing a noise resistant link layer is critical to succssful PoC transmissions in increasingly crowded or
+  lossy environments. We will additionally be capable of increasing the data rate and lowering time on air without
+  sacrificing sensitivity. The advantage of a builtin BER test gives us an accurate measure of link quality truely
   descriptive of a connection between two discrete devices which we have no other method of determining with any
   accuracy currently. RSSI and SNR alone for a single transmission sporadically over a day or days is far too low
   frequency to establish quality of a link, and network adopters should rightly question/doubt any claim of assumed coverage.
 
 # Unresolved Questions
-[unresolved]: #unresolved-questions
 
 - Quantity and distribution of rewards is considered out of scope for this HIP.
 
 # Deployment Impact
-[deployment-impact]: #deployment-impact
 
 - Deployment of this system will have a direct impact on current hotspot deployments, increasing number of transmissions during PoC.
 
 # Success Metrics
-[success-metrics]: #success-metrics
 
 What metrics can be used to measure the success of this design?
 
 - Successful PoC transmissions should increase with additional reports of BER.
 
 # Glossary
-[glossary]: #glossary
 
 1\. (LT) Fountain Code Fountain codes are rate-less erasure codes,
 encoding an undefined sequence of information into an unlimited number
@@ -120,7 +109,6 @@ correcting code utilizing a (sparse) parity-check matrix, ideally
 constructed to be optimal for the data to be transmitted.
 
 # Implementation Results
-[implementation-results]: #implementation-results
 
 These are a series of test results from Random and Systematic fountain encoders/decoders using both MinSum and BitFlipping LDPC decoders. Subtract 100 from the overhead number to get the actual overhead
 sent over the air as the LDPC encoder implicitly doubles the size of the outgoing payload. There are verying degrees of loss, with Systematic encoders/decoders clearly outperforming any other option which

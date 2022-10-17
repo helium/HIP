@@ -30,8 +30,8 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | 15 | [Beaconing Rewards](https://github.com/helium/HIP/blob/main/0015-beaconing-rewards.md) | [Deployed](https://github.com/helium/blockchain-core/pull/662) ([audit](https://github.com/helium/miner/blob/master/audit/var-50.md) / [txn](https://explorer.helium.com/txns/vnEqwbKtFfFxXgYI_9L5Th0LRVkpJlsX-sQzZTh2VwY)) |
 | 16 | [Remove Score from Consensus Group Elections](https://github.com/helium/HIP/blob/main/0016-random-consensus-group-election.md) | [Deployed](https://github.com/helium/HIP/issues/55) ([audit](https://github.com/helium/miner/blob/master/audit/var-48.md) / [txn](https://explorer.helium.com/txns/DywtCExrXhTxv8VoDZl_hJDjQ2PUcov_AYrW98ZPpcg)) |
 | 17 | [Hex Density-based Transmit Reward Scaling](https://github.com/helium/HIP/blob/main/0017-hex-density-based-transmit-reward-scaling.md) | [Deployed](https://github.com/helium/blockchain-core/pull/677) ([audit](https://github.com/helium/miner/blob/master/audit/var-50.md) / [txn](https://explorer.helium.com/txns/vnEqwbKtFfFxXgYI_9L5Th0LRVkpJlsX-sQzZTh2VwY)) |
-| 18 | [Remove Oracle Forecast for DC Burn](https://github.com/helium/HIP/blob/main/0018-remove-oracle-forecast-for-dc-burn.md) | [Approved](https://github.com/helium/HIP/issues/60) |
-| 19 | [Approval Process For Third-Party Manufacturers](https://github.com/helium/HIP/blob/main/0019-third-party-manufacturers.md) | [Approved](https://github.com/helium/HIP/issues/87) |
+| 18 | [Remove Oracle Forecast for DC Burn](https://github.com/helium/HIP/blob/main/0018-remove-oracle-forecast-for-dc-burn.md) | [Deployed](https://github.com/helium/HIP/issues/60) |
+| 19 | [Approval Process For Third-Party Manufacturers](https://github.com/helium/HIP/blob/main/0019-third-party-manufacturers.md) | [Deployed](https://github.com/helium/HIP/issues/87) |
 | 20 | [HNT Max Supply](https://github.com/helium/HIP/blob/main/0020-hnt-max-supply.md) | [Deployed](https://github.com/helium/HIP/issues/73) ([audit](https://github.com/helium/miner/blob/master/audit/var-79.md)) |
 | 21 | [PoC Link Layer Upgrades](https://github.com/helium/HIP/blob/main/0021-poc-link-layer.md) | [Closed](https://github.com/helium/HIP/issues/78) |
 | 22 | [DIY Concentrators (f/k/a Golden or Anchor Gateways)](https://github.com/helium/HIP/blob/main/0022-diy-concentrators.md) | [In Discussion](https://github.com/helium/HIP/issues/94) |
@@ -49,7 +49,7 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | 34 | [Validator Node Security](https://github.com/helium/HIP/blob/main/0034-validator-node-security.md) | [In Discussion](https://github.com/helium/HIP/issues/223) |
 | 35 | [RF Metadata Sidechannel](https://github.com/helium/HIP/blob/main/0035-safe-rf-metadata-side-channel.md) | [In Discussion](https://github.com/helium/HIP/issues/250) |
 | 36 | [Blockheight Chainvar Activation](https://github.com/helium/HIP/blob/main/0036-blockheights-instead-of-time.md) | [In Discussion](https://github.com/helium/HIP/issues/260) |
-| 37 | [Omni-Protocol PoC](https://github.com/helium/HIP/blob/main/0037-omni-protocol-poc.md) | [In Discussion](https://github.com/helium/HIP/issues/271) |
+| 37 | [Omni-Protocol PoC](https://github.com/helium/HIP/blob/main/0037-omni-protocol-poc.md) | [Closed](https://github.com/helium/HIP/issues/271) |
 | 38 | [Validator Oracles](https://github.com/helium/HIP/blob/main/0038-validator-oracles.md) | [In Discussion](https://github.com/helium/HIP/issues/282) |
 | 39 | [HNT Redenomination](https://github.com/helium/HIP/blob/main/0039-hnt-redenomination.md) | [In Discussion](https://github.com/helium/HIP/issues/283) |
 | 40 | [Validator Denylist](https://github.com/helium/HIP/blob/main/0040-validator-denylist.md) | [In Discussion](https://github.com/helium/HIP/issues/285) |
@@ -83,6 +83,7 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | 68 | [Open Service Subdao](https://github.com/helium/HIP/blob/main/0068-open-service-subdao.md) | [In Discussion](https://github.com/helium/HIP/issues/457) |
 | 69 | [Re-assertion Fee Reduction](https://github.com/helium/HIP/blob/main/0069-reassertion-fee-reduction.md) | [In Discussion](https://github.com/helium/HIP/issues/458) |
 | 70 | [Scaling the Helium Network](https://github.com/helium/HIP/blob/main/0070-scaling-helium.md) | [Approved](https://github.com/helium/HIP/issues/471) |
+| 71 | [Scaling the Network with Governance & Hedera](https://github.com/helium/HIP/blob/main/0071-scaling-with-governance-hedera.md) | [In Discussion](https://github.com/helium/HIP/issues/480) |
 
 ## Status key
 

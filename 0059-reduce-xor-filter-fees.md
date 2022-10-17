@@ -9,7 +9,7 @@
 
 # Summary
 
-Helium community members who host a Router instance use on-chain XOR filters to  process traffic from known devices in order to significantly improve performance. This is an integrated component of a Router instance, and allows Routers and Packet Purchasers on the network to avoid spending resources on join packets from unknown devices. 
+Helium community members who host a Router instance use on-chain XOR filters to  process traffic from known devices in order to significantly improve performance. This is an integrated component of a Router instance, and allows Routers and Packet Purchasers on the network to avoid spending resources on join packets from unknown devices.
 
 This HIP proposes a change for how fees are calculated when doing a XOR filter update with the goal of reducing these fees and enabling more updates to XOR filters.
 
@@ -17,13 +17,13 @@ This HIP proposes a change for how fees are calculated when doing a XOR filter u
 
 The Helium Network benefits if non-incumbent organizations (like the Helium Foundation and Nova Labs, Inc.) host Console and Router instances that buy packets on the Helium Network. This will encourage more usage on the network driving the demand side of the Helium Flywheel. Open source users can choose to host their own instances to provide a commercial offering for others to leverage or for their own devices.
 
-Console and Router hosting requires costs for both initial setup (OUI, Devaddrs), and ongoing including hosting services and operational costs related to the blockchain. 
+Console and Router hosting requires costs for both initial setup (OUI, Devaddrs), and ongoing including hosting services and operational costs related to the blockchain.
 
 XOR filter fees are operational costs related to maintaining OUIs on the blockchain. With the current implementation these fees can become a big part of the cost of running a Router instance, the core developers have identified a way to reduce those costs which benefit anyone who chooses to host an Router instance.
 
 ## Stakeholders
 
-All Console/Router open-source operators are directly affected by this proposal. 
+All Console/Router open-source operators are directly affected by this proposal.
 
 ## Detailed Explanation
 
@@ -34,13 +34,13 @@ As more devices get added to the filter, it grows. Meaning that any update is ca
 The proposal is to not account for the full size of the XOR filter every time but only the difference compared to the previous update. For example: if the previous XOR had a size of 100 bytes and the update is 110 bytes then fees would be calculated on the difference: (`110 - 100 = 10`) 10 bytes.
 
 This approach increases the commercial viability for community members to host a Console/Router instance, only the difference of the XOR filter will be calculated vs paying for the entire amount each time.
-It’s useful to provide some context on how device data is routed on the Helium network to understand why this is a useful addition to the network. 
+It’s useful to provide some context on how device data is routed on the Helium network to understand why this is a useful addition to the network.
 
 Today, a device attempts a new join via XOR filter  [XOR Filter](https://github.com/mpope9/exor_filter) associated with the paired OUI. The OUI includes a set of Device Addresses (DevAddrs) that will be assigned to newly joined devices (note these DevAddrs do not need to be unique for each device, the combination of application key is used to avoid conflicts).
 
 An `OUI` can have up to 5 XOR filters, controlled by a chain variable: `max_xor_filter_num`.
 
-New devices are assigned to a DevAddr which are handed out based on the OUI. The `app_eui`, and `dev_eui` are hashed together and added to the XOR filter which is then written to the blockchain (added to a block and propagated to miners). 
+New devices are assigned to a DevAddr which are handed out based on the OUI. The `app_eui`, and `dev_eui` are hashed together and added to the XOR filter which is then written to the blockchain (added to a block and propagated to miners).
 
 XOR Filters are manipulated via a transaction called `blockchain_txn_routing_v1`.
 

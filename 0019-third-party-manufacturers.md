@@ -4,8 +4,8 @@
 - Start Date: 2020-11-14
 - Amended Date: 2021-02-16
 - Category: Meta
-- Original HIP PR: https://github.com/helium/HIP/pull/86
-- Tracking Issue: https://github.com/helium/HIP/issues/87
+- Original HIP PR: <https://github.com/helium/HIP/pull/86>
+- Tracking Issue: <https://github.com/helium/HIP/issues/87>
 - Status: Approved
 
 # Summary
@@ -13,7 +13,6 @@
 This proposal seeks to lay out requirements for third-party manufacturers to be approved by the community, and a process by which onboarding keys can be issued by Helium, Inc to those manufacturers.
 
 For Light Hotspots to be added to the Network, Validators must be a network participant to handle consensus. Shipping to consumers cannot happen until HIP25 is implemented in production.
-
 
 # Motivation
 
@@ -27,7 +26,6 @@ Helium Inc is currently the only party that can issue the keys required to add a
 
 Importantly, this proposal does not contemplate granting direct key issuance authority to any third-parties. While desirable, we believe that proposal and its potential consequences should be evaluated in a separate HIP.
 
-
 # Stakeholders
 
 Almost everyone involved in the Helium ecosystem, but especially:
@@ -37,7 +35,6 @@ Almost everyone involved in the Helium ecosystem, but especially:
 - Prospective hotspot owners, who might have been deterred by cost, features or lack of availability
 - Current hotspot owners, whose earnings will be further diluted as the network grows
 - Network end-users, who desire broader coverage
-
 
 # Detailed Explanation
 
@@ -54,7 +51,6 @@ For an initial launch, we propose favoring:
 - Hardware designs that emphasize security and reliability rather than novel designs with more unknowns
 
 Since this is a brand-new initiative and there is potential for abuse or failure to deliver, we seek to minimize risk. Over time, we would like to open this up to hobbyists, new entrants, and more experimental designs.
-
 
 ## Application Requirements
 
@@ -84,15 +80,15 @@ Lastly, manufacturers are expected to provide:
 
 While we recognize that much of this information could be considered sensitive or proprietary, we believe it is imperative to build trust with the initial set of manufacturers that are brought in through this process. Thus we ask more of this initial set of manufacturers than we might from later approvals.
 
-
 ### Light Hotspot Requirements (Amendment)
-With the incoming launch of Validators (HIP25), the network no longer requires compute-intensive Hotspots to run consensus groups. This reduces the requirements for Hotspots such that they become "Light Hotspots". Light Hotspots are a new subclass of trusted Hotspots on the Network, able to participate in PoC, Witness, and create Challenges. In addition to PoC activities, they can transfer Data Packets. Light Hotspots will earn HNT for these activities. 
+
+With the incoming launch of Validators (HIP25), the network no longer requires compute-intensive Hotspots to run consensus groups. This reduces the requirements for Hotspots such that they become "Light Hotspots". Light Hotspots are a new subclass of trusted Hotspots on the Network, able to participate in PoC, Witness, and create Challenges. In addition to PoC activities, they can transfer Data Packets. Light Hotspots will earn HNT for these activities.
 
 Light Hotspots will **not** participate in Consensus and will be flagged as such on the Blockchain. They will not mine HNT for participating in Consensus.
 
 The reduced compute requirements will enable a new class of lower-cost Hotspots to enter the market.
 
-Light Hotspots will not be expected to pass the Audit and Compute requirements to run and participate in consensus. Their block absorption rate may be documented as a comparison to other blockchain following miners. 
+Light Hotspots will not be expected to pass the Audit and Compute requirements to run and participate in consensus. Their block absorption rate may be documented as a comparison to other blockchain following miners.
 
 ## Issuing Keys & Paying Staking Fees
 
@@ -104,7 +100,6 @@ For the time being, we strongly recommend Helium Inc continue to keep control of
 
 We suggest that Helium Inc move RAK and other third-party manufacturers to a new key issuance system that includes public record-keeping on the blockchain. The specifics of this system are still to be determined. We believe this proposal could be approved and a solution developed independently. Applicants that would otherwise be approved should be able to move forward with the process
 
-
 ## Revoking Manufacturer Approvals
 
 We suggest a similar HIP-style "rough consensus" process in the case that the community wants to cease issuing codes to an approved manufacturer.
@@ -112,7 +107,6 @@ We suggest a similar HIP-style "rough consensus" process in the case that the co
 Removing any hotspots associated with that manufacturer is not currently possible. Consideration and approval of this is left to a separate proposal, as it is both technically and philosophically complex.
 
 For consideration, there is not currently a way to unstake a hotspot on the Helium network. There is also no denylist support, which could be used as to implement community-led blocking of known bad actors. A mechanism for revoking access could potentially be built alongside the key-issuance system mentioned above, but again, this is explicitly left to a future proposal.
-
 
 ## Apps, Software Updates & Customer Support
 
@@ -134,10 +128,10 @@ Both Helium and RAK hotspots are (presumably) running the same miner software as
 
 Interested manufacturers should visit the [dewi-alliance/hotspot-manufacturers](https://github.com/dewi-alliance/hotspot-manufacturers/) repository, which contains instructions on how to submit an application and tracking issues for in-progress applications.
 
-* Make a copy of the `TEMPLATE.md` file
-* Fill it out; if you have questions or concerns about a particular question, just leave it blank and ask on GitHub or on Discord.
-* Submit a GitHub pull request
-* Discussion and approval would follow the same "rough consensus” process used by HIPs generally, as outlined in [HIP7](https://github.com/helium/HIP/blob/master/0007-managing-hip-process.md).
+- Make a copy of the `TEMPLATE.md` file
+- Fill it out; if you have questions or concerns about a particular question, just leave it blank and ask on GitHub or on Discord.
+- Submit a GitHub pull request
+- Discussion and approval would follow the same "rough consensus” process used by HIPs generally, as outlined in [HIP7](https://github.com/helium/HIP/blob/master/0007-managing-hip-process.md).
 
 Sensitive information like financials or proofs of identity could be furnished to members of both Helium Inc. and the Decentralized Wireless Alliance (DeWi) and attested publicly, via the HIP document, GitHub comments, or otherwise.
 
@@ -173,7 +167,6 @@ Sensitive information like financials or proofs of identity could be furnished t
 # Deployment Impact
 
 - More devices on the network means more potential for abuse by bad-actors. This is already a serious issue with the 10k/month RAKspots they are estimated to ship each month, and those feature essentially zero security. This HIP would likely improve the situation by allowing manufacturers with more-secure designs, which could potentially function as \[golden gateways](...)
-
 
 # Success Metrics
 

@@ -3,13 +3,13 @@
 - Author(s): Helium Core Developers
 - Start Date: 2022-08-30
 - Category: Technical
-- Original HIP PR: https://github.com/helium/HIP/pull/470
-- Tracking Issue: https://github.com/helium/HIP/issues/471
+- Original HIP PR: <https://github.com/helium/HIP/pull/470>
+- Tracking Issue: <https://github.com/helium/HIP/issues/471>
 - Status: In Discussion
 
 # Summary
 
-In this HIP, we propose a new approach to Proof-of-Coverage and Data Transfer Accounting by moving this responsibility to oracles and, thereby, reducing the complexity required for operating a blockchain that supports the Helium Network. Through these actions, we believe we can allow for more reliable data transfer and more consistent and predictable Proof-of-Coverage activity. 
+In this HIP, we propose a new approach to Proof-of-Coverage and Data Transfer Accounting by moving this responsibility to oracles and, thereby, reducing the complexity required for operating a blockchain that supports the Helium Network. Through these actions, we believe we can allow for more reliable data transfer and more consistent and predictable Proof-of-Coverage activity.
 
 With the move to more “oracled” activity on chain, we believe that the simplification allows us to select a more scalable Layer 1 for the Helium community, specifically Solana. Integration of the Helium tokens (HNT, DC, IOT, and MOBILE, initially) into the Solana ecosystem additionally provides Helium wallet holders access to a variety of applications, governance mechanisms, and other utilities not available natively on our sovereign L1.
 
@@ -23,14 +23,14 @@ The Helium Network has grown incredibly quickly with close to 1 million Hotspots
 
 We believe that the two most important goals of the Network should be to ensure the following:
 
-* Reliable Data Transfer activity (and consistent accounting)
-* Reliable Proof-of-Coverage activity (and proportional and fair rewards distribution)
+- Reliable Data Transfer activity (and consistent accounting)
+- Reliable Proof-of-Coverage activity (and proportional and fair rewards distribution)
 
 In the last several months of the network, both have been challenging for network participants with much reduced Proof-of-Coverage activity due to network size and blockchain/validator load and packet delivery issues due to complexities related to managing routing and packet purchasing data on the Helium blockchain.
 
 # Stakeholders
 
-This HIP has a direct impact on all stakeholders on the network. We believe that overall, Hotspot owners and Users of the network will see more consistent and reliable data transfer as discussed above. 
+This HIP has a direct impact on all stakeholders on the network. We believe that overall, Hotspot owners and Users of the network will see more consistent and reliable data transfer as discussed above.
 
 One set of stakeholders, namely validator stakers, staking pool operators, and validator-as-a-service providers, may be negatively impacted by this change but we believe these parties will continue to be able to participate in network activities. Stakers will be able to more actively participate in governance by staking their HNT into veHNT as described in [HIP 51][HIP 51] and earn subDAO tokens like IOT or MOBILE by assigning their veHNT to a network they “vote” for.
 
@@ -44,7 +44,7 @@ Re-designing PoC activity to be implemented as Oracles introduces some new servi
 
 Today, the Proof-of-Coverage system depends on Hotspots to be informed by their connected Validator that they are being challenged. This system depends on all Validators generating potential challenge keys, those keys being selected by the Consensus Group, the connected Validator staying in sync and connected, and the creating Validator being reachable). This complexity was introduced to improve the on-chain scalability of Proof-of-Coverage and to limit the amount of activity on the Helium blockchain as the network grows (making it not need to scale as the number of Hotspots increases). While well-intentioned, the reduction of activity this causes makes it more difficult for individual Hotspot owners to understand their performance and usefulness to the network and reduces Proof-of-Coverage activity rates in the network at the scale of many millions of Hotspots.
 
-We propose, instead, that Hotspots themselves are responsible for beaconing regularly; with the initial proposed beacon rate to be once per hour. With a predictable beacon rate, a Hotspot owner can be assured that they are “alive” on the network, are eligible for Proof-of-Coverage rewards, and potentially providing useful coverage for devices on the network. 
+We propose, instead, that Hotspots themselves are responsible for beaconing regularly; with the initial proposed beacon rate to be once per hour. With a predictable beacon rate, a Hotspot owner can be assured that they are “alive” on the network, are eligible for Proof-of-Coverage rewards, and potentially providing useful coverage for devices on the network.
 
 ### Scaling PoC Activity
 
@@ -54,7 +54,7 @@ The beacon receipt can be reported, once transmitted, directly to the PoC Ingest
 
 From here, the PoC Verifier Oracle is introduced to the data pipeline. This oracle is responsible for analyzing receipt files, correlating beacons with witnesses, and analyzing entire events for validity. This Oracle can be scaled by sharing time buckets, and this task is extremely parallelizable.
 
-Using traditional data pipeline techniques, this architectural change to Proof-of-Coverage will help scale the network to millions of Hotspots across multiple subDAOs. This technique can be adapted for the IOT and MOBILE network today and could be considered for the WIFI subDAO as well in the future. 
+Using traditional data pipeline techniques, this architectural change to Proof-of-Coverage will help scale the network to millions of Hotspots across multiple subDAOs. This technique can be adapted for the IOT and MOBILE network today and could be considered for the WIFI subDAO as well in the future.
 
 ### Faster Iteration of Proof-of-Coverage
 
@@ -101,7 +101,7 @@ Today, Data Delivery can be dependent on Validators, Routers, and other chain-fo
 
 In this proposal, we also introduce a few new pieces of infrastructure and return to using traditional LoRaWAN network servers with our new architecture. Hotspots will speak directly to Load Balancers which are traditionally easier to scale horizontally. These Load Balancers are paired with Packet Routers that have up-to-date information on how to route packets and are able to stream packet details like hashes, sizes, and originating Hotspots to a scalable storage layer, similar to the PoC Ingestion Oracle as described above.
 
-These Packet Routers can stream packets directly to LNSs based on routing information stored in a Config Service and can make decisions on whether or not packets should be routed based on the rules of the network. 
+These Packet Routers can stream packets directly to LNSs based on routing information stored in a Config Service and can make decisions on whether or not packets should be routed based on the rules of the network.
 
 These architectural changes are summarized in the following diagram.
 
@@ -141,7 +141,7 @@ A more thorough analysis of the variety of options considered is forthcoming but
 
 With the move to Solana, we propose that the Consensus and Challenge Construction Reward portions of HNT emissions (6.85%) are allocated to the subDAOs as proposed in [HIP 51][HIP 51], increasing the allotment of rewards to Hotspot owners. This should continue to incentivize deployment of the IOT and MOBILE network.
 
-The Helium Validator community is robust. At the time of writing, almost 38% of all HNT is staked in Validators. And the over 3,700 validator nodes are supported by a deep ecosystem of custodial (pooled) and non-custodial (dedicated) hosting providers. Though the transition to Solana would remove the need for staked HNT as we know it today, we believe the proposed subDAO structure allows for current HNT validators to redeploy their HNT and resources in ways that will earn comparable yield while playing a similarly important role in the growth of the network, with this role moving from mining blocks to subDAO governance. 
+The Helium Validator community is robust. At the time of writing, almost 38% of all HNT is staked in Validators. And the over 3,700 validator nodes are supported by a deep ecosystem of custodial (pooled) and non-custodial (dedicated) hosting providers. Though the transition to Solana would remove the need for staked HNT as we know it today, we believe the proposed subDAO structure allows for current HNT validators to redeploy their HNT and resources in ways that will earn comparable yield while playing a similarly important role in the growth of the network, with this role moving from mining blocks to subDAO governance.
 
 ### Reduce the cooldown period of Staked Validators
 
