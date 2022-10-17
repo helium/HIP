@@ -4,6 +4,7 @@
 - Start Date: November 11, 2020
 - Category: Technical
 - Tracking Issue: [#78](https://github.com/helium/HIP/issues/78)
+- Status: Closed
 
 # Summary
 [summary]: #summary
