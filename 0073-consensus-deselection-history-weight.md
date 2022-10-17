@@ -1,11 +1,11 @@
 # HIP 73: Consensus Deselection Weighting
 
-- Author(s): @PaulM
+- Author(s): [@PaulVMo](https://github.com/PaulVMo)
 - Start Date: 2022-10-03
 - Category: Technical
-- Original HIP PR:
-- Tracking Issue:
-- Code PR: https://github.com/helium/blockchain-core/pull/1468
+- Original HIP PR: [#490](https://github.com/helium/HIP/pull/490)
+- Tracking Issue: [#491](https://github.com/helium/HIP/issues/491)
+- Code PR: [helium/blockchain-core#1468](https://github.com/helium/blockchain-core/pull/1468)
 
 # Summary
 
