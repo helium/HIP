@@ -62,7 +62,7 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | 47 | [Increase DKG Failure Penalty](https://github.com/helium/HIP/blob/main/0047-increase-dkg-penalty.md) | [Approved](https://github.com/helium/HIP/issues/313) |
 | 48 | [IP-over-LoRaWAN](https://github.com/helium/HIP/blob/main/0048-ip-support.md) | [In Discussion](https://github.com/helium/HIP/issues/319) |
 | 49 | [LoRaWAN Sub-region Max EIRP Limit](https://github.com/helium/HIP/blob/main/0049-max-eirp-adjustment.md) | [In Discussion](https://github.com/helium/HIP/issues/327) |
-| 50 | [Display All Potential Witness Beacons](https://github.com/helium/HIP/blob/main/0050-display-all-potential-beacon-witnesses.md) | [In Discussion](https://github.com/helium/HIP/issues/331) |
+| 50 | [Display All Potential Witness Beacons](https://github.com/helium/HIP/blob/main/0050-display-all-potential-beacon-witnesses.md) | [Closed](https://github.com/helium/HIP/issues/331) |
 | 51 | [Helium DAO](https://github.com/helium/HIP/blob/main/0051-helium-dao.md) | [Approved](https://github.com/helium/HIP/issues/336) |
 | 52 | [IoT subDAO](https://github.com/helium/HIP/blob/main/0052-iot-dao.md) | [Approved](https://github.com/helium/HIP/issues/338) |
 | 53 | [Mobile subDAO](https://github.com/helium/HIP/blob/main/0053-mobile-dao.md) | [Approved](https://github.com/helium/HIP/issues/345) |
