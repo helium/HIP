@@ -91,7 +91,7 @@ signature = ed25519_sign(msg, pubKey, privKey)
 The firmware running on Secure Concentrator is open-source. The firmware itself has a bootloader that checks the cryptographic signature of the application image at each power up to ensure it is unaltered from its original form. The Helium Foundation manages the cryptographic key used by bootloader. The Helium Foundation is also responsible for auditing the firmware.
 
 ## Proof of Coverage Rewards
-In order to incentivize adoption of Secure Concentrators, we propose increasing the earnings of PoC Witness packets received by Secure Concentrator by a factor of three **(3x)**. We believe this is justified due to the increased security benefits the entire Helium network will enjoy with the addition of Secure Concentators.
+In order to incentivize adoption of Secure Concentrators, we propose increasing the earnings of PoC Witness packets received by Secure Concentrator by a factor of **(1.25x)**. We believe this is justified due to the increased security benefits the entire Helium network will enjoy with the addition of Secure Concentators.
 
 ## Onboarding
 Manufacturers will purchase unique ED25519 keypairs for installation onto Secure Concentrator devices from the Heilum Foundation for a fee of 4,000,000 DC ($40 USD) each. Each Manufacturer will be required to purchase a minimum quantity of 1000 key pairs. This rule serves as a type of proof-of-stake mechanism ensuring only serious manufactures are allowed access to keypairs. Keypairs are intended for installation on Secure Concentrators produced by that Manufacturer only. Any Manufacturer found to be re-selling keypairs or otherwise using them as unintended, will have their keypairs revoked. 
