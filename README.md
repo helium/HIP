@@ -43,7 +43,7 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | 28 | [Consensus Reward Adjustments](https://github.com/helium/HIP/blob/main/0028-consensus-reward-adjustments.md) | [Deployed](https://github.com/helium/HIP/issues/140) ([audit](https://github.com/helium/miner/blob/master/audit/var-84.md) / [txn](https://explorer.helium.com/txns/siOPX2IFSh9ey2U0X18BiDsPJHrgxQ0_YKleY4Vyew4)) |
 | 29 | [Multi-signature Keys](https://github.com/helium/HIP/blob/main/0029-multisignature-keys.md) | [Deployed](https://github.com/helium/HIP/issues/157) ([commit](https://github.com/helium/miner/commit/b038f24c8ea801c2062644c7cd682832919b25b0)) |
 | 30 | [BLS12-381 for Threshold Cryptography](https://github.com/helium/HIP/blob/main/0030-update-threshold-cryptography.md) | [Deployed](https://github.com/helium/HIP/issues/158) ([commit](https://github.com/helium/miner/commit/b038f24c8ea801c2062644c7cd682832919b25b0)) |
-| 31 | [Governance by Token Lock](https://github.com/helium/HIP/blob/main/0031-governance-by-token-lock.md) | [In Discussion](https://github.com/helium/HIP/issues/183) |
+| 31 | [Governance by Token Lock](https://github.com/helium/HIP/blob/main/0031-governance-by-token-lock.md) | [Closed](https://github.com/helium/HIP/issues/183) |
 | 32 | [Split DCs Among All Transferers](https://github.com/helium/HIP/blob/main/0032-split-dcs.md) | [In Discussion](https://github.com/helium/HIP/issues/221) |
 | 33 | [Regional Reward Adjustments](https://github.com/helium/HIP/blob/main/0033-regional-reward-adjustments.md) | [In Discussion](https://github.com/helium/HIP/issues/222) |
 | 34 | [Validator Node Security](https://github.com/helium/HIP/blob/main/0034-validator-node-security.md) | [In Discussion](https://github.com/helium/HIP/issues/223) |
