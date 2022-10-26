@@ -53,7 +53,7 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | 38 | [Validator Oracles](https://github.com/helium/HIP/blob/main/0038-validator-oracles.md) | [In Discussion](https://github.com/helium/HIP/issues/282) |
 | 39 | [HNT Redenomination](https://github.com/helium/HIP/blob/main/0039-hnt-redenomination.md) | [In Discussion](https://github.com/helium/HIP/issues/283) |
 | 40 | [Validator Denylist](https://github.com/helium/HIP/blob/main/0040-validator-denylist.md) | [Closed](https://github.com/helium/HIP/issues/285) |
-| 41 | [Governance by Token Lock V2](https://github.com/helium/HIP/blob/main/0041-governance-by-token-lock-v2.md) | [In Discussion](https://github.com/helium/HIP/issues/302) |
+| 41 | [Governance by Token Lock V2](https://github.com/helium/HIP/blob/main/0041-governance-by-token-lock-v2.md) | [Closed](https://github.com/helium/HIP/issues/302) |
 | 42 | [Beacon/Witness Ratio - Witness Reward Limit](https://github.com/helium/HIP/blob/main/0042-beacon-witness-ratio-witness-reward-limit.md) | [Closed](https://github.com/helium/HIP/issues/303) |
 | 43 | [Software Release Guidelines](https://github.com/helium/HIP/blob/main/0043-software-release-guidelines.md) | [In Discussion](https://github.com/helium/HIP/issues/309) |
 | 44 | [Witness Reward Decay](https://github.com/helium/HIP/blob/main/0044-witness-decay.md) | [In Discussion](https://github.com/helium/HIP/issues/310) |
