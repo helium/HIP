@@ -52,7 +52,7 @@ After vetting the idea, please write it up using this markdown-formatted [HIP te
 How to submit a pull request:
 
 - Fork this repository (e.g. using the GitHub "Fork" button top-right) and checkout your fork
-- Add your file using the next available number in the existing filename convention, e.g. `0004-data-credits.md`
+- Add your file and give it a title but do not allocate a number, e.g. `HIP-data-credits.md`
 - Commit your changes (`git commit [filename] -m "Description of your changes"`) and push them to your fork (`git push origin master`)
 - Submit your change as a [pull request](https://github.com/helium/hip/pulls)
 
