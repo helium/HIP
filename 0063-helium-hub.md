@@ -3,16 +3,14 @@
 - Author(s): [@anthonyra](https://github.com/anthonyra)
 - Start Date: 2022-05-26
 - Category: Economic
-- Original HIP PR: https://github.com/helium/HIP/pull/419
-- Tracking Issue: https://github.com/helium/HIP/issues/423
+- Original HIP PR: <https://github.com/helium/HIP/pull/419>
+- Tracking Issue: <https://github.com/helium/HIP/issues/423>
 
 # Summary
-[summary]: #summary
 
 This HIP is an alternative to the one being presented as [HIP-51 Helium DAO](0051-helium-dao.md). This HIP will take the goverance proposal with slight modifications from that HIP but drastically changes the economic and technical implementation. As Helium Hub the Helium blockchain will become the center/hub of a web of wireless protocols all of which have the ability to leverage the Helium Ecosystem.
 
 # Motivation
-[motivation]: #motivation
 
 The purpose of this HIP is to simplify the proposal of Helium becoming the center of multiple wireless protocols (omniprotocol access layer).
 
@@ -25,12 +23,10 @@ The purpose of this HIP is to simplify the proposal of Helium becoming the cente
 - Describe how goverance is used within the Helium Hub to include scope
 
 # Stakeholders
-[stakeholders]: #stakeholders
 
 - The Helium Community as a whole. This will drastically change the way Helium operates.
 
 # Detailed Explaination
-[detailed-explanation]: #detailed-explanation
 
 This explaination will describe the following in regards to Helium Hub and sub-protocols.
 
@@ -39,10 +35,8 @@ This explaination will describe the following in regards to Helium Hub and sub-p
 - Governance
 
 ## Helium Hub - Sub-protocols
-[sub-protocol-requirements]: #helium-hub---sub-protocols
 
 ### Minimum Requirements
-[minimum-requirements]: #minimum-requirements
 
 For the sub-protocol to be eligible for data transfer rewards it needs to;
 
@@ -65,7 +59,6 @@ For the sub-protocol to be eligible for Proof-of-Protocol-Service (PoPS) it also
 1) Maintain 21,000,000 USD of DC in its bonding pool. Up to 10% of this amount can be used as a cold start bucket. This bond can be crowdfunded. In the funding phase, HNT accumulates until the 21,000,000 USD valuation is reached. At this point the HNT is burnt to DC and the sub-protocol then becomes eligible for PoPS. If the sub-protocol doesn't reach this valuation within the set timeframe those who bonded HNT to this fund are allowed to redeem their HNT.
 
 ## Helium Hub - Rewards
-[hub-rewards]: #helium-hub---rewards
 
 The bonding pool functions both as an eligibility requirement and as the source of the HNT for the programmatic treasury and the DC's used for the sub-protocol. In doing so it's also the location where the Helium Hub will deposit any epoch rewards.
 
@@ -156,7 +149,6 @@ This reward structures sets an age on how long a sub-protocol is rewarded for bu
 To help make sense of how this all works together, I've created a spreadsheet that shows how the network would react if the switch was flipped this second. [spreadsheet](https://docs.google.com/spreadsheets/d/1fRZvUAvp6WfAhHx4TDVpsNDs7vndtAHqfTFiPbqiklM/edit#gid=462165445)
 
 ## Helium Hub - Goverance
-[goverance]: #helium-hub---goverance
 
 Vote Escrowed HNT - veHNT are non-fungible tokens that aren't transferable. The only way to get veHNT is to lock up HNT on the recieving account.
 
@@ -200,12 +192,10 @@ As stated above, one of the requirements for becoming a sub-protocol is to maint
 Further details on the vote-escrow weighted governance model can be found in [Curve governance documentation](https://resources.curve.fi/governance/understanding-governance) and [https://docs.tribeca.so/electorate/voting-escrow](https://docs.tribeca.so/electorate/voting-escrow).
 
 # Drawbacks
-[drawbacks]: #drawbacks
 
 This drastically changes how Helium as a blockchain functions. The amount of development work is far greater then anything proposed to date. If Helium and all sub-protocols decide to use the Cosmos SDK it'd also shift the programming language of Helium to Go and Rust. Making most Erlang work to date obsolete. The migration process that will be proposed later will try to maintain the current chain as the LoRa sub-protocol but that sub-protocol wouldn't be locked into such an agreement. It's just proposed for an easier transition.
 
 # Rationale and Alternatives
-[alternatives]: #rationale-and-alternatives
 
 This is your chance to discuss your proposal in the context of the whole design
 space. This is probably the most important section!
@@ -215,12 +205,10 @@ space. This is probably the most important section!
 - This is a direct alternative to [HIP-51](0051-helium-dao.md)
 
 # Unresolved Questions
-[unresolved]: #unresolved-questions
 
 - How will the above be implemented techinically speaking.
 
 # Deployment Impact
-[deployment-impact]: #deployment-impact
 
 Describe how this design will be deployed and any potential impact it may have on
 current users of this project.
@@ -228,7 +216,6 @@ current users of this project.
 - This HIP will have a follow up HIP that will describe an means of switching to this model with the use of the Cosmos SDK. Since the technical implementation is not important it's not included here.
 
 # Success Metrics
-[success-metrics]: #success-metrics
 
 What metrics can be used to measure the success of this design?
 

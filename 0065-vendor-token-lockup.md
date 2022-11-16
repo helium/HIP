@@ -1,8 +1,8 @@
 # HIP 65: Vendor HNT Lockup
 
 - Category: Economic, Technical
-- Original PR: https://github.com/helium/HIP/pull/428
-- Tracking Issue: https://github.com/helium/HIP/issues/437
+- Original PR: <https://github.com/helium/HIP/pull/428>
+- Tracking Issue: <https://github.com/helium/HIP/issues/437>
 - Status: In Discussion
 
 # Addendum to HIP-19
@@ -76,11 +76,11 @@ This division of roles ensures that each group vigorously pursues their own agen
 
 ### Prosecuting Body
 
-The right to bring forth an action under this proposal belongs *solely* to the Proof-of-Coverage Security Working Group*; a separate, community-organized body. The group shall use whatever criteria it deems appropriate to investigate allegations of wrongdoing and when ready, bring the case forward to the *judicial body* to begin a trial.
+The right to bring forth an action under this proposal belongs *solely* to the Proof-of-Coverage Security Working Group*; a separate, community-organized body. The group shall use whatever criteria it deems appropriate to investigate allegations of wrongdoing and when ready, bring the case forward to the*judicial body* to begin a trial.
 
 ### Defending body
 
-In all cases, the manufacturer accused of wrongdoing shall have the right to represent itself as the *defending body* at the trial. Manufacturers representing themselves will have a minimum of three full business days (72 hours) to prepare. 
+In all cases, the manufacturer accused of wrongdoing shall have the right to represent itself as the *defending body* at the trial. Manufacturers representing themselves will have a minimum of three full business days (72 hours) to prepare.
 
 ### Judicial Body
 

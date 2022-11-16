@@ -3,8 +3,8 @@
 - Authors: Karam Lakshman, Shubhendu Sharma,[@tjain-mcc](https://github.com/tjain-mcc), [@shayons297](https://github.com/shayons297)
 - Start Date: 2022-06-01
 - Category: Economic, Technical
-- Original PR: https://github.com/helium/HIP/pull/420
-- Tracking Issue: https://github.com/helium/HIP/issues/424
+- Original PR: <https://github.com/helium/HIP/pull/420>
+- Tracking Issue: <https://github.com/helium/HIP/issues/424>
 
 ![https://lh6.googleusercontent.com/KStfb4K7ODMe4EmsovQbrzkzm7gp7YI30dw5-Y5RRsGksHyD-rg-FHgEDrC7V5ISRbHRdD7SoHOVqZ1uylbJMJf6SDtBG-bcRCNe2jjj22VBjFLMGerSJIhgUNlFAqe8GWvTDT4FeWXgwTGMNA](https://lh6.googleusercontent.com/KStfb4K7ODMe4EmsovQbrzkzm7gp7YI30dw5-Y5RRsGksHyD-rg-FHgEDrC7V5ISRbHRdD7SoHOVqZ1uylbJMJf6SDtBG-bcRCNe2jjj22VBjFLMGerSJIhgUNlFAqe8GWvTDT4FeWXgwTGMNA)
 
@@ -117,7 +117,7 @@ WiFi SubDao will operate a chain variable that will dictate the conversion ratio
 
 ### Governance Specification
 
-# The WiFi network is under the control of the subDAO. All subDAO proposals must come attached with code to be approved.
+# The WiFi network is under the control of the subDAO. All subDAO proposals must come attached with code to be approved
 
 We propose that veHWIFI governance is constructed in a manner largely identical to veMOBILE governance as specified in [HIP 51: Helium DAO](https://github.com/helium/HIP/blob/main/0051-helium-dao.md).
 

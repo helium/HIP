@@ -4,31 +4,29 @@
 - Start Date: November 1, 2021
 - Category: Governance
 - Status: In Discussion
-- Original HIP PR: https://github.com/helium/HIP/pull/299
+- Original HIP PR: <https://github.com/helium/HIP/pull/299>
 - Tracking Issue: TODO
 - Discord Channel: TODO
 
 # Summary
 
-This proposal specifies a governance mechanism to enable modifications to chain variables (on-chain voting), and specifies an additional signaling mechanism for general purpose protocol improvements (off-chain voting). 
+This proposal specifies a governance mechanism to enable modifications to chain variables (on-chain voting), and specifies an additional signaling mechanism for general purpose protocol improvements (off-chain voting).
 
 *Note: This HIP has been submitted In direct response to ["Rewrite HIP31 with Token Lock rather than Token Burn mechanism"](https://github.com/helium/HIP/pull/252)*
 
 # Motivation
 
-Sound governance models help networks develop in the direction that creates the most value for their participants. Governance mechanisms must be designed such that decisions are transparent, permissionless, and align incentives for the long term. 
+Sound governance models help networks develop in the direction that creates the most value for their participants. Governance mechanisms must be designed such that decisions are transparent, permissionless, and align incentives for the long term.
 
 Most protocol governance in practice today relies on a one-token, one-vote system. This mechanism is vulnerable to adversarial parties borrowing tokens for the solely for the duration of a given vote, and steering the network in a potentially harmful direction. With historical precedent of low voter turnout and low interest rates for short-term loans, this is an easily feasible attack vector.
 
-One-token, one vote also concentrates voting power in the hands of large market makers and traders who hold tokens for trading purposes but do not have long term commitment to the network. This can lead to smaller holders becoming disenfranchised and disengaged from governance. 
+One-token, one vote also concentrates voting power in the hands of large market makers and traders who hold tokens for trading purposes but do not have long term commitment to the network. This can lead to smaller holders becoming disenfranchised and disengaged from governance.
 
-This proposal outlines a system that imposes a cost on voting such that only committed participants are willing to vote. 
-
+This proposal outlines a system that imposes a cost on voting such that only committed participants are willing to vote.
 
 # Stakeholders
 
 All Helium Network stakeholders are affected by this HIP because governance impacts key parameters in the network.
-
 
 # Detailed Explanation
 
@@ -48,7 +46,7 @@ As a simple example, let’s imagine Alice, Bob, and Charlie all have 100 HNT:
 
 ![voting-power-multiplier-graph](0041-governance-by-token-lock-v2/voting-power-multiplier.png)
 
-As the lockup burns down, so does the voting power. For example, if Charlie locked up his 100 tokens for 2,500,000 blocks and 1,125,000 blocks have passed then Charlie would have 2,500 vote power. 
+As the lockup burns down, so does the voting power. For example, if Charlie locked up his 100 tokens for 2,500,000 blocks and 1,125,000 blocks have passed then Charlie would have 2,500 vote power.
 
 | Period (Blocks) | Multiplier (Scalar) |
 | --------------- | ------------------- |
@@ -63,10 +61,9 @@ As the lockup burns down, so does the voting power. For example, if Charlie lock
 | 2,250,000       | 89.00               |
 | 2,500,000       | 100.00              |
 
-Governance proposals can be called to a formal vote with a minimum of 1,000,000 voting power (“vote minimum”), and users will be able to participate in each vote for a period of 7 days (“voting period”). These thresholds are placed to mitigate risk of DDoS attacks, but both parameters will be tunable by this same voting process at any time. 
+Governance proposals can be called to a formal vote with a minimum of 1,000,000 voting power (“vote minimum”), and users will be able to participate in each vote for a period of 7 days (“voting period”). These thresholds are placed to mitigate risk of DDoS attacks, but both parameters will be tunable by this same voting process at any time.
 
 Note that the voting power used to call a vote is eligible to vote, so the user that calls for a proposal to be voted upon can allocate their stake to either side. At the end of the voting period, the governance staking contract looks at how many tokens a voter has and how long they are locked for. Voters can always extend their lockup period just prior to voting. Locked tokens can vote as many times as they want, and all earnings from staking are earned by voters as normal staking rewards.
-
 
 **Commit-and-Reveal**
 
@@ -78,7 +75,6 @@ Commit-and-reveal can be implemented by having voters hash together their addres
 
 The result of this should be maximal participation for important decisions because voters won’t know whether their vote will matter or not.
 
-
 **Voting Mechanics**
 
 The minimum threshold to win a vote is 66%. We believe that chain variables in networks should only change when there is broad consensus amongst stakeholders and seek to avoid giving too much power to narrow majorities. There are three classes of variables going forward:
@@ -89,8 +85,7 @@ The minimum threshold to win a vote is 66%. We believe that chain variables in n
 
 Since voting by token lock has meaningful liquidity implications for holders, vote results should be binding and simple to deploy quickly. Chain variable changes fit this criteria.
 
-The Vote Power by Lock mechanism is designed for proposals to automatically modify chain variables at the end of the voting process, but can also be utilized for general purpose network changes. This proposal requires that code be presented prior to the vote for any general purpose network changes. 
-
+The Vote Power by Lock mechanism is designed for proposals to automatically modify chain variables at the end of the voting process, but can also be utilized for general purpose network changes. This proposal requires that code be presented prior to the vote for any general purpose network changes.
 
 # Drawbacks
 
@@ -102,17 +97,15 @@ The Vote Power by Lock mechanism is designed for proposals to automatically modi
 
 4. **Payoff ambiguity:** It is difficult to calculate the payoff for participation in any given vote.
 
-
 # Rationale
 
-1. **Incentivizes consensus:** In this structure, having a contentious vote is expensive (in terms of lost liquidity) if a network participant is on the losing side, so it is worth building consensus on a proposal 
+1. **Incentivizes consensus:** In this structure, having a contentious vote is expensive (in terms of lost liquidity) if a network participant is on the losing side, so it is worth building consensus on a proposal
 
 2. **Fights concentration of governance power via concentration of economic power:** This structure is much less oligarchic than one token, one vote, partially preventing whales from de facto control of governance proposals because votes are private and one side cannot take the lead publicly thereby dissuading the other side from voting
 
-
 # Alternatives
 
-1. Governance by token burn:[https://docs.google.com/document/d/1aTla9U4JLPTQ-mRyUB28VPOHkm4USK36uafOig6IJ_w/edit#]
+1. Governance by token burn:[<https://docs.google.com/document/d/1aTla9U4JLPTQ-mRyUB28VPOHkm4USK36uafOig6IJ_w/edit>#]
 
 # Deployment Impact and Timeline
 

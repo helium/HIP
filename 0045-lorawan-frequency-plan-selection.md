@@ -3,13 +3,11 @@
 - Author(s): [@lthiery](https://github.com/lthiery), [@ivandigiusto](https://github.com/ivandigiusto)
 - Start Date: 2021-10-25
 - Category: Technical
-- Original HIP PR: https://github.com/helium/HIP/pull/298
-- Tracking Issue: https://github.com/helium/HIP/issues/311
+- Original HIP PR: <https://github.com/helium/HIP/pull/298>
+- Tracking Issue: <https://github.com/helium/HIP/issues/311>
 - Status: Withdrawn
 
-
 # Problem Statement
-[problem_statement]: #ProblemStatement
 
 There are over a dozen of officially recognized LoRaWAN channel plans cited in
 the [LoRaWAN Regional Specification](https://lora-alliance.org/wp-content/uploads/2021/05/RP002-1.0.3-FINAL-1.pdf):
@@ -28,11 +26,11 @@ American Samoa), the selection for the Helium Network may default to that one.
 
 From the snippet above, you can see a few cases where selection is not so
 straightforward:
-* **Afghanistan, Angola, Antartica, Antigua and Barbuda, Aruba**: there is no
+- **Afghanistan, Angola, Antartica, Antigua and Barbuda, Aruba**: there is no
 channel plan suggestion nor is there one support for regulatory type approval
-* **Aland Island, Albania, Algeria, Armenia**: there are multiple potential
+- **Aland Island, Albania, Algeria, Armenia**: there are multiple potential
 plans but not support for regulatory type approval
-* **Australia**: there are _two_ potential plans and both have regulatory
+- **Australia**: there are _two_ potential plans and both have regulatory
 type approval
 
 These cases each special consideration which requires deep technical expertise
@@ -45,7 +43,6 @@ and those may often be implemented quickly as "bug fixes". However, for the
 more ambiguous regions, disambiguation lacks rigor and process.
 
 # Solution
-[solution]: #solution
 
 This HIP strives to solve the problem of choosing a _single_ frequency plan
 per region. We believe this is an important assumption as while the network
@@ -78,7 +75,7 @@ forum will be in attempt to reach consensus. The author of the dissenting
 opinion must be ready to take the floor to represent their position.
 4. If the change remains contentious, the decision will go to on-chain
 voting. Currently, that would be implemented using [Helium Vote](https://www.heliumvote.com/)
-mechanism where 1 hotspot in the concerned region equals 1 vote. Votes are 
+mechanism where 1 hotspot in the concerned region equals 1 vote. Votes are
 cast by doing a DC burn transaction towards the appropriate wallet. A hotspot
 must be asserted in the concerned region for the entire duration of the vote,
 which must last at least seven days.
@@ -88,7 +85,6 @@ Committee may withdraw their proposal and reissue a new proposal at anytime.
 This would effectively restart the process at step 1.
 
 # Rationale and Alternatives
-[alternatives]: #rationale-and-alternatives
 
 An alternate approach would be to allow any hotspot operate to choose any legal
 frequency plan. For example, operators in Australia could select AU915 _or_
@@ -98,7 +94,6 @@ Instead, we believe such mechanisms would be useful for expanding into
 additional subbands.
 
 # Deployment Impact
-[deployment-impact]: #deployment-impact
 
 A change in frequency plan could potentially cause certain devices to not be
 eligible for operation under the new frequency plan, either due to  hardware

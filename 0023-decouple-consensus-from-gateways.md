@@ -3,17 +3,15 @@
 - Author(s): @cvolkernick
 - Start Date: 2020-12-15
 - Category: Technical
-- Original HIP PR: https://github.com/helium/HIP/pull/97
-- Tracking Issue: https://github.com/helium/HIP/issues/101
+- Original HIP PR: <https://github.com/helium/HIP/pull/97>
+- Tracking Issue: <https://github.com/helium/HIP/issues/101>
 - Status: Closed
 
 # Summary
-[summary]: #summary
 
 Changes the structure & process involved in forming consensus on the network - primarily by separating concerns of miners (providing verifiable coverage) and consensus group (securing the network / block formation).
 
 # Motivation
-[motivation]: #motivation
 
 In its current state, consensus takes place onboard miners, or in the cloud in the case of "light gateways" with cloud-based miners. This HIP proposes moving away from the former and toward the latter as a standard, by moving consensus away from miners and onto dedicated cloud-based or otherwise privately operated server farms. By separating the concerns of miners (involved in tandem with gateways/packet forwarders) and consensus group, the two can be better optimized to perform their respective duties.
 
@@ -32,8 +30,7 @@ Consensus Group:
 - Security; robust against potential gaming, attacks, etc., and does not allow for powerful and/or bad actors to compromise the system at scale or via brute force.
 
 # Stakeholders
-[stakeholders]: #stakeholders
-  
+
 All current and future hotspot owners will be affected by this change. Miner owners will be given a new option to opt-in to stake & participate in CG for a marginal staking fee (opted-out by default).
 
 There will also be a new class or "role" of operator created -- validator pools/nodes. These operators will obviously have stake, as they are brought into existence via this HIP.
@@ -41,7 +38,6 @@ There will also be a new class or "role" of operator created -- validator pools/
 Community debate / discussion will be solicited via Discord in the respective hip-23-move-consensus-off-miners channel, and here in git comments.
 
 # Detailed Explanation
-[detailed-explanation]: #detailed-explanation
 
 Each miner on the network is a "constituent", with independent interests. Constituent miners can delegate their vote ("stake") in the collective network to a delegated pool entity "representative". There is no monetary cost to do so; the only potential cost is the net effect of your chosen delegate pool's election being less rewarding than another potential pool's. As an alternative approach, miners can be given the option to "opt-in" to a per-epoch stake, and then provided a list of available validator pools to delegate their votes to. From a UX standpoint this would look something like the following:
 
@@ -75,38 +71,33 @@ There are technically two separate and distinct stakes here:
 2) Constituent / Delegate Stake - this is required of individual constituent miners who are opting-in to staking and delegating their stake to validator pools / nodes. If a miner does not opt-in, they will not be charged a staking fee each epoch, and will not be eligible to receive CG rewards as a result. If miners opt-in, they will be billed the epoch stake at the initiation of each epoch period, and paid out any respective reward if their delegated stake is elected to and successfully participates in CG. These collections will constitute the reward pool for the elected pools (and by extension, their constituent delegator miners). Because of this, the rewards pool will grow and shrink respectively according on participation levels. If more miners stake, there is a greater stake at play. If less, then the opposite. This allows the reward pool to remain scaled to the current level of involvment and reward appropriately relative to "risk" or "chance".
 
 # Drawbacks
-[drawbacks]: #drawbacks
 
 - There has been concern around consensus as a whole that it may become "exclusive", in the sense that the "average Joe" miner may lose the ability to be competitive in a stake-based pool where earning opportunity is closely correlated to earning capacity (i.e. the more miners one has, the more influence they have on the ability to join CG).
 - There may be unforeseen opportunities to game CG introduced not covered or considered here. It is the author's perspective that because delegate votes are tightly coupled 1:1 with miner population, this should provide a check on concentration of influence, as there is a material cost to acquiring and operating additional miners required to obtain additional "directly-controlled" votes (as opposed to needing to "pitch" or "campaign" to delegate voters to obtain others' vote(s)).
 
 # Rationale and Alternatives
-[alternatives]: #rationale-and-alternatives
 
 Decoupling of consensus from miners is likely inevitable, as there are a variety of negative impacts caused by running consensus on low-powered devices (primarily raspberry pis). There is also a great deal of discussion around light gateways, and of course the existing implementations of semi-light gateways ("regular" gateways with their miners decoupled away in the cloud). These two likely evolutions are quite synergistic when considered together, and there are other proposals which would further enhance this architecture design, e.g. [Move PoC challenge construction to Consensus Group](https://github.com/helium/HIP/pull/41).
 
 Without this decoupling of miners and CG, the network performance is likely to suffer, as again, the optimal configurations of miner/gateways and performance of CG are directly at odds. Miner owners will likely prefer to highest cost/benefit of cheaper miners doing the same job as the more expensive counterparts, while consensus is a highly computationally intense process that is not well-suited for this arrangement -- each has different priorities, and hence cannot be optimized in the current tightly-coupled state.
 
 # Unresolved Questions
-[unresolved]: #unresolved-questions
-  
-  - Economic incentives : There are many up for debate but likely comes down to opinion and popularity. The initial thoughts here are intended to inspire debate and constructive criticism and elicit improvements in all areas suggested.
-  - Technical implementation details : The considerations herein ane mainly from a "brainstorming" perspective that takes place at a high conceptual level. These considerations are made in the macro sense, but are inadequate for technical level implementation details. More expert knowledge on the current technical workings of Consensus and it's compatibility with the suggested methods is desired / welcome.
-  - There are many potential second and third order effects / changes that may be inspired or caused / necessary with this large-scale and quite fundamental change to the system-level design of consensus group functioning. Some examples have been cited above -- light gateways, moving certain responsibilties to CG (such as challenge construction).
-  - Staking : Staking is not necessarily a monolith, so alternative methods could be proposed or supplemented/exchanged in place of the methods briefly discussed here.
-  - Effects on Consensus Group Rewards : CG rewards currently account for 6% of all reward distributions per epoch. It's to be determined how the rewards pool will be impacted.
 
-Consensus Group currently 
+- Economic incentives : There are many up for debate but likely comes down to opinion and popularity. The initial thoughts here are intended to inspire debate and constructive criticism and elicit improvements in all areas suggested.
+- Technical implementation details : The considerations herein ane mainly from a "brainstorming" perspective that takes place at a high conceptual level. These considerations are made in the macro sense, but are inadequate for technical level implementation details. More expert knowledge on the current technical workings of Consensus and it's compatibility with the suggested methods is desired / welcome.
+- There are many potential second and third order effects / changes that may be inspired or caused / necessary with this large-scale and quite fundamental change to the system-level design of consensus group functioning. Some examples have been cited above -- light gateways, moving certain responsibilties to CG (such as challenge construction).
+- Staking : Staking is not necessarily a monolith, so alternative methods could be proposed or supplemented/exchanged in place of the methods briefly discussed here.
+- Effects on Consensus Group Rewards : CG rewards currently account for 6% of all reward distributions per epoch. It's to be determined how the rewards pool will be impacted.
+
+Consensus Group currently
 
 # Deployment Impact
-[deployment-impact]: #deployment-impact
 
 - Current users will be granted a new ability to stake earnings. As staking is involved, and the process is now opt-in as opposed to default (e.g. "random consensus group election"), any network partipants who do not wish to participate (opt-in) to staking will no longer be involved in the consensus process.
 - It's currently unclear as to what existing functionality will be "backwards compatible" here, as a lot will hinge on the specific implementation details that are hashed out.
 - Existing documentation will almost certainly need to be overhauled to the extent that it exists, as the process of consensus will potentially fundamentally change.
 
 # Success Metrics
-[success-metrics]: #success-metrics
 
 Success for this HIP can be measured in several ways. First, improved consensus performance overall should be emphasized. This can be measured by improvement of CG participants dropping / timing out, material reduction in consensus group stalls, and perhaps even reduction in block times (if this is so desired...it is the author's understanding that there is a desire to hold block times as close to ~60s as possible, pending correction). Given there are also issues of individual miners crashing due to being underpowered and being elected to CG, it would follow that a successful implementation of cloud / distributed consensus would cause less of these problems to occur.
 

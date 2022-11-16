@@ -22,7 +22,7 @@ With the introduction of a hard cap on HNT supply, Helium’s token-economics wo
 
 # Stakeholders
 
-All HNT holders, Hotspot owners, and HST holders will be affected by this HIP. 
+All HNT holders, Hotspot owners, and HST holders will be affected by this HIP.
 
 There will be no change to the cost to transfer data because the cost of Data Credits is fixed in USD terms.
 
@@ -133,8 +133,8 @@ Another alternative to the proposed cap on Net Emissions is to make the Net Emis
 
 # Deployment Impact
 
-Once the halvening occurs, there will be a meaningful impact on all Hotspot owners and HST holders equally. There is no code deployment necessary until the first halvening which is on August 1st, 2021. 
+Once the halvening occurs, there will be a meaningful impact on all Hotspot owners and HST holders equally. There is no code deployment necessary until the first halvening which is on August 1st, 2021.
 
-Net Emissions will impact HNT mining as soon as they are implemented. However the cap on Net Emissions is a very small percentage of the current HNT mining, therefore we expect this impact to be minimal. 
+Net Emissions will impact HNT mining as soon as they are implemented. However the cap on Net Emissions is a very small percentage of the current HNT mining, therefore we expect this impact to be minimal.
 
 This HIP would require changes to Helium Protocol documentation and education of the community regarding the new emissions schedule.

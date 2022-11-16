@@ -4,12 +4,11 @@
   [@vihu](https://github.com/vihu), [@abhay](https://github.com/abhay) (hashc0de), et al
 - Start Date: 2022-02-02
 - Category: Technical
-- Original HIP PR: https://github.com/helium/HIP/pull/342
-- Tracking Issue: https://github.com/helium/HIP/issues/347
+- Original HIP PR: <https://github.com/helium/HIP/pull/342>
+- Tracking Issue: <https://github.com/helium/HIP/issues/347>
 - Status: In Discussion
 
 # Summary
-[summary]: #summary
 
 This HIP serves as both an explanation of the current Proof-of-Coverage (PoC)
 targeting behaviour as well as a proposal for a more scalable replacement using
@@ -18,7 +17,6 @@ that this is a _change_ to the current implementation but we believe it still
 falls within the original intent of PoC.
 
 # Motivation
-[motivation]: #motivation
 
 The current targeting mechanism relies on a global list of asserted Hotspots.
 This list, as the network grows, is increasingly expensive to maintain and
@@ -39,14 +37,12 @@ see a few instances of it). With the publishing of this HIP, however, we believe
 it may become more interesting to arbitrageurs.
 
 # Stakeholders
-[stakeholders]: #stakeholders
 
 All Hotspot owners are directly affected by this HIP. It should improve fairness
 in targeting for PoC but may affect those Hotspot deployers who are taking
 advantage of the current mis-targeting behaviour.
 
 # Detailed Explanation
-[detailed-explanation]: #detailed-explanation
 
 We will begin by explaining the current targeting behaviour and then explain the
 proposed changes.
@@ -81,21 +77,21 @@ Steps leading up to targeting:
 
 4. Once in targeting phase:
 
-  - A list of all the populated hexes (at h3 resolution 5) is fetched from the
+- A list of all the populated hexes (at h3 resolution 5) is fetched from the
     Ledger.
-  - A random state is initialized using the incoming entropy and the
+- A random state is initialized using the incoming entropy and the
     Challenger's public key
-  - An initial h3 hex `zone` is selected using an Inverse Cumulative
+- An initial h3 hex `zone` is selected using an Inverse Cumulative
     Distribution Function (ICDF) using random state and the hex list
-  - Random state is also stored for future computation
+- Random state is also stored for future computation
 
 5. Once an initial h3 hex (zone) is selected, it starts a recursive target
    selection mechanism which operates upon the following filters:
 
-  - Filter out any inactive gateways (those which haven't been challenged in a
+- Filter out any inactive gateways (those which haven't been challenged in a
     long time decided by the `poc_v4_target_challenge_age` chain variable).
-  - Do not target the Challenger Hotspot itself (this is obvious).
-  - Do not target Hotspots which do not have relevant capability. Each Hotspot
+- Do not target the Challenger Hotspot itself (this is obvious).
+- Do not target Hotspots which do not have relevant capability. Each Hotspot
     in the ledger has a `mode` defined in `blockchain_caps.hrl`.
 
 6. Once there is a filtered list of eligible targets, it re-runs the ICDF with
@@ -116,9 +112,9 @@ with a ranged iterator so that any Hotspots inside that hex, of an arbitrary
 resolution, can be queried. This is superior in several ways to the older
 "hexes" list:
 
- * It can be updated granularly
- * It can be queried efficiently
- * It does not require the entire list to be read into memory to be used
+- It can be updated granularly
+- It can be queried efficiently
+- It does not require the entire list to be read into memory to be used
 
 However, it shared the flaw with the hexes list in that it, too, had no garbage
 collection for inactive Hotspots. The HIP17 code also did inactive Hotspot
@@ -140,7 +136,7 @@ is replaced by the following:
 - A set of `poc_target_pool_size` populated hexes is selected randomly, using
   the challenge entropy, from the h3dex. `poc_target_pool_size` is a new chain
   variable.
-- The set of populated h3 hexes is weighted by their *active* population counts
+- The set of populated h3 hexes is weighted by their _active_ population counts
   and an ICDF is run as before in step 4
 
 At this point the code continues with step 5, although the inactive Hotspot
@@ -168,7 +164,6 @@ This proposal is currently implemented in
 [blockchain-core#1214](https://github.com/helium/blockchain-core/pull/1214).
 
 # Drawbacks
-[drawbacks]: #drawbacks
 
 The only known drawback is a slight change in targeting selection semantics
 because an ICDF over all populated hexes is no longer used. This is expected to
@@ -176,7 +171,6 @@ average out over time, but testing for biases and presentation of results will
 be done and added to the HIP here.
 
 # Rationale and Alternatives
-[alternatives]: #rationale-and-alternatives
 
 This design was considered superior to some alternatives because it uses an
 existing data structure that the ledger already tracks and uses and does not add
@@ -194,14 +188,12 @@ The list continues to grow, continues to become more expensive to interact with,
 targeting becomes more and biased by inactive Hotspots.
 
 # Unresolved Questions
-[unresolved]: #unresolved-questions
 
 The other mechanics of targeting are considered out of bounds. This HIP aims to
 maintain existing behaviour as much as possible and simply improve performance
 and scalability.
 
 # Deployment Impact
-[deployment-impact]: #deployment-impact
 
 Normal users should not expect to see a measurable impact, other than
 improvements to chain performance.
@@ -220,7 +212,6 @@ Code could also be written to re-calculate the hexes list on a downgrade back to
 the old behaviour.
 
 # Success Metrics
-[success-metrics]: #success-metrics
 
 The community should notice an improvement in the performance of validating and
 absorbing blocks and more expected targeting distributions.

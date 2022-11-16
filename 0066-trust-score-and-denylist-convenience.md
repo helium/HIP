@@ -3,12 +3,11 @@
 - Author(s): [@H-Baguette](https://github.com/h-baguette)
 - Start Date: 2022-06-10
 - Category: Technical
-- Original HIP PR: https://github.com/helium/HIP/pull/430
-- Tracking Issue: https://github.com/helium/HIP/issues/438
-- Status: In Discussion 
+- Original HIP PR: <https://github.com/helium/HIP/pull/430>
+- Tracking Issue: <https://github.com/helium/HIP/issues/438>
+- Status: In Discussion
 
 # Summary
-[summary]: #summary
 
 There is no single way to determine whether a hotspot is spoofing. This HIP therefore looks at several types of data that are typically looked at when looking for spoofers and combines them into a score, the Trust Score, which is designed to tell how likely a hotspot is to be spoofing, in order for them to be manually added to the denylist later.
 
@@ -17,21 +16,19 @@ The HIP doesn't make any automatic additions to the denylist, nor does it invali
 Additionally, the HIP provides convenient ways for hotspot owners to report hotspots to the denylist as well as prove their own integrity, directly in-app.
 
 # Motivation
-[motivation]: #motivation
 
 Despite the different updates introduced to limit spoofing (Denylist, HIP 58, Crowdspot, ...), spoofers are still thriving, as only a small portion of them end up on the denylist. This HIP aims to facilitate the addition of spoofing hotspots to the denylist by giving users an easier way to find them, investigate them, and report them.
 
 I previously tried to automate the invalidation of spoofing witnesses by using the hotspot's IP, but it turned out to be unsuccessful, as there are too many cases of honest miners having an IP situation that I deemed irregular. This made evident that no single data is enough to determine whether a hotspot is spoofing. This HIP works differently, by taking into account different types of data that are typically looked at before adding a hotspot to the denylist.
 
 # Stakeholders
-[stakeholders]: #stakeholders
 
-* All hotspot owners are affected by this proposal.
+- All hotspot owners are affected by this proposal.
 
 # Detailed Explanation
-[detailed-explanation]: #detailed-explanation
 
 This HIP calculates a hotspot's Trust Score by focusing on the following data :
+
 - Blockchain addition date
 - Asserted location
 - Owner addresses
@@ -67,6 +64,7 @@ Owners of spoofing hotspots can try to change the location of their hotspots in 
 Additionally, just like spoofing hotspots are likely to be added to the blockchain on the same day, they are also likely to have their location asserted on the same day. Because each newly asserted location is already penalized, we only take the last location assertion date into account.
 
 **Impact on the Trust Score** :
+
 - **-1** for each location assertion in the last 365 days *(the first location assertion in a hotspot's history doesn't count)*.
 - from **-1 to -0** for each interaction in the last 15 days with a hotspot whose latest location was asserted on a similar date, depending on how close the dates are, ranging from a 0 to a 30-day difference  (-1 if both were asserted on the exact same date, -0 if they were asserted 30 days appart or more).
 
@@ -113,6 +111,7 @@ Similar to the SNR, the RSSI (Received Signal Strength Indication) is an indicat
 Additionally, even if an RSSI is low enough that a witness is not automatically invalidated, a high RSSI value close to the maximum allowed value should at least be considered suspicious.
 
 **Impact on the Trust Score** :
+
 - **-1** per witness at least 2 hexes away in the last 60 days being invalid for having an RSSI too high.
 - from **-1 to -0** per valid witness at least 2 hexes away in the last 60 days whose RSSI is close to the maximum allowed value, ranging from a difference of 0 to 15 between the recorded RSSI value and the maximum allowed value.
 
@@ -125,6 +124,7 @@ The RSSI shows the strength of the received signal. Normally, on average, the fa
 *Explanation taken from Crowdspot :* ![image](https://user-images.githubusercontent.com/106159694/177018086-e09fd799-2dcd-4d5a-8b06-127c9f8043c3.png)
 
 **Impact on the Trust Score** :
+
 - **-(R²-0.1) * n**, R² being the variance (same value as on Crowdspot), and n being the number of interactions in the last 7 days.
 
  *(A value R² < 0.1 results in a gain of points, a value R² > 0.1 results in a loss of points).*
@@ -136,6 +136,7 @@ Spoofers often either use a VPN to conceal their IP in order to appear legit, or
 There are cases of honest hotspots having an IP in a different country than their asserted location. Some owners are using VPNs either for convenience, or to hide their mining activity from their ISP *(Internet Service Provider)*. ISP can also be using CGNAT, with the hotspot's IPv4 being located in a different country. However, the former can use a VPN located in their country, while the latter is rare enough that we can consider the case of IP addresses being located in a different country than the asserted location of a hotspot to be more likely to belong to a spoofing hotspot.
 
 **Impact on the Trust Score** :
+
 - **-5** for a hotspot whose IP is located in a different country than its asserted location, or whose IP cannot be located.
 - **-1** for each interaction in the last 7 days with a hotspot whose IP is located in a different country than its asserted location.
 
@@ -164,12 +165,14 @@ The other webs show hotspots that are too isolated to interact with the rest of 
 - # Invalid witnesses
 
 A witness can be invalid for two reasons :
+
 - The registered distance between the beacon and the witness is greater than 100km.
 - Its RSSI value is too high.
 
 Like it is mentioned in HIP 58, over 99.9% of witnesses are within the 100km limit. The only few exceptions are tower deployments and spoofers. While the former might lose some points on their Trust Score, they will without a doubt compensate with their many valid witnesses. Spoofers, on the other hand, will have a harder time to regain those points.
 
 **Impact on the Trust Score** :
+
 - **-1** for each witness in the last 90 days that was invalid for being too far.
 - *For invalid witnesses being caused by a high RSSI value, the impact on the trust score was detailed in the RSSI section of the HIP.*
 
@@ -208,19 +211,16 @@ Here are some more metrics that can be used to calculate the Trust Score. This c
 - Checking whether an IP is from China. As most cheaters are located in China, it would make sense to preemptively penalize all hotspots in this country. However, this comes with the obvious downside that all honest miners in China would also be penalized.
 
 # Drawbacks
-[drawbacks]: #drawbacks
 
 The way the Trust Score is calculated might negatively impact some honest miners that are in very specific situations. Although precautions are taken to limit this impact, by spreading the Trust Score over many types of data, there will probably some honest miners losing points on several of them *(an isolated cluster of hotspots all connected to the same VPN, belonging to the same owner, that were added to the blockchain and whose location was asserted on the same day, and whose rewards are all sent to the same wallet, for example)*. However, regardless on their Trust Score, additions to the denylist are never automatic, and even these rare cases should be able to prove their integrity directly from the Helium app.
 
 # Rationale and Alternatives
-[alternatives]: #rationale-and-alternatives
 
 Automatically cut (or simply lower) Proof of Coverage rewards from hotspots with a low Trust Score is a possibility. However, it is important to keep the "assumed innocent until proven guilty" ethos, which is why I designed the Trust Score to only be an indication, rather than a decisive value.
 
 Data transfers could have been used in the calculation of the Trust Score, but they feel to easily cheated, as spoofers could simply trigger data transfers themselves.
 
 # Unresolved Questions
-[unresolved]: #unresolved-questions
 
 - Is the Trust Score too easily cheated ?
 
@@ -233,7 +233,6 @@ Data transfers could have been used in the calculation of the Trust Score, but t
 - Do we really want hotspot owners to be contacted directly via the Helium app ?
 
 # Deployment Impact
-[deployment-impact]: #deployment-impact
 
 Who will it affect, and how ?
 
@@ -246,7 +245,6 @@ Who will it affect, and how ?
 *This change is entirely backwards compatible.*
 
 # Success Metrics
-[success-metrics]: #success-metrics
 
 - More hotspots being reported to the denylist.
 - More hotspots being added to the denylist.

@@ -4,9 +4,9 @@
 - Start Date: August 28th, 2021
 - Category: Technical
 - Status: In Discussion
-- Original HIP PR: https://github.com/helium/HIP/pull/269
-- Tracking Issue: https://github.com/helium/HIP/issues/271
-- Discord channel: `#hip-37-omniprotocol-poc` on https://discord.gg/helium
+- Original HIP PR: <https://github.com/helium/HIP/pull/269>
+- Tracking Issue: <https://github.com/helium/HIP/issues/271>
+- Discord channel: `#hip-37-omniprotocol-poc` on <https://discord.gg/helium>
 
 ## Summary
 
@@ -18,8 +18,8 @@ This document is an follow-up to HIP 27, tackling economic incentives to impleme
 
 To make the proposed changes easier to understand, we are splitting this HIP into two interrelated sections:
 
--   Economics Proposal for Proof-of-Coverage for New Wireless Network Types
--   Implementation Proposal for Proof-of-Coverage for 5G and Wi-Fi
+- Economics Proposal for Proof-of-Coverage for New Wireless Network Types
+- Implementation Proposal for Proof-of-Coverage for 5G and Wi-Fi
 
 ## Stakeholders
 
@@ -31,7 +31,7 @@ Currently, under [HIP-27](https://github.com/helium/HIP/blob/master/0027-cbrs-5g
 
 We propose two significant changes to the reward bucket structure:
 
-1.  ### Remove division between PoC and DC reward buckets
+1. ### Remove division between PoC and DC reward buckets
 
 After [HIP-10](https://github.com/helium/HIP/blob/master/0010-usage-based-data-transfer-rewards.md), the vast majority ofDC rewards are reallocated to the LoRaWAN PoC, which has made the distinction between the buckets nominal. Given this reality, we propose a merging of the two rewards buckets at the date of the second halving (around 8/1/2023). Under this model, DC rewards will be allocated up to the level of DC usage and all remaining rewards in the bucket will be used for PoC rewards.
 
@@ -43,7 +43,7 @@ Existing reward curve by reward type:
 
 The new reward bucket would be a combination of the “Network Data Transfer” and “Proof of Coverage” rewards above.
 
-2.  ### Split PoC rewards between wireless protocols based on the proportion of DCs burned by each protocol
+2. ### Split PoC rewards between wireless protocols based on the proportion of DCs burned by each protocol
 
 The success of the Helium network is contingent on its ability to find real world applications that burn data credits via data transfer activity. Therefore, the incentive model should be designed in a way that promotes wireless network protocols (WNPs) that accomplish that goal. We propose aligning the reward structure with the network’s goal by splitting PoC rewards between WNPs with each WNP receiving a % of the entire PoC reward bucket equivalent to the % of DCs burned by the WNP.
 
@@ -71,13 +71,13 @@ Helium’s current implementation of PoC is based on wireless coverage being ver
 
 We propose to separate the challenge and witness function(s) for 5G PoC between the operator of a hotspot and an iOS/Android app (aka eSIM app), as follows:
 
--   All hotspots on the network (regardless of wireless protocol) will continue to perform “the challenger” function by issuing randomly targeted challenges. However, instead of all challenges always targeting LoRaWan hotspots, every N blocks challengers would also target alternative protocols, starting with 5G. This role may change in the future as Validators take on the role of challenge generation.
+- All hotspots on the network (regardless of wireless protocol) will continue to perform “the challenger” function by issuing randomly targeted challenges. However, instead of all challenges always targeting LoRaWan hotspots, every N blocks challengers would also target alternative protocols, starting with 5G. This role may change in the future as Validators take on the role of challenge generation.
 
--   5G Hotspot operators will perform the role of challengee/transmitter by picking up 5G challenges and transmitting them to witness cell phones that attach to the hotspot
+- 5G Hotspot operators will perform the role of challengee/transmitter by picking up 5G challenges and transmitting them to witness cell phones that attach to the hotspot
 
--   All 5G Hotspots will come equipped with the LoRa concentrator and will also participate in the LoRa PoC. In the spirit of minimizing deviations from existing PoC mechanisms, location attestation for 5G hotspots will continue to be performed using existing, LoRa-based algorithms.
+- All 5G Hotspots will come equipped with the LoRa concentrator and will also participate in the LoRa PoC. In the spirit of minimizing deviations from existing PoC mechanisms, location attestation for 5G hotspots will continue to be performed using existing, LoRa-based algorithms.
 
--   Cell phone owners with the eSIM app installed will “witness” that the hotspot is, indeed, active and radiating signal, and submit the confirmation back to the blockchain.
+- Cell phone owners with the eSIM app installed will “witness” that the hotspot is, indeed, active and radiating signal, and submit the confirmation back to the blockchain.
 
 Following the completion of the above, both the 5G hotspot operator and the cell phone owner with the eSIM app will receive their respective “challenge” and “witness” rewards.
 
@@ -103,9 +103,9 @@ Helium community may choose to initially launch a Helium branded end-to-end impl
 
 It is fair to assume that as we roll out 5G and Wi-Fi coverage on the Helium network, initially the coverage will be very spotty and likely the quality of service will not be up to “carrier grade” standards, which introduces additional challenges to get a large number of MNOs and MVNOs to actually use the network for mobile data offload. With the app based approach we can enable two modes of offload:
 
--   Passive - in this mode the eSIM app will merely serve as a phone based miner of “witness” rewards and will only send mock data packets to the offload network. The app will collect data on performance of hotspots. That same data can also be later used to adjust PoC challenge incentives, skewing rewards towards 5G hotspots placed in areas with the greatest need for coverage. Finally, passive mode will allow operators to gauge savings and test the network prior to actually offloading any data that would affect end user experience
+- Passive - in this mode the eSIM app will merely serve as a phone based miner of “witness” rewards and will only send mock data packets to the offload network. The app will collect data on performance of hotspots. That same data can also be later used to adjust PoC challenge incentives, skewing rewards towards 5G hotspots placed in areas with the greatest need for coverage. Finally, passive mode will allow operators to gauge savings and test the network prior to actually offloading any data that would affect end user experience
 
--   Active - in this mode the app will also actively offload the traffic into the Helium network. The operator will have the ability to specify on an individual eSIM basis, which of the eSIMs are authorized to offload into which of the Helium operated hotspots, thus optimizing the savings and user experience for the customer, balancing between macro network and offload network
+- Active - in this mode the app will also actively offload the traffic into the Helium network. The operator will have the ability to specify on an individual eSIM basis, which of the eSIMs are authorized to offload into which of the Helium operated hotspots, thus optimizing the savings and user experience for the customer, balancing between macro network and offload network
 
 Switching between active and passive modes can be done remotely by the operator, without requiring the end user to update the SIM card or app software.
 
@@ -115,12 +115,12 @@ Key consideration in the design for the modified PoC approach is susceptibility 
 
 Below we outline 6 exploit scenarios and how the current implementation protects against those. However, we’d like to solicit further feedback from the Helium community on possible security design flaws in the system and propose additional scenarios we may not have thought about.
 
--   Faking presence of cellular radio
--   Spoofing / Faking location
--   Faking a witness
--   Filtering out non-PoC Traffic
--   Phone farming
--   Unlimited plan gaming
+- Faking presence of cellular radio
+- Spoofing / Faking location
+- Faking a witness
+- Filtering out non-PoC Traffic
+- Phone farming
+- Unlimited plan gaming
 
 ### Faking presence of cellular radio
 
@@ -134,27 +134,25 @@ This exploit involves falsifying the location of a hotspot by asserting a locati
 
 Current hardware design for omni-protocol hotspots (such as FFi gateway) includes a LoRa concentrator in the hotspot. This affords us with the opportunity to re-use existing mechanisms implemented for LoRa to be able to verify location using LoRa signal strength and SNR and without relying on GPS or CBRS specific mechanisms. We propose that the presence of a LoRa concentrator remains a standard requirement for all non-LoRaWan gateways for the foreseeable future.
 
-
 ### Faking a witness
 
 Faking a witness involves somebody running a virtual machine with Android OS and an eSIM app and writing fake witness transactions to the block chain. To prevent the possibility of faking a witness, we propose to re-use the mechanism of DeWi-issued keys that’s already been proven in the LoRa deployment to preclude the possibility of faking a LoRa hotspot.
 
--   All witnesses that mine on mainnet will be required to sign transactions with a witness key, generated as part of the DeWi onboarding process.
+- All witnesses that mine on mainnet will be required to sign transactions with a witness key, generated as part of the DeWi onboarding process.
 
--   Operators that use eSIM app SDK to augment their existing apps to perform witnessing function on mainnet will be subject to passing the app audit (similar to hardware audit performed by the manufacturing committee)
+- Operators that use eSIM app SDK to augment their existing apps to perform witnessing function on mainnet will be subject to passing the app audit (similar to hardware audit performed by the manufacturing committee)
 
--   Onboarding keys will be mapped to phone IMEI (International Mobile Equipment Identity) - a unique identity associated with each handset, maintained and issued by GSM. Only 1 key per 1 IMEI will be allowed
+- Onboarding keys will be mapped to phone IMEI (International Mobile Equipment Identity) - a unique identity associated with each handset, maintained and issued by GSM. Only 1 key per 1 IMEI will be allowed
 
--   Similar to the LoRa gateway onboarding process, to onboard an eSIM app, the operator of an eSIM back-end (generally a service provider / MVNO) will submit a phone IMEI to the onboarding server during eSIM issuance using the same API that current manufacturers use to submit hotspot hardware credentials such as mac addresses.
+- Similar to the LoRa gateway onboarding process, to onboard an eSIM app, the operator of an eSIM back-end (generally a service provider / MVNO) will submit a phone IMEI to the onboarding server during eSIM issuance using the same API that current manufacturers use to submit hotspot hardware credentials such as mac addresses.
 
--   Onboarding keys will be generated and stored in a secure key storage module of a phone - iOS Keychain or Android Keystore - similar to how they are stored in the ECC or TPM chip of a miner.
+- Onboarding keys will be generated and stored in a secure key storage module of a phone - iOS Keychain or Android Keystore - similar to how they are stored in the ECC or TPM chip of a miner.
 
 Today all devices capable of mining on Helium MainNet are a) build by a vendor, explicitly approved by the manufacturer oversight committee; b) contain a security key issued by DeWi, associated with the mac address of the unit that was provided to DeWi by the approved manufacturer, thereby ensuring KYC compliance. To ensure that the integrity of the above model does not get compromised by the introduction of eSIM app and a phone, we propose to stick to a similar procedure for authenticating witness apps.
 
 <table class="c27"><tbody><tr class="c13"><td class="c6" colspan="1" rowspan="1"><p class="c8"><span class="c1">Vendor allowed to build hardware is approved by MOC, which includes testing miner code on the manufacturer&rsquo;s hardware </span></p></td><td class="c6" colspan="1" rowspan="1"><p class="c8"><span class="c1">Operator of the eSIM infrastructure (usually offload operator) is approved by DeWi, which includes testing their eSIM app </span></p></td></tr><tr class="c13"><td class="c6" colspan="1" rowspan="1"><p class="c8"><span class="c1">Each device manufactured by the approved vendor has mac address verified by the vendor &nbsp;</span></p></td><td class="c6" colspan="1" rowspan="1"><p class="c8"><span class="c1">Each phone has both - mac address and IMEI. Additionally, IMEI is used by eSIM infrastructure operators to create a unique eSIM profile. Spoofing/changing IMEI post eSIM provisioning invalidates the eSIM </span></p></td></tr><tr class="c13"><td class="c6" colspan="1" rowspan="1"><p class="c8"><span class="c1">Manufacturer provides DeWi with mac address of the devices, so each DeWi issued key can be mapped to mac address </span></p></td><td class="c6" colspan="1" rowspan="1"><p class="c8"><span class="c1">eSim infrastructure operator provides IMEI, which was used to create an eSIM profile. </span></p></td></tr><tr class="c13"><td class="c6" colspan="1" rowspan="1"><p class="c8"><span class="c1">DeWi approves a mining key against the mac address provided by the manufacturer &nbsp;</span></p></td><td class="c6" colspan="1" rowspan="1"><p class="c8"><span class="c1">DeWi approves a witness key against the IMEI, validated by eSIM infrastructure operator</span></p></td></tr><tr class="c13"><td class="c6" colspan="1" rowspan="1"><p class="c8"><span class="c1">DeWi approved key is stored in ECC or TPM module of the device, so it cannot be extracted or transferred</span></p></td><td class="c6" colspan="1" rowspan="1"><p class="c8"><span class="c1">DeWi approved key is stored iOS keychain or Android Keystore, so it cannot be extracted or transferred </span></p></td></tr></tbody></table>
 
 ### Filtering Out Non-PoC Traffic
-
 
 This exploit involves tweaking access control lists in a firewall behind the hotspot, such that only PoC related traffic is passed, but no other internet traffic is allowed. This allows one to collect PoC rewards without passing any data traffic.
 
@@ -182,14 +180,14 @@ However, for an added layer of security, we propose to address the above by impl
 
 # Summary of Benefits
 
--   Just as hack-proof as current LoRa based proof of coverage, since challenge/witness PoC will be done over the air vs. IP network
+- Just as hack-proof as current LoRa based proof of coverage, since challenge/witness PoC will be done over the air vs. IP network
 
--   Will work for Wi-Fi and 5G/LTE
+- Will work for Wi-Fi and 5G/LTE
 
--   Can collect intelligence on network coverage gaps, which can later be used to adjust incentives for placing 5G and Wi-Fi hotspots in most sought after places
+- Can collect intelligence on network coverage gaps, which can later be used to adjust incentives for placing 5G and Wi-Fi hotspots in most sought after places
 
--   Passive mode can enable MVNOs to run experiments and estimate the potential savings from offloading data into Helium, prior to actually enabling offload, hence decreasing barrier to entry
+- Passive mode can enable MVNOs to run experiments and estimate the potential savings from offloading data into Helium, prior to actually enabling offload, hence decreasing barrier to entry
 
--   Introduces lightweight way for people to start participating in the Helium network i.e. earn rewards with an eSIM capable phone
+- Introduces lightweight way for people to start participating in the Helium network i.e. earn rewards with an eSIM capable phone
 
--   Open source library implementation approach creates incentive for MNOs and MVNOs to just whitelabel it and use for their eSIM service
+- Open source library implementation approach creates incentive for MNOs and MVNOs to just whitelabel it and use for their eSIM service

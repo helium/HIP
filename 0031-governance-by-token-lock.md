@@ -3,18 +3,15 @@
 - Authors: [Tushar Jain](https://github.com/@tjmcc), Shayon Sengupta
 - Start Date: November 14, 2020
 - Category: Governance
-- Original HIP PR: https://github.com/helium/HIP/pull/182
-- Tracking Issue: https://github.com/helium/HIP/issues/183
+- Original HIP PR: <https://github.com/helium/HIP/pull/182>
+- Tracking Issue: <https://github.com/helium/HIP/issues/183>
 - Status: In Discussion
 
 # Summary
-[summary]: #summary
 
 This proposal suggests on-chain governance voting for implementations of chain variables and protocol upgrades.
 
-
 # Motivation
-[motivation]: #motivation
 
 On-chain governance helps make governing decisions open and transparent. It is intended to support decentralization of the protocol governance to the community as the Helium protocol continues its journey toward complete decentralization.
 
@@ -31,14 +28,11 @@ We propose a governance implementation where voters that win the vote must**lock
 
 We also propose having declining weight per token in the voting process to encourage timely voting and reduce last minute manipulations.
 
-
 # Stakeholders
-[stakeholders]: #stakeholders
 
 All Helium Network stakeholders are affected by this HIP.
 
 # Detailed Explanation
-[detailed-explanation]: #detailed-explanation
 
 ## Vote Initiation and Weighting
 
@@ -52,14 +46,13 @@ In this proposal, HNT corresponds to a certain number of “vote credits”. Net
 
 ![](https://lh4.googleusercontent.com/PuwNiLI82brcIcWHTJNMMhVx3aNV6wmQ1g43Akd19Wr1ykRifYmrSOi6LXbnMnNwFeU2iSTLMsC1kqfNLxc0OOudrMvioJY7WXC81JUMJ9Wh3hDupfywW_5b36_OZKL6t3aI_28)
 
-
 ## Lockup Amount and Mechanism
 
 At the end of the voting epoch, suppose the vote credits are distributed as x% for the losing address and (100 - x)% for the winning address.
 
 There is no lock up if votes are passed with greater than or equal to 80% majority (x&lt;=20%). If x>20%, we define the lockup period for the HNT contained in the winning address as per the following formula (in days):
-  
-![](https://lh5.googleusercontent.com/cljWpx5-WOPvC8fLKV3pNpvMOgX5jTsokMfJX94ePDZihjjw3Tgzr3qBqfp1wmBqjZLj37hhv8Rpw9SWHWmDYvhdi_wpz2UyUCVM4x1trH2U-ad5-68x8UN_IhIw8ttwM__Yjxo)  
+
+![](https://lh5.googleusercontent.com/cljWpx5-WOPvC8fLKV3pNpvMOgX5jTsokMfJX94ePDZihjjw3Tgzr3qBqfp1wmBqjZLj37hhv8Rpw9SWHWmDYvhdi_wpz2UyUCVM4x1trH2U-ad5-68x8UN_IhIw8ttwM__Yjxo)
 
 The shape of the curve is as follows:
 
@@ -69,13 +62,11 @@ The intention is that the lockup period increases exponentially with the content
 
 Note: The lockup period imposed by governance is incremental to the unbonding period for validators.
 
-
 **Validator Rewards and Consensus**
 
 Tokens locked due to governance continue to accrue validator rewards and those rewards are not subject to lock-up.
 
 Tokens locked due to governance can vote on future HIPs; future victories add to the lock-up period.
-
 
 ## List of Chain Variables
 
@@ -83,33 +74,25 @@ We need to decide which are the exact chain variables we are governed by this sy
 
 [Attached](https://helium.plus/chain-vars)
 
-
 # Benefits
-[benefits]: #benefits
 
 1. Consequences to voting, so less risk of low conviction votes
 2. Having a contentious vote is extremely expensive, so it is worth building consensus on a proposal prior to voting.
 3. Locking via vote creates scarcity on the circulating market supply of HNT for all network participants.
 4. Much less oligarchic than one token one vote, partially preventing whales from de facto control of governance proposals. In governance by lock, whales who try to control contentious governance decisions start locking up tokens and bearing the cost.
 
-
 # Drawbacks
-[drawbacks]: #drawbacks
 
 1. It is difficult to calculate the lockup time for participation in any given vote. The uncertainty might lower voter participation.
 
-
 # Rationale
-[rationale]: #rationale
 
 1. Weighted voting attaches a cost to proposing and participating in contentious protocol changes, forcing the winners of the vote to be locked into the system and bear the consequences of their decision.
 2. The token lock means only long term network participants will vote on network direction.
 3. Allowing staked tokens to vote aligns incentives with holders who believe in a project. Decred is one of the long standing examples of this system.
 4. Time-weighted votes allow for fairer markets that disincentivize last minute swings in votes.
 
-
 # Open Questions For The Community
-[openquestions]: #openquestions
 
 1. Should we have a maximum cap for lockup across votes?
    - One idea from the authors is to have a max cap on the lock-up period of 2 years across all votes. How likely is it that someone wants to break the network after locking a meaningful amount of tokens for 2 years? The total lack of a cap could discourage high signal participation because of personal liquidity profiles. The function could also be modified such that it would require several contentious votes to reach the proposed cap.
