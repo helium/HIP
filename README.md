@@ -60,7 +60,7 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | 45 | [LoRaWAN Frequency Plan Selection](https://github.com/helium/HIP/blob/main/0045-lorawan-frequency-plan-selection.md) | [Withdrawn](https://github.com/helium/HIP/issues/311) |
 | 46 | [LoRaWAN NetID Routing](https://github.com/helium/HIP/blob/main/0046-lorawan-netid-routing.md) | [Approved](https://github.com/helium/HIP/issues/312) |
 | 47 | [Increase DKG Failure Penalty](https://github.com/helium/HIP/blob/main/0047-increase-dkg-penalty.md) | [Approved](https://github.com/helium/HIP/issues/313) |
-| 48 | [IP-over-LoRaWAN](https://github.com/helium/HIP/blob/main/0048-ip-support.md) | [In Discussion](https://github.com/helium/HIP/issues/319) |
+| 48 | [IP-over-LoRaWAN](https://github.com/helium/HIP/blob/main/0048-ip-support.md) | [Closed](https://github.com/helium/HIP/issues/319) |
 | 49 | [LoRaWAN Sub-region Max EIRP Limit](https://github.com/helium/HIP/blob/main/0049-max-eirp-adjustment.md) | [In Discussion](https://github.com/helium/HIP/issues/327) |
 | 50 | [Display All Potential Witness Beacons](https://github.com/helium/HIP/blob/main/0050-display-all-potential-beacon-witnesses.md) | [Closed](https://github.com/helium/HIP/issues/331) |
 | 51 | [Helium DAO](https://github.com/helium/HIP/blob/main/0051-helium-dao.md) | [Approved](https://github.com/helium/HIP/issues/336) |
