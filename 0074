@@ -68,10 +68,11 @@ The Heartbeat frequency requirement and backhaul test requirements will remain u
 This HIP proposes four tiers of potential signal power - High, Medium, Low, and None. Reward points for Obstruction Data will replace Radio Type multipliers, but will retain a similar proportion between them because the more powerful radios, if placed correctly, will have the ability to cover and get rewarded for more res 12 hexes.
 
 Table of reference signal received power and corresponding reward multipliers for Outdoor Radios:
+
 ---|---|---|---|---
-**Potential Signal Power** | SP > -90dBm | -90 dBm >= SP > -105 dBm | -105 >= SP > -130 dBm | SP <= -130 dBm
-**Potential Signal Level** | High | Medium | Low | None
-**Estimated coverage points** | 16 | 8 | 4
+| **Potential Signal Power** | SP > -90dBm | -90 dBm >= SP > -105 dBm | -105 >= SP > -130 dBm | SP <= -130 dBm |
+| **Potential Signal Level** | High | Medium | Low | None |
+| **Estimated coverage points** | 16 | 8 | 4 |
 Table 1. Signal power tiers, corresponding signal strength and estimated coverage points for Outdoor Radios.
 
 #### Indoor Radios
@@ -79,9 +80,9 @@ Table 1. Signal power tiers, corresponding signal strength and estimated coverag
 Since there are no sufficient and reliable data sources about obstacles in indoor spaces, Obstruction Data Oracle cannot be used to evaluate coverage by Indoor Radios. Instead, we propose to use an approximation based on the data gathered during the testing of certified Indoor Radios in various indoor settings. Based on the test data, we assume that Indoor Radios provide max signal strength coverage in the hex where they are physically located and low signal level in all adjacent hexes. To ensure indoor radios are fairly compensated, our algorithm errs on the side of generosity. The reward tiers will be as follows:
 
 ---|---|---|---|---
-**Location** | Inside hex | All adjacent hexes
-**Potential Signal Level** | High | Low
-**Estimated coverage points** | 16 | 4
+| **Location** | Inside hex | All adjacent hexes |
+| **Potential Signal Level** | High | Low |
+| **Estimated coverage points** | 16 | 4 |
 Table 2. Signal power tiers, corresponding signal strength and estimated coverage points for Indoor Radios.
 
 Like Outdoor, Indoor Radios will be able to collect rewards from providing coverage in multiple hexes.
@@ -110,11 +111,11 @@ The new formula for Reward calculation per Radio:
 
 For simplicity, assuming that total MOBILE Rewards per period is 10,000, and Radios provide coverage in 4 hexes at most. The actual projected coverage on average will include much more hexes.
 
-| Heartbeat | Speed Test | Estimated Coverage Reward Points
+| | Heartbeat | Speed Test | Estimated Coverage Reward Points|
 ---|---|---|---
-Radio 1 (Outdoor) | Acceptable (1x) | Hex1: 16, Hex2: 8. Total: 34
-Radio 2 (Outdoor) | Poor (0.25x) | Hex2: 8, Hex3: 4. Total: 12
-Radio 3 (Indoor) | Degraded (0.5x) | Hex1: 1, Hex2: 1, Hex 3: 1, Hex4: 4. Total: 7
+| Radio 1 (Outdoor) | Acceptable (1x) | Hex1: 16, Hex2: 8. Total: 34 |
+| Radio 2 (Outdoor) | Poor (0.25x) | Hex2: 8, Hex3: 4. Total: 12 |
+| Radio 3 (Indoor) | Degraded (0.5x) | Hex1: 1, Hex2: 1, Hex 3: 1, Hex4: 4. Total: 7 |
 
 Table 3. Simplified data for two Outdoor and one Indoor Radio with Heartbeat, Speed Test and Estimated Coverage Points for one Reward Period.
 
@@ -125,11 +126,11 @@ Where R is the reward per one estimated coverage reward point.
 
 *R = 246.91*
 
-| Total MOBILE Rewards
+| | Total MOBILE Rewards |
 ---|---
-Radio 1 (Outdoor) | = 246.91x1x1x34 = 8,395
-Radio 2 (Outdoor) | = 246.91x1x0.25x12 = 741
-Radio 3 (Indoor) | = 246.91x1x0.5x7 = 864
+| Radio 1 (Outdoor) | = 246.91x1x1x34 = 8,395 |
+| Radio 2 (Outdoor) | = 246.91x1x0.25x12 = 741 |
+| Radio 3 (Indoor) | = 246.91x1x0.5x7 = 864 |
 
 
 ## Data Visualization
