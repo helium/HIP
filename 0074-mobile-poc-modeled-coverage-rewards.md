@@ -30,11 +30,10 @@ This HIP affects only MOBILE SubDAO, particularly 5G Hotspot owners with Radios 
 5G Hotspot owners: 5G Hotspot owners with Outdoor Radios will need to meet new quality coverage requirements to earn maximum MOBILE rewards. Some owners might need to adjust the locations and/or angles of their Outdoor Radios to optimize for coverage. It is possible that in some places, it won't be possible to earn max rewards due to environmental obstacles that are not possible to mitigate. This HIP also proposes to consider rewarding those deployers who were among the first to provide quality coverage in a given Hex.
 
 There will be three possible outcomes for owners of Radios:
-<ol>
-<li>Increase in earnings. Because some Radios on the MOBILE Network won't be able to meet minimum quality requirements, part of the rewards will be re-distributed proportionally to those who qualify based on all PoC criteria.</li>
-<li>Earnings will stay the same.</li>
-<li>Less or no earnings.</li>
-</ol>
+
+1. Increase in earnings. Because some Radios on the MOBILE Network won't be able to meet minimum quality requirements, part of the rewards will be re-distributed proportionally to those who qualify based on all PoC criteria.
+2. Earnings will stay the same.
+3. Less or no earnings.
 
 Hotspot owners will be able to evaluate their performance with the Modeled Coverage map. Depending on the location and time of deployment in the particular hex, there might be an opportunity to improve coverage and earn more. Changing the location and angle of the Radio requires resubmission of the CPI registration. In addition to compliance, this registration ensures new data is used for Modeled Coverage data calculations.
 
@@ -56,7 +55,8 @@ This HIP introduces a fundamental difference in the use of hexes for Mobile Netw
 
 To help visualize the significant difference between these two resolutions, below is a map with green hex resolution 12 and a small dot inside it - purple hex with resolution 8.
 
-![Image 1. Hex res 12 and hex res 8 map overlay.](<https://user-images.githubusercontent.com/5078844/204653226-ff215c61-8b9d-4cd7-8436-76e893aff252.png>)
+![Image 1. Hex res 12 and hex res 8 map overlay.](./0074-mobile-poc-modeled-coverage-rewards/hex-12-and-hex-8-comparison.png)
+
 Image 1. Hex res 12 and hex res 8 map overlay
 
 ### Reward Tiers
@@ -89,17 +89,15 @@ Like Outdoor, Indoor Radios will be able to collect rewards from providing cover
 
 The proposed new algorithm for MOBILE Reward calculation in the MOBILE Oracle is as follows:
 
-<ol>
-<li>Supply declared transmitter power of each Radio and its location to the Obstruction Data Oracle.</li>
-<li>Get all hexes that have coverage from Outdoor Radios based on the information returned by Obstruction Data Oracle.</li>
-<li>Based on the location of Indoor Radios, get all hexes with Indoor coverage and all adjacent hexes to the hex where Indoor radios are located.</li>
-<li>Use projected signal loss information from Obstruction Data Oracle to determine the potential signal strength level of each Outdoor Radio in each hex.</li>
-<li>For each hex, get at most 5 Outdoor Radios with the top signal strength of the same level. If there are more than 5 Radios with the same signal strength level, use the *coverage_claim_time* value to determine the top 5 oldest installations. *coverage_claim_time* is the time when the Radio received the spectrum access grant for the first time. To prevent rewarding “dead” Radios, we propose to reset *coverage_claim_time* if the Radio was not heartbeating for more than 72 hours, and use the time of the last Heartbeat as new *coverage_claim_time*.</li>
-<li>Get max 5 Indoor Radios using the same approach as above for Outdoor Radios.<li>
-<li>Based on Tables 1 and 2, sum up all estimated coverage points earned by each Radio in all hexes and multiply that by *speedtest_multiplier* for each Radio.</li>
-<li>Divide the total number of MOBILE emitted during the Rewards Period by the sum of multiples of *estimated_reward_point* and *speedtest_multiplier* for each Radios to determine reward per one estimated_reward_point for Radio with Acceptable Speed Test.</li>
-<li>Sum up all the points for each Radio and multiply that number by the MOBILE per one *estimated_reward_point* to determine the reward for each Radio.</li>
-</ol>
+1. Supply declared transmitter power of each Radio and its location to the Obstruction Data Oracle.</li>
+1. Get all hexes that have coverage from Outdoor Radios based on the information returned by Obstruction Data Oracle.</li>
+1. Based on the location of Indoor Radios, get all hexes with Indoor coverage and all adjacent hexes to the hex where Indoor radios are located.</li>
+1. Use projected signal loss information from Obstruction Data Oracle to determine the potential signal strength level of each Outdoor Radio in each hex.</li>
+1. For each hex, get at most 5 Outdoor Radios with the top signal strength of the same level. If there are more than 5 Radios with the same signal strength level, use the *coverage_claim_time* value to determine the top 5 oldest installations. *coverage_claim_time* is the time when the Radio received the spectrum access grant for the first time. To prevent rewarding “dead” Radios, we propose to reset *coverage_claim_time* if the Radio was not heartbeating for more than 72 hours, and use the time of the last Heartbeat as new *coverage_claim_time*.</li>
+1. Get max 5 Indoor Radios using the same approach as above for Outdoor Radios.<li>
+1. Based on Tables 1 and 2, sum up all estimated coverage points earned by each Radio in all hexes and multiply that by *speedtest_multiplier* for each Radio.</li>
+1. Divide the total number of MOBILE emitted during the Rewards Period by the sum of multiples of *estimated_reward_point* and *speedtest_multiplier* for each Radios to determine reward per one estimated_reward_point for Radio with Acceptable Speed Test.</li>
+1. Sum up all the points for each Radio and multiply that number by the MOBILE per one *estimated_reward_point* to determine the reward for each Radio.</li>
 
 The new formula for Reward calculation per Radio:
 
@@ -139,11 +137,11 @@ This HIP proposes the creation of a new Explorer dedicated exclusively to MOBILE
 
 A basic map overlay of 5G data coverage with signal strength is proposed to be the first iteration of the Mobile SubDAO Explorer. Below is the visualization of signal propagation for the Outdoor Radio, directed along the street and installed on a pole on the two-story building roof.
 
-![Image 2. Baicells Outdoor Radio 430 installed on the two-story building roof on the pole.](<https://user-images.githubusercontent.com/5078844/204653237-3e4742d1-d558-4c60-97b1-44ba5d0f2d9b.jpeg>)
+![Image 2. Baicells Outdoor Radio 430 installed on the two-story building roof on the pole.](./0074-mobile-poc-modeled-coverage-rewards/baicells-outdoor-430.jpeg)
 Image 2. Baicells Outdoor Radio 430 installed on the two-story building roof on the pole.
 
-![Image 3. Modeled coverage of the Radio pictured on Image 1.](<https://user-images.githubusercontent.com/5078844/204653189-c212cb91-406d-4004-a1b0-41fcdaf34c6d.png>)
-Image 3. Modeled coverage of the Radio pictured on Image 1.
+![Image 3. Modeled coverage of the Radio pictured on Image 2.](./0074-mobile-poc-modeled-coverage-rewards/baicells-outdoor-430-modeled.png)
+Image 3. Modeled coverage of the Radio pictured on Image 2.
 
 
 ## Transition Plan
@@ -153,11 +151,9 @@ We propose to show Mapped Coverage information for at least four weeks before sw
 
 Rough timeline for the Modeled Coverage rollout:
 
-Week 0:
-<ul><li>Start displaying Modeled Coverage data as a basic map overlay of 5G data coverage with signal strength in the Mobile Explorer.</li></ul>
-Week 3:
-<ul><li>Add the ability to check coverage for each Outdoor Radio on the Mobile Explorer map.</li></ul>
-Week 5:
-<ul><li>Send push notifications to the Radio owners with less than a High potential signal level in the hex where they are located.</li></ul>
-Week 7:
-<ul><li>Switch to Modeled Coverage instead of power-based multiplier in the MOBILE rewards algorithm.</li></ul>
+|Timeline|Events|
+|---|---|
+|Week 0|Start displaying Modeled Coverage data as a basic map overlay of 5G data coverage with signal strength in the Mobile Explorer.|
+|Week 3|Add the ability to check coverage for each Outdoor Radio on the Mobile Explorer map.|
+|Week 5|Send push notifications to the Radio owners with less than a High potential signal level in the hex where they are located.|
+|Week 7|Switch to Modeled Coverage instead of power-based multiplier in the MOBILE rewards algorithm.|
