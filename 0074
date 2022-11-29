@@ -56,7 +56,7 @@ This HIP introduces a fundamental difference in the use of hexes for Mobile Netw
 
 To help visualize the significant difference between these two resolutions, below is a map with green hex resolution 12 and a small dot inside it - purple hex with resolution 8.
 
-![Image 1. Hex res 12 and hex res 8 map overlay.](<>)
+![Image 1. Hex res 12 and hex res 8 map overlay.](<https://user-images.githubusercontent.com/5078844/204653226-ff215c61-8b9d-4cd7-8436-76e893aff252.png>)
 Image 1. Hex res 12 and hex res 8 map overlay
 
 ### Reward Tiers
@@ -69,7 +69,6 @@ This HIP proposes four tiers of potential signal power - High, Medium, Low, and 
 
 Table of reference signal received power and corresponding reward multipliers for Outdoor Radios:
 
----|---|---|---|---
 | **Potential Signal Power** | SP > -90dBm | -90 dBm >= SP > -105 dBm | -105 >= SP > -130 dBm | SP <= -130 dBm |
 | **Potential Signal Level** | High | Medium | Low | None |
 | **Estimated coverage points** | 16 | 8 | 4 |
@@ -79,7 +78,6 @@ Table 1. Signal power tiers, corresponding signal strength and estimated coverag
 
 Since there are no sufficient and reliable data sources about obstacles in indoor spaces, Obstruction Data Oracle cannot be used to evaluate coverage by Indoor Radios. Instead, we propose to use an approximation based on the data gathered during the testing of certified Indoor Radios in various indoor settings. Based on the test data, we assume that Indoor Radios provide max signal strength coverage in the hex where they are physically located and low signal level in all adjacent hexes. To ensure indoor radios are fairly compensated, our algorithm errs on the side of generosity. The reward tiers will be as follows:
 
----|---|---|---|---
 | **Location** | Inside hex | All adjacent hexes |
 | **Potential Signal Level** | High | Low |
 | **Estimated coverage points** | 16 | 4 |
@@ -141,10 +139,10 @@ This HIP proposes the creation of a new Explorer dedicated exclusively to MOBILE
 
 A basic map overlay of 5G data coverage with signal strength is proposed to be the first iteration of the Mobile SubDAO Explorer. Below is the visualization of signal propagation for the Outdoor Radio, directed along the street and installed on a pole on the two-story building roof.
 
-![Image 2. Baicells Outdoor Radio 430 installed on the two-story building roof on the pole.](<>)
+![Image 2. Baicells Outdoor Radio 430 installed on the two-story building roof on the pole.](<https://user-images.githubusercontent.com/5078844/204653237-3e4742d1-d558-4c60-97b1-44ba5d0f2d9b.jpeg>)
 Image 2. Baicells Outdoor Radio 430 installed on the two-story building roof on the pole.
 
-![Image 3. Modeled coverage of the Radio pictured on Image 1.](<>)
+![Image 3. Modeled coverage of the Radio pictured on Image 1.](<https://user-images.githubusercontent.com/5078844/204653189-c212cb91-406d-4004-a1b0-41fcdaf34c6d.png>)
 Image 3. Modeled coverage of the Radio pictured on Image 1.
 
 
