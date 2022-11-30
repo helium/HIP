@@ -69,6 +69,8 @@ This HIP proposes four tiers of potential signal power - High, Medium, Low, and 
 
 Table of reference signal received power and corresponding reward multipliers for Outdoor Radios:
 
+| Item | Tier 1 | Tier 2 | Tier 3 | Tier 4 |
+|---|---|---|---|---|
 | **Potential Signal Power** | SP > -90dBm | -90 dBm >= SP > -105 dBm | -105 >= SP > -130 dBm | SP <= -130 dBm |
 | **Potential Signal Level** | High | Medium | Low | None |
 | **Estimated coverage points** | 16 | 8 | 4 |
@@ -78,6 +80,8 @@ Table 1. Signal power tiers, corresponding signal strength and estimated coverag
 
 Since there are no sufficient and reliable data sources about obstacles in indoor spaces, Obstruction Data Oracle cannot be used to evaluate coverage by Indoor Radios. Instead, we propose to use an approximation based on the data gathered during the testing of certified Indoor Radios in various indoor settings. Based on the test data, we assume that Indoor Radios provide max signal strength coverage in the hex where they are physically located and low signal level in all adjacent hexes. To ensure indoor radios are fairly compensated, our algorithm errs on the side of generosity. The reward tiers will be as follows:
 
+| Item | Tier 1 | Tier 2 |
+|---|---|---|
 | **Location** | Inside hex | All adjacent hexes |
 | **Potential Signal Level** | High | Low |
 | **Estimated coverage points** | 16 | 4 |
@@ -89,15 +93,15 @@ Like Outdoor, Indoor Radios will be able to collect rewards from providing cover
 
 The proposed new algorithm for MOBILE Reward calculation in the MOBILE Oracle is as follows:
 
-1. Supply declared transmitter power of each Radio and its location to the Obstruction Data Oracle.</li>
-1. Get all hexes that have coverage from Outdoor Radios based on the information returned by Obstruction Data Oracle.</li>
-1. Based on the location of Indoor Radios, get all hexes with Indoor coverage and all adjacent hexes to the hex where Indoor radios are located.</li>
-1. Use projected signal loss information from Obstruction Data Oracle to determine the potential signal strength level of each Outdoor Radio in each hex.</li>
-1. For each hex, get at most 5 Outdoor Radios with the top signal strength of the same level. If there are more than 5 Radios with the same signal strength level, use the *coverage_claim_time* value to determine the top 5 oldest installations. *coverage_claim_time* is the time when the Radio received the spectrum access grant for the first time. To prevent rewarding “dead” Radios, we propose to reset *coverage_claim_time* if the Radio was not heartbeating for more than 72 hours, and use the time of the last Heartbeat as new *coverage_claim_time*.</li>
-1. Get max 5 Indoor Radios using the same approach as above for Outdoor Radios.<li>
-1. Based on Tables 1 and 2, sum up all estimated coverage points earned by each Radio in all hexes and multiply that by *speedtest_multiplier* for each Radio.</li>
-1. Divide the total number of MOBILE emitted during the Rewards Period by the sum of multiples of *estimated_reward_point* and *speedtest_multiplier* for each Radios to determine reward per one estimated_reward_point for Radio with Acceptable Speed Test.</li>
-1. Sum up all the points for each Radio and multiply that number by the MOBILE per one *estimated_reward_point* to determine the reward for each Radio.</li>
+1. Supply declared transmitter power of each Radio and its location to the Obstruction Data Oracle.
+1. Get all hexes that have coverage from Outdoor Radios based on the information returned by Obstruction Data Oracle.
+1. Based on the location of Indoor Radios, get all hexes with Indoor coverage and all adjacent hexes to the hex where Indoor radios are located.
+1. Use projected signal loss information from Obstruction Data Oracle to determine the potential signal strength level of each Outdoor Radio in each hex.
+1. For each hex, get at most 5 Outdoor Radios with the top signal strength of the same level. If there are more than 5 Radios with the same signal strength level, use the *coverage_claim_time* value to determine the top 5 oldest installations. *coverage_claim_time* is the time when the Radio received the spectrum access grant for the first time. To prevent rewarding “dead” Radios, we propose to reset *coverage_claim_time* if the Radio was not heartbeating for more than 72 hours, and use the time of the last Heartbeat as new *coverage_claim_time*.
+1. Get max 5 Indoor Radios using the same approach as above for Outdoor Radios.
+1. Based on Tables 1 and 2, sum up all estimated coverage points earned by each Radio in all hexes and multiply that by *speedtest_multiplier* for each Radio.
+1. Divide the total number of MOBILE emitted during the Rewards Period by the sum of multiples of *estimated_reward_point* and *speedtest_multiplier* for each Radios to determine reward per one estimated_reward_point for Radio with Acceptable Speed Test.
+1. Sum up all the points for each Radio and multiply that number by the MOBILE per one *estimated_reward_point* to determine the reward for each Radio.
 
 The new formula for Reward calculation per Radio:
 
@@ -107,14 +111,14 @@ The new formula for Reward calculation per Radio:
 
 For simplicity, assuming that total MOBILE Rewards per period is 10,000, and Radios provide coverage in 4 hexes at most. The actual projected coverage on average will include much more hexes.
 
-| | Heartbeat | Speed Test | Estimated Coverage Reward Points|
----|---|---|---
-| Radio 1 (Outdoor) | Acceptable (1x) | Hex1: 16, Hex2: 8. Total: 34 |
-| Radio 2 (Outdoor) | Poor (0.25x) | Hex2: 8, Hex3: 4. Total: 12 |
-| Radio 3 (Indoor) | Degraded (0.5x) | Hex1: 1, Hex2: 1, Hex 3: 1, Hex4: 4. Total: 7 |
+| Radio  | Heartbeat | Speed Test | Speedtest Multiplier | Hex 1 | Hex 2 | Hex 3 | Hex 4 | Total Coverage Points | Total Reward Points |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 (Outdoor) | Ok | Acceptable  | 1    | 16 | 8  |    |    | 24 | 24 |
+| 2 (Outdoor) | Ok | Poor        | 0.25 |    | 8  | 4  |    | 12 | 3  |
+| 3 (Indoor)  | Ok | Degraded    | 0.5  | 1  | 1  | 1  | 4  |  7 | 3.5|
+| Reward Points | | | | | | | | | 30.5 |
 
 Table 3. Simplified data for two Outdoor and one Indoor Radio with Heartbeat, Speed Test and Estimated Coverage Points for one Reward Period.
-
 
 *R x (1x1x34 + 1x0.25x12 + 1x0.5x7) = 10,000,*
 
