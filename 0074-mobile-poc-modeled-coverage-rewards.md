@@ -69,9 +69,9 @@ This HIP proposes four tiers of potential signal power - High, Medium, Low, and 
 
 Table of reference signal received power and corresponding reward multipliers for Outdoor Radios:
 
-| Item | Tier 1 | Tier 2 | Tier 3 | Tier 4 |
+|  | Tier 1 | Tier 2 | Tier 3 | Tier 4 |
 |---|---|---|---|---|
-| **Potential Signal Power** | SP > -90dBm | -90 dBm >= SP > -105 dBm | -105 >= SP > -130 dBm | SP <= -130 dBm |
+| **Potential Signal Power** | $P > -90 dBm$ | $-90 dBm \ge P > -105 dBm$ | $-105 dBm \ge P > -130 dBm$ | $P \le -130 dBm$ |
 | **Potential Signal Level** | High | Medium | Low | None |
 | **Estimated coverage points** | 16 | 8 | 4 | 0 |
 
@@ -81,7 +81,7 @@ Table 1. Signal power tiers, corresponding signal strength and estimated coverag
 
 Since there are no sufficient and reliable data sources about obstacles in indoor spaces, Obstruction Data Oracle cannot be used to evaluate coverage by Indoor Radios. Instead, we propose to use an approximation based on the data gathered during the testing of certified Indoor Radios in various indoor settings. Based on the test data, we assume that Indoor Radios provide max signal strength coverage in the hex where they are physically located and low signal level in all adjacent hexes. To ensure indoor radios are fairly compensated, our algorithm errs on the side of generosity. The reward tiers will be as follows:
 
-| Item | Tier 1 | Tier 2 |
+|  | Tier 1 | Tier 2 |
 |---|---|---|
 | **Location** | Inside hex | All adjacent hexes |
 | **Potential Signal Level** | High | Low |
@@ -107,18 +107,28 @@ The proposed new algorithm for MOBILE Reward calculation in the MOBILE Oracle is
 
 The new formula for Reward calculation per Radio:
 
-*heartbeat_multplier * speedtest_multiplier * (estimated_coverage_points * reward_per_one_estimated_coverage_point)*
+$$
+W = k_H \times k_S \times C_E \times W_p
+$$
+
+| Variable | Description |
+|---|---|
+| $W$ | Total rewards |
+| $k_H$ | Heartbeat multiplier |
+| $k_S$ | Speedtest multiplier |
+| $C_E$ | Estimated coverage points |
+| $W_p$ | Epoch rewards per coverage point |
 
 ### Calculation Example
 
 For simplicity, assuming that total MOBILE Rewards per period is 10,000, and Radios provide coverage in 4 hexes at most. The actual projected coverage on average will include much more hexes.
 
-| Radio  | Heartbeat | Speed Test | Speedtest Multiplier | Hex 1 | Hex 2 | Hex 3 | Hex 4 | Total Coverage Points | Total Reward Points |
-|---|---|---|---|---|---|---|---|---|---|
-| 1 (Outdoor) | Ok | Acceptable  | 1    | 16 | 8  |    |    | 24 | 24 |
-| 2 (Outdoor) | Ok | Poor        | 0.25 |    | 8  | 4  |    | 12 | 3  |
-| 3 (Indoor)  | Ok | Degraded    | 0.5  | 1  | 1  | 1  | 4  |  7 | 3.5|
-| Reward Points | | | | | | | | | 30.5 |
+| Radio  | Heartbeat | Heartbeat multiplier $k_H$ | Speed Test | Speedtest Multiplier $k_S$| Hex 1 | Hex 2 | Hex 3 | Hex 4 | Total Coverage Points | Total Reward Points |
+|---|--|---|---|---|---|---|---|---|---|---|
+| 1 (Outdoor) | Ok | 1 | Acceptable  | 1    | 16 | 8  |    |    | 24 | 24 |
+| 2 (Outdoor) | Ok | 1 | Poor        | 0.25 |    | 8  | 4  |    | 12 | 3  |
+| 3 (Indoor)  | Ok | 1 | Degraded    | 0.5  | 1  | 1  | 1  | 4  |  7 | 3.5|
+| | | | | | | | | | Points| 30.5 |
 
 Table 3. Simplified data for two Outdoor and one Indoor Radio with Heartbeat, Speed Test and Estimated Coverage Points for one Reward Period.
 
