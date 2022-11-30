@@ -53,7 +53,7 @@ Analysis of the coverage by a single Outdoor Radio with Modeled Coverage data sh
 
 This HIP introduces a fundamental difference in the use of hexes for Mobile Network compared to IoT. In IoT, hexes are used to determine the locations of the Hotspots and the number of Hotspots in the given hex. On the contrary, in Mobile Network, hexes are used to determine where the coverage exists. The Radio doesn't have to be in a given hex to provide coverage there. The use of Modeled Coverage data allows us to un-tie the device's location from its signal strength and propagation. To sum up, the hexes in Mobile Network are used to identify the level of coverage in a particular hex from all the different radios. A Radio can earn rewards by providing coverage in multiple hexes.
 
-To help visualize the significant difference between these two resolutions, below is a map with green hex resolution 12 and a small dot inside it - purple hex with resolution 8.
+To help visualize the significant difference between these two resolutions, below is a map with green hex resolution 8 and a small dot inside it - purple hex with resolution 12.
 
 ![Image 1. Hex res 12 and hex res 8 map overlay.](./0074-mobile-poc-modeled-coverage-rewards/hex-12-and-hex-8-comparison.png)
 
