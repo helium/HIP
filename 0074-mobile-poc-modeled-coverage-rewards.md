@@ -159,17 +159,3 @@ Image 2. Baicells Outdoor Radio 430 installed on the two-story building roof on 
 ![Image 3. Modeled coverage of the Radio pictured on Image 2.](./0074-mobile-poc-modeled-coverage-rewards/baicells-outdoor-430-modeled.png)
 Image 3. Modeled coverage of the Radio pictured on Image 2.
 
-
-## Transition Plan
-
-To make sure the transition to the new PoC system, which replaces static, power-based multipliers, is smooth, Hotspot owners should be able to evaluate the coverage they provide before the switch takes effect.
-We propose to show Mapped Coverage information for at least four weeks before switching to the new PoC model.
-
-Rough timeline for the Modeled Coverage rollout:
-
-|Timeline|Events|
-|---|---|
-|Week 0|Start displaying Modeled Coverage data as a basic map overlay of 5G data coverage with signal strength in the Mobile Explorer.|
-|Week 3|Add the ability to check coverage for each Outdoor Radio on the Mobile Explorer map.|
-|Week 5|Send push notifications to the Radio owners with less than a High potential signal level in the hex where they are located.|
-|Week 7|Switch to Modeled Coverage instead of power-based multiplier in the MOBILE rewards algorithm.|
