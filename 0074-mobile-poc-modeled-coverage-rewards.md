@@ -73,7 +73,8 @@ Table of reference signal received power and corresponding reward multipliers fo
 |---|---|---|---|---|
 | **Potential Signal Power** | SP > -90dBm | -90 dBm >= SP > -105 dBm | -105 >= SP > -130 dBm | SP <= -130 dBm |
 | **Potential Signal Level** | High | Medium | Low | None |
-| **Estimated coverage points** | 16 | 8 | 4 |
+| **Estimated coverage points** | 16 | 8 | 4 | 0 |
+
 Table 1. Signal power tiers, corresponding signal strength and estimated coverage points for Outdoor Radios.
 
 #### Indoor Radios
@@ -85,6 +86,7 @@ Since there are no sufficient and reliable data sources about obstacles in indoo
 | **Location** | Inside hex | All adjacent hexes |
 | **Potential Signal Level** | High | Low |
 | **Estimated coverage points** | 16 | 4 |
+
 Table 2. Signal power tiers, corresponding signal strength and estimated coverage points for Indoor Radios.
 
 Like Outdoor, Indoor Radios will be able to collect rewards from providing coverage in multiple hexes.
