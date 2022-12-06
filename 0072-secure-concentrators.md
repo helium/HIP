@@ -104,9 +104,7 @@ Helium Foundation will make publicly available the list of public keys purchased
 
 ## Reference Hardware Design
 
-![image ](secure-concentrators/nlighten_concentrator.jpg)
-
-NLighten Systems has developed Open-Source hardware and firmware Secure Concentrator reference design. 
+NLighten Systems has developed Open-Source hardware and firmware Secure Concentrator reference design. The design files can be found here: https://gitlab.com/nlighten-systems/kompressor/
 
 ## Drawbacks
 
