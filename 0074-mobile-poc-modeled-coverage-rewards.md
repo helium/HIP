@@ -130,28 +130,34 @@ $$
 
 ### Calculation Example
 
-For simplicity, assuming that total MOBILE Rewards per period is 10,000, and Radios provide coverage in 4 hexes at most. The actual projected coverage on average will include much more hexes.
+For simplicity, assuming that total MOBILE Rewards per period is 10,000.
+
+| Radio  | Heartbeat | Heartbeat multiplier $k_H$ | Speed Test | Speedtest Multiplier $k_S$| Hex 1 - Hex 10 | Hex 11 - Hex 20 | Hex 21 - Hex 220 | Total Coverage Points | Total Reward Points |
+|---|--|---|---|---|---|---|---|---|---|
+| 1 (Outdoor) | Ok | 1 | Acceptable  | 1    | 160 | 80 | 800 | 1,040 | 1,040 |
+| 2 (Outdoor) | Ok | 1 | Poor        | 0.25 | 80  | 40 |     | 120   | 30    |
+| | | | | | | | | Points| 1,070 |
+
+Table 3. Simplified data for two Outdoor Radios with Heartbeat, Speed Test and Estimated Coverage Points for one Reward Period.
 
 | Radio  | Heartbeat | Heartbeat multiplier $k_H$ | Speed Test | Speedtest Multiplier $k_S$| Hex 1 | Hex 2 | Hex 3 | Hex 4 | Total Coverage Points | Total Reward Points |
 |---|--|---|---|---|---|---|---|---|---|---|
-| 1 (Outdoor) | Ok | 1 | Acceptable  | 1    | 16 | 8  |    |    | 24 | 24 |
-| 2 (Outdoor) | Ok | 1 | Poor        | 0.25 |    | 8  | 4  |    | 12 | 3  |
-| 3 (Indoor)  | Ok | 1 | Degraded    | 0.5  | 1  | 1  | 1  | 4  |  7 | 3.5|
-| | | | | | | | | | Points| 30.5 |
+| 3 (Indoor)  | Ok | 1 | Degraded    | 0.5  | 100 | 100 | 100 | 400 | 700 | 350 |
+| | | | | | | | | | Points| 350 |
 
-Table 3. Simplified data for two Outdoor and one Indoor Radio with Heartbeat, Speed Test and Estimated Coverage Points for one Reward Period.
+Table 4. Simplified data for one Indoor Radio with Heartbeat, Speed Test and Estimated Coverage Points for one Reward Period.
 
-*R x (1x1x34 + 1x0.25x12 + 1x0.5x7) = 10,000,*
+*R x (1x1x1040 + 1x0.25x120 + 1x0.5x700) = 10,000,*
 
 Where R is the reward per one estimated coverage reward point.
 
-*R = 246.91*
+*R = 6.54*
 
 | | Total MOBILE Rewards |
 ---|---
-| Radio 1 (Outdoor) | = 246.91x1x1x34 = 8,395 |
-| Radio 2 (Outdoor) | = 246.91x1x0.25x12 = 741 |
-| Radio 3 (Indoor) | = 246.91x1x0.5x7 = 864 |
+| Radio 1 (Outdoor) | = 6.54x1x1x1040 = 6,806.3 |
+| Radio 2 (Outdoor) | = 6.54x1x0.25x120 = 903.14 |
+| Radio 3 (Indoor) | = 6.54x1x0.5x700 = 2,290.58 |
 
 
 ## Data Visualization
