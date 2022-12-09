@@ -10,17 +10,17 @@
 
 This HIP proposes the first Proof-of-Coverage reward scheme for the MOBILE network and the method it will use to govern rewards in the current Genesis Phase, and beyond. This coverage scheme, known as _Modeled Coverage_, attempts to predict the coverage that a MOBILE radio provides to a surrounding area using radio characteristics, location data provided during the CBRS CPI registration process, and a public topographical database. This calculation will be performed by a new entity known as an Obstruction Data Oracle, which is an automated process that can predict how a signal will propogate into the surrounding area.
 
-This scheme replaces the current Genesis Phase scheme that relies solely on self-reported Hotspot parameters such as Radio Heartbeats and network Speed Tests. While these items are hard to spoof, they are not verified by external sources and provide limited information about the quality of coverage that a Radio provides. Modeled Coverage improves upon the current scheme by taking into account the directionality of Radios and environmental obstructions that prevent the propagation of the signals they generate. 
+This scheme replaces the current Genesis Phase scheme that relies solely on self-reported Hotspot parameters such as Radio Heartbeats and network Speed Tests. While these items are hard to spoof, they are not verified by external sources and provide limited information about the quality of coverage that a Radio provides. Modeled Coverage improves upon the current scheme by taking into account the directionality of Radios and environmental obstructions that prevent the propagation of the signals they generate.
 
 Once implemented, Modeled Coverage will be a significant milestone in introducing the Proof-of-Coverage concept in the Mobile Network. It's covered in a detailed MOBILE PoC roadmap in the blog post MOBILE Proof-of-Coverage: The Road Ahead [MOBILE Proof-of-Coverage: The Road Ahead](<https://blog.helium.com/mobile-proof-of-coverage-the-road-ahead-73a25601a13d>) as Obstruction Data.
-Combined with other parameters like uptime (Heartbeats) and backhaul (Speed Test), it allows for more fair rewards and incentivizes the deployment of Radios at optimal locations.
+Combined with other parameters like uptime (Heartbeats) and backhaul (Speed Test), it allows for more fair rewards and incentivizes high-quality deployments of Radios.
 
 
 # Motivation
 
-Building the MOBILE Network began with the Genesis Period, during which 5G Hotspot owners with Radios had to send just one Heartbeat in 24 hours to prove they were online. This was a necessary starting point to kickstart the deployments. However, from the start, the goal was to introduce more and more data sources to evaluate the certainty and usefulness of coverage.
+Building the MOBILE Network began with the Genesis Period, during which 5G Hotspot owners with Radios had to send just one Heartbeat in 24 hours to prove they were online. This was a necessary starting point to kickstart the deployments. However, to be successful, any network must be reliable, always available, and meet the expectations of its users. Using Modeled Coverage is an important step to measure the quality of coverage beyond self-reported data. In the future, it will be complemented and cross-checked by the data provided by Mobile Mappers.
 
-To be successful, any Network must be reliable, always available, and meet the expectations of its users. To move one step closer to the Proof-of-Coverage verified by external sources, we propose to use Modeled Coverage data to evaluate performance of Radios.
+Additionally, Modeled Coverage lays a foundation to introduce more data sources like zoning and population density to measure the usefulness of coverage and motivate deployments in places where it matters the most. The addition of the location-based incentive points will also be possible once the Modeled Coverage is introduced in the Mobile Rewards calculations.
 
 
 # Stakeholders
@@ -85,11 +85,20 @@ Since there are no sufficient and reliable data sources about obstacles in indoo
 |---|---|---|
 | **Location** | Inside hex | All adjacent hexes |
 | **Potential Signal Level** | High | Low |
-| **Estimated coverage points** | 16 | 4 |
+| **Estimated coverage points** | 400 | 100 |
 
 Table 2. Signal power tiers, corresponding signal strength and estimated coverage points for Indoor Radios.
 
 Like Outdoor, Indoor Radios will be able to collect rewards from providing coverage in multiple hexes.
+
+Estimated coverage points for Indoor Radios are significantly higher than the per hex points awarded to Outdoor Radios. This was done on purpose and is to balance the importance of Indoor Radios in the network and their relatively smaller coverage footprints.
+
+These values were chosen by taking all the Outdoor Radios in an example market and analyzing the distribution of estimated coverage points per radio based on the algorithm described in this HIP. We then chose estimated coverage point values that result in Indoor Radios getting roughly ¼th the estimated coverage points as the 95h percentile Outdoor Radios. The chosen points scheme also results in Indoor Radios getting about ½ the points of the average Outdoor Radio. Both of these results are aligned with the ratios used during genesis rewards where Indoor, Low-power Outdoor, and High-power Outdoor were rewarded at a ratio of 1 to 2.5 to 4 respectively. Figure 1 below is the CDF plot of the sample market Outdoor Radio estimated coverage points.
+
+![Figure 1. CDF of Outdoor Radio estimated coverage points for 904 radios in the L.A. market area.](./0074-mobile-poc-modeled-coverage-rewards/propagation_point_cdf.png)
+
+Figure 1. CDF of Outdoor Radio estimated coverage points for 904 radios in the L.A. market area.
+
 
 ## Reward Algorithm
 
@@ -159,3 +168,11 @@ Image 2. Baicells Outdoor Radio 430 installed on the two-story building roof on 
 ![Image 3. Modeled coverage of the Radio pictured on Image 2.](./0074-mobile-poc-modeled-coverage-rewards/baicells-outdoor-430-modeled.png)
 Image 3. Modeled coverage of the Radio pictured on Image 2.
 
+## Implementation Timeline
+
+Launch of the Modeled Coverage in the PoC Rewards calculation is planned for Q1 2023.
+However, to make sure the transition to the new PoC system, which replaces static, power-based multipliers, is smooth, Hotspot owners will be able to evaluate the coverage they provide before the switch takes effect.
+We propose to show Mapped Coverage information in the Mobile Explorer for at least four weeks before switching to the new PoC model.
+
+# Drawbacks
+Setting a maximum of 5 Indoor Radios might not work for multi-story or high-rise buildings. Compared with Outdoor Radios, no data is accessible about the elevation of Indoor Radios, and no other data sources are available immediately to model such information. However, by adding more external sources like zoning and population density to PoC in the future, we will be able to evaluate the usefulness of coverage provided by Indoor Radios more precisely. In the meantime, 5 radios in a given hex is sufficient to cover up to a 10 story building, making Multi-Dwelling Unit deployments feasible under the current limits while we work on further improvements.
