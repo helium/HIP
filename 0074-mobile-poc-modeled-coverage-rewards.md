@@ -8,7 +8,7 @@
 
 # Summary
 
-This HIP proposes the first Proof-of-Coverage reward scheme for the MOBILE network and the method it will use to govern rewards in the current Genesis Phase, and beyond. This coverage scheme, known as _Modeled Coverage_, attempts to predict the coverage that a MOBILE radio provides to a surrounding area using radio characteristics, location data provided during the CBRS CPI registration process, and a public topographical database. This calculation will be performed by a new entity known as an Obstruction Data Oracle, which is an automated process that can predict how a signal will propogate into the surrounding area.
+This HIP proposes the first Proof-of-Coverage reward scheme for the MOBILE network and the method it will use to govern rewards in the current Genesis Phase, and beyond. This coverage scheme, known as _Modeled Coverage_, attempts to predict the coverage that a MOBILE radio provides to a surrounding area using radio characteristics, location data provided during the CBRS CPI registration process, and a public topographical database. This calculation will be performed by a new entity known as an Obstruction Data Oracle, which is an automated process that can predict how a signal will propogate into the surrounding area. This HIP impacts only Helium 5G Hotspot owners with Radios and does not affect the IoT rewards.
 
 This scheme replaces the current Genesis Phase scheme that relies solely on self-reported Hotspot parameters such as Radio Heartbeats and network Speed Tests. While these items are hard to spoof, they are not verified by external sources and provide limited information about the quality of coverage that a Radio provides. Modeled Coverage improves upon the current scheme by taking into account the directionality of Radios and environmental obstructions that prevent the propagation of the signals they generate.
 
@@ -20,12 +20,14 @@ Combined with other parameters like uptime (Heartbeats) and backhaul (Speed Test
 
 Building the MOBILE Network began with the Genesis Period, during which 5G Hotspot owners with Radios had to send just one Heartbeat in 24 hours to prove they were online. This was a necessary starting point to kickstart the deployments. However, to be successful, any network must be reliable, always available, and meet the expectations of its users. Using Modeled Coverage is an important step to measure the quality of coverage beyond self-reported data. In the future, it will be complemented and cross-checked by the data provided by Mobile Mappers.
 
-Additionally, Modeled Coverage lays a foundation to introduce more data sources like zoning and population density to measure the usefulness of coverage and motivate deployments in places where it matters the most. The addition of the location-based incentive points will also be possible once the Modeled Coverage is introduced in the Mobile Rewards calculations.
+This HIP lays the groundwork for rewarding Helium Mobile Hotspot operators based on coverage vs. just existence (status quo) Specifically:
+1. Proposes a framework to count coverage using res 12 hexes;
+2. Proposes a framework to start incorporating external data sources for calculating coverage, starting with the Obstruction Data Oracle. We expect this to be the first in a series of HIPs that will incorporate other data sources, such as zoning and population density, feedback from carrier members of the MOBILE DAO, network users and mappers, etc.
 
 
-# Stakeholders
+# Stakeholders & Deployment Impact
 
-This HIP affects only MOBILE SubDAO, particularly 5G Hotspot owners with Radios and users of the MOBILE Network.
+This HIP affects only MOBILE SubDAO, particularly 5G Hotspot owners with Radios and users of the MOBILE Network. It does not have an impact on the IoT rewards.
 
 5G Hotspot owners: 5G Hotspot owners with Outdoor Radios will need to meet new quality coverage requirements to earn maximum MOBILE rewards. Some owners might need to adjust the locations and/or angles of their Outdoor Radios to optimize for coverage. It is possible that in some places, it won't be possible to earn max rewards due to environmental obstacles that are not possible to mitigate. This HIP also proposes to consider rewarding those deployers who were among the first to provide quality coverage in a given Hex.
 
@@ -182,3 +184,22 @@ We propose to show Mapped Coverage information in the Mobile Explorer for at lea
 
 # Drawbacks
 Setting a maximum of 5 Indoor Radios might not work for multi-story or high-rise buildings. Compared with Outdoor Radios, no data is accessible about the elevation of Indoor Radios, and no other data sources are available immediately to model such information. However, by adding more external sources like zoning and population density to PoC in the future, we will be able to evaluate the usefulness of coverage provided by Indoor Radios more precisely. In the meantime, 5 radios in a given hex is sufficient to cover up to a 10 story building, making Multi-Dwelling Unit deployments feasible under the current limits while we work on further improvements.
+
+# Rationale and Alternatives
+
+MOBILE PoC requires many external sources of information to evaluate uniqueness, usefulness, and quality of coverage. Any incrementally built product requires a solid foundation that can be implemented quickly, have an immediate impact, and can be extended with future improvements.
+As initially planned, Mobile Mappers were supposed to be the primary sources of coverage verification for the MOBILE PoC. However, as with any hardware, it takes time and resources to have enough devices in the field to map all areas with coverage. Not to stall the progress with the PoC development, we've decided to evaluate Obstruction Data sources to model the Mobile coverage.
+
+While analyzing the results, it was determined that Obstruction Data could complement information scanned by Mobile Mappers to cross-check and confidently verify signal levels, while immediately helping evaluate quality of Mobile coverage.
+
+
+# Unresolved Questions
+Finding reliable sources of information about indoor obstruction data is challenging. Until we incorporate data like population density and zoning to better understand the unique specifics of locations where Indoor Radios are located, we'll continue rewarding them for meeting Genesis PoC requirements but will have a limit of 5 rewardable Indoor Radios per hex. Indoor Radios will need to continue meeting Heartbeats and Speed Tests requirements but will receive increased rewards to keep the Genesis-period ratio of Indoor vs. Outdoor rewards.
+
+
+# Success Metrics
+
+The main success metric will be improvements to MOBILE coverage. We expect to see more distributed coverage and less clusterization of Outdoor Radios as their owners improve placements to optimize for maximum MOBILE rewards.
+Improvements to coverage will be measured by the number of effectively covered hexes and the change in that number over time.
+
+At a glance, changes to coverage can be easily visualized by comparing snapshots of the Modeled Coverage map for different periods. Mobile Explorer might include the functionality to retrieve snapshots for a given period of time.
