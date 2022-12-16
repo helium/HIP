@@ -55,7 +55,7 @@ Thus, the 500,000 DC fee in addition to the three aforementioned gaming preventi
 
 **This HIP will be implemented in two stages:**
 
- 1) Upon community vote approval, the current 1,000,000 DC reassertion fee amount will immediately be reduced to 500,000 DC. Stage 2 will only be implemented if we see hotspots moving to a distance of 10km or greater, within Res8 hexes that contain less than 3 hotspots (post stage 1).
+ 1) Upon community vote approval and upon the completion of HIP 70, the current 1,000,000 DC reassertion fee amount will immediately be reduced to 500,000 DC. Stage 2 will only be implemented if we see hotspots moving to a distance of 10km or greater, within Res8 hexes that contain less than 3 hotspots (post stage 1).
 
  2) In order to dynamically meet the goals of this HIP regardless of the future oracle price, monthly rewards, and daily average DC earned per hotspot, the following mathematical equation/logic will be implemented.
 
@@ -72,6 +72,12 @@ Additionally, there will always be a minimum of 100,000 DC and maximum of 500,00
 (Average Daily Rewards Per Hotspots [HNT/day]) x OraclePrice[USD/HNT] x 8 [Days] x 100.000 [DC/USD] = Reassert Fee In DC.
 
 In stage two, the reassertion fee will be dynamically calculated by what an average hotspot earns. These earnings change, depending on the monthly rewards target set by the HIP 20 halvings schedule, the number of active hotspots, and the price of HNT. This notwithstanding, the reassertion fee shall never be higher than 500,000 DC (5 USD) and never lower than 100,000 DC (1 USD).
+
+**This HIP will be voted on as follows:**
+
+  1) Stage/phase 1 will be an HNT vote to cut the assertion fees in half for the first three months post HIP 70 to correct their hotspots locations, without any antigaming code. Since everyone will be warned that, if they do not correct their hotspots to their actual location, then they will be caught for spoofing/cheating and blacklisted. The Foundation/Nova will also use the data derived from this for future antigaming/antispoofing proofing. If the vote is approved by the community, then this stage will be implemented via a simple chain variable. Therefore, no code is necessary for this stage.
+
+  2) Stage/phase 2 will be a veIOT vote, to determine whether or not there should be a permanent or ongoing dynamic level mathematical equation, determining the ongoing reassertion fees. (Allowed, based on whatever proper antigaming eligibility/criteria methods the Foundation determines at that time.) This stage requires a veIOT voting system, as well as antigaming and the dynamic level mathamatical code. Additionally, it will help test the new veIOT voting system, and helps keep IOT in the treasury, which is beneficial for every IOT hotspot owner.
 
 # Drawbacks
 
