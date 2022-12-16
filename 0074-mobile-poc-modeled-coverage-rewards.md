@@ -25,7 +25,7 @@ This HIP lays the groundwork for rewarding Helium Mobile Hotspot operators based
 2. Proposes a framework to start incorporating external data sources for calculating coverage, starting with the Obstruction Data Oracle. We expect this to be the first in a series of HIPs that will incorporate other data sources, such as zoning and population density, feedback from carrier members of the MOBILE DAO, network users and mappers, etc.
 
 
-# Stakeholders & Deployment Impact
+# Stakeholders
 
 This HIP affects only MOBILE SubDAO, particularly 5G Hotspot owners with Radios and users of the MOBILE Network. It does not have an impact on the IoT rewards.
 
@@ -192,10 +192,33 @@ As initially planned, Mobile Mappers were supposed to be the primary sources of 
 
 While analyzing the results, it was determined that Obstruction Data could complement information scanned by Mobile Mappers to cross-check and confidently verify signal levels, while immediately helping evaluate quality of Mobile coverage.
 
+# Deployment Impact
+
+This HIP affects only MOBILE SubDAO, particularly 5G Hotspot owners with Radios and users of the MOBILE Network. It does not have an impact on the IoT rewards.
+
+## Impact on Rewards
+
+There will be three possible outcomes for owners of Radios:
+1. Increase in earnings. Because some Radios on the MOBILE Network won't be able to meet minimum quality requirements, part of the rewards will be re-distributed proportionally to those who qualify based on all PoC criteria.
+2. Earnings will stay the same.
+3. Less or no earnings.
+This HIP proposes to limit five oldest Radio deployments with the highest signal strength in a given hex for reward eligibility. The duration of the deployment will be calculated based on the time of the latest SAS grant received. Please see the Rewards Algorithm section for more details.
+Due to the lack of reliable data sources regarding obstacles in the indoor spaces, an approximation based on the data gathered during the testing of certified Indoor Radios will be used to determine the signal strength of the Indoor Radios. Please see the Reward Tiers section for more information. The proposed reward points for Indoor Radios will align with the ratios used during the Genesis rewards period.
+
+Detailed information about proposed reward points can be found in the Reward Tiers section of this HIP.
+
+## Mobile Explorer
+This HIP proposes the launch of a new Mobile Explorer to display Modeled Coverage and other data of MOBILE Network. Before the launch of Modeled Coverage data in the Rewards calculation, Radio owners will be able to view the signal strength and hex coverage by their Radios in the new Mobile Explorer. We propose to give at least four weeks from the launch of the new Mobile Explorer for any necessary adjustments to the Radio locations before we consider Modeled Coverage data in the Rewards calculations.
+
+Besides potential Radio location adjustments, no other actions related to this HIP will be required to be eligible for MOBILE Rewards.
+
+## Proof-of-Coverage Roadmap
+
+This HIP is one of the important milestones in the MOBILE PoC Roadmap. It lays the foundation for addition of other external data sources to evaluate the usefulness of coverage. HIPs that propose to use zoning, population density and allow location based optimization are coming as next steps. You can check out the MOBILE PoC Roadmap [here](<https://blog.helium.com/mobile-proof-of-coverage-the-road-ahead-73a25601a13d/>)
 
 # Unresolved Questions
-Finding reliable sources of information about indoor obstruction data is challenging. Until we incorporate data like population density and zoning to better understand the unique specifics of locations where Indoor Radios are located, we'll continue rewarding them for meeting Genesis PoC requirements but will have a limit of 5 rewardable Indoor Radios per hex. Indoor Radios will need to continue meeting Heartbeats and Speed Tests requirements but will receive increased rewards to keep the Genesis-period ratio of Indoor vs. Outdoor rewards.
 
+Finding reliable sources of information about indoor obstruction data is challenging. Until we incorporate data like population density and zoning to better understand the unique specifics of locations where Indoor Radios are located, we'll continue rewarding them for meeting Genesis PoC requirements but will have a limit of 5 rewardable Indoor Radios per hex. Indoor Radios will need to continue meeting Heartbeats and Speed Tests requirements but will receive increased rewards to keep the Genesis-period ratio of Indoor vs. Outdoor rewards.
 
 # Success Metrics
 
