@@ -8,7 +8,7 @@
 
 # Summary
 
-HIP-74 proposes the first Proof-of-Coverage scheme for the MOBILE Network and the method it will use to govern MOBILE Rewards in the current Genesis Phase and beyond. This coverage scheme, known as _Modeled Coverage_, attempts to predict the coverage that a MOBILE Radio provides to a surrounding area using radio characteristics, location data provided during the CBRS CPI registration process, and a public topographical database. A new entity known as an Obstruction Data Oracle, an automated process that predicts how a signal will propagate into the surrounding area, performs these calculations.
+HIP-74 proposes the first Proof-of-Coverage scheme for the MOBILE Network and the method it will use to govern MOBILE Rewards in the current Genesis Phase and beyond. This coverage scheme, known as _Modeled Coverage_, attempts to predict the coverage that a MOBILE Radio provides to a surrounding area using radio characteristics, location data provided during the CBRS CPI registration process, and a public topographical database. A new entity known as an Obstruction Data Oracle, an automated process that predicts how a signal will propagate into the surrounding area, performs these calculations. This HIP impacts only Helium 5G Hotspot owners with Radios and does not affect the IoT rewards.
 
 This scheme replaces the current Genesis Phase scheme that relies solely on self-reported 5G Hotspot parameters such as uptime (Radio Heartbeats) and backhaul (Speed Tests). While these items are hard to spoof, external sources do not verify them and provide limited information about the quality of coverage that a Radio provides. Modeled coverage improves upon the current scheme by considering the directionality of Radios and environmental obstructions that prevent the propagation of the signals they generate.
 
@@ -16,13 +16,18 @@ Once implemented, Modeled Coverage will be a significant milestone in introducin
 
 # Motivation
 
-Building the MOBILE Network began with the Genesis Phase, during which 5G Hotspot Owners with Radios had to send just one Heartbeat in 24 hours to prove the Radios were online, a necessary starting point to kickstart the deployments. However, to be successful, the MOBILE Network must be reliable, always available, and meet the expectations of its users. Using Modeled Coverage is a critical step to measure the quality of coverage beyond self-reported data. In the future, it will be complemented and cross-checked by the data provided by MOBILE Mappers.
+Building the MOBILE Network began with the Genesis Phase, during which 5G Hotspot Owners with Radios had to send just one Heartbeat in 24 hours to prove the Radios were online, a necessary starting point to kickstart the deployments. However, to be successful, any MOBILE Network must be reliable, always available, and meet the expectations of its users. Using Modeled Coverage is an important step to measure the quality of coverage beyond self-reported data. In the future, it will be complemented and cross-checked by the data provided by Mobile Mappers.
+
+This HIP lays the groundwork for rewarding Helium Mobile Hotspot operators based on coverage vs. just existence (status quo) Specifically:
+
+1. Proposes a framework to count coverage using res12 hexes;
+2. Proposes a framework to start incorporating external data sources for calculating coverage, starting with the Obstruction Data Oracle. We expect this to be the first in a series of HIPs that will incorporate other data sources, such as zoning and population density, feedback from carrier members of the MOBILE subDAO, Network users and Mappers, etc.
 
 Additionally, Modeled Coverage lays a foundation to introduce more data sources like zoning and population density to measure the usefulness of coverage and motivate deployments in places where it matters the most. With Modeled Coverage, location-based incentive points in the Mobile Rewards calculations will also be possible.
 
 # Stakeholders
 
-HIP-74 affects only MOBILE SubDAO, particularly 5G Hotspot Owners with Radios and users of the MOBILE Network.
+This HIP affects only the MOBILE SubDAO, particularly 5G Hotspot Owners with Radios and users of the MOBILE Network. This HIP does not have an impact on the IoT Network or IoT Rewards.
 
 5G Hotspot Owners with Outdoor Radios must meet new Quality Coverage requirements to maximize potential MOBILE Rewards earnings. Some Owners may need to modify their Outdoor Radio locations, orientations, or both to optimize for Quality Coverage. Additionally, environmental obstacles that are impossible to mitigate may reduce the maximum Rewards a Radio can earn. HIP-74 also proposes rewarding deployers among the first to provide quality coverage in a given hex.
 
@@ -196,3 +201,47 @@ We propose to show Mapped Coverage information in the Mobile Explorer for at lea
 Setting a maximum of 5 Indoor Radios might not work for multi-story or high-rise buildings. In contrast to Outdoor Radios, no data is accessible about the elevation of Indoor Radios, and no other data sources are available immediately to model such information.
 
 By adding more external sources like zoning and population density to PoC in the future, we will be able to evaluate the usefulness of coverage provided by Indoor Radios more precisely. In the meantime, 5 Indoor Radios in a given hex are sufficient to cover up to a ten-story building, making Multi-Dwelling Unit deployments feasible under the current limits while we work on further improvements.
+
+# Rationale and Alternatives
+
+MOBILE PoC requires many external sources of information to evaluate uniqueness, usefulness, and quality of coverage. Any incrementally built product requires a solid foundation that can be implemented quickly, have an immediate impact, and can be extended with future improvements.
+As initially planned, Mobile Mappers were supposed to be the primary sources of coverage verification for the MOBILE PoC. However, as with any hardware, it takes time and resources to have enough devices in the field to map all areas with coverage. Not to stall the progress with the PoC development, we've decided to evaluate Obstruction Data sources to model the Mobile coverage.
+
+While analyzing the results, it was determined that Obstruction Data could complement information scanned by Mobile Mappers to cross-check and confidently verify signal levels, while immediately helping evaluate quality of Mobile coverage.
+
+# Deployment Impact
+
+This HIP affects only MOBILE SubDAO, particularly 5G Hotspot owners with Radios and users of the MOBILE Network. It does not have an impact on the IoT rewards.
+
+## Impact on Rewards
+
+There will be three possible outcomes for owners of Radios:
+
+1. Increase in earnings. Because some Radios on the MOBILE Network won't be able to meet minimum quality requirements, part of the rewards will be re-distributed proportionally to those who qualify based on all PoC criteria.
+2. Earnings will stay the same.
+3. Less or no earnings.
+   This HIP proposes to limit five oldest Radio deployments with the highest signal strength in a given hex for reward eligibility. The duration of the deployment will be calculated based on the time of the latest SAS grant received. Please see the Rewards Algorithm section for more details.
+   Due to the lack of reliable data sources regarding obstacles in the indoor spaces, an approximation based on the data gathered during the testing of certified Indoor Radios will be used to determine the signal strength of the Indoor Radios. Please see the Reward Tiers section for more information. The proposed reward points for Indoor Radios will align with the ratios used during the Genesis rewards period.
+
+Detailed information about proposed reward points can be found in the Reward Tiers section of this HIP.
+
+## Mobile Explorer
+
+This HIP proposes the launch of a new Mobile Explorer to display Modeled Coverage and other data of MOBILE Network. Before the launch of Modeled Coverage data in the Rewards calculation, Radio owners will be able to view the signal strength and hex coverage by their Radios in the new Mobile Explorer. We propose to give at least four weeks from the launch of the new Mobile Explorer for any necessary adjustments to the Radio locations before we consider Modeled Coverage data in the Rewards calculations.
+
+Besides potential Radio location adjustments, no other actions related to this HIP will be required to be eligible for MOBILE Rewards.
+
+## Proof-of-Coverage Roadmap
+
+This HIP is one of the important milestones in the MOBILE PoC Roadmap. It lays the foundation for addition of other external data sources to evaluate the usefulness of coverage. HIPs that propose to use zoning, population density and allow location based optimization are coming as next steps. You can check out the MOBILE PoC Roadmap [here](https://blog.helium.com/mobile-proof-of-coverage-the-road-ahead-73a25601a13d/)
+
+# Unresolved Questions
+
+Finding reliable sources of information about indoor obstruction data is challenging. Until we incorporate data like population density and zoning to better understand the unique specifics of locations where Indoor Radios are located, we'll continue rewarding them for meeting Genesis PoC requirements but will have a limit of 5 rewardable Indoor Radios per hex. Indoor Radios will need to continue meeting Heartbeats and Speed Tests requirements but will receive increased rewards to keep the Genesis-period ratio of Indoor vs. Outdoor rewards.
+
+# Success Metrics
+
+The main success metric will be improvements to MOBILE coverage. We expect to see more distributed coverage and less clusterization of Outdoor Radios as their owners improve placements to optimize for maximum MOBILE rewards.
+Improvements to coverage will be measured by the number of effectively covered hexes and the change in that number over time.
+
+At a glance, changes to coverage can be easily visualized by comparing snapshots of the Modeled Coverage map for different periods. Mobile Explorer might include the functionality to retrieve snapshots for a given period of time.
