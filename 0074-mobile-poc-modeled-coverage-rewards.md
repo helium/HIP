@@ -83,7 +83,7 @@ Table of reference signal received power and corresponding reward multipliers fo
 
 |                               | Tier 1        | Tier 2                     | Tier 3                      | Tier 4           |
 | ----------------------------- | ------------- | -------------------------- | --------------------------- | ---------------- |
-| **Potential Signal Power**    | $P > -90 dBm$ | $-90 dBm \ge P > -105 dBm$ | $-105 dBm \ge P > -130 dBm$ | $P \le -130 dBm$ |
+| **Potential Signal Power**    | $P > -95 dBm$ | $-95 dBm \ge P > -105 dBm$ | $-105 dBm \ge P > -115 dBm$ | $P \le -115 dBm$ |
 | **Potential Signal Level**    | High          | Medium                     | Low                         | None             |
 | **Estimated coverage points** | 16            | 8                          | 4                           | 0                |
 
