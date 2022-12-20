@@ -14,7 +14,7 @@ This scheme replaces the current Genesis Phase scheme that relies solely on self
 
 Once implemented, Modeled Coverage will be a significant milestone in introducing the Proof-of-Coverage concept in the Mobile Network. The blog post [MOBILE Proof-of-Coverage: The Road Ahead](https://blog.helium.com/mobile-proof-of-coverage-the-road-ahead-73a25601a13d) provides a detailed MOBILE PoC Roadmap. Combined with other parameters like uptime and backhaul, Obstruction Data allows for more fair rewards and incentivizes high-quality deployments of Radios.
 
-It's important to note, HIP 74 is the start of programmatic emissions. This will update a new chain varaiable that mints rather than draws from the premine.
+It's important to note, HIP 74 is the start of programmatic emissions. This will update a new chain variable that mints rather than draws from the premine.
 
 # Motivation
 
@@ -219,7 +219,7 @@ While analyzing the results, Obstruction Data was determined to complement infor
 
 HIP-74 affects only MOBILE SubDAO, particularly 5G Hotspot owners with Radios and users of the MOBILE Network. It does not impact the IoT Network or IoT Rewards.
 
-HIP 74 is the start of programmatic emissions. This will update a new chain varaiable that mints rather than draws from the premine.
+HIP 74 is the start of programmatic emissions. This will update a new chain variable that mints rather than draws from the premine.
 
 ## Impact on Rewards
 
