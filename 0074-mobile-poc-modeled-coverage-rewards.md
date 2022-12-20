@@ -43,7 +43,9 @@ There will be three possible outcomes for owners of Radios:
 
 # Detailed Explanation
 
-HIP-74 replaces the current algorithm for MOBILE Rewards initially introduced during the Genesis Phase based on Radio Type multipliers with a new algorithm that uses the location of the Radio to calculate Rewards based on the hexes the Radio covers, as modeled by the Obstruction Data Oracle. Below is a detailed explanation of the proposed rewards algorithm and new requirements for scaling MOBILE Rewards based on the Modeled Coverage data.
+HIP-74 replaces the current algorithm for MOBILE Rewards initially introduced during the Genesis Phase based on Radio Type multipliers with a new algorithm that uses the location of the Radio to calculate Rewards based on the hexes the Radio covers, as modeled by the Obstruction Data Oracle. In addition, HIP-74 will be the start of programmatic emissions and will no longer draw rewards from the MOBILE premine. 
+
+Below is a detailed explanation of the proposed rewards algorithm and new requirements for scaling MOBILE Rewards based on the Modeled Coverage data.
 
 # Reward Mechanics
 
@@ -194,7 +196,7 @@ Below is the visualization of signal propagation for the Outdoor Radio, directed
 
 # Implementation Timeline
 
-Launch of the Modeled Coverage in the PoC Rewards calculation is planned for Q1 2023.
+Launch of the Modeled Coverage in the PoC Rewards calculation is planned for Q1 2023, which will also include a chain variable to update `subnetwork_rewards_v1` to transition from premine rewards to programmatic emissions.
 
 However, to make sure the transition to the new PoC system, which replaces static, power-based multipliers, is smooth, Hotspot owners can evaluate the coverage they provide before the switch takes effect.
 We propose to show Mapped Coverage information in the Mobile Explorer for at least four weeks before switching to the new PoC model.
