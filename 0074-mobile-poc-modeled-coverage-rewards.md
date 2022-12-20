@@ -14,6 +14,8 @@ This scheme replaces the current Genesis Phase scheme that relies solely on self
 
 Once implemented, Modeled Coverage will be a significant milestone in introducing the Proof-of-Coverage concept in the Mobile Network. The blog post [MOBILE Proof-of-Coverage: The Road Ahead](https://blog.helium.com/mobile-proof-of-coverage-the-road-ahead-73a25601a13d) provides a detailed MOBILE PoC Roadmap. Combined with other parameters like uptime and backhaul, Obstruction Data allows for more fair rewards and incentivizes high-quality deployments of Radios.
 
+It's important to note, HIP 74 is the start of programmatic emissions. This will update a new chain varaiable that mints rather than draws from the premine.
+
 # Motivation
 
 Building the MOBILE Network began with the Genesis Phase, during which 5G Hotspot Owners with Radios had to send just one Heartbeat in 24 hours to prove the Radios were online, a necessary starting point to kickstart the deployments. However, to be successful, any MOBILE Network must be reliable, always available, and meet the expectations of its users. Using Modeled Coverage is an important step to measure the quality of coverage beyond self-reported data. In the future, it will be complemented and cross-checked by the data provided by Mobile Mappers.
