@@ -73,11 +73,15 @@ Additionally, there will always be a minimum of 100,000 DC and maximum of 500,00
 
 In stage two, the reassertion fee will be dynamically calculated by what an average hotspot earns. These earnings change, depending on the monthly rewards target set by the HIP 20 halvings schedule, the number of active hotspots, and the price of HNT. This notwithstanding, the reassertion fee shall never be higher than 500,000 DC (5 USD) and never lower than 100,000 DC (1 USD).
 
+
 **This HIP will be voted on as follows:**
 
-  1) Stage/phase 1 will be an HNT vote to cut the assertion fees in half for the first three months post HIP 70 to correct their hotspots locations, without any antigaming code. Since everyone will be warned that, if they do not correct their hotspots to their actual location, then they will be caught for spoofing/cheating and blacklisted. The Foundation/Nova will also use the data derived from this for future antigaming/antispoofing proofing. If the vote is approved by the community, then this stage will be implemented via a simple chain variable. Therefore, no code is necessary for this stage.
+  1) Stage/phase 1 will be an HNT vote to cut the assertion fees in half for the first three months post HIP 70 to correct their hotspots locations, without any antigaming code. Since everyone will be warned that, if they do not correct their hotspots to their actual location, then they will be caught for spoofing/cheating and blacklisted. (This HIP will NOT blacklist hotspots.) The Foundation/Nova will also use the data derived from this for future antigaming/antispoofing proofing. After three months, the assertion fee will be reverted. If the vote is approved by the community, then this stage will be implemented via a simple chain variable. Therefore, no code is necessary for this stage.
 
-  2) Stage/phase 2 will be a veIOT vote, to determine whether or not there should be a permanent or ongoing dynamic level mathematical equation, determining the ongoing reassertion fees. (Allowed, based on whatever proper antigaming eligibility/criteria methods the Foundation determines at that time.) This stage requires a veIOT voting system, as well as antigaming and the dynamic level mathamatical code. Additionally, it will help test the new veIOT voting system, and helps keep IOT in the treasury, which is beneficial for every IOT hotspot owner.
+  2) Stage/phase 2 will be a veIOT vote, to determine whether or not there should be a permanent or ongoing dynamic level mathematical equation, determining the ongoing reassertion fees. (Allowed, based on whatever proper antigaming eligibility/criteria methods the Foundation determines appropriate at that time.) This stage requires a veIOT voting system, as well as antigaming and the dynamic level mathematical code. Additionally, it will help test the new veIOT voting system, and helps keep IOT in the treasury, which is beneficial for every IOT hotspot owner.
+
+*Please note that this HIP does **not** impact 5G CBRS gateways & radios.*
+
 
 # Drawbacks
 
@@ -97,4 +101,4 @@ As far as resourcing, who will build/write the code?
 
 # Success Metrics
 
-Success may be measured, once we see hotspots moving to a distance of 10km or greater, within Res8 hexes that contain less than 3 hotspots.
+Success may be measured, once we see MORE hotspots moving to a distance of 10km or greater, within Res8 hexes that contain less than 3 hotspots.
