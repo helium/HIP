@@ -14,7 +14,7 @@ It proposes a framework to count coverage using res 12 hexes;
 It proposes a framework for incorporating external data sources (aka Oracles) to calculate and/or coverage;
 It proposes Obstruction Data Oracle as the first such external data source.
 
-We expect this to be the first in a series of HIPs that will incorporate other data sources, such as zoning and population density, feedback from carrier members of the MOBILE DAO, network users and mappers, etc.
+We expect this to be the first in a series of HIPs that will incorporate other data sources, such as zoning and population density, feedback from carrier members of the MOBILE DAO, network users and mappers, etc. Our aim is to make future HIPs smaller and more easily consumable.
 
 This HIP affects only the Helium 5G network and has no impact on IoT rewards.
 
@@ -195,9 +195,7 @@ Below is the visualization of signal propagation for the Outdoor Radio, directed
 
 # Implementation Timeline
 
-Launch of the Modeled Coverage in the PoC Rewards calculation is planned for Q1 2023, which will also include a chain variable to update `subnetwork_rewards_v1` to transition from premine rewards to programmatic emissions.
-
-However, to make sure the transition to the new PoC system, which replaces static, power-based multipliers, is smooth, Hotspot owners can evaluate the coverage they provide before the switch takes effect.
+To make sure the transition to the new PoC system, which replaces static, power-based multipliers, is smooth, Hotspot owners can evaluate the coverage they provide before the switch takes effect.
 We propose to show Mapped Coverage information in the Mobile Explorer for at least four weeks before switching to the new PoC model.
 
 # Drawbacks
