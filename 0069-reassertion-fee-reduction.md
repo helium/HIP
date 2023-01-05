@@ -31,6 +31,12 @@ In order to help expand the network and ease the burden on new people joining th
 
 Please note that I specifically chose 500,000 DC and not less (say 10,000 DC), to help prevent people from taking advantage of reduced reassertion fees, and to lesson the economical effect on the Network.
 
+If approved by community (HNT) vote, this HIP will reduce **all** assertion fees in half, for three months, beginning immediately upon the migration to Solana, and will revert back after three months. 
+
+No code is required, since this may be accomplished via chain vars. 
+
+**PLEASE NOTE THAT FROM THIS POINT ON IS NO LONGER RELEVANT, ALL OF THE BELOW WILL NOT BE VOTED ON, AND MUST BE REWRITTEN IN A NEW HIP.**
+
 In addition, to prevent location spoofing as a result of reassertion fees deduction, any given individual hotspot may only have its reassertion fees reduced every 525k blocks (approximately once per year).
 
 Furthermore, in order to help prevent abuse of the reassertion fee reduction, there will be a minimum distance of 10KM (between the original location to the reasserted location) requirement.
