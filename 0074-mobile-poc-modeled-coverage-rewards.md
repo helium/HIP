@@ -8,22 +8,22 @@
 
 # Summary
 
-HIP-74 proposes the first Proof-of-Coverage scheme for the MOBILE Network and the method it will use to govern MOBILE Rewards in the current Genesis Phase and beyond. This coverage scheme, known as _Modeled Coverage_, attempts to predict the coverage that a MOBILE Radio provides to a surrounding area using radio characteristics, location data provided during the CBRS CPI registration process, and a public topographical database. A new entity known as an Obstruction Data Oracle, an automated process that predicts how a signal will propagate into the surrounding area, performs these calculations. HIP-74 impacts only Helium 5G Hotspot owners with Radios and does not impact the IoT Network or IoT Rewards.
+HIP-74 lays the groundwork to start rewarding Helium Mobile Hotspot operators based on actual coverage provided vs. mere existence. Specifically:
 
-This scheme replaces the current Genesis Phase scheme that relies solely on self-reported 5G Hotspot parameters such as uptime (Radio Heartbeats) and backhaul (Speed Tests). While these items are hard to spoof, external sources do not verify them and provide limited information about the quality of coverage that a Radio provides. Modeled coverage improves upon the current scheme by considering the directionality of Radios and environmental obstructions that prevent the propagation of the signals they generate.
+It proposes a framework to count coverage using res 12 hexes;
+It proposes a framework for incorporating external data sources (aka Oracles) to calculate and/or coverage;
+It proposes Obstruction Data Oracle as the first such external data source.
+
+We expect this to be the first in a series of HIPs that will incorporate other data sources, such as zoning and population density, feedback from carrier members of the MOBILE DAO, network users and mappers, etc. Our aim is to make future HIPs smaller and more easily consumable.
+
+This HIP affects only the Helium 5G network and has no impact on IoT rewards.
 
 Once implemented, Modeled Coverage will be a significant milestone in introducing the Proof-of-Coverage concept in the Mobile Network. The blog post [MOBILE Proof-of-Coverage: The Road Ahead](https://blog.helium.com/mobile-proof-of-coverage-the-road-ahead-73a25601a13d) provides a detailed MOBILE PoC Roadmap. Combined with other parameters like uptime and backhaul, Obstruction Data allows for more fair rewards and incentivizes high-quality deployments of Radios.
 
-It's important to note, HIP 74 is the start of programmatic emissions. This will update a new chain variable that mints rather than draws from the premine.
 
 # Motivation
 
-Building the MOBILE Network began with the Genesis Phase, during which 5G Hotspot Owners with Radios had to send just one Heartbeat in 24 hours to prove the Radios were online, a necessary starting point to kickstart the deployments. However, to be successful, any MOBILE Network must be reliable, always available, and meet the expectations of its users. Using Modeled Coverage is an important step to measure the quality of coverage beyond self-reported data. In the future, it will be complemented and cross-checked by the data provided by Mobile Mappers.
-
-HIP-74 lays the groundwork for rewarding Helium Mobile Hotspot operators based on coverage vs. just existence (status quo) Specifically:
-
-1. Proposes a framework to count coverage using res12 hexes;
-2. Proposes a framework to start incorporating external data sources for calculating coverage, starting with the Obstruction Data Oracle. We expect this to be the first in a series of HIPs incorporating other data sources, such as zoning and population density, feedback from carrier members of the MOBILE subDAO, Network users and Mappers, etc.
+Building the MOBILE Network began with the Genesis Phase, during which 5G Hotspot Owners with Radios were rewarded for keeping the radios online vs. providing useful coverage. This was a necessary starting point to kickstart the deployments. However, to be successful, any MOBILE Network must be reliable, always available, and meet the expectations of its users. Using Modeled Coverage is an important step to measure the quality of coverage beyond self-reported data. In the future, it will be complemented and cross-checked by the data provided by Mobile Mappers.
 
 Additionally, Modeled Coverage lays a foundation to introduce more data sources like zoning and population density to measure the usefulness of coverage and motivate deployments in places where it matters the most. With Modeled Coverage, location-based incentive points in the Mobile Rewards calculations will also be possible.
 
@@ -43,8 +43,7 @@ There will be three possible outcomes for owners of Radios:
 
 # Detailed Explanation
 
-HIP-74 replaces the current algorithm for MOBILE Rewards initially introduced during the Genesis Phase based on Radio Type multipliers with a new algorithm that uses the location of the Radio to calculate Rewards based on the hexes the Radio covers, as modeled by the Obstruction Data Oracle. In addition, HIP-74 will be the start of programmatic emissions and will no longer draw rewards from the MOBILE premine. 
-
+HIP-74 replaces the current algorithm for MOBILE Rewards that was based on Radio Type multipliers with a new algorithm that uses the location of the Radio to calculate Rewards based on the hexes the Radio covers, as modeled by the Obstruction Data Oracle.
 Below is a detailed explanation of the proposed rewards algorithm and new requirements for scaling MOBILE Rewards based on the Modeled Coverage data.
 
 # Reward Mechanics
@@ -111,7 +110,7 @@ Estimated per-hex coverage points for Indoor Radios are intentionally significan
 
 These values we chosen by taking all the Outdoor Radios in an example area and analyzing the distribution of estimated coverage points per Radio resulting from the algorithm described in HIP-74. We then chose estimated coverage point values that result in Indoor Radios getting roughly ¼th the estimated coverage points as the 95th percentile Outdoor Radios and about ½ the points of the average Outdoor Radio.
 
-These results align with the ratios used during the `1:2.5:4` Genesis Phase rewards ratio for Indoor Radios, Outdoor Radios, and High-Power Outdoor Radios. Figure 2 below is the cumulative distribution function plot of the sample market Outdoor Radio estimated coverage points.
+These results align with the current Radio Type Multiplieres approach `1:2.5:4` for Indoor Radios, Outdoor Radios, and High-Power Outdoor Radios. Figure 2 below is the cumulative distribution function plot of the sample market Outdoor Radio estimated coverage points.
 
 ![Figure 2. The cumulative distribution function of Outdoor Radio estimated coverage points for 904 Radios in the L.A. market area.](./0074-mobile-poc-modeled-coverage-rewards/propagation_point_cdf.png)
 
@@ -196,9 +195,7 @@ Below is the visualization of signal propagation for the Outdoor Radio, directed
 
 # Implementation Timeline
 
-Launch of the Modeled Coverage in the PoC Rewards calculation is planned for Q1 2023, which will also include a chain variable to update `subnetwork_rewards_v1` to transition from premine rewards to programmatic emissions.
-
-However, to make sure the transition to the new PoC system, which replaces static, power-based multipliers, is smooth, Hotspot owners can evaluate the coverage they provide before the switch takes effect.
+To make sure the transition to the new PoC system, which replaces static, power-based multipliers, is smooth, Hotspot owners can evaluate the coverage they provide before the switch takes effect.
 We propose to show Mapped Coverage information in the Mobile Explorer for at least four weeks before switching to the new PoC model.
 
 # Drawbacks
@@ -233,7 +230,7 @@ There will be three possible outcomes for owners of Radios:
 
 HIP-74 proposes to limit the five oldest Radio deployments with the highest signal strength in a given hex for reward eligibility. The MOBILE Rewards Oracle will calculate the deployment duration based on the time of the latest SAS grant received. Please see the Rewards Algorithm section for more details.
 
-Determining the signal strength of the Indoor Radios will use an approximation based on the data gathered during the testing of certified Indoor Radios due to the lack of reliable data sources regarding obstacles in the indoor spaces. Please see the Reward Tiers section for more information. The proposed reward points for Indoor Radios will align with the ratios used during the Genesis rewards period.
+Determining the signal strength of the Indoor Radios will use an approximation based on the data gathered during the testing of certified Indoor Radios due to the lack of reliable data sources regarding obstacles in the indoor spaces. Please see the Reward Tiers section for more information.
 
 The Reward Tiers section of HIP-74 contains detailed information about proposed reward points.
 
@@ -243,13 +240,15 @@ HIP-74 proposes the launch of a new Mobile Explorer to display Modeled Coverage 
 
 Eligibility for MOBILE Rewards related to HIP-74 will require no actions aside from potential Radio location adjustments.
 
+Barebones Modeled Coverage Map has already been launched to give a first glance at how each Radio performs based on the Modeled Coverage data: https://coverage-explorer.helium.com/. The first version shows how many hexes the Radio covers, at which signal levels, and what are other competing Radios in that hex. With the passing of this HIP, more features will be added to evolve this map into a full-scale Mobile Network Explorer.
+
 # Proof-of-Coverage Roadmap
 
 HIP-74 is one of the critical milestones in the MOBILE PoC Roadmap. It lays the foundation for adding other external data sources to evaluate the usefulness of coverage HIPs that propose to use zoning, population density, and allow location-based optimization is coming as the next steps. You can check out the MOBILE PoC Roadmap [here](https://blog.helium.com/mobile-proof-of-coverage-the-road-ahead-73a25601a13d/)
 
 # Unresolved Questions
 
-Finding reliable sources of information about indoor obstruction data is challenging. Until we incorporate data like population density and zoning to better understand the unique specifics of Indoor Radios locations, we will continue rewarding them for meeting Genesis PoC requirements. Still, we will have a limit of five rewardable Indoor Radios per hex. In addition, Indoor Radios will need to continue meeting Heartbeat and Speed Test requirements but will receive increased rewards to keep the Genesis Phase ratio of Indoor vs. Outdoor rewards.
+Finding reliable sources of information about indoor obstruction data is challenging. Until we incorporate data like population density and zoning to better understand the unique specifics of Indoor Radios locations, we will approximate res 12 hexes covered by Indoor Radios using a hardcoded algorithm and assign higher value to indoor hexes as described above. Still, we will have a limit of five rewardable Indoor Radios per hex. In addition, Indoor Radios will need to continue meeting Heartbeat and Speed Test requirements but will receive increased rewards.
 
 # Success Metrics
 
