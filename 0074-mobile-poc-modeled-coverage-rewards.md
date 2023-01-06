@@ -1,18 +1,18 @@
 # HIP 74: MOBILE PoC - Modeled Coverage Rewards
 
-- Author(s): @thehardbits, @zer0tweets, @jpad-freedomfi, @meowshka
+- Author(s): [@thehardbits](https://github.com/thehardbits), [@zer0tweets](https://github.com/zer0tweets), [@jpad-freedomfi](https://github.com/jpad-freedomfi), [@meowshka](https://github.com/meowshka)
 - Start Date: 2022-11-29
 - Category: Technical & Economic
-- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
-- Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
+- Original HIP PR: [#501](https://github.com/helium/HIP/pull/501)
+- Tracking Issue: [#504](https://github.com/helium/HIP/issues/504)
 
 # Summary
 
 HIP-74 lays the groundwork to start rewarding Helium Mobile Hotspot operators based on actual coverage provided vs. mere existence. Specifically:
 
-It proposes a framework to count coverage using res 12 hexes;
-It proposes a framework for incorporating external data sources (aka Oracles) to calculate and/or coverage;
-It proposes Obstruction Data Oracle as the first such external data source.
+- It proposes a framework to count coverage using res 12 hexes;
+- It proposes a framework for incorporating external data sources (aka Oracles) to calculate and/or coverage;
+- It proposes Obstruction Data Oracle as the first such external data source.
 
 We expect this to be the first in a series of HIPs that will incorporate other data sources, such as zoning and population density, feedback from carrier members of the MOBILE DAO, network users and mappers, etc. Our aim is to make future HIPs smaller and more easily consumable.
 
@@ -29,7 +29,7 @@ Additionally, Modeled Coverage lays a foundation to introduce more data sources 
 
 # Stakeholders
 
-HIP-74 affects only the MOBILE SubDAO, particularly 5G Hotspot Owners with Radios and users of the MOBILE Network. HIP-74 does not impact the IoT Network or IoT Rewards.
+HIP-74 affects only the MOBILE SubDAO, particularly 5G Hotspot Owners with Radios and users of the MOBILE Network. HIP-74 does not impact the IOT Hotspots or IOT Rewards.
 
 5G Hotspot Owners with Outdoor Radios must meet new Quality Coverage requirements to maximize potential MOBILE Rewards earnings. Some Owners may need to modify their Outdoor Radio locations, orientations, or both to optimize for Quality Coverage. Additionally, environmental obstacles that are impossible to mitigate may reduce the maximum Rewards a Radio can earn. HIP-74 also proposes rewarding deployers among the first to provide quality coverage in a given hex.
 
