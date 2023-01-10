@@ -240,7 +240,7 @@ HIP-74 proposes the launch of a new Mobile Explorer to display Modeled Coverage 
 
 Eligibility for MOBILE Rewards related to HIP-74 will require no actions aside from potential Radio location adjustments.
 
-Barebones Modeled Coverage Map has already been launched to give a first glance at how each Radio performs based on the Modeled Coverage data: https://coverage-explorer.helium.com/. The first version shows how many hexes the Radio covers, at which signal levels, and what are other competing Radios in that hex. With the passing of this HIP, more features will be added to evolve this map into a full-scale Mobile Network Explorer.
+Barebones Modeled Coverage Map has already been launched to give a first glance at how each Radio performs based on the Modeled Coverage data: https://coverage-explorer.herokuapp.com/. The first version shows how many hexes the Radio covers, at which signal levels, and what are other competing Radios in that hex. With the passing of this HIP, more features will be added to evolve this map into a full-scale Mobile Network Explorer.
 
 # Proof-of-Coverage Roadmap
 
