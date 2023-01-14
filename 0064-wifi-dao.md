@@ -23,18 +23,18 @@ a high level of penetration in developed nations worldwide and has ample room to
 nations. Upcoming Wifi standards provide a roadmap for greater data transfer rates paving the way
 for even higher rates of consumption as new applications take advantage of new bandwidth.
 
-Today all WiFi networks operate as siloed and independent hotspots. A user cannot easily roam from
-one hotspot to another. The WiFi subDAO proposes a structure whereby WiFi hotspots can be brought
+Today all WiFi networks operate as siloed and independent Hotspots. A user cannot easily roam from
+one Hotspot to another. The WiFi subDAO proposes a structure whereby WiFi Hotspots can be brought
 onto the Helium network thereby incentivizing the creation of a common global WiFi network that
 allows for greater user access and roaming capabilities.
 
 [HIP 53: Mobile DAO](https://github.com/helium/HIP/blob/main/0053-mobile-dao.md) proposes an offload
 use case for WiFi along with its 5G implementation, wherein cellular traffic is offloaded to WiFi
-hotspots. In this proposal we expand the focus of WiFi beyond offload and to direct data consumption
+Hotspots. In this proposal we expand the focus of WiFi beyond offload and to direct data consumption
 from consumers and devices. Users will be able to connect to and use the Helium WiFi network just as
 they use any other WiFi network but with the added benefits of roaming and using a single data
 credit system across the entire network globally. Users or devices on the Mobile DAO will also be
-able to roam onto hotspots from the WiFi subDAO seamlessly.
+able to roam onto Hotspots from the WiFi subDAO seamlessly.
 
 # Stakeholders
 
@@ -55,11 +55,11 @@ We propose to inherit the same core structure from
    appropriate parties. Responsibilities here include definition of oracle software, minimum stake
    amounts, and rewards for participation.
 4. **Data Transfer Mechanism and Pricing** Data transfer within subnetworks occurs via the process
-   of procuring and burning data credits in the name of the hotspot or set of hotspots that provide
+   of procuring and burning data credits in the name of the Hotspot or set of Hotspots that provide
    coverage. Responsibilities here include Organizationally Unique Identifier (OUI) registration,
    state channel creation, and bandwidth capacity per data credit definition.
 5. **Proof-of-Coverage Mechanism** The WiFi SubDao will use a Proof of Coverage algorithm to verify
-   on an ongoing basis that hotspots are accurately representing their location and the wireless
+   on an ongoing basis that Hotspots are accurately representing their location and the wireless
    network coverage they are creating from that location. Responsibilities here include
    Proof-of-Coverage challenge construction, target selection, reward scaling, and verification.
 6. **Network participants** The types of network & economic participants on the WiFi SubDao will
@@ -78,7 +78,7 @@ halvenings. This requires a 1 year “stub” period from August 1, 2022 to Augu
 
 We also propose that 50B HWIFI are pre-mined at the launch of the network, and distributed to the
 subDAO operations fund administered by WiFi subDAO. This allocation is distributed over the course
-of the stub period to live WiFi hotspots on an epochal basis in roughly equal proportion (akin to
+of the stub period to live WiFi Hotspots on an epochal basis in roughly equal proportion (akin to
 universal basic income).
 
 For clarity, the emission schedule is as follows:
@@ -109,14 +109,14 @@ incentives could include
 1. Surge-pricing style dynamic multipliers based on data transfer activity for individual regions
 2. Bespoke incentives for oracles and manufacturers on the basis of changing network demands
 
-Once emissions are distributed to hotspots and oracles, HWIFI owners can either redeem their
+Once emissions are distributed to Hotspots and oracles, HWIFI owners can either redeem their
 holdings for underlying HNT against the treasury reserve automatically, hold for redemptions at a
 later time, or lock up their HWIFI for veHWIFI in a process similar to the veHNT mechanism described
 in HIP 51.
 
 Users can choose to delegate their veHWIFI for three core purposes:
 
-1. Stakeholder staking to specific hotspots or service providers.
+1. Stakeholder staking to specific Hotspots or service providers.
 2. Oracle delegation in order to earn future emissions.
 3. Governance participation in subDAO proposals for core matters.
 
@@ -134,7 +134,7 @@ for HWIFI, but holders always retain the ability to exchange at the prevailing r
 ### Oracle Operations
 
 WiFi SubDao oracles confirm proof of coverage, data transfer, and add blocks to the WD subnetwork.
-They serve state data around Proof-of-Coverage challenges and data transfer events to hotspots.
+They serve state data around Proof-of-Coverage challenges and data transfer events to Hotspots.
 
 Validation is performed by a set of rotating nodes known as the consensus group, which verifies
 transactions and ordering prior to forming a block and proposing it to the L2 chain. Consensus
@@ -154,38 +154,38 @@ transaction at which point all HNT mined in that epoch are distributed.
 
 ### Proof-of-Coverage Specification
 
-The WiFi SubDao is required to constantly interrogate hotspots using the Proof-of-Coverage challenge
-mechanism to ensure that hotspots are representing their locations and uptime accurately. The net
+The WiFi SubDao is required to constantly interrogate Hotspots using the Proof-of-Coverage challenge
+mechanism to ensure that Hotspots are representing their locations and uptime accurately. The net
 results of each of these challenges are relayed to the Helium L1 after being validated by their
 respective consensus groups.
 
 For WiFi SubDao we propose to separate the challenge and witness functions between the operator of a
-hotspot and a mapper device (such as a phone or a dedicated mapper) with an application that has
+Hotspot and a mapper device (such as a phone or a dedicated mapper) with an application that has
 been authorized to perform the witness function. This approach is largely similar to the Mobile DAO
 with a key difference being the usage of an application provided by the subDAO rather than a SIM for
 authentication since WiFi devices do not need SIM cards in order to access the network.
 
 Any device (first and foremost a phone) with the proper application can be a witnessing device on
-the network. To witness coverage a “mapper phone” must connect to a hotspot using an application
+the network. To witness coverage a “mapper phone” must connect to a Hotspot using an application
 that has been granted mapping privileges by the service provider. Service providers will act as
 “validators of witness transactions” performed by mappers by authenticating mappers.
 
 During initial launch stages, when network density is low, to combat gaming, the WiFi SubDao will
 implement a simple limiting algorithm:
 
-1. Same mapper can witness the same hotspot no more than once every 4 hours
+1. Same mapper can witness the same Hotspot no more than once every 4 hours
 2. Same cell can be witnessed by a maximum of 6 unique mappers every hour
 
 During consequent launch stages, as the density of mappers grows, WiFi SubDao will look to implement
-a more robust algorithm, similar to Helium LoRa PoC, whereby only randomly challenged hotspots can
+a more robust algorithm, similar to Helium LoRa PoC, whereby only randomly challenged Hotspots can
 be witnessed. We also propose that some of the HWIFI that are pre-mined at the launch of the
 network, and distributed to the subDAO operations fund is distributed over the course of the stub
-period to live hotspots on an epochal basis in roughly equal proportion (akin to universal basic
+period to live Hotspots on an epochal basis in roughly equal proportion (akin to universal basic
 income).
 
 ### Data Transfer and Pricing Specification
 
-Data Credits are utilized in asserting new hotspots and their location on the chain, registering
+Data Credits are utilized in asserting new Hotspots and their location on the chain, registering
 OUIs and associated devices, and as payment for packet transfers. We propose 1GB of data at $0.01 as
 the initial value price consumers will pay to access the Wifi network. We propose to use a similar
 pricing mechanism defined as per
@@ -209,7 +209,7 @@ proposals with code attached can be voted on.
 
 _Activation fee_
 
-An activation fee of $10 will be applied to wifi hotspot hosts when activating their devices on the
+An activation fee of $10 will be applied to wifi Hotspot hosts when activating their devices on the
 network.
 
 _Network participants_
@@ -220,23 +220,23 @@ following functional and economic roles:
 | Name             | Functional Role                                                                                                                                                                                                                                                                                     | Economic Role                                                                                                                        |
 | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | Subscriber       | Uses the network                                                                                                                                                                                                                                                                                    | Pays service providers to access data on the network                                                                                 |
-| Mapper           | Runs a network mapping app on the phone or uses a dedicated mapper device to verify coverage provided by the hotspot hosts. Mappers are required to be a subscriber.                                                                                                                                | Receives HWIFI mining rewards for mapping networking coverage                                                                        |
-| Service Provider | Promotes network service to subscribers and mappers Runs subscriber database and authenticates inbound subscribers and mappers into the network Records data transfer transactions to state channels Maintains their flavor of the witnessing app Responds to subscriber and mapper support queries | Receives payments for data access from subscribers and mappers Burns HNT into Data Credits and settles data usage with hotspot hosts |
-| Hotspot Host     | Operates a wifi hotspot and pays for backhaul.                                                                                                                                                                                                                                                      | Receives HWIFI mining rewards for providing coverage Receives HWIFI mining rewards for providing data access to subscribers          |
+| Mapper           | Runs a network mapping app on the phone or uses a dedicated mapper device to verify coverage provided by the Hotspot hosts. Mappers are required to be a subscriber.                                                                                                                                | Receives HWIFI mining rewards for mapping networking coverage                                                                        |
+| Service Provider | Promotes network service to subscribers and mappers Runs subscriber database and authenticates inbound subscribers and mappers into the network Records data transfer transactions to state channels Maintains their flavor of the witnessing app Responds to subscriber and mapper support queries | Receives payments for data access from subscribers and mappers Burns HNT into Data Credits and settles data usage with Hotspot hosts |
+| Hotspot Host     | Operates a wifi Hotspot and pays for backhaul.                                                                                                                                                                                                                                                      | Receives HWIFI mining rewards for providing coverage Receives HWIFI mining rewards for providing data access to subscribers          |
 | Oracles          | Relay data to L1 emission contract Calculate incentive points for service providers and mappers                                                                                                                                                                                                     | Stake HWIFI Receive % of rewards from emissions contract                                                                             |
-| Hotspot Vendor   | Builds and sells hotspots Supports hotspot hosts Runs software to provide updates of hotspots Maintain integrations with service providers                                                                                                                                                          | Stakes HWIFI Receive % of rewards mined by hotspot hosts                                                                             |
+| Hotspot Vendor   | Builds and sells Hotspots Supports Hotspot hosts Runs software to provide updates of Hotspots Maintain integrations with service providers                                                                                                                                                          | Stakes HWIFI Receive % of rewards mined by Hotspot hosts                                                                             |
 
 ![https://lh3.googleusercontent.com/G2Ii7fH3R81A7ff69C3MxvdX-1ROtEOc_LiHQhcjTpsIirIKsLomKEvufhCRB2mEd7gzeFIibUP_Qq0ssIp-j_GU4BKMxDKahd6Lyo67o0ya4iNJcTVtt77bb1A8zR0vlUjGnCK9EG06V0cEgQ](https://lh3.googleusercontent.com/G2Ii7fH3R81A7ff69C3MxvdX-1ROtEOc_LiHQhcjTpsIirIKsLomKEvufhCRB2mEd7gzeFIibUP_Qq0ssIp-j_GU4BKMxDKahd6Lyo67o0ya4iNJcTVtt77bb1A8zR0vlUjGnCK9EG06V0cEgQ)
 
-Rewards from the emissions contract are distributed between service providers, mappers and hotspot
+Rewards from the emissions contract are distributed between service providers, mappers and Hotspot
 hosts as a function of the incentive points earned during a period of time. Service providers are
 allowed (and encouraged) to use the pool of HWIFI emissions they get towards growing their
 subscriber base by either sharing HWIFI directly with subscribers for usage via a witnessing app or
 discounting data plans.
 
 Reward calculations that trigger distribution of tokens between service providers, mappers and
-hotspot operators in the WiFi SubDao are performed by Oracles. Oracles continuously witness a stream
-of events coming from various DAO participants (such as mapper/hotspot events, data offload events,
+Hotspot operators in the WiFi SubDao are performed by Oracles. Oracles continuously witness a stream
+of events coming from various DAO participants (such as mapper/Hotspot events, data offload events,
 etc.) and perform reward distribution calculation. At the end of an epoch, Oracles come to consensus
 on proper distribution of HWIFI based on events witnessed during the last epoch.
 
@@ -252,16 +252,16 @@ digits - India for example is at a lowly 7% with only about 20 million broadband
 connections.
 
 In order to deploy a planet scale WiFi network, the subDAO has to offer a compelling proposition for
-consumers with existing WiFi routers to upgrade to a Helium compatible hotspot and at the same time
-deploy new hotspots along with underlying broadband infrastructure in growth markets like India.
+consumers with existing WiFi routers to upgrade to a Helium compatible Hotspot and at the same time
+deploy new Hotspots along with underlying broadband infrastructure in growth markets like India.
 
 The WiFi subDAO offers consumers with existing broadband connections or WiFi routers a number of
-compelling reasons to upgrade their hotspots:
+compelling reasons to upgrade their Hotspots:
 
 1. Lower the cost of their existing internet connection by using the rewards earned by providing
    proof of coverage and helping the network grow.
 2. Expand range of their existing WiFi network by connecting an additional Helium compatible WiFi
-   hotspot.
+   Hotspot.
 3. Providing public wifi access at a location that requires broader access like stores, restaurants,
    venues, educational institutions, etc.
 4. Extend their existing LoRaWAN or 5G Helium portfolio with WiFi.
@@ -274,7 +274,7 @@ The Wifi subDAO offers service providers in developing markets compelling incent
 4. L2 software stack to simplify authentication, access and accounting.
 5. Higher network utilization as users and devices can roam across the network.
 
-_Wifi Dabba - Launch service provider & hotspot vendor_
+_Wifi Dabba - Launch service provider & Hotspot vendor_
 
 [Wifi Dabba](https://www.wifidabba.com/) was founded in 2017 with a mission to bring a billion
 Indians online with super fast, super cheap broadband internet. Wifi Dabba uses lasers instead of
@@ -282,7 +282,7 @@ expensive underground fiber to dramatically lower the cost of deploying city sca
 infrastructure.
 
 Wifi Dabba lasers are mounted on rooftops and telecom towers across a city to form a core network
-backbone that can serve millions of hotspots. Fiber optic cable is used for last mile connectivity
+backbone that can serve millions of Hotspots. Fiber optic cable is used for last mile connectivity
 wherein cables are drawn from the nearest laser to the consumer’s premises. Low cost commodity WiFi
 routers running custom firmware are provided to customers that create a WiFi mesh system allowing
 users to roam across the network with ease.

@@ -26,7 +26,7 @@ issue and therefore be addressed as quickly as possible.
 
 As validators will take over all activities regarding consensus on the Helium network, the pool of
 actors in charge of validating transactions and creating blocks is significantly reduced from the
-current situation (72K+ hotspots and growing fast) to a small pool of (expected) several hundreds of
+current situation (72K+ Hotspots and growing fast) to a small pool of (expected) several hundreds of
 nodes, which significantly decreases the targets that need to be interfered with in order to impact
 consensus in one's own favor. Having these nodes be publicly visible, traceable and targetable on
 the Helium network therefore poses a significantly increased security risk compared to the current
@@ -120,7 +120,7 @@ mean they would earn far less rewards, or none at all.
 
 A possible drawback is that miners in the network can no longer reach the validator nodes to submit
 RF data. We are not sure if this would be an issue as the validators can still pull data from
-hotspots; however a remedy for this should be found in case the Helium RF implemenation would not
+Hotspots; however a remedy for this should be found in case the Helium RF implemenation would not
 function properly when validator node IPs are obscured.
 
 # Rationale and Alternatives

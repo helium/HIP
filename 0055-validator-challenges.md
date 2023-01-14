@@ -264,7 +264,7 @@ Documentation will need to be updated to explain the new model, this HIP can ser
 
 The activation would be done via a set of chain variables which would switch the system over to this
 new model, before that happens we need the new code to be merged, deployed to the fleet (routers,
-hotspots, validators, node users) and this HIP needs to be ratified.
+Hotspots, validators, node users) and this HIP needs to be ratified.
 
 [hip54]: https://github.com/helium/HIP/blob/main/0054-h3dex-targeting.md
 [proto]:

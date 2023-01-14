@@ -10,7 +10,7 @@
 
 This proposal suggests a change to proof-of-coverage (PoC) from multihop to beaconing as well as a
 change in how PoC is rewarded that combines HNT mining for witnessing and PoC into one pool and
-gives the bulk of the reward to hotspot witnessing or receiving RF payloads vs transmitting RF
+gives the bulk of the reward to Hotspot witnessing or receiving RF payloads vs transmitting RF
 payloads.
 
 # Motivation
@@ -18,8 +18,8 @@ payloads.
 Beaconing with the modified reward structure outlined below does a much better job of rewarding
 desired coverage. The existing PoC method and reward structure heavily rewards transmitters with
 minimal rewards for receivers while the vast majority of LoRaWAN usage is for unconfirmed uplinks,
-meaning hotspots mostly receive data. This reward structure better rewards real coverage and
-encourages honest hotspot owners to see maximized rewards as they build towards efficient network
+meaning Hotspots mostly receive data. This reward structure better rewards real coverage and
+encourages honest Hotspot owners to see maximized rewards as they build towards efficient network
 topologies.
 
 Beaconing, regardless of reward structures allows the elimination of Multi-hop PoC. Multihop PoC
@@ -31,9 +31,9 @@ be re-allocated to more beneficial purposes (like combating gaming/exploitation)
 
 # Stakeholders
 
-All hotspot owners will be affected by this HIP as the reward structure and PoC behavior will
-undergo a significant change. In general, hotspots that are able to witness many other hotspots are
-likely to see rewards go up and hotspots that can only witness a few hotspots may see rewards go
+All Hotspot owners will be affected by this HIP as the reward structure and PoC behavior will
+undergo a significant change. In general, Hotspots that are able to witness many other Hotspots are
+likely to see rewards go up and Hotspots that can only witness a few Hotspots may see rewards go
 down.
 
 The Helium Inc developer team will also need to change sections of the blockchain-core to change how
@@ -47,10 +47,10 @@ as change the reward distribution percentages.
 
 Beaconing behaves a lot like a single hop of PoC but there is no intended target, everyone that can
 receive a transmission is a witness. Beacons can be initiated in the same manner as PoC today, where
-challenger hotspots trigger a hotspot to beacon and gather witness receipts (this works fine if the
+challenger Hotspots trigger a Hotspot to beacon and gather witness receipts (this works fine if the
 challenger role is being moved to CG per
 [Consensus Group PoC Challenges](https://github.com/helium/HIP/pull/41)). I assume each active
-hotspot will be targeted uniformly randomly so on average, each hotspot will be challenged the same
+Hotspot will be targeted uniformly randomly so on average, each Hotspot will be challenged the same
 number of times.
 
 To determine the rewards given for a beacon, first define a term **_reward unit_**. A reward unit is
@@ -68,7 +68,7 @@ distributed among the transmitter and witnesses for each beacon.
 Definitions:
 
 - `w` = Number of witnesses to a transmission
-- `N` = Desired redundancy. `N`+1 hotspots cover an area (transmitter also covers area)
+- `N` = Desired redundancy. `N`+1 Hotspots cover an area (transmitter also covers area)
 - `r` = decay rate for additional transmitter reward if `w` > `N`.
 
 Reward formula for Transmitter:
@@ -87,7 +87,7 @@ There are 3 regions in this reward distribution described below:
 #### w < N
 
 For each beacon challenge there is desired number of witnesses which should be set by chain variable
-`N`. This number should be >1 because we want redundant RF coverage since hotspots are “unreliable”
+`N`. This number should be >1 because we want redundant RF coverage since Hotspots are “unreliable”
 as compared to enterprise gateways like cell towers. If the number of witnesses (`w`) is less than
 `N`, then this area is under desired coverage. Each witness gets a full 1-unit of reward for
 providing needed coverage, the transmitter receives a fraction of a reward unit proportionally based
@@ -114,9 +114,9 @@ possible.
 
 Overall, this method should encourage greedy transmitters to transmit as powerfully and with as much
 coverage as possible and witnesses to receive as many transmissions as possible and deliver witness
-receipts. Thus each hotspot is motivated to provide as much coverage as possible without
+receipts. Thus each Hotspot is motivated to provide as much coverage as possible without
 over-rewarding redundant coverage. This reward structure does a much better job of giving rewards to
-“good” coverage meaning coverage over many neighboring hotspots and over hotspots without many
+“good” coverage meaning coverage over many neighboring Hotspots and over Hotspots without many
 existing witnesses.
 
 Note: There is not a maximum number of witnesses but one can set a limit to cap the transaction size
@@ -151,7 +151,7 @@ no penalty for having nearby witnesses (these can be accounted for in an additio
 
 Unlike nearby witnesses which are excluded even if honest, witness observations that are invalid due
 to suspect signals means either the transmitter or the witness may be lying about location or some
-other aspect of coverage. This cannot simply be dropped since its possible for a gaming hotspot to
+other aspect of coverage. This cannot simply be dropped since its possible for a gaming Hotspot to
 have many witnesses with most invalid but some still have some “lucky” witnesses with valid signals.
 The method of penalizing can change as the methods of evaluating signals change but this section
 describes a simple method that is compatible with PoC version 10 that is the most recent anti-gaming
@@ -207,16 +207,16 @@ cannot demonstrate the ability to receive RF (it receives over p2p which is not 
 
 A description of each figure:
 
-- **Figure (a)**: Two isolated hotspots that can witness only each other.
-- **Figure (b)**: a string of five hotspots A-E where the witness relationship is asymmetric. B can
+- **Figure (a)**: Two isolated Hotspots that can witness only each other.
+- **Figure (b)**: a string of five Hotspots A-E where the witness relationship is asymmetric. B can
   witness A but A cannot witness B, C can witness B but B cannot witness C etc.
-- **Figure (c)**: this figure is similar to (a) but with 100 hotspots collocated at each position.
-- **Figure (d)**: is a ring of 24 hotspots that can all witness each other. Assume hotspots are
+- **Figure (c)**: this figure is similar to (a) but with 100 Hotspots collocated at each position.
+- **Figure (d)**: is a ring of 24 Hotspots that can all witness each other. Assume Hotspots are
   still spaced beyond minimum distance to witness.
-- **Figure (e)**: is six hotspots with a central hotspot A that can hear all other hotspots
-  transmissions and all other hotspots can witness A’s transmissions. Hotspots B-F cannot witness
+- **Figure (e)**: is six Hotspots with a central Hotspot A that can hear all other Hotspots
+  transmissions and all other Hotspots can witness A’s transmissions. Hotspots B-F cannot witness
   each other and can only communicate with A.
-- **Figure (f)**: is a ring of five hotspots where all hotspots can witness each other.
+- **Figure (f)**: is a ring of five Hotspots where all Hotspots can witness each other.
 
 A table of expected rewards for MultiHop PoC (used today) vs this HIPs beaconing rewards
 
@@ -228,9 +228,9 @@ A table of expected rewards for MultiHop PoC (used today) vs this HIPs beaconing
 We can see rewards are fairly similar except for two figures **(b)** and **(c)**.
 
 In figure (b) we see how asymetric witnessing may cause rewards to be pushed towards certain
-hotspots. Hotspot D gets roughly 2.2 times hotspot B even though it has identical coverage.
+Hotspots. Hotspot D gets roughly 2.2 times Hotspot B even though it has identical coverage.
 
-In figure (c) beaconing hotspots earn significantly more than those with multihop PoC. This is
+In figure (c) beaconing Hotspots earn significantly more than those with multihop PoC. This is
 because the bulk of rewards go to witnessing and although there are only two distinct locations,
 there are enough witnesses to give the transmitter full credit and the witnesses get to split the
 maximum rewards for receivers per transmission. The best way to address this concern is to discount
@@ -241,17 +241,17 @@ Scaling_ proposal).
 
 This will be a considerable implementation effort to change how PoC are constructed and verified.
 Also, this change to the reward structure may drastically change how rewards are distributed for
-some hotspots. Hotspot owners that optimized for the existing algorithm which has been largely
+some Hotspots. Hotspot owners that optimized for the existing algorithm which has been largely
 unchanged since Helium’s introduction may find their setups to be suboptimal with the new scheme.
 The example topologies show small variations in rewards for most situations. There are some
 improvements to rewarding equal coverage equally but also some potential problems introduced where
-co-located hotspots may see increased rewards This beaconing reward proposal can be supplemented
+co-located Hotspots may see increased rewards This beaconing reward proposal can be supplemented
 with other methods to account for these over-rewarded topologies.
 
 It may appear that beaconing is less secure since there is no multi-level onion packet. I believe
 this was false security as it is just as easy to distribute raw data received over LoRa to miners
 whether that is an onion packet or a pseudorandom payload for beaconing. The multi-level onion
-packet does not reduce the ability for hotspots to collude, completely virtualize or otherwise lie
+packet does not reduce the ability for Hotspots to collude, completely virtualize or otherwise lie
 to increase earnings and in isolated gaming clusters this multihop worked to increase rewards.
 
 Having an intended target chosen from witnesses does not validate the PoC more than simple
@@ -260,7 +260,7 @@ witnessing.
 # Rationale and Alternatives
 
 Beaconing breaks down the PoC to a more fundamental form of a single transmit and group of receive
-observations. It allows more direct targeting of hotspots and PoC activity (and corresponding
+observations. It allows more direct targeting of Hotspots and PoC activity (and corresponding
 rewards) to be better controlled by targeting methods and not strongly dictated by witness
 topologies.
 

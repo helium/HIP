@@ -28,7 +28,7 @@ There are three key motivations behind an HNT redenomination:
    rewards in excess of 1 HNT per day (historically much higher), but with the HIP-20 halving and a
    10 fold-plus increase in gateway deployments in 2021 those earnings have been reduced to partial
    fractions of an HNT. Even though the market price of HNT has increased approximately 20X since
-   August 2020 and the median $ earnings per hotspot has remained generally consistent, there has
+   August 2020 and the median $ earnings per Hotspot has remained generally consistent, there has
    been growing discontent with the HNT earning rate. In behavioral economics, the preference for
    obtaining full units (or completing full tasks) is called unit bias. In general, people prefer
    earning rewards denominated in full units rather than partial units. As we have seen in Helium,
@@ -52,22 +52,22 @@ There are three key motivations behind an HNT redenomination:
 
 ## Stakeholders
 
-All HNT holders, hotspot owners, and HST holders will be affected by this HIP.
+All HNT holders, Hotspot owners, and HST holders will be affected by this HIP.
 
 ## Detailed Explanation
 
 At the time of the redenomination the conversion between bones and HNT would be adjusted from
 100,000,000 (10^8) bones per 1 HNT to 100,000 (10^5) bones per 1 HNT. In other words, if someone
-were mining 1 HNT per day with a hotspot, they would now mine 1,000 HNT per day. What’s critically
+were mining 1 HNT per day with a Hotspot, they would now mine 1,000 HNT per day. What’s critically
 important is that the number of**bones** in the system would remain unchanged.
 
 Let’s take the example above and look at it in terms of bones:
 
-Pre-redenomination: 1 HNT per day per hotspot x 100,000,000 bones per HNT = 100,000,000 bones per
-day per hotspot
+Pre-redenomination: 1 HNT per day per Hotspot x 100,000,000 bones per HNT = 100,000,000 bones per
+day per Hotspot
 
-Post-redenomination: 1,000 HNT per day per hotspot x 100,000 bones per HNT = 100,000,000 bones per
-day per hotspot
+Post-redenomination: 1,000 HNT per day per Hotspot x 100,000 bones per HNT = 100,000,000 bones per
+day per Hotspot
 
 The significant advantage of a redenomination vs a ‘split’ in which new tokens are created, is that
 most systems that interact with the blockchain already account for transactions in terms of bones;

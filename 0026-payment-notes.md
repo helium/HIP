@@ -50,7 +50,7 @@ wallets in a single transaction), which is already supported.
 # Drawbacks
 
 In the existing / past debates over this change, it has been argued that the ability to message
-hotspot owners might enable forms of harrassment and/or present privacy concerns; however, because
+Hotspot owners might enable forms of harrassment and/or present privacy concerns; however, because
 the contact is initiated through the owner address (which is already publicly available
 information), there is no implied correlation with owner PII -- it is for all intents and purposes
 anonymous contact that the recipient is not obligated to acknowledge or respond to. There are also

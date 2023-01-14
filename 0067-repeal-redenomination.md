@@ -31,8 +31,8 @@ be partially remedied by the subtokens introduced by HIPs 51-53:
 
 1. Incentive Unit Bias
 
-   The HIP 39 authors argued that, the massive growth in Helium LoRaWAN hotspot numbers and the
-   resulting reduction of daily earnings to fractional amounts of HNT, hotspot operators were less
+   The HIP 39 authors argued that, the massive growth in Helium LoRaWAN Hotspot numbers and the
+   resulting reduction of daily earnings to fractional amounts of HNT, Hotspot operators were less
    content to earn part of a token rather than a whole token (actual value in bones or fiat aside).
    With the implementation of HIP 51, all new subDAOs will be able to set their token supply caps
    individually and can design their tokenomics with the incentive unit bias in mind going forward,

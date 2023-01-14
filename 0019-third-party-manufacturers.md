@@ -20,22 +20,22 @@ consensus. Shipping to consumers cannot happen until HIP25 is implemented in pro
 # Motivation
 
 In order to succeed, the Helium network will require ubiquitous, worldwide coverage. To achieve that
-level of coverage, we will need a large number of hotspots. As of writing, there are approximately
-13,000 hotspots online. At true global scale, this required number of hotspots is estimated to be in
+level of coverage, we will need a large number of Hotspots. As of writing, there are approximately
+13,000 Hotspots online. At true global scale, this required number of Hotspots is estimated to be in
 the millions.
 
-Helium Inc have indicated they will no longer produce their original hotspots. Currently, RAK
-Wireless of Shenzhen is the only approved third-party hotspot manufacturer, and relies on Helium
-Inc's firmware, staking servers, and customer support. The RAK hotspots have also been criticized
+Helium Inc have indicated they will no longer produce their original Hotspots. Currently, RAK
+Wireless of Shenzhen is the only approved third-party Hotspot manufacturer, and relies on Helium
+Inc's firmware, staking servers, and customer support. The RAK Hotspots have also been criticized
 for having minimal security precautions – swarm_keys stored in files, easily removed SD cards -
 which makes it easier for bad actors to cheat.
 
-Additional hotspot manufacturers would provide redundancy, competition, and the opportunity for
+Additional Hotspot manufacturers would provide redundancy, competition, and the opportunity for
 novel designs that could improve on security, cost, usability, portability and more. A highly secure
 design could be a potential candidate for the "Golden Gateways" concept that has been discussed in
 other HIPs.
 
-Helium Inc is currently the only party that can issue the keys required to add a new hotspot to the
+Helium Inc is currently the only party that can issue the keys required to add a new Hotspot to the
 blockchain. They've indicated they would be willing to follow the community's lead for approving new
 manufacturers and issuing them onboarding keys, and this proposal attempts to outline a process for
 that community approval.
@@ -48,10 +48,10 @@ evaluated in a separate HIP.
 
 Almost everyone involved in the Helium ecosystem, but especially:
 
-- Prospective third-party hotspot manufacturers
+- Prospective third-party Hotspot manufacturers
 - Existing third-party manufacturers, like RAK Wireless
-- Prospective hotspot owners, who might have been deterred by cost, features or lack of availability
-- Current hotspot owners, whose earnings will be further diluted as the network grows
+- Prospective Hotspot owners, who might have been deterred by cost, features or lack of availability
+- Current Hotspot owners, whose earnings will be further diluted as the network grows
 - Network end-users, who desire broader coverage
 
 # Detailed Explanation
@@ -66,7 +66,7 @@ This document attempts to outline:
 For an initial launch, we propose favoring:
 
 - Known community members with demonstrated experience in hardware design and manufacturing
-- Large production batch sizes (10s of thousands of hotspots), rather than prototypes or smaller
+- Large production batch sizes (10s of thousands of Hotspots), rather than prototypes or smaller
   production runs
 - Hardware designs that emphasize security and reliability rather than novel designs with more
   unknowns
@@ -88,7 +88,7 @@ Prospective manufacturers would be expected to provide:
 - A list of other potential risks and issues
 
 Additionally, we want devices approved under this proposal to be reasonably secure and resistant to
-tampering. The original Helium hotspots used an ECC chip to house the `swarm_key` using a secure ECC
+tampering. The original Helium Hotspots used an ECC chip to house the `swarm_key` using a secure ECC
 chip, which was significantly more secure than the external SD card and unencrypted file storage
 used by the current RAKspots. We propose that applicants are required to include:
 
@@ -138,8 +138,8 @@ blockchain following miners.
 
 ## Issuing Keys & Paying Staking Fees
 
-In order to join the blockchain, every hotspot requires an onboarding code. This code is validated
-by a staking server and used to onboard a hotspot and pay the $40 staking fee. Currently, these
+In order to join the blockchain, every Hotspot requires an onboarding code. This code is validated
+by a staking server and used to onboard a Hotspot and pay the $40 staking fee. Currently, these
 codes are exclusively issued by Helium Inc and validated by their staking server at
 &lt;staking.helium.foundation>.
 
@@ -160,11 +160,11 @@ Applicants that would otherwise be approved should be able to move forward with 
 We suggest a similar HIP-style "rough consensus" process in the case that the community wants to
 cease issuing codes to an approved manufacturer.
 
-Removing any hotspots associated with that manufacturer is not currently possible. Consideration and
+Removing any Hotspots associated with that manufacturer is not currently possible. Consideration and
 approval of this is left to a separate proposal, as it is both technically and philosophically
 complex.
 
-For consideration, there is not currently a way to unstake a hotspot on the Helium network. There is
+For consideration, there is not currently a way to unstake a Hotspot on the Helium network. There is
 also no denylist support, which could be used as to implement community-led blocking of known bad
 actors. A mechanism for revoking access could potentially be built alongside the key-issuance system
 mentioned above, but again, this is explicitly left to a future proposal.
@@ -172,23 +172,23 @@ mentioned above, but again, this is explicitly left to a future proposal.
 ## Apps, Software Updates & Customer Support
 
 Currently, Helium Inc handles all software updates and customer support for both their official
-hotspots and hotspots sold by RAK Wireless.
+Hotspots and Hotspots sold by RAK Wireless.
 
 Third-party manufacturers would be expected to manage:
 
 - Onboarding devices via web interface, mobile app or otherwise
-- Over-the-air (OTA) software updates to deployed hotspots
-- Customer support for sold hotspots, generally via email
+- Over-the-air (OTA) software updates to deployed Hotspots
+- Customer support for sold Hotspots, generally via email
 
-It is unreasonable to expect Helium Inc to maintain software for other manufacturers’ hotspots in
+It is unreasonable to expect Helium Inc to maintain software for other manufacturers’ Hotspots in
 perpetuity. If possible, we suggest Helium Inc open-source as much of the software around this
 process as possible, so future manufacturers don’t need to reinvent the wheel.
 
-The official Helium mobile app is the primary interface for onboarding a new hotspot. It was
-recently (Nov 12, 2020) [released as open-source](https://github.com/helium/hotspot-app) and could
+The official Helium mobile app is the primary interface for onboarding a new Hotspot. It was
+recently (Nov 12, 2020) [released as open-source](https://github.com/helium/Hotspot-app) and could
 presumably be updated or forked by a third-party manufacturer:
 
-Both Helium and RAK hotspots are (presumably) running the same miner software as available on
+Both Helium and RAK Hotspots are (presumably) running the same miner software as available on
 GitHub, but software updates are handled by a proprietary process. Additionally, there is remote
 access that can be used by Helium staff to diagnose and resolve issues. Both of these are
 closed-source and undocumented. If not open-sourced, third-party manufacturers would need to develop
@@ -235,7 +235,7 @@ _note: items 3-4 can occur simultaneously_
 
 # Rationale and Alternatives
 
-- Continue to rely solely on RAK Wireless to produce hotspots. They have a track record, and are
+- Continue to rely solely on RAK Wireless to produce Hotspots. They have a track record, and are
   shipping and maintaining reliable devices. However, they represent a single point of failure, and
   having a single manufacturer limits the amount of design innovation we can introduce to the
   ecosystem.
@@ -243,9 +243,9 @@ _note: items 3-4 can occur simultaneously_
   the network, constrained only by the cost and difficulty of acquiring swarm_keys via authorized
   resellers. Being able to spin up an unlimited number of keys means the network requires only one
   bad actor to bring it down. We do not feel the network is ready for open DIYs.
-- Additional manufactures can provide a variety of form factors for hotspots. Currently, all the
-  hotspots (except for DIY) are basically the same setup. It would be beneficial to have form
-  factors that move mining to a cloud instance. This would allow for lighter weight hotspots
+- Additional manufactures can provide a variety of form factors for Hotspots. Currently, all the
+  Hotspots (except for DIY) are basically the same setup. It would be beneficial to have form
+  factors that move mining to a cloud instance. This would allow for lighter weight Hotspots
   requiring lower bandwidth needs for remote or off grid deployments. Additional form factors could
   fit specific use cases such as marine deployments.
 

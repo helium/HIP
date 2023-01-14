@@ -23,7 +23,7 @@ The aim is to create an economy such that the underlying HNT-Data Credit burn-an
 continues to power the Helium Flywheel, while Proof-of-Coverage rules and earnings are dictated by
 the corresponding subDAO.
 
-The technical model requires that the entire Helium Network (tokens, hotspots, emissions rules,
+The technical model requires that the entire Helium Network (tokens, Hotspots, emissions rules,
 governance, etc.) lives at some proposed base layer blockchain (L1). All accounts and transaction
 activity happens at this L1. The decision on which L1 to use will be based on the technical and
 economical evaluation of the requirements of this proposal.
@@ -112,7 +112,7 @@ The phases are defined as follows:
       propose that 50B of 250B MOBILE is pre-mined and deposited to the Foundation.
    2. The Helium Foundation then utilizes this reserve of MOBILE tokens to immediately perform
       market activities critical to the functioning of the Mobile network, including rewards for
-      hotspots and community or business development efforts.
+      Hotspots and community or business development efforts.
 
 2. Phase II (August 1, 2022) : On the third anniversary of the Helium Network, the IOT token is
    issued on the working Helium blockchain as per HIP 52: IoT subDAO,
@@ -187,7 +187,7 @@ to use voting power within the Helium DAO:
    support for subnetworks. veHNT stakers towards a DNP are rewarded up to a fixed cap of 6% DNT
    emissions every epoch. This is fixed across DNPs and cannot be changed by the DNP. The reason to
    keep this fixed is to avoid a scenario where DNPs compete to give more rewards to veHNT stakers
-   at the expense of hotspot hosts.
+   at the expense of Hotspot hosts.
 2. **New Subnetwork Proposals** Proposals for new decentralized network protocol to become a part of
    the Helium Network as a subDAO must be voted on by veHNT.\*\*
 3. **Helium DAO Proposals** All proposals that impact global Helium DAO parameters including DAO
@@ -259,7 +259,7 @@ _Frequency of PoC reward split recalculation_ Recalculated every epoch using dat
 30 days
 
 _Active Device_ Active devices are the subDAO's definition of devices creating valid coverage (aka
-hotspots) and therefore being rewarded during the epoch.
+Hotspots) and therefore being rewarded during the epoch.
 
 ## subDAO Treasury Management
 
@@ -270,10 +270,10 @@ DNT are issued according to a predefined **emission schedule**. This must be def
 approve the DNP subDAO joining the Helium Network.
 
 All subDAOs have full control over DNT issuance parameters including overall emission schedules,
-inflation rates, bonus carve-outs, and stakeholder distributions (hotspots, oracles, etc.). The only
+inflation rates, bonus carve-outs, and stakeholder distributions (Hotspots, oracles, etc.). The only
 exception to this is the fixed cap of 6% DNT rewards going to veHNT stakers. The reason to keep this
 fixed is to avoid a scenario where DNPs compete to give more rewards to veHNT stakers at the expense
-of hotspot hosts.
+of Hotspot hosts.
 
 In each epoch, DNP subDAOs under the Helium network earn some amount of HNT as per the DAO utility
 score defined in the previous section. This HNT is deposited directly into the DNP subDAO treasury
@@ -313,11 +313,11 @@ includes the following sections:
    parties. Responsibilities here include definition of oracle software, minimum stake amounts, and
    rewards for participation.
 4. **Data Transfer Mechanism and Pricing** Data transfer across subnetworks occurs via the process
-   of procuring and burning data credits in the name of the hotspot or set of hotspots that provide
+   of procuring and burning data credits in the name of the Hotspot or set of Hotspots that provide
    coverage. Responsibilities here include Organizationally Unique Identifier (OUI) registration,
    state channel creation, and bandwidth capacity per data credit definition.
 5. **Proof-of-Coverage Mechanism** Most subnetworks will utilize a Proof of Coverage algorithm to
-   verify on an ongoing basis that hotspots are accurately representing their location and the
+   verify on an ongoing basis that Hotspots are accurately representing their location and the
    wireless network coverage they are creating from that location. Responsibilities here include
    Proof-of-Coverage challenge construction, target selection, reward scaling, and verification.
    Note that subnetworks can choose to skip this mechanism, but must provide reasoning as to why it
@@ -341,7 +341,7 @@ The device subsequently uses those Data Credits with a DNP specific State Channe
 Hotspot or set of Hotspots. The State Channel credits the Hotspot(s) once data has been transferred
 and submits this information to the DNP Oracles through State Channel Closes.
 
-The hotspot may dispute the State Channel summaries by submitting signed attestations to the DNP
+The Hotspot may dispute the State Channel summaries by submitting signed attestations to the DNP
 Oracles.
 
 Every epoch, DNP Oracles calculate each miner's rewards based on data transferred in State Channels
@@ -393,7 +393,7 @@ the overall network
    Credit is added to an address’s subnetwork DC balance, it can be transferred to any other
    subnetwork DC balance on the L1. This is a notable change as today, Data Credits cannot be
    transferred once created.
-2. Mining rewards for hotspots in a given DNP are distributed in the corresponding DNT. We encourage
+2. Mining rewards for Hotspots in a given DNP are distributed in the corresponding DNT. We encourage
    wallet applications to offer an auto swap feature for miners so they can automatically swap their
    mined DNT for HNT if they choose to do so.
 3. DNTs can be traded on secondary markets but are redeemable for HNT as per the primary market

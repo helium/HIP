@@ -37,7 +37,7 @@ individuals for feedback, from both within the Helium community and other crypto
 projects.
 
 Specifically we aim to achieve rough consensus around this process with Helium Inc (as the primary
-developer of nearly all core Helium software), hotspot owners, and the newly-formed
+developer of nearly all core Helium software), Hotspot owners, and the newly-formed
 [DeWi Alliance](https://dewi.org), which plans to commit time & money to community governance in the
 Helium ecosystem.
 

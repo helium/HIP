@@ -94,7 +94,7 @@ standard.
 - _What is the impact of not doing this?_
 
 Keeping the existing (extremely small) group of Oracles & price submissions is antithetical to the
-culture of "The People's Network"; at time of writing there are 150,000+ hotspots & 2,000+
+culture of "The People's Network"; at time of writing there are 150,000+ Hotspots & 2,000+
 validators on the network, yet only _9_ price Oracles, the majority of which are completely unknown
 (by design, to credit). This is less aligned with the transparency of the blockchain on-chain
 methods provide.

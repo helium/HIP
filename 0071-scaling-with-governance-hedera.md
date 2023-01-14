@@ -26,7 +26,7 @@ formal evaluation and comparison phase (and some evaluation criteria) to ensure 
 eventually chosen** (see Governance section).
 
 This focus on governance has to be more than just superficial. By including representatives of all
-stakeholder groups - most importantly hotspot owners and operators that have put up their time and
+stakeholder groups - most importantly Hotspot owners and operators that have put up their time and
 money to build this network - it will ensure a stable and sustainable network for all.
 
 In this HIP, we propose an alternative architecture for the Helium network to use the Hedera network
@@ -202,14 +202,14 @@ flowchart TB
 We propose, instead, that Hotspots themselves are responsible for beaconing regularly; with the
 initial proposed beacon rate to be once per day. With a predictable beacon rate, a Hotspot owner can
 be assured that they are “alive” on the network, are eligible for Proof-of-Coverage rewards, and
-potentially providing useful coverage for devices on the network. The hotspots will send the beacon
+potentially providing useful coverage for devices on the network. The Hotspots will send the beacon
 report periodically to Hedera Consensus Service, a low-cost, high-performance, service on the Hedera
 network. The hotpots also submit witness reports to HCS directly. Reporting those beacon reports
 directly on-chain increases transparency, removes intermediaries and increases decentralization.
 Hotspots could submit these beacon reports directly to Hedera via a Consensus Service transaction
-signed by the Hotspot, alternatively, hotspots could perform this activity via a gateway. The
+signed by the Hotspot, alternatively, Hotspots could perform this activity via a gateway. The
 gateway would be a lightweight open source component which would accept a beacon report from a
-hotspot and forward it to Hedera as a Consensus Service transaction. Gateways could be hosted by
+Hotspot and forward it to Hedera as a Consensus Service transaction. Gateways could be hosted by
 Helium as part of their infrastructure, alternatively current validator operators could be
 incentivised to operate their own gateway for complete decentralization of the beacon reporting
 activity.
@@ -521,7 +521,7 @@ approving payments.
 | Description                                       | Fee    | Calculation          |
 | ------------------------------------------------- | ------ | -------------------- |
 | 1M hourly beacon reports                          | $10    | 0.00001 \* 1,000,000 |
-| Yearly (per hotspot)                              | $0.087 | 24 _7_ 52 \* 0.00001 |
+| Yearly (per Hotspot)                              | $0.087 | 24 _7_ 52 \* 0.00001 |
 | 1M hourly individual payments                     | $100   | 0.0001 \* 1,000,000  |
 | 1M daily individual payments                      | $4.1   | 100 / 24             |
 | 1M aggregated hourly payments (9 per transaction) | $78    | 0.0007 \* 111,111    |
@@ -620,7 +620,7 @@ for protocol buffers for both Rust and Erlang.
 
 This HIP likely proposes a very different approach to solving Helium’s desire to switch to another
 L1. Indeed, the proposal here is to notarize beacon and packet reports on ledger, providing
-transparency to the reporting and ensuring all hotspots and routers are able to record reports on
+transparency to the reporting and ensuring all Hotspots and routers are able to record reports on
 the ledger without a third party being involved.
 
 The proposal also suggests the use of off-ledger Oracles (named consensus Oracles in this HIP) that

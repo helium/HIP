@@ -32,23 +32,23 @@ commentary.
 ## Definitions
 
 - **LOS**: Line Of Sight, Rx visible from Tx
-- **GW**: Short for gateway aka hotspot, miner etc
+- **GW**: Short for gateway aka Hotspot, miner etc
 - **SFN**: Spreading Factor N
 - **Tx**: Transmitting gateway
 - **PoC**: Proof of Coverage
 - **Fade Margin**: Calculation artifact for potential environmental obsticles and other conditions
-- **Density_tgt**: Target number of hotspots in target hex resolution (example = 1). Density in a
+- **Density_tgt**: Target number of Hotspots in target hex resolution (example = 1). Density in a
   target resolution hex will be clipped at this number unless certain conditions are met. This would
   be a chain variable for each resolution of interest.
-- **Density_max**: maximum number of hotspots to consider for target resolution any density beyond
+- **Density_max**: maximum number of Hotspots to consider for target resolution any density beyond
   this will be clipped under any conditions. (Example= 4) This would be a chain variable for each
   resolution of interest.
 - **N**: number of neighboring hex’s that must meet **Density_tgt** before clipping will be raised
   above **Density_tgt**. (Example =2). This would be a chain variable for each resolution of
   interest.
-- \*Interactive Hotspot\*\*: an active hotspot that has also recently had a transmission witnessed.
+- \*Interactive Hotspot\*\*: an active Hotspot that has also recently had a transmission witnessed.
   Lone wolves are active but not interactive.
-- **Occupied Hex**: hex where at least one interactive hotspot is present. This can apply to any
+- **Occupied Hex**: hex where at least one interactive Hotspot is present. This can apply to any
   resolution of interest. It also implies that if we know a certain hex is occupied, all parents of
   that hex up to resolution 0 are also occupied.
 - **Hex Whitelist**: a list of hex’s that are eligible for rewards, these could be specified at any
@@ -81,7 +81,7 @@ North America for different fade margins at receiver sensitivity -126 dBm ([SF81
 <!-- TODO: Change Factor -->
 
 With an area coverage factor of 20 this gives the Helium Gateway owners vastly mixed signals about
-how and where to deploy hotspots optimaly and for what purpose.
+how and where to deploy Hotspots optimaly and for what purpose.
 
 ### PoC Purpose
 
@@ -109,7 +109,7 @@ Semtech chip supporting a Tx of up to 20 dBm. This proposal
 
 ## Deployment Impact
 
-This deployment will effect all hotspot owners. Hotspot owners in EU will likely see a significant
+This deployment will effect all Hotspot owners. Hotspot owners in EU will likely see a significant
 change in earnings (either up or down) based on the new reward methodology. It will also require
 significant documentation update on how proof-of-coverage is performed and rewarded.
 

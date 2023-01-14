@@ -107,7 +107,7 @@ Model (Tab 1):
 
 ## Implementation Proposal for Proof of Coverage for 5G and Wi-Fi
 
-Helium’s current implementation of PoC is based on wireless coverage being verified through hotspots
+Helium’s current implementation of PoC is based on wireless coverage being verified through Hotspots
 issuing “challenges” to “challengees” and “witnessing” over the air interface. However, for 5G
 wireless protocol, radios cannot both challenge and witness the packets over the air, as the
 protocol stack is designed for the radio to interact with a UE (such as cell phone) vs another
@@ -119,25 +119,25 @@ macro-cells in proximity. Usefulness should not be a function of location relati
 on the Helium network, as is the case with LoRa.
 
 We propose to separate the challenge and witness function(s) for 5G PoC between the operator of a
-hotspot and an iOS/Android app (aka eSIM app), as follows:
+Hotspot and an iOS/Android app (aka eSIM app), as follows:
 
-- All hotspots on the network (regardless of wireless protocol) will continue to perform “the
+- All Hotspots on the network (regardless of wireless protocol) will continue to perform “the
   challenger” function by issuing randomly targeted challenges. However, instead of all challenges
-  always targeting LoRaWan hotspots, every N blocks challengers would also target alternative
+  always targeting LoRaWan Hotspots, every N blocks challengers would also target alternative
   protocols, starting with 5G. This role may change in the future as Validators take on the role of
   challenge generation.
 
 - 5G Hotspot operators will perform the role of challengee/transmitter by picking up 5G challenges
-  and transmitting them to witness cell phones that attach to the hotspot
+  and transmitting them to witness cell phones that attach to the Hotspot
 
 - All 5G Hotspots will come equipped with the LoRa concentrator and will also participate in the
   LoRa PoC. In the spirit of minimizing deviations from existing PoC mechanisms, location
-  attestation for 5G hotspots will continue to be performed using existing, LoRa-based algorithms.
+  attestation for 5G Hotspots will continue to be performed using existing, LoRa-based algorithms.
 
-- Cell phone owners with the eSIM app installed will “witness” that the hotspot is, indeed, active
+- Cell phone owners with the eSIM app installed will “witness” that the Hotspot is, indeed, active
   and radiating signal, and submit the confirmation back to the blockchain.
 
-Following the completion of the above, both the 5G hotspot operator and the cell phone owner with
+Following the completion of the above, both the 5G Hotspot operator and the cell phone owner with
 the eSIM app will receive their respective “challenge” and “witness” rewards.
 
 From the implementation standpoint, we’ll attempt to stay as close to the existing proof-of-coverage
@@ -151,7 +151,7 @@ their cellular counterpart.
 \*The example above provides step-by-step detail, specifically for cellular (vs. Wi-Fi) use case.
 However, the general flow for Wi-Fi offload will work very similar, assuming sim based
 authentication (EAP-AKA/EAP-AKA’) is used and cellular CBRS radios are replaced with enterprise
-grade Wi-Fi hotspots that support the above.
+grade Wi-Fi Hotspots that support the above.
 
 # Why is eSIM Important?
 
@@ -165,7 +165,7 @@ and offloading data into the eSIM based service vs. the primary sim card. An eme
 MNOs and MVNOs is now embracing eSIM.
 
 The app we are proposing to implement will rely on the eSIM standard and will program the eSIM of
-the phone to attach to one of the PLMNs broadcasted by the 5G hotspot operators to witness a
+the phone to attach to one of the PLMNs broadcasted by the 5G Hotspot operators to witness a
 challenge. eSIM approach would further allow us to circumvent issues with limited control of the iOS
 apps over the connection control functions of the phone.
 
@@ -190,14 +190,14 @@ modes of offload:
 
 - Passive - in this mode the eSIM app will merely serve as a phone based miner of “witness” rewards
   and will only send mock data packets to the offload network. The app will collect data on
-  performance of hotspots. That same data can also be later used to adjust PoC challenge incentives,
-  skewing rewards towards 5G hotspots placed in areas with the greatest need for coverage. Finally,
+  performance of Hotspots. That same data can also be later used to adjust PoC challenge incentives,
+  skewing rewards towards 5G Hotspots placed in areas with the greatest need for coverage. Finally,
   passive mode will allow operators to gauge savings and test the network prior to actually
   offloading any data that would affect end user experience
 
 - Active - in this mode the app will also actively offload the traffic into the Helium network. The
   operator will have the ability to specify on an individual eSIM basis, which of the eSIMs are
-  authorized to offload into which of the Helium operated hotspots, thus optimizing the savings and
+  authorized to offload into which of the Helium operated Hotspots, thus optimizing the savings and
   user experience for the customer, balancing between macro network and offload network
 
 Switching between active and passive modes can be done remotely by the operator, without requiring
@@ -235,11 +235,11 @@ challenges.
 
 ### Spoofing / Faking Location
 
-This exploit involves falsifying the location of a hotspot by asserting a location that is different
+This exploit involves falsifying the location of a Hotspot by asserting a location that is different
 from the actual physical location.
 
-Current hardware design for omni-protocol hotspots (such as FFi gateway) includes a LoRa
-concentrator in the hotspot. This affords us with the opportunity to re-use existing mechanisms
+Current hardware design for omni-protocol Hotspots (such as FFi gateway) includes a LoRa
+concentrator in the Hotspot. This affords us with the opportunity to re-use existing mechanisms
 implemented for LoRa to be able to verify location using LoRa signal strength and SNR and without
 relying on GPS or CBRS specific mechanisms. We propose that the presence of a LoRa concentrator
 remains a standard requirement for all non-LoRaWan gateways for the foreseeable future.
@@ -249,7 +249,7 @@ remains a standard requirement for all non-LoRaWan gateways for the foreseeable 
 Faking a witness involves somebody running a virtual machine with Android OS and an eSIM app and
 writing fake witness transactions to the block chain. To prevent the possibility of faking a
 witness, we propose to re-use the mechanism of DeWi-issued keys that’s already been proven in the
-LoRa deployment to preclude the possibility of faking a LoRa hotspot.
+LoRa deployment to preclude the possibility of faking a LoRa Hotspot.
 
 - All witnesses that mine on mainnet will be required to sign transactions with a witness key,
   generated as part of the DeWi onboarding process.
@@ -264,7 +264,7 @@ LoRa deployment to preclude the possibility of faking a LoRa hotspot.
 
 - Similar to the LoRa gateway onboarding process, to onboard an eSIM app, the operator of an eSIM
   back-end (generally a service provider / MVNO) will submit a phone IMEI to the onboarding server
-  during eSIM issuance using the same API that current manufacturers use to submit hotspot hardware
+  during eSIM issuance using the same API that current manufacturers use to submit Hotspot hardware
   credentials such as mac addresses.
 
 - Onboarding keys will be generated and stored in a secure key storage module of a phone - iOS
@@ -281,7 +281,7 @@ witness apps.
 
 ### Filtering Out Non-PoC Traffic
 
-This exploit involves tweaking access control lists in a firewall behind the hotspot, such that only
+This exploit involves tweaking access control lists in a firewall behind the Hotspot, such that only
 PoC related traffic is passed, but no other internet traffic is allowed. This allows one to collect
 PoC rewards without passing any data traffic.
 
@@ -305,7 +305,7 @@ subject for subsequent HIPs.
 
 ### Phone Farming
 
-This exploit involves malicious actors setting up a farm of 5G hotspots and many cheap (potentially
+This exploit involves malicious actors setting up a farm of 5G Hotspots and many cheap (potentially
 used) real phones with valid IMEIs and properly onboarded eSIM Apps in proximity to each other. The
 goal of the malicious actor is to emulate a highly popular data offload location and collect
 unfairly large PoC rewards, whereas in reality the entire setup is located in their basement.
@@ -320,10 +320,10 @@ for LoRa apply for most other wireless protocols.
 
 This exploit involves a user subscribing to some large number of unlimited data plans (such as AT&T
 unlimited elite) provided by an operator that is also a Helium network customer then placing all 10
-phones to stream Netflix next to the Helium CBRS hotspot that they themselves set up. That way the
+phones to stream Netflix next to the Helium CBRS Hotspot that they themselves set up. That way the
 malicious actor can be paying a capped amount of $80/month for 10 unlimited plans, yet collecting an
 uncapped amount of rewards at $.5/Gb on all artificially generated data passed through the very
-offload hotspot they are operating. I.e. effectively an operator will be paying the user through the
+offload Hotspot they are operating. I.e. effectively an operator will be paying the user through the
 Helium network any difference between the fixed fee the operator is charging the user and the actual
 cost of data that the user artificially generated through their CBRS cell.
 
@@ -345,7 +345,7 @@ operator basis.
 - Will work for Wi-Fi and 5G/LTE
 
 - Can collect intelligence on network coverage gaps, which can later be used to adjust incentives
-  for placing 5G and Wi-Fi hotspots in most sought after places
+  for placing 5G and Wi-Fi Hotspots in most sought after places
 
 - Passive mode can enable MVNOs to run experiments and estimate the potential savings from
   offloading data into Helium, prior to actually enabling offload, hence decreasing barrier to entry

@@ -86,7 +86,7 @@ The amount of rewards that a sub-protocol will receive per epoch is based on two
 
 2. The amount of DC being used by the sub-protocol
 
-The current network relies on Proof-of-Coverage and Data Transfers to reward hotspot operators for
+The current network relies on Proof-of-Coverage and Data Transfers to reward Hotspot operators for
 the service that they provide. This HIP will keep these reward pools and percentages the same but
 will suggest that Proof-of-Coverage to be renamed to Proof-of-Protocol-Service (for LoRa this is
 done using PoC but for a future sub-protocol it might not be coverage based).

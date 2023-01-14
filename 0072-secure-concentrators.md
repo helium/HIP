@@ -22,7 +22,7 @@ Frequency, GPS location and time) can be verified to be authentic.
 ## Motivation
 
 Today's Helium Hotspot have a large security flaw. Anyone can modify the software running on a
-hotspot and generate fake LoRa packets. This is a big problem because PoC rewards are based on these
+Hotspot and generate fake LoRa packets. This is a big problem because PoC rewards are based on these
 packets. The new Secure Concentrator Card solves this problem by digitally signing packets in
 hardware. Secure Concentrators make it _prohibitively_ difficult to game the PoC system by also
 utilizing tamper-resistant design elements (routed traces, hard cured potting material, etc). The
@@ -31,7 +31,7 @@ for all.
 
 The proposed SCC design allows existing Helium miners to upgrade by swapping out existing
 concentrator cards with new secure card. In addition, SCC would enable the DIY community to build
-their own hardware, greatly increasing the diversity and proliferation of hotspots.
+their own hardware, greatly increasing the diversity and proliferation of Hotspots.
 
 ## Stakeholders
 
@@ -44,7 +44,7 @@ gaming the network very difficult to perform and scalable.
 
 - Increase security level of Helium's Proof-of-Coverage (I.E. make gaming much more difficult).
 - Ability to replace/upgrade existing Miner's concentrator card with secure concentrator card
-- Turn off-the-shelf LoRaWAN gateways into full PoC Helium miner (DIY hotspot)
+- Turn off-the-shelf LoRaWAN gateways into full PoC Helium miner (DIY Hotspot)
   - Secure Concentrators effectively replace the need for ECC806 security chip as mandated in
     HIP 19.
 - Enable new class of Helium nodes that can provide additional functionality (LoRa PoC Mapper?
@@ -86,8 +86,8 @@ compatible with SX1302 and like SX1302, it excels in cutting down current consum
 thermal design, lowering Bill Of Materials cost, and reducing overall size of gateways. In addition
 to supporting all the features of SX1302, SX1303 introduces a new Fine Timestamp capability that
 enables Time Difference of Arrival (TDOA) network-based geolocation. The new TDOA feature could
-potentially enable another layer of Proof of Coverage. For example, Helium hotspots using SX1303
-chipset could coordinate together to assert that another Helium hotspot's beacon signal actually
+potentially enable another layer of Proof of Coverage. For example, Helium Hotspots using SX1303
+chipset could coordinate together to assert that another Helium Hotspot's beacon signal actually
 originated from the stated geo-location.
 
 ### GPS Receiver

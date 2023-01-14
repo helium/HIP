@@ -17,7 +17,7 @@ in order to check the status of their network and diagnose faults the moment the
 This is achieved by collecting RF meta-data from every packet received or transmitted and feeding it
 into an analysis stack for further processing.
 
-Since such task typically involves tapping into the packet stream, a Helium hotspot owoner might be
+Since such task typically involves tapping into the packet stream, a Helium Hotspot owoner might be
 reluctant to allow a third-party tool to tamper with the stream, for security considerations.
 
 Therefore, we are proposing a mechanism that would enable the extraction of packet meta-data without
@@ -133,7 +133,7 @@ Considering that:
    concern, JSON is a valid trade-off.
 4. Since this is an opt-in feature, it should be enabled via an external flag (eg. using an
    environment variable).
-5. To further reduce the processing demand, the analytics data are NOT processed inside the hotspot
+5. To further reduce the processing demand, the analytics data are NOT processed inside the Hotspot
    client. Instead they are relayed to a third-party _Analytics Client_. This could be a simple
    proxy, or a more elaborate statistics aggregator. The implementation details are not important as
    part of this HIP.
@@ -545,7 +545,7 @@ analytics down to it.
 
 ### 2. Example 2
 
-Bob, a professional LoRaWAN network operator, has deployed 1,000 Helium hotspots in an area and he
+Bob, a professional LoRaWAN network operator, has deployed 1,000 Helium Hotspots in an area and he
 wants to make sure his services are reliable. He is using production miners bought from one of the
 official suppliers.
 

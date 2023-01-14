@@ -78,7 +78,7 @@ The deposit is returned to the manufacturer for good behavior over the course of
 
 To keep the scheme practical, deposits must be made in advance and must be made in batches of
 ~~1_000 HNT\*~~ \*_\*\*10,000 Hotspots minimum. Manufacturers whose approval pre-dates the deposit
-scheme will be required to make a one-time catch-up deposit of 1 HNT_ for every hotspot they have
+scheme will be required to make a one-time catch-up deposit of 1 HNT_ for every Hotspot they have
 already deployed, capping at 10_000 HNT\* total.
 
 To keep the deposit scheme effective, manufacturers must make deposits in step with their onboarding

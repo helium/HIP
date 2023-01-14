@@ -11,7 +11,7 @@
 
 Currently HIP votes are conducted via wallet signatures at heliumvote.com; this proposal suggests
 further improvement by constraining a given entities voting power to equal the total number of
-network entities (hotspots, validators, routers), rather than by the balance of a voting wallet. The
+network entities (Hotspots, validators, routers), rather than by the balance of a voting wallet. The
 vote should be weighted accordingly to incorporate the relative network utility value contributed by
 a given entity respectively.
 
@@ -41,7 +41,7 @@ are consistent across each proposed HIP.
 # Detailed Explanation
 
 Ideally voting should at a minimum use a 1:1 correlation between participant stake in the network
-(i.e. each hotspot purchased / onboarded, validator staked, router loaded w/ DC).
+(i.e. each Hotspot purchased / onboarded, validator staked, router loaded w/ DC).
 
 HIP votes originated as limited scope straw polls, typically conducted and voted upon by the most
 active of community members via Discord. This was limited in scope of awareness, and lacked any
@@ -55,10 +55,10 @@ context resources explaining each vote and its implications.
 Using private key signatures to cast votes is also a step up in loosely connecting participation in
 the network via some unique identifier (wallet address / DC burn), however there is no connection
 between stake in the network _utility_ / infrastructure required to do so. Tying voting power to
-number on onboarded hotspots, validators, and/or DC held by routers provides a fair and logical
+number on onboarded Hotspots, validators, and/or DC held by routers provides a fair and logical
 basis and "stake" in the vote, which mirrors the voting party's stake in the network.
 
-Initial starting point suggestions would be using hotspot onboarding stake as a basis for the
+Initial starting point suggestions would be using Hotspot onboarding stake as a basis for the
 following weights:
 
 -Hotspot: 1 vote (1,055,000 DC) -Validator: X votes, where X = DC equivalent of 10,000 HNT stake at
@@ -73,12 +73,12 @@ method of tying HNT balance to vote weight.
 # Deployment Impact
 
 Voting mechanism should not fundamentally change in terms of how one goes about voting. The key
-distinction is that the hotspot count on each a voting wallet is what is taken into consideration
+distinction is that the Hotspot count on each a voting wallet is what is taken into consideration
 for vote weight as opposed to simply allowing any wallet(s) to burn DC to cast votes.
 
 # Success Metrics
 
 With successful implementation it should be possible to audit any given HIP vote and see that votes
-are proportionate to wallets' number of eligible onboarded hotspots. It should possibly (in lieu of
+are proportionate to wallets' number of eligible onboarded Hotspots. It should possibly (in lieu of
 privacy concerns or other controversy arising in the discussion of the proposal) also be possible to
-see how wallet(s) and/or hotspot(s) voted on a given HIP.
+see how wallet(s) and/or Hotspot(s) voted on a given HIP.

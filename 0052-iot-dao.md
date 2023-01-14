@@ -40,11 +40,11 @@ The Helium IoT subDAO has six core functions
    Responsibilities here include definition of oracle software, minimum stake amounts, and rewards
    for participation.
 4. **Data Transfer Mechanism and Pricing** Data transfer within subnetworks occurs via the process
-   of procuring and burning data credits in the name of the hotspot or set of hotspots that provide
+   of procuring and burning data credits in the name of the Hotspot or set of Hotspots that provide
    coverage. Responsibilities here include Organizationally Unique Identifier (OUI) registration,
    state channel creation, and bandwidth capacity per data credit definition.
 5. **Proof-of-Coverage Mechanism** Most subnetworks will utilize a Proof of Coverage algorithm to
-   verify on an ongoing basis that hotspots are accurately representing their location and the
+   verify on an ongoing basis that Hotspots are accurately representing their location and the
    wireless network coverage they are creating from that location. Responsibilities here include
    Proof-of-Coverage challenge construction, target selection, reward scaling, and verification.
    Note that subnetworks can choose to skip this mechanism, but must provide reasoning in their
@@ -79,12 +79,12 @@ For clarity, the emission schedule is as follows:
 | 7    | 175.625B                     | 8.125B     | 21%                                                     | 59%                                              | 7%           | 7%              | 6%            |
 
 At launch of the IoT subnetwork, 2.5% of the total supply of IOT tokens (5B tokens) are issued and
-airdropped to oracles and hotspots on the existing IoT network. This airdrop is intended to
+airdropped to oracles and Hotspots on the existing IoT network. This airdrop is intended to
 bootstrap the network, and is distributed to oracles and validators in the following proportion:
 
 Oracles: 50% of 5B tokens, distributed in proportion to HNT staked at the snapshot
 
-Hotspots: 50% of 5B tokens, distributed to all active hotspots (rewarded in the past 30 days) and
+Hotspots: 50% of 5B tokens, distributed to all active Hotspots (rewarded in the past 30 days) and
 not on the denylist at the time of snapshot
 
 At the end of a given epoch, the IoT subnetwork oracles relay start balance, current balance, and
@@ -98,14 +98,14 @@ sustain network growth. The primary use case of the operations fund is to fund a
 transaction fees to the L1, but can be deployed in any manner of ways as per subDAO governance. Such
 incentives could include
 
-1. One-time DNT bonuses for hotspots providing continuous coverage in new regions deemed to be
+1. One-time DNT bonuses for Hotspots providing continuous coverage in new regions deemed to be
    economically valuable by governance
-2. Bonus rewards for hotspots and OUIs that are consistent in network activity and meet certain good
+2. Bonus rewards for Hotspots and OUIs that are consistent in network activity and meet certain good
    actor conditions such as surge-pricing style dynamic multipliers based on data transfer activity
    for individual regions or bespoke incentives for oracles and manufacturers on the basis of
    changing network demands.
 
-Once emissions are distributed to hotspots and oracles, IOT owners can either redeem their holdings
+Once emissions are distributed to Hotspots and oracles, IOT owners can either redeem their holdings
 for underlying HNT against the treasury reserve automatically, hold for redemptions at a later time,
 or lock up their IOT for veIOT in a process similar to the veHNT mechanism described in HIP 51.
 
@@ -180,7 +180,7 @@ Clarifications:
 
 IoT oracles confirm proof of coverage, data transfer, and add blocks to the IoT subnetwork. They
 serve state data around Proof-of-Coverage challenges and data transfer events to light and data only
-hotspots.
+Hotspots.
 
 Validation is performed by a set of rotating nodes known as the consensus group, which verifies
 transactions and ordering prior to forming a block and proposing it to the subnetwork chain.
@@ -211,8 +211,8 @@ oracles.
 
 ### Proof-of-Coverage Specification
 
-The IoT subDAO is required to constantly interrogate hotspots using the Proof-of-Coverage challenge
-mechanism to ensure that hotspots are representing their locations accurately. The net results of
+The IoT subDAO is required to constantly interrogate Hotspots using the Proof-of-Coverage challenge
+mechanism to ensure that Hotspots are representing their locations accurately. The net results of
 each of these challenges are relayed to the Helium L1 after being validated by their respective
 consensus groups.
 
@@ -228,12 +228,12 @@ IoT Challenges involve three distinct roles:
 
 ### Data Transfer and Pricing Specification
 
-Data Credits are utilized in asserting new hotspots and their location on the chain, registering
+Data Credits are utilized in asserting new Hotspots and their location on the chain, registering
 OUIs and associated devices, and as payment for packet transfers.
 
 With the activation of
 [HIP 10](https://github.com/helium/HIP/blob/master/0010-usage-based-data-transfer-rewards.md),
-hotspot operators receive HNT emissions up to 32.5% per epoch and are rewarded at 1:1 rate based on
+Hotspot operators receive HNT emissions up to 32.5% per epoch and are rewarded at 1:1 rate based on
 dollar value of Data Credits transfers as per the
 [HNT Price Oracle](https://docs.helium.com/blockchain/oracles). This proposal scales Data Credits
 rewards based on actual activity on the network, and disincentivizes arbitrageurs from taking
@@ -257,7 +257,7 @@ The transaction is as follows:
 
 Note that it is possible to support both metered and unmetered networks. For an unmetered network,
 an OUI can choose to pay a fixed rate for an indefinite period of time which involves the purchase
-and burn of some number of data credits per minute, and attribution to hotspots after consumption
+and burn of some number of data credits per minute, and attribution to Hotspots after consumption
 occurs pro rata network traffic under the unmetered plan.
 
 ### Governance Specification

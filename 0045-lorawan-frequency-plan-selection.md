@@ -71,9 +71,9 @@ frequency plan per region and/or country**.
    to reach consensus. The author of the dissenting opinion must be ready to take the floor to
    represent their position.
 4. If the change remains contentious, the decision will go to on-chain voting. Currently, that would
-   be implemented using [Helium Vote](https://www.heliumvote.com/) mechanism where 1 hotspot in the
+   be implemented using [Helium Vote](https://www.heliumvote.com/) mechanism where 1 Hotspot in the
    concerned region equals 1 vote. Votes are cast by doing a DC burn transaction towards the
-   appropriate wallet. A hotspot must be asserted in the concerned region for the entire duration of
+   appropriate wallet. A Hotspot must be asserted in the concerned region for the entire duration of
    the vote, which must last at least seven days.
 
 After steps 2 and 3, before proceeding to the next escalation, DeWi's LoRaWAN Committee may withdraw
@@ -82,7 +82,7 @@ step 1.
 
 # Rationale and Alternatives
 
-An alternate approach would be to allow any hotspot operate to choose any legal frequency plan. For
+An alternate approach would be to allow any Hotspot operate to choose any legal frequency plan. For
 example, operators in Australia could select AU915 _or_ AS923-1 when they assert location. We
 believe this to be problematic as it will lead to fragmentation of coverage and confusion on behalf
 of network users. Instead, we believe such mechanisms would be useful for expanding into additional

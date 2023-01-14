@@ -26,7 +26,7 @@ packets on the Helium Network.
 
 Join frames are routed on the Helium Network thanks to the filters maintained by each OUI. These
 filters are written onto the blockchain by the OUI operator and indicate interest in purchasing
-those Join frames that have matching (JoinEui, DevEui). When a hotspot (LoRaWAN gateway) receives a
+those Join frames that have matching (JoinEui, DevEui). When a Hotspot (LoRaWAN gateway) receives a
 Join packet, it will cycle through each OUI and each filter for each OUI to check if they are
 interested in this Join frame.
 
@@ -57,17 +57,17 @@ Data frames are routed thanks to their DevAddr. The DevAddr is assigned after a 
 If the NwkID (aka NetID) matches that of the Helium Network, the bottom 25-bits, aka: NwkAddr, is
 used to determine which OUI this device belongs to. OUIs can purchase one or many "slabs" of
 NwkAddrs; they can then allocate devices to these addresses in their JoinAccept responses and expect
-that hotspots will offer these Data frames to them.
+that Hotspots will offer these Data frames to them.
 
 ### Non-Helium NetIDs
 
 Currently, packets that are not under the Helium NetID are dropped. They belong to other networks,
 such as Actility or Senet. However, these other networks have manifested interest in purchasing
 these packets and thus "roaming" on the Helium Network. Ultimately, enabling this makes the existing
-infrastructure more valuable as the same hotspots (LoRaWAN gateways) can provide coverage for these
+infrastructure more valuable as the same Hotspots (LoRaWAN gateways) can provide coverage for these
 existing LoRaWAN Networks.
 
-**We need a way to tell hotspots that one or many OUIs is interested in purchasing Data frames from
+**We need a way to tell Hotspots that one or many OUIs is interested in purchasing Data frames from
 another network.** The existing mechanism for Join frames requires no changes.
 
 ## Solution
@@ -90,4 +90,4 @@ We could conceive of a system where any OUI operator could submit interest in pu
 a NetID via a permissionless transaction. However, this is a direct violation of LoRaWAN Alliance
 requirements agreed by DeWi upon joining the LoRaWAN Alliance and receiving a LoRaWAN NetID
 allocation. Furthermore, bad actors could exploit this mechanism to harvest data from the Helium
-Network without even compensating hotspot operators.
+Network without even compensating Hotspot operators.

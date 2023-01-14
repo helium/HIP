@@ -14,13 +14,13 @@ changes (such as GA's) in a timely manner.
 
 # Motivation
 
-Helium GA releases can be quite frequent at times, and cause downtime on the network and for hotspot
+Helium GA releases can be quite frequent at times, and cause downtime on the network and for Hotspot
 owners while thier devices download the updates. With an increasing number of third party vendors,
 less and less devices will automatically download a new GA and will require the manufacturer/vendor
 to release a software update.
 
 Sometimes this has been on Fridays or weekends, at this time a significant part of the US/Europe
-would not be working, or ready to develop and test a new hotspot software update. This leaves third
+would not be working, or ready to develop and test a new Hotspot software update. This leaves third
 party devices with less rewards or even security issues until the following Monday. If this happened
 to be a public holiday, a significant part of the network could be vulnerable for 4 or more days.
 
@@ -31,10 +31,10 @@ to be a public holiday, a significant part of the network could be vulnerable fo
 
 # Detailed Explanation
 
-- Certain updates can be released any time (such as zero-day, widespread hotspot issues or
+- Certain updates can be released any time (such as zero-day, widespread Hotspot issues or
   significant data transmission failure)
 
-- All other updates such as hotspot GA's should be released on a weekday e.g: Monday, Tuesday,
+- All other updates such as Hotspot GA's should be released on a weekday e.g: Monday, Tuesday,
   Wednesday or Thursday, this gives manufacturers/vendors time to test and release the updates.
 
 - Alternatively, all updates could have a timeframe to be implemented. This could be ASAP for
@@ -53,8 +53,8 @@ to be a public holiday, a significant part of the network could be vulnerable fo
 # Rationale and Alternatives
 
 Recently several GA's have been released at the end of the week, requiring vendors to release
-updates out of hours, or hotspot owners wait until Monday to get the update. This makes rewards
-messy over this time period and hotspot owners can lose out on rewards over the weekend.
+updates out of hours, or Hotspot owners wait until Monday to get the update. This makes rewards
+messy over this time period and Hotspot owners can lose out on rewards over the weekend.
 
 # Unresolved Questions
 
@@ -63,8 +63,8 @@ messy over this time period and hotspot owners can lose out on rewards over the 
 # Deployment Impact
 
 - Vendors will be quicker at releasing device updates as they will be at work
-- Network should be more stable as hotspots will all update in a more timely manner
-- Rewards will be more consistent as surrounding hotspots will be on the same software version for
+- Network should be more stable as Hotspots will all update in a more timely manner
+- Rewards will be more consistent as surrounding Hotspots will be on the same software version for
   longer
 
 # Success Metrics

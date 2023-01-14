@@ -44,7 +44,7 @@ Consensus Group:
 
 # Stakeholders
 
-All current and future hotspot owners will be affected by this change. Miner owners will be given a
+All current and future Hotspot owners will be affected by this change. Miner owners will be given a
 new option to opt-in to stake & participate in CG for a marginal staking fee (opted-out by default).
 
 There will also be a new class or "role" of operator created -- validator pools/nodes. These

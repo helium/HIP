@@ -11,12 +11,12 @@
 The `add_gateway` remains one of the few permissioned transactions relating to the network. Ideally,
 `add_gateway` would be permissionless and any compatible hardware could be added to the blockchain
 and mine HNT. However, this transaction has always been regulated due to a concerns with bad actors
-creating virtual hotspots only to maximize mining rewards without truly providing coverage.
+creating virtual Hotspots only to maximize mining rewards without truly providing coverage.
 
 Initially, only gateways sold by Helium could be added to the blockchain, but
 [HIP19](0019-third-party-manufacturers.md) expands this ability to approved vendors. One of the
-principal requirements of HIP19 is that the hotspot identity be contained with a hardware security
-module. Following the lead of the Helium "OG Hotspot", every hotspot on the market has the following
+principal requirements of HIP19 is that the Hotspot identity be contained with a hardware security
+module. Following the lead of the Helium "OG Hotspot", every Hotspot on the market has the following
 architecture:
 
 ![image Current Architecture](0022-diy-concentrators/current_hardware_architecture.jpg)
@@ -26,7 +26,7 @@ the Host CPU. Therefore, the Host CPU pulls data from the SX130x concentrator, r
 element (generally an ECC608) sign the transaction and then submits the transaction to the
 blockchain.
 
-The strength of this approach is that it requires bad actors to acquire hotspots and their secure
+The strength of this approach is that it requires bad actors to acquire Hotspots and their secure
 element and to maintain physical access to the hardware security module; thus the overhead of such
 operations is increased and the scalability is hindered. However, this does not prevent bad actors
 from lying about the packets they have seen.
@@ -136,7 +136,7 @@ existing HIP19 secure element approach.
 
 The following onboarding specification requires no blockchain features.
 
-DIY concentrators will be subject to the same onboarding fees as regular hotspots. The `swarm_key`
+DIY concentrators will be subject to the same onboarding fees as regular Hotspots. The `swarm_key`
 shall be stored in the secure firmware and will be the entity signing the transactions. As such, the
 secure firmware will be responsible for signing the `add_gateway` transaction.
 
@@ -145,12 +145,12 @@ previous identity with a new HIP22 identity (ie: `careful-pickel-squirrel` will 
 `long-fuchsia-sloth`).
 
 Provisioned concentrators will be provided to the DeWi-managed staking server, similar to
-HIP19-approved hotspots. As such, the vendor of a DIY concentrator remains responsible for
+HIP19-approved Hotspots. As such, the vendor of a DIY concentrator remains responsible for
 onboarding fees and must have these priced in for the customer.
 
 Vendors who are already approved via HIP19 shall manage a separate account for HIP22 concentrators,
 so that we have some on-chain transparency of the different security models used for on-chain
-hotspots.
+Hotspots.
 
 # Syncrob.it Product Summary
 

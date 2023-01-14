@@ -11,7 +11,7 @@
 
 Currently DCs are rewarded to the fastest responder which mostly comes down to internet speed.
 Redundancy that is available and just as capable goes unrewarded and thus has little reason to
-exist. **Thus I propose to change the DC reward from the fastest responder to all hotspots that
+exist. **Thus I propose to change the DC reward from the fastest responder to all Hotspots that
 could have performed this duty in a timely fashion.**
 
 # Motivation
@@ -25,7 +25,7 @@ or visually simplified:
 ![Current DC Split](./0032-split-dcs/Current_Split.jpg)
 
 Of course this picture doesn't even come close to describe the situation in densely populated areas
-where hotspots might have an effective coverage of 0, because hotspots with better latency are
+where Hotspots might have an effective coverage of 0, because Hotspots with better latency are
 overlapping their entire coverage. This HIP doesn't aim to incentivise these densely populated
 areas, but solely aims at giving redudancy a reward that they are **due**. The density problem we
 are currently facing has to be resolved differently and this HIP assumes that this will happen.
@@ -36,7 +36,7 @@ So we go to something more like this:
 
 in one simple step that will naturally adapt to the current situation without much code necessary.
 
-This HIP does not have an affect to areas that have no other hotspots nearby.
+This HIP does not have an affect to areas that have no other Hotspots nearby.
 
 # Stakeholders
 
@@ -53,10 +53,10 @@ anything and be declined.
 
 Physical proximity is largely meaningless as the signal of sensor propagates at the speed of light.
 To put it into terms the speed of light means you can circle the earth 7 times in one second. Due to
-this we can assume that hotspots will receive the request at the same time.
+this we can assume that Hotspots will receive the request at the same time.
 
 To resolve this we can simply have the server listen for a bit longer (e.g. 150ms) and then reward
-them all equally for the work. A hotspot that is too slow will not be rewarded.
+them all equally for the work. A Hotspot that is too slow will not be rewarded.
 
 As an example we have a use-case sending out a ping and there is 6 Hotspots that receive and try to
 act. Hotspot 1 was the fastest, but Hotspot 2-5 all reacted in under 150 ms aswell. Hotspot 6 only
@@ -65,7 +65,7 @@ failed and is thus not rewarded.
 
 **No new rewards or price increase is happening here. The reward that would go to one guy in full
 before would now be equally split to all that could have handled the request well. If there is no
-other hotspot to begin with, then this changes nothing.**
+other Hotspot to begin with, then this changes nothing.**
 
 # Drawbacks
 
@@ -112,7 +112,7 @@ can tie that in here aswell.
 
 What metrics can be used to measure the success of this design?
 
-Once we stop finding examples of single hotspots dominating a huge area in terms of DC earnings we
+Once we stop finding examples of single Hotspots dominating a huge area in terms of DC earnings we
 know, that we have succeeded.
 
 As a final note I want to greet Tim and re-offer poffertjes to be guaranteed a purchase of 5

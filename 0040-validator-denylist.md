@@ -133,8 +133,8 @@ check transactions against.
 
 ### Denylist Aggregator
 
-In the interest of allowing denied hotspot owners and community members alike to understand why a
-given hotspot was denied, we propose an aggregator of these distributed lists. In preparation for
+In the interest of allowing denied Hotspot owners and community members alike to understand why a
+given Hotspot was denied, we propose an aggregator of these distributed lists. In preparation for
 this HIP, the Helium Foundation has opted to build and host this community resource.
 
 The denylist aggregator will serve both as an interface to explore the state of Hotspots within
@@ -155,7 +155,7 @@ sending push notifications to Hotspot owners via their apps by leveraging this A
 
 | <img src="0040-validator-denylist/hotspot_denial_example.png" alt="Example of a Hotspot with denied PoC." width="400">          |
 | :------------------------------------------------------------------------------------------------------------------------------ |
-| Mock UI for a hotspot that has experienced a denied transaction. Warning would only appear if the hotspot experienced a denial. |
+| Mock UI for a Hotspot that has experienced a denied transaction. Warning would only appear if the Hotspot experienced a denial. |
 
 ```jsx
 GET https://aggregator.domain.io/current/11xBfYCA24v9GpadmcP2ZQC4DVyfXsfSJ6J5983xebtysR8ZPCR
@@ -202,7 +202,7 @@ penalizing the opposing group members. As such, In order to execute a transactio
 within consensus will vote to block rewards for individual witness receipts within a receipts
 transaction. This vote is added to the block metadata on-chain, which allows for later analysis of
 Hotspot activities. The on-chain data is important for the continued monitoring of denylisted
-hotspots for their possible removal or continued inclusion. In the current implementation, blocked
+Hotspots for their possible removal or continued inclusion. In the current implementation, blocked
 PoC activity does not appear on-chain, thus removing an important dataset for continued analysis.
 
 Operators will specify their preferences for denylists in a configuration file. This configuration
@@ -291,7 +291,7 @@ transfer.
 
 Since the majority of Validators in consensus must agree to deny earnings, it is possible that a
 particular consensus group does not hold enough voting power due to participation in a particular
-Denylist. This would lead to a dishonest hotspot still being able to earn enough to make their
+Denylist. This would lead to a dishonest Hotspot still being able to earn enough to make their
 falsified coverage financially attractive.
 
 ## Deployment Impact

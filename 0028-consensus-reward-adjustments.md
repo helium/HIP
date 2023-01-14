@@ -40,7 +40,7 @@ several reasons:
    supply, it is not predictable and also continuously impacts the max supply since the halvings are
    tied to blocks not epochs.
 3. Over rewards other network participants - The relative allocation of rewards to community members
-   (hotspot owners and consensus members) is reduced relative to investors (HST holders) any time
+   (Hotspot owners and consensus members) is reduced relative to investors (HST holders) any time
    epochs go long. The success of Helium depends on the cooperation of both groups and as such the
    relative earnings between the two should remain consistent.
 
@@ -216,7 +216,7 @@ I seek input from the community on a couple open questions:
 
 Since this change is not backwards compatible with previous rewards calculations, this change will
 be implemented through incrementing of the `reward_version` chain variable to 6 or more. As such,
-all validators, hotspots, and other chain followers will need to be updated before enabling the
+all validators, Hotspots, and other chain followers will need to be updated before enabling the
 change via chain variable.
 
 Given the impact of this on return expected by operators of validators, I propose implementing this

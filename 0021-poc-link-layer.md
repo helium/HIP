@@ -24,7 +24,7 @@ PoC payload with no redundancy or any additional correction applied. We have an 
 a PoC packet is not very resistant to noise or collision. Additionally, and more importantly,
 sending one packet with one signal reading infrequently (say twice a day) is not very descriptive.
 We are looking to better describe coverage quality, and a series of smaller packets to describe a
-larger payload will let us better know how strong a link is between many hotspots even if we are
+larger payload will let us better know how strong a link is between many Hotspots even if we are
 technically PoC'ing twice a day or so.
 
 # Stakeholders
@@ -87,7 +87,7 @@ could align with a reasonable percentage overhead (200% - 250%).
 
 # Deployment Impact
 
-- Deployment of this system will have a direct impact on current hotspot deployments, increasing
+- Deployment of this system will have a direct impact on current Hotspot deployments, increasing
   number of transmissions during PoC.
 
 # Success Metrics

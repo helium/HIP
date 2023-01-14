@@ -17,17 +17,17 @@ from one owner to another. This transaction can have an optional amount of HNT a
 # Motivation
 
 Although new RAK Hotspot Miners coming online and future efforts towards other gateways are
-underway, we can enable existing hotspot owners to redirect coverage resources to hosts who are
+underway, we can enable existing Hotspot owners to redirect coverage resources to hosts who are
 willing to provide coverage in underutilized areas.
 
-Over 7000 hotspots (at the time of writing) have come online since launching the Helium network.
+Over 7000 Hotspots (at the time of writing) have come online since launching the Helium network.
 They have been placed in over 1500 cities. Some cities like Modesto, Brooklyn, New York, and San
-Francisco have over 250 hotspots deployed over a relatively small area. Other notable cities like
-New Orleans or Knoxville, TN are significantly under covered by existing hotspots.
+Francisco have over 250 Hotspots deployed over a relatively small area. Other notable cities like
+New Orleans or Knoxville, TN are significantly under covered by existing Hotspots.
 
 # Stakeholders
 
-- Any Helium hotspot owner who has deployed at least one hotspot.
+- Any Helium Hotspot owner who has deployed at least one Hotspot.
 - The Helium blockchain engineering team.
 
 # Detailed Explanation
@@ -46,8 +46,8 @@ gateway's owner in the ledger.
 4. If the receiving account contains sufficient HNT balance as requested by the current owner and
    contains enough HNT to burn into DCs for the transaction, the transaction is accepted and the
    gateway's owner is updated in the ledger.
-5. The hotspot no longer appears in the sender's hotspot list and now appears in the recipient's
-   hotspot list.
+5. The Hotspot no longer appears in the sender's Hotspot list and now appears in the recipient's
+   Hotspot list.
 
 ## Implement the transaction in the helium-wallet client
 
@@ -86,11 +86,11 @@ to pay an amount of HNT as requested by the sender.
 
 # Deployment Impact
 
-We expect that some Helium hotspots will be transfered to new owners and perhaps may move locations
+We expect that some Helium Hotspots will be transfered to new owners and perhaps may move locations
 to provide more favorable coverage.
 
 # Success Metrics
 
 The Helium blockchain team will not be explicitly tracking success metrics for this transaction type
-addition but we expect that coverage will be improved in underserved areas as hotspots become
+addition but we expect that coverage will be improved in underserved areas as Hotspots become
 transferrable.

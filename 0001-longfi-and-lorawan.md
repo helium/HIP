@@ -69,10 +69,10 @@ OUI route from the blockchain records.
 
 DevEUI currently plays no role in LongFi, but remains important for LoRaWAN functions.
 
-Assuming the OUI is registered in the blockchain appropriately, hotspots will route the JoinRequest
+Assuming the OUI is registered in the blockchain appropriately, Hotspots will route the JoinRequest
 packet to the appropriate Router. The Router will use the Message Integrity Check (MIC) to
 authenticate the JoinRequest and, if successful, an unencrypted JoinAccept message will be
-communicated down to the hotspot which transmits to the device, providing a NetId, DevAddr, and
+communicated down to the Hotspot which transmits to the device, providing a NetId, DevAddr, and
 AppNonce.
 
 ```
@@ -89,7 +89,7 @@ same NwkSKey and AppSKey (LoRaWAN Specification 6.2.5). Henceforth, payloads are
 NwkSkey and AppSkey (LoRaWAN Specification 4.3.3).
 
 The DevAddr is used by LongFi to indicate the OUI and this is part of the Frame Header Structure
-(FHDR) of all messages after the successful Join; this enables hotspots to continue forwarding
+(FHDR) of all messages after the successful Join; this enables Hotspots to continue forwarding
 packets to the appropriate Router.
 
 The Router/NetworkServer derives the DeviceId by bruteforcing the MIC against its list of active

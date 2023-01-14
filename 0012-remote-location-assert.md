@@ -6,30 +6,30 @@
 
 # Summary
 
-Hotspot owners, especially Patrons, have a frequent need to update hotspots' asserted locations when
-changing their physical locations. This can currently only be done when the hotspot owner has
-physical access to the hotspot.
+Hotspot owners, especially Patrons, have a frequent need to update Hotspots' asserted locations when
+changing their physical locations. This can currently only be done when the Hotspot owner has
+physical access to the Hotspot.
 
-This HIP proposes a new transaction, `assert_location_v2`, which will allow a hotspot's location to
-be asserted remotely without physical access to the hotspot.
+This HIP proposes a new transaction, `assert_location_v2`, which will allow a Hotspot's location to
+be asserted remotely without physical access to the Hotspot.
 
 # Motivation
 
 Asserting a new location with the `assert_location_v1` currently requires a signature from the
-hotspot, which requires physical access (Bluetooth connection) to obtain.
+Hotspot, which requires physical access (Bluetooth connection) to obtain.
 
-This poses a massive operational headache for owners and Patrons who have deployed hotspots at
+This poses a massive operational headache for owners and Patrons who have deployed Hotspots at
 remote locations, and leaves them with no options other than:
 
-- a) travel to the hotspot's current location
-- b) have the hotspot temporarily shipped back
-- c) share their private key with hotspot hosts to perform the assertion
+- a) travel to the Hotspot's current location
+- b) have the Hotspot temporarily shipped back
+- c) share their private key with Hotspot hosts to perform the assertion
 
 All of these options are costly and/or dangerous.
 
 # Stakeholders
 
-Any Helium hotspot owner who has deployed at least one remote hotspot.
+Any Helium Hotspot owner who has deployed at least one remote Hotspot.
 
 The Helium blockchain engineering team.
 
@@ -37,23 +37,23 @@ The Helium blockchain engineering team.
 
 ## Implement a new transaction, `assert_location_v2`, and optionally deprecate the previous `assert_location_v1`
 
-This new transaction would require the owner's private key, hotspot public key and h3 index of the
-new desired location. It would replace the hotspot's existing location, and charge the same assert
+This new transaction would require the owner's private key, Hotspot public key and h3 index of the
+new desired location. It would replace the Hotspot's existing location, and charge the same assert
 fee (in DC) as `assert_location_v1`.
 
-## Create a simple UI for asserting hotspot location in the Helium mobile app
+## Create a simple UI for asserting Hotspot location in the Helium mobile app
 
-This UI would be the same as the current pin-drop UI, centering the map on either the hotspot's
-current location, or the phone's current location if the hotspot has no location.
+This UI would be the same as the current pin-drop UI, centering the map on either the Hotspot's
+current location, or the phone's current location if the Hotspot has no location.
 
 It would need to be easy to find. It could be exposed as a new button next to the gear-icon button
 that is currently used to bring up the Bluetooth connection UI, or possibly as a separate section on
-the Bluetooth connection modal, where it's made clear that a direct connection to the hotspot isn't
+the Bluetooth connection modal, where it's made clear that a direct connection to the Hotspot isn't
 required to use this function.
 
-If the hotspot's current asserted location is far (>1km) from the user's current GPS location, they
-should be warned that they are changing the location for a remote hotspot and picking the wrong
-location could have an impact on that hotspot's earnings.
+If the Hotspot's current asserted location is far (>1km) from the user's current GPS location, they
+should be warned that they are changing the location for a remote Hotspot and picking the wrong
+location could have an impact on that Hotspot's earnings.
 
 # Drawbacks
 
@@ -62,7 +62,7 @@ of the codebase where the current `assert_location_v1` transaction is considered
 
 # Rationale and Alternatives
 
-This is a simple and straightforwad solution that will save hotspot owners time, effort and
+This is a simple and straightforwad solution that will save Hotspot owners time, effort and
 frustration.
 
 Not making this change could deter current and future owners from making remote deployments, which
@@ -72,13 +72,13 @@ It will generally reduce operational friction.
 
 # Deployment Impact
 
-It can be deployed in a routine hotspot update. It will also need support in the Helium mobile app
+It can be deployed in a routine Hotspot update. It will also need support in the Helium mobile app
 for the easiest and safest experience. However, if this requires too much bandwidth from the Helium
 team, it can be supported in the CLI as a temporary measure to at least make remote assertion
-possible. In this case, @rawrmaan could make a guide to help the less tech-savvy hotspot owners do
+possible. In this case, @rawrmaan could make a guide to help the less tech-savvy Hotspot owners do
 some remote assertions in a safe way.
 
 # Success Metrics
 
-- Number of hotspot locations asserted with `assert_location_v2`
+- Number of Hotspot locations asserted with `assert_location_v2`
 - Hotspot owner & Patron complaints in chat channels reducing to zero
