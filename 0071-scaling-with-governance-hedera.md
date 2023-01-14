@@ -85,7 +85,7 @@ As far as it is possible to determine (requests in the foundation channel in the
 
 # Proposed Architecture
 
-![Proposed Architecture](images/Proposed%20Architecture.jpg)
+![Proposed Architecture](0071-scaling-with-governance-hedera/Proposed%20Architecture.jpg)
 
 The above architecture shows the high-level overview of components of a new Helium ecosystem built on the Hedera network.
 

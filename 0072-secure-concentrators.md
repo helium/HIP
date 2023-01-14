@@ -34,7 +34,8 @@ The entire IoT Helium network will be affected by this HIP as the introduction o
  * Enable new level of Proof-of-Coverage verification (possibly using Time Difference of Arrival (TDOA)) 
 
 ### Hardware Architecture
-![image ](secure-concentrators/hardware_block.png)
+
+![image ](0072-secure-concentrators/hardware_block.png)
 The new hardware architecture for SCC is based on Semtech's LoRa Corecell Gateway reference design. The major change involves the addition of a Secure MCU (**SMCU**) placed in between the communication path of the Host CPU and the SX1303. The SMCU's primary job is to cryptographically sign RF data received over the air such that other nodes participating on the Helium network are able to verify the data is authentic and unaltered from it original form. It is important the SMCU has exclusive access SX1303's SPI bus to eliminate the possibility of spoofing incoming RF packets. The hardware design will consider several techniques to make it physically difficult to access the SMPU and SX130x including using buried traces, placing the components under a metal shield, and/or using potting material.
 
 ### Hardware Key
@@ -50,7 +51,7 @@ The GPS receiver is a required component. GPS provides geolocation and timestamp
 
 ### RF Data Signature
 
-![image ](secure-concentrators/rf_signing.png)
+![image ](0072-secure-concentrators/rf_signing.png)
 
 Semtech's open-source LoRa packet forwarder is traditionally the software that runs on the Host CPU and reads data from the SX130x hardware via SPI or USB. The packet forwarder produces output JSON formatted data when RF data is received. We propose modifying the packet forwarder software to include an additional key/value pair containing the RF data cryptographic signature.
 
