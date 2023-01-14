@@ -7,19 +7,24 @@
 - Status: Closed
 
 # Summary
+
 The goals of these changes are to:
 
 1. Break up the PoC message to improve the reliability of PoC transmissions.
 2. Improve the quality of information gained from PoC transmissions in the RF layer.
 
-The link layer is the method by which information is send from one source to another. It sits directly above the PHY layer and below the MAC layer. For a
-specific definition, please see the OSI model.
+The link layer is the method by which information is send from one source to another. It sits
+directly above the PHY layer and below the MAC layer. For a specific definition, please see the OSI
+model.
 
 # Motivation
-In our current implementation the link layer is extremely simple. We encode and transmit a single PoC payload with no redundancy or any additional
-correction applied. We have an issue right now that a PoC packet is not very resistant to noise or collision. Additionally, and more importantly,
-sending one packet with one signal reading infrequently (say twice a day) is not very descriptive. We are looking to better describe coverage quality,
-and a series of smaller packets to describe a larger payload will let us better know how strong a link is between many hotspots even if we are
+
+In our current implementation the link layer is extremely simple. We encode and transmit a single
+PoC payload with no redundancy or any additional correction applied. We have an issue right now that
+a PoC packet is not very resistant to noise or collision. Additionally, and more importantly,
+sending one packet with one signal reading infrequently (say twice a day) is not very descriptive.
+We are looking to better describe coverage quality, and a series of smaller packets to describe a
+larger payload will let us better know how strong a link is between many hotspots even if we are
 technically PoC'ing twice a day or so.
 
 # Stakeholders
@@ -35,37 +40,30 @@ technically PoC'ing twice a day or so.
 
 ### Modifications
 
-The PoC link layer should attempt to provide reliable transmissions of
-data without requiring high error correction overhead or the need for
-numerous packet re-transmissions or acknowledgments. To accomplish this,
-the first step in transmitting a message is creating fountain generator
-from the encrypted source payload. Next, the fountain generator produces
-small, fixed size packets, or "droplets", which are LDPC (low-density
-parity check) encoded. Combining the two methods provides block erasure
-and bit level error correction for transmissions in a noisy channel.
-Additionally, the entire message will be received without
-re-transmissions so long as the link remains active. A bit error rate
-and connection quality can be derived by the receiver through the
-decoding of each LDPC encoded droplet, and calculating the overhead of
-droplets needed to receive the message relative to the distribution used
-to generate droplets. If this is a standard distribution over the data,
-the mean would be 1.5 times the minimum payload size.
+The PoC link layer should attempt to provide reliable transmissions of data without requiring high
+error correction overhead or the need for numerous packet re-transmissions or acknowledgments. To
+accomplish this, the first step in transmitting a message is creating fountain generator from the
+encrypted source payload. Next, the fountain generator produces small, fixed size packets, or
+"droplets", which are LDPC (low-density parity check) encoded. Combining the two methods provides
+block erasure and bit level error correction for transmissions in a noisy channel. Additionally, the
+entire message will be received without re-transmissions so long as the link remains active. A bit
+error rate and connection quality can be derived by the receiver through the decoding of each LDPC
+encoded droplet, and calculating the overhead of droplets needed to receive the message relative to
+the distribution used to generate droplets. If this is a standard distribution over the data, the
+mean would be 1.5 times the minimum payload size.
 
-The general implementation of the LDPC-LT encoding an decoding method
-requires, known, shared LDPC encoding techniques, a sudo-random block
-creation technique based on a normal probability distribution, and a
-decoding buffer to attempt decoding payloads as the receive buffers are
-filled via Gaussian reduction.
+The general implementation of the LDPC-LT encoding an decoding method requires, known, shared LDPC
+encoding techniques, a sudo-random block creation technique based on a normal probability
+distribution, and a decoding buffer to attempt decoding payloads as the receive buffers are filled
+via Gaussian reduction.
 
 ![LT-LDPC Diagram](0021-poc-link-layer/ltldpc-diag.png)
 
-To begin, the Challengee braodcasts the PoC message stream and waits for
-a response from any gateways in range, expiring on a percentage of
-expected witnesses acknowledging recovery of the payload. The transmit
-sequence by a gateway involves it transmitting droplets continuously
-until it receives a single N/ACK from a gateway indicating the entire
-message was received correctly or not. An alternative to the N/ACK
-requirement could be to implement an expiry window. The expiry window
+To begin, the Challengee braodcasts the PoC message stream and waits for a response from any
+gateways in range, expiring on a percentage of expected witnesses acknowledging recovery of the
+payload. The transmit sequence by a gateway involves it transmitting droplets continuously until it
+receives a single N/ACK from a gateway indicating the entire message was received correctly or not.
+An alternative to the N/ACK requirement could be to implement an expiry window. The expiry window
 could align with a reasonable percentage overhead (200% - 250%).
 
 # Drawbacks
@@ -74,12 +72,14 @@ could align with a reasonable percentage overhead (200% - 250%).
 
 # Rationale and Alternatives
 
-- Implementing a noise resistant link layer is critical to succssful PoC transmissions in increasingly crowded or
-  lossy environments. We will additionally be capable of increasing the data rate and lowering time on air without
-  sacrificing sensitivity. The advantage of a builtin BER test gives us an accurate measure of link quality truely
-  descriptive of a connection between two discrete devices which we have no other method of determining with any
-  accuracy currently. RSSI and SNR alone for a single transmission sporadically over a day or days is far too low
-  frequency to establish quality of a link, and network adopters should rightly question/doubt any claim of assumed coverage.
+- Implementing a noise resistant link layer is critical to succssful PoC transmissions in
+  increasingly crowded or lossy environments. We will additionally be capable of increasing the data
+  rate and lowering time on air without sacrificing sensitivity. The advantage of a builtin BER test
+  gives us an accurate measure of link quality truely descriptive of a connection between two
+  discrete devices which we have no other method of determining with any accuracy currently. RSSI
+  and SNR alone for a single transmission sporadically over a day or days is far too low frequency
+  to establish quality of a link, and network adopters should rightly question/doubt any claim of
+  assumed coverage.
 
 # Unresolved Questions
 
@@ -87,7 +87,8 @@ could align with a reasonable percentage overhead (200% - 250%).
 
 # Deployment Impact
 
-- Deployment of this system will have a direct impact on current hotspot deployments, increasing number of transmissions during PoC.
+- Deployment of this system will have a direct impact on current hotspot deployments, increasing
+  number of transmissions during PoC.
 
 # Success Metrics
 
@@ -97,22 +98,22 @@ What metrics can be used to measure the success of this design?
 
 # Glossary
 
-1\. (LT) Fountain Code Fountain codes are rate-less erasure codes,
-encoding an undefined sequence of information into an unlimited number
-of encoded symbols which can be recovered from any subset of encoded
-symbols greater than or equal to the source information. The encoded
-symbol creation is based on a known distribution and random seed, which
-the receiver uses to iteratively decode collected samples.
+1\. (LT) Fountain Code Fountain codes are rate-less erasure codes, encoding an undefined sequence of
+information into an unlimited number of encoded symbols which can be recovered from any subset of
+encoded symbols greater than or equal to the source information. The encoded symbol creation is
+based on a known distribution and random seed, which the receiver uses to iteratively decode
+collected samples.
 
-2\. LDPC Coding Low density parity check coding is a linear error
-correcting code utilizing a (sparse) parity-check matrix, ideally
-constructed to be optimal for the data to be transmitted.
+2\. LDPC Coding Low density parity check coding is a linear error correcting code utilizing a
+(sparse) parity-check matrix, ideally constructed to be optimal for the data to be transmitted.
 
 # Implementation Results
 
-These are a series of test results from Random and Systematic fountain encoders/decoders using both MinSum and BitFlipping LDPC decoders. Subtract 100 from the overhead number to get the actual overhead
-sent over the air as the LDPC encoder implicitly doubles the size of the outgoing payload. There are verying degrees of loss, with Systematic encoders/decoders clearly outperforming any other option which
-is the expected behavior.
+These are a series of test results from Random and Systematic fountain encoders/decoders using both
+MinSum and BitFlipping LDPC decoders. Subtract 100 from the overhead number to get the actual
+overhead sent over the air as the LDPC encoder implicitly doubles the size of the outgoing payload.
+There are verying degrees of loss, with Systematic encoders/decoders clearly outperforming any other
+option which is the expected behavior.
 
 ```bash
 running 8 tests

@@ -11,19 +11,28 @@
 
 # Summary
 
-Large-scale IoT network operators are usually collecting analytics information from their gateways in order to check the status of their network and diagnose faults the moment they happen.
+Large-scale IoT network operators are usually collecting analytics information from their gateways
+in order to check the status of their network and diagnose faults the moment they happen.
 
-This is achieved by collecting RF meta-data from every packet received or transmitted and feeding it into an analysis stack for further processing.
+This is achieved by collecting RF meta-data from every packet received or transmitted and feeding it
+into an analysis stack for further processing.
 
-Since such task typically involves tapping into the packet stream, a Helium hotspot owoner might be reluctant to allow a third-party tool to tamper with the stream, for security considerations.
+Since such task typically involves tapping into the packet stream, a Helium hotspot owoner might be
+reluctant to allow a third-party tool to tamper with the stream, for security considerations.
 
-Therefore, we are proposing a mechanism that would enable the extraction of packet meta-data without disclosing critical information that could be used for malicious purposes.
+Therefore, we are proposing a mechanism that would enable the extraction of packet meta-data without
+disclosing critical information that could be used for malicious purposes.
 
 # Motivation
 
-Helium wants to deliver a fair, robust and secure solution to all of it's stakeholders. In order to achieve this, it requires full control over the components involved in order to minimize the chances of someone abusing the network.
+Helium wants to deliver a fair, robust and secure solution to all of it's stakeholders. In order to
+achieve this, it requires full control over the components involved in order to minimize the chances
+of someone abusing the network.
 
-This means that on an official helium gateway it's normally impossible to collect RF meta-data since it requires tampering with the most critical component: the packet forwarder. Therefore, we are proposing this HIP as the means for enabling RF meta-data collection without having to tamper with the internal components.
+This means that on an official helium gateway it's normally impossible to collect RF meta-data since
+it requires tampering with the most critical component: the packet forwarder. Therefore, we are
+proposing this HIP as the means for enabling RF meta-data collection without having to tamper with
+the internal components.
 
 # Stakeholders
 
@@ -36,9 +45,13 @@ This means that on an official helium gateway it's normally impossible to collec
 
 ## What are RF Meta-Data
 
-Every time a packet is received, the packet forwarder includes useful information regarding it's quality. You can read the complete list of fields returned for every packet sent and received on [Semtech's packet_forwarder website](https://github.com/Lora-net/packet_forwarder/blob/master/PROTOCOL.TXT) but a short summary is the following:
+Every time a packet is received, the packet forwarder includes useful information regarding it's
+quality. You can read the complete list of fields returned for every packet sent and received on
+[Semtech's packet_forwarder website](https://github.com/Lora-net/packet_forwarder/blob/master/PROTOCOL.TXT)
+but a short summary is the following:
 
-Every time a packet is received (or scheduled for transmission) the following information are transferred:
+Every time a packet is received (or scheduled for transmission) the following information are
+transferred:
 
 - RF Quality (RSSI/SNR)
 - RF Channel and Frequency
@@ -46,21 +59,30 @@ Every time a packet is received (or scheduled for transmission) the following in
 - GPS Timestamp (When the gateway is equipped with a GPS receiver)
 - The packet data payload
 
-In addition, the gateway is periodically pushing [summary statistics](https://github.com/Lora-net/packet_forwarder/blob/master/PROTOCOL.TXT#L206) that includes:
+In addition, the gateway is periodically pushing
+[summary statistics](https://github.com/Lora-net/packet_forwarder/blob/master/PROTOCOL.TXT#L206)
+that includes:
 
 - Number of packets sent/received
 - Number of packets rejected transmission or received with bad CRC
 - Percentage of upstream datagrams that were acknowledged
 
-All this information are obviously needed by the LoRaWAN core to function correctly, but they can also be proven helpful when you are trying to diagnose an issue in your network. For example: if you measure the average RSSI of the packets received over time and you see a degradation, then you might be having an issue with our antenna.
+All this information are obviously needed by the LoRaWAN core to function correctly, but they can
+also be proven helpful when you are trying to diagnose an issue in your network. For example: if you
+measure the average RSSI of the packets received over time and you see a degradation, then you might
+be having an issue with our antenna.
 
 ## Payload Considerations
 
-As you can already see, most of the information above are just meta-data and announcing them to a third-party component will have negligible security side-effects. However, the contents of the `data` payload might contain sensitive information that must not be shared.
+As you can already see, most of the information above are just meta-data and announcing them to a
+third-party component will have negligible security side-effects. However, the contents of the
+`data` payload might contain sensitive information that must not be shared.
 
-For example, consider a case where `data` holds a PoC payload: if this message gets shared with a third-party, it could be maliciously used to simulate more witnesses than in reality.
+For example, consider a case where `data` holds a PoC payload: if this message gets shared with a
+third-party, it could be maliciously used to simulate more witnesses than in reality.
 
-Therefore, we should consider the `data` payload _Unsafe_ and replace it with another representation that is safe, but still holds the valuable meta-data information needed. For example:
+Therefore, we should consider the `data` payload _Unsafe_ and replace it with another representation
+that is safe, but still holds the valuable meta-data information needed. For example:
 
 - Payload length in bytes
 - Payload checksum (eg. ADLER32)
@@ -69,12 +91,18 @@ Therefore, we should consider the `data` payload _Unsafe_ and replace it with an
 And the justification is the following:
 
 - The _Payload Length_ is enough for identifying cases where wrong spreading factors are used.
-- The _Payload Checksum_ is used to de-duplciate the same packet when received by multiple gateways in a short period of time. Note that it does not need to be cryptographically secure (eg. SHA sums) and simpler checksums, with smaller impact on the processing time could be used. The ADLER32 is suggested as a good trade-off between speed, memory usage and randomness of the result.
-- The LoRaWAN MAC header holds useful information to diagnose LoRaWAN issues and must be included intact into the meta-data. This header is found in the first 8 bytes of the payload and it does not hold any application-level information (eg. the contents of the PoC message).
+- The _Payload Checksum_ is used to de-duplciate the same packet when received by multiple gateways
+  in a short period of time. Note that it does not need to be cryptographically secure (eg. SHA
+  sums) and simpler checksums, with smaller impact on the processing time could be used. The ADLER32
+  is suggested as a good trade-off between speed, memory usage and randomness of the result.
+- The LoRaWAN MAC header holds useful information to diagnose LoRaWAN issues and must be included
+  intact into the meta-data. This header is found in the first 8 bytes of the payload and it does
+  not hold any application-level information (eg. the contents of the PoC message).
 
 ## Analytics Side-Channel Proposal
 
-We are proposing the introduction of an _Analytics Side-Channel_ that can be used by the stakeholders to consume analytics of the incoming messages in a secure and reliable manner.
+We are proposing the introduction of an _Analytics Side-Channel_ that can be used by the
+stakeholders to consume analytics of the incoming messages in a secure and reliable manner.
 
 ```
  +------------------+  Semtech UDP  +----------------+
@@ -95,24 +123,41 @@ The proposed solution should:
 
 Considering that:
 
-1. The Analytics Side-Channel should be implemented using a connection-less protocol such as UDP, since we don't care about reliability and back-pressure from the consumer must not affect the producer.
-2. The amount of processing power must be reduced to the minimum, therefore an ADLER32 checksum is recommended for the payload instead of the computational-intensive cryptographic hashes.
-3. The serialization overhead of the message should be kept to minimum, in which case Google Protobuf can be used. However, since interoperatiblity with existing solutions might be a concern, JSON is a valid trade-off.
-4. Since this is an opt-in feature, it should be enabled via an external flag (eg. using an environment variable).
-5. To further reduce the processing demand, the analytics data are NOT processed inside the hotspot client. Instead they are relayed to a third-party _Analytics Client_. This could be a simple proxy, or a more elaborate statistics aggregator. The implementation details are not important as part of this HIP.
-6. Since the analytics meta-data are stripped-off of any risky information, an analytics datagram could be sent outside of the gateway even without encryption. This allows us to consider that the _Analytics Client_ is either a local OR a remote process.
+1. The Analytics Side-Channel should be implemented using a connection-less protocol such as UDP,
+   since we don't care about reliability and back-pressure from the consumer must not affect the
+   producer.
+2. The amount of processing power must be reduced to the minimum, therefore an ADLER32 checksum is
+   recommended for the payload instead of the computational-intensive cryptographic hashes.
+3. The serialization overhead of the message should be kept to minimum, in which case Google
+   Protobuf can be used. However, since interoperatiblity with existing solutions might be a
+   concern, JSON is a valid trade-off.
+4. Since this is an opt-in feature, it should be enabled via an external flag (eg. using an
+   environment variable).
+5. To further reduce the processing demand, the analytics data are NOT processed inside the hotspot
+   client. Instead they are relayed to a third-party _Analytics Client_. This could be a simple
+   proxy, or a more elaborate statistics aggregator. The implementation details are not important as
+   part of this HIP.
+6. Since the analytics meta-data are stripped-off of any risky information, an analytics datagram
+   could be sent outside of the gateway even without encryption. This allows us to consider that the
+   _Analytics Client_ is either a local OR a remote process.
 
 ## Side-Channel Protocol Description
 
-The analytics side-channel emits 3 different kinds of messages. Each message is sent as a UDP datagram, encoded with the aggreed serialization format (JSON or Protobuf), and always have exactly one receipient.
+The analytics side-channel emits 3 different kinds of messages. Each message is sent as a UDP
+datagram, encoded with the aggreed serialization format (JSON or Protobuf), and always have exactly
+one receipient.
 
-The fields present in these messages are very similar to the fields defined in the [Semtech UDP Forwarder PROTOCOL.TXT](https://github.com/Lora-net/packet_forwarder/blob/master/PROTOCOL.TXT#L206), but they are adapted for faster consumption and for the security concerns explained above.
+The fields present in these messages are very similar to the fields defined in the
+[Semtech UDP Forwarder PROTOCOL.TXT](https://github.com/Lora-net/packet_forwarder/blob/master/PROTOCOL.TXT#L206),
+but they are adapted for faster consumption and for the security concerns explained above.
 
-Note that the compact naming of the fields can be used when encoding the analytics data with JSON, in order to keep the overall message size to minimum, and therefore fit in a single datagram.
+Note that the compact naming of the fields can be used when encoding the analytics data with JSON,
+in order to keep the overall message size to minimum, and therefore fit in a single datagram.
 
 ### 1. Uplink Messages
 
-An uplink message is sent every time a packet is received from the packet forwarder. It contains the following fields:
+An uplink message is sent every time a packet is received from the packet forwarder. It contains the
+following fields:
 
 <table>
   <thead>
@@ -249,7 +294,8 @@ An uplink message is sent every time a packet is received from the packet forwar
 
 ### 2. Downlink Messages
 
-An downlink message is sent every time the system has just pushed a downlink message to the packet forwarder. It contains the following fields:
+An downlink message is sent every time the system has just pushed a downlink message to the packet
+forwarder. It contains the following fields:
 
 <table>
   <thead>
@@ -386,7 +432,9 @@ An downlink message is sent every time the system has just pushed a downlink mes
 
 ### 3. Statistics Messages
 
-A statistics message is sent every time the respective `stat` message is received from the packet forwarder. This message is blindly forwarded without further processing and it has the following fields.
+A statistics message is sent every time the respective `stat` message is received from the packet
+forwarder. This message is blindly forwarded without further processing and it has the following
+fields.
 
 (Note that the statistic counters reset to zero every time a stat message is sent)
 
@@ -485,31 +533,42 @@ A statistics message is sent every time the respective `stat` message is receive
 
 ### 1. Example 1
 
-Alice has a DIY hostspot built using a packet forwarder and a light client. She is having reception issues with her devices and she wants to debug.
+Alice has a DIY hostspot built using a packet forwarder and a light client. She is having reception
+issues with her devices and she wants to debug.
 
-She has built her own log processing stack that runs on the cloud and she wants to feed the packet analytics down to it.
+She has built her own log processing stack that runs on the cloud and she wants to feed the packet
+analytics down to it.
 
-1. She then adjust the environment variables for `gateway-rs` and sets `HELIUM_ANALYTICS_CLIENT="my.cloud.service:12345`.
-4. Once the client restarts, she starts seeing data.
+1. She then adjust the environment variables for `gateway-rs` and sets
+   `HELIUM_ANALYTICS_CLIENT="my.cloud.service:12345`.
+2. Once the client restarts, she starts seeing data.
 
 ### 2. Example 2
 
-Bob, a professional LoRaWAN network operator, has deployed 1,000 Helium hotspots in an area and he wants to make sure his services are reliable. He is using production miners bought from one of the official suppliers.
+Bob, a professional LoRaWAN network operator, has deployed 1,000 Helium hotspots in an area and he
+wants to make sure his services are reliable. He is using production miners bought from one of the
+official suppliers.
 
-He is already using a centralized analytics aggregation system on his deployment that already consumes data in Semtech UDP format.
+He is already using a centralized analytics aggregation system on his deployment that already
+consumes data in Semtech UDP format.
 
-We are assuming that once this HIP has landed, the gateway manufacturer will enable a new option on their UI called `Helium Analyltics Client`.
+We are assuming that once this HIP has landed, the gateway manufacturer will enable a new option on
+their UI called `Helium Analyltics Client`.
 
-1. Bob simply goes to the UI configures the helium analytics client to point to the cloud infrastructure that he is already using.
-2. He will already receive 80% of the interesting data from day 0 and he will only have to do minor adjustments to the protocol in order to accommodate the new fields.
+1. Bob simply goes to the UI configures the helium analytics client to point to the cloud
+   infrastructure that he is already using.
+2. He will already receive 80% of the interesting data from day 0 and he will only have to do minor
+   adjustments to the protocol in order to accommodate the new fields.
 
 # Drawbacks
 
-- We are kind of duplicating the stream of incoming data, but at the same time we cannot really forward them without processing, because we are risking exposing critical information.
+- We are kind of duplicating the stream of incoming data, but at the same time we cannot really
+  forward them without processing, because we are risking exposing critical information.
 
 # Rationale and Alternatives
 
-The most obvious and straightforward way of solving this issue is by introducing a man-in-the-middle UDP forwarder between the packet forwarder and the Hotspot Client (Light or Full) as seen below:
+The most obvious and straightforward way of solving this issue is by introducing a man-in-the-middle
+UDP forwarder between the packet forwarder and the Hotspot Client (Light or Full) as seen below:
 
 ```
  +------------------+  Semtech UDP   +-----------------+  Semtech UDP   +----------------+
@@ -520,16 +579,23 @@ The most obvious and straightforward way of solving this issue is by introducing
                                      RF Meta-Data Stream
 ```
 
-This solution is trivial to integrate and requires no further modification to the Helium core components. **However** it requires that the Analytics Proxy is a trusted component and it does not disclose sensitive information to third parties.
+This solution is trivial to integrate and requires no further modification to the Helium core
+components. **However** it requires that the Analytics Proxy is a trusted component and it does not
+disclose sensitive information to third parties.
 
 # Unresolved Questions
 
-- We need to decide weather we go with JSON (and therefore creating a backwards-compatible interface, similar to the semtech UDP packet itself), or we go with Protobuf, and therefore breaking any existing solution.
-- Some discussion might be needed to further clean-up the fields in the analytics protocol. More specifically, if there is any smart alternative to encode the different fields for LORA or FSK encoding.
+- We need to decide weather we go with JSON (and therefore creating a backwards-compatible
+  interface, similar to the semtech UDP packet itself), or we go with Protobuf, and therefore
+  breaking any existing solution.
+- Some discussion might be needed to further clean-up the fields in the analytics protocol. More
+  specifically, if there is any smart alternative to encode the different fields for LORA or FSK
+  encoding.
 
 # 8. Deployment Impact
 
-We are not expecting any considerable impact on the deployment once this solution is applied. Both the processing power and the overall size footprint should be left relataively intact.
+We are not expecting any considerable impact on the deployment once this solution is applied. Both
+the processing power and the overall size footprint should be left relataively intact.
 
 Plus, this is an opt-in feature so it wan't affect the user experience by default.
 
