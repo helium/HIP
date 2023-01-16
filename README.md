@@ -80,7 +80,7 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | 65 | [Vendor HNT Lockup](https://github.com/helium/HIP/blob/main/0065-vendor-token-lockup.md) | [In Discussion](https://github.com/helium/HIP/issues/437) |
 | 66 | [Trust Score & Denylist Convenience](https://github.com/helium/HIP/blob/main/0066-trust-score-and-denylist-convenience.md) | [In Discussion](https://github.com/helium/HIP/issues/438) |
 | 67 | [Repeal Redenomination](https://github.com/helium/HIP/blob/main/0067-repeal-redenomination.md) | [Approved](https://github.com/helium/HIP/issues/456) |
-| 68 | [Open Service Subdao](https://github.com/helium/HIP/blob/main/0068-open-service-subdao.md) | [In Discussion](https://github.com/helium/HIP/issues/457) |
+| 68 | [Open Service Subdao](https://github.com/helium/HIP/blob/main/0068-open-service-subdao.md) | [Closed](https://github.com/helium/HIP/issues/457) |
 | 69 | [Re-assertion Fee Reduction](https://github.com/helium/HIP/blob/main/0069-reassertion-fee-reduction.md) | [In Discussion](https://github.com/helium/HIP/issues/458) |
 | 70 | [Scaling the Helium Network](https://github.com/helium/HIP/blob/main/0070-scaling-helium.md) | [Approved](https://github.com/helium/HIP/issues/471) |
 | 71 | [Scaling the Network with Governance & Hedera](https://github.com/helium/HIP/blob/main/0071-scaling-with-governance-hedera.md) | [Closed](https://github.com/helium/HIP/issues/480) |
