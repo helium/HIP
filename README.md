@@ -86,7 +86,7 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | 71 | [Scaling the Network with Governance & Hedera](https://github.com/helium/HIP/blob/main/0071-scaling-with-governance-hedera.md) | [Closed](https://github.com/helium/HIP/issues/480) |
 | 72 | [Secure Concentrators](https://github.com/helium/HIP/blob/main/0072-secure-concentrators.md) | [In Discussion](https://github.com/helium/HIP/issues/489) |
 | 73 | [Consensus Deselection Weighting](https://github.com/helium/HIP/blob/main/0073-consensus-deselection-history-weight.md) | [Deployed (audit/txn)](https://github.com/helium/HIP/issues/491) |
-| 74 | [Mobile PoC - Modeled Coverage Rewards](https://github.com/helium/HIP/blob/main/0074-mobile-poc-modeled-coverage-rewards.md) | [In Discussion](https://github.com/helium/HIP/issues/504) |
+| 74 | [Mobile PoC - Modeled Coverage Rewards](https://github.com/helium/HIP/blob/main/0074-mobile-poc-modeled-coverage-rewards.md) | [Approved](https://github.com/helium/HIP/issues/504) |
 
 ## Status key
 
