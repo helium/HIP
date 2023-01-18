@@ -87,6 +87,7 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | 72 | [Secure Concentrators](https://github.com/helium/HIP/blob/main/0072-secure-concentrators.md) | [In Discussion](https://github.com/helium/HIP/issues/489) |
 | 73 | [Consensus Deselection Weighting](https://github.com/helium/HIP/blob/main/0073-consensus-deselection-history-weight.md) | [Deployed (audit/txn)](https://github.com/helium/HIP/issues/491) |
 | 74 | [Mobile PoC - Modeled Coverage Rewards](https://github.com/helium/HIP/blob/main/0074-mobile-poc-modeled-coverage-rewards.md) | [Approved](https://github.com/helium/HIP/issues/504) |
+| 75 | [Initiate Programmatic PoC Emissions with an Updated Emissions Curve](https://github.com/helium/HIP/blob/main/0075-programmatic-poc-emissions-and-updated-emissions-curve.md) | [In Discussion](https://github.com/helium/HIP/issues/526) |
 
 ## Status key
 
