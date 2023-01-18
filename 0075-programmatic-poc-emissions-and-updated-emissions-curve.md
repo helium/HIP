@@ -14,7 +14,6 @@ Since the migration to Solana requires more time and the current balance of pre-
 
 This HIP proposes to un-tie programmatic treasury from Solana migration and launch a simplified version on the Helium Blockchain. Additionally, it suggests adjusting the emissions curve to accommodate changes in the timelines.
 
-
 # Motivation
 
 Moving to Solana, while instrumental to the long-term viability of the Helium network, requires careful planning, implementation, and coordination between various parties and is something that cannot be rushed. As of now, the timeline for the launch has shifted to the end of February, and remains an unconfirmed date. This shift in the migration timeline challenges the continuous rewarding of 5G Hotspot Owners. The current extension of the Genesis period, when the rewards come from the pre-mined pool of MOBILE tokens, ends on February 1st, 2023.
@@ -59,23 +58,20 @@ A more conservative emissions schedule would ensure that more MOBILE tokens are 
 | 6    | 215B                            | 8.25B         | 170B                            | 7.5B          |
 | 7    | 223.25B                         | 8.25B         | 177.5B                          | 7.5B          |
 
-* 50B pre-mine *
+* *50B pre-mine*
 
 The economic part of this HIP changes when MOBILE tokens come into existence, but it does not change the max supply of 250B MOBILE as specified in the HIP53.
 The updated emissions schedule will continue emitting roughly 3B MOBILE tokens per month to 5G Hotspot Owners until the next halving, effectively preserving the economic status quo for Hotspot Owners that was established during the Genesis period.
 
-
 # Drawbacks
 
 There are no obvious drawbacks related to the implementation of this HIP.
-
 
 # Unresolved Questions
 
 This HIP proposes an implementation of the programmatic treasury that is limited in functionality. It will only emit MOBILE tokens according to the emissions curve schedule.
 
 As specified in the HIP53, the fully featured programmatic treasury must maintain the HNT reserve and set a market-making curve. This functionality will be added after the Solana migration is complete.
-
 
 # Deployment Impact
 
@@ -84,7 +80,6 @@ Current 5G Hotspot Owners will not see the changes to the MOBILE rewarding. It w
 Once the HIP is approved, http://docs.helium.com will be updated with more technical details of how the programmatic treasury works and the new emissions curve.
 
 From the technical standpoint, this HIP can be undone, but it will require approval of the changes by the Community via another HIP.
-
 
 # Success Metrics
 
