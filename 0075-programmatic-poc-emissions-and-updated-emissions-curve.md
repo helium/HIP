@@ -3,8 +3,8 @@
 - Author(s): [@zer0tweets](https://github.com/zer0tweets), [@meowshka](https://github.com/meowshka)
 - Start Date: 2023-01-17
 - Category: Economic, Technical
-- Original HIP PR: [#525] (https://github.com/helium/HIP/pull/525)
-- Tracking Issue: [#526] (https://github.com/helium/HIP/issues/526)
+- Original HIP PR: [#525](https://github.com/helium/HIP/pull/525)
+- Tracking Issue: [#526](https://github.com/helium/HIP/issues/526)
 
 # Summary
 
