@@ -28,7 +28,7 @@ In the long run, this HIP affects all participants of the Mobile subDAO as it pr
 
 Immediately after implementation, this HIP affects 5G Hotspot Owners as it ensures the continuity of MOBILE rewards past depletion of the Genesis pool of pre-mind MOBILE tokens. There will be no changes to the amount of MOBILE rewards compared to the Genesis period and no changes to the timing of the rewards submission.
 
-Feedback from the Community will be mainly solicited through the Helium Community Slack channels.
+Feedback from the Community will be mainly solicited through the Helium Community Discord channels.
 
 # Detailed Explanation
 
@@ -38,7 +38,7 @@ This HIP proposes to launch a simplified programmatic treasury. The sole functio
 
 During the Genesis period, the MOBILE tokens were taken from the pre-minded MOBILE pool and distributed to the 5G Hotspot Owners based on the Mobile Oracle calculations. With the programmatic treasury, MOBILE tokens will be minted directly on the Blockchain with the new type of subnetwork transaction issued by Validators.
 
-The above-described change is already implemented in the Mainnet Validator beta build v1.17.0 and requires chain var activation. 
+The above-described change is already implemented in the Mainnet Validator beta build v1.17.0 and requires chain var activation.
 
 To sum up, the technical part of the HIP changes the mechanics of how the MOBILE tokens come into existence.
 
@@ -46,17 +46,17 @@ To sum up, the technical part of the HIP changes the mechanics of how the MOBILE
 
 A more conservative emissions schedule would ensure that more MOBILE tokens are available to compensate hotspot hosts and other network participants during the later stages of network development when the MOBILE POC algorithm is more mature.
 
-|      |       BEFORE: HIP 53 Emissions Schedule         |        AFTER: HIP XX Emissions Schedule         |
-| -----| ----------------------------------------------- | ----------------------------------------------- |
-| Year | MOBILE at the start of the year | MOBILE minted | MOBILE at the start of the year | MOBILE minted |
-| ---- | ------------------------------- | ------------- | ------------------------------- | ------------- |
-| 1    | 50B                             | 116B*         | 50B                             | 80B*          |
-| 2    | 116B                            | 33B           | 80B                             | 30B           |
-| 3    | 149.5B                          | 33B           | 110B                            | 30B           |
-| 4    | 182B                            | 16.5B         | 140B                            | 15B           |
-| 5    | 198.5B                          | 16.5B         | 155B                            | 15B           |
-| 6    | 215B                            | 8.25B         | 170B                            | 7.5B          |
-| 7    | 223.25B                         | 8.25B         | 177.5B                          | 7.5B          |
+|      | BEFORE: HIP 53 Emissions Schedule |               | AFTER: HIP XX Emissions Schedule |               |
+| ---- | ------------------------------------------------- | ------------------------------------------------ |
+| Year | MOBILE at the start of the year   | MOBILE minted | MOBILE at the start of the year  | MOBILE minted |
+| ---- | --------------------------------- | ------------- | -------------------------------- | ------------- |
+| 1    | 50B                               | 116B*         | 50B                              | 80B*          |
+| 2    | 116B                              | 33B           | 80B                              | 30B           |
+| 3    | 149.5B                            | 33B           | 110B                             | 30B           |
+| 4    | 182B                              | 16.5B         | 140B                             | 15B           |
+| 5    | 198.5B                            | 16.5B         | 155B                             | 15B           |
+| 6    | 215B                              | 8.25B         | 170B                             | 7.5B          |
+| 7    | 223.25B                           | 8.25B         | 177.5B                           | 7.5B          |
 
 * *50B pre-mine*
 
