@@ -10,7 +10,7 @@
 
 On November 11th, the Foundation announced the shifts in the timelines related to the Solana migration and the necessary extension of the Genesis period to accommodate the move without halting MOBILE rewarding of 5G Hotspot Owners.
 
-Since the migration to Solana requires more time and the current balance of pre-mind MOBILE tokens in the Treasury is approximately 1.5B, which will last only until February 1st, this HIP is urgent and necessary to prevent the MOBILE rewarding halt.
+Since the migration to Solana requires more time and the current balance of pre-mined MOBILE tokens in the Treasury is approximately 1.5B, which will last only until February 1st, this HIP is urgent and necessary to prevent the MOBILE rewarding halt.
 
 This HIP proposes to un-tie programmatic treasury from Solana migration and launch a simplified version on the Helium Blockchain. Additionally, it suggests adjusting the emissions curve to accommodate changes in the timelines.
 
@@ -20,15 +20,15 @@ Moving to Solana, while instrumental to the long-term viability of the Helium ne
 
 As a solution, this HIP proposes to un-gate the evolution of MOBILE PoC from Solana migration by initiating programmatic emissions of MOBILE tokens using Helium L1 blockchain starting February 1st, 2023.
 
-Furthermore, given the iterative approach for evolving the PoC adopted by HIP 74, it is evident that it may take a series of HIPs and a longer than initially expected period of time to ensure that the proof of coverage algorithm used by MOBILE subDAO is sufficiently smart and secure to drive useful coverage. As such, we propose to alter the programmatic emissions curve, initially approved in HIP 53, to make it less inflationary and allow more time for MOBILE POC to evolve.
+Furthermore, given the iterative approach for evolving the PoC adopted by HIP 74, it is evident that it may take a series of HIPs and a longer than initially expected period of time to ensure that the proof-of-coverage algorithm used by MOBILE subDAO is sufficiently smart and secure to drive useful coverage. As such, we propose to alter the programmatic emissions curve, initially approved in HIP 53, to make it less inflationary and allow more time for MOBILE PoC to evolve.
 
 # Stakeholders
 
 In the long run, this HIP affects all participants of the Mobile subDAO as it proposes changes to the emissions curve. This includes Subscribers, Mappers, Service Providers, Hotspot Vendors, 5G Hotspot Owners, and Oracles.
 
-Immediately after implementation, this HIP affects 5G Hotspot Owners as it ensures the continuity of MOBILE rewards past depletion of the Genesis pool of pre-mind MOBILE tokens. There will be no changes to the amount of MOBILE rewards compared to the Genesis period and no changes to the timing of the rewards submission.
+Immediately after implementation, this HIP affects 5G Hotspot Owners as it ensures the continuity of MOBILE rewards past the depletion of the Genesis pool of pre-mined MOBILE tokens. There will be no changes to the amount of MOBILE rewards compared to the Genesis period and no changes to the timing of the rewards submission.
 
-Feedback from the Community will be mainly solicited through the Helium Community Slack channels.
+Feedback from the Community will be mainly solicited through the Helium Community Discord channels.
 
 # Detailed Explanation
 
@@ -36,15 +36,15 @@ Feedback from the Community will be mainly solicited through the Helium Communit
 
 This HIP proposes to launch a simplified programmatic treasury. The sole function of this treasury will be to mint MOBILE tokens on the Helium Blockchain according to the emissions schedule proposed in this HIP.
 
-During the Genesis period, the MOBILE tokens were taken from the pre-minded MOBILE pool and distributed to the 5G Hotspot Owners based on the Mobile Oracle calculations. With the programmatic treasury, MOBILE tokens will be minted directly on the Blockchain with the new type of subnetwork transaction issued by Validators.
+During the Genesis period, the MOBILE tokens were taken from the pre-minded MOBILE pool and distributed to the 5G Hotspot Owners based on Mobile Oracle calculations. With the programmatic treasury, MOBILE tokens will be minted directly on the Helium L1 Blockchain with a new type of subnetwork transaction issued by Validators.
 
-The above-described change is already implemented in the Mainnet Validator beta build v1.17.0 and requires chain var activation. 
+The above-described change is already implemented in the Mainnet Validator beta build v1.17.0 and requires a chain variable activation. 
 
 To sum up, the technical part of the HIP changes the mechanics of how the MOBILE tokens come into existence.
 
 ## Economic: Changes to Emissions Curve
 
-A more conservative emissions schedule would ensure that more MOBILE tokens are available to compensate hotspot hosts and other network participants during the later stages of network development when the MOBILE POC algorithm is more mature.
+A more conservative emissions schedule would ensure that more MOBILE tokens are available to compensate 5G Hotspot hosts and other network participants during the later stages of network development when the MOBILE POC algorithm is more mature.
 
 |      |       BEFORE: HIP 53 Emissions Schedule         |        AFTER: HIP XX Emissions Schedule         |
 | -----| ----------------------------------------------- | ----------------------------------------------- |
