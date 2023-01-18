@@ -49,7 +49,7 @@ A more conservative emissions schedule would ensure that more MOBILE tokens are 
 |      | BEFORE: HIP 53 Emissions Schedule |               | AFTER: HIP XX Emissions Schedule |               |
 | ---- | ------------------------------------------------- | ------------------------------------------------ |
 | Year | MOBILE at the start of the year   | MOBILE minted | MOBILE at the start of the year  | MOBILE minted |
-| ---- | --------------------------------- | ------------- | -------------------------------- | ------------- |
+|      |                                   |               |                                  |               |
 | 1    | 50B                               | 116B*         | 50B                              | 80B*          |
 | 2    | 116B                              | 33B           | 80B                              | 30B           |
 | 3    | 149.5B                            | 33B           | 110B                             | 30B           |
