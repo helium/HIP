@@ -50,7 +50,7 @@ A more conservative emissions schedule would ensure that more MOBILE tokens are 
   <tr>
     <th> </th>
     <th colspan="2">BEFORE: HIP 53 Emissions Schedule</th>
-    <th colspan="2">AFTER: HIP XX Emissions Schedule</th>
+    <th colspan="2">AFTER: HIP 75 Emissions Schedule</th>
   </tr>
   </tr>
     <td>Time</td>
