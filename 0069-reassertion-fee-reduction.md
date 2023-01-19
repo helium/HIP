@@ -19,7 +19,7 @@ Please note that it is likely the hotspots which are earning below average incom
 
 # Stakeholders
 
-In reality, since the amount of DC burned has an economic impact, this hip (indirectly) affects everyone. Directly, this hip affects everyone that is reasserting their hotspots. Additionally, since maker apps are used to assert locations, this HIP directly affects all owners of maker apps.
+In reality, since the amount of DC burned has an economic impact, this hip (indirectly) affects everyone. Directly, this hip affects everyone that is asserting their hotspots locations. 
 
 # Detailed Explanation
 
@@ -37,7 +37,10 @@ Please note that I specifically chose 500,000 DC and not less (say 10,000 DC), t
 
 If approved by community (HNT) vote, this HIP will reduce **all** assertion fees in half, for three months, beginning immediately upon the migration to Solana, and will revert back after three months. 
 
-No new (blockchain) code is required, since this may be accomplished via chain variables. However, maker apps will have to update their apps to request the lower (500,000 DC) amount (at the start of the 3 month period,) and they will need to update their apps to request the original (1,000,000 DC) amount at the end of the three month period. That being said, makers are in essence being paid to make these changes, since the end result is that their 1st location/onboarding assertion costs will be reduced by 50%. 
+No new (blockchain) code is required, since this may be accomplished via chain variables. (**No** vendor app work is necessary.)
+
+
+
 
 *Please note that this HIP does **not** impact 5G CBRS gateways & radios.*
 
