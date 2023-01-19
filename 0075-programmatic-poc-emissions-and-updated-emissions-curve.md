@@ -60,7 +60,7 @@ A more conservative emissions schedule would ensure that more MOBILE tokens are 
     <td>MOBILE minted</td>
   </tr>
     <td>1</td>
-    <td>116B</td>
+    <td>50B</td>
     <td>116B*</td>
     <td>50B</td>
     <td>80B*</td>
