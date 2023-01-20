@@ -1,4 +1,4 @@
-# HIP 75: Initiate Programmatic PoC Minting with an Updated Emissions Curve
+# HIP 75: MOBILE PoC - Initiate Programmatic Minting with an Updated Emissions Curve
 
 - Author(s): [@zer0tweets](https://github.com/zer0tweets), [@meowshka](https://github.com/meowshka)
 - Start Date: 2023-01-17
