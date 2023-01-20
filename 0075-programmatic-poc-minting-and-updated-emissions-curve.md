@@ -1,4 +1,4 @@
-# HIP 75: Initiate Programmatic PoC Emissions with an Updated Emissions Curve
+# HIP 75: Initiate Programmatic PoC Minting with an Updated Emissions Curve
 
 - Author(s): [@zer0tweets](https://github.com/zer0tweets), [@meowshka](https://github.com/meowshka)
 - Start Date: 2023-01-17
@@ -12,13 +12,13 @@ On November 11th, the Foundation announced the shifts in the timelines related t
 
 Since the migration to Solana requires more time and the current balance of pre-mined MOBILE tokens in the Treasury is approximately 1.5B, which will last only until February 1st, this HIP is urgent and necessary to prevent the MOBILE rewarding halt.
 
-This HIP proposes to un-tie programmatic treasury from Solana migration and launch a simplified version on the Helium Blockchain. Additionally, it suggests adjusting the emissions curve to accommodate changes in the timelines.
+This HIP proposes to un-tie programmatic minting from Solana migration and launch a simplified version on the Helium Blockchain. Additionally, it suggests adjusting the emissions curve to accommodate changes in the timelines.
 
 # Motivation
 
 Moving to Solana, while instrumental to the long-term viability of the Helium network, requires careful planning, implementation, and coordination between various parties and is something that cannot be rushed. As of now, the timeline for the launch has shifted to the end of February, and remains an unconfirmed date. This shift in the migration timeline challenges the continuous rewarding of 5G Hotspot Owners. The current extension of the Genesis period, when the rewards come from the pre-mined pool of MOBILE tokens, ends on February 1st, 2023.
 
-As a solution, this HIP proposes to un-gate the evolution of MOBILE PoC from Solana migration by initiating programmatic emissions of MOBILE tokens using Helium L1 blockchain starting February 1st, 2023.
+As a solution, this HIP proposes to un-gate the evolution of MOBILE PoC from Solana migration by initiating programmatic minting of MOBILE tokens using Helium L1 blockchain starting February 1st, 2023.
 
 Furthermore, given the iterative approach for evolving the PoC adopted by HIP 74, it is evident that it may take a series of HIPs and a longer than initially expected period of time to ensure that the proof-of-coverage algorithm used by MOBILE subDAO is sufficiently smart and secure to drive useful coverage. As such, we propose to alter the programmatic emissions curve, initially approved in HIP 53, to make it less inflationary and allow more time for MOBILE PoC to evolve.
 
