@@ -36,7 +36,7 @@ Feedback from the Community will be mainly solicited through the Helium Communit
 
 This HIP proposes to start programmatic emissions that will start minting MOBILE tokens according to the new emissions schedule proposed in this HIP.
 
-During the Genesis period, the MOBILE tokens were taken from the pre-minded MOBILE pool and distributed to the 5G Hotspot Owners based on Mobile Oracle calculations. With the programmatic minting, MOBILE tokens will be minted directly on the Helium L1 Blockchain with a new type of subnetwork transaction issued by Validators.
+During the Genesis period, the MOBILE tokens were taken from the pre-minded MOBILE pool and distributed to the 5G Hotspot Owners based on Mobile Oracle calculations. With the programmatic emissions, MOBILE tokens will be minted directly on the Helium L1 Blockchain with a new type of subnetwork transaction issued by Validators.
 
 The above-described change is already implemented in the Mainnet Validator beta build v1.17.0 and requires a chain variable activation.
 
@@ -122,7 +122,7 @@ There are no obvious drawbacks related to the implementation of this HIP.
 
 # Unresolved Questions
 
-This HIP proposes an implementation of the programmatic minting that will only emit MOBILE tokens according to the emissions curve schedule.
+This HIP proposes an implementation of the programmatic emissions that will only mint MOBILE tokens according to the emissions curve schedule.
 
 It does not propose the implementation of the fully-featured programmatic treasury as specified in HIP53 on the Helium Blockchain. Features like maintaining of the HNT reserve and a market-making curve will be implemented after migration to Solana is complete.
 
@@ -131,7 +131,7 @@ It does not propose the implementation of the fully-featured programmatic treasu
 
 Current 5G Hotspot Owners will not see the changes to the MOBILE rewarding. It will continue at the same rate and schedule as during the Genesis Phase.
 
-Once the HIP is approved, http://docs.helium.com will be updated with more technical details of how the programmatic minting works and the new emissions curve.
+Once the HIP is approved, http://docs.helium.com will be updated with more technical details of how the programmatic emissions works and the new emissions curve.
 
 From the technical standpoint, this HIP can be undone, but it will require approval of the changes by the Community via another HIP.
 
@@ -139,7 +139,7 @@ From the technical standpoint, this HIP can be undone, but it will require appro
 
 ## Technical: Programmatic Emissions
 
-The success of launching the programmatic minting on the Helium Blockchain would be uninterrupted MOBILE rewarding of 5G Hotspot Owners with active Radios.
+The success of launching the programmatic emissions on the Helium Blockchain would be uninterrupted MOBILE rewarding of 5G Hotspot Owners with active Radios.
 
 This is an easily measurable goal. 5G Hotspot Owners should notice no changes. The rewarding should happen at the same time, around 01:00 UTC, with the same amount of roughly 3B total MOBILE tokens per month for the whole Network.
 
