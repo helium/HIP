@@ -53,7 +53,7 @@ A more conservative emissions schedule would ensure that more MOBILE tokens are 
     <th colspan="2">AFTER: HIP 75 Emissions Schedule</th>
   </tr>
   </tr>
-    <td>Time</td>
+    <td>Year</td>
     <td>MOBILE at the start of the year</td>
     <td>MOBILE minted</td>
     <td>MOBILE at the start of the year</td>
@@ -108,7 +108,7 @@ A more conservative emissions schedule would ensure that more MOBILE tokens are 
     <td>7.5B</td>
   </tr>
 </table>
-* *50B pre-mine*
+<b>* 50B pre-mine</b>
 
 The economic part of this HIP changes when MOBILE tokens come into existence, but it does not change the max supply of 250B MOBILE as specified in the HIP53.
 The updated emissions schedule will continue emitting roughly 3B MOBILE tokens per month to 5G Hotspot Owners until the next halving, effectively preserving the economic status quo for Hotspot Owners that was established during the Genesis period.
