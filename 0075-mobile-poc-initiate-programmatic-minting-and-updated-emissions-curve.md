@@ -110,9 +110,16 @@ A more conservative emissions schedule would ensure that more MOBILE tokens are 
 </table>
 <b>* 50B pre-mine</b>
 
-The economic part of this HIP changes when MOBILE tokens come into existence, but it does not change the max supply of 250B MOBILE as specified in the HIP53.
-The updated emissions schedule will continue emitting roughly 3B MOBILE tokens per month to 5G Hotspot Owners until the next halving, effectively preserving the economic status quo for Hotspot Owners that was established during the Genesis period.
+Full emissions schedule of HIP53 and HIP75 can be downloaded [here](./0075-mobile-poc-programmatic-minting/mobile-emissions-schedule-HIP53-vs-HIP75.pdf)
 
+The economic part of this HIP changes when MOBILE tokens come into existence, and the max supply of 250B MOBILE that was specified in the HIP53. With new schedule the max supply of tokens will be 200B MOBILE.
+Below are charts to help visualize the proposed changes in minting schedule and the total supply of MOBILE tokens.
+
+![Figure 1. MOBILE Minted HIP53 vs HIP75.](./0075-mobile-poc-programmatic-minting/MOBILE-Minted-HIP53-vs-HIP75.png)
+
+![Figure 2. MOBILE Supply HIP53 vs HIP75.](./0075-mobile-poc-programmatic-minting/MOBILE-Supply-HIP53-vs-HIP75.png)
+
+The updated emissions schedule will continue emitting roughly 3B MOBILE tokens per month to 5G Hotspot Owners until the next halving, effectively preserving the economic status quo for Hotspot Owners that was established during the Genesis period.
 If this change is not implemented and we start emitting tokens based on the schedule proposed in HIP53, 5G Hotspot Owners will earn 6.6B MOBILE tokens per month beginning February 1st. The rewards will more than double compared to the Genesis period, but the PoC algorithm will stay the same. We think that rewards should reflect the maturity and evolution of the technical aspects of the Network, and adjusting the emissions curve is necessary to reflect the shifts in PoC timelines.
 
 
