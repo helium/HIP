@@ -1,6 +1,6 @@
 # HIP19: Approval Process For Third-Party Manufacturers
 
-- Author(s): @jamiew (jamiedubs), @georgica, @philltran, @cokes, [@sophie](https://github.com/Sophi)
+- Author(s): @jamiew (jamiedubs), @georgica, @philltran, @cokes, [@sophi](https://github.com/Sophi)
 - Start Date: 2020-11-14
 - Amended Date: 2021-02-16
 - Category: Meta
@@ -10,8 +10,7 @@
 
 ## Light Hotspots
 
-HNT staking using Validators will be discontinued in 2023 Q1 with the implementation of HIP 70 with
-a link to the docs.
+HNT staking using Validators will be discontinued in 2023 Q1 with the [implementation of HIP 70](https://docs.helium.com/mine-hnt/validators/validators-and-voting-power/#how-will-staking-rewards-change).
 
 ## Motivation
 
@@ -31,7 +30,7 @@ other HIPs.
 
 The Helium Foundation is currently the only party that can issue the keys required to onboard a new
 Hotspot to the blockchain. Approval of new manufacturers is by the Manufacturing Compliance
-Committee, who meets regularly to discuss manufacturers, blockchain security, and growth of the
+Committee (MCC), who meets regularly to discuss manufacturers, blockchain security, and growth of the
 Helium Network.
 
 Importantly, this proposal does not contemplate granting direct key issuance authority to any
@@ -44,27 +43,25 @@ Almost everyone involved in the Helium ecosystem, but especially:
 
 - Prospective third-party Hotspot manufacturers.
 - Existing third-party manufacturers.
-- Prospective Hotspot owners, who might have been deterred by cost, features or lack of
-  availability.
+- Prospective Hotspot owners
 - Current Hotspot owners, whose earnings will be further diluted as the Helium Network grows.
 - Network end-users, who desire broader coverage.
 
 ## Detailed Explanation
 
-This document attempts to outline:
-
+This document outlines:
 - Requirements and process for applications by third-party manufacturers.
-- A rough process for the Helium Foundation to issue onboarding codes to those manufacturers.
+- A process for the Helium Foundation to issue onboarding codes to those manufacturers.
 - Expectations for software maintenance and customer support from those manufacturers.
-- For an initial launch, we propose favoring:
+
+We propose favoring:
 - Known community members with demonstrated experience in hardware design and manufacturing.
 - Large production batch sizes (10s of thousands of Hotspots), rather than prototypes or smaller
   production runs.
 - Hardware designs that emphasize security and reliability rather than novel designs with more
   unknowns.
 
-Since this is a brand-new initiative and there is potential for abuse or failure to deliver, we seek
-to minimize risk.
+Since there is potential for abuse or failure to deliver, we seek to minimize risk.
 
 ## Application Requirements
 
@@ -77,8 +74,8 @@ Prospective manufacturers would be expected to provide:
 - Proof of reliable software configuration for the devices. This would include remote updates and
   the ability for hosts to change wifi settings, via manufacturer official apps or otherwise.
 - A list of other potential risks and issues.
-- Additionally, we want devices approved under this proposal to be reasonably secure and resistant
-  to tampering. We propose that applicants are required to include:
+
+Devices approved under this proposal must be reasonably secure and resistantto tampering. We propose that applicants are required to include:
 - Encrypted/locked-down firmware.
 - Encrypted storage of the miner swarm_key, either via disk encryption or hardware measures like an
   ECC chip.
@@ -97,13 +94,13 @@ on behalf of the entire network, such as:
 
 Applicants wishing to manufacture Light Hotspots with packet forwarding capability-only (often
 called Data-Only Hotspots) will not need to fulfill the secured chip requirement. Light Hotspots
-participating in PoC, Witnessing, and Challenging will be subject to the ECC chip requirement.
+participating in PoC, Witnessing, and Challenging will be subject to the ECC608 chip or other security implementation requirement.
 
 Lastly, manufacturers are expected to provide:
 
 - Proof of identity for individuals owning 25% or more of the manufacturer, per typical KYC/AML
   procedure. This could be provided privately to trusted parties like the Helium Foundation
-  employees or DeWi board members and publicly confirmed.
+  employees or Helium Foundation board members and publicly confirmed.
 - A production budget, to further demonstrate progress and expertise with manufacturing.
 - Proof of the capital necessary to fund that budget. Ideally we would not be approving vendors who
   are solely reliant on presales or crowdfunding, to help account for delays, production issues,
@@ -229,7 +226,7 @@ It is unreasonable to expect the Helium Foundation to maintain software for othe
 Hotspots in perpetuity. If possible, we suggest the Helium Foundation open-source as much of the
 software around this process as possible, so future manufacturers don’t need to reinvent the wheel.
 
-As of February 2022, manufacturers are expected to have their own mobile or web app as the primary
+As of February 2022, manufacturers must have their own mobile or web app as the primary
 interface for onboarding a new Hotspot. Helium released an example app
 [as open source](https://github.com/helium/hotspot-app) which can be updated or forked by a third
 party manufacturer.
@@ -261,7 +258,7 @@ the Helium Foundation and attested publicly, via the HIP document, GitHub commen
 3. FCC/CE or other application radio certification
 4. Hardware audit
 5. Onboarding integration
-6. Manufacturing Oversight Committee approval
+6. Manufacturing Compliance Committee approval
 7. Pre-orders
 
 _note: items 3-4 can occur simultaneously_
