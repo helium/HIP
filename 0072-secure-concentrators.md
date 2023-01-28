@@ -9,6 +9,10 @@
 ## Summary
 In this HIP, we propose a new type of IoT network actor: the Secure Concentrator Card (SCC). Secure Concentrator Card is similar to standard LoRaWAN concentrator cards, but with additional Secure Microcontroller Unit (SMCU) and onboard GPS receiver. The SMCU digitally signs LoRa data packets as they are received from the radio. In this way, packet data and its corresponding metadata (RSSI, Frequency, GPS location and time) can be verified to be authentic.
 
+
+ * Secure Concentrators are *optional.* There is **no** requirement to upgrade or purchase new hardware. Helium Hotspots without Secure Concentrator will continue functioning as normal.
+ * Helium Hotspots with Secure Concentrators will earn **1.25x** rewards. (See *Proof Of Coverage Rewards* section)
+
 ## Motivation
 Today's Helium Hotspot have a large security flaw. Anyone can modify the software running on a hotspot and generate fake LoRa packets. This is a big problem because PoC rewards are based on these packets. The new Secure Concentrator Card solves this problem by digitally signing packets in hardware. Secure Concentrators make it *prohibitively* difficult to game the PoC system by also utilizing tamper-resistant design elements (routed traces, hard cured potting material, etc). The end result is a more secure Physical Root of Trust for the Helium IoT system and fair PoC earnings for all.
 
@@ -100,9 +104,7 @@ Helium Foundation will make publicly available the list of public keys purchased
 
 ## Reference Hardware Design
 
-![image ](secure-concentrators/nlighten_concentrator.jpg)
-
-NLighten Systems has developed Open-Source hardware and firmware Secure Concentrator reference design. 
+NLighten Systems has developed Open-Source hardware and firmware Secure Concentrator reference design. The design files can be found here: https://gitlab.com/nlighten-systems/kompressor/
 
 ## Drawbacks
 
