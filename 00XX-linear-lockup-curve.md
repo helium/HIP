@@ -1,4 +1,4 @@
-# HIP Draft: Simplify Lockup and veTokens
+# HIP 76: Simplify Lockup and veTokens
 
 - Author(s): @ferebee
 - Start Date: 2023-01-23
@@ -8,17 +8,17 @@
 
 # Summary
 
-HIP-51 specifies that holders of HNT may lock their HNT for a period of up to 48 months in order to receive veHNT (vote-escrowed HNT). veHNT conveys voting power in the Helium DAO, and may be delegated to a subDAO to receive a share of subDAO token emissions. The combination of HNT locked for a particular duration, combined with the assigned veHNT, is called a “position”. One wallet may contain multiple positions.
+HIP-51 specifies that holders of HNT may lock their HNT for up to 48 months to receive veHNT (vote-escrowed HNT). veHNT conveys voting power in the Helium DAO, and may be delegated to a subDAO. The combination of HNT locked for a duration, combined with the assigned veHNT, is called a position. One wallet may contain multiple positions.
 
-The amount of veHNT returned on lockup increases linearly per HIP-51 from 1x veHNT per HNT at the minimum lockup duration of 6 months, all the way to 100x veHNT per HNT at 48 months. However, when a locked HNT position enters cooldown, the associated veHNT follows a different curve and instead declines linearly to zero over the entire period. These asymmetric lockup and cooldown functions have unintuitive consequences.
+The amount of veHNT returned on lockup increases linearly per HIP-51 from 1x veHNT per HNT at the minimum lockup duration of 6 months, all the way to 100x veHNT per HNT at 48 months. However, when a locked HNT position enters cooldown, the associated veHNT follows a different curve and instead declines linearly to zero over the entire period. These asymmetric lockup and cooldown functions have unintuitive consequences. Therefore, this HIP proposes simplifying the lockup curve, eliminating a minimum lockup period, and allowing veHNT to be transferrable. 
 
 **1. Simplify lockup**
 
-We propose to simplify the lockup function by specifying a linear relation between the lockup period and the associated veHNT multiplier, assigning 0x veHNT at 0 months and 100x veHNT at 48 months, valid equally at lockup and cooldown. This would eliminate the special-case provision for a 6-month duration with 1x veHNT and accordingly increase the veHNT multiplier for short lockup durations in general.
+We propose simplifying the lockup function by specifying a linear relation between the lockup period and the associated veHNT multiplier, assigning 0x veHNT at 0 months and 100x veHNT at 48 months, valid equally at lockup and cooldown. This would eliminate the special-case provision for a 6-month duration with 1x veHNT and increase the veHNT multiplier for short lockup durations.
 
 **2. Eliminate minimum period**
 
-We propose to eliminate the 6-month minimum lockup period, allowing participants to lock for any desired period up to the maximum, including shorter periods with an accordingly smaller associated amount of veHNT.
+We propose eliminating the 6-month minimum lockup period, allowing participants to lock for any desired period up to the maximum, including shorter periods with an accordingly smaller associated amount of veHNT.
 
 **3. Make veHNT transferable**
 
@@ -26,7 +26,7 @@ While HIP-51 specifies that veHNT be “fully non-transferable” and bound to t
 
 **4. Specify 3x landrush rules**
 
-Finally, in accordance with the veHNT implementation as currently under development by Helium Foundation, we specify operation rules for the special-case 3x “landrush” multiplier introduced to veHNT by HIP-70.
+Finally, per the veHNT implementation as currently under development by Helium Foundation, we specify operation rules for the special-case 3x “landrush” multiplier introduced to veHNT by HIP-70.
 
 The mechanics described here in terms of HNT and veHNT will apply equally to veMOBILE and veIOT when they are introduced.
 
@@ -34,31 +34,33 @@ As HIPs 51–53 and HIP-70 do not specify a 3x landrush period for IOT and MOBIL
 
 # Motivation
 
-In order to encourage as many participants as possible to lock their HNT and participate in governance, the relationship between lockup period and resulting veHNT multiplier should be simple and easy to understand, and the more flexible and convenient the lockup procedure can be made, the more approachable it will become.
+The current model of veHNT lockup is misaligned with long-term incentives, presents security concerns if wallets become compromised, and is not attractive or well-understood by the average user. To encourage as many participants as possible to lock their HNT and participate in governance, the relationship between the lockup period and the resulting veHNT multiplier should be simple and easy to understand. The more flexible and convenient the lockup procedure can be made, the more approachable it will become.
 
-As the implementation of veHNT has progressed, additional operations not described in HIP-51 have become possible that encourage lockup, such as the ability to extend the lockup period of already locked HNT. In some cases, these operations expose counterintuitive properties of the lockup function specified by HIP-51. For example, it is possible to extend the lockup period of an HNT position and thereby reduce the associated veHNT multiplier.
+As the implementation of veHNT has progressed, additional operations not described in HIP-51 have become possible that encourage lockup, such as the ability to extend the lockup period of already locked HNT. In some cases, these operations expose counterintuitive properties of the lockup function specified by HIP-51. For example, extending the lockup period of an HNT position is possible, thereby reducing the associated veHNT multiplier.
 
-Changing the lockup curve to a simple linear function, which is easier to understand, also removes these counterintuitive edge cases. In addition, implementation becomes significantly simpler and therefore possibly quicker and safer.
+Therefore, changing the lockup curve to a simple linear function, which is easier to understand, also removes these counterintuitive edge cases. Implementation becomes significantly simpler, quicker, and safer for average users.
 
-The provision in HIP-51 of a 1x veHNT multiplier for a 6-month lockup was intended to encourage participants to lock HNT for longer durations. However, considering that locking 1 HNT for 48 months returns 100 veHNT, while locking 100 HNT for 6 months also returns 100 veHNT, the 6-month lockup is entirely unattractive. Instead of locking 100 HNT for 6 months, it would almost always be more attractive to lock 1 HNT for 48 months and keep 99 HNT completely unlocked.
+The provision in HIP-51 of a 1x veHNT multiplier for a 6-month lockup was intended to encourage participants to lock HNT for longer durations. However, since locking 1 HNT for 48 months returns 100 veHNT, while locking 100 HNT for 6-months also returns 100 veHNT, the 6-month lockup could be more attractive, and incentives need to be aligned. Instead of locking 100 HNT for 6-months, it would be more attractive to lock 1 HNT for 48 months and keep 99 HNT completely unlocked.
 
-Therefore, we believe the linear lockup function will actually encourage greater total lockup.
+Therefore, the linear lockup function proposed in this HIP will encourage greater total lockup. 
 
-The 6-month minimum lockup period was intended to prevent holders of large HNT wallets from dominating governance by locking their HNT for short periods. However, even with the linear lockup function, a 1-month lockup receives just over 2% the veHNT multiplier of a 48-month lockup, and a 1-day lockup receives less than 0.1% the veHNT multiplier of a 48-month lockup.
+For background, the 6-month minimum lockup period was intended to prevent holders of large HNT wallets from dominating governance by locking their HNT for short periods. However, even with the linear lockup function, a 1-month lockup receives just over 2% the veHNT multiplier of a 48-month lockup, and a 1-day lockup receives less than 0.1% the veHNT multiplier of a 48-month lockup.
 
-Therefore, we hold that both for simplicity, and to encourage maximum participation, the 6-month minimum should be dropped.
+Therefore, the 6-month minimum should be dropped for simplicity and to encourage maximum participation.
 
-HIP-51 specifies that veHNT should be “fully non-transferable”, meaning that the locked HNT position and the associated veHNT would be bound to the originating wallet.
+Furthermore, HIP-51 specifies that veHNT should be “fully non-transferable”, meaning that the locked HNT position and the associated veHNT would be bound to the originating wallet.
 
 An HNT position can be locked for 48 months, or longer if it does not enter cooldown. There is a significant chance that the originating wallet could be compromised during that time, such as through a security breach of the host system or through a security flaw in a wallet application. In such a case, the entire HNT/veHNT position could be lost if there is no way to transfer the position.
 
 Therefore, we propose that locked positions be made transferable. Other operations would still be disabled, such as payment transfers or HNT burn to DC.
 
-Finally, we make the rules governing 3x landrush positions explicit to document the behavior of the veHNT implementation that is being developed in accordance with HIP-70, which does not specify details.
+Finally, we make the rules governing 3x landrush positions explicit about documenting the behavior of the veHNT implementation that is being developed in accordance with HIP-70, which does not specify details.
+
+The motivations seek to achieve governance usability, long-term engagement and maintain individual wallet security. 
 
 # Stakeholders
 
-This proposal is relevant to all holders of HNT who intend to lock HNT to receive veHNT, and existing validator operators who have not completed cooldown at the Solana L1 transition. As we also propose to eliminate the minimum 6 month lockup period, it is relevant to HNT holders who may previously have not considered locking their HNT due to the 6 month minimum lockup period specified in HIP-51.
+This proposal is relevant to all holders of HNT who intend to lock HNT to receive veHNT, and existing validator operators who still need to complete cooldown at the Solana L1 transition. As we also propose to eliminate the minimum 6-month lockup period, it is relevant to HNT holders who may not have considered locking their HNT due to the 6-month minimum lockup period specified in HIP-51.
 
 # Detailed Explanation
 
@@ -132,11 +134,11 @@ At the end of the duration of the 3x landrush multiplier, as determined at the e
 
 # Consequences
 
-As the requirement for a 6-month minimum lockup duration is removed in this HIP, this change to veHNT allocation will make veHNT accessible to all participants willing to lock HNT for any duration, with no 6 month minimum.
-
-It will simplify implementation, as the existing code from Solana voter stake registry projects, such as Curve/veCRV, will become directly applicable to the veHNT lockup function.
+As the requirement for a 6-month minimum lockup duration is removed by this HIP, the change to veHNT allocation will make veHNT accessible to all participants willing to lock HNT for any duration, with no 6 month minimum.
 
 It will continue to make long-term lockup attractive, as the highest allocation of veHNT will still be reserved for the longest 48-month lockup duration.
+
+It will simplify implementation for Helium Core Devs with respect to smart contract development on Solana and Realms.
 
 With respect to veHNT positions being represented as non fungible tokens, it will greatly improve the UX around positions. Positions will be visible in any Solana wallet, and able to be transferred out in the case of a compromise. Delegation to subDAOs becomes semantically easier, as users can easily manage multiple positions, delegating them to different subDAOs. 
 
@@ -150,9 +152,9 @@ Similarly, removing the minimum requirement of a 6-month lockup duration could e
 
 Again, we believe that the linear veHNT allocation function provides sufficient incentives such that most participants will favor longer durations.
 
-Permitting the transfer of veHNT positions between wallets potentially allows owners of locked HNT to sell their positions, reducing the effectiveness of token lock. This is conceptually similar to the way current validator operators can sell their validator stake.
+Permitting the transfer of veHNT positions between wallets potentially allows owners of locked HNT to sell their positions, reducing the effectiveness of token lock. This is conceptually similar to the way current validator operators can sell their validator stake. NFT tokens may also open the project to securities law. The extent of this is unclear but should be considered in discussion.
 
-We believe that the restrictions on locked positions, which disallow payment transfers and HNT burn, sufficiently restrict the liquidity of locked positions. Even if locked positions were bound to the originating wallets, their lock could in principle be circumvented by smart contracts similar to liquid staking smart contracts. Therefore, we believe the benefits to security and user experience of allowing transfers outweigh the potential drawbacks.
+The restrictions on locked positions, which disallow payment transfers and HNT burn, sufficiently restrict the liquidity of locked positions. Even if locked positions were bound to the originating wallets, their lock could be circumvented by smart contracts similar to liquid staking smart contracts. Therefore, the benefits to the security and user experience of allowing transfers outweigh the potential drawbacks.
 
 # Deployment Impact
 
@@ -162,4 +164,4 @@ The 6-month minimum lockup period for legacy validator stakes that have not comp
 
 Other participants will be able to lock HNT for any period without a 6-month minimum. The veHNT multipliers for short lock durations will be significantly higher than those specified by HIP-51.
 
-The landrush 3x multiplier remains available as originally specified in HIP-70.
+The landrush 3x multiplier remains available as specified initially in HIP-70.
