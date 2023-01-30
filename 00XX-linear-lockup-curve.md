@@ -10,7 +10,7 @@
 
 HIP-51 specifies that holders of HNT may lock their HNT for up to 48 months to receive veHNT (vote-escrowed HNT). veHNT conveys voting power in the Helium DAO, and may be delegated to a subDAO. The combination of HNT locked for a duration, combined with the assigned veHNT, is called a position. One wallet may contain multiple positions.
 
-The amount of veHNT returned on lockup increases linearly per HIP-51 from 1x veHNT per HNT at the minimum lockup duration of 6 months, all the way to 100x veHNT per HNT at 48 months. However, when a locked HNT position enters cooldown, the associated veHNT follows a different curve and instead declines linearly to zero over the entire period. These asymmetric lockup and cooldown functions have unintuitive consequences. Therefore, this HIP proposes simplifying the lockup curve, eliminating a minimum lockup period, and allowing veHNT to be transferrable. 
+The amount of veHNT returned on lockup increases linearly per HIP-51 from 1x veHNT per HNT at the minimum lockup duration of 6 months, all the way to 100x veHNT per HNT at 48 months. However, when a locked HNT position enters cooldown, the associated veHNT follows a different curve and instead declines linearly to zero over the entire period. These asymmetric lockup and cooldown functions have unintuitive consequences. Therefore, this HIP proposes simplifying the lockup curve, eliminating a minimum lockup period, and allowing veHNT to be transferable. 
 
 **1. Simplify lockup**
 
