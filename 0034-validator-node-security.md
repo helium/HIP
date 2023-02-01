@@ -1,4 +1,4 @@
-# HIP 34: Validator Node Security Implementation(s)
+# HIP-34: Validator Node Security Implementation(s)
 
 - Author(s): [@BFX](http://github.com/Bx64/), [@cryptomaniac](https://github.com/cryptomaniac79/)
 - Start Date: 2021-06-01

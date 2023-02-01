@@ -1,4 +1,4 @@
-# HIP 29: Multi-signature Keys
+# HIP-29: Multi-signature Keys
 
 - Author(s): [@xandkar](http://github.com/xandkar), [@Vagabond](http://github.com/Vagabond), Helium
   Systems, Inc. team

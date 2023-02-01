@@ -1,4 +1,4 @@
-# HIP 74: MOBILE PoC - Modeled Coverage Rewards
+# HIP-74: MOBILE PoC - Modeled Coverage Rewards
 
 - Author(s): [@thehardbits](https://github.com/thehardbits),
   [@zer0tweets](https://github.com/zer0tweets),
@@ -320,7 +320,7 @@ evaluate the quality of MOBILE coverage and Radio deployments.
 HIP-74 affects only MOBILE SubDAO, particularly 5G Hotspot owners with Radios and users of the
 MOBILE Network. It does not impact the IoT Network or IoT Rewards.
 
-HIP 74 is the start of programmatic emissions. This will update a new chain variable that mints
+HIP-74 is the start of programmatic emissions. This will update a new chain variable that mints
 rather than draws from the premine.
 
 ## Impact on Rewards

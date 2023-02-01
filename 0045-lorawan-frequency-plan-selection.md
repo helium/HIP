@@ -1,4 +1,4 @@
-# HIP 45: LoRaWAN Frequency Plan Selection
+# HIP-45: LoRaWAN Frequency Plan Selection
 
 - Author(s): [@lthiery](https://github.com/lthiery),
   [@ivandigiusto](https://github.com/ivandigiusto)

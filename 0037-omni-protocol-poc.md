@@ -1,4 +1,4 @@
-# HIP 37: Omni-Protocol PoC on Helium Network
+# HIP-37: Omni-Protocol PoC on Helium Network
 
 - Authors: @zer0tweets (FreedomFi), @JMF, @hashc0de
 - Start Date: August 28th, 2021
@@ -10,18 +10,18 @@
 
 ## Summary
 
-This document is an follow-up to HIP 27, tackling economic incentives to implement proof-of-coverage
+This document is an follow-up to HIP-27, tackling economic incentives to implement proof-of-coverage
 (PoC) for cellular and Wi-Fi data and recommending a technical implementation that includes adding a
 new device type to the Helium network.
 
 ## Background
 
-[HIP 27 originally introduced](https://docs.google.com/document/d/1E_D-8mU8vdwSOLxrzeA4lTtLtisESBc52tBWhnQUL2I/edit)
+[HIP-27 originally introduced](https://docs.google.com/document/d/1E_D-8mU8vdwSOLxrzeA4lTtLtisESBc52tBWhnQUL2I/edit)
 a concept to allocate a portion of unrewarded Data Transfer rewards (up to 30% of the DC Bonus Pool)
 towards Proof-of-Coverage rewards for new wireless networks, such as 5G and Wi-Fi. The approach was
 presented and discussed at the DeWi Community Call and Discord. While the concept was generally well
 received, we failed short of coming up with a technical implementation that would be sufficiently
-difficult to arbitrage. As a result, we chose to truncate HIP 27 to focus on implementation of a
+difficult to arbitrage. As a result, we chose to truncate HIP-27 to focus on implementation of a
 chain variable for DC / cellular data conversion ratio and revisit economics and implementation of
 PoC for non-LoRaWan wireless network types to a future HIP.
 
@@ -233,7 +233,7 @@ flaws in the system and propose additional scenarios we may not have thought abo
 This exploit involves a malicious actor purchasing a miner (such as FreedomFi Gateway) and running a
 virtualized radio front end instead of buying and plugging in a real cellular radio.
 
-This exploit was possible in the original HIP 27 proposal where witness <> challengee interaction
+This exploit was possible in the original HIP-27 proposal where witness <> challengee interaction
 wasn’t performed over the air interface. Current proposed implementation moves the witness function
 into an eSIM app and closely mimics the over the air witnessing flow of the current LoRa network.
 This exploit is no longer possible with the current proposed design as the physical presence of the
@@ -324,9 +324,9 @@ goal of the malicious actor is to emulate a highly popular data offload location
 unfairly large PoC rewards, whereas in reality the entire setup is located in their basement.
 
 In the spirit of reusing the existing community know-how, we propose to apply witness reward scaling
-implemented as part of HIP 15 to address this. Granted we may want to adjust the number of witnesses
+implemented as part of HIP-15 to address this. Granted we may want to adjust the number of witnesses
 required to get max reward to a number higher than 4 and evolve that into a protocol-specific chain
-variable, we believe that the same concepts of managing witness oversaturation addressed by HIP 15
+variable, we believe that the same concepts of managing witness oversaturation addressed by HIP-15
 for LoRa apply for most other wireless protocols.
 
 ### Unlimited Plan Gaming

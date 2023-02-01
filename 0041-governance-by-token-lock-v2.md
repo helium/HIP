@@ -1,4 +1,4 @@
-# HIP 41: Governance by Token Lock V2
+# HIP-41: Governance by Token Lock V2
 
 - Authors: @tjain-mcc (tushar)
 - Start Date: November 1, 2021

@@ -1,4 +1,4 @@
-# HIP 66: Trust Score & Denylist Convenience
+# HIP-66: Trust Score & Denylist Convenience
 
 - Author(s): [@H-Baguette](https://github.com/h-baguette)
 - Start Date: 2022-06-10
@@ -22,7 +22,7 @@ as well as prove their own integrity, directly in-app.
 
 # Motivation
 
-Despite the different updates introduced to limit spoofing (Denylist, HIP 58, Crowdspot, ...),
+Despite the different updates introduced to limit spoofing (Denylist, HIP-58, Crowdspot, ...),
 spoofers are still thriving, as only a small portion of them end up on the denylist. This HIP aims
 to facilitate the addition of spoofing Hotspots to the denylist by giving users an easier way to
 find them, investigate them, and report them.
@@ -265,7 +265,7 @@ A witness can be invalid for two reasons :
 - The registered distance between the beacon and the witness is greater than 100km.
 - Its RSSI value is too high.
 
-Like it is mentioned in HIP 58, over 99.9% of witnesses are within the 100km limit. The only few
+Like it is mentioned in HIP-58, over 99.9% of witnesses are within the 100km limit. The only few
 exceptions are tower deployments and spoofers. While the former might lose some points on their
 Trust Score, they will without a doubt compensate with their many valid witnesses. Spoofers, on the
 other hand, will have a harder time to regain those points.

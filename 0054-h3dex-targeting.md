@@ -1,4 +1,4 @@
-# HIP 54: H3Dex-based PoC Targeting
+# HIP-54: H3Dex-based PoC Targeting
 
 - Author(s): [@Vagabond](https://github.com/Vagabond), [@vihu](https://github.com/vihu),
   [@abhay](https://github.com/abhay) (hashc0de), et al

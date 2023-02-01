@@ -1,4 +1,4 @@
-# HIP 23: Decouple Consensus From Gateways
+# HIP-23: Decouple Consensus From Gateways
 
 - Author(s): @cvolkernick
 - Start Date: 2020-12-15
@@ -199,12 +199,12 @@ to being underpowered and being elected to CG, it would follow that a successful
 cloud / distributed consensus would cause less of these problems to occur.
 
 It should also be considered that there are potential economic implications to this change, as well.
-HIP 16 implementing random consensus selection appears to be widely popular within the community due
+HIP-16 implementing random consensus selection appears to be widely popular within the community due
 to more equity of opportunity and more widely distributed rewards. Among these considerations are
 lone wolves, who rightfully have concerns about any changes that would result in them being at an
 inherent disadvantage. A successful implementation of these changes to consensus should ensure that
 these concerns are considered and that consensus group election considerations do not adversely
-effect the changes implemented successfully in HIP 16.
+effect the changes implemented successfully in HIP-16.
 
 Fundamentally, success should be tightly-coupled with roughly the same metrics that this HIP
 proposes validator pools are judged by. Some potential metrics to collect/report on:

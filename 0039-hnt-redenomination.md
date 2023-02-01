@@ -1,4 +1,4 @@
-# HIP 39: HNT Redenomination
+# HIP-39: HNT Redenomination
 
 - Author: @JMF
 - Start Date: September 14, 2021

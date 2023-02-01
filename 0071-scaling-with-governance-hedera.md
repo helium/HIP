@@ -1,4 +1,4 @@
-# HIP 71: Scaling the Network with Governance & Hedera
+# HIP-71: Scaling the Network with Governance & Hedera
 
 - Author(s): [@leogaggl](https://github.com/leogaggl),
   [@gregscullard](https://github.com/gregscullard), [@pathornteng](https://github.com/pathornteng),

@@ -1,4 +1,4 @@
-# HIP 25: Validators
+# HIP-25: Validators
 
 - Author(s): @evanmcc, Helium Team
 - Start Date: 2021-01-11

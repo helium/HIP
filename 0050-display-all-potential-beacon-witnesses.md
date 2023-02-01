@@ -1,4 +1,4 @@
-# HIP 50: Display All Potential Beacon Witnesses
+# HIP-50: Display All Potential Beacon Witnesses
 
 - Author(s): @captainhindsite
 - Start Date: 2021-12-09

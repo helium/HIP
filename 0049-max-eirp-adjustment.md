@@ -1,4 +1,4 @@
-# HIP 49: LoRaWAN Sub-region Max EIRP Limit
+# HIP-49: LoRaWAN Sub-region Max EIRP Limit
 
 - Author(s): [@beaky98](https://github.com/beaky98) [@resyncX](https://github.com/resyncX)
   [@AnhTuDo1998](https://github.com/AnhTuDo1998)

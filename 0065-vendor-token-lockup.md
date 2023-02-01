@@ -1,4 +1,4 @@
-# HIP 65: Vendor HNT Lockup
+# HIP-65: Vendor HNT Lockup
 
 - Category: Economic, Technical
 - Original PR: <https://github.com/helium/HIP/pull/428>

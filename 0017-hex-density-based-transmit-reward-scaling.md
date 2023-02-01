@@ -220,7 +220,7 @@ Hotspots with low transmit reward scaling can still be very high earners if they
 Hotspots with high transmit reward scaling. This will work best when implemented in conjunction with
 beaconing and a change in reward distribution that gives the bulk of challenge rewards to RF
 receivers (witnesses) not transmitters. There is a separate proposal for details of beaconing in
-[HIP 15](https://github.com/helium/HIP/blob/master/0015-beaconing-rewards.md).
+[HIP-15](https://github.com/helium/HIP/blob/master/0015-beaconing-rewards.md).
 
 So for each transmit, the transmitting Hotspot’s reward will be based on the number of witnesses and
 then scaled by its own transmit reward scale. For witnesses, they will receive a portion of reward
@@ -322,7 +322,7 @@ Some alternatives are:
 # Unresolved Questions
 
 Integrating this design with a beaconing / receive focused reward structure is required. This could
-be [HIP 15](https://github.com/helium/HIP/blob/master/0015-beaconing-rewards.md) or an alternative.
+be [HIP-15](https://github.com/helium/HIP/blob/master/0015-beaconing-rewards.md) or an alternative.
 
 Tuning of the chain variables, specifically per H3 resolution target and maximum densities. Initial
 analysis shows that scaling target/max densities linearly with area means only the highest
@@ -352,7 +352,7 @@ encourages Hotspots to spread out which may make some anti-gaming methods more a
 
 This method will need to be deployed along with or soon after Beaconing. It assumes an existing
 reward structure that biases PoC rewards towards receivers vs transmitters. One such method is
-described in [HIP 15](https://github.com/helium/HIP/blob/master/0015-beaconing-rewards.md). This
+described in [HIP-15](https://github.com/helium/HIP/blob/master/0015-beaconing-rewards.md). This
 deployment will effect all Hotspot owners. Current Hotspot owners will likely see a significant
 change in earnings (either up or down) based on the new reward methodology. It will also require
 significant documentation update on how proof-of-coverage is performed and rewarded.

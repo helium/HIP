@@ -1,4 +1,4 @@
-# HIP 58: PoC Distance Limit
+# HIP-58: PoC Distance Limit
 
 - Author(s): [@abhay](https://github.com/abhay), [@mrpatrick1991](https://github.com/mrpatrick1991),
   et al

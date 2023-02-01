@@ -1,4 +1,4 @@
-# HIP 31: Governance by Token Lock
+# HIP-31: Governance by Token Lock
 
 - Authors: [Tushar Jain](https://github.com/@tjmcc), Shayon Sengupta
 - Start Date: November 14, 2020

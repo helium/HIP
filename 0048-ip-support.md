@@ -1,4 +1,4 @@
-# HIP 48: IP Support
+# HIP-48: IP Support
 
 - Author(s): @ivelin
 - Start Date: Dec 6, 2021

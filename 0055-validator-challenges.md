@@ -1,4 +1,4 @@
-# HIP 55: Validator Challenges
+# HIP-55: Validator Challenges
 
 - Author(s): [@Vagabond](https://github.com/Vagabond), [@andymck](https://github.com/andymck),
   [@abhay](https://github.com/abhay)
@@ -47,7 +47,7 @@ Hotspot and Validator owners/operators.
 ## Description of Current Implementation
 
 It is useful to recapitulate the current challenge process. First refer to the Detailed Explanation
-section of [HIP 54: H3Dex-based PoC Targeting][hip54] which describes how a challenge is constructed
+section of [HIP-54: H3Dex-based PoC Targeting][hip54] which describes how a challenge is constructed
 and submitted to the blockchain.
 
 1. Once the PoC Request has appeared on the blockchain and the Challengee has been selected, the
@@ -182,7 +182,7 @@ Today, the Hotspots creating PoC Challenges and submitting receipts to the block
 with 0.9% of HNT rewarded per epoch. We propose that this subsidy be moved to the Validator
 Challenger that is creating and collecting Challenge data and submitting this information to the
 blockchain. We don't recommend any other changes at this time as it would increase the scope of
-implementation. Please refer to [HIP 10][hip10] or [docs.helium.com][docs] for the details of the
+implementation. Please refer to [HIP-10][hip10] or [docs.helium.com][docs] for the details of the
 current reward scheme for PoC and specifically for Challengers.
 
 We believe that there could be a future iteration of Validator Challengers that could introduce a

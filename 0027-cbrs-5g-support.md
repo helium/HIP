@@ -1,4 +1,4 @@
-# HIP 27: Data Credit Support for CBRS 5G on Helium Network
+# HIP-27: Data Credit Support for CBRS 5G on Helium Network
 
 - Author: FreeedomFi @zer0tweets
 - Start Date: February 23th, 2021

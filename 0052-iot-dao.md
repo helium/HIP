@@ -1,4 +1,4 @@
-# HIP 52: IOT subDAO
+# HIP-52: IOT subDAO
 
 - Author: [@tjain-mcc](https://github.com/tjain-mcc), [@shayons297](https://github.com/shayons297),
   [@jmfayal](https://github.com/jmfayal), [@abhay](https://github.com/abhay)
@@ -10,7 +10,7 @@
 
 ## Summary
 
-[HIP 51: Helium DAOs](https://github.com/helium/HIP/blob/main/0051-helium-dao.md) provides a general
+[HIP-51: Helium DAOs](https://github.com/helium/HIP/blob/main/0051-helium-dao.md) provides a general
 structure for onboarding new Decentralized Network Protocols (DNPs) to the broader Helium Network,
 with mechanisms in place to ensure that protocol-specific attributes such as Proof-of-Coverage
 rules, Data Credit pricing, and consensus-driven rules are within control of the emergent DNP DAO.
@@ -26,7 +26,7 @@ This proposal impacts all current and future participants in the Helium IoT Comm
 
 ## IoT subDAO core jobs-to-be-done
 
-We proposed in HIP 51 that each DNP subDAO operate as a sovereign economics and governance layer.
+We proposed in HIP-51 that each DNP subDAO operate as a sovereign economics and governance layer.
 The Helium IoT subDAO has six core functions
 
 1. **Emissions Curve** The Helium IoT subDAO handles all IOT emissions, mining rewards, and
@@ -107,7 +107,7 @@ incentives could include
 
 Once emissions are distributed to Hotspots and oracles, IOT owners can either redeem their holdings
 for underlying HNT against the treasury reserve automatically, hold for redemptions at a later time,
-or lock up their IOT for veIOT in a process similar to the veHNT mechanism described in HIP 51.
+or lock up their IOT for veIOT in a process similar to the veHNT mechanism described in HIP-51.
 
 A user’s veIOT lockup power is determined by 1) the amount of IOT they lock up with, and 2) the
 amount of time they commit to locking up their IOT. The structure applies a linear multiplier of
@@ -232,14 +232,14 @@ Data Credits are utilized in asserting new Hotspots and their location on the ch
 OUIs and associated devices, and as payment for packet transfers.
 
 With the activation of
-[HIP 10](https://github.com/helium/HIP/blob/master/0010-usage-based-data-transfer-rewards.md),
+[HIP-10](https://github.com/helium/HIP/blob/master/0010-usage-based-data-transfer-rewards.md),
 Hotspot operators receive HNT emissions up to 32.5% per epoch and are rewarded at 1:1 rate based on
 dollar value of Data Credits transfers as per the
 [HNT Price Oracle](https://docs.helium.com/blockchain/oracles). This proposal scales Data Credits
 rewards based on actual activity on the network, and disincentivizes arbitrageurs from taking
 advantage of more arbitrary distribution mechanisms for rewards.
 
-**[HIP 37](https://github.com/helium/HIP/blob/master/0037-omni-protocol-poc.md) proposed the removal
+**[HIP-37](https://github.com/helium/HIP/blob/master/0037-omni-protocol-poc.md) proposed the removal
 of a division between proof-of-coverage and data credits rewards entirely at the date of the second
 HNT halving (8/1/2023). We propose this removal happen from the launch of the IoT subDAO. As shown
 in the emissions schedule, this is reflected in the IOT subDAO.**

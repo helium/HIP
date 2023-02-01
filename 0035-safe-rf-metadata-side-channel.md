@@ -1,4 +1,4 @@
-# HIP 35: Safe RF Meta-Data Side Channel
+# HIP-35: Safe RF Meta-Data Side Channel
 
 - Author(s): [@wavesoft](https://github.com/wavesoft/), [@dmamalis](https://github.com/dmamalis)
 - Start Date: 2021-07-28

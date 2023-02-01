@@ -1,4 +1,4 @@
-# HIP 20: HNT Max Supply
+# HIP-20: HNT Max Supply
 
 - Author: @jmfayal (jmf), @tjain-mcc (tushar), @rawrmaan
 - Start Date: November 4, 2020

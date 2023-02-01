@@ -39,9 +39,9 @@ For the Helium Network to grow to global scale in number of active devices and u
 to develop economic and technical primitives that will support that scale across various wireless
 networking technologies.
 
-[HIP 27: CBRS 5G Support](https://github.com/helium/HIP/blob/master/0027-cbrs-5g-support.md)
+[HIP-27: CBRS 5G Support](https://github.com/helium/HIP/blob/master/0027-cbrs-5g-support.md)
 provides a broad discussion of 5G DNP specific Data Credits mechanisms, and
-[HIP 37: Omni-Protocol PoC](https://github.com/helium/HIP/blob/master/0037-omni-protocol-poc.md)
+[HIP-37: Omni-Protocol PoC](https://github.com/helium/HIP/blob/master/0037-omni-protocol-poc.md)
 proposes an incentive model as well as Proof-of-Coverage rules for the 5G Network. This is a
 three-part proposal that builds on such existing work with two primary aims:
 
@@ -50,8 +50,8 @@ three-part proposal that builds on such existing work with two primary aims:
    Data Transfer pricing, and miner rewards are within control of the DNT subDAO.
 2. Specify the implementation of the structure proposed through detailed onboarding proposals for
    the LoRaWAN and 5G networks, described in
-   [HIP 52: LoRaWAN DAO](https://github.com/helium/HIP/blob/main/0052-iot-dao.md) and
-   [HIP 53: 5G DAO](https://github.com/helium/HIP/blob/main/0053-mobile-dao.md).
+   [HIP-52: LoRaWAN DAO](https://github.com/helium/HIP/blob/main/0052-iot-dao.md) and
+   [HIP-53: 5G DAO](https://github.com/helium/HIP/blob/main/0053-mobile-dao.md).
 
 The technical and economic design decisions of the Helium Network historically have been made around
 the first LoRaWAN Decentralized Network Protocol. In order to support new networks and devices,
@@ -98,13 +98,13 @@ This proposal impacts all current and future stakeholders in the Helium Communit
 
 # **Implementation**
 
-HIP 51 is to be implemented in three phases, each of which is contingent upon approval via
+HIP-51 is to be implemented in three phases, each of which is contingent upon approval via
 governance across three separate voting procedures. Note that each vote, and therefore phase, must
 necessarily have code attached for consideration.
 
 The phases are defined as follows:
 
-1. Phase I (Q2 2022) : As per HIP 53: Helium Mobile subDAO, MOBILE token is issued on the existing
+1. Phase I (Q2 2022) : As per HIP-53: Helium Mobile subDAO, MOBILE token is issued on the existing
    Helium blockchain. This will immediately allow any online 5G radio to mine MOBILE tokens.
 
    1. The pre-mine amount specified in the Economics Overview section of the proposal is assigned to
@@ -115,7 +115,7 @@ The phases are defined as follows:
       Hotspots and community or business development efforts.
 
 2. Phase II (August 1, 2022) : On the third anniversary of the Helium Network, the IOT token is
-   issued on the working Helium blockchain as per HIP 52: IoT subDAO,
+   issued on the working Helium blockchain as per HIP-52: IoT subDAO,
 
    1. The specified emissions curve and treasury reserve redemption contract (one-way implementation
       of the market making curve) is deployed to the network such that core subDAO economic
@@ -123,7 +123,7 @@ The phases are defined as follows:
       respective treasuries if they choose or continue to hold the DNT. At this point, all HNT
       emissions are deposited to subDAO treasuries, existing Helium Validators, and HST holders.
       Each subnetwork rewards Hotspots through DNTs for data transfer and Proof-of-Coverage.
-   2. Remaining portions of the HIP 52 and HIP 53 specifications that are deemed to be within scope
+   2. Remaining portions of the HIP-52 and HIP-53 specifications that are deemed to be within scope
       by Helium Foundation are bundled. This will likely include updates to the proof-of-coverage
       mechanism for the Mobile subDAO.
 
@@ -152,7 +152,7 @@ below.
 
 ## veHNT and Governance
 
-Helium operates as a network of networks under HIP 51, and as such requires its own global
+Helium operates as a network of networks under HIP-51, and as such requires its own global
 governance mechanism. While each subnetwork is able to define its own governance layer through its
 subDAO and DNT, core proposals involving the overall Helium network evaluated through veHNT
 (vote-escrowed HNT) weighted governance.

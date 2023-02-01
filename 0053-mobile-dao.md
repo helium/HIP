@@ -1,4 +1,4 @@
-# HIP 53: Mobile subDAO
+# HIP-53: Mobile subDAO
 
 - Authors: [Boris Renski](https://github.com/zer0tweets),
   [@tjain-mcc](https://github.com/tjain-mcc), [@shayons297](https://github.com/shayons297),
@@ -11,7 +11,7 @@
 
 **Summary**
 
-[HIP 51: Helium DAOs](https://github.com/helium/HIP/blob/main/0051-helium-dao.md) provides a general
+[HIP-51: Helium DAOs](https://github.com/helium/HIP/blob/main/0051-helium-dao.md) provides a general
 structure for onboarding new Decentralized Network Protocols (DNPs) to the broader Helium Network,
 with mechanisms in place to ensure that protocol-specific attributes such as Proof-of-Coverage
 rules, Data Credit pricing, and consensus-driven rules are within control of the emergent DNP DAO.
@@ -32,7 +32,7 @@ onboarding proposal for the Helium Mobile Network.
 
 # **Mobile subDAO core jobs-to-be-done**
 
-[HIP 51](https://github.com/helium/HIP/blob/main/0051-helium-dao.md) proposed that each subDAO
+[HIP-51](https://github.com/helium/HIP/blob/main/0051-helium-dao.md) proposed that each subDAO
 operate as a sovereign economics and governance layer. The Helium Mobile Network subDAO has seven
 core functions
 
@@ -239,7 +239,7 @@ incentives could include
 Once emissions are distributed to Hotspots and oracles, MOBILE owners can either redeem their
 holdings for underlying HNT against the treasury reserve automatically, hold for redemptions at a
 later time, or lock up their MOBILE for veMOBILE in a process similar to the veHNT mechanism
-described in HIP 51.
+described in HIP-51.
 
 A user’s veMOBILE lockup power is determined by 1) the amount of MOBILE they lock up with, and 2)
 the amount of time they commit to locking up their MOBILE. The structure applies a linear multiplier

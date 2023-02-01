@@ -1,4 +1,4 @@
-# HIP 40: Validator Denylist
+# HIP-40: Validator Denylist
 
 - Author(s): @BFGNeil, @Anthonyra, @ElonTusk, @AP, @Joey, @jerm
 - Start Date: 2021-09-27

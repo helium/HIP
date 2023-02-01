@@ -1,4 +1,4 @@
-# HIP 42: Beacon/Witness Ratio - Witness Reward Limit
+# HIP-42: Beacon/Witness Ratio - Witness Reward Limit
 
 - Author(s): @anthonyra
 - Start Date: 9/30/2021

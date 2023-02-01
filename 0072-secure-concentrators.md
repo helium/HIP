@@ -1,4 +1,4 @@
-# HIP 72: Secure Concentrators
+# HIP-72: Secure Concentrators
 
 - Author(s) @Dinocore
 - Start Date: Oct 1, 2022
@@ -46,7 +46,7 @@ gaming the network very difficult to perform and scalable.
 - Ability to replace/upgrade existing Miner's concentrator card with secure concentrator card
 - Turn off-the-shelf LoRaWAN gateways into full PoC Helium miner (DIY Hotspot)
   - Secure Concentrators effectively replace the need for ECC806 security chip as mandated in
-    HIP 19.
+    HIP-19.
 - Enable new class of Helium nodes that can provide additional functionality (LoRa PoC Mapper?
   Mobile Hotspot?)
 - Enable new level of Proof-of-Coverage verification (possibly using Time Difference of Arrival

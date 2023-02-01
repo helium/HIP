@@ -1,4 +1,4 @@
-# HIP 46: LoRaWAN NetID Routing
+# HIP-46: LoRaWAN NetID Routing
 
 - Author(s): [@lthiery](https://github.com/lthiery)
 - Start Date: 2021-10-26

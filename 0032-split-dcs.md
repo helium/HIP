@@ -86,7 +86,7 @@ made it in time including the full reward.
 This is your chance to discuss your proposal in the context of the whole design space. This is
 probably the most important section!
 
-There is people out there that use the current hip 15 and 17 to the best of their abilities and plan
+There is people out there that use the current HIP-15 and 17 to the best of their abilities and plan
 accordingly. They try to provide redundancy in a reasonable fashion, but they all must fear the
 gigabyte gangster taking it all. A second look at the real life examples that are happening TODAY
 might be in order. Should one really earn 18.000 DC while others don't even total 200 just a few

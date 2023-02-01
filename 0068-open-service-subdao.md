@@ -1,4 +1,4 @@
-# HIP 68: Open Service Subdao
+# HIP-68: Open Service Subdao
 
 - Author(s): [@sndnsos](https://github.com/sndnsos) [@haihongS](https://github.com/haihongS)
 - Start Date: 2022/07/23
@@ -9,7 +9,7 @@
 
 # Summary
 
-[HIP 51: Helium DAO](https://github.com/helium/HIP/blob/main/0051-helium-dao.md) proposed that each
+[HIP-51: Helium DAO](https://github.com/helium/HIP/blob/main/0051-helium-dao.md) proposed that each
 communications network built on top of the Helium Network has its own subDAO with its own token and
 governance. Till now, LoRaWAN subDAO, 5G subDAO, and WiFi subDAO are proposed. They are about
 communication networks. But another very significant subDAO that should be a next step, is to help

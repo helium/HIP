@@ -1,4 +1,4 @@
-# HIP 44: Witness Reward Decay
+# HIP-44: Witness Reward Decay
 
 - Author(s): [@abhay](https://github.com/abhay)
 - Start Date: 2021-10-07

@@ -1,4 +1,4 @@
-# HIP 57: PoC Rewards Establishment Period
+# HIP-57: PoC Rewards Establishment Period
 
 - Author(s): [@Scottsigel](https://github.com/Scottsigel),
   [@starwatcher](https://github.com/mrpatrick1991), [@jthiller](https://github.com/jthiller)

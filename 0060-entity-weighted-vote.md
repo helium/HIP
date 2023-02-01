@@ -1,4 +1,4 @@
-# HIP 60 : Entity-Weighted Vote
+# HIP-60 : Entity-Weighted Vote
 
 - Author(s): [@cvolkernick](https://github.com/cvolkernick)
 - Start Date: 2022-04-28

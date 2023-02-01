@@ -1,4 +1,4 @@
-# HIP 24: Reward Splitting
+# HIP-24: Reward Splitting
 
 - Author(s): @ericmheilman
 - Reviewer: @abhay

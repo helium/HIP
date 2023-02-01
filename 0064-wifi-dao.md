@@ -1,4 +1,4 @@
-# HIP 64: Helium WiFi subDAO
+# HIP-64: Helium WiFi subDAO
 
 - Authors: Karam Lakshman, Shubhendu Sharma,[@tjain-mcc](https://github.com/tjain-mcc),
   [@shayons297](https://github.com/shayons297)
@@ -11,7 +11,7 @@
 
 # Summary
 
-[HIP 51: Helium DAO](https://github.com/helium/HIP/blob/main/0051-helium-dao.md) provides a general
+[HIP-51: Helium DAO](https://github.com/helium/HIP/blob/main/0051-helium-dao.md) provides a general
 structure for onboarding new Decentralized Network Protocols (DNPs) to the broader Helium Network.
 
 In this proposal, we describe the structure for the Helium WiFi subDAO, also henceforth referred to
@@ -28,7 +28,7 @@ one Hotspot to another. The WiFi subDAO proposes a structure whereby WiFi Hotspo
 onto the Helium network thereby incentivizing the creation of a common global WiFi network that
 allows for greater user access and roaming capabilities.
 
-[HIP 53: Mobile DAO](https://github.com/helium/HIP/blob/main/0053-mobile-dao.md) proposes an offload
+[HIP-53: Mobile DAO](https://github.com/helium/HIP/blob/main/0053-mobile-dao.md) proposes an offload
 use case for WiFi along with its 5G implementation, wherein cellular traffic is offloaded to WiFi
 Hotspots. In this proposal we expand the focus of WiFi beyond offload and to direct data consumption
 from consumers and devices. Users will be able to connect to and use the Helium WiFi network just as
@@ -43,7 +43,7 @@ This proposal impacts all current and future participants in the Helium Communit
 # WiFi SubDao core functions
 
 We propose to inherit the same core structure from
-[HIP 53: Mobile subDAO](https://github.com/helium/HIP/blob/main/0053-mobile-dao.md).
+[HIP-53: Mobile subDAO](https://github.com/helium/HIP/blob/main/0053-mobile-dao.md).
 
 1. **Emissions Curve**The WiFi subDAO is responsible for all emissions, mining rewards, and
    programmatic treasury operations. The economic responsibilities around this involve managing the
@@ -64,7 +64,7 @@ We propose to inherit the same core structure from
    Proof-of-Coverage challenge construction, target selection, reward scaling, and verification.
 6. **Network participants** The types of network & economic participants on the WiFi SubDao will
    initially be largely the same as those of the
-   [HIP 53: Mobile subDAO](https://docs.google.com/document/u/1/d/1WvldI9gyhuouK2o2nquvIZaFK3dSfQIePRx5M5ssu9g/edit).
+   [HIP-53: Mobile subDAO](https://docs.google.com/document/u/1/d/1WvldI9gyhuouK2o2nquvIZaFK3dSfQIePRx5M5ssu9g/edit).
 
 The remainder of this proposal defines initial values for the subDAO given the aforementioned set of
 responsibilities.
@@ -112,7 +112,7 @@ incentives could include
 Once emissions are distributed to Hotspots and oracles, HWIFI owners can either redeem their
 holdings for underlying HNT against the treasury reserve automatically, hold for redemptions at a
 later time, or lock up their HWIFI for veHWIFI in a process similar to the veHNT mechanism described
-in HIP 51.
+in HIP-51.
 
 Users can choose to delegate their veHWIFI for three core purposes:
 
@@ -121,7 +121,7 @@ Users can choose to delegate their veHWIFI for three core purposes:
 3. Governance participation in subDAO proposals for core matters.
 
 We propose to use a points and incentive structure largely similar to
-[HIP 53: Mobile DAO](https://github.com/helium/HIP/blob/main/0053-mobile-dao.md)
+[HIP-53: Mobile DAO](https://github.com/helium/HIP/blob/main/0053-mobile-dao.md)
 
 ### Treasury Reserve DNT Market Making Curve
 
@@ -189,7 +189,7 @@ Data Credits are utilized in asserting new Hotspots and their location on the ch
 OUIs and associated devices, and as payment for packet transfers. We propose 1GB of data at $0.01 as
 the initial value price consumers will pay to access the Wifi network. We propose to use a similar
 pricing mechanism defined as per
-[HIP 53: Mobile subDAO](https://github.com/helium/HIP/blob/main/0053-mobile-dao.md).
+[HIP-53: Mobile subDAO](https://github.com/helium/HIP/blob/main/0053-mobile-dao.md).
 
 WiFi SubDao will operate a chain variable that will dictate the conversion ratio between Data
 Credits and WD tokens, denominated in oracle USD price. Changes to the conversion ratios will be
@@ -201,7 +201,7 @@ conducted following Sub DAO governance specification
 
 We propose that veHWIFI governance is constructed in a manner largely identical to veMOBILE
 governance as specified in
-[HIP 51: Helium DAO](https://github.com/helium/HIP/blob/main/0051-helium-dao.md).
+[HIP-51: Helium DAO](https://github.com/helium/HIP/blob/main/0051-helium-dao.md).
 
 Users can choose to delegate their lockup power in veHWIFI to all subDAO governance proposals.
 Proposals are assessed using majority and quorum thresholds defined in veHWIFI terms. Note that only

@@ -1,4 +1,4 @@
-# HIP 70: Scaling the Helium Network
+# HIP-70: Scaling the Helium Network
 
 - Author(s): Helium Core Developers
 - Start Date: 2022-08-30
@@ -23,13 +23,13 @@ utilities not available natively on our sovereign L1.
 We acknowledge that this change removes the need for staked validators operating block production
 and challenge creation as they do today. That said, we expect that HNT stakers will migrate their
 positions towards securing current and/or future subDAOs and participating in governance through the
-vote-escrow token based system proposed in [HIP 51][hip 51]. Removal of the staked validator reward
+vote-escrow token based system proposed in [HIP-51][hip-51]. Removal of the staked validator reward
 also returns the full 6.85% of HNT emissions back to the rewards pool, benefitting Hotspot owners on
 all subDAOs. In the first year alone, this is estimated to be over 2 million more HNT rewarded.
 
-We consider these changes as complementary to the changes proposed in [HIP 51][hip 51] and a
+We consider these changes as complementary to the changes proposed in [HIP-51][hip-51] and a
 necessary set of changes to more easily implement some of the redemption and governance mechanisms
-proposed in [HIP 51][hip 51], [HIP 52][hip 52], and [HIP 53][hip 53]. We additionally expect that
+proposed in [HIP-51][hip-51], [HIP-52][hip-52], and [HIP-53][hip-53]. We additionally expect that
 more protocols will be attracted to participate in the Helium ecosystem because of the move to a
 more widely used Layer 1 blockchain.
 
@@ -38,7 +38,7 @@ more widely used Layer 1 blockchain.
 The Helium Network has grown incredibly quickly with close to 1 million Hotspots deployed around the
 world, with increasing data usage through an ever expanding list of use cases. While scaling up the
 network, the core developers and members of the community have spent countless hours supporting this
-unprecedented growth. As we look towards the implementation of [HIP 51][hip 51] (and the subsequent
+unprecedented growth. As we look towards the implementation of [HIP-51][hip-51] (and the subsequent
 subnetworks with new use cases), the core developers believe it’s important to evolve the design of
 the Helium Network to meet the demands of current and future users.
 
@@ -61,7 +61,7 @@ above.
 One set of stakeholders, namely validator stakers, staking pool operators, and
 validator-as-a-service providers, may be negatively impacted by this change but we believe these
 parties will continue to be able to participate in network activities. Stakers will be able to more
-actively participate in governance by staking their HNT into veHNT as described in [HIP 51][hip 51]
+actively participate in governance by staking their HNT into veHNT as described in [HIP-51][hip-51]
 and earn subDAO tokens like IOT or MOBILE by assigning their veHNT to a network they “vote” for.
 
 # Detailed Explanation
@@ -254,7 +254,7 @@ down the road of building our own. Over the last few years, this community has m
 consensus rule updates, and a tremendous amount of firefighting.
 
 With the move to Solana, we propose that the Consensus and Challenge Construction Reward portions of
-HNT emissions (6.85%) are allocated to the subDAOs as proposed in [HIP 51][hip 51], increasing the
+HNT emissions (6.85%) are allocated to the subDAOs as proposed in [HIP-51][hip-51], increasing the
 allotment of rewards to Hotspot owners. This should continue to incentivize deployment of the IOT
 and MOBILE network.
 
@@ -269,11 +269,11 @@ from mining blocks to subDAO governance.
 ### Reduce the cooldown period of Staked Validators
 
 In order to prepare for this change, we propose, at the time of HIP approval, that the cooldown for
-staked HNT in Validators (`stake_withdrawal_cooldown`, as defined by [HIP 25][hip 25]) immediately
+staked HNT in Validators (`stake_withdrawal_cooldown`, as defined by [HIP-25][hip-25]) immediately
 be reduced on the Helium blockchain to 125,000 blocks (currently set at 250,000). This would
 effectively reduce the cooldown period to less than 3 months. Any existing staked HNT holder or
 mining pool operator can release their stake if they choose to do so. Note that this is a one time
-adjustment and does not affect the minimum veHNT lockup of 6 months as defined in [HIP 51][hip 51].
+adjustment and does not affect the minimum veHNT lockup of 6 months as defined in [HIP-51][hip-51].
 Our goal for completing this migration is the end of this year (2022) at the earliest so this should
 provide sufficient time for current Validators to unstake before this deadline.
 
@@ -286,10 +286,10 @@ enables all staked HNT holders to continue to participate in the ecosystem by as
 to a subDAO (IOT or MOBILE) in order to influence the DAO’s Utility Score, participate in new
 Subnetwork Proposals, or participate in overall governance of the Helium Network.
 
-According to [HIP 52][hip 52] and [HIP 53][hip 53] veHNT stakers will earn both IOT and MOBILE
+According to [HIP-52][hip-52] and [HIP-53][hip-53] veHNT stakers will earn both IOT and MOBILE
 tokens, respectively, by staking their veHNT in support of these subDAOs and participating in their
 governance. The IOT subDAO sets aside 6% of all emissions as does the MOBILE subDAO. A further
-elaboration of veHNT is also available in [HIP 51][hip 51]. It's important to note that the current
+elaboration of veHNT is also available in [HIP-51][hip-51]. It's important to note that the current
 minimum staking requirements of 10,000 HNT are no longer necessary for veHNT.
 
 ### Encourage initial veHNT staking
@@ -339,8 +339,8 @@ activities and ensure decentralization.
 
 We propose that as this infrastructure is deployed, the core developers and community introduce new
 HIPs that enable subDAOs to have multiple oracles, the specific coordination rules (consensus, etc),
-and discuss the potential of incentivizing these actors. Today, [HIP 52][hip 52] and [HIP
-53][hip 53] propose such oracle rewards but do not specify the responsibility of those oracles or
+and discuss the potential of incentivizing these actors. Today, [HIP-52][hip-52] and [HIP
+53][hip-53] propose such oracle rewards but do not specify the responsibility of those oracles or
 how they come to agreement. We propose that until a time that multiple oracle providers are online,
 this reward is not issued to the single oracle, Nova Labs, or the Helium Foundation.
 
@@ -357,7 +357,7 @@ Validators, and Multiple Oracle Operators sections. Although there are some conc
 that this is the best move forward in order to scale the network, align incentives to Hotspot
 owners, and enable HNT, IOT, and MOBILE holders more utility in the future.
 
-[hip 25]: https://github.com/helium/HIP/blob/main/0025-validators.md
-[hip 51]: https://github.com/helium/HIP/blob/main/0051-helium-dao.md
-[hip 52]: https://github.com/helium/HIP/blob/main/0052-iot-dao.md
-[hip 53]: https://github.com/helium/HIP/blob/main/0053-mobile-dao.md
+[hip-25]: https://github.com/helium/HIP/blob/main/0025-validators.md
+[hip-51]: https://github.com/helium/HIP/blob/main/0051-helium-dao.md
+[hip-52]: https://github.com/helium/HIP/blob/main/0052-iot-dao.md
+[hip-53]: https://github.com/helium/HIP/blob/main/0053-mobile-dao.md

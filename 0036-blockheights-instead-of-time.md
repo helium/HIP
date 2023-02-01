@@ -1,4 +1,4 @@
-# HIP 36: Blockheight for (variable) activation on blockchain
+# HIP-36: Blockheight for (variable) activation on blockchain
 
 - Author(s): [@BFX](http://github.com/Bx64/)
 - Start Date: 2021-08-06
@@ -67,7 +67,7 @@ None at this time.
 # Deployment Impact
 
 Existing chain variables may need to be re-coded to allow for blockheight activation. Current
-(non-closed) HIPs are not affected, with the exception of HIP 20. Adjustments to this HIP should be
+(non-closed) HIPs are not affected, with the exception of HIP-20. Adjustments to this HIP should be
 (not accounting for leap years, which could be ignored completely):
 
 ```
