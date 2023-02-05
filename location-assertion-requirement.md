@@ -59,7 +59,7 @@ should not be greatly impacted. This HIP would immediately put into effect a nee
 without a location asserted, whether Full, Light, or DO [Data Only], will immediately cease receiving mining rewards until their location has
 been asserted.
 
-<b>NEW DEPLOYMENT GUIDELINES:</b>
+<b>NEW DEPLOYMENT GUIDELINE:</b>
 
 LOCATION MUST BE ASSERTED- This includes DO, Light, and Full hotspots. In order to earn HNT from PoC or Data Transfer, your hotspot will need to have
 the location asserted. Your hotspot will not be considered deployed until then and will be ineligible for rewards until you've done so.
