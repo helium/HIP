@@ -26,7 +26,7 @@ network must assert their location in order to earn.</b>
 The motivation for this change is to provide instant accurate locations for hotspots on our network, and to reduce
 the concern many community members have developed that Data Only hotspots are being used to acquire illegitimate DC
 rewards. The presence of DC gaming would result in a clear accounting discrepancy that would be obvious, as more
-DC would be rewarded to hotspots than is being paid for with HNT. This would be obvious, and doesn't appear to be happening,
+DC would be rewarded to hotspots than is being paid for with HNT. This doesn't appear to be happening,
 nonetheless many community members still feel concerned about the rewards for these data transfers. Requiring an
 asserted location in order to mine PoC or DC from data transfer should be a requirement because the validity of our
 network is determined through GPS triangulation through analyzing predictable radio patterns.
