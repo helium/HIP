@@ -146,10 +146,22 @@ signature = ed25519_sign(msg, pubKey, privKey)
 
 ## Secure Firmware
 
-The firmware running on Secure Concentrator is open-source. The firmware itself has a bootloader
-that checks the cryptographic signature of the application image at each power up to ensure it is
-unaltered from its original form. The Helium Foundation manages the cryptographic key used by
-bootloader. The Helium Foundation is also responsible for auditing the firmware.
+The firmware running on Secure Concentrator's SMCU is licensed under the GPLv3 open-source license.
+It's code repository is kept public and maintained by the Community. The firmware itself has a
+bootloader that checks the cryptographic signature of the application image at each power up to
+ensure it is unaltered from its original form. The key used to sign the application image is called
+the `App Signing Key`. The firmware actually has two App Signing Keys slots. One of the key slots
+must be populated with Helium Foundation's App Signing Key. The other key slot can optionally be
+populated with a Manufacturer's App Signing Key. Helium Foundation will use its App Signing Key to
+sign firmware from the official open-source repository. Manufacturers can optionally fork the
+open-source repository and create changes specific to their hardware variants. Manufacturer's must
+comply with the reciprocal nature of the GPLv3 license and make their modifications compatible with
+the GPLv3.
+
+The intention of the "two-slot" scheme is to always allow any Secure Concentrator produced by any
+Manufacture to be updated with the official open-source firmware. In the case a Manufacture goes out
+of business or otherwise unable to provide support for their hardware, owners of Secure
+Concentrators can always choose to run the open-source firmware.
 
 ## Proof of Coverage Rewards
 
@@ -158,20 +170,29 @@ Witness packets received by Secure Concentrator by a factor of **(1.25x)**. We b
 justified due to the increased security benefits the entire Helium network will enjoy with the
 addition of Secure Concentators.
 
+## Manufacturers
+
+Hardware Manufacturers of Secure Concentrators will be required to be approved by the Helium
+Manufacturer Compliance Committee and pass a hardware audit process similar to the hardware audit
+process required for Hotspot manufacturers (see HIP-19).
+
 ## Onboarding
 
-Manufacturers will purchase unique ED25519 keypairs for installation onto Secure Concentrator
-devices from the Heilum Foundation for a fee of 4,000,000 DC ($40 USD) each. Each Manufacturer will
-be required to purchase a minimum quantity of 1000 key pairs. This rule serves as a type of
-proof-of-stake mechanism ensuring only serious manufactures are allowed access to keypairs. Keypairs
-are intended for installation on Secure Concentrators produced by that Manufacturer only. Any
-Manufacturer found to be re-selling keypairs or otherwise using them as unintended, will have their
-keypairs revoked.
+Onboarding refers to the action a Manufacture takes to add new Secure Concentrator Hardware Keys to
+the blockchain. Onboarding will occur at a time before being shipped to final customers. a Secure
+Concentrator is only capable of earning Proof of Coverage rewards after its Hardware Key has been
+Onboarded. Onboarding is fully automatic processes performed by interacting with a Solana Smart
+Contract.
 
-Helium Foundation will make publicly available the list of public keys purchased by all
-Manufacturers. This ensures that any 3rd party can verify PoC transactions produced by Secure
-Concentrators. Oracle verifier nodes will use the public key list to verify every PoC packet signed
-by a Secure Concentrator.
+Manufacturers will be required to deposit $10 USD of collateral into a Smart Contract for each
+Secure Concentrator they produce. The collateral (AKA 'stake') will be locked in a Smart Contract
+and slowly paid back to the Manufacturer at a rate of 1/3 the staking balance per year. If a
+Manufacturer is found to have violated any of the terms of the Helium Foundation Ethics document (as
+determined by the Helium Tribunal Process), their staking balance can be partially or fully Burned.
+The "Burned" action is defined as converting the offending Manufacturer's collateral balance into
+HNT and then removing the resulting HNT from circulation permanently.
+
+The Smart Contract will hold Manufacturer's stake balance in Stable Coins.
 
 ## Reference Hardware Design
 
