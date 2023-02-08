@@ -30,21 +30,22 @@ The presence of DC gaming would result in a clear accounting discrepancy that wo
 DC would be rewarded to hotspots than is being paid for with HNT. This doesn't appear to be happening,
 nonetheless many community members still feel concerned about the rewards for these data transfers. Requiring an
 asserted location in order to mine both PoC and Data Transfer should be a requirement because the validity of the
-network is determined through GPS triangulation through analyzing predictable radio patterns.
+network is determined through trilateration through analyzing predictable radio patterns.
 
 # Stakeholders
 
 [stakeholders]: #stakeholders
 
-The only impact this has on Stakeholders is having the potential to improve reputation of the network by clarifying the rules
-for deploying hotspots, which should eliminate some doubt in the rewards mechanism pertaining to Data Transfer.
+The impact this has on Stakeholders is having the potential to improve reputation of the network by clarifying the rules
+for deploying hotspots, which should eliminate some doubt in the rewards mechanism pertaining to Data Transfer. This directly 
+impacts Data Only hotspots and DO hotspot deployers.
 
 # Detailed Explanation
 
 [detailed-explanation]: #detailed-explanation
 
 The 'Proof of Coverage' that The Helium Network is reliant upon is based on predictable properties of radio waves, which allow an automated
-validation system to determine the approximate location of a hotspot through triangulation in order to determine rewards eligibility.
+validation system to determine the approximate location of a hotspot through trilateration in order to determine rewards eligibility.
 Without a location asserted, there is no other way to validate the location of the hotspot. Going forward, in order for a hotspot to
 participate in Data Transfer rewards, it will need a location asserted.
 
@@ -56,15 +57,20 @@ many, is to make it more difficult on the network end. Requiring a location asse
 rewards through geo-spoofing.
 
 There is currently no miner or sensor deployment methodology that would require a location not be asserted, and legitimate hotspots
-should not be greatly impacted. This HIP would immediately put into effect a need to have an accurately asserted location. Hotspots
+should not be greatly impacted. This HIP would immediately put into effect a need for all hotspots to have an asserted location. Hotspots
 without a location asserted, whether Full, Light, or DO [Data Only], will immediately cease receiving Data Transfer mining rewards 
 until their location has been asserted.
 
 <b>NEW DEPLOYMENT GUIDELINE:</b>
 
 LOCATION MUST BE ASSERTED- This includes DO, Light, and Full hotspots. In order to earn HNT from both PoC and Data Transfer, a hotspot 
-will need to have the location asserted. A hotspot will not be considered deployed until then and will be ineligible for rewards until 
+will need to have the location asserted. A hotspot will not be considered deployed and will be ineligible for rewards until 
 asserted.
+
+# Implementation 
+
+COMING SOON - IN DRAFT STAGE
+
 
 # Drawbacks
 
