@@ -168,7 +168,10 @@ Concentrators can always choose to run the open-source firmware.
 In order to incentivize adoption of Secure Concentrators, we propose increasing the earnings of PoC
 Witness packets received by Secure Concentrator by a factor of **(1.25x)**. We believe this is
 justified due to the increased security benefits the entire Helium network will enjoy with the
-addition of Secure Concentators.
+addition of Secure Concentators. A Secure Concentrator is only eligible for the PoC bonus if the
+Witness packet includes valid GPS time and location data. If a Secure Concentrator does not have a
+valid GPS lock at the time of receiving the Witness packet, it will only receive the normal (1.00x)
+reward.
 
 ## Manufacturers
 
@@ -193,6 +196,25 @@ The "Burned" action is defined as converting the offending Manufacturer's collat
 HNT and then removing the resulting HNT from circulation permanently.
 
 The Smart Contract will hold Manufacturer's stake balance in Stable Coins.
+
+## Hotspot Mechanics
+
+Registering a Hotspot that uses a Secure Concentrator is similar process to registering a Data-Only
+Hotspot. First, the Hotspot generates a new random `swarm_key`. Unlike other Hotspot types, the
+`swarm_key` on a Secure Hotspot is not considered a high priority secret because it is not used for
+earning PoC rewards. As such, it is not required to store the `swarm_key` in a secure element. In
+fact, a Secure Hotspot is not required to have a hardware secure element at all (can store in
+flash). Next, a transaction is sent to the blockchain defining the new Hotspot as a 'secure' type.
+This transaction includes the `swarm_key` and the Secure Concentrator's Hardware Key and is signed
+by both keys. If this is the first time the Secure Concentrator's Hardware Key is used to bind
+`swarm_key` and Hardware Key together, there is no fee. Otherwise, there is a small $5 fee. Note:
+this mechanism enables several things that are currently difficult or impossible such as resale of
+Secure Concentrators/Hotspots on the secondary market and repurposing Hotspots with lost keys or
+Hotspots on the denylist.
+
+Secure Hotspots do not require Location Assertion transactions. In fact, Secure Hotspots are free to
+continually move their location because the GPS location metadata is included in the signed packets.
+Secure Hotspots are still subject to the same density scale rules.
 
 ## Reference Hardware Design
 
