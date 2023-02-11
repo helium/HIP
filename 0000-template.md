@@ -21,7 +21,7 @@ One paragraph explanation of the proposal.
 
 ## Stakeholders
 
-- Who is affected by this HIP? A stakeholder is any individual, group, or party such as network 
+- Who is affected by this HIP? A stakeholder is any individual, group, or party such as network
   users, Hotspot hosts, or token holders.
 - How are we soliciting feedback on this HIP from these stakeholders? Note that they may not be
   watching the HIP repository or even directly active in the Helium Community chat channels.
