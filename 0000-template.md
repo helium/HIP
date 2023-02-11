@@ -61,7 +61,7 @@ Describe how this design will be deployed and any potential impact it may have o
 this project.
 
 - How will current users be impacted?
-- How will existing documentation/knowlege base need to be supported? Any content to change at
+- How will existing documentation/knowledge base need to be supported? Any content to change at
   <http://docs.helium.com>?
 - Is this backwards compatible? Can this HIP be undone?
   - If not, what is the procedure to migrate?
