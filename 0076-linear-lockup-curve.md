@@ -205,7 +205,7 @@ During the 7-day landrush period, the following rules apply.
 
 - The landrush position may be split into multiple landrush positions, which may be extended or
   delegated separately.
-- The lockup duration may be extended to the maximum of 48 months.
+- The lockup duration may be extended up to the maximum of 48 months.
 - HNT may be added to the landrush position.
 - The position may be delegated to a subDAO or re-delegated to a different subDAO.
 
