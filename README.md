@@ -4,14 +4,20 @@ Helium Improvement Proposals
 
 _"How a bill becomes a law"_
 
-More details on process and how to participate can be found in HIP7, ["A Process For Managing Helium Improvement Proposals"](https://github.com/helium/HIP/blob/main/0007-managing-hip-process.md).
+More details on process and how to participate can be found in HIP7,
+["A Process For Managing Helium Improvement Proposals"](https://github.com/helium/HIP/blob/main/0007-managing-hip-process.md).
 
-If you have questions or feedback, please ask in [#hip-open-discussion in the community Discord](https://discord.gg/helium). Each proposal in discussion also has its own dedicated channel.
+If you have questions or feedback, please ask in
+[#hip-open-discussion in the community Discord](https://discord.gg/helium). Each proposal in
+discussion also has its own dedicated channel.
 
-**Looking for HIP19 hotspot manufacturer applications?** Those have moved to their own dedicated repository: [dewi-alliance/hotspot-manufacturers](https://github.com/dewi-alliance/hotspot-manufacturers)
+**Looking for HIP19 hotspot manufacturer applications?** Those have moved to their own dedicated
+repository:
+[dewi-alliance/hotspot-manufacturers](https://github.com/dewi-alliance/hotspot-manufacturers)
 
 ## Index of proposals
 
+<!-- prettier-ignore -->
 | ID | Title | Status |
 | -- | ----- | ------ |
 | 1  | [Longfi and LoRaWAN](https://github.com/helium/HIP/blob/main/0001-longfi-and-lorawan.md) | Deployed |
@@ -91,8 +97,9 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 
 ## Status key
 
-* Draft: HIP is in process of being written; author is not yet soliciting feedback from the community at large
-* In Discussion: HIP is under active consideration by the community
-* Approved: HIP has been approved by rough consensus, and pending development and testing
-* Deployed: Code to implement HIP has been merged and deployed to the network
-* Closed: HIP abandoned, rendered obsolete by other changes, or otherwise withdrawn by the author
+- Draft: HIP is in process of being written; author is not yet soliciting feedback from the
+  community at large
+- In Discussion: HIP is under active consideration by the community
+- Approved: HIP has been approved by rough consensus, and pending development and testing
+- Deployed: Code to implement HIP has been merged and deployed to the network
+- Closed: HIP abandoned, rendered obsolete by other changes, or otherwise withdrawn by the author

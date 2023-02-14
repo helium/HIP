@@ -10,7 +10,8 @@
 
 ## Light Hotspots
 
-HNT staking using Validators will be discontinued in 2023 Q1 with the [implementation of HIP 70](https://docs.helium.com/mine-hnt/validators/validators-and-voting-power/#how-will-staking-rewards-change).
+HNT staking using Validators will be discontinued in 2023 Q1 with the
+[implementation of HIP-70](https://docs.helium.com/mine-hnt/validators/validators-and-voting-power/#how-will-staking-rewards-change).
 
 ## Motivation
 
@@ -30,8 +31,8 @@ other HIPs.
 
 The Helium Foundation is currently the only party that can issue the keys required to onboard a new
 Hotspot to the blockchain. Approval of new manufacturers is by the Manufacturing Compliance
-Committee (MCC), who meets regularly to discuss manufacturers, blockchain security, and growth of the
-Helium Network.
+Committee (MCC), who meets regularly to discuss manufacturers, blockchain security, and growth of
+the Helium Network.
 
 Importantly, this proposal does not contemplate granting direct key issuance authority to any
 third-parties. We believe that the above proposal and its potential consequences should be evaluated
@@ -50,11 +51,13 @@ Almost everyone involved in the Helium ecosystem, but especially:
 ## Detailed Explanation
 
 This document outlines:
+
 - Requirements and process for applications by third-party manufacturers.
 - A process for the Helium Foundation to issue onboarding codes to those manufacturers.
 - Expectations for software maintenance and customer support from those manufacturers.
 
 We propose favoring:
+
 - Known community members with demonstrated experience in hardware design and manufacturing.
 - Large production batch sizes (10s of thousands of Hotspots), rather than prototypes or smaller
   production runs.
@@ -75,7 +78,9 @@ Prospective manufacturers would be expected to provide:
   the ability for hosts to change wifi settings, via manufacturer official apps or otherwise.
 - A list of other potential risks and issues.
 
-Devices approved under this proposal must be reasonably secure and resistantto tampering. We propose that applicants are required to include:
+Devices approved under this proposal must be reasonably secure and resistantto tampering. We propose
+that applicants are required to include:
+
 - Encrypted/locked-down firmware.
 - Encrypted storage of the miner swarm_key, either via disk encryption or hardware measures like an
   ECC chip.
@@ -94,7 +99,8 @@ on behalf of the entire network, such as:
 
 Applicants wishing to manufacture Light Hotspots with packet forwarding capability-only (often
 called Data-Only Hotspots) will not need to fulfill the secured chip requirement. Light Hotspots
-participating in PoC, Witnessing, and Challenging will be subject to the ECC608 chip or other security implementation requirement.
+participating in PoC, Witnessing, and Challenging will be subject to the ECC608 chip or other
+security implementation requirement.
 
 Lastly, manufacturers are expected to provide:
 
@@ -136,7 +142,7 @@ critical component of this ecosystem rather than replacing service providers alt
 
 A general structure for onboarding new Decentralized Network Protocols (DNPs) to the broader Helium
 Network was created with the passing of
-[HIP 51: Helium DAOs](https://github.com/helium/HIP/blob/main/0051-helium-dao.md). The Helium Mobile
+[HIP-51: Helium DAOs](https://github.com/helium/HIP/blob/main/0051-helium-dao.md). The Helium Mobile
 DAO with 5G Hotspots is the first step in the evolution of the Helium ecosystem.
 
 The requirements for 5G manufacturers are stringent. Helium 5G/ Mobile Hotspots must have several
@@ -226,8 +232,8 @@ It is unreasonable to expect the Helium Foundation to maintain software for othe
 Hotspots in perpetuity. If possible, we suggest the Helium Foundation open-source as much of the
 software around this process as possible, so future manufacturers don’t need to reinvent the wheel.
 
-As of February 2022, manufacturers must have their own mobile or web app as the primary
-interface for onboarding a new Hotspot. Helium released an example app
+As of February 2022, manufacturers must have their own mobile or web app as the primary interface
+for onboarding a new Hotspot. Helium released an example app
 [as open source](https://github.com/helium/hotspot-app) which can be updated or forked by a third
 party manufacturer.
 
