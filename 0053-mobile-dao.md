@@ -394,7 +394,7 @@ implements a simple limiting algorithm:
 During consequent launch stages, as the density of mappers grows, Helium Mobile DAO will look to
 implement a more robust algorithm, similar to Helium LoRa PoC, whereby only randomly challenged
 Hotspots can be witnessed. Details of this mechanism along with analysis of various attack vectors
-have been previously published and discussed with the community in HIP37 but these implementations
+have been previously published and discussed with the community in HIP-37 but these implementations
 are subject to change as we gather more data about deployments.
 
 ### _Governance Specification_
@@ -403,7 +403,7 @@ Mobile Network Network is under the control of the subDAO. All subDAO proposals 
 with code to be approved.
 
 We propose that veMOBILE governance is constructed in a manner identical to veHNT governance as
-specified in HIP51.
+specified in HIP-51.
 
 Users can choose to delegate their lockup power in veMOBILE to all Mobile Network DAO governance
 proposals. Proposals are assessed using majority and quorum thresholds defined in veMOBILE terms,
