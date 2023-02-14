@@ -143,7 +143,7 @@ tokens based on events witnessed during the last epoch.
 Below is a high level visualization of the rewards flow from the emissions curve to economic
 participants of the DAO:
 
-![https://lh5.googleusercontent.com/FEecWNOLdSOvWk7fVFJ3ETXn_Qw7-CcuMGy67m4cHTzWvELd-OZzVWuijVZY7KVT8TNC0bBsUAI9k7Xmn9H3dZ6dNDdzfNjIfkej5ozfKgQF3PSLbIUMlIrMueAgaV99-WSJjgLvwbeZfZmDAA](https://lh5.googleusercontent.com/FEecWNOLdSOvWk7fVFJ3ETXn_Qw7-CcuMGy67m4cHTzWvELd-OZzVWuijVZY7KVT8TNC0bBsUAI9k7Xmn9H3dZ6dNDdzfNjIfkej5ozfKgQF3PSLbIUMlIrMueAgaV99-WSJjgLvwbeZfZmDAA)
+![Rewards Flow Chart](./0053-mobile-dao/hip0053-rewards-flow.png)
 
 Service providers will earn 20% of all MOBILE tokens minted by the DAO emissions curve, which will
 be distributed as a function of the number of incentive points accumulated by service provider
@@ -163,7 +163,7 @@ service and its interactions with the service provider infrastructure (such as O
 Individual hourly MOBILE earned by service provider during an epoch (initially 1 hour) is then
 calculated using the following formula:
 
-![https://lh6.googleusercontent.com/EjhKTALD0rFg0XshYboRJhsVmfdXZkLNC1jlCKFEIBq_Uzw2BZoo8B12AHM_fyTVflSyUhVXHHlRLYROCoXzlzzgMVVALX61mXsp9Z_4Us-5LW7VrBb3lGB9eYWqJgxq7xITtnwm-p9PgD45Hw](https://lh6.googleusercontent.com/EjhKTALD0rFg0XshYboRJhsVmfdXZkLNC1jlCKFEIBq_Uzw2BZoo8B12AHM_fyTVflSyUhVXHHlRLYROCoXzlzzgMVVALX61mXsp9Z_4Us-5LW7VrBb3lGB9eYWqJgxq7xITtnwm-p9PgD45Hw)
+![Service Provider Rewards Formula](./0053-mobile-dao/hip0053-mobile-earn-service-provider.png)
 
 Mappers will earn 10% of all MOBILE tokens minted by the DAO emissions curve. Tokens will be
 distributed to mappers as a function of the number of incentive points accumulated by all mappers on
@@ -176,7 +176,7 @@ mapping algorithms with elements of gamification.
 
 Individual hourly MOBILE earned by a mapper is calculated using the following formula:
 
-![https://lh4.googleusercontent.com/BKClIKjuGDz8okQ6cKAFoF30Z-7n7FtlsfAsJCnX-f1NniIHo8tzGH-UTsA3zH1DVzA2CgES0PbPSrJYvxllo_5wNCbjFpJwy_sIbqZEYXOW6pYWD-jxzECvqvAbGRoBPylqWlWxEuRsz_pS5g](https://lh4.googleusercontent.com/BKClIKjuGDz8okQ6cKAFoF30Z-7n7FtlsfAsJCnX-f1NniIHo8tzGH-UTsA3zH1DVzA2CgES0PbPSrJYvxllo_5wNCbjFpJwy_sIbqZEYXOW6pYWD-jxzECvqvAbGRoBPylqWlWxEuRsz_pS5g)
+![Mapper Rewards Formula](./0053-mobile-dao/hip0053-mobile-earn-mapper.png)
 
 Hotspot owners will earn 60% of all MOBILE tokens for proof of coverage (PoC) related events
 (staying eligible and getting mapped) and for burning Helium data credits.
@@ -189,7 +189,7 @@ during a given epoch. Incentive points are issued using the following rules:
 1. Hotspot receives 1 point for each 4 consecutive epochs of remaining eligible
 2. Hotspot receives 3 points every time it was witnessed by a mapper
 
-![https://lh4.googleusercontent.com/C-qT_FXuoqgiiQVfj29PUEtMI7G1SKIPHh1wWHJOUn2ykffTRR0TXyUgBkGFYNAnh01FogvbHStLq6KPfaz-1imYEFT8L9JMGH4ACiaSLth-XLwWYgUVdFtFpBqXJ0pO073at5zNOx1za7SLKQ](https://lh4.googleusercontent.com/C-qT_FXuoqgiiQVfj29PUEtMI7G1SKIPHh1wWHJOUn2ykffTRR0TXyUgBkGFYNAnh01FogvbHStLq6KPfaz-1imYEFT8L9JMGH4ACiaSLth-XLwWYgUVdFtFpBqXJ0pO073at5zNOx1za7SLKQ)
+![Hotspot Rewards Formula](./0053-mobile-dao/hip0053-mobile-earn-hotspot.png)
 
 Tokens related to data credit burn are distributed in direct proportion to the number of DCs burned
 and are a function of amount of data offloaded by a particular Hotspot and price of DC set by the
