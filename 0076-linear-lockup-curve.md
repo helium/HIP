@@ -3,8 +3,8 @@
 - Author(s): @ferebee
 - Start Date: 2023-02-14
 - Category: Economic
-- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
-- Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
+- Original HIP PR: #547
+- Tracking Issue: #560
 
 # Summary
 
