@@ -87,31 +87,21 @@ responsibilities.
 ### _Economics Overview_
 
 There are a number of real world physical entities that comprise the network and perform the
-following functional and economic roles: | Name | Functional Role | Economic Role |
-|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Subscriber | Uses the network | Pays service providers to access data on the network | | Mapper |
-Runs a network mapping app on the phone or uses a dedicated mapper device to verify coverage
-provided by the Hotspot hosts. Mappers are required to be a subscriber. | Receives MOBILE mining
-rewards for mapping networking coverage | | Service Provider | Promotes network service to
-subscribers and mappers Runs subscriber database and authenticates inbound subscribers and mappers
-into the network Records data transfer transactions to state channels by running session purchaser
-instance Issues sim cards to subscribers and mappers Maintains their flavor of the witnessing app
-Responds to subscriber and mapper support queries | Receives payments for data access from
-subscribers and mappers Burns HNT into Data Credits and settles data usage with Hotspot hosts Stakes
-MOBILE to receive % of rewards from MOBILE Emissions contract | | Hotspot Host | Operates a Hotspot
-(can be 5G or Wi-Fi) and pays for backhaul. Note that there are two onboarding fees associated with
-the Hotspot Host: 1) Hotspot addition fees ($40) and 2) Assert Location fees ($10) | Receives MOBILE
-mining rewards for providing coverage Receives MOBILE mining rewards for providing data access to
-subscribers | | Hotspot Vendor | Builds and sells Hotspots Supports Hotspot hosts Runs software to
-provide updates of Hotspots Maintain integrations with service providers | Stakes MOBILE Receive %
-of rewards mined by Hotspot hosts | | Oracles | Relay data to L1 emission contract Calculate
-incentive points for service providers and mappers | Stake MOBILE Receive % of rewards from
-emissions contract |
+following functional and economic roles:
 
-To operate on the network, service providers and Hotspot vendors must control a respective NFT.
-Getting this NFT requires Hotspot vendors and service providers to:
+| Name             | Functional Role                                                                                                                                                                                                                                                                                                                                                                       | Economic Role                                                                                                                                                                                             |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Subscriber       | Uses the network                                                                                                                                                                                                                                                                                                                                                                      | Pays service providers to access data on the network                                                                                                                                                      |
+| Mapper           | Runs a network mapping app on the phone or uses a dedicated mapper device to verify coverage provided by the hotspot hosts. Mappers are required to be a subscriber.                                                                                                                                                                                                                  | Receives MOBILE mining rewards for mapping networking coverage                                                                                                                                            |
+| Service Provider | Promotes network service to subscribers and mappers Runs subscriber database and authenticates inbound subscribers and mappers into the network Records data transfer transactions to state channels by running session purchaser instance Issues sim cards to subscribers and mappers Maintains their flavor of the witnessing app Responds to subscriber and mapper support queries | Receives payments for data access from subscribers and mappers Burns HNT into Data Credits and settles data usage with hotspot hosts Stakes MOBILE to receive % of rewards from MOBILE Emissions contract |
+| Hotspot Host     | Operates a hotspot (can be 5G or Wi-Fi) and pays for backhaul. Note that there are two onboarding fees associated with the Hotspot Host: 1) Hotspot addition fees (\$40) and 2) Assert Location fees (\$10)                                                                                                                                                                           | Receives MOBILE mining rewards for providing coverage Receives MOBILE mining rewards for providing data access to subscribers                                                                             |
+| Hotspot Vendor   | Builds and sells hotspots Supports hotspot hosts Runs software to provide updates of hotspots Maintain integrations with service providers                                                                                                                                                                                                                                            | Stakes MOBILE Receive % of rewards mined by hotspot hosts                                                                                                                                                 |
+| Oracles          | Relay data to L1 emission contract Calculate incentive points for service providers and mappers                                                                                                                                                                                                                                                                                       | Stake MOBILE Receive % of rewards from emissions contract                                                                                                                                                 |
 
-1. Stake a minimum of 50M MOBILE in the case of Hotspot vendors, and 500M MOBILE in the case of
+To operate on the network, service providers and hotspot vendors must control a respective NFT.
+Getting this NFT requires hotspot vendors and service providers to:
+
+1. Stake a minimum of 50M MOBILE in the case of hotspot vendors, and 500M MOBILE in the case of
    service providers
 2. Obtain MOBILE DAO governance approval
 
@@ -207,14 +197,17 @@ subDAO operations fund administered by the Helium Foundation. Some fraction of t
 distributed over the course of the genesis period to live Mobile Network Hotspots on an epochal
 basis in roughly equal proportion (akin to universal basic income).
 
-For clarity, the emission schedule is as follows: | Year | MOBILE at the start of the year | MOBILE
-minted | Hotspot PoC | Hotspot Data (excess to PoC) | Mappers | Service Providers | Oracles | veHNT
-Stakers |
-|------|---------------------------------|---------------|--------------|------------------------------|---------|-------------------|---------|---------------|
-| 1 | 50B | 116B\* | 20% | 40% | 10% | 20% | 4% | 6% | | 2 | 116B | 33B | 20% | 40% | 10% | 20% | 4%
-| 6% | | 3 | 149.5B | 33B | 20% | 40% | 10% | 20% | 4% | 6% | | 4 | 182B | 16.5B | 20% | 40% | 10% |
-20% | 4% | 6% | | 5 | 198.5B | 16.5B | 20% | 40% | 10% | 20% | 4% | 6% | | 6 | 215B | 8.25B | 20% |
-40% | 10% | 20% | 4% | 6% | | 7 | 223.25B | 8.25B | 20% | 40% | 10% | 20% | 4% | 6% |
+For clarity, the emission schedule is as follows:
+
+| Year | MOBILE at the start of the year | MOBILE minted | Hotspot PoC | Hotspot Data (excess to PoC) | Mappers | Service Providers | Oracles | veHNT Stakers |
+| ---- | ------------------------------- | ------------- | ----------- | ---------------------------- | ------- | ----------------- | ------- | ------------- |
+| 1    | 50B                             | 116B\*        | 20%         | 40%                          | 10%     | 20%               | 4%      | 6%            |
+| 2    | 116B                            | 33B           | 20%         | 40%                          | 10%     | 20%               | 4%      | 6%            |
+| 3    | 149.5B                          | 33B           | 20%         | 40%                          | 10%     | 20%               | 4%      | 6%            |
+| 4    | 182B                            | 16.5B         | 20%         | 40%                          | 10%     | 20%               | 4%      | 6%            |
+| 5    | 198.5B                          | 16.5B         | 20%         | 40%                          | 10%     | 20%               | 4%      | 6%            |
+| 6    | 215B                            | 8.25B         | 20%         | 40%                          | 10%     | 20%               | 4%      | 6%            |
+| 7    | 223.25B                         | 8.25B         | 20%         | 40%                          | 10%     | 20%               | 4%      | 6%            |
 
 \*_ 50B pre-mine, 66B emitted in year 1_
 
