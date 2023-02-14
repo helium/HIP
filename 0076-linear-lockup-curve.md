@@ -144,7 +144,7 @@ We also propose that the 6-month minimum lockup period be removed and HNT holder
 HNT for any desired period, including periods less than 6 months.
 
 The implementation calculates veHNT with a granularity of 1 day. The maximum lockup duration,
-specified in HIP-51 as 48 months, corresponds to 1561 days.
+specified in HIP-51 as 48 months, corresponds to 1461 days.
 
 The amount of veHNT associated with a position of HNT locked for d days will be determined by the
 linear function:
