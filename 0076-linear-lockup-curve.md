@@ -178,7 +178,7 @@ The behavior of the 3x landrush multiplier is unchanged from HIP-51. To clarify,
 remains in effect for the duration of the most recent HNT lockup set during the 7-day landrush
 period, even if the HNT lockup is extended to a longer duration after the end of the landrush.
 
-# Minimum Lockup
+# Minimum Lockup Amount
 
 We propose to introduce a minimum HNT lockup amount per position of 1 HNT. This amount is set
 through a chain variable and may be modified later through governance.
