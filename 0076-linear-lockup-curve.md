@@ -120,12 +120,13 @@ that HNT locked for 6 months should receive 1x veHNT per HNT. HNT locked for the
 graph in HIP-51.
 
 Using available tools and following the specification of the Curve implementation referenced in
-HIP-51, when the cooldown is triggered for a position of locked HNT, the amount of associated veHNT
-will decay linearly to zero over the entire lockup duration.
+HIP-51, a locked position initially maintains the same lockup duration indefinitely. At any time,
+the holder of the position may trigger cooldown, and then the amount of associated veHNT will decay
+linearly to zero over the entire lockup duration. (Cooldown may also be stopped at any time.)
 
-As the cooldown decay curve is linear but different from the lockup curve, the amount of veHNT
-associated with an HNT position during cooldown would be different from the amount of veHNT
-associated with a similar HNT position that is newly locked for the same lock duration.
+As the cooldown decay curve is linear but different from the lockup curve specified in HIP-51, the
+amount of veHNT associated with an HNT position during cooldown would be different from the amount of
+veHNT associated with a similar HNT position that is newly locked for the same lock duration.
 
 For example, if 1 HNT is newly locked for 6 months, HIP-51 specifies that it will receive 1 veHNT.
 However, if 1 HNT is locked for 48 months, receiving 100 veHNT, and then enters cooldown for 42
@@ -208,6 +209,7 @@ During the 7-day landrush period, the following rules apply.
 - The lockup duration may be extended up to the maximum of 48 months.
 - HNT may be added to the landrush position.
 - The position may be delegated to a subDAO or re-delegated to a different subDAO.
+- Cooldown may be started or stopped.
 
 At the end of the landrush, the duration of the 3x landrush multiplier is set to whatever the lockup
 duration of the locked HNT position is.
@@ -224,6 +226,7 @@ After the 7-day landrush period ends, the following rules apply to landrush posi
   multiplier.
 - No additional HNT may be transferred into the landrush position.
 - The position may be delegated or re-delegated.
+- Cooldown may be started or stopped.
 
 At the end of the duration of the 3x landrush multiplier, as determined at the end of the landrush, the
 3x multiplier ends, and the landrush position reverts to a regular position.
