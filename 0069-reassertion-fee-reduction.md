@@ -50,7 +50,7 @@ discount.
 
 In order to help expand the network and accomplish obtaining (the aforementioned) location assertion
 data, I'm proposing that the reassertion price be reduced from 1,000,000 DC to half (which is
-500,000 DC) for 3 (three) months, post HIP-70's transition to Solana.
+500,000 DC) for 3 (three) months post HIP-70's transition to Solana.
 
 Please note that I specifically chose 500,000 DC and not less (say 10,000 DC), to help prevent
 people from taking advantage of reduced reassertion fees, and to lessen the economic effect on the
