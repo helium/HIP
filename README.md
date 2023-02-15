@@ -4,14 +4,20 @@ Helium Improvement Proposals
 
 _"How a bill becomes a law"_
 
-More details on process and how to participate can be found in HIP7, ["A Process For Managing Helium Improvement Proposals"](https://github.com/helium/HIP/blob/main/0007-managing-hip-process.md).
+More details on process and how to participate can be found in HIP7,
+["A Process For Managing Helium Improvement Proposals"](https://github.com/helium/HIP/blob/main/0007-managing-hip-process.md).
 
-If you have questions or feedback, please ask in [#hip-open-discussion in the community Discord](https://discord.gg/helium). Each proposal in discussion also has its own dedicated channel.
+If you have questions or feedback, please ask in
+[#hip-open-discussion in the community Discord](https://discord.gg/helium). Each proposal in
+discussion also has its own dedicated channel.
 
-**Looking for HIP19 hotspot manufacturer applications?** Those have moved to their own dedicated repository: [dewi-alliance/hotspot-manufacturers](https://github.com/dewi-alliance/hotspot-manufacturers)
+**Looking for HIP19 hotspot manufacturer applications?** Those have moved to their own dedicated
+repository:
+[dewi-alliance/hotspot-manufacturers](https://github.com/dewi-alliance/hotspot-manufacturers)
 
 ## Index of proposals
 
+<!-- prettier-ignore -->
 | ID | Title | Status |
 | -- | ----- | ------ |
 | 1  | [Longfi and LoRaWAN](https://github.com/helium/HIP/blob/main/0001-longfi-and-lorawan.md) | Deployed |
@@ -47,50 +53,54 @@ If you have questions or feedback, please ask in [#hip-open-discussion in the co
 | 32 | [Split DCs Among All Transferers](https://github.com/helium/HIP/blob/main/0032-split-dcs.md) | [In Discussion](https://github.com/helium/HIP/issues/221) |
 | 33 | [Regional Reward Adjustments](https://github.com/helium/HIP/blob/main/0033-regional-reward-adjustments.md) | [In Discussion](https://github.com/helium/HIP/issues/222) |
 | 34 | [Validator Node Security](https://github.com/helium/HIP/blob/main/0034-validator-node-security.md) | [In Discussion](https://github.com/helium/HIP/issues/223) |
-| 35 | [RF Metadata Sidechannel](https://github.com/helium/HIP/blob/main/0035-safe-rf-metadata-side-channel.md) | [In Discussion](https://github.com/helium/HIP/issues/250) |
-| 36 | [Blockheight Chainvar Activation](https://github.com/helium/HIP/blob/main/0036-blockheights-instead-of-time.md) | [In Discussion](https://github.com/helium/HIP/issues/260) |
+| 35 | [RF Metadata Sidechannel](https://github.com/helium/HIP/blob/main/0035-safe-rf-metadata-side-channel.md) | [Closed](https://github.com/helium/HIP/issues/250) |
+| 36 | [Blockheight Chainvar Activation](https://github.com/helium/HIP/blob/main/0036-blockheights-instead-of-time.md) | [Closed](https://github.com/helium/HIP/issues/260) |
 | 37 | [Omni-Protocol PoC](https://github.com/helium/HIP/blob/main/0037-omni-protocol-poc.md) | [Closed](https://github.com/helium/HIP/issues/271) |
 | 38 | [Validator Oracles](https://github.com/helium/HIP/blob/main/0038-validator-oracles.md) | [Closed](https://github.com/helium/HIP/issues/282) |
 | 39 | [HNT Redenomination](https://github.com/helium/HIP/blob/main/0039-hnt-redenomination.md) | [In Discussion](https://github.com/helium/HIP/issues/283) |
 | 40 | [Validator Denylist](https://github.com/helium/HIP/blob/main/0040-validator-denylist.md) | [Closed](https://github.com/helium/HIP/issues/285) |
 | 41 | [Governance by Token Lock V2](https://github.com/helium/HIP/blob/main/0041-governance-by-token-lock-v2.md) | [Closed](https://github.com/helium/HIP/issues/302) |
 | 42 | [Beacon/Witness Ratio - Witness Reward Limit](https://github.com/helium/HIP/blob/main/0042-beacon-witness-ratio-witness-reward-limit.md) | [Closed](https://github.com/helium/HIP/issues/303) |
-| 43 | [Software Release Guidelines](https://github.com/helium/HIP/blob/main/0043-software-release-guidelines.md) | [In Discussion](https://github.com/helium/HIP/issues/309) |
+| 43 | [Software Release Guidelines](https://github.com/helium/HIP/blob/main/0043-software-release-guidelines.md) | [Closed](https://github.com/helium/HIP/issues/309) |
 | 44 | [Witness Reward Decay](https://github.com/helium/HIP/blob/main/0044-witness-decay.md) | [In Discussion](https://github.com/helium/HIP/issues/310) |
 | 45 | [LoRaWAN Frequency Plan Selection](https://github.com/helium/HIP/blob/main/0045-lorawan-frequency-plan-selection.md) | [Withdrawn](https://github.com/helium/HIP/issues/311) |
 | 46 | [LoRaWAN NetID Routing](https://github.com/helium/HIP/blob/main/0046-lorawan-netid-routing.md) | [Approved](https://github.com/helium/HIP/issues/312) |
 | 47 | [Increase DKG Failure Penalty](https://github.com/helium/HIP/blob/main/0047-increase-dkg-penalty.md) | [Approved](https://github.com/helium/HIP/issues/313) |
-| 48 | [IP-over-LoRaWAN](https://github.com/helium/HIP/blob/main/0048-ip-support.md) | [In Discussion](https://github.com/helium/HIP/issues/319) |
-| 49 | [LoRaWAN Sub-region Max EIRP Limit](https://github.com/helium/HIP/blob/main/0049-max-eirp-adjustment.md) | [In Discussion](https://github.com/helium/HIP/issues/327) |
+| 48 | [IP-over-LoRaWAN](https://github.com/helium/HIP/blob/main/0048-ip-support.md) | [Closed](https://github.com/helium/HIP/issues/319) |
+| 49 | [LoRaWAN Sub-region Max EIRP Limit](https://github.com/helium/HIP/blob/main/0049-max-eirp-adjustment.md) | [Closed](https://github.com/helium/HIP/issues/327) |
 | 50 | [Display All Potential Witness Beacons](https://github.com/helium/HIP/blob/main/0050-display-all-potential-beacon-witnesses.md) | [Closed](https://github.com/helium/HIP/issues/331) |
 | 51 | [Helium DAO](https://github.com/helium/HIP/blob/main/0051-helium-dao.md) | [Approved](https://github.com/helium/HIP/issues/336) |
 | 52 | [IoT subDAO](https://github.com/helium/HIP/blob/main/0052-iot-dao.md) | [Approved](https://github.com/helium/HIP/issues/338) |
 | 53 | [Mobile subDAO](https://github.com/helium/HIP/blob/main/0053-mobile-dao.md) | [Approved](https://github.com/helium/HIP/issues/345) |
-| 54 | [H3Dex-based PoC Targeting](https://github.com/helium/HIP/blob/main/0054-h3dex-targeting.md) | [Approved](https://github.com/helium/HIP/issues/347) |
+| 54 | [H3Dex-based PoC Targeting](https://github.com/helium/HIP/blob/main/0054-h3dex-targeting.md) | [Deployed](https://github.com/helium/HIP/issues/347) |
 | 55 | [Validator Challenges](https://github.com/helium/HIP/blob/main/0055-validator-challenges.md) | [Approved](https://github.com/helium/HIP/issues/362) |
 | 56 | [Improved State Channel Disputes](https://github.com/helium/HIP/blob/main/0056-state-channel-dispute-strategy.md) | [Approved](https://github.com/helium/HIP/issues/369) |
-| 57 | [PoC Rewards Establishment Period](https://github.com/helium/HIP/blob/main/0057-poc-rewards-establishment-period.md) | [In Discussion](https://github.com/helium/HIP/issues/376) |
+| 57 | [PoC Rewards Establishment Period](https://github.com/helium/HIP/blob/main/0057-poc-rewards-establishment-period.md) | [Closed](https://github.com/helium/HIP/issues/376) |
 | 58 | [PoC Distance Limit](https://github.com/helium/HIP/blob/main/0058-poc-distance-limit.md) | [Approved](https://github.com/helium/HIP/issues/384) |
 | 59 | [Reduce XOR filter fees](https://github.com/helium/HIP/blob/main/0059-reduce-xor-filter-fees.md) | [Approved](https://github.com/helium/HIP/issues/391) |
-| 60 | [Entity-Weighted Vote](https://github.com/helium/HIP/blob/main/0060-entity-weighted-vote.md) | [In Discussion](https://github.com/helium/HIP/issues/399) |
-| 61 | [Increase Challenger Rewards](https://github.com/helium/HIP/blob/main/0061-increase-challenger-rewards.md) | [In Discussion](https://github.com/helium/HIP/issues/421) |
-| 62 | [PoC Witness IP Check](https://github.com/helium/HIP/blob/main/0062-poc-witness-ip-check.md) | [In Discussion](https://github.com/helium/HIP/issues/422) |
+| 60 | [Entity-Weighted Vote](https://github.com/helium/HIP/blob/main/0060-entity-weighted-vote.md) | [Closed](https://github.com/helium/HIP/issues/399) |
+| 61 | [Increase Challenger Rewards](https://github.com/helium/HIP/blob/main/0061-increase-challenger-rewards.md) | [Closed](https://github.com/helium/HIP/issues/421) |
+| 62 | [PoC Witness IP Check](https://github.com/helium/HIP/blob/main/0062-poc-witness-ip-check.md) | [Closed](https://github.com/helium/HIP/issues/422) |
 | 63 | [Helium Hub](https://github.com/helium/HIP/blob/main/0063-helium-hub.md) | [In Discussion](https://github.com/helium/HIP/issues/423) |
 | 64 | [WiFi subDAO](https://github.com/helium/HIP/blob/main/0064-wifi-dao.md) | [In Discussion](https://github.com/helium/HIP/issues/424) |
 | 65 | [Vendor HNT Lockup](https://github.com/helium/HIP/blob/main/0065-vendor-token-lockup.md) | [In Discussion](https://github.com/helium/HIP/issues/437) |
 | 66 | [Trust Score & Denylist Convenience](https://github.com/helium/HIP/blob/main/0066-trust-score-and-denylist-convenience.md) | [In Discussion](https://github.com/helium/HIP/issues/438) |
 | 67 | [Repeal Redenomination](https://github.com/helium/HIP/blob/main/0067-repeal-redenomination.md) | [Approved](https://github.com/helium/HIP/issues/456) |
-| 68 | [Open Service Subdao](https://github.com/helium/HIP/blob/main/0068-open-service-subdao.md) | [In Discussion](https://github.com/helium/HIP/issues/457) |
+| 68 | [Open Service Subdao](https://github.com/helium/HIP/blob/main/0068-open-service-subdao.md) | [Closed](https://github.com/helium/HIP/issues/457) |
 | 69 | [Re-assertion Fee Reduction](https://github.com/helium/HIP/blob/main/0069-reassertion-fee-reduction.md) | [In Discussion](https://github.com/helium/HIP/issues/458) |
 | 70 | [Scaling the Helium Network](https://github.com/helium/HIP/blob/main/0070-scaling-helium.md) | [Approved](https://github.com/helium/HIP/issues/471) |
-| 71 | [Scaling the Network with Governance & Hedera](https://github.com/helium/HIP/blob/main/0071-scaling-with-governance-hedera.md) | [In Discussion](https://github.com/helium/HIP/issues/480) |
+| 71 | [Scaling the Network with Governance & Hedera](https://github.com/helium/HIP/blob/main/0071-scaling-with-governance-hedera.md) | [Closed](https://github.com/helium/HIP/issues/480) |
 | 72 | [Secure Concentrators](https://github.com/helium/HIP/blob/main/0072-secure-concentrators.md) | [In Discussion](https://github.com/helium/HIP/issues/489) |
 | 73 | [Consensus Deselection Weighting](https://github.com/helium/HIP/blob/main/0073-consensus-deselection-history-weight.md) | [Deployed (audit/txn)](https://github.com/helium/HIP/issues/491) |
+| 74 | [Mobile PoC - Modeled Coverage Rewards](https://github.com/helium/HIP/blob/main/0074-mobile-poc-modeled-coverage-rewards.md) | [Approved](https://github.com/helium/HIP/issues/504) |
+| 75 | [Initiate Programmatic PoC Emissions with an Updated Emissions Curve](https://github.com/helium/HIP/blob/main/0075-programmatic-poc-emissions-and-updated-emissions-curve.md) | [In Discussion](https://github.com/helium/HIP/issues/526) |
+| 76 | [Simplify Lockup Curve and veTokens](https://github.com/helium/HIP/blob/main/0076-linear-lockup-curve.md) | [In Discussion](https://github.com/helium/HIP/issues/560) |
 
 ## Status key
 
-* Draft: HIP is in process of being written; author is not yet soliciting feedback from the community at large
-* In Discussion: HIP is under active consideration by the community
-* Approved: HIP has been approved by rough consensus, and pending development and testing
-* Deployed: Code to implement HIP has been merged and deployed to the network
-* Closed: HIP abandoned, rendered obsolete by other changes, or otherwise withdrawn by the author
+- Draft: HIP is in process of being written; author is not yet soliciting feedback from the
+  community at large
+- In Discussion: HIP is under active consideration by the community
+- Approved: HIP has been approved by rough consensus, and pending development and testing
+- Deployed: Code to implement HIP has been merged and deployed to the network
+- Closed: HIP abandoned, rendered obsolete by other changes, or otherwise withdrawn by the author
