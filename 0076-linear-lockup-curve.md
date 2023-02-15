@@ -210,10 +210,13 @@ During the 7-day landrush period, the following rules apply.
 - The position may be delegated to a subDAO or re-delegated to a different subDAO.
 
 At the end of the landrush, the duration of the 3x landrush multiplier is set to whatever the lockup
-duration of the position is. The duration of the landrush multiplier is counted from the moment of
-L1 transition.
+duration of the locked HNT position is.
 
-After the landrush ends, the following rules apply to landrush positions:
+The duration of the landrush multiplier is counted from the day at which the lockup was last set or
+extended during the landrush, or from the day of L1 transition in the case of validator stakes which
+were automatically rolled over to lockup positions and not extended during the landrush.
+
+After the 7-day landrush period ends, the following rules apply to landrush positions:
 
 - The position may be split, but the landrush multiplier stays with the original position. The new
   position is not a landrush position and receives no 3x multiplier.
@@ -222,7 +225,7 @@ After the landrush ends, the following rules apply to landrush positions:
 - No additional HNT may be transferred into the landrush position.
 - The position may be delegated or re-delegated.
 
-At the end of the duration of the 3x landrush multiplier, as determined at the end of landrush, the
+At the end of the duration of the 3x landrush multiplier, as determined at the end of the landrush, the
 3x multiplier ends, and the landrush position reverts to a regular position.
 
 # Consequences
