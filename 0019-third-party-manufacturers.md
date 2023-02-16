@@ -204,7 +204,7 @@ issue and deserves its own independent proposal.
 
 ## Revoking Manufacturer Approvals
 
-Currently, the Manufacturing Oversight Committee may vote to remove a manufacturer’s key for cause
+Currently, the Manufacturing Compliance Committee may vote to remove a manufacturer’s key for cause
 at the MCC’s discretion.
 
 Removing any Hotspots associated with that manufacturer is not currently possible. Consideration and
