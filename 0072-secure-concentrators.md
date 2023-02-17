@@ -35,14 +35,16 @@ their own hardware, greatly increasing the diversity and proliferation of Hotspo
 
 ## Stakeholders
 
-The entire IoT Helium network will be affected by this HIP as the introduction of SCC will make
-gaming the network very difficult to perform and scalable.
+The entire IoT Helium network will be affected by this HIP as the introduction of SCC will create a
+reliable source of data to base Proof of Coverage algorithms on. SCC will also enable DIY Hotspot
+builds increasing the diversity and proliferation of Helium Hotspots. Finally, SCCs will enable a
+new type of location service for low-power devices (TDoA).
 
 ## Detailed Explanation
 
 ### Design Goals
 
-- Increase security level of Helium's Proof-of-Coverage (I.E. make gaming much more difficult).
+- Increase security level of Helium's Proof-of-Coverage.
 - Ability to replace/upgrade existing Miner's concentrator card with secure concentrator card
 - Turn off-the-shelf LoRaWAN gateways into full PoC Helium miner (DIY Hotspot)
   - Secure Concentrators effectively replace the need for ECC806 security chip as mandated in
@@ -232,7 +234,7 @@ in the future and it would be prohibitively difficult to maintain SMCU firmware 
 architecture also enables potential new class of Helium nodes that can provide additional future
 functionality. For example, a SCC could be used in a PoC Mapper device to securely verify coverage
 in remote locations. Perhaps most importantly, this architecture can be used to upgrade existing
-Helium miners hopefully one day eliminating wide spread network gaming.
+Helium miners providing reliable data to PoC algorithms.
 
 ## Unresolved Questions
 
@@ -245,5 +247,7 @@ Hotspot owner's part.
 
 ## Success Metrics
 
-The central thrust of this HIP is to eliminate widespread network gaming/cheating. Success will be
-determined by less reported network gaming.
+SCC success can be measured several ways. One metric will be the number of DIY Hotspots and Secure
+mapper devices built with SCC. Another metric is the amount of low-power sensors that utilize the
+TDoA location services SCC provide. Also the amount of DCs associated with those sensors. Finally,
+Secure Concentrators will enjoy in the success of any future PoC algorithm that utilizes its data.
