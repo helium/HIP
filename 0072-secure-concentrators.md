@@ -191,11 +191,11 @@ Contract.
 
 Manufacturers will be required to deposit $10 USD of collateral into a Smart Contract for each
 Secure Concentrator they produce. The collateral (AKA 'stake') will be locked in a Smart Contract
-and slowly paid back to the Manufacturer at a rate of 1/3 the staking balance per year. If a
-Manufacturer is found to have violated any of the terms of the Helium Foundation Ethics document (as
-determined by the Helium Tribunal Process), their staking balance can be partially or fully Burned.
-The "Burned" action is defined as converting the offending Manufacturer's collateral balance into
-HNT and then removing the resulting HNT from circulation permanently.
+and slowly paid back to the Manufacturer over a three (3) year period. If a Manufacturer is found to
+have violated any of the terms of the Helium Foundation Ethics document (as determined by the Helium
+Tribunal Process), their staking balance can be partially or fully Burned. The "Burned" action is
+defined as converting the offending Manufacturer's collateral balance into HNT and then removing the
+resulting HNT from circulation permanently.
 
 The Smart Contract will hold Manufacturer's stake balance in Stable Coins.
 
