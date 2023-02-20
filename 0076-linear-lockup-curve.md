@@ -80,7 +80,7 @@ participant while decreasing the total amount of locked HNT.
 Therefore, the linear lockup function proposed in this HIP will encourage greater total lockup and
 thereby promote long-term goals.
 
-Similarly, we propose dropping the 6-month minimum lockup period for simplicity and encouraging
+Similarly, we propose dropping the 6-month minimum lockup period for simplicity and to encourage
 maximum participation.
 
 For background, the 6-month minimum lockup period was intended to prevent holders of large HNT
@@ -98,8 +98,8 @@ Finally, we make the rules governing 3x landrush positions explicit to document 
 veHNT implementation that is being developed in accordance with HIP-70, which does not specify
 details.
 
-In summary, the motivation of this HIP is to improve governance usability and long-term engagement
-and to provide clarity on the rules governing landrush.
+In summary, the motivation of this HIP is to improve governance, usability, and long-term
+engagement, and to provide clarity on the rules governing landrush.
 
 # Stakeholders
 
@@ -185,7 +185,7 @@ We propose to introduce a minimum HNT lockup amount per position of 1 HNT. This 
 through a chain variable and may be modified later through governance.
 
 The intention is to prevent bad actors from creating very large numbers of frivolous lockup
-positions and spamming the chain.
+positions and spamming the smart contract.
 
 # Landrush 3x Multiplier
 
@@ -199,12 +199,12 @@ positions”), according to the veHNT implementation as currently in development
 
 At any time during the landrush, a wallet owner may open one or multiple HNT positions locked to any
 duration up to 48 months. Wallets with staked validators that have not completed validator cooldown
-at transition will automatically have each 10,000 HNT validator position migrated as a locked HNT
-position with a 6-month lockup duration.
+at transition will automatically receive a locked HNT position with a 6-month lockup duration
+containing 10,000 locked HNT per staked validator.
 
 During the 7-day landrush period, the following rules apply.
 
-- The landrush position may be split into multiple landrush positions, which may be extended or
+- A landrush position may be split into multiple landrush positions, which may be extended or
   delegated separately.
 - The lockup duration may be extended up to the maximum of 48 months.
 - HNT may be added to the landrush position.
@@ -216,7 +216,7 @@ duration of the locked HNT position is.
 
 The duration of the landrush multiplier is counted from the day at which the lockup was last set or
 extended during the landrush, or from the day of L1 transition in the case of validator stakes which
-were automatically rolled over to lockup positions and not extended during the landrush.
+were automatically rolled over to locked positions and not extended during the landrush.
 
 After the 7-day landrush period ends, the following rules apply to landrush positions:
 
@@ -231,7 +231,7 @@ After the 7-day landrush period ends, the following rules apply to landrush posi
 At the end of the duration of the 3x landrush multiplier, as determined at the end of the landrush, the
 3x multiplier ends, and the landrush position reverts to a regular position.
 
-# Consequences
+# Consequences of this HIP
 
 As the requirement for a 6-month minimum lockup duration is removed by this HIP, the change to veHNT
 allocation will make veHNT accessible to all participants willing to lock HNT for any duration, with
@@ -272,7 +272,7 @@ and reduce the cost of changes should they become necessary in the future.
 
 The 6-month minimum lockup period for legacy validator stakes that have not completed cooldown at
 transition is unaffected. Validator stakes that transition to locked HNT will be assigned the same
-6-month lockup period but will benefit from a 12.5x veHNT multiplier instead of the 1x multiplier
+6-month lockup period, but will benefit from a 12.5x veHNT multiplier instead of the 1x multiplier
 specified in HIP-51.
 
 Other participants will be able to lock HNT for any period without a 6-month minimum. The veHNT
