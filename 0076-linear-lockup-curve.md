@@ -46,7 +46,7 @@ We propose introducing a 1 HNT minimum per lockup position to prevent spam posit
 We define rules of operation for the special-case 3x “landrush” veHNT multiplier that HIP-70
 introduced but did not specify in detail.
 
-The mechanics described here in terms of HNT, and veHNT will apply equally to veMOBILE and veIOT
+The mechanics described here in terms of HNT and veHNT will apply equally to veMOBILE and veIOT
 when they are introduced.
 
 As HIPs 51–53 and HIP-70 do not specify a 3x landrush period for IOT and MOBILE, the landrush
