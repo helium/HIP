@@ -111,7 +111,7 @@ This proposal is relevant to:
   who may not have considered locking their HNT due to the 6-month minimum lockup period specified
   in HIP-51.
 
-# Detailed Explanation
+# Simplified Lockup Curve
 
 HIP-51 specifies that HNT must be locked for a minimum of 6 months in order to receive veHNT, and
 that HNT locked for 6 months should receive 1x veHNT per HNT. HNT locked for the maximum duration of
