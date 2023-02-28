@@ -1,4 +1,4 @@
-# Finalize Solana Parameters Prior To Go Live
+# Launch Parameters for Solana Migration
 
 - Author: [@ChewingGlass](https://github.com/ChewingGlass),[@abhay](https://github.com/abhay)
 - Start Date: 2023-02-20
