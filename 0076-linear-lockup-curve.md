@@ -139,7 +139,7 @@ veHNT under all circumstances.**
 
 Therefore, we propose to remove the special-case provision of HIP-51 that a 6-month lockup receives
 a 1x veHNT multiplier. Instead, it will receive the same veHNT as implied by the linear decay
-function, which is approximately 12.5x.
+function, which is 12.5x. e.g, a 100 HNT stake for 6 months will establish a 1250 veHNT position at the time of staking.
 
 We also propose that the 6-month minimum lockup period be removed and HNT holders be allowed to lock
 HNT for any desired period up to 48 months, including periods less than 6 months.
