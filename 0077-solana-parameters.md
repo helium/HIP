@@ -46,7 +46,7 @@ The Helium Foundation will need to be able to make changes and/or upgrades to th
 
 ## Decimals for IOT and MOBILE
 
-Solana uses a 64 bit unsigned integer (`u64`) to represent token amounts. The maximum value a `u64` can hold is `18,446,744,073,709,551,615`. On the Helium L1 tokens are represented by `bones` where 1 full token is defined as 10^8 `bones`. The expected maximum supply of the MOBILE subDAO is 223.25B MOBILE which is larger than the `u64` can hold with 8 decimals. The limitations of the `u64` would mean that the maximum supply would be capped at 184.46B MOBILE. To remedy this problem we propose that the smallest denominator of the tokens, `bones`, is redefined to 10^-6 or 6 decimals. Existing token balances will be bankers rounded to the nearest token with 6 decimals of precision.
+Solana uses a 64 bit unsigned integer (`u64`) to represent token amounts. The maximum value a `u64` can hold is `18,446,744,073,709,551,615`. On the Helium L1 tokens are represented by `bones` where 1 full token is defined as 10^8 `bones`. The expected maximum supply of the MOBILE subDAO is 223.25B MOBILE which is larger than the `u64` can hold with 8 decimals. The limitations of the `u64` would mean that the maximum supply would be capped at 184.46B MOBILE. To remedy this problem we propose that the amount of decimals for MOBILE and IOT tokens will be 6. Existing token balances will be bankers rounded to the nearest token with 6 decimals of precision.
 
 We propose that the amount of decimals of a subDAO token can be autonomously decided by the subDAO with the limitation that the maximum supply must fit inside a `u64` at the proposed precision.
 
