@@ -46,12 +46,25 @@ We propose introducing a 1 HNT minimum per lockup position to prevent spam posit
 We define rules of operation for the special-case 3x “landrush” veHNT multiplier that HIP-70
 introduced but did not specify in detail.
 
-The changes to token lockup positions and associated veTokens described in HIP-76 in terms of HNT
-and veHNT will apply equally to veMOBILE and veIOT when they are introduced.
+HIPs prior to HIP-76 define subDAO veTokens and establish rules concerning the amount of veDNT that
+is associated with the lockup of a DNT. Given that mechanisms of subDAO governance do not currently
+exist by which these rules could be modified, and in the interest of establishing uniform veToken
+lockup curves across the Helium DAO and its subDAOs at Solana transition, HIP-76 modifies the
+provisions of existing HIPs concerning the amount of veDNT associated with DNT lockup positions in
+the same way as it modifies the provisions concerning the amount of veHNT associated with HNT lockup
+positions.
 
-As HIPs 51–53 and HIP-70 do not specify a 3x landrush period for IOT and MOBILE, the landrush
-provisions will only apply to a subDAO token if the subDAO introduces its own landrush period for
-its veToken.
+Specifically, the veDNT lockup curves defined in prior HIPs are modified such that veDNT shall be
+associated with DNT lockup durations in a linear fashion for any duration, and there shall be no
+minimum duration, insofar as prior HIPs specify otherwise.
+
+Existing HIPs prior to HIP-76 do not specify a landrush period for the lockup of subDAO tokens. If
+a subDAO landrush period is introduced by HIP or subDAO governance, the provisions of HIP-76
+concerning the 3x landrush period of HNT lockup shall apply equally to the landrush period of the
+lockup of the subDAO DNT, to the extent that a HIP or the subDAO do not introduce provisions
+superseding them.
+
+HIP-76 shall not be construed to establish any precedent concerning subDAO governance.
 
 # Motivation
 
