@@ -175,6 +175,8 @@ Witness packet includes valid GPS time and location data. If a Secure Concentrat
 valid GPS lock at the time of receiving the Witness packet, it will only receive the normal (1.00x)
 reward.
 
+This incentive structure is part of a larger future roadmap with more network improvements and hardware types that will each have their own incentives.
+
 ## Manufacturers
 
 Hardware Manufacturers of Secure Concentrators will be required to be approved by the Helium
