@@ -149,7 +149,7 @@ signature = ed25519_sign(msg, pubKey, privKey)
 ## Secure Firmware
 
 The firmware running on Secure Concentrator's SMCU is licensed under the GPLv3 open-source license.
-It's code repository is kept public and maintained by the Community. The firmware itself has a
+Its code repository is kept public and maintained by the Community. The firmware itself has a
 bootloader that checks the cryptographic signature of the application image at each power up to
 ensure it is unaltered from its original form. The key used to sign the application image is called
 the `App Signing Key`. The firmware actually has two App Signing Keys slots. One of the key slots
@@ -161,7 +161,7 @@ comply with the reciprocal nature of the GPLv3 license and make their modificati
 the GPLv3.
 
 The intention of the "two-slot" scheme is to always allow any Secure Concentrator produced by any
-Manufacture to be updated with the official open-source firmware. In the case a Manufacture goes out
+Manufacturer to be updated with the official open-source firmware. In the case a Manufacturer goes out
 of business or otherwise unable to provide support for their hardware, owners of Secure
 Concentrators can always choose to run the open-source firmware.
 
