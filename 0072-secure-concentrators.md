@@ -175,7 +175,8 @@ Witness packet includes valid GPS time and location data. If a Secure Concentrat
 valid GPS lock at the time of receiving the Witness packet, it will only receive the normal (1.00x)
 reward.
 
-This incentive structure is part of a larger future roadmap with more network improvements and hardware types that will each have their own incentives.
+This incentive structure is part of a larger future roadmap with more network improvements and
+hardware types that will each have their own incentives.
 
 ## Manufacturers
 
@@ -199,7 +200,9 @@ Tribunal Process), their staking balance can be partially or fully Burned. The "
 defined as converting the offending Manufacturer's collateral balance into HNT and then removing the
 resulting HNT from circulation permanently.
 
-The Smart Contract will hold Manufacturer's stake balance in Stable Coins.
+The Smart Contract will hold Manufacturer's stake balance in HNT. The Smart Contract will use the
+HNT price oracle to dynamically calculate $10 USD worth of HNT at the time of Onboarding
+transaction.
 
 ## Hotspot Mechanics
 
