@@ -35,16 +35,14 @@ their own hardware, greatly increasing the diversity and proliferation of Hotspo
 
 ## Stakeholders
 
-The entire IoT Helium network will be affected by this HIP as the introduction of SCC will create a
-reliable source of data to base Proof of Coverage algorithms on. SCC will also enable DIY Hotspot
-builds increasing the diversity and proliferation of Helium Hotspots. Finally, SCCs will enable a
-new type of location service for low-power devices (TDoA).
+The entire IoT Helium network will be affected by this HIP as the introduction of SCC will make
+gaming the network very difficult to perform and scalable.
 
 ## Detailed Explanation
 
 ### Design Goals
 
-- Increase security level of Helium's Proof-of-Coverage.
+- Increase security level of Helium's Proof-of-Coverage (I.E. make gaming much more difficult).
 - Ability to replace/upgrade existing Miner's concentrator card with secure concentrator card
 - Turn off-the-shelf LoRaWAN gateways into full PoC Helium miner (DIY Hotspot)
   - Secure Concentrators effectively replace the need for ECC806 security chip as mandated in
@@ -148,99 +146,32 @@ signature = ed25519_sign(msg, pubKey, privKey)
 
 ## Secure Firmware
 
-The firmware running on Secure Concentrator's SMCU is licensed under the GPLv3 open-source license.
-Its code repository is kept public and maintained by the Community. The firmware itself has a
-bootloader that checks the cryptographic signature of the application image at each power up to
-ensure it is unaltered from its original form. The key used to sign the application image is called
-the `App Signing Key`. The firmware actually has two App Signing Keys slots. One of the key slots
-must be populated with Helium Foundation's App Signing Key. The other key slot can optionally be
-populated with a Manufacturer's App Signing Key. Helium Foundation will use its App Signing Key to
-sign firmware from the official open-source repository. Manufacturers can optionally fork the
-open-source repository and create changes specific to their hardware variants. Manufacturer's must
-comply with the reciprocal nature of the GPLv3 license and make their modifications compatible with
-the GPLv3.
-
-The intention of the "two-slot" scheme is to always allow any Secure Concentrator produced by any
-Manufacturer to be updated with the official open-source firmware. In the case a Manufacturer goes out
-of business or otherwise unable to provide support for their hardware, owners of Secure
-Concentrators can always choose to run the open-source firmware.
+The firmware running on Secure Concentrator is open-source. The firmware itself has a bootloader
+that checks the cryptographic signature of the application image at each power up to ensure it is
+unaltered from its original form. The Helium Foundation manages the cryptographic key used by
+bootloader. The Helium Foundation is also responsible for auditing the firmware.
 
 ## Proof of Coverage Rewards
 
 In order to incentivize adoption of Secure Concentrators, we propose increasing the earnings of PoC
 Witness packets received by Secure Concentrator by a factor of **(1.25x)**. We believe this is
 justified due to the increased security benefits the entire Helium network will enjoy with the
-addition of Secure Concentators. A Secure Concentrator is only eligible for the PoC bonus if the
-Witness packet includes valid GPS time and location data. If a Secure Concentrator does not have a
-valid GPS lock at the time of receiving the Witness packet, it will only receive the normal (1.00x)
-reward.
-
-This incentive structure is part of a larger future roadmap with more network improvements and
-hardware types that will each have their own incentives.
-
-## Manufacturers
-
-Hardware Manufacturers of Secure Concentrators will be required to be approved by the Helium
-Manufacturer Compliance Committee and pass a hardware audit process similar to the hardware audit
-process required for Hotspot manufacturers (see HIP-19).
-
-Responsibility for installation and service:
-
-- Manufactures can include SCCs in Hotspots, in which case Manufactures are responsible for
-  providing installation and service.
-- Hotspot owners can buy and install SCCs in which case the Hotspot falls under the OEM's warranty.
-- Note: upgrading an existing Hotspot with SCCs may require changes to the Hotspot firmware. It is
-  the Hotspot Manufacture's discretion to provide support for SCCs.
-
-Responsibility for MCC audit
-
-The hardware audit process for SCCs are exactly the same as the process for Hotspot hardware under
-HIP 19.
-
-- MCC audits the SCC design and implementation.
-- Use of SCC in Hotspot design satisfies the HIP 19 requirement for Encrypted/locked-down firmware
-  and Encrypted storage of the miner swarm_key. To be clear, Hotspots that use SCC will not be
-  required to have locked-down firmware and will not be required to securely store the swarm_key.
-  (Note swarm_key is not the same as the SCC's Hardware Key).
+addition of Secure Concentators.
 
 ## Onboarding
 
-Onboarding refers to the action a Manufacture takes to add new Secure Concentrator Hardware Keys to
-the blockchain. Onboarding will occur at a time before being shipped to final customers. a Secure
-Concentrator is only capable of earning Proof of Coverage rewards after its Hardware Key has been
-Onboarded. Onboarding is fully automatic processes performed by interacting with a Solana Smart
-Contract.
+Manufacturers will purchase unique ED25519 keypairs for installation onto Secure Concentrator
+devices from the Heilum Foundation for a fee of 4,000,000 DC ($40 USD) each. Each Manufacturer will
+be required to purchase a minimum quantity of 1000 key pairs. This rule serves as a type of
+proof-of-stake mechanism ensuring only serious manufactures are allowed access to keypairs. Keypairs
+are intended for installation on Secure Concentrators produced by that Manufacturer only. Any
+Manufacturer found to be re-selling keypairs or otherwise using them as unintended, will have their
+keypairs revoked.
 
-Manufacturers will be required to deposit $10 USD of collateral into a Smart Contract for each
-Secure Concentrator they produce. The collateral (AKA 'stake') will be locked in a Smart Contract
-and slowly paid back to the Manufacturer over a three (3) year period. If a Manufacturer is found to
-have violated any of the terms of the Helium Foundation Ethics document (as determined by the Helium
-Tribunal Process), their staking balance can be partially or fully Burned. The "Burned" action is
-defined as converting the offending Manufacturer's collateral balance into HNT and then removing the
-resulting HNT from circulation permanently.
-
-The Smart Contract will hold Manufacturer's stake balance in HNT. The Smart Contract will use the
-HNT price oracle to dynamically calculate $10 USD worth of HNT at the time of Onboarding
-transaction.
-
-## Hotspot Mechanics
-
-Registering a Hotspot that uses a Secure Concentrator is similar process to registering a Data-Only
-Hotspot. First, the Hotspot generates a new random `swarm_key`. Unlike other Hotspot types, the
-`swarm_key` on a Secure Hotspot is not considered a high priority secret because it is not used for
-earning PoC rewards. As such, it is not required to store the `swarm_key` in a secure element. In
-fact, a Secure Hotspot is not required to have a hardware secure element at all (can store in
-flash). Next, a transaction is sent to the blockchain defining the new Hotspot as a 'secure' type.
-This transaction includes the `swarm_key` and the Secure Concentrator's Hardware Key and is signed
-by both keys. If this is the first time the Secure Concentrator's Hardware Key is used to bind
-`swarm_key` and Hardware Key together, there is no fee. Otherwise, there is a small $5 fee. Note:
-this mechanism enables several things that are currently difficult or impossible such as resale of
-Secure Concentrators/Hotspots on the secondary market and repurposing Hotspots with lost keys or
-Hotspots on the denylist.
-
-Secure Hotspots do not require Location Assertion transactions. In fact, Secure Hotspots are free to
-continually move their location because the GPS location metadata is included in the signed packets.
-Secure Hotspots are still subject to the same density scale rules.
+Helium Foundation will make publicly available the list of public keys purchased by all
+Manufacturers. This ensures that any 3rd party can verify PoC transactions produced by Secure
+Concentrators. Oracle verifier nodes will use the public key list to verify every PoC packet signed
+by a Secure Concentrator.
 
 ## Reference Hardware Design
 
@@ -258,7 +189,7 @@ in the future and it would be prohibitively difficult to maintain SMCU firmware 
 architecture also enables potential new class of Helium nodes that can provide additional future
 functionality. For example, a SCC could be used in a PoC Mapper device to securely verify coverage
 in remote locations. Perhaps most importantly, this architecture can be used to upgrade existing
-Helium miners providing reliable data to PoC algorithms.
+Helium miners hopefully one day eliminating wide spread network gaming.
 
 ## Unresolved Questions
 
@@ -271,7 +202,5 @@ Hotspot owner's part.
 
 ## Success Metrics
 
-SCC success can be measured several ways. One metric will be the number of DIY Hotspots and Secure
-mapper devices built with SCC. Another metric is the amount of low-power sensors that utilize the
-TDoA location services SCC provide. Also the amount of DCs associated with those sensors. Finally,
-Secure Concentrators will enjoy in the success of any future PoC algorithm that utilizes its data.
+The central thrust of this HIP is to eliminate widespread network gaming/cheating. Success will be
+determined by less reported network gaming.
