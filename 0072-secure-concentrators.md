@@ -184,6 +184,25 @@ Hardware Manufacturers of Secure Concentrators will be required to be approved b
 Manufacturer Compliance Committee and pass a hardware audit process similar to the hardware audit
 process required for Hotspot manufacturers (see HIP-19).
 
+Responsibility for installation and service:
+
+- Manufactures can include SCCs in Hotspots, in which case Manufactures are responsible for
+  providing installation and service.
+- Hotspot owners can buy and install SCCs in which case the Hotspot falls under the OEM's warranty.
+- Note: upgrading an existing Hotspot with SCCs may require changes to the Hotspot firmware. It is
+  the Hotspot Manufacture's discretion to provide support for SCCs.
+
+Responsibility for MCC audit
+
+The hardware audit process for SCCs are exactly the same as the process for Hotspot hardware under
+HIP 19.
+
+- MCC audits the SCC design and implementation.
+- Use of SCC in Hotspot design satisfies the HIP 19 requirement for Encrypted/locked-down firmware
+  and Encrypted storage of the miner swarm_key. To be clear, Hotspots that use SCC will not be
+  required to have locked-down firmware and will not be required to securely store the swarm_key.
+  (Note swarm_key is not the same as the SCC's Hardware Key).
+
 ## Onboarding
 
 Onboarding refers to the action a Manufacture takes to add new Secure Concentrator Hardware Keys to
