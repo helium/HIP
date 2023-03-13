@@ -93,7 +93,7 @@ The full token emissions schedule as of Solana Migration can be downloaded
 
 ### Price Oracles
 
-On Solana, we have access to a Pyth price oracle on the HNT price. This oracle includes data from multiple exchanges, as well as market makers and other publishers on the HNT token. 
+On Solana, we have access to a Pyth price oracle on the HNT price. This oracle includes data from multiple exchanges, as well as market makers and other publishers on the HNT token. We propose using this Oracle instead of the existing oracle approach.
 
 Pyth is not available for MOBILE and IOT prices, and so we propose these prices should follow a similar pattern to the current HNT price oracle on the helium L1, documented [here](https://docs.helium.com/blockchain/oracles/).
 
