@@ -8,147 +8,100 @@
 
 # Summary
 
-In the course of the migration to the Solana blockchain and prior to the finality date of
-2023-03-27, several parameters need to be finalized by the community. This includes everything from
-governance settings, circuit breaker settings, and the number of decimals in our tokens to prevent
-overflow.
+This HIP describes several parameters analogous to the chain variables of the current L1. These parameters can be changed by an update authority which will be held by a wallet requiring multiple signatures (multisig) initially held by the Helium Foundation.
 
-The largest change proposed here is to change MOBILE and IOT tokens from 8 decimals to 6 decimals.
-Solana uses the u64 data type to represent token supply, and given the hundreds of billions of
-tokens in MOBILE and IOT, with 8 decimals, this would cause an overflow.
+The HIP proposes the following initial parameters:
+- Decimals for HNT: `8`
+- Decimals for MOBILE: `6`
+- Decimals for IOT: `6`
+- Ability to bring a proposal to a vote: `Helium Foundation`
+- Vote duration: `7 days`
+- Quorum: `100M veHNT`
+- Epoch duration: `24h from 00:00 UTC to 00:00 UTC`
+- HNT Mint Circuit Breaker: `5x the epoch amount`
+- MOBILE Mint Circuit Breaker: `5x the epoch amount`
+- IOT Mint Circuit Breaker: `5x the epoch amount`
+- MOBILE Reward Pool Circuit Breaker: `5x the epoch amount`
+- IOT Reward Pool Circuit Breaker: `5x the epoch amount`
+- MOBILE Treasury Circuit Breaker: `20% of epoch amount`
+- IOT Treasury Circuit Breaker: `20% of epoch amount`
+- IOT and Mobile Prices to be decided via a pricing oracle similar to that of HNT.
+- HNT Price to be decided via a Pyth price oracle
 
-The second largest change is the formation of a multisig to govern the helium programs and
-parameters. Currently, changes to the blockchain are governed by a master key that flips a chainvar
-after validators have upgraded. On Solana, programs are upgradeable by an updated authority.
+Each of the proposed variables can be changed by a governance procedure.
 
 # Motivation
 
-HIP-70 proposed a move to Solana to scale the helium network. Now that the implementation of this
-The HIP is well underway, we should finalize the settings for when we move to the Solana network. While
-most of these settings can be changed, it is important we reach consensus before flipping the
-switch.
+HIP-70 proposed to move from the Helium L1 to Solana to scale the Helium network. To finalize the implementation of the Solana smart programs several parameters need an initial value. These parameters are similar to the chain variables of the Helium L1 and can be changed at a later date through governance. It is important that the Helium community reaches consensus on these parameters before the migration starts.
 
 # Stakeholders
 
-The entire Helium IOT community will be affected by these settings.
+The entire Helium community will be affected by these settings.
 
 # Detailed Explanation
 
+## Multisig Update Authority
+
+We propose that a multisig wallet that requires 2 out of 3 signatures will be used to initially govern Solana's programs and parameters (hereinafter `multisig`). The `multisig` will initially be controlled by the Helium Foundation. This will be expanded to a 3 out of 5 signature multisig wallet to be governed by the Helium DAO or an elected council.
+
+The Helium Foundation will need to be able to make changes and/or upgrades to the Solana programs quickly if there are any bugs or faults uncovered. As the programs mature and stabilize these upgrades will become less time sensitive and this will allow the `multisig` to be expanded to include the Helium DAO or an elected council.
+
 ## Decimals for IOT and MOBILE
 
-Solana uses a uint 64 to represent token supply. The smallest denomination of any Helium token has
-been represented by “Bones,” 10^8 of which make up a full token. The u64 on Solana is used to
-represent bones.
+Solana uses a 64 bit unsigned integer (`u64`) to represent token amounts. The maximum value a `u64` can hold is `18,446,744,073,709,551,615`. On the Helium L1 tokens are represented by `bones` where 1 full token is defined as 10^8 `bones`. The expected maximum supply of the MOBILE subDAO is 223.25B MOBILE which is larger than the `u64` can hold with 8 decimals. The limitations of the `u64` would mean that the maximum supply would be capped at 184.46B MOBILE. To remedy this problem we propose that the amount of decimals for MOBILE and IOT tokens will be 6. Existing token balances will be bankers rounded to the nearest token with 6 decimals of precision.
 
-A u64 has a maximum value of `18,446,744,073,709,551,615`. Given a maximum supply of 223.25B MOBILE,
-this yields 223.25B \* 10^8 = `22,325,000,000,000,000,000` bones, which will overflow the Solana
-u64. This would freeze the ability to mint new tokens at the u64 maximum.
-
-We propose redefining a “bone” as the smallest denomination of a particular token and allowing subdaos
-to have different decimal denominations. We further propose delimiting IOT and MOBILE with 6
-decimals on the Solana network.
-
-For existing tokens, any wallet-owning bones cut off by this decimal will be bankers rounded to the
-nearest whole bone with 6 decimals.
-
-## Multisig Formation
-
-We propose that a ⅔ multisig controlled by the Helium Foundation be used to initially govern Solana's
-programs and important parameters. This will be expanded to a ⅗ multisig and can
-eventually be governed by the DAO itself or an elected council.
-
-In the early days of the migration, the foundation will need to be able to make changes/upgrades to
-the contracts quickly, as there may be bugs that have yet to be uncovered. We expect this to happen less frequently as the programs mature and stabilize. Because of this, it is important that the
-foundation hold the ability to upgrade these contracts initially.
-
-Because these contracts hold the mint authority to all tokens, it is important that the authority is
-safeguarded. Changes to this authority, whether it be to governance or an elected council, should be
-taken with care, as we do not want to expose these programs to a governance attack (one individual
-buying up tokens to vote to mint more tokens).
+We propose that the amount of decimals of a subDAO token can be autonomously decided by the subDAO with the limitation that the maximum supply must fit inside a `u64` at the proposed precision.
 
 ## Governance Parameters
 
 ### Proposals
 
-Solana Governance has the ability to limit the ability to create proposals based on veToken
-holdings. We propose that the two entities that may create proposals are
-
-The Helium Foundation Multisig Any holder with more than 30m veHNT
+Solana Governance has the ability to bring proposals to a vote based on VeToken holdings. We propose that initially, the Helium Foundation `multisig` is the only one able to bring proposals to a vote. This is how the DAO currently functions on the Helium L1. A future HIP can open this up to a threshold of VeToken holdings.
 
 ### Voting Time
 
-We propose that votes take course over 7 days
+We propose that Helium DAO governance votes will be open for 7 days. This will initially also hold for the subDAOs but the subDAOs are free to change this parameter via their own governance.
 
 ### Quorum
 
-We propose starting with a 100m veHNT quorum. This number was achieved by taking 1% of the current
-HNT supply, and multiplying it by an average of 75x multiplier. We feel this is reasonable given the
-current voter participation and the 3x landrush multiplier.
+We propose that the initial quorum be set at 100M. This number was achieved by taking 1% of the current HNT supply and multiplying it by an average multiplier of 75x. We feel this is a reasonable initial value given the current voter participation and the 3x landrush multiplier. We propose that this quorum can be modified by the `multisig`
 
-We propose that this quorum be editable by the Helium Foundation multisig as needed to achieve a
-reliable quorum.
+### Epoch Duration
 
-### Epoch Length
-
-Epochs are the interval within which rewards are issued to subdaos. The current epoch length setting
-is 24 hours.
+Epochs are the interval within which rewards are issued to subDAOs, and during which rewards are issued to hotspots and other rewardable entities. We propose the epoch duration to be 24 hours, running from 00:00 UTC to 00:00 UTC.
 
 ### Circuit Breakers
 
-The Helium implementation on Solana has circuit breakers in place to prevent exploits to the smart
-contracts. These breakers act as a rate limiter to keep from an entire account being drained or an
-unreasonable amount of tokens from being minted. A good example of these circuit breakers is the one
-on the SubDAO treasury. If a subdao treasury were to go from 100 HNT immediately down to 20 HNT,
-there is a good chance the system is not functioning as intended and there is an exploit. Instead,
-the circuit breaker system can dictate that not more than 20% of a treasury can leave per day.
+The Helium implementation on Solana has circuit breakers in place to prevent exploits to the smart contracts. These circuit breakers act as a protection mechanism to protect the Helium network and limit the impact of potential exploits. The circuit breakers will be adjustable by the `multisig` and through the governance process. The circuit breakers may limit legitimate use but we feel that the security benefits outweigh the drawbacks. We propose several different circuit breakers that are outlined below.
 
-This has a drawback in that this may delay functionality for legitimate use cases. These parameters
-can be changed, but this HIP proposes the following initial parameters.
+#### Mint Circuit Breakers
 
-We propose that these circuit breakers also be initially governed by the Helium Foundation multisig.
-This will allow us to quickly add additional limits to token flow in the case of an attack.
+The Mint Circuit Breakers protect the issuance of new tokens. We propose that the circuit breaker does not allow more than 5x the epoch amount be minted within a single 24h period. Because epoch rewards are automated by Clockwork there should never be a day where more than the normal epoch amount is emitted. The initial value of 5 allows bugs to process emissions that might be backed up by a bug. There will initially be three Mint Circuit Breakers, one for HNT, one for MOBILE and one for IOT.
 
-#### HNT Mint Circuit Breaker
+#### Reward Pool Circuit Breaker
 
-This circuit breaker wraps HNT minting for rewards issued every epoch. We propose a circuit breaker
-that does not allow more than 5 epochs worth of HNT to be minted within a single day. Because epoch
-rewards are automated by Clockwork, there should never be a day where more than one epoch is
-emitted. However, these systems could experience a bug and be backed up. Allowing 5 epochs worth
-gives us time to repair and turn the cranks.
-
-#### MOBILE and IOT Mint Circuit Breakers
-
-This circuit breaker wraps DNT minting for rewards issued to hotspots/other rewardable entities each
-epoch. We propose a circuit breaker that does not allow more than 5 epochs worth of DNT tokens to be
-minted within a single day. Because epoch rewards are automated by Clockwork, there should never be
-a day where more than one epoch is emitted. However, these systems could experience a bug and be
-backed up. Allowing 5 epochs worth gives us time to repair and turn the cranks.
-
-#### MOBILE and IOT Reward Pools
-
-Once tokens are minted for MOBILE and IOT, they go into a reward pool account, awaiting the hotspot
-owners to claim their rewards. This circuit breaker ensures that the account cannot be drained. We
-propose a limit of 5 epochs worth of tokens per day. The drawback of this limit is that if a large
-deployer claims a large number of tokens, this breaker could be thrown.
+The Reward Pool Circuit Breaker protect the reward pool accounts. Tokens that are minted will wait in the reward pool account until the hotspots owner claims the rewards. We propose that the circuit breaker does not allow more than 5x the epoch amount to be claimed from the reward pool account. The drawback of this limit is that a large deployer may claim a large number of tokens might trigger the circuit breaker. There will initially be two Reward Pool Circuit Breakers, one for MOBILE and one for IOT.
 
 #### Treasury Circuit Breakers
 
-These circuit breakers control the MOBILE and IOT treasuries, which allow swapping DNT tokens for
-HNT.
-
-We propose that these circuit breakers are completely closed for the first month of Helium on Solana. This will allow ample time for the subdao treasuries to fill with HNT.
-
-After one month, we propose these treasuries be limited to 20% within 24 hours.
+The Treasury Circuit Breakers protect the subDAO treasuries. The subDAO treasuries allow DNT tokens to be redeemed for HNT. We propose that the circuit breaker be set to disallow redeeming DNT tokens for 30 days after the migration. We propose that after 30 days the circuit breaker will allow a maximum of 20% of the treasury to be redeemed every 24 hours. There will initially be two Treasury Circuit Breakers, one for MOBILE and one for IOT.
 
 ### Emission Schedules
 
 The full token emissions schedule as of Solana Migration can be downloaded
 [here](./HIP-solana-parameters/token-emissions-as-of-solana-migration.pdf).
 
+### Price Oracles
+
+On Solana, we have access to a Pyth price oracle on the HNT price. This oracle includes data from multiple exchanges, as well as market makers and other publishers on the HNT token. We propose using this Oracle instead of the existing oracle approach.
+
+Pyth is not available for MOBILE and IOT prices, and so we propose these prices should follow a similar pattern to the current HNT price oracle on the helium L1, documented [here](https://docs.helium.com/blockchain/oracles/).
+
+It is necessary to know the IOT and MOBILE prices for rewards calculations. 
+
 # Drawbacks
 
-Every one of these parameters has potential drawbacks, but they can be changed through either (a)
-governance voting, or (b) the foundation multisig.
+The potential drawbacks of each of the parameters has been discussed in the section where they are defined. It is important to note that these parameters can be changed through the governance process. The `multisig` will hold the authority to change the parameters and can do so without a governance procedure in case of unintended behavior.
 
 # Frequently Asked Questions
 
