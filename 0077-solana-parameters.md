@@ -14,7 +14,7 @@ The HIP proposes the following initial parameters:
 - Decimals for HNT: `8`
 - Decimals for MOBILE: `6`
 - Decimals for IOT: `6`
-- Proposal ability: `Helium Foundation` and any entity with at least `30M veHNT`
+- Ability to bring a proposal to a vote: `Helium Foundation`
 - Vote duration: `7 days`
 - Quorum: `100M veHNT`
 - Epoch duration: `24h from 00:00 UTC to 00:00 UTC`
@@ -25,6 +25,8 @@ The HIP proposes the following initial parameters:
 - IOT Reward Pool Circuit Breaker: `5x the epoch amount`
 - MOBILE Treasury Circuit Breaker: `20% of epoch amount`
 - IOT Treasury Circuit Breaker: `20% of epoch amount`
+- IOT and Mobile Prices to be decided via a pricing oracle similar to that of HNT.
+- HNT Price to be decided via a Pyth price oracle
 
 Each of the proposed variables can be changed by a governance procedure.
 
@@ -54,7 +56,7 @@ We propose that the amount of decimals of a subDAO token can be autonomously dec
 
 ### Proposals
 
-Solana Governance has the ability to limit the ability to create proposals based on VeToken holdings. We propose that the Helium Foundation as well as any entity that holds more than 30M veHNT is allowed to create proposals.
+Solana Governance has the ability to bring proposals to a vote based on VeToken holdings. We propose that initially, the Helium Foundation `multisig` is the only one able to bring proposals to a vote. This is how the DAO currently functions on the Helium L1. A future HIP can open this up to a threshold of VeToken holdings.
 
 ### Voting Time
 
@@ -66,7 +68,7 @@ We propose that the initial quorum be set at 100M. This number was achieved by t
 
 ### Epoch Duration
 
-Epochs are the interval within which rewards are issued to subDAOs. We propose the epoch duration to be 24 hours, running from 00:00 UTC to 00:00 UTC.
+Epochs are the interval within which rewards are issued to subDAOs, and during which rewards are issued to hotspots and other rewardable entities. We propose the epoch duration to be 24 hours, running from 00:00 UTC to 00:00 UTC.
 
 ### Circuit Breakers
 
@@ -88,6 +90,14 @@ The Treasury Circuit Breakers protect the subDAO treasuries. The subDAO treasuri
 
 The full token emissions schedule as of Solana Migration can be downloaded
 [here](./HIP-solana-parameters/token-emissions-as-of-solana-migration.pdf).
+
+### Price Oracles
+
+On Solana, we have access to a Pyth price oracle on the HNT price. This oracle includes data from multiple exchanges, as well as market makers and other publishers on the HNT token. 
+
+Pyth is not available for MOBILE and IOT prices, and so we propose these prices should follow a similar pattern to the current HNT price oracle on the helium L1, documented [here](https://docs.helium.com/blockchain/oracles/).
+
+It is necessary to know the IOT and MOBILE prices for rewards calculations. 
 
 # Drawbacks
 
