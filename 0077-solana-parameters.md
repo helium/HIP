@@ -84,7 +84,7 @@ The Reward Pool Circuit Breaker protect the reward pool accounts. Tokens that ar
 
 #### Treasury Circuit Breakers
 
-The Treasury Circuit Breakers protect the subDAO treasuries. The subDAO treasuries allow DNT tokens to be redeemed for HNT. We propose that the circuit breaker be set to disallow redeeming DNT tokens for 30 days after the migration. We propose that after 30 days the circuit breaker will allow a maximum of 20% of the treasury to be redeemed every 24 hours. There will initially be two Treasury Circuit Breakers, one for MOBILE and one for IOT.
+The Treasury Circuit Breakers protect the subDAO treasuries. The subDAO treasuries allow DNT tokens to be redeemed for HNT. We propose that the circuit breaker will allow a maximum of 20% of the treasury to be redeemed in every 24 hour period. There will initially be two Treasury Circuit Breakers, one for MOBILE and one for IOT.
 
 ### Emission Schedules
 
