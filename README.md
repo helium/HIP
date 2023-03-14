@@ -94,7 +94,8 @@ repository:
 | 73 | [Consensus Deselection Weighting](https://github.com/helium/HIP/blob/main/0073-consensus-deselection-history-weight.md) | [Deployed (audit/txn)](https://github.com/helium/HIP/issues/491) |
 | 74 | [Mobile PoC - Modeled Coverage Rewards](https://github.com/helium/HIP/blob/main/0074-mobile-poc-modeled-coverage-rewards.md) | [Approved](https://github.com/helium/HIP/issues/504) |
 | 75 | [Initiate Programmatic PoC Emissions with an Updated Emissions Curve](https://github.com/helium/HIP/blob/main/0075-mobile-poc-initiate-programmatic-minting-and-updated-emissions-curve.md) | [In Discussion](https://github.com/helium/HIP/issues/526) |
-| 76 | [Simplify Lockup Curve and veTokens](https://github.com/helium/HIP/blob/main/0076-linear-lockup-curve.md) | [In Discussion](https://github.com/helium/HIP/issues/560) |
+| 76 | [Simplify Lockup Curve and veTokens](https://github.com/helium/HIP/blob/main/0076-linear-lockup-curve.md) | [Approved](https://github.com/helium/HIP/issues/560) |
+| 77 | [Launch Parameters for Solana Migration](https://github.com/helium/HIP/blob/main/0077-solana-parameters.md) | [In Discussion](https://github.com/helium/HIP/issues/573) |
 
 ## Status key
 
