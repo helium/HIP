@@ -16,7 +16,9 @@ As a result, no onboarding fees have yet been burned towards the MOBILE subDAO.
 
 This prevents the tokenomics based on DAO Utility Score, as defined in HIP-51, from working as designed.
 
-HIP-XX solves this problem by requiring that Hotspots participating in a particular Helium subDAO must burn an onboarding fee towards that subDAO. Specific fee schedules will be determined by subDAO governance. A mechanism is specified whereby the existing MOBILE Hotspots may be onboarded retroactively.
+HIP-XX solves this problem by requiring that Hotspots participating in a particular Helium subDAO must burn an onboarding fee towards that subDAO. The MOBILE subDAO onboarding fee has been set at $40 by HIP-43. In the future, fee schedules will be determined by subDAO governance.
+
+A mechanism is specified whereby the existing MOBILE Hotspots may be onboarded retroactively.
 
 # Motivation
 
@@ -32,7 +34,7 @@ This proposal is relevant to:
 
 - Existing and future IOT and MOBILE Hotspot owners, who are affected by the clarification of fees and the MOBILE DAO Utility Score.
 - MOBILE Hotspot manufacturers, who may need to budget for onboarding fees as decided by the MOBILE subDAO.
-- Anyone designing a future subDAO.
+- Anyone contributing to the design of the MOBILE subDAO or a future subDAO.
 
 # Detailed Explanation
 
