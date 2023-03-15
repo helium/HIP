@@ -83,7 +83,7 @@ This proposal may require Hotspot manufacturers and therefore, indirectly, Hotsp
 # Benefits
 
 - Under this proposal, all subDAOs will contribute onboarding fees to the Helium DAO, and in return will obtain a DAO Utility Score as proposed in HIP-51. Rules for Hotspots participating in multiple subDAOs are clarified, including subDAOs which may be introduced in the future as upgrades to existing Hotspot hardware.
-- Onboarded MOBILE Hotspots will be counted towards the MOBILE DAO Utility Score as intended by HIP-53.
+- Onboarded MOBILE Hotspots will be counted towards the MOBILE DAO Utility Score as intended by HIP-53, provided manufacturers and/or other parties successfully coordinate with Helium Foundation to pay the outstanding fees.
 
 # Deployment Impact
 
@@ -95,4 +95,4 @@ To resolve any ambiguity in HIP-51, the distribution of HNT to subDAOs is clarif
 
 - The Helium DAO HNT emissions contract distributes HNT to HST holders as specified in HIP-20.
 - All remaining HNT is distributed between all subDAOs in proportion to their relative DAO Utility Scores.
-  - Rewards to individual Hotspots for PoC and Data Transfer are issued in DNT according to the reward schedules defined for each subDAO, which may be modified through subDAO governance.
+- Rewards to individual Hotspots for PoC and Data Transfer are issued in DNT according to the reward schedules defined for each subDAO, which may be modified through subDAO governance.
