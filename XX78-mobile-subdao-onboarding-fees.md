@@ -1,4 +1,4 @@
-# HIP 78: subDAO Onboarding Fees
+# HIP 78: MOBILE subDAO Onboarding Fees
 
 - Author(s): @ferebee
 - Start Date: 2023-03-10
