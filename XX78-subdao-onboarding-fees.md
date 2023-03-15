@@ -1,10 +1,10 @@
-# HIP XX: subDAO Onboarding Fees
+# HIP 78: subDAO Onboarding Fees
 
 - Author(s): @ferebee
 - Start Date: 2023-03-10
 - Category: Economic, Technical
-- Original HIP PR: #XX
-- Tracking Issue: #XX
+- Original HIP PR: #580
+- Tracking Issue: #582
 
 # Summary
 
