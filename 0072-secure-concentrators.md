@@ -161,8 +161,8 @@ comply with the reciprocal nature of the GPLv3 license and make their modificati
 the GPLv3.
 
 The intention of the "two-slot" scheme is to always allow any Secure Concentrator produced by any
-Manufacturer to be updated with the official open-source firmware. In the case a Manufacturer goes out
-of business or otherwise unable to provide support for their hardware, owners of Secure
+Manufacturer to be updated with the official open-source firmware. In the case a Manufacturer goes
+out of business or otherwise unable to provide support for their hardware, owners of Secure
 Concentrators can always choose to run the open-source firmware.
 
 ## Proof of Coverage Rewards
@@ -238,9 +238,12 @@ this mechanism enables several things that are currently difficult or impossible
 Secure Concentrators/Hotspots on the secondary market and repurposing Hotspots with lost keys or
 Hotspots on the denylist.
 
-Secure Hotspots do not require Location Assertion transactions. In fact, Secure Hotspots are free to
-continually move their location because the GPS location metadata is included in the signed packets.
-Secure Hotspots are still subject to the same density scale rules.
+For clarity, Hotspots with Secure Concentrators are not subject to any fees when adding a Hotspot to
+the blockchain (with the exception of the $5 'Binding' fee which is only applicable for subsequent
+binding transactions). Hotspots with Secure Concentrators are not subject to Assert Location fees.
+In fact, Secure Hotspots are free to continually move their physical location because the GPS
+metadata is included in the signed packets. Secure Hotspots are still subject to the same density
+scale rules.
 
 ## Reference Hardware Design
 
