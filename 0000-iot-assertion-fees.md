@@ -1,4 +1,8 @@
+# IoT Assertion Fees Update
+
+- Author(s): @charlesfayal
 - Start Date: 2023-5-19
+- Category: economic
 - HIP PR: <!-- leave this empty -->
 - Tracking Issue: <!-- leave this empty -->
 
