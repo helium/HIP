@@ -81,15 +81,11 @@ A sheet to play with: https://docs.google.com/spreadsheets/d/1nDYbj4APWg_XEeGEsL
 | Total Tokens Minted Monthly                   | 5,000,000,000 |
 | Total Tokens Minted in 24 Hours               |   166,666,667 |
 | Total Token Pool for Mappers (20%)            |    33,333,333 |
-|                                               |               |
 | Fixed 24 hour reward for discovery mappers    |            30 |
 | Average 24 hour reward for Spot*              |           168 |
-|                                               |               |
 | Active Discovery Mappers (Subscribers/Phones) |        10,000 |
 | Active Verification Mappers (Spot)            |         2,000 |
-|                                               |               |
 | Total Points Earned by All Mappers            |       636,000 |
-|                                               |               |
 | Mobile Earned per Discovery Mapper            |     **1,572** |
 | Mobile Earned per Verification Mapper         |     **8,805** |
 
