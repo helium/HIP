@@ -16,7 +16,7 @@ The fee to assert (aka onboard) an IoT gateways is currently 4,000,000 DC ($40) 
 
 The price of gateways have come down to as low as $99. With $50 of assertion fees included (onboarding + first location) this means that ~50% of the cost of the gateways is from the cost of these fees, demonstrating that these fees are unnecessarily high. The cheaper that gateways become the more use cases open up and the more the network will expand.
 
-The original reason for the fees is to prevent Sybil attacks (aka spamming the blockchain). At the new proposed rates, the anti-sybil objective is still achieved.
+The original reason for the fees is to prevent [Sybil attacks](https://en.wikipedia.org/wiki/Sybil_attack). This was only relevant when gateways performed the PoC logic. If an attacker created a bunch of fake gateways they could control the blockchain. This is no longer relevant since gateways do not perform the blockchain logic anymore.
 
 # Stakeholders
 [stakeholders]: #stakeholders
@@ -38,8 +38,6 @@ There would be no blockchain code changes for this HIP, however, any documentati
 
 # Drawbacks
 [drawbacks]: #drawbacks
-
-Increases the chance of sybil attacks, though at the current network earning rates and the proposed rates, this shouldn't have an effect.
 
 With the current DAO utility score equation this would mean the IoT utility score would increase incrementally less than it would have per gateway with higher assertion fees.
 
@@ -64,7 +62,7 @@ Waiting to determine if we can adjust the DAO utility score to either not includ
 
 Helium's documentation would need to be adjusted to reflect the new rates. For example, https://docs.helium.com/blockchain/transaction-fees/
 
-This will be backwards compatible.
+This will be backwards compatible with 
 
 # Success Metrics
 [success-metrics]: #success-metrics
