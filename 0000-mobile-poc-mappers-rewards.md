@@ -76,6 +76,7 @@ Given the above, we propose to use the following framework for discovery mapping
 
 A sheet to play with: https://docs.google.com/spreadsheets/d/1nDYbj4APWg_XEeGEsLdR17CW8q2EiuEqoLKs_I6T1Dc/edit#gid=1971124829
 
+|                                               |               |
 | --------------------------------------------- | ------------- |
 | Total Tokens Minted Monthly                   | 5,000,000,000 |
 | Total Tokens Minted in 24 Hours               |   166,666,667 |
