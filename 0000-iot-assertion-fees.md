@@ -33,7 +33,8 @@ Investors - cheaper gateways should increase the cost to utility ratio of the ne
 [detailed-explanation]: #detailed-explanation
 
 Their are no new concepts to this HIP. The only change would be that the assertion fees would be adjusted to the proposed amounts via chain variable adjustments.
-No new code is needed
+
+There would be no blockchain code changes for this HIP, however, any documentation or apps that use the assertion fees will need to be updated to reflect the new fees.
 
 # Drawbacks
 [drawbacks]: #drawbacks
@@ -72,4 +73,4 @@ The main metric would be the cost of gateways post merge. For example for the $9
 
 We should see an increase in gateway sales as the price decreases, although this has a number of other macro factors.
 
-The decrease in the location reassertion fee should result in an increase of gateway locations.
+The decrease in the location reassertion fee could result in an increase of gateway locations changes.
