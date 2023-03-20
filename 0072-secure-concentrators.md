@@ -205,23 +205,25 @@ HIP 19.
 
 ## Onboarding
 
-Onboarding refers to the action a Manufacture takes to add new Secure Concentrator Hardware Keys to
-the blockchain. Onboarding will occur at a time before being shipped to final customers. a Secure
+Onboarding refers to the action a Manufacture takes to add new Secure Concentrator Hardware Key to
+the blockchain. Onboarding will occur at a time before shipping to final customers. a Secure
 Concentrator is only capable of earning Proof of Coverage rewards after its Hardware Key has been
-Onboarded. Onboarding is fully automatic processes performed by interacting with a Solana Smart
-Contract.
+Onboarded.
 
-Manufacturers will be required to deposit $10 USD of collateral into a Smart Contract for each
-Secure Concentrator they produce. The collateral (AKA 'stake') will be locked in a Smart Contract
-and slowly paid back to the Manufacturer over a three (3) year period. If a Manufacturer is found to
-have violated any of the terms of the Helium Foundation Ethics document (as determined by the Helium
-Tribunal Process), their staking balance can be partially or fully Burned. The "Burned" action is
-defined as converting the offending Manufacturer's collateral balance into HNT and then removing the
-resulting HNT from circulation permanently.
+Manufacturers will be required to stake $10 USD worth of HNT (as determined by HNT price oracle
+using the previous 30-day average from the time of the staking transaction) for each Secure
+Concentrator they produce. The staking period is fixed at three years. Like normal HNT staking
+operations, the HNT is converted to veHNT and deposited into the Manufacture's wallet. If a
+Manufacturer is found to have violated any of the terms of the Helium Foundation Ethics document (as
+determined by the Helium Tribunal Process), their staking balance can be partially or fully Burned.
+The "Burned" action is defined as converting the offending Manufacturer's stake balance into HNT and
+then removing the resulting HNT from circulation permanently.
 
-The Smart Contract will hold Manufacturer's stake balance in HNT. The Smart Contract will use the
-HNT price oracle to dynamically calculate $10 USD worth of HNT at the time of Onboarding
-transaction.
+Onboarding is fully automatic processes performed by interacting with a Solana Smart Contract. A
+Manufacturer will create an Oboarding transaction containing the new Secure Concentrator Hardware
+Public key and $10 worth of HNT and send it to the Solana Smart Contract. The Smart Contract
+processes the transaction, adds the Hardware Key to the blockchain, and deposits the equivalent
+veHNT into the Manufacturer's wallet.
 
 ## Hotspot Mechanics
 
