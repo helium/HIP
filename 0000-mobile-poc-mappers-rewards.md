@@ -1,6 +1,6 @@
 # HIPXX: Mobile PoC - Mappers Rewards
 
-- Author(s): Mobile PoC Working Group ([@gateholder](https://github.com/gateholder), [@jhella](https://github.com/jhella), [@Maxgold91](https://github.com/Maxgold91), [@zer0tweets](https://github.com/zer0tweets))
+- Author(s): Mobile PoC Working Group ([@gateholder](https://github.com/gateholder), [@jhella](https://github.com/jhella), [@Maxgold91](https://github.com/Maxgold91), [@modern-memories](https://github.com/modern-memories), [@zer0tweets](https://github.com/zer0tweets))
 - Start Date: 2023-03-19
 - Category: economic, technical
 - Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
@@ -23,12 +23,10 @@ In light of these discoveries, we’d like to propose an adjustment to the rewar
 - Since SP rewards can’t be re-distributed to Subscribers, we propose to reduce Service Provider rewards bucket from 20% to 10% and expand mappers bucket from 10% to 20% to account for the additional types of mapping activity.
 - Introduce a framework of reward points and tasks that can be performed by Mappers for verifying existing coverage (verification mapping), as well as, helping discover coverage opportunities (discovery mapping).
 
-
 ## Stakeholders
 
 - Service Providers joining the Mobile SubDAO will have a decreased pool of MOBILE rewards from 20% to 10%.
 - Mappers who operate dedicated mapping devices (Spot) and Subscribers to the Mobile Network will earn rewards for network mapping from the 20% pool of emitted MOBILE.
-
 
 ## Detailed Explanation
 
@@ -101,3 +99,38 @@ It has been decided by the Mobile PoC Working Group to postpone the final decisi
 ### Mapper subDAO  
 
 The Mobile PoC Working Group has also agreed to initiate work on Mapper subDAO. Mapper subDAO would make it possible for mapper devices to provide data that can be used across various types of networks - IoT, MOBILE, Wi-Fi etc - as well as receive incentives for mapping macro operator coverage. It has been decided that, following the implementation of Mapper subDAO, Mobile subDAO will become one of the first “customers” of Mapper subDAO.
+
+## Drawbacks
+
+There are no obvious drawbacks.
+
+## Rationale and Alternatives
+
+None of the alternatives are really viable.
+One alternative is not to use Mappers and continue relying on individual self-certification of radios, which is prone to gaming.
+
+## Unresolved Questions
+
+This HIP proposes to move forward with mapping rewards without creating a final algorithm for how Hotspot rewards will be adjusted. For the full effect of Mappers to take place, that part needs to be addressed. It has been decided that it is best addressed following actual data that will be collected by mapping.
+
+For discovery mapping, this HIP proposes the approach for uncovering hexes with likely high concentration of Helium 5G network users, but it doesn’t lay out the path for how this information can be used to incentivize coverage at such locations over any other. The Mobile PoC Working Group has discussed this at a high level and will make a separate proposal that describes how Service Providers on the network can boost locations with high likelihood of traffic usage by staking MOBILE in a separate HIP.
+
+## Deployment Impact
+
+The deployment will kickstart the emission of MOBILE Mappers reward at an increased 20% and rewarding of Subscribers and Mappers once they join the network and start mapping activities.
+It will also reduce the emissions of the MOBILE rewards to 10% for Service Providers once they join the Mobile Network.
+
+Deployment of this HIP will require the following:
+- Onboarding of Mappers and Subscribers to the Solana blockchain with NFTs, in a similar approach to onboarding of Hotspot.
+- Emissions of an additional 20% MOBILE dedicated to Mappers rewards bucket on the Solana.
+- Integration of the discovery mapping data from the Subscribers app and verification mapping data from Spot device with Mobile Oracle.
+- Implementation of the hex recharge algorithm on the Mobile Oracle.
+- Implementation of the rewarding algorithm on the Mobile Oracle that determines how much each Mapper and Subscriber gets rewards for specific mapping activities.
+- Visualization of the mapped hexes with a tool similar to Modeled Coverage Explorer.
+- Updates to [dev docs](https://docs.helium.com/).
+
+## Success Metrics
+
+For verification mapping the key success metrics is the number of modeled coverage hexes that have been validated or invalidated by mapping activity.
+
+For discovery mapping the key success metric is the number of subscribers that opted in to help share their data usage and location with the network and, as a byproduct of it, whether or not this information uncovers sufficient concentration of usage in certain areas, such that it is useful for making Hotspot deployment decisions.
