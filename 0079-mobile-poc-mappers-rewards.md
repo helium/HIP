@@ -18,7 +18,7 @@ HIP53 described Mobile subDAO and proposed a number of reward buckets to be acti
 - We initially set a 10% bucket for Mappers, because at the time of writing HIP53, we assumed that Mappers will be the only and primary way of aligning Hotspot operator rewards with coverage. Since then, we have come to the conclusion that using modeled coverage, coupled with Mappers as a means to verify modeled coverage is a better approach to arrive at a complete coverage map.
 - We initially assumed that mapping is limited to network participants verifying existing coverage using dedicated mapping devices. We have since expanded our thinking and believe that mapping should also include helping reveal hexes where offload is most likely to happen, by having network Subscribers share locations where most TMO data is being used.
 
-In light of these discoveries, we’d like to propose an adjustment to the reward buckets proposed in HIP53 and a new, more flexible framework for providing rewards for work performed on the network by various types of mapping activity.  
+In light of these discoveries, we’d like to propose an adjustment to the reward buckets proposed in HIP53 and a new, more flexible framework for providing rewards for work performed on the network by various types of mapping activity.
 
 - Since SP rewards can’t be re-distributed to Subscribers, we propose to reduce Service Provider rewards bucket from 20% to 10% and expand mappers bucket from 10% to 20% to account for the additional types of mapping activity.
 - Introduce a framework of reward points and tasks that can be performed by Mappers for verifying existing coverage (verification mapping), as well as, helping discover coverage opportunities (discovery mapping).
@@ -30,11 +30,11 @@ In light of these discoveries, we’d like to propose an adjustment to the rewar
 
 ## Detailed Explanation
 
-### Reward Points Framework for Mappers  
+### Reward Points Framework for Mappers
 
 Similar to various Radios earning various amounts of reward points, depending on the coverage they provide across res12 hexes, we propose a series of tasks and associated reward points for mapping activity. Mappers to accumulate rewards points over a 24 hour period and total MOBILE minted for the period that is attributable to the mappers bucket will be ratably distributed based on reward points.
 
-#### Discovery Mapping Rewards  
+#### Discovery Mapping Rewards
 
 Today people deploy Mobile Hotspots at all kinds of random locations and we provide little guidance on placement, aside from broad statements to the tune of “locations with a lot of slow moving people.” Given Helium 5G neutral host focus and our objective to bring maximum amount of data to the Network, it is critical that the Hotspots are placed and rewarded in very specific locations - those where there is a concentration of Helium Mobile (and, later, other Service Providers) Subscribers using a lot of non-Helium 5G data while stationary or moving slowly. I.e. locations where there is the highest probability of data offload happening.
 
@@ -42,7 +42,7 @@ Achieving this is possible by having some critical mass of Subscribers that belo
 
 To help identify coverage opportunities people will be required to be a Subscriber on the Network and opt-in through the Helium Mobile app (or any other carrier app provided by an approved Service Provider on the Network). Similar to Google Maps or other, location dependent apps, Helium Mobile app will intermittently query the GPS of the mobile device and share the device location with the Network every so often.
 
-We propose that 30 reward points be attributed to each Subscriber who has consistently shared their mobile location during the 24 reward period. Identifying coverage opportunities is, by design, a passive activity. I.e. we don’t want Subscribers to be exhibiting any special, unnatural activity in terms of where they go or how much data they use. Therefore, there is no way a participant can influence the rewards by doing something in particular. There are just two requirements for earning these rewards: 1) be a Subscriber on the Network, going about your daily routine; 2) voluntarily opt-in to share your location for the betterment of the Network.   
+We propose that 30 reward points be attributed to each Subscriber who has consistently shared their mobile location during the 24 reward period. Identifying coverage opportunities is, by design, a passive activity. I.e. we don’t want Subscribers to be exhibiting any special, unnatural activity in terms of where they go or how much data they use. Therefore, there is no way a participant can influence the rewards by doing something in particular. There are just two requirements for earning these rewards: 1) be a Subscriber on the Network, going about your daily routine; 2) voluntarily opt-in to share your location for the betterment of the Network.
 
 ##### Using Discovery Mapping Data to Boost Hexes
 
@@ -70,25 +70,24 @@ Given the above, we propose to use the following framework for discovery mapping
 - Furthermore, all adjacent hexes discharge by 50%.
 - There is a maximum number of 672 points that can be earned by a single Mapper for verifying the same Radio during any given 7 day period.
 
-#### Example Reward Calculations for Mappers  
+#### Example Reward Calculations for Mappers
 
 A sheet to play with: https://docs.google.com/spreadsheets/d/1nDYbj4APWg_XEeGEsLdR17CW8q2EiuEqoLKs_I6T1Dc/edit#gid=1971124829
 
 |                                               |               |
 | --------------------------------------------- | ------------- |
 | Total Tokens Minted Monthly                   | 5,000,000,000 |
-| Total Tokens Minted in 24 Hours               |   166,666,667 |
-| Total Token Pool for Mappers (20%)            |    33,333,333 |
-| Fixed 24 hour reward for discovery mappers    |            30 |
-| Average 24 hour reward for Spot*              |           168 |
-| Active Discovery Mappers (Subscribers/Phones) |        10,000 |
-| Active Verification Mappers (Spot)            |         2,000 |
-| Total Points Earned by All Mappers            |       636,000 |
-| Mobile Earned per Discovery Mapper            |     **1,572** |
-| Mobile Earned per Verification Mapper         |     **8,805** |
+| Total Tokens Minted in 24 Hours               | 166,666,667   |
+| Total Token Pool for Mappers (20%)            | 33,333,333    |
+| Fixed 24 hour reward for discovery mappers    | 30            |
+| Average 24 hour reward for Spot\*             | 168           |
+| Active Discovery Mappers (Subscribers/Phones) | 10,000        |
+| Active Verification Mappers (Spot)            | 2,000         |
+| Total Points Earned by All Mappers            | 636,000       |
+| Mobile Earned per Discovery Mapper            | **1,572**     |
+| Mobile Earned per Verification Mapper         | **8,805**     |
 
-*Assume it mapped 2 semi-charged hexes
-
+\*Assume it mapped 2 semi-charged hexes
 
 ### Adjusting Hotspot Rewards Based on Mapper Input
 
@@ -96,7 +95,7 @@ The Mobile PoC Working Group has discussed and documented a potential path to ad
 
 It has been decided by the Mobile PoC Working Group to postpone the final decision regarding the specific algorithm to the second stage of Mapper reward implementation. This approach would make it possible to create Hotspot rewards adjustment algorithms based on the actual data from mapping activity vs. speculating regarding variables and weights.
 
-### Mapper subDAO  
+### Mapper subDAO
 
 The Mobile PoC Working Group has also agreed to initiate work on Mapper subDAO. Mapper subDAO would make it possible for mapper devices to provide data that can be used across various types of networks - IoT, MOBILE, Wi-Fi etc - as well as receive incentives for mapping macro operator coverage. It has been decided that, following the implementation of Mapper subDAO, Mobile subDAO will become one of the first “customers” of Mapper subDAO.
 
@@ -121,6 +120,7 @@ The deployment will kickstart the emission of MOBILE Mappers reward at an increa
 It will also reduce the emissions of the MOBILE rewards to 10% for Service Providers once they join the Mobile Network.
 
 Deployment of this HIP will require the following:
+
 - Onboarding of Mappers and Subscribers to the Solana blockchain with NFTs, in a similar approach to onboarding of Hotspot.
 - Emissions of an additional 20% MOBILE dedicated to Mappers rewards bucket on the Solana.
 - Integration of the discovery mapping data from the Subscribers app and verification mapping data from Spot device with Mobile Oracle.
