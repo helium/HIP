@@ -1,10 +1,10 @@
-# HIPXX: Mobile PoC - Mappers Rewards
+# HIP 79: Mobile PoC - Mappers Rewards
 
 - Author(s): Mobile PoC Working Group ([@gateholder](https://github.com/gateholder), [@jhella](https://github.com/jhella), [@Maxgold91](https://github.com/Maxgold91), [@modern-memories](https://github.com/modern-memories), [@zer0tweets](https://github.com/zer0tweets))
 - Start Date: 2023-03-19
-- Category: economic, technical
-- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
-- Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
+- Category: Economic, Technical
+- Original HIP PR: #590
+- Tracking Issue: #592
 
 ## Summary
 
