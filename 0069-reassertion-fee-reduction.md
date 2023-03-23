@@ -5,7 +5,7 @@
 - Category: Economy
 - Original HIP PR: <https://github.com/helium/HIP/pull/453>
 - Tracking Issue: <https://github.com/helium/HIP/issues/458>
-- Status: In Discussion
+- Status: Approved 
 
 # Summary
 
@@ -26,7 +26,7 @@ average earnings for those hotspots.
 # Stakeholders
 
 In reality, since the amount of DC burned has an economic impact, this hip (indirectly) affects
-everyone. Directly, this hip affects everyone that is reasserting their hotspots. Additionally,
+everyone. Directly, this HIP affects everyone that is reasserting their hotspots. Additionally,
 since maker apps are used to assert locations, this HIP directly affects all owners of maker apps.
 
 # Detailed Explanation
@@ -56,14 +56,14 @@ Please note that I specifically chose 500,000 DC and not less (say 10,000 DC), t
 people from taking advantage of reduced reassertion fees, and to lessen the economic effect on the
 Network.
 
-If approved by community (HNT) vote, this HIP will reduce **all** assertion fees in half, for three
+If approved by community (HNT) vote, this HIP will reduce **all** location assertion fees in half, for three
 months, beginning immediately upon the migration to Solana, and will revert back after three months.
 
 No new (blockchain) code is required, since this may be accomplished via chain variables. However,
 maker apps will have to update their apps to request the lower (500,000 DC) amount (at the start of
 the 3 month period,) and they will need to update their apps to request the original (1,000,000 DC)
 amount at the end of the three month period. That being said, makers are in essence being paid to
-make these changes, since the end result is that their 1st location/onboarding assertion costs will
+make these changes, since the end result is that their 1st ($10) location/onboarding assertion costs will
 be reduced by 50%.
 
 _Please note that this HIP does **not** impact 5G CBRS gateways & radios._
@@ -88,7 +88,7 @@ caught- due to the potential lack of (additional) location assertion data.
 
 Regarding the economic effect, burning less HNT as a result of reduced reassertion fees, has a
 negative economic impact. However, there may end up being more DC burned from more location
-assertions (than there were prior to the reassertion fee reduction.) Therefore, will this HIP impact
+assertions (than there were prior to the reassertion fee reduction.) Thus, the question remains, will this HIP impact
 the Network's economics negatively or positively?
 
 # Success Metrics
