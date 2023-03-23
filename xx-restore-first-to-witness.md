@@ -1,4 +1,4 @@
-# HIP Template (Give it a title here but do not allocate a number, maintainer will allocate a number)
+# XX Restore first to respond witness rewarding
 
 - Author(s): @BFGNeil
 - Start Date: 2023-03-23 <!-- fill me in with today's date, YYYY-MM-DD -->
