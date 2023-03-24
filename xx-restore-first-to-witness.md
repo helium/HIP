@@ -14,7 +14,7 @@ traffic (late delivery) to earn from PoC.
 
 ## Motivation
 
-The motovation here is to move to reward the "best" setup hotspots in an area. The IOT PoC WG is
+The motivation here is to move to reward the "best" setup hotspots in an area. The IOT PoC WG is
 focusing on improving PoC to reward for the better utilised hotspots in an area, this is one step of
 that by rewarding the best setup hotspots rather than anyone who heard it within 20 minutes.
 
@@ -35,7 +35,7 @@ This change ensures the "best setup" (in terms of line of sight & internet speed
 originating gateway) are rewarded over those setup on for example slow connections, badly placed
 indoors or those far away on towers not providing useful coverage for sensors.
 
-Reducising this window makes little difference as we're talking milliseconds of difference, the only
+Reducing this window makes little difference as we're talking milliseconds of difference, the only
 way to curb this stuffing is to return back to first to hear over this random selection as
 forwarding will always add latency.
 
@@ -47,7 +47,7 @@ reward them for their laggy setup.
 
 - Fiber connections will always have a faster delivery over other providers options.
 - 600 or so DIY gateways exist with the key stored on the filesystem, these hotspots will always be
-  faster at delivering as they dont have to ask the ECC to sign the witness, they can just use the
+  faster at delivering as they don't have to ask the ECC to sign the witness, they can just use the
   flat file key which is quicker.
 - differences in security methods mean some are slower than others to sign witnesses and send them
   off.
