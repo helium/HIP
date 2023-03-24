@@ -14,51 +14,52 @@ traffic (late delivery) to earn from PoC.
 
 ## Motivation
 
-the motovation here is to move to reward the "best" setup hotspots in an area. The IOT PoC WG is
+The motovation here is to move to reward the "best" setup hotspots in an area. The IOT PoC WG is
 focusing on improving PoC to reward for the better utilised hotspots in an area, this is one step of
 that by rewarding the best setup hotspots rather than anyone who heard it within 20 minutes.
 
-Currently Hotspots have a 20 block window to report their witnessing of a beacon in. out of everyone
-that heard the beacon (no matter if they report the witness instantly or ~20 minutes later) 14 are
-chosen and rewarded.
-
-Having this window to report also allows for packet stuffers to recieve, edit and submit fake
-witnesses and have just as much chance of being selected as a legitimate setup.
-
-Reducising this window makes little difference as we're talking milliseconds of difference, the only
-way to reudce it is to return back to first to hear over this random selection as forwarding will
-always add latency.
-
-If a hotspot heard a packet from a sensor, and took 20 minutes to report it, the packet would be
-marked as late and rejected, yet in the current system we would potentially reward them for their
-laggy setup.
-
 ## Stakeholders
 
-This effects every hotspot on the network,
+This effects every hotspot on the network.
 
 ## Detailed Explanation
 
-- Introduce and explain new concepts.
-- It should be reasonably clear how the proposal would be implemented.
-- Provide representative examples that show how this proposal would be commonly used.
-- Corner cases should be dissected by example.
+Currently Hotspots have a 20 block window to report their witnessing of a beacon. Out of everyone
+that heard the beacon (no matter if they report the witness instantly or ~20 minutes later) 14 are
+chosen and rewarded.
+
+Having this window to report allows for packet stuffers to recieve, edit and submit fake witnesses
+and have just as much chance of being selected as a legitimate setup.
+
+This change ensures the "best setup" (in terms of line of sight & internet speed, distance from
+originating gateway) are rewarded over those setup on for example slow connections, badly placed
+indoors or those far away on towers not providing useful coverage for sensors.
+
+Reducising this window makes little difference as we're talking milliseconds of difference, the only
+way to curb this stuffing is to return back to first to hear over this random selection as
+forwarding will always add latency.
+
+If a hotspot heard a packet from a sensor, and took 20 minutes to report it, the packet would be
+marked as late and the hotspot would not be rewarded, yet in the current system we would potentially
+reward them for their laggy setup.
 
 ## Drawbacks
 
 - Fiber connections will always have a faster delivery over other providers options.
 - 600 or so DIY gateways exist with the key stored on the filesystem, these hotspots will always be
   faster at delivering as they dont have to ask the ECC to sign the witness, they can just use the
-  flat file key which is quicker
+  flat file key which is quicker.
+- differences in security methods mean some are slower than others to sign witnesses and send them
+  off.
 
 ## Rationale and Alternatives
 
 An alternative would be to reduce this window, but it would not solve the issue of stuffing, we're
-talking milliseconds of difference, only changing to first to hear solves this.
+talking milliseconds of difference, only changing to a system where first to respond solves this.
 
 ## Unresolved Questions
 
-None
+None so far.
 
 ## Deployment Impact
 
@@ -69,4 +70,5 @@ which will match the experience we want for sensors.
 ## Success Metrics
 
 To measure the success of this hip we need to look at packet stuffing reward reductions and an
-increase to the better setup hotspots in an area which should be confirmable via mapping
+increase to the better setup hotspots in an area which should be confirmable via mapping and in
+terms of rewards.
