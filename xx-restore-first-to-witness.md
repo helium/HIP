@@ -19,7 +19,7 @@ focusing on improving PoC to reward for the better utilised hotspots in an area,
 that by rewarding the best setup hotspots rather than anyone who heard it within 20 minutes.
 
 Currently Hotspots have a 20 block window to report their witnessing of a beacon in. out of everyone
-that heard the beacon (no matter if they report the witness instantly or ~20 minutes later) 12 are
+that heard the beacon (no matter if they report the witness instantly or ~20 minutes later) 14 are
 chosen and rewarded.
 
 Having this window to report also allows for packet stuffers to recieve, edit and submit fake
