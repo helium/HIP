@@ -10,7 +10,7 @@
 
 [HIP-51](https://github.com/helium/HIP/blob/main/0051-helium-dao.md#omni-protocol-poc-incentive-model) specifies the DAO Utility Score, which determines the distribution of HNT among all Helium subDAOs.
 
-Its purpose is to incentivize current and future subDAOs to grow their burn of HNT for Data Transfer, while also protecting the investment of the LoRa Hotspots that participated from the start to launch the Helium network of networks.
+Its purpose is to incentivize current and future subDAOs to grow grow the value of their services provided through the Helium DAO, while also protecting the investment of the LoRa Hotspots that participated from the start to launch the Helium network of networks.
 
 As the implementation of HIP-70 has progressed, multiple theoretical and practical drawbacks of the DAO Utility Score as specified in HIP-51 have become apparent, threatening the interests of the existing IOT and MOBILE subDAOs, possible future subDAOs, and the Helium DAO as a whole.
 
@@ -104,7 +104,7 @@ $D = \text{max}(Floor, \sqrt{\text{DNP DCs burned per epoch in USD}})$
 
 and *Floor* is 1 for all subDAOs except for the IOT subDAO.
 
-*Floor* shall be 50 for the IOT subDAO until the fourth halvening of HNT emissions, which is currently scheduled to occur on 1 August 2027.
+*Floor* shall be 50 for the IOT subDAO until the fourth halvening of HNT emissions, which is currently scheduled to occur on 1 August 2027. Then, it shall revert to 1.
 
 # Discussion of HIP-78 Utility Score
 
@@ -124,7 +124,7 @@ $\text{IOT DCs burned per epoch in USD} = 50 \times 50 \text{USD} = 2,500 \text{
 
 $\text{IOT DCs burned per 30 days in USD} = 75,000 \text{USD.}$
 
-This special treatment of IOT shall last until the fourth halvening of HNT emissions, which is scheduled for 1 August 2027.
+This special treatment of IOT shall last until the fourth halvening of HNT emissions, which is scheduled for 1 August 2027, when *Floor* for IOT shall revert to 1.
 
 In other words, as soon as the IOT subDAO achieves a monthly DC burn of $75,000, its founder’s bonus will become irrelevant. If it cannot achieve this burn by 1 August 2027, it will have to succeed or fail on its own merits.
 
