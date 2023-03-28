@@ -6,7 +6,7 @@ Authors:
 - ChatGPT
 
 ## Introduction:
-The Helium network is a decentralized network that relies on hotspots to create and maintain the network. However, in some cases, the rewards of some hotspots may be denied due to potential fraudulent activity. While it is important to prevent fraud, it may also result in the unfair denial of rewards to legitimate hotspots.
+The Helium Network relies on Proof of Coverage to verify that Hotspots accurately represent their location and installation configuration. Hotspots deemed to be partaking in fraudulent activity by misrepresenting the Hotspot's coverage may be added to the Denylist, resulting in the denial of Proof of Coverage related rewards. While it is essential to prevent fraud, it may also result in the unfair denial of rewards to legitimate Hotspots.
 
 ## Proposal:
 To address this issue, this HIP proposes a temporary holding of rewards for hotspots that have been placed on the denied list. The rewards would be held until a review and appeal process is completed. If the hotspot is deemed to be legitimate, the rewards would be returned to the hotspot owner.
