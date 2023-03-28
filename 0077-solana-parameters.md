@@ -27,7 +27,7 @@ The HIP proposes the following initial parameters:
 - IOT Treasury Circuit Breaker: `20% of epoch amount`
 - IOT and Mobile Prices to be decided via a pricing oracle similar to that of HNT.
 - HNT Price to be decided via a Pyth price oracle
-- Landrush Period: `10 days` instead of the original 7
+- Landrush Period: `10 days` instead of the original `7` for technical / implementation reasons
 - Chain halt and Solana Launch starting on April 18th, 2023 at 4:00pm UTC
 
 Each of the proposed variables can be changed by a governance procedure.
