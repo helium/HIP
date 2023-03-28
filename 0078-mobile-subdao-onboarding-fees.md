@@ -72,11 +72,11 @@ Therefore, under the existing model, the DAO Utility Score of the IOT subDAO cou
 
 ## Influence of veHNT
 
-Independent of the installed Hotspots and the data transfer and DC burn they contribute, the *V* component of the DAO Utility Score as defined in HIP-51 considers the veHNT delegated to the various subDAOs. This is intended as a way for network participants to signal their preference for a particular subDAO. By encouraging participants to lock their HNT for veHNT, it also contributes to the stability of the Helium DAO and its governance.
+Independent of the installed Hotspots and the Data Transfer and DC burn they contribute, the *V* component of the DAO Utility Score as defined in HIP-51 considers the veHNT delegated to the various subDAOs. This is intended as a way for network participants to signal their preference for a particular subDAO. By encouraging participants to lock their HNT for veHNT, it also contributes to the stability of the Helium DAO and its governance.
 
-While the *A* component, which counts Hotspots and their onboarding fees, is counted by its fourth root, and the *D* component, which counts data transfer, is counted by its square root, the *V* component is counted linearly.
+While the *A* component, which counts Hotspots and their onboarding fees, is counted by its fourth root, and the *D* component, which counts Data Transfer, is counted by its square root, the *V* component is counted linearly.
 
-This gives inordinate weight to the delegation of veHNT. For example, 10 times the amount of delegated veHNT would have the same weight as 100 times the DC burn from data transfer, or 10,000 times the number of Hotspots.
+This gives inordinate weight to the delegation of veHNT. For example, 10 times the amount of delegated veHNT would have the same weight as 100 times the DC burn from Data Transfer, or 10,000 times the number of Hotspots.
 
 Modeling has shown that this favors a winner-takes-all scenario. Once one subDAO has received a large majority of delegated veHNT, the *V* component of the DAO Utility Score dominates the Score to such an extent that it becomes economically unattractive to delegate to any other subDAO, considering the delegation rewards that are available in the different subDAOs, as valued through the treasury exchange rate to HNT. Another subDAO, even if it provides network coverage and DC burn that are valuable to the Helium DAO as a whole, could be unable to attract sufficient veHNT delegation to reward its participants appropriately.
 
@@ -104,7 +104,7 @@ $D = \text{max}(Floor, \sqrt{\text{DNP DCs burned per epoch in USD}})$
 
 and *Floor* is 1 for all subDAOs except for the IOT subDAO.
 
-*Floor* shall be 50 for the IOT subDAO until the third halvening of HNT emissions, which is currently scheduled to occur on 1 August 2027.
+*Floor* shall be 50 for the IOT subDAO until the fourth halvening of HNT emissions, which is currently scheduled to occur on 1 August 2027.
 
 # Discussion of HIP-78 Utility Score
 
@@ -119,12 +119,14 @@ To respect this intent while simplifying the calculation, HIP-78 proposes to giv
 The effect of this is to treat the IOT subDAO as if
 
 $\sqrt{\text{IOT DCs burned per epoch in USD}} = 50,$ which is equivalent to
-$\text{IOT DCs burned per epoch in USD} = 50 \times 50 USD = 2,500 USD,$ which is equivalent to
-$\text{IOT DCs burned per 30 days in USD} = \$75,000.$
 
-This special treatment of IOT shall last until the third halvening of HNT emissions, which is scheduled for 1 August 2027.
+$\text{IOT DCs burned per epoch in USD} = 50 \times 50 \text{USD} = 2,500 \text{USD,}$ which is equivalent to
 
-In other words, as soon as the IOT subDAO achieves a monthly DC burn of $75,000, its founder’s bonus will become irrelevant. If it cannot do so by 1 August 2027, it will have to succeed or fail on its own merits.
+$\text{IOT DCs burned per 30 days in USD} = 75,000 \text{USD.}$
+
+This special treatment of IOT shall last until the fourth halvening of HNT emissions, which is scheduled for 1 August 2027.
+
+In other words, as soon as the IOT subDAO achieves a monthly DC burn of $75,000, its founder’s bonus will become irrelevant. If it cannot achieve this burn by 1 August 2027, it will have to succeed or fail on its own merits.
 
 As was proposed in the discussions leading up to HIP-51, this will ensure that the IOT subDAO has the opportunity to receive a majority share of total HNT emissions as long as other subDAOs are not contributing significant DC burn.
 
@@ -148,7 +150,7 @@ Therefore, the new DAO Utility Score proposed by HIP-78 considers veHNT delegati
 
 The Utility Score proposed in HIP-78 eliminates the incentive for subDAOs to compete for HNT emissions through the onboarding fees charged to their Hotspots, as fees are no longer relevant to the Score and thus the share of HNT emissions to each subDAO.
 
-The sole remaining purpose of onboarding fees is to protect the Helium DAO from nuisance attacks caused by the onboarding an arbitrary number of invalid hotspots.
+The sole remaining purpose of onboarding fees is to protect the Helium DAO from nuisance attacks caused by onboarding an arbitrary number of invalid hotspots.
 
 Therefore, the Helium DAO, with HIP-78, sets the onboarding fee for all subDAOs universally to $5, to be modified in the future as needed through Helium DAO governance. A Hotspot participating in multiple subDAOs shall burn a separate fee to each subDAO independently.
 
