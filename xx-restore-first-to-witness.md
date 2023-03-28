@@ -14,9 +14,12 @@ traffic (late delivery) to earn from PoC.
 
 ## Motivation
 
-The motivation here is to move to reward the "best" setup hotspots in an area. The IOT PoC WG is
-focusing on improving PoC to reward for the better utilised hotspots in an area, this is one step of
-that by rewarding the best setup hotspots rather than anyone who heard it within 20 minutes.
+The motivation here is to move to reward the "best" setup hotspots in an area when there are a lot
+of hotspots. This change wont effect areas where beacons recieve under 14 witnesses, but will take
+effect in dense areas where putting a 3g/4g backed hotspot makes little sense over using fiber if
+its available. It swaps PoC to focus on whats good for data, and replicates the experience of
+sensors whilst still rewarding those seeking unique "usefull" coverage using LTE hotspots in less
+congested areas.
 
 ## Stakeholders
 
