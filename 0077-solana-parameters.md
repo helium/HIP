@@ -109,7 +109,7 @@ We propose that the chain halt and Solana launch should start on April 18th, 202
 
 On Solana, we have access to a Pyth price oracle on the HNT price. This oracle includes data from multiple exchanges, as well as market makers and other publishers on the HNT token. We propose using this Oracle instead of the existing oracle approach.
 
-Pyth is not available for MOBILE and IOT prices, and so we propose these prices should follow a similar pattern to the current HNT price oracle on the helium L1, documented [here](https://docs.helium.com/blockchain/oracles/). During the initial few weeks post-launch, pyth price feeds will also not be available for HNT. We propose using the same pattern for the current HNT price oracle until Pyth oracles are live. 
+Pyth is not available for MOBILE and IOT prices, and so we propose these prices should follow a similar pattern to the current HNT price oracle on the helium L1, documented [here](https://docs.helium.com/blockchain/oracles/). During the initial few weeks post-launch, Pyth price feeds will also not be available for HNT. We propose using the same pattern for the current HNT price oracle until Pyth oracles are live. 
 
 It is necessary to know the IOT and MOBILE prices for rewards calculations. 
 
