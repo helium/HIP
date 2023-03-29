@@ -30,11 +30,13 @@ setups reducing rewards for those not providing "usefull" coverage.
 
 ## Detailed Explanation
 
-Currently hotspots have a 20 block window to report their witnessing of a beacon. Out of everyone
-that heard the beacon (no matter if they report the witness instantly or ~20 minutes later) 14 are
-chosen and rewarded.
+Currently hotspots have a 20 block window to report witnessing of a beacon. The list of witnesses is
+then randomised and 14 are selected at the end of this 20 block window.
 
-This randomisation means a hotspot on a windowcill on wifi has just as much chance as a hotspot on
+This hip aims to reverse the randomised change back to one where the first 14 to respond are
+rewarded instead.
+
+This randomisation meant a hotspot on a windowcill on wifi has just as much chance as a hotspot on
 cable internet placed on a roof with wired internet access, but the hotspot on wifi would very
 likely not be able to report data transfer and simply wouldn't be rewarded.
 
@@ -45,18 +47,27 @@ reward them for their laggy setup.
 Having this window also allows for packet stuffers to recieve, edit and submit fake witnesses and
 have just as much chance of being selected as a legitimate setup.
 
-This change ensures the "best setup" (in terms of line of sight & internet speed, distance from
-originating gateway) are rewarded over those setup on for example slow connections, badly placed
-indoors or those far away on towers pointing into cities not providing useful coverage for sensors.
+The change to the first 14 to respond ensures the "best setup" (in terms of line of sight & internet
+speed, distance from originating gateway) are rewarded over those setup on for example slow
+connections, badly placed indoors or those far away on towers pointing into cities not providing
+useful coverage for sensors.
+
+By removing this window & randomisation and returning it to one where the first 14 to witness earn,
+we have the added benefit of stopping a lot of packet stuffers gaming on the network. Hearing a
+beacon, altering the data and routing it to another hotspot adds latency, so returning it to the
+first 14 that heard it will mean the window isnt open for them to take their time with altering and
+forwarding of witnesses. This Hip wont reduce all packet stuffing, but it will lock out a lot of
+gamers in high density areas where there are more than 14 witnesses to a beacon
 
 ## Drawbacks
 
-- Fiber connections will always have a faster delivery over ISP connection types.
+- Fiber connections will always have a faster delivery over ISP connection options
+- LTE connections will be slower than cable/adsl (not always true but as a generalisation)
 - 600 or so DIY gateways exist with the key stored on the filesystem, these hotspots will always be
   faster at delivering as they don't have to ask the ECC to sign the witness, they can just use the
   flat file key which is quicker.
-- Differences in security methods mean some are slower than others to sign witnesses reports and
-  send them.
+- Differences in security methods mean some hotspots are slower than others to sign witnesses
+  reports and send them.
 
 ## Rationale and Alternatives
 
@@ -67,7 +78,7 @@ this hip in favour of a smaller randomised window.
 
 ## Unresolved Questions
 
-None so far.
+Which hotspots are faster than others, which ones are slower (data to follow)
 
 ## Deployment Impact
 
