@@ -44,20 +44,18 @@ If a hotspot heard a packet from a sensor, and took 20 minutes to report it, the
 marked as late and the hotspot would not be rewarded, yet in the current system we would potentially
 reward them for their laggy setup.
 
-Having this window also allows for packet stuffers to recieve, edit and submit fake witnesses and
-have just as much chance of being selected as a legitimate setup.
+By removing this window & randomisation and returning it to one where the first 14 to witness earn,
+we have the added benefit of stopping a lot of packet stuffers gaming on the network. Hearing a
+beacon, altering the data and routing it to another hotspot adds latency, so returning it to a
+system where the first 14 that heard a beacon will mean the window isnt open for them to take their
+time with altering and forwarding of witnesses. This Hip wont reduce all packet stuffing, but it
+will lock out a lot of gamers in high density areas where there are more than 14 witnesses to a
+beacon
 
 The change to the first 14 to respond ensures the "best setup" (in terms of line of sight & internet
 speed, distance from originating gateway) are rewarded over those setup on for example slow
 connections, badly placed indoors or those far away on towers pointing into cities not providing
 useful coverage for sensors.
-
-By removing this window & randomisation and returning it to one where the first 14 to witness earn,
-we have the added benefit of stopping a lot of packet stuffers gaming on the network. Hearing a
-beacon, altering the data and routing it to another hotspot adds latency, so returning it to the
-first 14 that heard it will mean the window isnt open for them to take their time with altering and
-forwarding of witnesses. This Hip wont reduce all packet stuffing, but it will lock out a lot of
-gamers in high density areas where there are more than 14 witnesses to a beacon
 
 ## Drawbacks
 
