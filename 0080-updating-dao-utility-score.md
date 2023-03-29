@@ -168,10 +168,14 @@ This proposal may require some DAO participants to revisit their evaluations of 
 
 # Deployment Impact
 
-The calculation of Utility Score will need to be adjusted. Based on feedback from the HIP-70 implementation team, this is possible within the existing development framework.
+The calculation of Utility Score will need to be adjusted. Based on feedback from the HIP 70 implementation team, this is possible within the existing development framework and requires updating prior to the Solana Migration on April 18th. 
 
 # Clarifications
 
 - subDAOs may continue to assess location assertion fees, which are determined by subDAO governance.
 - The Helium DAO HNT emissions contract distributes HNT to HST holders as specified in HIP-20.
 - In clarification of HIP-51, all remaining HNT is distributed between all subDAOs in proportion to their relative DAO Utility Scores.
+
+# Success Metrics
+
+- This HIP is succesful if simplifying the DAO Utility Score lends itself to increased incentives and more utility for each subDAO
