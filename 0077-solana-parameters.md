@@ -26,7 +26,9 @@ The HIP proposes the following initial parameters:
 - MOBILE Treasury Circuit Breaker: `20% of epoch amount`
 - IOT Treasury Circuit Breaker: `20% of epoch amount`
 - IOT and Mobile Prices to be decided via a pricing oracle similar to that of HNT.
-- HNT Price to be decided via a Pyth price oracle
+- HNT Price to be decided via a [Pyth](https://pyth.network) price oracle
+- Landrush Period: `10 days` instead of the original `7` for technical / implementation reasons
+- Chain halt and Solana Launch starting on April 18th, 2023 at 4:00pm UTC
 
 Each of the proposed variables can be changed by a governance procedure.
 
@@ -88,14 +90,26 @@ The Treasury Circuit Breakers protect the subDAO treasuries. The subDAO treasuri
 
 ### Emission Schedules
 
+The emission schedules until 2025 are codified [in the helium program library repository](https://github.com/helium/helium-program-library/tree/master/packages/helium-cli/emissions). These emission values
+will need to be adjusted as more rewardable entities, like mappers, are added. The values present in these json files represent the amount that will be emitted per epoch given the current set of rewardable entities.
+
 The full token emissions schedule as of Solana Migration can be downloaded
 [here](./HIP-solana-parameters/token-emissions-as-of-solana-migration.pdf).
+
+
+### Landrush Period
+
+HIP-51 specified a 7 day landrush period. Due to the fact that the migration will likely happen between UTC days, we feel that it is better to extend the landrush period to 10 days to guarantee that everyone in every time zone has a minimum of 7 days to get the landrush bonus.
+
+### Launch Date
+
+We propose that the chain halt and Solana launch should start on April 18th, 2023 at 4:00pm UTC.
 
 ### Price Oracles
 
 On Solana, we have access to a Pyth price oracle on the HNT price. This oracle includes data from multiple exchanges, as well as market makers and other publishers on the HNT token. We propose using this Oracle instead of the existing oracle approach.
 
-Pyth is not available for MOBILE and IOT prices, and so we propose these prices should follow a similar pattern to the current HNT price oracle on the helium L1, documented [here](https://docs.helium.com/blockchain/oracles/).
+Pyth is not available for MOBILE and IOT prices, and so we propose these prices should follow a similar pattern to the current HNT price oracle on the helium L1, documented [here](https://docs.helium.com/blockchain/oracles/). During the initial few weeks post-launch, Pyth price feeds will also not be available for HNT. We propose using the same pattern for the current HNT price oracle until Pyth oracles are live. 
 
 It is necessary to know the IOT and MOBILE prices for rewards calculations. 
 
