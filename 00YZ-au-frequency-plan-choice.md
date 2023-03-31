@@ -19,7 +19,7 @@ The LoRaWAN regional channel plan is critical to the operation of a LoRaWAN netw
 
 The reasoning related to a footnote inserted in a LoRa Alliance document by an industry player, which the Alliance have confirmed in no way reflects the LoRa Alliance's official stance. The LoRa Alliance have made it very clear, and all of their official documentation confirms that they support both AU915 and AS923 in Australia, and the Alliance make no distinction between the two. The LoRa Alliance also confirmed that there is no intention to diminish the AU915 frequency plan in the future.
 
-We believe, backed up by expert opinions including senior members of the LoRa Alliance, that the only effective way to support AS923 is to utilise 16-channel gateways, dual-head 8-channel gateways, or allow investors/operators in densely populated areas to voluntarily operate on AS923 in line with the Helium IOT PoC roadmap goal of reducing congestion.
+We believe, backed up by expert opinions including senior members of the LoRa Alliance, that the only effective way to support AS923 is to utilise 16-channel gateways, dual-head 8-channel gateways, or allow operators in densely populated areas to voluntarily operate on AS923 in line with the Helium IOT PoC roadmap goal of reducing congestion.
 
 AU915 is better suited to the Australian environment/use cases due to
 
