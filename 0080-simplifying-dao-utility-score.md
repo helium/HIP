@@ -1,6 +1,6 @@
 # HIP 80: Simplifying the DAO Utility Score
 
-- Author: @ferebee, @jmfayal (jmf), @rawrmaan
+- Author: [@ferebee](https://github.com/ferebee), [@jmfayal](https://github.com/jmfayal), [@rawrmaan](https://github.com/rawrmaan)
 - Start Date: 2023-03-29
 - Category: Economic, Technical
 - Original HIP PR: 
