@@ -65,7 +65,7 @@ Further risks in not switching to AU915 are that the current trend downwards in 
 
 ### United States Usage
 
-![Australia Usage 20 weeks](00YZ-au-frequency-plan-choice/helium_usage_US_2023-03-07.png)
+![United States Usage 20 weeks](00YZ-au-frequency-plan-choice/helium_usage_US_2023-03-07.png)
 
 ### Worldwide Usage
 
