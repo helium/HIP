@@ -128,7 +128,7 @@ The public networks currently and planned for Australia, all operating on AU915,
 
 ## Voting mechanism
 
-It is proposed to use the standard Helium on-chain voting system [HeliumVotes](https://heliumvote.com) to allow any wallet to vote on this HIP. See [Voting on Helium](https://docs.helium.com/community-voting/) documentation on Helium Docs.
+It is proposed to use the standard Helium on-chain voting system [Helium Vote](https://heliumvote.com) to allow any wallet to vote on this HIP. See [Voting on Helium](https://docs.helium.com/community-voting/) documentation on Helium Docs.
 
 Since this is a change only affecting the Australian Region it should be made clear that only wallets containing hotspots asserted in the Australian region will be eligible to be counted. Votes will be weighted on the basis of 1 vote per hotspot asserted to the Australian region at the time of the vote.
 
