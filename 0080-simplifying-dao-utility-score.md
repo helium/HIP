@@ -1,6 +1,6 @@
 # HIP 80: Simplifying the DAO Utility Score
 
-- Author: @ferebee
+- Author: @ferebee, @jmfayal (jmf), @rawrmaan
 - Start Date: 2023-03-29
 - Category: Economic, Technical
 - Original HIP PR: 
@@ -10,13 +10,13 @@
 
 [HIP-51](https://github.com/helium/HIP/blob/main/0051-helium-dao.md#omni-protocol-poc-incentive-model) specifies the DAO Utility Score, which determines the distribution of HNT among all Helium subDAOs.
 
-Its purpose is to incentivize current and future subDAOs to grow grow the value of their services provided through the Helium DAO, while also protecting the investment of the LoRa Hotspots that participated from the start to launch the Helium network of networks.
+Its purpose is to incentivize current and future subDAOs to grow the value of their services provided through the Helium DAO, while also protecting the investment of the LoRa Hotspots that participated from the start to launch the Helium network of networks.
 
 As the implementation of HIP-70 has progressed, multiple theoretical and practical drawbacks of the DAO Utility Score as specified in HIP-51 have become apparent, threatening the interests of the existing IOT and MOBILE subDAOs, possible future subDAOs, and the Helium DAO as a whole.
 
 To solve these problem, HIP-80 proposes a new, simplified DAO Utility Score, which is easier to understand and protects the interests of all participants.
 
-The new Score no longer considers the number of Hotspots and their onboarding fees, but only the square root of DC Burn and the square root of delegated veHNT.
+The new Score no longer considers the number of Hotspots and their onboarding fees, instead using only the square root of the product of DC Burn and delegated veHNT.
 
 The IOT subDAO receives an explicit guarding factor to ensure its continued funding.
 
