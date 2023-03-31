@@ -11,7 +11,7 @@
 
 ## Summary
 
-This Helium Improvement Proposal is designed to allow the investors in the Helium network in Australia to have a voice in determining the country's best frequency plan, as originally proposed by the Helium Foundation in early 2022. The plan proposed by this HIP is AU915.
+This Helium Improvement Proposal is designed to allow the deployers of the Helium network in Australia to have a voice in determining the country's preferred frequency plan. The plan proposed by this HIP is AU915.
 
 ## Motivation
 
