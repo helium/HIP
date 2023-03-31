@@ -17,7 +17,7 @@ This Helium Improvement Proposal is designed to allow the deployers of the Heliu
 
 The LoRaWAN regional channel plan is critical to the operation of a LoRaWAN network. Two different channel plans are available for use in Australia, AU915 and AS923-1. The current Helium network in Australia operates on an AS923-1 channel plan variant. However, the community was not included in the decision-making process for the change in selecting this channel plan from the original AU915.
 
-The reasoning related to a footnote inserted in a LoRa Alliance document by an industry player, which the Alliance have confirmed in no way reflects the LoRa Alliance's official stance. The LoRa Alliance have made it very clear, and all of their official documentation confirms that they support both AU915 and AS923 in Australia, and the Alliance make no distinction between the two. The LoRa Alliance also confirmed that there is no intention to diminish the AU915 frequency plan in the future.
+The reasoning related to a footnote inserted in a LoRa Alliance document by an industry player, which senior members of the Alliance have confirmed in no way reflects the LoRa Alliance's official stance. The LoRa Alliance have made it very clear, and all of their official documentation confirms that they support both AU915 and AS923 in Australia, and the Alliance make no distinction between the two. The LoRa Alliance also confirmed that, at this time, there is no intention to diminish the AU915 frequency plan in the future.
 
 We believe, backed up by expert opinions including senior members of the LoRa Alliance, that the only effective way to support AS923 is to utilise 16-channel gateways, dual-head 8-channel gateways, or allow operators in densely populated areas to voluntarily operate on AS923 in line with the Helium IOT PoC roadmap goal of reducing congestion.
 
@@ -25,7 +25,7 @@ AU915 is better suited to the Australian environment/use cases due to
 
 1. The availability of higher power sensors (as the default configuration)
 2. The higher likelihood of roaming opportunities and partnerships in the public AU915 ecosystem is likely to bring more significant benefits than a single commercial operator who has limited use cases and provides coverage in areas where they are utilising sensors.
-3. AU915 also allows gateway operators who will move over to alternative networks the potential to dual-purpose their gateways and sensors rather than lose them from the Helium network completely. Operators in other parts of the world currently have and are utilising this option where the current situation in Australia creates competing networks, which in a market with low population density and the geography of Australia will see all parties lose out.
+3. AU915 is currently better suited to regional areas and provides a common market for devices accross public networks in Australia. Given the relatively small size of the market, this is important to ensure growth of the network.
 
 ## Stakeholders
 
