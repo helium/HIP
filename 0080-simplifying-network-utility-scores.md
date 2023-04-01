@@ -8,7 +8,7 @@
 
 # Summary
 
-[HIP-51](https://github.com/helium/HIP/blob/main/0051-helium-dao.md#omni-protocol-poc-incentive-model) specifies the DAO Utility Score (referenced hereon as 'Network Utility Score'), which determines the distribution of HNT among the Helium IOT and MOBILE networks.
+[HIP-51](https://github.com/helium/HIP/blob/main/0051-helium-dao.md#omni-protocol-poc-incentive-model) specifies the DAO Utility Score (referenced hereon as 'Network Utility Score'), which determines the distribution of HNT among the Helium IOT, MOBILE, and future networks.
 
 The Network Utility Score's purpose is to incentivize current and future networks to grow the value of their services provided through the Helium Network, while also protecting the investment of the LoRa Hotspots that participated from the start to launch the Helium network of networks.
 
@@ -48,7 +48,7 @@ This proposal is relevant to all participants in the Helium Network.
 
 ## Utility Scores of IOT and MOBILE
 
-HIP-51 introduces the [Network Utility Score](https://github.com/helium/HIP/blob/main/0051-helium-dao.md#omni-protocol-poc-incentive-model), which determines the proportion of HNT emissions distributed to each network, and defines it as:
+HIP-51 introduces the Network Utility Score as the [DAO Utility Score](https://github.com/helium/HIP/blob/main/0051-helium-dao.md#omni-protocol-poc-incentive-model), which determines the proportion of HNT emissions distributed to each network, and defines it as:
 
 $\text{Legacy Network Utility Score per HIP-51} = V \times D \times A$
 
