@@ -93,7 +93,7 @@ Sensor deployments include:
 
     The bulk of the above deployments in our region require the higher powered sensors available under AU915 and have not been sustainable under the AS923 'Dual Plan'.
 
-    In conclusion, the switch from AU915 to AS923 in November presented significant challenges to our operations, directly resulting in significant wasted time, disgruntled clients and loss of goodwill. We were forced to move off the Helium network entirely due to this change. However, we continue to evaluate our options concerning the availability and reliability of IoT networks to support our business model
+    In conclusion, the switch from AU915 to AS923 in November presented significant challenges to our operations, directly resulting in significant wasted time, disgruntled clients and loss of goodwill. We were forced to move off the Helium network entirely due to this change. However, we continue to evaluate our options concerning the availability and reliability of IoT networks to support our business model"
 
 At the very least the operator/investors in Australia should be presented with the potential benefits of each option and be allowed to make the decision based on what is best for the whole network including growth, reliability and therefore their investments.
 
