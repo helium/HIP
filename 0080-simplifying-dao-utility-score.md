@@ -20,7 +20,7 @@ The new Score no longer considers the number of Hotspots and their onboarding fe
 
 The IOT subDAO receives an explicit guarding factor to ensure its continued funding.
 
-As the Hotspot onboarding fee is no longer relevant to the new Score, all subDAO onboarding fees are reduced universally to $5 per Hotspot. A Hotspot must burn an onboarding fee towards each subDAO in which it participates.
+As the Hotspot onboarding fee is no longer relevant to the new Score, subDAOs may find it advantageous to lower their onboarding fee, and may do so by subDAO governance. The minimum onboarding fee is $5 and may be changed by Helium DAO governance. A Hotspot must burn an onboarding fee towards each subDAO in which it participates.
 
 # Motivation
 
@@ -152,7 +152,7 @@ The Utility Score proposed in HIP-80 eliminates the incentive for subDAOs to com
 
 The sole remaining purpose of onboarding fees is to protect the Helium DAO from nuisance attacks caused by onboarding an arbitrary number of invalid hotspots.
 
-Therefore, the Helium DAO, with HIP-80, sets the onboarding fee for all subDAOs universally to $5, to be modified in the future as needed through Helium DAO governance. A Hotspot participating in multiple subDAOs shall burn a separate fee to each subDAO independently.
+Therefore, the Helium DAO, with HIP-80, sets a minimum onboarding fee for all subDAOs of $5, to be modified in the future as needed through Helium DAO governance. A Hotspot participating in multiple subDAOs shall burn a separate fee to each subDAO independently. Each subDAO may set its onboarding fee as desired by subDAO governance, subject to the minimum.
 
 As a one-time exception, all MOBILE Hotspots onboarded prior to the implementation of HIP-70 through the legacy onboarding procedure, which was introduced in the implementation of HIP-53, shall be considered to have been onboarded to both the MOBILE and the IOT subDAOs.
 
