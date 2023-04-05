@@ -1,6 +1,6 @@
 # HIP 80: Simplifying the DAO Utility Score
 
-- Author: [@ferebee](https://github.com/ferebee), [@jmfayal](https://github.com/jmfayal), [@rawrmaan](https://github.com/rawrmaan)
+- Author: [@ferebee](https://github.com/ferebee), [@jmfayal](https://github.com/jmfayal), [@rawrmaan](https://github.com/rawrmaan), [@gateholder](https://github.com/gateholder)
 - Start Date: 2023-03-29
 - Category: Economic, Technical
 - Original HIP PR: 
@@ -14,7 +14,7 @@ Its purpose is to incentivize current and future subDAOs to grow the value of th
 
 As the implementation of HIP-70 has progressed, multiple theoretical and practical drawbacks of the DAO Utility Score as specified in HIP-51 have become apparent, threatening the interests of the existing IOT and MOBILE subDAOs, possible future subDAOs, and the Helium DAO as a whole.
 
-To solve these problem, HIP-80 proposes a new, simplified DAO Utility Score, which is easier to understand and protects the interests of all participants.
+To solve these problems, HIP-80 proposes a new, simplified DAO Utility Score, which is easier to understand and protects the interests of all participants.
 
 The new Score no longer considers the number of Hotspots and their onboarding fees, instead using only the square root of the product of DC Burn and delegated veHNT.
 
@@ -60,11 +60,13 @@ $D = \text{max}(1, \sqrt{\text{DNP DCs burned in USD}})$
 
 $A = \text{max}(1, \sqrt[4]{\text{DNP Active Device Count} \times \text{DNP Device Activation Fee}})$
 
-HIP-53 describes a [$40 onboarding fee](https://github.com/helium/HIP/blob/main/0053-mobile-dao.md#economics-overview) and $10 location assertion fee, analogous to the traditional fees assessed for IOT Hotspots. However, the gateways developed by FreedomFi and used to launch the MOBILE network, as well as models introduced by other manufacturers, include both IOT and MOBILE Hotspot functions, which operate independently. In the existing implementation, the IOT Hotspot component is onboarded in the same way as all other Helium IOT Hotspots, with a $40 onboarding fee and optionally a $10 location assert. However, the MOBILE Hotspot component itself currently performs no onboarding operation of its own, but it is treated as if it were onboarded nonetheless.
+HIP-53 describes a [$40 onboarding fee](https://github.com/helium/HIP/blob/main/0053-mobile-dao.md#economics-overview) and $10 location assertion fee, analogous to the traditional fees assessed for IOT Hotspots. However, the gateways developed by FreedomFi and used to launch the MOBILE network, as well as models introduced by other manufacturers, include both IOT and MOBILE Hotspot functions, which operate independently. In the existing implementation, the IOT Hotspot component is onboarded in the same way as all other Helium IOT Hotspots, with a $40 onboarding fee and a $10 location assert. However, the MOBILE Hotspot component itself currently performs no onboarding operation of its own, but it is treated as if it were onboarded nonetheless.
 
 As a result, the *A* component of the Score is currently 1 for the MOBILE subDAO, as no onboarding fees (a. k. a. Activation Fees) have yet been burned to the MOBILE subDAO.
 
 Due to this implementation oversight, the DAO Utility Score of MOBILE as defined by HIP-51 is slated to launch far below its intended value, which would impair the incentive for participants to deploy new MOBILE Hotspots for Helium 5G. The buildout of Helium 5G is essential for the upcoming launch of Helium Mobile and therefore the growth of the Helium DAO as a whole.
+
+Furthermore, no firm launch date has yet been set for the Helium Mobile MVNO, the first Service Provider of the MOBILE subDAO. As a result, the subDAO is unable to burn DC for Data Transfer, even though hardware has already been successfully deployed. This further limits the Score of the MOBILE subDAO at launch.
 
 On the other hand, if the MOBILE subDAO is successful, it is expected to burn a large volume of DC per Hotspot in the medium term, as it is providing network coverage for a device class (smartphones) that is already ubiquitous and consumes large amounts of bandwidth. The IOT subDAO is expected to follow a slower growth path, as it is providing coverage for entirely new applications that are still being developed and are expected to be rolled out in the next several years as technology matures.
 
@@ -102,9 +104,9 @@ $V = \text{max}(1, \sqrt{veHNT_{DNP}})$
 
 $D = \text{max}(Floor, \sqrt{\text{DNP DCs burned per epoch in USD}})$
 
-and *Floor* is 1 for all subDAOs except for the IOT subDAO.
+and *Floor* is 7 for all subDAOs except for the IOT subDAO.
 
-*Floor* shall be 50 for the IOT subDAO until the fourth halvening of HNT emissions, which is currently scheduled to occur on 1 August 2027. Then, it shall revert to 1.
+*Floor* shall be 40 for the IOT subDAO until the fourth halvening of HNT emissions, which is currently scheduled to occur on 1 August 2027. Then, it shall revert to 7.
 
 # Discussion of HIP-80 Utility Score
 
@@ -114,23 +116,25 @@ HIP-51 recognizes that the participants of the IOT subDAO jumpstarted the Helium
 
 The *A* factor of the DAO Utility Score as proposed in HIP-51, which counts the number of active Hotspots multiplied by their onboarding fees, was intended to respect this contribution by giving an initial advantage to the IOT subDAO.
 
-To respect this intent while simplifying the calculation, HIP-80 proposes to give the IOT subDAO an explicit—but limited—advantage by setting its *Floor* to 50.
+To respect this intent while simplifying the calculation, HIP-80 proposes to give the IOT subDAO an explicit—but limited—advantage by setting its *Floor* to 40.
 
 The effect of this is to treat the IOT subDAO as if
 
-$\sqrt{\text{IOT DCs burned per epoch in USD}} = 50,$ which is equivalent to
+$\sqrt{\text{IOT DCs burned per epoch in USD}} = 40,$ which is equivalent to
 
-$\text{IOT DCs burned per epoch in USD} = 50 \times 50 \text{USD} = 2,500 \text{USD,}$ which is equivalent to
+$\text{IOT DCs burned per epoch in USD} = 40 \times 40 \text{USD} = 1,600 \text{USD,}$ which is equivalent to
 
-$\text{IOT DCs burned per 30 days in USD} = 75,000 \text{USD.}$
+$\text{IOT DCs burned per 30 days in USD} = 48,000 \text{USD.}$
 
-This special treatment of IOT shall last until the fourth halvening of HNT emissions, which is scheduled for 1 August 2027, when *Floor* for IOT shall revert to 1.
+This special treatment of IOT shall last until the fourth halvening of HNT emissions, which is scheduled for 1 August 2027, when *Floor* for IOT shall revert to 7.
 
-In other words, as soon as the IOT subDAO achieves a monthly DC burn of $75,000, its founder’s bonus will become irrelevant. If it cannot achieve this burn by 1 August 2027, it will have to succeed or fail on its own merits.
+In other words, as soon as the IOT subDAO achieves a monthly DC burn of $48,000, its founder’s bonus will become irrelevant. If it cannot achieve this burn by 1 August 2027, it will have to succeed or fail on its own merits.
 
 As was proposed in the discussions leading up to HIP-51, this will ensure that the IOT subDAO has the opportunity to receive a majority share of total HNT emissions as long as other subDAOs are not contributing significant DC burn.
 
-On the other hand, once Helium Mobile and possibly other service providers begin moving data over Helium 5G, the MOBILE subDAO may quickly begin burning significantly more DC than the notional $75,000/month floor attributed to the IOT subDAO, so the MOBILE subDAO may then be able to capture a larger share of total HNT emissions, while also contributing the greater value to the Helium DAO and thus to HNT itself by virtue of its greater rate of DC burn. This in turn will benefit the IOT subDAO as well.
+Similarly to the calculations above, the effect of the *Floor* of 7 for all other subDAOs besides IOT is to treat all subDAOs as if they were to burn at least $1,470 of DC per month. This ensures that the MOBILE treasury will get some share of HNT emissions from launch, in line with the original intent of HIP-51, and provides for a minimum level of HNT emissions (subject to the *V* factor) to any future subDAOs which may be approved to join the Helium DAO.
+
+On the other hand, once Helium Mobile and possibly other Service Providers begin moving data over Helium 5G, the MOBILE subDAO may quickly begin burning significantly more DC than the notional $48,000/month floor attributed to the IOT subDAO, so the MOBILE subDAO may then be able to capture a larger share of total HNT emissions, while also contributing the greater value to the Helium DAO and thus to HNT itself by virtue of its greater rate of DC burn. This in turn will benefit the IOT subDAO as well.
 
 ## *A* Factor
 
@@ -164,18 +168,20 @@ This proposal may require some DAO participants to revisit their evaluations of 
 
 - The simplified DAO Utility Score introduced by this proposal is easier to evaluate and model. By giving equal weight to economic investment and network deployment and usage, it is anticipated to deliver stabler economic incentives for all participants.
 - The existing MOBILE Hotspots can be properly onboarded without the need to secure additional funding for the missing onboarding fees.
-- The IOT subDAO is guaranteed a predictable minimum incentive to continue network buildout and maintenance, protecting its opportunity to realize its potential.
+- The MOBILE subDAO is guaranteed to receive a significant share of HNT emissions from launch, consistent with the intent of HIP-51.
+- The IOT subDAO is guaranteed a predictable minimum incentive over the longer term to continue network buildout and maintenance, protecting its opportunity to realize its potential.
 
 # Deployment Impact
 
-The calculation of Utility Score will need to be adjusted. Based on feedback from the HIP 70 implementation team, this is possible within the existing development framework and requires updating prior to the Solana Migration on April 18th. 
+The calculation of Utility Score will need to be adjusted. Based on feedback from the HIP-70 implementation team, this is possible within the existing development framework. It would be desirable to finalize all changes to the Utility Score before the Solana transition on 18 April 2023. 
 
 # Clarifications
 
 - subDAOs may continue to assess location assertion fees, which are determined by subDAO governance.
 - The Helium DAO HNT emissions contract distributes HNT to HST holders as specified in HIP-20.
 - In clarification of HIP-51, all remaining HNT is distributed between all subDAOs in proportion to their relative DAO Utility Scores.
+- If the fourth halvening of HNT emissions falls on a different date than 1 August 2027 for any reason, the founder’s bonus IOT *Floor* of 40 shall remain in effect until then and end on that date.
 
 # Success Metrics
 
-- This HIP is succesful if simplifying the DAO Utility Score lends itself to increased incentives and more utility for each subDAO
+- This HIP is succesful if simplifying the DAO Utility Score supports the growth and utility of all subDAOs.
