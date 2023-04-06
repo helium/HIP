@@ -8,14 +8,14 @@
 
 ## Summary
 
-This HIP proposes to set a minimum onboarding fee for Hotspots in the subDAO structure. This HIP also proposes that Hotspots for which the minimum onboarding fee has not been burned are not eligible for rewards from the subDAO. The minimum onboarding fee will be set to $5 and can be changed via a governance procedure.
+This HIP proposes to set a minimum onboarding fee for Hotspots in the subDAO structure. This HIP also proposes that Hotspots for which the minimum onboarding fee has not been burned are not eligible for rewards from the subDAO. The minimum onboarding fee will be dynamically defined as $40 and will follow the same halving schedule as HNT and will therefore start at $20.
 
 ## Motivation
 
 A minimum onboarding fee is necessary to:
 
 1. Stop subDAOs from arbitrarily onboarding Hotspots. 
-2. And prevents nuisance attacks against subDAOs and the Helium DAO. 
+2. Prevents nuisance attacks against subDAOs and the Helium DAO. 
 
 HIP51 has described the onboarding of Hotspots but has not made this explicit. Hotspots for which the minimum onboarding fee has not been burnt are not eligible for rewards. SubDAOs attempting to bypass this requirement will be subject to slashing.
 
