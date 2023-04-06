@@ -132,7 +132,7 @@ In other words, as soon as the IOT subDAO achieves a monthly DC burn of $48,000,
 
 As was proposed in the discussions leading up to HIP-51, this will ensure that the IOT subDAO has the opportunity to receive a majority share of total HNT emissions as long as other subDAOs are not contributing significant DC burn.
 
-Similarly to the calculations above, the effect of the *Floor* of 7 for all other subDAOs besides IOT is to treat all subDAOs as if they were to burn at least $1,470 of DC per month. This ensures that the MOBILE treasury will get some share of HNT emissions from launch, in line with the original intent of HIP-51, and provides for a minimum level of HNT emissions (subject to the *V* factor) to any future subDAOs which may be approved to join the Helium DAO.
+Similarly to the calculations above, the effect of the *Floor* of 7 for all other subDAOs besides IOT is to treat all subDAOs as if they were to burn at least $1,470 of DC per month. This ensures that the MOBILE treasury will get some share of HNT emissions from launch, and provides for a minimum level of HNT emissions (subject to the *V* factor) to any future subDAOs which may be approved to join the Helium DAO.
 
 On the other hand, once Helium Mobile and possibly other Service Providers begin moving data over Helium 5G, the MOBILE subDAO may quickly begin burning significantly more DC than the notional $48,000/month floor attributed to the IOT subDAO, so the MOBILE subDAO may then be able to capture a larger share of total HNT emissions, while also contributing the greater value to the Helium DAO and thus to HNT itself by virtue of its greater rate of DC burn. This in turn will benefit the IOT subDAO as well.
 
