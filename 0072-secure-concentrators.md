@@ -170,10 +170,9 @@ Concentrators can always choose to run the open-source firmware.
 In order to incentivize adoption of Secure Concentrators, we propose increasing the earnings of PoC
 Witness packets received by Secure Concentrator by a factor of **(1.25x)**. We believe this is
 justified due to the increased security benefits the entire Helium network will enjoy with the
-addition of Secure Concentators. A Secure Concentrator is only eligible for the PoC bonus if the
+addition of Secure Concentators. A Secure Concentrator is only eligible for the PoC reward if the
 Witness packet includes valid GPS time and location data. If a Secure Concentrator does not have a
-valid GPS lock at the time of receiving the Witness packet, it will only receive the normal (1.00x)
-reward.
+valid GPS lock at the time of receiving the Witness packet, it will not receive any reward.
 
 This incentive structure is part of a larger future roadmap with more network improvements and
 hardware types that will each have their own incentives.
@@ -212,12 +211,13 @@ Onboarded.
 
 Manufacturers will be required to stake $10 USD worth of HNT (as determined by HNT price oracle
 using the trailing 30-day average from the time of the staking transaction) for each Secure
-Concentrator they produce. The staking period is fixed at three years. Like normal HNT staking
-operations, the HNT is converted to veHNT and automatically 100% delegated to the IoT subDAO. If a
-Manufacturer is found to have violated any of the terms of the Helium Foundation Ethics document (as
-determined by the Helium Tribunal Process), their staking balance can be partially or fully Burned.
-The "Burned" action is defined as converting the offending Manufacturer's stake balance into HNT and
-then removing the resulting HNT from circulation permanently.
+Concentrator they produce. The staking period is fixed at three years. The HNT is converted to veHNT
+and automatically 100% delegated to the IoT subDAO. Any earning generated as a result of staking
+activity is transferred to the Manufacturer wallet as per usual. If a Manufacturer is found to have
+violated any of the terms of the Helium Foundation Ethics document (as determined by the Helium
+Tribunal Process), their staking balance can be partially or fully Burned. The "Burned" action is
+defined as converting the offending Manufacturer's stake balance into HNT and then removing the
+resulting HNT from circulation permanently.
 
 Onboarding is fully automatic processes performed by interacting with a Solana Smart Contract. A
 Manufacturer will create an Oboarding transaction containing the new Secure Concentrator Hardware
@@ -233,19 +233,24 @@ Hotspot. First, the Hotspot generates a new random `swarm_key`. Unlike other Hot
 earning PoC rewards. As such, it is not required to store the `swarm_key` in a secure element. In
 fact, a Secure Hotspot is not required to have a hardware secure element at all (can store in
 flash). Next, a transaction is sent to the blockchain defining the new Hotspot as a 'secure' type.
-This transaction includes the `swarm_key` and the Secure Concentrator's Hardware Key and is signed
-by both keys. If this is the first time the Secure Concentrator's Hardware Key is used to bind
-`swarm_key` and Hardware Key together, there is no fee. Otherwise, there is a small $5 fee. Note:
+This transaction (the Binding transaction) includes the Hotspot's `swarm_key`, the Secure
+Concentrator's Hardware Key, and the Hotpot Owner's wallet address. The Binding transaction is
+signed by all keys. The first time the Secure Concentrator's Hardware Key is used in a Binding
+trasaction, there is no fee. Every subsequent Binding transaction cost 500000 DC ($5 USD). Note:
 this mechanism enables several things that are currently difficult or impossible such as resale of
 Secure Concentrators/Hotspots on the secondary market and repurposing Hotspots with lost keys or
 Hotspots on the denylist.
 
 For clarity, Hotspots with Secure Concentrators are not subject to any fees when adding a Hotspot to
 the blockchain (with the exception of the $5 'Binding' fee which is only applicable for subsequent
-binding transactions). Hotspots with Secure Concentrators are not subject to Assert Location fees.
+Binding transactions). Hotspots with Secure Concentrators are not subject to Assert Location fees.
 In fact, Secure Hotspots are free to continually move their physical location because the GPS
 metadata is included in the signed packets. Secure Hotspots are still subject to the same density
 scale rules.
+
+Note: the Binding transaction still requires a small Solana transaction fee. It is expected that
+initial transaction fee will be paid out of the Maker's wallet. Subsequent binding transaction fees
+will be covered from the Hotspot owner's wallet.
 
 ## Reference Hardware Design
 
