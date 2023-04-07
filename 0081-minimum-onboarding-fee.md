@@ -1,9 +1,9 @@
-# HIPxx: Minimum Device Onboarding Fee
+# HIP 81: Minimum Device Onboarding Fee
 
-- Author(s): @mawdegroot, @Maxgold91 <!-- your GitHub @username -->
-- Start Date: 2023-04-03 <!-- fill me in with today's date, YYYY-MM-DD -->
-- Category: economic <!-- economic, technical, meta -->
-- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
+- Author(s): @mawdegroot, @Maxgold91 
+- Start Date: 2023-04-07 
+- Category: economic Economic
+- Original HIP PR: #606
 - Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
 
 ## Summary
