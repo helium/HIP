@@ -10,12 +10,26 @@
 
 This HIP proposes to set a minimum onboarding fee for Hotspots in the subDAO structure. This HIP also proposes that Hotspots for which the minimum onboarding fee has not been burned are not eligible for rewards from the subDAO. The minimum onboarding fee will be dynamically defined as $40 and will follow the same halving schedule as HNT and will therefore start at $20.
 
+| Date       | Minimum Onboard Fee in DC |
+|------------|--------------------------:|
+| 08/01/2019 | 4,000,000                |
+| 08/01/2021 | 2,000,000                |
+| 08/01/2023 | 1,000,000                |
+| 08/01/2025 | 500,000                  |
+| 08/01/2027 | 250,000                  |
+| 08/01/2029 | 125,000                  |
+| 08/01/2031 | 62,500                   |
+| 08/01/2033 | 31,250                   |
+| 08/01/2035 | 15,625                   |
+
+The HIP authors fully support any community initiative to set a floor price to stop the halving at a future date. However, it is our opinion that the current halving schedule gives the network about 8-10 years to figure out which figure works best. The halving schedule was chosen to be in line with the theory of Moore's Law and roughly correlate to the CAPEX required for these networks. If these features, in the future, are no longer relevant, the Helium DAO should update the minimum onboard price to be in line with future economic forces.
+
 ## Motivation
 
 A minimum onboarding fee is necessary to:
 
 1. Stop subDAOs from arbitrarily onboarding Hotspots. 
-2. Prevents nuisance attacks against subDAOs and the Helium DAO. 
+2. Prevent nuisance attacks against subDAOs and the Helium DAO. 
 
 HIP51 has described the onboarding of Hotspots but has not made this explicit. Hotspots for which the minimum onboarding fee has not been burnt are not eligible for rewards. SubDAOs attempting to bypass this requirement will be subject to slashing.
 
@@ -31,7 +45,7 @@ The onboarding fees protect the network against nuissance attacks as well as mak
 
 ### Rewards burn
 
-The Helium flywheel is based on creating DC burn. Onboarding fees have historically been the most influential driving force of DC burn. The $A$ factor rewards subDAOs for non-recurring DC burn such as the onboarding fee analog to the $D$ factor rewards a subDAO for recurring DC burn. The $A$ factor rewards networks that have contributed significantly to the Helium flywheel with non-recurrent fees. Without the $A$ factor the subDAOs will be incentivized to burn as little DC as possible on non-recurring costs thereby slowing down the Helium flywheel.
+The Helium flywheel is based on creating DC burn. Onboarding fees have historically been the most influential driving force of DC burn. The $A$ factor rewards subDAOs for non-recurring DC burn such as the onboarding fee analog to the $D$ factor rewards a subDAO for recurring DC burn. The $A$ factor rewards networks that have contributed significantly to the Helium flywheel with non-recurrent fees. Without the $A$ factor the subDAOs will be incentivized to burn as little DC as possible on non-recurring costs, thereby slowing down the Helium flywheel.
 
 ### Dead networks
 
@@ -52,6 +66,28 @@ $D = \text{max}(1, \sqrt{\text{DNP DCs burned in USD}})$
 $A = \text{max}(1, \sqrt[4]{\text{DNP Active Device Count} \times \text{DNP Device Activation Fee}})$
 
 Retaining the $A$ factor is valuable as the $A$ factor represents the onboarding fee that has several uses which are either partly or fully negated without the $A$ factor.
+
+### Further specifications
+
+#### DNP Device Activation Fee
+
+The DAO Utility Score will use the onboarding fee that has been burned for a specific device. E.g. if a device is active and has burned a $40 onboarding fee the DNP Device Activation Fee will be $40 and if a device is active and has burned a $20 onboarding fee the DNP Device Activation Fee will be $20.
+
+#### Onboarding devices
+
+[HIP51](./0051-helium-dao.md) defines active devices as "_Active devices are the subDAO's definition of devices creating valid coverage (aka Hotspots) and therefore being rewarded during the epoch_". This definition will implicitly prevent devices that have not been onboarded to be credited towards the DAO Utility Score as the unonboarded devices are not allowed to be rewarded for anything other than data transfer. This includes, but is not limited to, Proof-of-Coverage rewards, pre-mine rewards, challenge construction rewards, and any other rewards that are not directly related to data transfer. Devices onboarded at the time of the Solana migration that do not meet the minimum outlined in this HIP may still be credited towards the DAO Utility Score based on the DC burn to onboard them (data only LoRaWAN hotspots). 
+
+We believe any incremental additions to hotspots that materially increase its price and materially increases its ability to mine more of a subDAO’s DNT constitutes a new device that must be onboarded. However, Helium DAO will give the subDAOs the freedom to reasonably decide what it considers to be a device. It is the position of Helium DAO that, while we encourage ECC chips and other similar security measures for devices, it is not a requirement and leave that distinction up to the subDAO. We also feel it is not necessary for a device to live on-chain if a subDAO feels it can effectively count and reward devices using off-chain oracles. SubDAOs that choose to maintain their device list and Proof-of-Coverage architecture in off-chain oracles agree to reasonable periodic audits at the Helium DAOs request.
+
+For example, an antenna on a LoRaWAN hotspot, which does not guarantee any additional rewards, would not need to be onboarded. Whereas, a MOBILE radio which requires a material increase in CAPEX over a gateway and directly relates to an increase in rewards should be onboarded.
+
+#### Payer of onboarding fees
+
+This HIP does explicitly _not_ prescribe subDAOs which entity is required to burn the onboarding fee. Historically, the onboarding fee has been burned by the manufacturer but each subDAO can, through governance, decide which entity burns the onboarding fee.
+
+#### Multiple subDAOs in a single device
+
+This HIP explicitly defines that devices are not required to onboard to every subDAO the hardware is capable of. The hotspots that are active before the Solana migration are considered to be onboarded on the IOT subDAO and will need to be onboarded on other subDAOs to be eligible for rewards.
 
 ## Drawbacks
 
