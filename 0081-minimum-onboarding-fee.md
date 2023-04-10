@@ -8,12 +8,12 @@
 
 ## Summary
 
-This HIP proposes to set a minimum onboarding fee for Hotspots in the subDAO structure. This HIP also proposes that Hotspots for which the minimum onboarding fee has not been burned are not eligible for rewards from the subDAO. The minimum onboarding fee will be dynamically defined as $40 and will follow the same halving schedule as HNT and will therefore start at $20.
+This HIP proposes to set a minimum onboarding fee for Hotspots in the subDAO structure. This HIP also proposes that Hotspots for which the minimum onboarding fee has not been burned are not eligible for rewards from the subDAO. The minimum onboarding fee will be dynamically defined as $40 and will follow the same halving schedule as HNT and would theoretically start at $20.  It is likely this HIP will be implemented in phases, first clearly defining the rules at the time of its passing, then on chain with a target date of August 1, 2023.
 
 | Date       | Minimum Onboard Fee in DC |
 |------------|--------------------------:|
 | 08/01/2019 | 4,000,000                |
-| 08/01/2021 | 2,000,000                |
+| 04/18/2021 | 2,000,000                |
 | 08/01/2023 | 1,000,000                |
 | 08/01/2025 | 500,000                  |
 | 08/01/2027 | 250,000                  |
@@ -73,9 +73,15 @@ Retaining the $A$ factor is valuable as the $A$ factor represents the onboarding
 
 The DAO Utility Score will use the onboarding fee that has been burned for a specific device. E.g. if a device is active and has burned a $40 onboarding fee the DNP Device Activation Fee will be $40 and if a device is active and has burned a $20 onboarding fee the DNP Device Activation Fee will be $20.
 
+#### Grace Period
+
+Due to technical limitations of the network architecture during the proposal of this Helium Improvement Proposal ("HIP"), as well as the timing of the Solana migration, this HIP hereby sets a compliance deadline of August 1, 2023, for subDAOs that are non-compliant. This grace period affords subDAOs the opportunity to operate as if the burn occurred on April 17, 2023 (prior to the migration). However, it necessitates a retroactive burn to reconcile any outstanding onboarding debts [in a manner consistent with the previous IOT retroactive burn.](https://explorer.helium.com/txns/5hSdF8hhyYz1VNI6DxdI_GiaKV0xyR5IJQzIluYDu0w) 
+
+For purposes of determining the MOBILE subDAO's $A$ score, a value of $40 shall be allocated per FreedomFi and 'Bobcat 5G' gateway that has been onboarded and is actively participating in either subDAO's proof of coverage at any point during the preceding 30 epochs. In the event that the MOBILE subDAO onboards via burn before the compliance deadline, the greater of the allocated value or the actual burn shall be counted. If the actual onboard burn number falls short of the grace period amount, the Helium DAO shall reduce any incremental HNT earned from the MOBILE subDAO treasury via slashing.
+
 #### Onboarding devices
 
-[HIP51](./0051-helium-dao.md) defines active devices as "_Active devices are the subDAO's definition of devices creating valid coverage (aka Hotspots) and therefore being rewarded during the epoch_". This definition will implicitly prevent devices that have not been onboarded to be credited towards the DAO Utility Score as the unonboarded devices are not allowed to be rewarded for anything other than data transfer. This includes, but is not limited to, Proof-of-Coverage rewards, pre-mine rewards, challenge construction rewards, and any other rewards that are not directly related to data transfer. Devices onboarded at the time of the Solana migration that do not meet the minimum outlined in this HIP may still be credited towards the DAO Utility Score based on the DC burn to onboard them (data only LoRaWAN hotspots). 
+[HIP51](./0051-helium-dao.md) defines active devices as "_Active devices are the subDAO's definition of devices creating valid coverage (aka Hotspots) and therefore being rewarded during the epoch_". This definition will implicitly prevent devices that have not been onboarded to be credited towards the DAO Utility Score as the unonboarded devices are not allowed to be rewarded for anything other than data transfer. This includes, but is not limited to, Proof-of-Coverage rewards, pre-mine rewards, challenge construction rewards, and any other rewards that are not directly related to data transfer. Devices onboarded at the time of the Solana migration that do not meet the minimum outlined in this HIP may still be credited towards the DAO Utility Score based on the DC burn to onboard them (data only LoRaWAN hotspots).  
 
 We believe any incremental additions to hotspots that materially increase its price and materially increases its ability to mine more of a subDAO’s DNT constitutes a new device that must be onboarded. However, Helium DAO will give the subDAOs the freedom to reasonably decide what it considers to be a device. It is the position of Helium DAO that, while we encourage ECC chips and other similar security measures for devices, it is not a requirement and leave that distinction up to the subDAO. We also feel it is not necessary for a device to live on-chain if a subDAO feels it can effectively count and reward devices using off-chain oracles. SubDAOs that choose to maintain their device list and Proof-of-Coverage architecture in off-chain oracles agree to reasonable periodic audits at the Helium DAOs request.
 
@@ -87,7 +93,7 @@ This HIP does explicitly _not_ prescribe subDAOs which entity is required to bur
 
 #### Multiple subDAOs in a single device
 
-This HIP explicitly defines that devices are not required to onboard to every subDAO the hardware is capable of. The hotspots that are active before the Solana migration are considered to be onboarded on the IOT subDAO and will need to be onboarded on other subDAOs to be eligible for rewards.
+This HIP explicitly defines that devices are not required to onboard to every subDAO the hardware is capable of. The hotspots that are active before the Solana migration are considered to be onboarded on the IOT subDAO and will need to be onboarded on other subDAOs to be eligible for rewards, except during the grace period outlined above.
 
 ## Drawbacks
 
@@ -99,7 +105,7 @@ The migration to Solana requires every Hotspot to be onboarded to every subDAO i
 
 ## Implementation
 
-To be implemented at the time of the Solana Migration on April 18th as part of the ongoing smart contract and subDAO work by the Helium Foundation.
+To be implemented at the time of the Solana Migration on April 18th as part of the ongoing smart contract and subDAO work by the Helium Foundation.  Full implentation will take place on or around August 1, 2023.
 
 ## Unresolved Questions
 
