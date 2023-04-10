@@ -79,13 +79,17 @@ Due to technical limitations of the network architecture, and the complexities o
 
 For purposes of determining the MOBILE subDAO's $A$ score, a value of $40 shall be allocated per FreedomFi and 'Bobcat 5G' gateway that has been onboarded and is actively participating in either subDAO's Proof of Coverage at any point during the preceding 30 epochs. In the event that the MOBILE subDAO onboards via burn before the compliance deadline, the greater of the allocated value or the actual burn shall be counted. If the actual onboard burn number falls short of the grace period amount, the Helium DAO shall reduce any incremental HNT earned from the MOBILE subDAO treasury via slashing.
 
-#### Onboarding devices
+#### Onboarding Devices
 
 [HIP51](./0051-helium-dao.md) defines active devices as "_Active devices are the subDAO's definition of devices creating valid coverage (aka Hotspots) and therefore being rewarded during the epoch_". This definition will implicitly prevent devices that have not been onboarded to be credited towards the DAO Utility Score as the unonboarded devices are not allowed to be rewarded for anything other than data transfer. This includes, but is not limited to, Proof-of-Coverage rewards, pre-mine rewards, challenge construction rewards, and any other rewards that are not directly related to data transfer. Devices onboarded at the time of the Solana migration that do not meet the minimum outlined in this HIP may still be credited towards the DAO Utility Score based on the DC burn to onboard them (data only LoRaWAN hotspots).  
 
 We believe any incremental additions to hotspots that materially increase its price and materially increases its ability to mine more of a subDAO’s DNT constitutes a new device that must be onboarded. However, Helium DAO will give the subDAOs the freedom to reasonably decide what it considers to be a device. It is the position of Helium DAO that, while we encourage ECC chips and other similar security measures for devices, it is not a requirement and leave that distinction up to the subDAO. We also feel it is not necessary for a device to live on-chain if a subDAO feels it can effectively count and reward devices using off-chain oracles. SubDAOs that choose to maintain their device list and Proof-of-Coverage architecture in off-chain oracles agree to reasonable periodic audits at the Helium DAOs request.
 
 For example, an antenna on a LoRaWAN hotspot, which does not guarantee any additional rewards, would not need to be onboarded. Whereas, a MOBILE radio which requires a material increase in CAPEX over a gateway and directly relates to an increase in rewards should be onboarded.
+
+#### Active Devices
+
+This HIP sets forth the definition of active devices as those that have been onboarded by a subDAO and rewarded for Proof-of-Coverage (or any other similar non-data transfer activity) within the preceding 30 days (or 30 epochs, as per a Solana epoch). In the event that a subDAO implements a 'deny list' or any other exclusionary measure, any device subject to such measure shall no longer be deemed active from the time it has its earning capability revoked.
 
 #### Payer of onboarding fees
 
