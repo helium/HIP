@@ -13,7 +13,7 @@ This HIP proposes to set a minimum onboarding fee for Hotspots in the subDAO str
 | Date       | Minimum Onboard Fee in DC |
 |------------|--------------------------:|
 | 08/01/2019 | 4,000,000                |
-| 04/18/2021 | 2,000,000                |
+| 04/18/2023 | 2,000,000                |
 | 08/01/2023 | 1,000,000                |
 | 08/01/2025 | 500,000                  |
 | 08/01/2027 | 250,000                  |
