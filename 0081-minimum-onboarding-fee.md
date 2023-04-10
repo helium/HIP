@@ -8,7 +8,7 @@
 
 ## Summary
 
-This HIP proposes to set a minimum onboarding fee for Hotspots in the subDAO structure. This HIP also proposes that Hotspots for which the minimum onboarding fee has not been burned are not eligible for rewards from the subDAO. The minimum onboarding fee will be dynamically defined as $40 and will follow the same halving schedule as HNT and would theoretically start at $20.  It is likely this HIP will be implemented in phases, first clearly defining the rules at the time of its passing, then on chain with a target date of August 1, 2023.
+This HIP proposes to set a minimum onboarding fee for Hotspots in the subDAO structure. This HIP also proposes that Hotspots for which the minimum onboarding fee has not been burned are not eligible for rewards from the subDAO. The minimum onboarding fee will be dynamically defined as $40 and will follow the same halving schedule as HNT and would theoretically start at $20.  This HIP will be implemented in phases, first clearly defining the requirements at the time of its passing, then on-chain with a target date of August 1, 2023.
 
 | Date       | Minimum Onboard Fee in DC |
 |------------|--------------------------:|
