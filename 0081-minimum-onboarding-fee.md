@@ -8,7 +8,7 @@
 
 ## Summary
 
-This HIP proposes to set a minimum onboarding fee for Hotspots in the subDAO structure. This HIP also proposes that Hotspots for which the minimum onboarding fee has not been burned are not eligible for rewards from the subDAO. The minimum onboarding fee will be dynamically defined as $40 and will follow the same halving schedule as HNT and would theoretically start at $20.  This HIP will be implemented in phases, first clearly defining the requirements at the time of its passing, then on-chain with a target date of August 1, 2023.
+This HIP proposes to set a minimum onboarding fee for Hotspots in the subDAO structure. This HIP also proposes that Hotspots for which the minimum onboarding fee has not been burned are not eligible for rewards from the subDAO. The minimum onboarding fee will be dynamically defined as $40 and will follow the same halving schedule as HNT and would theoretically start at $20.  This HIP only defins a minimum onboarding fee, subDAOs ultimately determine the onboarding fee by device via their own governance procedures.  This HIP will be implemented in phases, first clearly defining the requirements at the time of its passing, then on-chain with a target date of August 1, 2023.
 
 | Date       | Minimum Onboard Fee in DC |
 |------------|--------------------------:|
@@ -41,7 +41,7 @@ All network participants.
 
 ### Network security
 
-The onboarding fees protect the network against nuissance attacks as well as making other attacks against the network less viable. Industrialized gaming is made less viable by the onboarding fees as well as giving the opportunity to catch gaming before a net-positive result is achieved by the gamer. The $A$ factor allows subDAOs to recoup some of the cost they incur by securing their network as it increases the DAO Utility Score.
+The onboarding fees protect the network against nuisance attacks as well as making other attacks against the network less viable. Industrialized gaming is made less viable by the onboarding fees as well as giving the opportunity to catch gaming before a net-positive result is achieved by the gamer. The $A$ factor allows subDAOs to recoup some of the cost they incur by securing their network as it increases the DAO Utility Score.
 
 ### Rewards burn
 
