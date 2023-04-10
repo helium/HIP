@@ -99,7 +99,7 @@ repository:
 | 78 | [Mobile SubDAO Onbaording Fees](https://github.com/helium/HIP/blob/main/0078-mobile-subdao-onboarding-fees.md) | [Closed](https://github.com/helium/HIP/issues/582) |
 | 79 | [Mobile PoC Mobile Mappers](https://github.com/helium/HIP/blob/main/0079-mobile-poc-mappers-rewards.md) | [In Discussion](https://github.com/helium/HIP/issues/592) |
 | 80 | [Simplifying the DAO Utility Score](https://github.com/helium/HIP/blob/main/0080-simplifying-dao-utility-score.md) | [In Discussion](https://github.com/helium/HIP/issues/599) |
-
+| 81 | [Minimum Device Onboarding Fees](https://github.com/helium/HIP/blob/main/0081-minimum-onboarding-fee.md) | [In Discussion](https://github.com/helium/HIP/issues/612) |
 
 ## Status key
 
