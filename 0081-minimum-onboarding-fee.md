@@ -1,4 +1,4 @@
-# HIP 81: Minimum Device Onboarding Fee
+# HIP 81: Scaling The Helium Network With Dynamic Onboarding
 
 - Author(s): @mawdegroot, @Maxgold91 
 - Start Date: 2023-04-07 
