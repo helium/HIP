@@ -92,16 +92,16 @@ Given the above, this HIP proposes the following framework for Discovery Mapping
 
 Use [this spreadsheet](https://docs.google.com/spreadsheets/d/1nDYbj4APWg_XEeGEsLdR17CW8q2EiuEqoLKs_I6T1Dc/edit#gid=1971124829) to experiment with values.
 
-| Item                                              | Rewards       |
+| Item                                              |       Rewards |
 | :------------------------------------------------ | ------------: |
 | Total MOBILE Tokens Minted Monthly                | 5,000,000,000 |
-| Total MOBILE Tokens Minted in 24 Hours            |   166,666,667 |
-| Total MOBILE Token Pool for Mappers (20%)         |    33,333,333 |
+| Total MOBILE Tokens Minted in 24 Hours            |   164,383,561 |
+| Total MOBILE Token Pool for Mappers (20%)         |    32,876,712 |
 | Fixed 24 hour Reward Points for Discovery Mapping |            30 |
 | Average 24 hour Reward Points for Mapper\*        |           168 |
 | Active Discovery Mappers (Subscribers/Phones)     |        10,000 |
 | Active Verification Mappers                       |         2,000 |
-| Total Rewrad Points Earned by All Mappers         |       636,000 |
+| Total Reward Points Earned by All Mappers         |       636,000 |
 | MOBILE Earned per Discovery Mapper                |     **1,572** |
 | MOBILE Earned per Verification Mapper             |     **8,805** |
 
