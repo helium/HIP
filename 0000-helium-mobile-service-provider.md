@@ -2,9 +2,10 @@
 
 - Author(s): [@zer0tweets](https://github.com/zer0tweets), [@meowshka](https://github.com/meowshka) (Nova Labs, Inc.)
 - Start Date: 2023-03-15
-- Category: economic, technical
+- Category: Economic, Technical
 - Original HIP PR: #581
 - Tracking Issue: #628
+- Voting Requirements: veMOBILE Holders
 
 ## Summary
 
