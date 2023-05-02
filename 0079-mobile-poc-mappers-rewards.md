@@ -117,6 +117,18 @@ The Mobile PoC Working Group has decided to postpone the final decision regardin
 
 The Mobile PoC Working Group has also agreed to initiate work on a Mapper subDAO. The Mapper subDAO would enable Mappers to provide usable data across various networks - IoT, MOBILE, Wi-Fi, and others - and receive incentives for mapping macro operator coverage. After implementing a Mapper subDAO, Mobile subDAO will become one of the first “customers” of Mapper subDAO.
 
+### Location Sharing Details
+
+#### Subscribers
+
+Subscribers will share detailed location information with their Service Providers, allowing them to define which hexes to boost. Service Providers voted to participate in Helium Mobile subDAO are required to keep exact subscriber mobile location data confidential. The specific confidentiality terms are subject to the service agreement between each particular service provider and the subscribers. 
+
+Subscribers will share binary information about whether location sharing event has occurred and the timestamp of the event to the Mobile Oracle for reward eligibility determination. Service Providers will verify the information Subscribers share before it is sent to the Mobile Oracle to prevent gaming.
+
+#### Mappers
+
+Mappers will share the location of res12 hex where the attach event occurred with the Mobile Oracle for reward eligibility determination and use by other services like Modeled Coverage Planner.
+
 ## Drawbacks
 
 There are no obvious drawbacks.
