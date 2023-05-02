@@ -1,4 +1,4 @@
-# HIP Add Helium Mobile as a Service Provider to the Helium Mobile subDAO
+# HIP 82: Add Helium Mobile as a Service Provider to the Helium Mobile subDAO
 
 - Author(s): [@zer0tweets](https://github.com/zer0tweets), [@meowshka](https://github.com/meowshka) (Nova Labs, Inc.)
 - Start Date: 2023-03-15
