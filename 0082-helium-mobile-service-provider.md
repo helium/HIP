@@ -107,6 +107,9 @@ We don’t anticipate data caps to be reached frequently. Nevertheless, we will 
 
 Approval of this approach is necessary for Helium Mobile to start offloading data to the Helium Mobile Network.
 
+## Implementation
+We leave this up to the Helium Core Developers to determine how this will be implemented and how the components of the smart contract, verifiability, and Service Provider compliance will be created.
+
 ## Drawbacks
 
 The only drawback of this proposal is related to anti-gaming mechanism. In rare cases Hotspot Owners might not get rewarded for the data traffic they provide, when the Subscriber of unlimited plan uses all the rewardable data limited to 30Gb per 30-day billing cycle.
