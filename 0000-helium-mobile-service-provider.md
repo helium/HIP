@@ -3,7 +3,7 @@
 - Author(s): [@zer0tweets](https://github.com/zer0tweets), [@meowshka](https://github.com/meowshka) (Nova Labs, Inc.)
 - Start Date: 2023-03-15
 - Category: economic, technical
-- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
+- Original HIP PR: #581
 - Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
 
 ## Summary
