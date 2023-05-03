@@ -87,19 +87,19 @@ repository:
 | 66 | [Trust Score & Denylist Convenience](https://github.com/helium/HIP/blob/main/0066-trust-score-and-denylist-convenience.md) | [In Discussion](https://github.com/helium/HIP/issues/438) |
 | 67 | [Repeal Redenomination](https://github.com/helium/HIP/blob/main/0067-repeal-redenomination.md) | [Approved](https://github.com/helium/HIP/issues/456) |
 | 68 | [Open Service Subdao](https://github.com/helium/HIP/blob/main/0068-open-service-subdao.md) | [Closed](https://github.com/helium/HIP/issues/457) |
-| 69 | [Re-assertion Fee Reduction](https://github.com/helium/HIP/blob/main/0069-reassertion-fee-reduction.md) | [In Discussion](https://github.com/helium/HIP/issues/458) |
+| 69 | [Re-assertion Fee Reduction](https://github.com/helium/HIP/blob/main/0069-reassertion-fee-reduction.md) | [Approved](https://github.com/helium/HIP/issues/458) |
 | 70 | [Scaling the Helium Network](https://github.com/helium/HIP/blob/main/0070-scaling-helium.md) | [Approved](https://github.com/helium/HIP/issues/471) |
 | 71 | [Scaling the Network with Governance & Hedera](https://github.com/helium/HIP/blob/main/0071-scaling-with-governance-hedera.md) | [Closed](https://github.com/helium/HIP/issues/480) |
 | 72 | [Secure Concentrators](https://github.com/helium/HIP/blob/main/0072-secure-concentrators.md) | [In Discussion](https://github.com/helium/HIP/issues/489) |
 | 73 | [Consensus Deselection Weighting](https://github.com/helium/HIP/blob/main/0073-consensus-deselection-history-weight.md) | [Deployed (audit/txn)](https://github.com/helium/HIP/issues/491) |
 | 74 | [Mobile PoC - Modeled Coverage Rewards](https://github.com/helium/HIP/blob/main/0074-mobile-poc-modeled-coverage-rewards.md) | [Approved](https://github.com/helium/HIP/issues/504) |
-| 75 | [Initiate Programmatic PoC Emissions with an Updated Emissions Curve](https://github.com/helium/HIP/blob/main/0075-mobile-poc-initiate-programmatic-minting-and-updated-emissions-curve.md) | [In Discussion](https://github.com/helium/HIP/issues/526) |
+| 75 | [Initiate Programmatic PoC Emissions with an Updated Emissions Curve](https://github.com/helium/HIP/blob/main/0075-mobile-poc-initiate-programmatic-minting-and-updated-emissions-curve.md) | [Approved](https://github.com/helium/HIP/issues/526) |
 | 76 | [Simplify Lockup Curve and veTokens](https://github.com/helium/HIP/blob/main/0076-linear-lockup-curve.md) | [Approved](https://github.com/helium/HIP/issues/560) |
-| 77 | [Launch Parameters for Solana Migration](https://github.com/helium/HIP/blob/main/0077-solana-parameters.md) | [In Discussion](https://github.com/helium/HIP/issues/573) |
+| 77 | [Launch Parameters for Solana Migration](https://github.com/helium/HIP/blob/main/0077-solana-parameters.md) | [Approved](https://github.com/helium/HIP/issues/573) |
 | 78 | [Mobile SubDAO Onbaording Fees](https://github.com/helium/HIP/blob/main/0078-mobile-subdao-onboarding-fees.md) | [Closed](https://github.com/helium/HIP/issues/582) |
 | 79 | [Mobile PoC Mobile Mappers](https://github.com/helium/HIP/blob/main/0079-mobile-poc-mappers-rewards.md) | [In Discussion](https://github.com/helium/HIP/issues/592) |
-| 80 | [Simplifying the DAO Utility Score](https://github.com/helium/HIP/blob/main/0080-simplifying-dao-utility-score.md) | [In Discussion](https://github.com/helium/HIP/issues/599) |
-| 81 | [Minimum Device Onboarding Fees](https://github.com/helium/HIP/blob/main/0081-minimum-onboarding-fee.md) | [In Discussion](https://github.com/helium/HIP/issues/612) |
+| 80 | [Simplifying the DAO Utility Score](https://github.com/helium/HIP/blob/main/0080-simplifying-dao-utility-score.md) | [Rejected](https://github.com/helium/HIP/issues/599) |
+| 81 | [Minimum Device Onboarding Fees](https://github.com/helium/HIP/blob/main/0081-minimum-onboarding-fee.md) | [Rejected](https://github.com/helium/HIP/issues/612) |
 
 ## Status key
 
@@ -108,4 +108,5 @@ repository:
 - In Discussion: HIP is under active consideration by the community
 - Approved: HIP has been approved by rough consensus, and pending development and testing
 - Deployed: Code to implement HIP has been merged and deployed to the network
+- Rejected: HIP did not pass voting
 - Closed: HIP abandoned, rendered obsolete by other changes, or otherwise withdrawn by the author
