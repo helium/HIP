@@ -96,6 +96,10 @@ repository:
 | 75 | [Initiate Programmatic PoC Emissions with an Updated Emissions Curve](https://github.com/helium/HIP/blob/main/0075-mobile-poc-initiate-programmatic-minting-and-updated-emissions-curve.md) | [In Discussion](https://github.com/helium/HIP/issues/526) |
 | 76 | [Simplify Lockup Curve and veTokens](https://github.com/helium/HIP/blob/main/0076-linear-lockup-curve.md) | [Approved](https://github.com/helium/HIP/issues/560) |
 | 77 | [Launch Parameters for Solana Migration](https://github.com/helium/HIP/blob/main/0077-solana-parameters.md) | [In Discussion](https://github.com/helium/HIP/issues/573) |
+| 78 | [Mobile SubDAO Onbaording Fees](https://github.com/helium/HIP/blob/main/0078-mobile-subdao-onboarding-fees.md) | [Closed](https://github.com/helium/HIP/issues/582) |
+| 79 | [Mobile PoC Mobile Mappers](https://github.com/helium/HIP/blob/main/0079-mobile-poc-mappers-rewards.md) | [In Discussion](https://github.com/helium/HIP/issues/592) |
+| 80 | [Simplifying the DAO Utility Score](https://github.com/helium/HIP/blob/main/0080-simplifying-dao-utility-score.md) | [In Discussion](https://github.com/helium/HIP/issues/599) |
+| 81 | [Minimum Device Onboarding Fees](https://github.com/helium/HIP/blob/main/0081-minimum-onboarding-fee.md) | [In Discussion](https://github.com/helium/HIP/issues/612) |
 
 ## Status key
 

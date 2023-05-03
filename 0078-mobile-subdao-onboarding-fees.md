@@ -5,6 +5,7 @@
 - Category: Economic, Technical
 - Original HIP PR: #580
 - Tracking Issue: #582
+- Status: Closed
 
 # Summary
 
