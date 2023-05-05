@@ -1,8 +1,8 @@
-# XX Restore first to respond witness rewarding
+# HIP 83: Restore First to Respond Witness Rewarding
 
 - Author(s): @BFGNeil, @mawdegroot
-- Start Date: 2023-03-23 <!-- fill me in with today's date, YYYY-MM-DD -->
-- Category: economic, technical
+- Start Date: 2023-05-05
+- Category: Economic, Technical
 - Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
 - Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
 
@@ -98,8 +98,7 @@ Which Hotspots are faster than others, and which ones are slower (data to follow
 
 ## Deployment Impact
 
-The deployment of this proposal is minimal as it is a relatively simple change to the Verifier
-Oracle with the added benefit of being easily reverted by rolling back Verifier Oracle code changes.
+The deployment of this proposal is minimal as it is a relatively simple change to the Verifier Oracle with the added benefit of being easily reverted by rolling back Verifier Oracle code changes. It is up to the Helium Core Developers on when this will be completed. The IOT PoC Working Group can work closely with the Core Devs on implementation.
 
 ## Success Metrics
 
