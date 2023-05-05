@@ -101,6 +101,8 @@ repository:
 | 80 | [Simplifying the DAO Utility Score](https://github.com/helium/HIP/blob/main/0080-simplifying-dao-utility-score.md) | [Rejected](https://github.com/helium/HIP/issues/599) |
 | 81 | [Minimum Device Onboarding Fees](https://github.com/helium/HIP/blob/main/0081-minimum-onboarding-fee.md) | [Rejected](https://github.com/helium/HIP/issues/612) |
 | 82 | [Add Helium Mobile as a Service Provider to the Helium Mobile subDAO](https://github.com/helium/HIP/blob/main/0082-helium-mobile-service-provider.md) | [In Discussion](https://github.com/helium/HIP/issues/628) |
+| 83 | [Restore First to Respond Witness Rewarding](https://github.com/helium/HIP/blob/main/0083-restore-first-to-witness.md) | [In Discussion](https://github.com/helium/HIP/issues/632) |
+
 
 ## Status key
 
