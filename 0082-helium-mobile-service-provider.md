@@ -25,7 +25,7 @@ This HIP affects:
 - Mobile carrier partners of Helium Mobile will have an economic opportunity to increase revenue by sharing their mobile infrastructure.
 - Owners of Hotspots with active Radios will be rewarded for providing data access to Subscribers.
 - Helium Mobile will have an opportunity to provide cellular Service to Subscribers and earn rewards.
-- Holders of HNT and MOBILE tokens as we anticipate an increase in utility of both HNT and MOBILE.
+- Holders of HNT and MOBILE tokens, as we anticipate an increase in utility of both HNT and MOBILE.
 
 ## Detailed Explanation
 
@@ -89,7 +89,7 @@ To illustrate, here are two scenarios:
 HIP53 specifies two conditions which Service Provider needs to meet to be allowed to operate on the Mobile Network:
 
 - Stake a minimum of 500M MOBILE,
-- Obtain MOBILE DAO governance approval.
+- Obtain MOBILE subDAO governance approval.
 
 Once voted in as a Service Provider, the operation of Helium Mobile on the Mobile Network should be governed with subsequent HIPs, until a new process of governance is created.
 
@@ -103,15 +103,16 @@ For Helium Mobile unlimited plan we propose to set the limit for the data traffi
 
 The 30Gb rewards limit will reset with a start of a new 30-day billing cycle for each Subscriber with an unlimited data plan. The data traffic cap is not limited to a particular Hotspot. It is applicable to all Hotspots that provide data for a specific Subscriber.
 
-It’s important to note that Helium Mobile offers an unlimited plan without data caps  for Subscribers. This means that the data offloading will still continue after the 30Gb usage is reached, however Hotspot Owners won’t earn MOBILE rewards for providing data traffic to such Subscribers. Additionally, DCs won’t be burned from the Helium Mobile Carrier account for the data traffic routing after the data caps are reached for Subscribers.
+It’s important to note that Helium Mobile offers an unlimited plan without data caps for Subscribers. This means that the data offloading will still continue after the 30Gb usage is reached, however Hotspot Owners won’t earn MOBILE rewards for providing data traffic to such Subscribers. Additionally, DCs won’t be burned from the Helium Mobile Carrier account for the data traffic routing after the data caps are reached for Subscribers.
 
 We do not anticipate that the 30GB data cap will be reached frequently. Nevertheless, we will closely analyze the data usage of our Subscribers and quickly iterate on solutions in order to ensure all members of the Network will be appropriately rewarded for legitimate use of the Network.
 
 Approval of this approach is necessary for Helium Mobile to start offloading data to the Helium Mobile Network.
 
 ## Implementation
-We leave this up to the Helium Core Developers to determine how this will be implemented and how the components of the smart contract, verifiability, and Service Provider compliance will be created.
-Staking MOBILE to become a Service Provider locks up MOBILE independently of veMOBILE, meaning that Service Provider does not get governance rights in addition.
+
+We leave the implementation of the smart contract components, verifiability, and Service Provider compliance up to the Helium Core Developers to determine.
+We note that staking MOBILE to become a Service Provider locks up MOBILE independently of veMOBILE, meaning that a Service Provider does not get governance rights in addition to Service Provider rights.
 
 ## Drawbacks
 
@@ -119,11 +120,11 @@ The only drawback of this proposal is related to anti-gaming mechanism. In rare 
 
 ## Unresolved Questions
 
-Staking mechanics for Service Providers on the Solana blockchain
+Staking mechanics for Service Providers on the Solana blockchain.
 
 ## Dependencies
 
-Nova Labs has done most of the work necessary to launch the Helium Mobile carrier on the data offloading, customer tooling and support flows side. Launch of staking, Hotspot rewards, and other blockchain related functionality is dependent on the Solana migration.
+Nova Labs has done most of the work necessary to launch the Helium Mobile carrier on the data offloading, customer tooling and support flows side. Launch of staking, Hotspot rewards, and other blockchain related functionality is dependent on the Solana migration and the successful implementation of these features by Helium Core Developers.
 
 ## Deployment Impact
 
@@ -133,4 +134,4 @@ Nova Labs has done most of the work necessary to launch the Helium Mobile carrie
 
 ## Success Metrics
 
-The main success metric would be cellular data being offloaded to the Helium Mobile Network by the Helium Mobile Service Provider.
+The main success metric would be cellular data being offloaded to the Helium Mobile Network by the Helium Mobile Service Provider, creating increased utility for HNT and MOBILE.
