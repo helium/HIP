@@ -3,8 +3,8 @@
 - Author(s): @BFGNeil, @mawdegroot
 - Start Date: 2023-05-05
 - Category: Economic, Technical
-- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
-- Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
+- Original HIP PR: #605
+- Tracking Issue: #632
 - Voting Requirements: veIOT Holders
 
 ## Summary
