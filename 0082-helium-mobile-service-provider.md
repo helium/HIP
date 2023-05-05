@@ -109,6 +109,7 @@ Approval of this approach is necessary for Helium Mobile to start offloading dat
 
 ## Implementation
 We leave this up to the Helium Core Developers to determine how this will be implemented and how the components of the smart contract, verifiability, and Service Provider compliance will be created.
+Staking MOBILE to become a Service Provider locks up MOBILE independently of veMOBILE, meaning that Service Provider does not get governance rights in addition.
 
 ## Drawbacks
 
