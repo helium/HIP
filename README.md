@@ -100,6 +100,7 @@ repository:
 | 79 | [Mobile PoC Mobile Mappers](https://github.com/helium/HIP/blob/main/0079-mobile-poc-mappers-rewards.md) | [In Discussion](https://github.com/helium/HIP/issues/592) |
 | 80 | [Simplifying the DAO Utility Score](https://github.com/helium/HIP/blob/main/0080-simplifying-dao-utility-score.md) | [Rejected](https://github.com/helium/HIP/issues/599) |
 | 81 | [Minimum Device Onboarding Fees](https://github.com/helium/HIP/blob/main/0081-minimum-onboarding-fee.md) | [Rejected](https://github.com/helium/HIP/issues/612) |
+| 82 | [Add Helium Mobile as a Service Provider to the Helium Mobile subDAO](https://github.com/helium/HIP/blob/main/0082-helium-mobile-service-provider.md) | [In Discussion](https://github.com/helium/HIP/issues/628) |
 
 ## Status key
 
