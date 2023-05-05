@@ -15,7 +15,7 @@ This HIP proposes to introduce Helium Mobile as a Service Provider (as defined i
 
 The Community has gone a long way in building Helium Mobile Network, and now is the perfect time to bring usage and utility to it.
 
-As a Service Provider member of Helium Mobile subDAO, Helium Mobile will actively offload its subscriber traffic into the Helium Mobile Network.  Launch of Helium Mobile carrier will help pave the path for other Service Providers coming to the Network by ironing out any undiscovered issues and creating a smooth onboarding process.  In addition, the increased traffic on the network as a result of the launch will have a commensurate increase in HNT burn and data rewards for Hotspot operators.
+As a Service Provider member of Helium Mobile subDAO, Helium Mobile will actively offload its subscriber traffic onto the Helium Mobile Network. The launch of Helium Mobile carrier will help pave the way for other Service Providers coming to the Helium Mobile Network by ironing out any undiscovered issues and creating a smooth onboarding process.  In addition, the increased traffic on the network as a result of the launch will have a commensurate increase in HNT burn and data rewards for Hotspot operators.
 
 ## Stakeholders
 
@@ -39,7 +39,7 @@ Once the required amount is staked, Helium Mobile Service Provider will be minte
 
 This stake will need to remain locked and will not earn any staking rewards, as long as the Service Provider remains as part of the MOBILE subDAO. In lieu of staking rewards, Service Provider has the right to claim up to 10% of MOBILE rewards (provided [HIP79](https://github.com/helium/HIP/blob/main/0079-mobile-poc-mappers-rewards.md) passes) in the Service Provider bucket. 
 
-This HIP proposes a cooldown period of 3 months before the Service Provider can claim the staked amount after it stops data offloading to the Mobile Network.
+This HIP proposes a cooldown period of 3 months before the Service Provider can claim the staked amount after it stops data offloading to the Helium Mobile Network.
 
 ### Data Offloading to the Helium Mobile Network
 
@@ -51,13 +51,15 @@ More details about Nova Labs and T-Mobile partnership can be found in the [press
 
 ### Service Provider Rewards
 
-HIP53 specifies an overall rewards bucket for Service Providers, but does not go into specifics how rewards should be calculation based on the amount of data being offloaded. To prevent situations when Service Providers get the full 10% MOBILE reward bucket (provided [HIP79](https://github.com/helium/HIP/blob/main/0079-mobile-poc-mappers-rewards.md) passes) with sending little or no data traffic to the Network, we propose to follow similar usage-based approach as outlined in [HIP10](https://github.com/helium/HIP/blob/main/0010-usage-based-data-transfer-rewards.md)] for IoT Network.
+HIP53 specifies an overall rewards bucket for Service Providers, but does not go into specifics how rewards should be calculation based on the amount of data being offloaded. To prevent a scenario in which a Service Providers is rewarded the full 10% MOBILE reward bucket* while burning little to no DC, we propose to follow similar usage-based approach as outlined in [HIP10](https://github.com/helium/HIP/blob/main/0010-usage-based-data-transfer-rewards.md)] for IoT Network.
 
-In this approach, instead of issuing 10% MOBILE to the Service Providers regardless of how much data is transferred, we propose to issue up to 10% of the MOBILE. The MOBILE should be rewarded to Service Providers at a 1:1 rate with the total value of DCs used to offload data to the Mobile Network during reward period. Once that amount of DCs exceeds the 10% of MOBILE, MOBILE should be distributed proportionally among different Service Providers. Contrary to the approach in HIP10, we propose that the remainder of the unspent rewards is not minted at all vs proportionally distributed for PoC work to Hotspot Owners.
+* (provided [HIP79](https://github.com/helium/HIP/blob/main/0079-mobile-poc-mappers-rewards.md) passes)
+
+We propose that Service Providers are rewarded up to 1:1 in MOBILE tokens for the amount of DC burned during a reward period, similar to the approach in HIP10. If the Service Providers collectively burn more DC than the equivalent amount of MOBILE tokens in the Service Provider reward bucket, a Service Provider will be rewarded proportionally to its share of DC burn. If the Service Providers collectively burn less DC than the equivalent amount of MOBILE tokens the remainder of the Service Provider bucket will not be minted.
 
 To illustrate, here are two scenarios:
 
-- Value of DCs burned for data traffic is less than 10% MOBILE in Service Provider bucket.
+- Value of DCs burned for data traffic is less than the Service Provider reward bucket (10% of MOBILE emissions).
 
 |                       |                   |
 | ----------------------| ----------------- |
@@ -71,7 +73,7 @@ To illustrate, here are two scenarios:
 * example, not the actual price. The actual price will be determined by the Price Oracle on the Solana blockchain during the rewards calculation time.
 ** (10,000 DC * $0.00001 (fixed price of DC) / $0.0001 (example price of MOBILE))
 
-- Value of DCs burned for data traffic exceeds 10% MOBILE in Service Provider bucket.
+- Value of DCs burned for data traffic exceeds the Service Provider reward bucket (10% of MOBILE emissions).
 
 |                       |                   |
 | ----------------------| ----------------- |
@@ -103,7 +105,7 @@ The 30Gb rewards limit will reset with a start of a new 30-day billing cycle for
 
 It’s important to note that Helium Mobile offers an unlimited plan without data caps  for Subscribers. This means that the data offloading will still continue after the 30Gb usage is reached, however Hotspot Owners won’t earn MOBILE rewards for providing data traffic to such Subscribers. Additionally, DCs won’t be burned from the Helium Mobile Carrier account for the data traffic routing after the data caps are reached for Subscribers.
 
-We don’t anticipate data caps to be reached frequently. Nevertheless, we will closely analyze usage on the Network and quickly iterate on solutions to ensure all members of the Network can earn rewards for legitimate use of the Network.
+We do not anticipate that the 30GB data cap will be reached frequently. Nevertheless, we will closely analyze the data usage of our Subscribers and quickly iterate on solutions in order to ensure all members of the Network will be appropriately rewarded for legitimate use of the Network.
 
 Approval of this approach is necessary for Helium Mobile to start offloading data to the Helium Mobile Network.
 
