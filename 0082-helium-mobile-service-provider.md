@@ -51,9 +51,7 @@ More details about Nova Labs and T-Mobile partnership can be found in the [press
 
 ### Service Provider Rewards
 
-HIP53 specifies an overall rewards bucket for Service Providers, but does not go into specifics how rewards should be calculation based on the amount of data being offloaded. To prevent a scenario in which a Service Providers is rewarded the full 10% MOBILE reward bucket* while burning little to no DC, we propose to follow similar usage-based approach as outlined in [HIP10](https://github.com/helium/HIP/blob/main/0010-usage-based-data-transfer-rewards.md)] for IoT Network.
-
-* (provided [HIP79](https://github.com/helium/HIP/blob/main/0079-mobile-poc-mappers-rewards.md) passes)
+HIP53 specifies an overall rewards bucket for Service Providers, but does not go into specifics how rewards should be calculation based on the amount of data being offloaded. To prevent a scenario in which a Service Providers is rewarded the full 10% MOBILE reward bucket (Provided [HIP79](https://github.com/helium/HIP/blob/main/0079-mobile-poc-mappers-rewards.md) passes) while burning little to no DC, we propose to follow similar usage-based approach as outlined in [HIP10](https://github.com/helium/HIP/blob/main/0010-usage-based-data-transfer-rewards.md) for IoT Network.
 
 We propose that Service Providers are rewarded up to 1:1 in MOBILE tokens for the amount of DC burned during a reward period, similar to the approach in HIP10. If the Service Providers collectively burn more DC than the equivalent amount of MOBILE tokens in the Service Provider reward bucket, a Service Provider will be rewarded proportionally to its share of DC burn. If the Service Providers collectively burn less DC than the equivalent amount of MOBILE tokens the remainder of the Service Provider bucket will not be minted.
 
