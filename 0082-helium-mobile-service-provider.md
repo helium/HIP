@@ -9,41 +9,41 @@
 
 ## Summary
 
-This HIP proposes to introduce Helium Mobile as a Service Provider (as defined in [HIP53](https://github.com/helium/HIP/blob/main/0053-mobile-dao.md#economics-overview)) on the Mobile Network. The main goal is to bring usage to the Network and pave the way for other Service Providers to join. The HIP describes integration with Helium Mobile Network, anti-gaming mechanism, and overall impact on the Network.
+This HIP proposes to introduce Helium Mobile as a Service Provider (as defined in [HIP53](https://github.com/helium/HIP/blob/main/0053-mobile-dao.md#economics-overview)) on the Mobile Network. The main goal is to bring usage to the Network and pave the way for other Service Providers to join. The HIP describes integration with the Helium Mobile Network, an anti-gaming mechanism, and overall impact on the Network.
 
 ## Motivation
 
-The Community has gone a long way in building Helium Mobile Network, and now is the perfect time to bring usage and utility to it.
+The Community has gone a long way in building the Helium Mobile Network. Now is the perfect time to bring usage and utility to it.
 
-As a Service Provider member of Helium Mobile subDAO, Helium Mobile will actively offload its subscriber traffic onto the Helium Mobile Network. The launch of Helium Mobile carrier will help pave the way for other Service Providers coming to the Helium Mobile Network by ironing out any undiscovered issues and creating a smooth onboarding process.  In addition, the increased traffic on the network as a result of the launch will have a commensurate increase in HNT burn and data rewards for Hotspot operators.
+As a Service Provider member of the Helium Mobile subDAO, Helium Mobile will actively offload its subscriber traffic onto the Helium Mobile Network. The launch of the Helium Mobile carrier will help pave the way for other Service Providers coming to the Helium Mobile Network by ironing out any undiscovered issues and creating a smooth onboarding process.  In addition, the increased traffic on the network as a result of the launch will have a commensurate increase in HNT burn and data rewards for Hotspot operators.
 
 ## Stakeholders
 
 This HIP affects:
 
-- Subscribers interested in using a crypto-carrier for cellular services will benefit by having inexpensive, private cellular Service and get rewards from Helium Mobile for improving the Network.
-- Mobile carrier partners of Helium Mobile will have an economic opportunity to increase revenue by sharing their mobile infrastructure.
-- Owners of Hotspots with active Radios will be rewarded for providing data access to Subscribers.
-- Helium Mobile will have an opportunity to provide cellular Service to Subscribers and earn rewards.
-- Holders of HNT and MOBILE tokens, as we anticipate an increase in utility of both HNT and MOBILE.
+- Subscribers interested in using a crypto-carrier for cellular services - will benefit by having inexpensive, private cellular Service and get rewards from Helium Mobile for improving the Network.
+- Mobile carrier partners of Helium Mobile - will have an economic opportunity to increase revenue by sharing their mobile infrastructure.
+- Owners of Hotspots with active Radios - will be rewarded for providing data access to Subscribers.
+- Helium Mobile - will have an opportunity to provide cellular Service to Subscribers and earn rewards.
+- Holders of HNT and MOBILE tokens - we anticipate an increase in utility of both HNT and MOBILE.
 
 ## Detailed Explanation
 
-The staking amount, rewards, and responsibilities of Helium Mobile as a Service Provider will follow those outlined in the [HIP53](https://github.com/helium/HIP/blob/main/0053-mobile-dao.md).
+The staking amount, rewards, and responsibilities of Helium Mobile as a Service Provider will follow those outlined in [HIP53](https://github.com/helium/HIP/blob/main/0053-mobile-dao.md).
 
 ### Onboarding to the Helium Mobile Network
 
 In compliance with HIP53 staking requirements for Service Providers, Helium Mobile will stake 500M MOBILE for the right to operate as a Service Provider on the Helium Mobile Network.
 
-Once the required amount is staked, Helium Mobile Service Provider will be minted as an NFT by the ‘Helium entity manager’ smart contract on the Solana blockchain and will become a rewardable entity.
+Once the required amount is staked, the Helium Mobile Service Provider will be minted as an NFT by the ‘Helium entity manager’ smart contract on the Solana blockchain and will become a rewardable entity.
 
-This stake will need to remain locked and will not earn any staking rewards, as long as the Service Provider remains as part of the MOBILE subDAO. In lieu of staking rewards, Service Provider has the right to claim up to 10% of MOBILE rewards (provided [HIP79](https://github.com/helium/HIP/blob/main/0079-mobile-poc-mappers-rewards.md) passes) in the Service Provider bucket. 
+This stake will need to remain locked and will not earn any staking rewards, as long as the Service Provider remains as part of the MOBILE subDAO. In lieu of staking rewards, the Service Provider has the right to claim up to 10% of MOBILE rewards (provided [HIP79](https://github.com/helium/HIP/blob/main/0079-mobile-poc-mappers-rewards.md) passes) in the Service Provider bucket. 
 
 This HIP proposes a cooldown period of 3 months before the Service Provider can claim the staked amount after it stops data offloading to the Helium Mobile Network.
 
 ### Data Offloading to the Helium Mobile Network
 
-Helium Mobile will operate as a roaming partner of Helium Mobile Network, using core Mobile coverage and paying DC for the data transfer at $0.5 per 1 GB as specified in HIP53.
+Helium Mobile will operate as a roaming partner of the Helium Mobile Network, using core Mobile coverage and paying DC for the data transfer at $0.5 per 1 GB as specified in HIP53.
 
 Where Helium Mobile Network coverage is unavailable, Helium Mobile will rely on the 5G coverage provided by T-Mobile. The partnership of Nova Labs with T-Mobile allows Helium Mobile subscribers to access both nationwide 5G coverage by T-Mobile and the growing Helium Mobile Network, which, due to its people-driven nature, is available in places that are hard to reach and acquire by traditional service providers.
 
@@ -51,7 +51,7 @@ More details about Nova Labs and T-Mobile partnership can be found in the [press
 
 ### Service Provider Rewards
 
-HIP53 specifies an overall rewards bucket for Service Providers, but does not go into specifics how rewards should be calculation based on the amount of data being offloaded. To prevent a scenario in which a Service Providers is rewarded the full 10% MOBILE reward bucket (Provided [HIP79](https://github.com/helium/HIP/blob/main/0079-mobile-poc-mappers-rewards.md) passes) while burning little to no DC, we propose to follow similar usage-based approach as outlined in [HIP10](https://github.com/helium/HIP/blob/main/0010-usage-based-data-transfer-rewards.md) for IoT Network.
+HIP53 specifies an overall rewards bucket for Service Providers, but does not go into specifics how rewards should be calculated based on the amount of data being offloaded. To prevent a scenario in which a Service Providers is rewarded the full 10% MOBILE reward bucket (Provided [HIP79](https://github.com/helium/HIP/blob/main/0079-mobile-poc-mappers-rewards.md) passes) while burning little to no DC, we propose to follow a similar usage-based approach as outlined in [HIP10](https://github.com/helium/HIP/blob/main/0010-usage-based-data-transfer-rewards.md) for the IoT Network.
 
 We propose that Service Providers are rewarded up to 1:1 in MOBILE tokens for the amount of DC burned during a reward period, similar to the approach in HIP10. If the Service Providers collectively burn more DC than the equivalent amount of MOBILE tokens in the Service Provider reward bucket, a Service Provider will be rewarded proportionally to its share of DC burn. If the Service Providers collectively burn less DC than the equivalent amount of MOBILE tokens the remainder of the Service Provider bucket will not be minted.
 
@@ -63,13 +63,15 @@ To illustrate, here are two scenarios:
 | ----------------------| ----------------- |
 | DCs burned by SP      | 100,000,000       |
 | Price of DC           | $0.00001          |
-| Price of MOBILE*      | $0.0001           |
-| DCs burned in MOBILE  | 10,000,000**      |
+| Price of MOBILE**      | $0.0001           |
+| DCs burned in MOBILE***| 10,000,000        |
 | 10% SP bucket         | 0.5B MOBILE       |
 | SP rewards            | 10,000,000 MOBILE |
 
-* example, not the actual price. The actual price will be determined by the Price Oracle on the Solana blockchain during the rewards calculation time.
-** (10,000 DC * $0.00001 (fixed price of DC) / $0.0001 (example price of MOBILE))
+
+** The price chosen is an example, not the actual price. The actual price will be determined by the Price Oracle on the Solana blockchain during the rewards calculation time.
+
+*** Amount of MOBILE tokens with the same value as the value of the DCs burned by SP: (10,000 DC * $0.00001 (fixed price of DC) / $0.0001 (example price of MOBILE))
 
 - Value of DCs burned for data traffic exceeds the Service Provider reward bucket (10% of MOBILE emissions).
 
@@ -77,14 +79,14 @@ To illustrate, here are two scenarios:
 | ----------------------| ----------------- |
 | DCs burned by SP      | 100,000,000,000   |
 | Price of DC           | $0.00001          |
-| Price of MOBILE*      | $0.0001           |
+| Price of MOBILE**     | $0.0001           |
 | DCs burned in MOBILE  | 10B               |
 | 10% SP bucket         | 0.5B MOBILE       |
 | SP rewards            | 0.5B MOBILE       |
 
 ### Governance 
 
-HIP53 specifies two conditions which Service Provider needs to meet to be allowed to operate on the Mobile Network:
+HIP53 specifies two conditions which a Service Provider needs to meet to be allowed to operate on the Mobile Network:
 
 - Stake a minimum of 500M MOBILE,
 - Obtain MOBILE subDAO governance approval.
