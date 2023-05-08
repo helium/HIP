@@ -1,6 +1,6 @@
-# HIP
+# Helium Improvement Proposals (HIP)
 
-Helium Improvement Proposals
+Helium Improvement Proposals are the core unit of change in the Helium Network.
 
 _"How a bill becomes a law"_
 
