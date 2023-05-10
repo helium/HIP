@@ -101,11 +101,13 @@ We propose a basic anti-gaming mechanism for unlimited plans that is Helium Mobi
 
 For Helium Mobile unlimited plan we propose to set the limit for the data traffic rewards for Hotspot Owners based on the amount of traffic each Subscriber uses with an unlimited plan. We’ve analyzed average data usage and determined that setting a cap at 30GB of rewardable data per 30-day billing cycle, per subscriber would be sufficiently high. It reflects normal data consumption and does not unreasonably prevent MOBILE earnings for Hotspot Owners. In fact, we anticipate most of the usage will fall below that number.
 
-The 30Gb rewards limit will reset with a start of a new 30-day billing cycle for each Subscriber with an unlimited data plan. The data traffic cap is not limited to a particular Hotspot. It is applicable to all Hotspots that provide data for a specific Subscriber.
+The 30GB rewards limit will reset with a start of a new 30-day billing cycle for each Subscriber with an unlimited data plan. The data traffic cap is not limited to a particular Hotspot. It is applicable to all Hotspots that provide data for a specific Subscriber.
 
-It’s important to note that Helium Mobile offers an unlimited plan without data caps for Subscribers. This means that the data offloading will still continue after the 30Gb usage is reached, however Hotspot Owners won’t earn MOBILE rewards for providing data traffic to such Subscribers. Additionally, DCs won’t be burned from the Helium Mobile Carrier account for the data traffic routing after the data caps are reached for Subscribers.
+It’s important to note that Helium Mobile offers an unlimited plan without data caps for Subscribers. This means that the data offloading will still continue after the 30GB usage is reached, however Hotspot Owners won’t earn MOBILE rewards for providing data traffic to such Subscribers. Additionally, DCs won’t be burned from the Helium Mobile Carrier account for the data traffic routing after the data caps are reached for Subscribers.
 
-Additionally, we propose a one-year grace period to allow for zero-rated traffic on the Hotspots. After the one year grace period, an option to selectively opt-out of data traffic routing will be implemented for Hotspot owners and available through a Cloud Dashboard or similar tool. The opt-out will disallow certain kinds of traffic like, for example, Subscribers over rewardable caps, or a Service Provider as a whole, etc. The full scope of traffic control features will be defined in future iterations.
+Additionally, we propose a one-year grace period to allow for unrewarded traffic over 30GB per Subscriber on the Hotspots. No later than the expiration of grace period, Nova Labs will implement an option to opt-out of unrewarded data traffic in a Cloud Dashboard or similar tool.
+
+ 1) HM implements the ability for hotspots to opt out of serving unrewarded data; 2) we have up to 12 months to do it; 3) until then there is a 30GB per subscriber per month rewards cap (original proposal)
 
 We do not anticipate that the 30GB data cap will be reached frequently. Nevertheless, we will closely analyze the data usage of our Subscribers and quickly iterate on solutions in order to ensure all members of the Network will be appropriately rewarded for legitimate use of the Network.
 
@@ -118,7 +120,7 @@ We note that staking MOBILE to become a Service Provider locks up MOBILE indepen
 
 ## Drawbacks
 
-The only drawback of this proposal is related to anti-gaming mechanism. In rare cases Hotspot Owners might not get rewarded for the data traffic they provide, when the Subscriber of unlimited plan uses all the rewardable data limited to 30Gb per 30-day billing cycle.
+The only drawback of this proposal is related to anti-gaming mechanism. In rare cases Hotspot Owners might not get rewarded for the data traffic they provide, when the Subscriber of unlimited plan uses all the rewardable data limited to 30GB per 30-day billing cycle.
 
 ## Unresolved Questions
 
