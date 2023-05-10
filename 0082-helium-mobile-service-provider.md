@@ -107,8 +107,6 @@ It’s important to note that Helium Mobile offers an unlimited plan without dat
 
 Additionally, we propose a one-year grace period to allow for unrewarded traffic over 30GB per Subscriber on the Hotspots. No later than the expiration of grace period, Nova Labs will implement an option to opt-out of unrewarded data traffic in a Cloud Dashboard or similar tool.
 
- 1) HM implements the ability for hotspots to opt out of serving unrewarded data; 2) we have up to 12 months to do it; 3) until then there is a 30GB per subscriber per month rewards cap (original proposal)
-
 We do not anticipate that the 30GB data cap will be reached frequently. Nevertheless, we will closely analyze the data usage of our Subscribers and quickly iterate on solutions in order to ensure all members of the Network will be appropriately rewarded for legitimate use of the Network.
 
 Approval of this approach is necessary for Helium Mobile to start offloading data to the Helium Mobile Network.
