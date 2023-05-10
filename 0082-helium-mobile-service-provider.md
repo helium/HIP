@@ -118,7 +118,7 @@ We note that staking MOBILE to become a Service Provider locks up MOBILE indepen
 
 ## Drawbacks
 
-The only drawback of this proposal is related to anti-gaming mechanism. In rare cases Hotspot Owners might not get rewarded for the data traffic they provide, when the Subscriber of the unlimited plan uses all the rewardable data limited to 30GB per 30-day billing cycle.
+The only drawback of this proposal is related to the anti-gaming mechanism. In rare cases a Hotspot Owners might not get rewarded for the data traffic they provide if the Subscriber of the unlimited plan uses all the rewardable data per the limited 30GB per 30-day billing cycle.
 
 ## Unresolved Questions
 
