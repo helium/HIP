@@ -2,9 +2,9 @@
 
 - Author(s): Mobile PoC Working Group
 - Start Date: 2023-04-26
-- Category: economic, technical
-- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
-- Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
+- Category: Economic, Technical
+- Original HIP PR: #625
+- Tracking Issue: #638
 
 ## Summary
 
