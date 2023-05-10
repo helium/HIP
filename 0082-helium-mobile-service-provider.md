@@ -105,7 +105,7 @@ The 30GB rewards limit will reset with a start of a new 30-day billing cycle for
 
 It’s important to note that Helium Mobile offers an unlimited plan without data caps for Subscribers. This means that the data offloading will still continue after the 30GB usage is reached, however Hotspot Owners won’t earn MOBILE rewards for providing data traffic to such Subscribers. Additionally, DCs won’t be burned from the Helium Mobile Carrier account for the data traffic routing after the data caps are reached for Subscribers.
 
-Additionally, we propose a one-year grace period to allow for unrewarded traffic over 30GB per Subscriber on the Hotspots. No later than the expiration of grace period, Nova Labs will implement an option to opt-out of unrewarded data traffic in a Cloud Dashboard or similar tool. The reward cap of 30GB per Subscriber of the unlimited plan will remain in place after the opt-out feature is implemented.
+Additionally, we propose a one-year grace period to allow for unrewarded traffic over 30GB per Subscriber on the Hotspots. Nova Labs will implement an option to opt-out of unrewarded data traffic in a Cloud Dashboard or similar tool no later than the expiration of the grace period. The reward cap of 30GB per Subscriber of the unlimited plan will remain in place after the opt-out feature is implemented.
 
 We do not anticipate that the 30GB data cap will be reached frequently. Nevertheless, we will closely analyze the data usage of our Subscribers and quickly iterate on solutions in order to ensure all members of the Network will be appropriately rewarded for legitimate use of the Network.
 
