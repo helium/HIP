@@ -1,4 +1,4 @@
-# HIP Service Provider Hex Boosting
+# HIP 84: Service Provider Hex Boosting
 
 - Author(s): Mobile PoC Working Group
 - Start Date: 2023-04-26
@@ -12,19 +12,23 @@ This HIP proposes a framework for Service Providers to influence the growth of t
 
 ## Motivation
 
-Currently, there is little guidance around the placement of Radios for Hotspot Owners. The provided information mainly focuses on the installation rather than on geographical optimization. This lack of direction in the growth of the Mobile Network is not optimal for building useful coverage.
+Currently, there is little guidance around the placement of Radios for Mobile Hotspot Owners. The provided information mainly focuses on the installation rather than on geographical optimization. The lack of direction in the growth of the Mobile Network is not optimal for building useful coverage.
 
 ## Stakeholders
 
 This HIP affects only participants of the MOBILE SubDAO:
 
 - Service Providers,
-- Mobile Hotspot owners with Radios,
+- Mobile Hotspot Owners with Radios,
 - Subscribers of the Mobile Network.
 
-Service Providers: with this proposal, Service Providers will be able to incentivize the building of new coverage in locations where prospective users of the MOBILE Network exist. This will allow the acquisition of new customers and, as a result, increase usage on the MOBILE Network.
-Mobile Hotspot owners: Mobile Hotspot owners will get the ability to earn extra MOBILE rewards by providing coverage with 5G Radios in the boosted hexes. Those with functional equipment in a boosted hex will automatically receive additional MOBILE rewards. Such owners will see an automatic increase in earnings if the hex they are in (identified by GPS location and/or Spectrum Access Service SAS)) is boosted, provided they are eligible to receive rewards based on other Proof-of-Coverage (PoC) requirements. 5G Hotspot owners planning to deploy in boosted hexes will need to ensure they can meet all PoC requirements in the same way as in non-boosted hexes to receive Service Provider boosted rewards.
+**More specifically, this HIP will affect these Stakeholders in the following ways:**
+
+Service Providers: with this proposal will be able to incentivize the building of new coverage in locations where prospective users of the MOBILE Network exist. This will allow the acquisition of new customers and, as a result, increase usage on the MOBILE Network.
+
+Mobile Hotspot Owners: Mobile Hotspot Owners will get the ability to earn extra MOBILE rewards by providing coverage with 5G Radios in the boosted hexes. Those with functional equipment in a boosted hex will automatically receive additional MOBILE rewards. Such owners will see an automatic increase in earnings if the hex they are in (identified by GPS location and/or Spectrum Access Service SAS)) is boosted, provided they are eligible to receive rewards based on other Proof-of-Coverage (PoC) requirements. 5G Hotspot owners planning to deploy in boosted hexes will need to ensure they can meet all PoC requirements in the same way as in non-boosted hexes to receive Service Provider boosted rewards.
 Mobile Hotspot owners in non-boosted hexes might see a decrease in MOBILE rewards. The decrease will depend on the number of hexes boosted, boost multipliers, duration of the boost, and the number of Radios deployed in boosted hexes.
+
 Network Subscribers: More coverage will be available to new and existing users of the MOBILE Network as 5G Radios are deployed in nascent hexes boosted by Service Providers. This will make the Network more appealing and reliable, especially for those in the areas that are not adequately covered by other players on the market.
 
 ## Detailed Explanation
@@ -39,11 +43,11 @@ Network Subscribers: More coverage will be available to new and existing users o
 
 ### Mechanics and Price of Boosting Hexes
 
-- The minimum boost time commitment is six months, so there is a reasonable reward for people to invest in creating coverage at a given location. Service Provider can extend boost in 1-month increments, following 6-month expiration by burning additional MOBILE into the hexes.
-- Once a Service Provider burns MOBILE into a hex, it remains “boosted” indefinitely until some coverage is created there.
-- Creation of coverage will be considered to have been confirmed when at least three unique phones with discovery mapping enabled have successfully connected and passed at least 1Mb of data at the location of coverage (as evidenced by the Mobile Oracle).
+- The minimum boost time commitment is six months, so there is a reasonable reward for people to invest in creating coverage at a given location. Service Providers can extend boost in 1-month increments, following 6-month expiration by burning additional MOBILE into the hexes.
+- Once a Service Provider burns MOBILE into a hex, it remains “boosted” indefinitely until some coverage is created in the hex location.
+- Creation of coverage will be considered to have been confirmed when at least three unique phones with discovery mapping enabled have successfully connected and passed at least 1MB of data at the location of coverage (as evidenced by the Mobile Oracle).
 - We propose the price for boosting one res12 hex for one month by 1x be initially set at $.005. This would roughly mean that boosting an area covered by a 436h (assuming it covers 500 res12 hexes) for six months to a 10x multiplier would cost $150.
-- The above number can be adjusted by the subDAO community vote down the line.
+**- The above number is able to be adjusted by the subDAO community vote down the line.**
 
 ## Drawbacks
 
@@ -61,9 +65,9 @@ This HIP doesn’t address the problem of preventing installations in hexes that
 
 Deployment of this HIP will allow Service Providers to boost hexes and therefore change the growth trajectory of the Mobile Network.
 Owners of Mobile Hotspots that meet all PoC requirements will receive increased MOBILE rewards when they deploy in boosted hexes, while those located in non-boosted hexes might see a decrease in earnings.
-Implementation of this HIP will require updates to the Mobile Coverage Planner to allow deployers quickly locate boosted hexes with details about boost multiplier, duration, etc. Estimated reward points should reflect boosting.
+Implementation of this HIP will require updates to the Mobile Coverage Planner to allow deployers to quickly locate boosted hexes with details about boost multiplier, duration, etc. Estimated reward points should reflect boosting.
 Additionally, a UI tool should be implemented for Service Provider to manage hex boosting.
-The Community vote can revert this HIP but requires honoring the boosted period for which Service Providers have burned the MOBILE.
+Note, the Community can propose and vote to revert this HIP, but requires honoring the boosted period for which Service Providers have burned the MOBILE.
 
 ## Success Metrics
 
