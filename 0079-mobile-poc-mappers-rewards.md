@@ -92,24 +92,24 @@ Given the above, this HIP proposes the following framework for Discovery Mapping
 
 Use [this spreadsheet](https://docs.google.com/spreadsheets/d/1nDYbj4APWg_XEeGEsLdR17CW8q2EiuEqoLKs_I6T1Dc/edit#gid=1971124829) to experiment with values.
 
-| Item                                          | MOBILE Tokens |
-| :-------------------------------------------- | ------------: |
-| Total Tokens Minted Monthly                   | 5,000,000,000 |
-| Total Tokens Minted in 24 Hours               |   166,666,667 |
-| Total Token Pool for Mappers (20%)            |    33,333,333 |
-| Fixed 24 hour reward for discovery mapping    |            30 |
-| Average 24 hour reward for Mapper\*           |           168 |
-| Active Discovery Mappers (Subscribers/Phones) |        10,000 |
-| Active Verification Mappers                   |         2,000 |
-| Total Points Earned by All Mappers            |       636,000 |
-| Mobile Earned per Discovery Mapper            |     **1,572** |
-| Mobile Earned per Verification Mapper         |     **8,805** |
+| Item                                              |       Rewards |
+| :------------------------------------------------ | ------------: |
+| Total MOBILE Tokens Minted Monthly                | 5,000,000,000 |
+| Total MOBILE Tokens Minted in 24 Hours            |   164,383,561 |
+| Total MOBILE Token Pool for Mappers (20%)         |    32,876,712 |
+| Fixed 24 hour Reward Points for Discovery Mapping |            30 |
+| Average 24 hour Reward Points for Mapper\*        |           168 |
+| Active Discovery Mappers (Subscribers/Phones)     |        10,000 |
+| Active Verification Mappers                       |         2,000 |
+| Total Reward Points Earned by All Mappers         |       636,000 |
+| MOBILE Earned per Discovery Mapper                |     **1,572** |
+| MOBILE Earned per Verification Mapper             |     **8,805** |
 
 \*Assume it mapped 2 semi-charged hexes
 
 ### Adjusting Hotspot Rewards Based on Mapper Input
 
-The Mobile PoC Working Group has discussed and documented a potential path to adjust MOBILE Hotspot rewards using the data collected by Mappers that would utilize the concept of the confidence score. A detailed description of the current thinking and community comments are available [here](TODO: find a link).
+The Mobile PoC Working Group has discussed and documented a potential path to adjust MOBILE Hotspot rewards using the data collected by Mappers that would utilize the concept of the confidence score. A detailed description of the current thinking and community comments are available [here](./0079-mobile-poc-mappers-rewards/adjusting_hotspot_rewards_based_on_mapper_input.pdf).
 
 The Mobile PoC Working Group has decided to postpone the final decision regarding the specific algorithm to the second stage of Mapper reward implementation. This approach would create Hotspot rewards adjustment algorithms based on the actual data from mapping activity vs. speculating regarding variables and weights.
 
