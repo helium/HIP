@@ -5,6 +5,7 @@
 - Category: Economic, Technical
 - Original HIP PR: #625
 - Tracking Issue: #638
+- Vote Requirements: veMOBILE Holders
 
 ## Summary
 
