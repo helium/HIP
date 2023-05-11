@@ -7,7 +7,7 @@
 - Tracking Issue: #632
 - Voting Requirements: veIOT Holders
 
-## Summary
+## Summary of This HIP
 
 Currently, the Proof-of-Coverage Oracles collect all the witnesses for a beacon and randomly reward
 a selection of 14 witnesses. This HIP proposes to revert to rewarding the first 14 Hotspots
