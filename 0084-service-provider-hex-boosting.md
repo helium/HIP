@@ -60,7 +60,7 @@ The alternative approach is to let the Network grow without factoring in demand 
 
 ## Unresolved Questions
 
-This HIP doesn’t address the problem of preventing installations in hexes that are not excepted to have any data offloading, like over water or in the desert. There’s an ongoing discussion within the Mobile PoC working group on how to tackle that. Once sufficiently defined, the approach will be added to this HIP.
+This HIP doesn’t address the problem of preventing installations in hexes that are not expected to have any data offloading, like over water or in the desert. There’s an ongoing discussion within the Mobile PoC working group on how to tackle that. Once sufficiently defined, the approach will be added to this HIP.
 
 ## Deployment Impact
 
