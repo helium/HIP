@@ -30,7 +30,7 @@ sensor listening window.
 
 The Helium network originally rewarded the fastest witnesses and moved to a random selection for
 several technical reasons that no longer apply to the Oracle-based POC architecture introduced as
-part of HIP 70.
+part of HIP-70.
 
 Technical limitations included, but are not limited to:
 
