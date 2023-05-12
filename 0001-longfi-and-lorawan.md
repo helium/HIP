@@ -3,7 +3,7 @@
 - Start Date: 2020-02-18
 - HIP PR: [#10](https://github.com/helium/HIP/pull/10)
 
-# Summary
+# Summary Of This HIP
 
 LongFi is not a full protocol from the ground up, but instead a blockchain layer on top of LoRaWAN.
 This allows any off-the-shelf LoRaWAN device to connect to the Helium network if you can update its
@@ -11,11 +11,7 @@ AppKey and AppEui.
 
 # Motivation
 
-There are many LoRaWAN compatible devices already out there and LoRaWAN already has many desirable
-protocol features (ACK, downlink, FCC certified, international specification). In order to
-accelerate adoption of the Helium network and to lower technical barriers, LongFi is no longer a
-distinct protocol from LoRaWAN but instead a layering of some blockchain components on top of
-LoRaWAN.
+There are many LoRaWAN compatible devices already out there and LoRaWAN already has many desirable protocol features (ACK, downlink, FCC certified, international specification). In order to accelerate adoption of the Helium network and to lower technical barriers, LongFi is no longer a distinct protocol from LoRaWAN but instead a layering of some blockchain components on top of LoRaWAN.
 
 # Stakeholders
 
