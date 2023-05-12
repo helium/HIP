@@ -3,7 +3,7 @@
 - Start Date: 2020-02-18
 - HIP PR: [#10](https://github.com/helium/HIP/pull/10)
 
-# Summary Of This HIP
+# Summary Of This HIP, and even more title stuff!
 
 LongFi is not a full protocol from the ground up, but instead a blockchain layer on top of LoRaWAN.
 This allows any off-the-shelf LoRaWAN device to connect to the Helium network if you can update its
