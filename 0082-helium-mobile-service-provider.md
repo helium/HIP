@@ -49,41 +49,6 @@ Where Helium Mobile Network coverage is unavailable, Helium Mobile will rely on 
 
 More details about Nova Labs and T-Mobile partnership can be found in the [press release](https://www.webwire.com/ViewPressRel.asp?aId=294475).
 
-### Service Provider Rewards
-
-HIP53 specifies an overall rewards bucket for Service Providers, but does not go into specifics how rewards should be calculated based on the amount of data being offloaded. To prevent a scenario in which a Service Providers is rewarded the full 10% MOBILE reward bucket (Provided [HIP79](https://github.com/helium/HIP/blob/main/0079-mobile-poc-mappers-rewards.md) passes) while burning little to no DC, we propose to follow a similar usage-based approach as outlined in [HIP10](https://github.com/helium/HIP/blob/main/0010-usage-based-data-transfer-rewards.md) for the IoT Network.
-
-We propose that Service Providers are rewarded up to 1:1 in MOBILE tokens for the amount of DC burned during a reward period, similar to the approach in HIP10. If the Service Providers collectively burn more DC than the equivalent amount of MOBILE tokens in the Service Provider reward bucket, a Service Provider will be rewarded proportionally to its share of DC burn. If the Service Providers collectively burn less DC than the equivalent amount of MOBILE tokens the remainder of the Service Provider bucket will not be minted.
-
-To illustrate, here are two scenarios:
-
-- Value of DCs burned for data traffic is less than the Service Provider reward bucket (10% of MOBILE emissions).
-
-|                       |                   |
-| ----------------------| ----------------- |
-| DCs burned by SP      | 100,000,000       |
-| Price of DC           | $0.00001          |
-| Price of MOBILE**      | $0.0001           |
-| DCs burned in MOBILE***| 10,000,000        |
-| 10% SP bucket         | 0.5B MOBILE       |
-| SP rewards            | 10,000,000 MOBILE |
-
-
-** The price chosen is an example, not the actual price. The actual price will be determined by the Price Oracle on the Solana blockchain during the rewards calculation time.
-
-*** Amount of MOBILE tokens with the same value as the value of the DCs burned by SP: (10,000 DC * $0.00001 (fixed price of DC) / $0.0001 (example price of MOBILE))
-
-- Value of DCs burned for data traffic exceeds the Service Provider reward bucket (10% of MOBILE emissions).
-
-|                       |                   |
-| ----------------------| ----------------- |
-| DCs burned by SP      | 100,000,000,000   |
-| Price of DC           | $0.00001          |
-| Price of MOBILE**     | $0.0001           |
-| DCs burned in MOBILE  | 10B               |
-| 10% SP bucket         | 0.5B MOBILE       |
-| SP rewards            | 0.5B MOBILE       |
-
 ### Governance 
 
 HIP53 specifies two conditions which a Service Provider needs to meet to be allowed to operate on the Mobile Network:
