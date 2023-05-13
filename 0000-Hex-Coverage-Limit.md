@@ -1,22 +1,24 @@
-Author: HeatedLime
-Start Date: 5/12/2023
-Category: Technical & Economic
-Original HIP PR:
-Tracking Issue: 
+# HIP XX: <--insert title
 
+- Author: @HeatedLime
+- Start Date: 5/12/2023
+- Category: Technical & Economic
+- Original HIP PR: #652
+- Tracking Issue: 
+- Voting Requirements: veIOT
 
-Summary:
+## Summary:
 This Helium Improvement Proposal (HIP) suggests adding a hex multiplier score to the MOBILE Proof of Coverage (PoC) modeled coverage points based on whether other coverage from Helium 5g deployments exist within that res12 hex. 
 
-Motivation:
+## Motivation:
 HIP 74 was passed to incorporate obstruction data and radio signal power into the PoC reward model; however, it weighed all coverage within each res12 hex equally, even if multiple radios were already providing coverage within that res12 hex. This means deployers could point 5 outdoor radios in the same direction, and still be awarded full modeled coverage points for each res12 hex. 
 
 This proposal aims to improve the value of the network coverage by incentivizing users to deploy radios that minimize overlapping coverage, and encourage deployments in new areas. 
 
- Stakeholders:
+## Stakeholders:
 The stakeholders of this proposal are radio deployers. 
  
-Detailed Explanation:
+## Detailed Explanation:
 Currently, any redundant network coverage is still rewarded with the same. This discourages the buildout of coverage to new areas. To prevent overcrowding and overlapping of coverage in hexes, this HIP proposes to limit the amount of modeled coverage points radios are awarded to redundant coverage in res12 hexes. 
 
 To ensure that only the best setups are rewarded, only the top four (4) radio signals in each res12 hex will be awarded modeled coverage points, with a decaying multiplier based on the radio score noted below. Any radios not scored within the top four (4) will be graded as “Fail”. 
@@ -38,7 +40,7 @@ Fail
 
 All outdoor radios that provide coverage to any res12 hex will be given a score for each res12 hex they provide coverage in based on the following potential attributes (note, this score is only for a single res12 hex and not the entire radio):
 
-Modeled Signal Strength 
+### Modeled Signal Strength 
 Date of CPI approval (only used as a tiebreaker if tie for attribute 1)
 
 Scoring attribute 2 (CPI approval date) will only be used when there is a tie for two or more radios for the proceeding attribute. 
@@ -86,18 +88,17 @@ Since radios B and C tied in Signal Strength, the CPI approval date is used to d
 
 Since radio E had the lowest signal strength out of all five (5) radios, and only the top four (4) radios will earn rewards, radio E will not earn any modeled coverage points.
 
-Drawbacks:
+## Drawbacks:
 The implementation of this proposal could increase the complexity of the Mobile network, and modeled coverage scores. 
 
-Alternatives
+## Rationale and Alternatives:
 An alternative would be to allow radios and hexes to keep earning the defined amount of modeled coverage points as described in HIP 74, which may prevent or stagnate the growth of the network. 
 
-
-Unresolved Question
+## Unresolved Question:
 How will mappers and mapping of the network tie into this?
 
-Deployment Impact
+## Deployment Impact:
 Outdoor radio deployers will now need to be cognizant of where they are placing their radios in order to maximize modeled coverage point. Additionally, there’s a large amount of overlapping coverage. Deployers may have to find new locations for some or all of their radios in order for them to continue to earn modeled coverage points. 
 
-Success Metrics
+## Success Metrics:
 The primary success metric will be greater coverage on the modeled coverage map and less redundant coverage. 
