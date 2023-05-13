@@ -45,13 +45,14 @@ Please note, that the multiplier table above only affects the modeled coverage p
 To see how this HIP would affect a deployment of five (5) radios that provide coverage to the same res12 hex, see the below example:
 
 
-| Radio |Signal Strenght| CPI Approval Date | Score | Coverage Points|  
-|-------|---------------|-------------------|-------|----------------|
-|   A   |   -77.33 dBm  |05/01/2023 23:24:25| 1     | 16 (16 * 1)    |
-|   B   |   -88.75 dBm  |12/01/2022 01:01:01| 2     | 12 (16 * .75)  |
-|   C   |   -88.75 dBm  |12/02/2022 12:11:01| 3     | 8 (16 * .5)    |
-|   D   |   -93.60 dBm  |12/05/2022 11:51:01| 4     | 4 (16 * .25)   |
-|   E   |   -94.69 dBm  |08/01/2022 05:01:59| Fail  | 0 (16 * 0)     |
+| Radio |Signal Strenght| CPI Approval Date | Score | Previous Coverage Points| New Coverage Points|  
+|       |               |                   |       |       Per HIP 74        |                    |
+|-------|---------------|-------------------|-------|-------------------------|--------------------|
+|   A   |   -77.33 dBm  |05/01/2023 23:24:25| 1     | 16 (16 * 1)             | 16 (16 * 1)        |
+|   B   |   -88.75 dBm  |12/01/2022 01:01:01| 2     | 16 (16 * 1)             | 12 (16 * .75)      |
+|   C   |   -88.75 dBm  |12/02/2022 12:11:01| 3     | 16 (16 * 1)             | 8 (16 * .5)        |
+|   D   |   -93.60 dBm  |12/05/2022 11:51:01| 4     | 16 (16 * 1)             | 4 (16 * .25)       |
+|   E   |   -94.69 dBm  |08/01/2022 05:01:59| Fail  | 16 (16 * 1)             | 0 (16 * 0)         |
 
 
 
