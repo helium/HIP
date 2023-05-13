@@ -30,21 +30,16 @@ Multiplier
 | Score/Grade  |Multiplier|  
 |--------------|----------|
 |      1       |   1X     |
-|--------------|----------|
 |      2       |  .75X    |
-|--------------|----------|
 |      3       |  .5X     |
-|--------------|----------|
 |      4       |  .25X    |
-|--------------|----------|
 |    Fail      |   0X     |
-|--------------|----------|
 
 
 All outdoor radios that provide coverage to any res12 hex will be given a score for each res12 hex they provide coverage in based on the following potential attributes (note, this score is only for a single res12 hex and not the entire radio):
 
-### Modeled Signal Strength 
-Date of CPI approval (only used as a tiebreaker if tie for attribute 1)
+•Modeled Signal Strength 
+•Date of CPI approval (only used as a tiebreaker if tie for attribute 1)
 
 Scoring attribute 2 (CPI approval date) will only be used when there is a tie for two or more radios for the proceeding attribute. 
 
@@ -52,36 +47,16 @@ Please note, that the multiplier table above only affects the modeled coverage p
 
 To see how this HIP would affect a deployment of five (5) radios that provide coverage to the same res12 hex, see the below example:
 
-Radio A
-Signal Strength: -77.33 dBm
-CPI Approval Date: 05/01/2023 23:24:25
-Score: 1
-Coverage Points Awarded: 16 (16 * 1)
 
-Radio B 
-Signal Strength: -88.77dBm
-CPI Approval Date: 12/01/2022 01:01:01
-Score: 2
-Coverage Points Awarded: 12 (16 * .75)
+| Radio |Signal Strenght| CPI Approval Date | Score | Coverage Points|  
+|-------|---------------|-------------------|-------|----------------|
+|   A   |   -77.33 dBm  |05/01/2023 23:24:25| 1     | 16 (16 * 1)    |
+|   B   |   -88.75 dBm  |12/01/2022 01:01:01| 2     | 12 (16 * .75)  |
+|   C   |   -88.75 dBm  |12/02/2022 12:11:01| 3     | 8 (16 * .5)    |
+|   D   |   -93.60 dBm  |12/05/2022 11:51:01| 4     | 4 (16 * .25)   |
+|   E   |   -94.69 dBm  |08/01/2022 05:01:59| Fail  | 0 (16 * 0)     |
 
 
-Radio C 
-Signal Strength: -88.77dBm
-CPI Approval Date: 12/02/2022 12:11:01
-Score: 3
-Coverage Points Awarded: 8 (16*.50)
-
-Radio D
-Signal Strength: 93.60 dBm
-CPI Approval Date: 12/05/2022 11:51:01
-Score: 4
-Coverage Points Awarded: 4 (16*.25) 
-
-Radio E 
-Signal Strength: 94.69 dBm
-CPI Approval Date: 08/01/2022 05:01:59
-Score: Fail
-Coverage Points Awarded: 0 (8*0)
 
 Since Radio A has the highest signal strength in that hex, it will be granted a 1X multiplier, which will award it with the full 16 (16 x 1) modeled coverage points for that epoch. 
 
