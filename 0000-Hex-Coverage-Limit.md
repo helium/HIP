@@ -21,7 +21,7 @@ All Mobile Radio deployers/ Mobile Hotspot Owners.
 ## Detailed Explanation:
 Currently, any redundant and overlapping network coverage is still rewarded the same as non-overlapping coverage. This discourages the buildout of coverage to new areas. To prevent overcrowding and overlapping of coverage in hexes, this HIP proposes to limit the amount of modeled coverage points radios for redundant coverage in res12 hexes. 
 
-To ensure that only the best setups are rewarded, only the top four (4) radio signals in each res12 hex will be awarded modeled coverage points, with a decaying multiplier based on the radio score noted below. Any radios not scored within the top four (4) will be graded as “Fail”. 
+To ensure that only the best setups are rewarded, only the top four (4) radio signals in each res12 hex will be awarded modeled coverage points, with a decaying multiplier based on the radio score noted below. Any radios not scored within the top four (4) will be graded as “Fail”, and receive no modeled coverage points for that res12 hex. 
 
 
 | Score/Grade  |Multiplier|  
@@ -36,7 +36,6 @@ To ensure that only the best setups are rewarded, only the top four (4) radio si
 All outdoor radios that provide coverage to any res12 hex will be given a score for each res12 hex they provide coverage in based on the following potential attributes (note, this score is only for a single res12 hex and not the entire radio):
 
 •Modeled Signal Strength 
-
 •Date of CPI approval (only used as a tiebreaker if tie for attribute 1)
 
 Scoring attribute 2 (CPI approval date) will only be used when there is a tie for two or more radios for the proceeding attribute. 
