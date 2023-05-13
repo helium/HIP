@@ -1,11 +1,11 @@
-# HIP XX: <--insert title
+# HIP XX: MOBILE Hex Coverage Limit
 
 - Author: @HeatedLime
 - Start Date: 5/12/2023
 - Category: Technical & Economic
 - Original HIP PR: #652
 - Tracking Issue: 
-- Voting Requirements: veIOT
+- Voting Requirements: veMOBILE
 
 ## Summary:
 This Helium Improvement Proposal (HIP) suggests adding a hex multiplier score to the MOBILE Proof-of-Coverage (PoC) Modeled Coverage points based on whether other coverage from Helium 5G deployments exist within that res12 hex. 
@@ -19,23 +19,26 @@ This proposal aims to improve the value of Mobile network coverage by incentiviz
 All Mobile Radio deployers/ Mobile Hotspot Owners. 
  
 ## Detailed Explanation:
-Currently, any redundant network coverage is still rewarded with the same hex. This discourages the buildout of coverage to new areas. To prevent overcrowding and overlapping of coverage in hexes, this HIP proposes to limit the amount of modeled coverage points radios are awarded to redundant coverage in res12 hexes. 
+Currently, any redundant and overlapping network coverage is still rewarded the same as non-overlapping coverage. This discourages the buildout of coverage to new areas. To prevent overcrowding and overlapping of coverage in hexes, this HIP proposes to limit the amount of modeled coverage points radios for redundant coverage in res12 hexes. 
 
 To ensure that only the best setups are rewarded, only the top four (4) radio signals in each res12 hex will be awarded modeled coverage points, with a decaying multiplier based on the radio score noted below. Any radios not scored within the top four (4) will be graded as “Fail”. 
 
 
 Score/Grade
 Multiplier 
-1
-1X
-2
-.75X
-3
-.5X
-4
-.25X
-Fail
-0X
+
+| Score/Grade  |Multiplier|  
+|--------------|----------|
+|      1       |   1X     |
+|--------------|----------|
+|      2       |  .75X    |
+|--------------|----------|
+|      3       |  .5X     |
+|--------------|----------|
+|      4       |  .25X    |
+|--------------|----------|
+|    Fail      |   0X     |
+|--------------|----------|
 
 
 All outdoor radios that provide coverage to any res12 hex will be given a score for each res12 hex they provide coverage in based on the following potential attributes (note, this score is only for a single res12 hex and not the entire radio):
