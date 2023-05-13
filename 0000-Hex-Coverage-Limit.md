@@ -24,9 +24,6 @@ Currently, any redundant and overlapping network coverage is still rewarded the 
 To ensure that only the best setups are rewarded, only the top four (4) radio signals in each res12 hex will be awarded modeled coverage points, with a decaying multiplier based on the radio score noted below. Any radios not scored within the top four (4) will be graded as “Fail”. 
 
 
-Score/Grade
-Multiplier 
-
 | Score/Grade  |Multiplier|  
 |--------------|----------|
 |      1       |   1X     |
@@ -39,6 +36,7 @@ Multiplier
 All outdoor radios that provide coverage to any res12 hex will be given a score for each res12 hex they provide coverage in based on the following potential attributes (note, this score is only for a single res12 hex and not the entire radio):
 
 •Modeled Signal Strength 
+
 •Date of CPI approval (only used as a tiebreaker if tie for attribute 1)
 
 Scoring attribute 2 (CPI approval date) will only be used when there is a tie for two or more radios for the proceeding attribute. 
@@ -69,8 +67,11 @@ Since radio E had the lowest signal strength out of all five (5) radios, and onl
 ## Drawbacks:
 The implementation of this proposal could increase the complexity of the Mobile network, and modeled coverage scores. 
 
+Further, radio deployers may lose out on awarded coverage points in instances where multiple radios are set up in the same hex.
+
+
 ## Rationale and Alternatives:
-An alternative would be to allow radios and hexes to keep earning the defined amount of modeled coverage points as described in HIP 74, which may prevent or stagnate the growth of the network. 
+An alternative would be to allow radios and hexes to keep earning the defined amount of modeled coverage points as described in HIP 74, which may prevent or stagnate the growth of the network because this method does encourage the strategic placement of radios to minimize overlapping coverage. 
 
 ## Unresolved Question:
 How will mappers and mapping of the network tie into this?
