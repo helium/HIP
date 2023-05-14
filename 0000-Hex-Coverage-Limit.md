@@ -73,7 +73,9 @@ Since radio E had the lowest signal strength out of all five (5) radios, and onl
 Once the mapping of the network and mapping of signal strenghts is released, there will be a more accurate method to track and document the hexes with the highest signal strenght. The following attributes will be used to determine the score: 
 
 • Mapped Signal strength 
+
 • Modeled Signal Strength (only used as a tiebreaker if tie for attribute 1)
+
 • Date of CPI approval (only used as a tiebreaker if tie for attribute 2)
 
 
