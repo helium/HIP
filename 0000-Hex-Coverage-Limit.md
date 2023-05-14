@@ -19,7 +19,7 @@ This proposal aims to improve the value of Mobile network coverage by incentiviz
 All Mobile Radio deployers/ Mobile Hotspot Owners. 
  
 ## Detailed Explanation:
-Currently, any redundant and overlapping network coverage is still rewarded the same as non-overlapping coverage. This discourages the buildout of coverage to new areas. To prevent overcrowding and overlapping of coverage in hexes, this HIP proposes to limit the amount of modeled coverage points radios for redundant coverage in res12 hexes. 
+Currently, any redundant and overlapping network coverage is still rewarded the same as non-overlapping coverage. This discourages the buildout of coverage to new areas. To prevent overcrowding and overlapping of coverage in hexes, this HIP proposes to limit the amount of modeled coverage points radios receive for redundant coverage in res12 hexes. 
 
 To ensure that only the best setups are rewarded, only the top four (4) radio signals in each res12 hex will be awarded modeled coverage points, with a decaying multiplier based on the radio score noted below. Any radios not scored within the top four (4) will be graded as “Fail”, and receive no modeled coverage points for that res12 hex. 
 
