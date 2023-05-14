@@ -35,13 +35,14 @@ To ensure that only the best setups are rewarded, only the top four (4) radio si
 
 All outdoor radios that provide coverage to any res12 hex will be given a score for each res12 hex they provide coverage in based on the following potential attributes (note, this score is only for a single res12 hex and not the entire radio):
 
-•Mapped Signal Strenght (Once mapping is impelemented)*
+•Mapped Signal Strength (Once mapping is implemented)*
 
 •Modeled Signal Strength 
 
 •Date of CPI approval (only used as a tiebreaker if tie for attribute 1)
 
-*Until Mapping is impelemented, the only attributes used will be Modeled Signal Strenght and date of CPI approval. See the end of this section for how Mapping is to be implemented for this HIP.
+*Until Mapping is implemented, the only attributes used will be Modeled Signal Strength and date of CPI approval. See the end of this section for how Mapping is to be implemented for this HIP.
+
 
 Scoring attribute 2 (CPI approval date) will only be used when there is a tie for two or more radios for the proceeding attribute. 
 
@@ -50,7 +51,7 @@ Please note, that the multiplier table above only affects the modeled coverage p
 To see the example below of how this HIP would affect a deployment of five (5) radios that provide modeled coverage to the same res12 hex, see the below example:
 
 
-| Radio |Signal Strenght| CPI Approval Date | Score | Coverage Points Per HIP 74| New Coverage Points|  
+| Radio |Signal Strength| CPI Approval Date | Score | Coverage Points Per HIP 74| New Coverage Points|  
 |-------|---------------|-------------------|-------|---------------------------|--------------------|
 |   A   |   -77.33 dBm  |05/01/2023 23:24:25| 1     | 16 (16 * 1)               | 16 (16 * 1)        |
 |   B   |   -88.75 dBm  |12/01/2022 01:01:01| 2     | 16 (16 * 1)               | 12 (16 * .75)      |
