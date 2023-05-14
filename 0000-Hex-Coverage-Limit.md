@@ -70,9 +70,9 @@ Since radio E had the lowest signal strength out of all five (5) radios, and onl
 
 Once the mapping of the network and mapping of signal strenghts is released, there will be a more accurate method to track and document the hexes with the highest signal strenght. The following attributes will be used to determine the score: 
 
-•Mapped Signal strength 
-•Modeled Signal Strength (only used as a tiebreaker if tie for attribute 1)
-•Date of CPI approval (only used as a tiebreaker if tie for attribute 2)
+• Mapped Signal strength 
+• Modeled Signal Strength (only used as a tiebreaker if tie for attribute 1)
+• Date of CPI approval (only used as a tiebreaker if tie for attribute 2)
 
 
 As noted in HIP 79, the Mobile PoC Working Group has discussed and documented a potential path to adjust MOBILE Hotspot rewards using the data collected by Mappers that would utilize the concept of the confidence score. The Mobile PoC Working Group has decided to postpone the final decision regarding the specific algorithm to the second stage of Mapper reward implementation. This approach would create Hotspot rewards adjustment algorithms based on the actual data from mapping activity vs. speculating regarding variables and weights. Therefore, this HIP will not define the exact metrics of how mapped signal strength is rewarded, and how it factors into the radio score, and will allow that HIP to define how it works.
