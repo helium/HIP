@@ -48,7 +48,7 @@ Scoring attribute 2 (CPI approval date) will only be used when there is a tie fo
 
 Please note, that the multiplier table above only affects the modeled coverage points that are given to each radio, and does not affect rewards distributed for the transfer of data. 
 
-To see the example below of how this HIP would affect a deployment of five (5) radios that provide modeled coverage to the same res12 hex, see the below example:
+See the example below of how this HIP would affect a deployment of five (5) radios that provide modeled coverage to the same res12 hex:
 
 
 | Radio |Signal Strength| CPI Approval Date | Score | Coverage Points Per HIP 74| New Coverage Points|  
@@ -71,7 +71,7 @@ Since radio E had the lowest signal strength out of all five (5) radios, and onl
 
 **Modeled Mapping**
 
-Once the mapping of the network and mapping of signal strenghts is released, there will be a more accurate method to track and document the hexes with the highest signal strenght. The following attributes will be used to determine the score: 
+Once the mapping of the network and mapping of signal strengths is released, there will be a more accurate method to track and document the hexes with the highest signal strength. The following attributes will be used to determine the score: 
 
 • Mapped Signal strength 
 
