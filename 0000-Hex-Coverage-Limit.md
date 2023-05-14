@@ -35,14 +35,17 @@ To ensure that only the best setups are rewarded, only the top four (4) radio si
 
 All outdoor radios that provide coverage to any res12 hex will be given a score for each res12 hex they provide coverage in based on the following potential attributes (note, this score is only for a single res12 hex and not the entire radio):
 
+•Mapped Signal Strenght (Once mapping is impelemented)*
 •Modeled Signal Strength 
 •Date of CPI approval (only used as a tiebreaker if tie for attribute 1)
+
+*Until Mapping is impelemented, the only attributes used will be Modeled Signal Strenght and date of CPI approval. See the end of this section for how Mapping is to be implemented for this HIP.
 
 Scoring attribute 2 (CPI approval date) will only be used when there is a tie for two or more radios for the proceeding attribute. 
 
 Please note, that the multiplier table above only affects the modeled coverage points that are given to each radio, and does not affect rewards distributed for the transfer of data. 
 
-To see how this HIP would affect a deployment of five (5) radios that provide coverage to the same res12 hex, see the below example:
+To see the example below of how this HIP would affect a deployment of five (5) radios that provide modeled coverage to the same res12 hex, see the below example:
 
 
 | Radio |Signal Strenght| CPI Approval Date | Score | Coverage Points Per HIP 74| New Coverage Points|  
@@ -63,6 +66,15 @@ Since radios B and C tied in Signal Strength, the CPI approval date is used to d
 
 Since radio E had the lowest signal strength out of all five (5) radios, and only the top four (4) radios will earn rewards, radio E will not earn any modeled coverage points.
 
+**Modeled Mapping**
+Once the mapping of the network and mapping of signal strenghts is released, there will be a more accurate method to track and document the hexes with the highest signal strenght. The following attributes will be used to determine the score: 
+
+•Mapped Signal Strenght 
+•Modeled Signal Strength (only used as a tiebreaker if tie for attribute 2)
+•Date of CPI approval (only used as a tiebreaker if tie for attribute 2)
+
+As noted in HIP 79, the Mobile PoC Working Group has discussed and documented a potential path to adjust MOBILE Hotspot rewards using the data collected by Mappers that would utilize the concept of the confidence score. The Mobile PoC Working Group has decided to postpone the final decision regarding the specific algorithm to the second stage of Mapper reward implementation. This approach would create Hotspot rewards adjustment algorithms based on the actual data from mapping activity vs. speculating regarding variables and weights. Therefore, this HIP will not define the exact metrics of how mapped signal strength is rewarded, and how it factors into the radio score, and will allow that HIP to define how it works.
+
 ## Drawbacks:
 The implementation of this proposal could increase the complexity of the Mobile network, and modeled coverage scores. 
 
@@ -73,7 +85,7 @@ Further, radio deployers may lose out on awarded coverage points in instances wh
 An alternative would be to allow radios and hexes to keep earning the defined amount of modeled coverage points as described in HIP 74, which may prevent or stagnate the growth of the network because this method does encourage the strategic placement of radios to minimize overlapping coverage. 
 
 ## Unresolved Question:
-How will mappers and mapping of the network tie into this?
+None
 
 ## Deployment Impact:
 Outdoor radio deployers will now need to be cognizant of where they are placing their radios in order to maximize modeled coverage point. Additionally, there’s a large amount of overlapping coverage. Deployers may have to find new locations for some or all of their radios in order for them to continue to earn modeled coverage points. 
