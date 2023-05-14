@@ -36,7 +36,9 @@ To ensure that only the best setups are rewarded, only the top four (4) radio si
 All outdoor radios that provide coverage to any res12 hex will be given a score for each res12 hex they provide coverage in based on the following potential attributes (note, this score is only for a single res12 hex and not the entire radio):
 
 •Mapped Signal Strenght (Once mapping is impelemented)*
+
 •Modeled Signal Strength 
+
 •Date of CPI approval (only used as a tiebreaker if tie for attribute 1)
 
 *Until Mapping is impelemented, the only attributes used will be Modeled Signal Strenght and date of CPI approval. See the end of this section for how Mapping is to be implemented for this HIP.
