@@ -27,10 +27,13 @@ This HIP suggests removing the transmit scales of hotspots, and creating a hard 
 To determine which two (2) Hotspots in a hex will be rewarded for the epoch, a points system will be established based on the density of Hotspots within a single hex. At the end of each epoch, the top two (2) Hotspots within each hex will be eligible for PoC IoT rewards based on their total amount of points accumulated during that epoch. See the points table below. 
 
 
-| Active Hotspots in Hex     | 1 | 2 | 3 |≥ 4 |
-|----------------------------|---|---|---|----|
-| Points Awarded Per Beacon  |80 |40 |10 |5   |
-| Points Awarded Per Witness |30 |25 |20 |15  |
+| Active Hotspots in Hex                    | 1 | 2 | 3 |≥ 4 |
+|-------------------------------------------|---|---|---|----|
+| Points Awarded Per Beacon                 |80 |40 |10 |5   |
+| Points Awarded Per Witness                |30 |25 |20 |15  |
+| Points Awarded Per Byte of Data Transfer* | 5 | 5 | 5 | 5  |
+
+*A maximum of 10 bytes of data will earn points (up to 100 points). Anything over 10 bytes will not earn extra points.
 
 An Active Hotspot is defined as a Hotspot that has had at least one (1) witness AND one (1) beacon within the last epoch. Note, if a Hotspot does not have at least one (1) witness AND one (1) beacon within the last epoch, it will not be eligible for PoC rewards for the next epoch. This HIP does not affect hotspots from earning data transfer rewards.
 
