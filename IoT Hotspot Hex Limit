@@ -20,56 +20,64 @@ This proposal aims to improve the value and coverage of IoT network coverage by 
 All Hotspot Owners.
 
 ## Detailed Explanation:
+Please refer to the following definitions: 
+Active Hotspot = a Hotspot that has had at least one (1) witness AND one (1) beacon within the last epoch. Note, if a Hotspot does not have at least one (1) witness AND one (1) beacon within the last epoch, it will not be eligible for PoC rewards for the next epoch. 
+Assigned Points = Points assigned to a Hotspot every epoch based on witnesses, beacons and data transfers to determine if the Hotspot is eligible to receive PoC IoT rewards for that epoch. 
+Awarded Points = Only the top two active Hotspots per hex are awarded points. These points are used to calculate the amount of IoT each Hotspot will receive every epoch.
+
 Currently, a transmit scale is assigned to a Hotspot based on how many other Hotspots are active in the current and neighboring hexes. This current method doesn’t impose a hard limit of how many Hotspots can earn Proof of Coverage (PoC) rewards within a single hex, and doesn’t provide enough incentive for Hotspot deployers to deploy in harder to reach areas. 
 
-This HIP suggests removing the transmit scales of hotspots, and creating a hard limit to only reward PoC rewards to two (2) Hotspots per hex, per epoch, and implementing a new method to determine how IoT rewards are calculated thats documented below. 
+This HIP suggests removing the transmit scales of hotspots, and creating a hard limit to only reward PoC rewards to two (2) Hotspots per hex, per epoch, and implementing a new method to determine how IoT rewards are calculated thats documented below. To further discourage having more than one (1) hotspot per hex, only the top Hotspot per epoch will earn full awarded points, while the second top Hotspot will earn half (50%) of the awarded points.
 
-To determine which two (2) Hotspots in a hex will be rewarded for the epoch, a points system will be established based on the density of Hotspots within a single hex. At the end of each epoch, the top two (2) Hotspots within each hex will be eligible for PoC IoT rewards based on their total amount of points accumulated during that epoch. See the points table below. 
+To determine which two (2) Hotspots in a hex will be rewarded for the epoch, a points system will be established based on the density of Hotspots within a single hex. At the end of each epoch, the top two (2) Hotspots within each hex will be eligible for PoC IoT rewards based on their total amount of assigned points accumulated during that epoch. See the points table below. 
 
 
 | Active Hotspots in Hex                   | 1 | 2 | 3 |≥ 4 |
 |------------------------------------------|---|---|---|----|
-| Points Awarded Per Beacon                |80 |40 |10 |5   |
-| Points Awarded Per Witness               |30 |25 |20 |15  |
-| Points Awarded Per Data Transfer Packet* |.25|.25|.25|.25 |
+| Points Assigned Per Beacon               |80 |40 |10 |5   |
+| Points Assigned Per Witness              |30 |25 |20 |15  |
+| Points Assigned Per Data Transfer Packet*|.25|.25|.25|.25 |
 
-*A maximum of 200 data packet transfers will earn up to 50 points. Anything over 200 packets will not earn extra points.
+*A maximum of 200 data packet transfers will earn up to 50 assigned points. Anything over 200 packets will not earn extra assigned points.
 
-An Active Hotspot is defined as a Hotspot that has had at least one (1) witness AND one (1) beacon within the last epoch. Note, if a Hotspot does not have at least one (1) witness AND one (1) beacon within the last epoch, it will not be eligible for PoC rewards for the next epoch. This HIP does not affect hotspots from earning data transfer rewards.
+
+Awarded points for the top Hotspot in each hex is calculated the following way: # of assigned points rounded to the nearest whole number. For example, if a top Hotspot has assigned points of 961.75, the awarded points will be 962. If that Hotspot instead had 961.25, it would be  961.
+
+Awarded points for the second top Hotspot is calculated similar, but instead, after the conversion of assigned points to awarded points, the final awarded points will be multiplied by .5 since only the top Hotspot earns full rewards. For example, if in the same hex as the example above, the second top Hotspot had assigned points of 500.50, the awarded points will equate to 501 * .5, which equals 250.5.
 
 Example
 In the example below, there’s a total of 10 hotspots; however, one of them is ineligible for PoC rewards since it didn’t have at least one witness and one beacon. Further, since only two (2) Hotspots in each hex are eligible for rewards, the total number of Hotspots that are eligible for rewards for this epoch is six (6).
 
 The total points generated from the six (6) eligible Hotspots for the epoch is 4,326.001 based on the table below. To determine the amount of IoT they will be rewarded for the epoch, it first must be determined what percent of total points each eligible Hotspot accumulated for that epoch against the total amount of points from all eligble for Iot reward Hotspots for that epoch. In this scenario, we will assume the amount of IoT distributed per epoch is 100,000. Refer to the table below for how each scenario affects IoT rewards.
 
-In some instances, there may be a tie in total points generated for that epoch. In those instances, whichever hotspot was asserted in that hex first will be awarded an extra .001 of a point.
+In some instances, there may be a tie in total points generated for that epoch. In those instances, whichever hotspot was asserted in that hex first will be awarded an extra assigned.01 of a point.
 
 
 
-|Hex A     |# of Beacons|# of Witnesses|Data Packet Transfers|Total Points| Hotspot Assertion Date| Eligble for IoT Rewards?| % of Total Points|IoT Rewarded|
-|----------|------------|--------------|---------------------|------------|-----------------------|-------------------------|------------------|------------|
-|HotSpot 1 |4           | 41           | 0                   |  635.001   |01/01/2020             |    Yes                  |  14.68%          | 14,678.71  |
-|HotSpot 2 |3           | 27           | 63                  |  445.75    |12/31/2021             |    No                   |  N/A             | 0          |
-|HotSpot 3 |1           | 15           | 0                   |  230       |02/28/2022             |    No                   |  N/A             | 0          |
-|HotSpot 4 |3           | 63           | 0                   |  960       |05/01/2023             |    Yes                  |  22.19%          | 22,191.39  |
-|HotSpot 5 |3           | 41           | 0                   |  635       |01/02/2020             |    No                   |  N/A             | 0          |
+|Hex A     |# of Beacons|# of Witnesses|Data Packet Transfers|Assigned Points|Hotspot Assertion Date|Awarded Points| % of Total Points|IoT Rewarded|
+|----------|------------|--------------|---------------------|---------------|----------------------|--------------|------------------|------------|
+|HotSpot 1 |4           | 41           | 0                   |  635.01      |01/01/2020            |  635.01     |  14.68%          | 14,678.71  |
+|HotSpot 2 |3           | 27           | 63                  |  445.75       |12/31/2021            |  0           |  N/A             | 0          |
+|HotSpot 3 |1           | 15           | 0                   |  230          |02/28/2022            |  0           |  N/A             | 0          |
+|HotSpot 4 |3           | 63           | 0                   |  960          |05/01/2023            |  960         |  22.19%          | 22,191.39  |
+|HotSpot 5 |3           | 41           | 0                   |  635          |01/02/2020            |  0           |  N/A             | 0          |
 
-|Hex B     |# of Beacons|# of Witnesses|Data Packet Transfers|Total Points| Hotspot Assertion Date| Eligble for IoT Rewards?| % of Total Points|IoT Rewarded|
-|----------|------------|--------------|---------------------|------------|-----------------------|-------------------------|------------------|------------|
-|HotSpot 6 | 3          | 6            | 0                   | 420        |  08/26/2022           |    Yes                  | 9.71%            | 9,708.74   |
+|Hex B     |# of Beacons|# of Witnesses|Data Packet Transfers|Assigned Points|Hotspot Assertion Date|Awarded Points| % of Total Points|IoT Rewarded|
+|----------|------------|--------------|---------------------|---------------|----------------------|--------------|------------------|------------|
+|HotSpot 6 | 3          | 6            | 0                   | 420           | 08/26/2022           |  420         | 9.71%            | 9,708.74   |
 
-|Hex C     |# of Beacons|# of Witnesses|Data Packet Transfers|Total Points| Hotspot Assertion Date| Eligble for IoT Rewards?| % of Total Points|IoT Rewarded|
-|----------|------------|--------------|---------------------|------------|-----------------------|-------------------------|------------------|------------|
-|HotSpot 7 | 4          |  8           | 0                   | 360        |  11/01/2020           |    Yes                  | 8.32%            | 8,321.77   |
-|HotSpot 8 | 4          |  12          | 0                   | 460        |  06/20/2022           |    Yes                  | 10.63%           | 10,633.38  |
+|Hex C     |# of Beacons|# of Witnesses|Data Packet Transfers|Assigned Points|Hotspot Assertion Date|Awarded Points| % of Total Points|IoT Rewarded|
+|----------|------------|--------------|---------------------|---------------|----------------------|--------------|------------------|------------|
+|HotSpot 7 | 4          |  8           | 0                   | 360           | 11/01/2020           |  180         | 8.32%            | 8,321.77   |
+|HotSpot 8 | 4          |  12          | 0                   | 460           | 06/20/2022           |  460         | 10.63%           | 10,633.38  |
 
-|Hex D     |# of Beacons|# of Witnesses|Data Packet Transfers|Total Points| Hotspot Assertion Date| Eligble for IoT Rewards?| % of Total Points|IoT Rewarded|
-|----------|------------|--------------|---------------------|------------|-----------------------|-------------------------|------------------|------------|
-|HotSpot 9 | 4          | 0            | 1                   | 320.25     |  04/06/2022           |    No                   | N/A              | 0          |
+|Hex D     |# of Beacons|# of Witnesses|Data Packet Transfers|Assigned Points|Hotspot Assertion Date|Awarded Points| % of Total Points|IoT Rewarded|
+|----------|------------|--------------|---------------------|---------------|----------------------|--------------|------------------|------------|
+|HotSpot 9 | 4          | 0            | 1                   | 320.25        | 04/06/2022           |  0           | N/A              | 0          |
 
-|Hex E     |# of Beacons|# of Witnesses|Data Packet Transfers|Total Points| Hotspot Assertion Date| Eligble for IoT Rewards?| % of Total Points|IoT Rewarded|
-|----------|------------|--------------|---------------------|------------|-----------------------|-------------------------|------------------|------------|
-|HotSpot 10| 4          | 39           |  4                  | 1,491      |  01/26/2021           |    Yes                  | 34.47%           | 34,466.01  |
+|Hex E     |# of Beacons|# of Witnesses|Data Packet Transfers|Assigned Points|Hotspot Assertion Date|Awarded Points| % of Total Points|IoT Rewarded|
+|----------|------------|--------------|---------------------|---------------|----------------------|--------------|------------------|------------|
+|HotSpot 10| 4          | 39           |  4                  | 1,491         | 01/26/2021           |  1,491       | 34.47%           | 34,466.01  |
 
 
 In some instances, deployers may not set up Hotspots optimally for IoT rewards, and only intend to use the Hotspot for MOBILE or IoT data transfer purposes. Therefore, this HIP also suggests the implementation to effectively opt out of IoT PoC activity (witnessing and beaconing) for all IoT hotspots. The cost to opt out or opt back in for PoC activity will cost 100,000 DC ($1). In instances where Hotspots are “opted out” of PoC activity, that Hotspot will not generate any points for witnessing and beaconing.  
