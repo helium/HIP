@@ -70,9 +70,11 @@ The 30GB rewards limit will reset with a start of a new 30-day billing cycle for
 
 It’s important to note that Helium Mobile offers an unlimited plan without data caps for Subscribers. This means that the data offloading will still continue after the 30GB usage is reached, however Hotspot Owners won’t earn MOBILE rewards for providing data traffic to such Subscribers. Additionally, DCs won’t be burned from the Helium Mobile Carrier account for the data traffic routing after the data caps are reached for Subscribers.
 
-Additionally, we propose a one-year grace period to allow for unrewarded traffic over 30GB per Subscriber on the Hotspots. Nova Labs will implement an option to opt-out of unrewarded data traffic in a Cloud Dashboard or similar tool no later than the expiration of the grace period. The reward cap of 30GB per Subscriber of the unlimited plan will remain in place after the opt-out feature is implemented.
+Additionally, we propose a 6 calendar month grace period to allow for unrewarded traffic over 30GB per Subscriber on the Hotspots. Nova Labs will implement an option to opt-out of unrewarded data traffic in a Cloud Dashboard or similar tool no later than the expiration of the grace period. 6 month countdown will start will start on the day this HIP is approved.  
 
-We do not anticipate that the 30GB data cap will be reached frequently. Nevertheless, we will closely analyze the data usage of our Subscribers and re-evaluate the reward cap limit of 30GB every six months.
+If Nova Labs fails to implement the opt-out feature past the expiration of the grace period, the reward cap is to be completely removed on the day of the expiration of the grace period and will remain so until Nova Labs has implemented the opt-out feature 
+
+The reward cap limit shall be calculated on a yearly basis, on the 1st of August, and shall maintain the reward cap limit at least 1 standard deviation above the average Subscriber's monthly data usage at that time.  If the reward cap limit falls more than 1 standard deviation below the average Subscriber's monthly usage, then the reward cap limit shall be adjusted immediately.  Any other changes to the reward cap limit shall require approval by a Mobile subDAO vote.
 
 Approval of this approach is necessary for Helium Mobile to start offloading data to the Helium Mobile Network.
 
