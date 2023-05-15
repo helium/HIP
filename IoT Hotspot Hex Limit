@@ -21,7 +21,7 @@ All Hotspot Owners.
 
 ## Detailed Explanation:
 Please refer to the following definitions: 
-Active Hotspot = a Hotspot that has had at least one (1) witness AND one (1) beacon within the last epoch. Note, if a Hotspot does not have at least one (1) witness AND one (1) beacon within the last epoch, it will not be eligible for PoC rewards for the next epoch. 
+Active Hotspot = a Hotspot that has had at least one (1) valid and selected witness AND one (1) beacon within the last epoch. Note, if a Hotspot does not have at least one (1) witness AND one (1) beacon within the last epoch, it will not be eligible for PoC rewards for the next epoch. 
 Assigned Points = Points assigned to a Hotspot every epoch based on witnesses, beacons and data transfers to determine if the Hotspot is eligible to receive PoC IoT rewards for that epoch. 
 Awarded Points = Only the top two active Hotspots per hex per epoch are awarded points. These points are used to calculate the amount of IoT each Hotspot will receive every epoch.
 
@@ -32,11 +32,11 @@ This HIP suggests removing the transmit scales of hotspots, and creating a hard 
 To determine which two (2) Hotspots in a hex will be rewarded with IoT for the epoch, a points system will be established based on the density of Hotspots within a single hex. At the end of each epoch, the top two (2) Hotspots based on assigned points from the prior epoch within each hex will be eligible for PoC IoT rewards. See the points table below. 
 
 
-| Active Hotspots in Hex                   | 1 | 2 | 3 |≥ 4 |
-|------------------------------------------|---|---|---|----|
-| Points Assigned Per Beacon               |80 |40 |10 |5   |
-| Points Assigned Per Witness              |30 |25 |20 |15  |
-| Points Assigned Per Data Transfer Packet*|.25|.25|.25|.25 |
+| Active Hotspots in Hex                      | 1 | 2 | 3 |≥ 4 |
+|---------------------------------------------|---|---|---|----|
+| Points Assigned Per Beacon                  |80 |40 |10 |5   |
+| Points Assigned Per Valid & Selected Witness|30 |25 |20 |15  |
+| Points Assigned Per Data Transfer Packet*   |.25|.25|.25|.25 |
 
 *A maximum of 200 data packet transfers will earn up to 50 assigned points at .25 assigned points per transfer. Anything over 200 packets will not earn extra assigned points.
 
