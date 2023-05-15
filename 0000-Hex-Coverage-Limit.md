@@ -32,11 +32,10 @@ To ensure that only the best setups are rewarded, only the top three (3) radio s
 
 All outdoor radios that provide coverage to any res12 hex will be given a score for each res12 hex they provide coverage in based on the following potential attributes (note, this score is only for a single res12 hex and not the entire radio):
 
-•Mapped Signal Strength (Once mapping is implemented)*
 
 •Modeled Signal Strength 
 
-•Date of CPI approval (only used as a tiebreaker if tie for attribute 1)
+•Start date that radio has sent at least one (1) heartbeat every 72 hours (only used as a tiebreaker if tie for attribute 1)
 
 *Until Mapping is implemented, the only attributes used will be Modeled Signal Strength and date of CPI approval. See the end of this section for how Mapping is to be implemented for this HIP.
 
@@ -46,13 +45,13 @@ Please note, that the multiplier table above only affects the modeled coverage p
 
 See the example below of how this HIP would affect a deployment of five (5) radios that provide modeled coverage to the same res12 hex:
 
-| Radio |Signal Strength| CPI Approval Date | Score | Coverage Points Per HIP 74| New Coverage Points|  
-|-------|---------------|-------------------|-------|---------------------------|--------------------|
-|   A   |   -77.33 dBm  |05/01/2023 23:24:25| 1     | 16 (16 * 1)               | 16  (16 * 1)       |
-|   B   |   -88.75 dBm  |12/01/2022 01:01:01| 2     | 16 (16 * 1)               | 12  (16 * .75)     |
-|   C   |   -88.75 dBm  |12/02/2022 12:11:01| 3     | 16 (16 * 1)               | 8   (16 * .5)      |
-|   D   |   -93.60 dBm  |12/05/2022 11:51:01| Fail  | 16 (16 * 1)               | 0   (16 * 0)       |
-|   E   |   -94.69 dBm  |08/01/2022 05:01:59| Fail  | 16 (16 * 1)               | 0   (16 * 0)       |
+| Radio |Signal Strength| Heartbeat Streak Start Date | Score | Coverage Points Per HIP 74| New Coverage Points|  
+|-------|---------------|-----------------------------|-------|---------------------------|--------------------|
+|   A   |   -77.33 dBm  |05/01/2023 23:24:25          | 1     | 16 (16 * 1)               | 16  (16 * 1)       |
+|   B   |   -88.75 dBm  |12/01/2022 01:01:01          | 2     | 16 (16 * 1)               | 12  (16 * .75)     |
+|   C   |   -88.75 dBm  |12/02/2022 12:11:01          | 3     | 16 (16 * 1)               | 8   (16 * .5)      |
+|   D   |   -93.60 dBm  |12/05/2022 11:51:01          | Fail  | 16 (16 * 1)               | 0   (16 * 0)       |
+|   E   |   -94.69 dBm  |08/01/2022 05:01:59          | Fail  | 16 (16 * 1)               | 0   (16 * 0)       |
 
 Since Radio A has the highest signal strength in that hex, it will be granted a 1X multiplier, which will award it with the full 16 (16 x 1) modeled coverage points for that epoch. 
 
