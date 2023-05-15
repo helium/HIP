@@ -23,7 +23,6 @@ Currently, any redundant and overlapping network coverage is still rewarded the 
 
 To ensure that only the best setups are rewarded, only the top four (4) radio signals in each res12 hex will be awarded modeled coverage points, with a decaying multiplier based on the radio score noted below. Any radios not scored within the top four (4) will be graded as “Fail”, and receive no modeled coverage points for that res12 hex. 
 
-
 | Score/Grade  |Multiplier|  
 |--------------|----------|
 |      1       |   1X     |
@@ -31,7 +30,6 @@ To ensure that only the best setups are rewarded, only the top four (4) radio si
 |      3       |  .5X     |
 |      4       |  .1X     |
 |    Fail      |   0X     |
-
 
 All outdoor radios that provide coverage to any res12 hex will be given a score for each res12 hex they provide coverage in based on the following potential attributes (note, this score is only for a single res12 hex and not the entire radio):
 
@@ -43,13 +41,11 @@ All outdoor radios that provide coverage to any res12 hex will be given a score 
 
 *Until Mapping is implemented, the only attributes used will be Modeled Signal Strength and date of CPI approval. See the end of this section for how Mapping is to be implemented for this HIP.
 
-
 Scoring attribute 2 (CPI approval date) will only be used when there is a tie for two or more radios for the proceeding attribute. 
 
 Please note, that the multiplier table above only affects the modeled coverage points that are given to each radio, and does not affect rewards distributed for the transfer of data. 
 
 See the example below of how this HIP would affect a deployment of five (5) radios that provide modeled coverage to the same res12 hex:
-
 
 | Radio |Signal Strength| CPI Approval Date | Score | Coverage Points Per HIP 74| New Coverage Points|  
 |-------|---------------|-------------------|-------|---------------------------|--------------------|
@@ -59,8 +55,6 @@ See the example below of how this HIP would affect a deployment of five (5) radi
 |   D   |   -93.60 dBm  |12/05/2022 11:51:01| 4     | 16 (16 * 1)               | 1.6 (16 * .1)      |
 |   E   |   -94.69 dBm  |08/01/2022 05:01:59| Fail  | 16 (16 * 1)               | 0   (16 * 0)       |
 
-
-
 Since Radio A has the highest signal strength in that hex, it will be granted a 1X multiplier, which will award it with the full 16 (16 x 1) modeled coverage points for that epoch. 
 
 However, since radios, B, C, D and E have a lower signal strength than radio A, and are providing redundant coverage, they will not earn the full modeled coverage points. Instead, they will only earn a fraction of that amount depending on their score. 
@@ -69,7 +63,7 @@ Since radios B and C tied in Signal Strength, the CPI approval date is used to d
 
 Since radio E had the lowest signal strength out of all five (5) radios, and only the top four (4) radios will earn rewards, radio E will not earn any modeled coverage points.
 
-**Modeled Mapping**
+### Modeled Mapping:
 
 Once the mapping of the network and mapping of signal strengths is released, there will be a more accurate method to track and document the hexes with the highest signal strength. The following attributes will be used to determine the score: 
 
@@ -79,14 +73,12 @@ Once the mapping of the network and mapping of signal strengths is released, the
 
 • Date of CPI approval (only used as a tiebreaker if tie for attribute 2)
 
-
 As noted in HIP 79, the Mobile PoC Working Group has discussed and documented a potential path to adjust MOBILE Hotspot rewards using the data collected by Mappers that would utilize the concept of the confidence score. The Mobile PoC Working Group has decided to postpone the final decision regarding the specific algorithm to the second stage of Mapper reward implementation. This approach would create Hotspot rewards adjustment algorithms based on the actual data from mapping activity vs. speculating regarding variables and weights. Therefore, this HIP will not define the exact metrics of how mapped signal strength is rewarded, and how it factors into the radio score, and will allow that HIP to define how it works.
 
 ## Drawbacks:
 The implementation of this proposal could increase the complexity of the Mobile network, and modeled coverage scores. 
 
 Further, radio deployers may lose out on awarded coverage points in instances where multiple radios are set up in the same hex.
-
 
 ## Rationale and Alternatives:
 An alternative would be to allow radios and hexes to keep earning the defined amount of modeled coverage points as described in HIP 74, which may prevent or stagnate the growth of the network because this method does encourage the strategic placement of radios to minimize overlapping coverage. 
