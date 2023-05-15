@@ -9,7 +9,7 @@
 
 
 ## Summary:
-This Helium Improvement Proposal (HIP) suggests adding a limit of how many IoT hotspots in a single hex can earn Proof of Coverage (PoC) rewards to two (2) Hotspots, while the top Hotspot earning full rewards, and the second top Hotspot earning half rewards. Further, this HIP would the transmit scale system established in HIP 17.
+This Helium Improvement Proposal (HIP) suggests adding a limit of how many IoT hotspots in a single hex can earn Proof of Coverage (PoC) rewards to two (2) Hotspots, while the top Hotspot earning full rewards, and the second top Hotspot earning half rewards. Further, this HIP would rermove the transmit scale system established in HIP 17.
 
 ## Motivation:
 HIP 17 was passed to reduce IoT rewards earned by transmitting or witnessing Hotspots in close proximity to each other, and discourage multiple Hotspots being deployed within the same hex. However, as we know, this did little to discourage the overcrowding of hexes.
