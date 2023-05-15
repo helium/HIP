@@ -37,9 +37,7 @@ All outdoor radios that provide coverage to any res12 hex will be given a score 
 
 •Start date that radio has sent at least one (1) heartbeat every 72 hours (only used as a tiebreaker if tie for attribute 1)
 
-*Until Mapping is implemented, the only attributes used will be Modeled Signal Strength and date of CPI approval. See the end of this section for how Mapping is to be implemented for this HIP.
-
-Scoring attribute 2 (CPI approval date) will only be used when there is a tie for two or more radios for the proceeding attribute. 
+Scoring attribute 2 (Heartbeat Streak Date) will only be used when there is a tie for two or more radios for the proceeding attribute. 
 
 Please note, that the multiplier table above only affects the modeled coverage points that are given to each radio, and does not affect rewards distributed for the transfer of data. 
 
@@ -53,25 +51,14 @@ See the example below of how this HIP would affect a deployment of five (5) radi
 |   D   |   -93.60 dBm  |12/05/2022 11:51:01          | Fail  | 16 (16 * 1)               | 0   (16 * 0)       |
 |   E   |   -94.69 dBm  |08/01/2022 05:01:59          | Fail  | 16 (16 * 1)               | 0   (16 * 0)       |
 
-Since Radio A has the highest signal strength in that hex, it will be granted a 1X multiplier, which will award it with the full 16 (16 x 1) modeled coverage points for that epoch. 
+Since Radio A has the highest signal strength in that hex, it will be granted a 1X multiplier, which will award it with the full 16 (16 x 1) modeled coverage points for that epoch.
 
-However, since radios, B, C, D and E have a lower signal strength than radio A, and are providing redundant coverage, they will not earn the full modeled coverage points. Instead, they will only earn a fraction of that amount depending on their score. 
+However, since radios, B, and D have a lower signal strength than radio A, and are providing redundant coverage, they will not earn the full modeled coverage points. Instead, they will only earn a fraction of that amount depending on their score.
 
-Since radios B and C tied in Signal Strength, the CPI approval date is used to determine which radio is scored next. For this example, radio B was CPI approved on 12/01/2022 01:01:01 and radio C was CPI approved on 12/02/2022 12:11:01. Therefore, radio B was CPI approved first, and will thus have a score of 2, while radio C having a score of 3. 
+Since radios B and C tied in Signal Strength, the Heartbeat Streak date is used to determine which radio is scored next. For this example, radio B had a heart beat at least once (1) every 72 hours starting on 12/01/2022 01:01:01 and radio C had a heart beat at least once (1) every 72 hours starting on  12/02/2022 12:11:01. Therefore, radio B was established first, and will thus have a score of 2, while radio C having a score of 3.
 
 Since radio D and E had the lowest signal strength out of all five (5) radios, and only the top three (3) radios will earn rewards, radio D and E will not earn any modeled coverage points.
 
-### Modeled Mapping:
-
-Once the mapping of the network and mapping of signal strengths is released, there will be a more accurate method to track and document the hexes with the highest signal strength. The following attributes will be used to determine the score: 
-
-• Mapped Signal strength 
-
-• Modeled Signal Strength (only used as a tiebreaker if tie for attribute 1)
-
-• Date of CPI approval (only used as a tiebreaker if tie for attribute 2)
-
-As noted in HIP 79, the Mobile PoC Working Group has discussed and documented a potential path to adjust MOBILE Hotspot rewards using the data collected by Mappers that would utilize the concept of the confidence score. The Mobile PoC Working Group has decided to postpone the final decision regarding the specific algorithm to the second stage of Mapper reward implementation. This approach would create Hotspot rewards adjustment algorithms based on the actual data from mapping activity vs. speculating regarding variables and weights. Therefore, this HIP will not define the exact metrics of how mapped signal strength is rewarded, and how it factors into the radio score, and will allow that HIP to define how it works.
 
 ## Drawbacks:
 The implementation of this proposal could increase the complexity of the Mobile network, and modeled coverage scores. 
