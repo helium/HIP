@@ -3,7 +3,7 @@
 - Author: @HeatedLime
 - Start Date: 5/12/2023
 - Category: Technical & Economic
-- Original HIP PR: #652
+- Original HIP PR: #654
 - Tracking Issue: 
 - Voting Requirements: veMOBILE
 
