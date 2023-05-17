@@ -1,13 +1,15 @@
-Author: Tony12times
-Start date: 2023-05-17
-Category: Meta
-Original HIP PR:
-Tracking Issue
+## HIP XX: <----input title here
+- Author: Tony12times
+- Start date: 2023-05-17
+- Category: Meta
+- Original HIP PR:
+- Tracking Issue
+- Voting Requirements: veIOT
 
-SUMMARY:
-        This HIP seeks to remodel the denylist processes within the existing infrastructure of Crowdspot.io.  Improvements to the review process will streamline the wait time for Crowdspot reviews, reduce redundant removal submissions from identified gamers, better categorizing reviews, and establishing definitions for use in the review process. The two main goals of reducing bad actors on the network and processing false positive cases in a more timely manner will be accomplished by two innovative steps. First, a Staking Bond will be required to place any removal submission on Crowdspot.  Second, a two stage process is established on Crowdspot to handle appeals of hotspots already on the denylist.    
+## Summary:
+This HIP seeks to remodel the denylist processes within the existing infrastructure of Crowdspot.io.  Improvements to the review process will streamline the wait time for Crowdspot reviews, reduce redundant removal submissions from identified gamers, better categorizing reviews, and establishing definitions for use in the review process. The two main goals of reducing bad actors on the network and processing false positive cases in a more timely manner will be accomplished by two innovative steps. First, a Staking Bond will be required to place any removal submission on Crowdspot.  Second, a two stage process is established on Crowdspot to handle appeals of hotspots already on the denylist.    
 
-MOTIVATION:
+## Motivation:
 
 The threshold for review should be less than 60 days, maybe even 30 days.  This HIP seeks to achieve these goals through updating Crowdspot with some new processes.
 
@@ -15,14 +17,12 @@ The current process and flow of the Crowdspot submissions is backlogged and in d
 
 As of the draft of this proposal, the wait time is 114 days based on historical wait times on Crowdspot, but this does not take into account the rate of new submissions since January's algorithmic detection added 5600 new submissions, nor April's Solana migration that has nearly halted all progress for the past 30 days.  
      
-STAKEHOLDERS
+## Stakeholders:
 All Hotspot owners will be positively affected by this proposal, due to the processing of false positive cases in a timely manner, and returning legit hotspots back to active on the network. 
 All Hotspot owners that were put on the denylist since January 2023 are negativity affected by the current state of Crowdspot processing review requests. 
 Any community member that manually detects a spoofed hotspot or farm on the network has nothing to gain by reporting the fraudulent activity if the request cant be reviewed for 6 months.  
 
-
-
-DETAILED EXPLANATION 
+## Detailed Explanation: 
 
 
 Definitions clarified and variables to be established in this HIP
@@ -113,9 +113,9 @@ REVIEW TEAM DEADLINES:
 
     An appeal removal submission has already had one team review by a human and possibly got there in the first place by algorithmic detection.  This case deserves a second look by the review team, however in the case that an appeal removal submission has not been reviewed in var_submission_expiration_time days the following shall occur.   The hotspot shall remain on the denylist, the stake bond shall be returned to the owner, and the submission shall be changed to the type addition submission and placed in that que for the review team at a later date.  
 
-Drawbacks
+## Drawbacks
 
-Rationale and Alternatives
+## Rationale and Alternatives
 
 
 I'm a big proponent of the "innocent until proven guilty" ethos. Right alongside this goes "the right to a fair and speedy trial."  The current state of Crowdspot serves neither  
@@ -175,12 +175,12 @@ Scenario 3  We control release of the submissions in scenario 2.  Only release 5
 
 Scenario 4  Keep the backlog of 4600 denied hotspots and submissions pending in crowdspot and start making any new submissions subject to the new rules.  I think that legit false positive owners will abandon the 4 month old submission and gladly "put their money where their mouth is".  
 
-Deployment Impact
+## Deployment Impact
 
 This portion is reserved for future use. 
 
 
-Success Metrics
+## Success Metrics
 
 The success metric will be the wait time for getting a human review after being placed on the denylist.   Like pointed out in the Summary, the threshold for review should be less than 60 days, maybe even 30 days.
 The expected "customer service experience" should dictate that 4-6 months is simply unreasonable.  
