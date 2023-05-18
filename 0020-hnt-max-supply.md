@@ -4,7 +4,6 @@
 - Start Date: November 4, 2020
 - Category: Economic
 - Tracking Issue: [#73](https://github.com/helium/HIP/issues/73)
-  - [audit](https://github.com/helium/miner/blob/master/audit/var-79.md)
 
 # Summary
 
