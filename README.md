@@ -83,7 +83,7 @@ repository:
 | 62 | [PoC Witness IP Check](https://github.com/helium/HIP/blob/main/0062-poc-witness-ip-check.md) | [Closed](https://github.com/helium/HIP/issues/422) |
 | 63 | [Helium Hub](https://github.com/helium/HIP/blob/main/0063-helium-hub.md) | [Closed](https://github.com/helium/HIP/issues/423) |
 | 64 | [WiFi subDAO](https://github.com/helium/HIP/blob/main/0064-wifi-dao.md) | [In Discussion](https://github.com/helium/HIP/issues/424) |
-| 65 | [Vendor HNT Lockup](https://github.com/helium/HIP/blob/main/0065-vendor-token-lockup.md) | [In Discussion](https://github.com/helium/HIP/issues/437) |
+| 65 | [Vendor HNT Lockup](https://github.com/helium/HIP/blob/main/0065-vendor-token-lockup.md) | [Closed](https://github.com/helium/HIP/issues/437) |
 | 66 | [Trust Score & Denylist Convenience](https://github.com/helium/HIP/blob/main/0066-trust-score-and-denylist-convenience.md) | [Closed](https://github.com/helium/HIP/issues/438) |
 | 67 | [Repeal Redenomination](https://github.com/helium/HIP/blob/main/0067-repeal-redenomination.md) | [Approved](https://github.com/helium/HIP/issues/456) |
 | 68 | [Open Service Subdao](https://github.com/helium/HIP/blob/main/0068-open-service-subdao.md) | [Closed](https://github.com/helium/HIP/issues/457) |
