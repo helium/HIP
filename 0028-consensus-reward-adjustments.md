@@ -6,7 +6,6 @@
 - Original HIP PR: <https://github.com/helium/HIP/pull/136>
 - Tracking Issue: <https://github.com/helium/HIP/issues/140>
 - Code PR: <https://github.com/helium/blockchain-core/pull/922>
-- Status: [Approved](https://github.com/helium/HIP/issues/140#issuecomment-892848351)
 
 # Summary
 

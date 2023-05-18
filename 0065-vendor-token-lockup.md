@@ -3,7 +3,6 @@
 - Category: Economic, Technical
 - Original PR: <https://github.com/helium/HIP/pull/428>
 - Tracking Issue: <https://github.com/helium/HIP/issues/437>
-- Status: In Discussion
 
 # Addendum to HIP-19
 

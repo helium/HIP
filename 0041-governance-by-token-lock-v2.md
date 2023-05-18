@@ -3,7 +3,6 @@
 - Authors: @tjain-mcc (tushar)
 - Start Date: November 1, 2021
 - Category: Governance
-- Status: In Discussion
 - Original HIP PR: <https://github.com/helium/HIP/pull/299>
 - Tracking Issue: TODO
 - Discord Channel: TODO

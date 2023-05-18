@@ -5,7 +5,6 @@
 - Category: Governance
 - Original HIP PR: <https://github.com/helium/HIP/pull/182>
 - Tracking Issue: <https://github.com/helium/HIP/issues/183>
-- Status: In Discussion
 
 # Summary
 

@@ -5,7 +5,6 @@
 - Category: Technical
 - Original HIP PR: <https://github.com/helium/HIP/pull/300>
 - Tracking Issue: TBD
-- Status: Approved
 
 ## Summary and Motivation
 
