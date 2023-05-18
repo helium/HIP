@@ -5,7 +5,6 @@
 - Category: Economic
 - Original HIP PR: <https://github.com/helium/HIP/pull/194>
 - Tracking Issue: <https://github.com/helium/HIP/issues/221>
-- Status: In Discussion
 
 # Summary
 

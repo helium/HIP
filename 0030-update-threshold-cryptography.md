@@ -6,7 +6,6 @@
 - Category: Technical
 - Original HIP PR: [#155](https://github.com/helium/HIP/pull/155)
 - Tracking Issue: [#158](https://github.com/helium/HIP/issues/158)
-- Status: Deployed (2021-05-04)
 
 # Summary
 
