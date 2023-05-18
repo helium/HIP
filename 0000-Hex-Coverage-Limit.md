@@ -21,13 +21,12 @@ All Mobile Radio deployers/ Mobile Hotspot Owners.
 ## Detailed Explanation:
 Currently, any redundant and overlapping network coverage is still rewarded the same as non-overlapping coverage. This discourages the buildout of coverage to new areas. To prevent overcrowding and overlapping of coverage in hexes, this HIP proposes to limit the amount of modeled coverage points radios receive for redundant coverage in res12 hexes. 
 
-To ensure that only the best setups are rewarded, only the top three (3) ranked radio signals in each res12 hex will be awarded modeled coverage points, with a decaying multiplier based on the radio rank noted below. Any radios not ranked within the top three (3) will be ranked as “Fail”, and receive no modeled coverage points for that res12 hex. 
+To ensure that only the best setups are rewarded, only the top two (2) ranked radio signals in each res12 hex will be awarded modeled coverage points, with a decaying multiplier based on the radio rank noted below. Any radios not ranked within the top two (2) will be ranked as “Fail”, and receive no modeled coverage points for that res12 hex. 
 
 | Rank         |Multiplier|  
 |--------------|----------|
 |      1       |   1X     |
 |      2       |  .75X    |
-|      3       |  .5X     |
 |    Fail      |   0X     |
 
 All outdoor radios that provide coverage to any res12 hex will be given a rank for each res12 hex they provide coverage in based on the following potential attributes (note, this rank is only for a single res12 hex and not the entire radio):
@@ -47,17 +46,15 @@ See the example below of how this HIP would affect a deployment of five (5) outd
 |-------|---------------|-----------------------------|-------|---------------------------|--------------------|
 |   A   |   -77.33 dBm  |05/01/2023 23:24:25          | 1     | 16 (16 * 1)               | 16  (16 * 1)       |
 |   B   |   -88.75 dBm  |12/01/2022 01:01:01          | 2     | 16 (16 * 1)               | 12  (16 * .75)     |
-|   C   |   -88.75 dBm  |12/02/2022 12:11:01          | 3     | 16 (16 * 1)               | 8   (16 * .5)      |
+|   C   |   -88.75 dBm  |12/02/2022 12:11:01          | Fail  | 16 (16 * 1)               | 0   (16 * .5)      |
 |   D   |   -93.60 dBm  |12/05/2022 11:51:01          | Fail  | 16 (16 * 1)               | 0   (16 * 0)       |
 |   E   |   -94.69 dBm  |08/01/2022 05:01:59          | Fail  | 16 (16 * 1)               | 0   (16 * 0)       |
 
 Since Radio A has the highest signal strength in that hex, it will be ranked as 1, and granted a 1X multiplier, which will award it with the full 16 (16 x 1) modeled coverage points for that epoch.
 
-However, since radios, B, and D have a lower signal strength than radio A, and are providing redundant coverage, they will not earn the full modeled coverage points. Instead, they will only earn a fraction of that amount depending on their score.
+Since radios B and C tied in Signal Strength, the Heartbeat Streak date is used to determine which radio is ranked next. For this example, radio B had its first heartbeat that contributed to its heartbeat streak on 12/01/2022 01:01:01 while radio C had a its first heartbeak contributing to the heartbeat streak on 12/02/2022 12:11:01. Therefore, since radio B had its first consecutive heartbeat contributing to the heartbeat streak first it will be ranked 2, while radio C having a rank of 3.
 
-Since radios B and C tied in Signal Strength, the Heartbeat Streak date is used to determine which radio is ranked next. For this example, radio B had a heart beat at least once (1) every 72 hours starting on 12/01/2022 01:01:01 and radio C had a heart beat at least once (1) every 72 hours starting on 12/02/2022 12:11:01. Therefore, radio B was established first, and will thus have a rank of 2, while radio C having a rank of 3.
-
-Since radio D and E had the lowest signal strength out of all five (5) radios, and only the top three (3) radios will earn rewards, radio D and E will not earn any modeled coverage points, and are ranked as "Fail".
+Since radio C, D and E had the lowest signal strength out of all five (5) radios, and only the top two (2) radios will earn PoC rewards, radios C, D and E will not earn any modeled coverage points, and are ranked as "Fail".
 
 
 ## Drawbacks:
