@@ -42,8 +42,8 @@ If you have questions or feedback, pleas
 | 26 | [Payment Notes](0026-payment-notes.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/125) |
 | 27 | [Support CBRS 5G](0027-cbrs-5g-support.md) | [<img src="https://img.shields.io/badge/Status-Approved-green"></img>](https://github.com/helium/HIP/pull/133) |
 | 28 | [Consensus Reward Adjustments](0028-consensus-reward-adjustments.md) | [<img src="https://img.shields.io/badge/Status-Deployed-blue"></img>](https://github.com/helium/HIP/issues/140) |
-| 29 | [Multi-signature Keys](0029-multisignature-keys.md) | [<img src="https://img.shields.io/badge/Status-Deployed-blue"></img>](https://github.com/helium/HIP/issues/157) |  | [commit](https://github.com/helium/miner/commit/b038f24c8ea801c2062644c7cd682832919b25b0) |
-| 30 | [BLS12-381 for Threshold Cryptography](0030-update-threshold-cryptography.md) | [<img src="https://img.shields.io/badge/Status-Deployed-blue"></img>](https://github.com/helium/HIP/issues/158) |  | [commit](https://github.com/helium/miner/commit/b038f24c8ea801c2062644c7cd682832919b25b0) |
+| 29 | [Multi-signature Keys](0029-multisignature-keys.md) | [<img src="https://img.shields.io/badge/Status-Deployed-blue"></img>](https://github.com/helium/HIP/issues/157) |
+| 30 | [BLS12-381 for Threshold Cryptography](0030-update-threshold-cryptography.md) | [<img src="https://img.shields.io/badge/Status-Deployed-blue"></img>](https://github.com/helium/HIP/issues/158) |
 | 31 | [Governance by Token Lock](0031-governance-by-token-lock.md) | [<img src="https://img.shields.io/badge/Status-Closed-lightgrey"></img>](https://github.com/helium/HIP/issues/183) |
 | 32 | [Split DCs Among All Transferers](0032-split-dcs.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/221) |
 | 33 | [Regional Reward Adjustments](0033-regional-reward-adjustments.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/222) |
@@ -93,11 +93,11 @@ If you have questions or feedback, pleas
 | 77 | [Launch Parameters for Solana Migration](0077-solana-parameters.md) | [<img src="https://img.shields.io/badge/Status-Deployed-blue"></img>](https://github.com/helium/HIP/issues/573) |
 | 78 | [Mobile SubDAO Onbaording Fees](0078-mobile-subdao-onboarding-fees.md) | [<img src="https://img.shields.io/badge/Status-Closed-lightgrey"></img>](https://github.com/helium/HIP/issues/582) |
 | 79 | [Mobile PoC Mobile Mappers](0079-mobile-poc-mappers-rewards.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/592) |
-| 80 | [Simplifying the DAO Utility Score](0080-simplifying-dao-utility-score.md) | [<img src="https://img.shields.io/badge/Status-Rejected-red"></img>](https://github.com/helium/HIP/issues/599)  |  |  |
-| 81 | [Minimum Device Onboarding Fees](0081-minimum-onboarding-fee.md) | [<img src="https://img.shields.io/badge/Status-Rejected-red"></img>](https://github.com/helium/HIP/issues/612)  |  |  |
-| 82 | [Add Helium Mobile as a Service Provider to the Helium Mobile subDAO](0082-helium-mobile-service-provider.md)  | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/628)  |  |  |
-| 83 | [Restore First to Respond Witness Rewarding](0083-restore-first-to-witness.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/632)  |  |  |
-| 84 | [Service Provider Hex Boosting](0084-service-provider-hex-boosting.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/638)  |  |  |
+| 80 | [Simplifying the DAO Utility Score](0080-simplifying-dao-utility-score.md) | [<img src="https://img.shields.io/badge/Status-Rejected-red"></img>](https://github.com/helium/HIP/issues/599)  |
+| 81 | [Minimum Device Onboarding Fees](0081-minimum-onboarding-fee.md) | [<img src="https://img.shields.io/badge/Status-Rejected-red"></img>](https://github.com/helium/HIP/issues/612)  |
+| 82 | [Add Helium Mobile as a Service Provider to the Helium Mobile subDAO](0082-helium-mobile-service-provider.md)  | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/628)  |
+| 83 | [Restore First to Respond Witness Rewarding](0083-restore-first-to-witness.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/632)  |
+| 84 | [Service Provider Hex Boosting](0084-service-provider-hex-boosting.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/638)  |
 
 ## Status Key
 
