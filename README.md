@@ -78,7 +78,7 @@ If you have questions or feedback, pleas
 | 62 | [PoC Witness IP Check](0062-poc-witness-ip-check.md) | [<img src="https://img.shields.io/badge/Status-Closed-lightgrey"></img>](https://github.com/helium/HIP/issues/422) |
 | 63 | [Helium Hub](0063-helium-hub.md) | [<img src="https://img.shields.io/badge/Status-Closed-lightgrey"></img>](https://github.com/helium/HIP/issues/423) |
 | 64 | [WiFi subDAO](0064-wifi-dao.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/424) |
-| 65 | [Vendor HNT Lockup](0065-vendor-token-lockup.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/437) |
+| 65 | [Vendor HNT Lockup](0065-vendor-token-lockup.md) | [<img src="https://img.shields.io/badge/Status-Closed-lightgrey"></img>](https://github.com/helium/HIP/issues/437) |
 | 66 | [Trust Score & Denylist Convenience](0066-trust-score-and-denylist-convenience.md) | [<img src="https://img.shields.io/badge/Status-Closed-lightgrey"></img>](https://github.com/helium/HIP/issues/438) |
 | 67 | [Repeal Redenomination](0067-repeal-redenomination.md) | [<img src="https://img.shields.io/badge/Status-Approved-green"></img>](https://github.com/helium/HIP/issues/456) |
 | 68 | [Open Service Subdao](0068-open-service-subdao.md) | [<img src="https://img.shields.io/badge/Status-Closed-lightgrey"></img>](https://github.com/helium/HIP/issues/457) |
