@@ -5,7 +5,6 @@
 - Category: Technical
 - Original HIP PR: <https://github.com/helium/HIP/pull/470>
 - Tracking Issue: <https://github.com/helium/HIP/issues/471>
-- Status: In Discussion
 
 # Summary
 

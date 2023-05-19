@@ -8,7 +8,6 @@
 - Original HIP PR:
   [#480](https://github.com/helium/HIP/blob/main/0071-scaling-with-governance-hedera.md)
 - Tracking Issue: [#486](https://github.com/helium/HIP/issues/486)
-- Status: In Discussion
 
 # Summary
 
