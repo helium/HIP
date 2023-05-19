@@ -6,7 +6,6 @@
 - Original HIP PR: <https://github.com/helium/HIP/pull/289>
 - Tracking Issue: <https://github.com/helium/HIP/issues/303>
 - Discord channel: #hip-42-beacon-witness-ratio
-- Status: In Discussion
 
 # Motivation
 

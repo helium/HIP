@@ -4,9 +4,9 @@ Helium Improvement Proposals are the core unit of change in the Helium Network.
 
 _"How a bill becomes a law"_
 
-More details on process and how to participate can be found in HIP7, ["A Process For Managing Helium Improvement Proposals"](0007-managing-hip-process.md).
+More details on process and how to participate can be found in HIP 7, ["A Process For Managing Helium Improvement Proposals"](0007-managing-hip-process.md).
 
-If you have questions or feedback, please ask in [#hip-open-discussion in the community Discord](https://discord.gg/helium). Each proposal in discussion also has its own dedicated channel.
+If you have questions or feedback, please see the [Discussion](https://github.com/helium/HIP/discussions) section of this Repo, where you can open forums to propose changes, provide feedback, and discuss ideas on how to make Helium Governance better.
 
 **Looking for HIP19 hotspot manufacturer applications?** Those have moved to their own dedicated repository: [dewi-alliance/hotspot-manufacturers](https://github.com/dewi-alliance/hotspot-manufacturers)
 
