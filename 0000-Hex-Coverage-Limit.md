@@ -1,6 +1,6 @@
 # HIP XX: MOBILE Hex Coverage Limit
 
-- Author: @HeatedLime
+- Author: Andy Zyvoloski
 - Start Date: 5/12/2023
 - Category: Technical & Economic
 - Original HIP PR: #654
