@@ -51,13 +51,13 @@ See the example below of how ranking based on a hex multiplier would affect a de
 |   D   |   -93.60 dBm  |12/05/2022 11:51:01          | Fail  | 16 (16 * 1)               | 0   (16 * 0)       |
 |   E   |   -94.69 dBm  |08/01/2022 05:01:59          | Fail  | 16 (16 * 1)               | 0   (16 * 0)       |
 
-Table Key:
-Radio: Example radio name
-Signal Strength: The Signal Strength of the res12 hex from the modeled coverage explorer
-Heartbeat: The date/time that the Heartbeat Streak started
-Rank: The assigned rank based on which radio has the strongest Signal Strength (or Heartbeat Streak if tied for Signal Strength)
-Coverage Points Per HIP 74: The amount of modeled coverage points currently awarded under HIP 74
-New Coverage Points: The amount of modeled coverage points that would be awarded under this HIP.
+**Table Key:**
+- **Radio:** Example radio name.
+- **Signal Strength:** The Signal Strength of the res12 hex from the modeled coverage explorer.
+- **Heartbeat:** The date/time that the Heartbeat Streak started.
+- **Rank:** The assigned rank based on which radio has the strongest Signal Strength (or Heartbeat Streak if tied for Signal Strength).
+- **Coverage Points Per HIP 74:** The amount of modeled coverage points currently awarded under HIP 74.
+- **New Coverage Points:** The amount of modeled coverage points that would be awarded under this HIP.
 
 
 Table Explanation:
