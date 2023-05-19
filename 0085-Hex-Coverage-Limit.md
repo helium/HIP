@@ -59,8 +59,7 @@ See the example below of how ranking based on a hex multiplier would affect a de
 - **Coverage Points Per HIP 74:** The amount of modeled coverage points currently awarded under HIP 74.
 - **New Coverage Points:** The amount of modeled coverage points that would be awarded under this HIP.
 
-
-Table Explanation:
+**Table Explanation:**
 
 Since Radio A has the highest signal strength in that hex, it will be ranked as "1", and granted a 1X multiplier, which will award it with the full 16 (16 x 1) modeled coverage points for that epoch.
 
@@ -79,7 +78,7 @@ Additionally, radio deployers may lose out on awarded coverage points in instanc
 An alternative would be to allow radios and hexes to keep earning the defined amount of modeled coverage points as described in HIP 74. This may prevent or stagnate the growth of the network because this method does encourage the strategic placement of radios to minimize overlapping coverage. 
 
 ## Unresolved Question:
-Should MOBILE Mapping Signal Strength be used in combination with Modeled Signal Strength?
+1. Should MOBILE Mapping Signal Strength be used in combination with Modeled Signal Strength?
 
 ## Deployment Impact:
 HIP 85 affects only Outdoor radios, and coverage from indoor radios will continue to earn Modeled Coverage Points based on HIP 74. New fields will need to be added into the Modeled Coverage Explorer to make visible Radio Hex Ranks, as well as Heartbeat Streaks.
