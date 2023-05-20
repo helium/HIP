@@ -7,17 +7,20 @@
 - Voting Requirements: veIOT
 
 ## Summary:
-This HIP seeks to remodel the denylist processes within the existing infrastructure of Crowdspot.io.  Improvements to the review process will streamline the wait time for Crowdspot reviews, adding more penalties for POC gaming, better categorizing review types, and establishing definitions for use in the review process. The two main goals of reducing bad actors on the network and processing false positive cases in a more timely manner will be accomplished by two innovative steps. First, a Staking Bond will be required to place any removal submission on Crowdspot.  Second, a two stage process is established on Crowdspot to handle appeals of hotspots already on the denylist.    
+
+There will always be gamers, therefore there will always be a need for policing those bad actors.  The proposals of this HIP aim to reinforce the impact of the denylist as a whole.  Penalties for POC gaming under this proposal are more harsh than the current process.
+Incidentally, there will occasionally be falsely accused hotspots.  This HIP seeks to identify and clear those falsely accused on a timely manner.
+The two main goals are reducing bad actors on the network and returning false positive cases to active status in a timely manner. These goals will be accomplished by two innovative steps.   First, a Staking Bond will be required to request any removal submission on Crowdspot.  Secondly, a "two & banned" process is established on Crowdspot to end the revolving door of appeals of the denylist.  
 
 ## Motivation:
 
-The threshold for review should be less than 60 days, maybe even 30 days.  This HIP seeks to achieve these goals through updating Crowdspot with some new processes.
 
-The current process and flow of the Crowdspot submissions is backlogged and in desperate need of overhaul and attention.  The Crowdspot submissions list controls the manual addition of gamers to the denylist and the manual removal of honest hotspot operators off of the denylist.  This is not to be confused with automatic algorithmic detection methods.  The current wait time for the 4100 manual review log jam is approaching 4 months. The requests to Crowdspot will continue to grow even longer if the process isn't improved.  This has resulted in thousands of false positive cases that can't get off the denylist for months at a time.
 
-As of the draft of this proposal, the wait time is 114 days based on historical wait times on Crowdspot, but this does not take into account the rate of new submissions since January's algorithmic detection added 5600 new submissions, nor April's Solana migration that has nearly halted all progress for the past 30 days. 
+The current process and flow of the Crowdspot submissions is 4 months backlogged and in desperate need of attention.  The requests to Crowdspot will continue to grow if the process isn't improved. This has resulted in thousands of potentially false positive cases that can not get a fair review for months at a time.  
 
-The proposals of this HIP do not undermine the need and impact of the denylist as a whole.  I want penalties under this proposal to be more harsh than the current process. There will always be gamers, therefore there will always be a need of policing those bad actors.  On the alternative side there will occasionally be falsely accused hotspots.  This HIP only seeks to help identify and clear those falsely accused in an efficient manner.
+January 12th's algorithmic detection shutdown almost 20,000 gamers in one sweep! It was initially hailed as a success with a greater than 99% accuracy rate. Within days, it was announced that hundreds of hotspots were denied incorrectly by the algorithm.  Within the first month it was announced that 1589 of those 20K had been removed from the deny list. Another month later on March 10th, it was announced that 784 of 2616 submissions reviewed had been declined vs. 1832 of those 2616 had been rolled back, an accuracy rate of 30% among the 2616 reviews conducted.  Since March 10th, there have been no further official updates regarding the more than 4100 hotspots requesting reviews.  Furthermore on March 10th it was announced that April's Solana migration would temporarily slow down the rate of reviews.  Instead, the migration has nearly halted all review progress for the past 60 days. 
+
+
      
 ## Stakeholders:
 All Hotspot owners will be positively affected by this proposal, due to the processing of false positive cases in a timely manner, and returning legit hotspots back to active on the network. 
