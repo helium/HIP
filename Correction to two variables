@@ -160,8 +160,8 @@ What to do with forfeited HNT?
 
 It is expected in the discussion process to determine the following variables in this HIP.  These current variables are only intended for the discussion process and are intended to become static once the discussion is finalized. 
 
-var_submission_expiration_time = 120 days
-var_staked_bond_amount = 25 HNT
+var_submission_expiration_time = 60 days
+var_staked_bond_amount = 5 HNT
 
 The staked bond amount is intended to be approximately equivalent to the network average earnings of one hotspot for var_submission_expiration_time days.
 
