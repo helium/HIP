@@ -39,11 +39,11 @@ Once the required amount is staked, the Helium Mobile Service Provider will be m
 
 This stake will need to remain locked and will not earn any staking rewards, as long as the Service Provider remains as part of the MOBILE subDAO. In lieu of staking rewards, the Service Provider has the right to claim up to 10% of MOBILE rewards (provided [HIP79](https://github.com/helium/HIP/blob/main/0079-mobile-poc-mappers-rewards.md) passes) in the Service Provider bucket. 
 
-This HIP proposes a cooldown period of 3 months before the Service Provider can claim the staked amount after it stops data offloading to the Helium Mobile Network.
+This HIP requires a cooldown period of 90-days after a public announcement by the Service Provider of its intention to cease data offloading on Helium's mobile network before it can stop such data offloading.  An additional 90-day cooldown period will be required before the Service Provider can claim the tokens they staked for the right to operate as a Service Provider on Helium's mobile network.
 
 ### Data Offloading to the Helium Mobile Network
 
-Helium Mobile will operate as a roaming partner of the Helium Mobile Network, using core Mobile coverage and paying DC for the data transfer at $0.5 per 1 GB as specified in HIP53.
+Helium Mobile will operate as a roaming partner on Helium's mobile network using Data Credits (DC) to pay for data transfer at a minimum price of $0.50 per 1 GB as specified in HIP53.  Any changes to the minimum price for data transfer anywhere on Helium's mobile network must be approved by MOBILE subDAO vote.  More specific regional or individual radio pricing options above the minimum price can be set by Helium Mobile but are subject to approval by MOBILE subDAO vote.
 
 Where Helium Mobile Network coverage is unavailable, Helium Mobile will rely on the 5G coverage provided by T-Mobile. The partnership of Nova Labs with T-Mobile allows Helium Mobile subscribers to access both nationwide 5G coverage by T-Mobile and the growing Helium Mobile Network, which, due to its people-driven nature, is available in places that are hard to reach and acquire by traditional service providers.
 
