@@ -85,6 +85,8 @@ HIP 85 affects only Outdoor radios, and coverage from indoor radios will continu
 
 Further, a large amount of overlapping coverage exists within the MOBILE network. Deployers may have to find new locations for some or all of their radios in order for them to continue to earn modeled coverage points. 
 
+This HIP leaves the implementation open to interpretation by Helium Core Developers who will implement this change on behalf of the community.
+
 ## Success Metrics: 
 This HIP is successful if:
 1. There is more broad coverage extended to new locations on the modeled coverage map 
