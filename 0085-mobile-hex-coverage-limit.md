@@ -4,7 +4,7 @@
 - Start Date: 5/12/2023
 - Category: Technical & Economic
 - Original HIP PR: #654
-- Tracking Issue: 
+- Tracking Issue: #673
 - Voting Requirements: veMOBILE
 
 ## Summary:
