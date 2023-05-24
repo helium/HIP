@@ -75,7 +75,11 @@ Implementing this proposal could increase the complexity of modeled coverage sco
 Additionally, radio deployers may lose out on awarded coverage points in instances where multiple radios are set up in the same hex.
 
 ## Rationale and Alternatives:
-An alternative would be allowing radios and hexes to keep earning the defined amount of modeled coverage points as described in HIP 74. However, this may prevent or stagnate the network's growth because this method incentivizes placement of radios to minimize overlapping coverage, which is misaligned with expanding urban coverage needs.
+An alternative would be allowing radios and hexes to keep earning the defined amount of modeled coverage points as described in HIP 74. 
+
+However, this may prevent or stagnate the network's growth because HIP 74 does not incentivize deployment of Hotspots to minimize overlapping coverage. 
+
+A mobile deployer that has a radio in an area that has a lot of coverage from other radio deployers, as a result of this HIP, may either get less (only 75% vs 100%) modeled coverage points, or 0 modeled coverage points if the signal isn't strong enough. Although this is may result in less rewards for deployers that have overlapping coverage, this HIP will create a incentive to expand coverage and extend signal in uncovered areas. promoting the growth of the mobile network.
 
 ## Unresolved Question:
 1. Should MOBILE Mapping Signal Strength be used in combination with Modeled Signal Strength?
