@@ -8,15 +8,15 @@
 - Voting Requirements: veMOBILE
 
 ## Summary:
-This Helium Improvement Proposal (HIP) suggests adding a hex multiplier score to the MOBILE Proof-of-Coverage (PoC) Modeled Coverage Points based on whether other coverage from Helium 5G deployments exist within that res12 hex. This HIP only applies to outdoor radios, and no changes to the reward structure of indoor mobile radios is being made with this HIP.
+This Helium Improvement Proposal (HIP) suggests adding a hex multiplier score to the MOBILE Proof-of-Coverage (PoC) Modeled Coverage Points based on whether other coverage from Helium 5G deployments exists within that res12 hex. This HIP only applies to outdoor radios, and no changes to the reward structure of indoor mobile radios are being made with this HIP.
 
 ## Motivation:
-HIP 74 was passed to incorporate obstruction data and radio signal power into the PoC reward model; however, it weighed all coverage within each res12 hex equally, even if multiple radios were already providing coverage within that res12 hex. This means deployers could point 5 outdoor radios in the same direction, and still be awarded full Modeled Coverage points for each res12 hex. This results in the dilution of MOBILE and reduced MOBILE rewards to deployments that are strategically placed to minimize overlap in coverage. 
+The Helium Community passed HIP 74 to incorporate obstruction data and radio signal power into the PoC reward model; however, it weighed all coverage within each res12 hex equally, even if multiple radios already provided coverage within that res12 hex. This means deployers could point five (5) outdoor radios in the same direction and still be awarded total Modeled Coverage points for each res12 hex. This results in the dilution of MOBILE and reduced MOBILE rewards to deployments that are strategically placed to minimize overlap in coverage. 
 
-This proposal aims to improve the value of Mobile network coverage by incentivizing users to deploy radios that minimize overlapping coverage, and encourage deployments in new areas. 
+This proposal aims to improve the value of Mobile network coverage by incentivizing users to deploy radios that minimize overlapping coverage and encourage deployments in new areas. 
 
 ## Stakeholders:
-All Mobile Radio deployers/ Mobile Hotspot Owners. 
+All Mobile Radio Deployers / Mobile Hotspot Owners. 
  
 ## Detailed Explanation:
 Currently, any redundant and overlapping network coverage is still rewarded the same as non-overlapping coverage. This discourages the buildout of coverage to new areas. To prevent overcrowding and overlapping of coverage in hexes, this HIP proposes to limit the amount of modeled coverage points radios receive for redundant coverage in res12 hexes. 
@@ -29,7 +29,7 @@ To ensure that only the best setups are rewarded, only the top two (2) ranked ra
 |      2       |  .75X    |
 |    Fail      |   0X     |
 
-Please note, that the multiplier table above only affects the modeled coverage points that are given to each outdoor radio, and does not affect rewards distributed for the transfer of data. 
+Please note that the multiplier table above only affects the modeled coverage points that are given to each outdoor radio and does not affect rewards distributed for the transfer of data. 
 
 ### Radio Ranking & Criteria
 
@@ -37,11 +37,11 @@ All outdoor radios that provide coverage to any res12 hex will be given a rank f
 
 - Modeled Signal Strength 
 
-- Heartbeat Steak - The Heartbeat Streak is the length of time that has elapsed since the first heartbeat of that radio at its current location, that has had at least 1 heartbeat every 72 hours. If a radio does not produce at least one (1) heartbeat over 72 consecutive hours, the streak is reset. This attribute is only used as a tiebreaker in instances where two or more radios tie for Modeled Signal Strength. If somehow, two or more radios tie both Modeled Signal Strength and Heartbeat Streak, the radio to be ranked will be randomly selected every epoch.
+- Heartbeat Steak - The Heartbeat Streak is the time that has elapsed since the first heartbeat of that radio at its current location, which has had at least one (1) heartbeat every 72 hours. If a radio does not produce at least one (1) heartbeat over 72 consecutive hours, the streak is reset. This attribute is only used as a tiebreaker when two or more radios tie for Modeled Signal Strength. If somehow, two or more radios tie both Modeled Signal Strength and Heartbeat Streak, the radio to be ranked will be randomly selected every epoch.
 
 ### Modeling Radio Ranking
 
-See the example below of how ranking based on a hex multiplier would affect a deployment of five (5) outdoor radios if they are providing modeled coverage to the same res12 hex:
+See the example below of how ranking based on a hex multiplier would affect deployment of five (5) outdoor radios if they are providing modeled coverage to the same res12 hex:
 
 | Radio |Signal Strength| Heartbeat Streak Start Date | Rank  | Coverage Points Per HIP 74| New Coverage Points|  
 |-------|---------------|-----------------------------|-------|---------------------------|--------------------|
@@ -70,18 +70,18 @@ Since radio C, D and E had the lowest signal strength out of all five (5) radios
 As noted in the example above, outdoor radio deployers will now need to be cognizant of where they are placing their radios in order to maximize modeled coverage point. 
 
 ## Drawbacks:
-The implementation of this proposal could increase the complexity of modeled coverage scores due to adding additional variables used to calculate total MOBILE rewards.
+Implementing this proposal could increase the complexity of modeled coverage scores due to adding additional variables used to calculate total MOBILE rewards.
 
 Additionally, radio deployers may lose out on awarded coverage points in instances where multiple radios are set up in the same hex.
 
 ## Rationale and Alternatives:
-An alternative would be to allow radios and hexes to keep earning the defined amount of modeled coverage points as described in HIP 74. This may prevent or stagnate the growth of the network because this method does encourage the strategic placement of radios to minimize overlapping coverage. 
+An alternative would be allowing radios and hexes to keep earning the defined amount of modeled coverage points as described in HIP 74. However, this may prevent or stagnate the network's growth because this method incentivizes placement of radios to minimize overlapping coverage, which is misaligned with expanding urban coverage needs.
 
 ## Unresolved Question:
 1. Should MOBILE Mapping Signal Strength be used in combination with Modeled Signal Strength?
 
 ## Deployment Impact:
-HIP 85 affects only Outdoor radios, and coverage from indoor radios will continue to earn Modeled Coverage Points based on HIP 74. New fields will need to be added into the Modeled Coverage Explorer to make visible Radio Hex Ranks, as well as Heartbeat Streaks.
+HIP 85 affects only Outdoor radios, and coverage from indoor radios will continue to earn Modeled Coverage Points based on HIP 74. New fields will need to be added into the Modeled Coverage Explorer to make Radio Hex Ranks and Heartbeat Streaks visible.
 
 Further, a large amount of overlapping coverage exists within the MOBILE network. Deployers may have to find new locations for some or all of their radios in order for them to continue to earn modeled coverage points. 
 
