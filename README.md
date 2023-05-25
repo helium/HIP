@@ -98,6 +98,7 @@ If you have questions or feedback, please see the [Discussion](https://github.co
 | 82 | [Add Helium Mobile as a Service Provider to the Helium Mobile subDAO](0082-helium-mobile-service-provider.md)  | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/628)  |
 | 83 | [Restore First to Respond Witness Rewarding](0083-restore-first-to-witness.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/632)  |
 | 84 | [Service Provider Hex Boosting](0084-service-provider-hex-boosting.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/638)  |
+| 85 | [MOBILE Hex Coverage Limit](0085-mobile-hex-coverage-limit.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/673)  |
 
 ## Status Key
 
