@@ -19,7 +19,7 @@ The two main goals are reducing bad actors on the network and returning false po
 The current process and flow of the Crowdspot submissions is 4 months backlogged and in desperate need of attention.  The requests to Crowdspot will continue to grow if the process isn't improved. This has resulted in thousands of potentially false positive cases that can not get a fair review for months at a time.  
 
 January 12th's algorithmic detection shutdown almost 20,000 gaming hotspots in one sweep! It was initially hailed as a success with a greater than 99% accuracy rate. Within days, it was announced that hundreds of hotspots were denied incorrectly by the algorithm.  Within a month it was announced that 1589 of those 20K had been removed from the denylist. Another month later on March 10th, it was announced that 2616 hotspots had been reviewed.  784 of 2616 submissions reviewed had been declined vs. 1832 of 2616 had been removed from the denylist, an accuracy rate of 30% among the 2616 reviews conducted.  Since March 10th, there have been no further official updates regarding the more than 4100 hotspots requesting reviews.  Furthermore on March 10th it was announced that April's Solana migration would temporarily slow down the rate of reviews.  Instead, the migration has nearly halted all review progress for the past 60 days. 
-577 removal requests have gone unanswered for more than 4 months. In one week that number will  more than double.
+1182 removal requests have gone unanswered for more than 4 months. In one week that number will increase to 1552 submissions over 4 months old.  (Statistics pulled from @crey and @rokoshewsky)
 
 ## Stakeholders:
 
