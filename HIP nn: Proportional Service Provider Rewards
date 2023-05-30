@@ -1,5 +1,5 @@
 HIP nn: Proportional Service Provider Rewards
-Author(s): @zer0tweets, @meowshka (Nova Labs, Inc.), @KeithRettigKeithR
+Author(s): @zer0tweets, @meowshka (Nova Labs, Inc.), @KeithRettig
 Start Date: 2023-05-15
 Category: Economic, Technical
 Original HIP PR: #nnn
@@ -10,7 +10,7 @@ Voting Requirements: veMOBILE Holders
 This HIP proposes to make modifications to how Service Providers are eligible for rewards from the Service Provider MOBILE Reward bucket.
 
 ## Motivation
-The primary motivation is to prevent a scenario in which a Service Provider is rewarded the full 10% MOBILE reward bucket (provided HIP79 passes) while burning little to no Data Credits.
+The primary motivation is to prevent a scenario in which a Service Provider is rewarded the full MOBILE reward bucket while burning little to no Data Credits.
 
 ## Stakeholders
 Any and all Service Providers of the Helium MOBILE Network.
