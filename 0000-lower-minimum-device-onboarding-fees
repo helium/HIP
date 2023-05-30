@@ -23,7 +23,7 @@ The HIP authors fully support any community initiative to set a floor price to s
 
 ## Motivation
 
-A minimum onboarding fee is necessary to stop subDAOs from arbitrarily onboarding Hotspots and to prevent nuisance attacks against subDAOs and the Helium DAO.  HIP51 has described the onboarding of Hotspots but has not made this explicit.  Hotspots for which the minimum onboarding fee has not been burnt are not eligible for any rewards.  SubDAOs attempting to bypass this requirement will be subject to slashing.
+A minimum onboarding fee is necessary to stop subDAOs from arbitrarily onboarding Hotspots and to prevent nuisance attacks against subDAOs and the Helium DAO.  HIP51 has described the onboarding of Hotspots but has not made this explicit.  Hotspots for which the minimum onboarding fee has not been burnt are not eligible for any rewards.  It is expected that the Helium Foundation will keep subDAOs from attempting to bypass this requirement via any contrary HIPs.
 
 ## Stakeholders
 
@@ -37,11 +37,11 @@ The onboarding fees protect the network against nuisance attacks as well as maki
 
 # Rewards burn
 
-The Helium flywheel is based on creating DC burn.  Onboarding fees have historically been the most influential driving force of DC burn.  The $A$ factor rewards subDAOs for non-recurring DC burn such as the onboarding fee analog to the D factor rewards a subDAO for recurring DC burn.  The $A$ factor rewards networks that have contributed significantly to the Helium flywheel with non-recurrent fees.  Without the A factor the subDAOs will be incentivized to burn as little DC as possible on non-recurring costs, thereby slowing down the Helium flywheel.
+The Helium flywheel is based on creating DC burn.  Onboarding fees have historically been the most influential driving force of DC burn.  The $A$ factor rewards subDAOs for non-recurring DC burn such as the onboarding fee analog to the $D$ factor rewards a subDAO for recurring DC burn.  The $A$ factor rewards networks that have contributed significantly to the Helium flywheel with non-recurrent fees.  Without the A factor the subDAOs will be incentivized to burn as little DC as possible on non-recurring costs, thereby slowing down the Helium flywheel.
 
 # Dead networks
 
-The original DAO Utility Score handles dead subDAOs gracefully.  Given the unlikely scenario that a subDAO ceases operation the $V$ factor will decrease to 1 as the delegators will redelegate to other networks.  The $D$ factor for a dead network will also be 1 as it no longer processes data.  Finally the $A$ factor will go to 1 as the amount of active Hotspots will decrease to 0.
+The original DAO Utility Score handles dead subDAOs gracefully.  Given the unlikely scenario that a subDAO ceases operation the $V$ factor will decrease to $1$ as the delegators will redelegate to other networks.  The $D$ factor for a dead network will also be $1$ as it no longer processes data.  Finally the $A$ factor will go to $1$ as the amount of active Hotspots will decrease to $0$.
 
 ## Rationale and Alternatives
 
@@ -69,7 +69,7 @@ The DAO Utility Score will use the onboarding fee that has been burned for a spe
 
 Due to technical limitations of the network architecture and the complexities of the engineering required, this HIP hereby sets a compliance deadline of September 4, 2023, for subDAOs that are non-compliant.  This grace period affords subDAOs the opportunity to operate as if the burn occurred on April 17, 2023 (prior to the migration).  However, it necessitates a retroactive burn to reconcile any outstanding onboarding debts in a manner consistent with the previous IoT retroactive burn.
 
-For purposes of determining the MOBILE subDAO's $A$ score, a value of $40 shall be allocated per FreedomFi and 'Bobcat 5G' gateway that has been onboarded and is actively participating in either subDAO's Proof of Coverage at any point during the preceding 30 epochs.  In the event that the MOBILE subDAO onboards via burn before the compliance deadline, the greater of the allocated value or the actual burn shall be counted.  If the actual onboard burn number falls short of the grace period amount, the Helium DAO shall reduce any incremental HNT earned from the MOBILE subDAO treasury via slashing.
+For purposes of determining the MOBILE subDAO's $A$ score, a value of $40 shall be allocated per FreedomFi and 'Bobcat 5G' gateway that has been onboarded and is actively participating in either subDAO's Proof of Coverage at any point during the preceding 30 epochs.  In the event that the MOBILE subDAO onboards via burn before the compliance deadline, the greater of the allocated value or the actual burn shall be counted.  If the actual onboard burn number falls short of the grace period amount, the Helium DAO shall garnish any future HNT earned by the MOBILE subDAO treasury until the retroactive amount is collected as well as all unpaid onboarding fees during the period of garnishment.
 
 # Onboarding Devices
 
