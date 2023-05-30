@@ -1,10 +1,10 @@
-HIP nn: Proportional Service Provider Rewards
-Author(s): @zer0tweets, @meowshka (Nova Labs, Inc.), @KeithRettig (Discord @KeithR)
-Start Date: 2023-05-29
-Category: Economic, Technical
-Original HIP PR: #nnn
-Tracking Issue: #nnn
-Voting Requirements: veMOBILE Holders
+# HIP XX: Proportional Service Provider Rewards
+- Author(s): @zer0tweets, @meowshka (Nova Labs, Inc.), @KeithRettig (Discord @KeithR)
+- Start Date: 2023-05-29
+- Category: Economic, Technical
+- Original HIP PR: #nnn
+- Tracking Issue: #nnn
+- Voting Requirements: veMOBILE Holders
 
 ## Summary
 This HIP proposes to make modifications to how Service Providers are eligible for rewards from the Service Provider MOBILE Reward bucket.
