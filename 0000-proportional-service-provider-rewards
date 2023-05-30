@@ -1,10 +1,10 @@
 # HIP XX: Proportional Service Provider Rewards
-Author(s): @KeithRettig, @zer0tweets (Nova Labs, Inc.), @meowshka (Nova Labs, Inc.)
-Start Date: 2023-05-15
-Category: Economic, Technical
-Original HIP PR: #nnn
-Tracking Issue: #nnn
-Voting Requirements: veMOBILE Holders
+- Author(s): @KeithRettig, @zer0tweets (Nova Labs, Inc.), @meowshka (Nova Labs, Inc.)
+- Start Date: 2023-05-15
+- Category: Economic, Technical
+- Original HIP PR: #nnn
+- Tracking Issue: #nnn
+- Voting Requirements: veMOBILE Holders
 
 ## Summary
 This HIP proposes to make specific how Service Providers are eligible for rewards from the HIP53-specified Service Provider MOBILE Reward bucket.  The proposal suggests a usage-based approach to calculate rewards for Service Providers based on the amount of Data Credits burned.  Service Providers would be rewarded in MOBILE tokens at a 1:1 ratio for the burned Data Credits with proportional distribution if the total exceeds the reward bucket value.
