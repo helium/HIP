@@ -1,4 +1,4 @@
-HIP nn: Increase the Cost of Data Credits
+HIP nn: Double the Value of Helium Data Credits
 Author(s): @KeithRettig
 Start Date: 2023-05-28
 Category: Economic
@@ -10,14 +10,13 @@ Voting Requirements: veHNT Holders
 This HIP proposes to change the cost of Data Credits (DC) from 100,000 DC = $1 USD to 50,000 DC = $1 USD.
 
 ## Motivation
-The primary motivation is to align the cost of Data Credits to the value of Data Credits.
+The primary motivation is to align the cost of Data Credits closer to the true value of Data Credits.
 
 ## Stakeholders
 Any and all customers, users, and operators of the Helium Network.
 
 ## Detailed Explanation
-The cost of Data Credits, the utility token of the Helium ecosystem, is far too inexpensive.  Our customers have commented that the cost is to low.  The amount of Data Credits a hotspot must earn to be meaningful borders on ridiculous.
-The cost of Data Credits is so cheap, that this proposed change of doubling the cost is unlikely to change any behaviors of the users of the Helium ecosystem.
+The cost of Data Credits, the utility token of the Helium ecosystem, is far too inexpensive.  Our customers have commented that the cost is to low.  The amount of Data Credits a hotspot must earn to be meaningful borders on ridiculous.  The cost of Data Credits is so cheap, that this proposed change of doubling the cost is unlikely to change any behaviors of the users of the Helium ecosystem.
 
 ## Implementation
 We leave the implementation of the smart contract components, verifiability, and Service Provider compliance up to the Helium Core Developers to determine.  It is understood that the cost function of Data Credits is a chainvar and thus it is believed to be quite easy to change.
@@ -32,7 +31,7 @@ There are no unresolved questions.
 No known dependencies.
 
 ## Deployment Impact
-As soon as the chainvar has been changed, custoemrs would burn 50,000 DC per $1 USD spent.
+As soon as the chainvar has been changed, customers would burn 50,000 DC per $1 USD spent.
 
 ## Success Metrics
-There are two success metrics.  First that the price change and, second, that the demand remains inelastic.
+There are two success metrics.  First that the price is changed and, second, that the demand remains inelastic.
