@@ -1,0 +1,37 @@
+# HIP XX: Double the Value of Helium Data Credits
+Author(s): @KeithRettig (Discord @KeithR)
+Start Date: 2023-05-28
+Category: Economic
+Original HIP PR: #nnn
+Tracking Issue: #nnn
+Voting Requirements: veHNT Holders
+
+## Summary
+This HIP proposes to change the cost of Data Credits (DC) from 100,000 DC = $1 USD to 50,000 DC = $1 USD.
+
+## Motivation
+The primary motivation is to align the cost of Data Credits closer to the true value of Data Credits.  While it is believed by author that the true value of Data Credits is closer to 1,000 DC = $1 USD, it would seem economically unfeasible to 100-fold increase the price in one action.
+
+## Stakeholders
+Any and all customers, users, and operators of the Helium Network.
+
+## Detailed Explanation
+The cost of Data Credits, the utility token of the Helium ecosystem, is far too inexpensive.  Our customers have publicly commented that the cost is too low.  The amount of Data Credits a hotspot must earn to be meaningful borders on ridiculous.  The cost of Data Credits is so cheap, that this proposed change of doubling the cost is unlikely to change any behaviors of the users of the Helium ecosystem.
+
+## Implementation
+We leave the implementation of the smart contract components, verifiability, and compliance up to the Helium Core Developers to determine.  It is understood that the cost function of Data Credits is a chainvar and thus it is believed this change should be very easy to implement.
+
+## Drawbacks
+A potential drawback is that customers will view the doubling of cost as too aggressive and not purchase as many Data Credits in the future.  It is believed that at this time and these prices the usage for Data Credits represents inelastic demand.  No change in purchasing nor usage behaviors is expected.
+
+## Unresolved Questions
+There are no unresolved questions other than how our customers will respond to the price change.
+
+## Dependencies
+No known dependencies.
+
+## Deployment Impact
+As soon as the chainvar has been changed, customers would burn 50,000 DC per $1 USD spent.
+
+## Success Metrics
+There are two success metrics.  First that the price is changed and, second, that the demand remains inelastic.
