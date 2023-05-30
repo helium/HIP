@@ -9,14 +9,15 @@ Tracking Issue:
 
 This HIP proposes to set a minimum onboarding fee for devices in the subDAO structure.  This HIP also proposes that devices for which the Minimum Onboarding Fee has not been burned are not eligible for rewards from the subDAO.  The Minimum Onboarding Fee will be dynamically defined as $10 on August 1, 2023 and will follow the same halving schedule as HNT emissions as shown in the chart below.  It is important to note, this HIP only defines a minimum fee and at the time of its writing, HIPs 51-53 have defined the onboarding fees as $40 per hotspot.  If a subDAO wishes to change its onboard fees, it must do so through the subDAO governance process.  This HIP will be implemented in phases, first clearly defining the requirements at the time of its passing, then on-chain with a target date of September 4, 2023.
 
-Date	      Minimum Onboard Fee in DC
-08/01/2023	1,000,000
-08/01/2025	500,000
-08/01/2027	250,000
-08/01/2029	125,000
-08/01/2031	62,500
-08/01/2033	31,250
-08/01/2035	15,625
+|Date|Minimum Onboard Fee in DC|
+|------------:|---------------------:|
+|08/01/2023|1,000,000|
+|08/01/2025|500,000|
+|08/01/2027|250,000|
+|08/01/2029|125,000|
+|08/01/2031|62,500|
+|08/01/2033|31,250|
+|08/01/2035|15,625|
 
 The HIP authors fully support any community initiative to set a floor price to stop the halvening at a future date.  However, it is our opinion that the current halving schedule gives the network about 8-10 years to figure out which figure works best.  The halvening schedule was chosen to be in line with the theory of Moore's Law and roughly correlates to the CAPEX required for these networks.  If these features, in the future, are no longer relevant, the Helium DAO should update the minimum onboard price to be in line with future economic forces.
 
