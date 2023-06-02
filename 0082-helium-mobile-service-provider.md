@@ -21,7 +21,7 @@ As a Service Provider member of the Helium Mobile subDAO, Helium Mobile will act
 
 This HIP affects:
 
-- Subscribers interested in using a crypto-carrier for cellular services - will benefit by having inexpensive, private cellular Service and get rewards from Helium Mobile for improving the Network.
+- Subscribers interested in using a crypto-carrier for cellular services - will benefit by having inexpensive, private cellular Service and being enabled to get rewards for improving the Network.
 - Mobile carrier partners of Helium Mobile - will have an economic opportunity to increase revenue by sharing their mobile infrastructure.
 - Owners of Hotspots with active Radios - will be rewarded for providing data access to Subscribers.
 - Helium Mobile - will have an opportunity to provide cellular Service to Subscribers and earn rewards.
