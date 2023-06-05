@@ -25,6 +25,7 @@ The HIP authors fully support any community initiative to set a floor price to s
 ## Motivation
 
 A minimum onboarding fee is necessary to stop subDAOs from arbitrarily onboarding Hotspots and to prevent nuisance attacks against subDAOs and the Helium DAO.  HIP51 has described the onboarding of Hotspots but has not made this explicit.  Hotspots for which the minimum onboarding fee has not been burnt are not eligible for any rewards.  It is expected that the Helium Foundation will keep subDAOs from attempting to bypass this requirement via any contrary HIPs.
+While this HIP is minimally different from HIP81 (which failed to be approved by vote), the slight changes and the timing should make the path to approval easier.  As this HIP will not be competing with a similar HIP as HIP81 did with HIP80 and because more of the community is seeing the detriment to a subDAO when it fails to pay its onboarding fees, its approval chances are greatly increased.
 
 ## Stakeholders
 
