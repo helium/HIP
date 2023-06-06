@@ -1,8 +1,13 @@
 Author: [Andy Zyvoloski](https://github.com/heatedlime)
+
 Start Date: 6/6/2023
+
 Category: Technical & Economic
+
 Original HIP PR: #
+
 Tracking Issue: #
+
 Voting Requirements: veMOBILE
 
 
