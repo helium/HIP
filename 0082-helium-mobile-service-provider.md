@@ -60,7 +60,7 @@ Once voted in as a Service Provider, the operation of Helium Mobile on the Mobil
 
 ### Data Reward Limits for Hotspot Owners and Gaming Prevention for Unlimited Plans
 
-Helium Mobile specifically plans to launch an Unlimited Plan offering to the market as part of its line-up and is faced with solving a potential gaming problem.  Helium Mobile rewards Hotspots for data on a per GB basis. This creates a potential gaming loophole whereby a person can purchase an unlimited plan for a fixed price that then streams movies and shows from a streaming service 24/7 through their own hotspots to rake up massive rewards.
+Helium Mobile specifically plans to launch an Unlimited Plan offering to the market as part of its line-up and is faced with solving a potential gaming problem.  Helium Mobile rewards Hotspots for data on a per GB basis. This creates a potential gaming loophole whereby a person can purchase an unlimited plan for a fixed price and then stream movies and shows from a streaming service 24/7 through their own hotspots to rake up massive rewards.
 
 We propose a basic anti-gaming mechanism for unlimited plans that is Helium Mobile-specific. This means that other carriers planning to join the Helium Mobile Network can propose their own algorithms or none.
 
@@ -85,7 +85,7 @@ We note that staking MOBILE to become a Service Provider locks up MOBILE indepen
 
 ## Drawbacks
 
-The only drawback of this proposal is related to the anti-gaming mechanism. In rare cases a Hotspot Owners might not get rewarded for the data traffic they provide if the Subscriber of the unlimited plan uses all the rewardable data per the limited 30GB per 30-day billing cycle.
+The only drawback of this proposal is related to the anti-gaming mechanism. In rare cases a Hotspot Owner might not get rewarded for the data traffic they provide if the Subscriber of the unlimited plan uses all the rewardable data per the limited 30GB per 30-day billing cycle.
 
 ## Unresolved Questions
 
@@ -99,7 +99,7 @@ Nova Labs has done most of the work necessary to launch the Helium Mobile carrie
 
 - Hotspot owners will start earning MOBILE rewards for the data transfer work.
 - Service Providers will be able to offload data traffic to the Helium Mobile Network and receive Service Provider rewards.
-- Subscribers to the Helium Mobile will be able to opt-in to earn MOBILE rewards for discovery mapping activity (provided [HIP79](https://github.com/helium/HIP/blob/main/0079-mobile-poc-mappers-rewards.md) passes).
+- Subscribers to Helium Mobile will be able to opt-in to earn MOBILE rewards for discovery mapping activity (provided [HIP79](https://github.com/helium/HIP/blob/main/0079-mobile-poc-mappers-rewards.md) passes).
 
 ## Success Metrics
 
