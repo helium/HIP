@@ -44,7 +44,8 @@ Coverage areas that are already covered by the top mobile carriers, such as T-Mo
 
 From reviewing the T-Mobile coverage map below of Minneapolis Minnesota and its surrounding suburbs, as well as other large cities within the US, it can be noted that T-Mobile coverage primarily consists of 5G Ultra Capacity and 5G Extended Range in populated cities. These are areas in which T-Mobile have deployed capital and infrastructure to increase and enhance coverage. Thus, one can assume data use in these areas are higher than data use in 4G LTE, 3G/2G areas. 
 
-INSERT T MOBILE MAP PICTURE HERE
+https://github.com/helium/HIP/commit/9e95944bc0e8c31cd332120888782a25127afe4b#commitcomment-116813063
+
 
 The below boosts will be awarded to modeled coverage points for each radio and each res12 hex: 
 
@@ -99,15 +100,15 @@ Baseline Hex Coverage Limit Multiplier: 1X
 MCP assigned per HIP 85: 16
 Total MCP per res12 hex: 32 
 
-Carrier Coverage Oracle Boost: .5X
+Carrier Coverage Oracle Boost: .25X
 Made Up Oracle Boost: .5X
 Service Provider Boost: None
-Aggregate Boosts: 1X 
+Aggregate Boosts: .75X 
 Potential Signal Level: High
 MCP assigned per HIP 74: 16
-Baseline Hex Coverage Limit Multiplier .75X
-MCP assigned per HIP 85: 12
-Total MCP per res12 hex: 12 
+Baseline Hex Coverage Limit Multiplier .25X
+MCP assigned per HIP 85: 4
+Total MCP per res12 hex: 3
 
 Drawbacks:
 The implementation of this proposal could increase the complexity of the Helium Mobile network, and modeled coverage scores. There may be concerns about the accuracy of the population data provided, or the need to update the data regularly. 
@@ -119,6 +120,7 @@ An alternative would be allowing radios and hexes to keep earning the defined am
 
 Unresolved Question
 1. Can bodies of water be extracted from the T-Mobile Map and provide a .1X multiplier for coverage over water?
+2. Are the current boosts prescribed in this HIP adequate? 
 
 Deployment Impact
 Radio deployers will now need to be cognizant of where they are placing their radios in order to maximize modeled coverage point.
