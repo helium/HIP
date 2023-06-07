@@ -44,7 +44,7 @@ Coverage areas that are already covered by the top mobile carriers, such as T-Mo
 
 From reviewing the T-Mobile coverage map below of Minneapolis Minnesota and its surrounding suburbs, as well as other large cities within the US, it can be noted that T-Mobile coverage primarily consists of 5G Ultra Capacity and 5G Extended Range in populated cities. These are areas in which T-Mobile have deployed capital and infrastructure to increase and enhance coverage. Thus, one can assume data use in these areas are higher than data use in 4G LTE, 3G/2G areas. 
 
-![](https://github.com/helium/HIP/commit/9e95944bc0e8c31cd332120888782a25127afe4b#commitcomment-116813063)
+![](https://user-images.githubusercontent.com/104723888/243865314-85ddc953-d767-4cdf-9556-1b7d5cf8b855.png)
 
 
 The below boosts will be awarded to modeled coverage points for each radio and each res12 hex: 
