@@ -45,7 +45,7 @@ This HIP requires a cooldown period of 90-days after a public announcement by th
 
 Helium Mobile will operate as a roaming partner on Helium's mobile network using Data Credits (DC) to pay for data transfer at a minimum price of $0.50 per 1 GB as specified in HIP53.  Any changes to the minimum price for data transfer anywhere on Helium's mobile network must be approved by MOBILE subDAO vote.  More specific regional or individual radio pricing options above the minimum price can be set by Helium Mobile but are subject to approval by MOBILE subDAO vote.
 
-Where Helium Mobile Network coverage is unavailable, Helium Mobile will rely on the 5G coverage provided by T-Mobile. The partnership of Nova Labs with T-Mobile allows Helium Mobile subscribers to access both nationwide 5G coverage by T-Mobile and the growing Helium Mobile Network, which, due to its people-driven nature, is available in places that are hard to reach and acquire by traditional service providers.
+Where Helium Mobile Network coverage is unavailable, Helium Mobile will rely on the additional coverage provided by their current Mobile Network Operator (MNO), T-Mobile. The partnership of Nova Labs with their MNO allows Helium Mobile subscribers to access both nationwide 5G coverage by the MNO and the growing Helium Mobile Network, which, due to its people-driven nature, is available in places that are hard to reach and acquire by traditional service providers.
 
 More details about Nova Labs and T-Mobile partnership can be found in the [press release](https://www.webwire.com/ViewPressRel.asp?aId=294475).
 
@@ -74,7 +74,7 @@ Additionally, we propose a 6 calendar month grace period to allow for unrewarded
 
 If Nova Labs fails to implement the opt-in feature past the expiration of the grace period, the reward cap is to be completely removed on the day of the expiration of the grace period and will remain so until Nova Labs has implemented the opt-in feature.
 
-Helium Mobile shall provide a subscriber usage report to the MOBILE subDAO on a yearly basis, on the 1st of August.  The report will present information about how much data traffic has been transferred; indicating the amount of rewarded traffic and unrewarded traffic by subscriber plan.
+Helium Mobile shall provide a subscriber usage report to the MOBILE subDAO on a minimum of a yearly basis, on the 1st of August, if not on a continual basis, such as a dashboard.  The report will present information about how much data traffic has been transferred; indicating the amount of rewarded traffic and unrewarded traffic by subscriber plan.
 
 Approval of this approach is necessary for Helium Mobile to start offloading data to the Helium Mobile Network.
 
@@ -85,7 +85,7 @@ We note that staking MOBILE to become a Service Provider locks up MOBILE indepen
 
 ## Drawbacks
 
-The only drawback of this proposal is related to the anti-gaming mechanism. In rare cases a Hotspot Owner might not get rewarded for the data traffic they provide if the Subscriber of the unlimited plan uses all the rewardable data per the limited 30GB per 30-day billing cycle.
+The only drawback of this proposal is related to the anti-gaming mechanism. In rare cases a Hotspot Owner might not get rewarded for the data traffic they provide if the Subscriber of the unlimited plan uses all the rewardable data per a 30-day billing cycle.
 
 ## Unresolved Questions
 
