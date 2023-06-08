@@ -102,49 +102,97 @@ feature.
 
 ![image ](0072-secure-concentrators/rf_signing.png)
 
-Semtech's open-source LoRa packet forwarder is traditionally the software that runs on the Host CPU
-and reads data from the SX130x hardware via SPI or USB. The packet forwarder produces output JSON
-formatted data when RF data is received. We propose modifying the packet forwarder software to
-include an additional key/value pair containing the RF data cryptographic signature.
+The Secure Concentrator signs LoRa packets and metadata with its unique ED25519 Hardware Key. To optimize for low-latency, the unsigned data if first sent to the host CPU and the packet signature is later computed. This design allows the host CPU to serve latency-sensitive applications.
 
+Signing data packets is performed by first converting the packet's metadata, payload, gps time, and location into a byte stream. The data is encoded using [Borsh](https://borsh.io/) serialization.
+
+Here we have the structure of received LoRa packets and metadata.
 ```
-{
-  "rxpk": {
-    "tmst":20900514000,
-    "chan":2,
-    "rfch":0,
-    "freq":866.349812,
-    "stat":1,
-    "modu":"LORA",
-    "datr":"SF9BW125",
-    "codr":"4/6",
-    "rssis":-108,
-    "rssic":-45,
-    "lsnr":-12.8,
-    "size":23,
-    "data":"AMy7qgAAAAAATYMmmnj6AADl6YP1Jrw",
-    // New fields below
-    "hw_sig": "HsOIwoZaHB8Iw4LDq1QTwqV0w7HDqcOOHRxvdQ8vwobDjsO2Jg7CnRrDtHLDtA==",
-    // optional fields below
-    "gps_time_s": 465465,
-    "gps_time_ns": 322983,
-    "gps_lat": 48.858288,
-    "gps_long": 2.294479,
-    "gps_alt": 10,
-  }
+struct RxPkt {
+  /// Frequency in Hertz
+  pub freq: u32,
+  /// Datarate. Something like "SF7BW125"
+  pub datarate: String,
+  /// Signal to Noise radio (in 0.01 dB)
+  pub snr: i16,
+  /// Received Signal Strength Indicator (in 0.1 dBm)
+  pub rssi: i16,
+  /// 32 Mhz clock timestamp
+  pub tmst: u32,
+  /// Unique identifier of the Secure Concentrator.
+  pub card_id: [u8 ; 8],
+  // timestamp the packet was received (nanoseconds since the GPS epoch 1980-01-06 0:00 UTC)
+  pub gps_time: Option<u64>,
+  pub pos: Option<WGS84Position>,
+  pub payload: Vec<u8>,
+}
+
+struct WGS84Position {
+  /// longitude (deg) 1e-7 scale
+  pub lon: i32,
+
+  /// latitude (deg) 1e-7 scale
+  pub lat: i32,
+
+  /// Height above ellipsoid (millimeters)
+  pub height: i32,
+
+  /// Horizontal accuracy estimate (millimeters)
+  pub hacc: u32,
+
+  /// Vertical accuracy estimate (millimeters)
+  pub vacc: Option<u32>,
 }
 ```
 
+### Example Signature
+```
+let pkt = RxPkt {
+  freq: 904_000_000,
+  datarate: "SF7BW125",
+  snr: -1200,
+  rssi: 100,
+  tmst: 10_000,
+  card_id: [1, 2, 3, 4, 5, 6, 7, 8],
+  gps_time: Some(1209600100000000000),
+  pos: Some(WGS84Position {
+      lat: 7353466,
+      lon: -3588727,
+      height: 38472,
+      hacc: 3425,
+      vacc: Some(683485),
+  }),
+  payload: b"hello world",
+};
+
+// The above example encoded with Borsh serialization results in the following hex-encoded data:
+
+00f2e13508000000534637425731323550fb64001027000001020304050607080100e8c6d8e15cc91001893dc9ff7a34700048960000610d000001dd6d0a000b00000068656c6c6f20776f726c64
+
+```
+
+Given the following private key and noise initiation, the resulting ED25519 signature of the above data would be:
+
+```
+private key: 38870584fa7cb9e56efe921a65e02fcc18d6d8e9fcfec7796181f422e6aa1e3fd466e616d43b44e2e045be240ad9faf7090fb444312445cef01f21ed5f74e55e
+noise: 000102030405060708090a0b0c0d0e0f
+sig (ED25519): c90fce6cc6810b6099cadfeb276a9b49077ec88a421d49045e1c7220fe459e081e75e4b77af51178396d1a94be3d6800b93605afe9fd5165134893c4b04e550b
+```
+
+Note: Secure Concentrators use ED25519 streaming (incremental) API for producing encrypted signatures.
+
 ### Sign Non-RF data
 
-The SMCU can also sign non-RF data with its Hardware Key upon request. The signature will always
-include the string prefix `nonrf` in its message creation to distinguish from RF data.
+The SMCU can also sign any arbitrary data with its Hardware Key upon request. However, the signature will always include the string prefix `nonrf` in its message creation to distinguish from RF data.
 
+For example, signing the ascii-encoded byte array: `hello world` would result:
 ```
-payload_hash = sha512(payload | int32_msb(payload size))
-msg = 'nonrf' | payload_hash | int32_msb(tmst)
-signature = ed25519_sign(msg, pubKey, privKey)
+private key: 38870584fa7cb9e56efe921a65e02fcc18d6d8e9fcfec7796181f422e6aa1e3fd466e616d43b44e2e045be240ad9faf7090fb444312445cef01f21ed5f74e55e
+noise: 000102030405060708090a0b0c0d0e0f
+sig (ED25519): 388609f27448a6981876edac0b9ed13f65015b36e48963056393434f562af0763ce81971c5421e0d54014fed3f7003489847241971e8c0be0d5f70bcee7fc500
 ```
+
+Note: Secure Concentrators use ED25519 streaming (incremental) API for producing encrypted signatures.
 
 ## Secure Firmware
 
