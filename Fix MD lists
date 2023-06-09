@@ -15,20 +15,20 @@ There will always be gamers, therefore there will always be a need for policing 
 Incidentally, there will occasionally be falsely accused hotspots.  This HIP seeks to identify and clear those falsely accused in a timely manner.
 
 The two main goals are reducing bad actors on the network and returning false positive cases to active status in a timely manner. These goals will be accomplished by two innovative steps.  
+
 - A **Staking Bond** will be required to request any removal submission on Crowdspot.  
 - A **Two & Banned Policy** is established to end the revolving door of appeals on Crowdspot.  
 
 ## Motivation:
 
 The current process and flow of the Crowdspot submissions is 4 months backlogged and in desperate need of attention.  There are over 4100 requests pending on Crowdspot, this number has only grown week after week for the past 4 months.  The number of requests on Crowdspot will continue to grow if the process isn't improved. This has resulted in hundreds of requests from the community to add gaming hotspots to the denylist that are not seen by the review team for months at a time. 
-As of this week, there are 4144 requests still pending on Crowdspot. Among them are 1869 removal requests that have gone unanswered for more than 4 months. Next month, that number will increase to 3200 submissions over 4 months old.  On June 15th, the oldest submission on Crowdspot will turn 5 months old.  (These statistics are sourced from @crey and @rokoshewsky on 08/06/23)
+As of this week, there are 4144 requests still pending on Crowdspot. Amongst them are 1869 removal requests that have gone unanswered for more than 4 months. Next month, that number will increase to 3200 submissions over 4 months old.  On June 15th, the oldest submission on Crowdspot will turn 5 months old.  (These statistics are sourced from @crey and @rokoshewsky on 08/06/23)
 
 ## Stakeholders:
 
--All Hotspot owners will be positively affected by this proposal, due to the processing of false positive cases in a timely manner, and returning legit hotspots back to POC active on the network. 
--Any community member that manually detects a spoofed hotspot or farm on the network has little to gain by reporting an addition request to Crowdspot if the request isn't reviewed for months.
--Any hotspot owners that were inaccurately put on the denylist in January 2023 are negativity affected by the current state of Crowdspot processing review requests.
-  
+- All Hotspot owners will be positively affected by this proposal, due to the processing of false positive cases in a timely manner, and returning legit hotspots back to POC active on the network. 
+- Any community member that manually detects a spoofed hotspot or farm on the network has little to gain by reporting an addition request to Crowdspot if the request isn't reviewed for months.
+- Any hotspot owners that were inaccurately put on the denylist in January 2023 are negatively affected by the current state of Crowdspot processing review requests.
 
 ## Detailed Explanation: 
 
@@ -47,13 +47,10 @@ As of this week, there are 4144 requests still pending on Crowdspot. Among them 
 **Owner Cancellation** The canceling of a removal submission at the owners' discretion in order to edit a submission, add evidence, add hotspots, or return the staked bond.  At the current time, submissions can only be canceled by moderators or admin.  
 
 It is expected in the discussion process to determine exact values for two variables used throughout this proposal.  The current values are only for discussion.
-
 **var_submission_expiration_time** = 145 days
 **var_staked_bond_amount** = 25 HNT
 
 ### Changes to the Crowdspot UI or front-end
-   
-The Crowdspot website will be modified to give the user the options for the following.   
 
 When creating any removal submission a section for Staked Bond will be presented.  An "i" informational box will be present within this section with the definition from this HIP for Staked Bond.   The user will have a check box present to indicate (insert legal disclaimer here)  "I understand that the HNT staked for the purpose of this submission may be forfeited if it is determined by the review team that I have represented my hotspot falsely to the network. I understand my responsibilities and deadlines as provided in HIP XX."
 For any pending submission, the Owner's shall be given access to cancel their own submissions prior to a determination by the review team.  Some owner cancelations come with penalties as discussed under **Owner Deadlines**.
@@ -68,10 +65,10 @@ The total Staked Bond will be a product of the number hotspots included on the s
 A mechanism shall be put in place to route any appeal removal submission to a different member of the review team than reviewed it's initial removal submission. 
 Due Notice of Change shall be sent to the hotspot owner via Helium Wallet regarding changes to their denylist status and changes to their submission status.
 When creating any removal submission the types "Initial" or "Appeal" will be selected by the form based on prior submissions and based on how the hotspot(s) came to be placed on the denylist.  An "i" information box will be present next to this selection with the definition from this HIP of both types of removal submissions.   
--Initial removal submissions are permitted for hotspots that were denied via algorithmic detection and have not had a prior addition submission "accepted" by the review team.  
--Appeal removal submissions are permitted for hotspots that have a prior addition submission "accepted" by the review team  or have one prior initial removal submission as "declined" by the review team.   
+- Initial removal submissions are permitted for hotspots that were denied via algorithmic detection and have not had a prior addition submission "accepted" by the review team.  
+- Appeal removal submissions are permitted for hotspots that have a prior addition submission "accepted" by the review team  or have one prior initial removal submission as "declined" by the review team.   
 In the event that an owner attempts to add multiple hotspots to a submission that are of mixed "initial" and "appeal" types, the form data shall not be validated and an error message shall alert the owner to try fewer hotspots per submission.  
-"Two & Banned Policy" - Only one initial removal submission and one appeal removal submission on a particular hotspot can ever be worked by the review team.  Once a determination of "declined" has been decided for an appeal submission, no removal submission can be accepted for that particular hotspot again. 
+Two & Banned Policy - Only one initial removal submission and one appeal removal submission on a particular hotspot can ever be worked by the review team.  Once a determination of "declined" has been decided for an appeal submission, no removal submission can be accepted for that particular hotspot again. 
 
  ### Staked Bond Details
 
@@ -79,27 +76,26 @@ The **Staked Bond** is intended to be a good faith deposit by the hotspot owner.
 The staked bond amount shall be var_staked_bond_amount HNT per hotspot. This was intended to be approximately equivalent to the average network earnings of one hotspot for var_submission_expiration_time days.  
 Only one staked bond shall be locked up for the initial and appeal removal submission.  The staked bond shall be carried over from an initial removal submission into an appeal removal submission provided that the owner creates the appeal removal submission within var_submission_expiration_time days of the denial determination by the review team.   
 
-
-
-The staked bond shall be **returned** to the owner's wallet under any one of these three conditions:  
--Any removal submission is approved by the review team and POC gaming was not substantiated. 
--An Owner Cancelation is executed on an initial removal submission prior to a determination by the review team.  For appeal removal submissions, the staked bond can not be recovered by owner cancellation. See **OWNER DEADLINES** for details.  
--The var_submission_expiration_time day time limit for any submission to be reviewed has expired. See **REVIEW TEAM DEADLINES** for details.  
+The staked bond shall be **returned** to the owner's wallet under any one of these three conditions:
+- Any removal submission is approved by the review team and POC gaming was not substantiated. 
+- An Owner Cancelation is executed on an initial removal submission prior to a determination by the review team.  For appeal removal submissions, the staked bond can not be recovered by owner cancellation. See **OWNER DEADLINES** for details.  
+- The var_submission_expiration_time day time limit for any submission to be reviewed has expired. See **REVIEW TEAM DEADLINES** for details.  
 
 The staked bond shall be **forfeited** under either one of these two conditions:
--On the var_submission_expiration_time +1 day (ie. 31st , 61st, 91st) after the initial removal submission was denied because the review team has positively determined that POC gaming was present and the owner has not opened an appeal removal submission.
--In the event that an appeal removal submission is denied. The review team has positively determined that POC gaming is still present despite thoroughly pondering the most currently available evidence. 
+- On the var_submission_expiration_time +1 day (ie. 31st , 61st, 91st) after the initial removal submission was denied because the review team has positively determined that POC gaming was present and the owner has not opened an appeal removal submission.
+- In the event that an appeal removal submission is denied. The review team has positively determined that POC gaming is still present despite thoroughly pondering the most currently available evidence. 
 
 ### Owner Deadlines and Responsibilities 
 
 Once a staked bond has been attached to a submission there is no guarantee that it will be returned to the owner.  There are several conditions and deadlines that can be met or broken to result in the forfeiture of the staked bond.  It is intended by this HIP that these responsibilities are burdened by the owner not the network operator.
 The Owner of the hotspot is responsible for the following **prior** to creating any removal submission.
--Be sure that you are aware of the deadlines listed in this HIP. 
--Be sure that your hotspot location is correctly asserted on the explorer map.  
--Be sure that you are asserting the correct height and gain of the antenna you are using. 
--Be sure that you have proper coax and connections. No attenuators, amplifiers, and no use of shared or multiple antennas.
--Be sure there are no gaming devices, cluster packet fowarders, data credit farming or other unauthorized methods used to gain an unfair advantage to POC activity.
--Be sure that you are giving all the true and factual information, photographic evidence and attaching videos of your setup to the submission.  It is highly recommended that a file share site is used for all evidence so that addition evidence can be added without having to cancel and re-submit on Crowdspot.  Canceling and re-submiting can also cause you to miss a deadline and forfeit the staked bond.   
+
+- Be sure that you are aware of the deadlines listed in this HIP. 
+- Be sure that your hotspot location is correctly asserted on the explorer map.  
+- Be sure that you are asserting the correct height and gain of the antenna you are using. 
+- Be sure that you have proper coax and connections. No attenuators, amplifiers, and no use of shared or multiple antennas.
+- Be sure there are no gaming devices, cluster packet fowarders, data credit farming or other unauthorized methods used to gain an unfair advantage to POC activity.
+- Be sure that you are giving all the true and factual information, photographic evidence and attaching videos of your setup to the submission.  It is highly recommended that a file share site is used for all evidence so that addition evidence can be added without having to cancel and re-submit on Crowdspot.  Canceling and re-submiting can also cause you to miss a deadline and forfeit the staked bond.   
 
 #### Deadline for Initial Removal Submission
 Removal submissions must be placed by the owner within var_submission_expiration_time days of a hotspot initially being placed on the denylist.  This is intended to increase the punishment for gamers by shutting the door on late submissions.  This is also intended to aid the workload management after a large ingestion of hotspots to the denylist and reduce overall workload for the volunteer members of the review team.  
@@ -117,30 +113,28 @@ The owner shall not be able to recover a stake bond by canceling an appeal remov
 Considerable increase in the severity of punishment has been established upon the alleged gamer within the provisions of this article.  The burden of proof is on the owner, the staked bond increased the ante, imposing deadlines to follow-up, and the Two & Banned policy have put down a clear line for gamers to think carefully about opening a Crowdspot submission after being caught.  With these steep burdens to bear, one concession must be given to those falsely accused hotspot owners to have their hotspot reviewed in a timely manner. 
 
 Initial removal submissions shall be reviewed by the team within var_submission_expiration_time days or 
--The hotspot is removed from the denylist.
--The staked bond shall be returned to the hotspot owner.
--The submission shall be closed with the status of "Expired". 
--This is not to say that the algorithmic detection can not deny the hotspot again upon its first fraudulent POC activity.  
+
+- The hotspot is removed from the denylist.
+- The staked bond shall be returned to the hotspot owner.
+- The submission shall be closed with the status of "Expired". 
+- This is not to say that the algorithmic detection can not deny the hotspot again upon its first fraudulent POC activity.  
 
 An appeal removal submission has already had one team member review by a human of either the initial removal or an addition submission.  This case deserves a second review by the team, with a thorough look at any new evidence in the appeal.  However, in the case that an appeal removal submission has not been reviewed in var_submission_expiration_time days the following shall occur.
--The hotspot shall remain on the denylist
--The stake bond shall be returned to the owner
+
+- The hotspot shall remain on the denylist
+- The stake bond shall be returned to the owner
 -The submission shall be closed with the status of "Expired".
--The date that the hotspot was added to the denylist shall be adjusted to the current date so that the var_submission_expiration_time day timer has reset and the owner may place another appeal removal submission. 
+- The date that the hotspot was added to the denylist shall be adjusted to the current date so that the var_submission_expiration_time day timer has reset and the owner may place another appeal removal submission. 
 
 ## Drawbacks
 This could be seen as too harsh?  I jest.  The gamers on Helium Network should have a short life.  The owner who wants to correct his past transgressions should be offered the opportunity, but only through the strictest of gauntlets.   
 
-
 ## Rationale and Alternatives
-
 
 I'm a big proponent of the "innocent until proven guilty" ethos. Right alongside this goes "the right to a fair and speedy trial."  The current state of Crowdspot serves neither. 
 
-
 What other designs have been considered and what is the rationale for not choosing them?
 HIP 40, 66 and PR 551 sought to work on Crowdspot and the impact of the denylist.   I think that all became stale due to technical challenges of implementing them.  None were ever sent to a vote.
-
 
 What is the impact of not doing this?
 
@@ -150,19 +144,17 @@ What is the impact of not doing this?
 Each week more submissions are added to Crowdspot than are being removed.  The time for an addition review is already at 1-2 years. The time for a removal review will grow so long that owners of legitimate hotspots that get falsely accused will have virtually no recourse.  Being put on the denylist falsely by an algorithm with a 90% accuracy will be equivalent to a perma-ban. 
 
 Each day submissions are added to Crowdspot by already identified gamers asking for another review of the previous review of a farm that was denied 12 months ago, and further bogging down the system.  This revolving door must be stopped and penalties should be enacted for simply bogging down the system.  
- 
 
 ## Unresolved Questions
 
--How long is unreasonable to wait for a review? 
--How much HNT to stake to hold your place on the list?
--What to do with the 4100 backlogged requests?
--What to do with forfeited HNT?
+- How long is unreasonable to wait for a review? 
+- How much HNT to stake to hold your place on the list?
+- What to do with the 4100 backlogged requests?
+- What to do with forfeited HNT?
 
 It is expected in the discussion process to determine the following variables in this HIP.  These current variables are only intended for the discussion process and are intended to be replaced as constant values once the discussion is finalized. 
-
-var_submission_expiration_time = 60 days
-var_staked_bond_amount = 5 HNT
+**var_submission_expiration_time** = 60 days
+**var_staked_bond_amount** = 5 HNT
 
 The staked bond amount is intended to be approximately equivalent to the network average earnings of one hotspot for var_submission_expiration_time days.
 
@@ -170,7 +162,6 @@ For example
 0.07 HNT for 1 day
 2.5 HNT for 30 days
 5 HNT for 60 days
-
 
 What about the 4100 submissions (4600 hotspots) that are currently backlogged on Crowdspot?   
 Keep in mind that the current Crowdspot data from the Jan 12th sweep to date has shown about 1800 false positive hotspots were put on the deny list, 900 were determined to be gaming after human review, and 3600 are still pending reviews.  Then another approximately 800 hotspots are pending review that were not in the Jan 12 sweep.  
@@ -196,6 +187,3 @@ This portion is reserved for future use.
 
 The success metric will be the wait time for getting a human review after placing a submission.   
 Like pointed out in the Summary, the threshold for review should be less than 145 days, maybe even 30 or 60 days. The expected "customer service experience" should dictate that 5 months wait is simply unreasonable.  
-
-
-
