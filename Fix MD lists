@@ -53,22 +53,23 @@ It is expected in the discussion process to determine exact values for two varia
 ### Changes to the Crowdspot UI or front-end
 
 When creating any removal submission a section for Staked Bond will be presented.  An "i" informational box will be present within this section with the definition from this HIP for Staked Bond.   The user will have a check box present to indicate (insert legal disclaimer here)  "I understand that the HNT staked for the purpose of this submission may be forfeited if it is determined by the review team that I have represented my hotspot falsely to the network. I understand my responsibilities and deadlines as provided in HIP XX."
+
 For any pending submission, the Owner's shall be given access to cancel their own submissions prior to a determination by the review team.  Some owner cancelations come with penalties as discussed under **Owner Deadlines**.
+
 Any "voting" references within Crowdspot shall be removed as it has no bearing on approvals or denials, and only serves to cloud the community's perception of how Crowdspot actually works.  
 
 ### Changes to Crowdspot backend
 
-Only the hotspot owner can create a removal submission on a hotspot that they own.
-The owner must include a staked bond with any type of removal submission.  
-No other wallet shall be used for locking the staking bond other than the wallet currently linked to Crowdspot. 
+Only the hotspot owner can create a removal submission on a hotspot that they own. The owner must include a staked bond with any type of removal submission.  No other wallet shall be used for locking the staking bond other than the wallet currently linked to Crowdspot.
+Two & Banned Policy - Only one initial removal submission and one appeal removal submission on a particular hotspot can ever be worked by the review team.  Once a determination of "declined" has been decided for an appeal submission, no removal submission can be accepted for that particular hotspot again. 
 The total Staked Bond will be a product of the number hotspots included on the submission multiplied by var_staked_bond_amount HNT. 
 A mechanism shall be put in place to route any appeal removal submission to a different member of the review team than reviewed it's initial removal submission. 
 Due Notice of Change shall be sent to the hotspot owner via Helium Wallet regarding changes to their denylist status and changes to their submission status.
 When creating any removal submission the types "Initial" or "Appeal" will be selected by the form based on prior submissions and based on how the hotspot(s) came to be placed on the denylist.  An "i" information box will be present next to this selection with the definition from this HIP of both types of removal submissions.   
 - Initial removal submissions are permitted for hotspots that were denied via algorithmic detection and have not had a prior addition submission "accepted" by the review team.  
-- Appeal removal submissions are permitted for hotspots that have a prior addition submission "accepted" by the review team  or have one prior initial removal submission as "declined" by the review team.   
+- Appeal removal submissions are permitted for hotspots that have a prior addition submission "accepted" by the review team  or have one prior initial removal submission as "declined" by the review team.
+
 In the event that an owner attempts to add multiple hotspots to a submission that are of mixed "initial" and "appeal" types, the form data shall not be validated and an error message shall alert the owner to try fewer hotspots per submission.  
-Two & Banned Policy - Only one initial removal submission and one appeal removal submission on a particular hotspot can ever be worked by the review team.  Once a determination of "declined" has been decided for an appeal submission, no removal submission can be accepted for that particular hotspot again. 
 
  ### Staked Bond Details
 
@@ -100,16 +101,17 @@ The Owner of the hotspot is responsible for the following **prior** to creating 
 #### Deadline for Initial Removal Submission
 Removal submissions must be placed by the owner within var_submission_expiration_time days of a hotspot initially being placed on the denylist.  This is intended to increase the punishment for gamers by shutting the door on late submissions.  This is also intended to aid the workload management after a large ingestion of hotspots to the denylist and reduce overall workload for the volunteer members of the review team.  
    
-#### Owner Cancelation of an initial removal submission. 
+#### Owner Cancelation of an Initial Removal Submission. 
 The owner shall immediately and automatically recover a staked bond by executing an Owner Cancelation of the initial removal submission prior to a determination by the review team.  The hotspot(s) will remain on the denylist, and the staked bond is returned.  The owner may make another initial removal submission, to include additional evidence, additional hotspots and the required stake bond within var_submission_expiration_time days of the algorithmic detection, not from the date of executing an owner cancellation.  
 
 #### Deadline for Appeal Removal Submission 
 There will be a var_submission_expiration_time day deadline to make an appeal removal submission after an addition submission has been accepted by a member of the review team and the hotspot has been denied, however, the already identified gamer only gets access to the appeal removal submission when creating the submission.  That is to say, if a team member already reviewed the data and determined that POC gaming was present, then the owner does not get an initial review, only an appeal. 
 
-#### Owner cancellation of an appeal removal submission.
+#### Owner Cancellation of an Appeal Removal Submission.
 The owner shall not be able to recover a stake bond by canceling an appeal removal submission under any circumstances. The owner may cancel an appeal removal submission, however the hotspot(s) will remain on the denylist and the staked bond will not be returned.   The staked bond is not immediately forfeited and may be attached to a new appeal removal submission. In this case, a subsequent appeal submission can only be for the same hotspots(s) and only within var_submission_expiration_time days of the initial removal submission being denied, or within var_submission_expiration_time days of the addition submission being accepted, not the date of cancelation.  
 
 ### Review Team Deadlines
+
 Considerable increase in the severity of punishment has been established upon the alleged gamer within the provisions of this article.  The burden of proof is on the owner, the staked bond increased the ante, imposing deadlines to follow-up, and the Two & Banned policy have put down a clear line for gamers to think carefully about opening a Crowdspot submission after being caught.  With these steep burdens to bear, one concession must be given to those falsely accused hotspot owners to have their hotspot reviewed in a timely manner. 
 
 Initial removal submissions shall be reviewed by the team within var_submission_expiration_time days or 
