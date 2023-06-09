@@ -31,7 +31,7 @@ The entire IoT Helium network will be affected by this HIP as the introduction o
 - Increase security level of Helium's Proof-of-Coverage.
 - Ability to replace/upgrade existing Miner's concentrator card with secure concentrator card
 - Turn off-the-shelf LoRaWAN gateways into full PoC Helium miner (DIY Hotspot)
-  - Secure Concentrators effectively replace the need for ECC806 security chip as mandated in HIP-19.
+  - Secure Concentrators effectively replace the need for ECC608 security chip as mandated in HIP-19.
 - Enable new class of Helium nodes that can provide additional functionality (LoRa PoC Mapper? Mobile Hotspot?)
 - Enable new types of Proof-of-Coverage verification (possibly using Time Difference of Arrival
   (TDOA))
@@ -53,58 +53,53 @@ Hotspot owners can optionally upgrade their existing Hotspot with a Secure Conce
 
 Manufactures can include SCCs in new Hotspots designs, in which case Manufactures are responsible for providing installation and service for Secure Concentrator. Use of SCC in Hotspot design satisfies the HIP 19 requirement for Encrypted/locked-down firmware and Encrypted storage of the miner swarm_key. To be clear, Hotspots that use SCC will not be required to have locked-down firmware and will not be required to securely store the swarm_key. (Note swarm_key is not the same as the SCC's Hardware Key).
 
-### General Requirements
+## General Requirements
 Ultimately, the MCC shall hold final approval power of a candidate Secure Concentrator design in accordance with HIP-19. That being said, a Secure Concentrator design should meet the following requirements:
 
-#### Hardware features
+### Hardware features
 
 An SCC design must meet the following minimum hardware requirements:
 
+ - Onboard GNSS (GPS) receiver. GPS provides geolocation and timestampling reference of every received packet.
+ - Appropriate hardware to precisely timestamp the arrival of received LoRa packets on par with Semtech SX1303.
+ - Ability to sign the received LoRa packets and associated metadata (GPS location, time, frequency, etc) with a secured asymmetric key (see further security requirements).
 
-Onboard GNSS (GPS) receiver. GPS provides geolocation and timestampling reference of every received packet.
-Appropriate hardware to precisely timestamp the arrival of received LoRa packets on par with Semtech SX1303.
-Ability to sign the received LoRa packets and associated metadata (GPS location, time, frequency, etc) with a secured asymmetric key (see further security requirements).
+### Security requirements
 
-#### Security requirements
+An SCC design must meet all the following minimum security requirements:
 
-An SCC design must meet the following minimum security requirements:
+ 1. A Secure Element capable of managing a permanent, unique ED25519 asymmetric key.
+ 2. A Security Boundary that ensures that:
+    - The Secure Element only obeys signature requests from a Secure Processor.
+    - The radio hardware is exclusively controlled by the Secure Processor.
+    - All packets and meta-data attested by the Secure Processor come only from the radio and not from an external source.
+    - The Secret key is only used to sign packet and meta-data or data with `no-rf` prefix.
+    - Read access to Secret key material is restricted to the Secure Processor only.
+    - Write access to the Secret key material if forbidden.
+ 3. A Secure Processor that only runs software which has been cryptographically authenticated to have come from the Manufacturer (or the MCC).
 
-A Secure Element capable of managing a permanent, unique ED25519 asymmetric key.
-A Security Boundary that ensures that:
-The Secure Element only obeys signature requests from a Secure Processor.
-The radio hardware is exclusively controlled by the Secure Processor.
-All packets and meta-data attested by the Secure Processor come only from the radio and not from an external source.
-A Secure Processor that only runs software which has been cryptographically authenticated to have come from the Manufacturer.
-These requirements are bound together – no design must be approved unless it shows it has met all criteria.
+No design will be approved unless it meets all criteria.
 
 Example design choices that reflect these requirements are:
-Using buried traces (2 & 3)
-Placing components under metal shields, and (2 & 3)
-Using potting material. (2 & 3)
-Resistance to timing attacks (1)
-Resistance to fault injection (1, 2 and 3).
-Separate buses between the Host and the Secure Element (2)
+ - Using buried traces (2 & 3)
+ - Placing components under metal shields (2 & 3)
+ - Using potting material (2 & 3)
+ - Resistance to timing attacks (1)
+ - Resistance to fault injection (1, 2 and 3).
+ - Separate buses between the Host and the Secure Element (2)
 
-Not externally readable
-Not able to be used to sign arbitrary data (except with “no-rf” prefix)
-#### Performance requirements
-Can sign X packet receipts per second.
+### Performance requirements
+ 1. Can sign 10 or more packet receipts per second.
 
-#### Process requirements
-Secure key generation at manufacturing time
-Secure firmware update process
-Provisioning process must disable diagnostic / debug interfaces permanently
-Maker must disclose who has access to firmware update keys.
-MCC is empowered to develop a firmware update contingency plan with Maker to cover exceptional cases such as abandonment or bankruptcy.
-Example 1: MCC and Maker may enter into a firmware update key escrow agreement with a third party.
-Example 2: Maker uses “dual-key” update design, allowing MCC to sign firmware updates.
+### Process requirements
+All effort must be taken to ensure the Hardware Key stored in the Secure Concentrator remains a secret. Manufacturers themselves should never have access to the keys. Also, Manufacturers are required to have strong processes in place for handling firmware updates. Manufactures must demonstrate prudence when handling firmware update key. Manufacturers must also have a firmware update contingency plan in place in the event the Manufacturer should cease to support their product. To these ends, Manufacturers of Secure Concentrator are required to practice the following process requirements:
 
+ 1. Secure key generation is performed on the Secure Concentrator hardware itself. The key material is never transferer in or out of the Secure Concentrator.
+ 2. The Provisioning process must disable all diagnostic/debug interfaces permanently.
+ 3. The Manufacturer must disclose via written document to the MCC their process for handling firmware updates including who has access to the firmware update keys and how the key is securely stored.
+ 4. The Manufacturer must disclose via written document to the MCC their firmware update contingency plan.
 
-### Hardware Key
-
-The SMCU stores a unique ED25519 keypair generated at manufacturing time in its non-volatile memory known as the **Hardware Key**. Note: the Hardware Key is not the same as the `swarm_key`. This is an important concept as it allows existing Miner's to upgrade their existing concentrator card with new SCC. The Hardware's private key is considered a secret and stored in a special section of the SMCU non-volatile memory used for secure storage. Secure storage can not be read-out and is not accessible to the Host CPU or via hardware debugging tools.
-
-The Hardware Key can also be used to sign other types of transactions beyond RF data. However, it does not allow signing _arbitrary_ data. Doing so would put the security on par with existing HIP-19 secure element approach and thus defeat the purpose of this HIP. Note: If the SMCU's firmware allowed for signing arbitrary data with its Hardware Key, an attacker could jailbreak the Host CPU and craft a signing request that contained fake RF data.
+One possible contingency plan is to use the "dual-key" update design. Under this plan, a Secure Concentrator will accept updates from either the Manufacturer's firmware update key OR the MCC's firmware update key. Another possible contingency plan is to enter into an escrow agreement in which a third-party keeps a copy of the firmware update key. In the event the Manufacturer ceases to support the product, the third party transfers control of the firmware update key to the MCC.
 
 ## Hotspot Mechanics
 
@@ -116,7 +111,7 @@ Note: the Binding transaction still requires a small Solana transaction fee. It 
 initial transaction fee will be paid out of the Maker's wallet. Subsequent binding transaction fees
 will be covered from the Hotspot owner's wallet.
 
-### RF Data Signature
+## RF Data Signature
 
 ![image ](0072-secure-concentrators/rf_signing.png)
 
@@ -214,7 +209,7 @@ Note: Secure Concentrators use ED25519 streaming (incremental) API for producing
 
 
 
-### Example Hardware Architecture
+## Example Hardware Architecture
 NLighten Systems has developed an open-source hardware and firmware Secure Concentrator reference design with the aid of a Helium Foundation grant. The design files can be found here: https://gitlab.com/nlighten-systems/kompressor/
 The following sections describe the reference design choices. Another alternative Secure Concentrator design does not necessarily need to include the same design components as long as it adheres to the General Requirements.
 
@@ -223,7 +218,13 @@ The following sections describe the reference design choices. Another alternativ
 ### Semtech SX1303
 The Semtech SX1303 is a new generation of LoRa baseband processor for gateways. It is size and pin compatible with SX1302 and like SX1302, it excels in cutting down current consumption, simplifying thermal design, lowering Bill Of Materials cost, and reducing overall size of gateways. In addition to supporting all the features of SX1302, SX1303 introduces a new Fine Timestamp capability that enables Time Difference of Arrival (TDOA) network-based geolocation. The new TDOA feature could potentially enable another layer of Proof of Coverage. For example, Helium Hotspots using SX1303 chipset could coordinate together to assert that another Helium Hotspot's beacon signal actually originated from the stated geo-location.
 
-## Secure Firmware
+### Hardware Key
+
+The SMCU stores a unique ED25519 keypair generated at manufacturing time in its non-volatile memory known as the **Hardware Key**. Note: the Hardware Key is not the same as the `swarm_key`. This is an important concept as it allows existing Miner's to upgrade their existing concentrator card with new SCC. The Hardware's private key is considered a secret and stored in a special section of the SMCU non-volatile memory used for secure storage. Secure storage can not be read-out and is not accessible to the Host CPU or via hardware debugging tools.
+
+The Hardware Key can also be used to sign other types of transactions beyond RF data. However, it does not allow signing _arbitrary_ data. Doing so would put the security on par with existing HIP-19 secure element approach and thus defeat the purpose of this HIP. Note: If the SMCU's firmware allowed for signing arbitrary data with its Hardware Key, an attacker could jailbreak the Host CPU and craft a signing request that contained fake RF data.
+
+### Secure Firmware
 
 The firmware running on NLighten’s Secure Concentrator's SMCU is licensed under the GPLv3 open-source license. Its code repository is kept public and maintained by the Community. The firmware itself has a bootloader that checks the cryptographic signature of the application image at each power up to ensure it is unaltered from its original form. The key used to sign the application image is called the `App Signing Key`. The firmware actually has two App Signing Keys slots. One of the key slots must be populated with Helium Foundation's App Signing Key. The other key slot can optionally be populated with a Manufacturer's App Signing Key. Helium Foundation will use its App Signing Key to sign firmware from the official open-source repository. Manufacturers can optionally fork the open-source repository and create changes specific to their hardware variants. Manufacturer's must comply with the reciprocal nature of the GPLv3 license.
 
