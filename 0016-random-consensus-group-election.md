@@ -5,9 +5,6 @@
 - Category: Economic, Technical
 - Original HIP PR: <https://github.com/helium/HIP/pull/54>
 - Tracking Issue: <https://github.com/helium/HIP/issues/55>
-- Status: Deployed
-  - [audit](https://github.com/helium/miner/blob/master/audit/var-48.md)
-  - [txn](https://explorer.helium.com/txns/DywtCExrXhTxv8VoDZl_hJDjQ2PUcov_AYrW98ZPpcg)
 
 # Summary
 

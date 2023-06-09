@@ -7,7 +7,6 @@
 - Category: Economic, Technical
 - Orignal PR: <https://github.com/helium/HIP/pull/341>
 - Tracking Issue: <https://github.com/helium/HIP/issues/345>
-- Status: In Discussion
 
 **Summary**
 
