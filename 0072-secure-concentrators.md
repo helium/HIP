@@ -213,6 +213,8 @@ Note: Secure Concentrators use ED25519 streaming (incremental) API for producing
 NLighten Systems has developed an open-source hardware and firmware Secure Concentrator reference design with the aid of a Helium Foundation grant. The design files can be found here: https://gitlab.com/nlighten-systems/kompressor/
 The following sections describe the reference design choices. Alternative Secure Concentrator design does not necessarily need to include the same design components as long as it adheres to the General Requirements.
 
+Note: approval of this HIP does NOT automatically approve NLighten System's design. The MCC has final approval power of any Secure Concentrator design, including the design by NLighten Systems.
+
 ![image ](0072-secure-concentrators/hardware_block.png) NLighten hardware architecture for SCC is based on Semtech's LoRa Corecell Gateway reference design. The major change involves the addition of a Secure MCU (**SMCU**) placed in between the communication path of the Host CPU and the SX1303. The SMCU's primary job is to cryptographically sign RF data received over the air such that other nodes participating on the Helium network are able to verify the data is authentic and unaltered from it original form. It is important the SMCU has exclusive access SX1303's SPI bus to eliminate the possibility of spoofing incoming RF packets. The hardware design employs several techniques to make it physically difficult to access the SMPU and SX130x including using buried traces, placing the components under a metal shield, and using hard-curing potting material.
 
 ### Semtech SX1303
