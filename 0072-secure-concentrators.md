@@ -60,7 +60,7 @@ Ultimately, the MCC shall hold final approval power of a candidate Secure Concen
 
 An SCC design must meet the following minimum hardware requirements:
 
- - Onboard GNSS (GPS) receiver. GPS provides geolocation and timestampling reference of every received packet.
+ - Onboard GNSS (GPS) receiver. GPS provides geolocation and timestamping reference of every received packet. The GPS accuracy must be 20 meters or better.
  - Appropriate hardware to precisely timestamp the arrival of received LoRa packets on par with Semtech SX1303.
  - Ability to sign the received LoRa packets and associated metadata (GPS location, time, frequency, etc) with a secured asymmetric key (see further security requirements).
 
