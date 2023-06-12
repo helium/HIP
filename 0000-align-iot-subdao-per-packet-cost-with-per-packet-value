@@ -1,0 +1,35 @@
+# HIP XX: Align IOT subDAO Per Packet Cost with Per Packet Value
+- Author(s): @KeithRettig (https://github.com/KeithRettig)
+- Start Date: 2023-05-28
+- Category: Economic
+- Original HIP PR: #nnn
+- Tracking Issue: #nnn
+- Voting Requirements: veIOT Holders
+
+## Summary
+This HIP proposes to change the per packet cost of transferring messages on the Helium IoT Network from 1 data credit (DC) per 24-byte packet to 2 data credits (DC) per 24-byte packet in an effort to better align the price with its value to our customers.
+
+## Motivation
+The primary motivation is to align the cost of packet transfer closer to the true value of packet transfer within the IOT subDAO.  While it is believed by author that the true value of packet transfer is closer to 100 DC, it would be economically unfeasible to implement a 100-fold increase in the price in one action.
+
+## Stakeholders
+Any and all customers, users, and operators of the Helium IoT Network.
+
+## Detailed Explanation
+The cost of packet transfer on the Helium IoT Network, is far too inexpensive.  Our customers have publicly commented that the cost is too low.  The number of packets a hotspot must transfer to earn a meaningful amount borders on ridiculous.  The cost of packet transfer is so cheap, that this proposed change of doubling the cost is unlikely to change any behaviors of the users of the Helium IoT Network.
+Currently to transfer a 24 byte packet on the Helium IoT Network, a customer must spend 1 DC.  This HIP proposes to make that cost be 2 DC per 24 byte packet.
+
+## Implementation
+We leave the implementation of the smart contract components, verifiability, and compliance up to the Helium Core Developers to determine.  It is understood that the cost function of packet transfer is a chainvar and thus it is believed this change should be very easy to implement.
+
+## Drawbacks
+A potential drawback is that customers will view the doubling of cost as too aggressive and not transfer as many packets in the future.  It is believed that at this time, and with the current price range, the usage of packet transfer is one of relatively inelastic demand.  No change in purchasing nor usage behavior is expected.
+
+## Unresolved Questions
+There are no unresolved questions other than how our customers will respond to the price change.
+
+## Deployment Impact
+There are no known dependencies by the author.  As soon as the chainvar has been changed, customers would be able to purchase 50,000 packets per $1 USD spent (representing 100,000 data credits).
+
+## Success Metrics
+There are two success metrics.  First that the price is changed and, second, that the demand remains inelastic.
