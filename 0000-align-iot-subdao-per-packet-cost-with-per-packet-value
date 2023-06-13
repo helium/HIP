@@ -10,7 +10,7 @@
 This HIP proposes to change the per packet cost of transferring messages on the Helium IoT Network from 1 data credit (DC) per 24-byte packet to 2 data credits (DC) per 24-byte packet in an effort to better align the price with its value to our customers.
 
 ## Motivation
-The primary motivation is to align the cost of packet transfer closer to the true value of packet transfer within the IOT subDAO.  While it is believed by author that the true value of packet transfer is closer to 100 DC, it would be economically unfeasible to implement a 100-fold increase in the price in one action.
+The primary motivation is to align the cost of packet transfer closer to the true value of packet transfer within the IOT subDAO.  While it is believed by the author that the true value of packet transfer is closer to 100 DC, it would be economically unfeasible to implement a 100-fold increase in the price in one action.
 
 ## Stakeholders
 Any and all customers, users, and operators of the Helium IoT Network.
