@@ -29,7 +29,7 @@ A potential drawback is that customers will view the doubling of cost as too agg
 There are no unresolved questions other than how our customers will respond to the price change.
 
 ## Deployment Impact
-There are no known dependencies by the author.  As soon as the chainvar has been changed, customers would pay 2 DC to transfer data rather than 1 DC.
+There are no known dependencies by the author.  As soon as the variable has been changed, customers would pay 2 DC to transfer data rather than 1 DC.
 
 ## Success Metrics
 There are two success metrics.  First that the price is changed and, second, that the demand remains inelastic.
