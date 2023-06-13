@@ -20,7 +20,7 @@ The cost of packet transfer on the Helium IOT Network, is far too inexpensive.  
 Currently to transfer a 24 byte packet on the Helium IOT Network, a customer must spend 1 DC.  This HIP proposes to make that cost be 2 DC per 24 byte packet.
 
 ## Implementation
-We leave the implementation of the smart contract components, verifiability, and compliance up to the Helium Core Developers to determine.  It is understood that the cost function of packet transfer is a chainvar and thus it is believed this change should be very easy to implement.
+We leave the implementation of the smart contract components, verifiability, and compliance up to the Helium Core Developers to determine.  It is understood that the cost function of packet transfer is implemented as a variable and thus it is believed this change should be very easy to implement in the IOT Packet Verifier.
 
 ## Drawbacks
 A potential drawback is that customers will view the doubling of cost as too aggressive and not transfer as many packets in the future.  It is believed that at this time, and with the current price range, the usage of packet transfer is one of relatively inelastic demand.  No change in purchasing nor usage behavior is expected.
