@@ -13,7 +13,7 @@ This HIP proposes to change the per packet cost of transferring messages on the 
 The primary motivation is to align the cost of packet transfer closer to the true value of packet transfer within the IOT subDAO.  While it is believed by the author that the true value of packet transfer is closer to 100 DC, it would be economically unfeasible to implement a 100-fold increase in the price in one action.
 
 ## Stakeholders
-Any and all customers, users, and operators of the Helium IoT Network.
+Any and all customers, users, and operators of the Helium IOT Network.
 
 ## Detailed Explanation
 The cost of packet transfer on the Helium IoT Network, is far too inexpensive.  Our customers have publicly commented that the cost is too low.  The number of packets a hotspot must transfer to earn a meaningful amount borders on ridiculous.  The cost of packet transfer is so cheap, that this proposed change of doubling the cost is unlikely to change any behaviors of the users of the Helium IoT Network.
