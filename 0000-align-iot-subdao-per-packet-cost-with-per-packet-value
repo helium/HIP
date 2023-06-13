@@ -16,7 +16,7 @@ The primary motivation is to align the cost of packet transfer closer to the tru
 Any and all customers, users, and operators of the Helium IOT Network.
 
 ## Detailed Explanation
-The cost of packet transfer on the Helium IoT Network, is far too inexpensive.  Our customers have publicly commented that the cost is too low.  The number of packets a hotspot must transfer to earn a meaningful amount borders on ridiculous.  The cost of packet transfer is so cheap, that this proposed change of doubling the cost is unlikely to change any behaviors of the users of the Helium IoT Network.
+The cost of packet transfer on the Helium IOT Network, is far too inexpensive.  Our customers have publicly commented that the cost is too low.  The number of packets a Hotspot must transfer to earn a meaningful amount borders on ridiculous.  The cost of packet transfer is so cheap, that this proposed change of doubling the cost is unlikely to change any behaviors of the users of the Helium IOT Network.
 Currently to transfer a 24 byte packet on the Helium IoT Network, a customer must spend 1 DC.  This HIP proposes to make that cost be 2 DC per 24 byte packet.
 
 ## Implementation
