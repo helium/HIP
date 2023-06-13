@@ -1,4 +1,4 @@
-# HIP XX: Align IOT subDAO Per Packet Cost with Per Packet Value
+# HIP XX: Increase IOT Data Transfer Cost
 - Author(s): [@KeithRettig](https://github.com/KeithRettig)
 - Start Date: 2023-05-28
 - Category: Economic
