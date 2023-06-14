@@ -3,7 +3,6 @@
 - Authors: @zer0tweets (FreedomFi), @JMF, @hashc0de
 - Start Date: August 28th, 2021
 - Category: Technical
-- Status: In Discussion
 - Original HIP PR: <https://github.com/helium/HIP/pull/269>
 - Tracking Issue: <https://github.com/helium/HIP/issues/271>
 - Discord channel: `#hip-37-omniprotocol-poc` on <https://discord.gg/helium>

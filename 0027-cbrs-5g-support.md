@@ -4,7 +4,6 @@
 - Start Date: February 23th, 2021
 - Category: Technical
 - Tracking Issue: <https://github.com/helium/HIP/issues/134>
-- Status: Approved
 
 ## Summary
 
