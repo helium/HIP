@@ -13,7 +13,7 @@ The Minimum Onboarding Fee will be dynamically defined as $10 on August 1, 2023 
 The Maximum Onboarding Fee will be no more than tem times the Minimum Onboarding Fee (10x).  Given the Minimum Onbaording Fee on August 1, 2023, the Maximum Onboarding Fee at that time will be $100.  If a subDAO wishes to change its Maximum Onboarding Fee, it must do so through the Helium DAO governance process.
 This HIP will be implemented in phases. The first phase will be to clearly define the requirements at the time of its passing.  Then on-chain with a target date of October 31, 2023.
 
-|Date|Minimum Onboarding Fee in DC||Maximum Onboarding Fee in DC|
+|Date|Minimum Onboarding Fee in DC|Maximum Onboarding Fee in DC|
 |------------:|---------------------:|---------------------:|
 |08/01/2023|1,000,000|10,000,000|
 |08/01/2025|500,000|5,000,000|
