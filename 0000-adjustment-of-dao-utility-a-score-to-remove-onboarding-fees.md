@@ -1,5 +1,5 @@
 # HIP XX: Adjustment of DAO Utility A Score to Remove Onboarding Fees
-- Authors: [Gateholder] (https://github.com/gateholder) & [Andy Zyvoloski](https://github.com/heatedlime)
+- Authors: [Gateholder](https://github.com/gateholder) & [Andy Zyvoloski](https://github.com/heatedlime)
 - Start Date: 6/15/2023
 - Category: Technical & Economic
 - Original HIP PR: #
