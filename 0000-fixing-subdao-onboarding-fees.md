@@ -1,4 +1,4 @@
-# HIP XX: Clarification of subDAO Onboarding Fees
+# HIP XX: Fixing subDAO Onboarding Fees
 - Author(s): [Keith Rettig](https://github.com/KeithRettig), [@mawdegroot](https://github.com/mawdegroot), [Max Gold](https://github.com/MaxGold91)
 - Start Date: 2023-05-29
 - Category: Economic
@@ -8,7 +8,7 @@
 
 ## Summary
 
-This HIP proposes to clarify a minimum and maximum onboarding fee for devices in the subDAO structure.
+This HIP proposes to clarify a minimum and maximum onboarding fee and a mechanism for self-payment for devices in the subDAO structure and how.
 The Minimum Onboarding Fee will be dynamically defined as $10 on August 1, 2023 and will follow the same halving schedule as HNT emissions as shown in the chart below.  It is important to note that at the time of its writing, HIP53 has defined the onboarding fee as $40 per hotspot.  If a subDAO wishes to change its Minimum Onboarding Fee, it must do so through the subDAO governance process.
 The Maximum Onboarding Fee will be no more than tem times the Minimum Onboarding Fee (10x).  Given the Minimum Onbaording Fee on August 1, 2023, the Maximum Onboarding Fee at that time will be $100.  If a subDAO wishes to change its Maximum Onboarding Fee, it must do so through the Helium DAO governance process.
 This HIP will be implemented in phases. The first phase will be to clearly define the requirements at the time of its passing.  Then on-chain with a target date of October 31, 2023.
