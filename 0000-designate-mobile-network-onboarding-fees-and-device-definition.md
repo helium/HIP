@@ -32,8 +32,11 @@ With this HIP, a way to track, manage, and burn Data Credits used to pay the Onb
 
 ### Definitions
 Indoor Device (AKA indoor radio) - A device that outputs a cellular or wifi signal to which End Users connect that is designed to be installed indoors.
+
 Outdoor Device (AKA outdoor radio) - A device that outputs a cellular or wifi signal to which End Users connect that is designed to be installed oudoors.
+
      At the time of this HIP's writing, both Indoor and Outdoor Devices would include CBRS Radioa and carrier-offloading Wifi (coWifi) devices.
+     
 End User - A device that connects to a cellular or wifi signal, such as a cell phone, tablet, laptop, etc.
 
 ## Unresolved Questions
