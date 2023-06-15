@@ -1,15 +1,13 @@
 # HIP XX: MOBILE Network Onboarding Fee
-
-Authors: [Andy Zyvoloski](https://github.com/heatedlime) & @KeithRettig
-Start Date: 6/14/2023
-Category: Technical & Economic
-Original HIP PR: #
-Tracking Issue: #
-Voting Requirements: veMOBILE
+- Authors: [Andy Zyvoloski](https://github.com/heatedlime) & @KeithRettig
+- Start Date: 6/14/2023
+- Category: Technical & Economic
+- Original HIP PR: #
+- Tracking Issue: #
+- Voting Requirements: veMOBILE
 
 ##Summary: 
 This proposal suggests the implementation of an onboarding fee for indoor output devices of $10 and outdoor output devices of $20 that join the MOBILE network the day after the passing of this HIP. Output devices are defined in the detailed summary section below.
-
 
 ##Motivation:
 As implemented in HIP 51, a DAO Utility Score is used to determine the daily emissions of HNT to each SubDAO treasury. The equation for this calculation is noted below:
@@ -34,10 +32,8 @@ HNT holders will also benefit with the burning of HNT for each newly onboarded o
 At the passing of this HIP, all outdoor and indoor output devices onboarded to the MOBILE network will be required to pay an onboarding fee, which is paid via data credits. With this HIP, a way to track, manage and burn HNT/data credits for newly onboarded output devices needs to be created by the Helium Foundation. Thus, a way to pay onboarding fees needs to be established before they can be paid. Therefore, any output devices onboarded the day after the passing of this HIP will be required to pay their onboard fee no later than October 31st, 2023. This allows time for the Helium Foundation to create a way to track and manage this process. If any output devices onboarded to the MOBILE network the day after the passing of this HIP do not pay their onboarding fees by October 31st, 2023, their output device will become inactive, and not earn any PoC or data transfer rewards until the fee is paid in full. 
 
 ###Definitions
-Output Device - A device that outputs a cellular or wifi signal for End Users to connect to. For example, this would include a CBRS Radio or a Carrier offload Wifi (CoWifi) unit.  
+Output Device - A device that outputs a cellular or wifi signal to which End Users connect. For example, this would include a CBRS Radio or a carrier-offloading Wifi (coWifi) unit.  
 End User - A device that connects to a cellular or wifi signal, such as a cell phone or mapping device.
-
-
 
 ##Alternatives:
 
@@ -45,17 +41,13 @@ One alternative is to do nothing, and keep onboarding fees as zero (0). However,
 
 Another alternative is to change the way the A score is calculated to benefit the HNT emissions of the MOBILE Network; however, this would require a vote with veHNT instead of veMOBILE. 
 
-
 ##Unresolved Question:
 None
-
 
 ##Deployment Impact:
 Output deployers will now need to pay onboarding fees for any newly onboarded output devices after the implementation of this HIP.
 
 The Helium Foundation will need to create a way to track and manage output device onboards and ensure fees paid for output devices prior to the October 31, 2023 deadline. Further, the foundation will need to ensure that the day after the passing of this HIP that the A score for the MOBILE SubDAO is correctly updated to reflect the total amount of indoor and outdoor output devices, as well as their associated fees for the MOBILE SubDAO.
 
-
 ##Success Metrics:
 The primary success metric will be greater daily HNT emissions to the MOBILE SubDAO treasury. 
-
