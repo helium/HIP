@@ -3,7 +3,7 @@
 - Start Date: 2023-05-28
 - Category: Economic
 - Original HIP PR: [#698](https://github.com/helium/HIP/pull/698)
-- Tracking Issue: #nnn
+- Tracking Issue: [#703](https://github.com/helium/HIP/issues/703)
 - Voting Requirements: veIOT Holders
 
 ## Summary
