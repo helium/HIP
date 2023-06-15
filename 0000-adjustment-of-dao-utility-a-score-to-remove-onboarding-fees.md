@@ -64,7 +64,7 @@ Maintaining the Current Calculation: One alternative would be to keep the curren
 Adjusting the A Score Calculation Differently: Another option is to explore different adjustments to the A score calculation that might achieve similar goals while addressing the potential drawbacks of this proposal. This could include introducing new parameters to calculate the total amount of HNT burned for onboarding for reach network, vs only using the current fee. However, since the IoT network had such a huge head start, and almost 1 million hotspots onboarded but not active, this metric would heavily favor the IoT network and their HNT emissions. 
 
 ## Deployment Impact
-The Helium Foundation will need to adjust the code for the A Score Calculation of the DAO Utility Score to remove onboarding fees. 
+This HIP requests that the Helium Foundation adjust the code for the A Score Calculation of the DAO Utility Score to remove onboarding fees. 
 
 ## Success Metrics
 The success metric will be the HNT daily emissions being correctly recalculated to exclude onboarding fees from the A Score.
