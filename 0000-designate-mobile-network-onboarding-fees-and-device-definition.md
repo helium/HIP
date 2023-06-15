@@ -13,9 +13,13 @@ This proposal designates the Onboarding Fees for the onboarding of MOBILE subDAO
 As implemented in HIP51, a DAO Utility Score is used to determine the daily emissions of HNT to each SubDAO treasury. The equation for this calculation is noted below:
 
 $\text{DAO Utility Score} = V \times D \times A$
+
 Where
+
 $V = \text{max}(1, veHNT_{DNP})$
+
 $D = \text{max}(1, \sqrt{\text{DNP DCs burned in USD}})$
+
 $A = \text{max}(1, \sqrt[4]{\text{DNP Active Device Count} \times \text{DNP Device Activation Fee}})$
 
 At its current rate, the $A$ score in the equation for MOBILE is $0$ (zero) as, currently, there is not any prescribed onboarding fees for the MOBILE network.  The implementation of this HIP would inscribe onboarding fees for output devices as prescribed by HIP51 which would allow a more appropriate calculation of the DAO Utility Score.
