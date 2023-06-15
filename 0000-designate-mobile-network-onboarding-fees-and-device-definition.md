@@ -49,9 +49,8 @@ End User - A device that connects to a cellular or wifi signal, such as a cell p
 ### Relocation/Reassertion Fees
 Relocation and or re-asserting a device location shall not occur any fee. 
 
-##Alternatives:
-
-One alternative is to do nothing, and keep onboarding fees as zero (0). However, this would impede the daily HNT emissions to the MOBILE SubDAO treasury since the A score would remain zero (0). 
+## Alternatives
+One alternative is to do nothing and keep onboarding fees as zero (0). However, this would impede the daily HNT emissions to the MOBILE SubDAO treasury since the A score would remain zero (0). 
 
 ## Unresolved Questions
 Confirmation that the Helium Foundation can certainly complete the needed work by the stated deadline of October 31, 2023.  Impromptu conversations have been had with various members of the Foundation and it is believed that approximately 90 days would be needed to complete the work.
@@ -63,6 +62,3 @@ The Helium Foundation will need to create a way to track and manage output devic
 
 ## Success Metrics
 The success metric will be the implementation of Onboarding Fees for all new Devices, which will lead to higher daily HNT emissions to the MOBILE SubDAO treasury.
-
-
-
