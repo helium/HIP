@@ -1,26 +1,29 @@
-# HIP XX: Lower Minimum Device Onboarding Fees
-- Author(s): [@KeithRettig](https://github.com/KeithRettig), [@mawdegroot](https://github.com/mawdegroot), [@MaxGold91](https://github.com/MaxGold91)
+# HIP XX: Clarification of subDAO Onboarding Fees
+- Author(s): [Keith Rettig](https://github.com/KeithRettig), [@mawdegroot](https://github.com/mawdegroot), [Max Gold](https://github.com/MaxGold91)
 - Start Date: 2023-05-29
 - Category: Economic
 - Original HIP PR: 
 - Tracking Issue:
-- Voting Requirements: 
+- Voting Requirements: veHNT
 
 ## Summary
 
-This HIP proposes to set a minimum onboarding fee for devices in the subDAO structure.  This HIP also proposes that devices for which the Minimum Onboarding Fee has not been burned are not eligible for rewards from the subDAO.  The Minimum Onboarding Fee will be dynamically defined as $10 on August 1, 2023 and will follow the same halving schedule as HNT emissions as shown in the chart below.  It is important to note, this HIP only defines a minimum fee and at the time of its writing, HIPs 51-53 have defined the onboarding fees as $40 per hotspot.  If a subDAO wishes to change its onboard fees, it must do so through the subDAO governance process.  This HIP will be implemented in phases, first clearly defining the requirements at the time of its passing, then on-chain with a target date of September 4, 2023.
+This HIP proposes to clarify a minimum and maximum onboarding fee for devices in the subDAO structure.
+The Minimum Onboarding Fee will be dynamically defined as $10 on August 1, 2023 and will follow the same halving schedule as HNT emissions as shown in the chart below.  It is important to note that at the time of its writing, HIP53 has defined the onboarding fee as $40 per hotspot.  If a subDAO wishes to change its Minimum Onboarding Fee, it must do so through the subDAO governance process.
+The Maximum Onboarding Fee will be no more than tem times the Minimum Onboarding Fee (10x).  Given the Minimum Onbaording Fee on August 1, 2023, the Maximum Onboarding Fee at that time will be $100.  If a subDAO wishes to change its Maximum Onboarding Fee, it must do so through the Helium DAO governance process.
+This HIP will be implemented in phases. The first phase will be to clearly define the requirements at the time of its passing.  Then on-chain with a target date of October 31, 2023.
 
-|Date|Minimum Onboard Fee in DC|
-|------------:|---------------------:|
-|08/01/2023|1,000,000|
-|08/01/2025|500,000|
-|08/01/2027|250,000|
-|08/01/2029|125,000|
-|08/01/2031|62,500|
-|08/01/2033|31,250|
-|08/01/2035|15,625|
+|Date|Minimum Onboarding Fee in DC||Maximum Onboarding Fee in DC|
+|------------:|---------------------:|---------------------:|
+|08/01/2023|1,000,000|10,000,000|
+|08/01/2025|500,000|5,000,000|
+|08/01/2027|250,000|2,500,000|
+|08/01/2029|125,000|1,250,000|
+|08/01/2031|62,500|625,000|
+|08/01/2033|31,250|312,500|
+|08/01/2035|15,625|156,250|
 
-The HIP authors fully support any community initiative to set a floor price to stop the halvening at a future date.  However, it is our opinion that the current halving schedule gives the network about 8-10 years to figure out which figure works best.  The halvening schedule was chosen to be in line with the theory of Moore's Law and roughly correlates to the CAPEX required for these networks.  If these features, in the future, are no longer relevant, the Helium DAO should update the minimum onboard price to be in line with future economic forces.
+The HIP authors fully support any community initiative to set a floor price to stop the halvening schedule at a future date.  However, it is our opinion that the current halving schedule gives the network about 8-10 years to figure out which figure works best.  The halvening schedule was chosen to be in line with the theory of Moore's Law and roughly correlates to the CAPEX required for these networks.  If these features are no longer relevant in the future, the Helium DAO should update the Minimum Onboarding Fee to be in line with the economic forces at that time.
 
 ## Motivation
 
@@ -112,3 +115,6 @@ None.
 ## Success Metrics
 
 This is successful if the onboarding fees provide Sybil resistance for the subDAOs and perform the minimum requirements for the network to function on Solana.
+
+This HIP proposes that devices for which the Minimum Onboarding Fee has not been burned are not eligible for rewards from the subDAO.  
+
