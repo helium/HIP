@@ -16,11 +16,30 @@ Currently, the A Score factors includes Active Device Count multiplied by the cu
 As implemented in HIP51, a DAO Utility Score is used to determine the daily emissions of HNT to each SubDAO treasury. The current equation for this calculation is noted below:
 
 Current:
+
+$\text{DAO Utility Score} = V \times D \times A$
+
+where
+
+$V = \text{max}(1, veHNT_{DNP})$
+
+$D = \text{max}(1, \sqrt{\text{DNP DCs burned in USD}})$
+
 $A = \text{max}(1, \sqrt[4]{\text{DNP Active Device Count} \times \text{DNP Device Activation Fee}})$
 
-This HIP proposes removing DNP Active Device Count from the A score, to have the equation equal the following:
+
+This HIP proposes adjusting only the A score to remove the DNP Active Device Count from the A score, to have the equation equal the following:
 
 Proposed:
+
+$\text{DAO Utility Score} = V \times D \times A$
+
+where
+
+$V = \text{max}(1, veHNT_{DNP})$
+
+$D = \text{max}(1, \sqrt{\text{DNP DCs burned in USD}})$
+
 $A = \text{max}(1, \sqrt[4]{\text{DNP Active Device Count}})$
 
 ## Stakeholders
