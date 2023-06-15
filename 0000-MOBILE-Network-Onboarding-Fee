@@ -25,19 +25,21 @@ This HIP only applies to output devices onboarded the day after the passing of t
 ##Stakeholders:
 Stakeholders are all current and future output device deployers on the MOBILE network. 
 
-HNT holders will also benefit with the burning of HNT for each newly onboarded output device.
+HNT holders will also benefit from the burning of HNT for each newly onboarded output device.
 
 ##Detailed Explanation:
 
-At the passing of this HIP, all outdoor and indoor output devices onboarded to the MOBILE network will be required to pay an onboarding fee, which is paid via data credits. With this HIP, a way to track, manage and burn HNT/data credits for newly onboarded output devices needs to be created by the Helium Foundation. Thus, a way to pay onboarding fees needs to be established before they can be paid. Therefore, any output devices onboarded the day after the passing of this HIP will be required to pay their onboard fee no later than October 31st, 2023. This allows time for the Helium Foundation to create a way to track and manage this process. If any output devices onboarded to the MOBILE network the day after the passing of this HIP do not pay their onboarding fees by October 31st, 2023, their output device will become inactive, and not earn any PoC or data transfer rewards until the fee is paid in full. 
+At the passing of this HIP, all outdoor and indoor output devices onboarded to the MOBILE network will be required to pay an onboarding fee, which is paid via data credits. 
+
+With this HIP, a way to track, manage and burn HNT/data credits for newly onboarded output devices will need to be created by the Helium Foundation. Therefore, any output devices onboarded the day after the passing of this HIP will be required to pay their onboard fee no later than October 31st, 2023. This allows time for the Helium Foundation to create a way to track and manage this process. If any output devices onboarded to the MOBILE network the day after the passing of this HIP do not pay their onboarding fees by October 31st, 2023, their output device will become inactive, and not earn any PoC or data transfer rewards until the fee is paid in full. 
 
 ###Definitions
-Output Device - A device that outputs a cellular or wifi signal to which End Users connect. For example, this would include a CBRS Radio or a carrier-offloading Wifi (coWifi) unit.  
+Output Device (AKA Gateway) - A device that outputs a cellular or wifi signal to which End Users connect. For example, this would include a CBRS Radio or a carrier-offloading Wifi (coWifi) unit.  
 End User - A device that connects to a cellular or wifi signal, such as a cell phone or mapping device.
 
 ##Alternatives:
 
-One alternative is to do nothing, and keep onboarding fees as zero (0). However, this would hinder the daily HNT emissions to the MOBILE SubDAO treasury since the A score would remain zero (0). 
+One alternative is to do nothing, and keep onboarding fees as zero (0). However, this would impede the daily HNT emissions to the MOBILE SubDAO treasury since the A score would remain zero (0). 
 
 Another alternative is to change the way the A score is calculated to benefit the HNT emissions of the MOBILE Network; however, this would require a vote with veHNT instead of veMOBILE. 
 
