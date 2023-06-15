@@ -39,7 +39,7 @@ Outdoor Device (AKA outdoor radio) - A device that outputs a cellular or wifi si
 End User - A device that connects to a cellular or wifi signal, such as a cell phone, tablet, laptop, etc.
 
 ## Unresolved Questions
-Confirmation that the Helium Foundation can certainly complete the needed work by the stated deadline of October 31, 2023.  Conversations have been had various members of the FOundation and it has been conveyed that approximately 90 days would be needed to complete the work.
+Confirmation that the Helium Foundation can certainly complete the needed work by the stated deadline of October 31, 2023.  Impromptu conversations have been had with various members of the Foundation and it is believed that approximately 90 days would be needed to complete the work.
 
 ## Deployment Impact
 Operators of Devices will now need to pay Onboarding Fees for any newly onboarded output devices after the implementation of this HIP.
