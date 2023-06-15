@@ -30,14 +30,14 @@ SubDAO Treasuries: SubDAO Treasuries may experience a potential change in the di
 
 HNT Owners: The removal of onboarding fees from the A Score may result in networks removing onboarding fees from their network, which will result in less HNT burn.
 
-##Drawbacks:
+## Drawbacks:
 
 While the proposed changes to the A score calculation aim to improve the distribution of HNT emissions in the Helium ecosystem, there are potential drawbacks to consider:
 
 Impact on Existing SubDAOs: Existing subDAOs that have been operating with the current A score calculation may be negatively affected by the proposed changes. The redistribution of HNT emissions could lead to disagreements or dissatisfaction among some stakeholders, particularly if they perceive the changes as unfavorable to their interests.
 
 
-##Alternatives
+## Alternatives
 Maintaining the Current Calculation: One alternative would be to keep the current A score calculation, with the onboarding fee included. However, doing so might lead to unnecessary complexity, as managing the onboarding fee using on-chain mechanisms like NFTs and storing the associated data would require additional resources and potentially increase costs. 
 
 Adjusting the A Score Calculation Differently: Another option is to explore different adjustments to the A score calculation that might achieve similar goals while addressing the potential drawbacks of this proposal. This could include introducing new parameters or modifying the existing calculation in other ways.
