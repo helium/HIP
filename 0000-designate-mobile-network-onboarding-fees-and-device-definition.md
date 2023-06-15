@@ -7,7 +7,7 @@
 - Voting Requirements: veMOBILE
 
 ## Summary
-This proposal designates the Onboarding Fees for the onboarding of MOBILE subDAO devices.  Also provides a definition of a Device within the MOBILE subDAO for the purposes of calculating the $A$ factor of the DAO Utility Score.  An Onboarding Fee of $40 will set immedaitely upon passing; and, then once the necessary coding is complete, an Onboarding Fee of $10 will be set for Indoor Radio devices and $20 for Outdoor Radio devices.  Indoor Devices and Outdoor Devices are defined in the detailed explanation section.
+This proposal designates the Onboarding Fees for the onboarding of MOBILE subDAO devices.  Also provides a definition of a Device within the MOBILE subDAO for the purposes of calculating the $A$ factor of the DAO Utility Score.  An Onboarding Fee of $40 will set immediately upon passing and apply to HIP51-inherited Defined Devices; and, then once the necessary coding is complete, an Onboarding Fee of $10 will be set for Indoor Devices and $20 for Outdoor Devices.  Indoor Devices and Outdoor Devices are defined in the detailed explanation section.
 
 ## Motivation
 As implemented in HIP51, a DAO Utility Score is used to determine the daily emissions of HNT to each SubDAO treasury. The equation for this calculation is noted below:
@@ -35,6 +35,8 @@ At the passing of this HIP, all Devices onboarded to the MOBILE Network will be 
 With this HIP, a way to track, manage, and burn Data Credits used to pay the Onboarding Fees for any newly onboarded Devices will need to be created by the Helium Foundation.  Therefore, any output devices onboarded the day after the passing of this HIP will be required to pay their onboarding fees no later than October 31st, 2023.  This allows time for the Helium Foundation to create a way to track and manage this process.  If any Device onboarded to the MOBILE Network after the passing of this HIP do not pay their onboarding fees by October 31st, 2023, their output device will become inactive and not earn any Proof-of-Coverage or Data Transfer rewards until the fee is paid in full.  Such Devices will be consider as if not onboarded.
 
 ### Definitions
+HIP51-inherited Defined Devices (AKA gateway) - A gateway device that allows mobile network radios to be attached to which End USers connect.
+
 Indoor Device (AKA indoor radio) - A device that outputs a cellular or wifi signal to which End Users connect that is designed to be installed indoors.  At the time of this HIP's writing, this would include CBRS Radios and carrier-offloading Wifi (coWifi) devices.
 
 Outdoor Device (AKA outdoor radio) - A device that outputs a cellular or wifi signal to which End Users connect that is designed to be installed oudoors.  At the time of this HIP's writing, this would include CBRS Radios and carrier-offloading Wifi (coWifi) devices.
