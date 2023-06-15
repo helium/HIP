@@ -1,4 +1,4 @@
-# HIP XX: Increase IOT Data Transfer Cost
+# HIP 86: Increase IOT Data Transfer Cost
 - Author(s): [@KeithRettig](https://github.com/KeithRettig)
 - Start Date: 2023-05-28
 - Category: Economic
