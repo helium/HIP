@@ -35,7 +35,7 @@ At the passing of this HIP, all Devices onboarded to the MOBILE Network will be 
 With this HIP, a way to track, manage, and burn Data Credits used to pay the Onboarding Fees for any newly onboarded Devices will need to be created by the Helium Foundation.  Therefore, any output devices onboarded the day after the passing of this HIP will be required to pay their onboarding fees no later than October 31st, 2023.  This allows time for the Helium Foundation to create a way to track and manage this process.  If any Device onboarded to the MOBILE Network after the passing of this HIP do not pay their onboarding fees by October 31st, 2023, their output device will become inactive and not earn any Proof-of-Coverage or Data Transfer rewards until the fee is paid in full.  Such Devices will be consider as if not onboarded.
 
 ### Definitions
-HIP51-inherited Defined Devices (AKA gateway) - A gateway device that allows mobile network radios to be attached to which End USers connect.
+HIP51-inherited Defined Devices (AKA gateway) - A gateway device that allows mobile network radios to be attached to which End Users connect.
 
 Indoor Device (AKA indoor radio) - A device that outputs a cellular or wifi signal to which End Users connect that is designed to be installed indoors.  At the time of this HIP's writing, this would include CBRS Radios and carrier-offloading Wifi (coWifi) devices.
 
