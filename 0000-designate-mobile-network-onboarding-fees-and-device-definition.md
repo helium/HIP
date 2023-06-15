@@ -36,7 +36,7 @@ With this HIP, a way to track, manage, and burn Data Credits used to pay the Onb
 
 ### Definitions
 
-Device - A device includes but is not limited to a any hotspot/radio/router/modem or other output device that is onboarded to the MOBILE network that is  creating a cellular or Wi-Fi Helium 5G signal in which End Users can connect to access the internet. At the writing of this HIP, the two types of devices can include Indoor Devices and Outdoor Devices, which are defined below. 
+Device - A device includes, but is not limited to, any hotspot/radio/router/modem or other output device that is onboarded to the MOBILE network that is creating a cellular or Wi-Fi Helium 5G signal in which End Users can connect to access the internet. At the writing of this HIP, the two types of devices can include Indoor Devices and Outdoor Devices, which are defined below. 
 
 Active Device - An active device is defined as a device that is creating valid coverage for that epoch.
 
