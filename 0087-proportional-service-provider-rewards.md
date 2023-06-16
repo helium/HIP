@@ -1,9 +1,9 @@
-# HIP XX: Proportional Service Provider Rewards
+# HIP 87: Proportional Service Provider Rewards
 - Author(s): [@KeithRettig](https://github.com/KeithRettig), [@zer0tweets](https://github.com/zer0tweets), [@meowshka](https://github.com/meowshka)
 - Start Date: 2023-05-15
 - Category: Economic, Technical
-- Original HIP PR: #nnn
-- Tracking Issue: #nnn
+- Original HIP PR: [#699](https://github.com/helium/HIP/pull/699)
+- Tracking Issue: [#704](https://github.com/helium/HIP/issues/704)
 - Voting Requirements: veMOBILE Holders
 
 ## Summary
