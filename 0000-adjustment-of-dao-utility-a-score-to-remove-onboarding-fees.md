@@ -1,4 +1,4 @@
-# HIP XX: Adjustment of DAO Utility A Score to Remove Onboarding Fees
+# HIP XX: Adjustment of DAO Utility A Score
 - Authors: [Gateholder](https://github.com/gateholder) & [Andy Zyvoloski](https://github.com/heatedlime)
 - Start Date: 6/15/2023
 - Category: Technical & Economic
@@ -7,10 +7,12 @@
 - Voting Requirements: veHNT
 
 ## Summary
-This proposal suggests removing the DNP Device Activation Fee (AKA onboarding fee) from the DAO Utility Score. 
+This proposal suggests removing the DNP Device Activation Fee (AKA onboarding fee) from the DAO Utility Score A factor. 
 
 ## Motivation
-Currently, the A Score factors includes Active Device Count multiplied by the current onboarding fee for each device for that network. As written, this currently discourages networks from lowering their device onboarding fee to make it more affordable to add and onboard devices to the network, since lowering their onboarding fee will ultimately lower that SubDAO's A score. As currently written, lowering onboarding fees would result in lower daily HNT emissions to that SubDAOs Treasury. This also creates a higher barrier of entry for each network, which may discourage the purchase of new equipment. As being a network of networks, the Helium Community should encourage the expansion of its sub networks, and make it more affordable for others to join. 
+Currently, the A factor in the DAO Utility Score equates to Active Device Count multiplied by the current onboarding fee for each device on that network to the fourth root. As currently written, this discourages SubDAO networks from lowering their device onboarding fee, as doing so would lower their A factor. As a result of a decreased A factor, the daily HNT emissions within that SubDAO would decrease. 
+
+Further, High onboarding fees make it less affordable for deployers to onboard new devices to that SubDAO network, which creates a higher  barrier of entry. As being a network of networks, the Helium Community should encourage the expansion of its SubDAO networks, and make it more affordable for others to join. 
 
 ## Detailed Explanation
 As implemented in HIP51, a DAO Utility Score is used to determine the daily emissions of HNT to each SubDAO treasury. The current equation for this calculation is noted below:
@@ -42,14 +44,17 @@ $D = \text{max}(1, \sqrt{\text{DNP DCs burned in USD}})$
 
 $A = \text{max}(1, \sqrt[4]{\text{DNP Active Device Count}})$
 
+
+Note, this HIP does not propose any changes to any current onboarding fees. Any changes to current onboarding fees are set by each SubDAO.
+
 ## Stakeholders
-The proposed changes to the A score calculation in the DAO score will impact various stakeholders within the Helium ecosystem. These stakeholders include:
+The proposed changes to the A factor calculation in the DAO Utility Score will impact various stakeholders within the Helium ecosystem. These stakeholders include:
 
-Hotspot Makers: Some Hotspot Makers hold a large quantity of DC within their maker wallet. If this HIP should pass, and a new HIP to lower IoT onboarding fees is proposed, this may leave makers with a large sum of DC within their maker wallets. However, this HIP does not directly impact Hotspot Makers, as another HIP would need to be implemented to reduce IoT onboard fees. 
+Hotspot Makers: Some Hotspot Makers hold a large quantity of DC within their maker wallet. If this HIP should pass, and a new HIP to lower IoT onboarding fees is proposed by the IoT SubDAO, this may leave makers with a large sum of DC within their maker wallets. However, this HIP does not directly impact Hotspot Makers, as another HIP would need to be implemented to reduce IoT onboard fees. 
 
-SubDAO Treasuries: SubDAO Treasuries will experience a change in the distribution of daily HNT emissions. The removal of the onboarding fee from the A score calculation may encourage more device owners to participate in subDAO networks.
+SubDAO Treasuries: SubDAO Treasuries will experience a change in the distribution of daily HNT emissions. The removal of the onboarding fee from the A factor calculation may encourage more device owners to participate in subDAO networks.
 
-HNT Owners: The removal of onboarding fees from the A Score may result in networks removing onboarding fees from their network, which will result in less HNT burn, which may cause a decrease in demand for HNT.
+HNT Owners: The removal of onboarding fees from the A factor may result in SubDAO networks lowering their onboarding fees, which would result in less HNT burn and a decrease in demand for HNT.
 
 ## Drawbacks:
 
@@ -57,14 +62,13 @@ While the proposed changes to the A score calculation aim to improve the distrib
 
 Impact on Existing SubDAOs: Existing subDAOs that have been operating with the current A score calculation may be negatively affected by the proposed changes. The redistribution of HNT emissions could lead to disagreements or dissatisfaction among some stakeholders, particularly if they perceive the changes as unfavorable to their interests.
 
-
 ## Alternatives
-Maintaining the Current Calculation: One alternative would be to keep the current A score calculation, with the onboarding fee included. However, doing so might lead to unnecessary complexity, as managing the onboarding fee using on-chain mechanisms like NFTs and storing the associated data would require additional resources and potentially increase costs. 
+Maintaining the Current Calculation: One alternative would be to keep the current A factor calculation, with the onboarding fee included. However, doing so might lead to unnecessary complexity, as this would force other SubDAOs to implement onboarding fees to increase their HNT emissions. This would require the buildout of additional backend infastructure to be built by Nova or the Helium Foundation, which is estimated to take around 3 months
 
-Adjusting the A Score Calculation Differently: Another option is to explore different adjustments to the A score calculation that might achieve similar goals while addressing the potential drawbacks of this proposal. This could include introducing new parameters to calculate the total amount of HNT burned for onboarding for reach network, vs only using the current fee. However, since the IoT network had such a huge head start, and almost 1 million hotspots onboarded but not active, this metric would heavily favor the IoT network and their HNT emissions. 
+Adjusting the A Score Calculation Differently: Another option is to explore different adjustments to the A score calculation that might achieve similar goals while addressing the potential drawbacks of this proposal. This could include introducing new parameters to calculate the total amount of HNT burned for onboarding for each SubDAO network, vs only using the current fee. However, since the IoT network had a large head start, and almost 1 million hotspots onboarded to the network, this metric would heavily favor the IoT network and disproportionately increase their HNT emissions. 
 
 ## Deployment Impact
-This HIP requests that the Helium Foundation adjust the code for the A Score Calculation of the DAO Utility Score to remove onboarding fees. 
+This HIP requests that the Helium Foundation adjust the code for the A factor Calculation within the DAO Utility Score to remove onboarding fees. 
 
 ## Success Metrics
 The success metric will be the HNT daily emissions being correctly recalculated to exclude onboarding fees from the A Score.
