@@ -100,6 +100,7 @@ If you have questions or feedback, please see the [Discussion](https://github.co
 | 84 | [Service Provider Hex Boosting](0084-service-provider-hex-boosting.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/638)  |
 | 85 | [MOBILE Hex Coverage Limit](0085-mobile-hex-coverage-limit.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/673)  |
 | 86 | [Increase IOT Data Transfer Cost](0086-increase-iot-data-transfer-cost.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/703)  |
+| 87 | [Proportional Service Provider Rewards](0087-proportional-service-provider-rewards.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/704)  |
 
 ## Status Key
 
