@@ -2,8 +2,8 @@
 - Authors: [Gateholder](https://github.com/gateholder) & [Andy Zyvoloski](https://github.com/heatedlime)
 - Start Date: 6/15/2023
 - Category: Technical & Economic
-- Original HIP PR: #
-- Tracking Issue: #
+- Original HIP PR: [#702](https://github.com/helium/HIP/pull/702)
+- Tracking Issue: [#707](https://github.com/helium/HIP/issues/707)
 - Voting Requirements: veHNT
 
 ## Summary
