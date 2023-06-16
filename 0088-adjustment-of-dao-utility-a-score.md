@@ -1,4 +1,4 @@
-# HIP XX: Adjustment of DAO Utility A Score
+# HIP 88: Adjustment of DAO Utility A Score
 - Authors: [Gateholder](https://github.com/gateholder) & [Andy Zyvoloski](https://github.com/heatedlime)
 - Start Date: 6/15/2023
 - Category: Technical & Economic
