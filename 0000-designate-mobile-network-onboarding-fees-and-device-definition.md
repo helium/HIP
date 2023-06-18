@@ -24,7 +24,7 @@ Future MOBILE Hotspot owners - Future MOBILE Hotspot owners may have to pay a hi
 MOBILE Hotspot manufacturers - MOBILE Hotspot manufactures will now be required to pay the onboarding fees for each MOBILE Hotspot, as well as retroactively pay onboarding fees for Hotspots already onboarded.
 
 ## Detailed Explanation
-The current A Score factor within the DAO Utility Score noted in the Motivation section above currently accounts for the active devices on that SubDAO multiplied by the current onboard fee set for each device. Therefore, the passing of this HIP and the establishment of a prescribed $40 MOBILE onboard fee will instantly raise the A Score factor for the MOBILE SubDAO. This will inture increase the daily emssions of HNT into the MOBILE SubDAO treasury. 
+The current A Score factor within the DAO Utility Score noted in the Motivation section above currently accounts for the active devices on that SubDAO multiplied by the current onboard fee set for each device. Therefore, the passing of this HIP and the establishment of a prescribed $40 MOBILE onboard fee will instantly raise the A Score factor for the MOBILE SubDAO. This will instantly increase the daily emssions of HNT into the MOBILE SubDAO treasury. 
 
 To show good faith to other SubDAOs, this HIP also requires that manufactures of MOBILE Hotspots that were previously onboarded to the IoT network are required to retroactively pay a $40 onboard fee to the MOBILE SubDAO.
 
@@ -41,4 +41,7 @@ Another alternative is to change the way the A score is calculated to benefit th
 
 ## Deployment Impact
 
+After the passing of this HIP, the Helium Foundation will need to modify the A Score code withint the DAO utility Score for the MOBILE Network to reflect the new onboard fee. 
+
+## Success Metrics
 The primary success metric will be greater daily HNT emissions to the MOBILE SubDAO treasury. 
