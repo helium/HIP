@@ -1,4 +1,4 @@
-# HIP XX: Designate MOBILE Network Onboarding Fees and Device Definition
+# HIP XX: MOBILE Network Onboarding Fees 
 - Authors: [Andy Zyvoloski](https://github.com/heatedlime), [Keith Rettig](https://github.com/keithrettig)
 - Start Date: 6/14/2023
 - Category: Technical & Economic
@@ -7,58 +7,38 @@
 - Voting Requirements: veMOBILE
 
 ## Summary
-This proposal designates the Onboarding Fees for the onboarding of MOBILE subDAO devices.  It also provides a definition of a Device within the MOBILE subDAO for the purposes of calculating the $A$ factor of the DAO Utility Score.  An Onboarding Fee of $40 will set immediately upon passing and apply to HIP51-inherited Defined Devices; and, then once the necessary coding is complete, an Onboarding Fee of $10 will be set for Indoor Devices and $20 for Outdoor Devices.  Indoor Devices and Outdoor Devices are defined in the detailed explanation section.
+This HIP proposes implementing a $40 onboard fee paid in Data Credits (DC) for each Hotspot onboarded to the Mobile Network.
 
 ## Motivation
-As implemented in HIP51, a DAO Utility Score is used to determine the daily emissions of HNT to each SubDAO treasury. The equation for this calculation is noted below:
+[HIP-51](https://github.com/helium/HIP/blob/main/0051-helium-dao.md#omni-protocol-poc-incentive-model) specifies the DAO Utility Score, which determines the distribution of HNT between all Helium subDAOs. The Hotspots of each subDAO count towards its Utility Score based on the onboarding fee set by that subDAO.
 
-$\text{DAO Utility Score} = V \times D \times A$
-
-Where
-
-$V = \text{max}(1, veHNT_{DNP})$
-
-$D = \text{max}(1, \sqrt{\text{DNP DCs burned in USD}})$
+However, current MOBILE Hotspots, such as Freedomfi and Bobcat 500, contain both an IOT Hotspot and a MOBILE Hotspot. While HIP-53 specifies that MOBILE Hotspots should burn a $40 onboarding fee, just like IOT Hotspots, the existing implementation only onboarded the IoT network component. All active MOBILE Hotspots have been onboarded to the IOT network, but no separate onboarding process for the MOBILE network was ever implemented. As a result, no onboarding fees have yet been burned towards the MOBILE subDAO, which negatively affects the A Score for the MOBILE SubDAO. The current A Score within the DAO Utility Score is as followed:
 
 $A = \text{max}(1, \sqrt[4]{\text{DNP Active Device Count} \times \text{DNP Device Activation Fee}})$
 
-At its current rate, the $A$ score in the equation for MOBILE is $0$ (zero) as, currently, there is not any prescribed onboarding fees for the MOBILE network.  The implementation of this HIP would inscribe onboarding fees for output devices as prescribed by HIP51 which would allow a more appropriate calculation of the DAO Utility Score.
-
-This HIP only applies to Devices onboarded after the passing of this HIP.  Any Device onboarded prior to the passing of this HIP are to be considered already onboarded.
 
 ## Stakeholders
-Stakeholders are all current and future Device deployers within the MOBILE subDAO.  HNT holders will also be impacted from the burning of HNT by each Device paying its Onboarding Fees.
+
+Future MOBILE Hotspot owners - Future MOBILE Hotspot owners may have to pay a higher fee to purchase a MOBILE Hotspot, as manufactures may pass the fee onto the consumer.
+
+MOBILE Hotspot manufacturers - MOBILE Hotspot manufactures will now be required to pay the onboarding fees for each MOBILE Hotspot, as well as retroactively pay onboarding fees for Hotspots already onboarded.
 
 ## Detailed Explanation
-At the passing of this HIP, all Devices onboarded to the MOBILE Network will be required to pay an onboarding fee; which is paid via $USD equivalent in Data Credits (DC). 
+The current A Score factor within the DAO Utility Score noted in the Motivation section above currently accounts for the active devices on that SubDAO multiplied by the current onboard fee set for each device. Therefore, the passing of this HIP and the establishment of a prescribed $40 MOBILE onboard fee will instantly raise the A Score factor for the MOBILE SubDAO. This will inture increase the daily emssions of HNT into the MOBILE SubDAO treasury. 
 
-With this HIP, a way to track, manage, and burn Data Credits used to pay the Onboarding Fees for any newly onboarded Devices will need to be created by the Helium Foundation.  Therefore, any output devices onboarded after the passing of this HIP will be required to pay their onboarding fees no later than October 31st, 2023.  This allows time for the Helium Foundation to create a way to track and manage this process.  If any Device onboarded to the MOBILE Network after the passing of this HIP do not pay their onboarding fees by October 31st, 2023, their output device will become inactive and not earn any Proof-of-Coverage or Data Transfer rewards until the fee is paid in full.  Such Devices will be consider as if not onboarded.
+To show good faith to other SubDAOs, this HIP also requires that manufactures of MOBILE Hotspots that were previously onboarded to the IoT network are required to retroactively pay a $40 onboard fee to the MOBILE SubDAO.
 
-### Definitions
+## Drawbacks
 
-Device - A device includes, but is not limited to, any hotspot/radio/router/modem or other output device that is onboarded to the MOBILE network that is creating a cellular or Wi-Fi Helium 5G signal in which End Users can connect to access the internet. At the writing of this HIP, the two types of devices can include Indoor Devices and Outdoor Devices, which are defined below. 
+This proposal may require Hotspot Manufactures to increase the costs of MOBILE Gateways. 
 
-Active Device - An active device is defined as a device that is creating valid coverage for that epoch.
-
-Indoor Device (AKA indoor radio or wi-Fi unit) - A device that outputs a cellular or wifi signal to which End Users connect that is designed to be installed indoors.  At the time of this HIP's writing, this would include CBRS Radios and carrier-offloading Wifi (coWifi) devices.
-
-Outdoor Device (AKA outdoor radio or wi-Fi unit) - A device that outputs a cellular or wifi signal to which End Users connect that is designed to be installed oudoors.  At the time of this HIP's writing, this would include CBRS Radios and carrier-offloading Wifi (coWifi) devices.
-
-End User - A device that connects to a cellular or wifi signal, such as a cell phone, tablet, laptop, etc.
-
-### Relocation/Reassertion Fees
-Relocation and or re-asserting a device location shall not occur any fee. 
+An additional drawback is that this HIP does not include the number of active radios, which may be a better metric of active devices. However, under guidance of the Helium Foundation, using Hotspots as the active device is easier to implement. 
 
 ## Alternatives
-One alternative is to do nothing and keep onboarding fees as zero (0). However, this would impede the daily HNT emissions to the MOBILE SubDAO treasury since the A score would remain zero (0). 
+One alternative is to do nothing, and keep onboarding fees as zero (0). However, this would hinder the daily HNT emissions to the MOBILE SubDAO treasury since the A score would remain zero (0). 
 
-## Unresolved Questions
-Confirmation that the Helium Foundation can certainly complete the needed work by the stated deadline of October 31, 2023.  Impromptu conversations have been had with various members of the Foundation and it is believed that approximately 90 days would be needed to complete the work.
+Another alternative is to change the way the A score is calculated to benefit the HNT emissions of the MOBILE Network; however, this would require a vote with veHNT instead of veMOBILE. 
 
 ## Deployment Impact
-Operators of Devices will now need to pay Onboarding Fees for any newly onboarded output devices after the implementation of this HIP.
 
-The Helium Foundation will need to create a way to track and manage output device onboards and ensure fees paid for output devices prior to the October 31, 2023 deadline. Further, the foundation will need to ensure that after the passing of this HIP that the $A$ score of the DAO Utility Score for the MOBILE SubDAO is correctly updated to reflect the total amount of indoor and outdoor output devices, as well as their associated fees for the MOBILE SubDAO.
-
-## Success Metrics
-The success metric will be the implementation of Onboarding Fees for all new Devices, which will lead to higher daily HNT emissions to the MOBILE SubDAO treasury.
+The primary success metric will be greater daily HNT emissions to the MOBILE SubDAO treasury. 
