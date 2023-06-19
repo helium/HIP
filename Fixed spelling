@@ -139,7 +139,7 @@ An appeal removal submission has already had one team member review by a human o
 - The date that the hotspot was added to the denylist shall be adjusted to the current date so that the var_submission_expiration_time day timer has reset and the owner may place another appeal removal submission. 
 
 ## Drawbacks:
-This could be seen as too harsh?  I jest.  The gamers on Helium Network should have a short life. we want gamers removed from out network, removed from our community, gone from our message boards.  The owner who wants to correct his past transgressions should be offered the opportunity, but only through the strictest of gauntlets.   
+This could be seen as too harsh?  I jest.  The gamers on Helium Network should have a short life. We want gamers removed from our network, removed from our community, gone from our message boards.  The owner who wants to correct his past transgressions should be offered the opportunity, but only through the strictest of gauntlets.   
 
 ## Rationale and Alternatives:
 
@@ -195,9 +195,9 @@ What about using HNT forfeited from gamers to reward false positive hotspots for
 
 The impact of this HIP will relieve a contentious point of mistrust within the community.  There are hundreds of hotspot owners that feel forgotten by Helium.  They were put on the denylist by a 90% accurate method then told how to appeal, however no further communication has come down.  This has brooded mistrust, conspiracy theories, frustration, sarcasm and doubt of Helium in regards to how the denylist and Crowdspot are handled. 
 
-There are potentially thousands of falsely accused hotspots thatcher sitting on the sidelines of POC activity at the current time.  There are potentially thousands more that need to be on the denylist.  However the current state of Crowdspot serves neither.
+There are potentially thousands of falsely accused hotspots that are sitting on the sidelines of POC activity at the current time.  There are potentially thousands more that need to be on the denylist.  However the current state of Crowdspot serves neither.
 
 ## Success Metrics
 
 The success metric will be the wait time for conducting a human review after placing a submission. 
-Like pointed out in the Motivation, the threshold for review should be less than 155 days, maybe even 30 or 60 days. The expected "customer service experience" should dictate that 5 months wait is simply unreasonable.  
+Like pointed out in the Motivation, the threshold for review should be less than 155 days, maybe even 30 or 60 days. The expected "customer service experience" should dictate that 5 months or 24 months wait is simply unreasonable.  
