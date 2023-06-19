@@ -1,4 +1,4 @@
-# HIP XX: Ability for each subDAO to govern payment methods used for Fees
+# HIP XX: Ability to Govern SubDAO Fees
 - Authors: [Andy Zyvoloski](https://github.com/heatedlime)
 - Start Date: 6/19/2023
 - Category: Technical & Economic
