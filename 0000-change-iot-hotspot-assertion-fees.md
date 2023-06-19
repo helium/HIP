@@ -7,7 +7,7 @@
 - Voting Requirements: veIoT
 
 ## Summary: 
-This HIP suggests changing the IoT location assertion fee from $10 in Data Creditis (DC) to $5 in IoT. 
+This HIP suggests changing the IoT location assertion fee from $10 in Data Credits (DC) to $5 in IoT. 
 
 ## Motivation:
 Currently, any IoT hotspot location re-assertion fees are paid in DC, by burning Helium (HNT). Since hotspot location re-assertion fees do not represent any variables within the DAO Utility Score which determines the daily HNT emissions to that SubDAO, the burning of HNT to pay hotspot location re-assertion fees currently does not benefit the IoT subDAO or IoT token holders. 
