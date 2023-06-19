@@ -12,7 +12,7 @@ This HIP proposes implementing a $40 onboard fee paid in Data Credits (DC) for e
 ## Motivation
 [HIP-51](https://github.com/helium/HIP/blob/main/0051-helium-dao.md#omni-protocol-poc-incentive-model) specifies the DAO Utility Score, which determines the distribution of HNT between all Helium subDAOs. The Hotspots of each subDAO count towards its Utility Score based on the Onboarding Fee set by that subDAO.
 
-Current MOBILE Hotspots, such as FreedomFi and Bobcat 500, contain both an IOT Hotspot and a MOBILE Hotspot. As such, HIP-53 specifies that MOBILE Hotspots should burn a \$40$ USD Onboarding Fee to be onboarded to the network. All onboarded MOBILE Hotspots were onboarded to the IOT network with the correct Onboarding Fee of \$40$ USD, but were onboarded to the MOBILE network with an Onboarding Fee of $\0$ USD. As a result, $\$0 USD in Onboarding Fees have been burned towards the MOBILE subDAO's $A$ Factor, which negatively affects the $A$ Score for the MOBILE subDAO. The current $A$ Score within the DAO Utility Score is as followed:
+Current MOBILE Hotspots, such as FreedomFi and Bobcat 500, contain both an IOT Hotspot and a MOBILE Hotspot. As such, HIP-53 specifies that MOBILE Hotspots should burn a 40 USD Onboarding Fee to be onboarded to the network. All onboarded MOBILE Hotspots were onboarded to the IOT network with the correct Onboarding Fee of 40 USD, but were onboarded to the MOBILE network with an Onboarding Fee of 0 USD. As a result, 0 USD in Onboarding Fees have been burned towards the MOBILE subDAO's $A$ Factor, which negatively affects the $A$ Score for the MOBILE subDAO. The current $A$ Score within the DAO Utility Score is as followed:
 
 $A = \text{max}(1, \sqrt[4]{\text{DNP Active Device Count} \times \text{DNP Device Activation Fee}})$
 
@@ -24,7 +24,7 @@ MOBILE Hotspot manufacturers - MOBILE Hotspot manufacturers will now be required
 ## Detailed Explanation
 The current $A$ Score factor within the DAO Utility Score noted in the Motivation section above currently accounts for the active devices on that subDAO multiplied by the current onboard fee set for each device. Therefore, the passing of this HIP and the establishment of a prescribed $40 MOBILE Onboarding Fee will raise the $A$ Score factor for the MOBILE subDAO. This will increase the daily emissions of HNT into the MOBILE subDAO treasury. 
 
-This HIP also requires that for MOBILE Hotspots that were previously onboarded at $0 USD, there is to be $40 USD worth of DCs burned to the MOBILE subDAO.  This HIP does not require any specific payer for the DCs; it is the responsibility of the MOBILE subDAO to find the payer(s) and to ensure the payment is settled.
+This HIP also requires that for MOBILE Hotspots that were previously onboarded at 0 USD, there is to be 40 USD worth of DCs burned to the MOBILE subDAO.  This HIP does not require any specific payer for the DCs; it is the responsibility of the MOBILE subDAO to find the payer(s) and to ensure the payment is settled.
 
 ## Drawbacks
 This proposal may cause Hotspot Manufacturers to increase the costs of MOBILE Network Gateways.  This is not expected to be the case.
