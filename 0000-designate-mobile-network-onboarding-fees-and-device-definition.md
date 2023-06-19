@@ -27,7 +27,7 @@ The current A Score factor within the DAO Utility Score noted in the Motivation 
 To show good faith to other subDAOs, this HIP also requires that manufacturers of MOBILE Hotspots that were previously onboarded to the IOT network are required to retroactively pay a $40 onboard fee to the MOBILE subDAO.
 
 ## Drawbacks
-This proposal may require Hotspot Manufactures to increase the costs of MOBILE Network Gateways. 
+This proposal may require Hotspot Manufacturers to increase the costs of MOBILE Network Gateways. 
 
 An additional drawback is that this HIP does not include the number of active radios, which may be a better metric of active devices. However, under guidance of the Helium Foundation, using Hotspots as the active device is easier to implement. 
 
