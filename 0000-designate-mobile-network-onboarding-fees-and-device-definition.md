@@ -10,7 +10,7 @@
 This HIP proposes implementing a $40 onboard fee paid in Data Credits (DC) for each Hotspot onboarded to the MOBILE Network.
 
 ## Motivation
-Current MOBILE Hotspots, such as FreedomFi and Bobcat 500, contain both an IOT Hotspot and a MOBILE Hotspot. As such, HIP-53 specifies that MOBILE Hotspots should burn a 40 USD Onboarding Fee to be onboarded to the network. All onboarded MOBILE Hotspots were onboarded to the IOT network with the correct Onboarding Fee of 40 USD, but were onboarded to the MOBILE network with an Onboarding Fee of 0 USD. As a result, 0 USD in Onboarding Fees have been burned towards the MOBILE subDAO's $A$ Factor, which negatively affects the $A$ Score established in HIP 51 for the MOBILE subDAO. The current $A$ Score within the DAO Utility Score is as follows:
+Current MOBILE Hotspots, such as FreedomFi and Bobcat 500, contain both IOT and a MOBILE network capabilities. As such, HIP-53 specifies that MOBILE Hotspots should burn a 40 USD Onboarding Fee to be onboarded to the network. All onboarded MOBILE Hotspots were onboarded to the IOT network with the correct Onboarding Fee of 40 USD, but were onboarded to the MOBILE network with an Onboarding Fee of 0 USD. As a result, 0 USD in Onboarding Fees have been burned towards the MOBILE subDAO's $A$ Factor, which negatively affects the $A$ Score established in HIP 51 for the MOBILE subDAO. The current $A$ Score within the DAO Utility Score is as follows:
 
 $A = \text{max}(1, \sqrt[4]{\text{DNP Active Device Count} \times \text{DNP Device Activation Fee}})$
 
