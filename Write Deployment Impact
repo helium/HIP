@@ -4,7 +4,7 @@
 @screwtape7  screwtape7#1969
 - Start date: 2023-05-17
 - Category: Meta
-- Original HIP PR:
+- Original HIP PR: 662
 - Tracking Issue
 - Voting Requirements: veIOT
 
@@ -14,21 +14,29 @@ There will always be gamers, therefore there will always be a need for policing 
 
 Incidentally, there will occasionally be falsely accused hotspots.  This HIP seeks to identify and clear those falsely accused in a timely manner.
 
-The two main goals are reducing bad actors on the network and returning false positive cases to active status in a timely manner. These goals will be accomplished by two innovative steps.  
+The two main goals are reducing bad actors from our community and returning false positive cases to active status in a timely manner. These goals will be accomplished by two innovative steps.  
 
 - A **Staking Bond** will be required to request any removal submission on Crowdspot.  
 - A **Two & Banned Policy** is established to end the revolving door of appeals on Crowdspot.  
 
 ## Motivation:
 
-The current process and flow of the Crowdspot submissions is 4 months backlogged and in desperate need of attention.  There are over 4100 requests pending on Crowdspot, this number has only grown week after week for the past 4 months.  The number of requests on Crowdspot will continue to grow if the process isn't improved. This has resulted in hundreds of requests from the community to add gaming hotspots to the denylist that are not seen by the review team for months at a time. 
-As of this week, there are 4120 requests still pending on Crowdspot.  Amongst them are 2346 removal requests that have gone unanswered for more than 4 months. Next month, that number will increase to 3200 submissions over 4 months old.  On June 18th, there are now 363 requests that are over  5 months old.  (These statistics are sourced from @crey and @rokoshewsky on 18/06/23)
+The current process and flow of the Crowdspot submissions is more than 5 months backlogged and in desperate need of attention.  There are over 4100 requests pending on Crowdspot that could be waiting up to 2 years for review.  This number has only grown week after week for the past 5 months.  The number of requests on Crowdspot will continue to grow each time the algorithmic detection is ran if the process isn't improved. This has resulted in hundreds of requests from the community to add gaming hotspots to the denylist that are not seen by the review team for months at a time.
+The oldest requests are 5 months old, however the newest requests may not be processed for years.  The average pace for reviews between June 1st and June 19th 2023 is 5.6 per day.  This means that submissions placed this week will have to wait about 24 months. 4100 ÷ 5.6 ÷ 30 = 24.  
+As of this week, there are 4120 requests pending on Crowdspot.  Among them are 2346 removal requests that have gone unanswered for more than 4 months. Next month, that number will increase to 3200 submissions over 4 months old.  As of June 18th, there are now 363 requests that are over 5 months old.  (These statistics are sourced from @crey and @rokoshewsky on 18/06/23)
 
 ## Stakeholders:
 
 - All Hotspot owners will be positively affected by this proposal, due to the processing of false positive cases in a timely manner, and returning legit hotspots back to POC active on the network. 
 - Any community member that manually detects a spoofed hotspot or farm on the network has little to gain by reporting an addition request to Crowdspot if the request isn't reviewed for months.
 - Any hotspot owners that were inaccurately put on the denylist in January 2023 are negatively affected by the current state of Crowdspot processing review requests.
+
+## Limitations and Scope
+I have intentionally limited the following scopes in this HIP
+- Does not seek to change the management of the denylist by Nova.  This is not a rewrite or replacement of HIP 40.
+- Does not seek to fund the review team. Does not try to make them a paid job at Nova.
+- Does not seek to let gamers off of the denylist, except through one narrow condition. 
+- Does not seek to change the algorithmic detection methods used to manage the denylist.
 
 ## Detailed Explanation: 
 
@@ -46,13 +54,15 @@ As of this week, there are 4120 requests still pending on Crowdspot.  Amongst th
 
 **Owner Cancellation** The canceling of a removal submission at the owners' discretion in order to edit a submission, add evidence, add hotspots, or return the staked bond.  At the current time, submissions can only be canceled by moderators or admin.  
 
-It is expected in the discussion process to determine exact values for two variables used throughout this proposal.  The current values are only for discussion.
-**var_submission_expiration_time** = 145 days
-**var_staked_bond_amount** = 25 HNT
+**var_submission_expiration_time** = 60 days
+
+**var_staked_bond_amount** = 5 HNT
+
+It is expected in the discussion process to determine exact values for two variables used throughout this proposal.  There is further discussion of the variables under section **Unanswered Questions**
 
 ### Changes to the Crowdspot UI or front-end
 
-When creating any removal submission a section for Staked Bond will be presented.  An "i" informational box will be present within this section with the definition from this HIP for Staked Bond.   The user will have a check box present to indicate (insert legal disclaimer here)  "I understand that the HNT staked for the purpose of this submission may be forfeited if it is determined by the review team that I have represented my hotspot falsely to the network. I understand my responsibilities and deadlines as provided in HIP XX."
+When creating any removal submission a section for Staked Bond will be presented.  An "i" informational box will be present within this section with the definition from this HIP for Staked Bond.   The user will have a check box present to indicate, "I understand that the HNT staked for the purpose of this submission may be forfeited if it is determined by the review team that I have represented my hotspot falsely to the network. I understand my responsibilities and deadlines as provided in HIP XX."
 
 For any pending submission, the Owner's shall be given access to cancel their own submissions prior to a determination by the review team.  Some owner cancelations come with penalties as discussed under **Owner Deadlines**.
 
@@ -65,7 +75,7 @@ Two & Banned Policy - Only one initial removal submission and one appeal removal
 The total Staked Bond will be a product of the number hotspots included on the submission multiplied by var_staked_bond_amount HNT. 
 A mechanism shall be put in place to route any appeal removal submission to a different member of the review team than reviewed it's initial removal submission. 
 Due Notice of Change shall be sent to the hotspot owner via Helium Wallet regarding changes to their denylist status and changes to their submission status.
-When creating any removal submission the types "Initial" or "Appeal" will be selected by the form based on prior submissions and based on how the hotspot(s) came to be placed on the denylist.  An "i" information box will be present next to this selection with the definition from this HIP of both types of removal submissions.   
+When creating any removal submission, the types "Initial" or "Appeal" will be selected by the form based on prior submissions and based on how the hotspot(s) came to be placed on the denylist.  An "i" information box will be present next to this selection with the definition from this HIP of both types of removal submissions.   
 - Initial removal submissions are permitted for hotspots that were denied via algorithmic detection and have not had a prior addition submission "accepted" by the review team.  
 - Appeal removal submissions are permitted for hotspots that have a prior addition submission "accepted" by the review team  or have one prior initial removal submission as "declined" by the review team.
 
@@ -96,7 +106,7 @@ The Owner of the hotspot is responsible for the following **prior** to creating 
 - Be sure that you are asserting the correct height and gain of the antenna you are using. 
 - Be sure that you have proper coax and connections. No attenuators, amplifiers, and no use of shared or multiple antennas.
 - Be sure there are no gaming devices, cluster packet fowarders, data credit farming or other unauthorized methods used to gain an unfair advantage to POC activity.
-- Be sure that you are giving all the true and factual information, photographic evidence and attaching videos of your setup to the submission.  It is highly recommended that a file share site is used for all evidence so that addition evidence can be added without having to cancel and re-submit on Crowdspot.  Canceling and re-submiting can also cause you to miss a deadline and forfeit the staked bond.   
+- Be sure that you are giving all the true and factual information, photographic evidence and attaching videos of your setup to the submission.  It is highly recommended that a file share site is used for all evidence so that additional evidence can be added without having to cancel and re-submit on Crowdspot.  Canceling and re-submiting can also cause you to miss a deadline and forfeit the staked bond.   
 
 #### Deadline for Initial Removal Submission
 Removal submissions must be placed by the owner within var_submission_expiration_time days of a hotspot initially being placed on the denylist.  This is intended to increase the punishment for gamers by shutting the door on late submissions.  This is also intended to aid the workload management after a large ingestion of hotspots to the denylist and reduce overall workload for the volunteer members of the review team.  
@@ -125,13 +135,13 @@ An appeal removal submission has already had one team member review by a human o
 
 - The hotspot shall remain on the denylist
 - The stake bond shall be returned to the owner
--The submission shall be closed with the status of "Expired".
+- The submission shall be closed with the status of "Expired".
 - The date that the hotspot was added to the denylist shall be adjusted to the current date so that the var_submission_expiration_time day timer has reset and the owner may place another appeal removal submission. 
 
-## Drawbacks
-This could be seen as too harsh?  I jest.  The gamers on Helium Network should have a short life.  The owner who wants to correct his past transgressions should be offered the opportunity, but only through the strictest of gauntlets.   
+## Drawbacks:
+This could be seen as too harsh?  I jest.  The gamers on Helium Network should have a short life. we want gamers removed from out network, removed from our community, gone from our message boards.  The owner who wants to correct his past transgressions should be offered the opportunity, but only through the strictest of gauntlets.   
 
-## Rationale and Alternatives
+## Rationale and Alternatives:
 
 I'm a big proponent of the "innocent until proven guilty" ethos. Right alongside this goes "the right to a fair and speedy trial."  The current state of Crowdspot serves neither. 
 
@@ -143,11 +153,11 @@ What is the impact of not doing this?
 - The wait time grows longer.
 - The revolving door of submissions stays open.
 
-Each week more submissions are added to Crowdspot than are being removed.  The time for an addition review is already at 1-2 years. The time for a removal review will grow so long that owners of legitimate hotspots that get falsely accused will have virtually no recourse.  Being put on the denylist falsely by an algorithm with a 90% accuracy will be equivalent to a perma-ban. 
+Each week more submissions are added to Crowdspot than are being removed.  The time for an addition review is already at 1-2 years. The time for a removal review will grow so long that owners of legitimate hotspots that get falsely accused will have virtually no recourse.  Being put on the denylist falsely by an algorithm with 90% accuracy will be equivalent to a perma-ban. 
 
 Each day submissions are added to Crowdspot by already identified gamers asking for another review of the previous review of a farm that was denied 12 months ago, and further bogging down the system.  This revolving door must be stopped and penalties should be enacted for simply bogging down the system.  
 
-## Unresolved Questions
+## Unresolved Questions:
 
 - How long is unreasonable to wait for a review? 
 - How much HNT to stake to hold your place on the list?
@@ -165,27 +175,29 @@ For example
 2.5 HNT for 30 days
 5 HNT for 60 days
 
-What about the 4100 submissions (4600 hotspots) that are currently backlogged on Crowdspot?   
-Keep in mind that the current Crowdspot data from the Jan 12th sweep to date has shown about 1800 false positive hotspots were put on the deny list, 900 were determined to be gaming after human review, and 3600 are still pending reviews.  Then another approximately 800 hotspots are pending review that were not in the Jan 12 sweep.  
+What about the 4100 submissions (4600 hotspots) that are currently backlogged on Crowdspot?     
 
 I have a couple of scenarios to clear out the log jam,  but I haven't worked out exactly what to do.  I'm really looking to the community (and perhaps members of the current review team) for the best answer.  
 
-Scenario 1  Delete the entire crowdspot backlog and make everyone re-file under the new rules.  Give the the owner of any hotspot currently pending on crowdspot due notice that upon the successful voting and implementation of this HIP, everyone has to re-file under the new stiffer penalties of this HIP. 
+- Scenario 1  Delete the entire crowdspot backlog and make everyone re-file under the new rules.  Give the the owner of any hotspot currently pending on crowdspot due notice that upon the successful voting and implementation of this HIP, everyone has to re-file under the new stiffer penalties of this HIP. 
 
-Scenario 2.0  Delete the 4100 backlogged submissions and remove them from the denylist.  This would be the worst case scenario IMHO.  We release all the hotspots currently on removal requests back into the POC pool for 10 days, then let the algorithmic detection do its job with a new sweep.  When the new wave of submissions come in to Crowdspot, the new rules apply.  Perhaps a percentage of these hotpots have given up on Helium and unplugged and will never be heard from again anyway.  Perhaps the algorithmic detection has been tweaked enough since the January sweep to be more accurate and less heavy handed.  Perhaps we will just encourage cheaters to keep cheating.  
+- Scenario 2.0  Delete the 4100 backlogged submissions and remove them from the denylist.  This would be the worst case scenario IMHO.  We release all the hotspots currently on removal requests back into the POC pool for 10 days, then let the algorithmic detection do its job with a new sweep.  When the new wave of submissions come in to Crowdspot, the new rules apply.  Perhaps a percentage of these hotpots have given up on Helium and unplugged and will never be heard from again anyway.  Perhaps the algorithmic detection has been tweaked enough since the January sweep to be more accurate and less heavy handed.  Perhaps we will just encourage cheaters to keep cheating.  
 
-Scenario 2.1  We control release some of the submissions in scenario 2.  Only release 500 hotspots at a time and allow them to start POC activity again. Also, only release hotspots that were algorithmic detected on Jan 12th, definitely not hotspots that were manually determined.  Allow algorithmic detection to sweep them with a focus on those 500 hotspots, as they were previously suspected/detected of gaming.  This will slowly ease the backlog on crowdspot. All new removal requests that filter into Crowdspot are subject to the new rules of this HIP.  
+- Scenario 2.1  We control release some of the submissions in scenario 2.  Only release 500 hotspots at a time and allow them to start POC activity again. Also, only release hotspots that were algorithmic detected on Jan 12th, definitely not hotspots that were manually determined.  Allow algorithmic detection to sweep them with a focus on those 500 hotspots, as they were previously suspected/detected of gaming.  This will slowly ease the backlog on crowdspot. All new removal requests that filter into Crowdspot are subject to the new rules of this HIP.  
 
-Scenario 3 Keep the backlog of 4100 submissions pending in crowdspot and start making any new submissions subject to the new rules.  I think that legit false positive owners will abandon the 4 month old submission and gladly "put their money where their mouth is".  
+- Scenario 3 Keep the backlog of 4100 submissions pending in crowdspot and start making any new submissions subject to the new rules.  I think that legit false positive owners will abandon the 5 month old submission under the old rules and gladly "put their money where their mouth is" under the new rules.  
 
-What about forfeited HNT?   I used the term "forfeit" earlier in this document, but where does it go? Can it be burned?  can it be sent to the needy and poor?  Could it be used somehow for R&D?  One solution  to this was proposed in PR 551.  Under PR 551, false positive hotspots were back paid rewards for the time spent falsely on the denylist.  One fault with PR 551 is where do those funds come from.  PR 551 was facing an issue of needing to carve out funds from epoch emissions, to redirect them toward false gamers.  We know that would be a dead argument and had stalled PR 551.
+What about forfeited HNT?   I used the term "forfeit" earlier in this document, but where does it go? Can it be burned?  Can it be sent to the needy and poor?  Could it be used somehow for R&D?  Could it be used to compensate owners for time they spent falsely accused and on the denylist?   
+One solution to this was proposed in PR 551.  Under PR 551, false positive hotspots are back-paid rewards for the time spent falsely on the denylist.  One fault with PR 551 is where do those funds come from?  PR 551 was facing an issue of needing to carve out funds from epoch emissions, to redirect them toward false gamers.  We know that would be a dead argument and had stalled PR 551.
 What about using HNT forfeited from gamers to reward false positive hotspots for their downtime?  I have an idea submitted by a community member that was added in the comments. It required a few extra steps, but involved paying back false accused hotspots through a staking bonus, much like landrush.  The details are in the comments.
 
 ## Deployment Impact
 
-This portion is reserved for future use. 
+The impact of this HIP will relieve a contentious point of mistrust within the community.  There are hundreds of hotspot owners that feel forgotten by Helium.  They were put on the denylist by a 90% accurate method then told how to appeal, however no further communication has come down.  This has brooded mistrust, conspiracy theories, frustration, sarcasm and doubt of Helium in regards to how the denylist and Crowdspot are handled. 
+
+There are potentially thousands of falsely accused hotspots thatcher sitting on the sidelines of POC activity at the current time.  There are potentially thousands more that need to be on the denylist.  However the current state of Crowdspot serves neither.
 
 ## Success Metrics
 
-The success metric will be the wait time for getting a human review after placing a submission.   
-Like pointed out in the Summary, the threshold for review should be less than 145 days, maybe even 30 or 60 days. The expected "customer service experience" should dictate that 5 months wait is simply unreasonable.  
+The success metric will be the wait time for conducting a human review after placing a submission. 
+Like pointed out in the Motivation, the threshold for review should be less than 155 days, maybe even 30 or 60 days. The expected "customer service experience" should dictate that 5 months wait is simply unreasonable.  
