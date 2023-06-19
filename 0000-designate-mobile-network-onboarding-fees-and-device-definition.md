@@ -37,7 +37,7 @@ Another alternative is to change the way the $A$ score is calculated to benefit 
 A complementary HIP is to require that for each MOBILE Hotspot that was previously onboarded at 0 USD, there is to be 40 USD worth of DCs burned to the MOBILE subDAO.  Such a HIP should not require any specific payer for the DCs; it would be the responsibility of the MOBILE subDAO to find the payer(s) and to ensure the payment is settled.  Given there is no mechanism currently for this be done, such a feature can not be included in this HIP.
 
 ## Deployment Impact
-After the passing of this HIP, the Helium Foundation will need to modify the chain variable that defines the onboarding fee for the MOBILE subDAO.
+After the passing of this HIP, the Helium multisig will need to modify the variable that defines the onboarding fee for the MOBILE subDAO.
 
 ## Success Metrics
 The success metric will be that any MOBILE Hotspot that is added to the MOBILE network will have paid its Onboarding Fee.
