@@ -22,9 +22,9 @@ Future MOBILE Hotspot owners - Future MOBILE Hotspot owners may have to pay a hi
 MOBILE Hotspot manufacturers - MOBILE Hotspot manufacturers will now be required to pay the onboarding fees for each MOBILE Hotspot, as well as retroactively pay onboarding fees for Hotspots already onboarded.
 
 ## Detailed Explanation
-The current $A$ Score factor within the DAO Utility Score noted in the Motivation section above currently accounts for the active devices on that subDAO multiplied by the current onboard fee set for each device. Therefore, the passing of this HIP and the establishment of a prescribed 40 USD MOBILE Onboarding Fee will raise the $A$ Score factor for the MOBILE subDAO. This will increase the daily emissions of HNT into the MOBILE subDAO treasury. 
+The current $A$ Score factor within the DAO Utility Score noted in the Motivation section above currently accounts for the active devices on that subDAO multiplied by the current onboard fee set for each device. Therefore, the passing of this HIP and the establishment of a prescribed <span>$<\span>40 USD MOBILE Onboarding Fee will raise the $A$ Score factor for the MOBILE subDAO. This will increase the daily emissions of HNT into the MOBILE subDAO treasury. 
 
-This HIP also requires that for each MOBILE Hotspot that was previously onboarded at 0 USD, there is to be 40 USD worth of DCs burned to the MOBILE subDAO.  This HIP does not require any specific payer for the DCs; it is the responsibility of the MOBILE subDAO to find the payer(s) and to ensure the payment is settled.
+This HIP also requires that for each MOBILE Hotspot that was previously onboarded at <span>$<\span>0 USD, there is to be <span>$<\span>40 USD worth of DCs burned to the MOBILE subDAO.  This HIP does not require any specific payer for the DCs; it is the responsibility of the MOBILE subDAO to find the payer(s) and to ensure the payment is settled.
 
 ## Drawbacks
 This proposal may cause Hotspot Manufacturers to increase the costs of MOBILE Network Gateways.  This is not expected to be the case.
