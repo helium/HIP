@@ -22,11 +22,11 @@ Future MOBILE Hotspot owners - Future MOBILE Hotspot owners may have to pay a hi
 MOBILE Hotspot manufacturers - MOBILE Hotspot manufacturers will now be required to pay the onboarding fees for each MOBILE Hotspot, as well as retroactively pay onboarding fees for Hotspots already onboarded.
 
 ## Detailed Explanation
-The current $A$ Score factor within the DAO Utility Score noted in the Motivation section above currently accounts for the active devices on that subDAO multiplied by the current onboard fee set for each device. Therefore, the passing of this HIP and the establishment of a prescribed 40 USD MOBILE Onboarding Fee will raise the $A$ Score factor for the MOBILE subDAO. This will increase the daily emissions of HNT into the MOBILE subDAO treasury. 
-
-This HIP also requires that for each MOBILE Hotspot that was previously onboarded at 0 USD, there is to be 40 USD worth of DCs burned to the MOBILE subDAO.  This HIP does not require any specific payer for the DCs; it is the responsibility of the MOBILE subDAO to find the payer(s) and to ensure the payment is settled.
+HIP-53 specified an Onboarding Fee and MOBILE Hotspots would like to pay the Onboarding Fee.  The Onboarding Fee for MOBILE Hotspots is currently set to 0 USD.  It is the purview of subDAOs to set the fees that apply to their network.  The MOBILE subDAO, via this HIP, is setting the Onboarding Fee to 40 USD.  While we are leaving the coding of this work to the Foundation, it is understood to be a rather simple task (estimated at less than an hour of work).  The chain variable is to be changed from 0 USD to 40 USD.
 
 ## Drawbacks
+The current $A$ Score factor within the DAO Utility Score currently accounts for the active devices on that subDAO multiplied by the current onboard fee set for each device. Therefore, the passing of this HIP and the establishment of a prescribed 40 USD MOBILE Onboarding Fee will raise the $A$ Score factor for the MOBILE subDAO. This will increase the daily emissions of HNT into the MOBILE subDAO treasury until the current limitation of the implementation is corrected. 
+
 This proposal may cause Hotspot Manufacturers to increase the costs of MOBILE Network Gateways.  This is not expected to be the case.
 
 An additional drawback is that the Onboarding Fees are not based the number of active radios, which may be a better metric of active devices. However, under guidance of the Helium Foundation, using Hotspots as the active device is easier to implement. 
@@ -36,8 +36,17 @@ One alternative is to do nothing, and keep Onboarding Fees as $0$ (zero). Howeve
 
 Another alternative is to change the way the $A$ score is calculated to benefit the HNT emissions of the MOBILE Network; however, this would require a vote with veHNT instead of veMOBILE. 
 
+A complementary HIP to require that for each MOBILE Hotspot that was previously onboarded at 0 USD, there is to be 40 USD worth of DCs burned to the MOBILE subDAO.  SUch a HIP should not require any specific payer for the DCs; it would be the responsibility of the MOBILE subDAO to find the payer(s) and to ensure the payment is settled.  Given there is no mechanism currently for this be done, such a feature can not be included in this HIP.
+
 ## Deployment Impact
 After the passing of this HIP, the Helium Foundation will need to modify the chain variable that defines the onboarding fee for the MOBILE subDAO.
 
 ## Success Metrics
-The primary success metric will be greater daily HNT emissions to the MOBILE subDAO treasury.
+The success metric will be that any MOBILE Hotspot that is added to the MOBILE network will have paid its Onboarding Fee.
+
+
+was:
+
+## Detailed Explanation
+The current $A$ Score factor within the DAO Utility Score noted in the Motivation section above currently accounts for the active devices on that subDAO multiplied by the current onboard fee set for each device. Therefore, the passing of this HIP and the establishment of a prescribed 40 USD MOBILE Onboarding Fee will raise the $A$ Score factor for the MOBILE subDAO. This will increase the daily emissions of HNT into the MOBILE subDAO treasury. 
+
