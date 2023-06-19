@@ -36,7 +36,7 @@ One alternative is to do nothing, and keep Onboarding Fees as $0$ (zero). Howeve
 
 Another alternative is to change the way the $A$ score is calculated to benefit the HNT emissions of the MOBILE Network; however, this would require a vote with veHNT instead of veMOBILE. 
 
-A complementary HIP to require that for each MOBILE Hotspot that was previously onboarded at 0 USD, there is to be 40 USD worth of DCs burned to the MOBILE subDAO.  SUch a HIP should not require any specific payer for the DCs; it would be the responsibility of the MOBILE subDAO to find the payer(s) and to ensure the payment is settled.  Given there is no mechanism currently for this be done, such a feature can not be included in this HIP.
+A complementary HIP to require that for each MOBILE Hotspot that was previously onboarded at 0 USD, there is to be 40 USD worth of DCs burned to the MOBILE subDAO.  Such a HIP should not require any specific payer for the DCs; it would be the responsibility of the MOBILE subDAO to find the payer(s) and to ensure the payment is settled.  Given there is no mechanism currently for this be done, such a feature can not be included in this HIP.
 
 ## Deployment Impact
 After the passing of this HIP, the Helium Foundation will need to modify the chain variable that defines the onboarding fee for the MOBILE subDAO.
