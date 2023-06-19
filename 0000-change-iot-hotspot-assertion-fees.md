@@ -24,10 +24,15 @@ IoT Token Holders - This HIP will benefit IoT token holders as it will decrease 
 As implemented in HIP 51, a DAO Utility Score is used to determine the daily emissions of HNT to each SubDAO treasury. The equation for this calculation is noted below:
 
 $\text{DAO Utility Score} = V \times D \times A$
+
 Where
+
 $V = \text{max}(1, veHNT_{DNP})$
+
 $D = \text{max}(1, \sqrt{\text{DNP DCs burned in USD}})$
+
 $A = \text{max}(1, \sqrt[4]{\text{DNP Active Device Count} \times \text{DNP Device Activation Fee}})$
+
 
 This current calculation does not take into effect any fees that are paid by the subDAO for re-asserting a hotspot's location. Thus, the IoT subDAO does not directly benefit from paying this fee in HNT/DC. This HIP proposes changing the current method of paying for hotspot relocation fees to be paid in IoT, and lower the fee to $5, from $10.
 
@@ -45,5 +50,5 @@ Currently, the treasury swap function within the Helium wallet only allows the s
 ## Deployment Impact:
 This HIP requires the Helium Foundation or Nova Labs to create a way that would allow the burning of IoT to pay hotspot location reassertion fees. 
 
-##Success Metrics:
+## Success Metrics:
 The primary success metric will be all hotspot reassertion fees being paid in IoT, which will lower the overall supply of IoT as each reassertion occurs. 
