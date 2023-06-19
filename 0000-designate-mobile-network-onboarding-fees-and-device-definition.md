@@ -16,7 +16,6 @@ However, current MOBILE Hotspots, such as Freedomfi and Bobcat 500, contain both
 
 $A = \text{max}(1, \sqrt[4]{\text{DNP Active Device Count} \times \text{DNP Device Activation Fee}})$
 
-
 ## Stakeholders
 Future MOBILE Hotspot owners - Future MOBILE Hotspot owners may have to pay a higher fee to purchase a MOBILE Hotspot, as manufactures may pass the fee onto the consumer.
 
@@ -33,12 +32,12 @@ This proposal may require Hotspot Manufactures to increase the costs of MOBILE G
 An additional drawback is that this HIP does not include the number of active radios, which may be a better metric of active devices. However, under guidance of the Helium Foundation, using Hotspots as the active device is easier to implement. 
 
 ## Alternatives
-One alternative is to do nothing, and keep Onboarding Fees as zero (0). However, this would hinder the daily HNT emissions to the MOBILE subDAO treasury since the A score would remain one (1). 
+One alternative is to do nothing, and keep Onboarding Fees as zero (0). However, this would impair the daily HNT emissions to the MOBILE subDAO treasury since the A score would remain one (1). 
 
 Another alternative is to change the way the A score is calculated to benefit the HNT emissions of the MOBILE Network; however, this would require a vote with veHNT instead of veMOBILE. 
 
 ## Deployment Impact
-After the passing of this HIP, the Helium Foundation will need to modify the A Score code within the DAO Utility Score for the MOBILE Network to reflect the new onboard fee. 
+After the passing of this HIP, the Helium Foundation will need to modify the chain variable that defines the onboarding fee for the MOBILE subDAO.
 
 ## Success Metrics
 The primary success metric will be greater daily HNT emissions to the MOBILE subDAO treasury.
