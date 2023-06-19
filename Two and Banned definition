@@ -54,6 +54,8 @@ I have intentionally limited the following scopes in this HIP
 
 **Owner Cancellation** The canceling of a removal submission at the owners' discretion in order to edit a submission, add evidence, add hotspots, or return the staked bond.  At the current time, submissions can only be canceled by moderators or admin.  
 
+**Two & Banned Policy** Only two human reviews can be worked per hotspot.  Only one initial removal submission and one appeal removal submission on a particular hotspot can ever be worked by the review team.
+
 **var_submission_expiration_time** = 60 days
 
 **var_staked_bond_amount** = 5 HNT
@@ -70,9 +72,7 @@ Any "voting" references within Crowdspot shall be removed as it has no bearing o
 
 ### Changes to Crowdspot backend
 
-Only the hotspot owner can create a removal submission on a hotspot that they own. The owner must include a staked bond with any type of removal submission.  No other wallet shall be used for locking the staking bond other than the wallet currently linked to Crowdspot.
-Two & Banned Policy - Only one initial removal submission and one appeal removal submission on a particular hotspot can ever be worked by the review team.  Once a determination of "declined" has been decided for an appeal submission, no removal submission can be accepted for that particular hotspot again. 
-The total Staked Bond will be a product of the number hotspots included on the submission multiplied by var_staked_bond_amount HNT. 
+Only the hotspot owner can create a removal submission on a hotspot that they own. The owner must include a staked bond with any type of removal submission.  No other wallet shall be used for locking the staking bond other than the wallet currently linked to Crowdspot. 
 A mechanism shall be put in place to route any appeal removal submission to a different member of the review team than reviewed it's initial removal submission. 
 Due Notice of Change shall be sent to the hotspot owner via Helium Wallet regarding changes to their denylist status and changes to their submission status.
 When creating any removal submission, the types "Initial" or "Appeal" will be selected by the form based on prior submissions and based on how the hotspot(s) came to be placed on the denylist.  An "i" information box will be present next to this selection with the definition from this HIP of both types of removal submissions.   
@@ -85,7 +85,8 @@ In the event that an owner attempts to add multiple hotspots to a submission tha
 
 The **Staked Bond** is intended to be a good faith deposit by the hotspot owner.  The owner attests to the Helium Network through staking this bond that they are not gaming the network.  This is also intended to keep know gamers, that know they were gaming POC, from placing a removal submission in the event they have been caught.
 The staked bond amount shall be var_staked_bond_amount HNT per hotspot. This was intended to be approximately equivalent to the average network earnings of one hotspot for var_submission_expiration_time days.  
-Only one staked bond shall be locked up for the initial and appeal removal submission.  The staked bond shall be carried over from an initial removal submission into an appeal removal submission provided that the owner creates the appeal removal submission within var_submission_expiration_time days of the denial determination by the review team.   
+The total Staked Bond will be a product of the number hotspots included on the submission multiplied by var_staked_bond_amount HNT. 
+Only one staked bond shall be locked up for the initial and appeal removal submission.  The staked bond shall be carried over from a denied initial removal submission into an appeal removal submission provided that the owner creates the appeal removal submission within var_submission_expiration_time days of the denial determination by the review team.   
 
 The staked bond shall be **returned** to the owner's wallet under any one of these three conditions:
 - Any removal submission is approved by the review team and POC gaming was not substantiated. 
