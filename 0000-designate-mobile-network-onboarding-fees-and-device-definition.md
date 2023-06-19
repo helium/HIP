@@ -24,7 +24,7 @@ MOBILE Hotspot manufacturers - MOBILE Hotspot manufactures will now be required 
 ## Detailed Explanation
 The current A Score factor within the DAO Utility Score noted in the Motivation section above currently accounts for the active devices on that subDAO multiplied by the current onboard fee set for each device. Therefore, the passing of this HIP and the establishment of a prescribed $40 MOBILE onboard fee will instantly raise the A Score factor for the MOBILE subDAO. This will instantly increase the daily emissions of HNT into the MOBILE subDAO treasury. 
 
-To show good faith to other subDAOs, this HIP also requires that manufacturers of MOBILE Hotspots that were previously onboarded to the IOT network are required to retroactively pay a $40 onboard fee to the MOBILE subDAO.
+To show good faith to other subDAOs, this HIP also requires that MOBILE Hotspots that were previously onboarded to the MOBILE network are required to retroactively pay a $40 onboard fee to the MOBILE subDAO.
 
 ## Drawbacks
 This proposal may require Hotspot Manufacturers to increase the costs of MOBILE Network Gateways. 
