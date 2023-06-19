@@ -32,7 +32,7 @@ This proposal may cause Hotspot Manufacturers to increase the costs of MOBILE Ne
 An additional drawback is that the Onboarding Fees are not based the number of active radios, which may be a better metric of active devices. However, under guidance of the Helium Foundation, using Hotspots as the active device is easier to implement. 
 
 ## Alternatives
-One alternative is to do nothing, and keep Onboarding Fees as zero (0). However, this would impair the daily HNT emissions to the MOBILE subDAO treasury since the $A$ score would remain $1$ (one). 
+One alternative is to do nothing, and keep Onboarding Fees as $0$ (zero). However, this would impair the daily HNT emissions to the MOBILE subDAO treasury since the $A$ score would remain $1$ (one). 
 
 Another alternative is to change the way the $A$ score is calculated to benefit the HNT emissions of the MOBILE Network; however, this would require a vote with veHNT instead of veMOBILE. 
 
