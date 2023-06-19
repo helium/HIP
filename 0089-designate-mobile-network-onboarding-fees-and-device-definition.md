@@ -1,9 +1,9 @@
-# HIP XX: MOBILE Network Onboarding Fees 
+# HIP 89: MOBILE Network Onboarding Fees 
 - Authors: [Andy Zyvoloski](https://github.com/heatedlime), [Keith Rettig](https://github.com/keithrettig)
 - Start Date: 6/14/2023
 - Category: Technical & Economic
-- Original HIP PR: #
-- Tracking Issue: #
+- Original HIP PR: [#701](https://github.com/helium/HIP/pull/701)
+- Tracking Issue: [#714](https://github.com/helium/HIP/issues/714)
 - Voting Requirements: veMOBILE
 
 ## Summary
