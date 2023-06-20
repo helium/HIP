@@ -7,10 +7,10 @@
 - Voting Requirements: veHNT
 
 ## Summary: 
-This Helium Improvement Proposal (HIP) suggests giving power to each subDAO to dictate the type of payment (Decentralized Network Tokens or Data Credits) used to pay for any miscellaneous fees within their subDAOs, including but not limited to onboarding fees and or location reassertion fees. Any services sold by each subDAO, such as data transfers, are not considered a fee, and as such, will need to continue to be paid in Data Credits (DC).
+This Helium Improvement Proposal (HIP) suggests giving power to each subDAO to dictate the type of payment (Decentralized Network Tokens or Data Credits) used to pay for any fees within their subDAOs, including but not limited to onboarding fees and or location reassertion fees. Any services sold by each subDAO, such as data transfers, are not considered a fee, and as such, will need to continue to be paid in Data Credits (DC).
 
 ## Motivation:
-Although HIP 51 created a Helium DAO which allowed the creation of Network subDAOs and their Decentralized Network Tokens (DNT), it specified that Helium (HNT) remain the unit of buy-and-burn in order to maintain the HNT flywheel. However, outside of burning HNT just to burn, there is no economic benefit to each subDAO, nor requirement that states a subDAO needs to charge any fees. For example, at the time of writing this HIP, the MOBILE subDAO has no onboarding or reassertion fees. 
+Although HIP 51 created a Helium DAO which allowed the creation of Network subDAOs and their Decentralized Network Tokens (DNT), it specified that Helium (HNT) remain the unit of buy-and-burn in order to maintain the HNT flywheel. However, outside of onboarding fees represented in the DAO Utility Score, there is no economic benefit to each subDAO for paying fees in DC, nor requirement that states a subDAO needs to charge any fees. For example, at the time of writing this HIP, the MOBILE subDAO has no onboarding or reassertion fees. 
 
 Fees charged for each subDAO are optional, and are dictated by that subDAO. Therefore, each subDAO should have the authority to choose the payment type (DNT vs DC), for the payment of fees. 
 
