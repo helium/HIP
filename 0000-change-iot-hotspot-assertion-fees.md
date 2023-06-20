@@ -15,7 +15,7 @@ Currently, Location Assert Fees are paid using HNT tokens. However, there is no 
 By adopting IOT tokens as the method of payment, it aims to drive value into the IOT ecosystem and give IOT tokens a small amount of utility. Moreover, this change aligns with the rules established in HIP-51, as detailed below.
 
 ## Stakeholders:
-IoT Token Holders - This HIP will benefit IoT token holders by providing a small amount of utility to the IoT token.
+Stakeholders include IOT Token Holders as this change will provide a small utility to the token. 
 
 ## Detailed Explanation:
 ### Method of Payment
