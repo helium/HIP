@@ -19,7 +19,7 @@ IoT Token Holders - This HIP will benefit IoT token holders by providing a small
 
 ## Detailed Explanation:
 ### Method of Payment
-This HIP proposes that Location Assert Fees be paid using IOT tokens instead of DC. The change will be effected by modifying the relevant code within the Helium network core implementation. This modification will ensure that only IOT tokens are accepted for Location Assert Fees.
+This HIP proposes that Location Assert Fees be paid using IOT tokens instead of DC. The change will be affected by modifying the relevant code within the Helium network core implementation. This modification will ensure that only IOT tokens are accepted for Location Assert Fees.
 
 Data credits will not be utilized in this process. Instead, a straight burn of IOT tokens will be implemented.
 
@@ -44,7 +44,7 @@ One alternative is to keep DC as the source used to pay for these fees; however,
 
 ## Drawbacks:
 
-Currently, the treasury swap function within the Helium wallet only allows the swapping of IoT to HNT, and not the other way around. Thus, if any hotspot owners needed $10 in IoT, it would need to be bought on the secondary market. 
+Currently, the treasury swap function within the Helium wallet only allows the swapping of IoT to HNT, and not the other way around. Thus, if any hotspot owners needed more IOT to complete the assertion, it will need to be obtained on the secondary market.
 
 ## Unresolved Questions:
 
@@ -60,4 +60,4 @@ There are no known security implications associated with this HIP. The proposal 
 
 ## Success Metrics:
 
-The primary success metric will be all hotspot reassertion fees being paid in IoT, which will provide a small amount of utility to the IOT tokens. 
+The primary success metric will be all hotspot reassertion fees being paid in IOT, which will provide a small amount of utility to the IOT tokens. 
