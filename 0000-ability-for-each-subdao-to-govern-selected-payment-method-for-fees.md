@@ -12,11 +12,11 @@ This Helium Improvement Proposal (HIP) suggests giving power to each subDAO to d
 ## Motivation:
 Although HIP 51 created a Helium DAO which allowed the creation of Network subDAOs and their Decentralized Network Tokens (DNT), it specified that Helium (HNT) remain the unit of buy-and-burn in order to maintain the HNT flywheel. However, outside of onboarding fees represented in the DAO Utility Score, there is no economic benefit to each subDAO for paying fees in DC, nor requirement that states a subDAO needs to charge any fees. For example, at the time of writing this HIP, the MOBILE subDAO has no onboarding or reassertion fees. 
 
-Fees charged for each subDAO are optional, and are dictated by that subDAO. Therefore, each subDAO should have the authority to choose the payment type (DNT vs DC), for the payment of fees. 
+Fees charged for each subDAO are optional, and are dictated by that subDAO. Therefore, each subDAO should have the authority to choose the payment type (DNT vs DC) fees are paid in. 
 
 ## Stakeholders:
 
-All subDAOs - If implemented, all subDAOs will have the power to change the payment method of fees charged to their native DNT. 
+All subDAOs - If implemented, all subDAOs will have the authority to change the payment method of fees charged to their native DNT, keep it as DC, or some combination of both. 
 
 HNT Holders - All HNT holders will be impacted by this HIP, as the HIP may decrease the demand for HNT. However, it is to be expected that onboarding fees for subDAOs continue to be paid in DC, as this directly impacts the subDAOs DAO Utility Score.
 
