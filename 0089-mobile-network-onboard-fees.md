@@ -24,7 +24,7 @@ Unfortunately, the framework for the MOBILE subDAO was established after the pas
 
 It is assumed by the authors that the onboarding server was correctly funded the 100 USD worth of Data Credits for each Hotspot by the Approved Hotspot Makers so as to pay for the IOT subDAO Onboarding Fee of 40 USD, the IOT subDAO Location Assert Fee of 10 USD, the MOBILE subDAO Onboarding Fee of 40 USD, and the MOBILE subDAO Location Assert Fee of 10 USD.  Given there are no Location Asserts within the MOBILE subDAO, what to do with the unnecessary fees (10 USD per Hotspot) presumed to be paid into the onboarding server is outside of the scope of this HIP.
 
-The correction is reportedly easy.  As such, The Helium Foundation has agreed to modify the Helium multisig for MOBILE Onboarding Fees from 0 USD to 40 USD upon passing of the HIP.  The expecting workload is to on the order of minutes and, therefore, should be able to be completed within the day.
+The correction is reportedly easy.  As such, The Helium Foundation has agreed to modify the Helium multisig for MOBILE Onboarding Fees from 0 USD to 40 USD upon passing of the HIP.  The expected workload is to on the order of minutes and, therefore, should be able to be completed within the day.
 
 ## Drawbacks
 A biggest potential drawback applies if HIP 88 is passed.  If the DAO Utility Score is modified to redefine the $A$ Factor calculation to be the multiple of active devices and the sum of all onboarding fees rather than simply a multiple of active devices and Onboarding Fee value, then it would seem required to ensure that the funds in the onboarding server were burned to the MOBILE subDAO's $A$ Factor.  The mechanism for how to do such a burn is outside of the scope of this HIP.
