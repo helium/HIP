@@ -15,7 +15,7 @@ MOBILE Hotspots - All currently onboarded MOBILE Hotspot owners.
 Approved Hotspot Makers - The sub-group of Approved Hotspot Makers that manufacture omni-protocol Hotspots that utilize the MOBILE Network and the IOT Network.  
 
 ## Motivation
-Current MOBILE Hotspots, the FreedomFi Gateway and the Bobcat 500, are both omni-protocol Hotspots; that is, they contain both IOT and MOBILE network capabilities.  HIP 53 ('Economics Overview' section) dictates that all Hotspots must pay an Onboarding Fee of 40 USD and a Location Assert Fee of 10 USD.  Helium Maker Ethics Section 9 indicates that Approved Hotspot Makers are responsible for funding the onboarding server for Hotspots.
+Current MOBILE Hotspots, the FreedomFi Gateway and the Bobcat 500, are both omni-protocol Hotspots; that is, they contain both IOT and MOBILE network capabilities.  HIP 53 ('Economics Overview' section) dictates that all Hotspots must pay an Onboarding Fee of 40 USD and a Location Assert Fee of 10 USD.  Helium Maker Ethics Section 9 indicates that Approved Hotspot Makers are responsible for funding the onboarding server for their Hotspots.
 
 At the time of onboarding these Hotspots, there was no MOBILE subDAO to which to designate the MOBILE subDAO's 40 USD Onboarding Fee.  As such, all MOBILE Hotspots were only onboarded to the IOT network with its associated Onboarding Fee of 40 USD and Location Assert Fee of 10 USD.  At the time of the migration in April of 2023, these Hotspots were incorrectly onboarded to the MOBILE network with an Onboarding Fee of 0 USD.  The error continues to this day.  As a result, 0 USD in Onboarding Fees have been burned towards the MOBILE subDAO's $A$ Factor, which introduces error in the $A$ Score of the DAO Utility Score established in HIP 51.
 
