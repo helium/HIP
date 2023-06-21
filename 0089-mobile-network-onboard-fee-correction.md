@@ -36,4 +36,4 @@ Another drawback is that since there are no Location Assert requirements for the
 One alternative is to change the way the $A$ score of the DAO Utility Score is calculated so as to negate the need for Onboarding Fees.  Given the significance of modifying the Helium ecosystem's tokenomics, such an alternative would require a vote to be held at the Helium DAO level with veHNT.
 
 ## Success Metrics
-This HIP is successful when the MOBILE Onboarding Fee is changed from 0 USD to 40 USD.  Once completed, all multi-protocol MOBILE Hotspots will automatically be onboarded to the MOBILE subDAO and the IOT subDAO and their required fees for both subDAOs will be paid from the Onboarding Server.
+This HIP is successful when the MOBILE Onboarding Fee is changed from 0 USD to 40 USD.  Once completed, all omni-protocol MOBILE Hotspots will automatically be onboarded to the MOBILE subDAO and the IOT subDAO and their required fees for both subDAOs will be paid from the Onboarding Server.
