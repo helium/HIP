@@ -1,4 +1,4 @@
-# HIP 89: MOBILE Network Onboarding Fees 
+# HIP 89: MOBILE Onboard Fee Correction 
 - Authors: [Andy Zyvoloski](https://github.com/heatedlime), [Keith Rettig](https://github.com/keithrettig), [Max Gold](https://github.com/MaxGold91)
 - Start Date: 6/14/2023
 - Category: Technical & Economic
