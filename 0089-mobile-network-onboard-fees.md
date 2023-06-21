@@ -12,7 +12,7 @@ It is requested that The Helium Foundation correct the MOBILE Onboarding Fee fro
 ## Stakeholders
 MOBILE Hotspots - All currently onboarded MOBILE Hotspot owners. 
 
-Approved Hotspot Makers - The sub-group of Approved Hotspot Makers that manufacture omni-protocol Hotspots that utilize the MOBILE Network.  
+Approved Hotspot Makers - The sub-group of Approved Hotspot Makers that manufacture omni-protocol Hotspots that utilize the MOBILE Network and the IOT Network.  
 
 ## Motivation
 Current MOBILE Hotspots, the FreedomFi Gateway and the Bobcat 500, are both omni-protocol Hotspots; that is, they contain both IOT and MOBILE network capabilities.  HIP 53 ('Economics Overview' section) dictates that all Hotspots must pay an Onboarding Fee of 40 USD and a Location Assert Fee of 10 USD.  Helium Maker Ethics Section 9 indicates that Approved Hotspot Makers are responsible for funding the onboarding server for Hotspots.
