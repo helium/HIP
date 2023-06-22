@@ -13,7 +13,7 @@ Allow select hotspots from the January 12, 2023 algorithmic detection to return 
 
 ## Motivation
 
-It has been known for some time that a large number of hotspots were denied in error in January, 2023 [^1] and remain on the denylist for months without recourse. [^2]  Erroneous denylist additions of hotspots are just as harmful to the network as gaming hotspots. [^3]  This has bred an atmosphere of mistrust, conspiracy theories, and FUD within the community in regards to how the denylist and how Crowdspot are handled.  A lack of resources for the review team and a lack of community consensus on  HIP 40 or HIP 66 to replace the temporary management has resulted in a severe backlog of over 4100 submissions, containing 4600 Hotspots, to Crowdspot. [^2] 
+It has been known for some time that a large number of hotspots were denied in error in January, 2023 [^1] and remain on the denylist for months without recourse. [^2]  Erroneous denylist additions of hotspots are just as harmful to the network as gaming hotspots. [^3]  This has bred an atmosphere of mistrust, conspiracy theories, and FUD within the community in regards to how the denylist and how Crowdspot are handled.  A lack of personel and resources for the review team combined with a lack of community consensus on HIP 40 and HIP 66 to replace the temporary Nova Lab's management [^5] has resulted in a severe backlog of over 4100 submissions, containing 4600 Hotspots, on Crowdspot. [^2] 
 > Removal pending time [avg/max]= [120.4 days / 158.1 days]. There are 4100 pending removal submissions.
 
  **It's time to clear the log jam, reset the algorithm, and try again.**
@@ -29,13 +29,14 @@ It has been known for some time that a large number of hotspots were denied in e
 ### Four steps
 
 1. Identify & remove stale requests
-2. New POC data, New Detection model each cycle
+2. New POC data, New Detection model, new adds to denylist
 3. Review team clears out Crowdspot and Sweeps again
 4. Repeat as needed
 
 ### 1. Identify the selection to be removed from the denylist 
 
-This should result in less than 3800 hotspots. [^2]
+I am currently waiting on this select hotspot list to be generated and will publish the exact list alongside this PR.  
+This list will be less than 3800 hotspots. [^2]
 > Denylist - state on: 2023-06-22T13:30:01.128Z
 > Hotspots*:    | accepted 1480 | declined 1048 | *pending 3725*
 
@@ -44,7 +45,7 @@ https://github.com/helium/denylist/pull/8297/files/d3a3dfe659f620859ae97ff574a45
 
 From those, keep submissions that have not previously been seen and reviewed by the review team. (Not appeals, not second looks, not additions) This will have to be sourced from crowdspot.io looking for removal submissions "declined".
 
-Take these identified submissions and hotspots and create a new denylist PR for removal. Successful signature of this PR will close them in Crowdspot and remove them from the denylist.  
+Take these identified submissions and hotspots and create a new denylist PR for removal. These identified hotspots will be removed from the denylist without a review.  Successful signature of this PR will close them in Crowdspot and remove them from the denylist.  
 
 ### 2. Start a new sweep cycle based on new POC data
 
@@ -68,32 +69,28 @@ The maximum number denied per sweep will be determined by
 - The historical Crowdspot submission reporting average =29.1% [^2]
 > Right now there are 5717 hotspots from 20k batch on removal submissions (29.1% of the 19670).
 
-- The historical average reviews worked per day = 5.6  [^4]
+- The historical average reviews worked per day = 5.95  [^4]
 
 The formula is 
 [Average reviews per day]  *  [number of days to clear out the reviews]  ÷ [percentage of denied hotspots that open a Crowdspot submission] 
 
 Using the current averages, the calculation for 30 days would be:
-30 x 5.6 ÷ 29.1% = 577 hotspots
+30 x 5.95 ÷ 29.1% = 613 hotspots
 
 This number will remain dynamic as manpower fluctuates, the algorithm becomes more accurate and fewer hotspots are incorrectly denied.
 
 ## Drawbacks
 
-Yes, we would be returning some potential gaming hotspots back to the POC pool.  We would also be returning some number of innocent hotspots back to the pool.  This number is less than 3800 total hotspots. (innocent and guilty) [^2]
+Yes, we would be returning some potential gaming hotspots back to the POC pool.  We would also be returning some number of innocent hotspots back to the pool.  This number is less than 3800 total, gaming and innocent hotspots.  An estimated ratio of innocent to guilty can be inferred from data available here. [^2]
 > Denylist - state on: 2023-06-22T13:30:01.128Z
-> Hotspots*:    | accepted 1480 | declined 1048 | *pending 3725*
-
-An estimated ratio of innocent to guilty can be inferenced from data available here. [^2]
-> Denylist - state on: 2023-06-22T13:30:01.128Z
-> Applications: | *accepted 1489* | *declined 1060* | pending 3579
+> Applications: | accepted 1489| declined 1060 | pending 3579
 > Hotspots*:    | accepted 1480 | declined 1048 | pending 3725
 
 ## Rationale and Alternatives
 
-The rational is simple, there are thousands of potential false positive hotspots on the denylist, within the 4100 pending submissions on crowdspot. There is no method in place or manpower available to clear them off the denylist in any timely fashion.  Those falsely accused have no recourse within the current framework of the denylist and Crowdspot management.  
+The rational is simple, there are thousands of potential false positive hotspots on the denylist, and within the 4100 pending submissions on crowdspot. There is no method in place or manpower available to review them in any timely fashion.  Many have been waiting for a review for many 5 months and would have to wait many more months for a review or a new HIP to change the methodology of the denylist.  Those falsely accused have no recourse within the current framework of the denylist and Crowdspot management.  
 
-Alternatives 
+Alternatives:
 - HIP 40 : was written for validators, pre Solana.   Decentralized the denylist and its management.  Never went to vote.
 - HIP 66: established trust score for denylist detection and determination. This was also written pre-Solana and never went to a vote.   
 - PR 551:  hold rewards for false positive hotspots, was written pre Solana
@@ -101,7 +98,7 @@ Alternatives
 
 ## Unresolved Questions
 
-Nova was granted the ability to temporarily, yet unilaterally manage the denylist in a vote in 2022.  The intention at that time was that HIP 40 would soon go to a vote and the implementation of decentralized denylists was at hand.  Because this has not been corrected in the past 18 months, a vacancy of resources needed to manage the Crowdspot submissions has collapsed the process.  Very few hotspots get removed or added to the denylist by hand, the algorithmic detection hasn't been ran in 5 months, and FUD of the denylist and gamers has taken over in Discord channels.  
+Nova was granted the ability to temporarily, yet unilaterally manage the denylist in a vote in 2022.  The intention at that time was that HIP 40 would soon go to a vote and the implementation of decentralized denylists was at hand.  Because this has not been corrected in the past 18 months, a vacancy of resources needed to manage the Crowdspot submissions has collapsed the process.  Very few hotspots get removed or added to the denylist by hand, the algorithmic detection hasn't been ran in 5 months [^7], and FUD of the denylist and gamers has taken over in Discord channels.  
 
 The unresolved questions are not really for this HIP, but rather for the community:
 - What is the solution for the denylist?
@@ -111,7 +108,7 @@ The unresolved questions are not really for this HIP, but rather for the communi
 ##Deployment Impact
 Who will have to do what work? 
 
-What docs.helium.com will need updating?
+What docs.helium.com will need updating?  I have reviewed the relevant Helium Docs [^6] and do not find any materials here that would need to be updated as a result of this HIP.  Please let me know of you find any.  @tony12times commits to work on these relevant Docs if needed as identified.  
 
 Can this HIP be undone?
 Yes, because the denylist is a dynamic document, it can be done, redone, and undone again.
@@ -128,7 +125,8 @@ Like pointed out in the Motivation, the threshold for review should be less than
 [^2] Sourced from the data scraped at the croudspot.io website and published daily by @crey on Discord.  https://discord.com/channels/404106811252408320/984427647977283674/1121432293362368513
 [^3] Credit to HIP 40 authors
 [^4] Sourced from the data scraped at the croudspot.io website and published daily by @crey on Discord.
-| JUNE  | Accepted | Declined | Sum |
+Average review per day: 131 ÷ 22 = 5.95
+| JUNE  | Accepted | Declined --Total |
 |-------|----------|----------|-----|
 |     1 | 0        | 4        | 4   |
 |     2 | 0        | 0        | 0   |
@@ -152,5 +150,11 @@ Like pointed out in the Motivation, the threshold for review should be less than
 |    20 | 0        | 11       | 11  |
 |    21 | 0        | 1        | 1   |
 |    22 | 0        | 12       | 12  |
-| Total |  48      |    83      | 131
-Average review per day: 131 ÷ 22 = 5.95
+| Total |  48      |    83      | 131  |
+[^5] https://heliumvote.com/14iwaexUYUe5taFgb5hx2BZw74z3TSyonRLYyZU1RbddV4bJest
+[^6] 
+Docs Crowdspot https://docs.helium.com/iot/crowdspot#how-to-submit-to-the-denylist
+Docs Denylist https://docs.helium.com/iot/denylist
+Docs Denylist Removal
+https://docs.helium.com/iot/denylist-removals
+[^7] Helium official Announcements https://discord.com/channels/404106811252408320/730418759298318346/1067230386075226233
