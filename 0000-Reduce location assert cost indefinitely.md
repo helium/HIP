@@ -1,4 +1,4 @@
-# HIP X: Extend hip-69 indefinitely
+# HIP X: Reduce location assert cost indefinitely
 
 - Author(s): @nosmaster89
 - Start Date: 2023-06-22
