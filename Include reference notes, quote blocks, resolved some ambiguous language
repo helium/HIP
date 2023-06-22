@@ -1,0 +1,156 @@
+# HIP XX: Vacate Backlogged Crowdspot Submissions 
+- Author(s): @tony12times 
+Credit to the Authors of HIP 40, I did copy a few lines and phrases from HIP 40.  
+- Start Date: 2023-06-21
+- Category: Meta
+- Original HIP PR: 721
+- Tracking Issue:
+- Voting Requirements: veIOT
+
+## Summary
+
+Allow select hotspots from the January 12, 2023 algorithmic detection to return to POC activity for approximately days, correct the flaws in the machine learning model (algorithm detection), and subsequently re-sweep for gamers on a unscheduled cycle in approximately days. 
+
+## Motivation
+
+It has been known for some time that a large number of hotspots were denied in error in January, 2023 [^1] and remain on the denylist for months without recourse. [^2]  Erroneous denylist additions of hotspots are just as harmful to the network as gaming hotspots. [^3]  This has bred an atmosphere of mistrust, conspiracy theories, and FUD within the community in regards to how the denylist and how Crowdspot are handled.  A lack of resources for the review team and a lack of community consensus on  HIP 40 or HIP 66 to replace the temporary management has resulted in a severe backlog of over 4100 submissions, containing 4600 Hotspots, to Crowdspot. [^2] 
+> Removal pending time [avg/max]= [120.4 days / 158.1 days]. There are 4100 pending removal submissions.
+
+ **It's time to clear the log jam, reset the algorithm, and try again.**
+
+## Stakeholders
+
+- All hotspot owners will be positively affected by this proposal by returning legit hotspots back to POC activity on the network.
+- Any community member that manually detects a spoofed hotspot or farm on the network has little to gain by reporting an addition request to Crowdspot if the request isn't reviewed for 158 days. [^2]
+- Any hotspot owners that were inaccurately put on the denylist in January 2023 are negatively affected by the current state of Crowdspot. 
+
+## Detailed Explanation
+
+### Four steps
+
+1. Identify & remove stale requests
+2. New POC data, New Detection model each cycle
+3. Review team clears out Crowdspot and Sweeps again
+4. Repeat as needed
+
+### 1. Identify the selection to be removed from the denylist 
+
+This should result in less than 3800 hotspots. [^2]
+> Denylist - state on: 2023-06-22T13:30:01.128Z
+> Hotspots*:    | accepted 1480 | declined 1048 | *pending 3725*
+
+Start with the 4100 pending submissions, containing 4600 hotspots, then keep only the hotspots that were placed on the denylist on *2023011001 #8297*
+https://github.com/helium/denylist/pull/8297/files/d3a3dfe659f620859ae97ff574a45b7313836816
+
+From those, keep submissions that have not previously been seen and reviewed by the review team. (Not appeals, not second looks, not additions) This will have to be sourced from crowdspot.io looking for removal submissions "declined".
+
+Take these identified submissions and hotspots and create a new denylist PR for removal. Successful signature of this PR will close them in Crowdspot and remove them from the denylist.  
+
+### 2. Start a new sweep cycle based on new POC data
+
+Wait 7 days, or 30 days, or whatever time is needed by the denylist authors to update the learning model and develop a more accurate gaming detection algorithm, then run the detection again.   The wait time will also give the hotspots themselves time to generate new POC data for the subsequent sweep.
+
+The wait time does not have to be 30 days, it can be as little as 1-2 weeks or as long as 3 months.  It is in the benefit of the network and the review team for this time frame to be unannounced, more frequent, and randomly selected.
+
+### 3. Only deny what the review team can work in a reasonable time frame 
+
+On subsequent algorithmic detection sweeps, only add a specific number of hotspots to the denylist per algorithm sweep if Nova can provide the volunteer manpower to process the Crowdspot submissions.  
+
+### 4. Rinse and Repeat the Sweep
+
+Once Crowdspot returns to a manageable level of submissions, perhaps 1-3 days left of reviews for the review team, repeat at step 2.
+
+It maybe necessary at times to repeat this process from step 1 instead of step 2 if the submissions to Crowdspot become stalled again. The regular flow and cycle schedule should be left up to the denylist authors and Nova Lab's discretion. However, a hard time out of 90 days should exist for any Crowdspot submissions that grow stale. 
+
+#### Calculations & Formula
+
+The maximum number denied per sweep will be determined by 
+- The historical Crowdspot submission reporting average =29.1% [^2]
+> Right now there are 5717 hotspots from 20k batch on removal submissions (29.1% of the 19670).
+
+- The historical average reviews worked per day = 5.6  [^4]
+
+The formula is 
+[Average reviews per day]  *  [number of days to clear out the reviews]  ÷ [percentage of denied hotspots that open a Crowdspot submission] 
+
+Using the current averages, the calculation for 30 days would be:
+30 x 5.6 ÷ 29.1% = 577 hotspots
+
+This number will remain dynamic as manpower fluctuates, the algorithm becomes more accurate and fewer hotspots are incorrectly denied.
+
+## Drawbacks
+
+Yes, we would be returning some potential gaming hotspots back to the POC pool.  We would also be returning some number of innocent hotspots back to the pool.  This number is less than 3800 total hotspots. (innocent and guilty) [^2]
+> Denylist - state on: 2023-06-22T13:30:01.128Z
+> Hotspots*:    | accepted 1480 | declined 1048 | *pending 3725*
+
+An estimated ratio of innocent to guilty can be inferenced from data available here. [^2]
+> Denylist - state on: 2023-06-22T13:30:01.128Z
+> Applications: | *accepted 1489* | *declined 1060* | pending 3579
+> Hotspots*:    | accepted 1480 | declined 1048 | pending 3725
+
+## Rationale and Alternatives
+
+The rational is simple, there are thousands of potential false positive hotspots on the denylist, within the 4100 pending submissions on crowdspot. There is no method in place or manpower available to clear them off the denylist in any timely fashion.  Those falsely accused have no recourse within the current framework of the denylist and Crowdspot management.  
+
+Alternatives 
+- HIP 40 : was written for validators, pre Solana.   Decentralized the denylist and its management.  Never went to vote.
+- HIP 66: established trust score for denylist detection and determination. This was also written pre-Solana and never went to a vote.   
+- PR 551:  hold rewards for false positive hotspots, was written pre Solana
+- PR 662: changed Crowdspot process, established staked bond.  Very bulky and needs resource commitment to code it.  
+
+## Unresolved Questions
+
+Nova was granted the ability to temporarily, yet unilaterally manage the denylist in a vote in 2022.  The intention at that time was that HIP 40 would soon go to a vote and the implementation of decentralized denylists was at hand.  Because this has not been corrected in the past 18 months, a vacancy of resources needed to manage the Crowdspot submissions has collapsed the process.  Very few hotspots get removed or added to the denylist by hand, the algorithmic detection hasn't been ran in 5 months, and FUD of the denylist and gamers has taken over in Discord channels.  
+
+The unresolved questions are not really for this HIP, but rather for the community:
+- What is the solution for the denylist?
+- Will there be a HIP for modeled coverage that will eliminate the denylist?  
+- Will it always remain as part of a multi pronged approach to network security? If so, then who should manage it?
+
+##Deployment Impact
+Who will have to do what work? 
+
+What docs.helium.com will need updating?
+
+Can this HIP be undone?
+Yes, because the denylist is a dynamic document, it can be done, redone, and undone again.
+
+##Success Metrics
+
+The success metric will be the wait time for conducting a human review after placing a submission. A second success metric will be seeing the algorithmic detection model grow more accurate and the time between sweep cycles (iterations)  drop to a very rapid pace.  
+
+Like pointed out in the Motivation, the threshold for review should be less than 5 months, maybe even 30 days. The expected "customer service experience" should dictate that 5 months or 24 months wait is simply unreasonable.  Anything longer sews mistrust, theories, and FUD. 
+
+## Footnotes
+
+[^1] Sourced from Discord official announcements. https://discord.com/channels/404106811252408320/730418759298318346/1083849753730744330
+[^2] Sourced from the data scraped at the croudspot.io website and published daily by @crey on Discord.  https://discord.com/channels/404106811252408320/984427647977283674/1121432293362368513
+[^3] Credit to HIP 40 authors
+[^4] Sourced from the data scraped at the croudspot.io website and published daily by @crey on Discord.
+| JUNE  | Accepted | Declined | Sum |
+|-------|----------|----------|-----|
+|     1 | 0        | 4        | 4   |
+|     2 | 0        | 0        | 0   |
+|     3 | 0        | 0        | 0   |
+|     4 | 19       | 0        | 19  |
+|     5 | 0        | 9        | 9   |
+|     6 | 0        | 8        | 8   |
+|     7 | 0        | 1        | 1   |
+|     8 | 0        | 6        | 6   |
+|     9 | 0        | 11       | 11  |
+|    10 | 0        | 0        | 0   |
+|    11 | 4        | 0        | 4   |
+|    12 | 0        | 5        | 5   |
+|    13 | 0        | 1        | 1   |
+|    14 | 0        | 0        | 0   |
+|    15 | 0        | 4        | 4   |
+|    16 | 0        | 0        | 0   |
+|    17 | 0        | 0        | 0   |
+|    18 | 25       | 4        | 29  |
+|    19 | 0        | 6        | 6   |
+|    20 | 0        | 11       | 11  |
+|    21 | 0        | 1        | 1   |
+|    22 | 0        | 12       | 12  |
+| Total |  48      |    83      | 131
+Average review per day: 131 ÷ 22 = 5.95
