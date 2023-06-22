@@ -3,8 +3,9 @@
 Credit to the Authors of HIP 40, I did copy a few lines and phrases from HIP 40.  
 - Start Date: 2023-06-21
 - Category: Meta
-- Original HIP PR:
+- Original HIP PR: 721
 - Tracking Issue:
+- Voting Requirements : veIOT
 
 ## Summary
 
@@ -90,6 +91,9 @@ The unresolved questions are not really for this HIP, but rather for the communi
 - Where will the community go from here? Will they take back the security of the network into decentralized hands? 
 
 ##Deployment Impact
+Who will have to do what work? 
+
+What docs.helium.com will need updating?
 
 Can this HIP be undone?
 Yes, because the denylist is a dynamic document, it can be done, redone, and undone again.
