@@ -1,4 +1,4 @@
-# HIP X: Reduce location assert cost indefinitely
+# HIP X: Reduce iot location assert cost indefinitely
 
 - Author(s): @nosmaster89
 - Start Date: 2023-06-22
@@ -9,7 +9,7 @@
 
 ## Summary
 
-this proposes an adjustment to the hotspot relocation fees on the network. Currently, as per the migration hip-69, the asset fees for IoT hotspots
+this hip proposes an adjustment to the hotspot relocation fees on the network. Currently, as per the migration hip-69, the asset fees for IoT hotspots
 have been halved. However, this adjustment is set to expire on July 20th, 2023, UTC, after which the asset fee will increase back to $10. This
 proposal suggests maintaining the reduced fee to encourage hotspot relocation and support future hips aiming to distribute hotspots in densely 
 populated areas.
