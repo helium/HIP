@@ -28,15 +28,16 @@ It has been known for some time that a large number of hotspots were denied in e
 
 ### Four steps
 
-1. Identify & remove stale requests
-2. New POC data, New Detection model, new adds to denylist
-3. Review team clears out Crowdspot and Sweeps again
+1. Identify & remove stale requests on Crowdspot 
+2. New Sweep with New POC data
+& New Detection model
+3. Review Team clears out Crowdspot
 4. Repeat as needed
 
-### 1. Identify the selection to be removed from the denylist 
+### 1. Identify the selection to be removed from stale submissions on Crowdspot and the denylist 
 
 I am currently waiting on this select hotspot list to be generated and will publish the exact list alongside this PR.  
-This list will be less than 3800 hotspots. [^2]
+This list will be less than 3725 hotspots. [^2]
 > Denylist - state on: 2023-06-22T13:30:01.128Z
 > Hotspots*:    | accepted 1480 | declined 1048 | *pending 3725*
 
@@ -49,23 +50,25 @@ Take these identified submissions and hotspots and create a new denylist PR for 
 
 ### 2. Start a new sweep cycle based on new POC data
 
-Wait 7 days, or 30 days, or whatever time is needed by the denylist authors to update the learning model and develop a more accurate gaming detection algorithm, then run the detection again.   The wait time will also give the hotspots themselves time to generate new POC data for the subsequent sweep.
+Wait 10 or 20 days, a month, or whatever time is needed by the denylist authors to update the learning model and develop a more accurate gaming detection algorithm, then run the algorithmic detection again.   The wait time will also give the hotspots themselves time to generate new POC data for the subsequent sweep.  Remember none of these hotspots have had POC data for 158 days.  Many are probably powered off.  Many will probably never go live on Helium Network again anyway.
 
-The wait time does not have to be 30 days, it can be as little as 1-2 weeks or as long as 3 months.  It is in the benefit of the network and the review team for this time frame to be unannounced, more frequent, and randomly selected.
+On future iterations, the wait time does not have to be 30 days, it can be as little as 1-2 weeks or as long as 3 months at the discretion of the Nova Team and the volunteers. It is in the benefit of the network for this time frame to be unannounced, more frequent, and randomly assigned.
 
-### 3. Only deny what the review team can work in a reasonable time frame 
+### 3. The review team clears out Crowdspot submissions in a reasonable time frame 
 
-On subsequent algorithmic detection sweeps, only add a specific number of hotspots to the denylist per algorithm sweep if Nova can provide the volunteer manpower to process the Crowdspot submissions.  
+Decide what a reasonable time is? 30 days would be a good place to start.  150+ days is not acceptable.  Maybe 90 days is on the high end of too long.  
+On subsequent algorithmic detection sweeps, only add a specific number (defined in calculation below) of hotspots to the denylist per algorithm sweep if Nova can provide the manpower or volunteer review team to process the Crowdspot submissions.  
+Step up the review team?  Add more members.  Is there any ideas on how we can make them a paid job?  I actually have heard we could use Fiver or Slack paid services.  is that serious?  I don't know, honestly.  
 
-### 4. Rinse and Repeat the Sweep
+### 4. Repeat the Sweep and clear Crowdspot again
 
 Once Crowdspot returns to a manageable level of submissions, perhaps 1-3 days left of reviews for the review team, repeat at step 2.
 
-It maybe necessary at times to repeat this process from step 1 instead of step 2 if the submissions to Crowdspot become stalled again. The regular flow and cycle schedule should be left up to the denylist authors and Nova Lab's discretion. However, a hard time out of 90 days should exist for any Crowdspot submissions that grow stale. 
+It maybe necessary at times to repeat this process from step 1 instead of step 2 if the submissions to Crowdspot become stalled again. The regular flow and cycle schedule should be left up to the denylist authors and Nova Lab's discretion. However, a hard time out of 90 days should exist for any Crowdspot removal submissions that grow stale. 
 
-#### Calculations & Formula
+#### Calculation & Formula
 
-The maximum number denied per sweep will be determined by 
+The maximum number denied per sweep will be determined by: 
 - The historical Crowdspot submission reporting average =29.1% [^2]
 > Right now there are 5717 hotspots from 20k batch on removal submissions (29.1% of the 19670).
 
@@ -81,14 +84,14 @@ This number will remain dynamic as manpower fluctuates, the algorithm becomes mo
 
 ## Drawbacks
 
-Yes, we would be returning some potential gaming hotspots back to the POC pool.  We would also be returning some number of innocent hotspots back to the pool.  This number is less than 3800 total, gaming and innocent hotspots.  An estimated ratio of innocent to guilty can be inferred from data available here. [^2]
+Yes, we would be returning some potential gaming hotspots back to the POC pool.  We would also be returning some number of innocent hotspots back to the pool.  This number is less than 3725 total, gaming and innocent hotspots.  An estimated ratio of innocent to guilty can be inferred from data available below. [^2]  1480 false positives vs 1060 sustained gamers, with 3725 unknown.  
 > Denylist - state on: 2023-06-22T13:30:01.128Z
 > Applications: | accepted 1489| declined 1060 | pending 3579
 > Hotspots*:    | accepted 1480 | declined 1048 | pending 3725
 
 ## Rationale and Alternatives
 
-The rational is simple, there are thousands of potential false positive hotspots on the denylist, and within the 4100 pending submissions on crowdspot. There is no method in place or manpower available to review them in any timely fashion.  Many have been waiting for a review for many 5 months and would have to wait many more months for a review or a new HIP to change the methodology of the denylist.  Those falsely accused have no recourse within the current framework of the denylist and Crowdspot management.  
+The rational is simple, there are thousands of potential false positive hotspots on the denylist, and within the 4100 pending submissions on crowdspot. There is no method in place or manpower available to review them in any timely fashion.  Many have been waiting for a review for 5 months and would have to wait many more months for a review or a new HIP to change the methodology of the denylist.  Those falsely accused have no recourse within the current framework of the denylist and Crowdspot management.  
 
 Alternatives:
 - HIP 40 : was written for validators, pre Solana.   Decentralized the denylist and its management.  Never went to vote.
