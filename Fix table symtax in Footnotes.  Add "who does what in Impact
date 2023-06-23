@@ -110,26 +110,27 @@ The unresolved questions are not really for this HIP, but rather for the communi
 
 ##Deployment Impact
 Who will have to do what work? 
+The expectation is that a memeber of the review team will open a PR and add the selected hotspots to the PR.  Two other memebers will have to add signatures to the PR, then the PR can be merged into the denylist. 
 
-What docs.helium.com will need updating?  I have reviewed the relevant Helium Docs [^6] and do not find any materials here that would need to be updated as a result of this HIP.  Please let me know of you find any.  @tony12times commits to work on these relevant Docs if needed as identified.  
+What docs.helium.com will need updating?  I have reviewed the relevant Helium Docs [^6] and do not find any materials here that would need to be updated as a result of this HIP.  Please let me know of you find any.  @tony12times commits to work on these relevant Docs if needed or identified.  
 
 Can this HIP be undone?
 Yes, because the denylist is a dynamic document, it can be done, redone, and undone again.
 
 ##Success Metrics
 
-The success metric will be the wait time for conducting a human review after placing a submission. A second success metric will be seeing the algorithmic detection model grow more accurate and the time between sweep cycles (iterations)  drop to a very rapid pace.  
+The success metric will be the wait time for conducting a human review after placing a submission. A second success metric will be seeing the algorithmic detection model grow more accurate and the time between sweep cycles (iterations) drop to a very rapid pace.  
 
-Like pointed out in the Motivation, the threshold for review should be less than 5 months, maybe even 30 days. The expected "customer service experience" should dictate that 5 months or 24 months wait is simply unreasonable.  Anything longer sews mistrust, theories, and FUD. 
+Like pointed out in the Motivation, the threshold for review should be less than 5 months, maybe even 30 days. The expected "customer service experience" should dictate that 5 months or 24 months wait is simply unreasonable.  Anything longer sows mistrust, conspiracy theories, and FUD. 
 
 ## Footnotes
 
-[^1] Sourced from Discord official announcements. https://discord.com/channels/404106811252408320/730418759298318346/1083849753730744330
+[^1] Sourced from Helium Official Discord Announcements. https://discord.com/channels/404106811252408320/730418759298318346/1083849753730744330
 [^2] Sourced from the data scraped at the croudspot.io website and published daily by @crey on Discord.  https://discord.com/channels/404106811252408320/984427647977283674/1121432293362368513
 [^3] Credit to HIP 40 authors
 [^4] Sourced from the data scraped at the croudspot.io website and published daily by @crey on Discord.
 Average review per day: 131 ÷ 22 = 5.95
-| JUNE  | Accepted | Declined --Total |
+| JUNE  | Accepted | Declined | Total |
 |-------|----------|----------|-----|
 |     1 | 0        | 4        | 4   |
 |     2 | 0        | 0        | 0   |
@@ -154,10 +155,11 @@ Average review per day: 131 ÷ 22 = 5.95
 |    21 | 0        | 1        | 1   |
 |    22 | 0        | 12       | 12  |
 | Total |  48      |    83      | 131  |
+
 [^5] https://heliumvote.com/14iwaexUYUe5taFgb5hx2BZw74z3TSyonRLYyZU1RbddV4bJest
 [^6] 
 Docs Crowdspot https://docs.helium.com/iot/crowdspot#how-to-submit-to-the-denylist
 Docs Denylist https://docs.helium.com/iot/denylist
 Docs Denylist Removal
 https://docs.helium.com/iot/denylist-removals
-[^7] Helium official Announcements https://discord.com/channels/404106811252408320/730418759298318346/1067230386075226233
+[^7] Helium Official Discord Announcements https://discord.com/channels/404106811252408320/730418759298318346/1067230386075226233
