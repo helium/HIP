@@ -9,7 +9,7 @@ Credit to the Authors of HIP 40, I did copy a few lines and phrases from HIP 40.
 
 ## Summary
 
-Allow select hotspots from the January 12, 2023 algorithmic detection to return to POC activity for approximately days, correct the flaws in the machine learning model (algorithm detection), and subsequently re-sweep for gamers on a unscheduled cycle in approximately days. 
+Allow select hotspots from the January 12, 2023 algorithmic detection to return to POC activity for approximately 30 days, correct the flaws in the machine learning model (algorithm detection), and subsequently re-sweep for gamers on a unscheduled cycle in approximately 30 days. 
 
 ## Motivation
 
@@ -46,7 +46,7 @@ https://github.com/helium/denylist/pull/8297/files/d3a3dfe659f620859ae97ff574a45
 
 From those, keep submissions that have not previously been seen and reviewed by the review team. (Not appeals, not second looks, not additions) This will have to be sourced from crowdspot.io looking for removal submissions "declined".
 
-Take these identified submissions and hotspots and create a new denylist PR for removal. These identified hotspots will be removed from the denylist without a review.  Successful signature of this PR will close them in Crowdspot and remove them from the denylist.  
+These identified hotspots will be removed from the denylist without a review.  Place these identified submissions and hotspots on a pull request for removal.  Successful signature and merger of this PR will close them in Crowdspot and remove them from the denylist.  
 
 ### 2. Start a new sweep cycle based on new POC data
 
@@ -84,7 +84,7 @@ This number will remain dynamic as manpower fluctuates, the algorithm becomes mo
 
 ## Drawbacks
 
-Yes, we would be returning some potential gaming hotspots back to the POC pool.  We would also be returning some number of innocent hotspots back to the pool.  This number is less than 3725 total, gaming and innocent hotspots.  An estimated ratio of innocent to guilty can be inferred from data available below. [^2]  1480 false positives vs 1060 sustained gamers, with 3725 unknown.  
+Yes, we would be returning some potential gaming hotspots back to the POC pool.  We would also be returning some number of innocent hotspots back to the pool.  This number is less than 3725 total, gaming and innocent hotspots.  An estimated ratio of innocent to guilty can be inferred from data available below. [^2]  1480 false positives vs 1060 sustained gamers, with 3725 unknown.  60% innocent vs 40% gamers. 
 > Denylist - state on: 2023-06-22T13:30:01.128Z
 > Applications: | accepted 1489| declined 1060 | pending 3579
 > Hotspots*:    | accepted 1480 | declined 1048 | pending 3725
