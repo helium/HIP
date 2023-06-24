@@ -10,11 +10,11 @@ Credit to the Authors of HIP 40, I did copy a few lines and phrases from HIP 40.
 ## Summary
 - Allow selected hotspots from the January 12, 2023 algorithmic detection, approximately 3700 of 19670, to return to POC activity
 - Update the programming of the machine learning model (algorithm detection iteration)
-- Re-sweep for gamers on an unannounced cycle within 14 days [^7】 with new POC data and a new algorithm 
+- Re-sweep for gamers on an unannounced cycle within 14 days [^7] with new POC data and a new algorithm 
 
 ## Motivation
 
-It has been known for some time that a large number of hotspots were denied in error in January, 2023 [^1] and remain on the denylist for months without recourse. [^2]  Erroneous denylist additions of hotspots (false positives) can be seen as just as harmful to the network integrity as gaming hotspots.  This has bred an atmosphere of mistrust, conspiracy theories, and FUD within the community in regards to how the denylist and how Crowdspot are handled. [^8】  A lack of community consensus on HIP 40 and HIP 66 to replace the temporary Nova Lab's management [^5] has cause a void in guidance and direction for Nova to follow in managing the denylist.  A lack of personel and resources for the review team has resulted in a severe backlog of over 4100 submissions, containing 4600 Hotspots, backlogged for 158 days. [^2] 
+It has been known for some time that a large number of hotspots were denied in error in January, 2023 [^1] and remain on the denylist for months without recourse. [^2]  Erroneous denylist additions of hotspots (false positives) can be seen as as harmful to the network integrity, right alongside gaming hotspots.  This has bred an atmosphere of mistrust, conspiracy theories, and FUD within the community in regards to how the denylist and how Crowdspot are handled. [^8]  A lack of personel and resources for the review team has resulted in a backlog of over 4100 submissions, containing 4600 Hotspots, backlogged for 158 days. [^2] [^8]
 > Removal pending time [avg/max]= [120.4 days / 158.1 days]. There are 4100 pending removal submissions.
 
  **It's time to clear the log jam, reset the algorithm, and try again.**
@@ -85,14 +85,14 @@ This number will remain dynamic as manpower fluctuates, the algorithm becomes mo
 
 ## Drawbacks
 
-Yes, we would be returning some potential gaming hotspots back to the POC pool.  We would also be returning some number of innocent hotspots back to the pool.  This number is less than 3725 total, gaming and innocent hotspots.  An estimated ratio of innocent to guilty can be inferred from data available below. [^2]  1480 false positives vs 1060 sustained gamers, with 3725 unknown.  60% innocent vs 40% gamers in that sample of reviews conducted. 
+Yes, we would be returning some potential gaming hotspots back to the POC pool.  We would also be returning some number of innocent hotspots back to the pool.  This number is less than 3725 total, gaming and innocent hotspots.  An estimated ratio of innocent to guilty can be inferred from data available below. [^2]  1489 false positives vs 1060 sustained gamers, with 3725 unknown.  60% innocent vs 40% gamers in the sample of 2549 reviews conducted. 
 > Denylist - state on: 2023-06-22T13:30:01.128Z
 > Applications: | accepted 1489| declined 1060 | pending 3579
 > Hotspots*:    | accepted 1480 | declined 1048 | pending 3725
 
 ## Rationale and Alternatives
 
-The rational is simple, there are thousands of potential false positive hotspots on the denylist, and within the 4100 pending submissions on crowdspot. There is no method in place or manpower available to review them in any timely fashion.  Many have been waiting for a review for 5 months and would have to wait many more months for a review or a new HIP to change the methodology of the denylist.  Those falsely accused have no recourse within the current framework of the denylist and Crowdspot management.  
+The rational is simple, there are potentially a thousand false positive hotspots on the denylist, and within the 4100 pending submissions on crowdspot. There is no method in place or manpower available to review them in any timely fashion.  Many have been waiting for a review for 5 months and would have to wait many more months for a review or a new HIP to change the methodology of the denylist.  Those falsely accused have no recourse within the current framework of the denylist and Crowdspot management.  It's just time to reset and try again.
 
 Alternatives:
 - HIP 40 : was written for validators, pre Solana.   Decentralized the denylist and its management.  Never went to vote.
