@@ -8,8 +8,9 @@ Credit to the Authors of HIP 40, I did copy a few lines and phrases from HIP 40.
 - Voting Requirements: veIOT
 
 ## Summary
-
-Allow select hotspots from the January 12, 2023 algorithmic detection to return to POC activity for approximately 30 days, correct the flaws in the machine learning model (algorithm detection), and subsequently re-sweep for gamers on a unscheduled cycle in approximately 30 days. 
+- Allow select hotspots, approximately 3700 of 19680, from the January 12, 2023 algorithmic detection to return to POC activity for approximately 30 days
+- Correct the flaws in the machine learning model (algorithm detection)
+- Re-sweep for gamers on an unannounced cycle in approximately 30 days. 
 
 ## Motivation
 
