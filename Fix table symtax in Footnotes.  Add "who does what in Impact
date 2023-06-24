@@ -9,12 +9,12 @@ Credit to the Authors of HIP 40, I did copy a few lines and phrases from HIP 40.
 
 ## Summary
 - Allow selected hotspots from the January 12, 2023 algorithmic detection, approximately 3700 of 19670, to return to POC activity
-- Correct the flaws in the machine learning model (algorithm detection)
-- Re-sweep for gamers on an unannounced cycle in approximately 30 days with new POC data and new algorithm 
+- Update the programming of the machine learning model (algorithm detection iteration)
+- Re-sweep for gamers on an unannounced cycle within 14 days [^7】 with new POC data and a new algorithm 
 
 ## Motivation
 
-It has been known for some time that a large number of hotspots were denied in error in January, 2023 [^1] and remain on the denylist for months without recourse. [^2]  Erroneous denylist additions of hotspots are just as harmful to the network as gaming hotspots. [^3]  This has bred an atmosphere of mistrust, conspiracy theories, and FUD within the community in regards to how the denylist and how Crowdspot are handled.  A lack of personel and resources for the review team combined with a lack of community consensus on HIP 40 and HIP 66 to replace the temporary Nova Lab's management [^5] has resulted in a severe backlog of over 4100 submissions, containing 4600 Hotspots, on Crowdspot. [^2] 
+It has been known for some time that a large number of hotspots were denied in error in January, 2023 [^1] and remain on the denylist for months without recourse. [^2]  Erroneous denylist additions of hotspots (false positives) can be seen as just as harmful to the network integrity as gaming hotspots.  This has bred an atmosphere of mistrust, conspiracy theories, and FUD within the community in regards to how the denylist and how Crowdspot are handled. [^8】  A lack of community consensus on HIP 40 and HIP 66 to replace the temporary Nova Lab's management [^5] has cause a void in guidance and direction for Nova to follow in managing the denylist.  A lack of personel and resources for the review team has resulted in a severe backlog of over 4100 submissions, containing 4600 Hotspots, backlogged for 158 days. [^2] 
 > Removal pending time [avg/max]= [120.4 days / 158.1 days]. There are 4100 pending removal submissions.
 
  **It's time to clear the log jam, reset the algorithm, and try again.**
@@ -42,7 +42,7 @@ This list will be less than 3725 hotspots. [^2]
 > Denylist - state on: 2023-06-22T13:30:01.128Z
 > Hotspots*:    | accepted 1480 | declined 1048 | *pending 3725*
 
-Start with the 4100 pending submissions, containing 4600 hotspots, then keep only the hotspots that were placed on the denylist on *2023011001 #8297*
+Start with the 4100 pending submissions, containing 4600 hotspots, then keep only the hotspots that were placed on the denylist on *2023011001 PR #8297*
 https://github.com/helium/denylist/pull/8297/files/d3a3dfe659f620859ae97ff574a45b7313836816
 
 From those, keep submissions that have not previously been seen and reviewed by the review team. (Not appeals, not second looks, not additions) This will have to be sourced from crowdspot.io looking for removal submissions "declined".
@@ -51,7 +51,7 @@ These identified hotspots will be removed from the denylist without a review.  P
 
 ### 2. Start a new sweep cycle based on new POC data
 
-Wait 10 or 20 days, a month, or whatever time is needed by the denylist authors to update the learning model and develop a more accurate gaming detection algorithm, then run the algorithmic detection again.   The wait time will also give the hotspots themselves time to generate new POC data for the subsequent sweep.  Remember none of these hotspots have had POC data for 158 days.  Many are probably powered off.  Many will probably never go live on Helium Network again anyway.
+Wait 14 days [^7] or whatever time is needed by the denylist authors to update the learning model and develop a more accurate gaming detection algorithm, then run the algorithmic detection again.   The wait time will also give the hotspots themselves time to generate new POC data for the subsequent sweep.  Remember none of these hotspots have had POC data for 158 days.  Many are probably powered off.  Many will probably never go live on Helium Network again anyway.
 
 On future iterations, the wait time does not have to be 30 days, it can be as little as 1-2 weeks or as long as 3 months at the discretion of the Nova Team and the volunteers. It is in the benefit of the network for this time frame to be unannounced, more frequent, and randomly assigned.
 
@@ -85,7 +85,7 @@ This number will remain dynamic as manpower fluctuates, the algorithm becomes mo
 
 ## Drawbacks
 
-Yes, we would be returning some potential gaming hotspots back to the POC pool.  We would also be returning some number of innocent hotspots back to the pool.  This number is less than 3725 total, gaming and innocent hotspots.  An estimated ratio of innocent to guilty can be inferred from data available below. [^2]  1480 false positives vs 1060 sustained gamers, with 3725 unknown.  60% innocent vs 40% gamers. 
+Yes, we would be returning some potential gaming hotspots back to the POC pool.  We would also be returning some number of innocent hotspots back to the pool.  This number is less than 3725 total, gaming and innocent hotspots.  An estimated ratio of innocent to guilty can be inferred from data available below. [^2]  1480 false positives vs 1060 sustained gamers, with 3725 unknown.  60% innocent vs 40% gamers in that sample of reviews conducted. 
 > Denylist - state on: 2023-06-22T13:30:01.128Z
 > Applications: | accepted 1489| declined 1060 | pending 3579
 > Hotspots*:    | accepted 1480 | declined 1048 | pending 3725
@@ -102,7 +102,7 @@ Alternatives:
 
 ## Unresolved Questions
 
-Nova was granted the ability to temporarily, yet unilaterally manage the denylist in a vote in 2022.  The intention at that time was that HIP 40 would soon go to a vote and the implementation of decentralized denylists was at hand.  Because this has not been corrected in the past 18 months, a vacancy of resources needed to manage the Crowdspot submissions has collapsed the process.  Very few hotspots get removed or added to the denylist by hand, the algorithmic detection hasn't been ran in 5 months [^7], and FUD of the denylist and gamers has taken over in Discord channels.  
+Nova was granted the ability to temporarily, yet unilaterally manage the denylist in a vote in 2022.  The intention at that time was that HIP 40 would soon go to a vote and the implementation of decentralized denylists was at hand.  Because this has not been corrected in the past 18 months, a vacancy of resources needed to manage the Crowdspot submissions has collapsed the process. [^4] Very few hotspots get removed or added to the denylist by hand, the algorithmic detection hasn't been ran in 5 months [^3], and FUD of the denylist and gamers has taken over in Discord channels.  
 
 The unresolved questions are not really for this HIP, but rather for the community:
 - What is the solution for the denylist?
@@ -128,7 +128,7 @@ Like pointed out in the Motivation, the threshold for review should be less than
 
 [^1] Sourced from Helium Official Discord Announcements. https://discord.com/channels/404106811252408320/730418759298318346/1083849753730744330
 [^2] Sourced from the data scraped at the croudspot.io website and published daily by @crey on Discord.  https://discord.com/channels/404106811252408320/984427647977283674/1121432293362368513
-[^3] Credit to HIP 40 authors
+[^3] Helium Official Discord Announcements https://discord.com/channels/404106811252408320/730418759298318346/1067230386075226233
 [^4] Sourced from the data scraped at the croudspot.io website and published daily by @crey on Discord.
 Average review per day: 131 ÷ 22 = 5.95
 | JUNE  | Accepted | Declined | Total |
@@ -163,4 +163,5 @@ Docs Crowdspot https://docs.helium.com/iot/crowdspot#how-to-submit-to-the-denyli
 Docs Denylist https://docs.helium.com/iot/denylist
 Docs Denylist Removal
 https://docs.helium.com/iot/denylist-removals
-[^7] Helium Official Discord Announcements https://discord.com/channels/404106811252408320/730418759298318346/1067230386075226233
+[^7] Time frame was originally 30 days, then suggested 7 days, but 14 has been decided as the compromise. 
+[^8] https://discord.com/channels/404106811252408320/984427647977283674
