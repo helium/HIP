@@ -1,6 +1,6 @@
 # HIP Sunset Console
 
-- Author(s): @gristlekinginc
+- Author(s): [Nik Hawks](https://github.com/gristlekinginc), [Max Gold](https://github.com/maxgold91)
 - Start Date: 2023-06-25
 - Category: economic
 - Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
