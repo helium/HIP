@@ -8,7 +8,7 @@
 
 ## Summary
 
-This proposal suggests sunsetting the Helium Console by Dec 31st, 2023.  Helium Console is a free service provided by the Helium Foundation that hinders the development of the Helium Network by removing any incentive for outside businesses to operate an LNS at anything more than base cost. Transitioning to a sustainable model encourages the adoption of independently operated LoRaWAN Network Servers (LNS). This network of independently operated LNS is vital to the sustainability of a global decentralized LoRaWAN.
+This proposal suggests sunsetting the Helium Console (defined as the Console run by Helium Foundation, not to be confused with the private Console, commonly known as "Helium VIP", which is run by Nova Labs) by Dec 31st, 2023.  Helium Console is a free service provided by the Helium Foundation that hinders the development of the Helium Network by removing any incentive for outside businesses to operate an LNS at anything more than base cost. Transitioning to a sustainable model encourages the adoption of independently operated LoRaWAN Network Servers (LNS). This network of independently operated LNS is vital to the sustainability of a global decentralized LoRaWAN.
 
 This HIP aims to outline a phased approach to remove access to the Helium Console quickly while ensuring a fair transition for businesses relying on the free service.
 
