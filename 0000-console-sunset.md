@@ -18,7 +18,11 @@ The motivation behind this proposal is to promote decentralization along with co
 
 The Helium Foundation incurs significant costs by providing the free Helium Console, and by phasing it out, they can alleviate this burden and continue the transition to a strong decentralized LoRaWAN. 
 
-Additionally, transitioning to independently operated LNS offers benefits such as increased control and customization options for network participants.
+While the HF is currently an easy vector for onboarding and testing for new participants, it has significant drawbacks.  Having a 10 device limit and no business support, means every tester who becomes a long term user must make a transition to another Console before building an actual business on it.  
+
+LNS providers can and should compete to provide an equivalent or better service including the ability to grow beyond 10 devices, which Helium Console does not have.  [Current LNS providers already exist](https://console.meteoscientific.com/front/) that offer this service
+
+Finally, transitioning to independently operated LNS offers benefits such as increased control and customization options for network participants.
 
 ## Stakeholders
 
@@ -49,29 +53,32 @@ Helium Foundation will provide a grant of 500 HNT for any commercial  businesses
 
 ## Drawbacks
 
-Some businesses may face challenges in migrating from the free Helium Console to independently operated LNS.
-It may take time for businesses to adapt their operations to the new model.
+- Some businesses may face challenges in migrating from the free Helium Console to independently operated LNS.
+- It may take time for businesses to adapt their operations to the new model.
 
 ## Rationale and Alternatives
 
 This proposal promotes sustainability, growth, and independence among Helium network participants, and allows for businesses to invest in the network. 
-Alternatives, such as continuing the free Helium Console indefinitely, significantly hinder the network's long-term viability and place a financial burden on the Helium Foundation.
-Additionally, the intent here should be to move as fast as possible in order to give new businesses who want to build on the Helium network a reasonable runway. 
-Delaying the sunsetting for a few hundred sensors deployed against a "Console should be free" model creates an uninviting ecosystem for the thousands of business that can grow on Helium as long as they don't have to compete with "free".
+
+Alternatives, such as continuing the free Helium Console indefinitely will provide a rocky onboarding experience as users must first sign up for an HF Console and then move to another LNS provider if they wish to grow.  This hinders the network's long-term viability and providing this service places a financial burden on the Helium Foundation.
+
+The intent here should be to move as fast as possible in order to give new businesses who want to build on the Helium network a reasonable runway. 
+
+Delaying the sunsetting creates an uninviting ecosystem for the thousands of business that can grow on Helium as long as they don't have to compete with "free".
 
 ## Unresolved Questions
 
-Specific details regarding the timeline, incentives, and technical support need to be resolved through the HIP process.
-How many businesses currently use and rely on the free Helium Console?  
-How much data do current businesseses represent as a percentage of network LoRaWAN data?
-The impact on businesses that do not migrate or choose alternative solutions should be further discussed.
+- Specific details regarding the timeline, incentives, and technical support need to be resolved through the HIP process.
+- How many businesses currently use and rely on the free Helium Console?  
+- How much data do current Helium Console businesseses represent as a percentage of network LoRaWAN data?
+- The impact on businesses that do not migrate or choose alternative solutions should be further discussed.
 
 ## Deployment Impact
 
-The deployment of this design will impact current users of the Helium network who rely on the free Helium Console. 
-They will need to migrate to independently operated LNS to continue using the network effectively. 
-Existing documentation and the knowledge base may require updates to reflect the new model. 
-The backwards compatibility of this HIP needs to be considered, along with a clear procedure for migration.
+- The deployment of this design will impact current users of the Helium network who rely on the free Helium Console. 
+- They will need to migrate to independently operated LNS to continue using the network effectively. 
+- Existing documentation and the knowledge base may require updates to reflect the new model. 
+- The backwards compatibility of this HIP needs to be considered, along with a clear procedure for migration.
 
 ## Success Metrics
 - Adoption rate/number of independently operated LNS.
