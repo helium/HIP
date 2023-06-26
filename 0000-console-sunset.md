@@ -8,7 +8,9 @@
 
 ## Summary
 
-This proposal suggests sunsetting the Helium Console (defined as the Console run by Helium Foundation, not to be confused with the private Console, commonly known as "Helium VIP", which is run by Nova Labs) by Dec 31st, 2023.  Helium Console is a free service provided by the Helium Foundation that hinders the development of the Helium Network by removing any incentive for outside businesses to operate an LNS at anything more than base cost. Transitioning to a sustainable model encourages the adoption of independently operated LoRaWAN Network Servers (LNS). This network of independently operated LNS is vital to the sustainability of a global decentralized LoRaWAN.
+This proposal suggests sunsetting the Helium Console (defined as the Console run by Helium Foundation, not to be confused with the private Console, commonly known as "Helium VIP", which is run by Nova Labs) by Dec 31st, 2023.  
+
+Helium Console is a free service provided by the Helium Foundation that hinders the development of the Helium Network by removing any incentive for outside businesses to provide their own entry-level "free" onboarding service.  Onboarding new customers is critical to business development.  Transitioning to a more decentralized model encourages the adoption of independently operated LoRaWAN Network Servers (LNS). This network of independently operated LNS is vital to the sustainability of a global decentralized LoRaWAN.
 
 This HIP aims to outline a phased approach to remove access to the Helium Console quickly while ensuring a fair transition for businesses relying on the free service.
 
@@ -18,7 +20,7 @@ The motivation behind this proposal is to promote decentralization along with co
 
 The Helium Foundation incurs significant costs by providing the free Helium Console, and by phasing it out, they can alleviate this burden and continue the transition to a strong decentralized LoRaWAN. 
 
-While the HF is currently an easy vector for onboarding and testing for new participants, it has significant drawbacks.  Having a 10 device limit and no business support, means every tester who becomes a long term user must make a transition to another Console before building an actual business on it.  
+While the HF is currently an easy vector for onboarding and testing for new participants, it has significant drawbacks.  Having a 10 device limit and no business support means every tester who becomes a long term user must make a transition to another Console before building an actual business on it. Additionally, "tests" of devices on the HF Console may not accurately reflect the performance and setup of those devices on other LNS. 
 
 LNS providers can and should compete to provide an equivalent or better service including the ability to grow beyond 10 devices, which Helium Console does not have.  [Current LNS providers already exist](https://console.meteoscientific.com/front/) that offer this service
 
@@ -32,9 +34,11 @@ Network users - Paying for data on the network
 ## Detailed Explanation
 
 **Communication and Notification:** 
+
 Promptly communicate the decision to sunset the Helium Console by the date proposed, providing the reasons, timeline, and commitment to a fair transition.
 
 **Establish a Transition Period:** 
+
 Provide a three step transition period for all those users relying on the free Helium Console to adjust their operations.
 
 1. Immediately removing the ability for new users to sign up for Helium Console.  
@@ -43,12 +47,15 @@ Provide a three step transition period for all those users relying on the free H
 4. The Helium Foundatino may elect to continue to maintain Console for testing purposes or educational accounts.
 
 **Encourage Independent LNS Adoption:** 
+
 Actively promote the adoption of independently operated LNS during the transition period, highlighting the associated benefits.
 
 **Migration Support and Resources:**
+
 Helium Foundation will provide comprehensive migration guides, tutorials, and support documentation. Additionally, the Foundation will stand up a migration team of 2-3 people to offer technical assistance to any current user throughout the migration process, with priority given to accounts running commercial operations of 40 or more proveable devices in the field.
 
 **Incentives for Early Migration:** 
+
 Helium Foundation will provide a grant of 500 HNT for any commercial  businesses that have 40 or more provable devices in the field that have been operating prior to the first public proposal of this HIP and that complete the migration by September 1st, 2023.
 
 ## Drawbacks
@@ -81,6 +88,7 @@ Delaying the sunsetting creates an uninviting ecosystem for the thousands of bus
 - The backwards compatibility of this HIP needs to be considered, along with a clear procedure for migration.
 
 ## Success Metrics
+
 - Adoption rate/number of independently operated LNS.
 - Network stability and performance measurements.
 - Reduction in Helium Foundation support overhead.
