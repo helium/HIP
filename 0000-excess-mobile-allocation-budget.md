@@ -10,7 +10,7 @@
 This HIP stipulates what 15 Billion of the 20 billion MOBILE currently under the Helium Foundation custody will be used for. 
 
 ## Stakeholders
-MOBILE Token Owners - MOBILE token holders will benefit from the burn of MOBILE, and the addition of new service providers
+MOBILE Token Owners - MOBILE token holders will benefit from the burn of MOBILE
 
 Helium Foundation - The Helium Foundation will benefit from the grant of 2B MOBILE.
 
