@@ -7,7 +7,7 @@
 - Voting Requirements: veMOBILE
 
 ## Summary
-This HIP stipulates what the 15 Billion of the 20 billion MOBILE currently under the Helium Foundation custody will be used for. 
+This HIP stipulates what 15 Billion of the 20 billion MOBILE currently under the Helium Foundation custody will be used for. 
 
 ## Stakeholders
 MOBILE Token Owners - MOBILE token holders will benefit from the burn of MOBILE, and the addition of new service providers
@@ -17,7 +17,7 @@ Helium Foundation - The Helium Foundation will benefit from the grant of 2B MOBI
 
 ## Motivation
 
-As a part of [HIP 53](https://github.com/helium/HIP/blob/main/0053-mobile-dao.md), 50 Billion MOBILE tokens were pre-mined at the launch of the network, to be distributed to the subDAO operations fund administered by the Helium Foundation. Only 30B was distributed to the sbuDAO operations fund, and the remaining 20B was left under custody of the Helium Foundation. 
+As a part of [HIP 53](https://github.com/helium/HIP/blob/main/0053-mobile-dao.md), 50 Billion MOBILE tokens were pre-mined at the launch of the network to be distributed to the MOBILE subDAO operations fund administered by the Helium Foundation. Only 30B was distributed to the sbuDAO operations fund, and the remaining 20B was left under custody of the Helium Foundation. 
 
 The 20B MOBILE currently under Foundation custody belongs to the MOBILE subDAO, and thus, it’s up to the MOBILE subDAO to decide what to do with these tokens. Therefore, this HIP establishes a 3-year budget of what to do with 15B of the 20B tokens under Foundation custody. 
 
