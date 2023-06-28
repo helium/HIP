@@ -60,6 +60,9 @@ The second is a major revamp of the subDAO utility score. A major revamp of the 
 ## Deployment Impact
 The implementation of the `active-devices` will have to be altered. The `active-devices` oracle uses a database in which it stores key metrics such as `lastReward` that it can use to correctly determine the number of active devices. The `distribution` oracle uses this information to distribute HNT to the treasuries of the different subDAOs. This proposal proposes to add paid onboarding fee to this database in order to provide the `distribution` oracle with the correct values to use for the $A$ factor of the subDAO utility score.
 
+It is also suggested that the [Helium Network Stats](https://explorer.helium.com/stats) webpage be updated after implementation to include the sum of onboard fees paid for all active devices within each subDAO.
+
+The specific implementation of the proposed changes will be determined by the Helium Core Developers while conforming to the intent of the proposal in the fullest extent possible.
 
 ## Success Metrics
 This proposal is a success when the `distribution` and `active-devices` oracles can correctly determine the $A$ factor of the subDAO utility score based on the amount of active devices and the corresponding onboarding fee that was paid. As a consequence, this will allow the the subDAOs to set the onboarding fee via their internal governance without requiring a veHNT vote.
