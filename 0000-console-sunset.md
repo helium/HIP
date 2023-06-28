@@ -56,7 +56,7 @@ Helium Foundation will provide comprehensive migration guides, tutorials, and su
 
 **Incentives for Early Migration:** 
 
-Helium Foundation will provide a grant of 500 HNT for any commercial  businesses that have 40 or more provable devices in the field that have been operating prior to the first public proposal of this HIP and that complete the migration by September 1st, 2023.
+There are no incentives for early migration.
 
 ## Drawbacks
 
