@@ -4,7 +4,7 @@
 - Start Date: 2023-04-26
 - Category: Economic, Technical
 - Original HIP PR: [#625](https://github.com/helium/HIP/pull/625)
-- Tracking Issue: [#638](https://github.com/helium/HIP/issue/638)
+- Tracking Issue: [#638](https://github.com/helium/HIP/issues/638)
 - Vote Requirements: veMOBILE Holders
 - Approved Version: [d03b33](https://github.com/helium/HIP/blob/d03b337e3334a303640b53f03805f62d5e244ca3/0084-service-provider-hex-boosting.md)
 
