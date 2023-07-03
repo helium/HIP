@@ -1,10 +1,10 @@
 # HIP 83: Restore First to Respond Witness Rewarding
 
-- Author(s): @BFGNeil, @mawdegroot
+- Author(s): [@BFGNeil](https://github.com/BFGNeil), [@mawdegroot](https://github.com/mawdegroot)
 - Start Date: 2023-05-05
 - Category: Economic, Technical
-- Original HIP PR: #605
-- Tracking Issue: #632
+- Original HIP PR: [#605](https://github.com/helium/HIP/pull/605)
+- Tracking Issue: [#632](https://github.com/helium/HIP/issues/632)
 - Voting Requirements: veIOT Holders
 
 ## Summary
