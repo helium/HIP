@@ -1,17 +1,17 @@
-# HIP X: Reduce iot location assert cost indefinitely
+# HIP X: Reduce IOT location assert cost indefinitely
 
 - Author(s): @nosmaster89
 - Start Date: 2023-06-22
 - Category: Economic 
-- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
+- Original HIP PR: 722
 - Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
 - Vote Requirements: veIOT Holders
 
 ## Summary
 
-this hip proposes an adjustment to the hotspot relocation fees on the network. Currently, as per the migration hip-69, the asset fees for IoT hotspots
-have been halved. However, this adjustment is set to expire on July 20th, 2023, UTC, after which the asset fee will increase back to $10. This
-proposal suggests maintaining the reduced fee to encourage hotspot relocation and support future hips aiming to distribute hotspots in densely 
+This hip proposes an adjustment to the hotspot relocation fees on the network. Currently, as per the migration HIP-69, the assert fees for IoT hotspots
+have been halved. However, this adjustment is set to expire on July 20th, 2023, UTC, after which the assert fee will increase back to $10. This
+proposal suggests maintaining the reduced fee to encourage hotspot relocation and support future HIPss aiming to distribute hotspots in densely 
 populated areas.
 
 ## Motivation
@@ -21,13 +21,14 @@ The key motivations behind this proposal are as follows:
 - Establishing a minimum fee that reflects the network's expectations for hotspot relocation, ensuring a longer-term commitment from hotspot owners.
 
 ## Stakeholders
-
-This proposal impacts the entire network as it affects the amount of DC burned, which influences the economics of all subdaos.
+IOT Hotspot Makers, who will not have to pay the increased 1M DC ($10) Location assert fee on the first location reassertions.
+IOT Hotspot owners, who will not have to pay the increased 1M DC ($10) Location assert fee on subsequent location reassertions.
+And This proposal impacts the entire network as it affects the amount of DC burned, which influences the economics of all subdaos.
 
 ## Detailed Explanation
-The proposal aims to extend the duration of the reduced asset fees for hotspot relocation indefinitely. By maintaining the lowered fee,
+The proposal aims to extend the duration of the reduced asset fees for hotspot relocation that HIP 69 introduced indefinitely. By maintaining the lowered fee,
 it becomes more attractive for hotspot owners to relocate their hotspots, increasing the likelihood of achieving better network coverage
-in various locations. Additionally, this change supports future hips that aim to distribute hotspots in densely populated areas.
+in various locations. Additionally, this change supports future HIPss that aim to distribute hotspots in densely populated areas.
 
 
 ## Drawbacks
@@ -46,8 +47,8 @@ An alternative could be to maintain the original asset fee of $10, but this may 
 
 ## Deployment Impact
 
-To implement this proposal, makers need to ensure that applications display the correct requirement of 500k DC for hotspot relocation.
+To implement this proposal, IOT Hotspot makers need to ensure that Maker Apps display and use the correct requirement of 500K DC/$5 for hotspot relocation.
 
 ## Success Metrics
 
-The success of this HIP can be measured by monitoring the burn for asset fees after its implementation. A successful outcome would be the retention of a reasonable level of burn, indicating active hotspot relocation and continued network growth.
+The success of this HIP can be measured by monitoring the burn for asset fees after its implementation. A successful outcome would be the retention or increase of the level of assert location DC burn, indicating active hotspot relocation and continued network growth.
