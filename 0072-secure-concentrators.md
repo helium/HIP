@@ -8,7 +8,7 @@
 
 ## Summary
 
-In this HIP, we propose an amendment to HIP 19 to enable a new type of IoT network actor: a Secure Concentrator Card (SCC). A Secure Concentrator Card is similar to a standard LoRaWAN concentrator card, but with an additional Secure Microcontroller Unit (SMCU) and onboard GPS receiver. The SMCU digitally signs LoRa data packets as they are received from the radio. In this way, packet data and its corresponding metadata (RSSI, Frequency, GPS location and time) can be verified to be authentic.
+In this HIP, we propose an amendment to HIP 19 to enable a new type of IoT network actor: a Secure Concentrator Card (SCC). A Secure Concentrator Card is similar to a standard LoRaWAN concentrator card, but with an additional Secure Microcontroller Unit (SMCU) and onboard GPS receiver. The SMCU digitally signs LoRa data packets as they are received from the radio. In this way, packet data and its corresponding metadata (RSSI, Frequency, GPS location and time) can be verified to be authentic. The primary intention of this HIP is to combat Proof-of-Coverage gaming. Secure Concentrtors achieve this by providing trustworthy data upon which better gaming detectors and PoC algorithms can be built.
 
 - Secure Concentrators are _optional._ There is **no** requirement to upgrade or purchase new
   hardware. Helium Hotspots without Secure Concentrator will continue functioning as normal.
@@ -16,7 +16,9 @@ In this HIP, we propose an amendment to HIP 19 to enable a new type of IoT netwo
 
 ## Motivation
 
-Today's Helium Hotspots have a large security flaw. Anyone can modify the software running on a Hotspot and generate fake LoRa packets. This is a big problem because PoC rewards are based on these packets. The new Secure Concentrator Card solves this problem by digitally signing packets in hardware. Secure Concentrators make it _prohibitively_ difficult to game the PoC system by also utilizing tamper-resistant design elements (routed traces, hard cured potting material, etc). The end result is a more secure Physical Root of Trust for the Helium IoT system and fair PoC earnings for all.
+Today's Helium Hotspots have a large security flaw. Anyone can modify the software running on a Hotspot and generate fake LoRa packets. This is a big problem because PoC rewards are based on these packets. The new Secure Concentrator Card solves this problem by digitally signing packets in hardware making it  _prohibitively_ difficult to generate fake data.
+
+Also, Secure Concentrators will provide the Helium PoC Oracles data about the local area in which they are deployed. The trustworthy data can be used to build the next generation of gaming detection AI and improved PoC algorithms. The end result is a more secure Physical Root of Trust for the Helium IoT system and fair PoC earnings for all.
 
 This HIP defines general hardware requirements for a Secure Concentrator and provides an example open-source implementation. The proposed requirements allow existing Helium Hotspots to be upgradable to Secure Hotspots simply by swapping out existing concentrator cards with a new secure card. In addition, SCC would enable the DIY community to build their own hotspot hardware capable of earning PoC rewards, greatly increasing the diversity and proliferation of Hotspots.
 
@@ -37,30 +39,30 @@ The entire IoT Helium network will be affected by this HIP as the introduction o
   (TDOA))
 
 ## Proof of Coverage Rewards
-In order to incentivize adoption of Secure Concentrators, we propose increasing the earnings of PoC Witness packets received by Secure Concentrator by a factor of **(1.25x)**. We believe this is justified due to the increased security benefits the entire Helium network will enjoy with the addition of Secure Concentrators. A Secure Concentrator is only eligible for the PoC reward if the Witness packet includes valid GPS time and location data. If a Secure Concentrator does not have a valid GPS lock at the time of receiving the Witness packet, it will not receive any reward.
+In order to incentivize adoption of Secure Concentrators, we propose increasing the earnings of PoC Witness packets received by Secure Concentrator by a factor of **(1.25x)**. We believe this is justified due to the increased security benefits the entire Helium network will enjoy with the addition of Secure Concentrators. A Secure Concentrator Hotspot is only eligible for the PoC reward if the Witness packet includes valid GPS time and location data. If a Secure Concentrator does not have a valid GPS lock at the time of receiving the Witness packet, it will not receive any reward.
 
 This incentive structure is part of a larger future roadmap with more network improvements and
-hardware types that will each have their own incentives.
+hardware types that will each have their own incentives. The proposed 1.25x rewards is intended to incentivize initial adoption. The rewards structure is subject to change with adoption of future HIP.
 
 ## Manufacturers
 Hardware Manufacturers of Secure Concentrators will be required to be approved by the Helium
 Manufacturer Compliance Committee and pass a hardware audit process similar to the hardware audit process required for Hotspot manufacturers (see HIP-19). 
 
-The process of onboarding new Secure Concentrators onto the Helium network is very similar to the Hotspot onboarding process as described in HIP-19. Manufacturers will also be bound by the same code of ethics as described in HIP-19. Also, the MCC will have the same authority over approved Manufacturers.
+The process of onboarding new Secure Concentrators onto the Helium network is very similar to the Hotspot onboarding process as described in HIP-19. Manufacturers will also be bound by the same code of ethics as described in HIP-19. Also, the Helium Manufacturing Compliance Committee (MCC) will have the same authority over approved Manufacturers.
 
 ## Installation
-Hotspot owners can optionally upgrade their existing Hotspot with a Secure Concentrator if they have a Hotspot that is capable of the upgrade. Most Hotspot designs that use a mPCIe card slot are capable of the upgrade. However, upgrading a Hotspot may void the warranty. Hotspot manufactures are NOT required to support upgrade to Secure Concentrator. It is the Hotspot Manufacturer's discretion to provide support for SCCs.  
+Hotspot owners can optionally upgrade their existing Hotspot with a Secure Concentrator if they have a Hotspot that is capable of the upgrade. Most Hotspot designs that use a mPCIe card slot are capable of the upgrade. However, upgrading a Hotspot may void the warranty. Hotspot manufacturers are NOT required to support upgrade to Secure Concentrator. It is the Hotspot Manufacturer's discretion to provide support for SCCs.  
 
-Manufactures can include SCCs in new Hotspots designs, in which case Manufactures are responsible for providing installation and service for Secure Concentrator. Use of SCC in Hotspot design satisfies the HIP 19 requirement for Encrypted/locked-down firmware and Encrypted storage of the miner swarm_key. To be clear, Hotspots that use SCC will not be required to have locked-down firmware and will not be required to securely store the swarm_key. (Note swarm_key is not the same as the SCC's Hardware Key).
+manufacturers can include SCCs in new Hotspots designs, in which case manufacturers are responsible for providing installation and service for Secure Concentrator. Use of SCC in Hotspot design satisfies the HIP 19 requirement for Encrypted/locked-down firmware and Encrypted storage of the miner swarm_key. To be clear, Hotspots that use SCC will not be required to have locked-down firmware and will not be required to securely store the swarm_key. (Note swarm_key is not the same as the SCC's Hardware Key).
 
 ## General Requirements
-Ultimately, the MCC shall hold final approval power of a candidate Secure Concentrator design in accordance with HIP-19. That being said, a Secure Concentrator design should meet the following requirements:
+This HIP gives authority the MCC to design a process for approving Secure Concentrators. The approval process may involve engaging with 3rd party security labs for intensive hardware/software penetration testing. Ultimately, the MCC shall hold final approval power of a candidate Secure Concentrator design. That being said, a Secure Concentrator design should meet the following requirements:
 
 ### Hardware features
 
 An SCC design must meet the following minimum hardware requirements:
 
- - Onboard GNSS (GPS) receiver. GPS provides geolocation and timestamping reference of every received packet. The GPS accuracy must be 20 meters or better.
+ - Onboard GNSS (GPS) receiver. GPS provides geolocation and timestamping reference of every received packet. The GPS horizontal and vertical position error must be less than 20 meters 99% of the time.
  - Appropriate hardware to precisely timestamp the arrival of received LoRa packets on par with Semtech SX1303.
  - Ability to sign the received LoRa packets and associated metadata (GPS location, time, frequency, etc) with a secured asymmetric key (see further security requirements).
 
@@ -92,7 +94,7 @@ Example design choices that reflect these requirements are:
  1. Can sign 10 or more packet receipts per second.
 
 ### Process requirements
-All effort must be taken to ensure the Hardware Key stored in the Secure Concentrator remains a secret. Manufacturers themselves should never have access to the keys. Also, Manufacturers are required to have strong processes in place for handling firmware updates. Manufactures must demonstrate prudence when handling firmware update key. Manufacturers must also have a firmware update contingency plan in place in the event the Manufacturer should cease to support their product. To these ends, Manufacturers of Secure Concentrator are required to practice the following process requirements:
+All effort must be taken to ensure the Hardware Key stored in the Secure Concentrator remains a secret. Manufacturers themselves should never have access to the keys. Also, Manufacturers are required to have strong processes in place for handling firmware updates. manufacturers must demonstrate prudence when handling firmware update key. Manufacturers must also have a firmware update contingency plan in place in the event the Manufacturer should cease to support their product. To these ends, Manufacturers of Secure Concentrator are required to practice the following process requirements:
 
  1. Secure key generation is performed on the Secure Concentrator hardware itself. The key material is never transferer in or out of the Secure Concentrator.
  2. The Provisioning process must disable all diagnostic/debug interfaces permanently.
