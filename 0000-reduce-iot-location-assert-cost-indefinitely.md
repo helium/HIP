@@ -3,7 +3,7 @@
 - Author(s): @nosmaster89
 - Start Date: 2023-06-22
 - Category: Economic 
-- Original HIP PR: 722
+- Original HIP PR: [#722](https://github.com/helium/HIP/pull/722)
 - Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
 - Vote Requirements: veIOT Holders
 
