@@ -23,7 +23,7 @@ The key motivations behind this proposal are as follows:
 ## Stakeholders
 IOT Hotspot Makers, who will not have to pay the increased 1M DC ($10) Location assert fee on the first location reassertions.
 IOT Hotspot owners, who will not have to pay the increased 1M DC ($10) Location assert fee on subsequent location reassertions.
-And This proposal impacts the entire network as it affects the amount of DC burned, which influences the economics of all subdaos.
+And this proposal impacts the entire network as it affects the amount of DC burned, which influences the economics of all networks.
 
 ## Detailed Explanation
 The proposal aims to extend the duration of the reduced asset fees for hotspot relocation that HIP 69 introduced indefinitely. By maintaining the lowered fee,
