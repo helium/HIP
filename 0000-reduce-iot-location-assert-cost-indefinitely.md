@@ -1,6 +1,6 @@
 # HIP X: Reduce IOT location assert cost indefinitely
 
-- Author(s): @nosmaster89
+- Author(s): [@nosmaster89](https://github.com/nosmaster89)
 - Start Date: 2023-06-22
 - Category: Economic 
 - Original HIP PR: [#722](https://github.com/helium/HIP/pull/722)
