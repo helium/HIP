@@ -9,10 +9,7 @@
 
 ## Summary
 
-This hip proposes an adjustment to the hotspot relocation fees on the network. Currently, as per the migration HIP-69, the assert fees for IoT hotspots
-have been halved. However, this adjustment is set to expire on July 20th, 2023, UTC, after which the assert fee will increase back to $10. This
-proposal suggests maintaining the reduced fee to encourage hotspot relocation and support future HIPss aiming to distribute hotspots in densely 
-populated areas.
+This HIP proposes an adjustment to the Hotspot location assertion fees on the network. Currently, as per [HIP-69](https://github.com/helium/HIP/blob/main/0069-reassertion-fee-reduction.md) and since the Solana migration, the fees for IOT hotspots were halved. However, this adjustment is set to expire on July 20th, 2023, UTC, after which the fee will increase back to $10 in Data Credits. This proposal suggests maintaining the reduced fee to encourage hotspot relocation and support future HIPs aiming to distribute hotspots in densely populated areas.
 
 ## Motivation
 The key motivations behind this proposal are as follows:
