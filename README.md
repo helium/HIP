@@ -96,13 +96,13 @@ If you have questions or feedback, please see the [Discussion](https://github.co
 | 80 | [Simplifying the DAO Utility Score](0080-simplifying-dao-utility-score.md) | [<img src="https://img.shields.io/badge/Status-Rejected-red"></img>](https://github.com/helium/HIP/issues/599)  |
 | 81 | [Minimum Device Onboarding Fees](0081-minimum-onboarding-fee.md) | [<img src="https://img.shields.io/badge/Status-Rejected-red"></img>](https://github.com/helium/HIP/issues/612)  |
 | 82 | [Add Helium Mobile as a Service Provider to the Helium Mobile subDAO](0082-helium-mobile-service-provider.md)  | [<img src="https://img.shields.io/badge/Status-Approved-green"></img>](https://github.com/helium/HIP/issues/628)  |
-| 83 | [Restore First to Respond Witness Rewarding](0083-restore-first-to-witness.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/632)  |
+| 83 | [Restore First to Respond Witness Rewarding](0083-restore-first-to-witness.md) | [<img src="https://img.shields.io/badge/Status-Voting_Open-cyan"></img>](https://github.com/helium/HIP/issues/632)  |
 | 84 | [Service Provider Hex Boosting](0084-service-provider-hex-boosting.md) | [<img src="https://img.shields.io/badge/Status-Approved-green"></img>](https://github.com/helium/HIP/issues/638)  |
 | 85 | [MOBILE Hex Coverage Limit](0085-mobile-hex-coverage-limit.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/673)  |
 | 86 | [Increase IOT Data Transfer Cost](0086-increase-iot-data-transfer-cost.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/703)  |
 | 87 | [Proportional Service Provider Rewards](0087-proportional-service-provider-rewards.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/704)  |
-| 88 | [Adjustment of DAO Utility A Score](0088-adjustment-of-dao-utility-a-score.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/707)  |
-| 89 | [MOBILE Network Onboarding Fees](0089-mobile-network-onboard-fees.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/714)  |
+| 88 | [Adjustment of DAO Utility A Score](0088-adjustment-of-dao-utility-a-score.md) | [<img src="https://img.shields.io/badge/Status-Voting_Open-cyan"></img>](https://github.com/helium/HIP/issues/707)  |
+| 89 | [MOBILE Network Onboarding Fees](0089-mobile-network-onboard-fees.md) | [<img src="https://img.shields.io/badge/Status-Voting_Open-cyan"></img>](https://github.com/helium/HIP/issues/714)  |
 | 90 | [Indefinitely Reduce IOT Location Assertion Cost](0090-reduce-iot-location-assert-cost-indefinitely.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/735)  |
 
 ## Status Key
@@ -111,6 +111,7 @@ If you have questions or feedback, please see the [Discussion](https://github.co
 | :------------ | :--------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------- |
 | Draft         | <img src="https://img.shields.io/badge/Status-Draft-yellow"></img>           | HIP is in process of being written; author is not yet soliciting feedback from the community at large |
 | In Discussion | <img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img> | HIP is under active consideration by the community                                                    |
+| Voting Open   | <img src="https://img.shields.io/badge/Status-Voting_Open-cyan"></img>       | HIP is currently being voted on
 | Approved      | <img src="https://img.shields.io/badge/Status-Approved-green"></img>         | HIP has been approved by rough consensus, and pending development and testing                         |
 | Deployed      | <img src="https://img.shields.io/badge/Status-Deployed-blue"></img>          | Code to implement HIP has been merged and deployed to the network                                     |
 | Rejected      | <img src="https://img.shields.io/badge/Status-Rejected-red"></img>           | HIP did not pass voting                                                                               |
