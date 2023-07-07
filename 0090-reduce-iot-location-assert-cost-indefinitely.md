@@ -1,10 +1,10 @@
-# HIP X: Reduce IOT location assert cost indefinitely
+# HIP 90: Indefinitely Reduce IOT Location Assertion Cost
 
 - Author(s): [@nosmaster89](https://github.com/nosmaster89)
 - Start Date: 2023-06-22
 - Category: Economic 
 - Original HIP PR: [#722](https://github.com/helium/HIP/pull/722)
-- Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
+- Tracking Issue: [#735](https://github.com/helium/HIP/issues/735)
 - Vote Requirements: veIOT Holders
 
 ## Summary
