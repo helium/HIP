@@ -97,17 +97,27 @@ Alternatives:
 
 ## Unresolved Questions
 
-#### Resonable Time for the Review Team?
+### Resonable Time for the Review Team?
 
 This has been the main question refered to throughout this HIP. 
+
 - What is a resonable time for a review? 
+
 Helium Foundation is going to have to answer this question from a customer service standpoint.  
 This HIP ties that timeframe to the question:
+
 - What is a reasonable time per iteration of the ML/AI algorithm?
-The answer to both of these questions have a lot to consider. It needs to be kept at something that a resonable person can deal with their hotspot being falsely accused and being unrewarded, while waiting on a resonable recourse, the human review.  It also needs to be kept at a resonable learning curve for the algorithm. New additions to the denylist need to continue via the algorithm for the next 35K identified gamers.  Waiting 6 minths between iteration is not a learning curve. 
+
+The answer to both of these questions have a lot to consider. It needs to be kept at something that a resonable person can deal with their hotspot being falsely accused and being unrewarded, while waiting on a resonable recourse, the human review.  It also needs to be kept at a resonable learning curve for the algorithm. New additions to the denylist need to continue via the algorithm for the next 35K identified gamers.  Waiting 6 months between iteration is not a learning curve. 
 The regular flow and iteration schedule should be left up to Nova Lab's discretion as the custodian of the denylist.  The expected customer/ user experience of the Helium Network is up to the Foundation to determine.  The answers to these questions is theirs' to ponder.
-How do we keep this from happening again?  How do we beef up the personel on the review team?  Are there any ideas on how we can make them a paid job?
-Nova was granted the authority to temporarily, yet unilaterally manage the denylist in a vote in 2022.  The intention at that time was that HIP 40 would soon go to a vote and the implementation of decentralized denylists was at hand.  Because this has not been corrected in the past 18 months, a vacancy of resources needed to manage the Crowdspot submissions has collapsed the process. [^4] Very few hotspots get removed or added to the denylist by hand, the algorithmic detection hasn't been ran in 5 months [^3], and FUD of the denylist and gamers has taken over in Discord channels.  How do we keep this from happening again?
+
+- How do we keep this from happening again?  
+- How do we beef up the personel on the review team?  
+- Are there any ideas on how we can make them a paid job?
+
+Nova was granted the authority to temporarily, yet unilaterally manage the denylist in a vote in 2022.  The intention at that time was that HIP 40 would soon go to a vote and the implementation of decentralized denylists was at hand.  Because this has not been corrected in the past 18 months, a vacancy of resources needed to manage the Crowdspot submissions has collapsed the process. [^4] Very few hotspots get removed or added to the denylist by hand, the algorithmic detection hasn't been ran in 5 months [^3], and FUD of the denylist and gamers has taken over in Discord channels.  
+- How do we keep this from happening again?
+
 The rest of the unresolved questions are not really for this HIP, but rather for the community:
 - What is the solution for the denylist as a whole?
 - Will there be a HIP for modeled coverage that will eliminate the denylist?  
