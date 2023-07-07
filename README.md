@@ -103,6 +103,7 @@ If you have questions or feedback, please see the [Discussion](https://github.co
 | 87 | [Proportional Service Provider Rewards](0087-proportional-service-provider-rewards.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/704)  |
 | 88 | [Adjustment of DAO Utility A Score](0088-adjustment-of-dao-utility-a-score.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/707)  |
 | 89 | [MOBILE Network Onboarding Fees](0089-mobile-network-onboard-fees.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/714)  |
+| 90 | [Indefinitely Reduce IOT Location Assertion Cost](0090-reduce-iot-location-assert-cost-indefinitely.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/735)  |
 
 ## Status Key
 
