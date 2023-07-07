@@ -30,8 +30,7 @@ It has been known for some time that a large number of hotspots were denied in e
 ### Four steps
 
 1. Identify & remove stale requests on Crowdspot 
-2. New Sweep with New POC data
-& New Detection model
+2. New sweep on new POC data with new detection model
 3. Review Team clears out Crowdspot in a resonable time
 4. Repeat as needed
 
