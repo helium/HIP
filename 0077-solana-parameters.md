@@ -90,7 +90,7 @@ The Treasury Circuit Breakers protect the subDAO treasuries. The subDAO treasuri
 
 ### Emission Schedules
 
-The emission schedules until 2025 are codified [in the helium program library repository](https://github.com/helium/helium-program-library/tree/master/packages/helium-cli/emissions). These emission values
+The emission schedules until 2025 are codified [in the helium program library repository](https://github.com/helium/helium-program-library/tree/master/packages/helium-admin-cli/emissions). These emission values
 will need to be adjusted as more rewardable entities, like mappers, are added. The values present in these json files represent the amount that will be emitted per epoch given the current set of rewardable entities.
 
 The full token emissions schedule as of Solana Migration can be downloaded
