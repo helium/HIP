@@ -9,7 +9,7 @@
 
 ## Summary
 
-This HIP proposes an extension of the reduced Hotspot location assertion fees on the network. Currently, the fees for IOT hotspots were halved as per HIP-69 since the Solana migration. However, this adjustment is set to expire on July 20th, 2023, UTC, after which the fee will increase back to $10 in Data Credits. This proposal suggests maintaining the reduced fee for an additional 3 months to incentivize hotspot relocation and gather more data on the impact of a $5 versus a $10 reassert fee.
+This HIP proposes an extension of the reduced Hotspot location assertion fees on the network. Currently, the fees for IOT hotspots were halved as per HIP-69 since the Solana migration. However, this adjustment is set to expire on July 20th, 2023, UTC, after which the fee will increase back to $10 in Data Credits. This proposal suggests maintaining the reduced fee for an additional 6 months to incentivize hotspot relocation and gather more data on the impact of a $5 versus a $10 reassert fee.
 
 ## Motivation
 
@@ -28,27 +28,39 @@ The key motivations behind this proposal are as follows:
 
 ## Detailed Explanation
 
-The proposal aims to indefinitely extend the duration of the reduced asset fees for hotspot relocation introduced by HIP 69. By maintaining the lowered fee, hotspot owners are more likely to relocate their hotspots, leading to improved network coverage in various locations. This change also supports future HIPs that aim to distribute hotspots in densely populated areas. After 3 months, the chain variable for location asserts will revert to $10, unless a new HIP is passed to keep the assert fee at $5 or any other value as decided by the community.
+The proposal aims to extend the duration of the reduced location assertion fees introduced by HIP 69 with 6 months. The extension will be used to further study the effect of reduced location assertion fees as initially set out by HIP 69. In the months following the migration to Solana, there were several issues with hotspot location assertion and as such it is believed that the initial 3 month period does not provide adequate data for determining the success of HIP 69.
 
+The Helium Foundation has commited to provide the community with location assertion data 1.5 month before the 6 month extension expires. The data will be used to identify if the reduced location assertion fees have the intended effect. Several key metrics will be used to determine the effectiveness of a reduced location assertion fee.
+
+1. **The amount of (legitimate) hotspot relocations**: if the amount of hotspot relocations increases this indicates that the reduced fees had a positive effect on building out the network.
+
+2. **Percentage of legitimate hotspot relocations**: if the percentage of illegitimate hotspot relocations increases it is an indicator that the hotspot assertion fee is no longer providing an adequate detterent against malicious actors.
+
+We use the following criteria to determine if a hotspot relocation is legitimate:
+
+1. **Time between hotspot relocations**: a known indicator of illegitimate hotspot relocations is the time between hotspot relocations. Several bad actors have used repeated hotspot relocations as a way to avoid detection.
+
+2. **Distance of the hotspot relocation**: a hotspot that relocates over a significant distance is likely truly relocating to a new area where it provides more value for the network. A hotspot that relocates over a very short distance is more likely to engage in what is often called "TS optimization". The goal of this proposal is to encourage relocating to a new location that is more valuable to the network and we will thus disregard small relocations.
 
 ## Drawbacks
 
-The primary drawback of this proposal is a lower overall DC burn for the network. However, the potential benefits gained from increased hotspot relocation and improved network coverage can offset this drawback.
+The primary drawback of this proposal is a lower overall DC burn for the network. However, the potential benefits gained from increased hotspot relocation and improved network coverage can offset this drawback. It is important to evaluate if the potential benefits to the network are achieved by reducing the assertion fees to avoid reducing the DC burn without benefits.
 
 ## Rationale and Alternatives
 
-The rationale behind this proposal is that the current reduced asset fee represents a reasonable minimum fee for the expected lifespan of a hotspot at a new location. By keeping the fee reduced, hotspot owners are more likely to commit to longer-term hotspot operation, thus supporting network stability and coverage. An alternative could be to maintain the original asset fee of $10, but this may discourage hotspot relocation and hinder efforts to optimize hotspot distribution.
+The rationale behind this proposal is to obtain more data to reach a conclusion. The hotspot assertion issues following the migration to Solana have created a biased data set and it is therefore difficult to determine whether the reduced assertion fees of HIP 69 had the intended effect. It is important to provide hotspot owners with a way to move hotspots to more valuable locations and the assertion fee should not be the limiting factor. At the same time it is important to recognize that location assertion fees provide revenue for the network and that reducing the location assertion fee without changing hotspot owner behavior is a net-negative for the network.
+
+The alternative to this proposal is to simply revert the location assertion fee to $10 but we believe the extension can provide the data that is needed to come to a data driven conclusion.
 
 ## Unresolved Questions
 
-- To what extent is the asset cost a deciding factor for hotspot owners when considering hotspot relocation?
-- How does the overall DC burn affect the economics of the network?
+Several unresolved questions remain that can be better evaluated with the data gathered during the 6 month extension. The main question is to what extent the assertion fee is a deciding factor in relocating a hotspot.
 
 ## Deployment Impact
 
-To implement this proposal, IOT Hotspot makers need to ensure that Maker Apps display and use the correct requirement of 500K DC/$5 for hotspot relocation.
+The Helium Foundation has committed to providing the community with the hotspot assertion data 1.5 months before the 6 month extension ends. There is no action required from the remaining actors of the network (e.g. hotspot owners, makers) because this proposal extends the (temporary) status quo set out by HIP 69.
 
 ## Success Metrics
 
-The success of this HIP can be measured by monitoring the burn for asset fees after its implementation. A successful outcome would be the retention or increase of the level of assert location DC burn, indicating active hotspot relocation and continued network growth.
+This proposal is deemed successful if it provides the data necessary to determine whether a more permanent reduction of the assertion fee is warranted. The assertion fee reduction has the intended effect if the data can show that the amount of hotspot relocations increase while not increasing the amount of illegitimate hotspot relocations.
 
