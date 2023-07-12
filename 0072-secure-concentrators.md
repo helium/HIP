@@ -5,6 +5,7 @@
 - Category: Technical
 - Original HIP PR: #484
 - Tracking Issue: #489
+- Voting Requirements: veIOT Holders
 
 ## Summary
 
