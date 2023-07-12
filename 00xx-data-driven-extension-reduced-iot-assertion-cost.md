@@ -1,10 +1,10 @@
 # HIP ??: Data-Driven Extension: Continuation of Reduced IOT Location Assertion Cost
 
-- Author(s): [@maxgold91](https://github.com/maxgold91), [@bfgneil](https://github.com/bfgneil), [@mawdegroot](https://github.com/mawdegroot), Fizzy, [@AndrewsMD](@github.com/andrewsMD)
+- Author(s): [@maxgold91](https://github.com/maxgold91), [@bfgneil](https://github.com/bfgneil), [@mawdegroot](https://github.com/mawdegroot), Fizzy, [@AndrewsMD](https://github.com/andrewsMD)
 - Start Date: 2023-07-09
 - Category: Economic 
-- Original HIP PR: 
-- Tracking Issue: 
+- Original HIP PR: [#738](https://github.com/helium/HIP/pull/738)
+- Tracking Issue: <!-- TODO -->
 - Vote Requirements: veIOT Holders
 
 ## Summary
@@ -30,11 +30,11 @@ The key motivations behind this proposal are as follows:
 
 The proposal aims to extend the duration of the reduced location assertion fees introduced by HIP 69 with 6 months. The extension will be used to further study the effect of reduced location assertion fees as initially set out by HIP 69. In the months following the migration to Solana, there were several issues with hotspot location assertion and as such it is believed that the initial 3 month period does not provide adequate data for determining the success of HIP 69.
 
-The Helium Foundation has commited to provide the community with location assertion data 1.5 month before the 6 month extension expires. The data will be used to identify if the reduced location assertion fees have the intended effect. Several key metrics will be used to determine the effectiveness of a reduced location assertion fee.
+The Helium Foundation has committed to provide the community with location assertion data 1.5 month before the 6 month extension expires. The data will be used to identify if the reduced location assertion fees have the intended effect. Several key metrics will be used to determine the effectiveness of a reduced location assertion fee.
 
 1. **The amount of (legitimate) hotspot relocations**: if the amount of hotspot relocations increases this indicates that the reduced fees had a positive effect on building out the network.
 
-2. **Percentage of legitimate hotspot relocations**: if the percentage of illegitimate hotspot relocations increases it is an indicator that the hotspot assertion fee is no longer providing an adequate detterent against malicious actors.
+2. **Percentage of legitimate hotspot relocations**: if the percentage of illegitimate hotspot relocations increases it is an indicator that the hotspot assertion fee is no longer providing an adequate deterrent against malicious actors.
 
 We use the following criteria to determine if a hotspot relocation is legitimate:
 
@@ -63,4 +63,3 @@ The Helium Foundation has committed to providing the community with the hotspot 
 ## Success Metrics
 
 This proposal is deemed successful if it provides the data necessary to determine whether a more permanent reduction of the assertion fee is warranted. The assertion fee reduction has the intended effect if the data can show that the amount of hotspot relocations increase while not increasing the amount of illegitimate hotspot relocations.
-
