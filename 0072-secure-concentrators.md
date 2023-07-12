@@ -3,8 +3,8 @@
 - Author(s) @Dinocore
 - Start Date: Oct 1, 2022
 - Category: Technical
-- Original HIP PR: #484
-- Tracking Issue: #489
+- Original HIP PR: [#484](https://github.com/helium/HIP/pull/484)
+- Tracking Issue: [#489](https://github.com/helium/HIP/issues/489)
 - Voting Requirements: veIOT Holders
 
 ## Summary
