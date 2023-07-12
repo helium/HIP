@@ -1,6 +1,6 @@
 # HIP-72: Secure Concentrators
 
-- Author(s) @Dinocore
+- Author(s) [@Dinocore](https://github.com/dinocore1)
 - Start Date: Oct 1, 2022
 - Category: Technical
 - Original HIP PR: [#484](https://github.com/helium/HIP/pull/484)
