@@ -1,10 +1,10 @@
-# HIP ??: Data-Driven Extension: Continuation of Reduced IOT Location Assertion Cost
+# HIP 91: Data-Driven Extension: Continuation of Reduced IOT Location Assertion Cost
 
 - Author(s): [@maxgold91](https://github.com/maxgold91), [@bfgneil](https://github.com/bfgneil), [@mawdegroot](https://github.com/mawdegroot), Fizzy, [@AndrewsMD](https://github.com/andrewsMD)
 - Start Date: 2023-07-09
 - Category: Economic 
 - Original HIP PR: [#738](https://github.com/helium/HIP/pull/738)
-- Tracking Issue: <!-- TODO -->
+- Tracking Issue: [#743](https://github.com/helium/HIP/issues/743)
 - Vote Requirements: veIOT Holders
 
 ## Summary
