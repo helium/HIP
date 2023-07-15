@@ -3,7 +3,7 @@
 - Author(s): @shawaj
 - Start Date: 2023-07-15
 - Category: technical
-- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
+- Original HIP PR: [#744](https://github.com/helium/HIP/pull/744)
 - Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
 - Vote Requirements: veHNT holders
 
