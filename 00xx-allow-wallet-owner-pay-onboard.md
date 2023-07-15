@@ -21,7 +21,7 @@ The key motivations for this proposal are as follows:
 ## Stakeholders
 
 - Hotspot Owners: if a user has purchased a hotspot from a maker that has subsequently left the ecosystem and has run out of onboarding credits they will now be able to onboard their devices more easily
-- Helium Foundation: there will likely have to be some flag in the onboarding server to determine whether a maker is active or not. Helium Foundation will likely need to be in charge of managing this.
+- Helium MCC: there will likely have to be some flag in the onboarding server to determine whether a maker is active or not. Helium Foundation will likely need to be in charge of managing this.
 
 ## Detailed Explanation
 
