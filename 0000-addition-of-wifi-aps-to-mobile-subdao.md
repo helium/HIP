@@ -61,7 +61,7 @@ Similarly to CBRS, a Wi-Fi access point can:
 
 Below we will discuss the mechanisms used to estimate how many hexes are covered by a Wi-Fi access point and how those hexes contribute to the rewards earned by that access point.
 
-### 3.1 Indoor Radios
+### 3.1 Indoor Access Points
 
 Indoor access points are devices that are usually not outdoor-rated and they are deployed inside buildings and venues to provide Wi-Fi coverage to Subscribers that are inside those facilities.
 
