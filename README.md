@@ -85,7 +85,7 @@ If you have questions or feedback, please see the [Discussion](https://github.co
 | 69 | [Re-assertion Fee Reduction](0069-reassertion-fee-reduction.md) | [<img src="https://img.shields.io/badge/Status-Deployed-blue"></img>](https://github.com/helium/HIP/issues/458) |
 | 70 | [Scaling the Helium Network](0070-scaling-helium.md) | [<img src="https://img.shields.io/badge/Status-Deployed-blue"></img>](https://github.com/helium/HIP/issues/471) |
 | 71 | [Scaling the Network with Governance & Hedera](0071-scaling-with-governance-hedera.md) | [<img src="https://img.shields.io/badge/Status-Closed-lightgrey"></img>](https://github.com/helium/HIP/issues/480) |
-| 72 | [Secure Concentrators](0072-secure-concentrators.md) | [<img src="https://img.shields.io/badge/Status-Voting_Open-cyan"></img>](https://github.com/helium/HIP/issues/489) |
+| 72 | [Secure Concentrators](0072-secure-concentrators.md) | [<img src="https://img.shields.io/badge/Status-Rejected-red"></img>](https://github.com/helium/HIP/issues/489) |
 | 73 | [Consensus Deselection Weighting](0073-consensus-deselection-history-weight.md) | [<img src="https://img.shields.io/badge/Status-Deployed-blue"></img>](https://github.com/helium/HIP/issues/491) |
 | 74 | [Mobile PoC - Modeled Coverage Rewards](0074-mobile-poc-modeled-coverage-rewards.md) | [<img src="https://img.shields.io/badge/Status-Approved-green"></img>](https://github.com/helium/HIP/issues/504) |
 | 75 | [Initiate Programmatic PoC Emissions with an Updated Emissions Curve](0075-mobile-poc-initiate-programmatic-minting-and-updated-emissions-curve.md) | [<img src="https://img.shields.io/badge/Status-Deployed-blue"></img>](https://github.com/helium/HIP/issues/526) |
@@ -103,8 +103,8 @@ If you have questions or feedback, please see the [Discussion](https://github.co
 | 87 | [Proportional Service Provider Rewards](0087-proportional-service-provider-rewards.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/704)  |
 | 88 | [Adjustment of DAO Utility A Score](0088-adjustment-of-dao-utility-a-score.md) | [<img src="https://img.shields.io/badge/Status-Approved-green"></img>](https://github.com/helium/HIP/issues/707)  |
 | 89 | [MOBILE Network Onboarding Fees](0089-mobile-network-onboard-fees.md) | [<img src="https://img.shields.io/badge/Status-Approved-green"></img>](https://github.com/helium/HIP/issues/714)  |
-| 90 | [Indefinitely Reduce IOT Location Assertion Cost](0090-reduce-iot-location-assert-cost-indefinitely.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/735)  |
-| 91 | [Data-Driven Extension: Continuation of Reduced IOT Location Assertion Cost](0091-data-driven-extension-reduced-iot-assertion-cost.md) | [<img src="https://img.shields.io/badge/Status-Voting_Open-cyan"></img>](https://github.com/helium/HIP/issues/743)  |
+| 90 | [Indefinitely Reduce IOT Location Assertion Cost](0090-reduce-iot-location-assert-cost-indefinitely.md) | [<img src="https://img.shields.io/badge/Status-Closed-lightgrey"></img>](https://github.com/helium/HIP/issues/735)  |
+| 91 | [Data-Driven Extension: Continuation of Reduced IOT Location Assertion Cost](0091-data-driven-extension-reduced-iot-assertion-cost.md) | [<img src="https://img.shields.io/badge/Status-Approved-green"></img>](https://github.com/helium/HIP/issues/743)  |
 
 ## Status Key
 
