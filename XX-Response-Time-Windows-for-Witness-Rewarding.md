@@ -1,4 +1,4 @@
-# HIP 92: Response Time Windows for Witness Rewarding
+# HIP XX: Response Time Windows for Witness Rewarding
 
 - Author: @disk91, @jmarcelino
 - Start Date: 2023/07/20
@@ -9,31 +9,36 @@
 # Summary 
 
 Currently the Proof-of-Coverage Oracles rewards the 14 first hotspots reporting a witness. This rewards 
-the fastest hotspots, incentivizing  fiber backhauls and specific hardware models that happen to be able 
-to produce fast signatures.  The result is that the same hotspots are selected, making others unviable 
+the fastest hotspots, incentivizing fiber backhauls and specific hardware models that happen to be able 
+to produce fast signatures. The result is that the same hotspots are selected, making others unviable 
 even if they provide unique and useful coverage for the network. In other words, punishes hotspots for 
 falling short of millisecond optimizations when the LoRaWAN protocol functions to the order of seconds. 
 A hotspot’s utility in providing LoRaWAN coverage is based on measuring “good enough” response times, not 
-absolute fastest as absolute speeds provides no marginal utility. 
+absolute fastest as absolute speeds provides no marginal utility, Uplink does not have a particular time-window, 
+donwlink time windows is up to 2 seconds, Join process up to 6 seconds.
 
 This HIP proposes to restore random hotspot selection but adding a response time window to eliminate only 
-slow hotspots that fail to meet LoRaWAN-grade timing constraints.
+slow hotspots that fail to meet LoRaWAN-grade timing constraints and push helium hotspots to improve their reponse time
+over time reasonibly. 
 
 # Motivation
 
 The LoRaWAN network has some timing constraints to be considered, these ones are related to the JOIN mechanism 
-and ACK/Downlink mechanism. JOIN requires a full loop within 5 seconds, ACK/Downlink requires a full loop in 1 
-second for RX1 window. Out of this time frame, the response will be ignored by the devices. LoRaWAN is a question 
-of seconds, not a question of microseconds, this is why creating a competition between hotspots and network 
+and ACK/Downlink mechanism. JOIN requires a full loop within 5 seconds, up to 6. ACK/Downlink requires a full loop in 1 
+second for RX1 window, up to 2 seconds for RX2 windows. Out of this time frame, the response will be ignored by the devices.  Appendix gives the consequence of these constraints on the expected hotspot response time.
+
+LoRaWAN is a question of seconds, not a question of microseconds, this is why creating a competition between hotspots and network 
 connectivity at a millisecond scale is not achieving any network goal.
 
 Hotspots with highly valuable locations, such as the mountaintops, cell towers, and even rooftops 
 sometimes rely on higher latency connectivity (4G/5G, Home Plug, Satellites) which adds anywhere from 
 10ms to 100ms. These hotspots generally have a higher operating cost and are unfairly impacted by the 
-current selection algorithm as they still operate within LoRaWAN timing specifications.
+current selection algorithm as they still operate within LoRaWAN timing specifications. 
+See Appendix about highly valuable coverage.
 
 Hotspot out of the city centers will get a slower Internet response time from the one in the city center, 
-even with fast Internet access, due to some extra network hops.
+even with fast Internet access, due to some extra network hops or downgraded connectivity technology like xDSL.
+See Appendix about suburb valuable coverage.
 
 Hotspot with the worst locations, indoor, in the city center, gets the best response time experience 
 with direct fiber connectivity.
@@ -41,22 +46,23 @@ with direct fiber connectivity.
 We have seen that depending on the hardware of the hotspot, the Witness processing time is largely dependent 
 on the packet signature. As the signature is delegated to an hardware ECC chip for most of the deployed hotspot, 
 the processing time depends on the hardware solution soldered. Even if firmware can be improved, the current solution 
-disqualifies certain hardware whatever is the hotspot owner's efforts.  More generally speaking, it disqualifies 
-lower-end hardware like light-hotspots based on micro-controllers. This is nonsense as these hardware have a better 
-fit for stability, long-life, energy saving, lower cost, and should be privileged.
-The Peoples Network must be accessible to anyone and not be a competition of micro-seconds optimization limited to a 
+disqualifies certain hardware whatever is the hotspot owner's efforts. See Appendix about Manufacturer ECC impact on
+global timing. 
+More generally speaking, it disqualifies lower-end hardware like light-hotspots based on micro-controllers. This is nonsense as these hardware have a better fit for stability, long-life, energy saving, lower cost, and should be privileged long term.
+The Peoples Network must be accessible to anyone and not be a competition of miliseconds optimization limited to a 
 small group of experts.
 
 The witness response time is not representative of the data packet processing. Witness response time does not have any 
 constraint of time. Witnesses are processed by Oracle, and response time depends on the Oracle localization, 
 associated with the network path to reach that Oracle. Response time can differ from a Witness to another Witness, 
 the absolute response time is not a good way to measure a performance responding to the LoRaWAN timing constraints.
+The witness process differ from the packet process, Appendix details these two processes.
 
 As for a given witness, the Hotspots from a similar area will report it to the same Oracle, we can consider a response 
 time window starting from the first witness received by the Oracle as a viable solution to eliminate the variable offset 
 timing and to eliminate hotspot that are really slower and can cause a problem for data processing.
 
-# Detailed Explanation
+# Rationale and Alternatives
 
 This HIP proposes to select a valid witness from the ones arriving in a time window of MAX_WITNESS_WAIT_WINDOW_MS starting 
 from the first received witness by the Oracle. 
@@ -73,3 +79,26 @@ milliseconds. Witness is marked valid.
 3. The Oracle receives the next witnesses during the MAX_WITNESS_WAIT_WINDOWS_MS ms and mark them valid.
 4. The Oracle receives the next witnesses after the MAX_WITNESS_WAIT_WINDOWS_MS ms time window and marks them invalid.
 5. The Oracle selects 14 of the valid witnesses randomly to be rewarded.
+
+# Unresolved Questions
+
+# Deployment Impact
+Oracle PoC rewarding code needs to be modified to take this into consideration. Deployment is global, Hotspots are not impacted.
+
+# Success Metrics
+
+# Appendix
+
+## Highly Valuable Coverage
+
+## Suburb Valuable Coverage
+
+## Packet Processing & LoRaWan time constraints
+
+## Packet Processing Waterfall
+
+## Witness Processinf Waterfall
+
+
+
+
