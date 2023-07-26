@@ -25,38 +25,38 @@ over time reasonibly.
 
 The LoRaWAN network has some timing constraints to be considered, these ones are related to the JOIN mechanism 
 and ACK/Downlink mechanism. JOIN requires a full loop within 5 seconds, up to 6. ACK/Downlink requires a full loop in 1 
-second for RX1 window, up to 2 seconds for RX2 windows. Out of this time frame, the response will be ignored by the devices.  Appendix gives the consequence of these constraints on the expected hotspot response time.
+second for RX1 window, up to 2 seconds for RX2 windows. Out of this time frame, the response will be ignored by the devices.  [Appendix](#packet-processing-and-lorawan-time-constraints) gives the consequence of these constraints on the expected hotspot response time.
 
-LoRaWAN is a question of seconds, not a question of microseconds, this is why creating a competition between hotspots and network 
-connectivity at a millisecond scale is not achieving any network goal.
+LoRaWAN is a question of seconds, not a question of microseconds, this is why creating a competition between hotspots and network connectivity at a millisecond scale is not achieving any network goal.
 
 Hotspots with highly valuable locations, such as the mountaintops, cell towers, and even rooftops 
 sometimes rely on higher latency connectivity (4G/5G, Home Plug, Satellites) which adds anywhere from 
 10ms to 100ms. These hotspots generally have a higher operating cost and are unfairly impacted by the 
 current selection algorithm as they still operate within LoRaWAN timing specifications. 
-See Appendix about highly valuable coverage.
+See [appendix](#highly-valuable-coverage) about highly valuable coverage.
 
 Hotspot out of the city centers will get a slower Internet response time from the one in the city center, 
 even with fast Internet access, due to some extra network hops or downgraded connectivity technology like xDSL.
-See Appendix about suburb valuable coverage.
+See [Appendix](#suburb-valuable-coverage) about suburb valuable coverage.
 
 Hotspot with the worst locations, indoor, in the city center, gets the best response time experience 
 with direct fiber connectivity.
 
 We have seen that depending on the hardware of the hotspot, the Witness processing time is largely dependent 
-on the packet signature. As the signature is delegated to an hardware ECC chip for most of the deployed hotspot, 
-the processing time depends on the hardware solution soldered. Even if firmware can be improved, the current solution 
-disqualifies certain hardware whatever is the hotspot owner's efforts. See Appendix about Manufacturer ECC impact on
-global timing. 
-More generally speaking, it disqualifies lower-end hardware like light-hotspots based on micro-controllers. This is nonsense as these hardware have a better fit for stability, long-life, energy saving, lower cost, and should be privileged long term.
+on the packet signature as described in the [appendix](#ecc-signature-impact). As the signature is delegated to an hardware 
+ECC chip for most of the deployed hotspot, the processing time depends on the hardware solution soldered. 
+Even if firmware can be improved, the current solution disqualifies certain hardware whatever is the hotspot owner's efforts. 
+
+More generally speaking, it disqualifies lower-end hardware like light-hotspots based on micro-controllers as, by definition, their capacity to process the same thing than an hotspot based on CPU is lower. This is nonsense as these hardware have a 
+better fit for stability, long-life, energy saving, lower cost, and should be privileged long term.
+
 The Peoples Network must be accessible to anyone and not be a competition of miliseconds optimization limited to a 
 small group of experts.
 
 The witness response time is not representative of the data packet processing. Witness response time does not have any 
 constraint of time. Witnesses are processed by Oracle, and response time depends on the Oracle localization, 
-associated with the network path to reach that Oracle. Response time can differ from a Witness to another Witness, 
-the absolute response time is not a good way to measure a performance responding to the LoRaWAN timing constraints.
-The witness process differ from the packet process, Appendix details these two processes.
+associated with the network path to reach that Oracle. It totally differ from the LNS network path.
+Response time can differ from a Witness to another Witness, the absolute response time is not a good way to measure a performance responding to the LoRaWAN timing constraints. The [Witness process](#witness-processing-waterfall) and the [Packet process](#packet-processing-waterfall) are detailed in the respective appendixes.
 
 As for a given witness, the Hotspots from a similar area will report it to the same Oracle, we can consider a response 
 time window starting from the first witness received by the Oracle as a viable solution to eliminate the variable offset 
@@ -82,6 +82,11 @@ milliseconds. Witness is marked valid.
 
 # Unresolved Questions
 
+- Packet processing is currently involving signature from ECC fro every packet, this is time costly and not mandatory.
+Some discussions are already opened to move this with a software signature from an ECC derivated key negotiated with Helium
+Packet Router for a given period of time.
+
+
 # Deployment Impact
 Oracle PoC rewarding code needs to be modified to take this into consideration. Deployment is global, Hotspots are not impacted.
 
@@ -93,11 +98,43 @@ Oracle PoC rewarding code needs to be modified to take this into consideration. 
 
 ## Suburb Valuable Coverage
 
-## Packet Processing & LoRaWan time constraints
+## Packet Processing and LoRaWan time constraints
+
+## ECC Signature impact
+
+The ECC Signature process is having a significant impact on the overall processing, some measure have been conducted by 
+community members like Miroslav (heliootics) & co, Jose Marcelino, using the gateway-mfr-rs test kit. For the tested hotspot provider we can the following average signature time:
+
+| Manufacturer Brand | Model | Avg Signature Time | Note |
+| ------------------ | ----- | ------------------ | ---- |
+| Calchip v1         |        | ?  | no ECC |
+| DiY                | x86    | ?  | no ECC |
+| DiY                | RPI 4  | ?  | no ECC |
+| Bobcat             | RK3566 | 105 ms | |
+| Milesight          |        | 105 ms | |
+| Nebra       | indoor CM3 v1 | 113 ms | |
+| Synchrobit            | CM4 | 120 ms | |
+| Cotx                   | X3 | 130 ms | |
+| Heltec           | HT-M2808 | 135 ms | |
+| Bobcat             | Others | 150 ms | |
+| Linxdot                  |  | 152 ms | |
+| Dusun                    |  | 154 ms | |
+| Nebra       | indoor CM3 v2 | 157 ms | |
+| RAK / MNTD           | Gold | 165 ms | |
+| RAK / MNTD          | Black | 174 ms | |
+| Pycom               | Other | 175 ms | |
+| Sensecap               | M1 | 175 ms | |
+| PantherX1                |  | 179 ms | |
+| Pisces                   |  | 180 ms | |
+| Controllino              |  | 180 ms | |
+| Heltec              | Other | 242 ms | |
+
+The signature impact on the first to arrive show a variability up to 250ms. ( to be completed with the non ECC device data later one)
+
 
 ## Packet Processing Waterfall
 
-## Witness Processinf Waterfall
+## Witness Processing Waterfall
 
 
 
