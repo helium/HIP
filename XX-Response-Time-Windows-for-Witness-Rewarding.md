@@ -106,7 +106,14 @@ This illustration is based on a real exemple, but is a general illustration for 
 
 ## Suburb Valuable Coverage
 
+The hotspots located in suburb and above, in blue in the illustration, are expending the network coverage with uniq 
+coverage zone and are in competition with the hotspot inside the city. They are also the hotspot that are opening the PoC rewarding to the next hotspot out of the city and suburb. 
 
+![Suburb illustration](XX-response-time-windows-for-witness-rewarding/suburb-coverage.png)
+
+These hotspots does not get benefit of the fastest Internet connection as their fiber connectivity will pass through the city center to reach the main Internet highways. For most of them the fiber connectivity will not be available and they are going to rely on xDSL connectivity before reaching the ISPs fiber Internet backhall.
+
+These hotspots are participating to the same PoC as the city center hotspot getting benefit of the fastest Internet connection.
 
 ## Packet Processing and LoRaWan time constraints
 
