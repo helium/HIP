@@ -67,10 +67,9 @@ timing and to eliminate hotspot that are really slower and can cause a problem f
 This HIP proposes to select a valid witness from the ones arriving in a time window of MAX_WITNESS_WAIT_WINDOW_MS starting 
 from the first received witness by the Oracle. 
 
-The MAX_WITNESS_WAIT_WINDOWS_MS parameter will be initially set to 200ms and could be later adjusted from 100ms to 300ms 
-by Helium Foundation to optimize the network quality without a need for a new vote. The purpose of this adjustement is to push 
-hardware manufacturers to optimize their solutions in a scheduled way. The initial 200ms take into consideration the ECC 
-signature and radio backhaul normal impact vs DiY. 
+The MAX_WITNESS_WAIT_WINDOWS_MS parameter will be initially set to 200ms, accordingly to the calculation described in appendix. 
+It could be later adjusted from 100ms to 300ms by Helium Foundation to optimize the network quality without a need for a new
+vote. The purpose of this adjustement is to push hardware manufacturers to optimize their solutions in a scheduled way. The initial 200ms take into consideration the ECC signature and radio backhaul normal impact vs DiY. 
 
 This means: 
 1. Different hotspots receive a beacon and send the witness information to the related Oracle
@@ -85,7 +84,6 @@ milliseconds. Witness is marked valid.
 - Packet processing is currently involving signature from ECC fro every packet, this is time costly and not mandatory.
 Some discussions are already opened to move this with a software signature from an ECC derivated key negotiated with Helium
 Packet Router for a given period of time.
-
 
 # Deployment Impact
 Oracle PoC rewarding code needs to be modified to take this into consideration. Deployment is global, Hotspots are not impacted.
@@ -116,6 +114,24 @@ These hotspots does not get benefit of the fastest Internet connection as their 
 These hotspots are participating to the same PoC as the city center hotspot getting benefit of the fastest Internet connection.
 
 ## Packet Processing and LoRaWan time constraints
+
+The Helium Packet Router (HPR) is accepeting all the coming packets up to the limit of the max_copies set on the route or eui in 
+the config service. First come, first paid. Only for roaming the HPR is applying a time limit. The time limit for a packet is 
+decided by the LNS after the HPR. This time limit for the LNS is a LNS setup and can vary for each of the LNS.
+
+LoRaWAN time constraints are the following:
+- UPLINK first copy arrival has no time constraint, next copies are withing the defined LNS deduplication time windows.
+- JOIN REQUEST needs to be responded within 5s for RX1 (same frequency, standard power) or 6s for RX2 (other frequency, potentially higher power). LNS decides of the selection between RX1 and RX2 dynamically, according to the time available.
+- DOWNLINK REQUEST / ACK needs to be responded within 5s for RX1 (same frequency, standard power) or 6s for RX2 (other frequency, potentially higher power). LNS decides of the selection between RX1 and RX2 dynamically, according to the time available.
+
+There is no reasons to prefer RX1 vs RX2, most of the implementations try to reach RX1 first, but RX2 provides different advantages, in particular in Europe where the duty cycle on RX2 is better and the higher power makes more chance to reach the device. 
+
+Basically, only the DOWNLINK REQ / ACK creates generate a time constraint at the time scale discussed in this HIP. This time constraints is to make sure that the order to send the ACK or the DOWNLINK transfer order comes to the desired Hotspot before the RX2 windows.
+
+In this constraint of time, we need to execute the [full packet processing steps](#packet-processing-waterfall).
+
+Based on this the LNS is able to accept incoming packets in a time windows with a minimal duration of 210ms with a 200ms margin,
+so basically up to 350-400ms. 
 
 ## ECC Signature impact
 
@@ -150,6 +166,20 @@ The signature impact on the first to arrive show a variability up to 250ms. ( to
 
 
 ## Packet Processing Waterfall
+
+The following waterfall represents the different steps in the data packet processing, in the case of a packet requesting a ACK or a downlink. The HPR is geo-replicated, time to reach it is within the zone. 
+
+Two scenarios are identified:
+- the first one in gray is the best case scenario, hotspot is fast and the LNS is in the same zone the device is, so the communication from HPR to LNS then LNS to Hotspot is short.
+- the second one in orange is the worst case scenario, hotspot is slower and LNS and device are in at the longest Internet distance, considering 600ms.
+
+The first scenario gives an idea of the acceptable copies reception windows to match with the RX1 window, in blue, up to 600ms. The second scenario gives an idea of the acceptable copies reception windows to match with RX2 window (RX1 not achievable due to round trip delay), up to 210ms. Both scenario includes a margin of 200ms for non seen yet.
+
+![Packer Processing Waterfall](XX-response-time-windows-for-witness-rewarding/packet-processing-waterfall.png)
+
+This minimum reception window to achieve the worst case has been used to propose the initial time windows for accepting the 
+witnesses.
+
 
 ## Witness Processing Waterfall
 
