@@ -31,8 +31,8 @@ LoRaWAN is a question of seconds, not a question of microseconds, this is why cr
 
 Hotspots with highly valuable locations, such as the mountaintops, cell towers, and even rooftops 
 sometimes rely on higher latency connectivity (4G/5G, Home Plug, Satellites) which adds anywhere from 
-10ms to 100ms. These hotspots generally have a higher operating cost and are unfairly impacted by the 
-current selection algorithm as they still operate within LoRaWAN timing specifications. 
+10ms to 100ms. These hotspots generally have a higher operating cost due to dedicated connectivity and hosting cost
+and are unfairly impacted by the current selection algorithm as they still operate within LoRaWAN timing specifications. 
 See [appendix](#highly-valuable-coverage) about highly valuable coverage.
 
 Hotspot out of the city centers will get a slower Internet response time from the one in the city center, 
@@ -69,7 +69,7 @@ from the first received witness by the Oracle.
 
 The MAX_WITNESS_WAIT_WINDOWS_MS parameter will be initially set to 200ms, accordingly to the calculation described in appendix. 
 It could be later adjusted from 100ms to 300ms by Helium Foundation to optimize the network quality without a need for a new
-vote. The purpose of this adjustement is to push hardware manufacturers to optimize their solutions in a scheduled way. The initial 200ms take into consideration the ECC signature and radio backhaul normal impact vs DiY. 
+vote. The purpose of this adjustement is to push hardware manufacturers to optimize their solutions in a scheduled way. The initial 200ms take into consideration the ECC signature and radio backhaul normal impact vs DiY in the LoRaWan constraints. 
 
 This means: 
 1. Different hotspots receive a beacon and send the witness information to the related Oracle
