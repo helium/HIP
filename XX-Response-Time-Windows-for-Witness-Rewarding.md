@@ -122,9 +122,10 @@ decided by the LNS after the HPR. This time limit for the LNS is a LNS setup and
 LoRaWAN time constraints are the following:
 - UPLINK first copy arrival has no time constraint, next copies are withing the defined LNS deduplication time windows.
 - JOIN REQUEST needs to be responded within 5s for RX1 (same frequency, standard power) or 6s for RX2 (other frequency, potentially higher power). LNS decides of the selection between RX1 and RX2 dynamically, according to the time available.
-- DOWNLINK REQUEST / ACK needs to be responded within 5s for RX1 (same frequency, standard power) or 6s for RX2 (other frequency, potentially higher power). LNS decides of the selection between RX1 and RX2 dynamically, according to the time available.
+- DOWNLINK REQUEST / ACK needs to be responded within 1s for RX1 (same frequency, standard power) or 2s for RX2 (other frequency, potentially higher power). LNS decides of the selection between RX1 and RX2 dynamically, according to the time available.
 
-There is no reasons to prefer RX1 vs RX2, most of the implementations try to reach RX1 first, but RX2 provides different advantages, in particular in Europe where the duty cycle on RX2 is better and the higher power makes more chance to reach the device. 
+There is no reasons to prefer RX1 vs RX2, most of the implementations try to reach RX1 first, but RX2 provides different advantages, in particular in Europe where the duty cycle on RX2 is better and the higher power makes more chance to reach the device. It also reduce the limited bandwidth usage on the 8 available channels and the risk of collision on these busy channels. Device power impact can be considered higher on RX2 but with a lower risk of collision and reception loss, practically speaking, this assumption is not always true. Selection between RX1 / RX2 is not a question in regard of this HIP. This is informative to
+understand that nothing bad in using one vs the other, both have advantages.
 
 Basically, only the DOWNLINK REQ / ACK creates generate a time constraint at the time scale discussed in this HIP. This time constraints is to make sure that the order to send the ACK or the DOWNLINK transfer order comes to the desired Hotspot before the RX2 windows.
 
