@@ -100,7 +100,9 @@ represent the city coverage provided by the mass of the other hotspot in the sam
 
 ![Highly valuable coverage illustration](XX-response-time-windows-for-witness-rewarding/valuable-coverage.png)
 
-This illustration is based on a real exemple, but is a general illustration for hotspot placed on cell-towers and high elevation point. The hotspot used in the illustration as model is Attractive-Olive-Cybord, located in Clermont-Ferrand, France. This hotspot is deployed on high elevation point. Coverage can be seen on mappers.helium.com, with 80km coverage from North to South. 
+This illustration is based on a real exemple, but is a general illustration for hotspot placed on cell-towers and high elevation point. The hotspot used in the illustration as model is Attractive-Olive-Cybord, located in Clermont-Ferrand, France. This hotspot is deployed on high elevation point. Coverage can be seen on mappers.helium.com, with 80km coverage from North to South.
+
+In term of coverage comparision, 60km hotspot provides 36x 10km hotspot area coverage. It provides about 3600x coverage compared to a indoor, city center located hotspot.
 
 ## Suburb Valuable Coverage
 
