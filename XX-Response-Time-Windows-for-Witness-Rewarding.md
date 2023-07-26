@@ -104,6 +104,8 @@ This illustration is based on a real exemple, but is a general illustration for 
 
 In term of coverage comparision, 60km hotspot provides 36x a 10km hotspot in area coverage. It provides about 3600x coverage compared to a indoor, city center located hotspot.
 
+This HIP does not propose to give these hotspots any advantages, the existing POC mechanisms already manage this. This HIP attempts to remove the penalty these important hotspots are currently suffering due to HIP-83.
+
 ## Suburb Valuable Coverage
 
 The hotspots located in suburb and above, in blue in the illustration, are expending the network coverage with uniq 
@@ -114,6 +116,8 @@ coverage zone and are in competition with the hotspot inside the city. They are 
 These hotspots does not get benefit of the fastest Internet connection as their fiber connectivity will pass through the city center to reach the main Internet highways. For most of them the fiber connectivity will not be available and they are going to rely on xDSL connectivity before reaching the ISPs fiber Internet backhall.
 
 These hotspots are participating to the same PoC as the city center hotspot getting benefit of the fastest Internet connection.
+
+This HIP does not propose to give these hotspots any advantages, the existing POC mechanisms already manage this. This HIP attempts to remove the penalty these important hotspots are currently suffering due to HIP-83.
 
 ## Packet Processing and LoRaWan time constraints
 
