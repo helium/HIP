@@ -96,7 +96,17 @@ Oracle PoC rewarding code needs to be modified to take this into consideration. 
 
 ## Highly Valuable Coverage
 
+Some of the hotspot have a really large coverage by being installed in really good / high location. These hotspots, due to the 
+geographical location and the height are covering wide zone, larger than the city. That way, they are offering a uniq coverage. The following picture is illustrating this: the blue area is representing the coverage offered by this sigle hotspot, the orange 
+represent the city coverage provided by the mass of the other hotspot in the same area. All these hotspots are in competition for the same witness.
+
+![Highly valuable coverage illustration](XX-response-time-windows-for-witness-rewarding/valuable-coverage.png)
+
+This illustration is based on a real exemple, but is a general illustration for hotspot placed on cell-towers and high elevation point. The hotspot used in the illustration as model is Attractive-Olive-Cybord, located in Clermont-Ferrand, France. This hotspot is deployed on high elevation point. Coverage can be seen on mappers.helium.com, with 80km coverage from North to South. 
+
 ## Suburb Valuable Coverage
+
+
 
 ## Packet Processing and LoRaWan time constraints
 
