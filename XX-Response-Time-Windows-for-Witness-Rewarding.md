@@ -89,7 +89,7 @@ milliseconds. Witness is marked valid.
 - 3 within EXTENDED_WITNESS_WAIT_WINDOWS_MS
 - 1 out of WINDOWS
 
-The 4 first are marked as SELECTED, the 3 next are marked as VALID, the last one is marked as INVALID. Oracle rewards all the reward marked as SELECTED, it can select 10 more randomly as part of the one marked as VALID, so it reward all these one. The last one is not rewarded.
+The 4 firsts are marked as SELECTED, the 3 next are marked as VALID, the last one is marked as INVALID. Oracle rewards all the one marked as SELECTED, it can select 10 more randomly as part of the ones marked as VALID, so it reward all of them. The last one is not rewarded.
 
 ### Exemple 2
 25 witnesses received:
@@ -97,7 +97,7 @@ The 4 first are marked as SELECTED, the 3 next are marked as VALID, the last one
 - 4 within EXTENDED_WITNESS_WAIT_WINDOWS_MS
 - 1 out of WINDOWS
 
-Only the first 20 within MAX_WITNESS_WAIT_WINDOWS_MS will be selected and marked as VALID, all the other are INVALID and won't be part of the reward calculation. The Oracle will randomly select 14 of the 20 VALID witness and reward them.
+Only the first 20 within MAX_WITNESS_WAIT_WINDOWS_MS will be selected and marked as VALID, all the others are INVALID and won't be part of the reward calculation. The Oracle will randomly select 14 of the 20 VALID witness and reward them.
 
 ### Exemple 3
 25 witnesses received:
@@ -105,7 +105,7 @@ Only the first 20 within MAX_WITNESS_WAIT_WINDOWS_MS will be selected and marked
 - 8 within EXTENDED_WITNESS_WAIT_WINDOWS_MS
 - 7 out of WINDOWS
 
-The 10 first are marked as SELECTED, the next 8 are marked as VALID, the 7 other are market as INVALID. Oracle will reward all the SELECTED, then is will randomly chose 6 (14-8) of the 8 witnesses marked as VALID and reward them.
+The 10 firsts are marked as SELECTED, the next 8 are marked as VALID, the 7 others are marked as INVALID. Oracle will reward all the SELECTED, then is will randomly choose 6 (14-8) of the 8 witnesses marked as VALID and reward them.
 
 
 # Unresolved Questions
@@ -114,7 +114,10 @@ The 10 first are marked as SELECTED, the next 8 are marked as VALID, the 7 other
 Some discussions are already opened to move this with a software signature from an ECC derivated key negotiated with Helium
 Packet Router for a given period of time.
 
+- Witness could be selected also in regard of their location. For exemple we could get a priority on the witnesses comming from the longest distance to offer an advantage to the hotpost offering the larger coverage.
+
 # Deployment Impact
+
 Oracle PoC rewarding code needs to be modified to take this into consideration. Deployment is global, Hotspots are not impacted.
 
 # Success Metrics
