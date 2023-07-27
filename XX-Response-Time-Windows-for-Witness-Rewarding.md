@@ -44,7 +44,7 @@ with direct fiber connectivity.
 
 We have seen that depending on the hardware of the hotspot, the Witness processing time is largely dependent 
 on the packet signature as described in the [appendix](#ecc-signature-impact). As the signature is delegated to an hardware 
-ECC chip for most of the deployed hotspot, the processing time depends on the hardware solution soldered. 
+ECC chip for most of the deployed hotspot, the processing time depends on the [hardware solution](#mcu-performance-impact) soldered. 
 Even if firmware can be improved, the current solution disqualifies certain hardware whatever is the hotspot owner's efforts. 
 
 More generally speaking, it disqualifies lower-end hardware like light-hotspots based on micro-controllers as, by definition, their capacity to process the same thing than an hotspot based on CPU is lower. This is nonsense as these hardware have a 
@@ -139,6 +139,15 @@ In this constraint of time, we need to execute the [full packet processing steps
 
 Based on this the LNS is able to accept incoming packets in a time windows with a minimal duration of 210ms with a 200ms margin,
 so basically up to 350-400ms. 
+
+## MCU performance impact
+
+| Hotspot | Motherboard | CPU/MCU | Clock | Cores | 
+|---------|-------------|---------|-------|-------|
+| Nebra...| RPI CM3     | BCM2837B0 | 1400MHz | 4 | 
+| Rak...  | RPI 4       | BCM2711 | 1500MHz | 4 | | 
+| Kerlink | Custom | MCIMX6X1CVO08AB | 800MHz | 1 | 
+| Senscap M2| Mediatek | MT7628 | 580MHz | 1 |
 
 ## ECC Signature impact
 
