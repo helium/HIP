@@ -107,6 +107,50 @@ Only the first 20 within MAX_WITNESS_WAIT_WINDOWS_MS will be selected and marked
 
 The 10 firsts are marked as SELECTED, the next 8 are marked as VALID, the 7 others are marked as INVALID. Oracle will reward all the SELECTED, then is will randomly choose 6 (14-8) of the 8 witnesses marked as VALID and reward them.
 
+** Alternate Proposal **
+
+This HIP proposes to select all witness arriving in a time window of MAX_WITNESS_WAIT_WINDOW_MS starting 
+from the first received witness by the Oracle. 
+
+The MAX_WITNESS_WAIT_WINDOWS_MS parameter will be initially set to 200ms, accordingly to the calculation described in appendix. 
+It could be later adjusted from 100ms to 300ms by Helium Foundation to optimize the network quality without a need for a new
+vote. The purpose of this adjustement is to push hardware manufacturers to optimize their solutions in a scheduled way. The initial 200ms take into consideration the ECC signature and radio backhaul normal impact vs DiY in the LoRaWan constraints. 
+
+When less than 5 Witnesses have been received within the MAX_WITNESS_WAIT_WINDOWS_MS, the Oracle accepts Witnesses, with a maximum ot 5 total, up to EXTENDED_WITNESS_WAIT_WINDOWS_MS, fixed at 600ms, the acceptable wait time for RX1 windows for regional traffic. This will allow slower hotspot to be accepted in the low density area when in high density the constraint is stronger. This allows to have sat backhaul in low density areas. The current situation, with HIP83, is accepting witness without limit of time in a such case, even if the time makes no LoRaWAN downlink & join possible.
+
+This means: 
+1. Different hotspots receive a beacon and send the witness information to the related Oracle
+2. The Oracle receives the first witness notification and opens a witness reception window for MAX_WITNESS_WAIT_WINDOWS_MS
+milliseconds. Witness is marked SELECTED.
+3. The Oracle receives the next witnesses during the MAX_WITNESS_WAIT_WINDOWS_MS ms and mark them SELECTED.
+4. When 5 or more have been received, it marks the other as INVALID
+5. When MAX_WITNESS_WAIT_WINDOWS_MS is over and less than 5 received, Oracle marks the next SELECTED until EXTENDED_WITNESS_WAIT_WINDOWS_MS with a maximum of 5 witnesses total, next are marked INVALID.
+7. The Oracle selects all the **SELECTED** witnesses to be rewarded.
+
+### Exemple 1
+
+8 witnesses received:
+- 4 within MAX_WITNESS_WAIT_WINDOWS_MS
+- 3 within EXTENDED_WITNESS_WAIT_WINDOWS_MS
+- 1 out of WINDOWS
+
+The 4 firsts are marked as SELECTED, the first 1 next is marked as SELECTED, the 2 two next within EXTENDED_WITNESS_WAIT_WINDOWS_MS and the one out of WINDOWS are marked as INVALID. Oracle rewards all the one marked as SELECTED. The last 3 are not rewarded.
+
+### Exemple 2
+25 witnesses received:
+- 20 within MAX_WITNESS_WAIT_WINDOWS_MS
+- 4 within EXTENDED_WITNESS_WAIT_WINDOWS_MS
+- 1 out of WINDOWS
+
+Only the first 20 within MAX_WITNESS_WAIT_WINDOWS_MS will be selected and marked as SELECTED, all the others are INVALID and won't be part of the reward calculation. The Oracle will reward all the SELECTED witnesses.
+
+### Exemple 3
+25 witnesses received:
+- 10 within MAX_WITNESS_WAIT_WINDOWS_MS
+- 8 within EXTENDED_WITNESS_WAIT_WINDOWS_MS
+- 7 out of WINDOWS
+
+The 10 firsts are marked as SELECTED, the next 8 are marked as INVALID, the 7 others are marked as INVALID. Oracle will reward all the SELECTED and reward them.
 
 # Unresolved Questions
 
