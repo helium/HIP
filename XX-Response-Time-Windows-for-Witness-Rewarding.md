@@ -254,7 +254,15 @@ community members like Miroslav (heliootics) & co, Jose Marcelino, using the gat
 | Controllino              |  | 180 ms | |
 | Heltec              | Other | 242 ms | |
 
-The signature impact on the first to arrive show a variability up to 250ms. ( to be completed with the non ECC device data later one)
+The signature impacts on the first to arrive show a variability up to 250ms. ( to be completed with the non ECC device data later one)
+
+The consequence of this in regard of the HIP-83 can be shown on the following grapfics:
+
+![ECC Signature impact on witness selection](XX-response-time-windows-for-witness-rewarding/hip83-delta-by-maker.png)
+
+This graphic shows, after the start of the HIP-83, the witness selection change by maker. It show the number of hotspot (Y axis) selected more time, on the right side of the 0 (X axis) or selected less time, on the left side of the 0 (X axis). 
+
+We see that the distribution is not centered, with certain brands getting an advantage on the other, due to hardware and software implementation. Bobcat ( faster ECC ) and Kerlink ( MCU intergrated ECC ) takes advantage over the other manufacturer.
 
 
 ## Packet Processing Waterfall
