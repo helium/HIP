@@ -326,7 +326,7 @@ witnesses.
 
 The following waterfall represent the different steps in the witness processing, the variability of each of the steps, depending on hardware, network access, network variability as been identified to have the scale of magnitude of each of the steps on the global processing. As steps normal variability is large and really context driven, this illustration tries to approximate the best way as possible but can't be exact.
 
-![Witness Processing Waterfall](XX-response-time-windows-for-witness-rewarding/witness-waterfall.png)
+![Witness Processing Waterfall](XX-response-time-windows-for-witness-rewarding/witness-waterfall-1.png)
 
 - Witness processing is the time to execute the gateway-rs code (out of ECC signature), I don't have reference of time and assume it should be around 10ms, any better data is welcome. The variability comes from the different hardware performace for running the same code, we have seen previously a ratio of 3x in term of cpu frequency, associable to performance.
 - ECC signature, as seen previsouly is a factor of magnitude of 4x between no ECC signature and worst ECC implementation.
