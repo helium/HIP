@@ -17,9 +17,10 @@ A hotspot’s utility in providing LoRaWAN coverage is based on measuring “goo
 absolute fastest as absolute speeds provides no marginal utility, Uplink does not have a particular time-window, 
 donwlink time windows is up to 2 seconds, Join process up to 6 seconds.
 
-This HIP proposes to restore random hotspot selection but adding a response time window to eliminate only 
-slow hotspots that fail to meet LoRaWAN-grade timing constraints and push helium hotspots to improve their reponse time
-over time reasonibly. 
+Since HIP-83, changing the way hotspot are selected, we see an acceleration of [hotspots not participating to PoC anymore](#network-hotspot-loss-acceleration) conducting to network size reduction.
+
+This HIP proposes to evolve the hotspot selection by adding a response time window to eliminate only 
+slow hotspots that fail to meet LoRaWAN-grade timing constraints and push helium hotspots to improve their reponse time, over time, reasonibly. 
 
 # Motivation
 
@@ -215,6 +216,46 @@ In this constraint of time, we need to execute the [full packet processing steps
 
 Based on this the LNS is able to accept incoming packets in a time windows with a minimal duration of 210ms with a 200ms margin,
 so basically up to 350-400ms. 
+
+## Network hotspot loss acceleration
+
+This month we see a clear acceleration of the network's hotspot reduction as shown with the following stats. This is the number of Hotspot that have participated to the PoC process since the indicated date, seen from July 28th. Basically hotspot with Witness revenue.
+Rq : This does not exclude new hotspots, lost hostpot may be a little bit higher. 
+
+| Date      | Hotspot Witnessing | Loss that day | Remark |
+| --------- | ----------------- | ---------- | -------- |
+| 2023-7-25 | 367066 | 2156 | |
+| 2023-7-24 | 369222 | 2106 | |
+| 2023-7-23 | 371328 | 1830 | |
+| 2023-7-22 | 373158 | 1774 | |
+| 2023-7-21 | 374932 | 1676 | |
+| 2023-7-20 | 376608 | 1456 | |
+| 2023-7-19 | 378064 | 1387 | |
+| 2023-7-18 | 379451 | 1445 | |
+| 2023-7-17 | 380896 | 1267 | |
+| 2023-7-16 | 382163 | 1259 | |
+| 2023-7-15 | 383422 | 1302 | |
+| 2023-7-14 | 384724 | 1253 | |
+| 2023-7-13 | 385977 | 1170 | HIP 83 activation day |
+| 2023-7-12 | 387147 | 1238 | |
+| 2023-7-11 | 388385 | 1107 | |
+| 2023-7-10 | 389492 | 1064 | |
+| 2023-7-09 | 390556 | 1025 | |
+| 2023-7-08 | 391581 | 1138 | |
+| 2023-7-07 | 392719 | 2313 | |
+| 2023-7-06 | 395032 | 1296 | |
+| 2023-7-05 | 396328 | 1103 | may include about 160 from denylist addition, here of later |
+| 2023-7-04 | 397431 | 1086 | |
+| 2023-7-03 | 398517 | 1120 | |
+| 2023-7-02 | 399637 | 1052 | |
+| 2023-7-01 | 400689 | 1085 | |
+
+Average loss per day before HIP-83 was about 1215 Hotspot per day, Average loss per day since HIP-83 is 1575 per day, growing.
+
+The following graphics is diplaying the Loss that day (Y axis) over days (X axis)
+
+![Hotspot loss per day](XX-response-time-windows-for-witness-rewarding/hospot-loss-per-day.png)
+
 
 ## MCU performance impact
 
