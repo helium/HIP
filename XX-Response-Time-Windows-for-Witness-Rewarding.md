@@ -167,6 +167,11 @@ Oracle PoC rewarding code needs to be modified to take this into consideration. 
 
 # Success Metrics
 
+- The distribution of rewards is not any more a function of the hotspot manufacturer
+- Hotpots with large coverage get balanced rewards
+- The decrease of active hostots is slowing down
+- The average response time to witness is improved over time
+
 # Appendix
 
 ## Highly Valuable Coverage
