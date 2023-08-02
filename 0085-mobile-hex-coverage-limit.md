@@ -11,7 +11,7 @@
 This Helium Improvement Proposal (HIP) suggests adding a baseline hex multiplier score to the MOBILE Proof-of-Coverage (PoC) Modeled Coverage Points based on whether other coverage from Helium 5G deployments exists within that res12 hex. This HIP only applies to outdoor radios, and no changes to the reward structure of indoor mobile radios are being made with this HIP.
 
 ## Motivation:
-The Helium Community passed HIP 74 to incorporate obstruction data and radio signal power into the PoC reward model; however, it weighed all coverage within each res12 hex equally, even if multiple radios already provided coverage within that res12 hex. This means deployers could point five (5) outdoor radios in the same direction and still be awarded total Modeled Coverage points for each res12 hex. This results in the dilution of MOBILE and reduced MOBILE rewards to deployments that are strategically placed to minimize overlap in coverage. 
+The Helium Community passed [HIP 74](https://github.com/helium/HIP/blob/main/0074-mobile-poc-modeled-coverage-rewards.md) to incorporate obstruction data and radio signal power into the PoC reward model; however, it weighed all coverage within each res12 hex equally, even if multiple radios already provided coverage within that res12 hex. This means deployers could point five (5) outdoor radios in the same direction and still be awarded total Modeled Coverage points for each res12 hex. This results in the dilution of MOBILE and reduced MOBILE rewards to deployments that are strategically placed to minimize overlap in coverage. 
 
 This proposal aims to improve the value of Mobile network coverage by incentivizing users to deploy radios that minimize overlapping coverage and encourage deployments in new areas. 
 
@@ -38,13 +38,14 @@ All outdoor radios that provide coverage to any res12 hex will be given a rank f
 
 - Modeled Signal Strength 
 
-- Heartbeat Steak - The Heartbeat Streak is the time that has elapsed since the first heartbeat of that radio at its current location, in which has had at least one (1) heartbeat every 72 hours. If a radio does not produce at least one (1) heartbeat over 72 consecutive hours, the streak is reset. This attribute is only used as a tiebreaker when two or more radios tie for Modeled Signal Strength. If somehow, two or more radios tie both Modeled Signal Strength and Heartbeat Streak, the radio to be ranked will be randomly selected every epoch.
+-Coverage Claim Time
+If there are more than 1 Radio with the same signal strength level, use the `coverage_claim_time` value to rank the top 3 oldest installations where `coverage_claim_time` is the timestamp when the Radio received the spectrum access grant for the first time. The oldest Radio will receive the higher rank, while newest radio will receive the lowest rank. To prevent rewarding "dead" Radios, we propose to reset `coverage_claim_time` if the Radio was not generating a Heartbeat for more than 72 hours and use the time of the last Heartbeat as the new `coverage_claim_time`.
 
 ### Modeling Radio Ranking
 
 See the example below of how ranking based on a hex multiplier would affect deployment of five (5) outdoor radios if they are providing modeled coverage to the same res12 hex:
 
-| Radio |Signal Strength| Heartbeat Streak Start Date | Rank  | Coverage Points Per HIP 74| New Coverage Points|  
+| Radio |Signal Strength| Coverage Claim Start Date   | Rank  | Coverage Points Per HIP 74| New Coverage Points|  
 |-------|---------------|-----------------------------|-------|---------------------------|--------------------|
 |   A   |   -77.33 dBm  |05/01/2023 23:24:25          | 1     | 16 (16 * 1)               | 16  (16 * 1)       |
 |   B   |   -88.75 dBm  |12/01/2022 01:01:01          | 2     | 16 (16 * 1)               | 12  (16 * .75)     |
@@ -55,8 +56,8 @@ See the example below of how ranking based on a hex multiplier would affect depl
 **Table Key:**
 - **Radio:** Example radio name.
 - **Signal Strength:** The Signal Strength of the res12 hex from the modeled coverage explorer.
-- **Heartbeat:** The date/time that the Heartbeat Streak started.
-- **Rank:** The assigned rank based on which radio has the strongest Signal Strength (or Heartbeat Streak if tied for Signal Strength).
+- **Coverage Claim:** The date/time that the Coverage Claim period started.
+- **Rank:** The assigned rank based on which radio has the strongest Signal Strength (or Coverage Claim if tied for Signal Strength).
 - **Coverage Points Per HIP 74:** The amount of modeled coverage points currently awarded under HIP 74.
 - **New Coverage Points:** The amount of modeled coverage points that would be awarded under this HIP.
 
@@ -64,7 +65,7 @@ See the example below of how ranking based on a hex multiplier would affect depl
 
 Since Radio A has the highest signal strength in that hex, it will be ranked as "1", and granted a 1X multiplier to the modeled coverage score of 16, which will award it with the full 16 (16 x 1) modeled coverage points for that epoch.
 
-Since radios B and C tied in Signal Strength, the Heartbeat Streak date is used to determine which radio is ranked next. For this example, radio B had its Heartbeat Streak start on 12/01/2022 01:01:01 while radio C had a its HeartBeat streak start on 12/02/2022 12:11:01. Therefore, since radio B has an earlier Heartbeat Streak, it will be ranked "2", while radio C having a rank of "3".
+Since radios B and C tied in Signal Strength, the Coverage Claim date is used to determine which radio is ranked next. For this example, radio B had its Coverage Claim date start on 12/01/2022 01:01:01 while radio C had a its Coverage Claim date starts  on 12/02/2022 12:11:01. Therefore, since radio B has an earlier Coverage Claim date, it will be ranked "2", while radio C having a rank of "3".
 
 Since radios D and E had the lowest signal strength out of all five (5) radios, and only the top three (3) radios will earn PoC rewards, radios D and E will not earn any modeled coverage points for this res12 hex, and are ranked as "Fail".
 
@@ -94,7 +95,9 @@ However, this may prevent or stagnate the network's growth because HIP 74 does n
 None
 
 ## Deployment Impact:
-HIP 85 affects only Outdoor radios, and coverage from indoor radios will continue to earn Modeled Coverage Points based on HIP 74. New fields will need to be added into the Modeled Coverage Explorer to make Radio Hex Ranks and Heartbeat Streaks visible.
+HIP 85 affects only Outdoor radios, and coverage from indoor radios will continue to earn Modeled Coverage Points based on HIP 74. 
+
+Nova Labs will need to add new fields into the Modeled Coverage Explorer to make Radio Hex Ranks and Coverage Claim date visible.
 
 Further, a large amount of overlapping coverage exists within the MOBILE network. Deployers may have to find new locations for some or all of their radios in order for them to continue to earn modeled coverage points. 
 
