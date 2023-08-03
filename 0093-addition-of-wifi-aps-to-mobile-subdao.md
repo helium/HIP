@@ -1,17 +1,17 @@
-# HIPXX: Addition of Wi-Fi Access Points to the Helium Mobile SubDAO
+# HIP 93: Addition of Wi-Fi Access Points to the Helium Mobile SubDAO
 
 - Author(s): [@italiandude](https://github.com/mario-novalabs) (Nova Labs, Inc.)
 - Start Date: 2023-07-17
-- Category: economic, technical
-- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
-- Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
-- Vote Requirements: <!-- veHNT Holders, veIOT Holders, or veMOBILE Holders -->
+- Category: Economic, Technical
+- Original HIP PR: [746](https://github.com/helium/HIP/pull/746)
+- Tracking Issue: [754](https://github.com/helium/HIP/issues/754)
+- Vote Requirements: veMOBILE Holders
 
 ## Summary
 
 This HIP outlines important aspects of adding Wi-Fi access points to the Helium Mobile Network. It describes location verification during onboarding for indoor access points and suggests approaches to continuously verify the locations of such access points.
 
-Additionally, the HIP proposes an algorithm and reward structure for Wi-Fi access points similar to what is defined in HIP74 but adjusted for the technical specifics of Wi-Fi compared to CBRS radios.
+Additionally, the HIP proposes an algorithm and reward structure for Wi-Fi access points similar to what is defined in [HIP-74](https://github.com/helium/HIP/blob/main/0074-mobile-poc-modeled-coverage-rewards.md) but adjusted for the technical specifics of Wi-Fi compared to CBRS radios.
 
 ## Motivation
 
