@@ -105,6 +105,7 @@ If you have questions or feedback, please see the [Discussion](https://github.co
 | 89 | [MOBILE Network Onboarding Fees](0089-mobile-network-onboard-fees.md) | [<img src="https://img.shields.io/badge/Status-Approved-green"></img>](https://github.com/helium/HIP/issues/714)  |
 | 90 | [Indefinitely Reduce IOT Location Assertion Cost](0090-reduce-iot-location-assert-cost-indefinitely.md) | [<img src="https://img.shields.io/badge/Status-Closed-lightgrey"></img>](https://github.com/helium/HIP/issues/735)  |
 | 91 | [Data-Driven Extension: Continuation of Reduced IOT Location Assertion Cost](0091-data-driven-extension-reduced-iot-assertion-cost.md) | [<img src="https://img.shields.io/badge/Status-Approved-green"></img>](https://github.com/helium/HIP/issues/743)  |
+| 92 | [Correcting IOT Pre-mine Calculation Errors](0091-data-driven-extension-reduced-iot-assertion-cost.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/752)  |
 
 ## Status Key
 
