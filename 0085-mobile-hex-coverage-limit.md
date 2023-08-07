@@ -38,9 +38,11 @@ All outdoor radios that provide coverage to any res12 hex will be given a rank f
 
 - Modeled Signal Strength 
 
+
 - Coverage Claim Time (Only used as a tiebreaker for Modeled Single Strenght)
 
 If there are more than 1 Radio with the same signal strength level, use the `coverage_claim_time` value to rank the top 3 oldest installations where `coverage_claim_time` is the timestamp when the Radio received the spectrum access grant for the first time. The oldest Radio will receive the higher rank, while newest radio will receive the lowest rank. To prevent rewarding "dead" Radios, we propose to reset `coverage_claim_time` if the Radio was not generating a Heartbeat for more than 72 hours and use the time of the last Heartbeat as the new `coverage_claim_time`.
+
 
 ### Modeling Radio Ranking
 
@@ -65,6 +67,7 @@ See the example below of how ranking based on a hex multiplier would affect depl
 **Table Explanation:**
 
 Since Radio A has the highest signal strength in that hex, it will be ranked as "1", and granted a 1X multiplier to the modeled coverage score of 16, which will award it with the full 16 (16 x 1) modeled coverage points for that epoch.
+
 
 Since radios B and C tied in Signal Strength, the Coverage Claim date is used to determine which radio is ranked next. For this example, radio B had its Coverage Claim date start on 12/01/2022 01:01:01 while radio C had a its Coverage Claim date starts  on 12/02/2022 12:11:01. Therefore, since radio B has an earlier Coverage Claim date, it will be ranked "2", while radio C having a rank of "3".
 
