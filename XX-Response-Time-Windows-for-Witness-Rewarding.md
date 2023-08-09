@@ -8,14 +8,8 @@
 
 # Summary 
 
-Currently the Proof-of-Coverage Oracles rewards the 14 first hotspots reporting a witness. This rewards 
-the fastest hotspots, incentivizing fiber backhauls and specific hardware models that happen to be able 
-to produce fast signatures. The result is that the same hotspots are selected, making others unviable 
-even if they provide unique and useful coverage for the network. In other words, punishes hotspots for 
-falling short of millisecond optimizations when the LoRaWAN protocol functions to the order of seconds. 
-A hotspot’s utility in providing LoRaWAN coverage is based on measuring “good enough” response times, not 
-absolute fastest as absolute speeds provides no marginal utility, Uplink does not have a particular time-window, 
-donwlink time windows is up to 2 seconds, Join process up to 6 seconds.
+Currently the Proof-of-Coverage Oracles rewards the 14 first hotspots (eq *default_max_witnesses_per_poc* ) reporting a witness. This rewards the fastest hotspots, incentivizing fiber backhauls and specific hardware models that happen to be able to produce fast signatures. The result is that the same hotspots are selected, making others unviable even if they provide unique and useful coverage for the network. In other words, punishes hotspots for falling short of millisecond optimizations when the LoRaWAN protocol functions to the order of seconds - [see also](#rewarded-hotspots-for-witnesses). 
+A hotspot’s utility in providing LoRaWAN coverage is based on measuring “good enough” response times, not absolute fastest as absolute speeds provides no marginal utility, Uplink does not have a particular time-window, donwlink time windows is up to 2 seconds, Join process up to 6 seconds.
 
 Since HIP-83, changing the way hotspot are selected, we see an acceleration of [hotspots not participating to PoC anymore](#network-hotspot-loss-acceleration) conducting to network size reduction.
 
@@ -28,7 +22,7 @@ The LoRaWAN network has some timing constraints to be considered, these ones are
 and ACK/Downlink mechanism. JOIN requires a full loop within 5 seconds, up to 6. ACK/Downlink requires a full loop in 1 
 second for RX1 window, up to 2 seconds for RX2 windows. Out of this time frame, the response will be ignored by the devices.  [Appendix](#packet-processing-and-lorawan-time-constraints) gives the consequence of these constraints on the expected hotspot response time.
 
-LoRaWAN is a question of seconds, not a question of microseconds, this is why creating a competition between hotspots and network connectivity at a millisecond scale is not achieving any network goal.
+LoRaWAN is a question of seconds ($`10^0s`$ to $`10^{-1}s`$), not a question of microseconds ($`10^{-6}s`$), this is why creating a competition between hotspots and network connectivity at a millisecond ($`10^{-3}s`$) scale is not achieving any network goal.
 
 Hotspots with highly valuable locations, such as the mountaintops, cell towers, and even rooftops 
 sometimes rely on higher latency connectivity (4G/5G, Home Plug, Satellites) which adds anywhere from 
@@ -48,8 +42,7 @@ on the packet signature as described in the [appendix](#ecc-signature-impact). A
 ECC chip for most of the deployed hotspot, the processing time depends on the [hardware solution](#mcu-performance-impact) soldered. 
 Even if firmware can be improved, the current solution disqualifies certain hardware whatever is the hotspot owner's efforts. 
 
-More generally speaking, it disqualifies lower-end hardware like light-hotspots based on micro-controllers as, by definition, their capacity to process the same thing than an hotspot based on CPU is lower. This is nonsense as these hardware have a 
-better fit for stability, long-life, energy saving, lower cost, and should be privileged long term.
+More generally speaking, it disqualifies lower-end hardware like light-hotspots based on micro-controllers as, by definition, their capacity to process the same thing than an hotspot based on CPU [is lower](#mcu-performance-impact). This is nonsense as these hardware have a better fit for stability, long-life, energy saving, lower cost, and should be privileged long term.
 
 The Peoples Network must be accessible to anyone and not be a competition of miliseconds optimization limited to a 
 small group of experts.
@@ -68,20 +61,20 @@ timing and to eliminate hotspot that are really slower and can cause a problem f
 This HIP proposes to select a valid witness from the ones arriving in a time window of MAX_WITNESS_WAIT_WINDOW_MS starting 
 from the first received witness by the Oracle. 
 
-The MAX_WITNESS_WAIT_WINDOWS_MS parameter will be initially set to 200ms, accordingly to the calculation described in appendix. 
+The MAX_WITNESS_WAIT_WINDOWS_MS parameter will be initially set to 200ms, accordingly to the calculation described in [appendix](#packet-processing-waterfall). 
 It could be later adjusted from 100ms to 300ms by Helium Foundation to optimize the network quality without a need for a new
 vote. The purpose of this adjustement is to push hardware manufacturers to optimize their solutions in a scheduled way. The initial 200ms take into consideration the ECC signature and radio backhaul normal impact vs DiY in the LoRaWan constraints. 
 
-When less than 14 Witnesses have been received within the MAX_WITNESS_WAIT_WINDOWS_MS, the Oracle accepts Witnesses up to EXTENDED_WITNESS_WAIT_WINDOWS_MS, fixed at 500ms, the acceptable wait time for RX1 windows for regional traffic. This will allow slower hotspot to be accepted in the low density area when in high density the constraint is stronger. The current situation, with HIP83, is accepting witness without limit of time in a such case, even if the time makes no LoRaWAN downlink & join possible.
+When less than **default_max_witnesses_per_poc** Witnesses have been received within the MAX_WITNESS_WAIT_WINDOWS_MS, the Oracle accepts Witnesses up to EXTENDED_WITNESS_WAIT_WINDOWS_MS, fixed at 500ms, the acceptable wait time for RX1 windows for regional traffic. This will allow slower hotspot to be accepted in the low density area when in high density the constraint is stronger. The current situation, with HIP83, is accepting witness without limit of time in a such case, even if the time makes no LoRaWAN downlink & join possible.
 
 This means: 
 1. Different hotspots receive a beacon and send the witness information to the related Oracle
 2. The Oracle receives the first witness notification and opens a witness reception window for MAX_WITNESS_WAIT_WINDOWS_MS
 milliseconds. Witness is marked valid.
 3. The Oracle receives the next witnesses during the MAX_WITNESS_WAIT_WINDOWS_MS ms and mark them valid.
-4. When 14 or more have been received, it marks the other as invalid
-5. When MAX_WITNESS_WAIT_WINDOWS_MS is over and less than 14 received, Oracle marks the first received as selected and waits until 14 or EXTENDED_WITNESS_WAIT_WINDOWS_MS, mark them as valid, then the others invalid.
-7. The Oracle selects all the **selected** witnesses and complete to 14 by selected ramdomly some of the one marked as valid.
+4. When **default_max_witnesses_per_poc** or more have been received, it marks the other as invalid
+5. When MAX_WITNESS_WAIT_WINDOWS_MS is over and less than **default_max_witnesses_per_poc** received, Oracle marks the first received as selected and waits until **default_max_witnesses_per_poc** or EXTENDED_WITNESS_WAIT_WINDOWS_MS, mark them as valid, then the others invalid.
+7. The Oracle selects all the **selected** witnesses and complete to **default_max_witnesses_per_poc** by selected ramdomly some of the one marked as valid.
 
 ### Exemple 1
 
@@ -90,7 +83,7 @@ milliseconds. Witness is marked valid.
 - 3 within EXTENDED_WITNESS_WAIT_WINDOWS_MS
 - 1 out of WINDOWS
 
-The 4 firsts are marked as SELECTED, the 3 next are marked as VALID, the last one is marked as INVALID. Oracle rewards all the one marked as SELECTED, it can select 10 more randomly as part of the ones marked as VALID, so it reward all of them. The last one is not rewarded.
+The 4 firsts are marked as SELECTED, the 3 next are marked as VALID, the last one is marked as INVALID. Oracle rewards all the one marked as SELECTED, it can select 10 more randomly as part of the ones marked as VALID, so it reward all of them. The last one is not rewarded. Assuming **default_max_witnesses_per_poc** is 14
 
 ### Exemple 2
 25 witnesses received:
@@ -98,7 +91,7 @@ The 4 firsts are marked as SELECTED, the 3 next are marked as VALID, the last on
 - 4 within EXTENDED_WITNESS_WAIT_WINDOWS_MS
 - 1 out of WINDOWS
 
-Only the first 20 within MAX_WITNESS_WAIT_WINDOWS_MS will be selected and marked as VALID, all the others are INVALID and won't be part of the reward calculation. The Oracle will randomly select 14 of the 20 VALID witness and reward them.
+Only the first 20 within MAX_WITNESS_WAIT_WINDOWS_MS will be selected and marked as VALID, all the others are INVALID and won't be part of the reward calculation. The Oracle will randomly select 14 of the 20 VALID witness and reward them. Assuming **default_max_witnesses_per_poc** is 14
 
 ### Exemple 3
 25 witnesses received:
@@ -106,14 +99,14 @@ Only the first 20 within MAX_WITNESS_WAIT_WINDOWS_MS will be selected and marked
 - 8 within EXTENDED_WITNESS_WAIT_WINDOWS_MS
 - 7 out of WINDOWS
 
-The 10 firsts are marked as SELECTED, the next 8 are marked as VALID, the 7 others are marked as INVALID. Oracle will reward all the SELECTED, then is will randomly choose 6 (14-8) of the 8 witnesses marked as VALID and reward them.
+The 10 firsts are marked as SELECTED, the next 8 are marked as VALID, the 7 others are marked as INVALID. Oracle will reward all the SELECTED, then is will randomly choose 6 (14-8) of the 8 witnesses marked as VALID and reward them. Assuming **default_max_witnesses_per_poc** is 14
 
 ** Alternate Proposal **
 
 This HIP proposes to select all witness arriving in a time window of MAX_WITNESS_WAIT_WINDOW_MS starting 
 from the first received witness by the Oracle. 
 
-The MAX_WITNESS_WAIT_WINDOWS_MS parameter will be initially set to 200ms, accordingly to the calculation described in appendix. 
+The MAX_WITNESS_WAIT_WINDOWS_MS parameter will be initially set to 200ms, accordingly to the calculation described in [appendix](#packet-processing-waterfall).  
 It could be later adjusted from 100ms to 300ms by Helium Foundation to optimize the network quality without a need for a new
 vote. The purpose of this adjustement is to push hardware manufacturers to optimize their solutions in a scheduled way. The initial 200ms take into consideration the ECC signature and radio backhaul normal impact vs DiY in the LoRaWan constraints. 
 
@@ -163,7 +156,7 @@ Packet Router for a given period of time.
 
 # Deployment Impact
 
-Oracle PoC rewarding code needs to be modified to take this into consideration. Deployment is global, Hotspots are not impacted.
+Oracle PoC rewarding code needs to be modified to take this into consideration. Deployment is global, Hotspots are not impacted. The Oracle PoC code update will impact the Nova team, no code is proposed by the Author of the HIP.
 
 # Success Metrics
 
@@ -191,13 +184,15 @@ This HIP does not propose to give these hotspots any advantages, the existing PO
 ## Suburb Valuable Coverage
 
 The hotspots located in suburb and above, in blue in the illustration, are expending the network coverage with uniq 
-coverage zone and are in competition with the hotspot inside the city. They are also the hotspot that are opening the PoC rewarding to the next hotspot out of the city and suburb. 
+coverage zone and are in competition with the hotspot inside the city. 
 
 ![Suburb illustration](XX-response-time-windows-for-witness-rewarding/suburb-coverage.png)
 
+Helium network development can be associated to a genetic algorithm growing from an already covered place. These Hotspots also making the link with hotspots out of the city and suburb. They are offering a chance, with their beacon, to isolated hotspot out of the city to participate to PoC.
+
 These hotspots does not get benefit of the fastest Internet connection as their fiber connectivity will pass through the city center to reach the main Internet highways. For most of them the fiber connectivity will not be available and they are going to rely on xDSL connectivity before reaching the ISPs fiber Internet backhall.
 
-These hotspots are participating to the same PoC as the city center hotspot getting benefit of the fastest Internet connection.
+These hotspots are participating to PoC with the city center hotspots without getting benefit of the fastest Internet connection they have more chance to never been or rarely selected.
 
 This HIP does not propose to give these hotspots any advantages, the existing POC mechanisms already manage this. This HIP attempts to remove the penalty these important hotspots are currently suffering due to HIP-83.
 
@@ -261,6 +256,9 @@ The following graphics is diplaying the Loss that day (Y axis) over days (X axis
 
 ![Hotspot loss per day](XX-response-time-windows-for-witness-rewarding/hospot-loss-per-day.png)
 
+### Rewarded Hotspots for Witnesses
+
+The following [Helium Geek](https://heliumgeek.com/stats/epoch/iot) stats displays the number of different hotspots rewarded for witnessing and beaconning. You can notice that since HIP 83 launch we had a break in the witness participation by 10.000 hotspots. This means witnesses rewards goes to less hotspots, even if all participating to beaconning. 10.000 of the hotspot are out of most for the reward distribution, to the benefit of the others.
 
 ## MCU performance impact
 
