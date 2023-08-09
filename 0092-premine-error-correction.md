@@ -28,7 +28,7 @@ The payment awarded on 20th April, 2023 was 5,789.755 IOT tokens based on the ca
 This HIP proposes that the following process is followed after this HIP is approved by the community.
 
 1. A multi-sig premine correction wallet will be created to fund awarding qualifying Hotspots that were not awarded during the IOT pre-mine.
-2. Each qualifying Hotspot will be awarded 5,789.755 IOT tokens out of the multi-sig wallet and transferred to the wallet that owned the Hotspot at the time of the original pre-mine award (20th April, 2023). The specifics of how this is implemented will be 
+2. Each qualifying Hotspot will be awarded 5798.755355 (2_500_000_000/431_127) IOT tokens out of the multi-sig wallet and transferred to the wallet that owned the Hotspot at the time of the original pre-mine award (20th April, 2023). The specifics of how this is implemented will be 
 3. The pre-mine correction multi-sig wallet will be able to be funded with donations from any source that chooses to add to the fund over a period of 14 epochs. Any difference required for the full payment will be funded by the Helium Foundation. Any extra leftover funds will be burnt, and the wallet's keys will be disposed of.
 4. The pre-mine correction multi-sig wallet will require 2 out of 3 signatures to distribute funds. (Suggested signatures: Helium Foundation, two trusted community members to be confirmed).
 5. The list of Hotspots that should have received the pre-mine payment will be published by an announcement by the Helium Foundation to the entire community.
