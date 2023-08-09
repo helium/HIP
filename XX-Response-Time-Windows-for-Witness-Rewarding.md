@@ -112,7 +112,7 @@ The first 10 are marked as SELECTED, the next 8 are marked as VALID, the 7 other
 
 ** Alternate Proposal **
 
-This HIP proposes to select all witness arriving in a time window of MAX_WITNESS_WAIT_WINDOW_MS starting 
+This HIP proposes to select **all witness** arriving in a time window of MAX_WITNESS_WAIT_WINDOW_MS starting 
 from the first received witness by the Oracle. 
 
 The MAX_WITNESS_WAIT_WINDOWS_MS parameter will be initially set to 200ms (0.2 seconds), accordingly to the calculation described in [appendix](#packet-processing-waterfall).  
@@ -131,15 +131,6 @@ milliseconds. Witness is marked SELECTED.
 7. The Oracle selects all the **SELECTED** witnesses to be rewarded.
 
 ### Example 1
-
-8 witnesses received:
-- 4 within MAX_WITNESS_WAIT_WINDOWS_MS 200ms
-- 3 within EXTENDED_WITNESS_WAIT_WINDOWS_MS 200-500ms
-- 1 outside EXTENDED_WITNESS_WAIT_WINDOWS_MS 500ms
-
-The first 4 are marked as SELECTED, the first 1 of the next 3 is marked as SELECTED, the 2 next of 3 within EXTENDED_WITNESS_WAIT_WINDOWS_MS and the one out of WINDOWS are marked as INVALID. Oracle rewards all the one marked as SELECTED. The last 3 are not rewarded.
-
-### Example 2
 25 witnesses received:
 - 20 within MAX_WITNESS_WAIT_WINDOWS_MS 200ms
 - 4 within EXTENDED_WITNESS_WAIT_WINDOWS_MS 200-500ms
@@ -147,13 +138,22 @@ The first 4 are marked as SELECTED, the first 1 of the next 3 is marked as SELEC
 
 Only the first 20 within MAX_WITNESS_WAIT_WINDOWS_MS will be selected and marked as SELECTED, all the others are INVALID and won't be part of the reward calculation. The Oracle will reward all the SELECTED witnesses.
 
-### Example 3
+### Example 2
 25 witnesses received:
 - 10 within MAX_WITNESS_WAIT_WINDOWS_MS 200ms
 - 8 within EXTENDED_WITNESS_WAIT_WINDOWS_MS 200-500ms
 - 7 outside EXTENDED_WITNESS_WAIT_WINDOWS_MS 500ms
 
 The first 10 are marked as SELECTED, the next 8 are marked as INVALID, the 7 others are marked as INVALID. Oracle will reward all the SELECTED and reward them.
+
+### Example 3
+8 witnesses received:
+- 4 within MAX_WITNESS_WAIT_WINDOWS_MS 200ms
+- 3 within EXTENDED_WITNESS_WAIT_WINDOWS_MS 200-500ms
+- 1 outside EXTENDED_WITNESS_WAIT_WINDOWS_MS 500ms
+
+The first 4 are marked as SELECTED, the first 1 of the next 3 is marked as SELECTED, the 2 next of 3 within EXTENDED_WITNESS_WAIT_WINDOWS_MS and the one out of WINDOWS are marked as INVALID. Oracle rewards all the one marked as SELECTED. The last 3 are not rewarded.
+
 
 # Unresolved Questions
 
