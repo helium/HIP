@@ -19,7 +19,7 @@ This is to correct the errors made during the calculation and payment of the IOT
 
 ## Stakeholders
 
-- All Hotspot owners (wallets) that have not correctly received the IOT pre-mine amount
+- All IOT hotspot owners
 
 ## Detailed Explanation
 
@@ -30,10 +30,11 @@ This HIP proposes that the following process is followed after this HIP is appro
 1. A multi-sig premine correction wallet will be created to fund awarding qualifying Hotspots that were not awarded during the IOT pre-mine.
 2. Each qualifying hotspot will be awarded pro rata share of the donation wallet up to 5789.755 IOT tokens, transferred to the wallet that owned the hotspot at of the time of the original premine award (20th April, 2023). The specifics of how this is implemented will be 
 3. The pre-mine correction multi-sig wallet will be able to be funded with donations from any source that chooses to add to the fund over a period of 14 epochs. Any extra leftover funds will be burnt, and the wallet's keys will be disposed of.
-4. The pre-mine correction multi-sig wallet will require 2 out of 3 signatures to distribute funds. (Suggested signatures: Helium Foundation, two trusted community members to be confirmed).
-5. The list of Hotspots that should have received the pre-mine payment will be published by an announcement by the Helium Foundation to the entire community.
-6. The query and data to generate list can be found at [this gist](https://gist.github.com/gradoj/fa29aac39b34de05fba8f6bc5e7d8948) for community verification. Once discussion of this HIP concludes, the final dataset used for this calculation will be added to the HIP repository as a single file. Hotspot addresses qualifying for the reward are defined as active_not_rewarded in the last file on the link above.
-7. After the passage of the HIP (time of vote closure), no further claims can be made for these missed pre-mine awards.
+4. The Foundation is authorized to fund the mutisig donation wallet for this HIP from the IOT Operations Fund, but only up to the amount needed to make up any shortfall in the donated funds required to fully pay the pre-mine on the agreed list of hotspots.
+5. The pre-mine correction multi-sig wallet will require 2 out of 3 signatures to distribute funds. (Suggested signatures: Helium Foundation, two trusted community members to be confirmed).
+6. The list of Hotspots that should have received the pre-mine payment will be published by an announcement by the Helium Foundation to the entire community.
+7. The query and data to generate list can be found at [this gist](https://gist.github.com/gradoj/fa29aac39b34de05fba8f6bc5e7d8948) for community verification. Once discussion of this HIP concludes, the final dataset used for this calculation will be added to the HIP repository as a single file. Hotspot addresses qualifying for the reward are defined as active_not_rewarded in the last file on the link above.
+8. After the passage of the HIP (time of vote closure), no further claims can be made for these missed pre-mine awards.
 
 ## Drawbacks
 
