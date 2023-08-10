@@ -40,6 +40,7 @@ Therefore the key motivations for this proposal are as follows:
 - Hotspot Owners: if a user has purchased a hotspot from a maker that has subsequently left the ecosystem and has run out of onboarding credits they will now be able to onboard their devices more easily
 - Helium MCC: there will likely have to be some flag in the onboarding server to determine whether a maker is active or not. Helium Foundation will likely need to be in charge of managing this
 - Network Users: it is bad for coverage if we have perfectly good hardware in the field which can't be onboarded
+- Hotspot App Developers/Creators: will need to implement changes in the app for the option to pay from the customers wallet
 
 ## Detailed Explanation
 
@@ -80,6 +81,7 @@ However, onboarding/ assertion fees can be deducted from the hotspot owner’s w
 The only drawbacks to this situation are as follows:
 
 - There is a chance that it makes makers more likely to leave the ecosystem, however this is unlikely as it would go along with their maker key being suspended meaning they cant add/sell new hotspots
+- If the Makers don't implement the changes required in their app, the process this HIP is designed to resolve will not be implemented
 - It adds a small additional effort on the Helium Foundation when suspending a maker key
 
 Both of these drawbacks are determined to be small and not blockers to this proposal.
