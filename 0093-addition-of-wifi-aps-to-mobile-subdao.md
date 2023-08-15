@@ -94,7 +94,7 @@ Given the poor inside-out RF propagation performance of 5GHz Wi-Fi, we are propo
 
 #### 3.1.3 Capping per Hex
 
-We are proposing a maximum of 3 overlapping Wi-Fi access points in one hex. In order to establish seniority, we will use the same algorithms for calculation of `coverga_claim_time` described in [HIP74](https://github.com/helium/HIP/blob/main/0074-mobile-poc-modeled-coverage-rewards.md#reward-algorithm).
+We are proposing a maximum of 3 overlapping Wi-Fi access points in one hex. In order to establish seniority, we will use the same algorithms for calculation of `coverage_claim_time` described in [HIP74](https://github.com/helium/HIP/blob/main/0074-mobile-poc-modeled-coverage-rewards.md#reward-algorithm).
 
 ### 3.2 Outdoor Access Points
 
@@ -104,15 +104,7 @@ Outdoor access points are devices that are rated for operating in outdoor condit
 
 All outdoor units will be required to be equipped with a GPS module that will be used to securely assert location during the onboarding process and that will be sent to the blockchain as part of the onboarding process.
 
-To estimate the usefulness and uniqueness of the coverage, the system will require more information regarding the actual deployment. This process is called Wi-Fi Professional Installer (WPI) and it is similar to the Certified Professional Installer (CPI) procedure used for CBRS.
-
-That required information includes:
-
-1. Model/Type of the Wi-Fi access point;
-2. Antenna pattern of the Wi-Fi access point for outdoor access points with external connectors, or, at a minimum, the max antenna gain of the main lobe; and
-3. The orientation of the antenna. 
-
-To onboard the access point, the system will require the deployer to send pictures of the access point *in situ*, similar to the CPI procedure used for CBRS.
+To estimate the usefulness and uniqueness of the coverage, the system will require more information regarding the actual deployment. This process will follow the community-established process for certifying CBRS and Wi-Fi radios.
 
 #### 3.2.3 Modeled And Templated Coverage
 
@@ -141,7 +133,7 @@ The figure below shows the proposed templated coverage map and estimated RSSI le
 
 #### 3.2.4 Capping per Hex
 
-We are proposing a maximum of 3 overlapping Wi-Fi access points in one hex. In order to establish seniority, we will use the same algorithms for calculation of `coverga_claim_time` described in [HIP74](https://github.com/helium/HIP/blob/main/0074-mobile-poc-modeled-coverage-rewards.md#reward-algorithm).
+We are proposing a maximum of 3 overlapping Wi-Fi access points in one hex. In order to establish seniority, we will use the same algorithms for calculation of `coverage_claim_time` described in [HIP74](https://github.com/helium/HIP/blob/main/0074-mobile-poc-modeled-coverage-rewards.md#reward-algorithm).
 
 ### 3.3 Coverage Events
 
