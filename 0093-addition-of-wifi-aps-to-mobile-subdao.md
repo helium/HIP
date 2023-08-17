@@ -16,14 +16,20 @@ Additionally, the HIP proposes an algorithm and reward structure for Wi-Fi acces
 ## Motivation
 
 We believe one of the most effective ways to meet the data demand of Service Providers [as defined in HIP53](https://github.com/helium/HIP/blob/main/0053-mobile-dao.md#economics-overview) on the Mobile subDAO is to lower equipment costs and simplify the installation process.
-
 We believe that Wi-Fi access points can help achieve both of those goals.
+
+Wi-Fi access points will belong to the Hotspot category; owners of these devices are classified as Hotspot Owners; Nova Labs is classified as Hotspot Vendor [as defined in HIP53](https://github.com/helium/HIP/blob/main/0053-mobile-dao.md#economics-overview).
+
+WiFi access points qualify as DNP devices as specified in [HIP51](https://github.com/helium/HIP/blob/main/0051-helium-dao.md).
 
 ## Stakeholders
 
-- Subscribers [as defined in HIP53](https://github.com/helium/HIP/blob/main/0053-mobile-dao.md#economics-overview) would benefit from faster-growing people-powered coverage.
+All stakeholders are defined in accordance with [HIP53](https://github.com/helium/HIP/blob/main/0053-mobile-dao.md#economics-overview).
+
+- Subscribers would benefit from faster-growing people-powered coverage.
 - Service Providers would be able to provide cheaper services and thus acquire more Subscribers by relying on the Helium Mobile Network for offloading data.
-- CBRS radio owners might see more data traffic as Service Providers bring more Subscribers to the Network. However, the share of PoC rewards per radio would decrease as more access points join the Network.
+- Hotspot Vendors such as Nova Labs will be able to manufacture a new type of equipment and earn MOBILE tokens as outlined in HIP53.
+- Hotspot Hosts might see more data traffic as Service Providers bring more Subscribers to the Network. However, the share of PoC rewards per radio would decrease as more access points join the Network.
 - Holders of MOBILE tokens would likely benefit from the increased utility of MOBILE attributed to the growth of the Helium Mobile Network.
 
 ## Detailed Explanation
@@ -48,11 +54,13 @@ The majority of Wi-Fi access points are capable of transmitting and receiving in
 
 For the purpose of evaluating coverage, we are going to assume that the access point is using 5GHz as the central frequency because that band will more likely produce the best and most consistent connectivity experience.
 
+Wi-Fi access point must support 5 GHz band. Wi-Fi access point could support 2.4 GHz and 6 GHz. For the purpose of calculation of modeled coverage we will consider the coverage provided by the 5GHz band.
+
 ### 3.0 Reward Tiers
 
-In accordance with HIP74, we are proposing to continue using res12 as defined by [H3](https://h3geo.org/docs/core-library/restable/) for hex sizes.
+In accordance with HIP74, we are proposing to continue using res12 as defined by [H3](https://h3geo.org/docs/core-library/restable/) for hex sizes. Additionally, the HIP proposes a new instance of an algorithm and reward structure for Wi-Fi access points based on what is defined in HIP-74 but adjusted for the technical specifics of Wi-Fi compared to CBRS radios.
 
-Res12 is the building block for evaluating geographical coverage and the scale that it provides to CBRS can be successfully ported to the Wi-Fi 5GHz band. It’s also important to differentiate between indoor deployments and outdoor deployments because the deployment models are significantly different (antenna patterns, placement, etc.) and they will contribute differently to the Mobile Network.
+Res12 is the building block for evaluating geographical coverage and the scale that it provides to CBRS can be successfully ported to the Wi-Fi 5 GHz band. It’s also important to differentiate between indoor deployments and outdoor deployments because the deployment models are significantly different (antenna patterns, placement, etc.) and they will contribute differently to the Mobile Network.
 
 Similarly to CBRS, a Wi-Fi access point can:
 
@@ -77,11 +85,13 @@ Mobile phones use Assisted GPS (A-GPS) to determine location. Relying simply on 
 
 During the onboarding procedure, the app will gather the location from the mobile phone in the background and use that information as the location of the nearby Wi-Fi access point. This self-asserted location will be validated later according to one of the methods described below.
 
-It is important to make sure that the mobile phone running the app is in close proximity to the Wi-Fi access point in order to reduce the probability of deployers misreporting the actual location of the access point deployment. The network can implement several methods (including, but not limited to, latency measurement, RSSI measurement, and physical proof of location, among others) in order to validate the access point’s onboarding location.
+It is important to make sure that the mobile phone running the app is in close proximity to the Wi-Fi access point in order to reduce the probability of deployers misreporting the actual location of the access point deployment. The network could implement several methods (including, but not limited to, latency measurement, RSSI measurement, and physical proof of location, among others) in order to validate the access point’s location asserted by the mobile app. The MCC (Manufacturing Compliance Committee) will review and approve those methods during the hardware audit process.
+
+The onboarding flow description will be reviewed by the MCC and made available by Nova Labs to other vendors.
 
 ##### 3.1.1.2 Location validation
 
-After an initial assertion of the location during the onboarding using the app as described above, it is important to periodically reassert the location of the access point in order to prevent situations in which the Wi-Fi access point is onboarded in one location and then moved into a different location.
+After an initial assertion of the location during the onboarding using the app as described above, the system must periodically reassert location. This will prevent situations in which the Wi-Fi access point is onboarded in one location and then moved into a different location. The periodicity used by the system will be subject to review and approval by the MCC during audit of the access point.
 
 There are multiple and possibly concurrent ways to implement subsequent location validation:
 
@@ -104,7 +114,7 @@ Outdoor access points are devices that are rated for operating in outdoor condit
 
 All outdoor units will be required to be equipped with a GPS module that will be used to securely assert location during the onboarding process and that will be sent to the blockchain as part of the onboarding process.
 
-To estimate the usefulness and uniqueness of the coverage, the system will require more information regarding the actual deployment. This process will follow the community-established process for certifying CBRS and Wi-Fi radios.
+To estimate the usefulness and uniqueness of the coverage, the system will require more information regarding the actual deployment. This process will be defined in a subsequent community-driven HIP. In the absence of which the current CBRS CPI process will be used.
 
 #### 3.2.3 Modeled And Templated Coverage
 
@@ -203,8 +213,7 @@ The alternative is to continue to rely on the addition of new CBRS radio deploym
 
 ## Unresolved Questions
 
-Wi-Fi devices are expected to retail for significantly less than CBRS, which makes the $40 onboarding fee currently adopted for CBRS radios prohibitively high. The onboarding fee for Wi-Fi access points is an open question that needs to be discussed and resolved by the community.
-
+Wi-Fi devices are expected to retail for significantly less than CBRS, which makes the $40 onboarding fee currently adopted for CBRS radios prohibitively high. The onboarding fee will be defined by subsequent HIP, in absence of which the onboarding and location assertions fee will be set to $0.
 ## Deployment Impact
 
 Many network components and third-party apps will need to be updated to support this HIP. This is not an exhaustive list but rather a minimum checklist that needs to be implemented:
@@ -215,6 +224,8 @@ Many network components and third-party apps will need to be updated to support 
 - Helium Mobile app will need to be updated to support the onboarding of Wi-Fi access points;
 - Helium Mobile Coverage Planner will need to be updated to support visualization of Wi-Fi access point coverage and planning of Wi-Fi deployments; and
 - Helium Mobile Hotspot Dashboard will need to be updated to support diagnostics, basic troubleshooting actions for Wi-Fi access points, and registration with Wi-Fi Professional Installer for outdoor access points.
+
+The Helium Foundation will analyze the deployment impact, allocate the resource for implementation and coordinate with responsible parties to ensure that new Hotspot Vendors can be successfully enabled to manufacture and deploy devices into the Mobile Network, included but not limited to Hotspots onboarding functionalities.
 
 ## Success Metrics
 
