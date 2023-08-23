@@ -225,7 +225,7 @@ Many network components and third-party apps will need to be updated to support 
 - Helium Mobile Coverage Planner will need to be updated to support visualization of Wi-Fi access point coverage and planning of Wi-Fi deployments; and
 - Helium Mobile Hotspot Dashboard will need to be updated to support diagnostics, basic troubleshooting actions for Wi-Fi access points, and registration with Wi-Fi Professional Installer for outdoor access points.
 
-The Helium Foundation will analyze the deployment impact, allocate the resource for implementation and coordinate with responsible parties to ensure that new Hotspot Vendors can be successfully enabled to manufacture and deploy devices into the Mobile Network, included but not limited to Hotspots onboarding functionalities.
+The Helium Foundation will validate the Hotspot Vendors to ensure viability of the Network. Specifically they will attest to the Network that Hotspot Vendors have the technical competencies and business processes to correctly support the Network including but not limited to Hotspot Owners and Service Providers. The MCC will review the deployment impact and coordinate with Hotspot Vendors to ensure that new Hotspot Vendors can be successfully enabled to manufacture and deploy devices into the Mobile Network. The Helium Community will review the information disclosed by the Hotspot Vendors to the the MCC including but not limited to architecture diagrams and security assessments of the devices. The MCC will reserve the right to not publicly disclose material that can be used to attack and threaten the Network.
 
 ## Success Metrics
 
