@@ -1,11 +1,11 @@
-# HIP XX: Response Time Windows for Witness Rewarding
+# HIP 94: Response Time Windows for Witness Rewarding
 
-- Author: [@disk91](https://github.com/disk91/), [@jmarcelino](https://github.com/jmarcelino)
-- Start Date: 2023/07/20
+- Author(s): [@disk91](https://github.com/disk91), [@jmarcelino](https://github.com/jmarcelino)
+- Start Date: 2023-07-20
 - Category: Economic, Technical
 - Original HIP PR: [#749](https://github.com/helium/HIP/pull/749)
-- Tracking issue:
-- Voting Requirements: veIoT Holders
+- Tracking issue: [#](https://github.com/helium/HIP/pull/749)
+- Voting Requirements: veIOT Holders
 
 # Summary 
 
