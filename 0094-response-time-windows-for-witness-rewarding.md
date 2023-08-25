@@ -4,7 +4,7 @@
 - Start Date: 2023-07-20
 - Category: Economic, Technical
 - Original HIP PR: [#749](https://github.com/helium/HIP/pull/749)
-- Tracking issue: [#](https://github.com/helium/HIP/pull/749)
+- Tracking issue: [#764](https://github.com/helium/HIP/issues/764)
 - Voting Requirements: veIOT Holders
 
 # Summary 
