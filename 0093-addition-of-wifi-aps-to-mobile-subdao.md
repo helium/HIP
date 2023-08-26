@@ -104,7 +104,7 @@ Given the poor inside-out RF propagation performance of 5GHz Wi-Fi, we are propo
 
 #### 3.1.3 Capping per Hex
 
-We are proposing a maximum of 3 overlapping Wi-Fi access points in one hex. In order to establish seniority, we will use the same algorithms for calculation of `coverage_claim_time` described in [HIP74](https://github.com/helium/HIP/blob/main/0074-mobile-poc-modeled-coverage-rewards.md#reward-algorithm).
+We are proposing a maximum of 1 Wi-Fi access point in one hex. In order to establish seniority, we will use the same algorithms for calculation of `coverage_claim_time` described in [HIP74](https://github.com/helium/HIP/blob/main/0074-mobile-poc-modeled-coverage-rewards.md#reward-algorithm).
 
 ### 3.2 Outdoor Access Points
 
@@ -177,6 +177,8 @@ In addition to the multipliers defined in HIP74 (i.e., heartbeat multiplier, spe
 - 0.25 - the device has successfully self-asserted its location via the mobile app
 - 0.75 - the device has successfully self-asserted its location via the mobile app and the location has been successfully validated by the network using a 3rd party service as described in section 3.1.1.2
 - 1.00 - the device has successfully self-asserted its location via the mobile app, the location has been successfully validated by the network, and at least a one coverage event on the access point has been successfully registered in the past 24 hours
+
+In order for the Wi-Fi access point to be eligible for boosted hex rewards as described in [HIP84](https://github.com/helium/HIP/blob/main/0084-service-provider-hex-boosting.md) the location trust score needs to be 0.75 or higher.
 
 #### 3.4.2 Outdoor Access Points Rewards
 
