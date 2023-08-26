@@ -9,61 +9,60 @@
 
 # Summary 
 
-Currently the Proof-of-Coverage Oracles reward the 14 first hotspots (defined in *default_max_witnesses_per_poc* ) reporting a witness. This rewards the fastest hotspots, incentivizing fiber backhauls and specific hardware models that happen to be able to produce fast signatures. The result is that the same hotspots are selected, making others unviable even if they provide unique and useful coverage for the network. In other words, it punishes hotspots for falling short of millisecond optimizations when the LoRaWAN protocol functions to the order of seconds - [see also](#rewarded-hotspots-for-witnesses). 
-A hotspot’s utility in providing LoRaWAN coverage is based on measuring “good enough” response times, not absolute fastest as absolute speeds provides no marginal utility, the Uplink does not have a particular time-window, the downlink time windows is up to 2 seconds, and the Join process up to 6 seconds.
+Currently the Proof-of-Coverage Oracles reward the 14 first hotspots (defined in *default_max_witnesses_per_poc* ) reporting a witness. This rewards the fastest hotspots, incentivizing fiber backhauls and specific hardware models that happen to be able to produce fast signatures. The result is that always the same hotspots are selected, making others unviable even if they provide unique and useful coverage for the network. In other words, it punishes hotspots for falling short of millisecond optimizations when the LoRaWAN protocol functions to the order of seconds - [see also](#rewarded-hotspots-for-witnesses). 
+But a hotspot’s utility in providing LoRaWAN coverage depends on having “good enough” response times, not on being amongst the absolute fastest as absolute speeds provide no marginal utility: the Uplink does not have a particular time-window, the Downlink time windows is up to 2 seconds, and the Join process up to 6 seconds.
 
 Since HIP-83, changing the way hotspot are selected, we see an acceleration of [hotspots not participating to PoC anymore](#network-hotspot-loss-acceleration) conducting to network size reduction.
 
-This HIP proposes to evolve the hotspot selection by adding a response time window to eliminate only 
-slow hotspots that fail to meet LoRaWAN-grade timing constraints and push helium hotspots to improve their reponse time, over time, reasonably. 
+This HIP proposes to evolve the hotspot selection by adding a response time window 
+- to eliminate only slow hotspots that fail to meet LoRaWAN-grade timing constraints and
+- to push helium hotspots to improve their reponse time, over time, reasonably. 
 
 # Motivation
 
-The LoRaWAN network has some timing constraints to be considered, these ones are related to the JOIN mechanism 
-and ACK/Downlink mechanism. JOIN requires a full loop within 5 seconds, up to 6 seconds. ACK/Downlink requires a full loop in 1 
-second for RX1 window, up to 2 seconds for RX2 windows. Out of this time frame, the response will be ignored by the sensor devices.  [Appendix](#packet-processing-and-lorawan-time-constraints) gives the consequence of these constraints on the expected hotspot response time.
+The LoRaWAN network has some timing constraints to be considered. They are related to the JOIN mechanism 
+and the ACK/Downlink mechanism. JOIN requires a full loop within 5 seconds, up to 6 seconds. ACK/Downlink requires a full loop in 1 
+second for RX1 windows, up to 2 seconds for RX2 windows. Out of this time frame, the response will be ignored by the sensor devices.  [Appendix](#packet-processing-and-lorawan-time-constraints) gives the consequence of these constraints on the expected hotspot response time.
 
 LoRaWAN is a question of seconds ($`10^0s`$ to $`10^{-1}s`$), not a question of microseconds ($`10^{-6}s`$), this is why creating a competition between hotspots and network connectivity at a millisecond ($`10^{-3}s`$) scale is not achieving any network goal.
 
 Hotspots with highly valuable locations, such as the mountaintops, cell towers, and even rooftops 
 sometimes rely on higher latency connectivity (4G/5G, Home Plug, Satellites) which adds anywhere from 
-10ms to 100ms. These hotspots generally have a higher operating cost due to dedicated connectivity and hosting cost
-and are unfairly impacted by the current selection algorithm as they still operate within LoRaWAN timing specifications. 
+10ms to 100ms. These hotspots generally have a higher operating cost due to dedicated connectivity and hosting cost. They are unfairly impacted by the current selection algorithm as they still operate within LoRaWAN timing specifications. 
 See [appendix](#highly-valuable-coverage) about highly valuable coverage.
 
 Hotspots located out of city centers will get a slower Internet response time from the one in the city center, 
 even with fast Internet access, due to some extra network hops or downgraded connectivity technology like xDSL.
 See [Appendix](#suburb-valuable-coverage) about suburb valuable coverage.
 
-Hotspot with the worst locations, indoor, in the city center, can get the best response time experience 
+Hotspots with the worst locations, indoor, in the city center, can get the best response time experience 
 with direct fiber connectivity.
 
 We have seen that depending on the hardware of the hotspot, the Witness processing time is largely dependent 
 on the packet signature as described in the [appendix](#ecc-signature-impact). As the signature is delegated to the hardware 
 ECC chip for most of the deployed hotspots, the processing time depends on the [hardware solution](#mcu-performance-impact) soldered in. 
-Even if firmware can be improved, the current solution disqualifies certain hardware whatever is the hotspot owner's efforts. 
+Even if firmware can be improved, the current solution disqualifies certain hardware no matter the hotspot owner's efforts. 
 
-More generally speaking, it disqualifies lower-end hardware like light-hotspots based on micro-controllers as, by definition, their capacity to process the same thing than an hotspot based on CPU [is lower](#mcu-performance-impact). This is nonsense as this hardware has a better fit for stability, long-life, energy saving, lower cost, and should be privileged long term.
+More generally speaking, it disqualifies lower-end hardware like light-hotspots based on micro-controllers as, by definition, their capacity to process the same thing as hotspots based on CPU [is lower](#mcu-performance-impact). This is a highly disadvantageous consequence as this hardware has a better fit for stability, long-life, energy saving, lower cost, and should be privileged long term.
 
-The Peoples Network must be accessible to anyone and not be a competition of miliseconds optimization limited to a 
+The People's Network must be accessible to anyone and not be a competition of millisecond optimization limited to a 
 small group of experts.
 
 The witness response time is not representative of the data packet processing. Witness response time does not have any 
-constraint of time. Witnesses are processed by Oracle, and response time depends on the Oracle localization, 
+constraint of time. Witnesses are processed by Oracles, and response time depends on the Oracle localization, 
 associated with the network path to reach that Oracle. It is totally different from the LNS network path taken by sensors.
-Response time can differ from a Witness to another Witness, the absolute response time is not a good way to measure a performance responding to the LoRaWAN timing constraints. The [Witness process](#witness-processing-waterfall) and the [Packet process](#packet-processing-waterfall) are detailed in the respective appendixes.
+Response time can differ from one Witness to another Witness, the absolute response time is not a good way to measure a performance responding to the LoRaWAN timing constraints. The [Witness process](#witness-processing-waterfall) and the [Packet process](#packet-processing-waterfall) are detailed in the respective appendixes.
 
-As for a given witness, the Hotspots from a similar area will report it to the same Oracle, we can consider a response 
+As for a given witness, the Hotspots from a similar area will report it to the same Oracle. We can consider a response 
 time window starting from the first witness received by the Oracle as a viable solution to eliminate the variable offset 
 timing and to eliminate those hotspots that are really slower and can cause a problem for data processing.
 
 # Stakeholders
 
-The earnings of All hotspot owners could be can be affected by this HIP. 
-It positively benefits hotspot owners negatively affected by HIP-83 who due to configuration or vendor are the slowest to respond and received less witness rewards.
-It negatively affects hotspot owners positively affected by HIP-83 who due to being the fastest to respond always got selected for witness rewards.
-It positivly affects hotspot vendors designs that were slower than other hotspot vendors designs but still within LoRaWAN specifications.
-Nova labs are the entity requested to implement the changes in the HIP.
+This HIP potentially affects the earnings of all hotspot owners: It positively benefits hotspot owners negatively affected by HIP-83, whose hotspots due to configuration or vendor are the slowest to respond and received less witness rewards.
+It negatively affects hotspot owners positively affected by HIP-83, whose hotspots due to being the fastest to respond always got selected for witness rewards.
+It positively affects hotspot vendor designs that were slower than other hotspot vendor designs but still within LoRaWAN specifications.
+Nova Labs is the entity requested to implement the changes in the HIP.
 
 # Rationale and Alternatives
 
