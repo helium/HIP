@@ -14,7 +14,9 @@ A hotspot’s utility in providing LoRaWAN coverage is based on measuring “goo
 
 We see a continous decrease of the number of [hotspots not participating to PoC anymore](#network-hotspot-loss-acceleration) over time, 41K (10%) are not seen anymore since August 15th compared to July 1st. The situations that is excluding or inequaly rewarding a hostpot, when providing a valuable coverage, does not help is stabilize the number of active hotposts over time. 
 
-This HIP proposes to evolve the hotspot selection by adding a response time window to eliminate only slow hotspots that fail to meet LoRaWAN-grade timing constraints and push helium hotspots to improve their reponse time, over time, reasonably. 
+This HIP proposes to evolve the hotspot selection by adding a response time window
+- to eliminate only slow hotspots that fail to meet LoRaWAN-grade timing constraints
+- to push helium hotspots to improve their reponse time, over time, reasonably. 
 
 # Motivation
 
