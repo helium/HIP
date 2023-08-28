@@ -12,10 +12,9 @@
 Currently the Proof-of-Coverage Oracles reward the 14 first hotspots (defined in *default_max_witnesses_per_poc* ) reporting a witness. This rewards the fastest hotspots, incentivizing fiber backhauls and specific hardware models that happen to be able to produce fast signatures. The result is that the same hotspots are selected, making others unviable even if they provide unique and useful coverage for the network. In other words, it punishes hotspots for falling short of millisecond optimizations when the LoRaWAN protocol functions to the order of seconds - [see also](#rewarded-hotspots-for-witnesses). 
 A hotspot’s utility in providing LoRaWAN coverage is based on measuring “good enough” response times, not absolute fastest as absolute speeds provides no marginal utility, the Uplink does not have a particular time-window, the downlink time windows is up to 2 seconds, and the Join process up to 6 seconds.
 
-Since HIP-83, changing the way hotspot are selected, we see an acceleration of [hotspots not participating to PoC anymore](#network-hotspot-loss-acceleration) conducting to network size reduction.
+We see a continous decrease of the number of [hotspots not participating to PoC anymore](#network-hotspot-loss-acceleration) over time, 41K (10%) are not seen anymore since August 15th compared to July 1st. The situations that is excluding or inequaly rewarding a hostpot, when providing a valuable coverage, does not help is stabilize the number of active hotposts over time. 
 
-This HIP proposes to evolve the hotspot selection by adding a response time window to eliminate only 
-slow hotspots that fail to meet LoRaWAN-grade timing constraints and push helium hotspots to improve their reponse time, over time, reasonably. 
+This HIP proposes to evolve the hotspot selection by adding a response time window to eliminate only slow hotspots that fail to meet LoRaWAN-grade timing constraints and push helium hotspots to improve their reponse time, over time, reasonably. 
 
 # Motivation
 
@@ -154,6 +153,24 @@ The first 10 are marked as SELECTED, the next 8 are marked as INVALID, the 7 oth
 
 The first 4 are marked as SELECTED, the first 1 of the next 3 is marked as SELECTED, the 2 next of 3 within EXTENDED_WITNESS_WAIT_WINDOWS_MS and the one out of WINDOWS are marked as INVALID. Oracle rewards all the one marked as SELECTED. The last 3 are not rewarded.
 
+** Option on proposal **
+
+Community discussions proposes to keep an insentive on hospot response time performance by getting a better reward distribution to the first responding and a lower to the last responding. This will be detailed if a later discussion comes to the selection of this option. 
+The way it would work would basically be like:
+- in first alternative: select the 7 (50% of the **default_max_witnesses_per_poc**) first responding hotspots then randomly select the 7 others ( 50% of the **default_max_witnesses_per_poc**)
+- in the second alternative: distribute 40% of the reward to the fastest 20%, 40% to the next 60%, 20% to the last 40%.
+
+Positive impact:
+- Reduce the impact of the reward calculation change for the one having a benefit of HIP-83. 
+- Continue to incentive hardware provider optimization
+- Continue to incentive faster connectivity
+
+Negative impact:
+- This option add complexity in the development. 
+- Continue to have inequity in reward distribution based on your geographical localization.
+- Continue to have an inequity between hostpot brands conducting to disconnection.
+- Push to hack hostpot to grab some ms and create an inequity in regard of owner technical skills.
+
 
 # Unresolved Questions
 
@@ -231,46 +248,71 @@ so basically up to 350-400ms.
 
 ## Network hotspot loss acceleration
 
-This month we see a clear acceleration of the network's hotspot reduction as shown with the following stats. This is the number of Hotspot that have participated to the PoC process since the indicated date, seen from July 28th. Basically hotspot with Witness revenue.
-Rq : This does not exclude new hotspots, lost hostpot may be a little bit higher. 
+The following data, computed on August 27th, gives the number of hostpots having given (witness, beacon, reward) activity at or after the given date. You can read it the following way:
+-  As seen on August 27th, there was 395717 uniq hostpots having received a witness (valid or not) since July 31th, 402719 having beaconned since July 31th, 395717 having been rewarded for any kind of activities including data reward. The max value of it can be considered as the number of active devices at this date.
+-  As the data are computed on August 27, the difference between two days is indicating the number of devices not been active on the network for at least a month.
+-  The reason of this can be denied list (the recent reactivation of the previously denied hostpot had a large impact on these day-to-day data), can be hostpot firmware bug stopping it, can be any local problem owner did not fixed, can be hostpot removal.
 
-| Date      | Hotspot Witnessing | Loss that day | Remark |
-| --------- | ----------------- | ---------- | -------- |
-| 2023-7-25 | 367066 | 2156 | |
-| 2023-7-24 | 369222 | 2106 | |
-| 2023-7-23 | 371328 | 1830 | |
-| 2023-7-22 | 373158 | 1774 | |
-| 2023-7-21 | 374932 | 1676 | |
-| 2023-7-20 | 376608 | 1456 | |
-| 2023-7-19 | 378064 | 1387 | |
-| 2023-7-18 | 379451 | 1445 | |
-| 2023-7-17 | 380896 | 1267 | |
-| 2023-7-16 | 382163 | 1259 | |
-| 2023-7-15 | 383422 | 1302 | |
-| 2023-7-14 | 384724 | 1253 | |
-| 2023-7-13 | 385977 | 1170 | HIP 83 activation day |
-| 2023-7-12 | 387147 | 1238 | |
-| 2023-7-11 | 388385 | 1107 | |
-| 2023-7-10 | 389492 | 1064 | |
-| 2023-7-09 | 390556 | 1025 | |
-| 2023-7-08 | 391581 | 1138 | |
-| 2023-7-07 | 392719 | 2313 | |
-| 2023-7-06 | 395032 | 1296 | |
-| 2023-7-05 | 396328 | 1103 | may include about 160 from denylist addition, here of later |
-| 2023-7-04 | 397431 | 1086 | |
-| 2023-7-03 | 398517 | 1120 | |
-| 2023-7-02 | 399637 | 1052 | |
-| 2023-7-01 | 400689 | 1085 | |
 
-Average loss per day before HIP-83 was about 1215 Hotspot per day, Average loss per day since HIP-83 is 1575 per day, growing.
+| Date      | Hs Witnessing | Hs Beaconing | Hs Rewarded | Hs Active | Hs Disconnected |
+| --------- | ------------- | ------------ | ----------- | --------- | --------------- |
+|30/06/2023|422691|428140|422691|428140|5449|796|
+|01/07/2023|421811|427280|421811|427280|5469|860|
+|02/07/2023|420993|426464|420993|426464|5471|816|
+|03/07/2023|420094|425652|420094|425652|5558|812|
+|04/07/2023|419239|424849|419239|424849|5610|803|
+|05/07/2023|418376|423994|418376|423994|5618|855|
+|06/07/2023|417483|423052|417483|423052|5569|942|
+|07/07/2023|416539|422301|416539|422301|5762|751|
+|08/07/2023|415770|421635|415770|421635|5865|666|
+|09/07/2023|415014|420909|415014|420909|5895|726|
+|10/07/2023|414250|420142|414250|420142|5892|767|
+|11/07/2023|413448|419409|413448|419409|5961|733|
+|12/07/2023|412579|418673|412579|418673|6094|736|
+|13/07/2023|411787|417936|411787|417936|6149|737|
+|14/07/2023|411000|417222|411000|417222|6222|714|
+|15/07/2023|410167|416446|410167|416446|6279|776|
+|16/07/2023|409373|415686|409373|415686|6313|760|
+|17/07/2023|408555|414893|408555|414893|6338|793|
+|18/07/2023|407717|414105|407717|414105|6388|788|
+|19/07/2023|406949|413387|406949|413387|6438|718|
+|20/07/2023|406110|412624|406110|412624|6514|763|
+|21/07/2023|405227|411752|405227|411752|6525|872|
+|22/07/2023|404327|410880|404327|410880|6553|872|
+|23/07/2023|403425|410057|403425|410057|6632|823|
+|24/07/2023|402609|409319|402609|409319|6710|738|
+|25/07/2023|401761|408483|401761|408483|6722|836|
+|26/07/2023|400833|407595|400833|407595|6762|888|
+|27/07/2023|399864|406718|399864|406718|6854|877|
+|28/07/2023|398746|405635|398746|405635|6889|1083|
+|29/07/2023|397776|404689|397776|404689|6913|946|
+|30/07/2023|396629|403571|396629|403571|6942|1118|
+|31/07/2023|395717|402719|395717|402719|7002|852|
 
-The following graphics is diplaying the Loss that day (Y axis) over days (X axis)
+Data after July 31th are impacted by Halving and later by the deny list changes.
+Basically the average loss per day before HIP-83 is 785 and after HIP-83 is 845. 
+The average not rewarded was 5688 then 6583.
 
-![Hotspot loss per day](0094-response-time-windows-for-witness-rewarding/hospot-loss-per-day.png)
+In a short term the HIP-83 did not had significant negative impact on disconnection rate (+6%) and it 
+did not add a significant impact on rewarded hotspots (beacons and data are not impacted by this evolution).
+It did not had a positive impact either. 
+
+In a longer term, it will be impossible to evaluate the impact as the halving started on August 1st. Between August 1st and August 15th, the average disconnection a day jumped to 1020 (+20%).
+
+![Hotspot disconnection evolution over 45 days](0094-response-time-windows-for-witness-rewarding/hotspot-disconnection-evoltution.png)
+
+Up to 41.000 hostpots (10% of the initial fleet) have been lost between July 1st and August 15th. 
 
 ### Rewarded Hotspots for Witnesses
 
-The following [Helium Geek](https://heliumgeek.com/stats/epoch/iot) stats displays the number of different hotspots rewarded for witnessing and beaconing. You can notice that since HIP 83 launch we had a break in the witness participation by 10,000 hotspots. This means the witnesses rewards goes to less hotspots, even if all are participating to witness beaconing. 10,000 of the hotspot are out of most for the reward distribution, to the benefit of the others.
+The following [Helium Geek](https://heliumgeek.com/stats/epoch/iot) stats displays the number of different hotspots rewarded for witnessing and beaconing within a same day.
+
+![Hotspot daily stats](0094-response-time-windows-for-witness-rewarding/hotspot-daily-stats.png)
+
+ You can notice that since HIP 83 launch we had a break in the witness participation by 10,000 hotspots. This means the witnesses rewards goes to less hotspots, even if all are participating to witness beaconing. 10,000 of the hotspots are out of most for the reward distribution, to the benefit of the others.
+
+ There is no visible short term evolution of the other trends, daily stats continue to decrease the same way.
+
 
 ## MCU performance impact
 
@@ -309,6 +351,7 @@ community members like Miroslav (heliootics) & co, Jose Marcelino, using the gat
 | Pisces                   |  | 180 ms | |
 | Controllino              |  | 180 ms | |
 | Heltec              | Other | 242 ms | |
+| FreedomFi           |       | 400 ms | |
 
 The signature impacts on the first to arrive show a variability up to 250ms. ( to be completed with the non ECC device data later one)
 
@@ -320,6 +363,8 @@ This graphic shows, after the start of the HIP-83, the witness selection change 
 
 We see that the distribution is not centered, with certain brands getting an advantage on the other, due to hardware and software implementation. Bobcat ( faster ECC ) and Kerlink ( MCU intergrated ECC ) takes advantage over the other manufacturer.
 
+The timing given above evolves based on the gateway-rs evolution, the manufacturer firmware improvement and my not be accurate at the day of the 
+reading. This aimed to illustrate how a single piece of hardware in the solution, will have a significant impact on the PoC response time.
 
 ## Packet Processing Waterfall
 
