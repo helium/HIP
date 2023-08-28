@@ -58,7 +58,7 @@ Wi-Fi access point must support 5 GHz band. Wi-Fi access point could support 2.4
 
 ### 3.0 Reward Tiers
 
-In accordance with HIP74, we are proposing to continue using res12 as defined by [H3](https://h3geo.org/docs/core-library/restable/) for hex sizes. Additionally, the HIP proposes a new instance of an algorithm and reward structure for Wi-Fi access points based on what is defined in HIP-74 but adjusted for the technical specifics of Wi-Fi compared to CBRS radios.
+In accordance with HIP74, we are proposing to continue using res12 as defined by [H3](https://h3geo.org/docs/core-library/restable/) for hex sizes. Additionally, the HIP proposes a new instance of an algorithm and reward structure for Wi-Fi access points based on what is defined in HIP-74 but adjusted for the technical specifics of Wi-Fi compared to CBRS radios. However, prior to the launch of HIP74, Wi-FI access points will be rewarded based on the currently implemented PoC algorithm for CBRS radios described [here](https://docs.helium.com/mobile/proof-of-coverage).
 
 Res12 is the building block for evaluating geographical coverage and the scale that it provides to CBRS can be successfully ported to the Wi-Fi 5 GHz band. It’s also important to differentiate between indoor deployments and outdoor deployments because the deployment models are significantly different (antenna patterns, placement, etc.) and they will contribute differently to the Mobile Network.
 
