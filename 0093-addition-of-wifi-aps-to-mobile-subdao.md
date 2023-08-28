@@ -104,7 +104,7 @@ Given the poor inside-out RF propagation performance of 5GHz Wi-Fi, we are propo
 
 #### 3.1.3 Capping per Hex
 
-We are proposing a maximum of 1 Wi-Fi access point in one hex. In order to establish seniority, we will use the same algorithms for calculation of `coverage_claim_time` described in [HIP74](https://github.com/helium/HIP/blob/main/0074-mobile-poc-modeled-coverage-rewards.md#reward-algorithm).
+We are proposing a maximum of 1 Indoor Wi-Fi access point in one hex for the PoC reward eligibility. In order to establish seniority, we will use the same algorithms for calculation of `coverage_claim_time` described in [HIP74](https://github.com/helium/HIP/blob/main/0074-mobile-poc-modeled-coverage-rewards.md#reward-algorithm). Additional access points will still be able eligible to earn rewards for data transfer activity.
 
 ### 3.2 Outdoor Access Points
 
@@ -143,7 +143,7 @@ The figure below shows the proposed templated coverage map and estimated RSSI le
 
 #### 3.2.4 Capping per Hex
 
-We are proposing a maximum of 3 overlapping Wi-Fi access points in one hex. In order to establish seniority, we will use the same algorithms for calculation of `coverage_claim_time` described in [HIP74](https://github.com/helium/HIP/blob/main/0074-mobile-poc-modeled-coverage-rewards.md#reward-algorithm).
+We are proposing a maximum of 3 Outdoor Wi-Fi access point in one hex for the PoC reward eligibility. In order to establish seniority, we will use the same algorithms for calculation of `coverage_claim_time` described in [HIP74](https://github.com/helium/HIP/blob/main/0074-mobile-poc-modeled-coverage-rewards.md#reward-algorithm). Additional access points will still be eligible to earn rewards for data transfer activity.
 
 ### 3.3 Coverage Events
 
@@ -151,7 +151,7 @@ Coverage is useful when it is actually utilized to carry real data. We propose u
 
 ### 3.4 Rewards calculation
 
-We propose using the same heartbeat and speed test multipliers used with the Mobile Genesis approach. We are also introducing a location trust score that will act as a multiplier to the total amount of potential coverage points that a access point can earn. In that sense we are modifying the formula for rewards calculation defined in HIP74, as follows:
+We propose using the same heartbeat and speed test multipliers used with the Mobile Genesis approach. We are also introducing a location trust score that will act as a multiplier to the total amount of potential coverage points that an access point can earn. In that sense we are modifying the formula for rewards calculation defined in HIP74, as follows:
 
 $$
 W = k_H \times k_S \times k_T \times C_E \times W_p
