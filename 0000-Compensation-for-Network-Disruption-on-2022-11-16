@@ -1,0 +1,45 @@
+# HIP xx: Compensation for Network Disruption on 2022-11-16
+Author(s): @jaym2518
+Start Date: 2023-08-30
+Category: Economic
+Original HIP PR:
+Tracking Issue: 
+
+## Summary
+This HIP proposes a compensation mechanism for Hotspot hosts impacted by the network disruption that occurred on 2022-11-16, which lasted for approximately 18 hours. Based on the specifications in Helium Docs, all Hotspots that were active, not on the denylist, and earned rewards from either beaconing, witnessing or passing rewardable data within the 7 days prior to the chain halt, will be rewarded. The proposed compensation will be calculated based on an average of daily HNT mined per hotspot during the 7-days prior and 7-days after the network disruption.
+
+## Motivation
+Why are we doing this?
+To ensure fairness and maintain trust among the Hotspot hosts.
+What use cases does it support?
+All Hotspot hosts who lost potential HNT rewards during the chain halt.
+What problems does it solve?
+It addresses the economic impact of the network disruption on Hotspot hosts.
+What is the expected outcome?
+A fair and transparent compensation mechanism.
+
+## Stakeholders
+All Hotspots that were active in the week leading up to the network disruption.
+
+## Detailed Explanation
+-This HIP proposes that the following process is followed after this HIP is approved by the community.
+-The Helium Foundation determines the source of funds and the mechanism to be used to complete the payments.
+-Each qualifying Hotspot will be awarded the average amount of HNT that would have been earned during the chain halt. The average will be determined by taking an average of daily HNT mined per hotspot during the 7-days prior and 7-days after the network disruption and prorated for the time that chain was halted. This will be implemented by the Helium Core Developers.
+-The list of Hotspots that should have received the pre-mine payment will be published by an announcement by the Helium Foundation to the entire community.
+-The query and data to generate the list is still to be determined. Once the discussion of this HIP concludes, the final dataset used for this calculation will be added to the HIP repository as a single file. 
+After the passage of the HIP (time of vote closure), no further claims can be made for funds as related to this specific chain halt event.
+
+## Drawbacks
+This could set a precedent for future compensations which may be exploited.
+
+## Rationale and Alternatives
+Avoiding the loss of trust among hotspot owners, which would increase the likelihood that hotspots that provide valuable coverage on the network will be disconnected, is the main motivation for this HIP. Further, this HIP offers a fair, transparent, and decentralized way to handle compensation that should have been earned by hotpots but was never paid out through no fault of their own.
+
+## Unresolved Questions
+Smart contract specifications and who will deploy it. The exact compensation amounts. The source of funds to be used for compensation.
+
+## Deployment Impact
+The wallets owning the qualifying hotspots on the date of the chain halt will receive an automated HNT transfer from the network. No claim action will be required within the Helium Wallet.
+
+## Success Metrics
+All qualifying Hotspots receive their rightful HNT payment.
