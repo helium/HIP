@@ -4,7 +4,7 @@
 - Start Date: 2023-07-15
 - Category: Economic, Technical
 - Original HIP PR: [#744](https://github.com/helium/HIP/pull/744)
-- Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
+- Tracking Issue: [#775](https://github.com/helium/HIP/issues/775)
 - Vote Requirements: veHNT holders
 
 ## Summary
