@@ -1,4 +1,4 @@
-# HIP xx: process for onboarding fee payment due to maker exit
+# HIP 94: Self-Onboard Hotspots After Maker Exit
 
 - Author(s): [@shawaj](https://github.com/shawaj), [@Sophi](https://github.com/sophi), [@ke6jjj](https://github.com/ke6jjj), [@ChewingGlass](https://github.com/ChewingGlass)
 - Start Date: 2023-07-15
