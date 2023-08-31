@@ -110,6 +110,7 @@ If you have questions or feedback, please see the [Discussion](https://github.co
 | 94 | [Response Time Windows for Witness Rewarding](0094-response-time-windows-for-witness-rewarding.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/764)  |
 | 95 | [Self-Onboard Hotspots After Maker Exit](0095-self-onboard-hotspots-after-maker-exit.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/775)  |
 
+
 ## Status Key
 
 | Status        | Label                                                                        | Summary                                                                                               |
