@@ -147,7 +147,7 @@ We are proposing a maximum of 3 Outdoor Wi-Fi access point in one hex for the Po
 
 ### 3.3 Coverage Events
 
-Coverage is useful when it is actually utilized to carry real data. We propose using “coverage events” as one of the mechanisms to validate the location of the Wi-Fi access point itself. A coverage event is an event where a Service Provider confirms that at least one or more data transfers have been carried out by a Wi-Fi access point. Those events, together with the fact that mappers and Subscriber mobile phones will report the location of the coverage events, will validate the coverage provided by the access point.
+We propose using “mapping coverage events” as one of the mechanisms to validate the location of the Wi-Fi access point itself. A mapping validation event is an event where a Service Provider confirms that at least one or more mapping event has been witnessed in the coverage of a Wi-Fi access point. Those events will be carried on by spot mappers and phone-based mapper and will validate the coverage provided by the access point.
 
 ### 3.4 Rewards calculation
 
@@ -172,13 +172,18 @@ Finally, given the nature of 5GHz band propagation and the shared spectrum natur
 
 We are proposing rewarding indoor Wi-Fi access points with a maximum of 400 coverage points within the hex that they have been assigned to during onboarding.
 
-In addition to the multipliers defined in HIP74 (i.e., heartbeat multiplier, speed test multiplier) we are adding the values of the location trust score multiplier for indoor access points, as follows:
+In addition to the estimated coverage points, heartbeat and speed test multipliers defined in HIP74 we are using the values of the location trust score multiplier for indoor access points, as follows:
 
 - 0.25 - the device has successfully self-asserted its location via the mobile app
 - 0.75 - the device has successfully self-asserted its location via the mobile app and the location has been successfully validated by the network using a 3rd party service as described in section 3.1.1.2
-- 1.00 - the device has successfully self-asserted its location via the mobile app, the location has been successfully validated by the network, and at least a one coverage event on the access point has been successfully registered in the past 24 hours
+- 1.00 - the device has successfully self-asserted its location via the mobile app, the location has been successfully validated by the network, and at least one mapping validation event on the access point has been successfully registered in the past 7 days.
 
 In order for the Wi-Fi access point to be eligible for boosted hex rewards as described in [HIP84](https://github.com/helium/HIP/blob/main/0084-service-provider-hex-boosting.md) the location trust score needs to be 0.75 or higher.
+
+Note that until mappers are launched, there will be only two possible trust scores:
+
+- 0.25 - the device has successfully self-asserted its location via the mobile app
+- 1.00 - the device has successfully self-asserted its location via the mobile app and the location has been successfully validated by the network using a 3rd party service as described in section 3.1.1.2.
 
 #### 3.4.2 Outdoor Access Points Rewards
 
@@ -203,7 +208,30 @@ The actual number of earned coverage points will be calculated based on:
 The values of the location trust score multiplier for outdoor access points are as follows:
 
 - 0.75 - the device has successfully self-asserted its location via internal GPS
-- 1.00 - the device has successfully self-asserted its location via internal GPS and at least one coverage event on the access point has been successfully registered in the past 24 hours
+- 1.00 - the device has successfully self-asserted its location via internal GPS and at least one mapping validation event on the access point has been successfully registered in the past 7 days.
+
+Note, that until mappers are launched, the trust score will be 1.00 when the device has successfully self-asserted its location via internal GPS.
+
+### 3.5 Rewards calculation prior to launch of HIP-74
+
+Prior to the launch of HIP-74, we propose that Wi-FI access points will be rewarded according to the currently implemented PoC algorithm for CBRS radios based on the heartbeat requirements, speed test, and radio reward scaling, adjusted to add the location trust score multiplier (3.4.1, 3.4.2) specifically for Wi-Fi.
+Speed test tiers and heartbeat requirements will be the same as the ones for CBRS radios. More info about heartbeat and speed test requirements can be found [here](https://docs.helium.com/mobile/proof-of-coverage/#uptime-heartbeats).
+Following the 40% scaling factor compared to CBRS that we are proposing in 3.4.1 (400 pts vs 1000 points) for HIP-74 coverage points, we propose a 0.4 radio reward scaling for Wi-Fi indoor and 1.0 radio reward scaling for outdoor Wi-Fi access points. More info about reward scaling tiers in the section ”Small Cell Radio Reward Scaling” [here](https://deploy-preview-985--helium-docs.netlify.app/5g-on-helium/mining-5g/).
+
+For reference, the updated model radio rewards scaling will be:
+
+| Device Type              | Reward Weight |
+| ------------------------ | :-----------: |
+| High Power CBRS Outdoor  |    `4.000`    |
+| CBRS Outdoor             |    `2.500`    |
+| CBRS Indoor              |    `1.000`    |
+| Wi-Fi Outdoor            |    `1.000`    |
+| Wi-Fi Indoor             |    `0.400`    |
+
+
+Please also note that prior to HIP-74 launch the cap described 3.1.3 and 3.2.4 cannot be enforced because the establishment of seniority is part of the HIP-74 implementation.
+
+After the implementation of HIP-74 rewards scheme described in this section will be ceased, and rewards will be allocated following the scheme described in 3.1 and 3.2
 
 ## Drawbacks
 
