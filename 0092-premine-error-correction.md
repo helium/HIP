@@ -1,6 +1,6 @@
 # HIP 92: Correcting IOT Pre-mine Calculation Errors
 
-- Author(s): [@elontusk](https://github.com/capjbadger007), [@gradoj](https://github.com/gradoj), [@leogaggl](https://github.com/leogaggl)
+- Author(s): [@elontusk](https://github.com/capjbadger007), [@leogaggl](https://github.com/leogaggl)
 - Start Date: 2023-07-08
 - Category: Economic
 - Original HIP PR: [736](https://github.com/helium/HIP/pull/736)
