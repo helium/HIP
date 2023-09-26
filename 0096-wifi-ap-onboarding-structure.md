@@ -3,7 +3,7 @@
 - Authors: [Max Gold](https://github.com/maxgold91), [Nova Labs, Inc](https://nova.xyz), [Nik Hawks](https://github.com/gristlekinginc), TBD
 - Start Date: 2023-08-31
 - Category: Economic, Technical
-- Original HIP PR: [#744](https://github.com/helium/HIP/pull/780)
+- Original HIP PR: [#780](https://github.com/helium/HIP/pull/780)
 - Tracking Issue: [#785](https://github.com/helium/HIP/issues/785)
 - Vote Requirements: veMOBILE Holders
 
