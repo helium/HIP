@@ -227,9 +227,12 @@ This HIP does not propose to give these hotspots any advantages, the existing PO
 
 ## Packet Processing and LoRaWan time constraints
 
-The Helium Packet Router (HPR) is accepeting all the coming packets up to the limit of the max_copies set on the route or eui in 
-the config service. First come, first paid. Only for roaming the HPR is applying a time limit. The time limit for a packet is 
-decided by the LNS after the HPR. This time limit for the LNS is a LNS setup and can vary for each of the LNS.
+The Helium Packet Router (HPR) is accepting all the coming packets up to the limit of the max_copies set on the route or eui in 
+the config service. First come, first paid. Only for roaming the HPR is applying a short time limit.
+
+According to Nova labs response, Helium packets, first arriving is opening a packet session for collecting the copies of it, during the session, all the packets up to max_copies are accepted and transmitted to LNS, after max_copies packets all are discarded. On every 30 minutes the session having a age higher than 30 minutes are closed. This means, a packet can be accepted up to 30 to 60 minutes after being emitted at HPR level. 
+
+The time limit for accepting packets as a single group of copies is decided by the LNS after the HPR. This time limit for the LNS is a LNS setup and can vary for each of the LNS. A LNS operating a local fleat will prefer a larger time windows to collect more copies, 600-800ms are viable configurations, global LNS will prefer a shorter time windows (see above waterfall for details).
 
 LoRaWAN time constraints are the following:
 - UPLINK first copy arrival has no time constraint, next copies are withing the defined LNS deduplication time windows.
