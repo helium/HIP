@@ -1,14 +1,11 @@
+# HIP 96: WiFi AP Onboarding Structure
 
-
-# HIP XXX: WiFi AP Onboarding Structure
-
-Authors: Max Gold, Nova Labs, Nik Hawks, TBD
-Start Date: 8/31/2023
-Category: Economic
-Original HIP PR: 
-Tracking Issue: 
-Voting Requirements: veMOBILE
-
+- Authors: [Max Gold](https://github.com/maxgold91), [Nova Labs, Inc](https://nova.xyz), [Nik Hawks](https://github.com/gristlekinginc), TBD
+- Start Date: 2023-08-31
+- Category: Economic, Technical
+- Original HIP PR: [#744](https://github.com/helium/HIP/pull/780)
+- Tracking Issue: [#780](https://github.com/helium/HIP/issues/780)
+- Vote Requirements: veMOBILE Holders
 
 ---
 
@@ -42,7 +39,8 @@ Q: What if a new vendor comes along with a new device that can earn MOBILE as on
 ## Flexibility for Cost Reductions
 
 In the event of a significant reduction in the hardware costs associated with devices, the community is advised to reassess the onboarding fees. A principle of maintaining approximately 10% of MSRP as the fee should be applied to align the fees with the evolving landscape of hardware costs, network growth, and token valuation.
-Q: How would reductions change the DC/MOBILE split?
+
+* Q: How would reductions change the DC/MOBILE split?
 
 # Rationale
 
@@ -50,13 +48,13 @@ The chosen onboarding fee structure balances the need for fair compensation, net
 
 # Implementation
 
-This fee structure will be implemented in the Helium Network's onboarding process for the specified device types. This process will be handled within the maker app.  Nova Labs has agreed to take on any engineering work required to pull the oracle price of Nova at the time of onboarding.  The fees will be paid by the maker on behalf of the buyer otherwise referred to in HIP-53 as the “hotspot host.” 
-Makers would be required to support this new onboarding fee process in their App
-Makers would be required to hold MOBILE in their Maker Wallet 
+* This fee structure will be implemented in the Helium Network's onboarding process for the specified device types. This process will be handled within the maker app.  Nova Labs has agreed to take on any engineering work required to pull the oracle price of Nova at the time of onboarding.  The fees will be paid by the maker on behalf of the buyer otherwise referred to in HIP-53 as the “hotspot host.” 
+* Makers would be required to support this new onboarding fee process in their App
+* Makers would be required to hold MOBILE in their Maker Wallet 
 
 # Drawbacks
 
-This fee structure is a bit more complicated to implement than the current onboarding process.
-This fee structure will negatively affect the ‘A’ score in the DAO utility score as opposed to using DC burn.
-There is a potential for a maker to either have insufficient DC or MOBILE to onboard devices.  There is currently no mechanism to ensure that any maker has enough DC in their maker wallet and the authors believe another HIP should be written in the future to remedy this problem.  Under the rules agreed to in HIP-53 a hotspot maker must stake 50M MOBILE tokens to be an approved maker.
+* This fee structure is a bit more complicated to implement than the current onboarding process.
+* This fee structure will negatively affect the ‘A’ score in the DAO utility score as opposed to using DC burn.
+* There is a potential for a maker to either have insufficient DC or MOBILE to onboard devices.  There is currently no mechanism to ensure that any maker has enough DC in their maker wallet and the authors believe another HIP should be written in the future to remedy this problem.  Under the rules agreed to in HIP-53 a hotspot maker must stake 50M MOBILE tokens to be an approved maker.
 
