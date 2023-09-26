@@ -109,6 +109,7 @@ If you have questions or feedback, please see the [Discussion](https://github.co
 | 93 | [Addition of Wi-Fi Access Points to the Helium Mobile SubDAO](0093-addition-of-wifi-aps-to-mobile-subdao.md) | [<img src="https://img.shields.io/badge/Status-Approved-green"></img>](https://github.com/helium/HIP/issues/754)  |
 | 94 | [Response Time Windows for Witness Rewarding](0094-response-time-windows-for-witness-rewarding.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/764)  |
 | 95 | [Self-Onboard Hotspots After Maker Exit](0095-self-onboard-hotspots-after-maker-exit.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/775)  |
+| 96 | [WiFi AP Onboarding Structure](0096-wifi-ap-onboarding-structure.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/785)  |
 
 
 ## Status Key
