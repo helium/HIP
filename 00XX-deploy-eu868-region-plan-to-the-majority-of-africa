@@ -14,7 +14,7 @@
 
 
 
-The Helium Foundation recommends that the community provisionally sets the currently unspecified and EU433 only countries in the Africa region to the EU868 frequency plan to match with what we understand from local regulatory authorities like the Africa Telecoms Union (ATU) and local deployers have defined as the future LoRaWAN regional frequency EU868. The LoRa Alliance does not currently specify regional parameters for these countries, or only has EU433 as an available frequency plan, so this would be an addition that the Helium Foundation is proposing for Helium network specific devices.
+The Helium Foundation recommends that the community provisionally sets the currently unspecified and EU433 only countries in the Africa region to the EU868 frequency plan to match with what we understand from local regulatory authorities like the Africa Telecoms Union (ATU) and local deployers have defined as the future LoRaWAN regional frequency EU868. The LoRa Alliance does not currently specify regional parameters for these countries, or only has EU433 as an available frequency plan, so this would be an addition that the Helium Foundation is proposing for Helium network specific devices. The LoRa Alliance has a country-by-country, or bottom up, approach to allocation of frequencies.
 
 The Foundation proposes:
 
