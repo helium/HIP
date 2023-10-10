@@ -20,8 +20,7 @@ The Foundation proposes:
 * We approach and communicate with all Telecoms Regulatory Authorities in these countries and confirm Helium provisionally complies with the EU868 regional parameter recommendation from the Africa Telecoms Union, and ask for confirmation that provisional operation is not disallowed in this provisional configuration.
 * The Helium Foundation presents this change and approach to the LoRa Alliance Regional Parameters Working Group.
 
-## 
-**Motivation**
+## Motivation
 
 
 Africa, as a continent, is lagging behind in the regulation of LoRaWAN frequency plans for each country, and additionally haven't attempted to harmonize frequency plans that are in use by countries that have a defined LoRaWAN frequency plan. The local regulatory authorities have not prioritized frequency plan selection as other efforts in 5G have taken precedence.
