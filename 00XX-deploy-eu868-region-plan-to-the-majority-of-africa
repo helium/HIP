@@ -18,8 +18,6 @@ The Helium Foundation recommends that the community provisionally sets the curre
 
 The Foundation proposes:
 
-
-
 * All Africa region countries currently set to an “Unknown” LoRaWAN regional frequency parameter are set to ETSI [EN300.220-2] standard. Region code EU868 on the Helium network.
 * All Africa region countries currently primarily set to EU433 as the default LoRaWAN regional frequency parameter are set to EU868 on the Helium network.
 * All Africa region countries with EU433 or an 800MHz based LoRaWAN regional frequency parameter are set to EU868 on the Helium network.
