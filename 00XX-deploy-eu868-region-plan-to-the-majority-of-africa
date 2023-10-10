@@ -37,7 +37,7 @@ The near term goal is to establish EU868 as a provisional regulation allowing He
 
 Pic 1: The ITU Region 1 is shown in the map above. From ITU Radio Regulations 2020
 
-The trigger countries for this HIP are Malawi, Liberia, The Democratic Republic Congo, The Republic of Congo and Ghana who the Foundation are working with on the ground through the OPEN team to establish local LoRaWAN connectivity on EU868.
+The trigger countries for this HIP are Malawi, Liberia, The Democratic Republic Congo, The Republic of Congo, and Ghana who the Foundation are working with on the ground through the OPEN team to establish local LoRaWAN connectivity on EU868.
 
 This frequency selection proposed here would be subject to future government or regulatory updates, or an update from the LoRa Alliance. Since this is a local initiative, it's assumed that Hotspot owners are going to deploy Hotspots on their own behalf and not on behalf of the Foundation.  So this guidance is based on our understanding of the local rules through conversations with the regulations and the community. Ultimately, Hotspot owners are the ones who are assuming the risk of deployment, assertion, and ongoing operation. If a Hotspot owner has specific questions or concerns, they should seek current local regulatory or legal advice.
 
