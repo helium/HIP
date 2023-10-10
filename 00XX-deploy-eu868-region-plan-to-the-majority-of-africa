@@ -18,7 +18,7 @@ The Foundation proposes:
 * All Africa region countries currently primarily set to EU433 as the default LoRaWAN regional frequency parameter are set to EU868 on the Helium network.
 * All Africa region countries with EU433 or an 800MHz based LoRaWAN regional frequency parameter are set to EU868 on the Helium network.
 * We approach and communicate with all Telecoms Regulatory Authorities in these countries and confirm Helium provisionally complies with the EU868 regional parameter recommendation from the Africa Telecoms Union, and ask for confirmation that provisional operation is not disallowed in this provisional configuration.
-* The Helium Foundation presents this change and approach to the LoRaWAN Alliance Regional Parameters Working Group.
+* The Helium Foundation presents this change and approach to the LoRa Alliance Regional Parameters Working Group.
 
 ## 
 **Motivation**
