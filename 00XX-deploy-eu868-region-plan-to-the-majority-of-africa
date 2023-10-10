@@ -25,7 +25,7 @@ The Foundation proposes:
 **Motivation**
 
 
-Africa as a continent is lagging behind in the regulation of LoRaWAN frequency plans for each country, and way behind attempting to harmonize the frequency plans that are in use by countries that have a defined LoRaWAN frequency plan. The local country telecoms regulatory authorities are not proactive with the LoRaWAN Alliance to get a frequency plan defined as it's not as much a priority for them as say 5G.
+Africa, as a continent, is lagging behind in the regulation of LoRaWAN frequency plans for each country, and additionally haven't attempted to harmonize frequency plans that are in use by countries that have a defined LoRaWAN frequency plan. The local regulatory authorities have not prioritized frequency plan selection as other efforts in 5G have taken precedence.
 
 Helium is being approached by organizations that want to deploy Helium infrastructure in Africa regional countries that do not have a frequency plan or have one that is legacy and is not recommended for future use - EU433. Unfortunately, the legal LoRaWAN frequency varies from country to country within the continent. Even rapidly growing IT-focused countries are having trouble defining the exact legal spectrum on which to operate, unless supported by other organizations or Unions.
 
