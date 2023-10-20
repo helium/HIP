@@ -55,3 +55,7 @@ The chosen onboarding fee structure balances the need for fair compensation, net
 * There is a potential for a maker to either have insufficient DC or MOBILE to onboard devices.  There is currently no mechanism to ensure that any maker has enough DC in their maker wallet and the authors believe another HIP should be written in the future to remedy this problem.  Under the rules agreed to in HIP-53 a hotspot maker must stake 50M MOBILE tokens to be an approved maker.
 * MOBILE prices are based on human oracles and not Python automated oracles.  This creates a potential situation where if human oracles stop quoting prices we will be unable to calculate a price in MOBILE.
    - The above is unlikely, as it would also mean any data transfer payments would not be calculated.
+
+# Success Metrics
+
+The hotspot owner will deploy a new WiFi AP hotspot using the makers app and the maker will be charged the fees stated above.
