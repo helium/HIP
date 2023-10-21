@@ -8,11 +8,11 @@
 - Voting Requirements: veMOBILE
 
 
-#Related Prior HIPs:
-####[HIP 53](https://github.com/helium/HIP/blob/main/0053-mobile-dao.md) - Established the concept of the MOBILE SubDAO
-####[HIP 74](https://github.com/helium/HIP/blob/main/0074-mobile-poc-modeled-coverage-rewards.md) - Established modeled proof of coverage, and modeled coverage points.
-####[HIP 85](https://github.com/helium/HIP/blob/main/0085-mobile-hex-coverage-limit.md) - Established limits to how many radios are rewarded proof of coverage rewards per res12 hex based on overlapping coverage. 
-####[HIP 93](https://github.com/helium/HIP/blob/main/0093-addition-of-wifi-aps-to-mobile-subdao.md) - Established Wi-Fi Access Points to be onboarded and rewarded to the Helium 5G network.
+# Related Prior HIPs:
+#### [HIP 53](https://github.com/helium/HIP/blob/main/0053-mobile-dao.md) - Established the concept of the MOBILE SubDAO
+#### [HIP 74](https://github.com/helium/HIP/blob/main/0074-mobile-poc-modeled-coverage-rewards.md) - Established modeled proof of coverage, and modeled coverage points.
+#### [HIP 85](https://github.com/helium/HIP/blob/main/0085-mobile-hex-coverage-limit.md) - Established limits to how many radios are rewarded proof of coverage rewards per res12 hex based on overlapping coverage. 
+#### [HIP 93](https://github.com/helium/HIP/blob/main/0093-addition-of-wifi-aps-to-mobile-subdao.md) - Established Wi-Fi Access Points to be onboarded and rewarded to the Helium 5G network.
 
 
 ## Summary
