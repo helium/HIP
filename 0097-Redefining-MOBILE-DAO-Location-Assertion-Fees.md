@@ -4,7 +4,7 @@
 - Start Date: 2023-10-02
 - Category: Economic, Technical
 - Original HIP PR: [#794](https://github.com/helium/HIP/pull/794)
-- Tracking Issue: [#794](https://github.com/helium/HIP/issues/794)
+- Tracking Issue: [#795](https://github.com/helium/HIP/issues/795)
 - Vote Requirements: veMOBILE Holders
 
 
