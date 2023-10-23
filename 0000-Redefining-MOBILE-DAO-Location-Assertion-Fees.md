@@ -1,11 +1,12 @@
- # Helium HIP - Redefining MOBILE DAO Location Assertion Fees
-- HIP Number: HIP-XXXX
-- Author: Andy Zyvoloski & Max Gold
-- Start Date: 10/2/2023
-- Category: Technical & Economic
-- Original HIP PR: 
-- Tracking Issue: 
-- Voting Requirements: veMOBILE
+  # HIP 97: Redefining MOBILE DAO Location Assertion Fees
+
+- Authors: [Andy Zyvoloski](https://github.com/heatedlime) & [Max Gold](https://github.com/maxgold91)
+- Start Date: 2023-10-02
+- Category: Economic, Technical
+- Original HIP PR: [#794](https://github.com/helium/HIP/pull/794)
+- Tracking Issue: [#794](https://github.com/helium/HIP/issues/794)
+- Vote Requirements: veMOBILE Holders
+
 
 ## Summary 
 This HIP proposes changing the currency and lowering the MOBILE location assert fees for Wi-Fi Access Points (APs) to $5 in MOBILE token burn per assertion, and reducing the assertion fee of Helium 5G Hotspots to $0.
