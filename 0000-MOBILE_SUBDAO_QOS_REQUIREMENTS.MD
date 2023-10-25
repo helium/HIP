@@ -1,11 +1,13 @@
-# Helium HIP - MOBILE SubDAO Quality of Service Requirements
-- HIP Number: HIP-XXXX
-- Author: Andy Zyvoloski 
-- Start Date: 10/21/2023
-- Category: Technical, Economic 
-- Original HIP PR: 
-- Tracking Issue: 
-- Voting Requirements: veMOBILE
+# HIP 98: MOBILE SubDAO Quality of Service Requirements
+
+- Author: [Andy Zyvoloski](https://github.com/heatedlime)
+- Start Date: 2023-10-21
+- Category: Economic, Technical
+- Original HIP PR: [#794](https://github.com/helium/HIP/pull/794)
+- Tracking Issue: [#797](https://github.com/helium/HIP/issues/797)
+- Vote Requirements: veMOBILE Holders
+
+
 
 
 ## Related Prior HIPs:
