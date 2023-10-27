@@ -43,16 +43,25 @@ Heartbeats occur every 60 seconds and transmit authorizations are valid for 240 
 To encourage reliable signal availability, 5G Hotspots and connected CBRS Small Cell Radios and Wi-Fi Access Points must generate at least one valid heartbeat per hour in 12 unique hours of the 24-hour Reward Period to earn Proof of Coverage (PoC) rewards. 
 
 
+
 #### Heartbeat Reward Tiers
 
 Each Radio and Access Point is given a heartbeat multiplier of either 0 or 1. This multiplier only affects Proof of Coverage rewards.
 
+
 Each Radio and Access Point is awarded 1 point for a valid heartbeat in each hour, with a maximum of 24 points in the Reward Period. All Radios and Access Points with at least 12 points in the 24-hour Reward Period are given a heartbeat multiplier of 1 and will be eligible to earn PoC MOBILE Rewards.
 
-### Speed Test Reward Tiers​
+### Speed Test Reward Tiers
 Many locations where connectivity is being deployed, including some rural areas, do not always have the high-speed Internet connectivity needed to meet the acceptable Internet requirements for Genesis rewards consistently. Note, the tiering and multipliers proposed below are only applicable to PoC rewards, MOBILE Rewards for data transfers are not affected. 
 
 Often these areas do not have good cellular coverage either. That's why it is essential to incentivize Helium deployments in less well-connected areas.
+
+
+### Speed Test Reward Tiers
+Many locations where connectivity is being deployed, including some rural areas, do not always have the high-speed Internet connectivity needed to meet the acceptable Internet requirements for Genesis rewards consistently. Note, the tiering and multipliers proposed below are only applicable PoC rewards, MOBILE Rewards for data transfers are not affected. 
+Often these areas do not have good cellular coverage either. That's why iit is essential to incentivize Helium deployments in less well-connected areas.
+
+
 Speed Test results are categorized into one of four Tiers - Acceptable, Degraded, Poor, and Fail.
 
 
