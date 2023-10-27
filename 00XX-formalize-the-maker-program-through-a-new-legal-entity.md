@@ -1,10 +1,10 @@
-# HIPXX: Formalize the Maker Program through a New Legal Entity
+# HIP 99: Formalize the Maker Program through a New Legal Entity
 
-- Author(s): [Scott Sigel](https://github.com/scottsigel)
+- Author(s): [Scott Sigel](https://github.com/scottsigel), [Helium Foundation](https://github.com/dewi-alliance)
 - Start Date: 2023-10-25
 - Category: Governance
-- Original HIP PR:
-- Tracking Issue:
+- Original HIP PR: [#796](https://github.com/helium/HIP/pull/796)
+- Tracking Issue: [#801](https://github.com/helium/HIP/issues/801)
 - Vote Requirements: veHNT holders
 
 ## Summary
