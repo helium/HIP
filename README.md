@@ -112,8 +112,7 @@ If you have questions or feedback, please see the [Discussion](https://github.co
 | 96 | [WiFi AP Onboarding Structure](0096-wifi-ap-onboarding-structure.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/785)  |
 | 97 | [Redefining MOBILE DAO Location Assertion Fees](0097-redefining-mobile-dao-location-assertion-fees.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/795)  |
 | 98 | [MOBILE SubDAO Quality of Service Requirements](0098-mobile-subdao-quality-of-service-requirements.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/797)  |
-| 99 | [Formalize the Maker Program through a New Legal Entity
-](0099-formalize-the-maker-program-through-a-new-legal-.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/801)  |
+| 99 | [Formalize the Maker Program through a New Legal Entity](0099-formalize-the-maker-program-through-a-new-legal-entity.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/801) |
 
 
 ## Status Key
