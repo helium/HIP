@@ -25,12 +25,11 @@ Africa shows growing LoRaWAN demand, yet has fractional or unspecified spectrum 
 
 There's a rising interest from organizations aiming to deploy compatible infrastructure in Africa. They are seeking guidance on the suitable frequency plan, especially with the uncertainty around the legacy EU433 plan. Certain countries are eager to determine the appropriate legal spectrum for operation but may benefit from additional support.
 
-The immediate objective is to promote EU868 as a provisional standard, enabling Helium deployers to roll out EU868 Hotspots across the African continent. By introducing this provisional amendment to the Helium network, there's an opportunity to influence changes in the LoRa Alliance's LoRaWAN Regional Parameters specifications.  Major African countries like South Africa, Nigeria, Egypt and Kenya already utilize EU868. However, several African countries are yet to establish regulations specific to LoRaWAN. The EU868 plan is gaining traction as a potential global standard for IoT devices, particularly in International Telecommunication Union (ITU) Region 1 (EMEA).
+The immediate objective is to promote EU868 as a provisional standard, enabling Helium deployers to roll out EU868 Hotspots across the African continent. By introducing this provisional amendment to the Helium network, there's an opportunity to influence changes in the LoRa Alliance's LoRaWAN Regional Parameters specifications.  Major African countries like South Africa, Nigeria, Egypt and Kenya already utilize EU868. However, several African countries are yet to establish regulations specific to LoRaWAN. The EU868 plan is gaining traction as a potential global standard for IoT devices, particularly in International Telecommunication Union (ITU) Region 1 (EMEA). The trigger countries for this HIP are Malawi, Liberia, The Democratic Republic of  Congo, The Republic of Congo, and Ghana which the Foundation are working with on the ground through the One Planet Education Network team to establish local LoRaWAN connectivity on EU868 in these countries.
 
 ![itu1 map](images/itu1.png)
-**Figure 1: The ITU Region 1 is shown in the map above. From ITU Radio Regulations 2020**
 
-The trigger countries for this HIP are Malawi, Liberia, The Democratic Republic of  Congo, The Republic of Congo, and Ghana which the Foundation are working with on the ground through the One Planet Education Network team to establish local LoRaWAN connectivity on EU868 in these countries.
+**Figure 1: The ITU Region 1 is shown in the map above. From ITU Radio Regulations 2020**
 
 A proactive step is essential to clarify the regulatory landscape and offer support to any organization looking to deploy LoRaWAN. A unified regional frequency would greatly assist service providers and manufacturers in decision-making regarding hardware development and deployment.
 
@@ -40,7 +39,7 @@ The 2024 goal would be to have the EU868 region for Africa map to include the co
 
 ![Africa 2024](images/africa2024v2.png)
 
-**Figure 2: The countries to be allocated EU868 by this HIP0**
+**Figure 2: The countries to be allocated EU868 by this HIP**
 
 ## Stakeholders
 
@@ -48,7 +47,7 @@ The 2024 goal would be to have the EU868 region for Africa map to include the co
 * The LoRaWAN Alliance Regulatory and Regional Parameters Working Groups (Foundation has been in contact)
 * The African Telecoms Union (ATU) (Foundation has been in contact)
 * The Regulatory Telecoms Authority in each of the countries in Tables 1,2 & 3
-* * African Telecoms and Commercial and Economic organizations, including [ECOWAS](https://ecowas.int/ecowas-member-states-adopt-common-positions-on-agenda-items-of-the-world-radiocommunications-conference-2023-wrc-23/), [CRASA](https://www.crasa.org/), [ASMG](https://www.itu.int/en/ITU-R/terrestrial/broadcast/ASMG/Pages/default.aspx), and others listed [here](https://en.wikipedia.org/wiki/Regional_Economic_Communities).
+* African Telecoms and Commercial and Economic organizations, including [ECOWAS](https://ecowas.int/ecowas-member-states-adopt-common-positions-on-agenda-items-of-the-world-radiocommunications-conference-2023-wrc-23/), [CRASA](https://www.crasa.org/), [ASMG](https://www.itu.int/en/ITU-R/terrestrial/broadcast/ASMG/Pages/default.aspx), and others listed [here](https://en.wikipedia.org/wiki/Regional_Economic_Communities).
 * Other public or private LoRaWAN networks considering similar or different regional frequency plans.
 * Hotspot owners and operators in affected regions and other nations.
 
@@ -60,6 +59,7 @@ Communication will be established with all relevant authorities and organization
 The proposed changes to regional frequency plans, based on the LoRaWAN Alliance's RP2-1.0.4 LoRaWAN Regional Parameters document, will be integrated into the regions.csv file and the corresponding .geojson files. The changes are aligned with the latest discussions, as documented in this [github issue](https://github.com/dewi-alliance/hplans/issues/51) and outlined in the tables below.
 
 ![tables 1-5](images/tables1-5v2.png)
+
 _Note: The countries marked with a * are members of CRASA and frequency harmonization amongst members is a goal of this organization._
 
 **Table 1**: Countries with no defined regional frequency plan (Unknown) will be set to EU868 - ATU discussed any countries wanting to define a regional frequency and looking for a recommendation for one from the ATU will have EU868 proposed
@@ -83,6 +83,7 @@ Other countries such as Uganda (AS923-1), Tanzania (AS923-1) and Niger (IN865) h
 The Southern African Development Community (SADC)’s regulatory arm - the Communications Regulators' Association of Southern Africa (CRASA) has a [frequency allocation plan](https://www.crasa.org/post-articles/sadc-radio-frequency-spectrum-allocation-plan-rfsap) common to all member countries. And members are urged to follow this “In order to achieve significant harmonization… as far as is practically possible.”
 
 ![table 6](images/table6.png)
+
 Table 6: List of SADC Member countries
 
 ## Drawbacks and Risks
@@ -135,11 +136,11 @@ Any countries authorities confirming they do not want to provisionally or active
 
 ## Success Metrics
 
-### Phase 1 - before or during 2024 Q1**
+### Phase 1 - before or during 2024 Q1
 
 Malawi, Liberia, The Democratic Republic Congo, The Republic of Congo and Ghana who the Foundation are working with through the OPEN team have a fixed or provisional EU868 frequency assigned by local regulators.
 
-### Phase 2 - before 2024 Q3**
+### Phase 2 - before 2024 Q3
 
 That all countries telecoms regulators in Tables 1-5 are contacted by the Helium Foundation proposing the provisional allowance of the EU868 as a regional LoRaWAN standard and a response status table is updated on the Helium DOCs pages.
 
