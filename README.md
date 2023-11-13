@@ -105,11 +105,14 @@ If you have questions or feedback, please see the [Discussion](https://github.co
 | 89 | [MOBILE Network Onboarding Fees](0089-mobile-network-onboard-fees.md) | [<img src="https://img.shields.io/badge/Status-Deployed-blue"></img>](https://github.com/helium/HIP/issues/714)  |
 | 90 | [Indefinitely Reduce IOT Location Assertion Cost](0090-reduce-iot-location-assert-cost-indefinitely.md) | [<img src="https://img.shields.io/badge/Status-Closed-lightgrey"></img>](https://github.com/helium/HIP/issues/735)  |
 | 91 | [Data-Driven Extension: Continuation of Reduced IOT Location Assertion Cost](0091-data-driven-extension-reduced-iot-assertion-cost.md) | [<img src="https://img.shields.io/badge/Status-Approved-green"></img>](https://github.com/helium/HIP/issues/743)  |
-| 92 | [Correcting IOT Pre-mine Calculation Errors](0092-premine-error-correction.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/752)  |
+| 92 | [Correcting IOT Pre-mine Calculation Errors](0092-premine-error-correction.md) | [<img src="https://img.shields.io/badge/Status-Rejected-red"></img>](https://github.com/helium/HIP/issues/752)  |
 | 93 | [Addition of Wi-Fi Access Points to the Helium Mobile SubDAO](0093-addition-of-wifi-aps-to-mobile-subdao.md) | [<img src="https://img.shields.io/badge/Status-Approved-green"></img>](https://github.com/helium/HIP/issues/754)  |
 | 94 | [Response Time Windows for Witness Rewarding](0094-response-time-windows-for-witness-rewarding.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/764)  |
 | 95 | [Self-Onboard Hotspots After Maker Exit](0095-self-onboard-hotspots-after-maker-exit.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/775)  |
 | 96 | [WiFi AP Onboarding Structure](0096-wifi-ap-onboarding-structure.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/785)  |
+| 97 | [Redefining MOBILE DAO Location Assertion Fees](0097-redefining-mobile-dao-location-assertion-fees.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/795)  |
+| 98 | [MOBILE SubDAO Quality of Service Requirements](0098-mobile-subdao-quality-of-service-requirements.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/797)  |
+| 99 | [Formalize the Maker Program through a New Legal Entity](0099-formalize-the-maker-program-through-a-new-legal-entity.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/801) |
 
 
 ## Status Key
