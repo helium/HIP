@@ -16,8 +16,8 @@ As a summary, this HIP proposes:
 * All Africa region countries with an “Unknown” LoRaWAN regional frequency plan are set to EU868 per ETSI [EN300.220-2].
 * All Africa region countries set to EU433 as the default LoRaWAN regional frequency parameter are set to EU868 on the Helium network.
 * All Africa region countries with EU433 or an 800MHz based LoRaWAN regional frequency parameter are set to EU868 on the Helium network.
-* WCommunicate with all Telecoms Regulatory Authorities in these countries and confirm Helium provisionally complies with the EU868 regional parameter recommendation from the Africa Telecoms Union.
-* We present approach to the LoRa Alliance Regulations and Regional Parameters Working Groups.
+* We communicate with all Telecoms Regulatory Authorities in these countries and confirm Helium provisionally complies with the EU868 regional parameter recommendation from the Africa Telecoms Union.
+* We present the approach to the LoRa Alliance Regulations and Regional Parameters Working Groups.
 
 ## Motivation
 
@@ -25,21 +25,13 @@ Africa shows growing LoRaWAN demand, yet has fractional or unspecified spectrum 
 
 There's a rising interest from organizations aiming to deploy compatible infrastructure in Africa. They are seeking guidance on the suitable frequency plan, especially with the uncertainty around the legacy EU433 plan. Certain countries are eager to determine the appropriate legal spectrum for operation but may benefit from additional support.
 
-The immediate objective is to promote EU868 as a provisional standard, enabling Helium deployers to roll out EU868 Hotspots across the African continent. By introducing this provisional amendment to the Helium network, there's an opportunity to influence changes in the LoRa Alliance's LoRaWAN Regional Parameters specifications.  Major African countries like South Africa, Nigeria, Egypt and Kenya already utilize EU868. However, several African countries are yet to establish regulations specific to LoRaWAN. The EU868 plan is gaining traction as a potential global standard for IoT devices, particularly in International Telecommunication Union (ITU) Region 1 (EMEA). The trigger countries for this HIP are Malawi, Liberia, The Democratic Republic of  Congo, The Republic of Congo, and Ghana which the Foundation are working with on the ground through the One Planet Education Network team to establish local LoRaWAN connectivity on EU868 in these countries.
+The immediate objective is to promote EU868 as a provisional standard, enabling Helium deployers to roll out EU868 Hotspots across the African continent. By introducing this provisional amendment to the Helium network, there's an opportunity to influence changes in the LoRa Alliance's LoRaWAN Regional Parameters specifications.  Major African countries like South Africa, Nigeria, Egypt and Kenya already utilize EU868. However, several African countries have yet to establish regulations specific to LoRaWAN. The EU868 plan is gaining traction as a potential global standard for IoT devices, particularly in the International Telecommunication Union (ITU) Region 1 (EMEA). The trigger countries for this HIP are Malawi, Liberia, The Democratic Republic of  Congo, The Republic of Congo, and Ghana which the Foundation are working with on the ground through the One Planet Education Network team to establish local LoRaWAN connectivity on EU868 in these countries.
 
 ![itu1 map](images/itu1.png)
 
 **Figure 1: The ITU Region 1 is shown in the map above. From ITU Radio Regulations 2020**
 
 A proactive step is essential to clarify the regulatory landscape and offer support to any organization looking to deploy LoRaWAN. A unified regional frequency would greatly assist service providers and manufacturers in decision-making regarding hardware development and deployment.
-
----
-
-The 2024 goal would be to have the EU868 region for Africa map to include the countries, islands and UK/France Territories as shown below.
-
-![Africa 2024](images/africa2024v2.png)
-
-**Figure 2: The countries to be allocated EU868 by this HIP**
 
 ## Stakeholders
 
@@ -72,7 +64,7 @@ This would support [hplans github issue 27](https://github.com/dewi-alliance/hpl
 
 **Table 4**:The LoRaWAN Alliance has updated the regional parameters for Algeria from AS923-3 to EU868 and we will follow their direction. Similarly Mauritius and Morocco have been updated from EU433/800MHz to EU868.
 
-**Table 5**: Saint Helena and its associated islands has been added as a proposal in this HIP though officially outside the Africa Region but is adjacent to other African islands and is a UK (EU868) Overseas Territory. It can be assumed that it would also be EU868 as African Islands that are French Overseas Territories are defined as EU868. And it exists within ITU Zone 1.
+**Table 5**: Saint Helena and its associated islands have been added as a proposal in this HIP though officially outside the Africa Region but is adjacent to other African islands and is a UK (EU868) Overseas Territory. It can be assumed that it would also be EU868 as African Islands that are French Overseas Territories are defined as EU868. And it exists within ITU Zone 1.
 
 
 ---
@@ -103,13 +95,11 @@ The traditional approach has been country-centric, with individual countries est
 
 Considering the pace of technological advancements, waiting for each country to independently establish its regulatory framework may hinder the growth of IoT in Africa. By proactively promoting a unified standard, Helium and its partners can influence the regulatory landscape while simultaneously supporting the growth of LoRaWAN across the continent.
 
-The LoRaWAN Alliance Regulatory and Regional Parameters Working Groups are supportive of efforts to speed up deployment and standardization of regional regulation in the Africa Region. 
-
 **Waiting for the LoRaWAN Alliance to set the frequency**
 
-The approach is significantly different from the LoRa Alliance. The Alliance works with individual African countries on a case-by-case basis and has not contacted the ATU to discuss an overall harmonious Africa plan. Progress has been slow, especially for the smaller countries and it could literally take a decade before all African countries have finalized regulations.  The Helium plan is to drastically shorten that time with provisional approval by promoting a suggested regional plan rather than waiting to approve a regional plan for one country at a time.
+The approach is significantly different from the LoRa Alliance. The Alliance primarily works with individual African countries on a case-by-case basis and has not contacted the ATU to discuss an overall harmonious Africa plan. Progress has been slow, especially for the smaller countries and it could literally take a decade before all African countries have finalized regulations.  The Helium plan is to drastically shorten that time with provisional approval by promoting a suggested regional plan rather than waiting to approve a regional plan for one country at a time.
 
-The LoRaWAN Alliance Regulatory and Regional Parameters Working Groups are supportive of our efforts to speed up deployment and standardization of regional regulation in the Africa Region. 
+The LoRaWAN Alliance Regulatory and Regional Parameters Working Groups are supportive of our efforts to speed up deployment and standardization of regional regulation in the African region. 
 
 ## Deployment Impact
 
@@ -122,7 +112,7 @@ The geojson does not contain the channel plan and spectrum definitions; it only 
 * The last release was on the [2nd of June 2023](https://github.com/helium/lorawan-h3/releases) and uses this set of [regional frequency parameters and plans](https://github.com/dewi-alliance/hplans/tree/e2a3a57a86c71e05064037576b3bc5f910ef5267)
 * [Lw-generator](https://github.com/helium/lorawan-h3/tree/region_params_2023.06.02) generates uber h3 files for helium to use from the geojson files
 
-There are a small number of hotspots in Algeria Switching from AS923 to EU868 and means their hardware is now obsolete, unless the hotspots can have their LoRaWAN Concentrator replaced,
+There are a small number of hotspots in Algeria Switching from AS923 to EU868 which means their hardware is now obsolete, unless the hotspots can have their LoRaWAN Concentrator replaced,
 
 ### Documentation/knowledge updates
 
@@ -132,19 +122,19 @@ There are a small number of hotspots in Algeria Switching from AS923 to EU868 an
     * Current status updates with countries viewing the EU868 proposal will be noted on this page or subpage
 * [https://github.com/dewi-alliance/hplans](https://github.com/dewi-alliance/hplans) will match the docs site
 
-Any countries authorities confirming they do not want to provisionally or actively deploy EU868 will be returned using the above processes to the LoRaWAN frequency plan definition in the latest LoRa Alliance Regional Parameters documentation. And any known deployers in that country in contact with the Foundation will be notified of the return to Alliance definitions..
+Any country's authorities confirming they do not want to provisionally or actively deploy EU868 will be returned using the above processes to the LoRaWAN frequency plan definition in the latest LoRa Alliance Regional Parameters documentation. And any known deployers in that country in contact with the Foundation will be notified of the return to Alliance definitions.
 
 ## Success Metrics
 
 ### Phase 1 - before or during 2024 Q1
 
-Malawi, Liberia, The Democratic Republic Congo, The Republic of Congo and Ghana who the Foundation are working with through the OPEN team have a fixed or provisional EU868 frequency assigned by local regulators.
+Malawi, Liberia, The Democratic Republic of Congo, The Republic of Congo and Ghana whom the Foundation are working with through the OPEN team have a fixed or provisional EU868 frequency assigned by local regulators.
 
 ### Phase 2 - before 2024 Q3
 
-That all countries telecoms regulators in Tables 1-5 are contacted by the Helium Foundation proposing the provisional allowance of the EU868 as a regional LoRaWAN standard and a response status table is updated on the Helium DOCs pages.
+That all country's telecoms regulators in Tables 1-5 are contacted by the Helium Foundation proposing the provisional allowance of the EU868 as a regional LoRaWAN standard and a response status table is updated on the Helium DOCs pages.
 
-Regular updates on the regional EU868 take up will be provided on the Community Calls.
+Regular updates on the regional EU868 take-up will be provided on the Community Calls and to the LoRa Alliance working groups.
 
 A further success metric will be the willingness of other LoRaWAN network operators to engage with and support this proposal for their own deployments
 
