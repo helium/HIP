@@ -51,11 +51,34 @@ Today, latency fails to do so.
 
 Short of a better KPI, randomness seems the fairest option.
 
+### Selection
+
+A typical flow could be shown as:
+
+1. Uplink received by gateway
+2. Cloud processing
+3. Downlink sent to gateway (if any)
+
+Latency is often measured as round trip time (RTT), so here it would be split in two on steps 1 and 3.  
+During step 2, it becomes known whether a class A downlink has to be sent to that device, we know which RX window can be selected, and we know from step 1 what is the uplink latency. By inferring that it is symmetrical (assumption that could be wrong and thus add the need for headroom), we could know at the end of step 2 whether a particular hotspot would be able to route the packet or not.
+
+Thus, some hotspots could be eliminated if they fail to provide the packet within a reasonable time (threshold).
+
+### Threshold
+
+Even if latency does not matter in terms of milliseconds or tens or milliseconds (or more) for LoRaWAN (see above), there could be a threshold to filter out hotspots that are too slow.
+
+| Scenario                                              | Threshold | Rationale                                                                                                 |
+|-------------------------------------------------------|-----------|-----------------------------------------------------------------------------------------------------------|
+| Uplink with no scheduled class A downlink             | 2500ms    | See table above; even with the most critical LoRaWAN use case, no latency below a few seconds is expected |
+| Uplink with a scheduled class A downlink, target RX1  | 800ms     | Gives 200ms headroom for cloud processing (LNS handling, window selection, latency computation, etc)      |
+| Uplink with a scheduled class A downlink, target RX2  | 1800ms    | Gives 200ms headroom for cloud processing (LNS handling, window selection, latency computation, etc)      |
+
 ## Behavior
 
 For PoCs or data packets:
 
-1. wait an aggregation period
-2. collect hotspots that brought value (routing/witnessing)
+1. first packet received from first hotspot: check if there is a class A downlink pending, decide RX1/RX2, and compute threshold accordingly
+2. collect hotspots that brought value (routing/witnessing) until the threshold expires (from packet timestamp, not from first hotspot)
 3. validate their work (cryptographically or through analysis e.g. denylist)
-4. if the list is greater than 14, select randomly
+4. if the list is greater than 14, select randomly 14 winners among the list
