@@ -16,7 +16,7 @@ As a summary, this HIP proposes:
 * All Africa region countries with an “Unknown” LoRaWAN regional frequency plan are set to EU868 per ETSI [EN300.220-2].
 * All Africa region countries set to EU433 as the default LoRaWAN regional frequency parameter are set to EU868 on the Helium network.
 * All Africa region countries with EU433 or an 800MHz based LoRaWAN regional frequency parameter are set to EU868 on the Helium network.
-* We communicate with all Telecoms Regulatory Authorities in these countries and confirm Helium provisionally complies with the EU868 regional parameter recommendation from the Africa Telecoms Union.
+* The network, through the Helium Foundation and other participants, communicate with Telecom Regulatory Authorities in these countries and confirm Helium provisionally complies with the EU868 regional parameter recommendation from the Africa Telecoms Union.
 * We present the approach to the LoRa Alliance Regulations and Regional Parameters Working Groups.
 
 ## Motivation
