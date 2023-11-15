@@ -1,10 +1,10 @@
-# HIP XXX: Deploy EU868 region plan to the majority of Africa
+# HIP 100: Deploy EU868 Region Plan to the Majority of Africa
 
 * Author: [Adrian Clint](https://github.com/waveform06) and [Helium Foundation](https://github.com/dewi-alliance) 
 * Start Date: 2023-09-22
 * Category: Technical
 * Original HIP PR: [#789](https://github.com/helium/HIP/pull/789)
-* Tracking Issue:
+* Tracking Issue: [#809](https://github.com/helium/HIP/issues/809)
 * Vote Requirements: veIOT Holders
 
 ## Summary
