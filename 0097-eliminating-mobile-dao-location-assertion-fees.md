@@ -15,9 +15,6 @@ This HIP proposes removing the MOBILE location assert fee for location assertion
 ## Motivation 
 Paying a fee to manually self-assert a location change is wasteful, as the data obtained from self-assertions is unreliable as deployers can assert their equipment in a location other than where it's actually deployed without an impact to earnings.
 
-## Motivation 
-Paying a fee to self-assert a location change is wasteful, as the data obtained from self-assertions is unreliable as deployers can assert their equipment in a location other than where it's actually deployed and still earn MOBILE.  
-
 ## Stakeholders
 MOBILE Hotspot and Wi-Fi AP Deployers - This stakeholder is impacted as it removes the cost to relocate their coverage devices.
 
