@@ -9,10 +9,16 @@
 
 
 ## Summary 
+
 This HIP proposes removing the MOBILE location assert fee for location assertions, and having locations automatically updated on chain as they occur. 
 
 ## Motivation 
 Paying a fee to manually self-assert a location change is wasteful, as the data obtained from self-assertions is unreliable as deployers can assert their equipment in a location other than where it's actually deployed without an impact to earnings.
+
+This HIP proposes effectively removing the MOBILE location assert fee for Wi-Fi Access Points (APs) and Helium 5G Hotspots by setting the fee to 0 USD.
+
+## Motivation 
+Paying a fee to self-assert a location change is wasteful, as the data obtained from self-assertions is unreliable as deployers can assert their equipment in a location other than where it's actually deployed and still earn MOBILE.  
 
 ## Stakeholders
 MOBILE Hotspot and Wi-Fi AP Deployers - This stakeholder is impacted as it removes the cost to relocate their coverage devices.
