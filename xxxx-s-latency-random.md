@@ -82,3 +82,9 @@ For PoCs or data packets:
 2. collect hotspots that brought value (routing/witnessing) until the threshold expires (from packet timestamp, not from first hotspot)
 3. validate their work (cryptographically or through analysis e.g. denylist)
 4. if the list is greater than 14, select randomly 14 winners among the list
+
+## Impact
+
+Here is a simulation of what would happen
+
+![Hard data](xxxx-data.png)
