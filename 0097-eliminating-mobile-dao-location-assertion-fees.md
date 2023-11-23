@@ -27,7 +27,7 @@ Currently, when Helium 5G Hotspots are asserted or re-asserted, the location of 
 
 Additionally, unlike Helium 5G Hotspots, Wi-Fi APs have the ability to self-assert their location through a third party vendor integrated within the Hotspot, which independently verifies the location. Eliminating the location assert fee will give deployers a more enjoyable user experience, as after the AP is onboarded, the location will automatically report any location changes to the blockchain without manual intervention. 
 
-This HIP will be implemented in two (2) phases, which are noted below:
+This HIP will be implemented in three (3) phases, which are noted below:
 
 ### Phase 1
 Upon the passing of this HIP, the Helium Foundation will need to update the Helium multisig for the MOBILE Assertion Fee from 10 USD to 0 USD. 
