@@ -27,22 +27,24 @@ Currently, when Helium 5G Hotspots are asserted or re-asserted, the location of 
 
 Additionally, unlike Helium 5G Hotspots, Wi-Fi APs have the ability to self-assert their location through a third party vendor integrated within the Hotspot, which independently verifies the location. Eliminating the location assert fee will give deployers a more enjoyable user experience, as after the AP is onboarded, the location will automatically report any location changes to the blockchain without manual intervention. 
 
-This HIP will be implemented in two (2) phases, which are noted below:
+This HIP will be implemented in three (3) phases, which are noted below:
 
 ### Phase 1
 Upon the passing of this HIP, the Helium Foundation will need to update the Helium multisig for the MOBILE Assertion Fee from 10 USD to 0 USD. 
 
 ### Phase 2
-Phase 2 consists of reporting radio Spectrum Access System (SAS) and Wi-Fi Access Points location data at a res12 hex level to an oracle, and ultimately on chain. Nova has agreed to undertake the work that is required to implement Phase 2.
+Phase 2 consists of reporting radio Spectrum Access System (SAS) and Wi-Fi Access Points location data at a res12 hex level to an oracle. Nova has agreed to undertake the work that is required to implement Phase 2. 
 
-In order to prevent the continual moving of Wi-Fi Access Points, which then causes an on-chain transaction and associated fee, a Wi-Fi Access Point may only have its location automatically re-asserted once every three (3) epochs. Hotspot Vendors/Manufacturers will be required to pay any Solana transaction fees that occur from these assertions.
+As each Wi-Fi Access Point is placed or moved, a confidence score is generated from a third party vendor integration to determine how confident the system is that the automatically asserted location is accurate. To ensure that each Wi-Fi Access Point is given enough time to self determine its location and generate a confidence score, each time the Access Point is moved to a new location, or onboarded, it must first undergo a probationary period of 1 epoch, and within that epoch, have a distinct 12 valid heartbeats within the new location before it will be rewarded PoC. The probationary period will still allow the Access Point to be rewarded for data transfers. During each reported heartbeat, the confidence score at the time of the heartbeat will be recorded. The average confidence score captured from all heartbeats within the probationary period must be greater than or equal to 80%. If the average confidence score is not greater than or equal to 80% within the first probationary period of 1 epoch, and/or there was not at least 12 distinct, the Access Point will stay in a probationary period and not be eligible to earn PoC rewards (it will still earn data rewards) until the average confidence score per epoch is greater than or equal to 80%, and at least 12 distinct heartbeats occured. 
+
+After the probationary period, if it is detected that the Access Point has moved locations, it will then be required to undergo a new probationary period to establish a new confidence level. Movement detection is noted by a drop in confidence level for one or more heartbeats of 75% or lower. 
+
+In any instances where a heartbeat is not generated or valid, that confidence score will not be reported, or counted towards any averages.
 
 Further, in order to help cover on chain fees and time spent, this HIP grants authority to vendors providing CPI services to charge up to a $10.00 USD or equivalent fee paid directly to the vendor per request, so long as the request is approved or rejected within 2 business days. If a request results in a rejection, the submitter may re-submit that request up to three (3) times for free. Any resubmission after the third rejection will be treated as a new request, and subject to up to a $10.00 USD or equivalent fee. 
 
-This HIP leaves the implementation of Phase 2 open to interpretation by Nova Developers who will implement this change on behalf of the community.
-
-Once Phase 2 is implemented, manual user initiated location assertions will no longer exist, as assertions will be completed automatically. 
-
+### Phase 3
+Phase 3 consists of moving location data on-chain. Once locations are on-chain, Wi-Fi Access Point manufactures will be required to pay for any on-chain fees associated with the assertions.
 
 ## Alternatives
 One alternative is instead of reducing the assertion fee to 0 USD, would be to change how it is paid (i.e. MOBILE burn). However, prompting the user to pay a fee every time they change device locations may complicate the user experience. 
