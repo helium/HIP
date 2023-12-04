@@ -100,14 +100,7 @@ See the table below for examples of how the multipliers will affect modeled cove
 
 
 ### Radio Health Metrics
-In order for CBRS Radios to earn rewards for the epoch, they must show the following for each category listed below:
-
-STATUS = Online
-SAS STATUS = Authorized
-CORE STATUS = Connected
-ON AIR = On
-
-If any of these health metrics does not equal the required output identified above for 12 or more heartbeats during an epoch, that radio will not earn PoC rewards for that epoch. 
+In order for CBRS Radios to earn rewards for the epoch, the radio must but authorized by SAS and on-air. If these metrics are not met for 12 or more heartbeats during an epoch, that radio will not earn PoC rewards for that epoch. 
 
 ## Rationale 
 As the Helium 5G network matures, it’s vitally important that the quality of the network and deployments provide usable and consistent coverage. 
