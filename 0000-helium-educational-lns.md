@@ -13,7 +13,7 @@ This proposal seeks to introduce a dedicated LoRaWAN Network Server (LNS) for ed
 
 ## Motivation
 
-The goal of the changes proposed in this HIP are to foster learning and experimentation within the Helium IoT Network. Operating under the Helium Foundation's Type 6 NetID (0xC00053), this new LNS would offer a unique educational and trial platform. It would allow free data transfers for educational and experimental purposes but with a key difference: these transfers will not yield rewards for Hotspots, ensuring the network's integrity and preventing potential exploitation. This approach seeks to balance the need for an open, accessible learning environment with the maintenance of the economic and operational stability of the main Helium Network.
+The goals of the changes proposed in this HIP are to foster learning and experimentation within the Helium IoT Network. Operating under the Helium Foundation's Type 6 NetID (0xC00053), this new LNS would offer a unique educational and trial platform. It would allow free data transfers for educational and experimental purposes but with a key difference: these transfers will not yield rewards for Hotspots, ensuring the network's integrity and preventing potential exploitation. This approach seeks to balance the need for an open, accessible learning environment with the maintenance of the economic and operational stability of the main Helium Network.
 
 As a broad overview, these bulleted sections highlight the impact areas and opportunities.
 
@@ -23,19 +23,19 @@ As a broad overview, these bulleted sections highlight the impact areas and oppo
 - Moving the community past Foundation Console drives growth across the broader ecosystem of LNS operators.
 
 **Continued Trial & Educational Access**
-- A new LNS is created using ChirpStack since the platform drives the underlying infrastructure of current public LNS offerings. It is configured for simple sign up and devices are permitted to operate for one week.
+- A new LNS is created using ChirpStack since the platform drives the underlying infrastructure of current public LNS offerings. It is configured for simple sign up and devices are permitted to operate for one day.
   - Eventually, this offering can grow into an ecosystem of trial services, such as instances of ThingPark Community or others, all following the same trial model as outlined for ChirpStack.
 - The new LNS offering, sitting on top of the Helium Foundation Type 6 NetID, would not issue rewards to Hotspots responsible for data transfer.
 
 ## Stakeholders
 
-This HIP affects all participants of the Helium IoT Network. Two most greatly impacted stakeholders are explained below.
+This HIP affects all participants of the Helium IoT Network. The two most greatly impacted stakeholders are explained below.
 
 ### Network Users
 Network users, as stakeholders in the new LNS, will benefit from a dedicated space for learning and testing. This LNS, which does not offer rewards for data transfer, aims to prevent misuse and maintain the network's integrity. Users will need to understand its different rules and purpose compared to the main Helium Network and adapt to its use limitations, including temporary device blocking. Their feedback will be important in shaping the future of this educational platform.
 
 ### Hotspot Operators
-Data traffic passed through the special LNS would not be rewarded to Hotspots or their operators. However, the core intent of this service is to drive more users of the network. If successful, this would drive greater traffic for Hotspots and their operators.
+Data traffic passed through the special LNS would not be rewarded to Hotspots or their operators. However, the core intent of this service is to drive more users to the network. If successful, this would drive greater traffic for Hotspots and their operators.
 
 ## Detailed Explanation
 
@@ -43,7 +43,7 @@ The primary objective of this proposal is to establish a free-to-use LoRaWAN Net
 
 To achieve this, we propose configuring the Helium Packet Router in such a way that it reports the packets, but the Packet Verifier ignores packets attributed to the Foundation Type 6 NetID. This configuration is crucial to ensure that data transfer through the free service is not rewarded to Hotspots, thus eliminating the incentive for exploitation, while maintaining metrics and insight.
 
-In addition, the LNS will be set up with specific operational rules to further safeguard network operations. Initially, devices will be allowed to operate on the LNS for one week. Following this, they will be automatically removed and blocked from the service for two weeks. This measure is designed to prevent continuous use of the network by a single user or device, thereby discouraging attempts to use this free service to exploit network coverage available on Helium. It also reinforces the utility of the Helium network for deployment-based use cases.
+In addition, the LNS will be set up with specific operational rules to further safeguard network operations. Initially, devices will be allowed to operate on the LNS for one day. Following this, they will be automatically removed and blocked from the service for one week. This measure is designed to prevent continuous use of the network by a single user or device, thereby discouraging attempts to use this free service to exploit network coverage available on Helium. It also reinforces the utility of the Helium network for deployment-based use cases.
 
 The presence of a closely managed free route in the ecosystem introduces numerous opportunities including but not limited to: interactive educational materials, coverage mapping platforms, and other initiatives.
 
@@ -58,7 +58,7 @@ Broadly, the content of this HIP should demonstrate the importance placed on pro
 In our current scenario where no new users can create accounts on Foundation Console, some alternative approaches do exist. However, we feel that this HIP proposes the best-case outcome.
 
 - **Converting Foundation Console into a paid service.**  
-  The conversion of Foundation Console into a paid service unnecessarily competes with the growing ecosystem of developers already providing these services. Furthermore, Foundation efforts are best focused on on the protocol, advocacy, and other defined goals.
+  The conversion of Foundation Console into a paid service unnecessarily competes with the growing ecosystem of developers already providing these services. Furthermore, Foundation efforts are best focused on the protocol, advocacy, and other defined goals.
 - **Leaving educational efforts to third-party providers.**  
   Foundation stands as the steward of the network. While third-party providers may offer trial or demo accounts, having a central entity that allows developers and deployers to trial the network means that any walkthrough or other educational material may point to the Helium Foundation for access to the most accurate and up-to-date experience. It does not need to be the responsibility of the network operator to offer these services.
 - **Creating an application process (KYC) for access to Console.**  
@@ -70,9 +70,9 @@ An alternative implementation of free & unrewarded traffic exists, which is to s
 
 ## Unresolved Questions
 
-While associated to this change, the ongoing operational plan for the existing Foundation Console is out of scope for this proposal, and continues to operate under the guidance of the Helium Foundation. This proposal is concerned primarialy with the updated treatment of the Foundation Type 6 NetID.
+While associated with this change, the ongoing operational plan for the existing Foundation Console is out of scope for this proposal and continues to operate under the guidance of the Helium Foundation. This proposal is concerned primarily with the updated treatment of the Foundation Type 6 NetID.
 
-Initial timeframes for device aliveness and disllowment are initially proposed at 1 week and 2 weeks, respectively. These values feel to be appropriate time periods for a user to experiment with the network, but the community may offer additional insight on what these initial values should be set to. In the long term, the Helium Foundation should make changes to these values as-needed, and without additional governance.
+Initial timeframes for device aliveness and disllowment are initially proposed at 1 day and 1 week, respectively. These values feel to be appropriate time periods for a user to experiment with the network, but the community may offer additional insight on what these initial values should be set to. In the long term, the Helium Foundation should make changes to these values as-needed, and without additional governance.
 
 ## Deployment Impact
 
@@ -84,4 +84,4 @@ As an additional detail, docs currently serves the list of public LNS operators 
 
 ## Success Metrics
 
-This HIP can be deemed successful if the limited access to free and unrewarded data transfer on the Helium IoT Network enables developers to better understand the Helium LoRaWAN opportunity. Success comes with an easing of learning curves, ability for other LNS operators to attract new users, and for the network to see more adoptions from developers.
+This HIP can be deemed successful if the limited access to free and unrewarded data transfer on the Helium IoT Network enables developers to better understand the Helium LoRaWAN opportunity. Success comes with an easing of learning curves, the ability for other LNS operators to attract new users, and for the network to see more adoptions from developers.
