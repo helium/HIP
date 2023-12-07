@@ -85,3 +85,5 @@ As an additional detail, docs currently serves the list of public LNS operators 
 ## Success Metrics
 
 This HIP can be deemed successful if the limited access to free and unrewarded data transfer on the Helium IoT Network enables developers to better understand the Helium LoRaWAN opportunity. Success comes with an easing of learning curves, the ability for other LNS operators to attract new users, and for the network to see more adoptions from developers.
+
+Metrics from the OUIs operating on the Foundation Type 6 NetID will all be recorded in Oracle data stores. As a means to offer transparency to the community, a dashboard will be created to represent metrics such as the number of distinct devices, traffic metrics, Hotspots used, etc.
