@@ -13,15 +13,15 @@ This Helium Improvement Proposal (HIP) suggests increasing Proof-of-Coverage (Po
 
 ## Related Prior HIPs
 
-[HIP 74](https://github.com/helium/HIP/blob/main/0074-mobile-poc-modeled-coverage-rewards.md) established modeled coverage for the MOBILE subDAO.
+* [HIP 74](0074-mobile-poc-modeled-coverage-rewards.md) established modeled coverage for the MOBILE subDAO.
 
-[HIP85](https://github.com/helium/HIP/blob/main/0085-mobile-hex-coverage-limit.md) changed the limit of outdoor radios eligible for PoC rewards from 5 to 3, and introduced ranking multiplier.
+* [HIP 85](0085-mobile-hex-coverage-limit.md) changed the limit of outdoor radios eligible for PoC rewards from 5 to 3, and introduced ranking multiplier.
 
-[HIP 93](https://github.com/helium/HIP/blob/main/0093-addition-of-wifi-aps-to-mobile-subdao.md) introduced the addition of Wi-Fi Access Points and certain limitations.
+* [HIP 93](0093-addition-of-wifi-aps-to-mobile-subdao.md) introduced the addition of Wi-Fi Access Points and certain limitations.
 
 ## Motivation
 
-[HIP 93](https://github.com/helium/HIP/blob/main/0093-addition-of-wifi-aps-to-mobile-subdao.md) introduced Wi-Fi Access Points (APs) as a new way to stay connected to the Helium Mobile Network and proposed a PoC algorithm for Wi-Fi Hotspots, largely mirroring the reward weights of CBRS radios. However, CBRS radios currently provide a lot less utility on the network. Specifically:
+[HIP 93](0093-addition-of-wifi-aps-to-mobile-subdao.md) introduced Wi-Fi Access Points (APs) as a new way to stay connected to the Helium Mobile Network and proposed a PoC algorithm for Wi-Fi Hotspots, largely mirroring the reward weights of CBRS radios. However, CBRS radios currently provide a lot less utility on the network. Specifically:
 - There is no immediate solution for Android phones to seamlessly hand-off data sessions between macro network like T-Mobile and CBRS; 
 - There is a way to do this for iOS17 devices, but, so far, this only works on iPhones 13+ and requires an install of a geo-fencing profile by the end user;
 - CBRS radios have no ability to provide guest / public Wi-Fi service and will always require an installation of additional, second CBRS sim on a client device to be accessible.
@@ -44,7 +44,7 @@ For the Helium Mobile Network to succeed, it is important to accelerate deployme
 - Indoor CBRS and Indoor Wi-Fi yield roughly the same ROI,
 - Outdoor CBRS 430 offers 3x ROI over Outdoor Wi-Fi.
 
-Based on the above analysis and the current status quo with “work-in-progress” CBRS handovers, we propose to increase Wi-Fi PoC as follows:
+Based on the above analysis and the current status quo with "work-in-progress" CBRS handovers, we propose to increase Wi-Fi PoC as follows:
 
 
 |                               | Tier 1           | Tier 2                        | Tier 3                       | Tier 4              |
