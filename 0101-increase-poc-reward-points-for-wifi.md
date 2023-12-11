@@ -39,7 +39,7 @@ For the Helium Mobile Network to succeed, it is important to accelerate deployme
 
 ## Detailed Explanation
 
-[Based on the current hardware market prices and existing PoC for Wi-Fi and CBRS](./XXXX-increase-poc-reward-points-for-wifi/WiFi-CBRS-ROI-Estimate.pdf) we can derive that:
+[Based on the current hardware market prices and existing PoC for Wi-Fi and CBRS](./0101-increase-poc-reward-points-for-wifi/WiFi-CBRS-ROI-Estimate.pdf) we can derive that:
 
 - Indoor CBRS and Indoor Wi-Fi yield roughly the same ROI,
 - Outdoor CBRS 430 offers 3x ROI over Outdoor Wi-Fi.
