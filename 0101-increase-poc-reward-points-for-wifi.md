@@ -7,6 +7,10 @@
 - Tracking Issue: [#825](https://github.com/helium/HIP/issues/825)
 - Vote Requirements: veMOBILE Holders
 
+## Summary
+
+This Helium Improvement Proposal (HIP) suggests increasing Proof-of-Coverage (PoC) rewards for Wi-Fi Indoor and Outdoor Hotspots to accelerate rollout of Wi-Fi. 
+
 ## Related Prior HIPs
 
 [HIP 74](https://github.com/helium/HIP/blob/main/0074-mobile-poc-modeled-coverage-rewards.md) established modeled coverage for the MOBILE subDAO.
@@ -14,10 +18,6 @@
 [HIP85](https://github.com/helium/HIP/blob/main/0085-mobile-hex-coverage-limit.md) changed the limit of outdoor radios eligible for PoC rewards from 5 to 3, and introduced ranking multiplier.
 
 [HIP 93](https://github.com/helium/HIP/blob/main/0093-addition-of-wifi-aps-to-mobile-subdao.md) introduced the addition of Wi-Fi Access Points and certain limitations.
-
-## Summary
-
-This Helium Improvement Proposal (HIP) suggests increasing Proof-of-Coverage (PoC) rewards for Wi-Fi Indoor and Outdoor Hotspots to accelerate rollout of Wi-Fi. 
 
 ## Motivation
 
