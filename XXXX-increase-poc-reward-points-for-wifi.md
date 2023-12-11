@@ -1,10 +1,10 @@
-# Increase PoC Reward Points for Wi-Fi Access Points
+# HIP 101: Increase PoC Reward Points for Wi-Fi Access Points
 
 - Author(s): [@zer0tweets](https://github.com/zer0tweets) (Nova Labs, Inc.)
 - Start Date: 2023-12-09
-- Category: economic
-- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
-- Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
+- Category: Economic, Technical
+- Original HIP PR: [#823](https://github.com/helium/HIP/pull/823)
+- Tracking Issue: [#825](https://github.com/helium/HIP/issues/825)
 - Vote Requirements: veMOBILE Holders
 
 ## Related Prior HIPs
