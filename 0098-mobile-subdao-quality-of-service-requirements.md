@@ -99,6 +99,8 @@ See the table below for examples of how the multipliers will affect modeled cove
 | E    | 1,000     | 0.00X              |  1.00X               |  1.00X           | 0.00     |
 
 
+### Radio Health Metrics
+In order for CBRS Radios to earn rewards for the epoch, the radio must but authorized by SAS and on-air. If these metrics are not met for 12 or more heartbeats during an epoch, that radio will not earn PoC rewards for that epoch. 
 
 ## Rationale 
 As the Helium 5G network matures, it’s vitally important that the quality of the network and deployments provide usable and consistent coverage. 
