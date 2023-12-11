@@ -93,7 +93,7 @@ Even if latency does not matter in terms of milliseconds or tens or milliseconds
 
 For PoCs or data packets:
 
-1. first packet received from first hotspot: check if there is a class A downlink pending, decide RX1/RX2, and compute threshold accordingly
+1. first packet received from first hotspot: check if there is a class A downlink pending, decide RX1/RX2, and use threshold accordingly
 2. collect hotspots that brought value (routing/witnessing) until the threshold expires (from packet timestamp, not from first hotspot)
 3. validate their work (cryptographically or through analysis e.g. denylist)
 4. if the list is greater than 14, select randomly 14 winners among the list
@@ -113,6 +113,8 @@ Here is a simulation of what would happen
 Removing the race to latency is fair for hotspot owners because latency wasn't a HIP19 requirement when makers started selling hotspots.
 
 A *good* threshold is crucial to avoid packet stuffing. It needs also to be fair, e.g. not exclude any maker or future hardware (so-called *light hotspot*).
+
+The threshold must also ensure that a decent latency is met when routing packets. For IoT applications, the requirement is perhaps to be under a second, so this won't impact the choice of threshold.
 
 [Empirical data](https://discord.com/channels/404106811252408320/1144746781071130795/1179544725951365273) taken from [Groot's data](https://discord.com/channels/404106811252408320/1144746781071130795/1177697584643575818) yield the following -3dB/50%/median latency per maker (with at least 5k online hotspots):
 
