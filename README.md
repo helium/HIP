@@ -114,6 +114,7 @@ If you have questions or feedback, please see the [Discussion](https://github.co
 |  98 | [MOBILE SubDAO Quality of Service Requirements](0098-mobile-subdao-quality-of-service-requirements.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/797)  |
 |  99 | [Formalize the Maker Program through a New Legal Entity](0099-formalize-the-maker-program-through-a-new-legal-entity.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/801) |
 | 100 | [Deploy EU868 Region Plan to the Majority of Africa](0100-deploy-eu868-region-plan-to-the-majority-of-africa.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/809) |
+| 101 | [Increase PoC Reward Points for Wi-Fi Access Points](0101-increase-poc-reward-points-for-wifi.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/809) |
 
 
 ## Status Key
