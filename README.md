@@ -86,7 +86,7 @@ If you have questions or feedback, please see the [Discussion](https://github.co
 |  70 | [Scaling the Helium Network](0070-scaling-helium.md) | [<img src="https://img.shields.io/badge/Status-Deployed-blue"></img>](https://github.com/helium/HIP/issues/471) |
 |  71 | [Scaling the Network with Governance & Hedera](0071-scaling-with-governance-hedera.md) | [<img src="https://img.shields.io/badge/Status-Closed-lightgrey"></img>](https://github.com/helium/HIP/issues/480) |
 |  72 | [Secure Concentrators](0072-secure-concentrators.md) | [<img src="https://img.shields.io/badge/Status-Rejected-red"></img>](https://github.com/helium/HIP/issues/489) |
-|  73 | [Consensus Deselection Weighting](0073-consensus-deselection-history-weight.md) | [<img src="https://img.shields.io/badge/Status-Deployed-blue"></img>](https://github.com/helium/HIP/issues/491) |
+|  73 | [Consensus Deselection Weighting](0073-consensus-deselection-weighting.md) | [<img src="https://img.shields.io/badge/Status-Deployed-blue"></img>](https://github.com/helium/HIP/issues/491) |
 |  74 | [Mobile PoC - Modeled Coverage Rewards](0074-mobile-poc-modeled-coverage-rewards.md) | [<img src="https://img.shields.io/badge/Status-Approved-green"></img>](https://github.com/helium/HIP/issues/504) |
 |  75 | [Initiate Programmatic PoC Emissions with an Updated Emissions Curve](0075-mobile-poc-initiate-programmatic-minting-and-updated-emissions-curve.md) | [<img src="https://img.shields.io/badge/Status-Deployed-blue"></img>](https://github.com/helium/HIP/issues/526) |
 |  76 | [Simplify Lockup Curve and veTokens](0076-linear-lockup-curve.md) | [<img src="https://img.shields.io/badge/Status-Deployed-blue"></img>](https://github.com/helium/HIP/issues/560) |
