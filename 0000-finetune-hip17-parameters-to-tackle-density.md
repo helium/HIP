@@ -29,25 +29,6 @@ Density at all hex resolution levels is checked, contributing to the final scali
 
 This approach, using neighbor density to increase scaling limits up to the 'max' value, allows for redundancy in coverage, particularly important in urban areas up to a certain level.
 
-The current HIP17 parameters are as follows: 
-```
-+---------+-----------+--------+------+
-| Hex Res | Neighbors | Target | Max  |
-|         | Occupied  |        |      |
-+---------+-----------+--------+------+
-| 4       | 1         | 250    | 800  |
-| 5       | 1         | 100    | 400  |
-| 6       | 1         | 25     | 100  |
-| 7       | 2         | 5      | 20   |
-| 8       | 2         | 1      | 4    |
-| 9       | 2         | 1      | 2    |
-| 10      | 2         | 1      | 1    |
-| 11      | 2         | 1      | 1    |
-| 12      | 2         | 1      | 1    |
-| 13      | 2         | 1      | 1    |
-+---------+-----------+--------+------+
-```
-
 ### Proposal
 
 The current HIP17 parameters present two primary challenges in the context of the existing network:
@@ -66,23 +47,25 @@ To address these issues, we propose the following adjustments:
 * To avoid unnecessary scaling in large areas and reduce sharp discrepancies:
     * Increase the limit for res-4.
 
-Here is the proposed set of parameters: 
+Here are the current and proposed sets of parameters: 
 ```
-+---------+-----------+--------+------+
-| Hex Res | Neighbors | Target | Max  |
-|         | Occupied  |        |      |
-+---------+-----------+--------+------+
-| 4       | 2         | 500    | 1000 |
-| 5       | 4         | 100    | 200  |
-| 6       | 4         | 25     | 50   |
-| 7       | 4         | 5      | 10   |
-| 8       | 2         | 1      | 1    |
-| 9       | 2         | 1      | 1    |
-| 10      | 2         | 1      | 1    |
-| 11      | 2         | 1      | 1    |
-| 12      | 2         | 1      | 1    |
-| 13      | 2         | 1      | 1    |
-+---------+-----------+--------+------+
+          +---------------------------+---------------------------+
+          |     As-is Parameters      |    Proposed Parameters    |
++---------+-----------+--------+------+-----------+--------+------+
+| Hex Res | Neighbors | Target | Max  | Neighbors | Target | Max  |
+|         | Occupied  |        |      | Occupied  |        |      |
++---------+-----------+--------+------+-----------+--------+------+
+| 4       | 1         | 250    | 800  | 2         | 500    | 1000 |
+| 5       | 1         | 100    | 400  | 4         | 100    | 200  |
+| 6       | 1         | 25     | 100  | 4         | 25     | 50   |
+| 7       | 2         | 5      | 20   | 4         | 5      | 10   |
+| 8       | 2         | 1      | 4    | 2         | 1      | 1    |
+| 9       | 2         | 1      | 2    | 2         | 1      | 1    |
+| 10      | 2         | 1      | 1    | 2         | 1      | 1    |
+| 11      | 2         | 1      | 1    | 2         | 1      | 1    |
+| 12      | 2         | 1      | 1    | 2         | 1      | 1    |
+| 13      | 2         | 1      | 1    | 2         | 1      | 1    |
++---------+-----------+--------+------+-----------+--------+------+
 ```
 
 ### How to Evaluate the Performance
