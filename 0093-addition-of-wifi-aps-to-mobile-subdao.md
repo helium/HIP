@@ -183,7 +183,12 @@ In order for the Wi-Fi access point to be eligible for boosted hex rewards as de
 Note that until mappers are launched, there will be only two possible trust scores:
 
 - 0.25 - the device has successfully self-asserted its location via the mobile app
-- 1.00 - the device has successfully self-asserted its location via the mobile app and the location has been successfully validated by the network using a 3rd party service as described in section 3.1.1.2.
+- 1.00 - the device has successfully self-asserted its location via the mobile app and the location has been successfully validated by the network using a 3rd party service as described in section 3.1.1.2 and is deemed to be within 100 meters of the asserted on-chain location
+
+The Location Validation service will verify the device's location at least twice per day. The timestamp of the last verification and the last derived lat/lng will be included in the heartbeats submitted by the device to the Oracles.
+
+The Mobile Verifier oracle as part of validating each heartbeat will validate the verified location and compare the provided lat/lng to the onchain asserted location and calculate a location trust score based on the rules defined above.  As the verified location can potentially change from one heartbeat to the next, the score will be calculated and assigned on a per heartbeat basis. Then at the time of rewards calculation the Mobile Verifier oracle will take an average of the location trust scores assigned to the verified heartbeats and this averaged score will form the location trust score multiplier for the device for the current epoch.
+
 
 #### 3.4.2 Outdoor Access Points Rewards
 
@@ -207,10 +212,15 @@ The actual number of earned coverage points will be calculated based on:
 
 The values of the location trust score multiplier for outdoor access points are as follows:
 
-- 0.75 - the device has successfully self-asserted its location via internal GPS
-- 1.00 - the device has successfully self-asserted its location via internal GPS and at least one mapping validation event on the access point has been successfully registered in the past 7 days.
+- 0.25 - the device has successfully self-asserted its location via internal GPS
+- 1.00 - the device has successfully self-asserted its location via internal GPS and at least one mapping validation event on the access point has been successfully registered in the past 7 days  and is deemed to be within 100 meters of the asserted on-chain location
 
 Note, that until mappers are launched, the trust score will be 1.00 when the device has successfully self-asserted its location via internal GPS.
+
+As per the indoor access points, the Location Validation service will verify an outdoor devices location at least twice per day. The timestamp of the last verification and the last derived lat/lng will be included in the heartbeats submitted by the device to the Oracles.
+
+The Mobile Verifier oracle as part of validating each heartbeat will validate the verified location and compare the provided lat/lng to the onchain asserted location and calculate a location trust score based on the rules defined above. As the verified location can potentially change from one heartbeat to the next, the score will be calculated and assigned on a per heartbeat basis. Then at the time of rewards calculation the Mobile Verifier oracle will take an average of the location trust scores assigned to the verified heartbeats and this averaged score will form the location trust score multiplier for the device for the current epoch.
+
 
 ### 3.5 Rewards calculation prior to launch of HIP-74
 
