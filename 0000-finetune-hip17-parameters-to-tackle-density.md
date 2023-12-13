@@ -98,6 +98,7 @@ Furthermore, we propose assessing the distribution of rewards per hex. Addressin
     </div>
 </div>
 
+*PS: To estimate the reward distribution among hexes, we assume each active hotspot beacons regularly and is witnessed by an equal number of hotspots for simplification. This assumption allows us to propose that the sum of the transmit scales for hotspots within a hex is proportional to the reward units allocated to that hex.*
 
 ## Drawbacks
 
