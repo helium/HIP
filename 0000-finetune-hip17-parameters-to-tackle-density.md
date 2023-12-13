@@ -6,6 +6,7 @@
 - Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
 - Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
 - Vote Requirements: veIOT Holders
+- Rendered View: https://heliumgeek.com/0000-finetune-hip17-parameters-to-tackle-density.pdf
 
 ## Summary
 
