@@ -176,7 +176,7 @@ In addition to the estimated coverage points, heartbeat and speed test multiplie
 
 - 0.25 - the device has successfully self-asserted its location via the mobile app
 - 0.75 - the device has successfully self-asserted its location via the mobile app and the location has been successfully validated by the network using a 3rd party service as described in section 3.1.1.2
-- 1.00 - the device has successfully self-asserted its location via the mobile app, the location has been successfully validated by the network, and at least one mapping validation event on the access point has been successfully registered in the past 7 days.
+- 1.00 - the device has successfully self-asserted its location via the mobile app, the location has been successfully validated by the network and is deemed to be within 100 meters of the asserted on-chain location and at least one mapping validation event on the access point has been successfully registered in the past 7 days.
 
 In order for the Wi-Fi access point to be eligible for boosted hex rewards as described in [HIP84](https://github.com/helium/HIP/blob/main/0084-service-provider-hex-boosting.md) the location trust score needs to be 0.75 or higher.
 
@@ -215,7 +215,7 @@ The values of the location trust score multiplier for outdoor access points are 
 - 0.25 - the device has successfully self-asserted its location via internal GPS
 - 1.00 - the device has successfully self-asserted its location via internal GPS and at least one mapping validation event on the access point has been successfully registered in the past 7 days  and is deemed to be within 100 meters of the asserted on-chain location
 
-Note, that until mappers are launched, the trust score will be 1.00 when the device has successfully self-asserted its location via internal GPS.
+Note, that until mappers are launched, the trust score will be 1.00 when the device has successfully self-asserted its location via internal GPS and is deemed to be within 100 meters of the asserted on-chain location.
 
 As per the indoor access points, the Location Validation service will verify an outdoor devices location at least twice per day. The timestamp of the last verification and the last derived lat/lng will be included in the heartbeats submitted by the device to the Oracles.
 
