@@ -45,6 +45,8 @@ For the Helium Mobile Network to succeed, it is important to accelerate deployme
 - Outdoor CBRS 430 offers 3x ROI over Outdoor Wi-Fi.
 
 Based on the above analysis and the current status quo with "work-in-progress" CBRS handovers, we propose to increase Wi-Fi PoC as follows:
+- 1.5x for Indoor Wi-Fi. I.e. 600 rewards points for Wi-Fi AP vs. current 400 reward points; 
+- 3x for Outdoor Wi-Fi AP per each covered hex. I.e. 1500 (instead of 500) points for templated coverage and the following points per modeled coverage hex
 
 
 |                               | Tier 1           | Tier 2                        | Tier 3                       | Tier 4              |
@@ -65,7 +67,7 @@ The issue with CBRS handovers is on its way of being solved and phone manufactur
 
 ## Unresolved Questions
 
-TBD
+None.
 
 ## Deployment Impact
 
