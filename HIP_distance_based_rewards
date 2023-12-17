@@ -1,0 +1,46 @@
+# Helium Improvement Proposal (HIP): Distance-based Witness Rewards
+
+## Abstract
+
+This proposal suggests a modification to the Helium network's witness reward system, specifically targeting the unfairness introduced by rewarding witnesses based on latency. The proposed change aims to reward witnesses based on their distribution within a 50 km radius and introduces a 50ms cutoff from the first to witness.
+
+## Motivation
+
+The current reward system, as outlined in HIP83, has successfully addressed certain issues related to gaming the Proof-of-Coverage (PoC) system. However, it inadvertently creates unfair advantages for higher latency internet backhauls and lower-end hardware. This proposal aims to maintain the essence of HIP83 while addressing the disparities in hardware capabilities and network conditions.
+
+## Proposed Changes
+
+### 1. Reward Distribution Based on Distance
+
+   - Witnesses will be rewarded based on their distribution within a 50 km radius rather than latency.
+   - A 50ms cutoff window from the first to witness will be implemented to discourage potential gaming and maintain the essence of HIP83.
+
+### 2. Consideration of RF Quality and Position Importance
+
+   - Introduce additional parameters in the reward distribution that take into account RF (Radio Frequency) quality and the importance of the witness's position.
+   - This addresses the oversight in HIP83 and ensures a more holistic approach to witness reward distribution.
+
+### 3. Session Keys for Package Signing
+
+   - Continue to use session keys for package signing to level the playing field for hardware with varying signing capabilities.
+   - This helps maintain the positive changes introduced by HIP83.
+
+### 4. First to Witness Reward Option
+
+   - **Option A**: Automatic reward for the first witness among the 14 selected witnesses.
+   - **Option B**: Leave out the automatic reward for the first to witness, considering it solely as a reference point for defining the cutoff.
+
+## Implementation Details
+
+   - Collaborate with the Helium development team to implement the proposed changes in a future network upgrade.
+
+## Expected Outcomes
+
+   - A more inclusive reward system that considers both distance and the quality/importance of witness positions.
+   - Encouragement for a broader range of hardware to participate in the Helium network without being disadvantaged.
+   - Significantly increased difficulty for bad actors attempting to replicate beacons, enhancing network security.
+   - Incentivization of new deployments by combining good internet connectivity with secludedness within a 50 km diameter from target hotspots.
+
+## Conclusion
+
+This proposal aims to enhance the fairness and inclusivity of the Helium network by adjusting the witness reward system. By prioritizing distance over latency, introducing a 50ms cutoff window, considering additional parameters, and presenting options regarding the automatic reward for the first to witness, we can create a more balanced ecosystem that encourages a diverse range of participants while mitigating potential gaming activities.
