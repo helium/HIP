@@ -117,6 +117,7 @@ If you have questions or feedback, please see the [Discussion](https://github.co
 | 101 | [Increase PoC Reward Points for Wi-Fi Access Points](0101-increase-poc-reward-points-for-wifi.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/809) |
 | 102 | [Helium Educational LNS - Unrewarded Trial Network](0102-helium-educational-lns.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/835) |
 | 103 | [MOBILE Oracle Hex Boosting](0103-oracle-hex-boosting.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/836) |
+| 104 | [Finetune HIP-17 Parameters to Tackle Density](0104-finetune-hip17-parameters-to-tackle-density.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/838) |
 
 
 ## Status Key
