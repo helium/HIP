@@ -1,29 +1,21 @@
-## MOBILE Oracle Hex Boosting
-Authors: [Andy Zyvoloski](https://github.com/heatedlime) & [@zer0tweets](https://github.com/zer0tweets)
+# HIP 103: MOBILE Oracle Hex Boosting
 
-Start Date: 
-
-Category: Technical & Economic
-
-Original HIP PR: #
-
-Tracking Issue: #
-
-Voting Requirements: veMOBILE
-
-## Prior Related HIPs
-
-[HIP-74](https://github.com/helium/HIP/blob/main/0074-mobile-poc-modeled-coverage-rewards.md) established modeled coverage.
-
-[HIP-84](https://github.com/helium/HIP/blob/main/0084-service-provider-hex-boosting.md) created Service Provider Hex Boosting.
-
-[HIP-85](https://github.com/helium/HIP/blob/main/0085-mobile-hex-coverage-limit.md) introduced penalties for overlapping CBRS coverage.
-
-[HIP-93](https://github.com/helium/HIP/blob/main/0093-addition-of-wifi-aps-to-mobile-subdao.md) introduced Wi-Fi Access Points. 
+- Author(s): [Andy Zyvoloski](https://github.com/heatedlime) & [@zer0tweets](https://github.com/zer0tweets)
+- Start Date: 2023-12-18
+- Category: Economic, Technical
+- Original HIP PR: [#822](https://github.com/helium/HIP/pull/822)
+- Tracking Issue: [#836](https://github.com/helium/HIP/issues/836)
+- Vote Requirements: veMOBILE Holders
 
 ## Summary:
 This Helium Improvement Proposal (HIP) discusses how Oracle Boosting rewards are calculated and creates a new Footfall Oracle, which incentives deployments in areas that have heavy footfall traffic. 
 
+## Prior Related HIPs
+
+* [HIP-74](https://github.com/helium/HIP/blob/main/0074-mobile-poc-modeled-coverage-rewards.md) established modeled coverage.
+* [HIP-84](https://github.com/helium/HIP/blob/main/0084-service-provider-hex-boosting.md) created Service Provider Hex Boosting.
+* [HIP-85](https://github.com/helium/HIP/blob/main/0085-mobile-hex-coverage-limit.md) introduced penalties for overlapping CBRS coverage.
+* [HIP-93](https://github.com/helium/HIP/blob/main/0093-addition-of-wifi-aps-to-mobile-subdao.md) introduced Wi-Fi Access Points. 
 
 ## Motivation:
 HIP 74 was passed to incorporate obstruction data and radio signal power into the PoC reward model; however, it weighs all hexes equally, even if there's a low probability of actual coverage being needed in that area. This proposal aims to improve the value of the network coverage by incentivizing users to deploy radios in areas where Oracles have determined the highest footfall traffic occurs. 
