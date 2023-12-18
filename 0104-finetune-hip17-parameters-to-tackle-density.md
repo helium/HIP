@@ -1,12 +1,11 @@
-# Finetune HIP17 parameters to tackle density
+# HIP 104: Finetune HIP-17 Parameters to Tackle Density
 
-- Author(s): mawdegroot, riobah
+- Author(s): [@mawdegroot](https://github.com/mawdegroot), [@riobah](https://github.com/riobah)
 - Start Date: 2023-12-20
 - Category: Technical
-- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
-- Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
+- Original HIP PR: [#830](https://github.com/helium/HIP/pull/830)
+- Tracking Issue: [#838](https://github.com/helium/HIP/issues/838)
 - Vote Requirements: veIOT Holders
-- Rendered View: https://heliumgeek.com/0000-finetune-hip17-parameters-to-tackle-density.pdf
 
 ## Summary
 
