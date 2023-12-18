@@ -1,25 +1,21 @@
-# HIP XXX: Modification of MOBILE subDAO Hex Limits
+# HIP 105: Modification of MOBILE subDAO Hex Limits
 
 - Author: [Andy Zyvoloski](https://github.com/heatedlime)
 - Contributors [Hans], [JD] [@italiandude](https://github.com/mario-novalabs)
-
 - Start Date: 12/7/2023
 - Category: Technical & Economic
-- Original HIP PR: #
-- Tracking Issue: #
-- Voting Requirements: veMOBILE
-
-## Related Previous HIPs
-
-[HIP 74](https://github.com/helium/HIP/blob/main/0074-mobile-poc-modeled-coverage-rewards.md) established modeled coverage for the MOBILE subDAO.
-
-[HIP 85](https://github.com/helium/HIP/blob/main/0085-mobile-hex-coverage-limit.md) implemented CBRS Hex limits.
-
-[HIP 93](https://github.com/helium/HIP/blob/main/0093-addition-of-wifi-aps-to-mobile-subdao.md) introduced the addition of Wi-Fi access points and certain limitations.
-
+- Original HIP PR: [#821](https://github.com/pull/821)
+- Tracking Issue: [#840](https://github.com/issues/840)
+- Voting Requirements: veMOBILE Holders
 
 ## Summary:
 This Helium Improvement Proposal (HIP) suggests modifying how Modeled Coverage Points (MCP) are calculated for Wi-Fi Access Points (APs) and CBRS Radios that provide overlapping coverage.
+
+## Related Previous HIPs
+
+* [HIP 74](https://github.com/helium/HIP/blob/main/0074-mobile-poc-modeled-coverage-rewards.md) established modeled coverage for the MOBILE subDAO.
+* [HIP 85](https://github.com/helium/HIP/blob/main/0085-mobile-hex-coverage-limit.md) implemented CBRS Hex limits.
+* [HIP 93](https://github.com/helium/HIP/blob/main/0093-addition-of-wifi-aps-to-mobile-subdao.md) introduced the addition of Wi-Fi access points and certain limitations.
 
 ## Motivation:
 [HIP 93](https://github.com/helium/HIP/blob/main/0093-addition-of-wifi-aps-to-mobile-subdao.md) introduced Wi-Fi APs as a new way to stay connected to the Helium MOBILE network; however, the HIP did not cover all gaming concerns, and introduced new vectors for farming MOBILE. This HIP proposes limiting the amount of Modeled Coverage Points issued for redundant coverage between Wi-Fi and CBRS. 
