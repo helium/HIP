@@ -15,20 +15,16 @@ The current reward system, as outlined in HIP83, has successfully addressed cert
    - Witnesses will be rewarded based on their distance to the beaconer equally from 1-14, rather than latency.
    - A 50ms cutoff window from the first to witness will be implemented to discourage potential gaming and maintain the essence of HIP83.
 
-### 2. Consideration of RF Quality and Position Importance - to be edited
+### 2. Consideration of hotspot Position Importance 
 
-   - Introduce additional parameters in the reward distribution that take into account RF (Radio Frequency) quality and the importance of the witness's position. - to be edited
+   - This incentivizes the need to move the hotspot away from crowded hexes, tries to encourage outward dispersion of hotspots as they would benefit from being rewarded more frequently and by doing that provide coverage that is not redundant or concentrated to more populated areas.
    - This addresses the oversight in HIP83 and ensures a more holistic approach to witness reward distribution.
 
-### 3. Session Keys for Package Signing
+### 3. Session Keys for Package Signing - irrelevant
 
    - Continue to use session keys for package signing to level the playing field for hardware with varying signing capabilities.
    - This helps maintain the positive changes introduced by HIP83.
 
-### 4. First to Witness Reward Option - to be edited
-
-   - **Option A**: Automatic reward for the first witness among the 14 selected witnesses.
-   - **Option B**: Leave out the automatic reward for the first to witness, considering it solely as a reference point for defining the cutoff.
 
 ## Implementation Details
 
