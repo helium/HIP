@@ -1,10 +1,10 @@
-# Helium Educational LNS: Unrewarded Trial Network
+# HIP 102: Helium Educational LNS - Unrewarded Trial Network
 
-- Author(s): @jthiller
+- Author(s): [@jthiller](https://github.com/jthiller)
 - Start Date: 2023-12-06
 - Category: Economic
-- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
-- Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
+- Original HIP PR: [#820](https://github.com/helium/HIP/pull/820)
+- Tracking Issue: [#835](https://github.com/helium/HIP/issues/835)
 - Vote Requirements: veIOT Holders
 
 ## Summary
