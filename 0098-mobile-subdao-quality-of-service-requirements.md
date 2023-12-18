@@ -102,6 +102,46 @@ See the table below for examples of how the multipliers will affect modeled cove
 ### Radio Health Metrics
 In order for CBRS Radios to earn rewards for the epoch, the radio must but authorized by SAS and on-air. If these metrics are not met for 12 or more heartbeats during an epoch, that radio will not earn PoC rewards for that epoch. 
 
+### Location Trust Score 
+As per [HIP 93](https://github.com/helium/HIP/blob/main/0093-addition-of-wifi-aps-to-mobile-subdao.md), after an initial assertion of its location during Wi-Fi access point onboarding, the system will periodically verify the access point's location. This is to prevent situations in which the Wi-Fi access point is onboarded in one location and then moved to a different location. In the current implementation the Location Validation service performs this verification twice per day. The timestamp of the last verification and the last derived lat/lng are subsequently included in the heartbeats submitted by the Wi-Fi access point to the Oracles.
+
+The Mobile Verifier oracle, as part of validating each heartbeat, will validate the verified location and compare the provided lat/lng to the onchain asserted location and as per the rules defined in [HIP 93](https://github.com/helium/HIP/blob/main/0093-addition-of-wifi-aps-to-mobile-subdao.md), calculate a location trust score. In the current implementation, as the verified location can potentially change from one heartbeat to the next, the score is calculated and assigned on a per heartbeat basis. Then at the time of rewards calculation the Mobile Verifier oracle will take an average of the location trust scores assigned to the verified heartbeats and this averaged score will form the location trust score multiplier for the Wi-Fi access point for that epoch.
+
+Example Heartbeats
+The example below illustrates the location trust score calculated for 24 heartbeats received from an access point over the course of one epoch.
+
+heartbeat_number	assigned location trust score
+
+|heartbeat_number|assigned location trust score|
+|----------------|-----------------------------|
+|1               |0.25                         |
+|2               |0.25                         |
+|3               |0.25                         |
+|4               |0.25                         |
+|5               |0.25                         |
+|6               |0.25                         |
+|7               |0.25                         |
+|8               |0.25                         |
+|9               |0.25                         |
+|10              |0.25                         |
+|11              |1.00                         |
+|12              |1.00                         |
+|13              |1.00                         |
+|14              |1.00                         |
+|15              |1.00                         |
+|16              |1.00                         |
+|17              |1.00                         |
+|18              |1.00                         |
+|19              |1.00                         |
+|20              |1.00                         |
+|21              |1.00                         |
+|22              |1.00                         |
+|23              |1.00                         |
+|24              |1.00                         |
+
+In the example above, the average would be 0.6875, and wojld be utilized during rewards.
+
+
 ## Rationale 
 As the Helium 5G network matures, it’s vitally important that the quality of the network and deployments provide usable and consistent coverage. 
 
