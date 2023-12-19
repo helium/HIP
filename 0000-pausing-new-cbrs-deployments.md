@@ -26,6 +26,8 @@ CBRS radios currently provide a lot less utility on the network. Specifically:
 Therefore, as the CBRS coverage is not ready for mainstream usage, this HIP proposes pausing new CBRS deployments for 180 calendar days after this HIP is implemented.
 
 ## Stakeholders:
+CBRS Hardware Vendors and Distributors - these stakeholders will be affected as they will need to pause sales of CBRS equipment during the 6 month period this HIP is in effect. 
+
 Deployers - this HIP will make it more fair for deployers who are able to deploy a more optimal Wi-Fi AP setup than current existing setups.
 
 
@@ -49,11 +51,16 @@ In instances where these grandfathered radios move locations and need to undergo
 ### Special Circumstances
 In an instance where a new service provider is approved to join the MOBILE network, and that service provider will use CBRS to offload data, this HIP will expire, even if 180 days have not passed.
 
+### Special Voting Requirements
+As this HIP may be controversial to some, the voting requirements for this HIP to pass will be raised to 75% in favor. If this HIP does not receive at least 75% of votes in favor of the HIP, the HIP will fail and not be implemented.  
+
 ## Drawbacks:
 The implementation of this proposal will stunt the growth of the CBRS network; however, it should increase the focus to Wi-Fi deployments, which are usable by the network's service provider customers today. 
 
 ## Deployment Impact
 Upon 30 days after passing, Nova/Freedomfi will have to stop accepting CPI submissions for new radios that have not yet been onboarded to the MOBILE Network. Additionally, a burn mechanism will need to be created to allow grandfathered radios to pay a $25 MOBILE burn fee for new CPI submissions. 
+
+As radio identities are not stored on chain, there are no on-chain changes required to prohibit CBRS radios from being onboarded. 
 
 ## Success Metrics
 The primary success metric will be to stop future CBRS deployments until CBRS is a usable/viable offload ramp for one of our service provider customers.
