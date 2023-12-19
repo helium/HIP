@@ -50,7 +50,7 @@ Communication will be established with all relevant authorities and organization
 
 The proposed changes to regional frequency plans, based on the LoRaWAN Alliance's RP2-1.0.4 LoRaWAN Regional Parameters document, will be integrated into the regions.csv file and the corresponding .geojson files. The changes are aligned with the latest discussions, as documented in this [github issue](https://github.com/dewi-alliance/hplans/issues/51) and outlined in the tables below.
 
-![tables 1-5](0100-deploy-eu868-region-plan-to-the-majority-of-africa/tables1-5v2.png)
+![tables 1-5](0100-deploy-eu868-region-plan-to-the-majority-of-africa/tables1-5v3.png)
 
 _Note: The countries marked with a * are members of CRASA and frequency harmonization amongst members is a goal of this organization._
 
@@ -69,7 +69,7 @@ This would support [hplans github issue 27](https://github.com/dewi-alliance/hpl
 
 ---
 
-Other countries such as Uganda (AS923-1), Tanzania (AS923-1) and Niger (IN865) have specifications other than EU868. Lesotho, Libya, Sierra Leone and Sudan have frequency spectrum specifications that need further review before deploying EU868. It would be expected that over time all these countries harmonize with the proposed region plan of the ATU for EU868, this HIP does not describe a current attempt to change them, but proposes to add EU868 to the list of their allowable regional frequencies in the Helium regions.csv file. 
+Other countries such as Uganda (AS923-1), Tanzania (AS923-1) and Niger (IN865) have specifications other than EU868. Lesotho, Libya and Sudan have frequency spectrum specifications that need further review before deploying EU868. It would be expected that over time all these countries harmonize with the proposed region plan of the ATU for EU868, this HIP does not describe a current attempt to change them, but proposes to add EU868 to the list of their allowable regional frequencies in the Helium regions.csv file. 
 
 
 The Southern African Development Community (SADC)’s regulatory arm - the Communications Regulators' Association of Southern Africa (CRASA) has a [frequency allocation plan](https://www.crasa.org/post-articles/sadc-radio-frequency-spectrum-allocation-plan-rfsap) common to all member countries. And members are urged to follow this “In order to achieve significant harmonization… as far as is practically possible.”

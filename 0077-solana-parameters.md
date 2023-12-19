@@ -94,7 +94,7 @@ The emission schedules until 2025 are codified [in the helium program library re
 will need to be adjusted as more rewardable entities, like mappers, are added. The values present in these json files represent the amount that will be emitted per epoch given the current set of rewardable entities.
 
 The full token emissions schedule as of Solana Migration can be downloaded
-[here](./HIP-solana-parameters/token-emissions-as-of-solana-migration.pdf).
+[here](./0077-solana-parameters/token-emissions-as-of-solana-migration.pdf).
 
 
 ### Landrush Period

@@ -86,7 +86,7 @@ If you have questions or feedback, please see the [Discussion](https://github.co
 |  70 | [Scaling the Helium Network](0070-scaling-helium.md) | [<img src="https://img.shields.io/badge/Status-Deployed-blue"></img>](https://github.com/helium/HIP/issues/471) |
 |  71 | [Scaling the Network with Governance & Hedera](0071-scaling-with-governance-hedera.md) | [<img src="https://img.shields.io/badge/Status-Closed-lightgrey"></img>](https://github.com/helium/HIP/issues/480) |
 |  72 | [Secure Concentrators](0072-secure-concentrators.md) | [<img src="https://img.shields.io/badge/Status-Rejected-red"></img>](https://github.com/helium/HIP/issues/489) |
-|  73 | [Consensus Deselection Weighting](0073-consensus-deselection-history-weight.md) | [<img src="https://img.shields.io/badge/Status-Deployed-blue"></img>](https://github.com/helium/HIP/issues/491) |
+|  73 | [Consensus Deselection Weighting](0073-consensus-deselection-weighting.md) | [<img src="https://img.shields.io/badge/Status-Deployed-blue"></img>](https://github.com/helium/HIP/issues/491) |
 |  74 | [Mobile PoC - Modeled Coverage Rewards](0074-mobile-poc-modeled-coverage-rewards.md) | [<img src="https://img.shields.io/badge/Status-Approved-green"></img>](https://github.com/helium/HIP/issues/504) |
 |  75 | [Initiate Programmatic PoC Emissions with an Updated Emissions Curve](0075-mobile-poc-initiate-programmatic-minting-and-updated-emissions-curve.md) | [<img src="https://img.shields.io/badge/Status-Deployed-blue"></img>](https://github.com/helium/HIP/issues/526) |
 |  76 | [Simplify Lockup Curve and veTokens](0076-linear-lockup-curve.md) | [<img src="https://img.shields.io/badge/Status-Deployed-blue"></img>](https://github.com/helium/HIP/issues/560) |
@@ -99,7 +99,7 @@ If you have questions or feedback, please see the [Discussion](https://github.co
 |  83 | [Restore First to Respond Witness Rewarding](0083-restore-first-to-witness.md) | [<img src="https://img.shields.io/badge/Status-Deployed-blue"></img>](https://github.com/helium/HIP/issues/632)  |
 |  84 | [Service Provider Hex Boosting](0084-service-provider-hex-boosting.md) | [<img src="https://img.shields.io/badge/Status-Approved-green"></img>](https://github.com/helium/HIP/issues/638)  |
 |  85 | [MOBILE Hex Coverage Limit](0085-mobile-hex-coverage-limit.md) | [<img src="https://img.shields.io/badge/Status-Approved-green"></img>](https://github.com/helium/HIP/issues/673)  |
-|  86 | [Increase IOT Data Transfer Cost](0086-increase-iot-data-transfer-cost.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/703)  |
+|  86 | [Increase IOT Data Transfer Cost](0086-increase-iot-data-transfer-cost.md) | [<img src="https://img.shields.io/badge/Status-Closed-lightgrey"></img>](https://github.com/helium/HIP/issues/703)  |
 |  87 | [Proportional Service Provider Rewards](0087-proportional-service-provider-rewards.md) | [<img src="https://img.shields.io/badge/Status-Approved-green"></img>](https://github.com/helium/HIP/issues/704)  |
 |  88 | [Adjustment of DAO Utility A Score](0088-adjustment-of-dao-utility-a-score.md) | [<img src="https://img.shields.io/badge/Status-Deployed-blue"></img>](https://github.com/helium/HIP/issues/707)  |
 |  89 | [MOBILE Network Onboarding Fees](0089-mobile-network-onboard-fees.md) | [<img src="https://img.shields.io/badge/Status-Deployed-blue"></img>](https://github.com/helium/HIP/issues/714)  |
@@ -109,11 +109,16 @@ If you have questions or feedback, please see the [Discussion](https://github.co
 |  93 | [Addition of Wi-Fi Access Points to the Helium Mobile SubDAO](0093-addition-of-wifi-aps-to-mobile-subdao.md) | [<img src="https://img.shields.io/badge/Status-Approved-green"></img>](https://github.com/helium/HIP/issues/754)  |
 |  94 | [Response Time Windows for Witness Rewarding](0094-response-time-windows-for-witness-rewarding.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/764)  |
 |  95 | [Self-Onboard Hotspots After Maker Exit](0095-self-onboard-hotspots-after-maker-exit.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/775)  |
-|  96 | [WiFi AP Onboarding Structure](0096-wifi-ap-onboarding-structure.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/785)  |
+|  96 | [WiFi AP Onboarding Structure](0096-wifi-ap-onboarding-structure.md) | [<img src="https://img.shields.io/badge/Status-Approved-green"></img>](https://github.com/helium/HIP/issues/785)  |
 |  97 | [Eliminating MOBILE DAO Location Assertion Fees](0097-eliminating-mobile-dao-location-assertion-fees.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/795)  |
 |  98 | [MOBILE SubDAO Quality of Service Requirements](0098-mobile-subdao-quality-of-service-requirements.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/797)  |
 |  99 | [Formalize the Maker Program through a New Legal Entity](0099-formalize-the-maker-program-through-a-new-legal-entity.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/801) |
 | 100 | [Deploy EU868 Region Plan to the Majority of Africa](0100-deploy-eu868-region-plan-to-the-majority-of-africa.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/809) |
+| 101 | [Increase PoC Reward Points for Wi-Fi Access Points](0101-increase-poc-reward-points-for-wifi.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/809) |
+| 102 | [Helium Educational LNS - Unrewarded Trial Network](0102-helium-educational-lns.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/835) |
+| 103 | [MOBILE Oracle Hex Boosting](0103-oracle-hex-boosting.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/836) |
+| 104 | [Finetune HIP-17 Parameters to Tackle Density](0104-finetune-hip17-parameters-to-tackle-density.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/838) |
+| 105 | [Modification of MOBILE subDAO Hex Limits](0105-modification-of-mobile-subdao-hex-limits.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/840) |
 
 
 ## Status Key
