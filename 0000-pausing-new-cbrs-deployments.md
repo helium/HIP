@@ -41,12 +41,12 @@ As MOBILE token demand increases, the incentive for deployers to deploy more CBR
 
 
 ### Grace Period
-Upon HIP passing, this HIP would grant a 30 day grace period to allow any newly purchased CBRS radios to have their CPI information submitted. If false pictures or data is used to try to pass CPI approval, the CPI approver may reject the submission, and ban this radio from being approved at this time. If the information submitted to the CPI is not doctored, false, and the correct data was used, but there was an honest error or omission, the submission may still be rejected, but can be re-submitted with the correct information to attempt to be onboarded again. Any re-submissions must be submitted within 60 calendar days after HIP passing. Any submissions submitted after 60 days after HIP passing will not be reviewed, and will be automatically rejected.
+Upon HIP passing, this HIP would grant a 30 day grace period to allow any newly purchased CBRS radios to have their CPI information submitted (for outdoor radios) or pass heartbeat requirements for one (1) epoch for indoor radios. If false pictures or data is used to try to pass CPI approval, the CPI approver may reject the submission, and ban this radio from being approved at this time. If the information submitted to the CPI is not doctored, false, and the correct data was used, but there was an honest error or omission, the submission may still be rejected, but can be re-submitted with the correct information to attempt to be onboarded again. Any re-submissions must be submitted within 60 calendar days after HIP passing. Any submissions submitted after 60 days after HIP passing will not be reviewed, and will be automatically rejected.
 
 ### Grandfathered Radios
 Any radios that were onboarded (CPI has been approved for that radio to operate on the Helium 5G Network at least once) will be grandfathered in and will continue to be allowed to operate on the network. 
 
-In instances where these grandfathered radios move locations and need to undergo a new CPI certification, the radio owner will be required to burn $25 in MOBILE token in order to submit new CPI information. If after the burn is completed, the CPI information is rejected, the submitter will have up to two (2) more attempts to remediate the errors identified by the CPI and re-submit the information for free. If the errors are not addressed after two (2) additional submissions, the $25 fee will be required to be burned again. 
+In instances where these grandfathered radios move locations and need to undergo a new CPI certification, the radio owner will be required to burn $25 in MOBILE token in order to submit new CPI information. If after the burn is completed, the CPI information is rejected, the submitter will have up to two (2) more attempts to remediate the errors identified by the CPI and re-submit the information for free. If the errors are not addressed after two (2) additional submissions, the $25 fee will be required to be burned again. Please note, this is only applicable to outdoor radios. 
 
 ### Special Circumstances
 In an instance where a new service provider is approved to join the MOBILE network, and that service provider will use CBRS to offload data, this HIP will expire, even if 180 days have not passed.
@@ -58,9 +58,11 @@ As this HIP may be controversial to some, the voting requirements for this HIP t
 The implementation of this proposal will stunt the growth of the CBRS network; however, it should increase the focus to Wi-Fi deployments, which are usable by the network's service provider customers today. 
 
 ## Deployment Impact
-Upon 30 days after passing, Nova/Freedomfi will have to stop accepting CPI submissions for new radios that have not yet been onboarded to the MOBILE Network. Additionally, a burn mechanism will need to be created to allow grandfathered radios to pay a $25 MOBILE burn fee for new CPI submissions. 
+Upon 30 days after passing, Nova/Freedomfi will have to stop accepting CPI submissions for new outdoor radios that have not yet been onboarded to the MOBILE Network. Additionally, a method to prevent new indoor radios from registering with SAS will need to be implemented by Nova/Freedomfi. As radio identities are not stored on-chain, there are no on-chain changes required to prohibit CBRS radios from being onboarded.
 
-As radio identities are not stored on chain, there are no on-chain changes required to prohibit CBRS radios from being onboarded. 
+Lastly, a burn mechanism will need to be created to allow grandfathered outdoor radios to pay a $25 MOBILE burn fee for new CPI submissions. 
+
+ 
 
 ## Success Metrics
 The primary success metric will be to stop future CBRS deployments until CBRS is a usable/viable offload ramp for one of our service provider customers.
