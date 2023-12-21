@@ -42,7 +42,7 @@ To address these issues, we propose the following adjustments:
 
 * To reduce redundancy:
     * Limit Res8 hexes (each covering only 0.78 sqkm) to a single hotspot.
-    * Lower the hotspot limit as more neighboring hexes become occupied.
+    * Lower the hotspot limit, `max`, which is applied when more neighboring hexes become occupied.
     * Increase the number of occupied neighboring hexes required to reach higher limits.
 * To avoid unnecessary scaling in large areas and reduce sharp discrepancies:
     * Increase the limit for res-4.
