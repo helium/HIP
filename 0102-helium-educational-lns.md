@@ -72,7 +72,7 @@ An alternative implementation of free & unrewarded traffic exists, which is to s
 
 While associated with this change, the ongoing operational plan for the existing Foundation Console is out of scope for this proposal and continues to operate under the guidance of the Helium Foundation. This proposal is concerned primarily with the updated treatment of the Foundation Type 6 NetID.
 
-Initial timeframes for device aliveness and disllowment are initially proposed at 1 day and 1 week, respectively. These values feel to be appropriate time periods for a user to experiment with the network, but the community may offer additional insight on what these initial values should be set to. In the long term, the Helium Foundation should make changes to these values as-needed, and without additional governance.
+Initial timeframes for device aliveness and disallowment are initially proposed at 1 day and 1 week, respectively. These values feel to be appropriate time periods for a user to experiment with the network, but the community may offer additional insight on what these initial values should be set to. In the long term, the Helium Foundation should make changes to these values as-needed, and without additional governance.
 
 ## Deployment Impact
 
