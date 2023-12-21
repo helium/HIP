@@ -81,52 +81,6 @@ Since Wi-Fi AP B and C tied in Signal Strength, the Coverage Claim date is used 
 
 Since Wi-Fi AP D and E had the lowest signal strength out of all five (5) Wi-Fi AP, and only the top three (3) Wi-Fi AP will earn PoC rewards, Wi-Fi AP D and E will not earn any MCP for this res12 hex, and are ranked as "Fail".
 
-### Nerfing MCP For Overlapping Wi-Fi and CBRS
-The implementation of Wi-Fi has allowed devices to connect almost instantly to the Helium 5G network. As a result of this, Wi-Fi coverage is prioritized for consumer use over CBRS coverage when both Wi-Fi and CBRS coverage is present. Therefore, redundant CBRS coverage should not be placed where there already is Wi-Fi coverage. To reduce the impact of deployers farming MOBILE by placing Outdoor Wi-Fi Access Points where they’ve already deployed CBRS, or vise versa, this HIP reduces the amount of MCP by 50% that an Outdoor CBRS Radio will receive (after multipliers of [HIP 85](https://github.com/helium/HIP/blob/main/0085-mobile-hex-coverage-limit.md) are applied) if there is already Wi-Fi coverage that is covering the same res12 hex with the same or higher tier of Potential Signal Power
-
-
-MCP per Tier for Wi-Fi from [HIP 93](https://github.com/helium/HIP/blob/main/0093-addition-of-wifi-aps-to-mobile-subdao.md)
-
-|                               | Tier 1           | Tier 2                        | Tier 3                       | Tier 4              |
-| ----------------------------- | ---------------- | ----------------------------- | ---------------------------- | ------------------- |
-| **Potential RSSI**            | $RSSI > -65 dBm$ | $-65 dBm \ge RSSI > -75 dBm$  | $-75 dBm \ge RSSI > -85 dBm$ | $RSSI \le -85 dBm$  |
-| **Potential Signal Level**    | High             | Medium                        | Low                          | None                |
-| **Estimated Coverage Points** | 16               | 8                             | 4                            | 0                   |
-
-MCP per Tier for CBRS Radios from [HIP 74](https://github.com/helium/HIP/blob/main/0074-mobile-poc-modeled-coverage-rewards.md) 
-
-|                               | Tier 1        | Tier 2                     | Tier 3                      | Tier 4           |
-| ----------------------------- | ------------- | -------------------------- | --------------------------- | ---------------- |
-| **Potential Signal Power**    | $P > -95 dBm$ | $-95 dBm \ge P > -105 dBm$ | $-105 dBm \ge P > -115 dBm$ | $P \le -115 dBm$ |
-| **Potential Signal Level**    | High          | Medium                     | Low                         | None             |
-| **Estimated coverage points** | 16            | 8                          | 4                           | 0                |
-
-
-See the table below for examples where there is both coverage from Wi-Fi Access Points and CBRS radios within the same res12 hex.
-
-Example 1
-| Device    | Signal Strength | Power Tier from HIP 74 & 93 | Coverage Claim Time| HIP 85 Multiplier If Applicable | HIP 85 MCP Multiplier | Wi-Fi MCP Per | HIP-XXX    | New MCP     |
-|-----------|-----------------|-----------------------------|--------------------|---------------------------------|-----------------------|---------------|------------|-------------|
-| Wi-Fi AP 1| -57.33 dBm      | 1                           |01/01/2024 01:01:01 | N/A                             | N/A                   | 16            | 1.00X      | (16*1) = 16 |
-| Wi-Fi AP 2| -66.75 dBm      | 2                           |01/01/2024 01:01:01 | N/A                             | N/A                   |  8            | 0.75X      | (8*.75) = 6 |
-| Wi-Fi AP 3| -66.75 dBm      | 2                           |02/12/2024 18:06:05 | N/A                             | N/A                   |  8            | 0.25X      | (8*.25) = 2 |
-| Wi-Fi AP 4| -75.60 dBm      | 3                           |01/02/2024 01:01:01 | N/A                             | N/A                   |  4            | 0.00X      | (4*0) =   0 |
-| CBRS 1    | -68.55 dBm      | 1                           |12/31/2023 01:01:01 | 1.00X                           | (16*1) = 16           | N/A           | 0.50X      | (16*.5) = 8 |  
-| CBRS 2    | -70.85 dBm      | 1                           |12/31/2023 01:01:01 | 0.75X                           | (16*.75) = 12         | N/A           | 0.50X      | (12*.5) = 6 |  
-| CBRS 3    | -95.55 dBm      | 2                           |12/31/2023 01:01:01 | 0.25X                           | (8*.25) = 2           | N/A           | 0.50X      | (2*.5) =  1 |  
-| CBRS 4    | -105.10 dBm     | 3                           |12/31/2023 01:01:01 | 0.00X                           |  (4*0) = 0            | N/A           | 0.50X      | (0*.50) = 0 |  
-
-Example 2
-| Device    | Signal Strength | Power Tier from HIP 74 & 93 | Coverage Claim Time| HIP 85 Multiplier If Applicable | HIP 85 MCP Multiplier | Wi-Fi MCP Per | HIP-XXX    | New MCP     |
-|-----------|-----------------|-----------------------------|--------------------|---------------------------------|-----------------------|---------------|------------|-------------|
-| Wi-Fi AP 2| -66.75 dBm      | 2                           |01/01/2024 01:01:01 | N/A                             | N/A                   |  8            | 1.00X      | (8*1) =   8 |
-| Wi-Fi AP 3| -66.75 dBm      | 2                           |02/12/2024 18:06:05 | N/A                             | N/A                   |  8            | 0.75X      | (8*.75) = 6 |
-| Wi-Fi AP 4| -75.60 dBm      | 3                           |01/02/2024 01:01:01 | N/A                             | N/A                   |  4            | 0.25X      | (4*.25) = 1 |
-| CBRS 1    | -68.55 dBm      | 1                           |12/31/2023 01:01:01 | 1.00X                           | (16*1) = 16           | N/A           | 1.00X      | (16*1) = 16 |  
-| CBRS 2    | -70.85 dBm      | 1                           |12/31/2023 01:01:01 | 0.75X                           | (16*.75) = 12         | N/A           | 1.00X      | (12*1) = 12 |  
-| CBRS 3    | -95.55 dBm      | 2                           |12/31/2023 01:01:01 | 0.25X                           | (8*.25) = 2           | N/A           | 0.50X      | (2*.50) = 1 |  
-| CBRS 4    | -105.10 dBm     | 3                           |12/31/2023 01:01:01 | 0.00X                           |  (4*0) = 0            | N/A           | 0.50X      | (0*.50) = 0 |  
-
 
 ### Indoor CBRS Limits
 This HIP also proposes implementing a similar limit established in [HIP 93](https://github.com/helium/HIP/blob/main/0093-addition-of-wifi-aps-to-mobile-subdao.md) to CBRS Radios, whereas this HIP limits the amount of indoor CBRS radios per res12 hex to 1. Further, Coverage Claim Time will be used to determine which indoor CBRS radio will be rewarded PoC. 
