@@ -1,7 +1,7 @@
 # HIP 105: Modification of MOBILE subDAO Hex Limits
 
 - Author: [Andy Zyvoloski](https://github.com/heatedlime)
-- Contributors [Hans], [JD] [@italiandude](https://github.com/mario-novalabs)
+- Contributors Hans, JD, & [@italiandude](https://github.com/mario-novalabs)
 - Start Date: 12/7/2023
 - Category: Technical & Economic
 - Original HIP PR: [#821](https://github.com/pull/821)
