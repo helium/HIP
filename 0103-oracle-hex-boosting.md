@@ -151,7 +151,6 @@ The implementation of this proposal could increase the complexity of the Helium 
 ## Alternatives
 An alternative would be allowing radios and hexes to keep earning the defined amount of modeled coverage points as described in HIP 74. However, this may prevent or stagnate the network's growth because HIP 74 does not incentivize deployment of Hotspots to specific areas or regions. 
 
-
 ## Deployment Impact
 Radio deployers will now need to be cognizant of where they are placing their radios in order to maximize modeled coverage point.
 
