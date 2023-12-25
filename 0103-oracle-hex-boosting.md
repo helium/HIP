@@ -1,6 +1,7 @@
 # HIP 103: MOBILE Oracle Hex Boosting
 
 - Author(s): [Andy Zyvoloski](https://github.com/heatedlime) & [@zer0tweets](https://github.com/zer0tweets)
+- Contributor: Gateholder
 - Start Date: 2023-12-18
 - Category: Economic, Technical
 - Original HIP PR: [#822](https://github.com/helium/HIP/pull/822)
@@ -34,8 +35,6 @@ This HIP recommends using data from a third party [site](https://shdw-drive.gene
 
 The below boosts will be applied for each indoor and outdoor CBRS Radio and Wi-Fi Access Point for each res12 hex: 
 
-
-### Indoor CBRS/Wifi
 ### Indoor CBRS/Wifi
 |Range       | Multiplier |
 |------------|------------|
