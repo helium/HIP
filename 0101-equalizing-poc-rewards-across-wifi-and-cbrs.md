@@ -1,4 +1,4 @@
-# HIP 101: Increase PoC Reward Points for Wi-Fi Access Points
+# HIP 101: Equalizing POC Rewards Across Wi-Fi and CBRS 
 
 - Author(s): [@zer0tweets](https://github.com/zer0tweets) (Nova Labs, Inc.)
 - Start Date: 2023-12-09
