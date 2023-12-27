@@ -79,7 +79,7 @@ The below boosts will be applied for each indoor and outdoor CBRS Radio and Wi-F
 | Urbanized       | 1.00X      |
 | Non-Urbanized   | 0.25X      |
 
-See the examples below of boosts in a single res12 hex. Note, the scenarios below assume all hexes are assigned 16 Modeled Coverage Points (MCP) per hex based off of [HIP-74](https://github.com/helium/HIP/blob/main/0074-mobile-poc-modeled-coverage-rewards.md). Further, any hexes that have not been boosted by a Service Provider are automatically assigned a 1.00X multiplier.
+See the examples below of boosts in a single res12 hex. Note, the scenarios below assume all hexes are assigned 16 Modeled Coverage Points (MCP) per hex based off of [HIP-74](0074-mobile-poc-modeled-coverage-rewards.md). Further, any hexes that have not been boosted by a Service Provider are automatically assigned a 1.00X multiplier.
 
 ### Example 1
 |Example                                                |               |
