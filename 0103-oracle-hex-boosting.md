@@ -144,15 +144,13 @@ See the examples below of boosts in a single res12 hex. Note, the scenarios belo
 ## Deployment Impact
 Nova has agreed to undertake the work to implement this HIP shall it pass. These Oracles may be implemented in any order, and do not need to be implemented all at once. Further, for example, specific categories within each Oracle, may be implemented one by one. For example, if it's easiest to implement the bodies of water within the Land Type Oracle, this may be introduced first, while the other catgegories are added to the Oracle at a later time once developed. 
 
+Radio deployers will now need to be cognizant of where they are placing their radios in order to maximize modeled coverage point.
+
 ## Drawbacks:
 The implementation of this proposal could increase the complexity of the Helium Mobile network, and modeled coverage scores. There may be concerns about the accuracy of the population data provided, or the need to update the data regularly. 
 
-
 ## Alternatives
 An alternative would be allowing radios and hexes to keep earning the defined amount of modeled coverage points as described in HIP 74. However, this may prevent or stagnate the network's growth because HIP 74 does not incentivize deployment of Hotspots to specific areas or regions. 
-
-## Deployment Impact
-Radio deployers will now need to be cognizant of where they are placing their radios in order to maximize modeled coverage point.
 
 ## Success Metrics
 The primary success metric will be greater coverage on the modeled coverage map in areas where top carriers have already identified as areas that need data. 
