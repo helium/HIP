@@ -86,7 +86,7 @@ Since Wi-Fi AP D and E had the lowest signal strength out of all five (5) Wi-Fi 
 This HIP also proposes implementing a similar limit established in [HIP 93](https://github.com/helium/HIP/blob/main/0093-addition-of-wifi-aps-to-mobile-subdao.md) to CBRS Radios, whereas this HIP limits the amount of indoor CBRS radios per res12 hex to 1. Further, Coverage Claim Time will be used to determine which indoor CBRS radio will be rewarded PoC. 
 
 ### CBRS Gateway Limitations
-This HIP also proposes limiting the amount of CBRS radios that can be plugged into a 5G Gateway to three (3). Any radios connected beyond the 3 limit will not earn PoC rewards.
+This HIP also proposes limiting the amount of outdoor CBRS radios that can be plugged into a single 5G Gateway to three (3). Any outdoor radios connected beyond the 3 limit will not earn PoC rewards.
 
 ## Drawbacks:
 Implementing this proposal will increase the complexity of modeled coverage scores due to adding additional variables used to calculate total MOBILE rewards.
