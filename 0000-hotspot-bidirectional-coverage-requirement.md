@@ -15,11 +15,7 @@ Hotspots that can not provide bidirectional coverage are not useful for the IOT 
 ## Motivation
 [motivation]: #motivation
 
-
-- Why are we doing this?
-- What use cases does it support?
-- What problems does it solve?
-- What is the expected outcome?
+By moving the bidirectional coverage check from the denylist to the proof of coverage pipeline it will signal a hotspot owner of a problem significantly faster. The hotspot will also be considered for rewards significantly faster after the issue has been resolved.
 
 ## Stakeholders
 [stakeholders]: #stakeholders
@@ -33,7 +29,7 @@ The hotspot owners that will experience an inability to provide bidirectional co
 ## Detailed Explanation 
 [detailed-explanation]: #detailed-explanation
 
-**TODO**: _detailed implementation pending discussion with the oracle team to determine whether a rolling window is technically feasible. A rolling window is preferred over a epoch-by-epoch system because it decreases the time between a hotspot owner fixing the issue and rewards being reapplied._
+**TODO**: _detailed implementation pending discussion with the oracle team to determine whether a rolling window is technically feasible. A rolling window is preferred over a epoch-by-epoch system because it decreases the time between a hotspot owner fixing the issue and rewards being reapplied. See the [Drawbacks](#drawbacks) section._
 
 ### New invalid reasons `GatewayNoValidBeacons` and `GatewayNoValidWitnesses`
 [detailed-explanation-new-invalid-reasons]: #detailed-explanation-new-invalid-reasons
