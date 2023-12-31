@@ -114,8 +114,8 @@ Since Wi-Fi AP and Radio B and C tied in Signal Strength, the Coverage Claim dat
 
 Since Wi-Fi AP and Radio D had the lowest signal strength out of all four (4) Wi-Fi AP, and only the top three (3) Wi-Fi AP will earn PoC rewards, Wi-Fi AP D will not earn any MCP for this res12 hex, and are ranked as "Fail".
 
-### CBRS and Wi-Fi Signal Interference
-Too much CBRS and Wi-Fi overlap may cause interference, and not provide the best or even usable experience for end users. Therefore, This HIP proposes that any res12 hex that has greater than four (4) CBRS signals or greater than four (4) Wi-Fi signals, shall not be awarded modeled coverage points for that res12 hex that has greater than four (4) signals.
+### Outdoor CBRS and Outdoor Wi-Fi Signal Interference
+Too much CBRS and Wi-Fi overlap may cause interference, and not provide the best or even usable experience for end users. Therefore, This HIP proposes that any res12 hex that has greater than four (4) outdoor CBRS signals or greater than four (4) outdoor Wi-Fi signals, shall not be awarded modeled coverage points for that res12 hex that has greater than four (4) signals.
 
 See the example below for an instance where five (5) CBRS and four (4) Wi-Fi signals share the same res12 hex:
 
