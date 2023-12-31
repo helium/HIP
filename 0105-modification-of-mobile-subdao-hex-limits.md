@@ -89,15 +89,14 @@ See the example below of how ranking based on a hex multiplier would affect depl
 | B        | -66.75 dBm      | 01/01/2024 01:01:01       | 2          | 8              |  6      |
 | C        | -66.75 dBm      | 02/12/2024 18:06:05       | 3          | 8              |  2      |
 | D        | -75.60 dBm      | 01/02/2024 01:01:01       | Fail       | 4              |  0      |
-| E        | -88.55 dBm      | 01/01/2024 01:01:01       | Fail       | 0              |  0      |
 
-|   CBRS   | Signal Strength | Coverage Claim Start Date | CBRS Rank | MCP per HIP 93 | New MCP |
-|----------|-----------------|---------------------------|-----------|----------------|---------|
-| A        | -63.33 dBm      | 01/01/2024 01:01:01       | 1         | 16             | 16      |
-| B        | -66.75 dBm      | 01/01/2024 01:01:01       | 2         | 8              |  6      |
-| C        | -66.75 dBm      | 02/12/2024 18:06:05       | 3         | 8              |  2      |
-| D        | -75.60 dBm      | 01/02/2024 01:01:01       | Fail      | 4              |  0      |
-| E        | -88.55 dBm      | 01/01/2024 01:01:01       | Fail      | 0              |  0      |
+| Radio    | Signal Strength | Coverage Claim Start Date | CBRS Rank  | MCP Per HIP 74 | New MCP |  
+|----------|-----------------|---------------------------|------------|----------------|---------|
+|   A      |   -77.33 dBm    |05/01/2023 23:24:25        | 1          | 16             | 16      |
+|   B      |   -98.75 dBm    |12/01/2022 01:01:01        | 2          | 8              | 6       |
+|   C      |   -98.75 dBm    |12/02/2022 12:11:01        | 3          | 8              | 2       |
+|   D      |   -105.60 dBm   |12/05/2022 11:51:01        | Fail       | 4              | 0       |
+
 
 **Table Key:**
 - **Wi-Fi/CBRS:** Example Wi-Fi AP / radio name.
@@ -113,10 +112,29 @@ Since Wi-Fi AP / Radio A has the highest signal strength in that hex, it will be
 
 Since Wi-Fi AP and Radio B and C tied in Signal Strength, the Coverage Claim date is used to determine which radio is ranked next. For this example, radio B had its Coverage Claim date start on 01/01/2024 01:01:01 while radio C had its Coverage Claim date start on 02/12/2024 18:06:05. Therefore, since Wi-Fi AP B has an earlier Coverage Claim date, it will be ranked "2", while Wi-Fi AP C has a rank of "3".
 
-Since Wi-Fi AP and Radio D and E had the lowest signal strength out of all five (5) Wi-Fi AP, and only the top three (3) Wi-Fi AP will earn PoC rewards, Wi-Fi AP D and E will not earn any MCP for this res12 hex, and are ranked as "Fail".
+Since Wi-Fi AP and Radio D had the lowest signal strength out of all four (4) Wi-Fi AP, and only the top three (3) Wi-Fi AP will earn PoC rewards, Wi-Fi AP D will not earn any MCP for this res12 hex, and are ranked as "Fail".
 
-### CBRS Gateway Limitations
-This HIP also proposes limiting the amount of outdoor CBRS radios that can be connected to a single 5G Gateway to four (4). Any outdoor radios connected beyond the 4 limit will not earn PoC rewards. This is due to Radio Frequency (RF) interference that is created when more than 4 radios are deployed in a single location, which causes the signal to be unusable. 
+### CBRS and Wi-Fi Signal Interference
+Too much CBRS and Wi-Fi overlap may cause interference, and not provide the best or even usable experience for end users. Therefore, This HIP proposes that any res12 hex that has greater than four (4) CBRS signals or greater than four (4) Wi-Fi signals, shall not be awarded modeled coverage points for that res12 hex that has greater than four (4) signals.
+
+See the example below for an instance where five (5) CBRS and four (4) Wi-Fi signals share the same res12 hex:
+
+
+| Radio    | Signal Strength | Coverage Claim Start Date | CBRS Rank  | MCP Per HIP 85| New MCP |  
+|----------|-----------------|---------------------------|------------|---------------|---------|
+|   A      |   -77.33 dBm    |05/01/2023 23:24:25        | 1          | 16            | 0       |
+|   B      |   -98.75 dBm    |12/01/2022 01:01:01        | 2          | 6             | 0       |
+|   C      |   -98.75 dBm    |12/02/2022 12:11:01        | 3          | 2             | 0       |
+|   D      |   -105.60 dBm    |12/05/2022 11:51:01       | Fail       | 0             | 0       |
+|   E      |   -105.69 dBm    |08/01/2022 05:01:59       | Fail       | 0             | 0       |
+
+| Wi-Fi    | Signal Strength | Coverage Claim Start Date | Wi-Fi Rank | MCP per HIP 93| New MCP |
+|----------|-----------------|---------------------------|------------|---------------|---------|
+| A        | -63.33 dBm      | 01/01/2024 01:01:01       | 1          | 16            | 16      |
+| B        | -66.75 dBm      | 01/01/2024 01:01:01       | 2          | 8             |  6      |
+| C        | -66.75 dBm      | 02/12/2024 18:06:05       | 3          | 8             |  2      |
+| D        | -75.60 dBm      | 01/02/2024 01:01:01       | Fail       | 4             |  0      |
+
 
 ## Drawbacks:
 Implementing this proposal will increase the complexity of modeled coverage scores due to adding additional variables used to calculate total MOBILE rewards.
