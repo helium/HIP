@@ -41,8 +41,6 @@ After the probationary period, if it is detected that the Access Point has moved
 
 In any instances where a heartbeat is not generated or valid, that confidence score will not be reported, or counted towards any averages.
 
-Further, in order to help cover on chain fees and time spent, this HIP grants authority to vendors providing CPI services to charge up to a $10.00 USD or equivalent fee paid directly to the vendor per request, so long as the request is approved or rejected within 2 business days. If a request results in a rejection, the submitter may re-submit that request up to three (3) times for free. Any resubmission after the third rejection will be treated as a new request, and subject to up to a $10.00 USD or equivalent fee. 
-
 ### Phase 3
 Phase 3 consists of moving location data on-chain. Once locations are on-chain, Wi-Fi Access Point manufactures will be required to pay for any on-chain fees associated with the assertions.
 
