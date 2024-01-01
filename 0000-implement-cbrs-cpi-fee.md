@@ -32,6 +32,87 @@ This HIP also grants authority to the CPI reviewer to collect up to a $20 fee al
 - A guide must be created that documents each reason a submission may be rejected (i.e. incorrect height, incorrect azimuth, outdoor radio installed indoors, etc.)
 - If the CPI submission is rejected for a reason that is not noted within the guide, the re-submission may be redone for free, and not counted towards the limit of 3 rejections for repayment, and also must be reviewed (approved or rejected) within one (1) business day of re-submission. 
 
+## Economic Impact Analysis 
+
+The below analysis will document three different scenarios in which the $20 fee could be applied to, and how that impacts emissions and the MOBILE/HNT swap rate. The analysis below are based on data from Epoch 19,723, with a HNT Oracle Price of $6.89, and MOBILE Oracle price of $0.003697.
+
+### Addition of HNT to MOBILE subDAO Treasury
+This example shows the output if $1,000 in HNT is added to the MOBILE subDAO Treasury. At current Oracle Price of $6.89, $1,000 in HNT = 145.1378 HNT
+
+| Control                             |                   |
+|-------------------------------------|-------------------|
+|HNT funded to MOBILE subDAO Treasury | 617,869           |
+|Total MOBILE Supply                  | 79,775,824,336    |
+|Swap Rate (MOBILE/HNT)               | 129,114.46        |
+|MOBILE Value Per Treasury Swap       | $0.00005336350    |
+
+| $1,000 in HNT Addition to Treasury  |                   |
+|-------------------------------------|-------------------|
+|HNT funded to MOBILE subDAO Treasury | 618,014.14        |
+|Total MOBILE Supply                  | 79,775,824,336    |
+|Swap Rate (MOBILE/HNT)               | 129,084.14        |
+|MOBILE Value Per Treasury Swap       | $0.00005337604    |
+
+MOBILE Value increase from $1,000 HNT deposited into MOBILE SubDAO Treasury = 0.0234992%
+
+### Reduction (Burn) of overall MOBILE Supply
+This example shows the output if $1,000 in HNT is added to the MOBILE subDAO Treasury. At current Oracle Price of $0.003697, $1,000 in MOBILE = 270,489.59 MOBILE
+
+| Control                             |                   |
+|-------------------------------------|-------------------|
+|HNT funded to MOBILE subDAO Treasury | 617,869           |
+|Total MOBILE Supply                  | 79,775,824,336    |
+|Swap Rate (MOBILE/HNT)               | 129,114.46        |
+|MOBILE Value Per Treasury Swap       | $0.00005336350    |
+
+| $1,000 in MOBILE Burn               |                   |
+|-------------------------------------|-------------------|
+|HNT funded to MOBILE subDAO Treasury | 617,869           |
+|Total MOBILE Supply                  | 79,775,553,846.41 |
+|Swap Rate (MOBILE/HNT)               | 129,114.03        |
+|MOBILE Value Per Treasury Swap       | $0.0000533638     |
+
+MOBILE Value increase from $1,000 HNT deposited into MOBILE SubDAO Treasury = 0.000337309%
+
+### Modification of the DAO Utility Score
+This example shows the output if a revision was made to the DAO Utility score revised in [HIP 88](https://github.com/helium/HIP/blob/main/0088-adjustment-of-dao-utility-a-score.md) which includes all DC Burn into the score. Specifically, the output is showing if $1,000 in HNT is burned by the MOBILE subDAO Treasury. At the current HNT Oracle Price of $6.89, $1,000 in HNT burn results in 145.1378 HNT being burned
+
+The new equation would be: 
+
+$\text{DAO Utility Score} = V \times D \times A$
+
+where
+
+$V = \text{max}(1, veHNT_{DNP})$
+
+$D = \text{max}(1, \sqrt{\text{All DNP DCs burned in USD}})$
+
+$A = \text{max}(1, \sqrt[4]{\text{DNP Active Device Count} \times \text{DNP Device Activation Fee}})$
+
+In the scenarios below, the HNT emitted to both subDAOs aggregates 27,945 assuming there is 0 HNT burn
+
+| Control - 0 HNT Burn                        |                   |
+|---------------------------------------------|-------------------|
+|HNT burned in previous Epoch                 | 0                 |
+|% of HNT Emitted to MOBILE subDAO per Epoch  | 66.88%            |
+|HNT Emitted to MOBILE SubDAO Last Epoch      | 18,689.61         |
+|HNT funded to MOBILE subDAO Treasury         | 617,869           |
+|Total MOBILE Supply                          | 79,775,824,336    |
+|Swap Rate (MOBILE/HNT)                       | 129,114.46        |
+|MOBILE Value Per Treasury Swap               | $0.00005336350    |
+
+|$1,000 in HNT    Burn for MOBILE subDAO      |                   |
+|---------------------------------------------|-------------------|
+|HNT burned by MOBILE subDAO in previous Epoch| 145.1378          |
+|% of HNT Emitted to MOBILE subDAO per Epoch  | 66.88%            |
+|HNT Emitted to MOBILE SubDAO Last Epoch      | 18,786.68         |
+|HNT funded to MOBILE subDAO Treasury         | 617,966.07        |
+|Total MOBILE Supply                          | 79,775,824,336    |
+|Swap Rate (MOBILE/HNT)                       | 129,094.182       |
+|MOBILE Value Per Treasury Swap               | $0.00005337188    |
+
+MOBILE Value increase from $1,000 HNT deposited into MOBILE SubDAO Treasury = 0.0157036%
+
 
 ## Drawbacks:
 New and existing deployers of CBRS radios will be required to obtain and pay at least $20 in HNT to onboard their new CBRS radio.
