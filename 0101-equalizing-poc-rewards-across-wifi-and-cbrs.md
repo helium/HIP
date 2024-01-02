@@ -26,8 +26,6 @@ This Helium Improvement Proposal (HIP) suggests equalizing Proof-of-Coverage (Po
 - There is a way to do this for iOS17 devices, but, so far, this only works on iPhones 13+ and requires an install of a geo-fencing profile by the end user;
 - CBRS radios have no ability to provide guest / public Wi-Fi service and will always require an installation of additional, second CBRS sim on a client device to be accessible.
 
-Further, as of 12/29/2023, CBRS traffic amounts to 0.28% (12.66 GB) of daily traffic usage on the Helium MOBILE network, while Wi-Fi consumes the remaining 99.72% (4,510 GB). 
-
 Wi-Fi Hotspots solve all of the above, thereby providing more utility for the Helium Mobile Network, yet are currently compensated for PoC based on modeled coverage, which calculates rewards purely in terms of geographic coverage and gives no consideration to greater overall utility of Wi-Fi. This, in turn, results in unfairly lower PoC rewards for the Wi-Fi hotspot deployers since Wi-Fi hotspots are less capable than CBRS at covering large number of res12 hexes.
 
 For the Helium Mobile Network to succeed, it is important to accelerate deployment of Wi-Fi Hotspots, which currently provide higher likelihood of real data usage on the Network for the reasons described above. 
