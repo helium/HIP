@@ -1,0 +1,43 @@
+0000-Warning to 5g hotspot deployers
+- Author(s):  @raynef1re
+- Start Date: 01/03/2024
+- Category: technical
+- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
+- Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
+- Vote Requirements: veMOBILE holders
+
+## Summary
+
+This proposal calls for Helium to implement a comprehensive disclosure strategy, using vibrant warning colors (red, yellow, black), on all communication platforms including emails, website pages, and app interfaces. This disclosure will inform hotspot owners, mobile customers, and token holders about the potential risks associated with providing access to private networks through Helium. These risks may include exposure to harmful or illegal activities, such as illegal downloads leading to DMCA warnings or lawsuits, facilitation of criminal activities, and access to illicit content.
+
+## Motivation
+
+The primary motivation for this proposal is to enhance the transparency and safety of the Helium network for all participants. It supports the use case of informed decision-making by network users. By clearly outlining potential risks, hotspot owners and users can make more informed decisions about their level of participation and take necessary precautions. The expected outcome is an increased awareness among the Helium community about the responsibilities and risks of network participation, leading to a safer and more secure environment.
+
+## Stakeholders
+
+This HIP affects all Helium network users, including hotspot owners, mobile customers, and token holders. To solicit feedback, outreach will be conducted through Helium community forums, direct communication channels, and surveys. Efforts will be made to ensure that feedback is gathered from a diverse range of network participants, including those not active on the HIP repository or Helium community chat channels.
+
+## Detailed Explanation
+
+The proposal involves the integration of warning messages in vivid colors on all Helium communication platforms. These warnings will detail the potential risks associated with network participation, including exposure to illegal activities and potential legal consequences. For instance, a hotspot owner providing network access might unknowingly facilitate illegal downloads, leading to legal issues. A corner case might involve a user who is fully aware and willing to accept these risks; even in such cases, Helium's duty to inform remains paramount.
+
+## Drawbacks
+
+A potential drawback is the possibility of inducing unnecessary fear or hesitation among network users, which could lead to reduced participation or growth of the network. Overemphasis on risks might overshadow the benefits and opportunities presented by the Helium network. Additionally, the implementation of such vivid warnings could impact the aesthetic and user experience of Helium's digital platforms.
+
+## Rationale and Alternatives
+
+This approach is deemed the best for ensuring maximum visibility and awareness of the risks involved. Alternatives considered include more subtle notifications or relying solely on terms and conditions documents; however, these methods may not effectively reach or impact all users. The impact of not implementing this proposal is continued operation without fully informing users of potential risks, which could lead to serious legal and ethical implications for the network and its users.
+
+## Unresolved Questions
+
+Questions to be resolved include the exact wording of the warnings, the design and placement on different platforms, and the balance between informative and alarming content. These aspects will be refined through community feedback and expert consultations. Legal implications and compliance with various regional laws also need to be considered.
+
+## Deployment Impact
+
+Current users will experience a more prominent display of risk-related information, potentially affecting their perception and usage of the Helium network. Documentation on <http://docs.helium.com> and other official channels will be updated to align with this new disclosure approach. This proposal is backward compatible as it relates to information dissemination and does not require technical changes to the network.
+
+## Success Metrics
+
+Success will be measured by an increase in user awareness, as assessed through surveys and user feedback. Metrics to track include the level of understanding among users about the risks involved and changes in user behavior in response to the disclosures. The acceptance of these changes by the community will also be a key indicator, with a focus on maintaining or improving user satisfaction and trust in the Helium network.
