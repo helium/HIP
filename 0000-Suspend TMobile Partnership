@@ -1,0 +1,54 @@
+0000-Suspend TMobile Partnership until CBRS technology is fixed
+- Author(s):  @raynef1re
+- Start Date: 01/03/2024
+- Category: economic
+- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
+- Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
+- Vote Requirements: veMOBILE holders
+
+## Summary
+
+This HIP proposes the suspension of the partnership between Helium and T-Mobile until the CBRS (Citizens Broadband Radio Service) network operates effectively as initially advertised. This proposal arises from the concern that Helium encouraged the community to invest in building out a 5G network using CBRS radios with the assurance of rewards. However, recent developments suggest that CBRS technology may not be functioning as expected, leading to proposed cuts in rewards for CBRS network builders. This situation is perceived as a betrayal of trust within the community, as many have invested significantly in the network based on these assurances. This HIP aims to protect the interests of the Helium community and ensure that their efforts and investments in building out the network are respected and rewarded as originally promised. The suspension of the partnership with T-Mobile is seen as a necessary step to reassess the network's functionality and to hold Helium accountable for its commitments to its community builders.
+
+## Motivation
+This HIP is driven by the need to uphold the trust and commitments made to the Helium community, especially those who invested in the CBRS network based on the expectation of rewards and functionality. It supports the use case of maintaining a reliable and transparent network development process, where community members can trust in the system's promises. The problem it addresses is the potential financial loss and erosion of trust among community members due to the proposed changes in CBRS rewards and functionality. The expected outcome is to restore faith in the network's governance by ensuring that changes in strategy do not negatively impact those who have invested based on initial promises.
+
+## Stakeholders
+
+The primary stakeholders affected by this HIP include network users, Hotspot hosts, and token holders, especially those who have invested in CBRS technology. To solicit feedback, outreach will be conducted through Helium community forums, social media platforms, and direct communication channels. Efforts will be made to engage stakeholders who may not be active on the HIP repository or Helium Community chat channels, ensuring a broad and inclusive feedback process.
+## Detailed Explanation
+The core of this proposal involves a strategic reassessment of the partnership between Helium and T-Mobile in light of the challenges and unmet expectations surrounding the CBRS (Citizens Broadband Radio Service) network. The community's trust in the Helium network has been shaken due to recent developments suggesting that the promised functionality and rewards of the CBRS network are not being realized. This proposal aims to address these concerns by temporarily suspending the partnership with T-Mobile until the CBRS network can reliably meet the standards and promises initially communicated to the Helium community.
+**Key Aspects of the Proposal:**
+1. **Suspension of Partnership**: The immediate action is to pause the ongoing partnership with T-Mobile. This suspension is not a termination but a temporary halt to allow for a comprehensive review and remediation of the CBRS network's issues.
+2. **Evaluation of CBRS Network Performance**: A thorough evaluation of the CBRS network will be conducted to assess its current functionality against the original promises made to the community. This evaluation will involve technical assessments, community feedback, and comparison with initially stated goals.
+3. **Communication and Transparency**: Throughout this process, maintaining open and transparent communication with the Helium community is crucial. Regular updates on the findings of the CBRS network evaluation and steps being taken to address any shortcomings will be provided.
+4. **Criteria for Resuming Partnership**: Clear and measurable criteria will be established to determine when and how the partnership with T-Mobile can be resumed. These criteria will be based on the CBRS network's performance, community feedback, and alignment with Helium's strategic goals.
+**Representative Example:**
+Consider a Helium network participant who invested in multiple CBRS radios based on the initial promise of a certain level of network functionality and associated rewards. With the proposed cuts in rewards and doubts about the CBRS network's effectiveness, this participant faces potential financial losses and disillusionment. This proposal aims to safeguard such participants by ensuring that their investments are not undermined by unmet technological promises.
+**Corner Cases:**
+
+One potential corner case is the situation of recent investors in the CBRS network who may face immediate financial strain due to the suspension of the partnership. Special considerations or support mechanisms might be needed for such individuals to ensure that the temporary suspension does not lead to disproportionate hardships.
+Additionally, there may be contractual and legal complexities with T-Mobile that need to be navigated carefully to avoid potential litigations or breaches of agreement. The specifics of these contractual obligations and how they can be managed within the scope of this suspension will be a critical aspect of the implementation.
+In summary, this proposal aims to realign Helium's strategy with its community's expectations and investments. It is a step towards restoring trust and ensuring that the network's development continues in a manner that is equitable and transparent to all stakeholders, especially those who have invested heavily based on the network's initial promises.
+
+## Drawbacks
+The main drawback is the potential strain on the relationship between Helium and T-Mobile, which could impact future collaboration and network expansion. Temporarily halting the partnership might also delay network growth.  Though the case could be made that the network should not grow if the technology doesn’t work.  
+
+## Rationale and Alternatives
+
+Suspending the partnership with T-Mobile is seen as the best course of action because it directly addresses the community's concerns about unfulfilled promises and potential financial losses. Alternatives like continuing the partnership with increased transparency or completely overhauling the CBRS strategy were considered. However, these do not address the immediate need to restore community trust. The impact of not implementing this proposal could be a continued erosion of trust and potential financial harm to the community.
+
+## Unresolved Questions
+
+Key questions include the criteria for evaluating the CBRS network's performance and the benchmarks for resuming the partnership with T-Mobile. These aspects will be refined through community consultations and technical assessments during the HIP process. Broader issues like long-term CBRS strategy and network expansion are out of this HIP's scope but could be addressed in future proposals. Meeting certain milestones, such as community consensus and technical evaluations, is crucial for the success of this HIP.
+
+## Deployment Impact
+
+Current users, particularly CBRS investors, will experience a reassessment of expectations and rewards.  Current deployments should continue to receive rewards to compensate for damages.  Documentation on <http://docs.helium.com> will be updated to reflect these changes. This proposal is backward compatible as it pertains to governance and partnership strategy rather than network technology. If reversal is needed, a new HIP would be proposed, following the standard governance process for community consensus.
+
+## Success Metrics
+
+The primary indicator of success will be the restoration of trust within the Helium community. Regular surveys and feedback mechanisms will assess the community's confidence in the network's governance and strategic direction. Concurrently, tangible improvements in the CBRS network's performance, especially post-implementation of identified solutions, will be a key metric. This includes enhanced reliability, coverage, and data throughput of the CBRS network, monitored through technical performance indicators.
+The network's growth, indicated by an increase in user numbers and new hotspot installations, will signify the proposal's positive impact on network stability and expansion. Progress in technological advancements following the proposal's implementation will also be a critical measure. This encompasses updates in network infrastructure and capabilities, reflecting a healthier and more advanced network ecosystem.
+The level of active community participation in governance and decision-making processes will serve as a measure of user acceptance. Increased involvement in HIP voting and community forums will indicate a higher degree of engagement and approval of the network's direction. The development of new ETL reports may be needed to track these aspects, providing a data-driven approach to evaluating the proposal’s impact on the Helium network.
+
