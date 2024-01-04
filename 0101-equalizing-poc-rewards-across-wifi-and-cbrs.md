@@ -51,6 +51,11 @@ Based on the benefits of Wi-Fi over CBRS explained in the motivation section abo
 | **Potential Signal Level**    | High             | Medium                        | Low                          | None                |
 | **Estimated Coverage Points** | 40               | 20                            | 10                           | 0                   |
 
+
+Further, to prevent the stacking of outdoor units, a limit of two (2) outdoor Wi-Fi Access points per res12 hex will be implemented. Coverage Claim Time will be used to determine which two (2) outdoor Wi-Fi Access Points get rewarded Modeled Coverage Points if there are more than 2 per res12 hex. Coverage Claim Time is explained below.
+
+If there are more than 2 Outdoor Wi-Fi AP deployed within the same res12 hex, the `coverage_claim_time` value will be used to identify the top 2 oldest installations where `coverage_claim_time` is the timestamp when the Wi-Fi AP was asserted in that hex. Only the two installations with the longest Coverage Claim Time will be rewarded modeled coverage points. To prevent rewarding "dead" Wi-Fi APs, we propose to reset `coverage_claim_time` if the Wi-Fi AP was not generating a Heartbeat for more than 72 hours and use the time of the last Heartbeat as the new `coverage_claim_time`.
+
 ## Drawbacks
 
 Implementing this proposal will decrease long term PoC rewards for CBRS Hotspot deployers.
