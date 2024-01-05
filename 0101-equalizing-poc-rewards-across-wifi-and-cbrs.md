@@ -39,7 +39,7 @@ For the Helium Mobile Network to succeed, it is important to accelerate deployme
 
 ## Detailed Explanation
 
-[Based on the current hardware market prices and existing PoC for Wi-Fi and CBRS](./0101-increase-poc-reward-points-for-wifi/WiFi-CBRS-ROI-Estimate.pdf) we propose to equalize POC for CBRS and Wi-Fi by increasing Wi-Fi PoC reward points as follows:
+Based on the benefits of Wi-Fi over CBRS explained in the motivation section above, we propose to equalize POC for CBRS and Wi-Fi by increasing Wi-Fi PoC reward points for 180 days after implementation as follows:
 
 - 1.5x for Indoor Wi-Fi. I.e. 600 rewards points for Wi-Fi AP vs. current 400 reward points; 
 - 2.5x for Outdoor Wi-Fi AP per each covered hex. I.e. 1250 (instead of 500) points for templated coverage and the following points per modeled coverage hex
@@ -50,6 +50,14 @@ For the Helium Mobile Network to succeed, it is important to accelerate deployme
 | **Potential RSSI**            | $RSSI > -65 dBm$ | $-65 dBm \ge RSSI > -75 dBm$  | $-75 dBm \ge RSSI > -85 dBm$ | $RSSI \le -85 dBm$  |
 | **Potential Signal Level**    | High             | Medium                        | Low                          | None                |
 | **Estimated Coverage Points** | 40               | 20                            | 10                           | 0                   |
+
+
+
+## Outdoor Coverage Limit
+To prevent the stacking of outdoor Wi-Fi AP's, this HIP limits modeled coverage rewards to the top two (2) outdoor Wi-Fi signals per res12 hex. If there is a tie, coverage claim time (explained below) is used to determine which top two will be rewarded.
+
+If there are more than 2 Outdoor Wi-Fi AP signals within the same res12 hex with the same signal strength, the `coverage_claim_time` value will be used as a tiebreaker  where `coverage_claim_time` is the timestamp when the Wi-Fi AP was asserted in that hex. To prevent rewarding "dead" Wi-Fi APs, we propose to reset `coverage_claim_time` if the Wi-Fi AP was not generating a Heartbeat for more than 72 hours and use the time of the last Heartbeat as the new `coverage_claim_time`.
+
 
 ## Drawbacks
 
@@ -71,4 +79,4 @@ Implementation of this HIP is extremely simple and will involve updating a few v
 
 ## Success Metrics
 
-This HIP is successful if we see the number of Wi-Fi Hotspots being actived on the Network outpace that of CBRS radios, resulting in higher paid data usage and more HNT emitted into MOBILE subDAO treasury. 
+This HIP is successful if we see the number of Wi-Fi Hotspots being actived on the Network continue to outpace that of CBRS radios, resulting in higher paid data usage and more HNT emitted into MOBILE subDAO treasury. 
