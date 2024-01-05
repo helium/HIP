@@ -1,4 +1,4 @@
-  # HIP 97: Removing MOBILE Location Assertion Fees
+  # HIP 97: Removing Manual MOBILE Location Assertions
 
 - Authors: [Andy Zyvoloski](https://github.com/heatedlime) & [Max Gold](https://github.com/maxgold91)
 - Start Date: 2023-10-02
