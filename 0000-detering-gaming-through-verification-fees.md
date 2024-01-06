@@ -1,4 +1,4 @@
-# HIP XXX: Detering Gaming Through CPI Fees
+# HIP XXX: Detering Gaming Through Verification Fees
 
 - Author(s): [Andy Zyvoloski](https://github.com/heatedlime) 
 - Start Date: 12/31/2023
@@ -33,7 +33,7 @@ This HIP also grants authority to the CPI reviewer of outdoor CBRS radios to cha
 - If the CPI submission is rejected for a reason that is not noted within the guide, the re-submission may be redone for free, regardless if it is the first or second submission, and also must be reviewed (approved or rejected) within one (1) business day of re-submission. Please note, this rule is not applicable if the submission was rejected due to gaming concerns.
 
 ### Outdoor Wi-Fi AP's
-A $10 fee in MOBILE burn will be required when the location for outdoor Wi-Fi AP's are re-submitted. Unlike CBRS, the first location assert will occur at a $0 MOBILE burn cost. Additionally, location information will need to be submitted for review by a CPI, or at minimum under supervision of a CPI. The minimum information that is required to be submitted is as followed:
+A $10 verification fee in MOBILE burn will be required when the location for outdoor Wi-Fi AP's are re-submitted. Unlike CBRS, the first location assert will occur at a $0 MOBILE burn cost. Additionally, location information will need to be submitted for review by a CPI, or at minimum under supervision of a CPI. The minimum information that is required to be submitted is as followed:
 
 - Install height (in feet)
 - Two (2) pictures of the setup - One (1) verifying the height of the install and one (1) showing the point of view (with the Wi-Fi AP in frame) of the direction the radio is facing
@@ -45,6 +45,8 @@ Please note, that any outdoor Wi-Fi AP's that were deployed prior to requiring t
 
 ## Rejection Due to Gaming Concerns
 As gaming becomes rampant within the MOBILE ecosystem, this HIP gives CPI's the authority to deny submission information on radios and Wi-Fi AP's even after they were initially approved if new information comes to light that the CPI suspects that the information originally submitted is no longer accurate or valid. Upon denying a previously approved submission, the radio/Wi-Fi AP will no longer earn PoC Modeled Coverage Points until a new submission is submitted and approved by the CPI. These new submissions will occur the same fees identified in the fee schedule above. New submissions due to gaming concerns may require additional submission data beyond what is required in the above portion of this HIP, such as a live or recorded video of the actual installation. 
+
+Further, if a submission is rejected for gaming concerns, the CPI and verifying entity may take up to 30 calendar days to re-verify the new information submitted. 
 
 
 ## Drawbacks:
