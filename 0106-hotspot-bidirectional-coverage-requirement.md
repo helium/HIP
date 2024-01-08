@@ -1,11 +1,11 @@
-# Hotspot Bidrectional Coverage Requirement
+# HIP 106: Hotspot Bidirectional Coverage Requirement
 
-- Author(s): <!-- your GitHub @username -->
-- Start Date: <!-- fill me in with today's date, YYYY-MM-DD -->
-- Category: technical
-- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
-- Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
-- Vote Requirements: veIOT
+- Author(s): [@mawdegroot](https://github.com/mawdegroot)
+- Start Date: 2023-12-12
+- Category: Technical, Economic
+- Original HIP PR: [#828](https://github.com/helium/HIP/pull/828)
+- Tracking Issue: [#870](https://github.com/helium/HIP/issues/870)
+- Vote Requirements: veIOT Holders
 
 ## Summary
 [summary]: #summary
