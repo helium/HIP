@@ -1,7 +1,7 @@
 # HIP 105: Modification of MOBILE subDAO Hex Limits
 
 - Author: [Andy Zyvoloski](https://github.com/heatedlime)
-- Contributors Hans & JD
+- Contributors: Hans & JD
 - Start Date: 12/7/2023
 - Category: Technical & Economic
 - Original HIP PR: [#821](https://github.com/pull/821)
@@ -21,7 +21,7 @@ The information within this HIP will supersede HIP 85 upon passing, thus creatin
 * [HIP 93](https://github.com/helium/HIP/blob/main/0093-addition-of-wifi-aps-to-mobile-subdao.md) introduced the addition of Wi-Fi access points and certain limitations.
 
 ## Motivation:
-[HIP 93](https://github.com/helium/HIP/blob/main/0093-addition-of-wifi-aps-to-mobile-subdao.md) introduced Wi-Fi APs as a new way to stay connected to the Helium MOBILE network; however, the HIP did not cover all gaming concerns, and introduced new vectors for farming MOBILE. Additionally, [HIP 85](https://github.com/helium/HIP/blob/main/0085-mobile-hex-coverage-limit.md) established CBRS Hex Limits that didn't apply to Wi-Fi, as Wi-Fi had not been rolled out yet. This HIP proposes imposing the same hex limits between unique Wi-Fi coverage and unique CBRS coverage. 
+The intentions of [HIP 85](https://github.com/helium/HIP/blob/main/0085-mobile-hex-coverage-limit.md) was to limit Modeled Coverage Points (MCP) to the top 3 radio signals from CBRS radios; however, since HIP 85 only states "radio signals", and does not specify wether those signals come from CBRS or Wi-Fi, the HIP was implemented to only count the top 3 radio signals, regardless of source (CBRS or Wi-Fi) within each res12 hex. This HIP proposes to fix that, and allow up to three (3) CBRS radio signals and (3) Wi-Fi signals to earn MCP in each res12 hex.
 
 
 ## Stakeholders:
@@ -33,14 +33,14 @@ Service Providers - If better Wi-Fi coverage is added due to this HIP, Service P
 
 ## Hex Limits
 
+Please note, the passing of this HIP will supersede the 5 radio limit proposed in [HIP 74](https://github.com/helium/HIP/blob/main/0074-mobile-poc-modeled-coverage-rewards.md) and the 2 Wi-Fi limit in [HIP 101](https://github.com/helium/HIP/blob/main/0101-equalizing-poc-rewards-across-wifi-and-cbrs.md) (assuming HIP 101 passes).
+
 ### Indoor Wi-Fi
-[HIP 93](https://github.com/helium/HIP/blob/main/0093-addition-of-wifi-aps-to-mobile-subdao.md) established a limit of one (1) Wi-Fi AP per res12 hex will be eligible for PoC rewards. This will remain the limit for Indoor Wi-Fi APs. 
+[HIP 93](https://github.com/helium/HIP/blob/main/0093-addition-of-wifi-aps-to-mobile-subdao.md) established a limit of one (1) indoor Wi-Fi AP per res12 hex will be eligible for PoC rewards. This will remain the limit for Indoor Wi-Fi APs. 
 
 ### Outdoor Wi-Fi 
 
-Currently, any redundant and overlapping Outdoor Wi-Fi coverage is still rewarded the same as non-overlapping coverage under [HIP 93](https://github.com/helium/HIP/blob/main/0093-addition-of-wifi-aps-to-mobile-subdao.md). This discourages the buildout of coverage to new areas. To prevent overcrowding and overlapping of Wi-Fi coverage in hexes, this HIP proposes to limit the amount of Modeled Coverage Points (MCP) Outdoor Wi-Fi AP receives for redundant outdoor Wi-Fi coverage in res12 hexes. 
-
-To ensure that only the best setups are rewarded, only the top three (3) ranked signals of Outdoor Wi-Fi APs in each res12 hex will be awarded MCP, with a decaying multiplier based on the AP rank noted below. Any AP not ranked within the top three (3) will be ranked as “Fail”, and receive no MCP for that res12 hex. Please note, these ranks below are only assigned to Wi-Fi APs. Therefore, adding one (1) CBRS radio to this equation will not result in less rewards for Wi-Fi.
+To ensure that only the best outdoor Wi-Fi setups are rewarded, only the top three (3) ranked signals of Outdoor Wi-Fi APs in each res12 hex will be awarded MCP, with a decaying multiplier based on the AP rank noted below. Any AP not ranked within the top three (3) will be ranked as “Fail”, and receive no MCP for that res12 hex. Please note, these ranks below are only assigned to Wi-Fi APs signals. Therefore, adding one (1) CBRS radio to this equation will not result in less rewards for Wi-Fi.
 
 | Wi-F Rank    |Multiplier   |  
 |--------------|-------------|
@@ -56,7 +56,7 @@ Please note that the multiplier table above only affects the MCP that are given 
 This HIP proposes implementing a similar res12 hex limit established in [HIP 93](https://github.com/helium/HIP/blob/main/0093-addition-of-wifi-aps-to-mobile-subdao.md) to CBRS Radios, whereas this HIP limits the amount of indoor CBRS radios per res12 hex to 1. Further, Coverage Claim Time (noted in the "Ranking & Criteria" below) will be used to determine which indoor CBRS radio will be rewarded PoC. 
 
 ### Outdoor CBRS Limits
-[HIP 85](https://github.com/helium/HIP/blob/main/0085-mobile-hex-coverage-limit.md) established outdoor limits for CBRS Radios, which will not change in this HIP. The ranks noted for CBRS from HIP 85 are noted below, and only applicable to Outdoor CBRS Radios and not Wi-Fi.
+To ensure that only the best outdoor CBRS setups are rewarded, only the top three (3) ranked signals of Outdoor CBRS in each res12 hex will be awarded MCP, with a decaying multiplier based on the AP rank noted below. Any AP not ranked within the top three (3) will be ranked as “Fail”, and receive no MCP for that res12 hex. Please note, these ranks below are only assigned to CBRS radio signals. Therefore, adding one (1) Wi-Fi AP to this equation will not result in less rewards for Wi-Fi.
 
 
 | CBRS Rank    |Multiplier   |  
@@ -66,6 +66,7 @@ This HIP proposes implementing a similar res12 hex limit established in [HIP 93]
 |      3       |  .25X       |
 |    Fail      |   0X        |
 
+Please note that the multiplier table above only affects the MCP that are given to each Outdoor Wi-Fi AP and does not affect rewards distributed for the transfer of data.
 
 #### Ranking & Criteria
 
@@ -114,35 +115,40 @@ Since Wi-Fi AP and Radio B and C tied in Signal Strength, the Coverage Claim dat
 
 Since Wi-Fi AP and Radio D had the lowest signal strength out of all four (4) Wi-Fi AP, and only the top three (3) Wi-Fi AP will earn PoC rewards, Wi-Fi AP D will not earn any MCP for this res12 hex, and are ranked as "Fail".
 
-### Outdoor CBRS and Outdoor Wi-Fi Signal Interference
-Too much CBRS and Wi-Fi overlap may cause interference, and not provide the best or even usable experience for end users. Therefore, This HIP proposes that any res12 hex that has greater than four (4) outdoor CBRS signals or greater than four (4) outdoor Wi-Fi signals, shall not be awarded modeled coverage points for that res12 hex that has greater than four (4) signals.
+### Outdoor CBRS Signal Interference Penalty
+Too much CBRS overlap may cause interference, and may not provide the best or even usable experience for end users. Therefore, This HIP proposes that any res12 hex that has greater than five (5) outdoor CBRS signals shall not be awarded any modeled coverage points for that res12 hex that has greater than five (5) signals.
 
-See the example below for an instance where five (5) CBRS and four (4) Wi-Fi signals share the same res12 hex:
+See the examples below:
 
+As this res12 hex has 5 or less CBRS radio signals, this penalty will not apply.
+
+| Radio    | Signal Strength | Coverage Claim Start Date | CBRS Rank  | MCP Per HIP 85| New MCP |  
+|----------|-----------------|---------------------------|------------|---------------|---------|
+|   A      |   -77.33 dBm    |05/01/2023 23:24:25        | 1          | 16            | 16      |
+|   B      |   -98.75 dBm    |12/01/2022 01:01:01        | 2          | 6             | 6       |
+|   C      |   -98.75 dBm    |12/02/2022 12:11:01        | 3          | 2             | 2       |
+|   D      |   -105.60 dBm   |12/05/2022 11:51:01        | Fail       | 0             | 0       |
+|   E      |   -105.69 dBm   |08/01/2022 05:01:59        | Fail       | 0             | 0       |
+
+Since this res12 hex has 6 or more CBRS radio signals, no CBRS radio signals within this res12 hex will get rewarded ANY MCP. 
 
 | Radio    | Signal Strength | Coverage Claim Start Date | CBRS Rank  | MCP Per HIP 85| New MCP |  
 |----------|-----------------|---------------------------|------------|---------------|---------|
 |   A      |   -77.33 dBm    |05/01/2023 23:24:25        | 1          | 16            | 0       |
 |   B      |   -98.75 dBm    |12/01/2022 01:01:01        | 2          | 6             | 0       |
 |   C      |   -98.75 dBm    |12/02/2022 12:11:01        | 3          | 2             | 0       |
-|   D      |   -105.60 dBm    |12/05/2022 11:51:01       | Fail       | 0             | 0       |
-|   E      |   -105.69 dBm    |08/01/2022 05:01:59       | Fail       | 0             | 0       |
+|   D      |   -105.60 dBm   |12/05/2022 11:51:01        | Fail       | 0             | 0       |
+|   E      |   -105.69 dBm   |08/01/2022 05:01:59        | Fail       | 0             | 0       |
+|   F      |   -108.69 dBm   |09/01/2022 06:05:01        | Fail       | 0             | 0       |
 
-| Wi-Fi    | Signal Strength | Coverage Claim Start Date | Wi-Fi Rank | MCP per HIP 93| New MCP |
-|----------|-----------------|---------------------------|------------|---------------|---------|
-| A        | -63.33 dBm      | 01/01/2024 01:01:01       | 1          | 16            | 16      |
-| B        | -66.75 dBm      | 01/01/2024 01:01:01       | 2          | 8             |  6      |
-| C        | -66.75 dBm      | 02/12/2024 18:06:05       | 3          | 8             |  2      |
-| D        | -75.60 dBm      | 01/02/2024 01:01:01       | Fail       | 4             |  0      |
 
 
 ## Drawbacks:
 Implementing this proposal will increase the complexity of modeled coverage scores due to adding additional variables used to calculate total MOBILE rewards.
 
 ## Rationale and Alternatives:
-An alternative would be allowing Wi-Fi APs to keep earning the defined amount of MCP as described in HIP 93. 
-
-However, this may prevent or stagnate the network's growth because HIP 93 does not incentivize deployment of Wi-Fi AP to minimize overlapping coverage. 
+An alternative would be only allow the top three (3) radio signals between CBRS and Wi-Fi receive MCP per res12 hex; however, this may discourage the roll out of new outdoor Wi-Fi AP's
+ 
 
 ## Deployment Impact:
 As [HIP 74](https://github.com/helium/HIP/blob/main/0074-mobile-poc-modeled-coverage-rewards.md) has already been deployed by Nova Labs, Nova Labs is able to change the chain variables to implement this HIP.
