@@ -5,21 +5,22 @@
 - Category: Technical
 - Original HIP PR: [#830](https://github.com/helium/HIP/pull/830)
 - Tracking Issue: [#838](https://github.com/helium/HIP/issues/838)
+- Networks affected: IOT
 - Vote Requirements: veIOT Holders
 
 ## Summary
 
-This proposal aims to modify HIP17's hex density-based transmit reward scaling, focusing on addressing the increased hotspot density in urban areas. The key objective is to enhance the share of rural areas in the reward pool, with the broader goal of improving the overall coverage of the Helium network. This adjustment is intended to respond to the evolving distribution of hotspots, ensuring a more balanced and widespread network deployment.
+This proposal aims to modify the IOT LoRaWAN Networks HIP17's hex density-based transmit reward scaling, focusing on addressing the increased hotspot density in urban areas. The key objective is to enhance the share of rural areas in the reward pool, with the broader goal of improving the overall coverage of the Helium network. This adjustment is intended to respond to the evolving distribution of IOT hotspots, ensuring a more balanced and widespread network deployment.
 
 ## Motivation
 
-The motivation for revising HIP17 stems from the evolving landscape of the Helium network, particularly the rapid growth in the number of hotspots, especially in urban areas. When HIP17 was initially implemented, its parameters were designed to scale down Proof of Coverage (PoC) rewards with increasing hotspot density, allowing a certain level of redundant coverage. However, as the network has expanded over the years, these parameters have not been updated to reflect the changing dynamics. Consequently, this has led to an imbalance, with city centers, now densely populated with hotspots, garnering a larger share of PoC rewards. This disproportionate reward distribution is not conducive to expanding network coverage into rural areas, as it provides little incentive for deployers to install hotspots outside urban centers. 
+The motivation for revising HIP17 stems from the evolving landscape of the Helium network, particularly the rapid growth in the number of hotspots, especially in urban areas. When [HIP17 was initially implemented](https://docs.helium.com/devblog/2020/12/09/blockchain-release-hip-17/), its parameters were designed to scale down IOT Proof of Coverage (PoC) rewards with increasing hotspot density, allowing a certain level of redundant coverage. However, as the network has expanded over the years, these parameters have not been updated to reflect the changing dynamics. Consequently, this has led to an imbalance, with city centers, now densely populated with hotspots, garnering a larger share of PoC rewards. This disproportionate reward distribution is not conducive to expanding network coverage into rural areas, as it provides little incentive for deployers to install hotspots outside urban centers. 
 
 The proposed adjustments to HIP17 seek to address this issue by recalibrating its parameters, thereby aiming to enhance the share of rural areas in the PoC reward pool and encouraging a more evenly distributed network growth.
 
 ## Stakeholders
 
-This HIP impacts all hotspot owners by revising the transmit scaling algorithm, which in turn affects the distribution of PoC rewards. It is anticipated that areas with higher hotspot density, typically city centers, will experience more significant scaling down of rewards. This change aims to shift the balance, potentially increasing PoC rewards in less dense, rural areas.
+This HIP impacts all IOT hotspot owners by revising the transmit scaling algorithm, which in turn affects the distribution of PoC rewards. It is anticipated that areas with higher hotspot density, typically city centers, will experience more significant scaling down of rewards. This change aims to shift the balance, potentially increasing PoC rewards in less dense, rural areas.
 
 ## Detailed Explanation
 
@@ -31,7 +32,7 @@ This approach, using neighbor density to increase scaling limits up to the 'max'
 
 ### Proposal
 
-The current HIP17 parameters present two primary challenges in the context of the existing network:
+The current [HIP17 parameters](https://github.com/helium/HIP/blob/main/0017-hex-density-based-transmit-reward-scaling.md) present two primary challenges in the context of the existing network:
 
 1. Excessive redundancy in urban areas is allowed.
 2. There is overly sharp scaling at lower-resolution hexes, such as res-4, leading to pronounced changes at res-4 boundaries. This can result in significantly different transmit scales for adjacent res-8 hexes, as depicted in the provided image.
@@ -55,17 +56,19 @@ Here are the current and proposed sets of parameters:
 | Hex Res | Neighbors | Target | Max  | Neighbors | Target | Max  |
 |         | Occupied  |        |      | Occupied  |        |      |
 +---------+-----------+--------+------+-----------+--------+------+
-| 4       | 1         | 250    | 800  | 2         | 500    | 1000 |
-| 5       | 1         | 100    | 400  | 4         | 100    | 200  |
-| 6       | 1         | 25     | 100  | 4         | 25     | 50   |
-| 7       | 2         | 5      | 20   | 4         | 5      | 10   |
-| 8       | 2         | 1      | 4    | 2         | 1      | 1    |
-| 9       | 2         | 1      | 2    | 2         | 1      | 1    |
+| 4       | 1         | 250    | 800  | <2        | <500   |<1000 |
+| 5       | 1         | 100    | 400  | <4        | 100    |>200  |
+| 6       | 1         | 25     | 100  | <4        | 25     |>50   |
+| 7       | 2         | 5      | 20   | <4        | 5      | 10   |
+| 8       | 2         | 1      | 4    | 2         | 1      | >1   |
+| 9       | 2         | 1      | 2    | 2         | 1      | >1   |
 | 10      | 2         | 1      | 1    | 2         | 1      | 1    |
 | 11      | 2         | 1      | 1    | 2         | 1      | 1    |
 | 12      | 2         | 1      | 1    | 2         | 1      | 1    |
 | 13      | 2         | 1      | 1    | 2         | 1      | 1    |
 +---------+-----------+--------+------+-----------+--------+------+
+< indicates where the proposed value has increased
+> indicates where the proposed value has decreased
 ```
 
 ### How to Evaluate the Performance
@@ -77,6 +80,8 @@ To assess the effectiveness of the new parameter set compared to the existing on
 The maps demonstrate that urban areas generally experience more significant scaling down, and the previously sharp edges at res-4 boundaries are less pronounced. Example images are included at the document's end to illustrate this effect.
 
 Furthermore, we propose assessing the distribution of rewards per hex. Addressing the density issue requires a more uniform reward distribution across different hexes. This metric facilitates a more objective comparison. We analyzed the reward units per hex for both current and proposed parameters, finding the proposed changes yield a more evenly distributed reward pattern. Histograms depicting these reward units are also provided for reference.
+
+The vertical axis indicates the number of Hexes with the corresponding value in reward units on the Horizontal axis.
 
 <div style="display: flex; flex-direction: row;">
     <div style="flex: 1; text-align: center;">
