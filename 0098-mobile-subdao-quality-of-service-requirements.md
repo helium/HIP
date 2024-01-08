@@ -62,12 +62,13 @@ Many locations where connectivity is being deployed, including some rural areas,
 Often these areas do not have good cellular coverage either. That's why iit is essential to incentivize Helium deployments in less well-connected areas.
 
 
-Speed Test results are categorized into one of four Tiers - Acceptable, Degraded, Poor, and Fail.
+Speed Test results are categorized into one of four Tiers - Good, Acceptable, Degraded, Poor, and Fail. Please note, this HIP proposes changing the name of the 1X speedtest multiplier to "Good", and adding a new 0.75X multiplier for "Acceptable". Please see the table below.
 
 
 |Speed Test Tier| Speedtest Multiplier| Requirement (speeds in Mbps, latency in ms)  |
 |---------------|---------------------|----------------------------------------------|
-| Acceptable    | 1.00X               |100+ Download, AND 10+ Upload, AND <50 Latency|
+| Good          | 1.00X               |100+ Download, AND 10+ Upload, AND <50 Latency|
+| Acceptable    | 0.75X               |75+ Download, AND 8+ Upload, AND <60 Latency  |
 | Degraded      | 0.50X               |50+ Download, AND 5+ Upload, AND <75 Latency  | 
 | Poor          | 0.25X               |30+ Download, AND 2+ Upload, AND <100 Latency |
 | Fail          | 0.00X               |<30 Download, OR <2 Upload, OR >100 Latency   |
@@ -145,6 +146,8 @@ In the example above, the average would be 0.6875, and wojld be utilized during 
 ## Rationale 
 As the Helium 5G network matures, it’s vitally important that the quality of the network and deployments provide usable and consistent coverage. 
 
+## Deployment Impact
+Nova Labs will have to change the speedtest requirements to incorporate the new "Acceptable" multiplier of 0.75X upon passing. 
 
 ## Success Metrics
 As most of what is written in this HIP has already been previously implemented, this HIP will be considered successful if it is passed. If this HIP does not pass, any quality of service metrics already previously established outside of a HIP process, such as speed test and heartbeat requirements must immediately be removed from the Helium 5G network.
