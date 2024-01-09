@@ -147,7 +147,7 @@ In the example above, the average would be 0.6875, and wojld be utilized during 
 As the Helium 5G network matures, it’s vitally important that the quality of the network and deployments provide usable and consistent coverage. 
 
 ## Deployment Impact
-Nova Labs will have to change the speedtest requirements to incorporate the new "Acceptable" multiplier of 0.75X upon passing. 
+Protocol engineers will have to change the speedtest requirements to incorporate the new "Acceptable" multiplier of 0.75X upon passing. 
 
 ## Success Metrics
 As most of what is written in this HIP has already been previously implemented, this HIP will be considered successful if it is passed. If this HIP does not pass, any quality of service metrics already previously established outside of a HIP process, such as speed test and heartbeat requirements must immediately be removed from the Helium 5G network.
