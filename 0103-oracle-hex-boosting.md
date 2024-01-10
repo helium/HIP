@@ -66,7 +66,7 @@ This HIP recommends using data from the United States Census Bureau's urban-rura
 As data from Oracles stem from third parties, the HIP authors recognize that there may be gaps or errors within the map and data used. Therefore, data from Oracles will be represented at a res10 hex level, and all res12 hexes within each res10 hex will have the same, highest value. For example, if one res12 hex within the res10 hex has a footfall range higher than 1.00, and all other res12 hexes within that res10 hex have 0, all res12 hexes within that res10 hex will be awarded for having footfall traffic of 1.01+
 
 ## Deployment Impact
-Nova Labs has agreed to undertake the work to implement this HIP shall it pass. This HIP also grants Nova Labs the authority to add green and yellow hexes onto the footfall map based on Helium Mobile subscriber data. 
+Nova Labs has agreed to undertake the work to implement this HIP shall it pass. 
 
 ## Drawbacks:
 The implementation of this proposal could increase the complexity of the Helium Mobile network, and modeled coverage scores. There may be concerns about the accuracy of the population data provided, or the need to update the data regularly. 
