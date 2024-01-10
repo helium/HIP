@@ -43,7 +43,9 @@ If Footfall Oracle is A, Land Type Oracle is B, and Urbanization Oracle is A, th
 Once all variations are accounted for, each tag will be assigned a value as outlined here:
 
 
-![Screen Shot 2024-01-09 at 4 37 11 PM](https://github.com/helium/HIP/assets/104723888/529d3ece-e685-498f-afdc-943e816fa9fc)
+
+![Screen Shot 2024-01-10 at 4 30 21 PM](https://github.com/helium/HIP/assets/104723888/25f4993a-61d3-4415-92ce-67ddef621810)
+
 
 
 Before the Final Multiplier equation is run, the calculations will check to see whether or not that res12 hex is boosted by a Service Provider greater than 1x. If not, then the assigned value will be maintained. If yes, then the Final Multiplier will automatically be 1X. 
@@ -63,7 +65,7 @@ This HIP recommends using data from the United States Census Bureau's urban-rura
 
 
 ### Smoothing of Data
-As data from Oracles stem from third parties, the HIP authors recognize that there may be gaps or errors within the map and data used. Therefore, data from Oracles will be represented at a res10 hex level, and all res12 hexes within each res10 hex will have the same, highest value. For example, if one res12 hex within the res10 hex has a footfall range higher than 1.00, and all other res12 hexes within that res10 hex have 0, all res12 hexes within that res10 hex will be awarded for having footfall traffic of 1.01+
+As data from Oracles stem from third parties, the HIP authors recognize that there may be gaps or errors within the map and data used. Therefore, data from Oracles will be represented at a res10 hex level, and all res12 hexes within each res10 hex will have the same, highest value. For example, if one res12 hex within the res10 hex has a footfall range higher than 1.00, and all other res12 hexes within that res10 hex have 0, all res12 hexes within that res10 hex will be awarded for having footfall traffic of 1.00+
 
 ## Deployment Impact
 Nova Labs has agreed to undertake the work to implement this HIP shall it pass. 
