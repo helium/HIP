@@ -56,12 +56,6 @@ Many locations where connectivity is being deployed, including some rural areas,
 
 Often these areas do not have good cellular coverage either. That's why it is essential to incentivize Helium deployments in less well-connected areas.
 
-
-### Speed Test Reward Tiers
-Many locations where connectivity is being deployed, including some rural areas, do not always have the high-speed Internet connectivity needed to meet the acceptable Internet requirements for Genesis rewards consistently. Note, the tiering and multipliers proposed below are only applicable PoC rewards, MOBILE Rewards for data transfers are not affected. 
-Often these areas do not have good cellular coverage either. That's why iit is essential to incentivize Helium deployments in less well-connected areas.
-
-
 Speed Test results are categorized into one of four Tiers - Good, Acceptable, Degraded, Poor, and Fail. Please note, this HIP proposes changing the name of the 1X speedtest multiplier to "Good", and adding a new 0.75X multiplier for "Acceptable". Please see the table below.
 
 
@@ -74,6 +68,7 @@ Speed Test results are categorized into one of four Tiers - Good, Acceptable, De
 | Fail          | 0.00X               |<30 Download, OR <2 Upload, OR >100 Latency   |
 
 
+To calculate the speed test results used for reward calculations for each epoch, the average of all speedtests (from each category) completed within that epoch will be used. For example, if one speedtest had a result of 150 MBPS download, and another within the same epoch of 50 MBPS, a result of 100 MBPS will be used to calculate rewards for that epoch. 
 
 Tiered Speed Test values are used as a multiplier in Rewards calculations as follows:
 Speed Test Results are put into Tiers based on the minimum value of each Download, Upload, and Latency (logical AND).
