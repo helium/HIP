@@ -75,8 +75,6 @@ Tiered Speed Test values are used as a multiplier in Rewards calculations as fol
 Speed Test Results are put into Tiers based on the minimum value of each Download, Upload, and Latency (logical AND).
 Speed Test results that do not meet the minimum requirements for any Download, Upload, or Latency are considered to have Failed and are not eligible for PoC Rewards until the Speed Test Average is improved (logical OR).
 
-If a device (Radio and or Wi-Fi Access Point) is given a speed tier of “Fail”, the device will stop broadcasting a signal until a speed test tier of “Poor” or greater is given to that device. 
-
 #### Multiplier Effect
 Upon implementation of [HIP 74](https://github.com/helium/HIP/blob/main/0074-mobile-poc-modeled-coverage-rewards.md), this multiplier will be applied the total modeled coverage points received by that radio/access point. The multipliers will be used within the following order:
 
