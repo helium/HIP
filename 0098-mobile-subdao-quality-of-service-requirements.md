@@ -68,7 +68,8 @@ Speed Test results are categorized into one of four Tiers - Good, Acceptable, De
 | Fail          | 0.00X               |<30 Download, OR <2 Upload, OR >100 Latency   |
 
 
-To calculate the speed test results used for reward calculations for each epoch, the average of all speedtests (from each category) completed within that epoch will be used. For example, if one speedtest had a result of 150 MBPS download, and another within the same epoch of 50 MBPS, a result of 100 MBPS will be used to calculate rewards for that epoch. 
+To calculate the speed test results used for reward calculations for each epoch, the average of up to 6 speedtests (within 48 hours of epoch end) will be used. If there are not a minimm of 2 speedtests within the 48 hours, the tier is automatically 'Fail'. 
+
 
 Tiered Speed Test values are used as a multiplier in Rewards calculations as follows:
 Speed Test Results are put into Tiers based on the minimum value of each Download, Upload, and Latency (logical AND).
@@ -142,7 +143,7 @@ In the example above, the average would be 0.6875, and wojld be utilized during 
 As the Helium 5G network matures, it’s vitally important that the quality of the network and deployments provide usable and consistent coverage. 
 
 ## Deployment Impact
-Protocol engineers will have to change the speedtest requirements to incorporate the new "Acceptable" multiplier of 0.75X upon passing and incorporate using the average of speedtests during the epoch for reward calculations. 
+Protocol engineers will have to change the speedtest requirements to incorporate the new "Acceptable" multiplier of 0.75X upon passing.
 
 ## Success Metrics
 As most of what is written in this HIP has already been previously implemented, this HIP will be considered successful if it is passed. If this HIP does not pass, any quality of service metrics already previously established outside of a HIP process, such as speed test and heartbeat requirements must immediately be removed from the Helium 5G network.
