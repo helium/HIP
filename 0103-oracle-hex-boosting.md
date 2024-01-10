@@ -1,7 +1,7 @@
 # HIP 103: MOBILE Oracle Hex Boosting
 
-- Author(s): [Andy Zyvoloski](https://github.com/heatedlime) & [@zer0tweets](https://github.com/zer0tweets) & [Jaym2158](https://github.com/jaym2518)
-- Contributor: [Gateholder](https://github.com/gateholder) & [Max Gold](https://github.com/maxgold91)
+- Author(s): [Andy Zyvoloski](https://github.com/heatedlime) & [@zer0tweets](https://github.com/zer0tweets) & [Jeremy Mahrle](https://github.com/jaym2518)
+- Contributor: [Gateholder](https://github.com/gateholder) & [Max Gold](https://github.com/maxgold91) & BZ
 - Start Date: 2023-12-18
 - Category: Economic, Technical
 - Original HIP PR: [#822](https://github.com/helium/HIP/pull/822)
@@ -33,151 +33,46 @@ The stakeholders of this proposal are:
 - **Radio/Wi-Fi Deployers** can benefit from increased rewards for providing coverage in areas where coverage is needed
 
 ## Detailed Explanation:
-MOBILE Boosting Oracles (refer herewith as “Oracles”) are data sources used to estimate how useful mobile coverage will be in a specific area. This HIP proposes allowing Oracles to be established to help guide deployments in areas that need more coverage. Oracles will be used to give applicable hexes boosts (increasing or decreasing) based on the area they are deployed in. 
+MOBILE Boosting Oracles (refer herewith as “Oracles”) are data sources used to estimate how useful mobile coverage will be in a specific area. This HIP proposes allowing Oracles to be established to help guide deployments in areas that need more coverage. Oracles will be used to give applicable hexes boosts (increasing or decreasing) based on the area they are deployed in.
 
-All Oracles are assigned a multiplier weight, in which the total weight of all Oracles must equal 1.0X. For example, for the three proposed Oracles within this HIP, the Footfall Oracle will be assigned a weight of 0.60X, the Land Type Oracle will be assigned a weight of 0.30X, and the Urbanization Oracle will be assigned a weight of 0.10X. If a new Oracle is added, these weightings must be re-adjusted within the proposing HIP. Further, within each Oracle, each category within that Oracle is assigned a value from 0.00X to 1.00X This category value is then multiplied by the weight, which is then added against the remaining Oracle outputs to get a Final Multiplier. For example, if each Category multiplier is 1.00X, the below equation will be used to determine the Final Multiplier:
+The data from each Oracle will be divided into categories and assigned a letter, beginning with A as the highest value and proceeding through the alphabet from there (B is the second highest value, C is the third highest value, etc.) based on the different types of locations that are delineated in the data. To avoid over complication, an Oracle shall not exceed X categories. 
 
-Footfall Oracle Weight (0.60) multiplied by Footfall Oracle Category Multiplier (1.00) (0.60 X 1.00 = 0.60X) plus Land Type Oracle Weight (0.30) multiplied by Land Type Oracle Category Multiplier (1.00) (0.30 X 1.00 = 0.30X) plus Urbanization Oracle Weight (0.10) multiplied by Urbanization Oracle Category Multiplier (1.00) (0.10 X 1.00) = 1.00X
+The categories from each Oracle will then be combined to identify areas of overlap to create a set of subcategories. For example:
+If Footfall Oracle is A, Land Type Oracle is B, and Urbanization Oracle is A, then the hex will be assigned the tag ABA.
 
-Further examples can be found within the example section below.
+Once all variations are accounted for, each tag will be assigned a value as outlined here:
 
-Before the Final Multiplier equation is run, the calculations will check to see if that res12 hex is boosted by a Service Provider. If that res12 hex is boosted by a Service Provider greater than 1X, the Final Multiplier will automatically be 1X.
+
+![Screen Shot 2024-01-09 at 4 37 11 PM](https://github.com/helium/HIP/assets/104723888/529d3ece-e685-498f-afdc-943e816fa9fc)
+
+
+Before the Final Multiplier equation is run, the calculations will check to see whether or not that res12 hex is boosted by a Service Provider greater than 1x. If not, then the assigned value will be maintained. If yes, then the Final Multiplier will automatically be 1X. 
 
 Once the Final Multiplier is calculated, this will be multiplied by any Service Provider Hex boosts, and then multiplied by the radio/wifi hex limit multiplier identified within HIP 85 and 105. The whole calculation is as followed:
 
 Final Multiplier X Service Provider Hex Boost Multiplier X HIP 85/105 Multiplier X Modeled Coverage Points from HIP 74/93.
 
-### Smoothing of Data
-As data from Oracles stem from third parties, the HIP authors recognize that there may be gaps or errors within the map and data used. Therefore, data from Oracles will be represented at a res10 hex level, and all res12 hexes within each res10 hex will have the same, highest value. For example, if one res12 hex within the res10 hex has a footfall range higher than 1.00, and all other res12 hexes within that res10 hex have 0, all res12 hexes within that res10 hex will be awarded for having footfall traffic of 1.01+
-
-### Footfall Oracle - Weight 0.60X
-This HIP recommends using data from third parties [Veraset](https://www.veraset.com/) and [SafeGraph](https://www.safegraph.com/), which identifies the level of footfall traffic in an area, and uses the method described [here](https://www.safegraph.com/guides/visit-attribution-white-paper) to determine areas that should have a higher multiplier based on their level of footfall. This data can be visualized on a map [here](https://shdw-drive.genesysgo.net/GANQ5D1hQVswq42Fk3vA3EYDddbNLLp1G2VmodQdprrF/index.html). This data is to be refreshed at least once per calendar year, but may be refreshed more frequently as new data from this source becomes available. A process for suggesting changes to the data (e.g., increasing the level for a location like a hospital or school, or reducing a residential or farm area) will be considered in a subsequent HIP. 
-
-The below boosts will be applied for each indoor and outdoor CBRS Radio and Wi-Fi Access Point for each res12 hex: 
-
-
-### CBRS/Wifi
-|Footfall    | Category Multiplier |
-|------------|---------------------|
-| Outside USA| 0.00X               |
-| 0 (No Data)| 0.25X               |
-| 0.001-1.00 | 0.50X               |
-| 1.01+      | 1.00X               |
-
-
+### Footfall Oracle 
+This HIP recommends using data from third parties [Veraset](https://www.veraset.com/) and [SafeGraph](https://www.safegraph.com/), which identifies the level of footfall traffic in an area, and uses the method described [here](https://www.safegraph.com/guides/visit-attribution-white-paper) to determine areas that should have a higher multiplier based on their level of footfall. This data can be visualized on a map [here](https://shdw-drive.genesysgo.net/GANQ5D1hQVswq42Fk3vA3EYDddbNLLp1G2VmodQdprrF/index.html). This data is to be refreshed at least once per calendar year, but may be refreshed more frequently as new data from this source becomes available. Further, Nova Labs is able to add, but  A process for suggesting changes to the data (e.g., increasing the level for a location like a hospital or school, or reducing a residential or farm area) will be considered in a subsequent HIP. 
 
 ### Land Type Oracle  
 This HIP recommends using data from the European Space Agency’s [WorldCover project](https://esa-worldcover.org/), as visualized [here](https://viewer.esa-worldcover.org/worldcover/?language=en&bbox=-255.05859374999997,-78.6991059255054,255.05859374999997,78.69910592550542&overlay=false&bgLayer=OSM&date=2023-12-25&layer=WORLDCOVER_2021_MAP), to identify the type of land, and provide multipliers based on land type. New data from this source will be incorporated into the Oracle as it becomes available. This Land Type Oracle will also be smoothed out to the res10 level like the Footfall Oracle above.
-
-The below boosts will be applied for each indoor and outdoor CBRS Radio and Wi-Fi Access Point for each res12 hex: 
-
-
-|Land Type                      | Category Multiplier |
-|-------------------------------|---------------------|
-| Built-up                      | 1.00X               |
-| Tree Cover                    | 0.80X               |
-| Shrubland                     | 0.80X               |
-| Grassland                     | 0.80X               |
-| Bare/Sparse                   | 0.80X               |
-| Cropland                      | 0.10X               |
-| Snow & Ice                    | 0.10X               |
-| Bodies of Water               | 0.10X               |
-| Wetland                       | 0.10X               |
-| Mangroves                     | 0.10X               |
-| Moss & Lichen                 | 0.10X               |
-| Any area outside of the U.S.A | 0.00X               |
-
-
 
 ### Urbanization Oracle  
 This HIP recommends using data from the United States Census Bureau's urban-rural classification, as defined [here](https://www.census.gov/programs-surveys/geography/guidance/geo-areas/urban-rural.html) and visualized [here](https://www.arcgis.com/apps/mapviewer/index.html?layers=10551da8fcd24062b1857473252b3df8), to provide multipliers based on if they are, or are not urbanized. New data from this source will be incorporated into the Oracle as it becomes available. This Urbanization Oracle will also be smoothed out to the res10 level like the Footfall Oracle above.
 
 
-The below boosts will be applied for each indoor and outdoor CBRS Radio and Wi-Fi Access Point for each res12 hex: 
-
-
-| Type            | Category Multiplier |
-|-----------------|---------------------|
-| Urbanized       | 1.00X               |
-| Non-Urbanized   | 0.25X               |
-|Outside of USA   | 0.00X               |
-
-
-See the examples below of boosts in a single res12 hex. Note, the scenarios below assume all hexes are assigned 16 Modeled Coverage Points (MCP) per hex based off of [HIP-74](0074-mobile-poc-modeled-coverage-rewards.md). Further, any hexes that have not been boosted by a Service Provider are automatically assigned a 1.00X multiplier.
-
-### Example 1 - Outdoor CBRS & Wi-Fi
-|Example                                                | Footfall Oracle | Land Type Oracle | Urbanization Oracle |
-|-------------------------------------------------------|-----------------|------------------|---------------------|
-|Oracle Weight                                          | 0.60X           | 0.30X            | 0.10X               |
-|Category Multiplier                                    | 1.00X           | 0.80X            | 0.25X               |
-|Final Individual lOracle Multiplier                    | 0.60X           | 0.24X            | 0.025X              |
-
-
-|Calculations                                           |  Equation                                                |
-|-------------------------------------------------------|----------------------------------------------------------|
-|Final Oracle Multiplier                                | (0.60) + (0.24) + (0.025) =  0.865X                      |
-|Service Provider                                       | 1.00X                                                    |
-|Hex Coverage Limit Multiplier from HIP 85/105          | 1.00X                                                    |
-|Final Multiplier                                       | 0.865X                                                   |
-|Total MCP per Res12 Hex                                | (16 X 0.865) = 13.84                                     |
-
-
-### Example 2 - Outdoor CBRS & Wi-Fi
-|Example                                                | Footfall Oracle | Land Type Oracle | Urbanization Oracle |
-|-------------------------------------------------------|-----------------|------------------|---------------------|
-|Oracle Weight                                          | 0.60X           | 0.30X            | 0.10X               |
-|Category Multiplier                                    | 0.50X           | 0.10X            | 0.25X               |
-|Final Individual lOracle Multiplier                    | 0.30X           | 0.03X            | 0.025X              |
-
-
-|Calculations                                           |  Equation                                                |
-|-------------------------------------------------------|----------------------------------------------------------|
-|Final Oracle Multiplier                                | (0.30) + (0.03) + (0.025) =  0.355X                      |
-|Service Provider                                       | 2.00X                                                    |
-|Hex Coverage Limit Multiplier from HIP 85/105          | 1.00X                                                    |
-|Final Multiplier                                       | 2.00X                                                    |
-|Total MCP per Res12 Hex                                | (16 X 2) = 32                                            |
-
-### Example 3 - Outdoor CBRS & Wi-Fi
-|Example                                                | Footfall Oracle | Land Type Oracle | Urbanization Oracle |
-|-------------------------------------------------------|-----------------|------------------|---------------------|
-|Oracle Weight                                          | 0.60X           | 0.30X            | 0.10X               |
-|Category Multiplier                                    | 1.00X           | 1.00X            | 1.00X               |
-|Final Individual lOracle Multiplier                    | 0.60X           | 0.30X            | 0.10X               |
-
-
-|Calculations                                           |  Equation                                                |
-|-------------------------------------------------------|----------------------------------------------------------|
-|Final Oracle Multiplier                                | (0.60) + (0.30) + (0.10) =  1.00X                        |
-|Service Provider                                       | 1.00X                                                    |
-|Hex Coverage Limit Multiplier from HIP 85/105          | 1.00X                                                    |
-|Final Multiplier                                       | 1.00X                                                    |
-|Total MCP per Res12 Hex                                | (16 X 1) = 16                                            |
-
-### Example 4 - Outdoor CBRS & Wi-Fi
-|Example                                                | Footfall Oracle | Land Type Oracle | Urbanization Oracle |
-|-------------------------------------------------------|-----------------|------------------|---------------------|
-|Oracle Weight                                          | 0.60X           | 0.30X            | 0.10X               |
-|Category Multiplier                                    | 0.25X           | 1.00X            | 1.00X               |
-|Final Individual lOracle Multiplier                    | 0.15X           | 0.30X            | 0.10X               |
-
-
-|Calculations                                           |  Equation                                                |
-|-------------------------------------------------------|----------------------------------------------------------|
-|Final Oracle Multiplier                                | (0.15) + (0.30) + (0.10) =  0.55X                        |
-|Service Provider                                       | 1.00X                                                    |
-|Hex Coverage Limit Multiplier from HIP 85/105          | 1.00X                                                    |
-|Final Multiplier                                       | 1.00X                                                    |
-|Total MCP per Res12 Hex                                | (16 X 1) = 8.8                                           |
-
+### Smoothing of Data
+As data from Oracles stem from third parties, the HIP authors recognize that there may be gaps or errors within the map and data used. Therefore, data from Oracles will be represented at a res10 hex level, and all res12 hexes within each res10 hex will have the same, highest value. For example, if one res12 hex within the res10 hex has a footfall range higher than 1.00, and all other res12 hexes within that res10 hex have 0, all res12 hexes within that res10 hex will be awarded for having footfall traffic of 1.01+
 
 ## Deployment Impact
-Nova has agreed to undertake the work to implement this HIP shall it pass. These Oracles may be implemented in any order, and do not need to be implemented all at once. If one Oracle is implemented at a time, the weight of the first Oracle will be 1.00X. When another Oracle is added, the weight of each Oracle will be 0.50X each. Once all three Oracles are in place, the weighting of each Oracle will be reflected from what is proposed in this HIP.  
+Nova Labs has agreed to undertake the work to implement this HIP shall it pass. 
+
 ## Drawbacks:
 The implementation of this proposal could increase the complexity of the Helium Mobile network, and modeled coverage scores. There may be concerns about the accuracy of the population data provided, or the need to update the data regularly. 
 
 ## Alternatives
-An alternative would be allowing radios and hexes to keep earning the defined amount of modeled coverage points as described in HIP 74. However, this may prevent or stagnate the network's growth because HIP 74 does not incentivize deployment of Hotspots to specific areas or regions. 
+Alternative methods of how Oracles interact and calculated were explored during the community discussion phase of this HIP, but ultimately, having Oracle's multiply, add, or be weighted didn't allow for the fine tuning of the Oracles to mirror real world scenarios. 
 
 ## Success Metrics
 The primary success metric will be greater coverage on the modeled coverage map in areas where top carriers have already identified as areas that need data.
