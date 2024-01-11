@@ -68,7 +68,9 @@ Speed Test results are categorized into one of four Tiers - Good, Acceptable, De
 | Fail          | 0.00X               |<30 Download, OR <2 Upload, OR >100 Latency   |
 
 
-To calculate the speed test results used for reward calculations for each epoch, the average of up to 6 speedtests (within 48 hours of epoch end) will be used. If there are not a minimm of 2 speedtests within the 48 hours, the tier is automatically 'Fail'. 
+For the first 120 days after HIP passing, the highest/fastest speedtest score from each category from the past 48 hours will be used. This is due to issues with current speedtests showing slower speeds than normal. 
+
+After 120 days, to calculate the speed test results used for reward calculations for each epoch, the average of up to 6 speedtests (within 48 hours of epoch end) will be used. If there are not a minimm of 2 speedtests within the 48 hours, the tier is automatically 'Fail'. 
 
 
 Tiered Speed Test values are used as a multiplier in Rewards calculations as follows:
