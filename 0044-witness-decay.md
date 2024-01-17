@@ -60,8 +60,8 @@ witnesses and this would incentivize the remainder of the network to grow and ex
 This is based on analysis of all witness receipts between blocks 1032738 and 1040915.
 [data](https://gist.github.com/abhay/8b75824c3b7cc27009f2a76f56fa9bc1)
 
-![population-graph](0044-witness-decay/population-graph.png)
-![focused-population-graph](0044-witness-decay/focused-population-graph.png)
+![population-graph](files/0044/population-graph.png)
+![focused-population-graph](files/0044/focused-population-graph.png)
 
 The fortunate coincidence about this feature is that it's already built and is just two chain
 variable away from being activated. We are able to enable it at the same time as PoCv11 is activated

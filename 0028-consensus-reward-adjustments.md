@@ -6,6 +6,7 @@
 - Original HIP PR: <https://github.com/helium/HIP/pull/136>
 - Tracking Issue: <https://github.com/helium/HIP/issues/140>
 - Code PR: <https://github.com/helium/blockchain-core/pull/922>
+- Approved Version: [c68417f](https://github.com/helium/HIP/blob/c68417ff57449f976bfe0c5834d97a837cac3df4/0015-beaconing-rewards.md)
 
 # Summary
 
@@ -92,7 +93,7 @@ to complete. This supports the rational that consensus rewards should be given a
 200 block period was choose as it represented more stable epoch times after initial validator issues
 and chain var settings were worked out.
 
-![image Epoch Length (Blocks 933238 to 939821)](./0028-consensus-reward-adjustments/epoch-lengths.png)
+![image Epoch Length (Blocks 933238 to 939821)](files/0028/epoch-lengths.png)
 
 Based on this data, we can also perform a comparison of earnings between current and what they would
 have been with HIP-28 implemented. The actual number of blocks covered by these 200 epoch is 6616

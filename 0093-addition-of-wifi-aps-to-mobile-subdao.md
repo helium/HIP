@@ -139,7 +139,7 @@ We are assuming a configuration/antenna pattern with the following characteristi
 
 The figure below shows the proposed templated coverage map and estimated RSSI levels in a typical urban propagation scenario.
 
-![Figure 1. Templated coverage map.](./0093-addition-of-wifi-aps-to-mobile-subdao/templated_coverage.png)
+![Figure 1. Templated coverage map.](files/0093/templated_coverage.png)
 
 #### 3.2.4 Capping per Hex
 

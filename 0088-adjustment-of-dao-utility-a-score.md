@@ -33,7 +33,7 @@ An active device is any rewardable entity that has been onboarded and has receiv
 
 The exact and explicit specification of the proposal is shown below. It is important to note that the remaining factors of the subDAO utility score, namely $V$ and $D$ remain unchanged.
 
-![0088-formulas](0088-adjustment-of-dao-utility-a-score/0088-formulas.png)
+![0088-formulas](files/0088/0088-formulas.png)
 
 ### examples
 

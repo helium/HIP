@@ -17,11 +17,11 @@ could have performed this duty in a timely fashion.**
 
 I want us to transition from this:
 
-![Real Example](./0032-split-dcs/Real_Example.jpg)
+![Real Example](files/0032/Real_Example.jpg)
 
 or visually simplified:
 
-![Current DC Split](./0032-split-dcs/Current_Split.jpg)
+![Current DC Split](files/0032/Current_Split.jpg)
 
 Of course this picture doesn't even come close to describe the situation in densely populated areas
 where Hotspots might have an effective coverage of 0, because Hotspots with better latency are
@@ -31,7 +31,7 @@ are currently facing has to be resolved differently and this HIP assumes that th
 
 So we go to something more like this:
 
-![Proposed DC Split](./0032-split-dcs/Proposed_Split.jpg)
+![Proposed DC Split](files/0032/Proposed_Split.jpg)
 
 in one simple step that will naturally adapt to the current situation without much code necessary.
 

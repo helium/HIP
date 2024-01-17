@@ -94,7 +94,7 @@ done using PoC but for a future sub-protocol it might not be coverage based).
 > **NOTE** DC overage ([HIP-10](0010-usage-based-data-transfer-rewards.md)) and the current schedule
 > for % allocation changes will also remain the same as described in the graphic below.
 
-![HNT Distribution Over Time](0063-helium-hub/hnt-distribution.svg)
+![HNT Distribution Over Time](files/0063/hnt-distribution.svg)
 
 ### Current Reward Models
 

@@ -5,8 +5,9 @@
   [@abhay](https://github.com/abhay), Joey Padden
 - Start Date: 2022-01-04
 - Category: Economic, Technical
-- Orignal PR: <https://github.com/helium/HIP/pull/341>
+- Original PR: <https://github.com/helium/HIP/pull/341>
 - Tracking Issue: <https://github.com/helium/HIP/issues/345>
+- Approved Version: [96bc8c6](https://github.com/helium/HIP/blob/96bc8c6fca4102125f0d3b23be4d54b65db3d3c3/0053-mobile-dao.md)
 
 **Summary**
 
@@ -132,7 +133,7 @@ tokens based on events witnessed during the last epoch.
 Below is a high level visualization of the rewards flow from the emissions curve to economic
 participants of the DAO:
 
-![Rewards Flow Chart](./0053-mobile-dao/hip0053-rewards-flow.png)
+![Rewards Flow Chart](files/0053/hip0053-rewards-flow.png)
 
 Service providers will earn 20% of all MOBILE tokens minted by the DAO emissions curve, which will
 be distributed as a function of the number of incentive points accumulated by service provider
@@ -152,7 +153,7 @@ service and its interactions with the service provider infrastructure (such as O
 Individual hourly MOBILE earned by service provider during an epoch (initially 1 hour) is then
 calculated using the following formula:
 
-![Service Provider Rewards Formula](./0053-mobile-dao/hip0053-mobile-earn-service-provider.png)
+![Service Provider Rewards Formula](files/0053/hip0053-mobile-earn-service-provider.png)
 
 Mappers will earn 10% of all MOBILE tokens minted by the DAO emissions curve. Tokens will be
 distributed to mappers as a function of the number of incentive points accumulated by all mappers on
@@ -165,7 +166,7 @@ mapping algorithms with elements of gamification.
 
 Individual hourly MOBILE earned by a mapper is calculated using the following formula:
 
-![Mapper Rewards Formula](./0053-mobile-dao/hip0053-mobile-earn-mapper.png)
+![Mapper Rewards Formula](files/0053/hip0053-mobile-earn-mapper.png)
 
 Hotspot owners will earn 60% of all MOBILE tokens for proof of coverage (PoC) related events
 (staying eligible and getting mapped) and for burning Helium data credits.
@@ -178,7 +179,7 @@ during a given epoch. Incentive points are issued using the following rules:
 1. Hotspot receives 1 point for each 4 consecutive epochs of remaining eligible
 2. Hotspot receives 3 points every time it was witnessed by a mapper
 
-![Hotspot Rewards Formula](./0053-mobile-dao/hip0053-mobile-earn-hotspot.png)
+![Hotspot Rewards Formula](files/0053/hip0053-mobile-earn-hotspot.png)
 
 Tokens related to data credit burn are distributed in direct proportion to the number of DCs burned
 and are a function of amount of data offloaded by a particular Hotspot and price of DC set by the
