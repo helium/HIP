@@ -14,7 +14,7 @@ This proposal aims to modify the IOT LoRaWAN Networks HIP17's hex density-based 
 
 ## Motivation
 
-The motivation for revising HIP17 stems from the evolving landscape of the Helium network, particularly the rapid growth in the number of hotspots, especially in urban areas. When [HIP17 was initially implemented](https://docs.helium.com/devblog/2020/12/09/blockchain-release-hip-17/), its parameters were designed to scale down IOT Proof of Coverage (PoC) rewards with increasing hotspot density, allowing a certain level of redundant coverage. However, as the network has expanded over the years, these parameters have not been updated to reflect the changing dynamics. Consequently, this has led to an imbalance, with city centers, now densely populated with hotspots, garnering a larger share of PoC rewards. This disproportionate reward distribution is not conducive to expanding network coverage into rural areas, as it provides little incentive for deployers to install hotspots outside urban centers. 
+The motivation for revising HIP17 stems from the evolving landscape of the Helium network, particularly the rapid growth in the number of hotspots, especially in urban areas. When [HIP17 was initially implemented](https://docs.helium.com/devblog/2020/12/09/blockchain-release-hip-17/), its parameters were designed to scale down IOT Proof of Coverage (PoC) rewards with increasing hotspot density, allowing a certain level of redundant coverage. However, as the network has expanded over the years, these parameters have not been updated to reflect the changing dynamics. Consequently, this has led to an imbalance, with city centers, now densely populated with hotspots, garnering a larger share of PoC rewards. This disproportionate reward distribution is not conducive to expanding network coverage into rural areas, as it provides little incentive for deployers to install hotspots outside urban centers.
 
 The proposed adjustments to HIP17 seek to address this issue by recalibrating its parameters, thereby aiming to enhance the share of rural areas in the PoC reward pool and encouraging a more evenly distributed network growth.
 
@@ -41,14 +41,15 @@ The current [HIP17 parameters](https://github.com/helium/HIP/blob/main/0017-hex-
 
 To address these issues, we propose the following adjustments:
 
-* To reduce redundancy:
-    * Limit Res8 hexes (each covering only 0.78 sq km) to a single hotspot.
-    * Lower the hotspot limit, `max`, which is applied when more neighboring hexes become occupied.
-    * Increase the number of occupied neighboring hexes required to reach higher limits.
-* To avoid unnecessary scaling in large areas and reduce sharp discrepancies:
-    * Increase the limit for res-4.
+- To reduce redundancy:
+  - Limit Res8 hexes (each covering only 0.78 sq km) to a single hotspot.
+  - Lower the hotspot limit, `max`, which is applied when more neighboring hexes become occupied.
+  - Increase the number of occupied neighboring hexes required to reach higher limits.
+- To avoid unnecessary scaling in large areas and reduce sharp discrepancies:
+  - Increase the limit for res-4.
 
-Here are the current and proposed sets of parameters: 
+Here are the current and proposed sets of parameters:
+
 ```
           +---------------------------+----------------------------+
           |     As-is Parameters      |    Proposed Parameters     |
@@ -74,8 +75,9 @@ Here are the current and proposed sets of parameters:
 ### How to Evaluate the Performance
 
 To assess the effectiveness of the new parameter set compared to the existing ones, we've created a website that displays scales for different hex resolutions on a map. This tool allows users to observe changes in various cities and areas and understand the scaling of hexes and hotspots. The site is accessible at:
-* Existing parameter set: https://heliumgeek.com/maps/hip17.html?p=default
-* Proposed parameter set: https://heliumgeek.com/maps/hip17.html?p=t1
+
+- Existing parameter set: https://heliumgeek.com/maps/hip17.html?p=default
+- Proposed parameter set: https://heliumgeek.com/maps/hip17.html?p=t1
 
 The maps demonstrate that urban areas generally experience more significant scaling down, and the previously sharp edges at res-4 boundaries are less pronounced. Example images are included at the document's end to illustrate this effect.
 
@@ -103,7 +105,7 @@ The vertical axis indicates the number of Hexes with the corresponding value in 
     </div>
 </div>
 
-*PS: To estimate the reward distribution among hexes, we assume each active hotspot beacons regularly and is witnessed by an equal number of hotspots for simplification. This assumption allows us to propose that the sum of the transmit scales for hotspots within a hex is proportional to the reward units allocated to that hex.*
+_PS: To estimate the reward distribution among hexes, we assume each active hotspot beacons regularly and is witnessed by an equal number of hotspots for simplification. This assumption allows us to propose that the sum of the transmit scales for hotspots within a hex is proportional to the reward units allocated to that hex._
 
 ## Drawbacks
 
@@ -111,7 +113,7 @@ Adjusting HIP17 parameters will alter the reward distribution among hotspot owne
 
 ## Rationale and Alternatives
 
-The rationale for the proposed changes is detailed in earlier sections. 
+The rationale for the proposed changes is detailed in earlier sections.
 
 Alternatives include maintaining current parameters, which could exacerbate hotspot density imbalances, or introducing a new algorithm, potentially causing more disruption. We believe that refining the existing parameters is a more manageable, less disruptive solution, allowing for future modifications with greater ease.
 
@@ -416,4 +418,3 @@ The primary indicator of success for these changes is increased network coverage
         <p>Istanbul - proposed params</p>
     </div>
 </div>
-

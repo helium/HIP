@@ -131,7 +131,7 @@ Hotspots. Note there are 7 “neighbor” hexs (6 + reference hex in center).
 The density limit follows the following criteria:
 
 |                       |                                                      |
-|----------------------:|:-----------------------------------------------------|
+| --------------------: | :--------------------------------------------------- |
 |    **Occupied Count** | ![image n formula](files/0017/n_formula.PNG)         |
 | **Hex Density Limit** | ![image limit formula](files/0017/limit_formula.PNG) |
 |                       |
@@ -147,7 +147,7 @@ Density_max=4. The yellow / orange lines show the res7 hex boundaries to make it
 neighboring hexs do not have to belong to the same parent
 
 |                    Example 1                    |                    Example 2                    |                    Example 3                    |                    Example 4                    |
-|:-----------------------------------------------:|:-----------------------------------------------:|:-----------------------------------------------:|:-----------------------------------------------:|
+| :---------------------------------------------: | :---------------------------------------------: | :---------------------------------------------: | :---------------------------------------------: |
 | ![1 Hex occupied](files/0017/example_1_hex.svg) | ![1 Hex occupied](files/0017/example_2_hex.svg) | ![1 Hex occupied](files/0017/example_3_hex.svg) | ![1 Hex occupied](files/0017/example_7_hex.svg) |
 
 **Example 1**: there is one occupied hex that has 5 interactive Hotspots in it. Since this is the
@@ -206,11 +206,11 @@ average and orange to red being below average. The map has a lot of content and 
 speed so it may be laggy to view.
 
 |               Manhattan, NY                |            San Fransisco, CA             |
-|:------------------------------------------:|:----------------------------------------:|
+| :----------------------------------------: | :--------------------------------------: |
 | ![myc scaling](files/0017/nyc_scaling.png) | ![sf scaling](files/0017/sf_scaling.png) |
 
 |                    Modesto, CA                     |                    Austin, TX                    |
-|:--------------------------------------------------:|:------------------------------------------------:|
+| :------------------------------------------------: | :----------------------------------------------: |
 | ![modesto scaling](files/0017/modesto_scaling.png) | ![austin scaling](files/0017/austin_scaling.png) |
 
 ### How Transmit Reward Scaling is Used
@@ -242,7 +242,7 @@ each Hotspot transmits exactly once. Finally, the rewards earned are assumed to 
 simplified) reward distribution from beaconing above.
 
 | Topology                                    | Reward Distribution                        |
-|---------------------------------------------|--------------------------------------------|
+| ------------------------------------------- | ------------------------------------------ |
 | ![ex 1 topo](files/0017/example_topo_1.png) | ![ex 2 topo](files/0017/example_rew_1.png) |
 
 This is an over-simplification of real-word data, but we can see that although D-H have a transmit
@@ -257,7 +257,7 @@ Hotspots circled, assume transmissions can be heard by everyone in the set(s) th
 So for example D and E can witness all Hotspots but A can only witness C-E, not F or G.
 
 | Topology                                    | Reward Distribution                        |
-|---------------------------------------------|--------------------------------------------|
+| ------------------------------------------- | ------------------------------------------ |
 | ![ex 2 topo](files/0017/example_topo_2.png) | ![ex 2 topo](files/0017/example_rew_2.png) |
 
 Based on this example we can see D and E earn the most even though they have half the transmit
@@ -273,7 +273,7 @@ area. The table on the left below gives an estimate of the rewards when there is
 per hex and the table on the right when there are 20 Hotspots per hex.
 
 |                 1 Hotspot per Hex                 |               20 Hotspots per Hex                |
-|:-------------------------------------------------:|:------------------------------------------------:|
+| :-----------------------------------------------: | :----------------------------------------------: |
 | ![modesto scaling](files/0017/example_rew_3a.png) | ![austin scaling](files/0017/example_rew_3b.png) |
 
 We can see that although the per-hex earnings do go up with increased density, they only see a

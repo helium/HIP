@@ -121,7 +121,7 @@ The Mobile PoC Working Group has also agreed to initiate work on a Mapper subDAO
 
 #### Subscribers
 
-Subscribers will share detailed location information with their Service Providers, allowing them to define which hexes to boost. Service Providers voted to participate in Helium Mobile subDAO are required to keep exact subscriber mobile location data confidential. The specific confidentiality terms are subject to the service agreement between each particular service provider and the subscribers. 
+Subscribers will share detailed location information with their Service Providers, allowing them to define which hexes to boost. Service Providers voted to participate in Helium Mobile subDAO are required to keep exact subscriber mobile location data confidential. The specific confidentiality terms are subject to the service agreement between each particular service provider and the subscribers.
 
 Subscribers will share binary information about whether location sharing event has occurred and the timestamp of the event to the Mobile Oracle for reward eligibility determination. Service Providers will verify the information Subscribers share before it is sent to the Mobile Oracle to prevent gaming.
 
