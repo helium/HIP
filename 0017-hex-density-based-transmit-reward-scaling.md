@@ -5,14 +5,15 @@
 - Category: Technical
 - Original HIP PR: [#59](https://github.com/helium/HIP/pull/59)
 - Tracking Issue: [#60](https://github.com/helium/HIP/issues/60)
+- Approved Version: [57b11be](https://github.com/helium/HIP/blob/57b11be21f24f60e0592f27f295f10de3ae5b556/0017-hex-density-based-transmit-reward-scaling.md)
 
 # Summary
 
 This HIP suggests a change to PoC rewarding to better rewards areas of coverage. This is done by
-reducing the rewards earned by transmitting or witnessing Hotspots in close proximity to each other.
+reducing the rewards earned by transmitting or witnessing Hotspots in proximity to each other.
 
 Very little additional coverage is demonstrated by being able to witness multiple Hotspots that are
-co-located or in close proximity to each other. On the other hand, being able to witness many
+co-located or in proximity to each other. On the other hand, being able to witness many
 Hotspots that are in distinct locations demonstrates a Hotspot is providing a large area of
 coverage. This is in contrast to the current PoC reward structure, where transmitters and high
 density areas see a significant portion of PoC rewards.
@@ -28,7 +29,7 @@ For example, you could have 5 Hotspots in unique locations all >300m apart and a
 path. This is healthy, but someone could place multiple Hotspots at each of these locations and they
 will multiply their earnings.
 
-![image Initial Topology Example](./0017-hex-density-based-transmit-reward-scaling/initial_topo_example.svg)
+![image Initial Topology Example](files/0017/initial_topo_example.svg)
 
 The two topologies shown above cover an equal area with coverage. The topology on the right will
 have each hex targeted 20 times as often as the topology on the left and earn around 20 times the
@@ -42,20 +43,20 @@ Hotspots coming online and Hotspot-based reward targeting overly benefiting dens
 # Stakeholders
 
 All Hotspot owners or potential owners will be effected by this HIP as it affects the method by
-which earnings are calculated for all proof-of-coverage based rewards. Owners or Patreons who have
-setup Hotspots to optimize for the existing PoC method and reward structure may be especially
+which earnings are calculated for all proof-of-coverage based rewards. Owners or Patrons who have
+set up Hotspots to optimize for the existing PoC method and reward structure may be especially
 affected.
 
-Additionally the Helium development team will have considerable work implementing the proposed
+Additionally, the Helium development team will have considerable work implementing the proposed
 algorithms on the blockchain.
 
-Due to the nature of the change, its likely an app push notification, engineering blog post, and
+Due to the nature of the change, it's likely an app push notification, engineering blog post, and
 other social media outreach may be needed to ensure effected stakeholders are notified and can voice
 support or concerns.
 
 # Detailed Explanation
 
-The following subsctions describe the reward scaling methodology and implementation.
+The following subsections describe the reward scaling methodology and implementation.
 
 ## Definitions
 
@@ -90,7 +91,7 @@ variable.
 The goal of this algorithm is to limit density to a specific target while being flexible enough to
 reward areas that require density above this target. For example, nation capitals or other dense
 urban areas. It should also be flexible enough to recognize there are many areas that would require
-localized density to be best served (non-capital cities, college towns, tech centers, etc).
+localized density to be best served (non-capital cities, college towns, tech centers, etc.).
 
 A brief summary is that rewards for transmitting Hotspots and witnesses to transmitting Hotspots
 will be scaled up or down based on hex density (and all parent hex densities) relative to target. In
@@ -103,7 +104,7 @@ today.
 
 There are many conditions that can be placed on Hotspots before they are classified as
 “interactive”. As a minimum they need to have an assert_location transaction and must be able to
-transmit with valid witnesses (300m+ distance, valid metadata, etc).
+transmit with valid witnesses (300m+ distance, valid metadata, etc.).
 
 A Hotspot should lose the status of interactive if its transmissions no longer have valid
 witness(es). This can be a count of unwitnessed transmission or a period of blocks where the most
@@ -129,10 +130,10 @@ Hotspots. Note there are 7 “neighbor” hexs (6 + reference hex in center).
 
 The density limit follows the following criteria:
 
-|                       |                                                                                            |
-| --------------------: | :----------------------------------------------------------------------------------------- |
-|    **Occupied Count** | ![image n formula](./0017-hex-density-based-transmit-reward-scaling/n_formula.PNG)         |
-| **Hex Density Limit** | ![image limit formula](./0017-hex-density-based-transmit-reward-scaling/limit_formula.PNG) |
+|                       |                                                      |
+| --------------------: | :--------------------------------------------------- |
+|    **Occupied Count** | ![image n formula](files/0017/n_formula.PNG)         |
+| **Hex Density Limit** | ![image limit formula](files/0017/limit_formula.PNG) |
 |                       |
 
 Example thresholds for N=2, Density_tgt = 1
@@ -145,9 +146,9 @@ Example Topologies, assume we are looking at resolution 8 with chain variables: 
 Density_max=4. The yellow / orange lines show the res7 hex boundaries to make it clear these
 neighboring hexs do not have to belong to the same parent
 
-|                                       Example 1                                       |                                       Example 2                                       |                                       Example 3                                       |                                       Example 4                                       |
-| :-----------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------: |
-| ![1 Hex occupied](./0017-hex-density-based-transmit-reward-scaling/example_1_hex.svg) | ![1 Hex occupied](./0017-hex-density-based-transmit-reward-scaling/example_2_hex.svg) | ![1 Hex occupied](./0017-hex-density-based-transmit-reward-scaling/example_3_hex.svg) | ![1 Hex occupied](./0017-hex-density-based-transmit-reward-scaling/example_7_hex.svg) |
+|                    Example 1                    |                    Example 2                    |                    Example 3                    |                    Example 4                    |
+| :---------------------------------------------: | :---------------------------------------------: | :---------------------------------------------: | :---------------------------------------------: |
+| ![1 Hex occupied](files/0017/example_1_hex.svg) | ![1 Hex occupied](files/0017/example_2_hex.svg) | ![1 Hex occupied](files/0017/example_3_hex.svg) | ![1 Hex occupied](files/0017/example_7_hex.svg) |
 
 **Example 1**: there is one occupied hex that has 5 interactive Hotspots in it. Since this is the
 only occupied hex among its neighbors, its count is limited to **Density_tgt** which is 1.
@@ -169,7 +170,7 @@ by the consensus group once per epoch or at whatever rate deemed necessary. To d
 scaling for a given Hotspot, iterate through lower and lower resolution hexs taking a product of the
 clipped / unclipped density per the formula below.
 
-![hotspot scale formula](./0017-hex-density-based-transmit-reward-scaling/hotspot_scale.PNG)
+![hotspot scale formula](files/0017/hotspot_scale.PNG)
 
 Important note, HexDensity_Unclipped is the unclipped sum of clipped child hexs meaning you clip the
 children, sum them and set the unclipped hex density. An example of this operation for a specific
@@ -191,7 +192,7 @@ For this analysis I used the example values for chain variables (N=2, R=8, tgt=1
 The chart below shows violin plots of the transmit reward scaling for Hotspots in larger metro areas
 or those especially effected by this proposal.
 
-![hotspot violin](./0017-hex-density-based-transmit-reward-scaling/city_violin.png)
+![hotspot violin](files/0017/city_violin.png)
 
 Additionally, I mapped each interactive Hotspot and its reward scale as well as drawing all
 resolution 8 and resolution 9, and 10 occupied hexs to get more detail on how this targeting will
@@ -204,17 +205,17 @@ represent normalized probability with yellow being the average scale factor, gre
 average and orange to red being below average. The map has a lot of content and is not optimized for
 speed so it may be laggy to view.
 
-|                                  Manhattan, NY                                   |                               San Fransisco, CA                                |
-| :------------------------------------------------------------------------------: | :----------------------------------------------------------------------------: |
-| ![myc scaling](./0017-hex-density-based-transmit-reward-scaling/nyc_scaling.png) | ![sf scaling](./0017-hex-density-based-transmit-reward-scaling/sf_scaling.png) |
+|               Manhattan, NY                |            San Fransisco, CA             |
+| :----------------------------------------: | :--------------------------------------: |
+| ![myc scaling](files/0017/nyc_scaling.png) | ![sf scaling](files/0017/sf_scaling.png) |
 
-|                                       Modesto, CA                                        |                                       Austin, TX                                       |
-| :--------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: |
-| ![modesto scaling](./0017-hex-density-based-transmit-reward-scaling/modesto_scaling.png) | ![austin scaling](./0017-hex-density-based-transmit-reward-scaling/austin_scaling.png) |
+|                    Modesto, CA                     |                    Austin, TX                    |
+| :------------------------------------------------: | :----------------------------------------------: |
+| ![modesto scaling](files/0017/modesto_scaling.png) | ![austin scaling](files/0017/austin_scaling.png) |
 
 ### How Transmit Reward Scaling is Used
 
-Its very important to understand that this is not a reward scaling for ALL rewards a Hotspot will
+It's very important to understand that this is not a reward scaling for ALL rewards a Hotspot will
 receive, it is scaling for a specific transmission and it effects the witnesses and transmitter.
 Hotspots with low transmit reward scaling can still be very high earners if they can witness
 Hotspots with high transmit reward scaling. This will work best when implemented in conjunction with
@@ -227,7 +228,7 @@ then scaled by its own transmit reward scale. For witnesses, they will receive a
 based on the number of witnesses scaled by the transmitter’s reward scale. To better describe the
 relationship two example distributions are shown below:
 
-**_IMPORTANT_**: These examples use a slightly outdated methodoogy of scaling that looked at
+**_IMPORTANT_**: These examples use a slightly outdated methodology of scaling that looked at
 siblings (hexs with the same parent) instead of neighbors (hexs sharing an edge). The overall
 principle of how transmit scaling effects rewards is the same but the implementation will have
 slightly different scalings for these topologies
@@ -240,9 +241,9 @@ assume all Hotspots can witness all others. Since Hotspots are targeted uniforml
 each Hotspot transmits exactly once. Finally, the rewards earned are assumed to be a (slightly
 simplified) reward distribution from beaconing above.
 
-| Topology                                                                          | Reward Distribution                                                              |
-| --------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| ![ex 1 topo](./0017-hex-density-based-transmit-reward-scaling/example_topo_1.png) | ![ex 2 topo](./0017-hex-density-based-transmit-reward-scaling/example_rew_1.png) |
+| Topology                                    | Reward Distribution                        |
+| ------------------------------------------- | ------------------------------------------ |
+| ![ex 1 topo](files/0017/example_topo_1.png) | ![ex 2 topo](files/0017/example_rew_1.png) |
 
 This is an over-simplification of real-word data, but we can see that although D-H have a transmit
 reward scale of less than ¼ those of A, B, C they only see a 20% reduction in earnings compared to
@@ -255,9 +256,9 @@ Here we look at a slightly more complex topology. Same beaconing reward method. 
 Hotspots circled, assume transmissions can be heard by everyone in the set(s) the hotpot belongs to.
 So for example D and E can witness all Hotspots but A can only witness C-E, not F or G.
 
-| Topology                                                                          | Reward Distribution                                                              |
-| --------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| ![ex 2 topo](./0017-hex-density-based-transmit-reward-scaling/example_topo_2.png) | ![ex 2 topo](./0017-hex-density-based-transmit-reward-scaling/example_rew_2.png) |
+| Topology                                    | Reward Distribution                        |
+| ------------------------------------------- | ------------------------------------------ |
+| ![ex 2 topo](files/0017/example_topo_2.png) | ![ex 2 topo](files/0017/example_rew_2.png) |
 
 Based on this example we can see D and E earn the most even though they have half the transmit
 reward scaling factor as F and G. A earns the least but it can only witness Hotspots with low reward
@@ -271,9 +272,9 @@ as well as that same area with 20 times the number of Hotspots all covering the 
 area. The table on the left below gives an estimate of the rewards when there is only one Hotspot
 per hex and the table on the right when there are 20 Hotspots per hex.
 
-|                                    1 Hotspot per Hex                                    |                                  20 Hotspots per Hex                                   |
-| :-------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: |
-| ![modesto scaling](./0017-hex-density-based-transmit-reward-scaling/example_rew_3a.png) | ![austin scaling](./0017-hex-density-based-transmit-reward-scaling/example_rew_3b.png) |
+|                 1 Hotspot per Hex                 |               20 Hotspots per Hex                |
+| :-----------------------------------------------: | :----------------------------------------------: |
+| ![modesto scaling](files/0017/example_rew_3a.png) | ![austin scaling](files/0017/example_rew_3b.png) |
 
 We can see that although the per-hex earnings do go up with increased density, they only see a
 35-65% increase vs 2,000% increase with existing PoC or a PoC reward structure that does not take
@@ -287,7 +288,7 @@ area) as possible, especially hex’s without a large amount of coverage already
 
 # Drawbacks
 
-This proposal will drastically effect earnings across the board as it is a significant change to how
+This proposal will drastically affect earnings across the board as it is a significant change to how
 earnings are calculated and distributed. There wil be many Hotspots in dense areas that will see
 significantly reduced earnings.
 
@@ -295,7 +296,7 @@ This method also does not consider first movers to an area who are penalized for
 as much as newcomers. I think this is appropriate as from the device perspective, all coverage is
 equal. Additionally, if a new Hotspot can be deployed in a more optimal location that makes many
 existing Hotspots redundant, what is healthiest for the network is if the old Hotspots move to more
-ideal locations, not to discourage placement of hoptsots that offer better coverage than existing
+ideal locations, not to discourage placement of hotspots that offer better coverage than existing
 deployments.
 
 This proposal is also a considerable development effort requiring a change in reward calculation,
@@ -343,9 +344,9 @@ keys under `res_vars` are the hex resolutions:
 Tuning of these variables allows a lot of flexibility in how rewards are distributed and periodic
 updates may be required.
 
-This proposal does not directly effect gaming and methods for discouraging Hotspots to lie about
+This proposal does not directly affect gaming and methods for discouraging Hotspots to lie about
 their location or the coverage they provided is needed to supplement this proposal which is meant to
-encourage healthy growth of the nework by honest Hotspots. By penalizing density, this proposal
+encourage healthy growth of the network by honest Hotspots. By penalizing density, this proposal
 encourages Hotspots to spread out which may make some anti-gaming methods more affective.
 
 # Deployment Impact
@@ -353,11 +354,11 @@ encourages Hotspots to spread out which may make some anti-gaming methods more a
 This method will need to be deployed along with or soon after Beaconing. It assumes an existing
 reward structure that biases PoC rewards towards receivers vs transmitters. One such method is
 described in [HIP-15](https://github.com/helium/HIP/blob/master/0015-beaconing-rewards.md). This
-deployment will effect all Hotspot owners. Current Hotspot owners will likely see a significant
+deployment will affect all Hotspot owners. Current Hotspot owners will likely see a significant
 change in earnings (either up or down) based on the new reward methodology. It will also require
 significant documentation update on how proof-of-coverage is performed and rewarded.
 
 # Success Metrics
 
 Success will be determined if rewards encourage breadth and depth of coverage resulting a faster
-buildout of a ubuiquitous, redundant and reliable network.
+buildout of a ubiquitous, redundant and reliable network.

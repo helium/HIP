@@ -49,7 +49,7 @@ Network Subscribers: More coverage will be available to new and existing users o
 - Once a Service Provider burns MOBILE into a hex, it remains “boosted” indefinitely until some coverage is created in the hex location.
 - Creation of coverage will be considered to have been confirmed when at least three unique phones with discovery mapping enabled have successfully connected and passed at least 1MB of data at the location of coverage (as evidenced by the Mobile Oracle).
 - We propose the price for boosting one res12 hex for one month by 1x be initially set at $.005. This would roughly mean that boosting an area covered by a 436h (assuming it covers 500 res12 hexes) for six months to a 10x multiplier would cost $150.
-**- The above number can be adjusted by the subDAO community vote down the line.**
+  **- The above number can be adjusted by the subDAO community vote down the line.**
 
 ## Drawbacks
 

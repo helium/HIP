@@ -10,7 +10,7 @@
 
 As Proof-of-Coverage continues to be improved, the community has proposed several improvements to
 continue to incentivize wide rollout of new Helium Hotspot coverage while addressing over-rewarding
-due to density and or arbitrage. One effective way to address over-rewarding is create soft limits
+due to density and or arbitrage. One effective way to address over-rewarding is to create soft limits
 on witness earnings through decaying witness reward units.
 
 ## Stakeholders
@@ -18,7 +18,7 @@ on witness earnings through decaying witness reward units.
 All Hotspot owners are affected by this proposal. Specifically, those with extremely high witness
 rates per epoch would be most affected and rewards would be more evenly distributed to other
 Hotspots that are witnessing within those epochs. Other network participants (Validators, Routers,
-etc) are not affected.
+etc.) are not affected.
 
 ### Detailed Explanation
 
@@ -51,7 +51,7 @@ following.
 1
 ```
 
-At `20` witness events, the Hotspot would only be elgible for `12.66` reward units (assuming no
+At `20` witness events, the Hotspot would only be eligible for `12.66` reward units (assuming no
 other scaling) but at `5` witness events, the Hotspot would be eligible for almost the full amount
 of reward units (`4.92`). No decay occurs up to 4 events.
 
@@ -60,8 +60,8 @@ witnesses and this would incentivize the remainder of the network to grow and ex
 This is based on analysis of all witness receipts between blocks 1032738 and 1040915.
 [data](https://gist.github.com/abhay/8b75824c3b7cc27009f2a76f56fa9bc1)
 
-![population-graph](0044-witness-decay/population-graph.png)
-![focused-population-graph](0044-witness-decay/focused-population-graph.png)
+![population-graph](files/0044/population-graph.png)
+![focused-population-graph](files/0044/focused-population-graph.png)
 
 The fortunate coincidence about this feature is that it's already built and is just two chain
 variable away from being activated. We are able to enable it at the same time as PoCv11 is activated

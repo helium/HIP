@@ -14,7 +14,7 @@ This proposal aims to modify the IOT LoRaWAN Networks HIP17's hex density-based 
 
 ## Motivation
 
-The motivation for revising HIP17 stems from the evolving landscape of the Helium network, particularly the rapid growth in the number of hotspots, especially in urban areas. When [HIP17 was initially implemented](https://docs.helium.com/devblog/2020/12/09/blockchain-release-hip-17/), its parameters were designed to scale down IOT Proof of Coverage (PoC) rewards with increasing hotspot density, allowing a certain level of redundant coverage. However, as the network has expanded over the years, these parameters have not been updated to reflect the changing dynamics. Consequently, this has led to an imbalance, with city centers, now densely populated with hotspots, garnering a larger share of PoC rewards. This disproportionate reward distribution is not conducive to expanding network coverage into rural areas, as it provides little incentive for deployers to install hotspots outside urban centers. 
+The motivation for revising HIP17 stems from the evolving landscape of the Helium network, particularly the rapid growth in the number of hotspots, especially in urban areas. When [HIP17 was initially implemented](https://docs.helium.com/devblog/2020/12/09/blockchain-release-hip-17/), its parameters were designed to scale down IOT Proof of Coverage (PoC) rewards with increasing hotspot density, allowing a certain level of redundant coverage. However, as the network has expanded over the years, these parameters have not been updated to reflect the changing dynamics. Consequently, this has led to an imbalance, with city centers, now densely populated with hotspots, garnering a larger share of PoC rewards. This disproportionate reward distribution is not conducive to expanding network coverage into rural areas, as it provides little incentive for deployers to install hotspots outside urban centers.
 
 The proposed adjustments to HIP17 seek to address this issue by recalibrating its parameters, thereby aiming to enhance the share of rural areas in the PoC reward pool and encouraging a more evenly distributed network growth.
 
@@ -37,18 +37,19 @@ The current [HIP17 parameters](https://github.com/helium/HIP/blob/main/0017-hex-
 1. Excessive redundancy in urban areas is allowed.
 2. There is overly sharp scaling at lower-resolution hexes, such as res-4, leading to pronounced changes at res-4 boundaries. This can result in significantly different transmit scales for adjacent res-8 hexes, as depicted in the provided image.
 
-![Image - SF - Impact of res-4 boundary](./0104-finetune-hip17-parameters-to-tackle-density/sf-res4-boundary.jpg)
+![Image - SF - Impact of res-4 boundary](files/0104/sf-res4-boundary.jpg)
 
 To address these issues, we propose the following adjustments:
 
-* To reduce redundancy:
-    * Limit Res8 hexes (each covering only 0.78 sqkm) to a single hotspot.
-    * Lower the hotspot limit, `max`, which is applied when more neighboring hexes become occupied.
-    * Increase the number of occupied neighboring hexes required to reach higher limits.
-* To avoid unnecessary scaling in large areas and reduce sharp discrepancies:
-    * Increase the limit for res-4.
+- To reduce redundancy:
+  - Limit Res8 hexes (each covering only 0.78 sq km) to a single hotspot.
+  - Lower the hotspot limit, `max`, which is applied when more neighboring hexes become occupied.
+  - Increase the number of occupied neighboring hexes required to reach higher limits.
+- To avoid unnecessary scaling in large areas and reduce sharp discrepancies:
+  - Increase the limit for res-4.
 
-Here are the current and proposed sets of parameters: 
+Here are the current and proposed sets of parameters:
+
 ```
           +---------------------------+----------------------------+
           |     As-is Parameters      |    Proposed Parameters     |
@@ -74,8 +75,9 @@ Here are the current and proposed sets of parameters:
 ### How to Evaluate the Performance
 
 To assess the effectiveness of the new parameter set compared to the existing ones, we've created a website that displays scales for different hex resolutions on a map. This tool allows users to observe changes in various cities and areas and understand the scaling of hexes and hotspots. The site is accessible at:
-* Existing parameter set: https://heliumgeek.com/maps/hip17.html?p=default
-* Proposed parameter set: https://heliumgeek.com/maps/hip17.html?p=t1
+
+- Existing parameter set: https://heliumgeek.com/maps/hip17.html?p=default
+- Proposed parameter set: https://heliumgeek.com/maps/hip17.html?p=t1
 
 The maps demonstrate that urban areas generally experience more significant scaling down, and the previously sharp edges at res-4 boundaries are less pronounced. Example images are included at the document's end to illustrate this effect.
 
@@ -85,25 +87,25 @@ The vertical axis indicates the number of Hexes with the corresponding value in 
 
 <div style="display: flex; flex-direction: row;">
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/Histogram_of_Res4_Hex_Reward_Units_as-is.png" alt="Histogram of Res4 Hex Reward Units as-is" />
+        <img src="files/0104/Histogram_of_Res4_Hex_Reward_Units_as-is.png" alt="Histogram of Res4 Hex Reward Units as-is" />
     </div>
     <div style="width: 10px;"></div> 
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/Histogram_of_Res4_Hex_Reward_Units_test1.png" alt="Histogram of Res4 Hex Reward Units proposed" />
+        <img src="files/0104/Histogram_of_Res4_Hex_Reward_Units_test1.png" alt="Histogram of Res4 Hex Reward Units proposed" />
     </div>
 </div>
 
 <div style="display: flex; flex-direction: row;">
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/Histogram_of_Res5_Hex_Reward_Units_as-is.png" alt="Histogram of Res5 Hex Reward Units as-is" />
+        <img src="files/0104/Histogram_of_Res5_Hex_Reward_Units_as-is.png" alt="Histogram of Res5 Hex Reward Units as-is" />
     </div>
     <div style="width: 10px;"></div> 
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/Histogram_of_Res5_Hex_Reward_Units_test1.png" alt="Histogram of Res5 Hex Reward Units proposed" />
+        <img src="files/0104/Histogram_of_Res5_Hex_Reward_Units_test1.png" alt="Histogram of Res5 Hex Reward Units proposed" />
     </div>
 </div>
 
-*PS: To estimate the reward distribution among hexes, we assume each active hotspot beacons regularly and is witnessed by an equal number of hotspots for simplification. This assumption allows us to propose that the sum of the transmit scales for hotspots within a hex is proportional to the reward units allocated to that hex.*
+_PS: To estimate the reward distribution among hexes, we assume each active hotspot beacons regularly and is witnessed by an equal number of hotspots for simplification. This assumption allows us to propose that the sum of the transmit scales for hotspots within a hex is proportional to the reward units allocated to that hex._
 
 ## Drawbacks
 
@@ -111,7 +113,7 @@ Adjusting HIP17 parameters will alter the reward distribution among hotspot owne
 
 ## Rationale and Alternatives
 
-The rationale for the proposed changes is detailed in earlier sections. 
+The rationale for the proposed changes is detailed in earlier sections.
 
 Alternatives include maintaining current parameters, which could exacerbate hotspot density imbalances, or introducing a new algorithm, potentially causing more disruption. We believe that refining the existing parameters is a more manageable, less disruptive solution, allowing for future modifications with greater ease.
 
@@ -131,289 +133,288 @@ The primary indicator of success for these changes is increased network coverage
 
 <div style="display: flex; flex-direction: row;">
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/nyc-default.png" alt="NYC - existing parms" />
-        <p>NYC - existing parms</p>
+        <img src="files/0104/nyc-default.png" alt="NYC - existing params" />
+        <p>NYC - existing params</p>
     </div>
     <div style="width: 10px;"></div> 
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/nyc-t1.png" alt="NYC - proposed parms" />
-        <p>NYC - proposed parms</p>
+        <img src="files/0104/nyc-t1.png" alt="NYC - proposed params" />
+        <p>NYC - proposed params</p>
     </div>
 </div>
 
 <div style="display: flex; flex-direction: row;">
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/sf-default.png" alt="SF - existing parms" />
-        <p>SF - existing parms</p>
+        <img src="files/0104/sf-default.png" alt="SF - existing params" />
+        <p>SF - existing params</p>
     </div>
     <div style="width: 10px;"></div> 
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/sf-t1.png" alt="SF - proposed parms" />
-        <p>SF - proposed parms</p>
+        <img src="files/0104/sf-t1.png" alt="SF - proposed params" />
+        <p>SF - proposed params</p>
     </div>
 </div>
 
 <div style="display: flex; flex-direction: row;">
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/la-default.png" alt="LA - existing parms" />
-        <p>LA - existing parms</p>
+        <img src="files/0104/la-default.png" alt="LA - existing params" />
+        <p>LA - existing params</p>
     </div>
     <div style="width: 10px;"></div> 
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/la-t1.png" alt="LA - proposed parms" />
-        <p>LA - proposed parms</p>
+        <img src="files/0104/la-t1.png" alt="LA - proposed params" />
+        <p>LA - proposed params</p>
     </div>
 </div>
 
 <div style="display: flex; flex-direction: row;">
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/washington-default.png" alt="Washington - existing parms" />
-        <p>Washington - existing parms</p>
+        <img src="files/0104/washington-default.png" alt="Washington - existing params" />
+        <p>Washington - existing params</p>
     </div>
     <div style="width: 10px;"></div> 
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/washington-t1.png" alt="Washington - proposed parms" />
-        <p>Washington - proposed parms</p>
+        <img src="files/0104/washington-t1.png" alt="Washington - proposed params" />
+        <p>Washington - proposed params</p>
     </div>
 </div>
 
 <div style="display: flex; flex-direction: row;">
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/philedelphia-default.png" alt="Philedelphia - existing parms" />
-        <p>Philedelphia - existing parms</p>
+        <img src="files/0104/philadelphia-default.png" alt="Philadelphia - existing params" />
+        <p>Philadelphia - existing params</p>
     </div>
     <div style="width: 10px;"></div> 
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/philedelphia-t1.png" alt="Philedelphia - proposed parms" />
-        <p>Philedelphia - proposed parms</p>
+        <img src="files/0104/philadelphia-t1.png" alt="Philadelphia - proposed params" />
+        <p>Philadelphia - proposed params</p>
     </div>
 </div>
 
 <div style="display: flex; flex-direction: row;">
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/chicago-default.png" alt="Chicago - existing parms" />
-        <p>Chicago - existing parms</p>
+        <img src="files/0104/chicago-default.png" alt="Chicago - existing params" />
+        <p>Chicago - existing params</p>
     </div>
     <div style="width: 10px;"></div> 
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/chicago-t1.png" alt="Chicago - proposed parms" />
-        <p>Chicago - proposed parms</p>
+        <img src="files/0104/chicago-t1.png" alt="Chicago - proposed params" />
+        <p>Chicago - proposed params</p>
     </div>
 </div>
 
 <div style="display: flex; flex-direction: row;">
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/orlando-default.png" alt="Orlando - existing parms" />
-        <p>Orlando - existing parms</p>
+        <img src="files/0104/orlando-default.png" alt="Orlando - existing params" />
+        <p>Orlando - existing params</p>
     </div>
     <div style="width: 10px;"></div> 
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/orlando-t1.png" alt="Orlando - proposed parms" />
-        <p>Orlando - proposed parms</p>
+        <img src="files/0104/orlando-t1.png" alt="Orlando - proposed params" />
+        <p>Orlando - proposed params</p>
     </div>
 </div>
 
 <div style="display: flex; flex-direction: row;">
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/colorado-default.png" alt="Colorado - existing parms" />
-        <p>Colorado - existing parms</p>
+        <img src="files/0104/colorado-default.png" alt="Colorado - existing params" />
+        <p>Colorado - existing params</p>
     </div>
     <div style="width: 10px;"></div> 
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/colorado-t1.png" alt="Colorado - proposed parms" />
-        <p>Colorado - proposed parms</p>
+        <img src="files/0104/colorado-t1.png" alt="Colorado - proposed params" />
+        <p>Colorado - proposed params</p>
     </div>
 </div>
 
 <div style="display: flex; flex-direction: row;">
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/dallas-default.png" alt="Dallas - existing parms" />
-        <p>Dallas - existing parms</p>
+        <img src="files/0104/dallas-default.png" alt="Dallas - existing params" />
+        <p>Dallas - existing params</p>
     </div>
     <div style="width: 10px;"></div> 
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/dallas-t1.png" alt="Dallas - proposed parms" />
-        <p>Dallas - proposed parms</p>
+        <img src="files/0104/dallas-t1.png" alt="Dallas - proposed params" />
+        <p>Dallas - proposed params</p>
     </div>
 </div>
 
 <div style="display: flex; flex-direction: row;">
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/./sanantonio-default.png" alt="San Antonio - existing parms" />
-        <p>San Antonio - existing parms</p>
+        <img src="files/0104/san-antonio-default.png" alt="San Antonio - existing params" />
+        <p>San Antonio - existing params</p>
     </div>
     <div style="width: 10px;"></div>
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/./sanantonio-t1.png" alt="San Antonio - proposed parms" />
-        <p>San Antonio - proposed parms</p>
+        <img src="files/0104/san-antonio-t1.png" alt="San Antonio - proposed params" />
+        <p>San Antonio - proposed params</p>
     </div>
 </div>
 
 <div style="display: flex; flex-direction: row;">
     <div style="flex: 1; text-align: center; margin: 0 auto;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/./portland-default.png" alt="Portland - existing parms" />
-        <p>Portland - existing parms</p>
+        <img src="files/0104/./portland-default.png" alt="Portland - existing params" />
+        <p>Portland - existing params</p>
     </div>
     <div style="width: 10px;"></div>
     <div style="flex: 1; text-align: center; margin: 0 auto;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/./portland-t1.png" alt="Portland - proposed parms" />
-        <p>Portland - proposed parms</p>
+        <img src="files/0104/./portland-t1.png" alt="Portland - proposed params" />
+        <p>Portland - proposed params</p>
     </div>
 </div>
 
 <div style="display: flex; flex-direction: row; margin: 0 auto;">
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/./seattle-default.png" alt="Seattle - existing parms" />
-        <p>Seattle - existing parms</p>
+        <img src="files/0104/./seattle-default.png" alt="Seattle - existing params" />
+        <p>Seattle - existing params</p>
     </div>
     <div style="width: 10px;"></div>
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/./seattle-t1.png" alt="Seattle - proposed parms" />
-        <p>Seattle - proposed parms</p>
+        <img src="files/0104/./seattle-t1.png" alt="Seattle - proposed params" />
+        <p>Seattle - proposed params</p>
     </div>
 </div>
 
 <div style="display: flex; flex-direction: row; margin: 0 auto;">
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/./toronto-default.png" alt="Toronto - existing parms" />
-        <p>Toronto - existing parms</p>
+        <img src="files/0104/./toronto-default.png" alt="Toronto - existing params" />
+        <p>Toronto - existing params</p>
     </div>
     <div style="width: 10px;"></div>
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/./toronto-t1.png" alt="Toronto - proposed parms" />
-        <p>Toronto - proposed parms</p>
+        <img src="files/0104/./toronto-t1.png" alt="Toronto - proposed params" />
+        <p>Toronto - proposed params</p>
     </div>
 </div>
 
 <div style="display: flex; flex-direction: row; margin: 0 auto;">
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/./london-default.png" alt="London - existing parms" />
-        <p>London - existing parms</p>
+        <img src="files/0104/./london-default.png" alt="London - existing params" />
+        <p>London - existing params</p>
     </div>
     <div style="width: 10px;"></div>
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/./london-t1.png" alt="London - proposed parms" />
-        <p>London - proposed parms</p>
+        <img src="files/0104/./london-t1.png" alt="London - proposed params" />
+        <p>London - proposed params</p>
     </div>
 </div>
 
 <div style="display: flex; flex-direction: row; margin: 0 auto;">
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/./paris-default.png" alt="Paris - existing parms" />
-        <p>Paris - existing parms</p>
+        <img src="files/0104/./paris-default.png" alt="Paris - existing params" />
+        <p>Paris - existing params</p>
     </div>
     <div style="width: 10px;"></div>
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/./paris-t1.png" alt="Paris - proposed parms" />
-        <p>Paris - proposed parms</p>
+        <img src="files/0104/./paris-t1.png" alt="Paris - proposed params" />
+        <p>Paris - proposed params</p>
     </div>
 </div>
 
 <div style="display: flex; flex-direction: row; margin: 0 auto;">
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/./vienna-default.png" alt="Vienna - existing parms" />
-        <p>Vienna - existing parms</p>
+        <img src="files/0104/./vienna-default.png" alt="Vienna - existing params" />
+        <p>Vienna - existing params</p>
     </div>
     <div style="width: 10px;"></div>
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/./vienna-t1.png" alt="Vienna - proposed parms" />
-        <p>Vienna - proposed parms</p>
+        <img src="files/0104/./vienna-t1.png" alt="Vienna - proposed params" />
+        <p>Vienna - proposed params</p>
     </div>
 </div>
 
 <div style="display: flex; flex-direction: row; margin: 0 auto;">
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/./budapest-default.png" alt="Budapest - existing parms" />
-        <p>Budapest - existing parms</p>
+        <img src="files/0104/./budapest-default.png" alt="Budapest - existing params" />
+        <p>Budapest - existing params</p>
     </div>
     <div style="width: 10px;"></div>
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/./budapest-t1.png" alt="Budapest - proposed parms" />
-        <p>Budapest - proposed parms</p>
+        <img src="files/0104/./budapest-t1.png" alt="Budapest - proposed params" />
+        <p>Budapest - proposed params</p>
     </div>
 </div>
 
 <div style="display: flex; flex-direction: row; margin: 0 auto;">
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/./berlin-default.png" alt="Berlin - existing parms" />
-        <p>Berlin - existing parms</p>
+        <img src="files/0104/./berlin-default.png" alt="Berlin - existing params" />
+        <p>Berlin - existing params</p>
     </div>
     <div style="width: 10px;"></div>
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/./berlin-t1.png" alt="Berlin - proposed parms" />
-        <p>Berlin - proposed parms</p>
+        <img src="files/0104/./berlin-t1.png" alt="Berlin - proposed params" />
+        <p>Berlin - proposed params</p>
     </div>
 </div>
 
 <div style="display: flex; flex-direction: row; margin: 0 auto;">
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/./rotterdam-default.png" alt="Rotterdam - existing parms" />
-        <p>Rotterdam - existing parms</p>
+        <img src="files/0104/./rotterdam-default.png" alt="Rotterdam - existing params" />
+        <p>Rotterdam - existing params</p>
     </div>
     <div style="width: 10px;"></div>
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/./rotterdam-t1.png" alt="Rotterdam - proposed parms" />
-        <p>Rotterdam - proposed parms</p>
+        <img src="files/0104/./rotterdam-t1.png" alt="Rotterdam - proposed params" />
+        <p>Rotterdam - proposed params</p>
     </div>
 </div>
 
 <div style="display: flex; flex-direction: row; margin: 0 auto;">
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/./bercelona-default.png" alt="Barcelona - existing parms" />
-        <p>Barcelona - existing parms</p>
+        <img src="files/0104/barcelona-default.png" alt="Barcelona - existing params" />
+        <p>Barcelona - existing params</p>
     </div>
     <div style="width: 10px;"></div>
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/./bercelona-t1.png" alt="Barcelona - proposed parms" />
-        <p>Barcelona - proposed parms</p>
+        <img src="files/0104/barcelona-t1.png" alt="Barcelona - proposed params" />
+        <p>Barcelona - proposed params</p>
     </div>
 </div>
 
 <div style="display: flex; flex-direction: row; margin: 0 auto;">
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/./rome-default.png" alt="Rome - existing parms" />
-        <p>Rome - existing parms</p>
+        <img src="files/0104/./rome-default.png" alt="Rome - existing params" />
+        <p>Rome - existing params</p>
     </div>
     <div style="width: 10px;"></div>
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/./rome-t1.png" alt="Rome - proposed parms" />
-        <p>Rome - proposed parms</p>
+        <img src="files/0104/./rome-t1.png" alt="Rome - proposed params" />
+        <p>Rome - proposed params</p>
     </div>
 </div>
 
 <div style="display: flex; flex-direction: row; margin: 0 auto;">
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/./madrid-default.png" alt="Madrid - existing parms" />
-        <p>Madrid - existing parms</p>
+        <img src="files/0104/./madrid-default.png" alt="Madrid - existing params" />
+        <p>Madrid - existing params</p>
     </div>
     <div style="width: 10px;"></div>
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/./madrid-t1.png" alt="Madrid - proposed parms" />
-        <p>Madrid - proposed parms</p>
+        <img src="files/0104/./madrid-t1.png" alt="Madrid - proposed params" />
+        <p>Madrid - proposed params</p>
     </div>
 </div>
 
 <div style="display: flex; flex-direction: row; margin: 0 auto;">
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/./lisbon-default.png" alt="Lisbon - existing parms" />
-        <p>Lisbon - existing parms</p>
+        <img src="files/0104/./lisbon-default.png" alt="Lisbon - existing params" />
+        <p>Lisbon - existing params</p>
     </div>
     <div style="width: 10px;"></div>
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/./lisbon-t1.png" alt="Lisbon - proposed parms" />
-        <p>Lisbon - proposed parms</p>
+        <img src="files/0104/./lisbon-t1.png" alt="Lisbon - proposed params" />
+        <p>Lisbon - proposed params</p>
     </div>
 </div>
 
 <div style="display: flex; flex-direction: row; margin: 0 auto;">
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/./istanbul-default.png" alt="Istanbul - existing parms" />
-        <p>Istanbul - existing parms</p>
+        <img src="files/0104/./istanbul-default.png" alt="Istanbul - existing params" />
+        <p>Istanbul - existing params</p>
     </div>
     <div style="width: 10px;"></div>
     <div style="flex: 1; text-align: center;">
-        <img src="0104-finetune-hip17-parameters-to-tackle-density/./istanbul-t1.png" alt="Istanbul - proposed parms" />
-        <p>Istanbul - proposed parms</p>
+        <img src="files/0104/./istanbul-t1.png" alt="Istanbul - proposed params" />
+        <p>Istanbul - proposed params</p>
     </div>
 </div>
-

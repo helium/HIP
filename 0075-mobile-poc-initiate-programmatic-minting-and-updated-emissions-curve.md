@@ -141,7 +141,7 @@ development when the MOBILE POC algorithm is more mature.
 <b>* 50B pre-mine</b>
 
 Full emissions schedule of HIP53 and HIP75 can be downloaded
-[here](./0075-mobile-poc-programmatic-minting/mobile-emissions-schedule-HIP53-vs-HIP75.pdf).
+[here](files/0075/mobile-emissions-schedule-HIP53-vs-HIP75.pdf).
 
 The economic part of this HIP changes when MOBILE tokens come into existence, and the max supply of
 250B MOBILE that was specified in the HIP53. With new schedule the max supply of tokens will be 200B

@@ -23,7 +23,7 @@ This proposal excludes data-only hotspots as their owners can already onboard us
 
 ## Motivation
 
-Over the last year, as the number of manufacturers has increased, so have the number of hotspots in the market. Some manufacturers find that they are no longer able to stay in business due to financial issues, and others are removed from the network for non-compliance. When a manufacturer exits the network, they may leave sold hotspots in the hands of customers who are then unable to onboard the hotspots to the network and/or assert the hotspot’s location. 
+Over the last year, as the number of manufacturers has increased, so have the number of hotspots in the market. Some manufacturers find that they are no longer able to stay in business due to financial issues, and others are removed from the network for non-compliance. When a manufacturer exits the network, they may leave sold hotspots in the hands of customers who are then unable to onboard the hotspots to the network and/or assert the hotspot’s location.
 
 The IOT location assertion and onboarding fee (Currently total $45 paid in DC) and MOBILE location assertion and onboarding fee (Currently total $50 paid in DC) in most cases have already been paid by the hotspot owner as part of the cost of purchasing the hotspot. Currently, when a manufacturer leaves the network, if these fees haven't been paid the hotspot owner is required to pay these fees if the maker account lacks funding for these fees.
 
@@ -52,6 +52,7 @@ Currently, if a maker leaves the network (for whatever reason) and subsequently 
 However, onboarding/ assertion fees can be deducted from the hotspot owner’s wallet instead of the maker wallet. This could use the same mechanism by which data only Hotspots are onboarded and the Helium Wallet App can assert IOT or MOBILE locations paying from the owner's wallet not the maker wallet.
 
 **Currently the onboarding process looks like this:**
+
 - Maker uploads records containing many Hotspots and info about them.
 - These records tie the Hotspots to the specific maker
 - User purchases Hotspot
@@ -61,10 +62,12 @@ However, onboarding/ assertion fees can be deducted from the hotspot owner’s w
 - User onboards Hotspot by paying the Onboarding Fee(s). Currently the maker pays the DC fees to onboard. This could be changed to the initiating wallet for makers that have exited.
 
 **Assumptions:**
+
 - We trust the hotspots that are in the database for the hotspot manufacturer (if we don't, such as in the case of Deeper, there are already mechanisms to deal with this - such as Denylist and suspending the maker)
 - That the manufacturer and not a bad actor actually added those hotspots to the database (again, this is probably outside the scope of this HIP)
 
 **This HIP proposes to solve this issue by some fairly minor changes to the current process:**
+
 - currently, if a maker leaves the ecosystem (such as Pycom, Syncrobit, Controllino have) the Helium Foundation may suspend their maker key or stop them from adding more records to the onboarding server. As part of this process, a flag should be added to the onboarding server marking this maker as defunct. When that flag is flipped, the transaction that is returned for onboarding has the hotspot owner as the payer
 - when onboarding, the Helium SDK / wallet app / maker apps can then look at this flag, and if a maker is found to be defunct/suspended/inactive and additionally has 0 onboarding credits left, it informs the user of this and allows them to optionally select to use their own HNT, performs an implicit burn to DC and onboards their hotspot all in a single action from the maker-app during onboarding
 - it is proposed that the MCC / Helium Foundation are in charge of the flag and deciding when it should be flipped
@@ -83,9 +86,9 @@ Both of these drawbacks are determined to be small and not blockers to this prop
 
 ## Rationale and Alternatives
 
-The only real alternative is the status-quo, which is not ideal whatsoever. 
+The only real alternative is the status-quo, which is not ideal whatsoever.
 
-Whilst no options in the scenario of a maker leaving the ecosystem are particularly ideal, the priority should be to ensure the least-possible interruption to hardware onboarding and user participation in the network. 
+Whilst no options in the scenario of a maker leaving the ecosystem are particularly ideal, the priority should be to ensure the least-possible interruption to hardware onboarding and user participation in the network.
 
 The impact of not doing this is a sub-par onboarding experience for people who are already in the unfortunate situation of a maker that has let them down and left the network. Part of the reason the Helium Network has been so sucessful is the ease of onboarding and the great user experience - any ways of improving the onboarding user experience should be welcomed to ensure maximum possible uptake and to avoid perfectly capable hardware being left unused and obsolete due to a maker exiting the ecosystem.
 
@@ -96,11 +99,12 @@ The impact of not doing this is a sub-par onboarding experience for people who a
 ## Deployment Impact
 
 **Who will implement the changes:**
+
 - Helium Foundation or Nova Labs to make changes to Helium SDK / onboarding server / wallet app / maker-starter-app to allow for this functionality
 - Maker app creators to pull through and implement the necessary changes to their individual apps
 - Helium Foundation / MCC to manage the process of flagging the necessary maker wallets in the onboarding server
 
-This will be deployed via updates to the Helium SDK, the onboarding server, wallet app and maker starter app. 
+This will be deployed via updates to the Helium SDK, the onboarding server, wallet app and maker starter app.
 
 Current users will not be impacted on any existing capabilities other than a much easier onboarding method in the scenario described.
 Makers will have to deploy a new version of their App which is compatible with this HIP.

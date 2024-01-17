@@ -109,7 +109,7 @@ Use [this spreadsheet](https://docs.google.com/spreadsheets/d/1nDYbj4APWg_XEeGEs
 
 ### Adjusting Hotspot Rewards Based on Mapper Input
 
-The Mobile PoC Working Group has discussed and documented a potential path to adjust MOBILE Hotspot rewards using the data collected by Mappers that would utilize the concept of the confidence score. A detailed description of the current thinking and community comments are available [here](./0079-mobile-poc-mappers-rewards/adjusting_hotspot_rewards_based_on_mapper_input.pdf).
+The Mobile PoC Working Group has discussed and documented a potential path to adjust MOBILE Hotspot rewards using the data collected by Mappers that would utilize the concept of the confidence score. A detailed description of the current thinking and community comments are available [here](files/0079/adjusting_hotspot_rewards_based_on_mapper_input.pdf).
 
 The Mobile PoC Working Group has decided to postpone the final decision regarding the specific algorithm to the second stage of Mapper reward implementation. This approach would create Hotspot rewards adjustment algorithms based on the actual data from mapping activity vs. speculating regarding variables and weights.
 
@@ -121,7 +121,7 @@ The Mobile PoC Working Group has also agreed to initiate work on a Mapper subDAO
 
 #### Subscribers
 
-Subscribers will share detailed location information with their Service Providers, allowing them to define which hexes to boost. Service Providers voted to participate in Helium Mobile subDAO are required to keep exact subscriber mobile location data confidential. The specific confidentiality terms are subject to the service agreement between each particular service provider and the subscribers. 
+Subscribers will share detailed location information with their Service Providers, allowing them to define which hexes to boost. Service Providers voted to participate in Helium Mobile subDAO are required to keep exact subscriber mobile location data confidential. The specific confidentiality terms are subject to the service agreement between each particular service provider and the subscribers.
 
 Subscribers will share binary information about whether location sharing event has occurred and the timestamp of the event to the Mobile Oracle for reward eligibility determination. Service Providers will verify the information Subscribers share before it is sent to the Mobile Oracle to prevent gaming.
 
