@@ -38,7 +38,7 @@ total penalties continue to remain in the consensus group. For example, the scre
 total penalty over time shows clear outliers who persist in the group despite amassing penalties 4x
 to 5x higher than average.
 
-![CG Performance](./0073-consensus-deselection-weighting/cg-penalties.png)
+![CG Performance](files/0073/cg-penalties.png)
 
 This change will help to remove these poor performers more quickly, by giving higher weight to
 performance penalties in the current epoch.

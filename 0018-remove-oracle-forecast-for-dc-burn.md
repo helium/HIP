@@ -45,7 +45,7 @@ has recently exploited this opportunity.
 Here it is graphed from on-chain data showing HNT burn events, mining rewards from DC and what the
 oracle price was for all of these events:
 
-![image MeerkatBurnAndMint](./0018-remove-oracle-forecast-for-dc-burn/meerkat.png)
+![image MeerkatBurnAndMint](files/0018/meerkat.png)
 
 As you can see, “the big burn” of about 27k HNT was burned right before the oracle price dropped
 from about $1.20 to $1.10. Over time, the DC was “minted” back into HNT via the DC rewards.

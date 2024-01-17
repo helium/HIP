@@ -57,9 +57,9 @@ One recommended way to mitigate these risks is for validators to carefully struc
 topology in a so-called single- or dual-layer sentry node architecture, which can be generalised as
 a sentry node operating as a proxy for its validator node.
 
-![image single-layer](0034-validator-node-security/0034-singlelayersentrynodes.jpg)
+![image single-layer](files/0034/0034-singlelayersentrynodes.jpg)
 
-![image dual-layer](0034-validator-node-security/0034-duallayersentrynodes.jpg)
+![image dual-layer](files/0034/0034-duallayersentrynodes.jpg)
 
 Validator nodes should only connect to full-nodes they trust because they operate them themselves or
 are run by other validators they know socially. The validator is only going to talk to the sentry
@@ -136,7 +136,7 @@ favorite cloud provider. You can consider reaching out to a large CDN. Follow op
 practices. Only expose a minimal amount of ports. Make sure to record logs. Setup monitoring for
 each machine and application involved. Configure alerting software, et cetera.
 
-![image unchanged](0034-validator-node-security/0034-unchangedarchitecture.jpg)
+![image unchanged](files/0034/0034-unchangedarchitecture.jpg)
 
 The issue with moving on without a security implementation to protect the validator node IPs from
 being publicly sourceable, the alternative of leaving security in the hands of validators themselves

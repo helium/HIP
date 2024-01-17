@@ -202,7 +202,7 @@ Some of the hotspot have a really large coverage by being installed in really go
 geographical location and the height are covering a wide zone, larger than a city. That way, they are offering a unique coverage. The following picture is illustrating this: the blue area is representing the coverage offered by this single hotspot, the orange 
 represent the city coverage provided by the mass of the other hotspot in the same area. All these hotspots are in competition for the same witness.
 
-![Highly valuable coverage illustration](0094-response-time-windows-for-witness-rewarding/valuable-coverage.png)
+![Highly valuable coverage illustration](files/0094/valuable-coverage.png)
 
 This illustration is based on a real example, but is a general illustration for hotspot placed on cell-towers and high elevation point. The hotspot used in the illustration as model is Attractive-Olive-Cyborg, located in Clermont-Ferrand, France. This hotspot is deployed on high elevation point. Coverage can be seen on [mappers.helium.com](https://mappers.helium.com/uplinks/hex/891f96a85b3ffff), with 80km coverage from North to South.
 
@@ -215,7 +215,7 @@ This HIP does not propose to give these hotspots any advantages, the existing PO
 The hotspots located in suburb and above, in blue in the illustration, are expending the network coverage with unique 
 coverage zone and are in competition with the hotspot inside the city. 
 
-![Suburb illustration](0094-response-time-windows-for-witness-rewarding/suburb-coverage.png)
+![Suburb illustration](files/0094/suburb-coverage.png)
 
 Helium network development can be associated to a genetic algorithm growing from an already covered place. These Hotspots also making the link with hotspots out of the city and suburb. They are offering a chance, with their beacon, to isolated hotspots out of the city to participate with PoC.
 
@@ -302,7 +302,7 @@ It did not had a positive impact either.
 
 In a longer term, it will be impossible to evaluate the impact as the halving started on August 1st. Between August 1st and August 15th, the average disconnection a day jumped to 1020 (+20%).
 
-![Hotspot disconnection evolution over 45 days](0094-response-time-windows-for-witness-rewarding/hotspot-disconnection-evoltution.png)
+![Hotspot disconnection evolution over 45 days](files/0094/hotspot-disconnection-evoltution.png)
 
 Up to 41.000 hostpots (10% of the initial fleet) have been lost between July 1st and August 15th. 
 
@@ -310,7 +310,7 @@ Up to 41.000 hostpots (10% of the initial fleet) have been lost between July 1st
 
 The following [Helium Geek](https://heliumgeek.com/stats/epoch/iot) stats displays the number of different hotspots rewarded for witnessing and beaconing within a same day.
 
-![Hotspot daily stats](0094-response-time-windows-for-witness-rewarding/hotspot-daily-stats.png)
+![Hotspot daily stats](files/0094/hotspot-daily-stats.png)
 
  You can notice that since HIP 83 launch we had a break in the witness participation by 10,000 hotspots. This means the witnesses rewards goes to less hotspots, even if all are participating to witness beaconing. 10,000 of the hotspots are out of most for the reward distribution, to the benefit of the others.
 
@@ -360,7 +360,7 @@ The signature impacts on the first to arrive show a variability up to 250ms. ( t
 
 The consequence of this in regard of the HIP-83 can be shown on the following grapfics:
 
-![ECC Signature impact on witness selection](0094-response-time-windows-for-witness-rewarding/hip83-delta-by-maker.png)
+![ECC Signature impact on witness selection](files/0094/hip83-delta-by-maker.png)
 
 This graphic shows, after the start of the HIP-83, the witness selection change by maker. It show the number of hotspot (Y axis) selected more time, on the right side of the 0 (X axis) or selected less time, on the left side of the 0 (X axis). 
 
@@ -379,7 +379,7 @@ Two scenarios are identified:
 
 The first scenario gives an idea of the acceptable copies reception windows to match with the RX1 window, in blue, up to 600ms. The second scenario gives an idea of the acceptable copies reception windows to match with RX2 window (RX1 not achievable due to round trip delay), up to 210ms. Both scenario includes a margin of 200ms for non seen yet.
 
-![Packer Processing Waterfall](0094-response-time-windows-for-witness-rewarding/packet-processing-waterfall.png)
+![Packer Processing Waterfall](files/0094/packet-processing-waterfall.png)
 
 This minimum reception window to achieve the worst case has been used to propose the initial time windows for accepting the 
 witnesses.
@@ -389,7 +389,7 @@ witnesses.
 
 The following waterfall represent the different steps in the witness processing, the variability of each of the steps, depending on hardware, network access, network variability as been identified to have the scale of magnitude of each of the steps on the global processing. As steps normal variability is large and really context driven, this illustration tries to approximate the best way as possible but can't be exact.
 
-![Witness Processing Waterfall](0094-response-time-windows-for-witness-rewarding/witness-waterfall-1.png)
+![Witness Processing Waterfall](files/0094/witness-waterfall-1.png)
 
 - Witness processing is the time to execute the gateway-rs code (out of ECC signature), I don't have reference of time and assume it should be around 10ms, any better data is welcome. The variability comes from the different hardware performace for running the same code, we have seen previously a ratio of 3x in term of cpu frequency, associable to performance.
 - ECC signature, as seen previously is a factor of magnitude of 4x between no ECC signature and worst ECC implementation.

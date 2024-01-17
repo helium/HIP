@@ -116,7 +116,7 @@ will be covered from the Hotspot owner's wallet.
 
 ## RF Data Signature
 
-![image ](0072-secure-concentrators/rf_signing.png)
+![image ](files/0072/rf_signing.png)
 
 The Secure Concentrator signs LoRa packets and metadata with its unique ED25519 Hardware Key. To optimize for low-latency, the unsigned data if first sent to the host CPU and the packet signature is later computed. This design allows the host CPU to serve latency-sensitive applications.
 
@@ -218,7 +218,7 @@ The following sections describe the reference design choices. Alternative Secure
 
 Note: approval of this HIP does NOT automatically approve NLighten System's design. The MCC has final approval power of any Secure Concentrator design, including the design by NLighten Systems.
 
-![image ](0072-secure-concentrators/hardware_block.png) NLighten hardware architecture for SCC is based on Semtech's LoRa Corecell Gateway reference design. The major change involves the addition of a Secure MCU (**SMCU**) placed in between the communication path of the Host CPU and the SX1303. The SMCU's primary job is to cryptographically sign RF data received over the air such that other nodes participating on the Helium network are able to verify the data is authentic and unaltered from it original form. It is important the SMCU has exclusive access SX1303's SPI bus to eliminate the possibility of spoofing incoming RF packets. The hardware design employs several techniques to make it physically difficult to access the SMPU and SX130x including using buried traces, placing the components under a metal shield, and using hard-curing potting material.
+![image ](files/0072/hardware_block.png) NLighten hardware architecture for SCC is based on Semtech's LoRa Corecell Gateway reference design. The major change involves the addition of a Secure MCU (**SMCU**) placed in between the communication path of the Host CPU and the SX1303. The SMCU's primary job is to cryptographically sign RF data received over the air such that other nodes participating on the Helium network are able to verify the data is authentic and unaltered from it original form. It is important the SMCU has exclusive access SX1303's SPI bus to eliminate the possibility of spoofing incoming RF packets. The hardware design employs several techniques to make it physically difficult to access the SMPU and SX130x including using buried traces, placing the components under a metal shield, and using hard-curing potting material.
 
 ### Semtech SX1303
 The Semtech SX1303 is a new generation of LoRa baseband processor for gateways. It is size and pin compatible with SX1302 and like SX1302, it excels in cutting down current consumption, simplifying thermal design, lowering Bill Of Materials cost, and reducing overall size of gateways. In addition to supporting all the features of SX1302, SX1303 introduces a new Fine Timestamp capability that enables Time Difference of Arrival (TDOA) network-based geolocation. The new TDOA feature could potentially enable another layer of Proof of Coverage. For example, Helium Hotspots using SX1303 chipset could coordinate together to assert that another Helium Hotspot's beacon signal actually originated from the stated geo-location.

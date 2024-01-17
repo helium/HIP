@@ -107,7 +107,7 @@ To summarize:
 To help visualize the significant difference between these two resolutions, below is a map with
 green hex res8 and a small dot inside it - purple hex with res12.
 
-![Figure 1. Hex res12 and hex res8 map overlay.](./0074-mobile-poc-modeled-coverage-rewards/hex-12-and-hex-8-comparison.png)
+![Figure 1. Hex res12 and hex res8 map overlay.](files/0074/hex-12-and-hex-8-comparison.png)
 
 **Figure 1.** Hex res12 and res8 map overlay
 
@@ -176,7 +176,7 @@ These results align with the current Radio Type Multiplieres approach `1:2.5:4` 
 Outdoor Radios, and High-Power Outdoor Radios. Figure 2 below is the cumulative distribution
 function plot of the sample market Outdoor Radio estimated coverage points.
 
-![Figure 2. The cumulative distribution function of Outdoor Radio estimated coverage points for 904 Radios in the L.A. market area.](./0074-mobile-poc-modeled-coverage-rewards/propagation_point_cdf.png)
+![Figure 2. The cumulative distribution function of Outdoor Radio estimated coverage points for 904 Radios in the L.A. market area.](files/0074/propagation_point_cdf.png)
 
 **Figure 2.** Cumulative distribution function of Outdoor Radio estimated coverage points for 904
 Radios in the L.A. market area.
@@ -273,10 +273,10 @@ map overlay of 5G data coverage with signal strength.
 Below is the visualization of signal propagation for the Outdoor Radio, directed along the street
 and installed on a pole on the two-story building roof.
 
-![Figure 3. A Baicells Outdoor Radio 430 installed on a two-story roof.](./0074-mobile-poc-modeled-coverage-rewards/baicells-outdoor-430.jpeg)
+![Figure 3. A Baicells Outdoor Radio 430 installed on a two-story roof.](files/0074/baicells-outdoor-430.jpeg)
 **Figure 3.** A Baicells Outdoor Radio 430 installed on a two-story roof.
 
-![Figure 4. Modeled coverage of the Radio pictured in Figure 3.](./0074-mobile-poc-modeled-coverage-rewards/baicells-outdoor-430-modeled.png)
+![Figure 4. Modeled coverage of the Radio pictured in Figure 3.](files/0074/baicells-outdoor-430-modeled.png)
 **Figure 4.** Modeled coverage of the Radio shown in Figure 3.
 
 # Implementation Timeline

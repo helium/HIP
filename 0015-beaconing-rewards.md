@@ -5,6 +5,7 @@
 - Category: Technical
 - Original HIP PR: [#49](https://github.com/helium/HIP/pull/49)
 - Tracking Issue: [#51](https://github.com/helium/HIP/issues/51)
+- Approved Version: [c68417f](https://github.com/helium/HIP/blob/c68417ff57449f976bfe0c5834d97a837cac3df4/0015-beaconing-rewards.md)
 
 # Summary
 
@@ -73,14 +74,14 @@ Definitions:
 
 Reward formula for Transmitter:
 
-![image RewardTX formula](./0015-beaconing-rewards/RewardTX_equation.PNG)
+![image RewardTX formula](files/0015/RewardTX_equation.PNG)
 
 Reward Formula for each Receiver:
 
-![image RewardRX formula](./0015-beaconing-rewards/RewardRX_equation.PNG)
+![image RewardRX formula](files/0015/RewardRX_equation.PNG)
 
-A chart showing reward distribution basd on the formulas listed above with example values of `N`=4
-and `r`=0.8: ![image Reward distribution](./0015-beaconing-rewards/RewardDistributionHist.svg)
+A chart showing reward distribution based on the formulas listed above with example values of `N`=4
+and `r`=0.8: ![image Reward distribution](files/0015/RewardDistributionHist.svg)
 
 There are 3 regions in this reward distribution described below:
 
@@ -203,7 +204,7 @@ similar to a beacon in the new method.
 Note in the current system, the initial target can only earn 2/3 (0.67) of a Reward Unit since it
 cannot demonstrate the ability to receive RF (it receives over p2p which is not rewarded).
 
-![image Topology Examples](./0015-beaconing-rewards/TopologyExamples.svg)
+![image Topology Examples](files/0015/TopologyExamples.svg)
 
 A description of each figure:
 

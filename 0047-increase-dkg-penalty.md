@@ -5,6 +5,7 @@
 - Category: Technical
 - Original HIP PR: <https://github.com/helium/HIP/pull/306>
 - Tracking Issue: <https://github.com/helium/HIP/issues/313>
+- Approved Version: [31409fe](https://github.com/helium/HIP/blob/31409fe38e4bbe842187e1f50173df678886f744/0047-increase-dkg-penalty.md)
 
 # Summary
 
@@ -58,7 +59,7 @@ capped at 35 blocks (which is the 30 block interval plus one 5 block election in
 election fails on the first try, then validators stop being rewarded until an election succeeds.
 This can be seen in the spikes above 35 blocks in the graph of epoch length (source: DeWi ETL).
 
-![Epoch length in blocks](0047-increase-dkg-penalty/epochlengthinblocks.png)
+![Epoch length in blocks](files/0047/epochlengthinblocks.png)
 
 # Stakeholders
 

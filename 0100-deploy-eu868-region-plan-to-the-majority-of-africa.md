@@ -27,7 +27,7 @@ There's a rising interest from organizations aiming to deploy compatible infrast
 
 The immediate objective is to promote EU868 as a provisional standard, enabling Helium deployers to roll out EU868 Hotspots across the African continent. By introducing this provisional amendment to the Helium network, there's an opportunity to influence changes in the LoRa Alliance's LoRaWAN Regional Parameters specifications.  Major African countries like South Africa, Nigeria, Egypt and Kenya already utilize EU868. However, several African countries have yet to establish regulations specific to LoRaWAN. The EU868 plan is gaining traction as a potential global standard for IoT devices, particularly in the International Telecommunication Union (ITU) Region 1 (EMEA). The trigger countries for this HIP are Malawi, Liberia, The Democratic Republic of  Congo, The Republic of Congo, and Ghana which the Foundation are working with on the ground through the One Planet Education Network team to establish local LoRaWAN connectivity on EU868 in these countries.
 
-![itu1 map](0100-deploy-eu868-region-plan-to-the-majority-of-africa/itu1.png)
+![itu1 map](files/0100/itu1.png)
 
 **Figure 1: The ITU Region 1 is shown in the map above. From ITU Radio Regulations 2020**
 
@@ -50,7 +50,7 @@ Communication will be established with all relevant authorities and organization
 
 The proposed changes to regional frequency plans, based on the LoRaWAN Alliance's RP2-1.0.4 LoRaWAN Regional Parameters document, will be integrated into the regions.csv file and the corresponding .geojson files. The changes are aligned with the latest discussions, as documented in this [github issue](https://github.com/dewi-alliance/hplans/issues/51) and outlined in the tables below.
 
-![tables 1-5](0100-deploy-eu868-region-plan-to-the-majority-of-africa/tables1-5v3.png)
+![tables 1-5](files/0100/tables1-5v3.png)
 
 _Note: The countries marked with a * are members of CRASA and frequency harmonization amongst members is a goal of this organization._
 
@@ -74,7 +74,7 @@ Other countries such as Uganda (AS923-1), Tanzania (AS923-1) and Niger (IN865) h
 
 The Southern African Development Community (SADC)’s regulatory arm - the Communications Regulators' Association of Southern Africa (CRASA) has a [frequency allocation plan](https://www.crasa.org/post-articles/sadc-radio-frequency-spectrum-allocation-plan-rfsap) common to all member countries. And members are urged to follow this “In order to achieve significant harmonization… as far as is practically possible.”
 
-![table 6](0100-deploy-eu868-region-plan-to-the-majority-of-africa/table6.png)
+![table 6](files/0100/table6.png)
 
 Table 6: List of SADC Member countries
 
