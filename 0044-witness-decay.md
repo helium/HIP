@@ -10,7 +10,7 @@
 
 As Proof-of-Coverage continues to be improved, the community has proposed several improvements to
 continue to incentivize wide rollout of new Helium Hotspot coverage while addressing over-rewarding
-due to density and or arbitrage. One effective way to address over-rewarding is create soft limits
+due to density and or arbitrage. One effective way to address over-rewarding is to create soft limits
 on witness earnings through decaying witness reward units.
 
 ## Stakeholders
@@ -18,7 +18,7 @@ on witness earnings through decaying witness reward units.
 All Hotspot owners are affected by this proposal. Specifically, those with extremely high witness
 rates per epoch would be most affected and rewards would be more evenly distributed to other
 Hotspots that are witnessing within those epochs. Other network participants (Validators, Routers,
-etc) are not affected.
+etc.) are not affected.
 
 ### Detailed Explanation
 
@@ -51,7 +51,7 @@ following.
 1
 ```
 
-At `20` witness events, the Hotspot would only be elgible for `12.66` reward units (assuming no
+At `20` witness events, the Hotspot would only be eligible for `12.66` reward units (assuming no
 other scaling) but at `5` witness events, the Hotspot would be eligible for almost the full amount
 of reward units (`4.92`). No decay occurs up to 4 events.
 

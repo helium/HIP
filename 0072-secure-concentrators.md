@@ -9,7 +9,7 @@
 
 ## Summary
 
-In this HIP, we propose an amendment to HIP 19 to enable a new type of IoT network actor: a Secure Concentrator Card (SCC). A Secure Concentrator Card is similar to a standard LoRaWAN concentrator card, but with an additional Secure Microcontroller Unit (SMCU) and onboard GPS receiver. The SMCU digitally signs LoRa data packets as they are received from the radio. In this way, packet data and its corresponding metadata (RSSI, Frequency, GPS location and time) can be verified to be authentic. The primary intention of this HIP is to combat Proof-of-Coverage gaming. Secure Concentrtors achieve this by providing trustworthy data upon which better gaming detectors and PoC algorithms can be built.
+In this HIP, we propose an amendment to HIP 19 to enable a new type of IoT network actor: a Secure Concentrator Card (SCC). A Secure Concentrator Card is similar to a standard LoRaWAN concentrator card, but with an additional Secure Microcontroller Unit (SMCU) and onboard GPS receiver. The SMCU digitally signs LoRa data packets as they are received from the radio. In this way, packet data and its corresponding metadata (RSSI, Frequency, GPS location and time) can be verified to be authentic. The primary intention of this HIP is to combat Proof-of-Coverage gaming. Secure Concentrators achieve this by providing trustworthy data upon which better gaming detectors and PoC algorithms can be built.
 
 - Secure Concentrators are _optional._ There is **no** requirement to upgrade or purchase new
   hardware. Helium Hotspots without Secure Concentrator will continue functioning as normal.
@@ -65,7 +65,7 @@ An SCC design must meet the following minimum hardware requirements:
 
  - Onboard GNSS (GPS) receiver. GPS provides geolocation and timestamping reference of every received packet. The GPS horizontal and vertical position error must be less than 20 meters 99% of the time.
  - Appropriate hardware to precisely timestamp the arrival of received LoRa packets on par with Semtech SX1303.
- - Ability to sign the received LoRa packets and associated metadata (GPS location, time, frequency, etc) with a secured asymmetric key (see further security requirements).
+ - Ability to sign the received LoRa packets and associated metadata (GPS location, time, frequency, etc.) with a secured asymmetric key (see further security requirements).
 
 ### Security requirements
 
@@ -221,7 +221,7 @@ Note: approval of this HIP does NOT automatically approve NLighten System's desi
 ![image ](files/0072/hardware_block.png) NLighten hardware architecture for SCC is based on Semtech's LoRa Corecell Gateway reference design. The major change involves the addition of a Secure MCU (**SMCU**) placed in between the communication path of the Host CPU and the SX1303. The SMCU's primary job is to cryptographically sign RF data received over the air such that other nodes participating on the Helium network are able to verify the data is authentic and unaltered from it original form. It is important the SMCU has exclusive access SX1303's SPI bus to eliminate the possibility of spoofing incoming RF packets. The hardware design employs several techniques to make it physically difficult to access the SMPU and SX130x including using buried traces, placing the components under a metal shield, and using hard-curing potting material.
 
 ### Semtech SX1303
-The Semtech SX1303 is a new generation of LoRa baseband processor for gateways. It is size and pin compatible with SX1302 and like SX1302, it excels in cutting down current consumption, simplifying thermal design, lowering Bill Of Materials cost, and reducing overall size of gateways. In addition to supporting all the features of SX1302, SX1303 introduces a new Fine Timestamp capability that enables Time Difference of Arrival (TDOA) network-based geolocation. The new TDOA feature could potentially enable another layer of Proof of Coverage. For example, Helium Hotspots using SX1303 chipset could coordinate together to assert that another Helium Hotspot's beacon signal actually originated from the stated geo-location.
+The Semtech SX1303 is a new generation of LoRa baseband processor for gateways. It is size and pin compatible with SX1302 and like SX1302, it excels in cutting down current consumption, simplifying thermal design, lowering Bill Of Materials cost, and reducing overall size of gateways. In addition to supporting all the features of SX1302, SX1303 introduces a new Fine Timestamp capability that enables Time Difference of Arrival (TDOA) network-based geolocation. The new TDOA feature could potentially enable another layer of Proof of Coverage. For example, Helium Hotspots using SX1303 chipset could coordinate together to assert that another Helium Hotspot's beacon signal actually originated from the stated geolocation.
 
 ### Hardware Key
 
@@ -240,7 +240,7 @@ The intention of the "two-slot" scheme is to always allow any Secure Concentrato
 ## Rationale and Alternatives
 
 The proposed architecture of SCC is the best possible design because it cleanly and securely
-decouples low-level RF packet data from high-level Helium network protocol and constructs. This decoupling is important because we expect the Helium network protocol to continue to grow and evolve in the future and it would be prohibitively difficult to maintain SMCU firmware to keep up. This architecture also enables potential new class of Helium nodes that can provide additional future functionality. For example, a SCC could be used in a PoC Mapper device to securely verify coverage in remote locations. Perhaps most importantly, this architecture can be used to upgrade existing Helium miners providing reliable data to PoC algorithms.
+decouples low-level RF packet data from high-level Helium network protocol and constructs. This decoupling is important because we expect the Helium network protocol to continue to grow and evolve in the future and it would be prohibitively difficult to maintain SMCU firmware to keep up. This architecture also enables potential new class of Helium nodes that can provide additional future functionality. For example, an SCC could be used in a PoC Mapper device to securely verify coverage in remote locations. Perhaps most importantly, this architecture can be used to upgrade existing Helium miners providing reliable data to PoC algorithms.
 
 ## Unresolved Questions
 

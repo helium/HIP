@@ -110,7 +110,7 @@ sufficient information (such as logging) as to why the failure occurred.
 
 However, given the fact that all penalties decay to zero over time (currently approximately 2 weeks’
 time) and the average time between elections for any individual validator is 5 to 6 days, the risk
-should be seen as acceptable in order to improve the performance of the network as a whole..
+should be seen as acceptable in order to improve the performance of the network as a whole.
 
 # Rationale and Alternatives
 
@@ -140,4 +140,4 @@ validators and other node types can already accept this value for the `dkg_penal
 # Success Metrics
 
 Success of this change will result in fewer epochs that are exceed 35 blocks and fewer repeat
-failures in the same election cycle when there is a failure..
+failures in the same election cycle when there is a failure.

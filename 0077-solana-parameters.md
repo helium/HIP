@@ -50,7 +50,7 @@ The Helium Foundation will need to be able to make changes and/or upgrades to th
 
 ## Decimals for IOT and MOBILE
 
-Solana uses a 64 bit unsigned integer (`u64`) to represent token amounts. The maximum value a `u64` can hold is `18,446,744,073,709,551,615`. On the Helium L1 tokens are represented by `bones` where 1 full token is defined as 10^8 `bones`. The expected maximum supply of the MOBILE subDAO is 223.25B MOBILE which is larger than the `u64` can hold with 8 decimals. The limitations of the `u64` would mean that the maximum supply would be capped at 184.46B MOBILE. To remedy this problem we propose that the amount of decimals for MOBILE and IOT tokens will be 6. Existing token balances will be bankers rounded to the nearest token with 6 decimals of precision.
+Solana uses a 64-bit unsigned integer (`u64`) to represent token amounts. The maximum value a `u64` can hold is `18,446,744,073,709,551,615`. On the Helium L1 tokens are represented by `bones` where 1 full token is defined as 10^8 `bones`. The expected maximum supply of the MOBILE subDAO is 223.25B MOBILE which is larger than the `u64` can hold with 8 decimals. The limitations of the `u64` would mean that the maximum supply would be capped at 184.46B MOBILE. To remedy this problem we propose that the amount of decimals for MOBILE and IOT tokens will be 6. Existing token balances will be bankers rounded to the nearest token with 6 decimals of precision.
 
 We propose that the amount of decimals of a subDAO token can be autonomously decided by the subDAO with the limitation that the maximum supply must fit inside a `u64` at the proposed precision.
 
@@ -78,7 +78,7 @@ The Helium implementation on Solana has circuit breakers in place to prevent exp
 
 #### Mint Circuit Breakers
 
-The Mint Circuit Breakers protect the issuance of new tokens. We propose that the circuit breaker does not allow more than 5x the epoch amount be minted within a single 24h period. Because epoch rewards are automated by Clockwork there should never be a day where more than the normal epoch amount is emitted. The initial value of 5 allows bugs to process emissions that might be backed up by a bug. There will initially be three Mint Circuit Breakers, one for HNT, one for MOBILE and one for IOT.
+The Mint Circuit Breakers protect the issuance of new tokens. We propose that the circuit breaker does not allow more than 5x the epoch amount be minted within a single 24h period. Because epoch rewards are automated by Clockwork there should never be a day in which more than the normal epoch amount is emitted. The initial value of 5 allows bugs to process emissions that might be backed up by a bug. There will initially be three Mint Circuit Breakers, one for HNT, one for MOBILE and one for IOT.
 
 #### Reward Pool Circuit Breaker
 
@@ -86,7 +86,7 @@ The Reward Pool Circuit Breaker protect the reward pool accounts. Tokens that ar
 
 #### Treasury Circuit Breakers
 
-The Treasury Circuit Breakers protect the subDAO treasuries. The subDAO treasuries allow DNT tokens to be redeemed for HNT. We propose that the circuit breaker will allow a maximum of 20% of the treasury to be redeemed in every 24 hour period. There will initially be two Treasury Circuit Breakers, one for MOBILE and one for IOT.
+The Treasury Circuit Breakers protect the subDAO treasuries. The subDAO treasuries allow DNT tokens to be redeemed for HNT. We propose that the circuit breaker will allow a maximum of 20% of the treasury to be redeemed in every 24-hour period. There will initially be two Treasury Circuit Breakers, one for MOBILE and one for IOT.
 
 ### Emission Schedules
 

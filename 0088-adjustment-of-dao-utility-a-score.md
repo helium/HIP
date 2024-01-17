@@ -1,6 +1,6 @@
 # HIP 88: Adjustment of DAO Utility A Score
 - Authors: [Gateholder](https://github.com/gateholder), [Andy Zyvoloski](https://github.com/heatedlime), [Groot](https://github.com/mawdegroot)
-- Start Date: 6/15/2023
+- Start Date: 2023-06-15
 - Category: Technical & Economic
 - Original HIP PR: [#702](https://github.com/helium/HIP/pull/702)
 - Tracking Issue: [#707](https://github.com/helium/HIP/issues/707)
@@ -65,4 +65,4 @@ It is also suggested that the [Helium Network Stats](https://explorer.helium.com
 The specific implementation of the proposed changes will be determined by the Helium Core Developers while conforming to the intent of the proposal in the fullest extent possible.
 
 ## Success Metrics
-This proposal is a success when the `distribution` and `active-devices` oracles can correctly determine the $A$ factor of the subDAO utility score based on the amount of active devices and the corresponding onboarding fee that was paid. As a consequence, this will allow the the subDAOs to set the onboarding fee via their internal governance without requiring a veHNT vote.
+This proposal is a success when the `distribution` and `active-devices` oracles can correctly determine the $A$ factor of the subDAO utility score based on the amount of active devices and the corresponding onboarding fee that was paid. As a consequence, this will allow the subDAOs to set the onboarding fee via their internal governance without requiring a veHNT vote.

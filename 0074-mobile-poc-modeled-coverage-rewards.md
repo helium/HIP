@@ -166,13 +166,13 @@ Estimated per-hex coverage points for Indoor Radios are intentionally significan
 per-hex coverage points awarded to Outdoor Radios to balance the importance of Indoor Radios in the
 MOBILE Network with their relatively smaller coverage footprints.
 
-These values we chosen by taking all the Outdoor Radios in an example area and analyzing the
+These values were chosen by taking all the Outdoor Radios in an example area and analyzing the
 distribution of estimated coverage points per Radio resulting from the algorithm described in
 HIP-74. We then chose estimated coverage point values that result in Indoor Radios getting roughly
 ¼th the estimated coverage points as the 95th percentile Outdoor Radios and about ½ the points of
 the average Outdoor Radio.
 
-These results align with the current Radio Type Multiplieres approach `1:2.5:4` for Indoor Radios,
+These results align with the current Radio Type Multipliers approach `1:2.5:4` for Indoor Radios,
 Outdoor Radios, and High-Power Outdoor Radios. Figure 2 below is the cumulative distribution
 function plot of the sample market Outdoor Radio estimated coverage points.
 
