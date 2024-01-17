@@ -41,7 +41,7 @@ Proof of Coverage activity does not appear on-chain. Additionally, the inclusion
 functionality in Validators ensures that parties manipulating Hotspot software are not able to let
 challenges through.
 
-This proposal seeks to decentralize the decision making to the trusted pool of Validators and a
+This proposal seeks to decentralize the decision-making to the trusted pool of Validators and a
 broader community of denylist authors. Previous drafts of this HIP called for a centralized
 authority in the Helium Foundation to maintain and publish a denylist. The HIP specified a singular
 committee to maintain and publish the denylist. This centralization was unpalatable and The Helium

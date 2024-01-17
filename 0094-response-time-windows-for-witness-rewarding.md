@@ -9,14 +9,14 @@
 
 # Summary 
 
-Currently the Proof-of-Coverage Oracles reward the 14 first hotspots (defined in *default_max_witnesses_per_poc* ) reporting a witness. This rewards the fastest hotspots, incentivizing fiber backhauls and specific hardware models that happen to be able to produce fast signatures. The result is that always the same hotspots are selected, making others unviable even if they provide unique and useful coverage for the network. In other words, it punishes hotspots for falling short of millisecond optimizations when the LoRaWAN protocol functions to the order of seconds - [see also](#rewarded-hotspots-for-witnesses). 
+Currently, the Proof-of-Coverage Oracles reward the 14 first hotspots (defined in *default_max_witnesses_per_poc* ) reporting a witness. This rewards the fastest hotspots, incentivizing fiber backhauls and specific hardware models that happen to be able to produce fast signatures. The result is that always the same hotspots are selected, making others not viable even if they provide unique and useful coverage for the network. In other words, it punishes hotspots for falling short of millisecond optimizations when the LoRaWAN protocol functions to the order of seconds - [see also](#rewarded-hotspots-for-witnesses). 
 But a hotspot’s utility in providing LoRaWAN coverage depends on having “good enough” response times, not on being amongst the absolute fastest as absolute speeds provide no marginal utility: the Uplink does not have a particular time-window, the Downlink time windows is up to 2 seconds, and the Join process up to 6 seconds.
 
-We see a continous decrease of the number of [hotspots not participating to PoC anymore](#network-hotspot-loss-acceleration) over time, 41K (10%) are not seen anymore since August 15th compared to July 1st. The situations that is excluding or inequaly rewarding a hostpot, when providing a valuable coverage, does not help is stabilize the number of active hotposts over time. 
+We see a continuous decrease of the number of [hotspots not participating to PoC anymore](#network-hotspot-loss-acceleration) over time, 41K (10%) are not seen anymore since August 15th compared to July 1st. The situations that is excluding or unequally rewarding a hotspot, when providing a valuable coverage, does not help is stabilize the number of active hotspots over time. 
 
 This HIP proposes to evolve the hotspot selection by adding a response time window
 - to eliminate only slow hotspots that fail to meet LoRaWAN-grade timing constraints
-- to push helium hotspots to improve their reponse time, over time, reasonably. 
+- to push helium hotspots to improve their response time, over time, reasonably. 
 
 # Motivation
 
@@ -43,7 +43,7 @@ on the packet signature as described in the [appendix](#ecc-signature-impact). A
 ECC chip for most of the deployed hotspots, the processing time depends on the [hardware solution](#mcu-performance-impact) soldered in. 
 Even if firmware can be improved, the current solution disqualifies certain hardware no matter the hotspot owner's efforts. 
 
-More generally speaking, it disqualifies lower-end hardware like light-hotspots based on micro-controllers as, by definition, their capacity to process the same thing as hotspots based on CPU [is lower](#mcu-performance-impact). This is a highly disadvantageous consequence as this hardware has a better fit for stability, long-life, energy saving, lower cost, and should be privileged long term.
+More generally speaking, it disqualifies lower-end hardware like light-hotspots based on microcontrollers as, by definition, their capacity to process the same thing as hotspots based on CPU [is lower](#mcu-performance-impact). This is a highly disadvantageous consequence as this hardware has a better fit for stability, long-life, energy saving, lower cost, and should be privileged long term.
 
 The People's Network must be accessible to anyone and not be a competition of millisecond optimization limited to a 
 small group of experts.
@@ -82,7 +82,7 @@ milliseconds. Witness is marked Valid.
 3. The Oracle receives the next witnesses during the MAX_WITNESS_WAIT_WINDOWS_MS ms and mark them Valid.
 4. When **default_max_witnesses_per_poc** or more have been received, it marks the other as Invalid
 5. When MAX_WITNESS_WAIT_WINDOWS_MS is over and less than **default_max_witnesses_per_poc** received, Oracle marks the first received as selected and waits until **default_max_witnesses_per_poc** or EXTENDED_WITNESS_WAIT_WINDOWS_MS, mark them as valid, then the others invalid.
-7. The Oracle selects all the **selected** witnesses and allocates rewards to the number of hotspots defined in **default_max_witnesses_per_poc** by selecting ramdomly from the ones marked as valid.
+7. The Oracle selects all the **selected** witnesses and allocates rewards to the number of hotspots defined in **default_max_witnesses_per_poc** by selecting randomly from the ones marked as valid.
 
 ### Example 1
 
@@ -155,7 +155,7 @@ The first 4 are marked as SELECTED, the first 1 of the next 3 is marked as SELEC
 
 ** Option on proposal **
 
-Community discussions proposes to keep an insentive on hospot response time performance by getting a better reward distribution to the first responding and a lower to the last responding. This will be detailed if a later discussion comes to the selection of this option. 
+Community discussions proposes to keep an incentive on hotspot response time performance by getting a better reward distribution to the first responding and a lower to the last responding. This will be detailed if a later discussion comes to the selection of this option. 
 The way it would work would basically be like:
 - in first alternative: select the 7 (50% of the **default_max_witnesses_per_poc**) first responding hotspots then randomly select the 7 others ( 50% of the **default_max_witnesses_per_poc**)
 - in the second alternative: distribute 40% of the reward to the fastest 20%, 40% to the next 60%, 20% to the last 40%.
@@ -168,30 +168,30 @@ Positive impact:
 Negative impact:
 - This option add complexity in the development. 
 - Continue to have inequity in reward distribution based on your geographical localization.
-- Continue to have an inequity between hostpot brands conducting to disconnection.
-- Push to hack hostpot to grab some ms and create an inequity in regard of owner technical skills.
+- Continue to have an inequity between hotspot brands conducting to disconnection.
+- Push to hack hotspot to grab some ms and create an inequity in regard of owner technical skills.
 
 
 # Unresolved Questions
 
 - Packet processing is currently involving signature from ECC for every packet, this is time costly and not mandatory.
-Some discussions are already opened to move this with a software signature from an ECC derivated key negotiated with Helium
+Some discussions are already opened to move this with a software signature from an ECC derived key negotiated with Helium
 Packet Router for a given period of time.
 
-- Witness could be selected also in regard of their location. For exemple we could get a priority on the witnesses comming from the longest distance to offer an advantage to the hotpost offering the larger coverage.
+- Witness could be selected also in regard of their location. For example we could get a priority on the witnesses coming from the longest distance to offer an advantage to the hotspot offering the larger coverage.
 
 - There could be some hotspot designs or configurations that always respond over 500ms, these would never be rewarded. 
 
 # Deployment Impact
 
 Oracle PoC rewarding code needs to be modified to take this into consideration. Deployment is global, Hotspots are not impacted. 
-The Oracle PoC code update will impact the Nova team for deployment, the Author of this HIP is not attaching any code..
+The Oracle PoC code update will impact the Nova team for deployment, the Author of this HIP is not attaching any code.
 
 # Success Metrics
 
-- The distribution of rewards isno longer a function of the hotspot manufacturer design
+- The distribution of rewards is no longer a function of the hotspot manufacturer design
 - Hotpots with large coverage get balanced rewards
-- The decrease of active hostots is slowing down
+- The decrease of active hotspots is slowing down
 - The average response time to witness is improved over time
 
 # Appendix
@@ -206,7 +206,7 @@ represent the city coverage provided by the mass of the other hotspot in the sam
 
 This illustration is based on a real example, but is a general illustration for hotspot placed on cell-towers and high elevation point. The hotspot used in the illustration as model is Attractive-Olive-Cyborg, located in Clermont-Ferrand, France. This hotspot is deployed on high elevation point. Coverage can be seen on [mappers.helium.com](https://mappers.helium.com/uplinks/hex/891f96a85b3ffff), with 80km coverage from North to South.
 
-In term of coverage comparision, a 60km reach hotspot provides 36x the area coverage a 10km reach hotspot can provide. It provides about 3600x coverage compared to a indoor, city center located hotspot.
+In terms of coverage comparison, a 60km reach hotspot provides 36x the area coverage a 10km reach hotspot can provide. It provides about 3600x coverage compared to an indoor, city center located hotspot.
 
 This HIP does not propose to give these hotspots any advantages, the existing POC mechanisms already manage this. This HIP attempts to remove the penalty these important hotspots are currently suffering due to HIP-83.
 
@@ -219,7 +219,7 @@ coverage zone and are in competition with the hotspot inside the city.
 
 Helium network development can be associated to a genetic algorithm growing from an already covered place. These Hotspots also making the link with hotspots out of the city and suburb. They are offering a chance, with their beacon, to isolated hotspots out of the city to participate with PoC.
 
-These hotspots do not get benefit of the fastest Internet connection as their fiber connectivity will pass through the city center to reach the main Internet highways. For most of them the fiber connectivity will not be available and they are going to rely on xDSL connectivity before reaching the ISPs fiber Internet backhall.
+These hotspots do not get benefit of the fastest Internet connection as their fiber connectivity will pass through the city center to reach the main Internet highways. For most of them the fiber connectivity will not be available, and they are going to rely on xDSL connectivity before reaching the ISPs fiber Internet backhaul.
 
 As these hotspots are participating in PoC with the city center hotspots without getting benefit of the fastest Internet connection, then the chance is they have never been or rarely selected for witness rewards.
 
@@ -230,19 +230,19 @@ This HIP does not propose to give these hotspots any advantages, the existing PO
 The Helium Packet Router (HPR) is accepting all the coming packets up to the limit of the max_copies set on the route or eui in 
 the config service. First come, first paid. Only for roaming the HPR is applying a short time limit.
 
-According to Nova labs response, Helium packets, first arriving is opening a packet session for collecting the copies of it, during the session, all the packets up to max_copies are accepted and transmitted to LNS, after max_copies packets all are discarded. On every 30 minutes the session having a age higher than 30 minutes are closed. This means, a packet can be accepted up to 30 to 60 minutes after being emitted at HPR level. 
+According to Nova labs response, Helium packets, first arriving is opening a packet session for collecting the copies of it, during the session, all the packets up to max_copies are accepted and transmitted to LNS, after max_copies packets all are discarded. On every 30 minutes the session having an age higher than 30 minutes are closed. This means, a packet can be accepted up to 30 to 60 minutes after being emitted at HPR level. 
 
-The time limit for accepting packets as a single group of copies is decided by the LNS after the HPR. This time limit for the LNS is a LNS setup and can vary for each of the LNS. A LNS operating a local fleat will prefer a larger time windows to collect more copies, 600-800ms are viable configurations, global LNS will prefer a shorter time windows (see above waterfall for details).
+The time limit for accepting packets as a single group of copies is decided by the LNS after the HPR. This time limit for the LNS is a LNS setup and can vary for each of the LNS. A LNS operating a local fleet will prefer a larger time windows to collect more copies, 600-800ms are viable configurations, global LNS will prefer a shorter time windows (see above waterfall for details).
 
 LoRaWAN time constraints are the following:
 - UPLINK first copy arrival has no time constraint, next copies are withing the defined LNS deduplication time windows.
 - JOIN REQUEST needs to be responded within 5 seconds for RX1 (same frequency, standard power) or 6 seconds for RX2 (other frequency, potentially higher power). LNS decides of the selection between RX1 and RX2 dynamically, according to the time available.
 - DOWNLINK REQUEST / ACK needs to be responded within 1 seconds for RX1 (same frequency, standard power) or 2 seconds for RX2 (other frequency, potentially higher power). LNS decides of the selection between RX1 and RX2 dynamically, according to the time available.
 
-There is no reasons to prefer RX1 vs RX2, most of the implementations try to reach RX1 first, but RX2 provides different advantages, in particular in Europe where the duty cycle on RX2 is better and the higher power makes more chance to reach the device. It also reduce the limited bandwidth usage on the 8 available channels and the risk of collision on these busy channels. Device power impact can be considered higher on RX2 but with a lower risk of collision and reception loss, practically speaking, this assumption is not always true. Selection between RX1 / RX2 is not a question in regard of this HIP. This is informative to
+There is no reasons to prefer RX1 vs RX2, most of the implementations try to reach RX1 first, but RX2 provides different advantages, in particular in Europe where the duty cycle on RX2 is better and the higher power makes more chance to reach the device. It also reduces the limited bandwidth usage on the 8 available channels and the risk of collision on these busy channels. Device power impact can be considered higher on RX2 but with a lower risk of collision and reception loss, practically speaking, this assumption is not always true. Selection between RX1 / RX2 is not a question in regard of this HIP. This is informative to
 understand that nothing bad in using one vs the other, both have advantages.
 
-Basically, only the DOWNLINK REQ / ACK creates generate a time constraint at the time scale discussed in this HIP. This time constraint is to make sure that the order to send the ACK or the DOWNLINK transfer order comes to the desired Hotspot before the RX2 windows.
+Basically, only the DOWNLINK REQ / ACK creates generate a time constraint at the timescale discussed in this HIP. This time constraint is to make sure that the order to send the ACK or the DOWNLINK transfer order comes to the desired Hotspot before the RX2 windows.
 
 In this constraint of time, we need to execute the [full packet processing steps](#packet-processing-waterfall).
 
@@ -251,8 +251,8 @@ so basically up to 350-400ms.
 
 ## Network hotspot loss acceleration
 
-The following data, computed on August 27th, gives the number of hostpots having given (witness, beacon, reward) activity at or after the given date. You can read it the following way:
--  As seen on August 27th, there was 395717 uniq hostpots having received a witness (valid or not) since July 31th, 402719 having beaconned since July 31th, 395717 having been rewarded for any kind of activities including data reward. The max value of it can be considered as the number of active devices at this date.
+The following data, computed on August 27th, gives the number of hotspots having given (witness, beacon, reward) activity at or after the given date. You can read it the following way:
+-  As seen on August 27th, there was 395717 uniq hotspots having received a witness (valid or not) since July 31st, 402719 having beaconned since July 31st, 395717 having been rewarded for any kind of activities including data reward. The max value of it can be considered as the number of active devices at this date.
 -  As the data are computed on August 27, the difference between two days is indicating the number of devices not been active on the network for at least a month.
 -  The reason of this can be denied list (the recent reactivation of the previously denied hostpot had a large impact on these day-to-day data), can be hostpot firmware bug stopping it, can be any local problem owner did not fixed, can be hostpot removal.
 
@@ -296,15 +296,15 @@ Data after July 31th are impacted by Halving and later by the deny list changes.
 Basically the average loss per day before HIP-83 is 785 and after HIP-83 is 845. 
 The average not rewarded was 5688 then 6583.
 
-In a short term the HIP-83 did not had significant negative impact on disconnection rate (+6%) and it 
+In a short term the HIP-83 did not have significant negative impact on disconnection rate (+6%) and it 
 did not add a significant impact on rewarded hotspots (beacons and data are not impacted by this evolution).
-It did not had a positive impact either. 
+It did not have a positive impact either. 
 
 In a longer term, it will be impossible to evaluate the impact as the halving started on August 1st. Between August 1st and August 15th, the average disconnection a day jumped to 1020 (+20%).
 
 ![Hotspot disconnection evolution over 45 days](files/0094/hotspot-disconnection-evoltution.png)
 
-Up to 41.000 hostpots (10% of the initial fleet) have been lost between July 1st and August 15th. 
+Up to 41.000 hotspots (10% of the initial fleet) have been lost between July 1st and August 15th. 
 
 ### Rewarded Hotspots for Witnesses
 
@@ -312,7 +312,7 @@ The following [Helium Geek](https://heliumgeek.com/stats/epoch/iot) stats displa
 
 ![Hotspot daily stats](files/0094/hotspot-daily-stats.png)
 
- You can notice that since HIP 83 launch we had a break in the witness participation by 10,000 hotspots. This means the witnesses rewards goes to less hotspots, even if all are participating to witness beaconing. 10,000 of the hotspots are out of most for the reward distribution, to the benefit of the others.
+ You can notice that since HIP 83 launch we had a break in the witness participation by 10,000 hotspots. This means the witnesses rewards goes to fewer hotspots, even if all are participating to witness beaconing. 10,000 of the hotspots are out of most for the reward distribution, to the benefit of the others.
 
  There is no visible short term evolution of the other trends, daily stats continue to decrease the same way.
 
@@ -362,16 +362,16 @@ The consequence of this in regard of the HIP-83 can be shown on the following gr
 
 ![ECC Signature impact on witness selection](files/0094/hip83-delta-by-maker.png)
 
-This graphic shows, after the start of the HIP-83, the witness selection change by maker. It show the number of hotspot (Y axis) selected more time, on the right side of the 0 (X axis) or selected less time, on the left side of the 0 (X axis). 
+This graphic shows, after the start of the HIP-83, the witness selection change by maker. It shows the number of hotspot (Y axis) selected more time, on the right side of the 0 (X axis) or selected less time, on the left side of the 0 (X axis). 
 
-We see that the distribution is not centered, with certain brands getting an advantage on the other, due to hardware and software implementation. Bobcat ( faster ECC ) and Kerlink ( MCU intergrated ECC ) takes advantage over the other manufacturer.
+We see that the distribution is not centered, with certain brands getting an advantage on the other, due to hardware and software implementation. Bobcat ( faster ECC ) and Kerlink ( MCU integrated ECC ) takes advantage over the other manufacturer.
 
 The timing given above evolves based on the gateway-rs evolution, the manufacturer firmware improvement and my not be accurate at the day of the 
 reading. This aimed to illustrate how a single piece of hardware in the solution, will have a significant impact on the PoC response time.
 
 ## Packet Processing Waterfall
 
-The following waterfall represents the different steps in the data packet processing, in the case of a packet requesting a ACK or a downlink. The HPR is geo-replicated, time to reach it is within the zone. 
+The following waterfall represents the different steps in the data packet processing, in the case of a packet requesting an ACK or a downlink. The HPR is geo-replicated, time to reach it is within the zone. 
 
 Two scenarios are identified:
 - the first one in gray is the best case scenario, hotspot is fast and the LNS is in the same zone the device is, so the communication from HPR to LNS then LNS to Hotspot is short.
@@ -391,14 +391,14 @@ The following waterfall represent the different steps in the witness processing,
 
 ![Witness Processing Waterfall](files/0094/witness-waterfall-1.png)
 
-- Witness processing is the time to execute the gateway-rs code (out of ECC signature), I don't have reference of time and assume it should be around 10ms, any better data is welcome. The variability comes from the different hardware performace for running the same code, we have seen previously a ratio of 3x in term of cpu frequency, associable to performance.
+- Witness processing is the time to execute the gateway-rs code (out of ECC signature), I don't have reference of time and assume it should be around 10ms, any better data is welcome. The variability comes from the different hardware performance for running the same code, we have seen previously a ratio of 3x in terms of cpu frequency, associated to performance.
 - ECC signature, as seen previously is a factor of magnitude of 4x between no ECC signature and worst ECC implementation.
-- The Witness is then reported to iotpoc server, this architecture is zone distributed, so we can assume all the hotspot reporting the Witness will report to the same server within their zone. The time to reach http://mainnet-pociot.helium.io:8080 can be checked with https://check-host.net/ in TCP Port check. The response time vary from 20 to 100ms including network latency natural variability. On top of this we can add an extra variable time related to the use of 4G (50-100ms) or xDSL (30-50ms).
-- Then the iotpoc server reports the witnesses to the Oracle to verify the PoC and compute the rewarding. The time depends on the Oracle location compared to iotpoc server. This is the same network path for all packets. The network natural network latency we have between packets (measurable with ping command, max - min) have an order of magnitude of 10-50ms (about 20%).
+- The Witness is then reported to iot poc server, this architecture is zone distributed, so we can assume all the hotspot reporting the Witness will report to the same server within their zone. The time to reach http://mainnet-pociot.helium.io:8080 can be checked with https://check-host.net/ in TCP Port check. The response time vary from 20 to 100ms including network latency natural variability. On top of this we can add an extra variable time related to the use of 4G (50-100ms) or xDSL (30-50ms).
+- Then the iot poc server reports the witnesses to the Oracle to verify the PoC and compute the rewarding. The time depends on the Oracle location compared to iot poc server. This is the same network path for all packets. The network natural network latency we have between packets (measurable with ping command, max - min) have an order of magnitude of 10-50ms (about 20%).
 
-The variation of time related to the hotspot type of connectivity (yellow block) is really limited compared to the overall variability in the Witness processing. Hotspot hardware is first impacting the performance, then network acces is quite equivalent to Internet natural variability from one packet to the other ( distribution is different ).
+The variation of time related to the hotspot type of connectivity (yellow block) is really limited compared to the overall variability in the Witness processing. Hotspot hardware is first impacting the performance, then network access is quite equivalent to Internet natural variability from one packet to the other ( distribution is different ).
 
-A reception windows of 320ms should cancel all the natural variability, the use of a windows 200ms will still impact the slow hostpots. The extended windows, used in the low density area is covering all the variability. 
+A reception windows of 320ms should cancel all the natural variability, the use of a windows 200ms will still impact the slow hotspots. The extended windows, used in the low density area is covering all the variability. 
 
 
 

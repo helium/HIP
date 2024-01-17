@@ -120,9 +120,9 @@ customers is kicked back up to the Hotspot vendors and pursue different deployme
 giving out free/highly subsidized Hotspots to passing 100% or rewards to Hotspot operators, but
 charging higher prices for hardware.
 
-Reward calculations that trigger distribution of tokens between service providers, mappers and and
+Reward calculations that trigger distribution of tokens between service providers, mappers and
 Hotspot operators in the Helium Mobile DAO is performed by Oracles. At launch, network participants
-stake MOBILE to a genesis oracle for some predefined pro-rata share of emissions. Over time as new
+stake MOBILE to a genesis oracle for some predefined pro rata share of emissions. Over time as new
 oracles onboard to the network, they are required to self-stake a minimum of 250M MOBILE in order to
 participate in rewards calculations, although the stake minimum is a parameter tunable by
 governance. Oracles continuously witness a stream of events coming from various DAO participants
@@ -172,7 +172,7 @@ Hotspot owners will earn 60% of all MOBILE tokens for proof of coverage (PoC) re
 (staying eligible and getting mapped) and for burning Helium data credits.
 
 Total number of tokens distributed specifically for PoC events will vary from 20% to 60%, depending
-on the amount of data offloaded and number of tokens that went to data. PoC tokens PoC tokens are
+on the amount of data offloaded and number of tokens that went to data. PoC tokens are
 distributed to Hotspot owners based on the number of incentive points accumulated by Hotspot owners
 during a given epoch. Incentive points are issued using the following rules:
 
@@ -330,7 +330,7 @@ Mobile Network oracles perform the following functions:
 2. Confirm transactions and add blocks to the Mobile Network L2 chain. They serve state data around
    Proof-of-Coverage challenges
 3. Reward calculations that trigger distribution of tokens between service providers, mappers and
-   and Hotspot operators
+   Hotspot operators
 
 Validation is performed by a set of rotating nodes known as the consensus group, which verifies
 transactions and ordering prior to forming a block and proposing it to the L2 chain. Consensus
@@ -358,7 +358,7 @@ PoC implementation proposed in the Helium Mobile Network subDAO is based on wire
 verified through LoRa Hotspots issuing “challenges” to “challengees” and “witnessing” over the air
 interface. However, for the 5G wireless protocol, radios cannot both challenge and witness the
 packets over the air, as the 5G/LTE and other cellular protocols are designed for the radio to
-interact with a UE (such as cell phone) vs another radio..
+interact with a UE (such as cell phone) vs another radio.
 
 For Mobile Network subDAO we propose to separate the challenge and witness function(s) between the
 operator of a Hotspot and a mapper device (such as a phone or a dedicated mapper) with a sim card
@@ -399,7 +399,7 @@ are subject to change as we gather more data about deployments.
 
 ### _Governance Specification_
 
-Mobile Network Network is under the control of the subDAO. All subDAO proposals must come attached
+Mobile Network is under the control of the subDAO. All subDAO proposals must come attached
 with code to be approved.
 
 We propose that veMOBILE governance is constructed in a manner identical to veHNT governance as

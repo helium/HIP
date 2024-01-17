@@ -179,16 +179,16 @@ date by DeWi.
 ![image Secure Concentrator](files/0022/concentrator.jpg)
 
 The MAX32510 can provide a guarantee that the firmware on-board is unchanged. Along with a secure
-key-store, it also provide a secure bootloader, ensuring that only signed firmware is booted.
+key-store, it also provides a secure bootloader, ensuring that only signed firmware is booted.
 
 The main attack vector would be tampering with the SX130x either directly on-board or over RF.
 Additional anti-tamper mechanisms may be deployed to reduce ease of tampering.
 
 In coordination with DeWi, the final design may feature the following such protections:
 
-- existing tamper proof features on the MAX32510
+- existing tamper-proof features on the MAX32510
 - firmware on the MAX32510 could detect PCB modifications
-- an out of band check by the concentrator on the antenna port, ensuring that the stock antenna is
+- an out-of-band check by the concentrator on the antenna port, ensuring that the stock antenna is
   deployed
 
 Due to the signature from the packet forwarder, either an alternative protocol will need to be

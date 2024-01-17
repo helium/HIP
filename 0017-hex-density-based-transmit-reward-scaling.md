@@ -10,10 +10,10 @@
 # Summary
 
 This HIP suggests a change to PoC rewarding to better rewards areas of coverage. This is done by
-reducing the rewards earned by transmitting or witnessing Hotspots in close proximity to each other.
+reducing the rewards earned by transmitting or witnessing Hotspots in proximity to each other.
 
 Very little additional coverage is demonstrated by being able to witness multiple Hotspots that are
-co-located or in close proximity to each other. On the other hand, being able to witness many
+co-located or in proximity to each other. On the other hand, being able to witness many
 Hotspots that are in distinct locations demonstrates a Hotspot is providing a large area of
 coverage. This is in contrast to the current PoC reward structure, where transmitters and high
 density areas see a significant portion of PoC rewards.
@@ -43,20 +43,20 @@ Hotspots coming online and Hotspot-based reward targeting overly benefiting dens
 # Stakeholders
 
 All Hotspot owners or potential owners will be effected by this HIP as it affects the method by
-which earnings are calculated for all proof-of-coverage based rewards. Owners or Patreons who have
-setup Hotspots to optimize for the existing PoC method and reward structure may be especially
+which earnings are calculated for all proof-of-coverage based rewards. Owners or Patrons who have
+set up Hotspots to optimize for the existing PoC method and reward structure may be especially
 affected.
 
-Additionally the Helium development team will have considerable work implementing the proposed
+Additionally, the Helium development team will have considerable work implementing the proposed
 algorithms on the blockchain.
 
-Due to the nature of the change, its likely an app push notification, engineering blog post, and
+Due to the nature of the change, it's likely an app push notification, engineering blog post, and
 other social media outreach may be needed to ensure effected stakeholders are notified and can voice
 support or concerns.
 
 # Detailed Explanation
 
-The following subsctions describe the reward scaling methodology and implementation.
+The following subsections describe the reward scaling methodology and implementation.
 
 ## Definitions
 
@@ -91,7 +91,7 @@ variable.
 The goal of this algorithm is to limit density to a specific target while being flexible enough to
 reward areas that require density above this target. For example, nation capitals or other dense
 urban areas. It should also be flexible enough to recognize there are many areas that would require
-localized density to be best served (non-capital cities, college towns, tech centers, etc).
+localized density to be best served (non-capital cities, college towns, tech centers, etc.).
 
 A brief summary is that rewards for transmitting Hotspots and witnesses to transmitting Hotspots
 will be scaled up or down based on hex density (and all parent hex densities) relative to target. In
@@ -104,7 +104,7 @@ today.
 
 There are many conditions that can be placed on Hotspots before they are classified as
 “interactive”. As a minimum they need to have an assert_location transaction and must be able to
-transmit with valid witnesses (300m+ distance, valid metadata, etc).
+transmit with valid witnesses (300m+ distance, valid metadata, etc.).
 
 A Hotspot should lose the status of interactive if its transmissions no longer have valid
 witness(es). This can be a count of unwitnessed transmission or a period of blocks where the most
@@ -215,7 +215,7 @@ speed so it may be laggy to view.
 
 ### How Transmit Reward Scaling is Used
 
-Its very important to understand that this is not a reward scaling for ALL rewards a Hotspot will
+It's very important to understand that this is not a reward scaling for ALL rewards a Hotspot will
 receive, it is scaling for a specific transmission and it effects the witnesses and transmitter.
 Hotspots with low transmit reward scaling can still be very high earners if they can witness
 Hotspots with high transmit reward scaling. This will work best when implemented in conjunction with
@@ -228,7 +228,7 @@ then scaled by its own transmit reward scale. For witnesses, they will receive a
 based on the number of witnesses scaled by the transmitter’s reward scale. To better describe the
 relationship two example distributions are shown below:
 
-**_IMPORTANT_**: These examples use a slightly outdated methodoogy of scaling that looked at
+**_IMPORTANT_**: These examples use a slightly outdated methodology of scaling that looked at
 siblings (hexs with the same parent) instead of neighbors (hexs sharing an edge). The overall
 principle of how transmit scaling effects rewards is the same but the implementation will have
 slightly different scalings for these topologies
@@ -288,7 +288,7 @@ area) as possible, especially hex’s without a large amount of coverage already
 
 # Drawbacks
 
-This proposal will drastically effect earnings across the board as it is a significant change to how
+This proposal will drastically affect earnings across the board as it is a significant change to how
 earnings are calculated and distributed. There wil be many Hotspots in dense areas that will see
 significantly reduced earnings.
 
@@ -296,7 +296,7 @@ This method also does not consider first movers to an area who are penalized for
 as much as newcomers. I think this is appropriate as from the device perspective, all coverage is
 equal. Additionally, if a new Hotspot can be deployed in a more optimal location that makes many
 existing Hotspots redundant, what is healthiest for the network is if the old Hotspots move to more
-ideal locations, not to discourage placement of hoptsots that offer better coverage than existing
+ideal locations, not to discourage placement of hotspots that offer better coverage than existing
 deployments.
 
 This proposal is also a considerable development effort requiring a change in reward calculation,
@@ -344,9 +344,9 @@ keys under `res_vars` are the hex resolutions:
 Tuning of these variables allows a lot of flexibility in how rewards are distributed and periodic
 updates may be required.
 
-This proposal does not directly effect gaming and methods for discouraging Hotspots to lie about
+This proposal does not directly affect gaming and methods for discouraging Hotspots to lie about
 their location or the coverage they provided is needed to supplement this proposal which is meant to
-encourage healthy growth of the nework by honest Hotspots. By penalizing density, this proposal
+encourage healthy growth of the network by honest Hotspots. By penalizing density, this proposal
 encourages Hotspots to spread out which may make some anti-gaming methods more affective.
 
 # Deployment Impact
@@ -354,11 +354,11 @@ encourages Hotspots to spread out which may make some anti-gaming methods more a
 This method will need to be deployed along with or soon after Beaconing. It assumes an existing
 reward structure that biases PoC rewards towards receivers vs transmitters. One such method is
 described in [HIP-15](https://github.com/helium/HIP/blob/master/0015-beaconing-rewards.md). This
-deployment will effect all Hotspot owners. Current Hotspot owners will likely see a significant
+deployment will affect all Hotspot owners. Current Hotspot owners will likely see a significant
 change in earnings (either up or down) based on the new reward methodology. It will also require
 significant documentation update on how proof-of-coverage is performed and rewarded.
 
 # Success Metrics
 
 Success will be determined if rewards encourage breadth and depth of coverage resulting a faster
-buildout of a ubuiquitous, redundant and reliable network.
+buildout of a ubiquitous, redundant and reliable network.

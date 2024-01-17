@@ -20,7 +20,7 @@ We believe that Wi-Fi access points can help achieve both of those goals.
 
 Wi-Fi access points will belong to the Hotspot category; owners of these devices are classified as Hotspot Owners; Nova Labs is classified as Hotspot Vendor [as defined in HIP53](https://github.com/helium/HIP/blob/main/0053-mobile-dao.md#economics-overview).
 
-WiFi access points qualify as DNP devices as specified in [HIP51](https://github.com/helium/HIP/blob/main/0051-helium-dao.md).
+Wi-Fi access points qualify as DNP devices as specified in [HIP51](https://github.com/helium/HIP/blob/main/0051-helium-dao.md).
 
 ## Stakeholders
 
@@ -36,7 +36,7 @@ All stakeholders are defined in accordance with [HIP53](https://github.com/heliu
 
 ### 1.0 Background and Rationale
 
-Wi-Fi is a IEEE standard that has been widely adopted worldwide because it addresses spectrum sharing of unlicensed bands at 2.4GHz, 5GHz, and 6GHz. Wi-Fi is based on Carrier Sense Multiple Access/ Collision Avoidance (CSMA/CA) also known as “listen-before-talk”, which has a direct impact on RF sensitivity thresholds that determines the “coverage” of a Wi-Fi access point. While more recent releases of Wi-Fi have better and improved performance, typical Wi-Fi coverage is characterized by a steep cliff in network performance at the cell edge as opposed to a more gradual performance degradation that 3GPP protocols, like LTE or 5G, deliver.
+Wi-Fi is an IEEE standard that has been widely adopted worldwide because it addresses spectrum sharing of unlicensed bands at 2.4GHz, 5GHz, and 6GHz. Wi-Fi is based on Carrier Sense Multiple Access/ Collision Avoidance (CSMA/CA) also known as “listen-before-talk”, which has a direct impact on RF sensitivity thresholds that determines the “coverage” of a Wi-Fi access point. While more recent releases of Wi-Fi have better and improved performance, typical Wi-Fi coverage is characterized by a steep cliff in network performance at the cell edge as opposed to a more gradual performance degradation that 3GPP protocols, like LTE or 5G, deliver.
 
 HIP74 describes the rewards mechanism used for estimating coverage and allocating rewards based on estimated PoC. However, HIP74 defines methods and thresholds that are tailored to CBRS devices and RF sensitivity parameters that are specific to 3GPP protocols (i.e., LTE, 5G). To define a rewards scheme that applies to Wi-Fi, those methods and thresholds must be adjusted to account for the different nature of the protocol.
 
@@ -255,7 +255,7 @@ Many network components and third-party apps will need to be updated to support 
 - Helium Mobile Coverage Planner will need to be updated to support visualization of Wi-Fi access point coverage and planning of Wi-Fi deployments; and
 - Helium Mobile Hotspot Dashboard will need to be updated to support diagnostics, basic troubleshooting actions for Wi-Fi access points, and registration with Wi-Fi Professional Installer for outdoor access points.
 
-The Helium Foundation will validate the Hotspot Vendors to ensure viability of the Network. Specifically they will attest to the Network that Hotspot Vendors have the technical competencies and business processes to correctly support the Network including but not limited to Hotspot Owners and Service Providers. The MCC will review the deployment impact and coordinate with Hotspot Vendors to ensure that new Hotspot Vendors can be successfully enabled to manufacture and deploy devices into the Mobile Network. The Helium Community will review the information disclosed by the Hotspot Vendors to the the MCC including but not limited to architecture diagrams and security assessments of the devices. The MCC will reserve the right to not publicly disclose material that can be used to attack and threaten the Network.
+The Helium Foundation will validate the Hotspot Vendors to ensure viability of the Network. Specifically they will attest to the Network that Hotspot Vendors have the technical competencies and business processes to correctly support the Network including but not limited to Hotspot Owners and Service Providers. The MCC will review the deployment impact and coordinate with Hotspot Vendors to ensure that new Hotspot Vendors can be successfully enabled to manufacture and deploy devices into the Mobile Network. The Helium Community will review the information disclosed by the Hotspot Vendors to the MCC including but not limited to architecture diagrams and security assessments of the devices. The MCC will reserve the right to not publicly disclose material that can be used to attack and threaten the Network.
 
 ## Success Metrics
 
