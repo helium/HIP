@@ -56,12 +56,6 @@ Many locations where connectivity is being deployed, including some rural areas,
 
 Often these areas do not have good cellular coverage either. That's why it is essential to incentivize Helium deployments in less well-connected areas.
 
-
-### Speed Test Reward Tiers
-Many locations where connectivity is being deployed, including some rural areas, do not always have the high-speed Internet connectivity needed to meet the acceptable Internet requirements for Genesis rewards consistently. Note, the tiering and multipliers proposed below are only applicable PoC rewards, MOBILE Rewards for data transfers are not affected. 
-Often these areas do not have good cellular coverage either. That's why iit is essential to incentivize Helium deployments in less well-connected areas.
-
-
 Speed Test results are categorized into one of four Tiers - Good, Acceptable, Degraded, Poor, and Fail. Please note, this HIP proposes changing the name of the 1X speedtest multiplier to "Good", and adding a new 0.75X multiplier for "Acceptable". Please see the table below.
 
 
@@ -74,12 +68,9 @@ Speed Test results are categorized into one of four Tiers - Good, Acceptable, De
 | Fail          | 0.00X               |<30 Download, OR <2 Upload, OR >100 Latency   |
 
 
-
 Tiered Speed Test values are used as a multiplier in Rewards calculations as follows:
 Speed Test Results are put into Tiers based on the minimum value of each Download, Upload, and Latency (logical AND).
 Speed Test results that do not meet the minimum requirements for any Download, Upload, or Latency are considered to have Failed and are not eligible for PoC Rewards until the Speed Test Average is improved (logical OR).
-
-If a device (Radio and or Wi-Fi Access Point) is given a speed tier of “Fail”, the device will stop broadcasting a signal until a speed test tier of “Poor” or greater is given to that device. 
 
 #### Multiplier Effect
 Upon implementation of [HIP 74](https://github.com/helium/HIP/blob/main/0074-mobile-poc-modeled-coverage-rewards.md), this multiplier will be applied the total modeled coverage points received by that radio/access point. The multipliers will be used within the following order:
@@ -147,7 +138,7 @@ In the example above, the average would be 0.6875, and wojld be utilized during 
 As the Helium 5G network matures, it’s vitally important that the quality of the network and deployments provide usable and consistent coverage. 
 
 ## Deployment Impact
-Protocol engineers will have to change the speedtest requirements to incorporate the new "Acceptable" multiplier of 0.75X upon passing. 
+Protocol engineers will have to change the speedtest requirements to incorporate the new "Acceptable" multiplier of 0.75X upon passing.
 
 ## Success Metrics
 As most of what is written in this HIP has already been previously implemented, this HIP will be considered successful if it is passed. If this HIP does not pass, any quality of service metrics already previously established outside of a HIP process, such as speed test and heartbeat requirements must immediately be removed from the Helium 5G network.
