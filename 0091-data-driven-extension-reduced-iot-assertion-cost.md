@@ -2,7 +2,7 @@
 
 - Author(s): [@maxgold91](https://github.com/maxgold91), [@bfgneil](https://github.com/bfgneil), [@mawdegroot](https://github.com/mawdegroot), Fizzy, [@AndrewsMD](https://github.com/andrewsMD)
 - Start Date: 2023-07-09
-- Category: Economic 
+- Category: Economic
 - Original HIP PR: [#738](https://github.com/helium/HIP/pull/738)
 - Tracking Issue: [#743](https://github.com/helium/HIP/issues/743)
 - Vote Requirements: veIOT Holders
