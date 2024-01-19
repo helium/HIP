@@ -43,9 +43,7 @@ If Footfall Oracle is A, Land Type Oracle is B, and Urbanization Oracle is A, th
 Once all variations are accounted for, each tag will be assigned a value as outlined here:
 
 
-
-![Screen Shot 2024-01-10 at 4 30 21 PM](https://github.com/helium/HIP/assets/104723888/25f4993a-61d3-4415-92ce-67ddef621810)
-
+![Screen Shot 2024-01-19 at 8 16 51 AM](https://github.com/heatedlime/HIP/assets/104723888/0bd381b5-7e0a-4638-a315-a4200b4ee328)
 
 
 Before the Final Multiplier equation is run, the calculations will check to see whether or not that res12 hex is boosted by a Service Provider greater than 1x. If not, then the assigned value will be maintained. If yes, then the Final Multiplier will automatically be 1X. 
@@ -63,18 +61,39 @@ This HIP recommends using data from the European Space Agency’s [WorldCover pr
 ### Urbanization Oracle  
 This HIP recommends using data from the United States Census Bureau's urban-rural classification, as defined [here](https://www.census.gov/programs-surveys/geography/guidance/geo-areas/urban-rural.html) and visualized [here](https://www.arcgis.com/apps/mapviewer/index.html?layers=10551da8fcd24062b1857473252b3df8), to provide multipliers based on if they are, or are not urbanized. New data from this source will be incorporated into the Oracle as it becomes available. This Urbanization Oracle will also be smoothed out to the res10 level like the Footfall Oracle above.
 
+### Smoothing and Refinement of Data
+As data from Oracles stem from third parties, the HIP authors recognize that there may be gaps or errors within the map and data used. Therefore, data from Oracles will be represented at a res10 hex level, and all res12 hexes within each res10 hex will have the same, highest value. 
 
-### Smoothing of Data
-As data from Oracles stem from third parties, the HIP authors recognize that there may be gaps or errors within the map and data used. Therefore, data from Oracles will be represented at a res10 hex level, and all res12 hexes within each res10 hex will have the same, highest value. For example, if one res12 hex within the res10 hex has a footfall range higher than 1.00, and all other res12 hexes within that res10 hex have 0, all res12 hexes within that res10 hex will be awarded for having footfall traffic of 1.00+
+Further, this HIP grants authority to Nova Labs to add the following areas to the footfall oracle as a POI greater than or equal to 1 that are not correctly represented in the data:
 
-## Deployment Impact
-Nova Labs has agreed to undertake the work to implement this HIP shall it pass. 
+- Any schools and or college campuses/Universities
+- Any sports arenas or stadiums
+- Any Hospitals
+- Any Parks
+
+## Deployment Impact and Implementation
+Nova Labs has agreed to undertake the work to implement this HIP shall it pass. These Oracles will be implemented one-by-one to have a faster roll out. The order of implementation, and assigned multipliers will be as followed:
+
+1. Urbanization Oracle
+
+![Screen Shot 2024-01-19 at 8 23 56 AM](https://github.com/heatedlime/HIP/assets/104723888/21efdf6b-d6d6-4710-934d-20ccad68ef94)
+
+2. Urbanization Oracle and Footfall Oracle
+
+![Screen Shot 2024-01-19 at 1 58 11 PM](https://github.com/heatedlime/HIP/assets/104723888/7055decd-08db-408e-8e08-3dfa89c2d38e)
+
+3. All Three (3) Oracles
+   
+![Screen Shot 2024-01-19 at 2 19 05 PM](https://github.com/heatedlime/HIP/assets/104723888/ff9cc018-aeb4-4a48-9e16-2d9e9667d470)
+
+
 
 ## Drawbacks:
 The implementation of this proposal could increase the complexity of the Helium Mobile network, and modeled coverage scores. There may be concerns about the accuracy of the population data provided, or the need to update the data regularly. 
 
 ## Alternatives
-Alternative methods of how Oracles interact and calculated were explored during the community discussion phase of this HIP, but ultimately, having Oracle's multiply, add, or be weighted didn't allow for the fine tuning of the Oracles to mirror real world scenarios. 
+One alternative would be to use subscriber discovery mapping data to identify areas in which there are multiple Helium Mobile subscribers; however, this method is easily gamed and would be heavily exploited.
+
 
 ## Success Metrics
 The primary success metric will be greater coverage on the modeled coverage map in areas where top carriers have already identified as areas that need data.
