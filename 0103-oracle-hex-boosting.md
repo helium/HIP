@@ -71,6 +71,8 @@ Further, this HIP grants authority to Nova Labs to add the following areas to th
 - Any Hospitals
 - Any Parks
 
+A process for the community to recommend additions will be implemented in a future HIP. 
+
 ## Deployment Impact and Implementation
 Nova Labs has agreed to undertake the work to implement this HIP shall it pass. These Oracles will be implemented one-by-one to have a faster roll out. The order of implementation, and assigned multipliers will be as followed:
 
