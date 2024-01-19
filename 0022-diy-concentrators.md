@@ -19,7 +19,7 @@ principal requirements of HIP19 is that the Hotspot identity be contained with a
 module. Following the lead of the Helium "OG Hotspot", every Hotspot on the market has the following
 architecture:
 
-![image Current Architecture](0022-diy-concentrators/current_hardware_architecture.jpg)
+![image Current Architecture](files/0022/current_hardware_architecture.jpg)
 
 The Hotspots identity, ie: the `swarm_key`, is contained in a secure element which is controlled by
 the Host CPU. Therefore, the Host CPU pulls data from the SX130x concentrator, requests the secure
@@ -39,7 +39,7 @@ Therefore, there is a plethora of POC gaming strategies revolve around intercept
 fabricating packets over the
 [Semtech GWMP Protocol over UDP](https://github.com/Lora-net/packet_forwarder/blob/master/PROTOCOL.TXT).
 
-![image GWMP Miner](0022-diy-concentrators/miner_packet_forwarder.jpg)
+![image GWMP Miner](files/0022/miner_packet_forwarder.jpg)
 
 It is not difficult to put software between the packet forwarder and the Helium Miner to manipulated
 packets,
@@ -51,7 +51,7 @@ We propose to create a special category of packet forwarders which cannot lie ab
 physically perceive. As such, they provide the network with a **Physical Root of Trust**. The new
 hardware architecture would be as follows:
 
-![image New Architecture](0022-diy-concentrators/new_hardware_architecture.jpg)
+![image New Architecture](files/0022/new_hardware_architecture.jpg)
 
 The change in this approach is that the SX130x data passes through a secure MCU which contains the
 Hotspots identity (ie: `swarm_key`) and, therefore, signs the packets. Therefore, we are not
@@ -97,7 +97,7 @@ software. As such, suitable processors must provide:
 
 - a tamper-proof hardware key store, guaranteeing that a key generated within may not be extracted
   (similar to the ECC608)
-- secure boot features, guaranteeing that only firmware signed by DeWi may executed (unlike ECC608,
+- secure boot features, guaranteeing that only firmware signed by DeWi may be executed (unlike ECC608,
   which does not execute firmware)
 - authentication of received packets from the SX130x by using the trusted firmware and tamper-proof
   hardware. Only actually received packets should receive a valid signature using the key stored.
@@ -158,8 +158,8 @@ Syncrob.it proposes a design which complies with this HIP based on the MAX32510 
 compatible interface (eg: similar to the RAK2287), allowing it to be a potential retrofit for nearly
 every gateway on the network.
 
-![image RAK2287](0022-diy-concentrators/rak2287.png)
-![image Syncro](0022-diy-concentrators/syncrobit.jpg)
+![image RAK2287](files/0022/rak2287.png)
+![image Syncro](files/0022/syncrobit.jpg)
 
 These "concentrator cards" are effectively one of Semtech's SX130x front-ends paired with a secure
 MCU. Over SPI, they communicate back to the main processor, such as a Raspberry Pi. Should this HIP
@@ -176,19 +176,19 @@ date by DeWi.
 
 # Hardware and Firmware Summary
 
-![image Secure Concentrator](0022-diy-concentrators/concentrator.jpg)
+![image Secure Concentrator](files/0022/concentrator.jpg)
 
 The MAX32510 can provide a guarantee that the firmware on-board is unchanged. Along with a secure
-key-store, it also provide a secure bootloader, ensuring that only signed firmware is booted.
+key-store, it also provides a secure bootloader, ensuring that only signed firmware is booted.
 
 The main attack vector would be tampering with the SX130x either directly on-board or over RF.
 Additional anti-tamper mechanisms may be deployed to reduce ease of tampering.
 
 In coordination with DeWi, the final design may feature the following such protections:
 
-- existing tamper proof features on the MAX32510
+- existing tamper-proof features on the MAX32510
 - firmware on the MAX32510 could detect PCB modifications
-- an out of band check by the concentrator on the antenna port, ensuring that the stock antenna is
+- an out-of-band check by the concentrator on the antenna port, ensuring that the stock antenna is
   deployed
 
 Due to the signature from the packet forwarder, either an alternative protocol will need to be

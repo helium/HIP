@@ -67,7 +67,7 @@ The most crucial reason for proposing rewarding the first witnesses to respond a
 
 - Which hotspots are faster than others, and which hotspots are slower.
 
-With the help of [HeliumGeek](https://heliumgeek.com/) a tool has been created to visualize what the proposed change means for individual hotspots. 
+With the help of [HeliumGeek](https://heliumgeek.com/) a tool has been created to visualize what the proposed change means for individual hotspots.
 
 [HeliumGeek HIP 83 tool](https://heliumgeek.com/maps/hip83.html).
 
