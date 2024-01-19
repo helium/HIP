@@ -82,20 +82,19 @@ A process for the community to recommend additions will be implemented in a futu
 Nova Labs has agreed to undertake the work to implement this HIP shall it pass. These Oracles will be implemented one-by-one to have a faster roll out. Nova Labs has estimated that it will take 30 days to implement each Oracle, for a total of 90 days for full HIP implementation. Please note, these are estimates, and not guaranteed. Specific Oracles may take longer, or shorter to fully implement. Nova Labs will provide a three (3) epoch notice prior to the implementation/go live of each of these Oracles. The order of implementation, and assigned multipliers will be as followed:
 
 
-1. Urbanization Oracle - Estimated Completion Date - 30 Days after HIP passing
+1. Urbanization Oracle - Estimated Implementation Date - 30 Days after HIP passing
 
 ![Screen Shot 2024-01-19 at 3 29 35 PM](https://github.com/helium/HIP/assets/104723888/b018f102-f1d9-448e-8cae-5ed6e91d7f2e)
 
-2. Urbanization Oracle and Footfall Oracle - Estimated Completion Date - 60 Days after HIP passing
+2. Urbanization Oracle and Footfall Oracle - Estimated Implementation Date - 60 Days after HIP passing
 
 ![Screen Shot 2024-01-19 at 3 29 50 PM](https://github.com/helium/HIP/assets/104723888/edb2fd84-18ff-4a41-be8b-d88029977274)
 
-3. All Three (3) Oracles  - Estimated Completion Date - 90 Days after HIP passing
+3. All Three (3) Oracles  - Estimated Implementation Date - 90 Days after HIP passing
    
 ![Screen Shot 2024-01-19 at 2 19 05 PM](https://github.com/helium/HIP/assets/104723888/95674006-9542-46ac-b7ef-e344848f97a5)
 
 
-### Smoothing
 ## Drawbacks:
 
 The implementation of this proposal could increase the complexity of the Helium Mobile network, and modeled coverage scores. There may be concerns about the accuracy of the population data provided, or the need to update the data regularly.
