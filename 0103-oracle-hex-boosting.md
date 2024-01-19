@@ -43,7 +43,7 @@ If Footfall Oracle is A, Land Type Oracle is B, and Urbanization Oracle is A, th
 Once all variations are accounted for, each tag will be assigned a value as outlined here:
 
 
-![Screen Shot 2024-01-19 at 8 16 51 AM](https://github.com/heatedlime/HIP/assets/104723888/0bd381b5-7e0a-4638-a315-a4200b4ee328)
+![Screen Shot 2024-01-19 at 2 19 05 PM](https://github.com/helium/HIP/assets/104723888/95674006-9542-46ac-b7ef-e344848f97a5)
 
 
 Before the Final Multiplier equation is run, the calculations will check to see whether or not that res12 hex is boosted by a Service Provider greater than 1x. If not, then the assigned value will be maintained. If yes, then the Final Multiplier will automatically be 1X. 
@@ -74,19 +74,20 @@ Further, this HIP grants authority to Nova Labs to add the following areas to th
 A process for the community to recommend additions will be implemented in a future HIP. 
 
 ## Deployment Impact and Implementation
-Nova Labs has agreed to undertake the work to implement this HIP shall it pass. These Oracles will be implemented one-by-one to have a faster roll out. The order of implementation, and assigned multipliers will be as followed:
+Nova Labs has agreed to undertake the work to implement this HIP shall it pass. These Oracles will be implemented one-by-one to have a faster roll out. Nova Labs has estimated that it will take 30 days to implement each Oracle, for a total of 90 days for full HIP implementation. Please note, these are estimates, and not guaranteed. Specific Oracles may take longer, or shorter to fully implement. Nova Labs will provide a three (3) epoch notice prior to the implementation/go live of each of these Oracles. The order of implementation, and assigned multipliers will be as followed:
 
-1. Urbanization Oracle
 
-![Screen Shot 2024-01-19 at 8 23 56 AM](https://github.com/heatedlime/HIP/assets/104723888/21efdf6b-d6d6-4710-934d-20ccad68ef94)
+1. Urbanization Oracle - Estimated Completion Date - 30 Days after HIP passing
 
-2. Urbanization Oracle and Footfall Oracle
+![Screen Shot 2024-01-19 at 3 29 35 PM](https://github.com/helium/HIP/assets/104723888/b018f102-f1d9-448e-8cae-5ed6e91d7f2e)
 
-![Screen Shot 2024-01-19 at 1 58 11 PM](https://github.com/heatedlime/HIP/assets/104723888/7055decd-08db-408e-8e08-3dfa89c2d38e)
+2. Urbanization Oracle and Footfall Oracle - Estimated Completion Date - 60 Days after HIP passing
 
-3. All Three (3) Oracles
+![Screen Shot 2024-01-19 at 3 29 50 PM](https://github.com/helium/HIP/assets/104723888/edb2fd84-18ff-4a41-be8b-d88029977274)
+
+3. All Three (3) Oracles  - Estimated Completion Date - 90 Days after HIP passing
    
-![Screen Shot 2024-01-19 at 2 19 05 PM](https://github.com/heatedlime/HIP/assets/104723888/ff9cc018-aeb4-4a48-9e16-2d9e9667d470)
+![Screen Shot 2024-01-19 at 2 19 05 PM](https://github.com/helium/HIP/assets/104723888/95674006-9542-46ac-b7ef-e344848f97a5)
 
 
 
