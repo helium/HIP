@@ -45,7 +45,9 @@ If Footfall Oracle is A, Land Type Oracle is B, and Urbanization Oracle is A, th
 
 Once all variations are accounted for, each tag will be assigned a value as outlined here:
 
-![Screen Shot 2024-01-09 at 4 37 11 PM](https://github.com/helium/HIP/assets/104723888/529d3ece-e685-498f-afdc-943e816fa9fc)
+
+![Screen Shot 2024-01-19 at 2 19 05 PM](https://github.com/helium/HIP/assets/104723888/95674006-9542-46ac-b7ef-e344848f97a5)
+
 
 Before the Final Multiplier equation is run, the calculations will check to see whether or not that res12 hex is boosted by a Service Provider greater than 1x. If not, then the assigned value will be maintained. If yes, then the Final Multiplier will automatically be 1X.
 
@@ -62,16 +64,36 @@ This HIP recommends using data from third parties [Veraset](https://www.veraset.
 This HIP recommends using data from the European Space Agency’s [WorldCover project](https://esa-worldcover.org/), as visualized [here](https://viewer.esa-worldcover.org/worldcover/?language=en&bbox=-255.05859374999997,-78.6991059255054,255.05859374999997,78.69910592550542&overlay=false&bgLayer=OSM&date=2023-12-25&layer=WORLDCOVER_2021_MAP), to identify the type of land, and provide multipliers based on land type. New data from this source will be incorporated into the Oracle as it becomes available. This Land Type Oracle will also be smoothed out to the res10 level like the Footfall Oracle above.
 
 ### Urbanization Oracle
-
 This HIP recommends using data from the United States Census Bureau's urban-rural classification, as defined [here](https://www.census.gov/programs-surveys/geography/guidance/geo-areas/urban-rural.html) and visualized [here](https://www.arcgis.com/apps/mapviewer/index.html?layers=10551da8fcd24062b1857473252b3df8), to provide multipliers based on if they are, or are not urbanized. New data from this source will be incorporated into the Oracle as it becomes available. This Urbanization Oracle will also be smoothed out to the res10 level like the Footfall Oracle above.
 
-### Smoothing of Data
+### Smoothing and Refinement of Data
+As data from Oracles stem from third parties, the HIP authors recognize that there may be gaps or errors within the map and data used. Therefore, data from Oracles will be represented at a res10 hex level, and all res12 hexes within each res10 hex will have the same value. 
 
-As data from Oracles stem from third parties, the HIP authors recognize that there may be gaps or errors within the map and data used. Therefore, data from Oracles will be represented at a res10 hex level, and all res12 hexes within each res10 hex will have the same, highest value. For example, if one res12 hex within the res10 hex has a footfall range higher than 1.00, and all other res12 hexes within that res10 hex have 0, all res12 hexes within that res10 hex will be awarded for having footfall traffic of 1.01+
+Further, this HIP grants authority to Nova Labs to add the following areas to the footfall oracle as a POI greater than or equal to 1 that are not correctly represented in the data:
 
-## Deployment Impact
+- Any schools and or college campuses/Universities
+- Any sports arenas or stadiums
+- Any Hospitals
+- Any Parks
 
-Nova Labs has agreed to undertake the work to implement this HIP shall it pass.
+A process for the community to recommend additions will be implemented in a future HIP. 
+
+## Deployment Impact and Implementation
+Nova Labs has agreed to undertake the work to implement this HIP shall it pass. These Oracles will be implemented one-by-one to have a faster roll out. Nova Labs has estimated that it will take 30 days to implement each Oracle, for a total of 90 days for full HIP implementation. Please note, these are estimates, and not guaranteed. Specific Oracles may take longer, or shorter to fully implement. Nova Labs will provide a three (3) epoch notice prior to the implementation/go live of each of these Oracles. The order of implementation, and assigned multipliers will be as followed:
+
+
+1. Urbanization Oracle - Estimated Implementation Date - 30 Days after HIP passing
+
+![Screen Shot 2024-01-19 at 3 29 35 PM](https://github.com/helium/HIP/assets/104723888/b018f102-f1d9-448e-8cae-5ed6e91d7f2e)
+
+2. Urbanization Oracle and Footfall Oracle - Estimated Implementation Date - 60 Days after HIP passing
+
+![Screen Shot 2024-01-19 at 3 29 50 PM](https://github.com/helium/HIP/assets/104723888/edb2fd84-18ff-4a41-be8b-d88029977274)
+
+3. All Three (3) Oracles  - Estimated Implementation Date - 90 Days after HIP passing
+   
+![Screen Shot 2024-01-19 at 2 19 05 PM](https://github.com/helium/HIP/assets/104723888/95674006-9542-46ac-b7ef-e344848f97a5)
+
 
 ## Drawbacks:
 
@@ -79,7 +101,8 @@ The implementation of this proposal could increase the complexity of the Helium 
 
 ## Alternatives
 
-Alternative methods of how Oracles interact and calculated were explored during the community discussion phase of this HIP, but ultimately, having Oracle's multiply, add, or be weighted didn't allow for the fine tuning of the Oracles to mirror real world scenarios.
+One alternative would be to use subscriber discovery mapping data to identify areas in which there are multiple Helium Mobile subscribers; however, this method is easily gamed and would be heavily exploited.
+
 
 ## Success Metrics
 
