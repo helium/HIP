@@ -116,11 +116,6 @@ Since Wi-Fi AP and Radio B and C tied in Signal Strength, the Coverage Claim dat
 
 Since Wi-Fi AP and Radio D had the lowest signal strength out of all four (4) Wi-Fi AP, and only the top three (3) Wi-Fi AP will earn PoC rewards, Wi-Fi AP D will not earn any MCP for this res12 hex, and are ranked as "Fail".
 
-### Outdoor CBRS Signal Interference Penalty
-
-Too much CBRS overlap may cause interference, and may not provide the best or even usable experience for end users. Therefore, This HIP proposes in instances where there is greater than five (5) outdoor CBRS signals in one res12 hex, that the SAS registration may be revoked or not approved by Nova Labs for the 6th and any subsequent radio for that entire radio that is providing redudant coverage to that res12 hex. This HIP allows Nova Labs to use discretion when revoking or denying the CPI of a radio with more than 5 overlapping signals. For example, if a 6th radio that is place has a small amount of overlapping coverage, Nova Labs may use discreation and not revoke or deny the CPI submission. 
-
-
 ## Drawbacks:
 
 Implementing this proposal will increase the complexity of modeled coverage scores due to adding additional variables used to calculate total MOBILE rewards.
