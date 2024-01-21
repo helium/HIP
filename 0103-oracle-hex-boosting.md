@@ -51,9 +51,9 @@ Once all combinations are accounted for, each combination value will be assigned
 
 Further, the HIP authors acknowledge that areas that Service Providers boost through hex boosting are areas where coverage is needed the most. Therefore, if a res12 hex is boosted by a Service Provider of ≥1, the Oracle Multiplier will automatically be 1.00X, regardless of what combination value it is assigned. 
 
-Once the Oracle Multiplier is calculated, this will be multiplied by any Service Provider Hex boosts, and then multiplied by the radio/wifi hex limit multiplier identified within HIP 85 and 105. The whole calculation is as followed:
+Once the Oracle Multiplier is calculated, this will be multiplied by Service Provider Hex boosts (from HIP 84), and then multiplied by the radio/wifi hex limit multiplier identified within HIP 85 and 105. The whole calculation is as followed:
 
-Oracle Multiplier X Service Provider Hex Boost Multiplier X HIP 85/105 Multiplier X Modeled Coverage Points from HIP 74/93.
+Oracle Multiplier X HIP 84 Service Provider Hex Boost Multiplier X HIP 85/105 Multiplier X Modeled Coverage Points from HIP 74/93.
 
 ### Footfall Oracle
 
