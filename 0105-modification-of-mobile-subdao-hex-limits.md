@@ -116,33 +116,6 @@ Since Wi-Fi AP and Radio B and C tied in Signal Strength, the Coverage Claim dat
 
 Since Wi-Fi AP and Radio D had the lowest signal strength out of all four (4) Wi-Fi AP, and only the top three (3) Wi-Fi AP will earn PoC rewards, Wi-Fi AP D will not earn any MCP for this res12 hex, and are ranked as "Fail".
 
-### Outdoor CBRS Signal Interference Penalty
-
-Too much CBRS overlap may cause interference, and may not provide the best or even usable experience for end users. Therefore, This HIP proposes that any res12 hex that has greater than five (5) outdoor CBRS signals shall not be awarded any modeled coverage points for that res12 hex that has greater than five (5) signals.
-
-See the examples below:
-
-As this res12 hex has 5 or less CBRS radio signals, this penalty will not apply.
-
-| Radio | Signal Strength | Coverage Claim Start Date | CBRS Rank | MCP Per HIP 85 | New MCP |
-| ----- | --------------- | ------------------------- | --------- | -------------- | ------- |
-| A     | -77.33 dBm      | 05/01/2023 23:24:25       | 1         | 16             | 16      |
-| B     | -98.75 dBm      | 12/01/2022 01:01:01       | 2         | 6              | 6       |
-| C     | -98.75 dBm      | 12/02/2022 12:11:01       | 3         | 2              | 2       |
-| D     | -105.60 dBm     | 12/05/2022 11:51:01       | Fail      | 0              | 0       |
-| E     | -105.69 dBm     | 08/01/2022 05:01:59       | Fail      | 0              | 0       |
-
-Since this res12 hex has 6 or more CBRS radio signals, no CBRS radio signals within this res12 hex will get rewarded ANY MCP.
-
-| Radio | Signal Strength | Coverage Claim Start Date | CBRS Rank | MCP Per HIP 85 | New MCP |
-| ----- | --------------- | ------------------------- | --------- | -------------- | ------- |
-| A     | -77.33 dBm      | 05/01/2023 23:24:25       | 1         | 16             | 0       |
-| B     | -98.75 dBm      | 12/01/2022 01:01:01       | 2         | 6              | 0       |
-| C     | -98.75 dBm      | 12/02/2022 12:11:01       | 3         | 2              | 0       |
-| D     | -105.60 dBm     | 12/05/2022 11:51:01       | Fail      | 0              | 0       |
-| E     | -105.69 dBm     | 08/01/2022 05:01:59       | Fail      | 0              | 0       |
-| F     | -108.69 dBm     | 09/01/2022 06:05:01       | Fail      | 0              | 0       |
-
 ## Drawbacks:
 
 Implementing this proposal will increase the complexity of modeled coverage scores due to adding additional variables used to calculate total MOBILE rewards.
