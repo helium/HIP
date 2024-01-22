@@ -1,10 +1,10 @@
-# HIP XXX: Detering Gaming Through Verification Fees
+# HIP 107: Deterring Gaming Through Verification Fees
 
 - Author(s): [Andy Zyvoloski](https://github.com/heatedlime) 
-- Start Date: 12/31/2023
+- Start Date: 2023-12-31
 - Category: Economic, Technical
-- Original HIP PR: 
-- Tracking Issue: 
+- Original HIP PR: [#857](https://github.com/helium/HIP/pull/857)
+- Tracking Issue: [#881](https://github.com/helium/HIP/issues/881)
 - Vote Requirements: veMOBILE Holders
 
 ## Summary:
