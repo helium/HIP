@@ -120,6 +120,7 @@ If you have questions or feedback, please see the [Discussion](https://github.co
 | 104 | [Finetune HIP-17 Parameters to Tackle Density](0104-finetune-hip17-parameters-to-tackle-density.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/838) |
 | 105 | [Modification of MOBILE subDAO Hex Limits](0105-modification-of-mobile-subdao-hex-limits.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/840) |
 | 106 | [Hotspot Bidirectional Coverage Requirement](0106-hotspot-bidirectional-coverage-requirement.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/870) |
+| 107 | [Deterring Gaming Through Verification Fees](0107-deterring-gaming-through-verification-fees.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/881) |
 
 
 ## Status Key
