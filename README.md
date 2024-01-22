@@ -113,13 +113,14 @@ If you have questions or feedback, please see the [Discussion](https://github.co
 |  97 | [Removing Manual MOBILE Location Assertions](0097-removing-manual-mobile-location-assertions.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/795)  |
 |  98 | [MOBILE SubDAO Quality of Service Requirements](0098-mobile-subdao-quality-of-service-requirements.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/797)  |
 |  99 | [Formalize the Maker Program through a New Legal Entity](0099-formalize-the-maker-program-through-a-new-legal-entity.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/801) |
-| 100 | [Deploy EU868 Region Plan to the Majority of Africa](0100-deploy-eu868-region-plan-to-the-majority-of-africa.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/809) |
-| 101 | [Equalizing POC Rewards Across Wi-Fi and CBRS](0101-equalizing-poc-rewards-across-wifi-and-cbrs.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/809) |
-| 102 | [Helium Educational LNS - Unrewarded Trial Network](0102-helium-educational-lns.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/835) |
+| 100 | [Deploy EU868 Region Plan to the Majority of Africa](0100-deploy-eu868-region-plan-to-the-majority-of-africa.md) | [<img src="https://img.shields.io/badge/Status-Approved-green"></img>](https://github.com/helium/HIP/issues/809) |
+| 101 | [Equalizing POC Rewards Across Wi-Fi and CBRS](0101-equalizing-poc-rewards-across-wifi-and-cbrs.md) | [<img src="https://img.shields.io/badge/Status-Voting_Open-cyan"></img>](https://github.com/helium/HIP/issues/809) |
+| 102 | [Helium Educational LNS - Unrewarded Trial Network](0102-helium-educational-lns.md) | [<img src="https://img.shields.io/badge/Status-Voting_Open-cyan"></img>](https://github.com/helium/HIP/issues/835) |
 | 103 | [MOBILE Oracle Hex Boosting](0103-oracle-hex-boosting.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/836) |
-| 104 | [Finetune HIP-17 Parameters to Tackle Density](0104-finetune-hip17-parameters-to-tackle-density.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/838) |
+| 104 | [Finetune HIP-17 Parameters to Tackle Density](0104-finetune-hip17-parameters-to-tackle-density.md) | [<img src="https://img.shields.io/badge/Status-Voting_Open-cyan"></img>](https://github.com/helium/HIP/issues/838) |
 | 105 | [Modification of MOBILE subDAO Hex Limits](0105-modification-of-mobile-subdao-hex-limits.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/840) |
 | 106 | [Hotspot Bidirectional Coverage Requirement](0106-hotspot-bidirectional-coverage-requirement.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/870) |
+| 107 | [Deterring Gaming Through Verification Fees](0107-deterring-gaming-through-verification-fees.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/881) |
 
 
 ## Status Key
