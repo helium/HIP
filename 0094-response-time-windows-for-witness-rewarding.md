@@ -163,9 +163,9 @@ Basically, only the DOWNLINK REQ / ACK creates generate a time constraint at the
 ## MCU hardware performance comparison
 
 | Hotspot    | Motherboard | CPU/MCU         | Clock   | Cores |
-| ---------- | ----------- | --------------- | ------- | ----- | --- |
+| ---------- | ----------- | --------------- | ------- | ----- | 
 | Nebra...   | RPI CM3     | BCM2837B0       | 1400MHz | 4     |
-| Rak...     | RPI 4       | BCM2711         | 1500MHz | 4     |     |
+| Rak...     | RPI 4       | BCM2711         | 1500MHz | 4     |
 | Kerlink    | Custom      | MCIMX6X1CVO08AB | 800MHz  | 1     |
 | Senscap M2 | Mediatek    | MT7628          | 580MHz  | 1     |
 
