@@ -46,10 +46,10 @@ To ensure that only the best outdoor Wi-Fi setups are rewarded, only the top thr
 
 | Wi-F Rank | Multiplier |
 | --------- | ---------- |
-| 1         | 1X         |
-| 2         | .75X       |
-| 3         | .25X       |
-| Fail      | 0X         |
+| 1         | 1.00X      |
+| 2         | 0.50X      |
+| 3         | 0.25X      |
+| Fail      | 0.00X      |
 
 Please note that the multiplier table above only affects the MCP that are given to each Outdoor Wi-Fi AP and does not affect rewards distributed for the transfer of data.
 
@@ -63,10 +63,10 @@ To ensure that only the best outdoor CBRS setups are rewarded, only the top thre
 
 | CBRS Rank | Multiplier |
 | --------- | ---------- |
-| 1         | 1X         |
-| 2         | .75X       |
-| 3         | .25X       |
-| Fail      | 0X         |
+| 1         | 1.00X      |
+| 2         | 0.50X      |
+| 3         | 0.25X      |
+| Fail      | 0.00X      |
 
 Please note that the multiplier table above only affects the MCP that are given to each Outdoor Wi-Fi AP and does not affect rewards distributed for the transfer of data.
 
@@ -88,14 +88,14 @@ See the example below of how ranking based on a hex multiplier would affect depl
 | Wi-Fi | Signal Strength | Coverage Claim Start Date | Wi-Fi Rank | MCP per HIP 93 | New MCP |
 | ----- | --------------- | ------------------------- | ---------- | -------------- | ------- |
 | A     | -63.33 dBm      | 01/01/2024 01:01:01       | 1          | 16             | 16      |
-| B     | -66.75 dBm      | 01/01/2024 01:01:01       | 2          | 8              | 6       |
+| B     | -66.75 dBm      | 01/01/2024 01:01:01       | 2          | 8              | 4       |
 | C     | -66.75 dBm      | 02/12/2024 18:06:05       | 3          | 8              | 2       |
 | D     | -75.60 dBm      | 01/02/2024 01:01:01       | Fail       | 4              | 0       |
 
 | Radio | Signal Strength | Coverage Claim Start Date | CBRS Rank | MCP Per HIP 74 | New MCP |
 | ----- | --------------- | ------------------------- | --------- | -------------- | ------- |
 | A     | -77.33 dBm      | 05/01/2023 23:24:25       | 1         | 16             | 16      |
-| B     | -98.75 dBm      | 12/01/2022 01:01:01       | 2         | 8              | 6       |
+| B     | -98.75 dBm      | 12/01/2022 01:01:01       | 2         | 8              | 4       |
 | C     | -98.75 dBm      | 12/02/2022 12:11:01       | 3         | 8              | 2       |
 | D     | -105.60 dBm     | 12/05/2022 11:51:01       | Fail      | 4              | 0       |
 
@@ -110,7 +110,7 @@ See the example below of how ranking based on a hex multiplier would affect depl
 
 **Table Explanation:**
 
-Since Wi-Fi AP / Radio A has the highest signal strength in that hex, it will be ranked as "1", and granted a 1X multiplier to the modeled coverage score of 16, which will award it with the full 16 (16 x 1) MCP for that epoch.
+Since Wi-Fi AP / Radio A has the highest signal strength in that hex, it will be ranked as "1", and granted a 1.00X multiplier to the modeled coverage score of 16, which will award it with the full 16 (16 x 1) MCP for that epoch.
 
 Since Wi-Fi AP and Radio B and C tied in Signal Strength, the Coverage Claim date is used to determine which radio is ranked next. For this example, radio B had its Coverage Claim date start on 01/01/2024 01:01:01 while radio C had its Coverage Claim date start on 02/12/2024 18:06:05. Therefore, since Wi-Fi AP B has an earlier Coverage Claim date, it will be ranked "2", while Wi-Fi AP C has a rank of "3".
 
