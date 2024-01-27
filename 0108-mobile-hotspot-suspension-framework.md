@@ -28,7 +28,7 @@ To preclude proliferation of counterproductive and/or malicious hotspot installs
 A foundation approved hotspot vendor must monitor its fleet of hotspots and exercise reasonable judgment to determine which hotspots are engaging in counterproductive and/or malicious activity. Common examples of such counterproductive and malicious activity may include:
 
  
--   Deployments in locations highly unlikely to ever produce data usage, yet optimized to harvest maximum POC by covering huge swaths of land i.e. 436H radios with majority of hexes covering water, urban fields, mountains etc. generally exceeding 2200 coverage points per radio (50th percentile)
+-   Deployments in locations highly unlikely to ever produce data usage, yet optimized to harvest maximum POC by covering huge swaths of land i.e. 436H radios with a majority of hexes covering water, urban fields, mountains etc. generally exceeding 2200 coverage points per radio (50th percentile)
 -   Creating harmful RF interference through artificial density i.e. more than 1 gateway with a total of 5 or more radios within a 200m radius inside an urbanized area 
 -   Radios engaging in data milking i.e. 30+ subscriber accounts registered to a single entity pushing data through a single hotspot at rates atypical of regular usage patterns  
 -   Any hotspot purposefully misrepresenting its coverage by using any means to fake an asserted location or misrepresentation of reality in CPI submission i.e. China IP addresses, fake photoshopped images in CPI submission, radio does not exist in CPI location etc.
