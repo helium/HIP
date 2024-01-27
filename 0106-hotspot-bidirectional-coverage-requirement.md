@@ -33,11 +33,9 @@ The hotspot owners that will experience an inability to provide bidirectional co
 
 [detailed-explanation]: #detailed-explanation
 
-The oracles will keep track of the last timestamp a hotspot has witnessed and of the last time a hotspot has beaconed.
+When a hotspot beacons the oracles will perform the existing proof of coverage checks. If the beacon report is valid and has at least one witness, the oracles will record the last beacon timestamp of the beaconer as well as the last witnessed timestamp for each of the valid witnesses. After the oracle has successfully processed the proof of coverage event it will run the reciprocity checks for the beaconer and each of the witnesses. If the beaconer has not witnessed any hotspots in the last _48 hours_ the beacon will be invalidated with `GatewayNoValidWitnesses`. Similarly, for all the witnesses of the beacon the oracle will check if the witnessing hotspot has successfully beaconed another hotspot in the last _48 hours_. If a witness has not successfully beaconed in the last _48 hours_ the witness event will be invalidated with invalid reason `GatewayNoValidBeacons`.
 
-When a hotspot witnesses a beacon the oracle will check the last time a hotspot has beaconed, if the time since the last beacon exceeds 48 hours the hotspots witness event will be invalidated with invalid reason `GatewayNoValidBeacons`.
-
-When a hotspot beacons the oracle will check the last time a hotspot has witnessed, if the time since the last witness exceeds 48 hours the hotspots beacon will be invalidated with the invalid reason `GatewayNoValidWitnesses`. All the witnesses of such a beacon will be dropped and not processed so the beacon will have 0 witnesses.
+If a hotspot has a valid witness it will update the last witnessed timestamp, even if the hotspot has its witness events invalid for `GatewayNoValidBeacons`. Similarly, if a hotspot has a valid beacon (with witnesses) but it is invalided for `GatewayNoValidWitnesses` the last beaconed time is still updated. This prevents a situation in which a hotspot can't successfully beacon for not having valid witnesses and not successfully witness for not having valid beacons.
 
 ### New invalid reasons `GatewayNoValidBeacons` and `GatewayNoValidWitnesses`
 
@@ -67,7 +65,7 @@ The alternative to this solution is to maintain the status quo where a hotspot i
 
 [unresolved-questions]: #unresolved-questions
 
-There are two general implementation options: per epoch or a rolling window. The preferred method is a rolling window because this will enable a hotspot for rewards as soon as it successfully beacons. The way this proposal is implemented is pending discussion with the oracle team on the technical limitations of the oracles.
+Any denylist classifier that acts upon witness reciprocity will have to make sure that it does not list a hotspot for lack of reciprocity that is already covered by the proof of coverage pipeline.
 
 ## Deployment Impact
 
