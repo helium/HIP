@@ -13,7 +13,7 @@ This proposal outlines the duties and guidelines for MOBILE hotspot vendors (CBR
 
 ## Motivation
 
-As the neetwork continues to grow, more and more hotspots are engaging in various types of nefarious activities aimed at farming MOBILE POC rewards. This HIP proposes a framework that can be used by hotspot vendors and the community to suspend such hotspots. 
+As the network continues to grow, more and more hotspots are engaging in various types of nefarious activities aimed at farming MOBILE POC rewards. This HIP proposes a framework that can be used by hotspot vendors and the community to suspend such hotspots. 
 
 ## Stakeholders
 
