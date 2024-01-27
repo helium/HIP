@@ -25,15 +25,17 @@ By moving the bidirectional coverage check from the denylist to the proof of cov
 
 All hotspot owners will be affected by this HIP. In particular hotspot owners that have hotspots that are unable to successfully witness or beacon. Two groups of hotspot owners are directly affected: the group of hotspot owners that is currently flagged for not being able to witness or beacon and the group of hotspot owners that experience such a failure in the future.
 
-The hotspot owners that are currently flagged for not being able to witness or beacon successfully will have a faster recourse if this proposal passes. The current denylist cadance is roughly 7 days whereas this proposal will determine if a hotspot supports bidirectional coverage much faster, thus offering faster recourse and feedback if such a failure is resolved.
+The hotspot owners that are currently flagged for not being able to witness or beacon successfully will have a faster recourse if this proposal passes. The current denylist cadance is roughly _7 days_ whereas this proposal will determine if a hotspot supports bidirectional coverage much faster, thus offering faster recourse and feedback if such a failure is resolved.
 
-The hotspot owners that will experience an inability to provide bidirectional coverage in the future will have faster feedback because they will stop being rewarded after the After resolving the issue the hotspot owner will not have to wait for the 7 day denylist cadence but instead will have immediate feedback that the issue is resolved as PoC rewards return.
+The hotspot owners that will experience an inability to provide bidirectional coverage in the future will have faster feedback because they will stop being rewarded after _48 hours_. After resolving the issue the hotspot owner will not have to wait for the 7 day denylist cadence but instead will have immediate feedback that the issue is resolved as PoC rewards return.
 
 ## Detailed Explanation
 
 [detailed-explanation]: #detailed-explanation
 
-**TODO**: _detailed implementation pending discussion with the oracle team to determine whether a rolling window is technically feasible. A rolling window is preferred over a epoch-by-epoch system because it decreases the time between a hotspot owner fixing the issue and rewards being reapplied. See the [Drawbacks](#drawbacks) section._
+When a hotspot beacons the oracles will perform the existing proof of coverage checks. If the beacon report is valid and has at least one witness, the oracles will record the last beacon timestamp of the beaconer as well as the last witnessed timestamp for each of the valid witnesses. After the oracle has successfully processed the proof of coverage event it will run the reciprocity checks for the beaconer and each of the witnesses. If the beaconer has not witnessed any hotspots in the last _48 hours_ the beacon will be invalidated with `GatewayNoValidWitnesses`. Similarly, for all the witnesses of the beacon the oracle will check if the witnessing hotspot has successfully beaconed another hotspot in the last _48 hours_. If a witness has not successfully beaconed in the last _48 hours_ the witness event will be invalidated with invalid reason `GatewayNoValidBeacons`.
+
+If a hotspot has a valid witness it will update the last witnessed timestamp, even if the hotspot has its witness events invalid for `GatewayNoValidBeacons`. Similarly, if a hotspot has a valid beacon (with witnesses) but it is invalided for `GatewayNoValidWitnesses` the last beaconed time is still updated. This prevents a situation in which a hotspot can't successfully beacon for not having valid witnesses and not successfully witness for not having valid beacons.
 
 ### New invalid reasons `GatewayNoValidBeacons` and `GatewayNoValidWitnesses`
 
@@ -63,7 +65,7 @@ The alternative to this solution is to maintain the status quo where a hotspot i
 
 [unresolved-questions]: #unresolved-questions
 
-There are two general implementation options: per epoch or a rolling window. The preferred method is a rolling window because this will enable a hotspot for rewards as soon as it successfully beacons. The way this proposal is implemented is pending discussion with the oracle team on the technical limitations of the oracles.
+Any denylist classifier that acts upon witness reciprocity will have to make sure that it does not list a hotspot for lack of reciprocity that is already covered by the proof of coverage pipeline.
 
 ## Deployment Impact
 
