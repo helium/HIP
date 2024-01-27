@@ -48,7 +48,7 @@ Upon discovery of any activity described above, a hotspot vendor is to follow th
 
 ## Drawbacks
 
-This proposal assumes that hotspot vendors are trustworthy and capable actors that can excercise reasonable judgement to suspend the hotspots. As we add new vendors, the history shows that this assumption may not always hold true. Furthermore, there are a number of gray areas when it comes to "reasonable judgement." Inevitably, some of the suspensions will be deemed controversial by the community. 
+This proposal assumes that hotspot vendors are trustworthy and capable actors that can exercise reasonable judgement to suspend the hotspots. As we add new vendors, the history shows that this assumption may not always hold true. Furthermore, there are a number of gray areas when it comes to "reasonable judgement." Inevitably, some of the suspensions will be deemed controversial by the community. 
 
 
 ## Deployment Impact
