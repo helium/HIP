@@ -25,7 +25,7 @@ As the network continues to grow, more and more hotspots are engaging in various
 To preclude proliferation of counterproductive and/or malicious hotspot installs aimed at farming MOBILE POC rewards, any vendor of MOBILE hotspots (either CBRS or Wi-Fi) certified by the Helium Foundation is required to police and temporarily suspend and/or disable a hotspot that such vendor has reasonable evidence to assume is part taking in an activity that is hurting the community.
 
 ## Criteria Guidelines for Suspension of Hotspot by a Vendor
-A foundation approved hotspot vendor must monitor its fleet of hotspots and exercise reasonable judgment to determine which hotspots are engaging in counterproduction and/or malicious activity. Common examples of such counterproductive and malicious activity may include:
+A foundation approved hotspot vendor must monitor its fleet of hotspots and exercise reasonable judgment to determine which hotspots are engaging in counterproductive and/or malicious activity. Common examples of such counterproductive and malicious activity may include:
 
  
 -   Deployments in locations highly unlikely to ever produce data usage, yet optimized to harvest maximum POC by covering huge swaths of land i.e. 436H radios with majority of hexes covering water, urban fields, mountains etc. generally exceeding 2200 coverage points per radio (50th percentile)
