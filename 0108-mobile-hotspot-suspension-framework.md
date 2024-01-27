@@ -1,11 +1,11 @@
 # HIP 108: Mobile Hotspot Suspension Framework
 
-- Author(s): @zer0tweets
-- Start Date: January 27th, 2024
+- Author(s): [@zer0tweets](https://github.com/zer0tweets)
+- Start Date: 2024-01-27
 - Category: Meta, Governance
-- Original HIP PR:
-- Tracking Issue: 
-- Vote Requirements: veMOBILE Holders -->
+- Original HIP PR: [#885](https://github.com/helium/HIP/pull/885)
+- Tracking Issue: [#887](https://github.com/helium/HIP/issues/887)
+- Vote Requirements: veMOBILE Holders
 
 ## Summary
 
