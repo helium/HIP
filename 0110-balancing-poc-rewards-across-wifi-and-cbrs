@@ -39,7 +39,7 @@ For the Helium Mobile Network to succeed, it is important to accelerate deployme
 
 ## Detailed Explanation
 
-Based on the benefits of Wi-Fi over CBRS explained in the motivation section above, we propose to equalize POC for CBRS and Wi-Fi by increasing Wi-Fi PoC reward points for 180 days after implementation as follows:
+Based on the benefits of Wi-Fi over CBRS explained in the motivation section above, we propose to balance POC for CBRS and Wi-Fi by increasing Wi-Fi PoC reward points for 180 days after implementation as follows:
 
 - 1.5x for Indoor Wi-Fi. I.e. 600 rewards points for Wi-Fi AP vs. current 400 reward points;
 - 2.5x for Outdoor Wi-Fi AP per each covered hex. I.e. 1250 (instead of 500) points for templated coverage and the following points per modeled coverage hex
