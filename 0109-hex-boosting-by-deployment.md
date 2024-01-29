@@ -3,7 +3,7 @@
 - Author(s): [Andy Zyvoloski](https://github.com/heatedlime) &  [Max Gold](https://github.com/maxgold91)
 - Start Date: 2024-01-27
 - Category: Economic, Technical
-- Original HIP PR: [#886](https://github.com/helium/HIP/pull/886)
+- Original HIP PR: [#884](https://github.com/helium/HIP/pull/884)
 - Tracking Issue: [#888](https://github.com/helium/HIP/issues/888)
 - Vote Requirements: veMOBILE Holders
 
