@@ -3,7 +3,7 @@
 - Author(s): [@zer0tweets](https://github.com/zer0tweets)
 - Start Date: 2024-01-27
 - Category: Meta, Governance
-- Original HIP PR: [#885](https://github.com/helium/HIP/pull/885)
+- Original HIP PR: [#886](https://github.com/helium/HIP/pull/886)
 - Tracking Issue: [#887](https://github.com/helium/HIP/issues/887)
 - Vote Requirements: veMOBILE Holders
 
