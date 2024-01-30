@@ -20,7 +20,7 @@ What we have is a some 15+ billion vote swing from no to yes on this vote, durin
 
 ## Stakeholders
 
-Everyone in the Helium ecosystem.
+Everyone that chooses to vote on HIP(s).
 
 ## Drawbacks
 
