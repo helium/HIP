@@ -31,3 +31,8 @@ It has been posited there's a drawback in people waiting until the last minute t
 ## Rationale and Alternatives
 
 The ability to change one's vote all the way up to the closing date/time of the vote allows for potential manipulation. This potential vote manipulation is unethical and should be prevented on all future HIPs. This HIP will ensure that everyone's vote is truthful, as they will only have one chance to vote. All other voting privileges, such as locking up more tokens, etc. will continue as-is.
+
+## Success Metrics
+
+This HIP is considered successful if voters are able to see vote results that cannot be changed.
+
