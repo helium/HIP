@@ -1,9 +1,9 @@
 # HIP 110: Balancing POC Rewards Across Wi-Fi and CBRS
 
-- Author(s): [@zer0tweets](https://github.com/zer0tweets) (Nova Labs, Inc.)
-- Start Date: 2023-12-09
+- Author(s): [@marcialc](https://github.com/marcialc)
+- Start Date: 2024-01-28
 - Category: Economic, Technical
-- Original HIP PR: [#823](https://github.com/helium/HIP/pull/890)
+- Original HIP PR: [#890](https://github.com/helium/HIP/pull/890)
 - Tracking Issue: [#825](https://github.com/helium/HIP/issues/825)
 - Vote Requirements: veMOBILE Holders
 
@@ -42,7 +42,7 @@ For the Helium Mobile Network to succeed, it is important to accelerate deployme
 Based on the benefits of Wi-Fi over CBRS explained in the motivation section above, we propose to balance POC for CBRS and Wi-Fi by increasing Wi-Fi PoC reward points for 180 days after implementation as follows:
 
 - 1.5x for Indoor Wi-Fi. I.e. 600 rewards points for Wi-Fi AP vs. current 400 reward points;
-- 2.5x for Outdoor Wi-Fi AP per each covered hex. I.e. 1250 (instead of 500) points for templated coverage and the following points per modeled coverage hex
+- 2.0x for Outdoor Wi-Fi AP per each covered hex. I.e. 1000 (instead of 500) points for templated coverage and the following points per modeled coverage hex
 
 |                               | Tier 1           | Tier 2                       | Tier 3                       | Tier 4             |
 | ----------------------------- | ---------------- | ---------------------------- | ---------------------------- | ------------------ |
