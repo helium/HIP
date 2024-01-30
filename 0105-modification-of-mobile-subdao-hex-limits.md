@@ -4,8 +4,8 @@
 - Contributors: Hans & JD
 - Start Date: 12/7/2023
 - Category: Technical & Economic
-- Original HIP PR: [#821](https://github.com/pull/821)
-- Tracking Issue: [#840](https://github.com/issues/840)
+- Original HIP PR: [#821](https://github.com/helium/HIP/pull/821)
+- Tracking Issue: [#840](https://github.com/helium/HIP/issues/840)
 - Voting Requirements: veMOBILE Holders
 
 ## Summary:
