@@ -77,7 +77,7 @@ If you have questions or feedback, please see the [Discussion](https://github.co
 |  61 | [Increase Challenger Rewards](0061-increase-challenger-rewards.md) | [<img src="https://img.shields.io/badge/Status-Closed-lightgrey"></img>](https://github.com/helium/HIP/issues/421) |
 |  62 | [PoC Witness IP Check](0062-poc-witness-ip-check.md) | [<img src="https://img.shields.io/badge/Status-Closed-lightgrey"></img>](https://github.com/helium/HIP/issues/422) |
 |  63 | [Helium Hub](0063-helium-hub.md) | [<img src="https://img.shields.io/badge/Status-Closed-lightgrey"></img>](https://github.com/helium/HIP/issues/423) |
-|  64 | [WiFi subDAO](0064-wifi-dao.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/424) |
+|  64 | [WiFi subDAO](0064-wifi-dao.md) | [<img src="https://img.shields.io/badge/Status-Closed-lightgrey"></img>](https://github.com/helium/HIP/issues/424) |
 |  65 | [Vendor HNT Lockup](0065-vendor-token-lockup.md) | [<img src="https://img.shields.io/badge/Status-Closed-lightgrey"></img>](https://github.com/helium/HIP/issues/437) |
 |  66 | [Trust Score & Denylist Convenience](0066-trust-score-and-denylist-convenience.md) | [<img src="https://img.shields.io/badge/Status-Closed-lightgrey"></img>](https://github.com/helium/HIP/issues/438) |
 |  67 | [Repeal Redenomination](0067-repeal-redenomination.md) | [<img src="https://img.shields.io/badge/Status-Deployed-blue"></img>](https://github.com/helium/HIP/issues/456) |
@@ -112,7 +112,7 @@ If you have questions or feedback, please see the [Discussion](https://github.co
 |  96 | [WiFi AP Onboarding Structure](0096-wifi-ap-onboarding-structure.md) | [<img src="https://img.shields.io/badge/Status-Deployed-blue"></img>](https://github.com/helium/HIP/issues/785)  |
 |  97 | [Removing Manual MOBILE Location Assertions](0097-removing-manual-mobile-location-assertions.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/795)  |
 |  98 | [MOBILE SubDAO Quality of Service Requirements](0098-mobile-subdao-quality-of-service-requirements.md) | [<img src="https://img.shields.io/badge/Status-Voting_Open-cyan"></img>](https://github.com/helium/HIP/issues/797)  |
-|  99 | [Formalize the Maker Program through a New Legal Entity](0099-formalize-the-maker-program-through-a-new-legal-entity.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/801) |
+|  99 | [Formalize the Maker Program through a New Legal Entity](0099-formalize-the-maker-program-through-a-new-legal-entity.md) | [<img src="https://img.shields.io/badge/Status-Closed-lightgrey"></img>](https://github.com/helium/HIP/issues/801) |
 | 100 | [Deploy EU868 Region Plan to the Majority of Africa](0100-deploy-eu868-region-plan-to-the-majority-of-africa.md) | [<img src="https://img.shields.io/badge/Status-Approved-green"></img>](https://github.com/helium/HIP/issues/809) |
 | 101 | [Equalizing POC Rewards Across Wi-Fi and CBRS](0101-equalizing-poc-rewards-across-wifi-and-cbrs.md) | [<img src="https://img.shields.io/badge/Status-Rejected-red"></img>](https://github.com/helium/HIP/issues/809) |
 | 102 | [Helium Educational LNS - Unrewarded Trial Network](0102-helium-educational-lns.md) | [<img src="https://img.shields.io/badge/Status-Approved-green"></img>](https://github.com/helium/HIP/issues/835) |
