@@ -85,7 +85,7 @@ An alternative would be to do nothing, and do nothing to stop gaming from occurr
 The following will need to occur once the HIP is passed:
 
 - A method to burn MOBILE from the Helium Wallet and or Helium Builder app will need to be created in such a way that the CBRS radio and or Wi-Fi AP serial number or hotspot name is inscribed in the transaction message of the burn in order to keep everything on-chain.
-- Helium Mobile (and or any new outdoor Wi-Fi Manufacturer) will need to capture and retain an image for each outdoor hotspot deployment as a part of the onboarding and or location update process, and make this image available to any Tier 1 Service Providers upon request. 
+- Nova Labs will need to change the outdoor Wi-Fi onboard flow to allow outdoor Wi-Fi APs to be onboarded on chain without submitting an intial assertion, as well as requiring an image of the deployment at each assertion.
 
 
 ## Success Metrics: 
