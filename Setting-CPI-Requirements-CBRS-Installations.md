@@ -37,7 +37,7 @@ https://www.coursera.org/learn/google-cbrs-cpi-training
 
 ## Rationale and Alternatives
 
-Many newcomers in this ecosystem have little understanding of CBRS and SAS, and requring all depoyers to go through the CBRS training program to get their CPI certification will directly impact the quality and knowledge of the ones that are actually doing to installations.    
+Many newcomers in this ecosystem have little understanding of CBRS and SAS, and requring all deployers to go through the CBRS training program to get their CPI certification will directly impact the quality and knowledge of the ones that are actually doing to installations.    
 
 ## Unresolved Questions
 
