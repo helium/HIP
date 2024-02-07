@@ -10,7 +10,7 @@
 ## Summary
 
 This HIP aims to set CPI (Certified Professional Installer) requirements for CBRS deployments to better the installation quality and knowledge of the deployers for the CBRS network. 
-Every new cbrs deployment and/or re-registration of a cbrs radios, and will require a CPI identification number when submitting for SAS registration.
+Every new cbrs deployment and/or re-authorization of a cbrs radios, and will require a CPI identification number when submitting for SAS registration.
 
 ## Motivation
 
@@ -30,6 +30,8 @@ https://www.federatedwireless.com/services/certified-professional-installer/
 
 https://www.coursera.org/learn/google-cbrs-cpi-training
 
+The CPI ID would be an additoanl required text field as part of the SAS authorization.
+
 
 ## Drawbacks
 
@@ -41,11 +43,11 @@ Many newcomers in this ecosystem have little understanding of CBRS and SAS, and 
 
 ## Unresolved Questions
 
-- How Nova Labs will use this information to better SAS registration.  
+- How Nova Labs will use this information to better SAS authorization.  
 
 ## Deployment Impact
 
-Current SAS registrations would not be effected. However if a re-CPI is required for those units either by means of moving the units or deviation of the GPS, a CPI ID will be required as part of the resubmitting for SAS registration. 
+Current SAS authorization would not be effected. However if a re-CPI is required for those units either by means of moving the units or deviation of the GPS, a CPI ID will be required as part of the resubmitting for SAS registration. 
 
 
 ## Success Metrics
