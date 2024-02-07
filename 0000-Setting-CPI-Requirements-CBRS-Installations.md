@@ -25,7 +25,9 @@ Every new cbrs deployment and/or re-registeration of a cbrs radios, and will req
 
 In order to get CPI certified, you must take a short online course that would take no longer than a day.  
 These courses can be taken at the follwoing sites:
+
 https://www.federatedwireless.com/services/certified-professional-installer/
+
 https://www.coursera.org/learn/google-cbrs-cpi-training
 
 
