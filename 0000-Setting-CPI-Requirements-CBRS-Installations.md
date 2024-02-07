@@ -1,79 +1,54 @@
 # Setting-CPI-Requirements-CBRS-Installations
 
-- Author(s): <!-- your GitHub @username -->
-- Start Date: <!-- fill me in with today's date, YYYY-MM-DD -->
-- Category: <!-- economic, technical, meta -->
+- Author(s): @mrfizzy99
+- Start Date: 2024/02/07
+- Category: Technical
 - Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
 - Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
-- Vote Requirements: <!-- veHNT Holders, veIOT Holders, or veMOBILE Holders -->
+- Vote Requirements: Current veMOBILE Holders
 
 ## Summary
 
 This HIP aims to set CPI (Certified Professional Installer) requirements for CBRS deployments to better the installation quality and knowlege of the deployers for the CBRS network. 
-Every new cbrs deployment and/or re-registeration of a cbrs radio, and will require a CPI identification number when submitting for SAS registration.
-
-<!-- Read the content requests in all sections before starting to write any section. -->
+Every new cbrs deployment and/or re-registeration of a cbrs radios, and will require a CPI identification number when submitting for SAS registration.
 
 ## Motivation
 
-- Why are we doing this?
-- What use cases does it support?
-- What problems does it solve?
-- What is the expected outcome?
+- Improving the quality of CBRS installs
+- Improving the knowledge of the ones deploying CBRS. 
 
 ## Stakeholders
 
-- Who is affected by this HIP? A stakeholder is any individual, group, or party such as network
-  users, Hotspot hosts, or token holders.
-- How are we soliciting feedback on this HIP from these stakeholders? Note that they may not be
-  watching the HIP repository or even directly active in the Helium Community chat channels.
+- CBRS Radios and Deployers 
 
 ## Detailed Explanation
 
-- Introduce and explain new concepts.
-- It should be reasonably clear how the proposal would be implemented.
-- Provide representative examples that show how this proposal would be commonly used.
-- Corner cases should be dissected by example.
+In order to get CPI certified, you must take a short online course that would take no longer than a day.  
+These courses can be taken at the follwoing sites:
+https://www.federatedwireless.com/services/certified-professional-installer/
+https://www.coursera.org/learn/google-cbrs-cpi-training
+
 
 ## Drawbacks
 
-- Why should we _not_ do this?
-- What problems could occur if we do this?
+- Less depoyments of CBRS due to a lack of knowledge or willingness to take the CPI Training Courses.  
 
 ## Rationale and Alternatives
 
-This is your chance to discuss your proposal in the context of the whole design space. This is
-probably the most important section!
-
-- Why is this design the best in the space of possible designs?
-- What other designs have been considered and what is the rationale for not choosing them?
-- What is the impact of not doing this?
+Many newcomers in this ecosystem have little understanding of CBRS and SAS, and requring all depoyers to go through the CBRS training program to get their CPI certification will directly impact the quality and knowledge of the ones that are actually doing to installations.    
 
 ## Unresolved Questions
 
-- What parts of the design do you expect to resolve through the HIP process before this gets merged?
-- What parts of the design do you expect to resolve through the implementation of this feature?
-- What related issues do you consider out of scope for this HIP that could be addressed in the
-  future independently of the solution that comes out of this HIP?
-- Are there dependencies, milestones, or dates that need to be met for this HIP to succeed?
+- How Nova Labs will use this infomration to better SAS registration.  
 
 ## Deployment Impact
 
-Describe how this design will be deployed and any potential impact it may have on current users of
-this project.
+Current SAS registerations would not be effected. However if a re-CPI is required for those units either by means of moving the units or divatiaion of the GPS, a CPI ID will be required as part of the resubmittion for SAS registration. 
 
-- How will current users be impacted?
-- How will existing documentation/knowledge base need to be supported? Any content to change at
-  <http://docs.helium.com>?
-- Is this backwards compatible? Can this HIP be undone?
-  - If not, what is the procedure to migrate?
 
 ## Success Metrics
 
-What metrics can be used to measure the success of this design? Are any new ETL reports needed to
-measure the success?
-
-- What should we measure to prove a performance increase?
-- What should we measure to prove an improvement in stability?
-- What should we measure to prove a reduction in complexity?
-- What should we measure to prove an acceptance of this by its users?
+- Higher quality installs of CBRS units.
+- Less CPI rejections due to not understanding what is required.
+  
+  
