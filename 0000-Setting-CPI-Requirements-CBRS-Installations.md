@@ -1,4 +1,4 @@
-# HIP Template (Give it a title here but do not allocate a number, maintainer will allocate a number)
+# Setting-CPI-Requirements-CBRS-Installations
 
 - Author(s): <!-- your GitHub @username -->
 - Start Date: <!-- fill me in with today's date, YYYY-MM-DD -->
@@ -9,7 +9,8 @@
 
 ## Summary
 
-One paragraph explanation of the proposal.
+This HIP aims to set CPI (Certified Professional Installer) requirements for CBRS deployments to better the installation quality and knowlege of the deployers for the CBRS network. 
+Every new cbrs deployment and/or re-registeration of a cbrs radio, and will require a CPI identification number when submitting for SAS registration.
 
 <!-- Read the content requests in all sections before starting to write any section. -->
 
