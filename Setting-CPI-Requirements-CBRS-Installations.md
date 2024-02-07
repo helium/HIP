@@ -30,7 +30,7 @@ https://www.federatedwireless.com/services/certified-professional-installer/
 
 https://www.coursera.org/learn/google-cbrs-cpi-training
 
-The CPI ID would be an additoanl required text field as part of the SAS authorization.
+The CPI ID would be an additional required text field as part of the SAS authorization.
 
 
 ## Drawbacks
