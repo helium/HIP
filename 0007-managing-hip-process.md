@@ -32,7 +32,7 @@ the Helium Network would be vetted through the HIP process.
 # Stakeholders
 
 We plan to circulate this proposal in
-[Discord #hip-open-discussion channel](https://discord.gg/helium). We will also solicit specific
+[Discord #hip-discussion channel](https://discord.gg/helium). We will also solicit specific
 individuals for feedback, from both within the Helium community and other crypto and open-source
 projects.
 
