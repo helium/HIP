@@ -26,6 +26,7 @@ The stakeholders of this proposal are:
 - **MOBILE Holders** will benefit with an increased value in terms of MOBILE/HNT Treasury swap rate.
 - **Service Providers** will be able to temporarily turn off radios/Wi-Fi APs suspected of gaming
 - **Gamers** will now suffer a financial and or opportunity cost loss when they are caught gaming
+- **MOBILE App Developers** will need to ensure their the onboarding app allow for submitting and paying for location change and CPI submissions
 
 ## Detailed Explanation:
 This HIP proposes the following fee structure:
@@ -33,7 +34,7 @@ This HIP proposes the following fee structure:
 ### Outdoor CBRS Radios
 A $20 fee in MOBILE burn will be required whenever new CPI information is submitted, which includes the initial/first CPI submission, and any submissions thereafter. If the CPI submission is rejected for a mistake made by the deployer when submitting the information, the deployer will have one (1) free resubmission for that radio, so long as that re-submission is done within 30 calendar days after initial rejection. If the CPI rejects the submission for any potential gaming concerns, there will be no free re-submissions, and a new fee will need to be paid. 
 
-This HIP also grants authority to the CPI reviewer of outdoor CBRS radios to charge a separate standard or priority fee of up to a $20 paid in MOBILE to the CPI reviewing entity. This fee is paid directly to the entity that is completing the CPI submission, and is NOT burned. If a fee is charged by the CPI reviewing entity, the following is required:
+This HIP also grants authority to the CPI reviewer of outdoor CBRS radios to charge a separate standard or priority fee of up to a $20 paid in MOBILE to the CPI reviewing entity. This fee is paid directly to the entity that is completing the CPI submission, and is NOT burned. If a fee is charged by the CPI reviewing entity, the following is required (note, if the following is not followed, the standard/priority fee must be refunded within 2 business days):
 
 - The CPI submission must be approved or rejected within 2 business days
 - A guide must be created that documents each reason a submission may be rejected (i.e. incorrect height, incorrect azimuth, outdoor radio installed indoors, gaming concerns, etc.)
