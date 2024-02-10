@@ -50,10 +50,13 @@ Below is a chart that illustrates the pricing costs per HIP 84, and what this HI
 |31-40X            | $57.33      | $44.70   |
 |41-50X            | $72.03      | $92.70   |
 
-
+### Existing Boosts
+Under this HIP, any res12 that was previously boosted will result in that whole res10 hex becoming boosted. To abide by the 50X maximum boost, all previously existing boosts will decrease by 50% (except any hexes that are boosted 2X, they will remain 2X), and rounded up to the nearest whole number, and the duration doubled. For example, if a res12 hex was previously boosted to 100X for 6 months, the whole res10 hex that that one res12 hex was in will now be boosted to 50% for 12 months. Another example is if a res12 hex was previously boosted 5X for 6 months, the broader res10 hex will now be boosted 3x for 12 months.
 
 ## Drawbacks:
 Service Providers will now not be able to fine tune boosts down to the res12 hex size, which might result in coverage being deployed in areas that are close to the res12 hex where they want boosted, but not close enough to provide coverage.  
+
+Deployers who currently are providing coverage to boosted hexes will see their boosts decrease by 50%; however, the total boost duration will now be doubled.
 
 Further, Service Providers will no longer be able to boost past 50X; however, with having current hex boosts at 100X, the MOBILE subnetwork has experienced an increase in gaming in those hexes.
 
