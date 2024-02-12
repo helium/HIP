@@ -6,7 +6,7 @@
 -   Category: Economic 
 -   Original HIP PR:
 -   Tracking Issue:
--   Vote Requirements: 67% to pass
+-   Vote Requirements: veMOBILE; 67% to pass
     
 
 ## Summary
