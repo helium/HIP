@@ -5,7 +5,7 @@ HIP-xxx - Repeal-SP-Hex-Boosting-Rewards
 - Category: Economic and Technical
 - Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
 - Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
-- Vote Requirements: Current veMOBILE Holders
+- Vote Requirements: veMOBILE Holders
 
 ## Summary
 
@@ -44,7 +44,8 @@ HIP-84 created Service Provider Hex Boosting.
 ## Drawbacks
 
 - Less deployments within current boosted hexes.
-- Hotspots moving outside of the boosted hexes that the current Service Provider has dictated as 'high-traffic' areas. 
+- Hotspots moving outside of the boosted hexes that the current Service Provider has dictated as 'high-traffic' areas.
+- Current Mexico Boosted Hexes will no longer have an ability of getting PoC at all. However as of to date, the current service provider has not utlized these. They can remain "Recommended" hexes as the service provider already intends to gatehold certified hotspots for Mexico to be given to authorized depoyers with the intent to deploy in those locations anyway. 
 
 
 ## Rationale and Alternatives
