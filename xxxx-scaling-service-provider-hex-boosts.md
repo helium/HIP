@@ -27,7 +27,7 @@ The stakeholders of this proposal are:
 - Deployers should see an increase in boosted hexes
 
 ## Detailed Explanation:
-Under this HIP, the minimum size hex a Service Provider can boost is one res10 hex (approximately 9.350 meters sq.), while the minimum duration remains at 6 months. It also provides tiered pricing to make boosting more hexes with a lower multiplier more attractive and cheaper, and boosts with a higher multiplier more expensive. Please note, per HIP 103, all hexes automatically have a Service Provider Hex Boost value of 1X. The cost to boost one res10 hex per month per 1X under this HIP is as followed:
+Under this HIP, the minimum size hex a Service Provider can boost is one res10 hex (approximately 15,047.5 meters sq.), while the minimum duration remains at 6 months. It also provides tiered pricing to make boosting more hexes with a lower multiplier more attractive and cheaper, and boosts with a higher multiplier more expensive. Please note, per HIP 103, all hexes automatically have a Service Provider Hex Boost value of 1X. The cost to boost one res10 hex per month per 1X under this HIP is as followed:
 
 
 | Final Multiplier | Per Month and Per 1X Increase |
