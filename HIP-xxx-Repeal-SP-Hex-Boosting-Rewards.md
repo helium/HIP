@@ -45,12 +45,12 @@ HIP-84 created Service Provider Hex Boosting.
 
 - Less new deployments within current boosted hexes, which will revert to "Recommended" hexes. 
 - Hotspots re-asserting outside of the boosted hexes, which will change to "Recommended" hexes, that the current Service Provider has dictated as 'high-traffic' areas without actual service provider footfall data to actually back this up.
-- Current Mexico Boosted Hexes will no longer have an ability of getting PoC at all. However as of to date, the current service provider has not utlized these. They can remain "Recommended" hexes as the service provider already intends to gatehold certified hotspots for Mexico to be given to authorized depoyers with the intent to deploy in those locations anyway. 
+- Current Mexico Boosted Hexes will no longer have an ability of getting PoC at all. However as of to date, the current service provider has not utlized these. They can remain "Recommended" hexes as the service provider already intends to gatehold certified hotspots for Mexico to be given to authorized deployers with the intent to deploy in those locations anyway. 
 
 
 ## Rationale and Alternatives
 
-- There are many alternatives that can be and are being discussed, however, these would take time to hash out and reimplement.   This could take from weeks to months while the Hex Boosting continues to be exploited at the detriment to nationwide depoyment within the HIP-103 Mobile-Oracle-Hex-Boosting layers.  
+- There are many alternatives that can be and are being discussed, however, these would take time to hash out and reimplement.   This could take from weeks to months while the Hex Boosting continues to be exploited at the detriment to nationwide deployment within the HIP-103 Mobile-Oracle-Hex-Boosting layers.  
 
 
 ## Unresolved Questions
