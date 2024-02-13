@@ -23,8 +23,8 @@ In instances where Service Providers identify areas where they have high demand 
 ## Stakeholders:
 
 The stakeholders of this proposal are:
-- Service Providers will be able to boost larger areas at a cheaper cost than previously
-- Deployers should see an increase in boosted hexes
+- **Service Providers** will be able to boost larger areas at a cheaper cost than previously
+- **Deployers** should see an increase in boosted hexes
 
 ## Detailed Explanation:
 Under this HIP, the minimum size hex a Service Provider can boost is one res10 hex (approximately 15,047.5 meters sq.), while the minimum duration remains at 6 months. It also provides tiered pricing to make boosting more hexes with a lower multiplier more attractive and cheaper, and boosts with a higher multiplier more expensive. Please note, per HIP 103, all hexes automatically have a Service Provider Hex Boost value of 1X. The cost to boost one res10 hex per month per 1X under this HIP is as followed:
@@ -32,23 +32,23 @@ Under this HIP, the minimum size hex a Service Provider can boost is one res10 h
 
 | Final Multiplier | Per Month and Per 1X Increase |
 |------------------|-------------------------------|
-|2-10X             | $0.05                         |
-|11-20X            | $0.10                         |
-|21-30X            | $0.20                         |
-|31-40X            | $0.40                         |
-|41-50X            | $0.80                         |
+|2-10X             | $0.10                         |
+|11-20X            | $0.20                         |
+|21-30X            | $0.40                         |
+|31-40X            | $0.80                         |
+|41-50X            | $1.60                         |
 
-In instances where the Service Provider boosts more than 10X, the price of the first 9 boosts will be $.05 per month, per 1x increase, and the next 11-20X at $0.10.
+In instances where the Service Provider boosts more than 10X, the price of the first 9 boosts (to equal 10x) will be $.10 per month, per 1x increase, and the next 11-20X at $0.20.
 
 Below is a chart that illustrates the pricing costs per HIP 84, and what this HIP would change them to:
 
-| Final Multiplier | HIP 84 Cost | New Cost |
-|------------------|-------------|----------|
-|2-10X             | $13.23      | $2.70    |
-|11-20X            | $27.93      | $8.70    |
-|21-30X            | $42.63      | $20.70   |
-|31-40X            | $57.33      | $44.70   |
-|41-50X            | $72.03      | $92.70   |
+| Final Multiplier | HIP 84 6 Month Cost | New 6 Month Cost |
+|------------------|---------------------|------------------|
+|2-10X             | $13.23              | $5.40            |
+|11-20X            | $27.93              | $17.40           |
+|21-30X            | $42.63              | $41.40           |
+|31-40X            | $57.33              | $89.40           |
+|41-50X            | $72.03              | $185.40          |
 
 ### Existing Boosts
 Under this HIP, any res12 that was previously boosted will result in that whole res10 hex becoming boosted. To abide by the 50X maximum boost, all previously existing boosts will decrease by 50% (except any hexes that are boosted 2X, they will remain 2X), and rounded up to the nearest whole number, and the duration doubled. For example, if a res12 hex was previously boosted to 100X for 6 months, the whole res10 hex that that one res12 hex was in will now be boosted to 50% for 12 months. Another example is if a res12 hex was previously boosted 5X for 6 months, the broader res10 hex will now be boosted 3x for 12 months.
