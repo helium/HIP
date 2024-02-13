@@ -1,4 +1,4 @@
-continuous# Repeal-SP-Hex-Boosting-Rewards
+HIP-xxx - Repeal-SP-Hex-Boosting-Rewards
 
 - Author(s): @mrfizzy99, @JD, @Gateholder, @Bobbin
 - Start Date: 2024/02/13
