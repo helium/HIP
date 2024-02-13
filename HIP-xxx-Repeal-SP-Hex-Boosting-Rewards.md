@@ -43,8 +43,8 @@ HIP-84 created Service Provider Hex Boosting.
 
 ## Drawbacks
 
-- Less deployments within current boosted hexes.
-- Hotspots moving outside of the boosted hexes that the current Service Provider has dictated as 'high-traffic' areas.
+- Less new deployments within current boosted hexes, which will revert to "Recommended" hexes. 
+- Hotspots re-asserting outside of the boosted hexes, which will change to "Recommended" hexes, that the current Service Provider has dictated as 'high-traffic' areas without actual service provider footfall data to actually back this up.
 - Current Mexico Boosted Hexes will no longer have an ability of getting PoC at all. However as of to date, the current service provider has not utlized these. They can remain "Recommended" hexes as the service provider already intends to gatehold certified hotspots for Mexico to be given to authorized depoyers with the intent to deploy in those locations anyway. 
 
 
