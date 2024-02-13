@@ -1,7 +1,7 @@
 HIP-xxx - Repeal-SP-Hex-Boosting-Rewards
 
-- Author(s): @mrfizzy99
-- Contributor(s): @0lav , @capjbadger007
+- Author(s): @mrfizzy99 (Fizzy99 - Fiz-Tech.net)
+- Contributor(s): @0lav (SaintOlav), @capjbadger007 (ElonTusk) , @bigbuffer (JD - Moken)
 - Start Date: 2024/02/13
 - Category: Economic and Technical
 - Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
