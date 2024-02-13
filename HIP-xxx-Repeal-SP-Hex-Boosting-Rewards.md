@@ -1,6 +1,7 @@
 HIP-xxx - Repeal-SP-Hex-Boosting-Rewards
 
-- Author(s): @mrfizzy99, @JD, @Gateholder, @Bobbin
+- Author(s): @mrfizzy99
+- Contributor(s): @0lav , @capjbadger007
 - Start Date: 2024/02/13
 - Category: Economic and Technical
 - Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
@@ -11,7 +12,6 @@ HIP-xxx - Repeal-SP-Hex-Boosting-Rewards
 
 This HIP aims to repeal and remove Hex Boosting that was passed in HIP-84. 
 
-<!-- Read the content requests in all sections before starting to write any section. -->
 
 ## Prior Related HIPs
 HIP-84 created Service Provider Hex Boosting.
@@ -21,7 +21,7 @@ HIP-84 created Service Provider Hex Boosting.
 
 - Current implementation of HIP-84 calls for Network to reward boosted hexes out of the networks PoC bucket. However, multiple issues and concerns for this model have risen that makes this detrimental to the core of the network.
   The biggest issue is the unchecked verification of locations for Indoor hotspots within boosted hexes that were released in December of 2023.  Prior to this, CBRS CPI verification and a consistent GPS lock masked this flaw.
-  While HIP-107/108 could correct this issue, this power and insight into gatekeeping which hotspots are not eligible for receiving MOBILE directly from the network is solely placed in the consistent diligence of the service provider.
+  While the current proposals of "HIP 107: Preventing Gaming Through Verification Fees" and "HIP 108: Mobile Hotspot Suspension Framework" (not yet voted on) could correct this issue, this power and insight into gatekeeping which hotspots are not eligible for receiving MOBILE directly from the network is solely placed in the consistent diligence of the service provider.
 
 - This HIP solves the problem of needless rewarding for areas that only the service provider deems as high traffic areas, prior to actual service provider footfall data, which is now being solved through HIP-103.
   Through HIP-103 Mobile-Oracle-Hex-Boosting, layers that can be defined, and a future layer of active Service Provider high traffic areas can be applied.  
@@ -55,12 +55,16 @@ HIP-84 created Service Provider Hex Boosting.
 
 ## Unresolved Questions
 
-- None.
+None
 
 ## Deployment Impact
 
-- This HIP will impact all current hex boosting that was implemented through HIP-84, and all hotspots currently deployed in boosted hexes.
- 
+- This HIP will remove all current hex boosting that was implemented through HIP-84, and affect all hotspots currently deployed in boosted hexes. These hexes will then be rewarded standard non-boosted rewards based on Modeled Coverage, without the boosted rewards as defined in HIP-84.
+  
+- HIP-109: Hex Boosting by Deployment - which has not yet been voted on, aims to directly change HIP-84 to allow Service Providers to spesifiy which Hotspot type (cbrs vs wifi) are elgiable to earn boosted MOBILE on newly boosted hexes.  However HIP-109 does not change current hexes boosted through HIP-84. If HIP-109 goes to vote and passes, and then this HIP passes, it will negate the effects of HIP-109 entirety as it is linked to HIP-84. 
+
+- A future HIP can bring back Hex Boosting, reworked to better attribute to the current dynamics of the network. The current code will be disabled until further refinements are made in a possible future HIP. 
+
 
 ## Success Metrics
 
