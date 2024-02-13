@@ -22,10 +22,10 @@ The primary Service Provider and company that reviews CPI information, Nova Labs
 The stakeholders of this proposal are:
 
 - **Outdoor CBRS and Wi-Fi Deployers** will be required to pay a fee when they move their radio/AP or onboard a new radio
-- **CPI Entities** will now be able to charge a fee of up to $20 for reviewing CPI information of CBRS radios.
 - **MOBILE Holders** will benefit with an increased value in terms of MOBILE/HNT Treasury swap rate.
 - **Service Providers** will be able to temporarily turn off radios/Wi-Fi APs suspected of gaming
 - **Gamers** will now suffer a financial and or opportunity cost loss when they are caught gaming
+- **MOBILE App Developers** will need to ensure their the onboarding app allow for submitting and paying for location change and CPI submissions
 
 ## Detailed Explanation:
 This HIP proposes the following fee structure:
@@ -33,11 +33,6 @@ This HIP proposes the following fee structure:
 ### Outdoor CBRS Radios
 A $20 fee in MOBILE burn will be required whenever new CPI information is submitted, which includes the initial/first CPI submission, and any submissions thereafter. If the CPI submission is rejected for a mistake made by the deployer when submitting the information, the deployer will have one (1) free resubmission for that radio, so long as that re-submission is done within 30 calendar days after initial rejection. If the CPI rejects the submission for any potential gaming concerns, there will be no free re-submissions, and a new fee will need to be paid. 
 
-This HIP also grants authority to the CPI reviewer of outdoor CBRS radios to charge a separate standard or priority fee of up to a $20 paid in MOBILE to the CPI reviewing entity. This fee is paid directly to the entity that is completing the CPI submission, and is NOT burned. If a fee is charged by the CPI reviewing entity, the following is required:
-
-- The CPI submission must be approved or rejected within 2 business days
-- A guide must be created that documents each reason a submission may be rejected (i.e. incorrect height, incorrect azimuth, outdoor radio installed indoors, gaming concerns, etc.)
-- If the CPI submission is rejected for a reason that is not noted within the guide, the re-submission may be redone for free, regardless if it is the first or second submission, and also must be reviewed (approved or rejected) within one (1) business day of re-submission. Please note, this rule is not applicable if the submission was rejected due to gaming concerns.
 
 ### Outdoor Wi-Fi AP's
 A $10 location submission fee in MOBILE burn will be required when the location/height/direction for outdoor Wi-Fi AP's are re-submitted/updated. Unlike CBRS, the first location assert will occur at a $0 MOBILE burn cost. Below are the minimum requirements that must be submitted when updating the location/height/direction of an outdoor Wi-Fi AP:
