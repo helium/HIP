@@ -5,7 +5,7 @@ HIP-xxx - Repeal-SP-Hex-Boosting-Rewards
 - Category: Economic and Technical
 - Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
 - Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
-- Vote Requirements: <!-- veHNT Holders, veIOT Holders, or veMOBILE Holders -->
+- Vote Requirements: Current veMOBILE Holders
 
 ## Summary
 
@@ -37,7 +37,7 @@ HIP-84 created Service Provider Hex Boosting.
 
 ## Detailed Explanation
 
-- Repealing Hex Bossting from HIP-84 is as simple of a detailed explanation as we can get. All current hexboosting hexes from HIP-84 will be removed, and all further rewards will be halted once this HIP passes.
+- Repealing Hex Boosting from HIP-84 is as simple of a detailed explanation as we can get. All current hexboosting hexes from HIP-84 will be removed, and all further rewards will be halted once this HIP passes.
 - The service provider can still "Recommend" hexes at their leisure. 
 
 
@@ -49,7 +49,7 @@ HIP-84 created Service Provider Hex Boosting.
 
 ## Rationale and Alternatives
 
-- There are many alternatives that can be and are being discussed, however, these would take time to hash out and reimplement.   This could take from weeks to months while the Hex Bossting continues to be exploited. 
+- There are many alternatives that can be and are being discussed, however, these would take time to hash out and reimplement.   This could take from weeks to months while the Hex Boosting continues to be exploited. 
 
 
 ## Unresolved Questions
