@@ -55,7 +55,7 @@ HIP-84 created Service Provider Hex Boosting.
 
 ## Unresolved Questions
 
-- If the current service provider has already burned MOBILE into the hexes, what happens?  This could be an IOU to the service provider from the network, that could be credited to that Service Provider the next time a mechinum requires a service provider to burn, such a future reworked Service Provider Hex Boosting. 
+- If the current service provider has already burned MOBILE into the hexes, what happens?  This could be an IOU to the service provider from the network, that could be credited to that Service Provider the next time a mechanism requires a service provider to burn, such a future reworked Service Provider Hex Boosting. 
 
 
 ## Deployment Impact
