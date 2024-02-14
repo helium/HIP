@@ -64,7 +64,7 @@ None
   
 - HIP-109: Hex Boosting by Deployment - which has not yet been voted on, aims to directly change HIP-84 to allow Service Providers to specify which Hotspot type (cbrs vs wifi) are eligible to earn boosted MOBILE on newly boosted hexes.  However, HIP-109 does not change current hexes boosted through HIP-84. If HIP-109 goes to vote and passes, and then this HIP passes, it will negate the effects of HIP-109 entirely as it is linked to HIP-84. 
 
-- A future HIP can bring back Hex Boosting, reworked to better attribute to the current dynamics of the network. The current code will be disabled, or boosted hexes changed to 1x until further refinements are made in a possible future HIP
+- A future HIP can bring back Hex Boosting, reworked to better attribute to the current dynamics of the network. The current code will be disabled until further refinements are made in a possible future HIP.
 
 
 ## Success Metrics
