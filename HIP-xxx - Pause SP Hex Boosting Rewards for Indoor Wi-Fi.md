@@ -21,10 +21,10 @@ HIP-xxx - Pause SP Hex Boosting Rewards for Indoor Wi-Fi
 ## Motivation
 
 - Current implementation of HIP-84 calls for Network to reward boosted hexes out of the networks PoC bucket. However, multiple issues and concerns for this model have risen that makes this detrimental to the core of the network.
-  The biggest issue is the unchecked verification of locations for Indoor hotspots within boosted hexes that were released in December of 2023.  Prior to this, CBRS CPI verification and a consistent GPS lock masked this flaw.
+  The biggest issue is the unchecked verification of locations for Indoor Wi-Fi hotspots within boosted hexes that were released in December of 2023.  Prior to this, CBRS CPI verification and a consistent GPS lock masked this flaw.
   While the current proposals of "HIP 107: Preventing Gaming Through Verification Fees" and "HIP 108: Mobile Hotspot Suspension Framework" (not yet voted on) could correct this issue, this power and insight into gatekeeping which hotspots are not eligible for receiving MOBILE directly from the network is solely placed in the consistent diligence of the service provider.
 
-- This HIP solves the problem of incorrectly rewarding areas that only the service provider deems as high traffic areas, when no indoor Wi-Fi AP actually covers the boosted hexes.
+- This HIP solves the problem of incorrectly rewarding areas that only the service provider deems as high traffic areas, when no Indoor Wi-Fi AP actually covers the boosted hexes.
 
   
 
@@ -35,16 +35,16 @@ HIP-xxx - Pause SP Hex Boosting Rewards for Indoor Wi-Fi
 
 ## Detailed Explanation
 
-- Hex Boosting from HIP-84 for indoor Wi-Fi APs will be temporarily put on pause until a future act of governance allows them to be eligible for boosted hex rewards.
+- Hex Boosting from HIP-84 for Indoor Wi-Fi APs will be temporarily put on pause until a future act of governance allows them to be eligible for boosted hex rewards.
 
-- If a service provider wishes to pay those deploying in boosted hexes as has been done in the past, this is considered outside of network emissions and outside of the governance process.  The service providers can still "recommend" hexes and incentivize deployment to indoor Wi-Fi APs outside of emissions.
+- If a service provider wishes to pay those Indoor Wi-Fi deploying in boosted hexes as has been done in the past, this is considered outside of network emissions and outside of the governance process.  The service providers can still "recommend" hexes and incentivize deployment to indoor Wi-Fi APs outside of emissions.
 
 
 ## Drawbacks
 
-- Less new deployments within current boosted hexes, which will revert to "Recommended" hexes.
+- Less new Indoor Wi-Fi deployments within current boosted hexes.
   
-- Hotspots re-asserting outside of the boosted hexes, which will change to "Recommended" hexes, that the current Service Provider has dictated as 'high-traffic' areas without actual service provider footfall data to actually back this up.
+- Indoor Wi-Fi Hotspots re-asserting outside of the boosted hexes, 
 
 
 ## Rationale and Alternatives
@@ -59,11 +59,11 @@ HIP-xxx - Pause SP Hex Boosting Rewards for Indoor Wi-Fi
 
 ## Deployment Impact
 
-- This HIP will remove all current hex boosting that was implemented through HIP-84, and affect all hotspots currently deployed in boosted hexes. These hexes will then be rewarded with standard non-boosted rewards based on Modeled Coverage, without the boosted rewards as defined in HIP-84.
+- This HIP will remove all current hex boosting for Indoor Wi-Fi that was implemented through HIP-84, and affect all Indoor Wi-Fi hotspots currently deployed in boosted hexes. The Indoor Wi-Fi will then be rewarded with standard non-boosted rewards based on Modeled Coverage, without the boosted rewards as defined in HIP-84.
   
 - HIP-109: Hex Boosting by Deployment - which has not yet been voted on, aims to directly change HIP-84 to allow Service Providers to specify which Hotspot type (cbrs vs Wi-Fi) are eligible to earn boosted MOBILE on newly boosted hexes.  However, HIP-109 does not change current hexes boosted through HIP-84. If HIP-109 goes to vote and passes, and then this HIP passes, this HIP negate the effects of HIP-109 for Indoor Wi-Fi.  Boosting Indoor Wi-Fi will continue to be paused even if the Service Provider specifies Indoor Wi-Fi. 
 
-- A future HIP can bring back Hex Boosting, reworked to better attribute to the current dynamics of the network. The current code will be disabled until further refinements are made in a possible future HIP.
+- A future HIP can bring back Hex Boosting for Indoor Wi-Fi, reworked to better attribute to the current dynamics of the network. The current code for Boosting Indoor Wi-Fi will be disabled until further refinements are made in a possible future HIP.
 
 
 ## Success Metrics
