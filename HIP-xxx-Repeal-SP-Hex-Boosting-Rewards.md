@@ -23,8 +23,8 @@ HIP-84 created Service Provider Hex Boosting.
   The biggest issue is the unchecked verification of locations for Indoor hotspots within boosted hexes that were released in December of 2023.  Prior to this, CBRS CPI verification and a consistent GPS lock masked this flaw.
   While the current proposals of "HIP 107: Preventing Gaming Through Verification Fees" and "HIP 108: Mobile Hotspot Suspension Framework" (not yet voted on) could correct this issue, this power and insight into gatekeeping which hotspots are not eligible for receiving MOBILE directly from the network is solely placed in the consistent diligence of the service provider.
 
-- This HIP solves the problem of needless rewarding for areas that only the service provider deems as high traffic areas, prior to actual service provider footfall data, which is now being solved through HIP-103.
-  Through HIP-103 Mobile-Oracle-Hex-Boosting, layers that can be defined, and a future layer of active Service Provider high traffic areas can be applied.  
+- This HIP solves the problem of needless rewarding for areas that only the service provider deems as high traffic areas, prior to actual service provider footfall data, which is now being solved through "HIP-103 Mobile-Oracle-Hex-Boosting".
+  Through HIP-103, layers can be defined, and a future layer of active Service Provider high traffic areas can be applied.  
 
 - While most of the concern comes from Indoor Wifi, current CBRS deployments within boosted hexes that are getting rewarded these boosted hexes currently have no ability to offload onto the Service Provider.
   As of January when the service provider switched from offering dual SIMs a Voice/Text + Data, to work on a single SIM solution. So CBRS departments, as of now, add little value in boosted hexes, when they can't be utilized by the Service Provider.  
@@ -55,7 +55,7 @@ HIP-84 created Service Provider Hex Boosting.
 
 ## Unresolved Questions
 
-None
+- If the current service provider has already burned MOBILE into the hexes, what happens?  This could be an IOU to the service provider from the network, that could be credited to that Service Provider the next time a mechinum requires a service provider to burn, such a future reworked Service Provider Hex Boosting. 
 
 
 ## Deployment Impact
