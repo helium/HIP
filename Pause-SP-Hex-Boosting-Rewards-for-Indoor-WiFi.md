@@ -10,7 +10,7 @@ HIP-xxx - Pause-SP-Hex-Boosting-Rewards-for-Indoor-WiFi
 
 ## Summary
 
-- Currently, the Helium MOBILE network has a security flaw that allows indoor wifi AP to be placed without a high degree of certainty that the AP is actually in its stated location.  This HIP aims to pause Hex Boosting that was passed in HIP-84 for indoor wifi APs until a rework can be completed in a future HIP.  Future provisions can include more verification mapping, more robust hardware, or reworking the economic model to remove any hex boosting arbitrages.
+- Currently, the Helium MOBILE network has a security flaw that allows indoor wifi AP to be placed without a high degree of certainty that the AP is actually in its asserted location.  This HIP aims to pause Hex Boosting that was passed in HIP-84 for indoor wifi APs until a rework can be completed in a future HIP.  Future provisions can include more verification mapping, more robust hardware, or reworking the economic model to remove any hex boosting arbitrages.
 
 
 ## Prior Related HIPs
