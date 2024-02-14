@@ -1,7 +1,7 @@
 HIP-xxx - Pause-SP-Hex-Boosting-Rewards-for-Indoor-WiFi
 
-- Author(s): @mrfizzy99 (Fizzy99 - Fiz-Tech.net)
-- Contributor(s): @0lav (SaintOlav), @capjbadger007 (ElonTusk) , @bigbuffer (JD - Moken) , Max Gold (GoldHawksAssociates) , @Gateholder (Gateholder Worthington Networks)
+- Author(s): [@mrfizzy99](https://github.com/mrfizzy99) (Fizzy99 - Fiz-Tech.net)
+- Contributor(s): [@0lav](https://github.com/0lav) (SaintOlav), [@capjbadger007](https://github.com/capjbadger007) (ElonTusk) , [@bigbuffer](https://github.com/bigbuffer) (JD - Moken) , [Max Gold](https://github.com/GoldHawksAssociates) (Max - GoldHawksAssociates) , [@Gateholder](https://github.com/Gateholder) (Gateholder Worthington Networks)
 - Start Date: 2024/02/13
 - Category: Economic and Technical
 - Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
