@@ -26,7 +26,6 @@ HIP-xxx - Pause SP Hex Boosting Rewards for Indoor Wi-Fi
 
 - This HIP solves the problem of incorrectly rewarding areas that only the service provider deems as high traffic areas, when no Indoor Wi-Fi AP actually covers the boosted hexes.
 
-  
 
 ## Stakeholders
 
