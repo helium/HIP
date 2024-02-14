@@ -1,4 +1,4 @@
-HIP-xxx - Repeal-SP-Hex-Boosting-Rewards
+HIP-xxx - Pause-SP-Hex-Boosting-Rewards
 
 - Author(s): @mrfizzy99 (Fizzy99 - Fiz-Tech.net)
 - Contributor(s): @0lav (SaintOlav), @capjbadger007 (ElonTusk) , @bigbuffer (JD - Moken)
@@ -10,7 +10,7 @@ HIP-xxx - Repeal-SP-Hex-Boosting-Rewards
 
 ## Summary
 
-This HIP aims to repeal and remove Hex Boosting that was passed in HIP-84. 
+This HIP aims to pause and remove Hex Boosting that was passed in HIP-84 until a rework can be completed in a future HIP. 
 
 
 ## Prior Related HIPs
@@ -37,7 +37,7 @@ HIP-84 created Service Provider Hex Boosting.
 
 ## Detailed Explanation
 
-- Repealing Hex Boosting from HIP-84 is as simple of a detailed explanation as we can get. All current hexboosting hexes from HIP-84 will be removed, and all further rewards will be halted once this HIP passes.
+- Pauseing Hex Boosting from HIP-84 is as simple of a detailed explanation as we can get. All current hexboosting hexes from HIP-84 will be removed, and all further rewards will be halted once this HIP passes.
 - The service provider can still "Recommend" hexes at their leisure. 
 
 
