@@ -47,6 +47,10 @@ This HIP aims to update the veMOBILE voting mechanism, creating an incentive for
 
 - The unlocking mechanism provides a balanced approach to liquidity management, allowing veMOBILE holders access to their tokens without long term commitments of up to 4 years in the current system. We believe a more dynamic approach to lock ups will make reduce the barrier for people looking to lock up their tokens. Additionally, we feel, given the current data for veMOBILE locks as well as other veHNT/veDNT tokens that people often lock fewer tokens for longer durations under the current system. The network prefers more tokens locked than fewer.
 
+## Stakeholders
+
+- All current and future veMOBILE holders as well as MOBILE holders.
+
 ## Success Metrics
 
 - This HIP will be considered successful if more MOBILE tokens are locked under this new system as opposed to the current system.
