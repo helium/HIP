@@ -30,7 +30,7 @@ HIP-xxx - Pause SP Hex Boosting Rewards for Indoor Wi-Fi
 
 ## Stakeholders
 
-- All Indoor Wi-Fi hotspots.  
+- The MOBILE Subdao.  
 
 
 ## Detailed Explanation
