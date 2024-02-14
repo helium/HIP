@@ -36,7 +36,7 @@ HIP-xxx - Pause SP Hex Boosting Rewards for Indoor Wi-Fi
 
 - Hex Boosting from HIP-84 for Indoor Wi-Fi APs will be temporarily put on pause until a future act of governance allows them to be eligible for boosted hex rewards.
 
-- If a service provider wishes to pay those Indoor Wi-Fi deploying in boosted hexes as has been done in the past, this is considered outside of network emissions and outside of the governance process.  The service providers can still "recommend" hexes and incentivize deployment to indoor Wi-Fi APs outside of emissions.
+- If a service provider wishes to pay those Indoor Wi-Fi deploying in boosted hexes as has been done in the past, this is considered outside of network emissions and outside of the governance process.  The service providers can still "recommend" hexes and incentivize deployment to Indoor Wi-Fi APs outside of emissions.
 
 
 ## Drawbacks
