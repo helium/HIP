@@ -18,11 +18,13 @@ The goals of the changes proposed in this HIP are to foster learning and experim
 As a broad overview, these bulleted sections highlight the impact areas and opportunities.
 
 **Future of Foundation Console**
+
 - Foundation Console will continue to operate. However, no new accounts will be added. Existing users will be able to continue to fund their accounts and operate up to 10 devices. The operation of Foundation Console remains under the purview of the Helium Foundation.
 - The home page of Console will be restyled to serve as an index of other known public LNSs in the ecosystem, leveraging the list maintained at [docs.helium.com](https://docs.helium.com/iot/find-a-lns-provider).
 - Moving the community past Foundation Console drives growth across the broader ecosystem of LNS operators.
 
 **Continued Trial & Educational Access**
+
 - A new LNS is created using ChirpStack since the platform drives the underlying infrastructure of current public LNS offerings. It is configured for simple sign up and devices are permitted to operate for one day.
   - Eventually, this offering can grow into an ecosystem of trial services, such as instances of ThingPark Community or others, all following the same trial model as outlined for ChirpStack.
 - The new LNS offering, sitting on top of the Helium Foundation Type 6 NetID, would not issue rewards to Hotspots responsible for data transfer.
@@ -32,9 +34,11 @@ As a broad overview, these bulleted sections highlight the impact areas and oppo
 This HIP affects all participants of the Helium IoT Network. The two most greatly impacted stakeholders are explained below.
 
 ### Network Users
+
 Network users, as stakeholders in the new LNS, will benefit from a dedicated space for learning and testing. This LNS, which does not offer rewards for data transfer, aims to prevent misuse and maintain the network's integrity. Users will need to understand its different rules and purpose compared to the main Helium Network and adapt to its use limitations, including temporary device blocking. Their feedback will be important in shaping the future of this educational platform.
 
 ### Hotspot Operators
+
 Data traffic passed through the special LNS would not be rewarded to Hotspots or their operators. However, the core intent of this service is to drive more users to the network. If successful, this would drive greater traffic for Hotspots and their operators.
 
 ## Detailed Explanation

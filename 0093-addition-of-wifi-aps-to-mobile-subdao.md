@@ -20,7 +20,7 @@ We believe that Wi-Fi access points can help achieve both of those goals.
 
 Wi-Fi access points will belong to the Hotspot category; owners of these devices are classified as Hotspot Owners; Nova Labs is classified as Hotspot Vendor [as defined in HIP53](https://github.com/helium/HIP/blob/main/0053-mobile-dao.md#economics-overview).
 
-WiFi access points qualify as DNP devices as specified in [HIP51](https://github.com/helium/HIP/blob/main/0051-helium-dao.md).
+Wi-Fi access points qualify as DNP devices as specified in [HIP51](https://github.com/helium/HIP/blob/main/0051-helium-dao.md).
 
 ## Stakeholders
 
@@ -36,7 +36,7 @@ All stakeholders are defined in accordance with [HIP53](https://github.com/heliu
 
 ### 1.0 Background and Rationale
 
-Wi-Fi is a IEEE standard that has been widely adopted worldwide because it addresses spectrum sharing of unlicensed bands at 2.4GHz, 5GHz, and 6GHz. Wi-Fi is based on Carrier Sense Multiple Access/ Collision Avoidance (CSMA/CA) also known as “listen-before-talk”, which has a direct impact on RF sensitivity thresholds that determines the “coverage” of a Wi-Fi access point. While more recent releases of Wi-Fi have better and improved performance, typical Wi-Fi coverage is characterized by a steep cliff in network performance at the cell edge as opposed to a more gradual performance degradation that 3GPP protocols, like LTE or 5G, deliver.
+Wi-Fi is an IEEE standard that has been widely adopted worldwide because it addresses spectrum sharing of unlicensed bands at 2.4GHz, 5GHz, and 6GHz. Wi-Fi is based on Carrier Sense Multiple Access/ Collision Avoidance (CSMA/CA) also known as “listen-before-talk”, which has a direct impact on RF sensitivity thresholds that determines the “coverage” of a Wi-Fi access point. While more recent releases of Wi-Fi have better and improved performance, typical Wi-Fi coverage is characterized by a steep cliff in network performance at the cell edge as opposed to a more gradual performance degradation that 3GPP protocols, like LTE or 5G, deliver.
 
 HIP74 describes the rewards mechanism used for estimating coverage and allocating rewards based on estimated PoC. However, HIP74 defines methods and thresholds that are tailored to CBRS devices and RF sensitivity parameters that are specific to 3GPP protocols (i.e., LTE, 5G). To define a rewards scheme that applies to Wi-Fi, those methods and thresholds must be adjusted to account for the different nature of the protocol.
 
@@ -77,7 +77,7 @@ Indoor access points are devices that are usually not outdoor-rated and they are
 
 ##### 3.1.1.1 Onboarding Location Assertion
 
-Indoor Wi-Fi access points are usually not equipped with a GPS receiver that can be used to establish the location of the access point. This is because GPS has poor outside-in RF penetration and, with the exception of the upcoming Wi-Fi6E protocol called Standard Power, Wi-Fi access points are not required to report their location.  Conversely, CBRS radios must talk to a SAS before they can operate in the CBRS band.
+Indoor Wi-Fi access points are usually not equipped with a GPS receiver that can be used to establish the location of the access point. This is because GPS has poor outside-in RF penetration and, with the exception of the upcoming Wi-Fi6E protocol called Standard Power, Wi-Fi access points are not required to report their location. Conversely, CBRS radios must talk to a SAS before they can operate in the CBRS band.
 
 In the case of indoor Wi-Fi access points, we are proposing an automatic self-assertion method where the access point owner will be required to be in close proximity to the Wi-Fi access point and to utilize an app in a mobile phone enabled with GPS assisted technology to onboard the Wi-Fi access point into the blockchain.
 
@@ -95,7 +95,7 @@ After an initial assertion of the location during the onboarding using the app a
 
 There are multiple and possibly concurrent ways to implement subsequent location validation:
 
-1. The network can leverage 3rd_party location services (e.g., Google Cloud Location Services, Skyhook, etc.) to estimate location based on Wi-Fi neighbor scans that will come directly from the access point and will be signed using secure mechanisms (e.g., TrustZone, disk encryption, etc.) as assumed in section 1.1. 
+1. The network can leverage 3rd_party location services (e.g., Google Cloud Location Services, Skyhook, etc.) to estimate location based on Wi-Fi neighbor scans that will come directly from the access point and will be signed using secure mechanisms (e.g., TrustZone, disk encryption, etc.) as assumed in section 1.1.
 2. The network can implement algorithms that leverage inter-access point communication for the purpose of probing the RF environment and gathering statistics that can be used for detecting significant changes in the environment correlated to a change of location.
 
 #### 3.1.2 Modeled Coverage
@@ -108,7 +108,7 @@ We are proposing a maximum of 1 Indoor Wi-Fi access point in one hex for the PoC
 
 ### 3.2 Outdoor Access Points
 
-Outdoor access points are devices that are rated for operating in outdoor conditions with certain operating ranges (usually defined by IP65/IP67 ratings). They are either wall- or pole-mounted, deployed outside buildings or venues, stationary or semi-stationary within those facilities and provide Wi-Fi coverage to Subscribers. 
+Outdoor access points are devices that are rated for operating in outdoor conditions with certain operating ranges (usually defined by IP65/IP67 ratings). They are either wall- or pole-mounted, deployed outside buildings or venues, stationary or semi-stationary within those facilities and provide Wi-Fi coverage to Subscribers.
 
 #### 3.2.1 Onboarding Location Assertion and First Installation Setup
 
@@ -139,7 +139,7 @@ We are assuming a configuration/antenna pattern with the following characteristi
 
 The figure below shows the proposed templated coverage map and estimated RSSI levels in a typical urban propagation scenario.
 
-![Figure 1. Templated coverage map.](./0093-addition-of-wifi-aps-to-mobile-subdao/templated_coverage.png)
+![Figure 1. Templated coverage map.](files/0093/templated_coverage.png)
 
 #### 3.2.4 Capping per Hex
 
@@ -189,21 +189,20 @@ Note that until mappers are launched, there will be only two possible trust scor
 
 Given the nature of 5GHz band propagation and the shared spectrum nature of the Wi-Fi standard, we are proposing calculating MOBILE rewards based on a table similar to that used in HIP74:
 
-|                               | Tier 1           | Tier 2                        | Tier 3                       | Tier 4              |
-| ----------------------------- | ---------------- | ----------------------------- | ---------------------------- | ------------------- |
-| **Potential RSSI**            | $RSSI > -65 dBm$ | $-65 dBm \ge RSSI > -75 dBm$  | $-75 dBm \ge RSSI > -85 dBm$ | $RSSI \le -85 dBm$  |
-| **Potential Signal Level**    | High             | Medium                        | Low                          | None                |
-| **Estimated Coverage Points** | 16               | 8                             | 4                            | 0                   |
+|                               | Tier 1           | Tier 2                       | Tier 3                       | Tier 4             |
+| ----------------------------- | ---------------- | ---------------------------- | ---------------------------- | ------------------ |
+| **Potential RSSI**            | $RSSI > -65 dBm$ | $-65 dBm \ge RSSI > -75 dBm$ | $-75 dBm \ge RSSI > -85 dBm$ | $RSSI \le -85 dBm$ |
+| **Potential Signal Level**    | High             | Medium                       | Low                          | None               |
+| **Estimated Coverage Points** | 16               | 8                            | 4                            | 0                  |
 
 **Table 1.** Potential received signal strength indicator (RSSI), corresponding signal level, and estimated coverage points for
 Outdoor Radios.
-
 
 The actual number of earned coverage points will be calculated based on:
 
 1. Modeled coverage, if obstruction and/or terrain data is available (similar to HIP74). In this case, the total amount of coverage points will be based on the model and will vary by location.
 
-2. Templated coverage, if obstruction and/or terrain data is not available. Based on the template set forth in section 3.2.3.1, the total amount of coverage points assigned to a templated coverage would be 500 (i.e., 6 Hexes@Tier 1 - 21 Hexes@Tier 2 - 59 Hexes@Tier 3). 
+2. Templated coverage, if obstruction and/or terrain data is not available. Based on the template set forth in section 3.2.3.1, the total amount of coverage points assigned to a templated coverage would be 500 (i.e., 6 Hexes@Tier 1 - 21 Hexes@Tier 2 - 59 Hexes@Tier 3).
 
 The values of the location trust score multiplier for outdoor access points are as follows:
 
@@ -220,14 +219,13 @@ Following the 40% scaling factor compared to CBRS that we are proposing in 3.4.1
 
 For reference, the updated model radio rewards scaling will be:
 
-| Device Type              | Reward Weight |
-| ------------------------ | :-----------: |
-| High Power CBRS Outdoor  |    `4.000`    |
-| CBRS Outdoor             |    `2.500`    |
-| CBRS Indoor              |    `1.000`    |
-| Wi-Fi Outdoor            |    `1.000`    |
-| Wi-Fi Indoor             |    `0.400`    |
-
+| Device Type             | Reward Weight |
+| ----------------------- | :-----------: |
+| High Power CBRS Outdoor |    `4.000`    |
+| CBRS Outdoor            |    `2.500`    |
+| CBRS Indoor             |    `1.000`    |
+| Wi-Fi Outdoor           |    `1.000`    |
+| Wi-Fi Indoor            |    `0.400`    |
 
 Please also note that prior to HIP-74 launch the cap described 3.1.3 and 3.2.4 cannot be enforced because the establishment of seniority is part of the HIP-74 implementation.
 
@@ -244,6 +242,7 @@ The alternative is to continue to rely on the addition of new CBRS radio deploym
 ## Unresolved Questions
 
 Wi-Fi devices are expected to retail for significantly less than CBRS, which makes the $40 onboarding fee currently adopted for CBRS radios prohibitively high. The onboarding fee will be defined by subsequent HIP, in absence of which the onboarding and location assertions fee will be set to $0.
+
 ## Deployment Impact
 
 Many network components and third-party apps will need to be updated to support this HIP. This is not an exhaustive list but rather a minimum checklist that needs to be implemented:
@@ -255,7 +254,7 @@ Many network components and third-party apps will need to be updated to support 
 - Helium Mobile Coverage Planner will need to be updated to support visualization of Wi-Fi access point coverage and planning of Wi-Fi deployments; and
 - Helium Mobile Hotspot Dashboard will need to be updated to support diagnostics, basic troubleshooting actions for Wi-Fi access points, and registration with Wi-Fi Professional Installer for outdoor access points.
 
-The Helium Foundation will validate the Hotspot Vendors to ensure viability of the Network. Specifically they will attest to the Network that Hotspot Vendors have the technical competencies and business processes to correctly support the Network including but not limited to Hotspot Owners and Service Providers. The MCC will review the deployment impact and coordinate with Hotspot Vendors to ensure that new Hotspot Vendors can be successfully enabled to manufacture and deploy devices into the Mobile Network. The Helium Community will review the information disclosed by the Hotspot Vendors to the the MCC including but not limited to architecture diagrams and security assessments of the devices. The MCC will reserve the right to not publicly disclose material that can be used to attack and threaten the Network.
+The Helium Foundation will validate the Hotspot Vendors to ensure viability of the Network. Specifically they will attest to the Network that Hotspot Vendors have the technical competencies and business processes to correctly support the Network including but not limited to Hotspot Owners and Service Providers. The MCC will review the deployment impact and coordinate with Hotspot Vendors to ensure that new Hotspot Vendors can be successfully enabled to manufacture and deploy devices into the Mobile Network. The Helium Community will review the information disclosed by the Hotspot Vendors to the MCC including but not limited to architecture diagrams and security assessments of the devices. The MCC will reserve the right to not publicly disclose material that can be used to attack and threaten the Network.
 
 ## Success Metrics
 

@@ -12,12 +12,12 @@
 There are over a dozen of officially recognized LoRaWAN channel plans cited in the
 [LoRaWAN Regional Specification](https://lora-alliance.org/wp-content/uploads/2021/05/RP002-1.0.3-FINAL-1.pdf):
 
-![image single-layer](0045-lorawan-frequency-plan-selection/0045-lorawan-channel-plans.png)
+![image single-layer](files/0045/0045-lorawan-channel-plans.png)
 
 The same document also provides guidance for eligible channel plans and "LoRaWAN® Certified devices
 with Regulatory Type Approval":
 
-![image single-layer](0045-lorawan-frequency-plan-selection/0045-lorawan-regional-spec-example.png)
+![image single-layer](files/0045/0045-lorawan-regional-spec-example.png)
 
 In each region, the Helium Network must select one and only one frequency plan (based on current
 design constraints). In cases where only one channel plan is possible (eg: Anguilla) or where only

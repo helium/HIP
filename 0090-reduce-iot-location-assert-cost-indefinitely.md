@@ -2,7 +2,7 @@
 
 - Author(s): [@nosmaster89](https://github.com/nosmaster89)
 - Start Date: 2023-06-22
-- Category: Economic 
+- Category: Economic
 - Original HIP PR: [#722](https://github.com/helium/HIP/pull/722)
 - Tracking Issue: [#735](https://github.com/helium/HIP/issues/735)
 - Vote Requirements: veIOT Holders
@@ -12,23 +12,26 @@
 This HIP proposes an adjustment to the Hotspot location assertion fees on the network. Currently, as per [HIP-69](https://github.com/helium/HIP/blob/main/0069-reassertion-fee-reduction.md) and since the Solana migration, the fees for IOT hotspots were halved. However, this adjustment is set to expire on July 20th, 2023, UTC, after which the fee will increase back to $10 in Data Credits. This proposal suggests maintaining the reduced fee to encourage hotspot relocation and support future HIPs aiming to distribute hotspots in densely populated areas.
 
 ## Motivation
+
 The key motivations behind this proposal are as follows:
 
 - Lowering the cost for hosts to relocate their hotspots going forward, facilitating better network coverage and decentralization.
 - Establishing a minimum fee that reflects the network's expectations for hotspot relocation, ensuring a longer-term commitment from hotspot owners.
 
 ## Stakeholders
+
 IOT Hotspot Makers, who will not have to pay the increased 1M DC ($10) Location assert fee on the first location reassertions.
 IOT Hotspot owners, who will not have to pay the increased 1M DC ($10) Location assert fee on subsequent location reassertions.
 And this proposal impacts the entire network as it affects the amount of DC burned, which influences the economics of all networks.
 
 ## Detailed Explanation
+
 The proposal aims to extend the duration of the reduced asset fees for hotspot relocation that HIP 69 introduced indefinitely. By maintaining the lowered fee,
 it becomes more attractive for hotspot owners to relocate their hotspots, increasing the likelihood of achieving better network coverage
 in various locations. Additionally, this change supports future HIPss that aim to distribute hotspots in densely populated areas.
 
-
 ## Drawbacks
+
 The primary drawback of this proposal is a lower overall DC burn for the network.
 However, this can be balanced by the potential benefits gained from increased hotspot relocation and improved network coverage.
 

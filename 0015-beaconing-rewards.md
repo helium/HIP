@@ -5,6 +5,7 @@
 - Category: Technical
 - Original HIP PR: [#49](https://github.com/helium/HIP/pull/49)
 - Tracking Issue: [#51](https://github.com/helium/HIP/issues/51)
+- Approved Version: [c68417f](https://github.com/helium/HIP/blob/c68417ff57449f976bfe0c5834d97a837cac3df4/0015-beaconing-rewards.md)
 
 # Summary
 
@@ -24,7 +25,7 @@ topologies.
 
 Beaconing, regardless of reward structures allows the elimination of Multi-hop PoC. Multihop PoC
 significantly more complex than beaconing requiring complex path building and path verification,
-Significant overhread of building long paths that never complete (due to hop reliability being low).
+Significant overhead of building long paths that never complete (due to hop reliability being low).
 Large payload sizes that are a-typical for many LoRa applications and require higher datarates, etc.
 A lot of implementation complexity is removed with beaconing and those CPU and ledger resources can
 be re-allocated to more beneficial purposes (like combating gaming/exploitation).
@@ -73,14 +74,14 @@ Definitions:
 
 Reward formula for Transmitter:
 
-![image RewardTX formula](./0015-beaconing-rewards/RewardTX_equation.PNG)
+![image RewardTX formula](files/0015/RewardTX_equation.PNG)
 
 Reward Formula for each Receiver:
 
-![image RewardRX formula](./0015-beaconing-rewards/RewardRX_equation.PNG)
+![image RewardRX formula](files/0015/RewardRX_equation.PNG)
 
-A chart showing reward distribution basd on the formulas listed above with example values of `N`=4
-and `r`=0.8: ![image Reward distribution](./0015-beaconing-rewards/RewardDistributionHist.svg)
+A chart showing reward distribution based on the formulas listed above with example values of `N`=4
+and `r`=0.8: ![image Reward distribution](files/0015/RewardDistributionHist.svg)
 
 There are 3 regions in this reward distribution described below:
 
@@ -103,9 +104,9 @@ given for this beacon with each participant getting 1 unit.
 #### w > N
 
 If the number of witnesses is greater than desired, we have too much coverage for this transmitter.
-We still want to encourage the transmitter to transmit as wide reaching as possible to expose this
+We still want to encourage the transmitter to transmit as wide-reaching as possible to expose this
 over-coverage, so we give a small portion of the witness rewards to the transmitter up to 1
-additional unit of rewards. For witnesses they all split the pool of reward units remaining for
+additional unit of rewards. For witnesses, they all split the pool of reward units remaining for
 witnesses. This means the total reward given to all participants remains at `N`+1 so there is no
 significant gain to be had by having the number of witnesses way above `N`. This reward structure
 still encourages witnesses to report receipts as even though they get a smaller and smaller slice of
@@ -114,7 +115,7 @@ possible.
 
 Overall, this method should encourage greedy transmitters to transmit as powerfully and with as much
 coverage as possible and witnesses to receive as many transmissions as possible and deliver witness
-receipts. Thus each Hotspot is motivated to provide as much coverage as possible without
+receipts. Thus, each Hotspot is motivated to provide as much coverage as possible without
 over-rewarding redundant coverage. This reward structure does a much better job of giving rewards to
 “good” coverage meaning coverage over many neighboring Hotspots and over Hotspots without many
 existing witnesses.
@@ -160,12 +161,12 @@ method active when this HIP is proposed.
 Witness with invalid signal count towards `w` but are given 0 reward. This mildly penalizes honest
 witnesses since they are splitting rewards with invalid witnesses, but if the percentage of invalid
 witnesses for a transmission are low then this penalty is minimal. If the percentage of invalid
-witnesses is high then its likely the transmitter is invalid and thus witnessing an invalid
+witnesses is high then it's likely the transmitter is invalid and thus witnessing an invalid
 transmitter should get a small reward.
 
 For transmitters, the reward units earned are scaled by the number of valid witnesses divided by all
 witnesses. Again, if the transmitter is valid then its likely only a small number of witnesses are
-invalid and this penalty is small. If most witnesses are invalid, then its likely the transmitter is
+invalid and this penalty is small. If most witnesses are invalid, then it's likely the transmitter is
 invalid and reward should be small.
 
 ### Example Beacon Scenarios
@@ -203,7 +204,7 @@ similar to a beacon in the new method.
 Note in the current system, the initial target can only earn 2/3 (0.67) of a Reward Unit since it
 cannot demonstrate the ability to receive RF (it receives over p2p which is not rewarded).
 
-![image Topology Examples](./0015-beaconing-rewards/TopologyExamples.svg)
+![image Topology Examples](files/0015/TopologyExamples.svg)
 
 A description of each figure:
 
@@ -227,14 +228,14 @@ A table of expected rewards for MultiHop PoC (used today) vs this HIPs beaconing
 
 We can see rewards are fairly similar except for two figures **(b)** and **(c)**.
 
-In figure (b) we see how asymetric witnessing may cause rewards to be pushed towards certain
+In figure (b) we see how asymmetric witnessing may cause rewards to be pushed towards certain
 Hotspots. Hotspot D gets roughly 2.2 times Hotspot B even though it has identical coverage.
 
 In figure (c) beaconing Hotspots earn significantly more than those with multihop PoC. This is
 because the bulk of rewards go to witnessing and although there are only two distinct locations,
 there are enough witnesses to give the transmitter full credit and the witnesses get to split the
 maximum rewards for receivers per transmission. The best way to address this concern is to discount
-beconing rewards based on some form of density (See _Method for Geographic Based Transmit Reward
+beaconing rewards based on some form of density (See _Method for Geographic Based Transmit Reward
 Scaling_ proposal).
 
 # Drawbacks
@@ -278,7 +279,7 @@ to the implementers, but it could simply be a 0-hop onion packet like is used fo
 (mainly for witness discovery). Overall, the reward structure is independent of beacon payload.
 
 **Hotspot Impact Analysis**: The community may want more real-world samples of expected beaconing
-behavior and reward distribution based on existing witness lists to see how this change will effect
+behavior and reward distribution based on existing witness lists to see how this change will affect
 reward distribution and if it is desirable (and more importantly healthy for network efficiency and
 growth).
 

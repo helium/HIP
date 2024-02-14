@@ -34,11 +34,11 @@ upon HIP approval by setting of `election_version` >= 7.
 
 The motivation for this change is to enable quicker removal of low performing validators from the
 consensus group. With the current election system, we often see obvious low performers with high
-total penalties continue to remain in the consensus group. For example, the screen shot of CG member
+total penalties remain in the consensus group. For example, the screenshot of CG member
 total penalty over time shows clear outliers who persist in the group despite amassing penalties 4x
 to 5x higher than average.
 
-![CG Performance](./0073-consensus-deselection-weighting/cg-penalties.png)
+![CG Performance](files/0073/cg-penalties.png)
 
 This change will help to remove these poor performers more quickly, by giving higher weight to
 performance penalties in the current epoch.
@@ -63,7 +63,7 @@ current group. This change has two components:
 
 1. Introduce new chain var `election_penalty_history_percentage` which is used during scoring of
    existing group members before selecting members for removal. This value controls whether and how
-   much the previous penalties (those in the ledger and thus earned outside of the current epoch)
+   much the previous penalties (those in the ledger and thus earned outside the current epoch)
    contribute to the score.\
    \
    Score for selecting to remove is thus:\
@@ -84,7 +84,7 @@ selection of new validators into CG. That continues to be weighted randomly base
 penalty score at time of the election.
 
 Note that when `election_penalty_history_percentage` is 1.0, the behavior of consensus member
-deselection is nearly identical to the existing behavior. There will be a miniscule difference in
+deselection is nearly identical to the existing behavior. There will be a minuscule difference in
 total penalty as the tenure penalty starts decaying at the end of the epoch versus the beginning of
 the epoch.
 
