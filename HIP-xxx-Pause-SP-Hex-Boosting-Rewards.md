@@ -1,7 +1,7 @@
 HIP-xxx - Pause-SP-Hex-Boosting-Rewards
 
 - Author(s): @mrfizzy99 (Fizzy99 - Fiz-Tech.net)
-- Contributor(s): @0lav (SaintOlav), @capjbadger007 (ElonTusk) , @bigbuffer (JD - Moken)
+- Contributor(s): @0lav (SaintOlav), @capjbadger007 (ElonTusk) , @bigbuffer (JD - Moken) , Max Gold (GoldHawksAssociates)
 - Start Date: 2024/02/13
 - Category: Economic and Technical
 - Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
@@ -10,11 +10,12 @@ HIP-xxx - Pause-SP-Hex-Boosting-Rewards
 
 ## Summary
 
-This HIP aims to pause and remove Hex Boosting that was passed in HIP-84 until a rework can be completed in a future HIP. 
+- Currently, the Helium MOBILE network has a security flaw that allows indoor wifi AP to be placed without a high degree of certainty that the AP is actually in its stated location.  This HIP aims to pause Hex Boosting that was passed in HIP-84 for indoor wifi APs until a rework can be completed in a future HIP.  Future provisions can include more verification mapping, more robust hardware, or reworking the economic model to remove any hex boosting arbitrages.
 
 
 ## Prior Related HIPs
-HIP-84 created Service Provider Hex Boosting.
+
+- HIP-84 created Service Provider Hex Boosting.
 
 
 ## Motivation
@@ -23,11 +24,8 @@ HIP-84 created Service Provider Hex Boosting.
   The biggest issue is the unchecked verification of locations for Indoor hotspots within boosted hexes that were released in December of 2023.  Prior to this, CBRS CPI verification and a consistent GPS lock masked this flaw.
   While the current proposals of "HIP 107: Preventing Gaming Through Verification Fees" and "HIP 108: Mobile Hotspot Suspension Framework" (not yet voted on) could correct this issue, this power and insight into gatekeeping which hotspots are not eligible for receiving MOBILE directly from the network is solely placed in the consistent diligence of the service provider.
 
-- This HIP solves the problem of needless rewarding for areas that only the service provider deems as high traffic areas, prior to actual service provider footfall data, which is now being solved through "HIP-103 Mobile-Oracle-Hex-Boosting".
-  Through HIP-103, layers can be defined, and a future layer of active Service Provider high traffic areas can be applied.  
+- This HIP solves the problem of incorrectly rewarding areas that only the service provider deems as high traffic areas, when no indoor wifi AP actually covers the boosted hexes.
 
-- While most of the concern comes from Indoor Wifi, current CBRS deployments within boosted hexes that are getting rewarded these boosted hexes currently have no ability to offload onto the Service Provider.
-  As of January when the service provider switched from offering dual SIMs a Voice/Text + Data, to work on a single SIM solution. So CBRS departments, as of now, add little value in boosted hexes, when they can't be utilized by the Service Provider.  
   
 
 ## Stakeholders
@@ -37,14 +35,17 @@ HIP-84 created Service Provider Hex Boosting.
 
 ## Detailed Explanation
 
-- Pauseing Hex Boosting from HIP-84 is as simple of a detailed explanation as we can get. All current hexboosting hexes from HIP-84 will be removed, and all further rewards will be halted once this HIP passes.
-- The service provider can still "Recommend" hexes at their leisure. 
+- Hex Boosting from HIP-84 for indoor wifi APs will be temporarily put on pause until a future act of governance allows them to be eligible for boosted hex rewards.
+
+- If a service provider wishes to pay those deploying in boosted hexes as has been done in the past, this is considered outside of network emissions and outside of the governance process.  The service providers can still "recommend" hexes and incentivize deployment to indoor wifi APs outside of emissions.
 
 
 ## Drawbacks
 
-- Less new deployments within current boosted hexes, which will revert to "Recommended" hexes. 
+- Less new deployments within current boosted hexes, which will revert to "Recommended" hexes.
+  
 - Hotspots re-asserting outside of the boosted hexes, which will change to "Recommended" hexes, that the current Service Provider has dictated as 'high-traffic' areas without actual service provider footfall data to actually back this up.
+  
 - Current Mexico Boosted Hexes will no longer have an ability of getting PoC at all. However as of to date, the current service provider has not utilized these. They can remain "Recommended" hexes as the service provider already intends to gatehold certified hotspots for Mexico to be given to authorized deployers with the intent to deploy in those locations anyway. 
 
 
@@ -55,7 +56,7 @@ HIP-84 created Service Provider Hex Boosting.
 
 ## Unresolved Questions
 
-- If the current service provider has already burned MOBILE into the hexes, what happens?  This could be an IOU to the service provider from the network, that could be credited to that Service Provider the next time a mechanism requires a service provider to burn, such a future reworked Service Provider Hex Boosting. 
+- None
 
 
 ## Deployment Impact
