@@ -30,7 +30,7 @@ HIP-xxx - Pause-SP-Hex-Boosting-Rewards-for-Indoor-WiFi
 
 ## Stakeholders
 
-- All MOBILE Hotspots, CBRS and WiFi, within boosted hexes.  
+- All Indoor WiFi hotspots.  
 
 
 ## Detailed Explanation
