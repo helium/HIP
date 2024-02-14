@@ -1,7 +1,7 @@
 HIP-xxx - Pause-SP-Hex-Boosting-Rewards-for-Indoor-WiFi
 
 - Author(s): @mrfizzy99 (Fizzy99 - Fiz-Tech.net)
-- Contributor(s): @0lav (SaintOlav), @capjbadger007 (ElonTusk) , @bigbuffer (JD - Moken) , Max Gold (GoldHawksAssociates) , @Gateholder (Gateholder
+- Contributor(s): @0lav (SaintOlav), @capjbadger007 (ElonTusk) , @bigbuffer (JD - Moken) , Max Gold (GoldHawksAssociates) , @Gateholder (Gateholder Worthington Networks)
 - Start Date: 2024/02/13
 - Category: Economic and Technical
 - Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
@@ -68,4 +68,4 @@ HIP-xxx - Pause-SP-Hex-Boosting-Rewards-for-Indoor-WiFi
 
 ## Success Metrics
 
-- Rewards in all other locations within the USA will see a boost in rewards once the Boosted Hexes are removed from draining the PoC pool form the network.
+- Rewards in all other locations will see a boost in rewards once the Indoor WiFi within Service Provider Hex Boosting are paused from draining the PoC pool form the network.
