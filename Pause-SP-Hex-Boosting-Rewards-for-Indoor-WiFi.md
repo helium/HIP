@@ -1,4 +1,4 @@
-HIP-xxx - Pause-SP-Hex-Boosting-Rewards
+HIP-xxx - Pause-SP-Hex-Boosting-Rewards-for-Indoor-WiFi
 
 - Author(s): @mrfizzy99 (Fizzy99 - Fiz-Tech.net)
 - Contributor(s): @0lav (SaintOlav), @capjbadger007 (ElonTusk) , @bigbuffer (JD - Moken) , Max Gold (GoldHawksAssociates)
