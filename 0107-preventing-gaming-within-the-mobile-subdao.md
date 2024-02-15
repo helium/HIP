@@ -32,8 +32,10 @@ The stakeholders of this proposal are:
 ## Detailed Explanation:
 This HIP proposes two main concepts to help curb gaming:
 
-Impose CPI/relocation fees for outdoor CBRS and outdoor Wi-Fi access points to discourage providing false assertion/CPI information, and allowing the CPI/Service Provider to revoke the previously submitted CPI and or location assert information if the CPI/Service Provider has suspicion to believe the initial information is no longer accurate.
-Allowing Tier 1 Service Providers (Tier 1 Service Provider is defined as a Service Provider who was approved by the MOBILE subDAO via HIP and staked 500M MOBILE) the ability to temporarily deactivate indoor Wi-Fi and CBRS radios when they have a reasonable belief that gaming is occurring. 
+1. Impose CPI/relocation fees for outdoor CBRS and outdoor Wi-Fi access points to discourage providing false assertion/CPI information, and allowing the CPI/Service Provider to revoke the previously submitted CPI and or location assert information if the CPI/Service Provider has suspicion to believe the initial information is no longer accurate.
+
+
+2. Allowing Tier 1 Service Providers (Tier 1 Service Provider is defined as a Service Provider who was approved by the MOBILE subDAO via HIP and staked 500M MOBILE) the ability to temporarily deactivate indoor Wi-Fi and CBRS radios when they have a reasonable belief that gaming is occurring. 
 
 
 Under concept 1 above, this HIP proposes the following fee structure:
