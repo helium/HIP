@@ -1,7 +1,6 @@
 # HIP-xxx - Pause HIP-86 SP Hex Boosting Rewards For All Radios
 
-- Author(s): [@mrfizzy99](https://github.com/mrfizzy99) (Fizzy99 - Fiz-Tech.net)
-- Contributor(s): [@0lav](https://github.com/0lav) (SaintOlav), [@capjbadger007](https://github.com/capjbadger007) (ElonTusk) , [@bigbuffer](https://github.com/bigbuffer) (JD - Moken) , [Max Gold](https://github.com/GoldHawksAssociates) (Max - GoldHawksAssociates) , [@Gateholder](https://github.com/Gateholder) (Gateholder Worthington Networks)
+- Author(s): [@mrfizzy99](https://github.com/mrfizzy99) (Fizzy99 - Fiz-Tech.net) , [@0lav](https://github.com/0lav) (SaintOlav), [@capjbadger007](https://github.com/capjbadger007) (ElonTusk) , [@bigbuffer](https://github.com/bigbuffer) (JD - Moken) , [Max Gold](https://github.com/GoldHawksAssociates) (Max - GoldHawksAssociates) , [@Gateholder](https://github.com/Gateholder) (Gateholder Worthington Networks)
 - Start Date: 2024/02/13
 - Category: Economic
 - Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
