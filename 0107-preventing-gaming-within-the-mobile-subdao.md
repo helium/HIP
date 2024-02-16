@@ -89,7 +89,9 @@ An alternative would be to do nothing, and do nothing and allow gaming to contin
 This HIP will be implemented in the following two phases:
 
 ### Phase 1
-Immediately after passing, Tier 1 Service Providers will be allowed to deactivate indoor Wi-Fi and CBRS devices that are suspected of gaming, so long as the deactivation reason aligns with those identified within this HIP, and the reason and length of deactivation is submitted to the MOBILE Oracle.
+Immediately after passing, Tier 1 Service Providers will be allowed to deactivate indoor Wi-Fi and CBRS devices for up to 10 epochs at a time that are suspected of gaming, so long as the deactivation reason aligns with those identified within this HIP, and the reason and length of deactivation is submitted to the MOBILE Oracle.
+
+Phase 1 will also allow the deactivation of outdoor Wi-Fi Access Points for up to 10 epochs at a time that are suspected of gaming until Phase 2 is implemented. 
 
 ### Phase 2
 - A method to submit and or resubmit CPI data/images as well as outdoor Wi-Fi deployment images will be added into the Helium Builder app.
