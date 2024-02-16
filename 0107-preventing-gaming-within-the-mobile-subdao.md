@@ -12,7 +12,7 @@ This Helium Improvement Proposal (HIP) proposes the following:
 
 - A $20 MOBILE burn be submitted along with CPI submissions
 - A $10 MOBILE burn be submitted when updating location information on outdoor Wi-Fi Access Points
-- Giving Service Providers the authority to temporarily deactivate radios/access points if there is suspicion of gaming
+- Giving Service Providers the authority to temporarily deactivate radios/access points if they are suspected of gaming
 
 
 ## Motivation:
@@ -32,7 +32,7 @@ The stakeholders of this proposal are:
 ## Detailed Explanation:
 This HIP proposes two main concepts to help curb gaming:
 
-1. Impose CPI/relocation fees for outdoor CBRS and outdoor Wi-Fi access points to discourage providing false assertion/CPI information, and allowing the CPI/Service Provider to revoke the previously submitted CPI and or location assert information if the CPI/Service Provider has suspicion to believe the initial information is no longer accurate.
+1. Impose CPI/relocation fees for outdoor CBRS and outdoor Wi-Fi access points to discourage providing false assertion/CPI information, and allowing the CPI/Service Provider to revoke the previously submitted CPI and or location assert information if the CPI/Service Provider suspects the initial information is no longer accurate.
 
 
 2. Allowing Tier 1 Service Providers (Tier 1 Service Provider is defined as a Service Provider who was approved by the MOBILE subDAO via HIP and staked 500M MOBILE) the ability to temporarily deactivate indoor Wi-Fi and CBRS radios when they have a reasonable belief that gaming is occurring. 
@@ -72,7 +72,7 @@ The following is a list of gaming reasons that the CPI/Service Provider may deny
 If a submission is rejected for gaming concerns, the CPI/Service Provider may take up to 30 calendar days to re-verify the new information submitted. The Service Provider and or CPI Entity that rejects submissions will be required to review any re-submissions as a result of the rejection within the timelines identified in this HIP. If the submission is not reviewed within 30 calendar days, the Service Provider is required to re-activate that device with the previous information submitted, and may not reject the device again for a minimum of 45 calendar days.
 
 ## Indoor Hotspot Gaming
-This HIP also grants authority to Tier 1 Service Providers to turn off, stop from producing heart beats, or effectively provide a 0X reward multiplier for both PoC and Data rewards for indoor CBRS and indoor Wi-Fi APs for up to ten (10) epochs for suspicion of gaming, so long as the reason is a reason identified in the section above. The gaming reason and length of deactivation must be submitted to the MOBILE Oracle so the reason and deactivation length is public. After the defined deactivation time (10 epochs maximum), the device must automatically be turned back on/re-activated. However, if the gaming continues, the Service Provider may continue to deactivate the device, up to 10 epochs at a time until gaming ceases.    
+This HIP also grants authority to Tier 1 Service Providers to turn off, stop from producing heart beats, or effectively provide a 0X reward multiplier for both PoC and Data rewards for indoor CBRS and indoor Wi-Fi APs for up to ten (10) epochs if they are suspected of gaming, so long as the reason is a reason identified in the section above. The gaming reason and length of deactivation must be submitted to the MOBILE Oracle so the reason and deactivation length is public. After the defined deactivation time (10 epochs maximum), the device must automatically be turned back on/re-activated. However, if the gaming continues, the Service Provider may continue to deactivate the device, up to 10 epochs at a time until gaming ceases.    
 
 ## Abuse of Power
 If it is identified that Service Providers are abusing their power to turn off MOBILE equipment without valid gaming reasons, or do not adhere to the requirements of this HIP, an informal governance proposal may be raised by the MOBILE Working Group to slash an amount of the Service Providers stake. The proposal must be voted on by the MOBILE subDAO with veMOBILE and pass by at least 67%.
