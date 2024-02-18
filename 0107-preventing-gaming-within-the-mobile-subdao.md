@@ -46,11 +46,13 @@ A $20 fee in MOBILE burn will be required whenever new CPI information is submit
 ### Outdoor Wi-Fi AP's
 A $10 location submission fee in MOBILE burn will be required when the location/height/direction for outdoor Wi-Fi AP's are re-submitted/updated. Unlike CBRS, the first location assert will occur at a $0 MOBILE burn cost. Below are the minimum requirements that must be submitted when updating the location/height/direction of an outdoor Wi-Fi AP:
 
-- Install height (in feet)
+- Install height (in feet, maximum 100 feet)
 - Azimuth
 - One picture verifying the height of the install taken from the ground level. If it is not feasible to capture a photo of the AP at the ground level, a picture at the deployment level may be used.
 
 Note, that information and images submitted are not required to be reviewed and or verified; however, they can be used and reviewed by any Tier 1 Service Provider at any time to detect gaming. 
+
+Further, it is noted that due to the shorter range of outdoor Wi-Fi, that the maximum height that can be asserted will change to 100 feet. Deployments can still be deployed higher than 100 feet; however, the maximum asserted height will only be able to be set to 100 feet. If any deployments currently have an asserted height of 100 feet, they will need to lower it to 100 feet or lower in order to continue to earn modeled coverage rewards.
 
 ## Rejection Due to Gaming Concerns
 As gaming becomes rampant within the MOBILE ecosystem, this HIP gives CPI's and Tier 1 Service Providers the authority to deny submissions on radios and Wi-Fi AP's even after they were initially approved or submitted if new information comes to light that the CPI or Service Provider suspects that the information originally submitted is no longer accurate or valid. Upon denying a previously approved submission, the radio/Wi-Fi AP will no longer earn ANY rewards (including data and modeled coverage rewards) until a new submission is submitted to the entity that rejected it, and approved by said entity. These new submissions will incur the same fees identified in the fee schedule above. New submissions due to gaming concerns may require additional submission data beyond what is required in the above portion of this HIP at the request of the CPI/Service Provider, such as a live or recorded video of the actual installation and or a written explanation explaining the discrepancy. 
@@ -80,6 +82,7 @@ If it is identified that Service Providers are abusing their power to turn off M
 ## Drawbacks:
  - Deployers will now have to pay a fee whenever they move locations, or onboard a new CBRS radio.
  - First time deployers of outdoor CBRS radios will now be required to hold MOBILE tokens in their wallet before deployment of a CBRS radio in order to pay for CPI submission fees.
+ - Deployers who have an outdoor Wi-Fi Access Point asserted higher than 100 feet will need to update the assertion height to a maximum of 100 feet.
 
 ## Rationale and Alternatives:
 An alternative would be to do nothing, and do nothing and allow gaming to continue. 
@@ -89,14 +92,15 @@ An alternative would be to do nothing, and do nothing and allow gaming to contin
 This HIP will be implemented in the following two phases:
 
 ### Phase 1
-Immediately after passing, Tier 1 Service Providers will be allowed to deactivate indoor Wi-Fi and CBRS devices for up to 10 epochs at a time that are suspected of gaming, so long as the deactivation reason aligns with those identified within this HIP, and the reason and length of deactivation is submitted to the MOBILE Oracle.
-
-Phase 1 will also allow the deactivation of outdoor Wi-Fi Access Points for up to 10 epochs at a time that are suspected of gaming until Phase 2 is implemented. 
+- Immediately after passing, Tier 1 Service Providers will be allowed to deactivate indoor Wi-Fi and CBRS devices for up to 10 epochs at a time that are suspected of gaming, so long as the deactivation reason aligns with those identified within this HIP, and the reason and length of deactivation is submitted to the MOBILE Oracle.
+- Phase 1 will also allow the deactivation of outdoor Wi-Fi Access Points for up to 10 epochs at a time that are suspected of gaming until Phase 2 is implemented.
+- Nova Labs will change the maximum assertion height for outdoor Wi-Fi Access Points to be 100 feet for all new assertions.
 
 ### Phase 2
 - A method to submit and or resubmit CPI data/images as well as outdoor Wi-Fi deployment images will be added into the Helium Builder app.
 - Nova Labs a.k.a Helium Mobile will work with the Helium Foundation to create or establish a method to burn MOBILE from the Helium Builder app (or similar app) in such a way that the CBRS radio, Wi-Fi AP serial number and or hotspot name is inscribed in the transaction message of the burn transaction in order to keep everything on-chain.
 - Nova Labs will need to change the outdoor Wi-Fi onboard flow to allow outdoor Wi-Fi APs to be onboarded on chain without submitting an initial assertion, as well as requiring an image of the deployment at each assertion.
+- Nova Labs will change the reward oracle to no longer allow any outdoor Wi-Fi Access Points with higher than 100 feet for the asserted location to earn modeled coverage PoC rewards. 
 
 
 ## Success Metrics: 
