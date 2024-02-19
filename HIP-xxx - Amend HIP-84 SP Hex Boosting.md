@@ -50,7 +50,7 @@ Examples:
 
 ## Drawbacks
 
-After the hex boosting has ended, a hotspot deployer could just unplug and dismantel their hotpost setup and closet the hotspot until their staking time has ended. This would only benefit them because the costs of being at that location outweigh the rewards, forcing the operator to retire from that hotspot until the staking has expired. 
+After the hex boosting has ended, a hotspot deployer could just unplug/dismantle their hotpost setup and closet the hotspot until their staking time has ended. This would only benefit them if the costs of being at that location outweigh the rewards, forcing the operator to retire that hotspot until the staking has expired. 
 
 
 ## Rationale and Alternatives
