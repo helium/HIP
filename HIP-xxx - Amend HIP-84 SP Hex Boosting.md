@@ -1,4 +1,4 @@
-# HIP-xxx - Amend HIP-84 Service Provider Hex Boosting.md
+# HIP-xxx - Amend HIP-84 Service Provider Hex Boosting
 
 - Author(s): [@mrfizzy99](https://github.com/mrfizzy99) (Fizzy99 - Fiz-Tech.net) 
 - Start Date: 2024/02/19
