@@ -56,8 +56,10 @@ Examples of stake duration: 
 - For a boosted hex that has already been activated for 4 months of a total 6 month boost with 2 months left, the hotspot assertion will ask if they are willing to stake their hotspot for a total of 4 months to gain the boosted rewards. 
 - For a boosted hex that only has 1 month of epochs left, that hotspot will only be asked to stake for a total of 2 months to receive boosted rewards.
 
-Example of use: 
-* work in progress *  When the hotspot asserts their location in a boosted hex, or outside of a boosted hex
+Examples of use when assterting and staking prompts: 
+When the hotspot asserts their location in a boosted hex, or within a Resoultion 6 hex of a boosted area, they will get a prompt after the assertion that they could be eligible for boosted hex rewards. They will be told that it will take 72 hours to validate coverage if they meet the eligibility requirements and will need to stake their hotspot NFT in order to receive the boosted rewards, lastly to check back in 72 hours for a new prompt on the status of such. 
+Once the 72 hours have passed, if the hotspot meets eligibility requirements, they will have a prompt to begin the hotspot NFT stake, with a few prompts explaining the implications of staking, and a total time their hotspot will be staked for in order to start receiving those boosts hex rewards. A hotspot could be ineligible for various reasons, and should also give short feedback on why they are not eligible. This could range from something such as the modeled coverage not extending into a boosted hex, to a skyhook inaccuracy flag.
+
 
 Phase 1:
 The first phase of this implementation would be Parts 1 and 2 stated above, as these should take relatively little time for implementation.
