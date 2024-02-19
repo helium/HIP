@@ -21,7 +21,7 @@ With this in mind, there are also a few other amendments in this HIP that will a
 
 ## Motivation
 
-This HIP is being proposed to address some concerns about the original implementation of HIP-84. 
+This HIP is being proposed to address some concerns about the original implementation of HIP-84. 
 
 
 ## Stakeholders
@@ -31,57 +31,62 @@ This HIP is being proposed to address some concerns about the original implement
 
 ## Detailed Explanation
 
-This HIP aims to do three things to amend HIP-84 Service Provider Hex Boosting.  
+This HIP aims to do three things to amend HIP-84 Service Provider Hex Boosting.  
 
 1.  Service Provider Hex Boosting rewards to be taken out of the Service Provider Bucket. 
 HIP-84 is by title, is Service Provider Hexboosting, and this should come out of the rewards distributed to the Service Provider. 
-This would incentivize Service Providers to think more carefully about where, for how long, and by how much a hex is boosted as it comes out of their own reward bucket. Incidentally, this also eliminates the need for limiting hex boosting multipliers while still allowing the Service Provider to boost 10x, 50x, 100x and beyond.  As the service provider takes the risk of their own rewards are taken advantage of, it will be an incentive to further police dishonest placements that they have deemed as high value.
+This would incentivize Service Providers to think more carefully about where, for how long, and by how much a hex is boosted as it comes out of their own reward bucket. Incidentally, this also eliminates the need for limiting hex boosting multipliers while still allowing the Service Provider to boost 10x, 50x, 100x and beyond.  As the service provider takes the risk that their own rewards are taken advantage of, it will be an incentive to further police dishonest placements that they have deemed as high value.
 
 2. Reduce the minimum time for Service Provider Hex Boosting to 3 months. 
 Currently set to 6 months minimum, reducing this to 3 months allows Service Providers more flexibility in boosting a hex that they may be unsure if has value. Given if that this HIP passes and will be out of their own reward bucket, this will allow the Service Provider to further reduce the risk if the location or deployments in said location do not end up being beneficial to that Service Provider.
 
-3. Staking a hotspot NFT to a Boosted Hex location. A Hotspot is unable to reassert once asserted into a boosted hex, and will be unable to reassert for the same amount of epochs that are remaining after the boosted has expired if they decide to stake for the boost. Due to the stake, the hotspots NFT will be unable to be transferred to any other wallet. When the hotspot asserts their location in a boosted hex, they will be prompted if they would like to stake the hotspot for x amount of epochs in order the receive boosted rewards. If they choose not to stake, they will receive no boosted rewards, and of course be able to reassert their hotspot at any time. 
-By doing this, the network will demotivate hotspots operators from chasing boosted hexes only for the boosted rewards, making deals or contracts that solely revolve around the boosted hex time, and then moving out of the Boosted Hexes after the boosted hex has expired. This will benefit the service provider as it will ask for an equal amount of epoches of deployment time from the deployer without the boost as the incentive.
-It is also expected that all current deployments within boosted hexes would be required and asked to stake their hotspot to their boosted hex location in order to receive the boosted hex rewards once fully implemented, there will be NO 'Grandfathered' hotspots that receive boosted hexes rewards without staking.
+3. Staking a hotspot NFT to a Boosted Hex location. A Hotspot is unable to reassert once asserted into a boosted hex, and will be unable to reassert for the same amount of epochs that are remaining after the boosted has expired if they decide to stake for the boost. Due to the stake, the hotspots NFT will be unable to be transferred to any other wallet. When the hotspot asserts their location in a boosted hex, they will be prompted if they would like to stake the hotspot for x amount of epochs in order the receive boosted rewards. If they choose not to stake, they will receive no boosted rewards, and of course be able to reassert their hotspot at any time. 
+By doing this, the network will demotivate hotspots operators from chasing boosted hexes only for the boosted rewards, making deals or contracts that solely revolve around the boosted hex time, and then moving out of the Boosted Hexes after the boosted hex has expired. This will benefit the service provider as it will ask for an equal amount of epoches for deployment time from the deployer without the boost as an incentive.
+It is also expected that all current deployments within boosted hexes would be required and asked to stake their hotspot to their boosted hex location in order to receive the boosted hex rewards. Once fully implemented, there will be NO 'Grandfathered' hotspots that receive boosted hexes rewards without staking.
 
-For CBRS, the FreedomFi is the NFT, while the radios are what determines the coverage and ultimately the rewards given. This HIP proposes locking the radio IDs to that freedomfi gateway during the stake time. This will prevent the deployer from reutilizing the radios in another deployment with a new FreedomFi after the hex boosting has ended, but the staking time has not. 
+For CBRS, the FreedomFi is the NFT, while the radios are what determines the coverage and ultimately the rewards given. This HIP proposes locking the radio IDs to that freedomfi gateway during the stake time. This will prevent the deployer from reutilizing the radios in another deployment with a new FreedomFi after the hex boosting has ended, but the staking time has not. 
 
-Examples: 
-- If a Service Provider boosts a hex for 6 months and the boosted hex has not yet been activated, the asserting hotspot will be asked if they would like to stake thier hotspot for a total of 12 months in order to receive the boosted rewards.  
-- For a boosted hex that has already been activated for 3 months, the hotspot assertion will ask if they are willing to stake their hotspot for a total of 6 months to gain the boosted rewards.  
+Examples: 
+- If a Service Provider boosts a hex for 6 months and the boosted hex has not yet been activated, the asserting hotspot will be asked if they would like to stake their hotspot for a total of 12 months in order to receive the boosted rewards.  
+- For a boosted hex that has already been activated for 4 months of a total 6 month boost with 2 months left, the hotspot assertion will ask if they are willing to stake their hotspot for a total of 4 months to gain the boosted rewards. 
 - For a boosted hex that only has 1 month of epochs left, that hotspot will only be asked to stake for a total of 2 months to receive boosted rewards.
 
 
+
+
 Phase 1:
-The first phase of this implementation would be Parts 1 and 2 stated above, as these should take relatively a short time for implementation.
+The first phase of this implementation would be Parts 1 and 2 stated above, as these should take relatively little time for implementation.
 
 Phase 2:
-The second phase of this implementation would be Part 3 stated above, as this could take longer for coding of the staking mechinisum. 
+The second phase of this implementation would be Part 3 stated above, as this could take longer for the coding of the staking mechinisum. 
+
 
 
 
 ## Drawbacks
 
-After the hex boosting has ended, a hotspot deployer could just unplug/dismantle their hotpost setup and closet the hotspot until their staking time has ended. This would only benefit them if the costs of being at that location outweigh the rewards, forcing the operator to retire that hotspot until the staking has expired. 
+After the hex boosting has ended, a hotspot deployer could just unplug/dismantle their hotspot setup and closet the hotspot until their staking time has ended. This would only benefit them if the costs of being at that location outweigh the rewards, forcing the operator to retire that hotspot until the staking has expired. 
 
 
 ## Rationale and Alternatives
 
-There are a few alternatives to HIP-84 that are being discussed, however the most prominent is topic discussed is where the allocation of rewards comes from which this HIP addresses. 
+There are a few alternatives to HIP-84 that are being discussed; however, the most prominent topic discussed is where the allocation of rewards comes from, which this HIP addresses. 
 
 
 ## Unresolved Questions
 
-How do we handle hotspots automatically denied hexboosting rewards due to low skyhook trust? Do they remain staked? Or automatically unstaked? Nova/Helium input will be needed.  
+How do we handle hotspots that are automatically denied hexboosting rewards due to low skyhook trust? Do they remain staked? Or automatically unstaked? Nova/Helium Mobile input will be needed.  
 
 
 ## Deployment Impact
 
-This will impact all hotspots currnetly asserted within boosted hexes by having them stake their hotspot NFT for x amount of time/epochs in order to continue to receive boosted hex rewards. This will also require all future asserting hotspots within boosted hexes to stake their hotspot NFT to receive boosted hex rewards.
+This will impact all hotspots currently asserted within boosted hexes by having them stake their hotspot NFT for x amount of time/epochs in order to continue to receive boosted hex rewards. This will also require all future asserting hotspots within boosted hexes to stake their hotspot NFT to receive boosted hex rewards.  
+
+This will also impact the emissions allocation for boosted hexes, switching from the PoC bucket to the Service Provider bucket.
 
 
 ## Success Metrics
 
-With the success of this HIP we should see more dedicated deployments within Hex Bossted areas, as operators take more risk of staking their hotspot into that area. 
+With the success of this HIP we should see more dedicated deployments within Hex Bossted areas, as operators take more risk of staking their hotspot into that area. 
 
 
