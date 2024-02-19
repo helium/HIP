@@ -21,7 +21,7 @@ HIP-84 created Service Provider Hex Boosting.
 
 ## Motivation
 
-
+TBW
 
 ## Stakeholders
 
@@ -55,12 +55,18 @@ After the hex boosting has ended, a hotspot deployer could just unplug and disma
 
 ## Rationale and Alternatives
 
+TBW
 
 ## Unresolved Questions
 
+TBW
 
 ## Deployment Impact
 
+TBW
 
 ## Success Metrics
+
+TBW
+
 
