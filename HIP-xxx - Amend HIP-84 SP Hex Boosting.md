@@ -42,11 +42,13 @@ Currently set to 6 months minimum, reducing this to 3 months allows Service Prov
 3. Staking a hotspot NFT to a Boosted Hex location. A Hotspot is unable to reassert once asserted into a boosted hex, and will be unable to reassert for the same amount of epochs that are remaining after the boosted has expired if they decide to stake for the boost. Due to the stake, the hotspots NFT will be unable to be transferred to any other wallet. When the hotspot asserts their location in a boosted hex, they will be prompted if they would like to stake the hotspot for x amount of epochs in order the receive boosted rewards. If they choose not to stake, they will receive no boosted rewards, and of course be able to reassert their hotspot at any time. 
 By doing this, the network will demotivate hotspots operators from chasing boosted hexes only for the boosted rewards, making deals or contracts that solely revolve around the boosted hex time, and then moving out of the Boosted Hexes after the boosted hex has expired. This will benefit the service provider as it will ask for an equal amount of epoches of deployment time from the deployer without the boost as the incentive. 
 
+For CBRS, the FreedomFi is the NFT, while the radios are what determines the coverage and ultimately the rewards given. This HIP proposes locking the radio IDs to that freedomfi gateway during the stake time. This will prevent the deployer from reutilizing the radios in another deployment with a new FreedomFi after the hex boosting has ended, but the staking time has not. 
+
 Examples: 
 - If a Service Provider boosts a hex for 6 months and the boosted hex has not yet been activated, the asserting hotspot will be asked if they would like to stake thier hotspot for a total of 12 months in order to receive the boosted rewards.  
 - For a boosted hex that has already been activated for 3 months, the hotspot assertion will ask if they are willing to stake their hotspot for a total of 6 months to gain the boosted rewards.  
 - For a boosted hex that only has 1 month of epochs left, that hotspot will only be asked to stake for a total of 2 months to receive boosted rewards.
-  
+
 
 ## Drawbacks
 
@@ -70,4 +72,3 @@ TBW
 TBW
 
 
-l
