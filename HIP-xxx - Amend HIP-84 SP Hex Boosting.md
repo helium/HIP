@@ -48,8 +48,8 @@ It is also expected that all current deployments within boosted hexes would be r
 For CBRS, the FreedomFi is the NFT, while the radios are what determines the coverage and ultimately the rewards given. This HIP proposes locking the radio IDs to that freedomfi gateway during the stake time. This will prevent the deployer from reutilizing the radios in another deployment with a new FreedomFi after the hex boosting has ended, but the staking time has not. 
 
 Staking Eligibility for Boosted Hex Rewards: 
-For both Wifi and CBRS, the hotspot asserted or has modeled coverage overlapping a boosted hex location will need to go through 3 full epochs/days with a total of atleast 48 valid heartbeats. 
-In the case of WiFi, they will also have to pass skyhook validation for that area in order to be eligible to stake their hotspot to receive hex boosting rewards. If the hotspot does not pass skyhook validation, they will not be eligible to proceed with staking their hotspot due to the inaccuracy. 
+- For both Wifi and CBRS, the hotspot asserted or has modeled coverage overlapping a boosted hex location will need to go through 3 full epochs/days with a total of atleast 48 valid heartbeats. 
+- In the case of WiFi, they will also have to pass skyhook validation for that area in order to be eligible to stake their hotspot to receive hex boosting rewards. If the hotspot does not pass skyhook validation, they will not be eligible to proceed with staking their hotspot due to the inaccuracy. 
 
 Examples of stake duration: 
 - If a Service Provider boosts a hex for 6 months and the boosted hex has not yet been activated, the asserting hotspot will be asked if they would like to stake their hotspot for a total of 12 months in order to receive the boosted rewards.  
@@ -57,7 +57,7 @@ Examples of stake duration: 
 - For a boosted hex that only has 1 month of epochs left, that hotspot will only be asked to stake for a total of 2 months to receive boosted rewards.
 
 Examples of use when assterting and staking prompts: 
-When the hotspot asserts their location in a boosted hex, or within a Resoultion 6 hex of a boosted area, they will get a prompt after the assertion that they could be eligible for boosted hex rewards. They will be told that it will take 72 hours to validate coverage if they meet the eligibility requirements and will need to stake their hotspot NFT in order to receive the boosted rewards, lastly to check back in 72 hours for a new prompt on the status of such. 
+- When the hotspot asserts their location in a boosted hex, or within a Resoultion 6 hex of a boosted area, they will get a prompt after the assertion that they could be eligible for boosted hex rewards. They will be told that it will take 72 hours to validate coverage if they meet the eligibility requirements and will need to stake their hotspot NFT in order to receive the boosted rewards, lastly to check back in 72 hours for a new prompt on the status of such. 
 Once the 72 hours have passed, if the hotspot meets eligibility requirements, they will have a prompt to begin the hotspot NFT stake, with a few prompts explaining the implications of staking, and a total time their hotspot will be staked for in order to start receiving those boosts hex rewards. A hotspot could be ineligible for various reasons, and should also give short feedback on why they are not eligible. This could range from something such as the modeled coverage not extending into a boosted hex, to a skyhook inaccuracy flag.
 
 
