@@ -12,7 +12,7 @@
 HIP-84 Service Provider Hex Boosting as it is written, provides to much unilateral control over where rewards are distributed to any service provider at the expense of the network PoC distribution pool.
 If a service provider decides to hex boost all of Miami, the rewards distributed on behalf of the network is disproportionate to the amount burned and disincentivizes the remaining nationwide deployments on the network for the sole purpose of that service provider, ultimately dictating areas where majority of rewards should go.
 While this author understands that the first service provider on the network is key to the networks success for future service providers to join, it should not be at the detriment of the network's natural expansion nationwide into other cities, and internationally. 
-With this in mind, there are also a few other amendments in this HIP that will also benefit the Service Provider in regards to HIP-84. One of which is changing the minium boost time to 3 months, and the other is staking the hotspot to a boosted hex location for a period of time after in order to receive the boosted rewards. 
+With this in mind, there are also a few other amendments in this HIP that will also benefit the Service Provider in regards to HIP-84. One of which is changing the minium boost time to 3 months, and the other is staking the hotspot in order to receive the boosted rewards. 
 
 ## Prior Related HIPs
 
@@ -88,7 +88,7 @@ How do we handle hotspots that are automatically denied hexboosting rewards due 
 
 ## Deployment Impact
 
-This will impact all hotspots currently asserted within boosted hexes by having them stake their hotspot NFT for x amount of time/epochs in order to continue to receive boosted hex rewards. This will also require all future asserting hotspots within boosted hexes to stake their hotspot NFT to receive boosted hex rewards.  
+This will impact all hotspots currently asserted that cover boosted hexes by having them stake their hotspot NFT for x amount of time/epochs in order to continue to receive boosted hex rewards. This will also require all future asserting hotspots to stake their hotspot if their coverage is within a boosted hexes.  
 
 This will also impact the emissions allocation for boosted hexes, switching from the PoC bucket to the Service Provider bucket.
 
