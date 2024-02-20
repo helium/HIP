@@ -65,7 +65,7 @@ Phase 1:
 The first phase of this implementation would be Parts 1 and 2 stated above, as these should take relatively little time for implementation.
 
 Phase 2:
-The second phase of this implementation would be Part 3 stated above, as this could take longer for the coding of the staking mechinisum. 
+The second phase of this implementation would be Part 3 stated above, as this could take longer for the coding of the staking mechanism. 
 
 
 
