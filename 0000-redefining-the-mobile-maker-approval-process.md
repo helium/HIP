@@ -27,53 +27,90 @@ In the case of Bobcat and Nebra, both have produced a 5G Hotspot; however, neith
 
 ## Stakeholders:
 
-**MOBILE Makers** - Manufacturers wishing to create MOBILE hardware will be required to adhere to the requirements within this HIP.
-**Manufacturer Compliance Committee (MCC)** - The MCC will need to ensure the requirements of this HIP are met prior to awarding a MOBILE Maker a Maker Key. 
+- **MOBILE Makers** - Manufacturers wishing to create MOBILE hardware will be required to adhere to the requirements within this HIP.
+- **Manufacturer Compliance Committee (MCC)** - The MCC will need to ensure the requirements of this HIP are met prior to awarding a MOBILE Maker a Maker Key. 
 
 
 ## Detailed Explanation
-This HIP imposes the following requirements MOBILE Makers must satisfy prior to them being given a Maker Key: 
+This HIP imposes MOBILE Makers must create a new MOBILE Maker Escrow Wallet in which they will not have access to withdraw funds from. Additionally, MOBILE Makers must satisfy the four below requirements prior to being awarded a Maker Key. This HIP will classify MOBILE Makers into three (3) tiers.  Please note, approval of this HIP will serve as Nova Lab’s subDAO approval. As such, Nova Labs will have satisfied all four requirements to this HIP.
 
-- Approval of hardware design by the MCC as outlined in HIP [HIP 19](https://github.com/helium/HIP/blob/main/0019-third-party-manufacturers.md)
+### MOBILE Hotspots Only (Tier 3)
+- Approval of hardware design by the Helium Foundation as outlined in HIP [HIP 19](https://github.com/helium/HIP/blob/main/0019-third-party-manufacturers.md)
+- Approval from the MOBILE subDAO via veMOBILE vote with 67% approval
 - The staking of 50M MOBILE tokens
-- Approval from the MOBILE subDAO via veMOBILE vote with 67% approval once the requirements above are met
 - The Maker must have the following minimum balances within their Maker Wallet:
-  - $10,000 in DC
-  - $10,000 worth of MOBILE at the Oracle Price at the time of deposit 
+  - 2,000,000,000 DC
+  - 2 SOL
+  - 1 MOBILE
 
-Once the above four (4) requirements are met, the MCC may award the MOBILE Maker a Maker Key.
+### Wi-Fi Access Points Only (Tier 2)
+- Approval of hardware design by the Helium Foundation as outlined in HIP [HIP 19](https://github.com/helium/HIP/blob/main/0019-third-party-manufacturers.md)
+- Approval from the MOBILE subDAO via veMOBILE vote with 67% approval
+- The staking of 50M MOBILE tokens
+- The Maker must have the following minimum balances within their Maker Wallet:
+  - 500,000,000 DC
+  - 5 SOL
+  - $10,000 worth of MOBILE at the time of deposit
+
+### Both MOBILE Hotspots and Wi-Fi Access Points (Tier 1)
+- Approval of hardware design by the Helium Foundation as outlined in HIP [HIP 19](https://github.com/helium/HIP/blob/main/0019-third-party-manufacturers.md)
+- Approval from the MOBILE subDAO via veMOBILE vote with 67% approval 
+- The staking of 50M MOBILE tokens
+- The Maker must have the following minimum balances within their Maker Wallet:
+  - 2,500,000,000 DC
+  - 5 SOL
+  - $10,000 worth of MOBILE at the time of deposit
 
 
-Please note, approval of this HIP will serve as Nova Lab’s subDAO approval. As such, Nova Labs will have satisfied all four requirements to this HIP. 
-
-### Rejection of Maker
-If the Maker does not get approved by the MOBILE subDAO via veMOBILE vote, the 50M stake will be returned to that manufacturer within 30 days. 
-
-### Stripping of Maker Keys
+## Stripping of Maker Keys
 Upon HIP passing, the MCC will strip any MOBILE Maker’s Maker Key’s that have not satisfied the above requirements. 
 
+## Ongoing MOBILE Maker Requirements
+As a part of this HIP, MOBILE Makers will be required to keep a minimum balance of tokens within their Maker Escrow Wallet, depending on their Tier. The minimum balance will be calculated to support at least 100 onboards, and are as followed:
 
-## Issuing Keys
-In order to join the blockchain, every Hotspot requires an onboarding code. This code is validated by an Onboarding Oracle and used to onboard a Hotspot/Access Point and pay the $40 onboard fee for Hotspots, $20 onboard fee for indoor Wi-Fi Access Points ($10 in DC and $10 in MOBILE), and $30 for outdoor Wi-Fi Access Points ($10 in DC and $20 in MOBILE). Currently, these codes are exclusively issued by the Helium Foundation and validated by their Onboarding Oracle at <staking.helium.foundation>.
+### Tier 3
+- 0.5 SOL
+- 400,000,000 DC
 
-Currently, manufacturers acquire codes from the Helium Foundation via a proprietary, manual process, with records of serial numbers or MAC addresses presumably kept by the Helium Foundation.
+### Tier 2
+- 0.5 SOL
+- 100,000,000 DC
+- $2,000 worth of MOBILE*
 
-This HIP will impose the following changes in order for the manufacturer to acquirer an onboard code:
+### Tier 1
+- 0.5 SOL
+- 500,000,000 DC
+- $2,000 worth of MOBILE*
 
-- Manufacturer must have an active Maker Key for the MOBILE subDAO
-- The onboarding fee for each device must be burned 1:1 at the time of the request for the code. For example, if a manufacturer is requesting an onboarding code for 1 outdoor Wi-Fi Access Point, they will be required to burn 1,000,000 DC and $20 worth of MOBILE at the current Oracle Price from their Maker Wallet at the time of request.
+*As the onboard fee for Wi-Fi Access Points are not set in a fixed amount of MOBILE, the amount of MOBILE a MOBILE Maker may need in their wallet may fluctuate. Therefore, on the first day of every quarter at 0:00:00 UTC, a snapshot of the MOBILE price from the MOBILE Price Oracle will be saved and that price will be used to determine the MOBILE requirement for the remaining quarter.
 
+For example, if on the first day of the quarter at 0:00:00 UTC, the MOBILE Price Oracle lists MOBILE price at $0.004 per MOBILE, a Tier 1 & 2 MOBILE Maker will be required to hold at least 500,000 MOBILE tokens.
 
-Once the above requirements are met, the Helium Foundation may issue an onboard code.
+## MOBILE Maker Slashing
+A smart contract will be created to automatically slash the MOBILE Makers 50M stake if that MOBILE Maker does not maintain the minimum balances identified above. If the MOBILE Makers balance goes below the minimum threshold defined in this HIP, they will have 1 calendar day to replenish their wallet before slashing occurs. If the wallet stays below the minimum threshold on the 2nd calendar day, the smart contract will automatically burn 0.10% (50,000 MOBILE) of the 50M MOBILE stake. For each day that the wallet stays below the minimum balance, the percentage burned will increase by 0.01. For example, if a MOBILE Makers wallet is below the minimum balance, on the second day, 0.10% of the stake balance will be burned, on the third day, 0.11% of the remaining stake will be burned, on the third day, 0.12% of the remaining stake will be burned, and so on.
+
+## Retirement of a MOBILE Maker
+In some instances, MOBILE Makers may wish to stop producing MOBILE devices, and request their stake be returned. In order for the stake to be returned to the MOBILE Maker, the following must occur:
+
+- The Helium Foundation must conduct an audit to ensure the following:
+  - The MOBILE Maker has issued a press release posted on their website that they are ceasing production and sales of said devices
+  - The MOBILE Maker and any of its affiliates have stopped advertising such devices for sale
+  - The MOBILE Maker will produce records that document total sales volume so the amount of sales can be reconciled against devices onboarded. The foundation will then require the wallet be replenished so at the time of the audit, the Maker Escrow Wallet holds at least enough tokens so that all remaining devices that have not been onboarded may be onboarded.
+
+After the audit is complete, and the MOBILE Maker Escrow Wallet was funded to support the remaining onboards, the stake will be released no sooner than 60 calendar days after the above requirements were met. If new information should arise within the 60 days that wasn't disclosed during the initial audit, the Helium Foundation may request a new audit.
+
+## Migration of MOBILE Maker Wallets to MOBILE Maker Escrow Wallets
+In instances where MOBILE Makers already have a pre-existing MOBILE Maker Wallet, they may continue to use that wallet for onboarding until the balance of DC is 0; however, a new MOBILE Maker Escrow Wallet must be created with the minimum wallet requirements noted above. 
 
 
 ## Deployment Impact:
 
 Upon HIP passing, the MCC and Helium Foundation will need to do the following: 
-- The MCC will revoke any Maker Keys for any Maker that do not satisfy the requirements of this HIP. 
-- The Helium Foundation will create a new Onboard Code process in which the Maker is required to submit the transaction ID(s) of the corresponding burn for each new Onboard Code they are requesting. 
-- The MCC will ensure they only award Maker Keys to MOBILE Makers who have satisfied the four (4) requirements noted within this HIP.
-- For any onboarding codes obtained, but not used, these onboards will undergo the legacy process of requiring the burn at the time of onboarding. For new Onboard Codes issued, the workflow for onboarding a Hotspot/Access Point will need to be changed by the Helium Foundation to not require the onboarding fee be paid at the time of onboarding.
+- The Helium Foundation will revoke any Maker Keys for any Maker that do not satisfy the requirements of this HIP.
+- The Helium Foundation will create a new MOBILE Maker Escrow Wallet type that MOBILE Makers can request.
+- The Helium Foundation will create a slashing smart contract to slash the MOBILE stake of MOBILE Makers who do not adhere to the requirements of this HIP.
+- The Helium Foundation will ensure they only award Maker Keys to MOBILE Makers who have satisfied the four (4) requirements noted within this HIP.
+
 
 ## Success Metrics:
 
