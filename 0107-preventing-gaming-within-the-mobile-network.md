@@ -73,7 +73,7 @@ For HIP implementation, Helium Mobile and Nova Labs has agreed to do the followi
 - Update the Helium Builder app to require a picture be uploaded when new assertions are done for outdoor Wi-Fi access points. This feature also needs to be backported to the Helium Wallet app since assertions can occur in this application.
 - Update the Hotspot trust score for Wi-Fi Hotspots to `0.00` if the asserted location is 1000 meters or more from external data sources like Skyhook, etc.
 - Update the Helium Builder app to change the maximum height an outdoor Wi-Fi Access Point can be asserted to at 100 feet.
-- Update the MOBILE oracle to ignore any heights asserted by outdoor Wi-Fi access points higher than 100 feet.
+- Update the MOBILE oracle to use 100 feet for any heights asserted by outdoor Wi-Fi access points higher than this value.
 - Enhance the CPI process to submit deactivation reason and deadline to MOBILE oracles
 - Update MOBILE oracles to automatically reactivate devices after the specified deadline.
 
