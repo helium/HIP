@@ -68,18 +68,6 @@ As of 02/25/2024, CBRS radios receive **81.7% of the MOBILE Proof of Coverage re
 | **Total (Wi-Fi)**      |        | 6,778  | 8,788,561.264    | 18.27%               | 1,296.63     |
 | **Total (All)**        |        | 14,483 | 48,104,773.323   | 100%                |              |
 
-| Cell Maker             | Technology |   Count  | Total Rewards    | % of Total Rewards  | Avg Reward   |
-|------------------------|-----------:|---------:|-----------------:|--------------------:|-------------:|
-| Baicells Nova430i      | CBRS   | 4,278  | 1,637,726   | 33.81%              | 3,828.25     |
-| Baicells Nova436H      | CBRS   | 557    | 1,946,631   | 40.19%              | 34,948.49    |
-| MosoLabs Indoor        | CBRS   | 2,694  | 313,906    | 6.48%               | 1,165.20     |
-| MosoLabs Outdoor       | CBRS   | 176    | 33,358      | 0.69%               | 1,895.34     |
-| Nova Wifi Indoor       | Wi-Fi  | 4,396  | 4,331,598    | 8.94%               | 985.35       |
-| Nova Wifi Outdoor      | Wi-Fi  | 1,842  | 4,456,962    | 9.20%               | 2,419.63     |
-| **Total (CBRS)**       |        | 7,705  | 39,316,212   | 81.73%               | 5,102.69     |
-| **Total (Wi-Fi)**      |        | 6,778  | 8,788,561    | 18.27%               | 1,296.63     |
-| **Total (All)**        |        | 14,483 | 48,104,773   | 100%                |              |
-
 _Source: https://explorer.moken.io/network-stats/detailed_
 
 Wi-Fi, in contrast, is disadvantaged in the Modeled Coverage reward points algrithm despite having extremely high utility to the network and being actively in production. This results in unfairly lower PoC rewards for Wi-Fi hotspot deployers, who comprise the majority of new participants in the network. 
