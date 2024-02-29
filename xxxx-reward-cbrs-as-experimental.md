@@ -70,7 +70,7 @@ As of 02/25/2024, CBRS radios receive **81.7% of the MOBILE Proof of Coverage re
 
 _Source: https://explorer.moken.io/network-stats/detailed_
 
-Wi-Fi, in contrast, is disadvantaged in the Modeled Coverage reward points algrithm despite having extremely high utility to the network and being actively in production. This results in unfairly lower PoC rewards for Wi-Fi hotspot deployers, who comprise the majority of new participants in the network. 
+Wi-Fi, in contrast, is disadvantaged in the Modeled Coverage reward points algorithm despite having extremely high utility to the network and being actively in production. This results in unfairly lower PoC rewards for Wi-Fi hotspot deployers, who comprise the majority of new participants in the network. 
 
 For the Helium Mobile Network to succeed, it is important to accelerate deployment of Wi-Fi Hotspots, which currently have the best capability to enable real data usage on the Network for the reasons described above.
 
@@ -81,7 +81,7 @@ Data Transfer rewards for CBRS radios **are not** proposed to change.
 ## Stakeholders
 
 - Deployers - This HIP will increase fairness for deployers who choose a more optimal Wi-Fi AP setup as opposed to an experimental CBRS setup.
-- Subscribers - Subscribers may see more coverage of Wi-Fi access, which every subscriber will be able to connect to, as opposed to CBRS radios which require a compatiable device and a second SIM.
+- Subscribers - Subscribers may see more coverage of Wi-Fi access, which every subscriber will be able to connect to, as opposed to CBRS radios which require a compatible device and a second SIM.
 - Service Providers - Service Providers may see a reduction in the amount of CBRS radios on the network.
 
 ## Detailed Explanation
@@ -188,4 +188,4 @@ If this HIP passes, it is expected that implementation of this HIP should not ta
 
 ## Success Metrics
 
-This HIP is successful if the number of Wi-Fi Hotspots being actived on the Network continues to outpace that of CBRS radios.
+This HIP is successful if the number of Wi-Fi Hotspots being activated on the Network continues to outpace that of CBRS radios.
