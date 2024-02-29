@@ -31,7 +31,7 @@ Specifically, Service Providers may stop radios/access points from producing hea
 Outdoor Radios suspected of gaming may have their CPI registration revoked or denied, and will not be able to earn rewards until a new submission is submitted and approved.
 
 ### Outdoor Wi-Fi Maximum Height
-It is worth noting that due to the shorter range of outdoor Wi-Fi, the maximum asserted height will be changed to 100 feet. This will be enforced initially in MOBILE oracles by ignoring values over 100 feet and may, in the future be blocked at the protocol level. Deployments can still be deployed higher than 100 feet but these values will not be considered for the purpose of modeled coverage rewards.
+It is worth noting that due to the shorter range of outdoor Wi-Fi, the maximum asserted height will be changed to 100 feet. This will be enforced initially in MOBILE oracles by using the value of 100 feet for all values above this limit. It may, in the future, be blocked at the protocol level. Deployments can still be deployed higher than 100 feet but these values will not be considered for the purpose of modeled coverage rewards.
 
 ### Maximum Asserted Distance Difference
 For indoor and outdoor Wi-Fi access points, Hotspot locations are verified using external services like Skyhook. If the asserted distance is greater than 1000 meters away from the external service location, the trust score will be set to `0.00`.
