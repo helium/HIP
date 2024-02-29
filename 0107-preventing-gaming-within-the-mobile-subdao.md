@@ -68,8 +68,9 @@ An alternative would be to do nothing, and do nothing and allow gaming to contin
  For HIP implementation, Helium Mobile has agreed to do the following: 
 
 - Update the Helium Builder app to require a picture be uploaded when new assertions are done for outdoor Wi-Fi access points
+- Update the trust score to ensure that if the asserted distance is 300 meters or greater away from the Skyhook location, trust score equals 0.00
 - Update the Helium Builder app to change the maximum height an outdoor Wi-Fi Access Point can be asserted to at 100 feet
-- For any outdoor Wi-Fi access points asserted greater than 100 feet, give each of those access points a 0X multiplier until the height is            asserted to 100 feet or less.
+- For any outdoor Wi-Fi access points asserted greater than 100 feet, give each of those access points a 0X multiplier until the height is asserted to 100 feet or less.
 - Submit to the MOBILE oracle instances where they deactivate a device to include the deactivation reason and deactivation length.
 
 
