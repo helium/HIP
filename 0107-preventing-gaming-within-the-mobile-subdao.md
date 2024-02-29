@@ -24,15 +24,20 @@ The stakeholders of this proposal are:
 
 
 ## Detailed Explanation:
-This HIP proposes allowing Tier 1 Service Providers (Tier 1 Service Provider is defined as a Service Provider who was approved by the MOBILE subDAO via HIP and staked 500M MOBILE) the ability to temporarily deactivate CBRS Radios and Wi-Fi Access Points when they have a reasonable belief that gaming is occurring. Further, the Certified Professional Installer (CPI) Entity may revoke or deny submissions due to suspected gaming. 
+This HIP proposes allowing Tier 1 Service Providers (Tier 1 Service Provider is defined as a Service Provider who was approved by the MOBILE subDAO via HIP and staked 500M MOBILE) the ability to temporarily deactivate CBRS Radios and Wi-Fi access points when they have a reasonable belief that gaming is occurring. Further, the Certified Professional Installer (CPI) Entity may revoke or deny submissions due to suspected gaming. 
 
-Specifically, Service Providers can now stop Radios/Access Points from producing heart beats, or effectively provide a 0X reward multiplier for both PoC and Data rewards for CBRS Radios and Wi-Fi Access Points for up to ten (10) consecutive epochs if they are suspected of gaming, so long as the reason is a reason identified in the section below. The gaming reason and length of deactivation must be submitted to the MOBILE Oracle so the reason and deactivation length is public. After the defined deactivation time (10 epochs maximum), the device must automatically be turned back on/re-activated (exception is for outdoor CBRS radios, which need a new CPI submission approved). However, if the gaming continues, the Service Provider may continue to deactivate the device, up to 10 epochs at a time until gaming ceases.
+Specifically, Service Providers can now stop Radios/access points from producing heart beats, or effectively provide a 0X reward multiplier for both PoC and Data rewards for CBRS Radios and Wi-Fi access points for up to ten (10) consecutive epochs if they are suspected of gaming, so long as the reason is a reason identified in the section below. The gaming reason and length of deactivation must be submitted to the MOBILE Oracle so the reason and deactivation length is public. After the defined deactivation time (10 epochs maximum), the device must automatically be turned back on/re-activated (exception is for outdoor CBRS radios, which need a new CPI submission approved). However, if the gaming continues, the Service Provider may continue to deactivate the device, up to 10 epochs at a time until gaming ceases.
 
 Outdoor Radios suspected of gaming may have their CPI registration revoked or denied, and will not be able to earn rewards until a new submission is submitted and approved.
 
-Further, it is noted that due to the shorter range of outdoor Wi-Fi, that the maximum height that can be asserted for outdoor Wi-Fi Access Points will be changed to 100 feet. Deployments can still be deployed higher than 100 feet; however, the maximum asserted height will only be able to be set to 100 feet. If any deployments currently have an asserted height of greater than 100 feet, they will need to lower it to 100 feet or less in order to continue to earn modeled coverage rewards.
+### Outdoor Wi-Fi Maximum Height
+It is noted that due to the shorter range of outdoor Wi-Fi, that the maximum height that can be asserted for outdoor Wi-Fi access points will be changed to 100 feet. Deployments can still be deployed higher than 100 feet; however, the maximum asserted height will only be able to be set to 100 feet. If any deployments currently have an asserted height of greater than 100 feet, they will need to lower it to 100 feet or less in order to continue to earn modeled coverage rewards.
 
-Lastly, this HIP requires deployers asserting a new location for outdoor Wi-Fi Access Points will also be required to also submit a picture of the Access Point from the ground level showing the height of the installation. 
+### Maximum Asserted Distance Difference
+For indoor and outdoor Wi-Fi access points, if the asserted distances is greater than 300 meters away from the skyhook location, the trust score will equal 0.00
+
+### Picture Requirements of Outdoor Wi-Fi
+This HIP requires deployers asserting a new location for outdoor Wi-Fi access points will also be required to also submit a picture of the Access Point from the ground level showing the height of the installation. 
 
 ## Rejection Due to Gaming Concerns
 The following is a list of gaming reasons that the CPI/Service Provider may deny a submission or deactivate a device:
@@ -62,9 +67,9 @@ An alternative would be to do nothing, and do nothing and allow gaming to contin
 ## Implementation Phases
  For HIP implementation, Helium Mobile has agreed to do the following: 
 
-- Update the Helium Builder app to require a picture be uploaded when new assertions are done for outdoor Wi-Fi Access Points
+- Update the Helium Builder app to require a picture be uploaded when new assertions are done for outdoor Wi-Fi access points
 - Update the Helium Builder app to change the maximum height an outdoor Wi-Fi Access Point can be asserted to at 100 feet
-- For any outdoor Wi-Fi Access Points asserted greater than 100 feet, give each of those Access Points a 0X multiplier until the height is            asserted to 100 feet or less.
+- For any outdoor Wi-Fi access points asserted greater than 100 feet, give each of those access points a 0X multiplier until the height is            asserted to 100 feet or less.
 - Submit to the MOBILE oracle instances where they deactivate a device to include the deactivation reason and deactivation length.
 
 
