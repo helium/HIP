@@ -62,7 +62,7 @@ This HIP imposes MOBILE Makers must create a new MOBILE Maker Escrow Wallet in w
   - 5 SOL
   - $4,000 worth of MOBILE at the time of deposit
 
-Please note, in instances where a MOBILE Maker has subsidiaries that create different devices (e.g. one subsidiary that creates MOBILE CBRS Hotspots, and one subsidiary that creates Wi-Fi Access Points), only one stake of 50M MOBILE tokens is needed for both subsidiaries. The MOBILE Maker can choose to have one combined wallet for the parentn company, or separate wallets for each subsidiary. In instances where the MOBILE Maker chooses to have separate wallets, they will be classified separetly as both a Tier 3 and a Tier 2 MOBILE Maker for each subsidiary.
+Please note, in instances where a MOBILE Maker has subsidiaries that create different devices (e.g. one subsidiary that creates MOBILE CBRS Hotspots, and one subsidiary that creates Wi-Fi Access Points), only one stake of 50M MOBILE tokens is needed for both subsidiaries. The MOBILE Maker can choose to have one combined wallet for the parent company, or separate wallets for each subsidiary. In instances where the MOBILE Maker chooses to have separate wallets, they will be classified separately as both a Tier 3 and a Tier 2 MOBILE Maker for each subsidiary.
 
 ## Stripping of Maker Keys
 Upon HIP passing, the MCC will strip any MOBILE Maker’s Maker Key’s that have not satisfied the above requirements. The removal of the MOBILE Makers key will prevent any more hotspots from that MOBILE Maker from being onboarded.
