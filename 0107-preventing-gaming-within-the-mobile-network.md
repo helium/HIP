@@ -34,7 +34,7 @@ Outdoor Radios suspected of gaming may have their CPI registration revoked or de
 It is worth noting that due to the shorter range of outdoor Wi-Fi, the maximum asserted height will be changed to 100 feet. This will be enforced initially in MOBILE oracles by ignoring values over 100 feet and may, in the future be blocked at the protocol level. Deployments can still be deployed higher than 100 feet but these values will not be considered for the purpose of modeled coverage rewards.
 
 ### Maximum Asserted Distance Difference
-For indoor and outdoor Wi-Fi access points, Hotspot locations are verified using external services like Skyhook. If the asserted distance is greater than 300 meters away from the external service location, the trust score will be set to `0.00`.
+For indoor and outdoor Wi-Fi access points, Hotspot locations are verified using external services like Skyhook. If the asserted distance is greater than 1000 meters away from the external service location, the trust score will be set to `0.00`.
 
 ### Picture Requirements of Outdoor Wi-Fi
 This proposal also requires deployers asserting a new location for outdoor Wi-Fi access points to also submit a picture of the Access Point installation. This picture will be submitted directly to the Hotspot Maker and must show the height of the installation from the ground level.
@@ -69,7 +69,7 @@ An alternative would be to do nothing and allow gaming to continue.
 For HIP implementation, Helium Mobile and Nova Labs has agreed to do the following:
 
 - Update the Helium Builder app to require a picture be uploaded when new assertions are done for outdoor Wi-Fi access points. This feature also needs to be backported to the Helium Wallet app since assertions can occur in this application.
-- Update the Hotspot trust score for Wi-Fi Hotspots to `0.00` if the asserted location is 300 meters or more from external data sources like Skyhook, etc.
+- Update the Hotspot trust score for Wi-Fi Hotspots to `0.00` if the asserted location is 1000 meters or more from external data sources like Skyhook, etc.
 - Update the Helium Builder app to change the maximum height an outdoor Wi-Fi Access Point can be asserted to at 100 feet.
 - Update the MOBILE oracle to ignore any heights asserted by outdoor Wi-Fi access points higher than 100 feet.
 - Enhance the CPI process to submit deactivation reason and deadline to MOBILE oracles
