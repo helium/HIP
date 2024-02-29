@@ -37,6 +37,7 @@ It is worth noting that due to the shorter range of outdoor Wi-Fi, the maximum a
 For indoor and outdoor Wi-Fi access points, Hotspot locations are verified using external services like Skyhook. If the asserted distance is greater than 1000 meters away from the external service location, the trust score will be set to `0.00`.
 
 Further, in order for access points to be eligible for boosted Service Provider rewards defined in HIP-84, the asserted distances must be 30 meters or less than the reported location from external services. In instances where the difference is greater than 30 meters, the access point will still be eligible for PoC rewards, but not boosted rewards.
+
 ### Picture Requirements of Outdoor Wi-Fi
 This proposal also requires deployers asserting a new location for outdoor Wi-Fi access points to also submit a picture of the Access Point installation. This picture will be submitted directly to the Hotspot Maker and must show the height of the installation from the ground level.
 
