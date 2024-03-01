@@ -1,11 +1,11 @@
 # HIP XXX: Proxy Voting
 
-Authors: [Abhay Kumar](https://github.com/abhay) and [Noah Prince](https://github.com/ChewingGlass)
-Start Date: TBD
-Category: Governance
-Original HIP PR:
-Tracking Issue:
-Voting Requirements: veHNT Holders 
+- Author(s): [Abhay Kumar](https://github.com/abhay) and [Noah Prince](https://github.com/ChewingGlass)
+- Start Date: 2024-03-01
+- Category: Governance
+- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
+- Tracking Issue: <!-- leave this empty; maintainer will fill in ID of this pull request -->
+- Vote Requirements: veHNT Holders
 
 ---
 
