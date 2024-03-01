@@ -106,16 +106,6 @@ Based on the low utility of CBRS explained in the motivation section above, this
 | **Estimated coverage points (current)**  | 400        | 100                |
 | **Estimated coverage points (proposed)** | **40**     | **10**             |
 
-### Changes to Templated Coverage Points
-
-| Device Type             | Reward Weight (current) | Reward Weight (proposed) |
-| ----------------------- | ----------------------- | ------------------------ |
-| High Power CBRS Outdoor | 4.000                   | 0.400                    |
-| CBRS Outdoor            | 2.500                   | 0.250                    |
-| CBRS Indoor             | 1.000                   | 0.100                    |
-| Wi-Fi Outdoor           | 1.000                   | 1.000                    |
-| Wi-Fi Indoor            | 0.400                   | 0.400                    |
-
 ### Examples of Specific Radios Before & After
 
 | Gateway                                                                                     | Radio Type             | Modeled Coverage Points (current) | Modeled Coverage Points (proposed) | Reduction |
