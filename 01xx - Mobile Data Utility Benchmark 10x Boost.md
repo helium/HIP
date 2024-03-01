@@ -43,6 +43,8 @@ Mobile Radios/APs must transfer at least 1MB of rewarded data through the radio 
 #### 2. Benchmark Exemption:
  
 Mobile Radios/APs that cannot pass rewarded data through no fault of their own will be exempt from the benchmark and recieve the boosted CPs. Exemption will automatically trigger for the epoch if that protocol has passed <1MB of rewarded data in a 14 epoch rolling window.
+Example: All WiFi certs (due to some bug) become inactive. After 14 epochs, all Wifi APs would not be subject to the benchmark requirement. Given the 7 epoch rolling window, Devs would have 7 epochs to get the issue corrected before Wifi AP owners would see a loss of the boost. 
+
 Currently CBRS and WiFi are the only Mobile subDAO protocols. This HIP will apply to any future protocols as they are added to the Mobile subDAO.
  
 ## Rationale:
