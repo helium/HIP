@@ -1,4 +1,4 @@
-# HIP XXX: MOBILE Data Utility Benchmark - 10x Reward Boost
+# HIP XXXX: MOBILE Data Utility Benchmark - 10x Reward Boost
  
 - Author(s): *[ElonTusk007](https://github.com/capjbadger007 ), [Max Gold](https://github.com/maxgold91), [Fizzy99](https://github.com/mrfizzy99)*
 - Start Date: 2024-02-01
