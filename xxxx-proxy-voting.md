@@ -5,13 +5,13 @@
 - Category: Governance
 - Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
 - Tracking Issue: <!-- leave this empty; maintainer will fill in ID of this pull request -->
-- Vote Requirements: veHNT Holders
+- Vote Requirements: veHNT Holders, veIOT Holders, and veMOBILE Holders
 
 ---
 
 # Summary
 
-This proposal formalizes the concept of Proxy Voters in Helium Governance. Proxy voting is a method of governance wherein a participant may assign their vote, potentially for a limited period of time, to another participant. In Helium Governance, we propose that a voting wallet with veToken power may assign their voting power, for a fixed period of time, to another voting wallet.
+This proposal formalizes the concept of Proxy Voters in [Helium Governance](https://heliumvote.com). Proxy voting is a method of governance wherein a participant may assign their vote, potentially for a limited period of time, to another participant. In Helium Governance, we propose that a voting wallet with veToken power may assign their voting power, for a fixed period of time, to another voting wallet.
 
 One can imagine a situation where a participant may not have the ability or time to properly research all Helium Improvement Proposals and directly vote using their vote power. There are also situations where participants are unable to directly vote, for a variety of reasons, but are able to assign their rights to another party. In either of these cases, we propose that participants can assign their voting power to a wallet held by a participant whom they trust without transferring control of the underlying assets.
 
@@ -21,9 +21,11 @@ We also propose that this assignment can be revoked or reassigned at any time al
 
 Finally, we propose that proxy voting in Helium’s ecosystem is broken into seasons that reset every August 1st, aligned with the anniversary of the network. This will ensure that assigned proxies do not get stale.
 
-It is worth noting that the concept of vote assignment already exists in Realms on Solana but as we move to using Modular Governance, we believe that the protocol needs to explicitly formalize this feature. As part of formalizing this feature, the authors would like to create a curated registry of well known Proxies. This will allow people to fully research proxies before they assign voting power. The authors believe that the discovery aspect of voting proxies is important, otherwise it will have limited effectiveness.
+It is worth noting that the concept of vote assignment already exists in [Realms](https://realms.today) on Solana but as we move to using Modular Governance, we believe that the protocol needs to explicitly formalize this feature. As part of formalizing this feature, the authors would like to create a curated registry of well known Proxies. This will allow people to fully research proxies before they assign voting power. The authors believe that the discovery aspect of voting proxies is important, otherwise it will have limited effectiveness.
 
 **Disclosure**: Please note that this HIP is written by members of the Helium Foundation and not in a personal capacity. It is intended to be a formal proposal to the community from the Foundation.
+
+**Note**: This proposal will likely need to voted on by each separate governance group. Specifically, if it's brought to a vote, a separate vote will be held of veHNT, veIOT, and veMOBILE holders.
 
 # Motivation
 
@@ -33,7 +35,7 @@ Participants in the ecosystem may be too busy, or do not feel like they understa
 
 A high voter turnout isn’t just important for guiding the direction of the protocol. It’s also important because it ensures that governance attacks are costly. With a low threshold of voting power needed to tip a vote, a malicious actor can guide the network towards decisions that only serve that actor.
 
-In a Proof-of-Stake network, validators must vote on all decisions made. In this way, all staked tokens participate in governance. By adding proxy voting to Helium, we can take meaningful steps towards a system where most staked HNT is voting. Much like selecting a validator, stakers in Helium tokens can select an appropriate Proxy based on their voting history and their documented positions.
+In a Proof-of-Stake network, validators must vote on all decisions made. In this way, all staked tokens participate in governance. By adding proxy voting to Helium, we can take meaningful steps towards a system where most staked tokens are participating in governance. Much like selecting a validator, stakers in Helium tokens can select an appropriate Proxy based on their voting history and their documented positions.
 
 # Specification
 
