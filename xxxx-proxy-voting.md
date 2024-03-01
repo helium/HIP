@@ -23,7 +23,7 @@ Finally, we propose that proxy voting in Helium’s ecosystem is broken into sea
 
 It is worth noting that the concept of vote assignment already exists in [Realms](https://realms.today) on Solana but as we move to using Modular Governance, we believe that the protocol needs to explicitly formalize this feature. As part of formalizing this feature, the authors would like to create a curated registry of well known Proxies. This will allow people to fully research proxies before they assign voting power. The authors believe that the discovery aspect of voting proxies is important, otherwise it will have limited effectiveness.
 
-**Disclosure**: Please note that this HIP is written by members of the Helium Foundation and not in a personal capacity. It is intended to be a formal proposal to the community from the Foundation.
+**Disclosure**: This HIP is a formal proposal authored by the [Helium Foundation](https://helium.foundation). Employees listed as authors are acting in their official capacity as representatives of the Foundation. All proposals contained within reflect solely the recommendations of the Foundation and not those of any individual author(s).
 
 **Note**: This proposal will likely need to voted on by each separate governance group. Specifically, if it's brought to a vote, a separate vote will be held of veHNT, veIOT, and veMOBILE holders.
 
