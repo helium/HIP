@@ -57,6 +57,34 @@ Once we have a registry of Proxies, users should be able to use heliumvote.com o
 
 Proxies will exist on a per-position basis. With proxy assignment being recursive, you can think of the proxies assigned for a given position as a linked list.
 
+```mermaid
+graph LR;
+    subgraph "`**Alice**`"
+        alice0["100 veHNT"]
+    end
+
+    subgraph "`**Bob**`"
+        bob0["50 veHNT"]
+    end
+
+    subgraph "`**Charlie (175 veHNT)**`"
+        charlie0["25 veHNT"]
+        charlie1["Alice + Bob (150 veHNT)"]
+        style charlie1 stroke-dasharray: 5 5
+    end
+
+    subgraph "`**Daniel (175 veHNT)**`"
+        daniel1["Alice + Bob + Charlie (175 veHNT)"]
+        style daniel1 stroke-dasharray: 5 5
+    end
+
+    alice0 --assign--> charlie1
+    bob0 --assign--> charlie1
+
+    charlie0 --assign--> daniel1
+    charlie1 --assign--> daniel1
+```
+
 In the above image, you can see that both Alice and Bob assign their positions to Charlie. Charlie then assigns all of his positions (and Alice and Bob’s positions) to Daniel.
 
 In this situation, Daniel can vote with 175 veHNT. Charlie can also (optionally) override 175 veHNT of Daniels vote if he disagrees. Further, Alice can override 100 veHNT of Charlie OR Daniel’s vote. Bob can override 50 veHNT of Charlie OR Daniel’s vote.
