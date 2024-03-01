@@ -2,7 +2,7 @@
  
 - Author(s): *ElonTusk007, Capc0m (Max), fizzy99*
 - Start Date: Feb 1, 2024
-- Status: Draft
+- Status: Pending PR approval
 - Category: Economic, Technical
 - Original HIP PR: <!--- TBD -->
 - Tracking Issue: <!--- TBD -->
