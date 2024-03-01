@@ -139,6 +139,17 @@ Due to the lack of a public Modeled Coverage API, these Coverage Points estimate
 | Wi-Fi         | 7,813,792                   | 33,257,171                 | 69.1%           | **+378.4%**             |
 | Total         | 11,302,245                  | 48,104,773                 | 100%            |                         |
 
+### Estimates of Specific Radio Rewards
+
+These estimates are derived from the the estimated Modeled Coverage Points proposed in the Detailed Explanation above.
+
+| Gateway                                                                                     | Radio Type             | MOBILE Rewards (current) | MOBILE Rewards (estimated) | Reduction |
+| ------------------------------------------------------------------------------------------- | ---------------------- | --------------------------------- | ---------------------------------- | --------- |
+| [Rare Amber Beetle](https://planner.hellohelium.com/hex/08c44a1b9431e1ff/radio/1711546)     | Baicells 436H Outdoor  | 38,548.93                             | 12,445.17                               | 67.7%     |
+| [Little Grey Porpoise](https://planner.hellohelium.com/hex/08c29a56d066e7ff/radio/5190)     | Baicells 436H Outdoor  | 10,601.19                              | 2,894.23                                | 72.7%     |
+| [Beautiful Caramel Ferret](https://planner.hellohelium.com/hex/08c2a100d87263ff/radio/1536) | Baicells 430i Outdoor  | 1,004.42                               | 293.68                                 | 70.8%     |
+| [Cool Ocean Mole](https://planner.hellohelium.com/hex/08c2830828a505ff/radio/2162886)       | Sercomm Indoor         | 1,190.08                              | 425.62                                | 64.2%     |
+
 
 ## Drawbacks
 
