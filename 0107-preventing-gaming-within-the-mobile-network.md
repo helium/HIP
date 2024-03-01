@@ -76,6 +76,8 @@ For HIP implementation, Helium Mobile and Nova Labs has agreed to do the followi
 - Update the MOBILE oracle to use 100 feet for any heights asserted by outdoor Wi-Fi access points higher than this value.
 - Enhance the CPI process to submit deactivation reason and deadline to MOBILE oracles
 - Update MOBILE oracles to automatically reactivate devices after the specified deadline.
+- Update the protocol to add `elevation` to on chain data of MOBILE hotspots.
+- Enforce maximum elevation for Outdoor Wi-Fi Hotspots on chain and make this configurable. 
 
 ## Success Metrics
 This HIP is successful if the amount of radios/access points that are incorrectly asserted or that are abusing the network decrease.
