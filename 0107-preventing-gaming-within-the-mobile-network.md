@@ -68,8 +68,6 @@ An alternative would be to do nothing and allow gaming to continue.
 
 ## Implementation Phases
 
-For HIP implementation, Helium Mobile and Nova Labs has agreed to do the following:
-
 - Update the Helium Builder app to require a picture be uploaded when new assertions are done for outdoor Wi-Fi access points. This feature also needs to be backported to the Helium Wallet app since assertions can occur in this application.
 - Update the Hotspot trust score for Wi-Fi Hotspots to `0.00` if the asserted location is 1000 meters or more from external data sources like Skyhook, etc.
 - Update the Helium Builder app to change the maximum height an outdoor Wi-Fi Access Point can be asserted to at 100 feet.
