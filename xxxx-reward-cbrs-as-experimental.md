@@ -21,6 +21,8 @@ This Helium Improvement Proposal (HIP) suggests adjusting Proof-of-Coverage (PoC
   
 - [HIP 101](0101-equalizing-poc-rewards-across-wifi-and-cbrs.md) proposed increasing Wi-Fi coverage points by 1.5x (indoor) and 2.5x (outdoor), but failed to pass a vote.
 
+**Disclosure**: Please note that this HIP is written by a Board Member of the [Helium Foundation](https://helium.foundation) solely in a personal capacity. The Foundation was not involved in the drafting of the proposal and has taken no formal position for or against the HIP as of the date of drafting.
+
 ## Motivation
 
 CBRS gateways and radios have been the main way to deploy coverage since the beginning of the Helium 5G network. However, as the network has matured, CBRS has proven to be impractical in a number of technical and operational categories, thus offering limited utility to the network.
