@@ -143,7 +143,7 @@ Due to the lack of a public Modeled Coverage API, these Coverage Points estimate
 
 ### Estimates of Specific Radio Rewards
 
-These estimates are derived from the the estimated Modeled Coverage Points proposed in the Detailed Explanation above.
+These estimates are derived from the estimated Modeled Coverage Points proposed in the Detailed Explanation above.
 
 | Gateway                                                                                     | Radio Type             | MOBILE Rewards (current) | MOBILE Rewards (estimated) | Reduction |
 | ------------------------------------------------------------------------------------------- | ---------------------- | --------------------------------- | ---------------------------------- | --------- |
