@@ -8,13 +8,13 @@
 
 ## Summary
 
-This HIP proposes allowing one (1) free IOT assertion per rolling 365 day period, including the initial assertion. Any additional assertions conducted within the 365 day rolling period will be required to pay a $10 fee in IOT burn.
+This HIP proposes allowing one (1) free IOT assertion per rolling 365 epoch period, including the initial assertion. Any additional assertions conducted within the 365 epoch rolling period will be required to pay a $10 fee in IOT burn.
 
 ## Motivation
 
 Currently, assertion fees for the IOT subnetwork are paid in Data Credit (DC) burn, which is created by burning HNT. Due to net emissions, the burning of HNT and DC may at times benefit the MOBILE subDAO greater than the IOT subDAO. This is due to the fact that the DAO utility score created in  [HIP 53](https://github.com/helium/HIP/blob/main/0051-helium-dao.md) does not provide greater emissions for more DC burn outside of onboards. 
 
-Further, this HIP will make it cheaper for hotspot deployers to ensure their asserted location is accurate by allowing one (1) free location assert per 365 days. 
+Further, this HIP will make it cheaper for hotspot deployers to ensure their asserted location is accurate by allowing one (1) free location assert per 365 epochs. 
 
 
 ## Stakeholders
@@ -34,8 +34,8 @@ The workflow for location re-assertions will be as followed:
 
 1. User initiates location assertion within the Helium Wallet App
 2. The Helium Wallet App will review on-chain data for that hotspot to determine when the last location assertion was
-3. If the last free (0 IOT)  location assertion was > 365 days or never occurred, cost for re-assertion is 0 IOT
-4. If the last free (0 IOT) location assertion was < 365 days, cost for re-assertion is $10 worth of IOT at current Oracle Price.
+3. If the last free (0 IOT)  location assertion was > 365 epochs or never occurred, cost for re-assertion is 0 IOT
+4. If the last free (0 IOT) location assertion was < 365 epochs, cost for re-assertion is $10 worth of IOT at current Oracle Price.
 
 
 The workflow for initial location assertions will be as followed:
