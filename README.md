@@ -126,7 +126,7 @@ If you have questions or feedback, please see the [Discussion](https://github.co
 | 110 | [Proxy Voting](0110-proxy-voting.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/928) |
 | 111 | [MOBILE Data Utility Benchmark](0111-mobile-data-utility-benchmark.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/929) |
 | 112 | [Scaling IOT Location Assert Fees](0112-scaling-iot-location-assert-fees.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/931) |
-
+| 113 | [Reward CBRS As Experimental](0113-reward-cbrs-as-experimental.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/934) |
 
 ## Status Key
 
