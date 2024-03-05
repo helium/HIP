@@ -68,14 +68,23 @@ An alternative would be to do nothing and allow gaming to continue.
 
 ## Implementation Phases
 
-- Update the Helium Builder app to require a picture be uploaded when new assertions are done for outdoor Wi-Fi access points. This feature also needs to be backported to the Helium Wallet app since assertions can occur in this application.
-- Update the Hotspot trust score for Wi-Fi Hotspots to `0.00` if the asserted location is 1000 meters or more from external data sources like Skyhook, etc.
-- Update the Helium Builder app to change the maximum height an outdoor Wi-Fi Access Point can be asserted to at 100 feet.
-- Update the MOBILE oracle to use 100 feet for any heights asserted by outdoor Wi-Fi access points higher than this value.
-- Enhance the CPI process to submit deactivation reason and deadline to MOBILE oracles
-- Update MOBILE oracles to automatically reactivate devices after the specified deadline.
-- Update the protocol to add `elevation` to on chain data of MOBILE hotspots.
-- Enforce maximum elevation for Outdoor Wi-Fi Hotspots on chain and make this configurable. 
+### Phase 1
+
+* Create a process for Service Providers to submit deactivation reason and deadline to MOBILE Oracles
+* Update MOBILE oracles to automatically reactivate devices after the specified deadline.
+
+### Phase 2
+
+* Update the MOBILE oracle to use 100 feet for any heights asserted by outdoor Wi-Fi access points higher than this value.
+* Enforce maximum elevation for Outdoor Wi-Fi Hotspots on chain and make this configurable.
+* Update the Helium Builder app to change the maximum height an outdoor Wi-Fi Access Point can be asserted to at 100 feet.
+
+### Phase 3
+
+* Update the Hotspot trust score for Wi-Fi Hotspots to 0.00 if the asserted location is 1000 meters or more from external data sources like Skyhook, etc.
+* Update the Helium Builder app to require a picture be uploaded when new assertions are done for outdoor Wi-Fi access points.
+* Update and backfill the protocol to add Height and Azimuth to on chain data of MOBILE hotspots.
+* Update the Helium Wallet app to allow location assertions within the app by capturing height, azimuth, and deployment photo
 
 ## Success Metrics
 This HIP is successful if the amount of radios/access points that are incorrectly asserted or that are abusing the network decrease.
