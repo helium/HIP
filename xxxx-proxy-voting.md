@@ -1,10 +1,10 @@
-# HIP XXX: Proxy Voting
+# HIP 110: Proxy Voting
 
 - Author(s): [Abhay Kumar](https://github.com/abhay) and [Noah Prince](https://github.com/ChewingGlass)
 - Start Date: 2024-03-01
 - Category: Governance
-- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
-- Tracking Issue: <!-- leave this empty; maintainer will fill in ID of this pull request -->
+- Original HIP PR: [#925](https://github.com/helium/HIP/pull/925)
+- Tracking Issue: [#928](https://github.com/helium/HIP/issues/928)
 - Vote Requirements: veHNT Holders, veIOT Holders, and veMOBILE Holders
 
 ---
