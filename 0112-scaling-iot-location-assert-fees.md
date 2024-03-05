@@ -1,10 +1,13 @@
-# HIP XXXX : Scaling IOT Hotspot Assert Fees
+# HIP 112: Scaling IOT Hotspot Assert Fees
+
 - Author(s): [Andy Zyvoloski](https://github.com/heatedlime)
-- Start Date: 02/12/2024
-- Category: Economic & Technical
-- Original HIP PR: 
-- Tracking Issue: 
-- Vote Requirements: veIOT 
+- Start Date: 2024-03-05
+- Category: Economic, Technical
+- Original HIP PR: [#912](https://github.com/helium/HIP/pull/912)
+- Tracking Issue: [#931](https://github.com/helium/HIP/issues/931)
+- Vote Requirements: veIOT Holders
+
+---
 
 ## Summary
 
