@@ -114,3 +114,7 @@ The wallet app and Helium Vote will need to be updated to provide a user interfa
 This feature depends on veHNT holders properly researching potential proxies and their voting history. If users do not choose proxies that represent their wishes, there is a potential for misalignment.
 
 Another potential risk is a proxy accumulating a large amount of voting power, and then changing their voting style to selfishly benefit themselves. While it is impossible to eliminate this risk entirely, the authors believe that (1) voters having the ability to pull their proxies and (2) proxies resetting yearly will alleviate this issue.
+
+# Success Metrics
+
+The primary metric that will be assessed after this proposal is implemented is whether or not it drives greater vote participation from locked HNT, IOT, and MOBILE.
