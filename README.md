@@ -124,6 +124,7 @@ If you have questions or feedback, please see the [Discussion](https://github.co
 | 108 | [Mobile Hotspot Suspension Framework](0108-mobile-hotspot-suspension-framework.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/887) |
 | 109 | [Hex Boosting by Deployment](0109-hex-boosting-by-deployment.md) | [<img src="https://img.shields.io/badge/Status-Closed-lightgrey"></img>](https://github.com/helium/HIP/issues/888) |
 | 110 | [Proxy Voting](0110-proxy-voting.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/928) |
+| 111 | [MOBILE Data Utility Benchmark](0111-mobile-data-utility-benchmark.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/929) |
 
 
 ## Status Key
