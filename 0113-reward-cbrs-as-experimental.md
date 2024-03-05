@@ -1,11 +1,13 @@
-# HIP XXX: Reward CBRS As Experimental
+# HIP 113: Reward CBRS As Experimental
 
-- Author(s): @rawrmaan
+- Author(s): [@rawrmaan](https://github.com/rawrmaan)
 - Start Date: 2024-02-29
 - Category: Economic
-- Original HIP PR: XXX
-- Tracking Issue: XXX
+- Original HIP PR: [#924](https://github.com/helium/HIP/pull/924)
+- Tracking Issue: [#934](https://github.com/helium/HIP/issues/934)
 - Vote Requirements: veMOBILE Holders
+
+---
 
 ## Summary
 
@@ -14,11 +16,8 @@ This Helium Improvement Proposal (HIP) suggests adjusting Proof-of-Coverage (PoC
 ## Related Prior HIPs
 
 - [HIP 74](0074-mobile-poc-modeled-coverage-rewards.md) established modeled coverage for the MOBILE subDAO.
-
 - [HIP 85](0085-mobile-hex-coverage-limit.md) changed the limit of outdoor radios eligible for PoC rewards from 5 to 3, and introduced ranking multiplier.
-
 - [HIP 93](0093-addition-of-wifi-aps-to-mobile-subdao.md) introduced the addition of Wi-Fi Access Points and certain limitations.
-  
 - [HIP 101](0101-equalizing-poc-rewards-across-wifi-and-cbrs.md) proposed increasing Wi-Fi coverage points by 1.5x (indoor) and 2.5x (outdoor), but failed to pass a vote.
 
 **Disclosure**: Please note that this HIP is written by a Board Member of the [Helium Foundation](https://helium.foundation) solely in a personal capacity. The Foundation was not involved in the drafting of the proposal and has taken no formal position for or against the HIP as of the date of drafting.
