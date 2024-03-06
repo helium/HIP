@@ -91,6 +91,8 @@ Based on the low utility of CBRS explained in the motivation section above, this
 
 ### Changes to Modeled Coverage Points for Outdoor CBRS Radios
 
+Since outdoor CBRS radios cover many hexes, a large reduction in coverage points is warranted to account for the fact that utility is very low regardless of how many hexes are covered.
+
 |                                          | Tier 1        | Tier 2                     | Tier 3                      | Tier 4           |
 | ---------------------------------------- | ------------- | -------------------------- | --------------------------- | ---------------- |
 | **Potential Signal Power**               | $P > -95 dBm$ | $-95 dBm \ge P > -105 dBm$ | $-105 dBm \ge P > -115 dBm$ | $P \le -115 dBm$ |
@@ -111,10 +113,10 @@ Based on the low utility of CBRS explained in the motivation section above, this
 
 | Gateway                                                                                     | Radio Type             | Modeled Coverage Points (current) | Modeled Coverage Points (proposed) | Reduction |
 | ------------------------------------------------------------------------------------------- | ---------------------- | --------------------------------- | ---------------------------------- | --------- |
-| [Rare Amber Beetle](https://planner.hellohelium.com/hex/08c44a1b9431e1ff/radio/1711546)     | Baicells 436H Outdoor  | 32584                             | 2924                               | 91.0%     |
-| [Little Grey Porpoise](https://planner.hellohelium.com/hex/08c29a56d066e7ff/radio/5190)     | Baicells 436H Outdoor  | 8908                              | 680                                | 92.4%     |
-| [Beautiful Caramel Ferret](https://planner.hellohelium.com/hex/08c2a100d87263ff/radio/1536) | Baicells 430i Outdoor  | 844                               | 69                                 | 91.8%     |
-| [Cool Ocean Mole](https://planner.hellohelium.com/hex/08c2830828a505ff/radio/2162886)       | Sercomm Indoor         | 1000                              | 100                                | 90.0%     |
+| [Rare Amber Beetle](https://planner.hellohelium.com/hex/08c44a1b9431e1ff/radio/1711546)     | Baicells 436H Outdoor  | 32,584 MCP                             | 2,924 MCP                               | 91.0%     |
+| [Little Grey Porpoise](https://planner.hellohelium.com/hex/08c29a56d066e7ff/radio/5190)     | Baicells 436H Outdoor  | 8,908 MCP                              | 680 MCP                                | 92.4%     |
+| [Beautiful Caramel Ferret](https://planner.hellohelium.com/hex/08c2a100d87263ff/radio/1536) | Baicells 430i Outdoor  | 844 MCP                               | 69 MCP                                 | 91.8%     |
+| [Cool Ocean Mole](https://planner.hellohelium.com/hex/08c2830828a505ff/radio/2162886)       | Sercomm Indoor         | 1,000 MCP                              | 100 MCP                                | 90.0%     |
 
 ## Estimated Rewards Impact
 
