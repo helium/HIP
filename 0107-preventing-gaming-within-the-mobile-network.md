@@ -82,9 +82,9 @@ One alternative is to give the MOBILE network the power to ban Hotspots, similar
 ### Phase 3
 
 * Update the Hotspot trust score for Wi-Fi Hotspots to 0.00 if the asserted location is 1000 meters or more from external data sources like Skyhook, etc.
-* Update the Helium Builder app to require a picture be uploaded when new assertions are done for outdoor Wi-Fi access points.
+* Update the Helium Builder app to require a picture be taken when new assertions are done for outdoor Wi-Fi access points.
 * Update and backfill the protocol to add Height and Azimuth to on chain data of MOBILE hotspots.
-* Update the Helium Wallet app to allow location assertions within the app by capturing height, azimuth, and deployment photo
+* Update the Helium Wallet app to allow location assertions within the app by capturing height, azimuth, and to take a photo of the deployment.
 
 ## Success Metrics
 This HIP is successful if the amount of radios/access points that are incorrectly asserted or that are abusing the network decrease.
