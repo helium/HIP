@@ -64,7 +64,7 @@ If it is identified that Service Providers are abusing their power to turn off M
 Deployers who have an outdoor Wi-Fi Access Point asserted higher than 100 feet will need to update the assertion height to a maximum of 100 feet.
 
 ## Rationale and Alternatives
-One alternative is to give the MOBILE subDAO the power to ban hotspots, similar to how CrowdSpot operated on the IOT network. However, as there were flaws to that method, CrowdSpot no longer exists. 
+One alternative is to give the MOBILE network the power to ban Hotspots, similar to how Crowdspot operated on the IOT network. However, as there were flaws to that method, Crowdspot no longer exists due to the overhead required to operate that particular implementation.
 
 ## Implementation Phases
 
