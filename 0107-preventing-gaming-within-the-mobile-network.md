@@ -64,7 +64,7 @@ If it is identified that Service Providers are abusing their power to turn off M
 Deployers who have an outdoor Wi-Fi Access Point asserted higher than 100 feet will need to update the assertion height to a maximum of 100 feet.
 
 ## Rationale and Alternatives
-An alternative would be to do nothing and allow gaming to continue.
+One alternative is to give the MOBILE network the power to ban Hotspots, similar to how Crowdspot operated on the IOT network. However, as there were flaws to that method, Crowdspot no longer exists due to the overhead required to operate that particular implementation.
 
 ## Implementation Phases
 
@@ -82,9 +82,9 @@ An alternative would be to do nothing and allow gaming to continue.
 ### Phase 3
 
 * Update the Hotspot trust score for Wi-Fi Hotspots to 0.00 if the asserted location is 1000 meters or more from external data sources like Skyhook, etc.
-* Update the Helium Builder app to require a picture be uploaded when new assertions are done for outdoor Wi-Fi access points.
+* Update the Helium Builder app to require a picture be taken when new assertions are done for outdoor Wi-Fi access points.
 * Update and backfill the protocol to add Height and Azimuth to on chain data of MOBILE hotspots.
-* Update the Helium Wallet app to allow location assertions within the app by capturing height, azimuth, and deployment photo
+* Update the Helium Wallet app to allow location assertions within the app by capturing height, azimuth, and to take a photo of the deployment.
 
 ## Success Metrics
 This HIP is successful if the amount of radios/access points that are incorrectly asserted or that are abusing the network decrease.
