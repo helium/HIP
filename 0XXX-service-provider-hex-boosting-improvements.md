@@ -19,8 +19,8 @@ This HIP aims to curtail gaming of boosted locations until verification mapping 
 
 ## Stakeholders
 
--   Hotspot owners
--   Service providers
+-   Hotspot owners deploying in boosted hexes will become subsject to audits by trusted mappers and have their rewards suspended, if misrepresenting the location
+-   Service providers will be obligated to audit boosted locations until verification mapping is implemented
     
 
 ## Detailed Explanation
@@ -67,6 +67,12 @@ In instances where the Service Provider wants to boost both indoor and outdoor o
 In instances where MOBILE already has been burned to boost hexes, and deployments are currently providing coverage to those hexes, those hexes will remain as boosted hexes for all deployment types (i.e. indoor CBRS, outdoor CBRS, indoor Wi-Fi, Outdoor Wi-Fi) for the duration of the boost.
 
 For any boosted hexes that do not contain coverage, the Service Provider will have the option to choose what type of deployment the boosts will apply to at no extra cost.
+
+### Remove Discovery Mapping Data Requirement to Trigger Rewards
+
+HIP 84 originally proposed that "creation of coverage will be considered to have been confirmed when at least three unique phones with discovery mapping enabled have successfully connected and passed at least 1MB of data at the location of coverage (as evidenced by the Mobile Oracle)" 
+
+This requires that all service providers on the network implement discovery mapping capability for their subscribers. We have since learned that due to uncertain regulatory climate surrounding cryptocurrency in various geographies this may raise the barrier to entry for new service providers. For instance, Telefonica is not currently able to implement discovery mapping for it's subscribers in Mexico. We, therefore, propose that this requirement be removed and the threshold be changed from 3 subscribers to 1 subscriber. I.e. any one subscriber, regardless of discovery mapping being enabled, passing 1Mb of data should trigger the start of boosted reward earnings for a hotspot. Coverage location will be confirmed through skyhook + audit trusted mappers audits and, later, verification mapping. 
 
 ## Drawbacks
 
