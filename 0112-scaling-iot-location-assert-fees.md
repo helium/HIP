@@ -11,13 +11,13 @@
 
 ## Summary
 
-This HIP proposes allowing one (1) free IOT assertion per rolling 365 epoch period for full and light hotspots, including the initial assertion, and allowing one (1) free IOT assertion per one (1) epoch for data only hotspots. Any additional assertions conducted within the 365/1 epoch rolling period will be required to pay a $10 fee in IOT burn for full and light hotspots, and $5.00 in IOT for data only hotspots. 
+This HIP proposes allowing one (1) free IOT assertion per rolling 365 epoch period for hotspots, including the initial assertion, and allowing one (1) free IOT assertion per one (1) epoch for data only hotspots. Any additional assertions conducted within the 365/1 epoch rolling period will be required to pay a $10 fee in IOT burn for hotspots, and $5.00 in IOT for data only hotspots. 
 
 ## Motivation
 
 Currently, assertion fees for the IOT subnetwork are paid in Data Credit (DC) burn, which is created by burning HNT. Due to net emissions, the burning of HNT and DC may at times benefit the MOBILE subDAO greater than the IOT subDAO. This is due to the fact that the DAO utility score created in  [HIP 53](https://github.com/helium/HIP/blob/main/0051-helium-dao.md) does not provide greater emissions for more DC burn outside of onboards. 
 
-Further, this HIP will make it cheaper for hotspot deployers to ensure their asserted location is accurate by allowing one (1) free location assert per 365 epochs for full and light hotspots. 
+Further, this HIP will make it cheaper for hotspot deployers to ensure their asserted location is accurate by allowing one (1) free location assert per 365 epochs for hotspots. 
 
 
 ## Stakeholders
@@ -28,17 +28,17 @@ Further, this HIP will make it cheaper for hotspot deployers to ensure their ass
 - **HNT Holders** will experience a decrease in demand for HNT to DC burn, as DC burn will no longer be required to assert hotspots.
 
 ## Detailed Explanation
-By allowing one (1) free location assertion per year for full and light hotspots, and one (1) free per epoch for data only hotspots, hotspot owners are more likely to relocate their hotspots, leading to improved network coverage in various locations. In addition, by making subsequent assertions for full and light hotspots requiring a $10 IOT burn instead of DC burn, this will help increase demand for the IOT token.
+By allowing one (1) free location assertion per year for hotspots, and one (1) free per epoch for data only hotspots, hotspot owners are more likely to relocate their hotspots, leading to improved network coverage in various locations. In addition, by making subsequent assertions for hotspots requiring a $10 IOT burn instead of DC burn, this will help increase demand for the IOT token.
 
 
 ## Technical Implementation
 
-The workflow for initial full/light hotspot location assertions will be as followed:
+The workflow for initial hotspot location assertions will be as followed:
 
 1. User is prompted to select an initial location for their hotspot
 2. Helium Wallet App will review on-chain data for that hotspot to determine if the hotspot has ever been asserted. If not, the initial assertion fee is 0 IOT.
 
-The workflow for reassertions for full/light hotspot locations will be as followed:
+The workflow for reassertions for hotspot locations will be as followed:
 
 1. User initiates location assertion within the Helium Wallet App
 2. The Helium Wallet App will review on-chain data for that hotspot to determine when the last location assertion was
