@@ -1,5 +1,12 @@
 # Incentive Escrow Fund for Subscriber Referrals
 
+- Author(s): @zer0tweets
+- Start Date: 2024-03-12
+- Category: Economic, Technical
+- Original HIP PR:
+- Tracking Issue: 
+- Vote Requirements: veMOBILE Holders
+
 Service Provider rewards will be used to programmatically issues various incentives (like referral fees) to grow Helium network subscriber base
     
 ##  Motivation
@@ -11,9 +18,9 @@ We propose a referral incentive program that would channel rewards to the commun
     
 ## Stakeholders
 
--   Service Provider    
--   Builders
--   Subscribers
+-   Service Providers will have a new capability to create referral incentive programs using unused rewards from service provider bucket      
+-   Builders will be able to earn MOBILE rewards for referring subscribres 
+-   Subscribers may be eligible for "referral discounts" in the form of MOBILE, if they stay with the network for a period of time 
     
 ## Detailed Explanation
 
