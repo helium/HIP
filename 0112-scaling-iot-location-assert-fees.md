@@ -28,7 +28,7 @@ Further, this HIP will make it cheaper for Hotspot deployers to ensure their ass
 - **HNT Holders** will experience a decrease in demand for HNT to DC burn, as DC burn will no longer be required to assert hotspots.
 
 ## Detailed Explanation
-By allowing one (1) free location assertion per year for hotspots, and one (1) free per epoch for data only hotspots, hotspot owners are more likely to relocate their hotspots, leading to improved network coverage in various locations. In addition, by making subsequent assertions for hotspots requiring a $10 IOT burn instead of DC burn, this will help increase demand for the IOT token.
+By allowing one (1) free location assertion per year for Hotspots, and one (1) free per epoch for data-only Hotspots, Hotspot owners are more likely to relocate their Hotspots, leading to improved network coverage in various locations. In addition, by making subsequent assertions for Hotspots requiring a $10 IOT burn instead of DC burn, this will help increase demand for the IOT token.
 
 
 ## Technical Implementation
