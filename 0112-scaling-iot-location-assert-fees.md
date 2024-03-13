@@ -55,7 +55,7 @@ The workflow for initial and reassertions for data only hotspots will be as foll
 
 ## Drawbacks
 
-The primary drawback of this proposal is a lower overall DC burn for the network. However, the potential benefits gained from increased hotspot relocation, improved network coverage and potential IOT burn can offset this drawback.
+The primary drawback of this proposal is a lower overall DC burn for the network. However, the potential benefits gained from increased Hotspot relocation, improved network coverage and potential IOT burn can offset this drawback.
 
 ## Rationale
 
