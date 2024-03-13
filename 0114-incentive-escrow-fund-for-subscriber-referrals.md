@@ -1,13 +1,17 @@
-# Incentive Escrow Fund for Subscriber Referrals
+# HIP 114: Incentive Escrow Fund for Subscriber Referrals
 
-- Author(s): @zer0tweets
+- Author: [@zer0tweets](https://github.com/zer0tweets)
 - Start Date: 2024-03-12
 - Category: Economic, Technical
-- Original HIP PR:
-- Tracking Issue: 
+- Original HIP PR: [#927](https://github.com/helium/HIP/pull/927)
+- Tracking Issue: [#942](https://github.com/helium/HIP/issues/942)
 - Vote Requirements: veMOBILE Holders
 
-Service Provider rewards will be used to programmatically issues various incentives (like referral fees) to grow Helium network subscriber base
+---
+
+## Summary
+
+Service Provider rewards will be used to programmatically issues various incentives (like referral fees) to grow Helium network subscriber base.
     
 ##  Motivation
 
