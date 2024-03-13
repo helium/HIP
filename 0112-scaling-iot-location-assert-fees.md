@@ -17,7 +17,7 @@ This HIP proposes allowing one (1) free IOT assertion per rolling 365 epoch peri
 
 Currently, assertion fees for the IOT subnetwork are paid in Data Credit (DC) burn, which is created by burning HNT. Due to net emissions, the burning of HNT and DC may at times benefit the MOBILE subDAO greater than the IOT subDAO. This is due to the fact that the DAO utility score created in  [HIP 53](https://github.com/helium/HIP/blob/main/0051-helium-dao.md) does not provide greater emissions for more DC burn outside of onboards. 
 
-Further, this HIP will make it cheaper for hotspot deployers to ensure their asserted location is accurate by allowing one (1) free location assert per 365 epochs for hotspots. 
+Further, this HIP will make it cheaper for Hotspot deployers to ensure their asserted location is accurate by allowing one (1) free location assert per 365 epochs for Hotspots. 
 
 
 ## Stakeholders
