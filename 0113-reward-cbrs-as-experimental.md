@@ -154,6 +154,40 @@ These estimates are derived from the estimated Modeled Coverage Points proposed 
 | [Cool Ocean Mole](https://planner.hellohelium.com/hex/08c2830828a505ff/radio/2162886)       | Sercomm Indoor         | 1,190.08                              | 425.62                                | 64.2%     |
 
 
+## Partial Reversal Option
+
+While CBRS faces many technical and integration challenges, it’s important to acknowledge that **a) poor handoff performance to/from macro networks** and **b) the 2nd SIM requirement** are the main factors limiting the technology’s adoption, and that if both of these problems are solved, the utility of CBRS to the Network will drastically increase.
+
+In the future, either **a) the community's rough consensus as determined by the Helium Foundation** or **b) a formal request from the Mobile Working Group** may compel the Helium Foundation launch a veMOBILE vote called “HIP 113 Partial Reversal” if all of the following conditions are met:
+
+- A Service Provider representing at least 25% of active Subscriber NFTs on the Network is able to develop a single SIM/eSIM solution that enables subscriber devices to handoff from a macro network to CBRS radios and vice versa
+
+- The SIM/eSIM is offered to all of the Service Provider’s US subscribers as part of its main Service offering
+
+- The user experience of handing off to/from CBRS is indistinguishable to that of normal macro tower handoffs
+
+Any disagreements or ambiguity regarding the criteria above shall be resolved by the outcome of the vote.
+
+If the vote passes the standard voting threshold of 67%, the following Mobile Oracle Modeled Coverage Point changes should be enacted by the Helium Foundation, with assistance from Nova Labs, no later than 1 week after the vote concludes:
+
+### Partial Reversal Changes to Modeled Coverage Points for Outdoor CBRS Radios
+
+|                                          | Tier 1        | Tier 2                     | Tier 3                      | Tier 4           |
+| ---------------------------------------- | ------------- | -------------------------- | --------------------------- | ---------------- |
+| **Potential Signal Power**               | $P > -95 dBm$ | $-95 dBm \ge P > -105 dBm$ | $-105 dBm \ge P > -115 dBm$ | $P \le -115 dBm$ |
+| **Potential Signal Level**               | High          | Medium                     | Low                         | None             |
+| **Estimated coverage points (HIP 113)**  | 2            | 1                          | 0                           | 0                |
+| **Estimated coverage points (HIP 113 Partial Reversal)** | **8**         | **4**                      | **2**                       | **0**            |
+
+### Partial Reversal Changes to Modeled Coverage Points for Indoor CBRS Radios
+
+|                                          | Tier 1     | Tier 2             |
+| ---------------------------------------- | ---------- | ------------------ |
+| **Location**                             | Inside hex | All adjacent hexes |
+| **Potential Signal Level**               | High       | Low                |
+| **Estimated coverage points (HIP 113)**  | 40        | 10                |
+| **Estimated coverage points (HIP 113 Partial Reversal)** | **200**     | **50**             |
+
 ## Drawbacks
 
 CBRS hotspot deployers will experience a substantial reduction in rewards. They may be unsatisfied with the change and may react in any number of ways, including turning off their radios.
