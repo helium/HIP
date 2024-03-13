@@ -59,7 +59,7 @@ The primary drawback of this proposal is a lower overall DC burn for the network
 
 ## Rationale
 
-Certain market conditions may discourage deployers from reasserting their hotspot to the correct location due to costs, or discourage them from even setting up future deployments due to the associated fees. This  HIP proposes to fix that.
+Certain market conditions may discourage deployers from reasserting their Hotspot to the correct location due to costs, or discourage them from even setting up future deployments due to the associated fees. This HIP proposes to fix that.
 
 
 ## Success Metrics
