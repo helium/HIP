@@ -11,7 +11,7 @@
 
 ## Summary
 
-This HIP proposes allowing one (1) free IOT assertion per rolling 365 epoch period for hotspots, including the initial assertion, and allowing one (1) free IOT assertion per one (1) epoch for data only hotspots. Any additional assertions conducted within the 365/1 epoch rolling period will be required to pay a $10 fee in IOT burn for hotspots, and $5.00 in IOT for data only hotspots. 
+This HIP proposes allowing one (1) free IOT assertion per rolling 365 epoch period for Hotspots, including the initial assertion, and allowing one (1) free IOT assertion per one (1) epoch for data-only Hotspots. Any additional assertions conducted within the above rolling periods will be required to pay a $10 fee in IOT burn for hotspots, and $5.00 in IOT for data-only Hotspots. 
 
 ## Motivation
 
