@@ -55,19 +55,19 @@ Nearly 18 months after the Helium 5G network's launch, **CBRS continues to recei
 
 CBRS radio and gateway sales have been discontinued by FreedomFi, the main manufacturer, with no publicly stated plans for continuation. Network participants with existing CBRS radios and gateways are taking advantage of their hardware to reap large rewards while offering minimal utility to the network.
 
-As of 02/25/2024, CBRS radios receive **81.7% of the MOBILE Proof of Coverage rewards** while accounting for only **55.2% of the radios** on the network.
+As of 03/13/2024, CBRS radios receive **75.5% of the MOBILE Proof of Coverage rewards** while accounting for only **53.2% of the radios** on the network.
 
 | Cell Maker             | Technology |   Count  | Total Rewards    | % of Total Rewards  | Avg Reward   |
 |------------------------|-----------:|---------:|-----------------:|--------------------:|-------------:|
-| Baicells Nova430i      | CBRS   | 4,278  | 16,377,260.094   | 33.81%              | 3,828.25     |
-| Baicells Nova436H      | CBRS   | 557    | 19,466,311.241   | 40.19%              | 34,948.49    |
-| MosoLabs Indoor        | CBRS   | 2,694  | 3,139,060.586    | 6.48%               | 1,165.20     |
-| MosoLabs Outdoor       | CBRS   | 176    | 333,580.138      | 0.69%               | 1,895.34     |
-| Nova Wifi Indoor       | Wi-Fi  | 4,396  | 4,331,598.421    | 8.94%               | 985.35       |
-| Nova Wifi Outdoor      | Wi-Fi  | 1,842  | 4,456,962.843    | 9.20%               | 2,419.63     |
-| **Total (CBRS)**       |        | 7,705  | 39,316,212.059   | 81.73%               | 5,102.69     |
-| **Total (Wi-Fi)**      |        | 6,778  | 8,788,561.264    | 18.27%               | 1,296.63     |
-| **Total (All)**        |        | 14,483 | 48,104,773.323   | 100%                |              |
+| Baicells Nova430i      | CBRS       | 4,420    | 16,422,337.101   | 33.74%              | 3,715.46     |
+| Baicells Nova436H      | CBRS       | 641      | 15,857,479.585   | 32.58%              | 24,738.66    |
+| MosoLabs Indoor        | CBRS       | 2,662    | 4,119,811.545    | 8.46%               | 1,547.64     |
+| MosoLabs Outdoor       | CBRS       | 185      | 356,600.729      | 0.73%               | 1,927.57     |
+| Nova Wifi Indoor       | Wi-Fi      | 4,664    | 5,641,842.608    | 11.59%              | 1,209.66     |
+| Nova Wifi Outdoor      | Wi-Fi      | 2,305    | 6,274,377.116    | 12.89%              | 2,722.07     |
+| **Total (CBRS)**       |            | 7,908    | 36,756,228.96    | 75.52%              | 4,647.98     |
+| **Total (Wi-Fi)**      |            | 6,969    | 11,916,219.724   | 24.48%              | 1,709.89     |
+| **Total (All)**        |            | 14,877   | 48,672,448.684   | 100%                |              |
 
 _Source: https://explorer.moken.io/network-stats/detailed_
 
@@ -122,25 +122,25 @@ Since outdoor CBRS radios cover many hexes, a large reduction in coverage points
 
 Although Coverage Points for CBRS radios are proposed to be reduced by ~90%, the impact on each radio's overall rewards is currently less than that due to how Modeled Coverage Points are calculated.
 
-Using a snapshot of coverage metrics as of 02/25/2024, the estimated average reward impact is **-62.2%** for CBRS radios and **+378.4%** for Wi-Fi hotspots as detailed below. This will continue to change over time as Coverage Points fluctuate.
+Using a snapshot of coverage metrics as of 03/13/2024, the estimated average reward impact is **-68.8%** for CBRS radios and **+312.2%** for Wi-Fi hotspots as detailed below. This will continue to change over time as Coverage Points fluctuate.
 
-Due to the lack of a public Modeled Coverage API, these Coverage Points estimates were made based on the rewards ratios on 02/25/2024 listed in the Motivation section above.
+Due to the lack of a public Modeled Coverage API, these Coverage Points estimates were made based on the rewards ratios on 03/13/2024 listed in the Motivation section above.
 
 ### Current Rewards
 
 |               | Coverage Points (current) | MOBILE Rewards (current)   | % Total Rewards |
 | ------------- | ------------------------- | -------------------------- | --------------- |
-| CBRS          | 34,884,529                | 39,316,212                 | 81.7%           |
-| Wi-Fi         | 7,813,792                 | 8,788,561                  | 18.3%           |
-| Total         | 42,698,321                | 48,104,773                 | 100.0%          |
+| CBRS          | 26,199,967                | 36,756,229                 | 75.5%           |
+| Wi-Fi         | 8,492,786                 | 11,916,220                 | 24.5%           |
+| Total         | 34,692,753                | 48,672,449                 | 100.0%          |
 
 ### Proposed Rewards (estimated)
 
 |               | Coverage Points (estimated) | MOBILE Rewards (estimated) | % Total Rewards | MOBILE Rewards Change   |
 | ------------- | --------------------------- | -------------------------- | --------------- | ----------------------- |
-| CBRS          | 3,488,453                   | 14,847,602                 | 30.9%           | **-62.2%**              |
-| Wi-Fi         | 7,813,792                   | 33,257,171                 | 69.1%           | **+378.4%**             |
-| Total         | 11,302,245                  | 48,104,773                 | 100%            |                         |
+| CBRS          | 2,619,997                   | 11,475,224                 | 23.6%           | **-68.8%**              |
+| Wi-Fi         | 8,492,786                   | 37,197,225                 | 76.4%           | **+312.2%**             |
+| Total         | 11,112,783                  | 48,672,449                 | 100%            |                         |
 
 ### Estimates of Specific Radio Rewards
 
@@ -148,10 +148,10 @@ These estimates are derived from the estimated Modeled Coverage Points proposed 
 
 | Gateway                                                                                     | Radio Type             | MOBILE Rewards (current) | MOBILE Rewards (estimated) | Reduction |
 | ------------------------------------------------------------------------------------------- | ---------------------- | --------------------------------- | ---------------------------------- | --------- |
-| [Rare Amber Beetle](https://planner.hellohelium.com/hex/08c44a1b9431e1ff/radio/1711546)     | Baicells 436H Outdoor  | 38,548.93                             | 12,445.17                               | 67.7%     |
-| [Little Grey Porpoise](https://planner.hellohelium.com/hex/08c29a56d066e7ff/radio/5190)     | Baicells 436H Outdoor  | 10,601.19                              | 2,894.23                                | 72.7%     |
-| [Beautiful Caramel Ferret](https://planner.hellohelium.com/hex/08c2a100d87263ff/radio/1536) | Baicells 430i Outdoor  | 1,004.42                               | 293.68                                 | 70.8%     |
-| [Cool Ocean Mole](https://planner.hellohelium.com/hex/08c2830828a505ff/radio/2162886)       | Sercomm Indoor         | 1,190.08                              | 425.62                                | 64.2%     |
+| [Rare Amber Beetle](https://planner.hellohelium.com/hex/08c44a1b9431e1ff/radio/1711546)     | Baicells 436H Outdoor  | 47,847.56                             | 12,806.71                               | 73.2%     |
+| [Little Grey Porpoise](https://planner.hellohelium.com/hex/08c29a56d066e7ff/radio/5190)     | Baicells 436H Outdoor  | 13,158.37                              | 2,978.31                                | 77.4%     |
+| [Beautiful Caramel Ferret](https://planner.hellohelium.com/hex/08c2a100d87263ff/radio/1536) | Baicells 430i Outdoor  | 1,243.75                               | 302.21                                 | 75.7%     |
+| [Cool Ocean Mole](https://planner.hellohelium.com/hex/08c2830828a505ff/radio/2162886)       | Sercomm Indoor         | 1,477.14                              | 437.97                                | 70.4%     |
 
 
 ## Partial Reversal Option
