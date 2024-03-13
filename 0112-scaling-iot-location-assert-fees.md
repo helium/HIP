@@ -63,5 +63,5 @@ Certain market conditions may discourage deployers from reasserting their Hotspo
 
 
 ## Success Metrics
-This HIP will be considered successful if more IOT hotspots assert their correct location on the network.
+This HIP will be considered successful if more IOT Hotspots assert their correct location on the network.
 
