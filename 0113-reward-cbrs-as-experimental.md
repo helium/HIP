@@ -98,7 +98,7 @@ Since outdoor CBRS radios cover many hexes, a large reduction in coverage points
 | **Potential Signal Power**               | $P > -95 dBm$ | $-95 dBm \ge P > -105 dBm$ | $-105 dBm \ge P > -115 dBm$ | $P \le -115 dBm$ |
 | **Potential Signal Level**               | High          | Medium                     | Low                         | None             |
 | **Estimated coverage points (current)**  | 16            | 8                          | 4                           | 0                |
-| **Estimated coverage points (proposed)** | **2**         | **1**                      | **0**                       | **0**            |
+| **Estimated coverage points (proposed)** | **4**         | **2**                      | **1**                       | **0**            |
 
 ### Changes to Modeled Coverage Points for Indoor CBRS Radios
 
@@ -107,22 +107,22 @@ Since outdoor CBRS radios cover many hexes, a large reduction in coverage points
 | **Location**                             | Inside hex | All adjacent hexes |
 | **Potential Signal Level**               | High       | Low                |
 | **Estimated coverage points (current)**  | 400        | 100                |
-| **Estimated coverage points (proposed)** | **40**     | **10**             |
+| **Estimated coverage points (proposed)** | **100**     | **25**             |
 
 ### Examples of Specific Radios Before & After
 
 | Gateway                                                                                     | Radio Type             | Modeled Coverage Points (current) | Modeled Coverage Points (proposed) | Reduction |
 | ------------------------------------------------------------------------------------------- | ---------------------- | --------------------------------- | ---------------------------------- | --------- |
-| [Rare Amber Beetle](https://planner.hellohelium.com/hex/08c44a1b9431e1ff/radio/1711546)     | Baicells 436H Outdoor  | 32,584 MCP                             | 2,924 MCP                               | 91.0%     |
-| [Little Grey Porpoise](https://planner.hellohelium.com/hex/08c29a56d066e7ff/radio/5190)     | Baicells 436H Outdoor  | 8,908 MCP                              | 680 MCP                                | 92.4%     |
-| [Beautiful Caramel Ferret](https://planner.hellohelium.com/hex/08c2a100d87263ff/radio/1536) | Baicells 430i Outdoor  | 844 MCP                               | 69 MCP                                 | 91.8%     |
-| [Cool Ocean Mole](https://planner.hellohelium.com/hex/08c2830828a505ff/radio/2162886)       | Sercomm Indoor         | 1,000 MCP                              | 100 MCP                                | 90.0%     |
+| [Rare Amber Beetle](https://planner.hellohelium.com/hex/08c44a1b9431e1ff/radio/1711546)     | Baicells 436H Outdoor  | 32,584 MCP                        | 8,146 MCP                          | 75.0%     |
+| [Little Grey Porpoise](https://planner.hellohelium.com/hex/08c29a56d066e7ff/radio/5190)     | Baicells 436H Outdoor  | 8,908 MCP                         | 2,227 MCP                          | 75.0%     |
+| [Beautiful Caramel Ferret](https://planner.hellohelium.com/hex/08c2a100d87263ff/radio/1536) | Baicells 430i Outdoor  | 844 MCP                           | 211 MCP                            | 75.0%     |
+| [Cool Ocean Mole](https://planner.hellohelium.com/hex/08c2830828a505ff/radio/2162886)       | Sercomm Indoor         | 1,000 MCP                         | 250 MCP                            | 75.0%     |
 
 ## Estimated Rewards Impact
 
-Although Coverage Points for CBRS radios are proposed to be reduced by ~90%, the impact on each radio's overall rewards is currently less than that due to how Modeled Coverage Points are calculated.
+Although Coverage Points for CBRS radios are proposed to be reduced by 75%, the impact on each radio's overall rewards is currently less than that due to how Modeled Coverage Points are calculated.
 
-Using a snapshot of coverage metrics as of 03/13/2024, the estimated average reward impact is **-68.8%** for CBRS radios and **+312.2%** for Wi-Fi hotspots as detailed below. This will continue to change over time as Coverage Points fluctuate.
+Using a snapshot of coverage metrics as of 03/13/2024, the estimated average reward impact is **-42.3%** for CBRS radios and **+230.6%** for Wi-Fi hotspots as detailed below. This will continue to change over time as Coverage Points fluctuate.
 
 Due to the lack of a public Modeled Coverage API, these Coverage Points estimates were made based on the rewards ratios on 03/13/2024 listed in the Motivation section above.
 
@@ -138,20 +138,20 @@ Due to the lack of a public Modeled Coverage API, these Coverage Points estimate
 
 |               | Coverage Points (estimated) | MOBILE Rewards (estimated) | % Total Rewards | MOBILE Rewards Change   |
 | ------------- | --------------------------- | -------------------------- | --------------- | ----------------------- |
-| CBRS          | 2,619,997                   | 11,475,224                 | 23.6%           | **-68.8%**              |
-| Wi-Fi         | 8,492,786                   | 37,197,225                 | 76.4%           | **+312.2%**             |
-| Total         | 11,112,783                  | 48,672,449                 | 100%            |                         |
+| CBRS          | 6,549,992                   | 21,193,170                 | 43.5%           | **-42.3%**              |
+| Wi-Fi         | 8,492,786                   | 27,479,279                 | 56.5%           | **+230.6%**             |
+| Total         | 15,042,778                  | 48,672,449                 | 100%            |                         |
 
 ### Estimates of Specific Radio Rewards
 
 These estimates are derived from the estimated Modeled Coverage Points proposed in the Detailed Explanation above.
 
-| Gateway                                                                                     | Radio Type             | MOBILE Rewards (current) | MOBILE Rewards (estimated) | Reduction |
+| Gateway                                                                                     | Radio Type             | MOBILE Rewards (current)          | MOBILE Rewards (estimated)         | Reduction |
 | ------------------------------------------------------------------------------------------- | ---------------------- | --------------------------------- | ---------------------------------- | --------- |
-| [Rare Amber Beetle](https://planner.hellohelium.com/hex/08c44a1b9431e1ff/radio/1711546)     | Baicells 436H Outdoor  | 47,847.56                             | 12,806.71                               | 73.2%     |
-| [Little Grey Porpoise](https://planner.hellohelium.com/hex/08c29a56d066e7ff/radio/5190)     | Baicells 436H Outdoor  | 13,158.37                              | 2,978.31                                | 77.4%     |
-| [Beautiful Caramel Ferret](https://planner.hellohelium.com/hex/08c2a100d87263ff/radio/1536) | Baicells 430i Outdoor  | 1,243.75                               | 302.21                                 | 75.7%     |
-| [Cool Ocean Mole](https://planner.hellohelium.com/hex/08c2830828a505ff/radio/2162886)       | Sercomm Indoor         | 1,477.14                              | 437.97                                | 70.4%     |
+| [Rare Amber Beetle](https://planner.hellohelium.com/hex/08c44a1b9431e1ff/radio/1711546)     | Baicells 436H Outdoor  | 47,847.56                         | 26,357.22                          | 44.9%     |
+| [Little Grey Porpoise](https://planner.hellohelium.com/hex/08c29a56d066e7ff/radio/5190)     | Baicells 436H Outdoor  | 13,158.37                         | 7,205.69                           | 45.2%     |
+| [Beautiful Caramel Ferret](https://planner.hellohelium.com/hex/08c2a100d87263ff/radio/1536) | Baicells 430i Outdoor  | 1,243.75                          | 682.71                             | 45.1%     |
+| [Cool Ocean Mole](https://planner.hellohelium.com/hex/08c2830828a505ff/radio/2162886)       | Sercomm Indoor         | 1,477.14                          | 808.9                              | 45.2%     |
 
 
 ## Partial Reversal Option
@@ -176,7 +176,7 @@ If the vote passes the standard voting threshold of 67%, the following Mobile Or
 | ---------------------------------------- | ------------- | -------------------------- | --------------------------- | ---------------- |
 | **Potential Signal Power**               | $P > -95 dBm$ | $-95 dBm \ge P > -105 dBm$ | $-105 dBm \ge P > -115 dBm$ | $P \le -115 dBm$ |
 | **Potential Signal Level**               | High          | Medium                     | Low                         | None             |
-| **Estimated coverage points (HIP 113)**  | 2            | 1                          | 0                           | 0                |
+| **Estimated coverage points (HIP 113)**  | 4            | 2                          | 1                           | 0                |
 | **Estimated coverage points (HIP 113 Partial Reversal)** | **8**         | **4**                      | **2**                       | **0**            |
 
 ### Partial Reversal Changes to Modeled Coverage Points for Indoor CBRS Radios
@@ -185,7 +185,7 @@ If the vote passes the standard voting threshold of 67%, the following Mobile Or
 | ---------------------------------------- | ---------- | ------------------ |
 | **Location**                             | Inside hex | All adjacent hexes |
 | **Potential Signal Level**               | High       | Low                |
-| **Estimated coverage points (HIP 113)**  | 40        | 10                |
+| **Estimated coverage points (HIP 113)**  | 100        | 25                |
 | **Estimated coverage points (HIP 113 Partial Reversal)** | **200**     | **50**             |
 
 ## Drawbacks
