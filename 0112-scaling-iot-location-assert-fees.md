@@ -49,7 +49,7 @@ The workflow for initial and reassertions for data only hotspots will be as foll
 
 1. User initiates initial or reassert location within the Helium Wallet App
 2. The Helium Wallet App will review on-chain data for that hotspot to determine when the last location assertion was
-3. If the last free (0 IOT)  location assertion was > 1 epochs or never occurred, cost for reassertion is 0 IOT
+3. If the last free (0 IOT) location assertion was > 1 epochs or never occurred, cost for reassertion is 0 IOT
 4. If the last free (0 IOT) location assertion was < 1 epochs, cost for reassertion is $5 worth of IOT at current Oracle Price.
 
 
