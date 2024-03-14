@@ -20,7 +20,6 @@ The stakeholders of this proposal are:
 - **Service Providers** will be able to temporarily turn off CBRS radios/Wi-Fi APs suspected of gaming. This may require them to allocate internal resources to use these tools to manage the rejection communication.
 - **CPI Reviewing Entity** will be able to reject previously approved CPI submissions if they are suspected of gaming.
 - **All Deployers** will now suffer an opportunity cost loss when they are caught gaming.
-- **Outdoor Wi-Fi Deployers** will now be required to upload a picture of their deployment when they assert a new location
 
 
 ## Detailed Explanation
@@ -30,6 +29,8 @@ Specifically, Service Providers may stop radios/access points from producing hea
 
 Outdoor Radios suspected of gaming may have their CPI registration revoked or denied, and will not be able to earn rewards until a new submission is submitted and approved.
 
+If a Wi-Fi Access Point is deactivated due to gaming concerns, the Service Provider may request additional content, such as a deployment picture be submitted. If an image is not provided during the deactivation period, the Service Provider may renew the deactivation (up to 10 epochs at a time) until the request has been satisfied. 
+
 ### Outdoor Wi-Fi Maximum Height
 It is worth noting that due to the shorter range of outdoor Wi-Fi, the maximum asserted height will be changed to 100 feet. This will be enforced initially in MOBILE oracles by using the value of 100 feet for all values above this limit. It may, in the future, be blocked at the protocol level. Deployments can still be deployed higher than 100 feet but these values will not be considered for the purpose of modeled coverage rewards.
 
@@ -38,10 +39,8 @@ For indoor and outdoor Wi-Fi access points, Hotspot locations are verified using
 
 Further, in order for access points to be eligible for boosted Service Provider rewards defined in HIP-84, the asserted distances must be 30 meters or less than the reported location from external services. In instances where the difference is greater than 30 meters, the access point will still be eligible for PoC rewards, but not boosted rewards.
 
-### Picture Requirements of Outdoor Wi-Fi
-This proposal also requires deployers asserting a new location for outdoor Wi-Fi access points to also submit a picture of the Access Point installation. This picture will be submitted directly to the Hotspot Maker and must show the height of the installation from the ground level.
 
-## Rejection Due to Gaming Concerns
+## Rejection/Deactivation Due to Gaming Concerns
 The following is a list of gaming reasons that the CPI/Service Provider may deny a submission or deactivate a device:
 
 - Radio/Wi-Fi AP is not in the same location as the submission data states. This includes:
@@ -82,9 +81,8 @@ One alternative is to give the MOBILE network the power to ban Hotspots, similar
 ### Phase 3
 
 * Update the Hotspot trust score for Wi-Fi Hotspots to 0.00 if the asserted location is 1000 meters or more from external data sources like Skyhook, etc.
-* Update the Helium Builder app to require a picture be taken when new assertions are done for outdoor Wi-Fi access points.
 * Update and backfill the protocol to add Height and Azimuth to on chain data of MOBILE hotspots.
-* Update the Helium Wallet app to allow location assertions within the app by capturing height, azimuth, and to take a photo of the deployment.
+* Update the Helium Wallet app to allow location assertions within the app by capturing height and azimuth.
 
 ## Success Metrics
 This HIP is successful if the amount of radios/access points that are incorrectly asserted or that are abusing the network decrease.
