@@ -220,9 +220,9 @@ None.
 
 ## Deployment Impact
 
-Implementation of this HIP is simple and will involve updating a few variables in the Mobile Oracle to calculate CBRS PoC rewards using the new reward points described above.
+Implementation of this HIP is simple and will involve updating a few variables in the Mobile Oracle to calculate CBRS PoC rewards using the updated Modeled Coverage Points described above.
 
-If this HIP passes, it is expected that implementation of this HIP should not take longer than 1 week. Nova Labs will complete the implementation and deployment of this HIP, collaborating with Helium Foundation as required.
+If this HIP passes, the Mobile Oracle shall be updated **30 epochs (30 days) after the vote ends**. Nova Labs will complete the implementation and deployment of this HIP, collaborating with Helium Foundation as required.
 
 ## Success Metrics
 
