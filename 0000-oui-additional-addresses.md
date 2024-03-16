@@ -1,4 +1,4 @@
-# HIP Template (Give it a title here but do not allocate a number, maintainer will allocate a number)
+# HIP Template (OUI Additional Address Space Reshuffle)
 
 - Author(s): @ccall48, @nowiresfil<!-- your GitHub @username -->
 - Start Date: 2024-03-05<!-- fill me in with today's date, YYYY-MM-DD -->
@@ -8,7 +8,6 @@
 - Vote Requirements: veIOT<!-- veHNT Holders, veIOT Holders, or veMOBILE Holders -->
 
 ## Summary
-
 <!-- One paragraph explanation of the proposal. -->
 With the inital purchase of an OUI it is mandatory for a LNS operator to either supply an alliance netID or purchase
 a minimum device address block from the foundation for $100 per address, with a minimum purchase of 8 for ($800 USD).
@@ -19,11 +18,12 @@ This proposal is to increase the amount of address space from 8 to 128 for the s
 The inital 8 block address spacing with the original helium console had the ability to multiplex this space out to
 around ~ 300K devices which is not possible multiplexing the same block size through the new openlns 
 initiative on Helium network over ChirpStack.
-
+<p>
 On simulation runs on a few different hardware types reliably puts this number at a maximum active device count of 
 around 2k devices well short of the previous ability which made the costing reasonable.
-
-Help encourage adopters to use the Helium 000003C netid rather then bringing an external address space.
+<p>
+Help encourage adopters to use the Helium 000003C netid rather then bringing an external address space bought elsewhere.
+In return drive up devices on the network by lowering the cost of entry for both hosters and deployers.
 <!--
 - Why are we doing this?
 - What use cases does it support?
@@ -32,13 +32,16 @@ Help encourage adopters to use the Helium 000003C netid rather then bringing an 
 -->
 
 ## Stakeholders
-This HIP will affect exisiting and future openlns operators operating a OUI on the Helium IOT network.
+This HIP will affect exisiting and future openlns operators or any individual operating an OUI on the Helium IOT network.
+<p>
+Feedback welcome by the offical discord channel or by watching the HIP repository on GitHub.
 <!--
 - Who is affected by this HIP? A stakeholder is any individual, group, or party such as network
   users, Hotspot hosts, or token holders.
 - How are we soliciting feedback on this HIP from these stakeholders? Note that they may not be
   watching the HIP repository or even directly active in the Helium Community chat channels.
 -->
+
 ## Detailed Explanation
 
 This is a breakdown of the prefix size of addresses for the respective prefix size for comparison.<br />
@@ -47,11 +50,11 @@ Prefix / number of device addresses<br />
 32/1<br />
 31/2<br />
 30/4<br />
-29/8............<= Current allocation size.<br />
+29/8 ________________ <= Current allocation size.<br />
 28/16<br />
 27/32<br />
-26/64...........<= Proposed secondary new block allocation size.<br />
-25/128..........<= Proposed preferred new block allocation size.<br />
+26/64 _______________ <= Proposed secondary new block allocation size.<br />
+25/128 ______________ <= Proposed preferred new block allocation size.<br />
 24/256<br />
 23/512<br />
 22/1,024<br />
@@ -69,36 +72,33 @@ Prefix / number of device addresses<br />
 10/4,194,304<br />
 9/8,388,608<br />
 8/16,777,216<br />
-7/33,554,432....<= Helium 00003C alocation size from lora alliance.<br />
+7/33,554,432 ________ <= Helium 00003C alocation size from lora alliance.
 <!--
 - Introduce and explain new concepts.
 - It should be reasonably clear how the proposal would be implemented.
 - Provide representative examples that show how this proposal would be commonly used.
 - Corner cases should be dissected by example.
 -->
-
 ## Drawbacks
-
-CURRENT COST /29:<br />
+This would reduce the current possible maximum revenue for address space on the helium network.
+However at the time of this HIP after 3 years of operation and 1 year of the foundation having the new 00003C
+allocation the uptake has already been quite slow.
+<p>
+Current Cost /29:<br />
 Possible allocations 4,194,304<br />
-Network Revenue: $3,355,443,200<br />
-<br />
-<br />
-FIRST PROPOSAL /25:<br />
+Network Revenue: $3,355,443,200
+<p>
+First Proposal /25:<br />
 Possible allocations 262,144<br />
-Network Revenue: $209,715,200<br />
-<br />
-<br />
-SECONDARY PROPOSAL /26:<br />
+Network Revenue: $209,715,200
+<p>
+Secondary Proposal /26:<br />
 Possible allocations 524,288<br />
-Network Revenue: $419,430,400<br />
-<br />
-<br />
--
+Network Revenue: $419,430,400
+<p>
 8 Block /29 at $10 per Address:<br />
 Possible allocations 4,194,304<br />
-Network Revenue: $335,544,320<br />
-<br />
+Network Revenue: $335,544,320<p>
 <br />
 Existing stakeholders in this area may feel like they were over charged if the price reduces for more
 address space, or if the system moves to a much lower cost per year rental system. We could offer increased
@@ -112,10 +112,9 @@ address space per year in of existing costs rendered or offer fee free years in 
 
 Accepatable alternatives could include:<br />
 1. Lower the costing of the offering to purchase a 8 block from $800 to $80.
-2. Allow the sale of singular addresse space at around $10 per address.
+2. Allow the sale of singular address space at around $10 per address.
 3. rent device space per year at a much reduced price of around $5 per address,<br />
    knowing the space is getting used and paid for yearly.
-
 <!--
 This is your chance to discuss your proposal in the context of the whole design space. This is
 probably the most important section!
@@ -134,7 +133,6 @@ TBA
 - Are there dependencies, milestones, or dates that need to be met for this HIP to succeed?
 -->
 ## Deployment Impact
-
 The deployment impact would be expected to be positive with a lowering of the cost of offering hosting
 to existing stakeholders I would expect this to be filtered down to cost of paid hosting services.
 <!--
@@ -148,7 +146,8 @@ this project.
   - If not, what is the procedure to migrate?
 -->
 ## Success Metrics
-An uptick in OUI deployers and devices traversing the network.
+An uptick in OUI deployers and devices traversing the network. With accpetance being more DC burn and IOT rewards
+for hotspot hosts.
 <!--
 What metrics can be used to measure the success of this design? Are any new ETL reports needed to
 measure the success?
