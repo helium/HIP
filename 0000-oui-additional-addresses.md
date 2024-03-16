@@ -40,62 +40,66 @@ This HIP will affect exisiting and future openlns operators operating a OUI on t
   watching the HIP repository or even directly active in the Helium Community chat channels.
 -->
 ## Detailed Explanation
-This is a breakdown of the prefix size of addresses for the respective prefix size for comparison.
-Prefix / number of device addresses
 
-32/1
-31/2
-30/4
-29/8            <= Current allocation size.
-28/16
-27/32
-26/64           <= Proposed secondary new block allocation size.
-25/128          <= Proposed preferred new block allocation size.
-24/256
-23/512
-22/1,024
-21/2,048
-20/4,046
-19/8,192
-18/16,384
-17/32,768
-16/65,536
-15/131,072
-14/262,144
-13/524,288
-12/1,048,576
-11/2,097,152
-10/4,194,304
-9/8,388,608
-8/16,777,216
-7/33,554,432    <= Helium 00003C alocation size from lora alliance.
+This is a breakdown of the prefix size of addresses for the respective prefix size for comparison.<br />
+Prefix / number of device addresses<br />
+<br />
+32/1<br />
+31/2<br />
+30/4<br />
+29/8............<= Current allocation size.<br />
+28/16<br />
+27/32<br />
+26/64...........<= Proposed secondary new block allocation size.<br />
+25/128..........<= Proposed preferred new block allocation size.<br />
+24/256<br />
+23/512<br />
+22/1,024<br />
+21/2,048<br />
+20/4,046<br />
+19/8,192<br />
+18/16,384<br />
+17/32,768<br />
+16/65,536<br />
+15/131,072<br />
+14/262,144<br />
+13/524,288<br />
+12/1,048,576<br />
+11/2,097,152<br />
+10/4,194,304<br />
+9/8,388,608<br />
+8/16,777,216<br />
+7/33,554,432....<= Helium 00003C alocation size from lora alliance.<br />
 <!--
 - Introduce and explain new concepts.
 - It should be reasonably clear how the proposal would be implemented.
 - Provide representative examples that show how this proposal would be commonly used.
 - Corner cases should be dissected by example.
 -->
+
 ## Drawbacks
 
-CURRENT COST /29:
-Possible allocations 4,194,304
-Network Revenue: $3,355,443,200
-
-CURRENT COST /29: 4,194,304 | $335,544,320
-
-FIRST PROPOSAL /25:
-Possible allocations 262,144
-Network Revenue: $209,715,200
-
-SECONDARY PROPOSAL /26:
-Possible allocations 524,288
-Network Revenue: $419,430,400
-
+CURRENT COST /29:<br />
+Possible allocations 4,194,304<br />
+Network Revenue: $3,355,443,200<br />
+<br />
+<br />
+FIRST PROPOSAL /25:<br />
+Possible allocations 262,144<br />
+Network Revenue: $209,715,200<br />
+<br />
+<br />
+SECONDARY PROPOSAL /26:<br />
+Possible allocations 524,288<br />
+Network Revenue: $419,430,400<br />
+<br />
+<br />
 -
-8 Block /29 at $10 per Address: 
-Possible allocations 4,194,304
-Network Revenue: $335,544,320
-
+8 Block /29 at $10 per Address:<br />
+Possible allocations 4,194,304<br />
+Network Revenue: $335,544,320<br />
+<br />
+<br />
 Existing stakeholders in this area may feel like they were over charged if the price reduces for more
 address space, or if the system moves to a much lower cost per year rental system. We could offer increased
 address space per year in of existing costs rendered or offer fee free years in lieu of the new proposal.
@@ -103,12 +107,13 @@ address space per year in of existing costs rendered or offer fee free years in 
 - Why should we _not_ do this?
 - What problems could occur if we do this?
 -->
+
 ## Rationale and Alternatives
 
-Accepatable alternatives could include:
+Accepatable alternatives could include:<br />
 1. Lower the costing of the offering to purchase a 8 block from $800 to $80.
 2. Allow the sale of singular addresse space at around $10 per address.
-3. rent device space per year at a much reduced price of around $5 per address,
+3. rent device space per year at a much reduced price of around $5 per address,<br />
    knowing the space is getting used and paid for yearly.
 
 <!--
@@ -120,7 +125,7 @@ probably the most important section!
 - What is the impact of not doing this?
 -->
 ## Unresolved Questions
-
+TBA
 <!--
 - What parts of the design do you expect to resolve through the HIP process before this gets merged?
 - What parts of the design do you expect to resolve through the implementation of this feature?
