@@ -46,34 +46,36 @@ Feedback welcome by the offical discord channel or by watching the HIP repositor
 
 ## Detailed Explanation
 This is a breakdown of the prefix size of addresses for the respective prefix size for comparison.
-<p>
-Prefix / number of device address allocations<br />
-32/1<br />
-31/2<br />
-30/4<br />
-29/8 ________________ <= Current allocation size.<br />
-28/16<br />
-27/32<br />
-26/64 _______________ <= Proposed secondary new block allocation size.<br />
-25/128 ______________ <= Proposed preferred new block allocation size.<br />
-24/256<br />
-23/512<br />
-22/1,024<br />
-21/2,048<br />
-20/4,046<br />
-19/8,192<br />
-18/16,384<br />
-17/32,768<br />
-16/65,536<br />
-15/131,072<br />
-14/262,144<br />
-13/524,288<br />
-12/1,048,576<br />
-11/2,097,152<br />
-10/4,194,304<br />
-9/8,388,608<br />
-8/16,777,216<br />
-7/33,554,432 ________ <= Helium 00003C Allocation size from Lora Alliance.
+
+```
+Prefix / number of device address allocations
+32 / 1
+31 / 2
+30 / 4
+29 / 8 ________________ <= Current allocation size.
+28 / 16
+27 / 32
+26 / 64 _______________ <= Proposed secondary new block allocation size.
+25 / 128 ______________ <= Proposed preferred new block allocation size.
+24 / 256
+23 / 512
+22 / 1,024
+21 / 2,048
+20 / 4,046
+19 / 8,192
+18 / 16,384
+17 / 32,768
+16 / 65,536
+15 / 131,072
+14 / 262,144
+13 / 524,288
+12 / 1,048,576
+11 / 2,097,152
+10 / 4,194,304
+9  / 8,388,608
+8  / 16,777,216
+7  / 33,554,432 ________ <= Helium 00003C Allocation size from Lora Alliance.
+```
 <!--
 - Introduce and explain new concepts.
 - It should be reasonably clear how the proposal would be implemented.
@@ -84,42 +86,14 @@ Prefix / number of device address allocations<br />
 ## Drawbacks
 This would reduce the current possible maximum revenue for address space on the Helium Network.<br />
 However at the time of this HIP after ~3 years of operation and 1 year of the foundation offering the new 00003C
-NetID allocation the uptake has already been quite slow.
+NetID allocation the uptake has already been quite slow, so there is also an argument that the existing pricing
+has missed the mark and thus actually is being underutilized.
 <p>
-At time of writing the break down device address is:<br />
-Total OUI: 106<br />
-000024: 56<br />
-00003C: 29<br />
-Purchased Externaly: 21
-<p>
-All larger allocations are being purchased externally and assigned to an OUI which is reducing the network burn,
-only a few existing 000024 & 00003C users have purchased more then 1 x 8 address block.
-
-### Existing Costs And Alternate Costing Ideas
-#### Current Cost /29:
-- Possible total allocations: 4,194,304<br />
-- Network One Time Revenue: $3,355,443,200
-
-#### First Proposal /25<br />
-- Possible total allocations: 262,144<br />
-- Network One Time Revenue: $209,715,200
-
-#### Secondary Proposal /26<br />
-- Possible total allocations: 524,288<br />
-- Network One Time Revenue: $419,430,400
-
-#### 8 Block /29 at $10 per Address<br />
-- Possible total allocations: 4,194,304<br />
-- Network One Time Revenue: $335,544,320<p>
-
-#### 8 Block /29 at $5 per Address (Yearly Rent)<br />
-- Possible total allocations: 4,194,304<br />
-- Network Total Possible Yearly Revenue: $20,971,520
 <p>
 Existing stakeholders in this area may feel like they were over charged if the price reduces for more
 address space, or if the system moves to a much lower cost per year or per year rental system.
-We could offer increased address space per year in of existing costs rendered or offer fee free years
-in lieu of the new proposal.
+We could offer increased address space per year to the new amount of existing costs already rendered.
+Or offer fee free years in lieu of the new proposal.
 <!--
 - Why should we _not_ do this?
 - What problems could occur if we do this?
@@ -127,11 +101,46 @@ in lieu of the new proposal.
 
 ## Rationale and Alternatives
 
-Accepatable alternatives could include:<br />
+At time of writing the break down of device addresses is:
+```
+Old Helium 000024  : 56
+New Helium 00003C  : 29
+Purchased Externaly: 21
+Total OUI's        : 106
+```
+All larger allocations are being purchased externally and assigned to an OUI which is reducing the network burn,
+only a few existing 000024 & 00003C users have purchased more then 1 x 8 address block.
+
+### Existing Costs And Alternate Costing Ideas
+```
+# Current Cost /29:
+- Possible total allocations: 4,194,304
+- Network One Time Revenue: $3,355,443,200
+
+# First Proposal /25
+- Possible total allocations: 262,144
+- Network One Time Revenue: $209,715,200
+
+# Secondary Proposal /26
+- Possible total allocations: 524,288
+- Network One Time Revenue: $419,430,400
+
+# 8 Block /29 at $10 per Address
+- Possible total allocations: 4,194,304
+- Network One Time Revenue: $335,544,320
+
+# 8 Block /29 at $5 per Address (Yearly Rent)
+- Possible total allocations: 4,194,304
+- Network Total Possible Yearly Revenue: $20,971,520
+```
+
+### Accepatable alternatives could include:
+```
 1. Lower the costing of the offering to purchase a 8 block from $800 to $80.
 2. Allow the sale of singular address space at around $10 per address.
-3. Possibly rent device space per year at a much reduced cost of around $5 per address space,<br />
+3. Possibly rent device space per year at a much reduced cost of around $5 per address space,
    knowing the space is getting used and paid for yearly.
+```
 <!--
 This is your chance to discuss your proposal in the context of the whole design space. This is
 probably the most important section!
