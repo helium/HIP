@@ -24,7 +24,7 @@ initiative on Helium network over ChirpStack.
 On simulation runs on a few different hardware types reliably puts this number at a maximum active device count of 
 around 2k devices well short of the previous ability which made the costing reasonable.
 <p>
-This should help encourage adopters to use the Helium 000003C NetID rather then bringing an external address space bought
+This should help encourage adopters to use the Helium 00003C NetID rather then bringing an external address space bought
 elsewhere. In return drive up devices on the network by lowering the cost of entry for both hosters and deployers.
 <!--
 - Why are we doing this?
