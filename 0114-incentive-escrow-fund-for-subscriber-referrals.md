@@ -46,7 +46,7 @@ This proposal introduces an additional layer of complexity to the already comple
 
 It may also be argued that allowing service providers the freedom to define the structure of a referral program is prone to gaming. Poorly designed and implemented referral schemes could result in exploits where referral payouts for fake users.
 
-Finally, since this proposal does require that incentive programs launched by service providers require that referred subscribers send data to the Helium Network, service providers will be using “network’s emissions” to attract subscribers that will bring revenue to the service provider, but not the network.
+Finally, since this proposal does not require that incentive programs launched by service providers require that referred subscribers send data to the Helium Network, service providers will be using “network’s emissions” to attract subscribers that will bring revenue to the service provider, but not the network.
 
 ## Rationale and Alternatives
 
