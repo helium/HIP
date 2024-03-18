@@ -1,6 +1,6 @@
 # HIP Template (OUI Additional Address Space Reshuffle)
 
-- Author(s): @ccall48, @nowiresfil<!-- your GitHub @username -->
+- Author(s): [@ccall48](https://github.com/ccall48), @nowiresfil<!-- your GitHub @username -->
 - Start Date: 2024-03-05<!-- fill me in with today's date, YYYY-MM-DD -->
 - Category: Technical<!-- economic, technical, meta -->
 - Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
