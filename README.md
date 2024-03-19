@@ -118,12 +118,16 @@ If you have questions or feedback, please see the [Discussion](https://github.co
 | 102 | [Helium Educational LNS - Unrewarded Trial Network](0102-helium-educational-lns.md) | [<img src="https://img.shields.io/badge/Status-Approved-green"></img>](https://github.com/helium/HIP/issues/835) |
 | 103 | [MOBILE Oracle Hex Boosting](0103-oracle-hex-boosting.md) | [<img src="https://img.shields.io/badge/Status-Approved-green"></img>](https://github.com/helium/HIP/issues/836) |
 | 104 | [Finetune HIP-17 Parameters to Tackle Density](0104-finetune-hip17-parameters-to-tackle-density.md) | [<img src="https://img.shields.io/badge/Status-Deployed-blue"></img>](https://github.com/helium/HIP/issues/838) |
-| 105 | [Modification of MOBILE subDAO Hex Limits](0105-modification-of-mobile-subdao-hex-limits.md) | [<img src="https://img.shields.io/badge/Status-Approved-green"></img>](https://github.com/helium/HIP/issues/840) |
+| 105 | [Modification of MOBILE subDAO Hex Limits](0105-modification-of-mobile-subdao-hex-limits.md) | [<img src="https://img.shields.io/badge/Status-Deployed-blue"></img>](https://github.com/helium/HIP/issues/840) |
 | 106 | [Hotspot Bidirectional Coverage Requirement](0106-hotspot-bidirectional-coverage-requirement.md) | [<img src="https://img.shields.io/badge/Status-Deployed-blue"></img>](https://github.com/helium/HIP/issues/870) |
-| 107 | [Preventing Gaming Within the MOBILE SubDAO](0107-preventing-gaming-within-the-mobile-subdao.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/881) |
+| 107 | [Preventing Gaming Within the MOBILE Network](0107-preventing-gaming-within-the-mobile-network.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/881) |
 | 108 | [Mobile Hotspot Suspension Framework](0108-mobile-hotspot-suspension-framework.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/887) |
 | 109 | [Hex Boosting by Deployment](0109-hex-boosting-by-deployment.md) | [<img src="https://img.shields.io/badge/Status-Closed-lightgrey"></img>](https://github.com/helium/HIP/issues/888) |
-
+| 110 | [Proxy Voting](0110-proxy-voting.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/928) |
+| 111 | [MOBILE Data Utility Benchmark](0111-mobile-data-utility-benchmark.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/929) |
+| 112 | [Scaling IOT Location Assert Fees](0112-scaling-iot-location-assert-fees.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/931) |
+| 113 | [Reward CBRS As Experimental](0113-reward-cbrs-as-experimental.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/934) |
+| 114 | [Incentive Escrow Fund for Subscriber Referrals](0114-incentive-escrow-fund-for-subscriber-referrals.md) | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/942) |
 
 ## Status Key
 
