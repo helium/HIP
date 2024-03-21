@@ -34,7 +34,6 @@ In instances where the Service Provider wants to boost both CBRS and Wi-Fi in a 
 
 In instances where the Service Provider wants to boost both indoor and outdoor of the same deployment type (CBRS or Wi-Fi), they can do so for an additional $.0025 per res12 hex.
 
-
 In instances where MOBILE already has been burned to boost hexes, and deployments are currently providing coverage to those hexes, those hexes will remain as boosted hexes for all deployment types (i.e. indoor CBRS, outdoor CBRS, indoor Wi-Fi, Outdoor Wi-Fi) for the duration of the boost.
 
 For any boosted hexes that do not contain coverage, the Service Provider will have the option to choose what type of deployment the boosts will apply to at no extra cost.
