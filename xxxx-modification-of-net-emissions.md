@@ -12,7 +12,7 @@ This Helium Improvement Proposal (HIP) proposes changing net emissions whereby p
 
 
 ## Motivation:
-The current net emissions number (1,643.83561643 HNT) is a fixed amount, which doesn’t allow fluctuations to occur with normal market conditions. For example, as the price of HNT rises, less HNT is needed to be burned to generate the same amount of DC. As a result, any epochs in which 1,643.83 HNT or less have been burned will not result in a net decrease in the overall maximum supply of HNT. Over time, this may make HNT less deflationary.
+The current net emissions number (1,643.83561643 HNT) is a fixed amount, which doesn’t allow for fluctuations within normal market conditions. For example, as the price of HNT rises, less HNT is needed to be burned to generate the same amount of DC. As a result, any epochs in which 1,643.83 HNT or less have been burned will not result in a net decrease in the overall maximum supply of HNT. Over time, this may make HNT less deflationary.
 
 ## Stakeholders:
 The stakeholders of this proposal are:
