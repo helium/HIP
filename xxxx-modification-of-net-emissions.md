@@ -28,7 +28,7 @@ This means that if less than 1,643.84 HNT is burned for DC within an epoch, the 
 
 This proposal suggests changing net emissions from a fixed amount (1,643.84) to a fixed percentage (50%), whereas 50% of HNT burned each epoch will be reminted via net emissions per epoch.
 
-For example, over the past 120 epochs (11/22/2024 through 3/20/2024), a total of 151,542.96 HNT was burned, with 58,548.99 (39%) of that being permanently burned and removed from circulation, while 92,993.97 (61%) was reminted via net emissions. This HIP would change it so an even, more predictable amount is being burned.
+For example, over the past 120 epochs (11/22/2024 through 3/20/2024), a total of 151,542.96 HNT was burned, with 58,548.99 (39%) of that being permanently burned and removed from circulation, while 92,993.97 (61%) was reminted via net emissions. Only 10 out of the past 120 epochs had HNT burn greater than 1,643.84 for that epoch. This HIP would change it so an even, more predictable amount is being burned.
 
 
 ## Rationale and Alternatives
