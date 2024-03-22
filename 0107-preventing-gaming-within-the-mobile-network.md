@@ -12,7 +12,7 @@ This Helium Improvement Proposal (HIP) proposes giving Service Providers the aut
 
 
 ## Motivation
-Currently, the first MOBILE Service Provider and company that reviews CPI information, Nova Labs (d.b.a. Helium Mobile), has expressed concern for ongoing gaming that they've identified within the MOBILE subnetwork; however, they do not have the appropriate authority to stop this from occurring. This HIP will give current and future MOBILE Service Providers the authority needed to curb gaming.
+Currently, the first MOBILE Service Provider and company that reviews CPI information, Nova Labs (d.b.a. Helium Mobile), has expressed concern for ongoing gaming that they've identified within the MOBILE subnetwork; however, they do not have the appropriate authority to stop this from occurring. This HIP will give current and future MOBILE Service Providers the authority needed to curb gaming. MOBILE Rewards are designed to reward materially positive contributions to the Helium Network, through enhancing either network performance, network utility, or both. MOBILE Rewards are not intended to reward self-serving activity that has no material benefit to the Helium Network ("Gaming").
 
 ## Stakeholders
 The stakeholders of this proposal are:
