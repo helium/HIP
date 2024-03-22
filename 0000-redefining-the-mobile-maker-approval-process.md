@@ -28,7 +28,6 @@ In the case of Bobcat and Nebra, both have produced a 5G Hotspot; however, neith
 ## Stakeholders:
 
 - **MOBILE Makers** - Manufacturers wishing to create MOBILE hardware will be required to adhere to the requirements within this HIP.
-- **Manufacturer Compliance Committee (MCC)** - The MCC will need to ensure the requirements of this HIP are met prior to awarding a MOBILE Maker a Maker Key. 
 
 
 ## Detailed Explanation
@@ -107,7 +106,7 @@ In instances where MOBILE Makers already have a pre-existing MOBILE Maker Wallet
 
 ## Deployment Impact:
 
-Upon HIP passing, the MCC and Helium Foundation will need to do the following: 
+Upon HIP passing, the Helium Foundation will need to do the following: 
 - The Helium Foundation will revoke any Maker Keys for any Maker that do not satisfy the requirements of this HIP.
 - The Helium Foundation will create a new MOBILE Maker Escrow Wallet type that MOBILE Makers can request.
 - The Helium Foundation will create a slashing smart contract to slash the MOBILE stake of MOBILE Makers who do not adhere to the requirements of this HIP.
