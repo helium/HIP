@@ -66,7 +66,7 @@ This HIP imposes MOBILE Makers must create a new MOBILE Maker Escrow Wallet in w
 Please note, in instances where a MOBILE Maker has subsidiaries that create different devices (e.g. one subsidiary that creates MOBILE CBRS Hotspots, and one subsidiary that creates Wi-Fi Access Points), only one stake of 50M MOBILE tokens is needed for both subsidiaries. The MOBILE Maker can choose to have one combined wallet for the parent company, or separate wallets for each subsidiary. In instances where the MOBILE Maker chooses to have separate wallets, they will be classified separately as both a Tier 3 and a Tier 2 MOBILE Maker for each subsidiary.
 
 ## Stripping of Maker Keys
-Upon HIP passing, the MCC will strip any MOBILE Maker’s Maker Key’s that have not satisfied the above requirements. The removal of the MOBILE Makers key will prevent any more hotspots from that MOBILE Maker from being onboarded.
+60 epochs after HIP passing, the Helium Foundation will strip any MOBILE Maker’s Maker Key’s that have not satisfied the above requirements. The removal of the MOBILE Makers key will prevent any more hotspots from that MOBILE Maker from being onboarded.
 
 ## Ongoing MOBILE Maker Requirements
 As a part of this HIP, MOBILE Makers will be required to keep a minimum balance of tokens within their Maker Escrow Wallet, depending on their Tier. The minimum balance will be calculated to support at least 100 onboards, and are as followed:
@@ -90,7 +90,9 @@ As a part of this HIP, MOBILE Makers will be required to keep a minimum balance 
 For example, if on the first epoch of the quarter at 0:00:00 UTC, the MOBILE Price Oracle lists MOBILE price at $0.004 per MOBILE, a Tier 1 & 2 MOBILE Maker will be required to hold at least 500,000 MOBILE tokens.
 
 ## MOBILE Maker Slashing
-A smart contract will be created to automatically slash the MOBILE Makers 50M stake if that MOBILE Maker does not maintain the minimum balances identified above. If the MOBILE Makers balance goes below the minimum threshold defined in this HIP, they will have 1 epoch to replenish their wallet before slashing occurs. If the wallet stays below the minimum threshold on the 2nd epoch, the smart contract will automatically burn 0.10% (50,000 MOBILE) of the 50M MOBILE stake. For each epoch that the wallet stays below the minimum balance, the percentage burned will increase by 0.01. For example, if a MOBILE Makers wallet is below the minimum balance, on the second epoch, 0.10% of the stake balance will be burned, on the third epoch, 0.11% of the remaining stake will be burned, on the fourth epoch, 0.12% of the remaining stake will be burned, and so on.
+A smart contract will be created to automatically slash the MOBILE Makers 50M stake if that MOBILE Maker does not maintain the minimum balances identified above. If the MOBILE Makers balance goes below the minimum threshold defined in this HIP, they will have 1 epoch to replenish their wallet before slashing occurs. If the wallet stays below the minimum threshold on the 2nd epoch, the smart contract will automatically burn 0.10% (50,000 MOBILE) of the 50M MOBILE stake. For each epoch that the wallet stays below the minimum balance, the percentage burned will increase by 0.01. For example, if a MOBILE Makers wallet is below the minimum balance, on the second epoch, 0.10% of the stake balance will be burned, on the third epoch, 0.11% of the remaining stake will be burned, on the fourth epoch, 0.12% of the remaining stake will be burned, and so on. If the balance is replenished above the minimum, and then falls again, the slash will reset to 0.10%.
+
+If the staked MOBILE balance falls under 30M MOBILE, the Maker Key will be revoked the same epoch the staked balance falls under 30M MOBILE. In order to reactivate their Maker Key, the Maker must replenish the staked balance to at least 50M.
 
 ## Retirement of a MOBILE Maker
 In some instances, MOBILE Makers may wish to stop producing MOBILE devices, and request their stake be returned. In order for the stake to be returned to the MOBILE Maker, the following must occur:
@@ -98,7 +100,9 @@ In some instances, MOBILE Makers may wish to stop producing MOBILE devices, and 
 - The Helium Foundation must conduct an audit to ensure the following:
   - The MOBILE Maker has issued a press release posted on their website that they are ceasing production and sales of said devices
   - The MOBILE Maker and any of its affiliates have stopped advertising such devices for sale
-  - The MOBILE Maker will produce records that document total sales volume so the amount of sales can be reconciled against devices onboarded. The foundation will then require the wallet be replenished so at the time of the audit, the Maker Escrow Wallet holds at least enough tokens so that all remaining devices that have not been onboarded may be onboarded.
+  - The MOBILE Maker will produce records that document total sales volume so the amount of sales can be reconciled against devices onboarded. 
+
+The foundation will then require the wallet be replenished so at the time of the audit, the Maker Escrow Wallet holds at least enough tokens so that all remaining devices that have not been onboarded may be onboarded as of that date.
 
 After the audit is complete, and the MOBILE Maker Escrow Wallet was funded to support the remaining onboards, the slashing smart contract will be removed, and the stake will be released no sooner than 60 epochs after the above requirements were met. If new information should arise within the 60 epochs that wasn't disclosed during the initial audit, the Helium Foundation may request a new audit.
 
@@ -113,8 +117,10 @@ Upon HIP passing, the Helium Foundation will need to do the following:
 - The Helium Foundation will create a new MOBILE Maker Escrow Wallet type that MOBILE Makers can request.
 - The Helium Foundation will create a slashing smart contract to slash the MOBILE stake of MOBILE Makers who do not adhere to the requirements of this HIP.
 - The Helium Foundation will ensure they only award Maker Keys to MOBILE Makers who have satisfied the four (4) requirements noted within this HIP.
+- The Helium Foundation will create a way to replenish a stake if it falls below 50M MOBILE.
 
 
 ## Success Metrics:
 
 This HIP is successful when only approved MOBILE Makers are allowed to have their hotspots onboarded to the Helium 5G subnetwork. 
+
