@@ -1,11 +1,13 @@
-# HIP 000: Add MNTD. as a Hotspot Vendor to the Helium MOBILE subNetwork
+# HIP 117: Add MNTD. as a Hotspot Vendor to the Helium MOBILE subNetwork
 
 - Author(s): Ken Yu
-- Start Date: 2024-03-11
+- Start Date: 2024-03-25
 - Category: Economic, Technical
-- Original HIP PR:
-- Tracking Issue:
-- Voting Requirements: veMOBILE Holders
+- Original HIP PR: [#948](https://github.com/helium/HIP/pull/948)
+- Tracking Issue: [#962](https://github.com/helium/HIP/issues/962)
+- Vote Requirements: veMOBILE Holders
+
+---
 
 ## Summary
 
