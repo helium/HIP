@@ -1,13 +1,15 @@
-# HIP XXX: Redefining the MOBILE Maker Approval Process
+# HIP 115: Redefining the MOBILE Maker Approval Process
 
 - Author: [Andy Zyvoloski](https://github.com/heatedlime)
-- Start Date: 2/27/2024
-- Category: Technical & Economic
-- Original HIP PR:
-- Tracking Issue: 
+- Start Date: 2024-03-25
+- Category: Technical, Economic
+- Original HIP PR: [#927](https://github.com/helium/HIP/pull/921)
+- Tracking Issue: [#957](https://github.com/helium/HIP/issues/957)
 - Voting Requirements: veMOBILE Holders
 
-## Summary:
+---
+
+## Summary
 
 This Helium Improvement Proposal (HIP) defines the approval process and requirements for Manufacturers of MOBILE CBRS Hotspots and Access Points (MOBILE Makers) to get a Maker Key.
 
@@ -17,7 +19,7 @@ This Helium Improvement Proposal (HIP) defines the approval process and requirem
 - [HIP 53](https://github.com/helium/HIP/blob/main/0053-mobile-dao.md) lays out the foundation and requirements for MOBILE Makers to produce equipment eligible to work with the Helium 5G Network.
 - [HIP 96](https://github.com/helium/HIP/blob/main/0096-wifi-ap-onboarding-structure.md) introduces new onboarding fees for Wi-Fi Access Points
 
-## Motivation:
+## Motivation
 [HIP 53](https://github.com/helium/HIP/blob/main/0053-mobile-dao.md) lays out the foundation and requirements that MOBILE Makers adhere to in order to produce equipment eligible to work with the Helium 5G Network. These requirements include manufactures hold a MOBILE NFT, which requires:
 
 - Stake a minimum of 50M MOBILE 
@@ -25,7 +27,7 @@ This Helium Improvement Proposal (HIP) defines the approval process and requirem
 
 In the case of Bobcat and Nebra, both have produced a 5G Hotspot; however, neither have satisfied either requirements above.
 
-## Stakeholders:
+## Stakeholders
 
 - **MOBILE Makers** - Manufacturers wishing to create MOBILE hardware will be required to adhere to the requirements within this HIP.
 
@@ -104,7 +106,7 @@ After the audit is complete, and the MOBILE Maker Escrow Wallet was funded to su
 In instances where MOBILE Makers already have a pre-existing MOBILE Maker Wallet, they may continue to use that wallet for onboarding until the balance of DC is 0; however, a new MOBILE Maker Escrow Wallet must be created with the minimum wallet requirements noted above. 
 
 
-## Deployment Impact:
+## Deployment Impact
 
 Upon HIP passing, the Helium Foundation will need to do the following: 
 - The Helium Foundation will revoke any Maker Keys for any Maker that do not satisfy the requirements of this HIP.
