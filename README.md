@@ -128,6 +128,7 @@ If you have questions or feedback, please see the [Discussion](https://github.co
 | 112 | [Scaling IOT Location Assert Fees](0112-scaling-iot-location-assert-fees.md)                                                                        | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/931)                 |
 | 113 | [Reward CBRS As Experimental](0113-reward-cbrs-as-experimental.md)                                                                                  | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/934)                 |
 | 114 | [Incentive Escrow Fund for Subscriber Referrals](0114-incentive-escrow-fund-for-subscriber-referrals.md)                                            | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/942)                 |
+| 115 | [Redefining the MOBILE Maker Approval Process](0115-redefining-the-mobile-maker-approval-process.md)                                                | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/957)                 |
 
 ## Status Key
 
