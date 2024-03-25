@@ -1,11 +1,13 @@
-# HIP Template (OUI Additional Address Space Reshuffle)
+# HIP 116: OUI Additional Address Space Reshuffle
 
-- Author(s): [@ccall48](https://github.com/ccall48), @nowiresfil<!-- your GitHub @username -->
-- Start Date: 2024-03-05<!-- fill me in with today's date, YYYY-MM-DD -->
-- Category: Technical<!-- economic, technical, meta -->
-- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
-- Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
-- Vote Requirements: veIOT<!-- veHNT Holders, veIOT Holders, or veMOBILE Holders -->
+- Author(s): [@ccall48](https://github.com/ccall48), [@nowiresfil](https://github.com/nowiresfil)
+- Start Date: 2024-03-25
+- Category: Technical
+- Original HIP PR: [#948](https://github.com/helium/HIP/pull/948)
+- Tracking Issue: [#959](https://github.com/helium/HIP/issues/959)
+- Vote Requirements: veIOT Holders
+
+---
 
 ## Summary
 With the inital purchase of an OUI it is mandatory for a LNS operator to either supply an Lora Alliance NetID or purchase
