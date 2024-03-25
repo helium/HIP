@@ -130,6 +130,7 @@ If you have questions or feedback, please see the [Discussion](https://github.co
 | 114 | [Incentive Escrow Fund for Subscriber Referrals](0114-incentive-escrow-fund-for-subscriber-referrals.md)                                            | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/942)                 |
 | 115 | [Redefining the MOBILE Maker Approval Process](0115-redefining-the-mobile-maker-approval-process.md)                                                | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/957)                 |
 | 116 | [OUI Additional Address Space Reshuffle](0116-oui-additional-address-space-reshuffle.md)                                                            | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/959)                 |
+| 117 | [Add MNTD. as a Hotspot Vendor to the Helium MOBILE subNetwork](0117-mntd-mobile-hotspot-vendor.md)                                                 | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/962)                 |
 
 ## Status Key
 
