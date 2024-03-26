@@ -11,7 +11,7 @@
 
 ## Summary
 
-This Helium Improvement Proposal (HIP) defines the approval process and requirements for Manufacturers of MOBILE CBRS Hotspots and Access Points (MOBILE Makers) to get a Maker Key.
+This Helium Improvement Proposal (HIP) defines the approval process and requirements for Manufacturers of MOBILE CBRS Hotspots and Access Points (MOBILE Makers) to get and retain a Maker Key, which will allow their Hotspots and Access Points to be onboarded.
 
 ## Previous Related HIPs
 
@@ -30,11 +30,11 @@ In the case of Bobcat and Nebra, both have produced a 5G Hotspot; however, neith
 ## Stakeholders
 
 - **MOBILE Makers** - Manufacturers wishing to create MOBILE hardware will be required to adhere to the requirements within this HIP.
+- **MOBILE Deployers** - MOBILE deployers who purchase 5G equipment from non-compliant MOBILE Makers may be unable to onboard their equipment, and will need to request a refund with the manufacturer.
 
 
 ## Detailed Explanation
-This HIP imposes MOBILE Makers must create a new MOBILE Maker Escrow Wallet in which they will not have access to withdraw funds from. Additionally, MOBILE Makers must satisfy the four below requirements prior to being awarded a Maker Key. This HIP will classify MOBILE Makers into three (3) tiers.  Please note, approval of this HIP will serve as Nova Lab’s subDAO approval. As such, Nova Labs will have satisfied all four requirements to this HIP.
-
+This HIP imposes the Helium Foundation, on behalf of MOBILE Makers, to create a new MOBILE Maker Escrow Wallet in which the Maker will not have access to withdraw from. Additionally, MOBILE Makers must satisfy the four below requirements prior to being awarded a Maker Key. This HIP will classify MOBILE Makers into three (3) tiers.  Please note, approval of this HIP will serve as Nova Lab’s subDAO approval.
 
 ### MOBILE CBRS Hotspots Only (Tier 3)
 1. Approval of hardware design by the Helium Foundation as outlined in HIP [HIP 19](https://github.com/helium/HIP/blob/main/0019-third-party-manufacturers.md)
@@ -64,9 +64,6 @@ This HIP imposes MOBILE Makers must create a new MOBILE Maker Escrow Wallet in w
   - $4,000 worth of MOBILE at the time of deposit
 
 Please note, in instances where a MOBILE Maker has subsidiaries that create different devices (e.g. one subsidiary that creates MOBILE CBRS Hotspots, and one subsidiary that creates Wi-Fi Access Points), only one stake of 50M MOBILE tokens is needed for both subsidiaries. The MOBILE Maker can choose to have one combined wallet for the parent company, or separate wallets for each subsidiary. In instances where the MOBILE Maker chooses to have separate wallets, they will be classified separately as both a Tier 3 and a Tier 2 MOBILE Maker for each subsidiary.
-
-## Stripping of Maker Keys
-60 epochs after HIP passing, the Helium Foundation will strip any MOBILE Maker’s Maker Key’s that have not satisfied the above requirements. The removal of the MOBILE Makers key will prevent any more hotspots from that MOBILE Maker from being onboarded.
 
 ## Ongoing MOBILE Maker Requirements
 As a part of this HIP, MOBILE Makers will be required to keep a minimum balance of tokens within their Maker Escrow Wallet, depending on their Tier. The minimum balance will be calculated to support at least 100 onboards, and are as followed:
@@ -113,12 +110,21 @@ In instances where MOBILE Makers already have a pre-existing MOBILE Maker Wallet
 ## Deployment Impact
 
 Upon HIP passing, the Helium Foundation will need to do the following: 
-- The Helium Foundation will revoke any Maker Keys for any Maker that do not satisfy the requirements of this HIP.
-- The Helium Foundation will create a new MOBILE Maker Escrow Wallet type that MOBILE Makers can request.
-- The Helium Foundation will create a slashing smart contract to slash the MOBILE stake of MOBILE Makers who do not adhere to the requirements of this HIP.
-- The Helium Foundation will ensure they only award Maker Keys to MOBILE Makers who have satisfied the four (4) requirements noted within this HIP.
+
+### Phase 1 
+- 30 epochs after HIP passing, the Helium Foundation will strip any MOBILE Maker’s Maker Key’s that have not been approved by the subDAO and have not staked 50M MOBILE. The removal of the MOBILE Makers key will prevent any more hotspots from that MOBILE Maker from being onboarded. 
+
+### Phase 2 
+-   The Helium Foundation will create a new MOBILE Maker Escrow Wallet type that MOBILE Makers can request. Within 30 epochs of creation of said wallet, MOBILE Makers will be required to fund their new wallet with the minimum balance requirements outlined within this HIP. If a new MOBILE Maker is approved by the subDAO and have staked 50M prior to the implementation of phase 2, they will be required to fund their new wallet once implemented within 30 epochs of creation of said wallet.
+
+ ### Phase 3 
+- The Helium Foundation will create a slashing smart contract to slash the MOBILE stake of MOBILE Makers who do not meet the minimum wallet balances set forward within this HIP. The foundation will need to ensure that the smart contract pulls the MOBILE price from the MOBILE price Oracle on the first epoch of the quarter at 0:00:00 UTC, and use that MOBILE price for the duration of the epochs within that quarter.
 - The Helium Foundation will create a way to replenish a stake if it falls below 50M MOBILE.
 
+If a MOBILE Maker's wallet falls below the minimum balance thresholds before Phase 3 is implemented, slashing will start on the first epoch of implementation.
+
+### After Implementation 
+- The Helium Foundation will ensure they only award Maker Keys to MOBILE Makers who have satisfied the four (4) requirements noted within this HIP.
 
 ## Success Metrics:
 
