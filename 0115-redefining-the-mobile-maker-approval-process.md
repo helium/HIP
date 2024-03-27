@@ -89,6 +89,8 @@ For example, if on the first epoch of the quarter at 0:00:00 UTC, the MOBILE Pri
 ## MOBILE Maker Slashing
 A smart contract will be created to automatically slash the MOBILE Makers 50M stake if that MOBILE Maker does not maintain the minimum balances identified above. If the MOBILE Makers balance goes below the minimum threshold defined in this HIP, they will have 1 epoch to replenish their wallet before slashing occurs. If the wallet stays below the minimum threshold on the 2nd epoch, the smart contract will automatically burn 0.10% (50,000 MOBILE) of the 50M MOBILE stake. For each epoch that the wallet stays below the minimum balance, the percentage burned will increase by 0.01. For example, if a MOBILE Makers wallet is below the minimum balance, on the second epoch, 0.10% of the stake balance will be burned, on the third epoch, 0.11% of the remaining stake will be burned, on the fourth epoch, 0.12% of the remaining stake will be burned, and so on. If the balance is replenished above the minimum, and then falls again, the slash will reset to 0.10%.
 
+The foundation and or the MOBILE subDAO may make a request, which must to be approved by the subDAO, to slash the stake of MOBILE Makers if the MOBILE Maker fails to add software support or updates for essential operations, such as adding passpoint profiles of service providers in a timely manner, updating the software on the device if needed, etc. The slash will start at 0.10% on day one, and increase by .01% everyday until the foundation has determined the Maker has taken appropriate steps to remediate the problem. 
+
 If the staked MOBILE balance falls under 30M MOBILE, the Maker Key will be revoked the same epoch the staked balance falls under 30M MOBILE. In order to reactivate their Maker Key, the Maker must replenish the staked balance to at least 50M.
 
 ## Retirement of a MOBILE Maker
@@ -96,8 +98,11 @@ In some instances, MOBILE Makers may wish to stop producing MOBILE devices, and 
 
 - The Helium Foundation must conduct an audit to ensure the following:
   - The MOBILE Maker has issued a press release posted on their website that they are ceasing production and sales of said devices
-  - The MOBILE Maker and any of its affiliates have stopped advertising such devices for sale
-  - The MOBILE Maker will produce records that document total sales volume so the amount of sales can be reconciled against devices onboarded. 
+  - The MOBILE Maker has stopped advertising such devices for sale, and will not sell any more to vendors or customers.
+  - The MOBILE Maker will produce records that document total sales volume so the amount of sales can be reconciled against devices onboarded.
+  - The Maker must transfer over their secure boot signing keys to the Helium Foundation
+ 
+  Ultimately, the Helium Foundation will have the final say in determining whether the Maker has satisfied the above. 
 
 The foundation will then require the wallet be replenished so at the time of the audit, the Maker Escrow Wallet holds at least enough tokens so that all remaining devices that have not been onboarded may be onboarded as of that date.
 
@@ -115,7 +120,7 @@ Upon HIP passing, the Helium Foundation will need to do the following:
 - 30 epochs after HIP passing, the Helium Foundation will strip any MOBILE Maker’s Maker Key’s that have not been approved by the subDAO and have not staked 50M MOBILE. The removal of the MOBILE Makers key will prevent any more hotspots from that MOBILE Maker from being onboarded. 
 
 ### Phase 2 
--   The Helium Foundation will create a new MOBILE Maker Escrow Wallet type that MOBILE Makers can request. Within 30 epochs of creation of said wallet, MOBILE Makers will be required to fund their new wallet with the minimum balance requirements outlined within this HIP. If a new MOBILE Maker is approved by the subDAO and have staked 50M prior to the implementation of phase 2, they will be required to fund their new wallet once implemented within 30 epochs of creation of said wallet.
+-   The Helium Foundation will create a new MOBILE Maker Escrow Wallet type that MOBILE Makers can request. Within 30 epochs of creation of said wallet, MOBILE Makers will be required to fund their new wallet with the minimum balance requirements outlined within this HIP. If a new MOBILE Maker is approved by the subDAO and has staked 50M prior to the implementation of phase 2, they will be required to fund their new wallet once implemented within 30 epochs of creation of said wallet.
 
  ### Phase 3 
 - The Helium Foundation will create a slashing smart contract to slash the MOBILE stake of MOBILE Makers who do not meet the minimum wallet balances set forward within this HIP. The foundation will need to ensure that the smart contract pulls the MOBILE price from the MOBILE price Oracle on the first epoch of the quarter at 0:00:00 UTC, and use that MOBILE price for the duration of the epochs within that quarter.
@@ -129,4 +134,3 @@ If a MOBILE Maker's wallet falls below the minimum balance thresholds before Pha
 ## Success Metrics:
 
 This HIP is successful when only approved MOBILE Makers are allowed to have their hotspots onboarded to the Helium 5G subnetwork. 
-
