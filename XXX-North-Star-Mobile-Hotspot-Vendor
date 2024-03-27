@@ -1,0 +1,56 @@
+# HIP-XXX - Add North Star as a Hotspot Vendor on the Helium MOBILE Subdao
+
+- Author(s): [North-Star](https://github.com/North-Star-Communications)
+- Start Date: 2024-03-27
+- Category: Technical, Economic
+- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
+- Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
+- Vote Requirements: veMOBILE Holders
+
+
+## Summary
+
+North Star is excited to join the Helium MOBILE Subdao to offer Wi-Fi hotspots and, possibly in the future, CBRS AWG devices (ei FreedomFi).  These special and unique hotspots will provide internet protection and firewall policies that adhere to the Children's Internet Protection Act (CIPA). By doing this, we eliminate inappropriate content from being viewed or accessed by underage persons out of the box, with no additional settings required. 
+
+
+## Motivation
+
+North Star will be partnering with school districts, churches, and other communities to offer a program with child safe internet. While this can be achieved without the Helium network, we wish to make this type of deployment scalable and easy to set up by other participants in the Helium ecosystem. 
+This type of hotspot will provide a use case for deployers and operators to deploy in areas and communities that may otherwise be disinterested in setting up a standard Wi-Fi unit. While they may be more inclined to setup a hotspot that could provide extra benefits that others do not typically provide, one that has the extra protection and content blocking from adult content. 
+The Wi-Fi hotspot will solve cases where communities are concerned about the content their children are viewing on their phones or the internet, at home and at school. This hotspot can be purchased by parents and communities to add to their existing standard router and provide an option for content-filtered internet for underage internet participants. 
+We expect many deployers, operators, school districts, and religious communities to be excited to be able to host these types of hotspots and increase the popularity of the Helium MOBILE ecosystem by offering a unique child safe Wi-Fi hotspot. 
+
+
+## Stakeholders
+
+- Helium Mobile Subdao
+- Helium Mobile Subscribers
+- Helium Mobile Service Provider
+
+
+## Detailed Explanation
+
+We intend to work with the existing service providers (and future ones) to bring this unique hotspot and its features to the network. 
+
+
+## Drawbacks
+
+- As there is a content filtering system, some unintended content could be blocked when it shouldn't be. On the other side, there could also be content that should be blocked but was not caught by the filtering system. 
+- A technical-savvy person could bypass all content protection by running a VPN client.
+
+
+## Unresolved Questions
+
+Unresolved questions can be discussed and added as this proposal proceeds through the community. 
+
+
+## Deployment Impact
+
+Adding more hotspots that have a different type of use and utility to the Helium MOBILE network will increase the use cases and expansion of the network. 
+
+
+## Success Metrics
+
+Success will be shown as more educational institutions and communities add North Star Hotspots to increase network coverage for child-safe internet. 
+
+
