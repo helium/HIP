@@ -139,7 +139,7 @@ Due to the lack of a public Modeled Coverage API, these Coverage Points estimate
 |               | Coverage Points (estimated) | MOBILE Rewards (estimated) | % Total Rewards | MOBILE Rewards Change   |
 | ------------- | --------------------------- | -------------------------- | --------------- | ----------------------- |
 | CBRS          | 6,549,992                   | 21,193,170                 | 43.5%           | **-42.3%**              |
-| Wi-Fi         | 8,492,786                   | 27,479,279                 | 56.5%           | **+230.6%**             |
+| Wi-Fi         | 8,492,786                   | 27,479,279                 | 56.5%           | **+130.6%**             |
 | Total         | 15,042,778                  | 48,672,449                 | 100%            |                         |
 
 ### Estimates of Specific Radio Rewards
