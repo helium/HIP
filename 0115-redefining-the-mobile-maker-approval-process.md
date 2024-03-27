@@ -1,6 +1,7 @@
 # HIP 115: Redefining the MOBILE Maker Approval Process
 
 - Author: [Andy Zyvoloski](https://github.com/heatedlime)
+- Contributor: [Groot](https://github.com/mawdegroot)
 - Start Date: 2024-03-25
 - Category: Technical, Economic
 - Original HIP PR: [#921](https://github.com/helium/HIP/pull/921)
@@ -34,13 +35,14 @@ In the case of Bobcat and Nebra, both have produced a 5G Hotspot; however, neith
 
 
 ## Detailed Explanation
-This HIP imposes the Helium Foundation, on behalf of MOBILE Makers, to create a new MOBILE Maker Escrow Wallet in which the Maker will not have access to withdraw from. Additionally, MOBILE Makers must satisfy the four below requirements prior to being awarded a Maker Key. This HIP will classify MOBILE Makers into three (3) tiers.  Please note, approval of this HIP will serve as Nova Lab’s subDAO approval.
+This HIP imposes the Helium Foundation, on behalf of MOBILE Makers, to create a new MOBILE Maker Escrow Wallet in which the Maker will not have access to withdraw from. Additionally, MOBILE Makers must satisfy the five below requirements prior to being awarded a Maker Key. This HIP will classify MOBILE Makers into three (3) tiers.  Please note, approval of this HIP will serve as Nova Lab’s subDAO approval.
 
 ### MOBILE CBRS Hotspots Only (Tier 3)
 1. Approval of hardware design by the Helium Foundation as outlined in HIP [HIP 19](https://github.com/helium/HIP/blob/main/0019-third-party-manufacturers.md)
 2. Approval from the MOBILE subDAO via veMOBILE vote with 67% approval
 3. The staking of 50M MOBILE tokens
-4. The Maker must have the following minimum balances within their Maker Wallet:
+4. Provide a copy of the Makers secure boot key in an escrow wallet held by the foundation
+5. The Maker must have the following minimum balances within their Maker Wallet:
   - 1,000,000,000 DC
   - 2 SOL
   - 1 MOBILE
@@ -49,7 +51,8 @@ This HIP imposes the Helium Foundation, on behalf of MOBILE Makers, to create a 
 1. Approval of hardware design by the Helium Foundation as outlined in HIP [HIP 19](https://github.com/helium/HIP/blob/main/0019-third-party-manufacturers.md)
 2. Approval from the MOBILE subDAO via veMOBILE vote with 67% approval
 3. The staking of 50M MOBILE tokens
-4. The Maker must have the following minimum balances within their Maker Wallet:
+4. Provide a copy of the Makers secure boot key in an escrow wallet held by the foundation
+5. The Maker must have the following minimum balances within their Maker Wallet:
   - 200,000,000 DC
   - 5 SOL
   - $4,000 worth of MOBILE at the time of deposit
@@ -58,7 +61,8 @@ This HIP imposes the Helium Foundation, on behalf of MOBILE Makers, to create a 
 1. Approval of hardware design by the Helium Foundation as outlined in HIP [HIP 19](https://github.com/helium/HIP/blob/main/0019-third-party-manufacturers.md)
 2. Approval from the MOBILE subDAO via veMOBILE vote with 67% approval
 3. The staking of 50M MOBILE tokens
-4. The Maker must have the following minimum balances within their Maker Wallet:
+4. Provide a copy of the Makers secure boot key in an escrow wallet held by the foundation
+5. The Maker must have the following minimum balances within their Maker Wallet:
   - 1,200,000,000 DC
   - 5 SOL
   - $4,000 worth of MOBILE at the time of deposit
@@ -129,7 +133,7 @@ Upon HIP passing, the Helium Foundation will need to do the following:
 If a MOBILE Maker's wallet falls below the minimum balance thresholds before Phase 3 is implemented, slashing will start on the first epoch of implementation.
 
 ### After Implementation 
-- The Helium Foundation will ensure they only award Maker Keys to MOBILE Makers who have satisfied the four (4) requirements noted within this HIP.
+- The Helium Foundation will ensure they only award Maker Keys to MOBILE Makers who have satisfied the five requirements noted within this HIP.
 
 ## Success Metrics:
 
