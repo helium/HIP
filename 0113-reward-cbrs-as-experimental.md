@@ -122,7 +122,7 @@ Since outdoor CBRS radios cover many hexes, a large reduction in coverage points
 
 Although Coverage Points for CBRS radios are proposed to be reduced by 75%, the impact on each radio's overall rewards is currently less than that due to how Modeled Coverage Points are calculated.
 
-Using a snapshot of coverage metrics as of 03/13/2024, the estimated average reward impact is **-42.3%** for CBRS radios and **+230.6%** for Wi-Fi hotspots as detailed below. This will continue to change over time as Coverage Points fluctuate.
+Using a snapshot of coverage metrics as of 03/13/2024, the estimated average reward impact is **-42.3%** for CBRS radios and **+130.6%** for Wi-Fi hotspots as detailed below. This will continue to change over time as Coverage Points fluctuate.
 
 Due to the lack of a public Modeled Coverage API, these Coverage Points estimates were made based on the rewards ratios on 03/13/2024 listed in the Motivation section above.
 
@@ -139,7 +139,7 @@ Due to the lack of a public Modeled Coverage API, these Coverage Points estimate
 |               | Coverage Points (estimated) | MOBILE Rewards (estimated) | % Total Rewards | MOBILE Rewards Change   |
 | ------------- | --------------------------- | -------------------------- | --------------- | ----------------------- |
 | CBRS          | 6,549,992                   | 21,193,170                 | 43.5%           | **-42.3%**              |
-| Wi-Fi         | 8,492,786                   | 27,479,279                 | 56.5%           | **+230.6%**             |
+| Wi-Fi         | 8,492,786                   | 27,479,279                 | 56.5%           | **+130.6%**             |
 | Total         | 15,042,778                  | 48,672,449                 | 100%            |                         |
 
 ### Estimates of Specific Radio Rewards
