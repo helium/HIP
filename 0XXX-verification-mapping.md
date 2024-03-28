@@ -11,7 +11,7 @@
 
 * [HIP 79](https://github.com/helium/HIP/blob/main/0079-mobile-poc-mappers-rewards.md) established general framework of discovery and verification mapping and related MOBILE reward pools
 * [HIP 84](https://github.com/helium/HIP/blob/main/0084-service-provider-hex-boosting.md) established the framework for service providers to boost hexes by burning MOBILE
-* [HIP 103](https://github.com/helium/HIP/blob/main/0103-oracle-hex-boosting.md) introduced the established the framework for automated boosting of certain hexes based on
+* [HIP 103](https://github.com/helium/HIP/blob/main/0103-oracle-hex-boosting.md) established the framework for automated boosting of certain hexes based on oracle data, such as urbanization and footfall
 
 ## Summary
 
@@ -33,7 +33,7 @@ To perform verification mapping activities one must be a subscriber on the netwo
 
 -   *Manual Designation:* Non-scalable approach designed to bootstrap new locations / geographies (such as Mexico) where there is not yet a pool of existing discovery mappers. A trusted mapper is designated by a service provider to complete physical verification of coverage at a given location, following a prescribed list of instructions, requiring such an individual to visit the location and attempt to complete a connection to a radio (Wi-Fi or CBRS). These types of trusted mappers are compensated for the work by the service providers and are not rewarded by the MOBILE emissions.
     
--   *Auto Designation:* An automated scalable approach for geographies with existing service providers (such as US with Helium Mobile) and an existing pool of discovery mappers. A discovery mapper gets automatically upgraded to verification mapper, should he/she meet certain criteria (described above). Auto designated verification mappers are able to earn additional MOBILE rewards for performing verification mapping work.
+-   *Auto Designation:* An automated scalable approach for geographies with existing service providers (such as US with Helium Mobile) and an existing pool of discovery mappers. A discovery mapper gets automatically upgraded to verification mapper, should he/she meet certain criteria (described below). Auto designated verification mappers are able to earn additional MOBILE rewards for performing verification mapping work.
   
 ### Auto Designation Criteria
 
@@ -51,7 +51,7 @@ In some instances verification mapping may be performed using specialized user e
 Subscribers that have been auto designated as verification mappers will earn rewards from the mapper pool. It is proposed that the rewards are calculated using a slightly modified approach vs. [what’s approved in HIP79](https://github.com/helium/HIP/blob/main/0079-mobile-poc-mappers-rewards.md#verification-mapping-rewards) . Specifically:
 
 -   Each radio charges up to 168 reward points over 168 hours (7 days)  
--   A verification mapper completes the verification event by successfully connecting to the radio (Wi-Fi or CBRS) and reporting a timestamp, A-GPS location (and if possible on android a skyhook beacon)
+-   A verification mapper completes the verification event by successfully connecting to the radio (Wi-Fi or CBRS) and reporting a timestamp and GPS location (and if possible on android a skyhook beacon)
     
 
 No action is required by a mapper to connect to the radio and perform verification; this happens automatically using installed wi-fi cert and/or CBRS sim whenever a verification mapper is within broadcast proximity of the radio.
@@ -64,9 +64,9 @@ It is proposed that absent a verification mapping event during the trailing 7 da
 
 ## Drawbacks
 
--   This approach may introduce limitations to international expansion of the Helium Network as it adds an additional burden on the service providers and requires an existing pool of discovery mappers to be present for the network to scale in a given geography. Cell tower location data may be considered proprietary by some service providers and maybe unavailable as “oracle data” in all geographies.    
--   Currently 100% of mapper rewards go to discovery mappers and discovery mapping rewards have been an important driver of the continued growth of the subscribers on the Helium Network. Verification mappers, if successfully deployed, will claim a considerable chunk of rewards from the discovery mapper pool, thus making discovery mapping less attractive and potentially negatively impacting subscriber growth velocity.   
--   Some small number of legitimately placed radios may either not get verified due to still relatively low density of discovery mappers on the network.
+-   This approach may introduce limitations to international expansion of the Helium Network as it adds an additional burden on the service providers and requires an existing pool of discovery mappers to be present for the network to scale in a given geography. Cell tower location data may be considered proprietary by some service providers and maybe not be available as “oracle data” in all geographies.    
+-   Currently 100% of mapper rewards go to discovery mappers and discovery mapping rewards have been an important driver of the continued growth of subscribers on the Helium Network. Verification mappers, if successfully deployed, will claim a considerable chunk of rewards from the discovery mapper pool, thus making discovery mapping less attractive and potentially negatively impacting subscriber growth velocity.   
+-   Some small number of legitimately placed radios may not get verified due to still relatively low density of discovery mappers on the network.
     
 
 ## Rationale and Alternatives
@@ -75,10 +75,9 @@ It is proposed that absent a verification mapping event during the trailing 7 da
 
 An alternative to the proposed approach could be to use the physical, specialized devices for verification mapping, akin to Spot that was initially contemplated. Downside of “spot approach” is scalability and cost.
 
+Another alternative is to completely do away with user equipment (UE) based verification mapping and double down on more robust methods of trust location identification using the hotspot itself. I.e. various probabilistic filtering and averaging of skyhook and GPS data. These methods are inherently unverifiable, as they rely on passive reporting of the observed RF environment.
 
-Another alternative is to completely do away with user equipment (UE) based verification mapping and double down on more robust methods of trust location identification using the hotspot itself. I.e. various probabilistic filtering and averaging of skyhook and GPS data. These methods are inherently unverifiable, as it is simply passive reporting of the observed RF environment.
-
-  ## Unresolved Question
+  ## Unresolved Questions
   
 Most critical open question is what happens in the event of a confirmed negative correlation between the hotspot asserted location and a location reported to by the verification mapper. I.e. if the verification mapper has connected to a hotspot and reported that its location is different from the asserted location?
 
@@ -86,7 +85,7 @@ One option is to implement a method for punishing hotspots for negative correlat
 
 ## Deployment Impact
 
-It is proposed that the implementation of this HIP will be done by Nova Labs. Implementation will require changes to all service provider apps (i.e. Helium Mobile app), as well as the rewards of Oracle. It is estimated that the work to implement this will take roughly 3 months, following the approval of this HIP and provided there are no substantial changes to scope as result of community discussions.
+It is proposed that the implementation of this HIP will be done by Nova Labs. Implementation will require changes to all service provider apps (i.e. Helium Mobile app), as well as the rewards of Oracle. It is estimated that the work to implement this will take roughly 3 months, following the approval of this HIP and provided there are no substantial changes to scope as a result of community discussions.
 
 ## Success Metrics
 
