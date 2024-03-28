@@ -1,7 +1,7 @@
 # HIP XXX: Verification Mapping for MOBILE Network
 
 - Author: @zer0tweets, @jpad
-- Start Date:
+- Start Date: 2024-03-28
 - Category: Technical & Economic
 - Original HIP PR: #
 - Tracking Issue: #
@@ -59,15 +59,13 @@ No action is required by a mapper to connect to the radio and perform verificati
 
 ### Reward Adjustments for the Radios
 
-  It is proposed that absent a verification mapping event during the trailing 7 days, maximum reward multiplier for any radio be 0.5x. I.e receiving boosted rewards of 0.7 per HIP 103 or higher and/or any service provider boosted rewards required for the radio to be verified at least once during the trailing 7 day period.  
+It is proposed that absent a verification mapping event during the trailing 7 days, maximum reward multiplier for any radio be 0.5x. I.e receiving boosted rewards of 0.7 per HIP 103 or higher and/or any service provider boosted rewards required for the radio to be verified at least once during the trailing 7 day period.  
   
 
 ## Drawbacks
 
--   This approach may introduce limitations to international expansion of the Helium Network as it adds an additional burden on the service providers and requires an existing pool of discovery mappers to be present for the network to scale in a given geography. Cell tower location data may be considered proprietary by some service providers and maybe unavailable as “oracle data” in all geographies.
-    
--   Currently 100% of mapper rewards go to discovery mappers and discovery mapping rewards have been an important driver of the continued growth of the subscribers on the Helium Network. Verification mappers, if successfully deployed, will claim a considerable chunk of rewards from the discovery mapper pool, thus making discovery mapping less attractive and potentially negatively impacting subscriber growth velocity.
-    
+-   This approach may introduce limitations to international expansion of the Helium Network as it adds an additional burden on the service providers and requires an existing pool of discovery mappers to be present for the network to scale in a given geography. Cell tower location data may be considered proprietary by some service providers and maybe unavailable as “oracle data” in all geographies.    
+-   Currently 100% of mapper rewards go to discovery mappers and discovery mapping rewards have been an important driver of the continued growth of the subscribers on the Helium Network. Verification mappers, if successfully deployed, will claim a considerable chunk of rewards from the discovery mapper pool, thus making discovery mapping less attractive and potentially negatively impacting subscriber growth velocity.   
 -   Some small number of legitimately placed radios may either not get verified due to still relatively low density of discovery mappers on the network.
     
 
@@ -92,4 +90,4 @@ It is proposed that the implementation of this HIP will be done by Nova Labs. Im
 
 ## Success Metrics
 
-  This HIP will be considered successful if at least 30% of all discovery mappers are auto-designated as verification mappers and at least at least 50% of all radios on the network are verified using this mechanism following 3 months after deployment.
+This HIP will be considered successful if at least 30% of all discovery mappers are auto-designated as verification mappers and at least at least 50% of all radios on the network are verified using this mechanism following 3 months after deployment.
