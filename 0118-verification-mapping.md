@@ -1,21 +1,23 @@
-# HIP XXX: Verification Mapping for MOBILE Network
+# HIP 118: Verification Mapping for MOBILE Network
 
 - Author: [@zer0tweets](https://github.com/zer0tweets), [@jpad](https://github.com/jpad)
 - Start Date: 2024-03-28
 - Category: Technical, Economic
-- Original HIP PR: #
-- Tracking Issue: #
+- Original HIP PR: [#950](https://github.com/helium/HIP/pull/950)
+- Tracking Issue: [#966](https://github.com/helium/HIP/issues/966)
 - Voting Requirements: veMOBILE
+
+---
+
+## Summary
+
+This Helium Improvement Proposal (HIP) lays out the approach to validate locations of Wi-Fi and CBRS hotspots using cell phones that belong to subscribers using the Helium network.
 
 ## Related Previous HIPs  
 
 * [HIP 79](https://github.com/helium/HIP/blob/main/0079-mobile-poc-mappers-rewards.md) established general framework of discovery and verification mapping and related MOBILE reward pools
 * [HIP 84](https://github.com/helium/HIP/blob/main/0084-service-provider-hex-boosting.md) established the framework for service providers to boost hexes by burning MOBILE
 * [HIP 103](https://github.com/helium/HIP/blob/main/0103-oracle-hex-boosting.md) established the framework for automated boosting of certain hexes based on oracle data, such as urbanization and footfall
-
-## Summary
-
-This Helium Improvement Proposal (HIP) lays out the approach to validate locations of Wi-Fi and CBRS hotspots using cell phones that belong to subscribers using the Helium network.
 
 ## Motivation
 
