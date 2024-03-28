@@ -1,6 +1,6 @@
 # HIP XXX: Verification Mapping for MOBILE Network
 
-- Author: @zer0tweets, @jpad
+- Author: [@zer0tweets](https://github.com/zer0tweets), [@jpad](https://github.com/jpad)
 - Start Date: 2024-03-28
 - Category: Technical & Economic
 - Original HIP PR: #
