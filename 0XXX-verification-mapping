@@ -25,7 +25,7 @@ After implementation of HIP84 and HIP103, the rewards for hotspots on the Helium
 
 ## Stakeholders
   
--   Deployers - deployers will be unable to collect rewards in locations boosted by HIP84 or HIP103, unless their location has been verified by a verification mapper
+-   Deployers - deployers will be unable to collect rewards in locations boosted by HIP-84 or HIP-103, unless their location has been verified by a verification mapper
 -   Subscribers - Subscribers will have the opportunity to earn extra rewards for performing verification mapping tasks
 -   Service providers - will need to designate verification mappers and/or provide additional oracle data to the network, such as location of their macro towers and a subset of call data records
    
