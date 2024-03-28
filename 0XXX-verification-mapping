@@ -21,7 +21,7 @@ This Helium Improvement Proposal (HIP) lays out the approach to validate locatio
 
 ## Motivation
 
-After implementation of HIP84 and HIP103, the rewards for hotspots on the Helium network can vary, depending on the location. This creates an incentive for hotspot depoyers to misrepresent their locations to earn larger rewards. While there are a number of measures already in-place to verify asserted hotspot locations, such as Skyhook and GPS validation, those are potentially spoofable.
+After implementation of HIP-84 and HIP-103, the rewards for hotspots on the Helium network can vary, depending on the location. This creates an incentive for hotspot deployers to misrepresent their locations to earn larger rewards. While there are a number of measures already in-place to verify asserted hotspot locations, such as Skyhook and GPS validation, those are potentially spoofable.
 
 ## Stakeholders
   
