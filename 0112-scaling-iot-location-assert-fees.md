@@ -11,51 +11,42 @@
 
 ## Summary
 
-This HIP proposes allowing one (1) free IOT assertion per rolling 365 epoch period for Hotspots, including the initial assertion, and allowing one (1) free IOT assertion per one (1) epoch for data-only Hotspots. Any additional assertions conducted within the above rolling periods will be required to pay a $10 fee in IOT burn for hotspots, and $5.00 in IOT for data-only Hotspots. 
+This HIP proposes allowing one (1) free IOT assertion per rolling 365 epoch period for Hotspots, including the initial assertion, and allowing one (1) free IOT assertion per one (1) epoch for data-only Hotspots. Any additional assertions conducted within the above rolling periods will be required to pay a $10 fee in Data Credit (DC) burn for Hotspots, and $5 fee in DC for data-only Hotspots. 
 
 ## Motivation
 
-Currently, assertion fees for the IOT subnetwork are paid in Data Credit (DC) burn, which is created by burning HNT. Due to net emissions, the burning of HNT and DC may at times benefit the MOBILE subDAO greater than the IOT subDAO. This is due to the fact that the DAO utility score created in  [HIP 53](https://github.com/helium/HIP/blob/main/0051-helium-dao.md) does not provide greater emissions for more DC burn outside of onboards. 
-
-Further, this HIP will make it cheaper for Hotspot deployers to ensure their asserted location is accurate by allowing one (1) free location assert per 365 epochs for Hotspots. 
+Currently, some Hotspot deployers disagree with paying a $10 fee to reassert their Hotspots location, and therefore, will not reassert their location after they move to a different hex. This may result in IOT explorers being inaccurate and displaying Hotspots in locations they may no longer be in.  
 
 
 ## Stakeholders
 
-- **IOT Hotspot Makers** will no longer be required to cover the initial $10 DC assertion fee, which may allow hotspot makers to sell hotspots for a cheaper price.
-- **IOT Hotspot Owners** who have a new hotspot in which the maker wallet does not contain appropriate funds to cover the initial assertion will now be able to complete that initial assertion for free.
-- **IOT Token Holders** will benefit through an increase in demand and decrease in total supply of IOT.
-- **HNT Holders** will experience a decrease in demand for HNT to DC burn, as DC burn will no longer be required to assert hotspots.
+- **IOT Hotspot Makers** will no longer be required to cover the initial $10 DC assertion fee, which may allow Hotspot makers to sell Hotspots for a cheaper price.
+- **New IOT Hotspot Owners** who have a new Hotspot in which the maker wallet does not contain appropriate funds to cover the initial assertion will now be able to complete that initial assertion for free.
+- **IOT Hotspot Owners** will be able to assert their location for free once per year.
 
 ## Detailed Explanation
-By allowing one (1) free location assertion per year for Hotspots, and one (1) free per epoch for data-only Hotspots, Hotspot owners are more likely to relocate their Hotspots, leading to improved network coverage in various locations. In addition, by making subsequent assertions for Hotspots requiring a $10 IOT burn instead of DC burn, this will help increase demand for the IOT token.
-
+By allowing one (1) free location assertion per year for Hotspots, and one (1) free per epoch for data-only Hotspots, Hotspot owners are more likely to relocate and assert their Hotspots correctly, leading to improved network coverage in various locations. 
 
 ## Technical Implementation
 
-The workflow for initial hotspot location assertions will be as followed:
-
-1. User is prompted to select an initial location for their hotspot
-2. Helium Wallet App will review on-chain data for that hotspot to determine if the hotspot has ever been asserted. If not, the initial assertion fee is 0 IOT.
-
-The workflow for reassertions for hotspot locations will be as followed:
+The workflow for initial and reassertions for Hotspots will be as followed:
 
 1. User initiates location assertion within the Helium Wallet App
-2. The Helium Wallet App will review on-chain data for that hotspot to determine when the last location assertion was
-3. If the last free (0 IOT) location assertion was > 365 epochs or never occurred, cost for reassertion is 0 IOT
-4. If the last free (0 IOT) location assertion was < 365 epochs, cost for reassertion is $10 worth of IOT at current Oracle Price.
+2. The Helium Wallet App will review on-chain data for that Hotspot to determine when the last location assertion was
+3. If the last free (0 DC) location assertion was > 365 epochs or never occurred, cost for reassertion is 0 DC
+4. If the last free (0 DC) location assertion was < 365 epochs, cost for reassertion is $10 worth of DC.
 
-The workflow for initial and reassertions for data only hotspots will be as followed:
+The workflow for initial and reassertions for data only Hotspots will be as followed:
 
 1. User initiates initial or reassert location within the Helium Wallet App
-2. The Helium Wallet App will review on-chain data for that hotspot to determine when the last location assertion was
-3. If the last free (0 IOT) location assertion was > 1 epochs or never occurred, cost for reassertion is 0 IOT
-4. If the last free (0 IOT) location assertion was < 1 epochs, cost for reassertion is $5 worth of IOT at current Oracle Price.
+2. The Helium Wallet App will review on-chain data for that Hotspot to determine when the last location assertion was
+3. If the last free (0 DC) location assertion was > 1 epochs or never occurred, cost for reassertion is 0 DC
+4. If the last free (0 DC) location assertion was < 1 epochs, cost for reassertion is $5 worth of DC.
 
 
 ## Drawbacks
 
-The primary drawback of this proposal is a lower overall DC burn for the network. However, the potential benefits gained from increased Hotspot relocation, improved network coverage and potential IOT burn can offset this drawback.
+The primary drawback of this proposal is a lower overall DC burn for the network. However, the potential benefits gained from increased Hotspot relocation and improved network coverage can offset this drawback.
 
 ## Rationale
 
