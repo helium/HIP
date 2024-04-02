@@ -17,6 +17,7 @@ With this in mind, there are also a few other amendments in this HIP that will a
 ## Prior / Related HIPs
 
 [HIP-84 Service Provider Hex Boosting](https://github.com/helium/HIP/blob/main/0084-service-provider-hex-boosting.md) created Service Provider Hex Boosting.
+
 [HIP-109 Hex Boosting by Deployment](https://github.com/helium/HIP/blob/main/0109-hex-boosting-by-deployment.md) modifys hex boosting to allow Service Providers to specify a radio type. 
 
 ## Motivation
