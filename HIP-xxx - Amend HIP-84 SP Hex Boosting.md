@@ -14,10 +14,10 @@ If a service provider decides to hex boost all of Miami, the rewards distributed
 While this author understands that the first service provider on the network is key to the networks success for future service providers to join, it should not be at the detriment of the network's natural expansion nationwide into other cities, and internationally. 
 With this in mind, there are also a few other amendments in this HIP that will also benefit the Service Provider in regards to HIP-84. One of which is changing the minium boost time to 3 months, and the other is staking the hotspot in order to receive the boosted rewards. 
 
-## Prior Related HIPs
+## Prior / Related HIPs
 
 [HIP-84 Service Provider Hex Boosting](https://github.com/helium/HIP/blob/main/0084-service-provider-hex-boosting.md) created Service Provider Hex Boosting.
-
+[HIP-109 Hex Boosting by Deployment](https://github.com/helium/HIP/blob/main/0109-hex-boosting-by-deployment.md) modifys hex boosting to allow Service Providers to specify a radio type. 
 
 ## Motivation
 
