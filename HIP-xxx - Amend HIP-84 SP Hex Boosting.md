@@ -82,8 +82,7 @@ There are a few alternatives to HIP-84 that are being discussed; however, the mo
 
 ## Unresolved Questions
 
-How do we handle hotspots that are automatically denied hexboosting rewards due to low skyhook trust? Do they remain staked? Or automatically unstaked? Nova/Helium Mobile input will be needed.  
-*** Addressed above in Staking Eligibility for Boosted Hex Rewards
+Will add as they come up in discussion. 
 
 
 ## Deployment Impact
