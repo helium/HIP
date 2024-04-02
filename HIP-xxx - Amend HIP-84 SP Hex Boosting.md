@@ -31,16 +31,19 @@ This HIP is being proposed to address some concerns about the original implement
 
 ## Detailed Explanation
 
-This HIP aims to do three things to amend HIP-84 Service Provider Hex Boosting.  
+This HIP aims to do four (4) things to amend HIP-84 Service Provider Hex Boosting.  
 
 1.  Service Provider Hex Boosting rewards to be taken out of the Service Provider Bucket first. 
 HIP-84 is by title, is Service Provider Hex Boosting, and this should come out of the rewards distributed to the Service Provider. If there is not enough MOBILE allocated for the Service Provider bucket to cover the boosted hexes in a single epoch, the remainer would then come out of the networks regular PoC bucket. 
-This would incentivize Service Providers to think more carefully about where, for how long, and by how much a hex is boosted as it comes out of their own reward bucket. Incidentally, this also eliminates the need for limiting hex boosting multipliers while still allowing the Service Provider to boost 10x, 50x, 100x and beyond.  As the service provider takes the risk that their own rewards are taken advantage of, it will be an incentive to further police dishonest placements that they have deemed as high value.
+This would incentivize Service Providers to think more carefully about where, for how long, and by how much a hex is boosted as it comes out of their own reward bucket.
 
 2. Reduce the minimum time for Service Provider Hex Boosting to 3 months. 
 Currently set to 6 months minimum, reducing this to 3 months allows Service Providers more flexibility in boosting a hex that they may be unsure if has value. Given if that this HIP passes and will be out of their own reward bucket, this will allow the Service Provider to further reduce the risk if the location or deployments in said location do not end up being beneficial to that Service Provider.
 
-3. Staking a hotspot NFT for Boosted Hex rewards.
+3. Limit boosting to a maximum of 10x. 
+Currnetly uncapped, we as a community have come to the conclusion that the 100x boosted hexes only breeds reward chasing and attempted gaming of PoC. This can be proven as there were very few people (if not no one) deploying within boosted hexes prior to the value oracle of MOBILE changing drastically late 2023. It is this authors opinion that boosted hexes should incentivise a longer term depoyment strategy, and the deployer should have their goals aligned with that in mind. With the current mutiplers that can be set, the goals of the depoyments in these are not for long term, and only short term.  This multiper would only reduce the maximum for any future hex boosting, and not change any current boosted hexes once passed. 
+
+4. Staking a hotspot NFT for Boosted Hex rewards.
 In order to receive boosted rewards from a boosted hex that is being covered, the operator will need to stake their hotspot NFT after they are deemed eligable (more on that below) for a period of time. The stake time will vary and depending on the amount of epochs that are remaining within those boosted hexes (averaged out if the hotspot covers multiple hexes), and multiplied by 2x. The hotspot operator will be asked if they are willing to stake for x amount of epochs in order the receive those boosted rewards, which again is double of the averaged out remaining epoche time on those boosted hexes covered. Once the hotspot is staked for boosted hex coverage rewards, the hotspot will be unable to reassert for the duration of the stake and the NFT will also be non-transferrable to any other wallet. If they choose not to stake, they will receive no boosted rewards, and of course be able to reassert or transfer their hotspot at any time.
 By doing this, the network will demotivate hotspots operators from chasing boosted hexes only for the boosted rewards, making deals or contracts that solely revolve around the boosted hex time, and then moving out of the Boosted Hexes after the boosted hex has expired. This will benefit the service provider as it will ask for an equal amount of epoches for deployment time from the deployer without the boost as an incentive.
 It is also expected that all current deployments that cover boosted hexes would be required and asked to stake their hotspot to their location in order to receive the boosted hex rewards. Once fully implemented, there will be NO 'Grandfathered' hotspots that receive boosted hexes rewards without staking.
@@ -62,10 +65,10 @@ Once the 72 hours have passed, if the hotspot meets eligibility requirements, th
 
 
 Phase 1:
-The first phase of this implementation would be Parts 1 and 2 stated above, as these should take relatively little time for implementation.
+The first phase of this implementation would be Parts 1, 2, and 3 stated above, as these should take relatively little time for implementation.
 
 Phase 2:
-The second phase of this implementation would be Part 3 stated above, as this could take longer for the coding of the staking mechanism. 
+The second phase of this implementation would be Part 4 stated above, as this could take longer for the coding of the staking mechanism. 
 
 
 
