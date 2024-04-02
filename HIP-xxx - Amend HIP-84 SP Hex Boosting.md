@@ -33,8 +33,8 @@ This HIP is being proposed to address some concerns about the original implement
 
 This HIP aims to do three things to amend HIP-84 Service Provider Hex Boosting.  
 
-1.  Service Provider Hex Boosting rewards to be taken out of the Service Provider Bucket. 
-HIP-84 is by title, is Service Provider Hex Boosting, and this should come out of the rewards distributed to the Service Provider. 
+1.  Service Provider Hex Boosting rewards to be taken out of the Service Provider Bucket first. 
+HIP-84 is by title, is Service Provider Hex Boosting, and this should come out of the rewards distributed to the Service Provider. If there is not enough MOBILE allocated for the Service Provider bucket to cover the boosted hexes in a single epoch, the remainer would then come out of the networks regular PoC bucket. 
 This would incentivize Service Providers to think more carefully about where, for how long, and by how much a hex is boosted as it comes out of their own reward bucket. Incidentally, this also eliminates the need for limiting hex boosting multipliers while still allowing the Service Provider to boost 10x, 50x, 100x and beyond.  As the service provider takes the risk that their own rewards are taken advantage of, it will be an incentive to further police dishonest placements that they have deemed as high value.
 
 2. Reduce the minimum time for Service Provider Hex Boosting to 3 months. 
