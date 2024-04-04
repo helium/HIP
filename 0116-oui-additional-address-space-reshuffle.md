@@ -15,7 +15,8 @@ a minimum device address block from the Helium Foundation for $100 per address, 
 
 [Helium OUI Documentation](https://docs.helium.com/iot/run-an-lns/buy-an-oui)
 
-This proposal is to increase the amount of address space from 8 to 128 for the same minimum one time purchase price.
+This proposal is to decrease the purchase cost from $800 to $100 for the same `/29` 8 Address block.<br />
+While also seeking to move the cost of OUI and Addresses space to be burnt from IOT subdao tokens.
 
 ## Motivation
 The initial 8 block address spacing with the original helium console had the ability to multiplex this space out to
@@ -41,11 +42,11 @@ Prefix / number of device address allocations
 32 / 1
 31 / 2
 30 / 4
-29 / 8 ________________ <= Current allocation size.
+29 / 8 ________________ <= Current allocation size to reduce from $800 to $100.
 28 / 16
 27 / 32
-26 / 64 _______________ <= Proposed secondary new block allocation size.
-25 / 128 ______________ <= Proposed preferred new block allocation size.
+26 / 64
+25 / 128
 24 / 256
 23 / 512
 22 / 1,024
@@ -96,22 +97,11 @@ only a few existing 000024 & 00003C users have purchased more than 1 x 8 address
 - Possible total allocations: 4,194,304
 - Network One Time Revenue: $3,355,443,200
 
-# First Proposal /25
-- Possible total allocations: 262,144
-- Network One Time Revenue: $209,715,200
-
-# Secondary Proposal /26
-- Possible total allocations: 524,288
+# After Proposal /29
+- Possible total allocations: 4,194,304
 - Network One Time Revenue: $419,430,400
-
-# 8 Block /29 at $10 per Address
-- Possible total allocations: 4,194,304
-- Network One Time Revenue: $335,544,320
-
-# 8 Block /29 at $5 per Address (Yearly Rent)
-- Possible total allocations: 4,194,304
-- Network Total Possible Yearly Revenue: $20,971,520
 ```
+Move the costs to be paid by burning IOT tokens to help IOT subdao score.
 
 ### Acceptable alternatives could include:
 ```
