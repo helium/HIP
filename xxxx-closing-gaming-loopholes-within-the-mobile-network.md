@@ -30,11 +30,22 @@ This HIP will set the maximum height an outdoor hotspot can be asserted to 100 f
 This HIP proposes changing the maximum asserted distance difference for indoor and outdoor Wi-Fi Access Points to the following: 
 
 #### Indoor Access Points
-In instances where external sources, such as Skyhook, states the asserted distance is 200-399 meters away, the trust score will be set to `0.25`. In instances where external sources, such as Skyhook, states the asserted distance is 400 or greater meters away, the trust score will be set to `0.00`.
+In instances where external sources, such as Skyhook, states the asserted distance is 201-300 meters away, the trust score will be set to `0.25`. In instances where external sources, such as Skyhook, states the asserted distance is 301 meters or greater meters away, the trust score will be set to `0.00`. Refer to the table below:
+
+|Difference in Distance Asserted| Trust Score|
+|-------------------------------|------------|
+| 0-200 Meters                  | `1.00`     |
+| 201-300 Meters                | `0.25`     |
+| 301 Meters or Greater         | `0.00`     |
 
 #### Outdoor Access Points
-In instances where external sources, such as Skyhook, states the asserted distance is 100-249 meters away, the trust score will be set to `0.25`. In instances where external sources, such as Skyhook, states the asserted distance is 250 or greater meters away, the trust score will be set to `0.00`.
+As the Outdoor Access Points contain GPS, they are able to obtain much accurate location readings than the indoor Wi-Fi. As such, the difference in distance is set to be more strict. In instances where GPS and or external sources, such as Skyhook, states the asserted distance 31-50 meters away, the trust score will be set to `0.25`. In instances where external sources, such as Skyhook, states the asserted distance is 51 or greater meters away, the trust score will be set to `0.00`. Refer to the table below:
 
+|Difference in Distance Asserted| Trust Score|
+|-------------------------------|------------|
+| 0-30 Meters                   | `1.00`     |
+| 31-50 Meters                  | `0.25`     |
+| 51 Meters or Greater          | `0.00`     |
 
 ### Maximum Asserted Distance for Boosted Hexes
 Further, in order for access points to be eligible for boosted Service Provider rewards defined in HIP-84, the asserted distances must be 30 meters or less than the reported location from external services for both indoor and outdoor Access Points. In instances where the difference is greater than 30 meters, the access point will still be eligible for PoC rewards, but not boosted rewards.
