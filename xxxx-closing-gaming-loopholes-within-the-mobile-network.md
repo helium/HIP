@@ -69,8 +69,8 @@ One alternative was already explored via HIP 107; however, the community voted a
 
 ### Phase 2
 
-* Update the Hotspot trust score for Wi-Fi indoor Hotspots to `0.25` if the asserted location is 400 meters or more from external data sources like Skyhook, etc.
-* Update the Hotspot trust score for Wi-Fi Outdoor Hotspots to `0.25` if the asserted location is 100 meters or more from external data sources like Skyhook, and to `0.00` if more than 250 meters away.
+* Update the Hotspot trust score for Wi-Fi indoor Hotspots to `0.25` if the asserted location is 201-300 meters or more from external data sources like Skyhook, and `0.00` if the asserted location is 301 meters or more away.
+* Update the Hotspot trust score for Wi-Fi Outdoor Hotspots to `0.25` if the asserted location is 31-50 meters or more from external data sources like Skyhook and or skyhook, and to `0.00` if 51 or more meters away.
 
 ### Phase 3
 * Update and backfill the protocol to add Height and Azimuth to on chain data of MOBILE hotspots.
