@@ -1,0 +1,47 @@
+# Slash Helium Mobile for incorrect RF pattern
+
+- Author(s): AcknorAbyss
+- Start Date: <!-- fill me in with today's date, 2023-04-05 -->
+- Category: Economic
+- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
+- Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
+- Vote Requirements: veMOBILE Holders
+
+## Summary
+
+This HIP suggests slashing Helium Mobile service provider stake (currently 500 million MOBILE) by 10% (50,000,000 MOBILE) for importing an incorrect RF pattern on the antenna KP-3Q0MA-13. 
+
+## Stakeholders
+
+Nova and Heloium Mobile
+Wi-Fi and CBRS Mobile Deployments
+
+## Detailed Explanation
+
+We suggest this slashing due to importing an inaccurate RF pattern for the antenna pattern of KP-3Q0MA-13 for the NOVA-436 radios in the CPI submission process. The CPI submissions for this antenna that were previously authorized and accepted months prior were promptly rejected without warning on 28/02/2024 bringing down the accessibility of many CBRS radios due to a mistake by one of the Nova employees. The KP-3Q0MA-13 was also listed on the official HelloHelium Planner as a usable antenna. Both parties, Nova and Helium Mobile, should be held accountable for this mistake.
+
+## Motivation
+
+To hold service providers and Nova accountable for mistakes that are controllable and avoidable, and encourage more professional communication and handling within the community.
+
+## Drawbacks
+
+None
+
+## Rationale and Alternatives
+
+This would be the first slashing of a service provider and set a starting point for future slashes. 
+
+## Unresolved Questions
+
+Is Nova allowed to vote on this?
+
+## Deployment Impact
+
+None
+
+## Success Metrics
+
+Nova and Helium Mobile will be more careful in the future by changing the readiness of the network. 
+
+
