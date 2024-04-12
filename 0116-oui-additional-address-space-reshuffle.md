@@ -30,7 +30,12 @@ This should help encourage adopters to use the Helium 00003C NetID rather than b
 elsewhere. In return drive up devices on the network by lowering the cost of entry for both hosts and deployers.
 
 ## Stakeholders
-This HIP will affect existing and future OpenLNS operators or any individual operating an OUI on the Helium IOT network.
+This HIP will affect existing and future OpenLNS operators or any individual operating an OUI on the Helium IOT network
+by lowering the cost of entry for deployment on the IOT network.
+- Future operators by a reduced cost of entry.
+- Existing operators by reduced cost of additional address block purchases.
+
+Helium Foundation for required develpement work to setup the appropriate mechanism to burn IOT instead of DC. 
 
 Feedback welcome by the official discord channel or by watching the HIP repository on GitHub.
 
@@ -126,3 +131,7 @@ attractive.
 ## Success Metrics
 An uptick in OUI deployers and devices traversing the network. With acceptance being more DC burn and IOT rewards
 for hotspot hosts.
+
+## Documentation Updates
+A list of known pages in the documentation that will need updating should this HIP be successful.
+- Helium OUI Documentation / https://docs.helium.com/iot/run-an-lns/buy-an-oui
