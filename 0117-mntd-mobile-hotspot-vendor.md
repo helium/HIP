@@ -36,7 +36,7 @@ HIP53 specifies two conditions which a Hotspot Vendor needs to meet to be allowe
 - Stake a minimum of 50M MOBILE
 - Obtain MOBILE subDAO governance approval
 
-Additionally, MNTD. has worked with the Helium Foundation to obtain a penetration test from a reputable 3rd party security vendor, of which the Foundation can attest to the results. A link to these results will be provided after this HIP is formally numbered and launched in the community for discussion.
+Additionally, MNTD. has worked with the Helium Foundation to obtain a penetration test from a reputable 3rd party security vendor, of which the Foundation [can attest to the results](./files/0117/helium-foundation-attestation.pdf).
 
 ## Implementation
 
