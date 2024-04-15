@@ -19,7 +19,7 @@ Additionally, we propose that this proxy assignment be recursive, meaning that t
 
 We also propose that this assignment can be revoked or reassigned at any time allowing the participant to both change their vote for a particular position or entirely reassign their vote power to a new voting proxy wallet. This provides an important balance that allows a voter to retain control at all times.
 
-Finally, we propose that proxy voting in Helium’s ecosystem is broken into seasons that reset every August 1st, aligned with the anniversary of the network. This will ensure that assigned proxies do not get stale.
+Finally, we propose that proxy voting in Helium’s ecosystem is broken into seasons that reset every August 1st, aligned with the anniversary of the network. This will ensure that assigned proxies do not get stale. To ensure that voters have adequate time to re-assign their proxies, there will be a 30 day window prior to the reset within which re-assigned proxies carry over to the next season. This way all non-stale proxies can be preserved, avoiding potential for a governance attack while voters re-assign.
 
 It is worth noting that the concept of vote assignment already exists in [Realms](https://realms.today) on Solana but as we move to using Modular Governance, we believe that the protocol needs to explicitly formalize this feature. As part of formalizing this feature, the authors would like to create a curated registry of well known Proxies. This will allow people to fully research proxies before they assign voting power. The authors believe that the discovery aspect of voting proxies is important, otherwise it will have limited effectiveness.
 
