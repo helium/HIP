@@ -11,7 +11,7 @@
 
 ## Summary
 
-This HIP proposes allowing one (1) free IOT Location assertion per rolling 365 epoch period for IOT Hotspots, including the initial assertion, and allowing one (1) free IOT assertion per one (1) epoch for IOT Data-only Hotspots. Any additional assertions conducted within the above rolling periods will be required to pay the existing $10 fee in Data Credits (1,000,000 DC) burn for Hotspots, and the existing $5 fee in Data Credits (500,000 DC) for Data-only Hotspots. This HIP also removes the fee ($10 for IOT Hotspot and $5 for IOT Data-Only Hotspots) associated with asserting the first initial location for Hotspots.
+This HIP proposes allowing one (1) free IOT Location assertion per rolling 365 epoch period for IOT Hotspots, including the initial assertion, and allowing one (1) free IOT assertion per one (1) epoch for IOT Data-only Hotspots. Any additional assertions conducted within the above rolling periods will be required to pay the existing $10 fee in Data Credits (1,000,000 DC) burn for Hotspots, and the existing $5 fee in Data Credits (500,000 DC) for Data-only Hotspots. This HIP also removes the fee ($10 for IOT Hotspot and $5 for IOT Data-Only Hotspots) associated with asserting the initial location for Hotspots during onboarding.
 
 ## Motivation
 
