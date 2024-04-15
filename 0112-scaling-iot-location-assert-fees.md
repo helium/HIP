@@ -65,5 +65,5 @@ The Helium Wallet App and Maker Apps do not need to be updated.
 The Helium Foundation is requested to make the changes in the onboarding process to confirm the reduced 0 DC fee as appropriate.
 
 ## Success Metrics
-This HIP will be considered successful if more IOT Hotspots assert their correct location on the network.
+This HIP will be considered successful if more incorrectly asserted IOT Hotspots reassert their Hotspot to correct location on the network.
 
