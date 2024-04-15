@@ -25,8 +25,8 @@ Hotspot owners pay the onboarding and initial location assertion fees for IOT Da
 ## Stakeholders
 
 - **New IOT Hotspot Owners** who have a new Hotspot in which the maker wallet does not contain appropriate funds to cover the initial assertion will now be able to complete that initial assertion for free.
-- **IOT Hotspot Owners** will be able to assert their location for free once per year, including their first initial assert.
-- **Data-only IOT Hotspot Owners** will be able to assert their location for free once per day, including their first initial assert.
+- **IOT Hotspot Owners** will be able to assert their location for free once per year, including their first assert.
+- **Data-only IOT Hotspot Owners** will be able to assert their location for free once per day, including their initial assert.
 - **IOT Hotspot Makers** will no longer be required to cover the initial $10 DC assertion fee, which may allow Hotspot makers to sell Hotspots for a cheaper price.
   **IOT Hotspot Makers with large DC Balances** proportionate to quantity of Hotspot onboards will take longer to burn through their balance as DC is consumed 20% slower. Eg, SenseCAP, Browan, Milesight, Dragino
 
