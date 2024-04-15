@@ -2,7 +2,7 @@
 
 - Author(s): Ken Yu
 - Start Date: 2024-03-25
-- Category: Economic, Technical
+- Category: Governance
 - Original HIP PR: [#948](https://github.com/helium/HIP/pull/948)
 - Tracking Issue: [#962](https://github.com/helium/HIP/issues/962)
 - Vote Requirements: veMOBILE Holders
