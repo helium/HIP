@@ -17,11 +17,10 @@ We wish to increase utility of the IOT token and increase participation in votin
 
 - All current and future veIOT holders as well as IOT holders.
 
-
 ## Detailed Explanation
 
 1. **Current veIOT unlock:**
-   - Upon implementation, all IOT currently locked in veIOT at the time of implementation will be able to unlock their tokens without any cool down period for the first 7 epochs after implementation. Any legacy veIOT will instantly reduce to a 1x on the implementation date and be treated like all other veIOT, aside from the 7 epoch amnesty period described above.
+   - Upon implementation, all IOT currently locked in veIOT at the time of implementation will be able to unlock their tokens and wait 14 epochs for the cool down period.
 
 2. **Emissions Apportionment:**
    - Allocate 4% of total IOT emissions to veIOT stakers, creating a direct and proportional reward system for participants.
@@ -68,14 +67,17 @@ Unlock of existing IOT may lead to less locks if the incentive is not high enoug
 
 ## Deployment Impact
 
-Describe how this design will be deployed and any potential impact it may have on current users of
-this project.
+*Existing veIOT Stakers*
+Current veIOT stakers will have their positions unlocked and the tokens returned to their respective wallets. This process should be seamless and automatic, requiring no action on the part of the stakers.
 
-- How will current users be impacted?
-- How will existing documentation/knowledge base need to be supported? Any content to change at
-  <http://docs.helium.com>?
-- Is this backwards compatible? Can this HIP be undone?
-  - If not, what is the procedure to migrate?
+*Helium Governance Systems*
+The Helium governance systems will require updates to accommodate the new staking and voting mechanisms outlined in the proposal.
+Changes need to be made within the blockchain infrastructure to support the staking rewards and voting power adjustments.
+
+*Docs updates*
+Changes to the staking section to reflect that users can stake veiot to earn rewards. A guide on how to stake veiot and all options available should be produced.
+
+https://docs.helium.com/governance/staking-with-helium-vote/
 
 ## Success Metrics
 
