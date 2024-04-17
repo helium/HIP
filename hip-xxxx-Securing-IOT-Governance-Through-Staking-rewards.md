@@ -22,6 +22,14 @@ We wish to increase utility of the IOT token and increase participation in votin
 1. **Current veIOT unlock:**
    - Upon implementation, all IOT currently locked in veIOT at the time of implementation will be able to unlock their tokens and wait 14 epochs for the cool down period.
 
+   **Contant Lockups**
+
+   - Position is updated to 365 days and gets a 365x 0.0025 token multiplier. This position can be unlocked with a 14 day cooldown.
+
+   **Cliff Lockups**
+
+   - Position is updated to 0 power and can unlock with a 14 day cooldown.
+
 2. **Emissions Apportionment:**
    - Allocate 4% of total IOT emissions to veIOT stakers, creating a direct and proportional reward system for participants.
 
@@ -67,16 +75,19 @@ Unlock of existing IOT may lead to less locks if the incentive is not high enoug
 
 ## Deployment Impact
 
-*Existing veIOT Stakers*
+## Existing veIOT Stakers
 Current veIOT stakers will be able to unlock their positions and wait 14 days for the cooloff to have their tokens returned
 
-*Helium Governance Systems*
+## Helium Governance Systems
 The Helium governance systems will require updates to accommodate the new staking mechanisms outlined in the proposal. Changes need to be made within the blockchain infrastructure to support the staking rewards.
 
-*Docs updates*
-Changes to the staking section to reflect that users can stake veiot to earn rewards.
+## Documentation Updates
+Documentation regarding staking with Helium Vote will need to be updated to reflect the new staking mechanisms introduced by this proposal. Users should be informed that they can stake veIOT to earn rewards and participate in the governance process effectively.
 
 https://docs.helium.com/governance/staking-with-helium-vote/
+
+## User Impact
+Users will have enhanced staking options with the introduction of staking rewards for veIOT. This may encourage more users to stake their IOT tokens, thus increasing network participation and stability. The availability of staking rewards may also lead to increased engagement from users who were previously hesitant to participate in staking or governance activities.
 
 ## Success Metrics
 
