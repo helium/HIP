@@ -68,14 +68,13 @@ Unlock of existing IOT may lead to less locks if the incentive is not high enoug
 ## Deployment Impact
 
 *Existing veIOT Stakers*
-Current veIOT stakers will have their positions unlocked and the tokens returned to their respective wallets. This process should be seamless and automatic, requiring no action on the part of the stakers.
+Current veIOT stakers will be able to unlock their positions and wait 14 days for the cooloff to have their tokens returned
 
 *Helium Governance Systems*
-The Helium governance systems will require updates to accommodate the new staking and voting mechanisms outlined in the proposal.
-Changes need to be made within the blockchain infrastructure to support the staking rewards and voting power adjustments.
+The Helium governance systems will require updates to accommodate the new staking mechanisms outlined in the proposal. Changes need to be made within the blockchain infrastructure to support the staking rewards.
 
 *Docs updates*
-Changes to the staking section to reflect that users can stake veiot to earn rewards. A guide on how to stake veiot and all options available should be produced.
+Changes to the staking section to reflect that users can stake veiot to earn rewards.
 
 https://docs.helium.com/governance/staking-with-helium-vote/
 
