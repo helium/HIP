@@ -23,24 +23,23 @@ We wish to increase utility of the IOT token and increase participation in votin
    - Upon implementation, all IOT currently locked in veIOT at the time of implementation will be able to unlock their tokens and wait 14 epochs for the cool down period.
 
    **Contant Lockups**
-
-   - Position is updated to 365 days and gets a 365x 0.0025 token multiplier. This position can be unlocked with a 14 day cooldown.
+   - Position is updated to the current number of locked up days and receives the 0.0025 top up multiplier for that number of days. This position can be unlocked with a 14 day cooldown.
 
    **Cliff Lockups**
 
    - Position is updated to 0 power and can unlock with a 14 day cooldown.
 
-2. **Emissions Apportionment:**
+3. **Emissions Apportionment:**
    - Allocate 4% of total IOT emissions to veIOT stakers, creating a direct and proportional reward system for participants.
 
-3. **Reduced Staking Minimums:**
+4. **Reduced Staking Minimums:**
    - Establish a minimum stake duration of 1 day with a 1x vote power multiplier.
    - Implement a daily multiplier increment of 0.0025 for every day a stake remains active. This progressive approach aligns with sustained commitment, rewarding long-term participants.
 
-4. **Unlocking Mechanism:**
+5. **Unlocking Mechanism:**
    - Stakers can unlock at any time and will be subject to a 14 epoch (approximately equal to 14 days) cool down period. During the cool down period, the tokens that were locked for veIOT will remain locked, but the veIOT will not have any voting power or receive any emissions. Stakers can elect to unlock all or some portion of their stake at any time.
 
-5. **Voting Power Increase:**
+6. **Voting Power Increase:**
     - A future HIP can introduce an additional multiplier increase of for every vote cast by veIOT holders in the governance process. This HIP will include the development work to make that possible; however, it will be implemented with an increase set at 0.00 unless another HIP is proposed and passed before implementation. It is the expectation of the authors that the other HIP will be discussed in parallel with or shortly after the passage of this HIP.
 
 ## Drawbacks
