@@ -40,7 +40,7 @@ Example: Currently, all CBRS radios are unable and have not received 1 data cred
 
 ## Rationale 
  
-1 data credit was chosen as it is low enough to simulate a single mobile webpage loading on a device that is connected. But high enough to discourage end users expectations that just connecting and then disconnecting from the unit is enough to qualify as registering as an activity. 
+1 data credit was chosen as it is low enough to simulate a single mobile webpage loading on a device that is connected. 
 
 
 ## Implementation
