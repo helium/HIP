@@ -18,7 +18,7 @@ Service Provider rewards will be used to programmatically issue various incentiv
 Helium Network utility is a function of the number of subscribers sending paid data to the network. I.e. we want more subscribers. Per HIP53, the service provider rewards bucket was originally designed to empower service providers to bring more subscribers to the network using token incentives.
 Today, the service provider bucket is mostly unused. Some rewards go to Helium Mobile for the traffic, but 90%+ of it is just never emitted.
 
-We propose a referral incentive program that would channel rewards to the community referring users that take advantage of un-emitted MOBILE in the service provider bucket.
+We propose a referral incentive program that would channel rewards to the community referring users and takes advantage of non-emitted MOBILE in the service provider bucket.
 
 ## Stakeholders
 
@@ -28,17 +28,29 @@ We propose a referral incentive program that would channel rewards to the commun
 
 ## Detailed Explanation
 
-- Service providers get the ability to delegate a percentage of their rewards towards a programmatic “incentive escrow fund”.
-- It is up to the service provider to define and change the percentage at any time. I.e. Helium Mobile can start delegating 50%, keep it for 1 month and then change delegation percentage to 0.
-- Any funds delegated towards the incentive escrow fund are matched pro rata up to 100% by un-used programmatic emissions from the service provider bucket. I.e. if there are plenty of un-emitted funds in the 10% service provider bucket and Helium Mobile chose to start delegating up to 50% of its rewards towards referral incentive escrow (roughly $1K/day in MOBILE), total of $2K/day in MOBILE will be deposited into the escrow.
-- Incentive escrow fund is specific to a service provider and multiple funds can exist for different service providers. I.e. Helium Mobile can run its own, Telefonica (when and if approved as an SP) can run its own.
-- Service providers can define and run various incentive programs that would reward the community for growing subscribers, using MOBILE delegated into the incentive escrow fund.
-- MOBILE in the escrow fund cannot be used for anything other than programmatic incentive programs aimed at new subscriber acquisitions (i.e. referrals or “new subscriber” bonus rewards).
-- Any MOBILE that has not been used by the referral program for a period of 12 calendar months from the moment of the original deposit into the fund is burned.
+- Service providers get the ability to delegate a percentage of their service provider rewards towards referral incentives.
+
+- Any funds delegated towards referral incentives are matched pro rata up to 100% by unused programmatic emissions from the service provider bucket. i.e. if there are plenty of non-emitted funds in the 10% service provider bucket and Helium Mobile chooses to start delegating up to 50% of its rewards towards referral incentive escrow (roughly $1K/day in MOBILE), a total of $2K/day in MOBILE will be deposited into the escrow.
+
+- Each service provider delivers wallet "referral eligibility" to the mobile ingest services. This is similar to how mobile mapper eligibility is delivered today.
+
+- At rewards time, the mobile verifier will distribute the amount indicated by the _active_ percentage as stored on-chain of the given service provider rewards plus the matched amount to _all_ eligible wallets as delivered by the service provider during the epoch.
+
+- A service provider can change the allocated percentage at any time. The percentage used at reward calculation time is the percentage as stored in the service provider Solana account.
+
+- The referral percentage is specific to a service provider. Each service provider defines their own referral percentage, and eligibility criteria. I.e. Helium Mobile can run its own, and Telefonica (when and if approved as an SP) can run its own.
+
+- Service providers can define and run various incentive programs that would reward the community for growing subscribers, using MOBILE delegated via the on-chain percentage.
+
+- MOBILE in the escrow fund cannot be used for anything other than programmatic incentive programs aimed at new subscriber acquisitions (i.e. "referrals" or “new subscriber” bonus rewards).
 
 ### Example Incentive Program Proposed by Helium Mobile
 
-Hotspot owners are incentivized to refer subscribers to the network. Each hotspot is able to generate a referral code, unique to that hotspot. For each successful and qualified subscriber that registered for the network and used said referral code, hotspot owner earns $10 in MOBILE immediately, then another $20 in MOBILE over 5 months, provided the subscriber is still active and in good standing. The gradual reward payout promotes subscriber retention and ensures a higher-quality subscriber base (an anti-gaming mechanism). Referrals are paid out of the incentive escrow fund.
+Hotspot owners are incentivized to refer subscribers to the network. Each hotspot can generate a referral code unique to that hotspot.
+
+For each successful and qualified subscriber that registered for the network and used the referral code, the hotspot owner earns $10 in MOBILE immediately, then another $20 in MOBILE over 5 months, provided the subscriber is still active and in good standing.
+
+The gradual reward payout promotes subscriber retention and ensures a higher-quality subscriber base (an anti-gaming mechanism). Referrals are paid out of the incentive allocation.
 
 ## Drawbacks
 
@@ -50,7 +62,7 @@ Finally, since this proposal does not require that incentive programs launched b
 
 ## Rationale and Alternatives
 
-An alternative would be for service providers to pay token rewards directly to network participants vs. using an incentive escrow fund. Depending on the regulatory framework governing crypto in the country where the service provider is domiciled this may involve varying levels of regulatory / compliance risk.
+An alternative would be for service providers to pay token rewards directly to network participants, instead of using an incentive escrow fund. Depending on the regulatory framework governing crypto in the country where the service provider is domiciled, this may involve varying levels of regulatory / compliance risk.
 
 ## Unresolved Questions
 
