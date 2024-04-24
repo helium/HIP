@@ -48,7 +48,7 @@ The multiplier will increase over a 90 epoch period in stages.
 This applies to the whole system from the date of implementation. This is not tied to the time a Radio/AP was installed.
 
 Example: 
-HIP is implimented May 1st. All Radios/APs meeting the benchmark would receive a 2.5x boost to CPs during the 30 epochs in May. During the next 30 epochs (June), qulaifying Radios/APs would receives a 5x boost, etc. 
+If this HIP is implemented May 1st, all Radios/APs meeting the benchmark would receive a 2.5x boost to CPs during the 30 epochs in May. During the next 30 epochs (June), qualifying Radios/APs would receives a 5x boost, etc. 
 
 #### 3. Benchmark Exemption
  
