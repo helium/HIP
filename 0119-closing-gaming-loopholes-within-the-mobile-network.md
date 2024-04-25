@@ -1,11 +1,13 @@
-# HIP XXX: Closing Gaming Loopholes Within the MOBILE Network
+# HIP 119: Closing Gaming Loopholes Within the MOBILE Network
 
 - Author(s): [Andy Zyvoloski](https://github.com/heatedlime)
 - Start Date: 2023-12-31
 - Category: Economic, Technical
-- Original HIP PR:
-- Tracking Issue:
+- Original HIP PR: [#969](https://github.com/helium/HIP/pull/969)
+- Tracking Issue: [#989](https://github.com/helium/HIP/issues/989)
 - Vote Requirements: veMOBILE Holders
+
+---
 
 ## Summary
 This Helium Improvement Proposal (HIP) proposes closing gaming loopholes to help prevent gaming within the MOBILE network.
