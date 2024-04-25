@@ -2,7 +2,7 @@
 
 - Author(s): [@ccall48](https://github.com/ccall48), [@nowiresfil](https://github.com/nowiresfil), [@jthiller](https://github.com/jthiller)
 - Start Date: 2024-03-25
-- Category: Technical
+- Category: Economic
 - Original HIP PR: [#948](https://github.com/helium/HIP/pull/948)
 - Tracking Issue: [#959](https://github.com/helium/HIP/issues/959)
 - Vote Requirements: veIOT Holders
