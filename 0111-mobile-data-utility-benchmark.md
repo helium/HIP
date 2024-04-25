@@ -40,10 +40,15 @@ MOBILE Radios/APs must transfer at least 1MB of data through the radio/AP within
  
 #### 2. Multiplier Phased Ramp Up
 
-The multiplier will increase over a 90 epoch period.
-- Epochs 1-30 will have a 2.5x CP multiplier.
-- Epochs 31-60 will have a 5x CP multiplier.
-- All epochs after 60 will have a 10x CP multiplier.
+The multiplier will increase over a 90 epoch period in stages.  
+- Epochs 1-30 will have a 2.5x CP multiplier for all Radios/APs that meet the benchmark.
+- Epochs 31-60 will have a 5x CP multiplier for all Radios/APs that meet the benchmark.
+- All epochs after 60 will have a 10x CP multiplier for all Radios/APs that meet the benchmark.
+
+This applies to the whole system from the date of implementation. This is not tied to the time a Radio/AP was installed.
+
+Example: 
+If this HIP is implemented May 1st, all Radios/APs meeting the benchmark would receive a 2.5x boost to CPs during the 30 epochs in May. During the next 30 epochs (June), qualifying Radios/APs would receives a 5x boost, etc. 
 
 #### 3. Benchmark Exemption
  
