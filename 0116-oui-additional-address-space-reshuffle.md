@@ -11,7 +11,7 @@
 
 ## Summary
 
-Network operators leveraging Helium must provision an Organizationally Unique Identifier (OUI) to bring devices onto the network. Along with the OUI, operators without their own NetID must also purchase a block of device addresses (DevAddr) to assign to devices. The cost of purchasing a block of 8 DevAddr is currently $800 USD. This proposal seeks to reduce the cost of purchasing a block of 8 DevAddr to $100 USD.
+Network operators leveraging Helium LoRaWAN must provision an Organizationally Unique Identifier (OUI) to bring devices onto the network. Along with the OUI, operators without their own NetID must also purchase a block of device addresses (DevAddr) to assign to devices. The cost of purchasing a block of 8 DevAddr is currently $800 USD. This proposal seeks to reduce the cost of purchasing a block of 8 DevAddr to $100 USD.
 
 The [Helium OUI Documentation](https://docs.helium.com/iot/run-an-lns/buy-an-oui) fully details the current costs and processes.
 
@@ -21,7 +21,7 @@ In addition to the DevAddr cost reduction, this proposal seeks to ultimately hav
 
 The current cost of purchasing a block of 8 DevAddr is $800 USD. This cost is viewed as a barrier to entry for network operators, especially those looking to self-host their LNS. By reducing the cost of purchasing a block of 8 DevAddr to $100 USD, the Helium Network becomes more accessible to a wider range of network operators.
 
-Moving payment for OUIs and DevAddrs to the IOT token ensures that the revenue of these purchases is fully captured by the IOT subnetwork.
+Transitioning payment for OUIs and DevAddrs to the IOT token ensures that the revenue of these purchases is fully captured by the IOT subnetwork.
 
 ## Stakeholders
 
@@ -31,7 +31,7 @@ by lowering the cost of entry for deployment on the IOT network.
 - Future operators will see a reduced cost of entry.
 - Existing operators will see a reduced cost for additional DevAddr block purchases.
 
-Moving puchases of OUIs and DevAddrs to the IOT token will affect HNT, IOT, and indirectly MOBILE token holders. The amount of HNT burned for these purchases will decrease and the amount of IOT burned will increase.
+Moving puchases of OUIs and DevAddrs to the IOT token will affect HNT, IOT, and indirectly MOBILE token holders. The amount of HNT burned for these purchases will decrease, and the amount of IOT burned will increase.
 
 ## Detailed Explanation
 
@@ -50,6 +50,12 @@ NetIDs are allocated based on membership tier with the LoRa Alliance. Types rang
 | Type 0     | 33,554,432        |                                                                |
 
 A single DevAddr can handle multiple devices through multiplexing on the LNS. The number of devices that can be multiplexed on a single DevAddr is dependent on the device throughput and the network server implementation. Additional DevAddrs become important as network servers scale to handle more devices.
+
+### Purchasing Process
+
+Since the Solana migration, the process for purchasing OUIs and DevAddrs has been handled off-chain and faciliated by the Helium Foundation. Work is ongoing to move this process on-chain for parity with the legacy process from the Helium L1.
+
+As such, a change from $800 per DevAddr block to $100 per DevAddr block would be simple according to the Helium Foundation. In the iterest of working toward an on-chain transaction mechanism, this HIP proposes to only implement IOT-based payments alongside the on-chain implementation.
 
 ### Implementation Timeline
 
@@ -72,28 +78,22 @@ At time of writing, the breakdown of OUIs using Helium Foundation or external Ne
 Old Helium 000024    : 56
 New Helium 00003C    : 29
 Using External NetID : 21
-Total OUI's          : 106
+Total OUIs           : 106
 ```
 
-Only a few existing 000024 & 00003C NetID users have purchased more than 1 x 8 DevAddr block. The following are a selection of larger Helium OUIs and their DevAddr allocations. For context on these OUIs and their protocol usage on the network, see the [Dune Data Credit Dashboard](https://dune.com/helium-foundation/helium-data-credits).
+Only a few existing 000024 & 00003C NetID users have purchased more than 1 x 8 DevAddr block. The following is a selection of larger Helium OUIs and their DevAddr allocations. For context on these OUIs and their protocol usage on the network, see the [Data Credit Dashboard on Dune](https://dune.com/helium-foundation/helium-data-credits).
 
 - OUI 1 (Foundation Console) 1024 DevAddr (scaled to this at peak dc gaming)
 - OUI 6 (Helium IoT EU) 152 DevAddr (added in 5 blocks)
 - OUI 12 (1663 Console) 32 DevAddr
 - OUI 1119 (TrackPac) 128 DevAddr (via their own netID)
 
-### Existing Costs And Alternate Costing Ideas
-
 In blocks of 8, there are 4,194,304 total allocations available on the Type 0 NetID. At $800 per block, the total revenue from the sale of all address space is $3,355,443,200. At $100 per block, the total revenue from the sale of all address space would be $419,430,400.
 
-### Acceptable alternatives could include:
+### Acceptable Alternatives Could Include
 
-```
-1. Lower the costing of the offering to purchase a 8 block from $800 to $80.
-2. Allow the sale of singular address space at around $10 per address.
-3. Possibly rent device space per year at a much reduced cost of around $5 per address space,
-   knowing the space is getting used and paid for yearly.
-```
+1. Lower the cost to purchase a 8 DevAddr block from $800 to $80, or another value.
+1. Rent device space per year at a reduced cost of around $5 per address.
 
 ## Unresolved Questions
 
