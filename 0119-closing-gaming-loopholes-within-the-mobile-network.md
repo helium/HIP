@@ -1,7 +1,7 @@
 # HIP 119: Closing Gaming Loopholes Within the MOBILE Network
 
 - Author(s): [Andy Zyvoloski](https://github.com/heatedlime)
-- Start Date: 2023-12-31
+- Start Date: 2024-04-25
 - Category: Economic, Technical
 - Original HIP PR: [#969](https://github.com/helium/HIP/pull/969)
 - Tracking Issue: [#989](https://github.com/helium/HIP/issues/989)
