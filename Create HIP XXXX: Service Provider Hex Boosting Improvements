@@ -35,9 +35,7 @@ This action will also mitigate the effects of a potential future gaming vector w
 
 To address these vectors, this HIP proposes creating a chain variable to allow for an upper cap to be placed on the multiplier that a SP can boost a hex. 
 
-Initially, this variable will be set to 20x. In the future if there is a desire to change this variable to a different cap, the change may be proposed in two ways: 
-1)	This HIP authorizes the Mobile Working Group, upon a majority vote of its members, to put forward a governance proposal to veMOBILE voters for their approval, meaning a new, formal HIP is not required. 
-2)	As in existing governance, anyone may draft a formal HIP to change this variable.
+Initially, the variable will be set to 20x. In the future if there is a desire to change the variable to a different cap, a new HIP will be required. If HIP authors follow the standard HIP template and limit their proposal to only adjusting this specific chain var with no other proposed changes, they will be able to request that the Foundation fast-track the proposal to a vote.
 
 ## Drawbacks:
 None.
