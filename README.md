@@ -138,7 +138,6 @@ If you have questions or feedback, please see the [Discussion](https://github.co
 
 | Status        | Label                                                                        | Summary                                                                                                                  |
 |:--------------|:-----------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------|
-| Draft         | <img src="https://img.shields.io/badge/Status-Draft-yellow"></img>           | HIP is in process of being written; author is not yet soliciting feedback from the community at large.                   |
 | In Discussion | <img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img> | HIP is under active consideration by the community and has a discussion channel on [Discord.](https://discord.gg/helium) |
 | Voting Open   | <img src="https://img.shields.io/badge/Status-Voting_Open-cyan"></img>       | HIP is currently being voted on at [heliumvote.com.](https://heliumvote.com/)                                            |
 | Closed        | <img src="https://img.shields.io/badge/Status-Closed-lightgrey"></img>       | HIP abandoned, rendered obsolete by other changes, or otherwise withdrawn by the author or governance.                   |
