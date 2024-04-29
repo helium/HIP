@@ -11,7 +11,7 @@
 
 ## Summary
 
-This Helium Improvement Proposal (HIP) introduces Data Connectivity and Usability requirements for MOBILE CBRS Radios and Wi-Fi Access Points in which units must be rewarded 1 data credit over a 14 epochs (days) in order to receive 1.0x multiplier for mobile coverage points. Units that do not pass this metric will receive 0.5x multiplier for mobile coverage points.
+This Helium Improvement Proposal (HIP) introduces Data Connectivity and Usability requirements for MOBILE CBRS Radios and Wi-Fi Access Points in which units must be received 1 data credit over a 14 epochs (days) in order to receive 1.0x multiplier for mobile coverage points. Units that do not pass this metric will receive 0.5x multiplier for mobile coverage points.
 
 ## Related HIPs
 
@@ -31,7 +31,7 @@ This HIP was written to ensure that hotspots have a working and operational conn
 
 
 ## Detailed Explanation
-The Data Connectivity and Usability benchmark will be calculated at the end of each epoch. Units must have received at least 1 data credit through the unit within a rolling 14 epoch window to be eligible to receive a full 1.0x multiplier on coverage points. If a unit has not been rewarded 1 data credit over the rolling 14 epochs, they will receive a 0.5x multiplier on coverage points.
+The Data Connectivity and Usability benchmark will be calculated at the end of each epoch. Units must have received at least 1 data credit through the unit within a rolling 14 epoch window to be eligible to receive a full 1.0x multiplier on coverage points. If a unit has not been received 1 data credit over the rolling 14 epochs, they will receive a 0.5x multiplier on coverage points.
 
 If a particular technology (Wi-Fi or CBRS) is unable to pass data, it will be exempt from the reward reduction. This will be calculated if all active units for that technology do not receive 1 data credit over the rolling 14 epochs.
 Example: Currently, all CBRS radios are unable and have not received 1 data credit at the time of writing this HIP, so they would be exempt from the reward reduction until a method is in place to allow users to pass rewardable data.
