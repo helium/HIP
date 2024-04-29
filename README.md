@@ -133,6 +133,8 @@ If you have questions or feedback, please see the [Discussion](https://github.co
 | 117 | [Add MNTD. as a Hotspot Vendor to the Helium MOBILE subNetwork](0117-mntd-mobile-hotspot-vendor.md)                                                 | [<img src="https://img.shields.io/badge/Status-Approved-green"></img>](https://github.com/helium/HIP/issues/962)                         |
 | 118 | [Verification Mapping for MOBILE Network](0118-verification-mapping.md)                                                                             | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/966)                 |
 | 119 | [Closing Gaming Loopholes Within the MOBILE Network](0119-closing-gaming-loopholes-within-the-mobile-network.md)                                    | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/989)                 |
+| 120 | [MOBILE Data Connectivity and Usability](0120-mobile-data-connectivity-and-usability.md)                                                            | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/994)                 |
+| 121 | [Service Provider Hex Boosting Improvements](0121-service-provider-hex-boosting-improvements.md)                                                    | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/995)                 |
 
 ## HIP Status Key
 
