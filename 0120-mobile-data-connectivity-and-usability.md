@@ -1,4 +1,4 @@
-# HIP 120 - MOBILE Data Connectivity and Usability
+# HIP 120: MOBILE Data Connectivity and Usability
 
 - Author(s): [Fizzy99](https://github.com/mrfizzy99)
 - Start Date: 2024-04-11
