@@ -1,6 +1,6 @@
 # HIP 111: MOBILE Data Utility Benchmark - 10x Reward Boost
  
-- Author(s): [ElonTusk007](https://github.com/capjbadger007), [Max Gold](https://github.com/maxgold91), [Fizzy99](https://github.com/mrfizzy99)
+- Author(s): [ElonTusk007](https://github.com/capjbadger007), [Max Gold](https://github.com/maxgold91)
 - Start Date: 2024-03-05
 - Category: Economic, Technical
 - Original HIP PR: [#903](https://github.com/helium/HIP/pull/903)
