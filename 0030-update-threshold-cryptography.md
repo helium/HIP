@@ -92,7 +92,7 @@ stably with a group size in the mid 50s. Since these protocols do not scale line
 cubic scaling), this is a significant improvement.
 
 We don't believe that the alternative of doing nothing makes sense either. We also would like to
-avoid creating a new library ourselves and haven't been successful in finding an an acceptable
+avoid creating a new library ourselves and haven't been successful in finding an acceptable
 alternative that meets all of our criteria.
 
 We believe this library and this implementation is the best choice for the Helium network as it has

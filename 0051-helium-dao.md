@@ -75,7 +75,7 @@ Network.
 # **Motivation**
 
 There are three key drivers for proposing that DNP specific calculations are done by DNP oracles and
-then submitted to the the overall Helium Network:
+then submitted to the overall Helium Network:
 
 1. _Scalability -_ Each DNP has the ability to run its own code for DNP specific items. This enables
    multiple parallel developer teams to work on advancing the Helium Network. This design also
