@@ -25,8 +25,7 @@ Transitioning payment for OUIs and DevAddrs to the IOT token ensures that the re
 
 ## Stakeholders
 
-This HIP will affect existing and future OpenLNS operators or any individual operating an OUI on the Helium IOT network
-by lowering the cost of entry for deployment on the IOT network.
+This HIP will affect existing and future OpenLNS operators or any individual operating an OUI on the Helium IOT network by lowering the cost of entry for deployment on the IOT network.
 
 - Future operators will see a reduced cost of entry.
 - Existing operators will see a reduced cost for additional DevAddr block purchases.
@@ -67,8 +66,7 @@ The Helium Foundation will also begin the process of moving OUI and DevAddr issu
 
 Decreasing the DevAddr cost would reduce the current possible maximum revenue for address space on the Helium Network.
 
-Existing stakeholders may feel like they were overcharged if the price is reduced for more
-address space.
+Existing stakeholders may feel like they were overcharged if the price is reduced for more address space.
 
 ## Rationale and Alternatives
 
@@ -99,17 +97,11 @@ As noted in Detailed Explanation, DevAddr can be acquired as part of a NetID and
 
 ## Unresolved Questions
 
-Would it be more reasonable to move to a lower cost but more address space allocation for a one time
-fee? Or possibly move to a much lower cost but yearly rent on the existing address space thus helping to
-be more accessible and help drive up IOT usage.
+Would it be more reasonable to move to a lower cost but more address space allocation for a one time fee? Or possibly move to a much lower cost but yearly rent on the existing address space thus helping to be more accessible and help drive up IOT usage.
 
 ## Deployment Impact
 
-By making the Helium Network more accessible and lowering the cost to encourage IoT network usage being the main
-factor. We expect the deployment impact to be positive with the lowering of the cost of offering hosting
-to existing stakeholders I would expect this to be filtered all the way down to cost of paid hosting services,
-as well as lower the barrier for small scale deployments to enter and use the network being more
-attractive.
+By making the Helium Network more accessible and lowering the cost to encourage IoT network usage being the main factor. We expect the deployment impact to be positive with the lowering of the cost of offering hosting to existing stakeholders I would expect this to be filtered all the way down to cost of paid hosting services, as well as lower the barrier for small scale deployments to enter and use the network being more attractive.
 
 ## Success Metrics
 
