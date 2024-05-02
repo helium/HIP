@@ -1,4 +1,4 @@
-# HIP 116: OUI Additional Address Space Reshuffle
+# HIP 116: LoRaWAN Device Address Price Adjustment
 
 - Author(s): [@ccall48](https://github.com/ccall48), [@nowiresfil](https://github.com/nowiresfil), Members of the IoT Working Group
 - Start Date: 2024-03-25
