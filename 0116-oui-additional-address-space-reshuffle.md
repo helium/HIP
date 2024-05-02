@@ -1,6 +1,6 @@
 # HIP 116: OUI Additional Address Space Reshuffle
 
-- Author(s): [@ccall48](https://github.com/ccall48), [@nowiresfil](https://github.com/nowiresfil), [@jthiller](https://github.com/jthiller)
+- Author(s): [@ccall48](https://github.com/ccall48), [@nowiresfil](https://github.com/nowiresfil), Members of the IoT Working Group
 - Start Date: 2024-03-25
 - Category: Economic
 - Original HIP PR: [#948](https://github.com/helium/HIP/pull/948)
@@ -75,20 +75,22 @@ address space.
 At time of writing, the breakdown of OUIs using Helium Foundation or external NetIDs is:
 
 ```
-Old Helium 000024    : 56
-New Helium 00003C    : 29
-Using External NetID : 21
-Total OUIs           : 106
+Old Helium 000024    : 55
+New Helium 00003C    : 34
+Using External NetID : 22
+Total OUIs           : 111
 ```
 
 Only a few existing 000024 & 00003C NetID users have purchased more than 1 x 8 DevAddr block. The following is a selection of larger Helium OUIs and their DevAddr allocations. For context on these OUIs and their protocol usage on the network, see the [Data Credit Dashboard on Dune](https://dune.com/helium-foundation/helium-data-credits).
 
-- OUI 1 (Foundation Console) 1024 DevAddr (scaled to this at peak dc gaming)
+- OUI 1 (Foundation Console) 1024 DevAddr (scaled to this at peak DC gaming)
 - OUI 6 (Helium IoT EU) 152 DevAddr (added in 5 blocks)
 - OUI 12 (1663 Console) 32 DevAddr
-- OUI 1119 (TrackPac) 128 DevAddr (via their own netID)
+- OUI 1119 (TrackPac) 128 DevAddr (via their own NetID)
 
 In blocks of 8, there are 4,194,304 total allocations available on the Type 0 NetID. At $800 per block, the total revenue from the sale of all address space is $3,355,443,200. At $100 per block, the total revenue from the sale of all address space would be $419,430,400.
+
+As noted in Detailed Explanation, DevAddr can be acquired as part of a NetID and LoRa Alliance membership. The tradeoff, from a financial standpoint, is that LoRa Alliance membership comes at a yearly cost. Currently, access to a Type 0 NetID requires a $50,000 USD membership fee. Access to Type 7 NetIDs are available at a $500/yr licensing fee.
 
 ### Acceptable Alternatives Could Include
 
