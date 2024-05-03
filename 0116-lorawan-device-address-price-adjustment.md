@@ -58,9 +58,9 @@ As such, a change from $800 per DevAddr block to $100 per DevAddr block would be
 
 ### Implementation Timeline
 
-Upon approval of this HIP, the Helium Foundation will immediately change the cost of purchasing a block of 8 DevAddr to $100 USD.
+Upon approval of this HIP, all subsequent purchases of a block of 8 DevAddr will cost $100 USD. The Helium Foundation will continue to facilitate the purchase of DevAddrs for the community.
 
-The Helium Foundation will also begin the process of moving OUI and DevAddr issuance to the IOT token. As OUI and DevAddr purchases are currently transacted off-chain, the purchases will be implemented to use the IOT token with the completion on-chain transaction method.
+In the future, OUI and DevAddr issuance will be moved to an on-chain mechanism where IOT will be used to secure the purchase of these assets. At that point, existing OUIs and DevAddrs will be migrated to this new representation without an additional IOT fee.
 
 ## Drawbacks
 
