@@ -24,17 +24,22 @@ This proposal aims to reduce the cost of onboarding data-only hotspots to the He
 - **What is the expected outcome?**
   - Increased adoption of Helium's IOT network through lower initial costs and incentivized location assertions, leading to denser and more accurate network coverage.
 
+  In general the IoT Working Group believes that by adopting this proposal, Helium can enhance its IOT network's robustness and utility while fostering a more vibrant and inclusive community of developers and users.
+
 
 ## Stakeholders
 
 - **Who is affected by this HIP?**
   - Existing and future operators of data-only hotspots will benefit from reduced costs and the ability to update their data-only hotspots' locations without additional charges once per month.
+  - Developers of Helium Wallets or Maker Apps that allow location assertion
+  - Developers of Helium CLI and API tools that allow location assertion
 
 
 ## Detailed Explanation
 
 - **Introduce and explain new concepts:**
-  - This HIP will reduce the cost of onboarding data-only hotspots from 1,000,000 DC ($10) to 500,000 DC ($5). After onboarding, these data-only hotspots can assert their location for free once per month (30 epochs). Any additional assertions within the same period will cost 100,000 DC ($1).
+  - This HIP will reduce the cost of onboarding data-only hotspots from 1,000,000 DC ($10) to 500,000 DC ($5). After successful onboarding, each data-only hotspot will automatically receive one free location assertion every 30 epochs, requiring no Data Credits (DC). This initial assertion per period is free. Should further assertions be desired within the same period, they will be charged at 100,000 DC ($1) each.
+
 - **How the proposal would be implemented:**
   - Users will use the Helium Wallet App, Maker App, or CLI Wallet to initiate location assertions. The system will check if a free assertion is available; if not, a fee will apply. The onboarding process remains unchanged but at a reduced cost. Solana fees will still apply for both onboarding and assertions.
 
@@ -43,6 +48,9 @@ This proposal aims to reduce the cost of onboarding data-only hotspots to the He
 
 - **Primary drawbacks:**
   - The main concern is the potential reduction in DC burn per onboarding or assertion. However, the increase in the number of data-only hotspots and assertions might compensate for this reduction by enhancing network coverage and utility.
+
+  A theoretical drawback might arise if vendors do not update their Maker Apps timely, potentially causing issues with onboarding or incorrect fee applications. However, this risk is mitigated by the proactive involvement of Seeed, the primary data-only hotspot vendor, who is likely to update their applications promptly. Coordination with all related vendors to ensure timely updates will be crucial in avoiding this potential pitfall.
+
 
 ## Rationale and Alternatives
 
@@ -58,7 +66,7 @@ This proposal aims to reduce the cost of onboarding data-only hotspots to the He
 
 - **Questions to resolve during the HIP process:**
   - Final determination of the exact onboarding and assertion fees and the duration of the free assertion period will be crucial.
-  
+
 
 ## Deployment Impact
 
@@ -66,13 +74,15 @@ This proposal aims to reduce the cost of onboarding data-only hotspots to the He
   - Users will gain the ability to update data-only hotspot locations monthly without a fee, encouraging more active and accurate participation in network data reporting.
 - **Changes to documentation:**
   - The Helium documentation will need updates to reflect new fee structures and the benefits of the free monthly location assertion.
+- **Responsibility and blockchain involvement**
+  - The implementation of this proposal requires some changes to blockchain operations, which will need to be undertaken by the Helium Foundation or Nova or another willing party (T.B.D.)
+  
+  Additionally, all developers of Helium Wallets, Maker Apps, CLI, and API tools must update their software to accommodate the new fee structure and free assertion feature to ensure smooth operation across the network.
 - **Backwards compatibility:**
-  - This proposal is fully reversible and compatible with existing network practices.
+  - This proposal is designed for easy reversibility, minimizing disruptions in the event that we need to revert to previous settings. Should a rollback be necessary, developers of Helium Wallet, Maker Apps, CLI, and API tools will need to re-implement the original fee structures and assertion rules. This requirement ensures the changes are manageable but would involve coordinated efforts across all developer platforms to maintain assertion and onboarding functionality for data-only hotspot opperators.
 
 
 ## Success Metrics
 
 - **Metrics for success:**
-  - A successful outcome will be measured by an increase in the number of active data-only hotspots and the frequency of location assertions, reflecting greater network utilization and coverage.
-
-In general the IoT Working Group believes that by adopting this proposal, Helium can enhance its IOT network's robustness and utility while fostering a more vibrant and inclusive community of developers and users.
+  - A successful outcome will be measured by an increase in the number of active data-only hotspots.
