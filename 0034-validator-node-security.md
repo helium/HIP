@@ -5,7 +5,6 @@
 - Category: Technical
 - Original HIP PR: [211](https://github.com/helium/HIP/pull/211)
 - Tracking Issue: <https://github.com/helium/HIP/issues/223>
-- Status: In Discussion
 
 # Summary
 
@@ -51,16 +50,16 @@ The risk of sharing node IP addresses (with validator nodes additionally opening
 internet) is well documented and a large number of different chains (DPoS & PoS) have approached
 protecting the delegate/validator nodes IP address from being published. A validator node could for
 example be attacked using the Distributed Denial of Service method, be the victim of a targeted hack
-attempt or its operator could see false charges made to their hosting privoder in an attempt to have
+attempt or its operator could see false charges made to their hosting provider in an attempt to have
 their nodes taken offline.
 
 One recommended way to mitigate these risks is for validators to carefully structure their network
 topology in a so-called single- or dual-layer sentry node architecture, which can be generalised as
 a sentry node operating as a proxy for its validator node.
 
-![image single-layer](0034-validator-node-security/0034-singlelayersentrynodes.jpg)
+![image single-layer](files/0034/0034-singlelayersentrynodes.jpg)
 
-![image dual-layer](0034-validator-node-security/0034-duallayersentrynodes.jpg)
+![image dual-layer](files/0034/0034-duallayersentrynodes.jpg)
 
 Validator nodes should only connect to full-nodes they trust because they operate them themselves or
 are run by other validators they know socially. The validator is only going to talk to the sentry
@@ -93,8 +92,8 @@ TOR node operators, but cannot be pulled directly from the network/logs as is th
 This solution provides a powerful way of hiding the IP address from the network, enabling the
 validator nodes to fully focus on validation blocks and transactions.
 
-An example implementation of this for a series of decentralised proof-of-stake networks can be found
-here: [Core Chameleon](https://github.com/alessiodf/core-chameleon). This implemenation is currently
+An example implementation of this for a series of decentralized proof-of-stake networks can be found
+here: [Core Chameleon](https://github.com/alessiodf/core-chameleon). This implementation is currently
 actively deployed by many validator node operators in several decentralized proof-of-stake networks
 and has a proven track record of keeping validator node IPs properly hidden from the network.
 
@@ -111,7 +110,7 @@ public tests on testnet).
 
 While sentry nodes can improve validator security, there are multiple trade-offs involved. The
 notion of sentry nodes adds complexity to both the node implementation itself as well as the overall
-network topology, and operator cost may increase due to the fact of having to setup several nodes
+network topology, and operator cost may increase due to the fact of having to set up several nodes
 instead of just one. However, the improved security and the validators' earnings should still
 outweigh these costs as validators should be aware that downtime due to SVs or malicious actors will
 mean they would earn far less rewards, or none at all.
@@ -120,7 +119,7 @@ mean they would earn far less rewards, or none at all.
 
 A possible drawback is that miners in the network can no longer reach the validator nodes to submit
 RF data. We are not sure if this would be an issue as the validators can still pull data from
-Hotspots; however a remedy for this should be found in case the Helium RF implemenation would not
+Hotspots; however a remedy for this should be found in case the Helium RF implementation would not
 function properly when validator node IPs are obscured.
 
 # Rationale and Alternatives
@@ -135,13 +134,13 @@ level you might want to put a mature TCP proxy in-front of your validator (e.g. 
 operate a stateful firewall yourself or use a hosted firewall / DOS protection service by your
 favorite cloud provider. You can consider reaching out to a large CDN. Follow operational best
 practices. Only expose a minimal amount of ports. Make sure to record logs. Setup monitoring for
-each machine and application involved. Configure alerting software, et cetera.
+each machine and application involved. Configure alerting software, etc.
 
-![image unchanged](0034-validator-node-security/0034-unchangedarchitecture.jpg)
+![image unchanged](files/0034/0034-unchangedarchitecture.jpg)
 
 The issue with moving on without a security implementation to protect the validator node IPs from
-being publicly sourceable, the alternative of leaving security in the hands of validators themselves
-is less desireable as the network will be at the mercy of the skill and knowledge of validator
+being publicly source-able, the alternative of leaving security in the hands of validators themselves
+is less desirable as the network will be at the mercy of the skill and knowledge of validator
 operators. One should assume this is far below the average skill of a malicious actor, and therefore
 is not sufficient to prevent attacks.
 
@@ -173,7 +172,7 @@ forwarding or transport-layer-security de- and encryption, but also things like 
 
 # Success Metrics
 
-The implementation will be considered succesful if it properly mitigates the described attack
+The implementation will be considered successful if it properly mitigates the described attack
 vectors on validator nodes and increases chain security in the coming months and years. A revision
 to keep up with industry standards may be required.
 

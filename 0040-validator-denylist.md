@@ -5,7 +5,6 @@
 - Category: Economic, Technical
 - Original HIP PR: <https://github.com/helium/HIP/pull/284>
 - Tracking Issue: <https://github.com/helium/HIP/issues/285>
-- Status: In Discussion
 
 ## Summary
 
@@ -42,7 +41,7 @@ Proof of Coverage activity does not appear on-chain. Additionally, the inclusion
 functionality in Validators ensures that parties manipulating Hotspot software are not able to let
 challenges through.
 
-This proposal seeks to decentralize the decision making to the trusted pool of Validators and a
+This proposal seeks to decentralize the decision-making to the trusted pool of Validators and a
 broader community of denylist authors. Previous drafts of this HIP called for a centralized
 authority in the Helium Foundation to maintain and publish a denylist. The HIP specified a singular
 committee to maintain and publish the denylist. This centralization was unpalatable and The Helium
@@ -66,7 +65,7 @@ However, this document makes no stipulations on how a Validator chooses a denyli
 **Bad actors:** The message is simple: Stop. If your Hotspots are earning HNT without providing
 coverage, now is the time to rectify that.
 
-![warning-ya](0040-validator-denylist/warningya.png)
+![warning-ya](files/0040/warningya.png)
 
 ## Detailed Explanation
 
@@ -88,7 +87,7 @@ learning models, or other means. It is the responsibility of the denylist operat
 methodologies and it is the responsibility of the Validator to choose a list that they feel is most
 aligned with the network.
 
-[![Distributed denylists, illustrated.](0040-validator-denylist/distributed_denylists_illustrated.png)](https://www.figma.com/file/CZxNpQJL55DdrfQYFAjiXv/Distributed-Denylists%2C-Illustrated?node-id=0%3A1)
+[![Distributed denylists, illustrated.](files/0040/distributed_denylists_illustrated.png)](https://www.figma.com/file/CZxNpQJL55DdrfQYFAjiXv/Distributed-Denylists%2C-Illustrated?node-id=0%3A1)
 
 #### Defining a List
 
@@ -318,7 +317,7 @@ for that Hotspot’s earning to be affected (on average). At approximately 66% o
 Hotspot would see 50% reward loss, on average. After ~80% inclusion, a Hotspot is effectively
 entirely blocked.
 
-![Chart of possible rewards vs denylist inclusion](0040-validator-denylist/rewards_chart.png)
+![Chart of possible rewards vs denylist inclusion](files/0040/rewards_chart.png)
 
 ## What If’s
 

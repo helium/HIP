@@ -5,34 +5,33 @@
 - Category: Economic
 - Original HIP PR: <https://github.com/helium/HIP/pull/194>
 - Tracking Issue: <https://github.com/helium/HIP/issues/221>
-- Status: In Discussion
 
 # Summary
 
-Currently DCs are rewarded to the fastest responder which mostly comes down to internet speed.
+Currently, DCs are rewarded to the fastest responder which mostly comes down to internet speed.
 Redundancy that is available and just as capable goes unrewarded and thus has little reason to
-exist. **Thus I propose to change the DC reward from the fastest responder to all Hotspots that
+exist. **Thus, I propose to change the DC reward from the fastest responder to all Hotspots that
 could have performed this duty in a timely fashion.**
 
 # Motivation
 
 I want us to transition from this:
 
-![Real Example](./0032-split-dcs/Real_Example.jpg)
+![Real Example](files/0032/Real_Example.jpg)
 
 or visually simplified:
 
-![Current DC Split](./0032-split-dcs/Current_Split.jpg)
+![Current DC Split](files/0032/Current_Split.jpg)
 
 Of course this picture doesn't even come close to describe the situation in densely populated areas
 where Hotspots might have an effective coverage of 0, because Hotspots with better latency are
 overlapping their entire coverage. This HIP doesn't aim to incentivise these densely populated
-areas, but solely aims at giving redudancy a reward that they are **due**. The density problem we
+areas, but solely aims at giving redundancy a reward that they are **due**. The density problem we
 are currently facing has to be resolved differently and this HIP assumes that this will happen.
 
 So we go to something more like this:
 
-![Proposed DC Split](./0032-split-dcs/Proposed_Split.jpg)
+![Proposed DC Split](files/0032/Proposed_Split.jpg)
 
 in one simple step that will naturally adapt to the current situation without much code necessary.
 
@@ -47,7 +46,7 @@ All those already providing coverage
 # Detailed Explanation
 
 Currently only the fastest responder of a DC packet is rewarded. Hotspot 2,3 or how many there are
-have no way of knowing that Hotspot 1 will be faster, so they aswell will at least have tried to
+have no way of knowing that Hotspot 1 will be faster, so they as well will at least have tried to
 resolve it. Currently only Hotspot 1 would be rewarded for resolving. All others would not receive
 anything and be declined.
 
@@ -59,8 +58,8 @@ To resolve this we can simply have the server listen for a bit longer (e.g. 150m
 them all equally for the work. A Hotspot that is too slow will not be rewarded.
 
 As an example we have a use-case sending out a ping and there is 6 Hotspots that receive and try to
-act. Hotspot 1 was the fastest, but Hotspot 2-5 all reacted in under 150 ms aswell. Hotspot 6 only
-responded after 200 ms now the reward is going out to to Hotspot 1-5 in equal amounts. Hotspot 6
+act. Hotspot 1 was the fastest, but Hotspot 2-5 all reacted in under 150 ms as well. Hotspot 6 only
+responded after 200 ms now the reward is going out to Hotspot 1-5 in equal amounts. Hotspot 6
 failed and is thus not rewarded.
 
 **No new rewards or price increase is happening here. The reward that would go to one guy in full
@@ -71,7 +70,7 @@ other Hotspot to begin with, then this changes nothing.**
 
 The drawback is that the 6 dBi gangster on top of his highrise cannot farm an entire city by himself
 anymore. Although I believe that this never should have been allowed to happen to begin with. Helium
-needs growth and we can't have grwoth and redudancy as long as overlapping coverage is basically a
+needs growth, and we can't have growth and redudancy as long as overlapping coverage is basically a
 latency war.
 
 - Why should we _not_ do this?
@@ -105,8 +104,8 @@ outskirts.
 
 # Unresolved Questions
 
-Should we maybe set a limit like a witnessing limit of 25 exists. Magic number for Helium is 4 so we
-can tie that in here aswell.
+Should we maybe set a limit like a witnessing limit of 25 exists? Magic number for Helium is 4, so we
+can tie that in here as well.
 
 # Success Metrics
 

@@ -5,7 +5,6 @@
 - Category: Technical, Economic
 - Original HIP PR: <https://github.com/helium/HIP/pull/210>
 - Tracking Issue: <https://github.com/helium/HIP/issues/222>
-- Status: In Discussion
 
 ## Summary
 
@@ -117,9 +116,7 @@ significant documentation update on how proof-of-coverage is performed and rewar
 
 <!-- References -->
 
-[hip-17]:
-  https://github.com/helium/HIP/blob/master/0017-hex-density-based-transmit-reward-scaling.md
-[jan 27 firmware update]:
-  https://engineering.helium.com/2021/01/27/hotspot-firmware-power-updates.html
+[hip-17]: https://github.com/helium/HIP/blob/master/0017-hex-density-based-transmit-reward-scaling.md
+[jan 27 firmware update]: https://engineering.helium.com/2021/01/27/hotspot-firmware-power-updates.html
 [sf8125khz]: https://www.semtech.com/products/wireless-rf/lora-transceivers/sx1276
 [miner pr #613]: https://github.com/helium/miner/pull/613

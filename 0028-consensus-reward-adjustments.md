@@ -6,7 +6,7 @@
 - Original HIP PR: <https://github.com/helium/HIP/pull/136>
 - Tracking Issue: <https://github.com/helium/HIP/issues/140>
 - Code PR: <https://github.com/helium/blockchain-core/pull/922>
-- Status: [Approved](https://github.com/helium/HIP/issues/140#issuecomment-892848351)
+- Approved Version: [c68417f](https://github.com/helium/HIP/blob/c68417ff57449f976bfe0c5834d97a837cac3df4/0015-beaconing-rewards.md)
 
 # Summary
 
@@ -74,7 +74,7 @@ Network to reward consensus accurately and fully.
 ## UPDATE: Actual results from Validators
 
 Looking at blocks 923722 (switch to 43 member Consensus Group) to 940522 (time of HIP update, approx
-1pm PT July 27 2021), validators were under rewarded relative to the target percentage by ~4% (.24%
+1pm PT July 27, 2021), validators were under rewarded relative to the target percentage by ~4% (.24%
 short of 6% target).
 
 | Reward Type     | Total HNT        | Percentage  | Target Percentage | Difference |
@@ -88,12 +88,12 @@ short of 6% target).
 | **Total**       | **1,751,164.33** | **100.00%** | **100.00%**       | **0.00%**  |
 
 Additionally, looking at epoch times for a 200 epoch period, we see that a typical epoch is ~33
-blocks long with a shortest of 32 blocks and longest of 38. Only six epochs took more than 35 blocks
+blocks long with the shortest of 32 blocks and longest of 38. Only six epochs took more than 35 blocks
 to complete. This supports the rational that consensus rewards should be given a grace period. The
-200 block period was choose as it represented more stable epoch times after initial validator issues
+200 block period was chosen as it represented more stable epoch times after initial validator issues
 and chain var settings were worked out.
 
-![image Epoch Length (Blocks 933238 to 939821)](./0028-consensus-reward-adjustments/epoch-lengths.png)
+![image Epoch Length (Blocks 933238 to 939821)](files/0028/epoch-lengths.png)
 
 Based on this data, we can also perform a comparison of earnings between current and what they would
 have been with HIP-28 implemented. The actual number of blocks covered by these 200 epoch is 6616
@@ -104,7 +104,7 @@ part of the six epochs that took more than 35 blocks were not rewarded.
 
 # Stakeholders
 
-As an economic change, this proposal has far reaching impacts:
+As an economic change, this proposal has far-reaching impacts:
 
 - Consensus group members will see an increase in rewards to more closely meet the original
   agreement of 6% of HNT mined.
@@ -137,7 +137,7 @@ calculated on the actual epoch length up to this limit.
 The revised calculation for consensus rewards will work as follows:
 
 > Epoch Consensus Rewards = (Monthly Rewards x Consensus Percentage) x ( min(Actual Epoch Length,
-> Election Interval + Election Resart Interval) x Block Time / Seconds in a month)
+> Election Interval + Election Restart Interval) x Block Time / Seconds in a month)
 
 # Drawbacks
 
@@ -176,7 +176,7 @@ rationale is documented in the existing blockchain rewards transaction code and 
 Another alternative is to change PoC and securities rewards to no longer adjust them based on epoch
 duration. Instead, they would be calculated much like consensus rewards today, assuming that an
 epoch is always 30 blocks. This would have significant impacts to the token economics of HNT as it
-would alter the month mining totals as well as the max supply. And, for these reasons, I do not a
+would alter the month mining totals as well as the max supply. And, for these reasons, I do not
 recommend this as an option.
 
 ### Reallocate unearned consensus rewards

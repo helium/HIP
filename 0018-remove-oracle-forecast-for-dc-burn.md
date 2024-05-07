@@ -5,7 +5,6 @@
 - Category: Technical
 - Original HIP PR: [#59](https://github.com/helium/HIP/pull/62)
 - Tracking Issue: [#65](https://github.com/helium/HIP/issues/65)
-- Status: Approved
 
 # Summary
 
@@ -46,7 +45,7 @@ has recently exploited this opportunity.
 Here it is graphed from on-chain data showing HNT burn events, mining rewards from DC and what the
 oracle price was for all of these events:
 
-![image MeerkatBurnAndMint](./0018-remove-oracle-forecast-for-dc-burn/meerkat.png)
+![image MeerkatBurnAndMint](files/0018/meerkat.png)
 
 As you can see, “the big burn” of about 27k HNT was burned right before the oracle price dropped
 from about $1.20 to $1.10. Over time, the DC was “minted” back into HNT via the DC rewards.
@@ -57,20 +56,20 @@ It’s worth noting, despite the magnitude of burn and mint, at the time of this
 - 27k HNT was burned
 - 29k HNT was minted
 
-While only 2k HNT was cleared, another side-effect of the arbitrage is that the Proof-of-Coverage
+While only 2k HNT was cleared, another side effect of the arbitrage is that the Proof-of-Coverage
 (POC) earnings during the period of the mint back were severely impacted as when the DC reward pool
 grows, it grows at the expense of POC rewards during that same epoch.
 
 It’s also worth noting that the mint back took roughly 24 hours, so should the market price and then
 the oracle price have snapped back, the Meerkat may have lost out. The severe price drop may also be
 an artifact due to manual entry of oracle prices. This will not be the focus of this HIP but remains
-noteworthy and perhaps the subject matter for future HIPs.
+noteworthy and perhaps the subject for future HIPs.
 
 # Winners and Losers as Is
 
 So who gains what from this opportunity? As previously stated, the owner of the Meerkat’s wallet has
 cleared about 2k HNT. The rest of the HNT in play was essentially burned and redeemed; in effect,
-HNT emissions were cut by about 30% during the 24 hour period of mint back. In a direct sense, this
+HNT emissions were cut by about 30% during the 24-hour period of mint back. In a direct sense, this
 benefits:
 
 - Current holders of HNT: effectively, inflation has been curbed
@@ -129,7 +128,7 @@ So who gains what from this solution? Nobody in particular gains other than the 
 those who gained from the arbitrage existing (see Winners and Losers above). The merits of this
 solution are that in targets the arbitrage precisely without further economic impact.
 
-In effect, this proposal only affords the "forward looking window" for transactions that cannot
+In effect, this proposal only affords the "forward-looking window" for transactions that cannot
 accomplish the circular arbitrage route that the DC burn transaction can.
 
 The biggest downside of this solution is an increase in complexity for the burn transaction as the
@@ -140,10 +139,10 @@ transaction, however, which provides a bounded conversion rate.
 
 ## Reduced Delay on new Oracle Prices
 
-The Oracle delay could be reduce from 60 minutes to, perhaps 15 minutes. The effect would be that
+The Oracle delay could be reduced from 60 minutes to, perhaps 15 minutes. The effect would be that
 the arbitrageur would have ~15 blocks to burn DCs at and advantageous price instead of ~60 blocks.
 This would not logically close the arb and thus leaves a guaranteed on-chain profit for the
-arbitrageur; keep in mind, off-chain market data may be used to front- run prices as well. In
+arbitrageur; keep in mind, off-chain market data may be used to front-run prices as well. In
 addition, as we reduce the delay, we introduce a higher probability that "something surprising"
 happens to other actors, notably anyone using implicit burn. Regular users would have to time their
 transactions carefully to avoid being at the cusp of a price change.

@@ -8,7 +8,6 @@
 - Original HIP PR:
   [#480](https://github.com/helium/HIP/blob/main/0071-scaling-with-governance-hedera.md)
 - Tracking Issue: [#486](https://github.com/helium/HIP/issues/486)
-- Status: In Discussion
 
 # Summary
 
@@ -157,7 +156,7 @@ Discord) there has been nothing published or shared to date.
 
 # Proposed Architecture
 
-![Proposed Architecture](0071-scaling-with-governance-hedera/Proposed%20Architecture.jpg)
+![Proposed Architecture](files/0071/Proposed%20Architecture.jpg)
 
 The above architecture shows the high-level overview of components of a new Helium ecosystem built
 on the Hedera network.

@@ -5,7 +5,6 @@
 - Category: Technical
 - Original HIP PR: <https://github.com/helium/HIP/pull/249>
 - Tracking Issue: <https://github.com/helium/HIP/issues/250>
-- Status: In Discussion
 
 # Safe extraction of RF Meta-Data
 

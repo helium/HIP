@@ -5,7 +5,7 @@
 - Category: Technical
 - Original HIP PR: <https://github.com/helium/HIP/pull/306>
 - Tracking Issue: <https://github.com/helium/HIP/issues/313>
-- Status: Approved
+- Approved Version: [31409fe](https://github.com/helium/HIP/blob/31409fe38e4bbe842187e1f50173df678886f744/0047-increase-dkg-penalty.md)
 
 # Summary
 
@@ -59,7 +59,7 @@ capped at 35 blocks (which is the 30 block interval plus one 5 block election in
 election fails on the first try, then validators stop being rewarded until an election succeeds.
 This can be seen in the spikes above 35 blocks in the graph of epoch length (source: DeWi ETL).
 
-![Epoch length in blocks](0047-increase-dkg-penalty/epochlengthinblocks.png)
+![Epoch length in blocks](files/0047/epochlengthinblocks.png)
 
 # Stakeholders
 
@@ -110,7 +110,7 @@ sufficient information (such as logging) as to why the failure occurred.
 
 However, given the fact that all penalties decay to zero over time (currently approximately 2 weeks’
 time) and the average time between elections for any individual validator is 5 to 6 days, the risk
-should be seen as acceptable in order to improve the performance of the network as a whole..
+should be seen as acceptable in order to improve the performance of the network as a whole.
 
 # Rationale and Alternatives
 
@@ -140,4 +140,4 @@ validators and other node types can already accept this value for the `dkg_penal
 # Success Metrics
 
 Success of this change will result in fewer epochs that are exceed 35 blocks and fewer repeat
-failures in the same election cycle when there is a failure..
+failures in the same election cycle when there is a failure.

@@ -4,7 +4,6 @@
 - Start Date: November 11, 2020
 - Category: Technical
 - Tracking Issue: [#78](https://github.com/helium/HIP/issues/78)
-- Status: Closed
 
 # Summary
 
@@ -13,7 +12,7 @@ The goals of these changes are to:
 1. Break up the PoC message to improve the reliability of PoC transmissions.
 2. Improve the quality of information gained from PoC transmissions in the RF layer.
 
-The link layer is the method by which information is send from one source to another. It sits
+The link layer is the method by which information is sent from one source to another. It sits
 directly above the PHY layer and below the MAC layer. For a specific definition, please see the OSI
 model.
 
@@ -52,14 +51,14 @@ encoded droplet, and calculating the overhead of droplets needed to receive the 
 the distribution used to generate droplets. If this is a standard distribution over the data, the
 mean would be 1.5 times the minimum payload size.
 
-The general implementation of the LDPC-LT encoding an decoding method requires, known, shared LDPC
+The general implementation of the LDPC-LT encoding a decoding method requires, known, shared LDPC
 encoding techniques, a sudo-random block creation technique based on a normal probability
 distribution, and a decoding buffer to attempt decoding payloads as the receive buffers are filled
 via Gaussian reduction.
 
-![LT-LDPC Diagram](0021-poc-link-layer/ltldpc-diag.png)
+![LT-LDPC Diagram](files/0021/ltldpc-diag.png)
 
-To begin, the Challengee braodcasts the PoC message stream and waits for a response from any
+To begin, the Challengee broadcasts the PoC message stream and waits for a response from any
 gateways in range, expiring on a percentage of expected witnesses acknowledging recovery of the
 payload. The transmit sequence by a gateway involves it transmitting droplets continuously until it
 receives a single N/ACK from a gateway indicating the entire message was received correctly or not.
@@ -72,10 +71,10 @@ could align with a reasonable percentage overhead (200% - 250%).
 
 # Rationale and Alternatives
 
-- Implementing a noise resistant link layer is critical to succssful PoC transmissions in
+- Implementing a noise resistant link layer is critical to successful PoC transmissions in
   increasingly crowded or lossy environments. We will additionally be capable of increasing the data
   rate and lowering time on air without sacrificing sensitivity. The advantage of a builtin BER test
-  gives us an accurate measure of link quality truely descriptive of a connection between two
+  gives us an accurate measure of link quality truly descriptive of a connection between two
   discrete devices which we have no other method of determining with any accuracy currently. RSSI
   and SNR alone for a single transmission sporadically over a day or days is far too low frequency
   to establish quality of a link, and network adopters should rightly question/doubt any claim of
@@ -112,7 +111,7 @@ collected samples.
 These are a series of test results from Random and Systematic fountain encoders/decoders using both
 MinSum and BitFlipping LDPC decoders. Subtract 100 from the overhead number to get the actual
 overhead sent over the air as the LDPC encoder implicitly doubles the size of the outgoing payload.
-There are verying degrees of loss, with Systematic encoders/decoders clearly outperforming any other
+There are varying degrees of loss, with Systematic encoders/decoders clearly outperforming any other
 option which is the expected behavior.
 
 ```bash

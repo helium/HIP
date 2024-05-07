@@ -3,7 +3,6 @@
 - Authors: @tjain-mcc (tushar)
 - Start Date: November 1, 2021
 - Category: Governance
-- Status: In Discussion
 - Original HIP PR: <https://github.com/helium/HIP/pull/299>
 - Tracking Issue: TODO
 - Discord Channel: TODO
@@ -68,7 +67,7 @@ As a simple example, let’s imagine Alice, Bob, and Charlie all have 100 HNT:
 3. Charlie commits to locking up his tokens for 2,500,000 blocks, and thus his voting power is 50 \*
    100 = 5,000
 
-![voting-power-multiplier-graph](0041-governance-by-token-lock-v2/voting-power-multiplier.png)
+![voting-power-multiplier-graph](files/0041/voting-power-multiplier.png)
 
 As the lockup burns down, so does the voting power. For example, if Charlie locked up his 100 tokens
 for 2,500,000 blocks and 1,125,000 blocks have passed then Charlie would have 2,500 vote power.

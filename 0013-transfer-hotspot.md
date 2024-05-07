@@ -5,9 +5,6 @@
 - Author: [@mrallen1](https://github.com/mrallen1), [@abhay](https://github.com/abhay)
 - HIP Number: 13
 - Tracking Issue: [#43](https://github.com/helium/HIP/issues/43)
-- Status: Deployed
-  - [audit](https://github.com/helium/miner/blob/master/audit/var-48.md)
-  - [txn](https://explorer.helium.com/txns/DywtCExrXhTxv8VoDZl_hJDjQ2PUcov_AYrW98ZPpcg)
 
 # Summary
 

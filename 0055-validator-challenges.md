@@ -6,7 +6,6 @@
 - Category: Technical
 - Original HIP PR: <https://github.com/helium/HIP/pull/359>
 - Tracking Issue: <https://github.com/helium/HIP/issues/362>
-- Status: In Discussion
 
 # Summary
 
@@ -267,11 +266,8 @@ new model, before that happens we need the new code to be merged, deployed to th
 Hotspots, validators, node users) and this HIP needs to be ratified.
 
 [hip54]: https://github.com/helium/HIP/blob/main/0054-h3dex-targeting.md
-[proto]:
-  https://github.com/helium/proto/blob/andymck/poc-grpc-msg-defs-WIP/src/service/gateway.proto#L101
-[message-sequence]:
-  https://docs.google.com/drawings/d/1eVTK89ob66vlcEwwoVNi0BFaCEaU2DYki8778LIRWpA/edit
-[poc-challenge-rate]:
-  https://user-images.githubusercontent.com/75/153673071-550eb970-4ab6-44e0-b9fc-e9b04e1b4dad.png
+[proto]: https://github.com/helium/proto/blob/andymck/poc-grpc-msg-defs-WIP/src/service/gateway.proto#L101
+[message-sequence]: https://docs.google.com/drawings/d/1eVTK89ob66vlcEwwoVNi0BFaCEaU2DYki8778LIRWpA/edit
+[poc-challenge-rate]: https://user-images.githubusercontent.com/75/153673071-550eb970-4ab6-44e0-b9fc-e9b04e1b4dad.png
 [hip10]: https://github.com/helium/HIP/blob/main/0010-usage-based-data-transfer-rewards.md
 [docs]: https://docs.helium.com/blockchain/mining#hnt-distributions-per-epoch

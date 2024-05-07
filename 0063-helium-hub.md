@@ -9,7 +9,7 @@
 # Summary
 
 This HIP is an alternative to the one being presented as [HIP-51 Helium DAO](0051-helium-dao.md).
-This HIP will take the goverance proposal with slight modifications from that HIP but drastically
+This HIP will take the governance proposal with slight modifications from that HIP but drastically
 changes the economic and technical implementation. As Helium Hub the Helium blockchain will become
 the center/hub of a web of wireless protocols all of which have the ability to leverage the Helium
 Ecosystem.
@@ -26,15 +26,15 @@ wireless protocols (omniprotocol access layer).
 
 - Describe how rewards are distributed to eligible sub-protocols
 
-- Describe how goverance is used within the Helium Hub to include scope
+- Describe how governance is used within the Helium Hub to include scope
 
 # Stakeholders
 
 - The Helium Community as a whole. This will drastically change the way Helium operates.
 
-# Detailed Explaination
+# Detailed Explanation
 
-This explaination will describe the following in regards to Helium Hub and sub-protocols.
+This explanation will describe the following with regard to Helium Hub and sub-protocols.
 
 - Sub-protocols
 - Rewards
@@ -48,7 +48,7 @@ For the sub-protocol to be eligible for data transfer rewards it needs to;
 
 1. Have a public immutable ledger for attestation purposes with Helium Hub
 
-2. Have the capability to inform Helium Hub of it's epoch statistics (Oracles/Validators/IBC/etc) as
+2. Have the capability to inform Helium Hub of its epoch statistics (Oracles/Validators/IBC/etc.) as
    a minimum would be the following;
 
    - Data Credit (DC) Usage
@@ -94,7 +94,7 @@ done using PoC but for a future sub-protocol it might not be coverage based).
 > **NOTE** DC overage ([HIP-10](0010-usage-based-data-transfer-rewards.md)) and the current schedule
 > for % allocation changes will also remain the same as described in the graphic below.
 
-![HNT Distribution Over Time](0063-helium-hub/hnt-distribution.svg)
+![HNT Distribution Over Time](files/0063/hnt-distribution.svg)
 
 ### Current Reward Models
 
@@ -119,7 +119,7 @@ done using PoC but for a future sub-protocol it might not be coverage based).
 | Security Tokens           | 33%            | 572.9166              |
 
 With the reward pools adequately redefined each sub-protocol will be rewarded per epoch based on
-it's age and amount of DC it submits (this value can be attested by the Helium Hub at anytime).
+its age and amount of DC it submits (this value can be attested by the Helium Hub at anytime).
 
 The base equation for PoPS is an equal distribution between all eligible sub-protocols. This
 distribution is affected by the age of the sub-protocol. The reward percentage is reduced upon
@@ -152,8 +152,8 @@ epoch.
 | PoPS %        | 0%             | 94%            |
 
 Once the amount of HNT based on PoPS above is calculated the amount of HNT needed to be rewarded for
-DC usaged is calculated. If the sub-protocol reported DC usage > 1.5x the amount of PoPS that was
-going to be rewarded for that epoch the amount of PoPS is reduced propotionally from 100% - 0%
+DC usage is calculated. If the sub-protocol reported DC usage > 1.5x the amount of PoPS that was
+going to be rewarded for that epoch the amount of PoPS is reduced proportionally from 100% - 0%
 (1.5x - 3x). The removed/reduced PoPS would be redistributed equally among the remaining eligible
 sub-protocols.
 
@@ -175,8 +175,8 @@ sub-protocols.
 | Final PoPS   | 435.76 | 0       |
 | Total        | 435.93 | 607.47  |
 
-This reward structures sets an age on how long a sub-protocol is rewarded for building it's network.
-This reward is dependant on the sub-protocols age and amount of data the sub-protocol is moving.
+This reward structures sets an age on how long a sub-protocol is rewarded for building its network.
+This reward is dependent on the sub-protocols age and amount of data the sub-protocol is moving.
 Which in turn will ensure no one is incentived to move dummy data to affect rewards thus preventing
 "Data Races".
 
@@ -184,10 +184,10 @@ To help make sense of how this all works together, I've created a spreadsheet th
 network would react if the switch was flipped this second.
 [spreadsheet](https://docs.google.com/spreadsheets/d/1fRZvUAvp6WfAhHx4TDVpsNDs7vndtAHqfTFiPbqiklM/edit#gid=462165445)
 
-## Helium Hub - Goverance
+## Helium Hub - Governance
 
 Vote Escrowed HNT - veHNT are non-fungible tokens that aren't transferable. The only way to get
-veHNT is to lock up HNT on the recieving account.
+veHNT is to lock up HNT on the receiving account.
 
 Entities that can have custody of veHNT:
 
@@ -225,7 +225,7 @@ For example, suppose A, B, and C all choose to lock up 1000 HNT:
 
 ### Governance Reach
 
-veHNT is used during the goverance of the Helium Hub. The only control the Hub has over the
+veHNT is used during the governance of the Helium Hub. The only control the Hub has over the
 sub-protocols is the requirements that make a sub-protocol eligible for HNT rewards. If these
 requirements are deemed inadequate the Hub can vote to change them. In this regard sub-protocols are
 expected to handle all internal workings (ie governance, tokenomics, and technical concerns).
@@ -234,7 +234,7 @@ expected to handle all internal workings (ie governance, tokenomics, and technic
 
 As stated above, one of the requirements for becoming a sub-protocol is to maintain 21,000,000 USD
 worth of DC in their bonding pool. This is the bare minimum requirement, that being said the
-sub-protocols "total" HNT is considered to be equivalent to the sub-protocols veHNT in regards to
+sub-protocols "total" HNT is considered to be equivalent to the sub-protocols veHNT with regard to
 voting power. The individuals making up the sub-protocol will form a yes or no vote based on their
 own governance. This vote will be backed with the sub-protocols voting power.
 
@@ -245,7 +245,7 @@ Further details on the vote-escrow weighted governance model can be found in
 # Drawbacks
 
 This drastically changes how Helium as a blockchain functions. The amount of development work is far
-greater then anything proposed to date. If Helium and all sub-protocols decide to use the Cosmos SDK
+greater than anything proposed to date. If Helium and all sub-protocols decide to use the Cosmos SDK
 it'd also shift the programming language of Helium to Go and Rust. Making most Erlang work to date
 obsolete. The migration process that will be proposed later will try to maintain the current chain
 as the LoRa sub-protocol but that sub-protocol wouldn't be locked into such an agreement. It's just
@@ -265,14 +265,14 @@ probably the most important section!
 
 # Unresolved Questions
 
-- How will the above be implemented techinically speaking.
+- How will the above be implemented technically speaking.
 
 # Deployment Impact
 
 Describe how this design will be deployed and any potential impact it may have on current users of
 this project.
 
-- This HIP will have a follow up HIP that will describe an means of switching to this model with the
+- This HIP will have a follow-up HIP that will describe a means of switching to this model with the
   use of the Cosmos SDK. Since the technical implementation is not important it's not included here.
 
 # Success Metrics
