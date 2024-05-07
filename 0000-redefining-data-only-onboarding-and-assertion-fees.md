@@ -34,7 +34,7 @@ This proposal aims to reduce the cost of onboarding data-only hotspots to the He
 ## Detailed Explanation
 
 - **Introduce and explain new concepts:**
-  - Data-only hotspots will be eligible for a reduced onboarding fee of 500,000 DC ($5). After onboarding, these data-only hotspots can assert their location for free once per month (30 epochs). Any additional assertions within the same period will cost 100,000 DC ($1).
+  - This HIP will reduce the cost of onboarding data-only hotspots from 1,000,000 DC ($10) to 500,000 DC ($5). After onboarding, these data-only hotspots can assert their location for free once per month (30 epochs). Any additional assertions within the same period will cost 100,000 DC ($1).
 - **How the proposal would be implemented:**
   - Users will use the Helium Wallet App, Maker App, or CLI Wallet to initiate location assertions. The system will check if a free assertion is available; if not, a fee will apply. The onboarding process remains unchanged but at a reduced cost. Solana fees will still apply for both onboarding and assertions.
 
