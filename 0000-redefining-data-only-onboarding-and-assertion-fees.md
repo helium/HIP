@@ -1,4 +1,4 @@
-# Redefining Data-Only IoT Hotspot Onboarding and Assertion Fees
+# Redefining IOT Data-Only Hotspot Onboarding and Assertion Fees
 
 - **Author(s):** Members of the IoT Working Group
 - **Start Date:** 2024-05-07
