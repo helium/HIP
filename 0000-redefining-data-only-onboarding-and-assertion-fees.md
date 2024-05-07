@@ -28,13 +28,13 @@ This proposal aims to reduce the cost of onboarding data-only hotspots to the He
 ## Stakeholders
 
 - **Who is affected by this HIP?**
-  - Existing and future operators of data-only hotspots will benefit from reduced costs and the ability to update their hotspots' locations without additional charges once per month.
+  - Existing and future operators of data-only hotspots will benefit from reduced costs and the ability to update their data-only hotspots' locations without additional charges once per month.
 
 
 ## Detailed Explanation
 
 - **Introduce and explain new concepts:**
-  - Data-only hotspots will be eligible for a reduced onboarding fee of 500,000 DC ($5). After onboarding, these hotspots can assert their location for free once per month (30 epochs). Any additional assertions within the same period will cost 100,000 DC ($1).
+  - Data-only hotspots will be eligible for a reduced onboarding fee of 500,000 DC ($5). After onboarding, these data-only hotspots can assert their location for free once per month (30 epochs). Any additional assertions within the same period will cost 100,000 DC ($1).
 - **How the proposal would be implemented:**
   - Users will use the Helium Wallet App, Maker App, or CLI Wallet to initiate location assertions. The system will check if a free assertion is available; if not, a fee will apply. The onboarding process remains unchanged but at a reduced cost. Solana fees will still apply for both onboarding and assertions.
 
@@ -42,7 +42,7 @@ This proposal aims to reduce the cost of onboarding data-only hotspots to the He
 ## Drawbacks
 
 - **Primary drawbacks:**
-  - The main concern is the potential reduction in DC burn per onboarding or assertion. However, the increase in the number of hotspots and assertions might compensate for this reduction by enhancing network coverage and utility.
+  - The main concern is the potential reduction in DC burn per onboarding or assertion. However, the increase in the number of data-only hotspots and assertions might compensate for this reduction by enhancing network coverage and utility.
 
 ## Rationale and Alternatives
 
@@ -63,7 +63,7 @@ This proposal aims to reduce the cost of onboarding data-only hotspots to the He
 ## Deployment Impact
 
 - **Impact on current users:**
-  - Users will gain the ability to update hotspot locations monthly without a fee, encouraging more active and accurate participation in network data reporting.
+  - Users will gain the ability to update data-only hotspot locations monthly without a fee, encouraging more active and accurate participation in network data reporting.
 - **Changes to documentation:**
   - The Helium documentation will need updates to reflect new fee structures and the benefits of the free monthly location assertion.
 - **Backwards compatibility:**
