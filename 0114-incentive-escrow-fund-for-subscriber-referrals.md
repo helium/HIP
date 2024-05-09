@@ -32,6 +32,8 @@ We propose a referral incentive program that would channel rewards to the commun
 
 - Any funds delegated towards referral incentives are matched pro rata up to 100% by unused programmatic emissions from the service provider bucket. i.e. if there are plenty of non-emitted funds in the 10% service provider bucket and Helium Mobile chooses to start delegating up to 50% of its rewards towards referral incentive escrow (roughly $1K/day in MOBILE), a total of $2K/day in MOBILE will be deposited into the escrow.
 
+- On-chain variable called _active percentage_ tracks relative contributions by various service providers towards incentive referral escrow and what portion of said rewards has already been distributed by a given service provider. The variable is then used by the mobile verifier at the moment of reward distribution to determine what portion of MOBILE rewards stored in the referral escrow bucket a particular service provider can direct towards a referral campaign.   
+
 - Each service provider delivers wallet "referral eligibility" to the mobile ingest services. This is similar to how mobile mapper eligibility is delivered today.
 
 - At rewards time, the mobile verifier will distribute the amount indicated by the _active_ percentage as stored on-chain of the given service provider rewards plus the matched amount to _all_ eligible wallets as delivered by the service provider during the epoch.
