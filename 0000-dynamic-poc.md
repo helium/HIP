@@ -79,10 +79,12 @@ Default(Max) EIRP is taken from (4)LoRaWAN Regional Parameters 1.0.4. The transm
 As an alternative to always transmitting at the maximum permitted value it is suggested that a random selection is made from a subset of allowable transmit powers. The large spread in allowable power across regions makes it difficult to implement one general set of transmit powers. Differentiating power-level selection by regions allows POC to be 'balanced' across regions. This hip does not attempt to address any possible imbalance in the current poc system which is outside the scope, however, this mechanism could be used to adjust any imbalance in the future. These suggested values keep status quo with today and do not introduce any change across regions:
 
 AU915, US915, IN865:
-$\{MaxEIRP,\ MaxEIRP*0.8 dBm,\ MaxEIRP*0.6 dBm\}$
+
+$`\{MaxEIRP,\ MaxEIRP*0.8 dBm,\ MaxEIRP*0.6 dBm\}`$
 
 KR920, AS923, RU864, EU868 regions set of power values. The duplicate 3rd value is intentionally left to make comparison to the fixed channel plans easier:
-$\{MaxEIRP,\ MaxEIRP*0.8 dBm,\ MaxEIRP*0.8 dBm\}$
+
+$`\{MaxEIRP,\ MaxEIRP*0.8 dBm,\ MaxEIRP*0.8 dBm\}`$
 
 A selection is made between full power or one of the reduced values. MaxEIRP minus 3dBm will cut the transmit power in half and minus 6dBm will be a quarter of the total power. Using inverse square law the estimated range will roughly double with a change of 6dBm.
 
@@ -257,6 +259,7 @@ US915
 |    SF8        |       16          |    52     |    -14    |       |
 |    SF7        |       16          |    52     |    -17    |       |
 
+![image](https://github.com/gradoj/HIPS/assets/7544765/5bbe60eb-953f-4c91-aae1-c333c32dcf5c)
 
 ## Success Metrics
 
