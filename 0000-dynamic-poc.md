@@ -25,7 +25,7 @@ A second benefit to varying beacon parameters is it allows us to collect a more 
 
 Randomizing transmission power also enhances security by making it more difficult for malicious actors to manipulate hotspot metadata. Currently, while the source of a beacon may be unknown, its constant transmission power is predictable. By dynamically adjusting this power, we introduce an additional layer of uncertainty that challenges potential manipulators.
 
-It is hoped that by introducing this random behaviour into the traditional PoC mechanism it will bring additonal value for minimal effort.
+It is hoped that by introducing this random behavior into the traditional PoC mechanism it will bring additional value for minimal effort.
 
 
 ## Stakeholders
@@ -37,7 +37,7 @@ It is hoped that by introducing this random behaviour into the traditional PoC m
 
 No action will be required but all hotspots will be impacted by the randomness introduced to PoC. The random parameters are expected to have varying amounts of coverage and this will impact the number of witnesses received by each beacon. No significant impact is expect to individual hotspots earnings as more or less witnesses will average out.
 
-Oracle bucket data proto defintions may need to be updated to handle any additonal parameters. Ingestors of this data will need to be notified if changed.
+Oracle bucket data proto definitions may need to be updated to handle any additional parameters. Ingesters of this data will need to be notified if changed.
 
 Feedback and suggestion to this hip can be discussed on Discord.
 
@@ -76,9 +76,13 @@ Default(Max) EIRP is taken from (4)LoRaWAN Regional Parameters 1.0.4. The transm
 | US915  |  30               | 36?      |
 | AU915  |  30               | 36?      |
 
-As an alternative to always transmitting at the maximum permitted value it is suggested that a random selection is made from a subset of allowable transmit powers:
+As an alternative to always transmitting at the maximum permitted value it is suggested that a random selection is made from a subset of allowable transmit powers. The large spread in allowable power across regions makes it difficult to implement one general set of transmit powers. Differentiating power-level selection by regions allows POC to be 'balanced' across regions. This hip does not attempt to address any possible imbalance in the current poc system which is outside the scope, however, this mechanism could be used to adjust any imbalance in the future. These suggested values keep status quo with today and do not introduce any change across regions:
 
-$\\{MaxEIRP,\ MaxEIRP-3dBm,\ MaxEIRP-6dBm\\}$
+AU915, US915, IN865:
+$\{MaxEIRP,\ MaxEIRP*0.8 dBm,\ MaxEIRP*0.6 dBm\}$
+
+KR920, AS923, RU864, EU868 regions set of power values. The duplicate 3rd value is intentionally left to make comparison to the fixed channel plans easier:
+$\{MaxEIRP,\ MaxEIRP*0.8 dBm,\ MaxEIRP*0.8 dBm\}$
 
 A selection is made between full power or one of the reduced values. MaxEIRP minus 3dBm will cut the transmit power in half and minus 6dBm will be a quarter of the total power. Using inverse square law the estimated range will roughly double with a change of 6dBm.
 
@@ -86,14 +90,13 @@ Suggested set of EIRP values for each region:
 
 | Region | EIRP Values(dBm) | Notes |
 |--------|-------------------|-------|
-| KR920  |  14, 11, 8               |       |
-| AS923  |  16, 13, 10               |       |
-| RU864  |  16, 13, 10               |       |
-| EU868  |  16, 13, 10               |       |
-| IN865  |  30, 27, 24               | 36?      |
-| US915  |  30, 27, 24               | 36?      |
-| AU915  |  30, 27, 24               | 36?      |
-
+| KR920  |  14, 11, 11               |       |
+| AS923  |  16, 13, 13               |       |
+| RU864  |  16, 13, 13               |       |
+| EU868  |  16, 13, 13               |       |
+| IN865  |  30, 22, 16               | 36?      |
+| US915  |  30, 22, 16               | 36?      |
+| AU915  |  30, 22, 16               | 36?      |
 
 To enhance the detail and accuracy of the coverage map, we propose introducing variable transmit power for beacons. By randomly adjusting the transmit power at each spreading factor, we can generate a comprehensive map that more accurately reflects the network’s capabilities.
 
@@ -108,7 +111,7 @@ Why do we use 36 in north america?
 
 The spreading factor (SF) in LoRa determines the number of chirps (symbol) used to encode a bit of information. A higher spreading factor increases the number of chirps per bit, which makes the signal take longer to transmit but increases its resilience to noise and increases range. Further detail is beyond the scope of this document but the performance improvements have been shown to the minimum sensitivity:
 
-Sensitivty improvements take from (3)Semtech AN1200.22:
+Sensitivity improvements take from (3)Semtech AN1200.22:
 
 | Mode | Bit Rate(kb/s) |	Sensitivity(dBm) | Symbol Time(ms) | US915 Max Packet Size(bytes)  |
 |------|---------------|------------------|-----------------|---------------------------|
@@ -129,8 +132,8 @@ Airtime taken from (2)https://avbentem.github.io/airtime-calculator/
 
 | Region | Spreading Factor | Datarate(bps) | Packet Length (bytes) | On-Air Time(ms)  |Max EIRP|  Notes                |
 |--------|------------------|---------------|-----------------------|------------------|--------|-----------------------|
-| US915  | SF7              |  5470         | 52                    | 103              |36      |                       |
-| US915  | SF8              |  3125         | 52                    | 185              |36      |                       |
+| US915  | SF7              |  5470         | 52                    | 103              |36      | 30?                   |
+| US915  | SF8              |  3125         | 52                    | 185              |36      | 30?                   |
 | US915  | SF9              |  1760         | 52                    | 329              |36      | Current POC Beacon    |
 | US915  | SF10             |  980          | 52                    | 616              |36      | Dwell time exceeded(Max 25-bytes)   |
 | EU868  | SF7              |  5470         | 52                    | 103              |16      |                       |
@@ -139,7 +142,6 @@ Airtime taken from (2)https://avbentem.github.io/airtime-calculator/
 | EU868  | SF10             |  980          | 52                    | 616              |16      |                       |
 | EU868  | SF11             |  440          | 52                    | 1315             |16      |                       |
 | EU868  | SF12             |  250          | 52                    | 2466             |16      | Current POC Beacon    |
-
 
 
 Enabling higher data rates on the network allows battery-powered LoRaWAN sensors to extend their battery life by transmitting data more quickly, which reduces transmitter on-time and consequently lowers system noise and collision risks. However, these higher data rates reduce transmission range, making it essential to accurately understand and map the network's coverage capabilities.
@@ -151,7 +153,7 @@ The maximum packet size M was take from 1.0.4 of the regional parameters. I need
 
 ### Beacon Packet Length
 
-The current packet length of the PoC beacon is 52 bytes. This length comes from legacy data included during targetted proof of coverage. The longer the packet the higher a chance of interference and packet loss(1). Using a variable packet length for POC will further help to understands the networks capability. 
+The current packet length of the PoC beacon is 52 bytes. This length comes from legacy data included during targeted proof of coverage. The longer the packet the higher a chance of interference and packet loss(1). Using a variable packet length for POC will further help to understands the networks capability. 
 
 If the beacon packet length can be reduced from 52-bytes and made variable ideally it would be multiples of 24-bytes or 1dc. If it could be reduced to 19-bytes SF10 could be utilized in US915 while still respecting the 400ms dwell time.
 
@@ -191,9 +193,9 @@ This design was chosen for its potential to enhance network integrity and mappin
 
 Alternative designs include adjusting some subset of the parameters discussed above. eg. dynamic spreading factor but do not vary transmit power. These do not offer the same level of unpredictability as varying all three parameters.
 
-Other discussions of dual beacons from neighbouring hotspots with a time sync method. This HIP does not exclude this addition in the future if deemed valuable.
+Other discussions of dual beacons from neighboring hotspots with a time sync method. This HIP does not exclude this addition in the future if deemed valuable.
 
-One alternative method sends multiple beacons within a very short interval. This would remove any long-term varition due to weather or other external factors but would require the beacons to be grouped instead of evenly spaced. This would further aggrevate the lumpiness that may be introduced to earnings with dynamic beacons.
+One alternative method sends multiple beacons within a very short interval. This would remove any long-term variation due to weather or other external factors but would require the beacons to be grouped instead of evenly spaced. This would further aggravate the lumpiness that may be introduced to earnings with dynamic beacons.
 
 
 ## Unresolved Questions
@@ -205,7 +207,8 @@ One alternative method sends multiple beacons within a very short interval. This
 - Are there dependencies, milestones, or dates that need to be met for this HIP to succeed?
 
 - Exact methods for deriving parameters from blockchain entropy need refinement.
-- Impact assessment on existing hotspots and any required updates. 
+- Impact assessment on existing hotspots and any required updates.
+- POC equalization across regions. Suggestions have been made to reduce the maximum EIRP for US915 to 22dBm. This hip does not try to equalize the existing poc rewards across regions but only keep the status quo.
 
 ## Deployment Impact
 
@@ -225,34 +228,34 @@ There is the potential for the power control to not work as expected across diff
 
 Current beacons, configured for maximum range, will still be send but at a less frequent interval. Users may notice less witnesses while sending beacons of a higher datarate or lower power. In some cases these beacons may not cover as large a footprint but still contains valuable data or its capability
 
-Comparison of potential beacon combinations compared to maximum of today:
+Comparison of potential beacon combinations compared to maximum of today. The Delta dB shows the difference from today's current POC beacon accounting for spreading factor and transmit power with the values suggested in the sections above:
 
 EU868
-|Spreading Factor|Transmit Power(dBm)|Packet Size| Delta dB |
-|----------------|-------------------|-----------|----------|
-|    SF12        |       16          |    52     |    0     |
-|    SF10        |       16          |    52     |   -5     |
-|    SF7         |       16          |    52     |   -14    |
-|    SF12        |       13          |    52     |   -3     |
-|    SF10        |       13          |    52     |   -8     |
-|    SF7         |       13          |    52     |   -17    |
-|    SF12        |       10          |    52     |   -6     |
-|    SF10        |       10          |    52     |   -11    |
-|    SF7         |       10          |    52     |   -20    |
+|Spreading Factor|Transmit Power(dBm)|Packet Size| Delta dB | Notes |
+|----------------|-------------------|-----------|----------|-------|
+|    SF12        |       16          |    52     |    0     | Current Beacon |
+|    SF10        |       16          |    52     |   -5     |       |
+|    SF7         |       16          |    52     |   -14    |       |
+|    SF12        |       13          |    52     |   -3     |       |
+|    SF10        |       13          |    52     |   -8     |       |
+|    SF7         |       13          |    52     |   -17    |       |
+|    SF12        |       13          |    52     |   -3     |       |
+|    SF10        |       13          |    52     |   -8     |       |
+|    SF7         |       13          |    52     |   -17    |       |
 
 
 US915
-|Spreading Factor|Transmit Power(dBm)|Packet Size| Delta dB |
-|----------------|-------------------|-----------|----------|
-|    SF9        |       27          |    52     |    0      |
-|    SF8        |       27          |    52     |    -3     |
-|    SF7        |       27          |    52     |    -6     |
-|    SF9        |       24          |    52     |    -3     |
-|    SF8        |       24          |    52     |    -6     |
-|    SF7        |       24          |    52     |    -9     |
-|    SF9        |       21          |    52     |    -6     |
-|    SF8        |       21          |    52     |    -9     |
-|    SF7        |       21          |    52     |    -12    |
+|Spreading Factor|Transmit Power(dBm)|Packet Size| Delta dB | Notes |
+|----------------|-------------------|-----------|----------|-------|
+|    SF9        |       27          |    52     |    0      | Current Beacon |
+|    SF8        |       27          |    52     |    -3     |       |
+|    SF7        |       27          |    52     |    -6     |       |
+|    SF9        |       22          |    52     |    -5     |       |
+|    SF8        |       22          |    52     |    -8     |       |
+|    SF7        |       22          |    52     |    -11    |       |
+|    SF9        |       16          |    52     |    -11    |       |
+|    SF8        |       16          |    52     |    -14    |       |
+|    SF7        |       16          |    52     |    -17    |       |
 
 
 ## Success Metrics
@@ -268,7 +271,7 @@ measure the success?
 
 Reducing the beacons from the current maximums will reduce the on-air time on average. This will reduce interference and packet collision. This may not be important in sparely populated areas but in dense deployments the PoC airtime from all hotspots within range could significantly degrade the channel.
 
-Visualization of PoC coverage could include mulitple layers for capability. Feedback from the community on improved coverage maps would be expected.
+Visualization of PoC coverage could include multiple layers for capability. Feedback from the community on improved coverage maps would be expected.
 
 The variable transmit power will most likely help to detected gaming or manipulation incidents. It will also make gaming 0dB antenna less effective. Finding the right distance apart will be more difficult as the packet strengths will vary and they are using noise and near-field effects versus propagation. 
 
