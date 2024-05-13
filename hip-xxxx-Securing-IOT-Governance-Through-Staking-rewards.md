@@ -1,3 +1,4 @@
+# HIP 01XX: Securing IOT Governance Through Staking Rewards
 - Author(s): BFGNeil, Siegfried
 - Start Date: 2024-04-16
 - Category: Economic, Governance
