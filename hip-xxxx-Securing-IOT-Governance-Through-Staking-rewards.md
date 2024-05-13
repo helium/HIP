@@ -19,50 +19,23 @@ We wish to increase utility of the IOT token and increase participation in votin
 
 ## Detailed Explanation
 
-1. **Current veIOT unlock:**
-   - Upon implementation, all IOT currently locked in veIOT at the time of implementation will be able to unlock their tokens and wait 14 epochs for the cool down period.
+1. **Emissions Apportionment:**
+   - Allocate 6% of total IOT emissions to veIOT stakers, creating a direct and proportional reward system for participants.
 
-   **Contant Lockups**
-   - Position is updated to the current number of locked up days and receives the 0.0025 top up multiplier for that number of days. This position can be unlocked with a 14 day cooldown.
-
-   **Cliff Lockups**
-
-   - Position is updated to 0 power and can unlock with a 14 day cooldown.
-
-3. **Emissions Apportionment:**
-   - Allocate 4% of total IOT emissions to veIOT stakers, creating a direct and proportional reward system for participants.
-
-4. **Reduced Staking Minimums:**
-   - Establish a minimum stake duration of 1 day with a 1x vote power multiplier.
-   - Implement a daily multiplier increment of 0.0025 for every day a stake remains active. This progressive approach aligns with sustained commitment, rewarding long-term participants.
-
-5. **Unlocking Mechanism:**
-   - Stakers can unlock at any time and will be subject to a 14 epoch (approximately equal to 14 days) cool down period. During the cool down period, the tokens that were locked for veIOT will remain locked, but the veIOT will not have any voting power or receive any emissions. Stakers can elect to unlock all or some portion of their stake at any time.
-
-6. **Voting Power Increase:**
-    - A future HIP can introduce an additional multiplier increase of for every vote cast by veIOT holders in the governance process. This HIP will include the development work to make that possible; however, it will be implemented with an increase set at 0.00 unless another HIP is proposed and passed before implementation. It is the expectation of the authors that the other HIP will be discussed in parallel with or shortly after the passage of this HIP.
-
+2. **Existing lockups:**
+   - All existing lockups stay as is, only now recieving rewards for their positions, methods of unlocking, locking , cliff, constant all stay the same.
+   - 
 ## Drawbacks
 
-Unlock of existing IOT may lead to less locks if the incentive is not high enough to lock
+None noted so far
 
 ## Rationale and Alternatives
 
+None proposed
+
 ### Strengthening Network Security
 
-- The dynamic staking mechanism should create an incentive for more veIOT to be locked, reducing the risk of network attacks and enhancing overall security.
-
-### Fostering Long-Term Commitment
-
-- The daily multiplier increment encourages veIOT holders to commit to longer staking periods, aligning interests and promoting sustained engagement.
-
-### Enhancing Governance Participation
-
-- By rewarding veIOT holders with an additional multiplier for casting votes, this proposal aims to increase participation in the governance process, fortifying the network against potential governance attacks.
-
-### Improving Liquidity Management For Stakers
-
-- The unlocking mechanism provides a balanced approach to liquidity management, allowing veIOT holders access to their tokens without long term commitments of up to 4 years in the current system. We believe a more dynamic approach to lock ups will make reduce the barrier for people looking to lock up their tokens. Additionally, we feel, given the current data for veIOT locks as well as other veHNT/veDNT tokens that people often lock fewer tokens for longer durations under the current system. The network prefers more tokens locked than fewer.
+- Rewarding users for locking up tokens should create an incentive for more veIOT to be locked, reducing the risk of network attacks and enhancing overall security by increasing voting numbers
 
 ## Unresolved Questions
 
@@ -75,10 +48,7 @@ Unlock of existing IOT may lead to less locks if the incentive is not high enoug
 ## Deployment Impact
 
 ### Existing veIOT Stakers
-Current veIOT stakers will be able to unlock their positions and wait 14 days for the cooloff to have their tokens returned
-
-### Helium Governance Systems
-The Helium governance systems will require updates to accommodate the new staking mechanisms outlined in the proposal. Changes need to be made within the blockchain infrastructure to support the staking rewards.
+Current veIOT stakers will start to recieve rewards for their lockups, and can decay their positions as normal.
 
 ### Documentation Updates
 Documentation regarding staking with Helium Vote will need to be updated to reflect the new staking mechanisms introduced by this proposal. Users should be informed that they can stake veIOT to earn rewards and participate in the governance process effectively.
