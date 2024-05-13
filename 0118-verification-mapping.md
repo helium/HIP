@@ -87,7 +87,7 @@ One option is to implement a method for punishing hotspots for negative correlat
 
 ## Deployment Impact
 
-It is proposed that the implementation of this HIP will be done by Nova Labs. Implementation will require changes to all service provider apps (i.e. Helium Mobile app), as well as the rewards of Oracle. It is estimated that the work to implement this will take roughly 3 months, following the approval of this HIP and provided there are no substantial changes to scope as a result of community discussions.
+It is proposed that the implementation of this HIP will be done by Nova Labs. Implementation will require changes to all service provider apps (i.e. Helium Mobile app), as well as the rewards of Oracle. This HIP will be implemented in 2 phases.  Verification Mapping will be implemented first and is estimated to take roughly 3 months.  Phase 2 will update Proof of Coverage rewards to use the Verification Mapping data and will be implemented 3 months after phase 1 goes live. The phased approach allows time to analyze the effect of Verification Mapping and determine how PoC rewards will be affected. During phase 1, all Verification Mapping results will be published to allow for community inspection and problem reports.
 
 ## Success Metrics
 
