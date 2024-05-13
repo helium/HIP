@@ -1,6 +1,6 @@
 # HIP 115: Redefining the MOBILE Maker Approval Process
 
-- Author: [Andy Zyvoloski](https://github.com/heatedlime)
+- Author: [Andy Zyvoloski](https://github.com/heatedlime) & the Helium Foundation
 - Contributor: [Groot](https://github.com/mawdegroot)
 - Start Date: 2024-03-25
 - Category: Technical, Economic
