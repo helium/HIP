@@ -1,17 +1,20 @@
-- Author(s): BFGNeil
+- Author(s): BFGNeil, IOT Working Group
 - Start Date: 2024-04-16
 - Category: Economic, Governance
-- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
-- Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
+- Original HIP PR: 
+- Tracking Issue: 
 - Vote Requirements: veIOT
 
 ## Summary
 
-This HIP aims to improve utility of IOT and increase voter turnout by providing staking rewards for locking IOT.
+This HIP aims to improve the utility of IOT token and increase voter turnout by providing staking rewards for locking IOT.
 
 ## Motivation
 
-We wish to increase utility of the IOT token and increase participation in voting. Currently most users have no reason or desire to hold IOT or lock it leading to low voter turnout.
+We wish to increase utility of the IOT token and increase participation in voting. Currently most users have no reason or desire to hold IOT or lock it leading to low voter turnout. 
+
+Rewarding users for locking up tokens will create an incentive for more veIOT to be locked, reducing the risk of network attacks via controlling voting on votes with low voter turnout.
+
 
 ## Stakeholders
 
@@ -20,45 +23,37 @@ We wish to increase utility of the IOT token and increase participation in votin
 ## Detailed Explanation
 
 1. **Emissions Apportionment:**
-   - Allocate 6% of total IOT emissions to veIOT stakers, creating a direct and proportional reward system for participants.
+   - Allocate 4% of total IOT emissions (4% deducted from PoC) to veIOT stakers, creating a reward system for locking IOT.
 
 2. **Existing lockups:**
-   - All existing lockups stay as is, only now recieving rewards for their positions, methods of unlocking, locking , cliff, constant all stay the same.
+   - All existing lockups stay as is. Functions for unlocking, locking, chosing cliff/constant, vote weight and unlocking remain the same.
    - 
 ## Drawbacks
 
-None noted so far
+Without forcing users to vote, simply locking and staking IOT will not automatically mean that voting numbers increases. 
 
 ## Rationale and Alternatives
 
-None proposed
-
-### Strengthening Network Security
-
-- Rewarding users for locking up tokens should create an incentive for more veIOT to be locked, reducing the risk of network attacks and enhancing overall security by increasing voting numbers
+No Alternatives proposed.
 
 ## Unresolved Questions
 
-- What parts of the design do you expect to resolve through the HIP process before this gets merged?
-- What parts of the design do you expect to resolve through the implementation of this feature?
-- What related issues do you consider out of scope for this HIP that could be addressed in the
-  future independently of the solution that comes out of this HIP?
-- Are there dependencies, milestones, or dates that need to be met for this HIP to succeed?
+None at this time
 
 ## Deployment Impact
 
 ### Existing veIOT Stakers
-Current veIOT stakers will start to recieve rewards for their lockups, and can decay their positions as normal.
+Current veIOT stakers will start to recieve rewards for their lockups, and can decay/unlock their positions as normal.
 
 ### Documentation Updates
-Documentation regarding staking with Helium Vote will need to be updated to reflect the new staking mechanisms introduced by this proposal. Users should be informed that they can stake veIOT to earn rewards and participate in the governance process effectively.
+Documentation regarding staking with Helium Vote will need to be updated to reflect that staking IOT now earns rewards.
 
 https://docs.helium.com/governance/staking-with-helium-vote/
 
 ### User Impact
-Users will have enhanced staking options with the introduction of staking rewards for veIOT. This may encourage more users to stake their IOT tokens, thus increasing network participation and stability. The availability of staking rewards may also lead to increased engagement from users who were previously hesitant to participate in staking or governance activities.
+users who choose to stake IOT will now earn rewards from it
 
 ## Success Metrics
 
 - This HIP will be considered successful if more IOT tokens are locked under this new system as opposed to the current system.
-- If a significant number of new participants choose to stake their IOT tokens and vote in future HIPs.
+- veIOT used for voting increases.
