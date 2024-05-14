@@ -28,7 +28,7 @@ All current and future veIOT holders, as well as IOT holders, are stakeholders i
     - Post the implementation of decentralized Oracles, this allocation will revert to Oracle rewards, providing veIOT holders with the opportunity to earn rewards by staking to Oracles as specified in HIP-52.
 
 2. **Existing lockups:**
-   -All existing lockups stay as is. Functions for unlocking, locking, choosing decaying/constant, vote weight and unlocking remain the same.
+    - All existing lockups stay as is. Functions for unlocking, locking, choosing decaying/constant, vote weight and unlocking remain the same.
 
 ## Drawbacks
 
