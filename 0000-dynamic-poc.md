@@ -1,7 +1,7 @@
-# HIP Template (Give it a title here but do not allocate a number, maintainer will allocate a number)
+# HIP XXX: Dynamic IOT Proof-of-Coverage
 
-- Author(s): gradoj
-- Start Date: May 7, 2024
+- Author(s): [gradoj](https://github.com/gradoj)
+- Start Date: 2024-05-07
 - Category: Technical
 - Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
 - Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
@@ -67,14 +67,14 @@ $EIRP(dBm) <= TransmitPower(dBm) + AntennGain(dBi)$
 Default(Max) EIRP is taken from (4)LoRaWAN Regional Parameters 1.0.4. The transmit power must be lowered to keep the EIRP within regulatory limits when paired with a high gain antenna.  
 
 | Region | Max EIRP(dBm) | Notes |
-|--------|-------------------|-------|
-| KR920  |  14               |       |
-| AS923  |  16               |       |
-| RU864  |  16               |       |
-| EU868  |  16               |       |
-| IN865  |  30               | 36?      |
-| US915  |  30               | 36?      |
-| AU915  |  30               | 36?      |
+|--------|---------------|-------|
+| KR920  | 14            |       |
+| AS923  | 16            |       |
+| RU864  | 16            |       |
+| EU868  | 16            |       |
+| IN865  | 30            | 36?   |
+| US915  | 30            | 36?   |
+| AU915  | 30            | 36?   |
 
 As an alternative to always transmitting at the maximum permitted value it is suggested that a random selection is made from a subset of allowable transmit powers. The large spread in allowable power across regions makes it difficult to implement one general set of transmit powers. Differentiating power-level selection by regions allows POC to be 'balanced' across regions. This hip does not attempt to address any possible imbalance in the current poc system which is outside the scope, however, this mechanism could be used to adjust any imbalance in the future. These suggested values keep status quo with today and do not introduce any change across regions:
 
@@ -91,14 +91,14 @@ A selection is made between full power or one of the reduced values. MaxEIRP min
 Suggested set of EIRP values for each region:
 
 | Region | EIRP Values(dBm) | Notes |
-|--------|-------------------|-------|
-| KR920  |  14, 11, 11               |       |
-| AS923  |  16, 13, 13               |       |
-| RU864  |  16, 13, 13               |       |
-| EU868  |  16, 13, 13               |       |
-| IN865  |  30, 22, 16               | 36?      |
-| US915  |  30, 22, 16               | 36?      |
-| AU915  |  30, 22, 16               | 36?      |
+|--------|------------------|-------|
+| KR920  | 14, 11, 11       |       |
+| AS923  | 16, 13, 13       |       |
+| RU864  | 16, 13, 13       |       |
+| EU868  | 16, 13, 13       |       |
+| IN865  | 30, 22, 16       | 36?   |
+| US915  | 30, 22, 16       | 36?   |
+| AU915  | 30, 22, 16       | 36?   |
 
 To enhance the detail and accuracy of the coverage map, we propose introducing variable transmit power for beacons. By randomly adjusting the transmit power at each spreading factor, we can generate a comprehensive map that more accurately reflects the network’s capabilities.
 
@@ -115,15 +115,16 @@ The spreading factor (SF) in LoRa determines the number of chirps (symbol) used 
 
 Sensitivity improvements take from (3)Semtech AN1200.22:
 
-| Mode | Bit Rate(kb/s) |	Sensitivity(dBm) | Symbol Time(ms) | US915 Max Packet Size(bytes)  |
-|------|---------------|------------------|-----------------|---------------------------|
-|FSK | 1.2 | -122	| |  -   |
-|SF12	| 0.293	| -137| 	32.768 |   -  |
-|SF11	| 0.537	| -134.5| 	16.384 |  -   |
-|SF10	| 0.976	| -132	| 8.192 |   19   |
-|SF9	| 1.757	| -129	| 4.096 |   61   |
-|SF8	| 3.125	| -126	| 2.048 |  133   |
-|SF7	| 5.468	| -123	| 1.024 |  230   |
+
+| Mode  | Bit Rate(kb/s) | 	Sensitivity(dBm) | Symbol Time(ms) | US915 Max Packet Size(bytes) |
+|-------|----------------|-------------------|-----------------|------------------------------|
+| FSK   | 1.2            | -122	             |                 | -                            |
+| SF12	 | 0.293	         | -137              | 	32.768         | -                            |
+| SF11	 | 0.537	         | -134.5            | 	16.384         | -                            |
+| SF10	 | 0.976	         | -132	             | 8.192           | 19                           |
+| SF9	  | 1.757	         | -129	             | 4.096           | 61                           |
+| SF8	  | 3.125	         | -126	             | 2.048           | 133                          |
+| SF7	  | 5.468	         | -123	             | 1.024           | 230                          |
 
 Regulatory constraints in the US915 region, which have a maximum dwell time of 400ms, restrict the use of spreading factors above SF9 for 52-byte packets. In contrast, the EU868 region can utilize SF12 but are limited in the EIRP. By randomly selecting the data rate, the proposed change is expected to reduce overall PoC airtime by 38% in US915(SF7,SF8,SF9) and 57% in EU868(SF7,SF10,SF12).
 
@@ -132,18 +133,19 @@ The following table, based on calculations from this airtime calculator, illustr
 Airtime taken from (2)https://avbentem.github.io/airtime-calculator/
 
 
-| Region | Spreading Factor | Datarate(bps) | Packet Length (bytes) | On-Air Time(ms)  |Max EIRP|  Notes                |
-|--------|------------------|---------------|-----------------------|------------------|--------|-----------------------|
-| US915  | SF7              |  5470         | 52                    | 103              |36      | 30?                   |
-| US915  | SF8              |  3125         | 52                    | 185              |36      | 30?                   |
-| US915  | SF9              |  1760         | 52                    | 329              |36      | Current POC Beacon    |
-| US915  | SF10             |  980          | 52                    | 616              |36      | Dwell time exceeded(Max 25-bytes)   |
-| EU868  | SF7              |  5470         | 52                    | 103              |16      |                       |
-| EU868  | SF8              |  3125         | 52                    | 185              |16      |                       |
-| EU868  | SF9              |  1760         | 52                    | 329              |16      |                       |
-| EU868  | SF10             |  980          | 52                    | 616              |16      |                       |
-| EU868  | SF11             |  440          | 52                    | 1315             |16      |                       |
-| EU868  | SF12             |  250          | 52                    | 2466             |16      | Current POC Beacon    |
+
+| Region | Spreading Factor | Datarate(bps) | Packet Length (bytes) | On-Air Time(ms) | Max EIRP | Notes                             |
+|--------|------------------|---------------|-----------------------|-----------------|----------|-----------------------------------|
+| US915  | SF7              | 5470          | 52                    | 103             | 36       | 30?                               |
+| US915  | SF8              | 3125          | 52                    | 185             | 36       | 30?                               |
+| US915  | SF9              | 1760          | 52                    | 329             | 36       | Current POC Beacon                |
+| US915  | SF10             | 980           | 52                    | 616             | 36       | Dwell time exceeded(Max 25-bytes) |
+| EU868  | SF7              | 5470          | 52                    | 103             | 16       |                                   |
+| EU868  | SF8              | 3125          | 52                    | 185             | 16       |                                   |
+| EU868  | SF9              | 1760          | 52                    | 329             | 16       |                                   |
+| EU868  | SF10             | 980           | 52                    | 616             | 16       |                                   |
+| EU868  | SF11             | 440           | 52                    | 1315            | 16       |                                   |
+| EU868  | SF12             | 250           | 52                    | 2466            | 16       | Current POC Beacon                |
 
 
 Enabling higher data rates on the network allows battery-powered LoRaWAN sensors to extend their battery life by transmitting data more quickly, which reduces transmitter on-time and consequently lowers system noise and collision risks. However, these higher data rates reduce transmission range, making it essential to accurately understand and map the network's coverage capabilities.
@@ -233,31 +235,33 @@ Current beacons, configured for maximum range, will still be send but at a less 
 Comparison of potential beacon combinations compared to maximum of today. The Delta dB shows the difference from today's current POC beacon accounting for spreading factor and transmit power with the values suggested in the sections above:
 
 EU868
-|Spreading Factor|Transmit Power(dBm)|Packet Size| Delta dB | Notes |
-|----------------|-------------------|-----------|----------|-------|
-|    SF12        |       16          |    52     |    0     | Current Beacon |
-|    SF10        |       16          |    52     |   -5     |       |
-|    SF7         |       16          |    52     |   -14    |       |
-|    SF12        |       13          |    52     |   -3     |       |
-|    SF10        |       13          |    52     |   -8     |       |
-|    SF7         |       13          |    52     |   -17    |       |
-|    SF12        |       13          |    52     |   -3     |       |
-|    SF10        |       13          |    52     |   -8     |       |
-|    SF7         |       13          |    52     |   -17    |       |
+
+| Spreading Factor | Transmit Power(dBm) | Packet Size | Delta dB | Notes          |
+|------------------|---------------------|-------------|----------|----------------|
+| SF12             | 16                  | 52          | 0        | Current Beacon |
+| SF10             | 16                  | 52          | -5       |                |
+| SF7              | 16                  | 52          | -14      |                |
+| SF12             | 13                  | 52          | -3       |                |
+| SF10             | 13                  | 52          | -8       |                |
+| SF7              | 13                  | 52          | -17      |                |
+| SF12             | 13                  | 52          | -3       |                |
+| SF10             | 13                  | 52          | -8       |                |
+| SF7              | 13                  | 52          | -17      |                |
 
 
 US915
-|Spreading Factor|Transmit Power(dBm)|Packet Size| Delta dB | Notes |
-|----------------|-------------------|-----------|----------|-------|
-|    SF9        |       27          |    52     |    0      | Current Beacon |
-|    SF8        |       27          |    52     |    -3     |       |
-|    SF7        |       27          |    52     |    -6     |       |
-|    SF9        |       22          |    52     |    -5     |       |
-|    SF8        |       22          |    52     |    -8     |       |
-|    SF7        |       22          |    52     |    -11    |       |
-|    SF9        |       16          |    52     |    -11    |       |
-|    SF8        |       16          |    52     |    -14    |       |
-|    SF7        |       16          |    52     |    -17    |       |
+
+| Spreading Factor | Transmit Power(dBm) | Packet Size | Delta dB | Notes          |
+|------------------|---------------------|-------------|----------|----------------|
+| SF9              | 27                  | 52          | 0        | Current Beacon |
+| SF8              | 27                  | 52          | -3       |                |
+| SF7              | 27                  | 52          | -6       |                |
+| SF9              | 22                  | 52          | -5       |                |
+| SF8              | 22                  | 52          | -8       |                |
+| SF7              | 22                  | 52          | -11      |                |
+| SF9              | 16                  | 52          | -11      |                |
+| SF8              | 16                  | 52          | -14      |                |
+| SF7              | 16                  | 52          | -17      |                |
 
 ![image](https://github.com/gradoj/HIPS/assets/7544765/5bbe60eb-953f-4c91-aae1-c333c32dcf5c)
 
