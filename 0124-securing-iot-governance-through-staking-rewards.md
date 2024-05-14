@@ -27,8 +27,8 @@ Rewarding users for locking up tokens will create an incentive for more veIOT to
 ## Detailed Explanation
 
 1. **Emissions Apportionment:**
-    - Allocate 7% of emissions currently unused assigned for the Oracle Bucket to veIOT staking, creating a reward system for locking IOT.
-    - When oracles are ready to be deployed, this hip can be qualified by its success metrics to say if we should keep this staking method and allocate more to the oracle bucket, or to replace it as it has failed.
+    - Allocate 4% of IOT emissions to staking rewards for veIOT, to be taken from the reward bucket assigned to Oracles in HIP-52, which is currently not emitted.
+    - Once decentralized Oracles are implemented, this allocation shall revert to Oracle rewards, which will give veIOT holders the opportunity to earn rewards by staking to Oracles as specified in HIP-52.
 
 2. **Existing lockups:**
     - All existing lockups stay as is. Functions for unlocking, locking, choosing cliff/constant, vote weight and unlocking remain the same.
