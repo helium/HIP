@@ -31,7 +31,7 @@ Rewarding users for locking up tokens will create an incentive for more veIOT to
     - Once decentralized Oracles are implemented, this allocation shall revert to Oracle rewards, which will give veIOT holders the opportunity to earn rewards by staking to Oracles as specified in HIP-52.
 
 2. **Existing lockups:**
-    - All existing lockups stay as is. Functions for unlocking, locking, choosing cliff/constant, vote weight and unlocking remain the same.
+    - All existing lockups stay as is. Functions for unlocking, locking, choosing decaying/constant, vote weight and unlocking remain the same.
     -
 ## Drawbacks
 
