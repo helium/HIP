@@ -17,7 +17,7 @@ This proposal outlines measures to invalidate boosted hex rewards for mobile hot
 
 ## Motivation
 
-The community and Service Provider (SP) have identified hotspot operators that are engaging in malicious activity in order to earn boosted hex rewards without providing legitimate coverage to those hexes.
+The Helium Community and Service Provider (SP) have identified hotspot operators that are engaging in malicious activity in order to earn boosted hex rewards without providing legitimate coverage to those hexes.
 
 Although there are proposals and initiatives to programmatically identify and deter this malicious behavior, such as HIP 118, it is likely to take several months to reach consensus on these measures, complete a community vote, and execute implementation of the approved plan.
 
