@@ -11,7 +11,7 @@
 
 ## Summary
 
-This Helium Improvement Proposal (HIP) aims to enhance the utility of the IOT token and boost voter engagement within the network by introducing staking rewards for veIOT holders. By incentivizing users to lock their IOT tokens, this proposal seeks to address the current challenge of low voter turnout by creating tangible benefits locking IOT which we believe will lead to more positions being voted with.
+This Helium Improvement Proposal (HIP) aims to increase voting turnout. It suggests to achieve this goal indirectly by paying rewards for locking IOT, thus reducing the cost of acquiring voting power (veIOT).
 
 ## Motivation
 
