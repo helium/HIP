@@ -26,12 +26,14 @@ After implementation of HIP-84 and HIP-103, the rewards for hotspots on the Heli
 ## Stakeholders
   
 -   Deployers - deployers will be unable to collect rewards in locations boosted by HIP-84 or HIP-103, unless their location has been verified by a verification mapper
--   Subscribers - Subscribers will have the opportunity to earn extra rewards for performing verification mapping tasks
 -   Service providers - will need to designate verification mappers and/or provide additional oracle data to the network, such as location of their macro towers and a subset of call data records
+-   Subscribers signing up for verification in addition to discovery will have the opportunity to earn extra rewards for performing verification mapping tasks.
+-   Subscribers who are discovery mappers not signing up or failing to meet verification criteria will receive reduced mapping rewards.
+(Subscribers not signing up for discovery mapping and verification mapping - no impact, no rewards.)
    
 ## Detailed Explanation
 
-To perform verification mapping activities one must be a subscriber on the network. I.e. run an app on the phone with a subscriber NFT in it. There are three ways that the subscriber NFT can earn “verification mapper” status.
+To perform verification mapping activities one must be a subscriber on the network. I.e. run an app on the phone with a subscriber NFT in it. There are two ways that the subscriber NFT can earn “verification mapper” status.
 
 -   *Manual Designation:* Non-scalable approach designed to bootstrap new locations / geographies (such as Mexico) where there is not yet a pool of existing discovery mappers. A trusted mapper is designated by a service provider to complete physical verification of coverage at a given location, following a prescribed list of instructions, requiring such an individual to visit the location and attempt to complete a connection to a radio (Wi-Fi or CBRS). These types of trusted mappers are compensated for the work by the service providers and are not rewarded by the MOBILE emissions.
     
