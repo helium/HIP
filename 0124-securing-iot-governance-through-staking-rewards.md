@@ -1,6 +1,6 @@
 # HIP 124: Securing IOT Governance Through Staking Rewards
 
-- Authors: [BFGNeil](https://github.com/BFGNeil), [Siegfried-B](https://github.com/Siegfried-B)
+- Authors: [BFGNeil](https://github.com/BFGNeil), [Siegfried-B](https://github.com/Siegfried-B), [Ferebee](https://github.com/ferebee)
 - Start Date: 2024-05-13
 - Category: Economic, Governance
 - Original HIP PR: [#1011](https://github.com/helium/HIP/pull/1011)
@@ -11,33 +11,29 @@
 
 ## Summary
 
-This HIP aims to improve the utility of the IOT token and increase voter turnout by providing staking rewards for locking IOT.
+This Helium Improvement Proposal (HIP) aims to increase voting turnout. It suggests to achieve this goal indirectly by paying rewards for locking IOT, thus reducing the cost of acquiring voting power (veIOT).
 
 ## Motivation
 
-We wish to increase utility of the IOT token and increase participation in voting. Currently most users have no reason or desire to hold IOT or lock it leading to low voter turnout.
-
-Rewarding users for locking up tokens will create an incentive for more veIOT to be locked, reducing the risk of network attacks via controlling voting when there is low voter turnout.
-
+The primary motivation behind this proposal is to increase the overall utility of the IOT token and foster greater participation in the network's governance processes. Presently, many IOT holders lack the incentive to engage in voting, resulting in low voter turnout. By rewarding users for staking their tokens, we aim to encourage more individuals to actively participate in governance as they have locked positions to vote with, thereby strengthening the network's resilience against potential attacks during periods of low participation.
 
 ## Stakeholders
 
-- All current and future veIOT holders as well as IOT holders.
+All current and future veIOT holders, as well as IOT holders, are stakeholders in this proposal. By incentivizing staking, the proposal benefits those who lock IOT while also promoting the long-term health and stability of the network.
 
 ## Detailed Explanation
 
 1. **Emissions Apportionment:**
-    - Allocate 7% of emissions currently unused assigned for the Oracle Bucket to veIOT staking, creating a reward system for locking IOT.
-    - When oracles are ready to be deployed, this hip can be qualified by its success metrics to say if we should keep this staking method and allocate more to the oracle bucket, or to replace it as it has failed.
+    - Allocate 4% of IOT emissions to staking rewards for veIOT. This allocation will be sourced from the reward bucket assigned to Oracles in HIP-52, which is currently not utilised.
+    - Post the implementation of decentralized Oracles, this allocation will revert to Oracle rewards, providing veIOT holders with the opportunity to earn rewards by staking to Oracles as specified in HIP-52.
 
 2. **Existing lockups:**
-    - All existing lockups stay as is. Functions for unlocking, locking, choosing cliff/constant, vote weight and unlocking remain the same.
-    -
+    - All existing lockups stay as is. Functions for unlocking, locking, choosing decaying/constant, vote weight and unlocking remain the same.
+
 ## Drawbacks
 
-- Whilst increasing the amount of locked IOT, IOT holders are not required to vote, this hip could lead to more locked, but no increase of voting.
-
-- Rewards daily emitted to veIOT holders will increase dilution of IOT supply. We believe that the advantages of increased voting participation will outweigh the disadvantages of increased IOT supply, though. IOT holders may lock to earn rewards, but not use their veIOT in a significant amount for voting. We believe the likelihood of this happening is low, though.
+- Although this proposal aims to increase the amount of locked IOT, there's a risk that IOT holders may lock tokens solely to earn rewards without actively participating in the voting process. This could potentially lead to an increase in locked tokens without a corresponding rise in voting activity.
+- Rewards emitted daily to veIOT holders will contribute to the dilution of the IOT supply. While this may pose a challenge, the benefits of increased voting participation are anticipated to outweigh the disadvantages of increased supply.
 
 ## Rationale and Alternatives
 
@@ -45,21 +41,25 @@ No Alternatives proposed.
 
 ## Unresolved Questions
 
-None at this time
+None at this time.
 
 ## Deployment Impact
+
 Total daily IOT emissions will increase by the amount of rewards emitted to veIOT holders.
 
 ### Existing veIOT Stakers
+
 Current veIOT stakers will start to receive rewards for their lockups, and can decay/unlock their positions as normal.
 
 ### Documentation Updates
+
 Documentation regarding staking with Helium Vote will need to be updated to reflect that staking IOT now earns rewards.
 
 https://docs.helium.com/governance/staking-with-helium-vote/
 
 ### User Impact
-users who choose to stake IOT will now earn rewards from it
+
+Users who choose to stake IOT will now have the opportunity to earn rewards from their staked tokens. 
 
 ## Success Metrics
 
