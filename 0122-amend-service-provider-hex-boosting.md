@@ -47,7 +47,7 @@ This HIP aims to do three (3) things to amend HIP-84 Service Provider Hex Boosti
       
 3. Reduce the minimum time for Service Provider Hex Boosting to 3 months.
    - Currently set to 6 months, reducing this to 3 months allows Service Providers more flexibility in boosting a hex that they may be unsure of the actual value of that location.
-   - It also sets more precedent for depoyers to not get accustomed to making contracts based on the boosted time, but rather that this is just a reward to jumpstart the depoyment. 
+   - It also sets more precedent for deployers to not get accustomed to making contracts based on the boosted time, but rather that this is just a reward to jumpstart the depoyment. 
       
 5. Limit FUTURE boost creation to a maximum of 10x.
    - Currently uncapped, we as a community have come to the conclusion that the 100x boosted hexes will mostly breed reward-chasing and attempted gaming of PoC.
