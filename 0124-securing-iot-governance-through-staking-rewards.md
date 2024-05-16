@@ -1,6 +1,6 @@
 # HIP 124: Securing IOT Governance Through Staking Rewards
 
-- Authors: [BFGNeil](https://github.com/BFGNeil), [Siegfried-B](https://github.com/Siegfried-B) , [Ferebee](https://github.com/ferebee)
+- Authors: [BFGNeil](https://github.com/BFGNeil), [Siegfried-B](https://github.com/Siegfried-B), [Ferebee](https://github.com/ferebee)
 - Start Date: 2024-05-13
 - Category: Economic, Governance
 - Original HIP PR: [#1011](https://github.com/helium/HIP/pull/1011)
