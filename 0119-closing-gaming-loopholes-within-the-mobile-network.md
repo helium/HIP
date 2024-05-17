@@ -38,13 +38,13 @@ In instances where external sources, such as Skyhook, states the asserted distan
 | 301 Meters or Greater           | `0.00`      |
 
 #### Outdoor Access Points
-As the Outdoor Access Points contain GPS, they are able to obtain much accurate location readings than the indoor Wi-Fi. As such, the difference in distance is set to be more strict. In instances where GPS and or external sources, such as Skyhook, states the asserted distance 31-50 meters away, the trust score will be set to `0.25`. In instances where external sources, such as Skyhook, states the asserted distance is 51 or greater meters away, the trust score will be set to `0.00`. Refer to the table below:
+As the Outdoor Access Points contain GPS, they are able to obtain much accurate location readings than the indoor Wi-Fi. As such, the difference in distance is set to be more strict. In instances where GPS and or external sources, such as Skyhook, states the asserted distance 75-100 meters away, the trust score will be set to `0.25`. In instances where external sources, such as Skyhook, states the asserted distance is 100 or greater meters away, the trust score will be set to `0.00`. Refer to the table below:
 
 | Difference in Distance Asserted | Trust Score |
 |---------------------------------|-------------|
-| 0-50 Meters                     | `1.00`      |
-| 51-75 Meters                    | `0.25`      |
-| 76 Meters or Greater            | `0.00`      |
+| 0-75 Meters                     | `1.00`      |
+| 76-100 Meters                   | `0.25`      |
+| 101 Meters or Greater           | `0.00`      |
 
 ### Maximum Asserted Distance for Boosted Hexes
 Further, in order for access points to be eligible for boosted Service Provider rewards defined in HIP-84, the asserted distances must be 30 meters or less than the reported location from external services for both indoor and outdoor Access Points. In instances where the difference is greater than 30 meters, the access point will still be eligible for PoC rewards, but not boosted rewards.
@@ -61,7 +61,7 @@ One alternative was already explored via HIP 107; however, the community voted a
 ### Phase 1
 
 * Update the Hotspot trust score for Wi-Fi indoor Hotspots to `0.25` if the asserted location is 201-300 meters or more from external data sources like Skyhook, and `0.00` if the asserted location is 301 meters or more away.
-* Update the Hotspot trust score for Wi-Fi Outdoor Hotspots to `0.25` if the asserted location is 51-75 meters or more from external data sources like Skyhook and or skyhook, and to `0.00` if 76 or more meters away.
+* Update the Hotspot trust score for Wi-Fi Outdoor Hotspots to `0.25` if the asserted location is 75-100 meters or more from external data sources like Skyhook and or skyhook, and to `0.00` if 101 or more meters away.
 
 ### Phase 2
 * Update and backfill the protocol to add Height and Azimuth to on chain data of MOBILE hotspots.
