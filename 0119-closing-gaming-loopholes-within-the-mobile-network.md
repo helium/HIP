@@ -47,7 +47,7 @@ As the Outdoor Access Points contain GPS, they are able to obtain much accurate 
 | 101 Meters or Greater           | `0.00`      |
 
 ### Maximum Asserted Distance for Boosted Hexes
-Further, in order for access points to be eligible for boosted Service Provider rewards defined in HIP-84, the asserted distances must be 30 meters or less than the reported location from external services for both indoor and outdoor Access Points. In instances where the difference is greater than 30 meters, the access point will still be eligible for PoC rewards, but not boosted rewards.
+Further, in order for access points to be eligible for boosted Service Provider rewards defined in HIP-84, the asserted distances must be 50 meters or less than the reported location from external services for both indoor and outdoor Access Points. In instances where the difference is greater than 50 meters, the access point will still be eligible for PoC rewards, but not boosted rewards.
 
 
 ## Drawbacks
