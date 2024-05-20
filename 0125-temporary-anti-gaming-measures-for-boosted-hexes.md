@@ -35,18 +35,18 @@ Service Providers: This provides a temporary tool to prevent abuse of SP boosted
 
 HIP 84 created a framework for SPs to influence the growth of the Network in locations where data offload is most likely to happen.  This primarily involves SPs burning mobile to increase PoC rewards in resolution 12 hexes.  A hotspot operator earns rewards by providing mobile network coverage in these hexes.
 
-HIP 84 has been largely successful given the rapid growth of coverage in regions such as Mexico and Miami, placing the MOBILE Network in a position to attract new service providers (e.g., Telefonica Movistar) and explore new business models (e.g., use of third party aggregators for wifi offloading).  However, the strong economic incentives that were required for this success attracts malicious actors to spoof or lie about their location to earn these rewards without providing legitimate coverage. 
+HIP 84 has been largely successful given the rapid growth of coverage in regions such as Mexico and Miami, placing the MOBILE Network in a position to attract new service providers (e.g., Telefonica Movistar) and explore new business models (e.g., use of third party aggregators for Wi-Fi offloading).  However, the strong economic incentives that were required for this success attracts malicious actors to spoof or lie about their location to earn these rewards without providing legitimate coverage. 
 
 This HIP provides a very narrow and simple scope:
 - SPs can invalidate boosted rewards if they have reasonable evidence the hexes they boosted are being taken advantage of by a malicious actor.
-- A SP can only invalidate boosted rewards for hexes they burned MOBILE to boost.  A SP can not invalidate another SP’s boosted hex rewards.
+- An SP can only invalidate boosted rewards for hexes they burned MOBILE to boost.  An SP can not invalidate another SP’s boosted hex rewards.
 - Although a network operator may have its boosted rewards invalidated, it can still earn rewards for other PoC activities and data transfer.  Hotspots or radios are not banned.
-- For hotspot operators that feel they have been mistakenly identified as malicious, the SP shall provide an email address (or some communication medium) for network operators to be able to request a physical verification of coverage at a given location, which will involve a SP attempting to complete a connection to a radio (Wi-Fi or CBRS) to verify its existence.  A SP that is willing to burn MOBILE to boost a hex is highly motivated to verify legitimate coverage is being provided to current and future customers.
+- For hotspot operators that feel they have been mistakenly identified as malicious, the SP shall provide an email address (or some communication medium) for network operators to be able to request a physical verification of coverage at a given location, which will involve an SP attempting to complete a connection to a radio (Wi-Fi or CBRS) to verify its existence.  An SP that is willing to burn MOBILE to boost a hex is highly motivated to verify legitimate coverage is being provided to current and future customers.
 - This HIP expires after 182 epochs (approximately 6 months), giving the network time to implement a programmatic solution such as HIP 118.  However, the community (or upon recommendation of community participants such as the Mobile Working Group (MWG)) can choose to extend this timeframe with a new vote if it feels sufficient progress has not been made on programmatic solutions. 
 
 ## Drawbacks
 
-This proposal assumes that the SP is trustworthy and can exercise reasonable judgment to invalidate malicious actors. To mitigate this potential abuse, the HIP is limited to 6 months.  Also, a SP is required to stake 500m MOBILE when it joins the network, which can be slashed if the community believes a SP has acted in bad faith.
+This proposal assumes that the SP is trustworthy and can exercise reasonable judgment to invalidate malicious actors. To mitigate this potential abuse, the HIP is limited to 6 months.  Also, an SP is required to stake 500m MOBILE when it joins the network, which can be slashed if the community believes an SP has acted in bad faith.
 
 A hotspot operator could be mis-identified as a malicious actor.  This is mitigated by allowing the hotspot operator to appeal to the SP for a physical verification.  In addition, the hotspot will still be eligible for other PoC and data transfer rewards.
 
