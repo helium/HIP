@@ -1,20 +1,22 @@
-# HIP XXX: Flexible Data Pricing for MOBILE Network
+# HIP 126: Flexible Data Pricing for MOBILE Network
 
-- Author: @zer0tweets,
-- Contributors: @KeithR, @Jhella
-- Start Date:
-- Category: Technical & Economic
-- Original HIP PR: #
-- Tracking Issue: #
-- Voting Requirements: veMOBILE
+- Author [zer0tweets](https://github.com/zer0tweets)
+- Contributors [KeithR](https://github.com/KeithR), [zer0tweets](https://github.com/KeithR)
+- Start Date: 2024-05-20
+- Category: Economic, Technical
+- Original HIP PR: [#1018](https://github.com/helium/HIP/pull/1018)
+- Tracking Issue: [#1023](https://github.com/helium/HIP/issues/1023)
+- Vote Requirements: veMOBILE Holders
 
-## Related Previous HIPs
-
-[HIP 27](https://github.com/helium/HIP/blob/main/0027-cbrs-5g-support.md) established the price of cellular data on the network at $0.5 per gigabyte.
+---
 
 ## Summary
 
 This document outlines a new flexible data pricing model for the Helium Mobile Network and introduces the concept of a utility score as a relative indicator of a MOBILE hotspot's usefulness on the network.
+
+## Related Previous HIPs
+
+* [HIP 27](https://github.com/helium/HIP/blob/main/0027-cbrs-5g-support.md) established the price of cellular data on the network at $0.5 per gigabyte.
 
 ## Motivation
 
