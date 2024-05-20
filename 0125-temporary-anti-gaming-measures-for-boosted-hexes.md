@@ -1,11 +1,13 @@
-# HIP XXX Temporary Anti-Gaming Measures For Boosted Hexes
+# HIP 125: Temporary Anti-Gaming Measures For Boosted Hexes
 
 - Author(s): [jhella](https://github.com/jhella) & [jaym2518](https://github.com/jaym2518)
-- Start Date: 2024-05-14
+- Start Date: 2024-05-20
 - Category: Economic, Technical
-- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
-- Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
+- Original HIP PR: [#1017](https://github.com/helium/HIP/pull/1017)
+- Tracking Issue: [#1022](https://github.com/helium/HIP/issues/1022)
 - Vote Requirements: veMOBILE Holders
+
+---
 
 ## Summary
 
