@@ -138,6 +138,8 @@ If you have questions or feedback, please see the [Discussion](https://github.co
 | 122 | [Amend Service Provider Hex Boosting](0122-amend-service-provider-hex-boosting.md)                                                                  | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/998)                 |
 | 123 | [Redefining IOT Data-Only Hotspot Onboarding and Assertion Fees](0123-redefining-data-only-onboarding-and-assertion-fees.md)                        | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/1012)                |
 | 124 | [Securing IOT Governance Through Staking Rewards](0124-securing-iot-governance-through-staking-rewards.md)                                          | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/1013)                |
+| 125 | [Temporary Anti-Gaming Measures For Boosted Hexes](0125-temporary-anti-gaming-measures-for-boosted-hexes.md)                                        | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/1022)                |
+| 126 | [Flexible Data Pricing for MOBILE Network](0126-flexible-data-pricing-for-mobile-network.md)                                                        | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/1023)                |
 
 ## HIP Status Key
 

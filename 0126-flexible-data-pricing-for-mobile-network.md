@@ -48,7 +48,7 @@ This HIP introduces new complexity to the rewards calculation and may also intro
 
 ## Rationale and Alternatives
 
-An alternative could be to prevent hotspots from controlling price setting altogether. Either a hotspot gets paid by the service provider at the price the service provider has set for a given res12 hex, or it doesn’t. This would significantly simplify the system but would remove all control from the hotspot operator and somewhat eliminate an incentive for service providers to consider setting the price to anything higher than zero.
+An alternative could be to prevent hotspots from controlling price setting altogether. Either a hotspot gets paid by the service provider at the price the service provider has set for a given res12 hex, or it doesn't. This would significantly simplify the system but would remove all control from the hotspot operator and somewhat eliminate an incentive for service providers to consider setting the price to anything higher than zero.
 
 ## Unresolved Question
 
