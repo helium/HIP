@@ -59,11 +59,12 @@ One alternative was already explored via HIP 107; however, the community voted a
 ## Implementation Phases
 
 ### Phase 1
-
+Nova Labs will complete the following:
 * Update the Hotspot trust score for Wi-Fi indoor Hotspots to `0.25` if the asserted location is 201-300 meters or more from external data sources like Skyhook, and `0.00` if the asserted location is 301 meters or more away.
 * Update the Hotspot trust score for Wi-Fi Outdoor Hotspots to `0.25` if the asserted location is 75-100 meters or more from external data sources like Skyhook and or skyhook, and to `0.00` if 101 or more meters away.
 
 ### Phase 2
+Helium Foundation will complete the following:
 * Update and backfill the protocol to add Height and Azimuth to on chain data of MOBILE hotspots.
 * Update the Helium Wallet app to allow location assertions within the app by capturing height and azimuth.
 
