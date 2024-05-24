@@ -41,14 +41,16 @@ This HIP provides a very narrow and simple scope:
 - SPs can invalidate boosted rewards if they have reasonable evidence the hexes they boosted are being taken advantage of by a malicious actor.
 - An SP can only invalidate boosted rewards for hexes they burned MOBILE to boost.  An SP can not invalidate another SP’s boosted hex rewards.
 - Although a network operator may have its boosted rewards invalidated, it can still earn rewards for other PoC activities and data transfer.  Hotspots or radios are not banned.
-- For hotspot operators that feel they have been mistakenly identified as malicious, the SP shall provide an email address (or some communication medium) for network operators to be able to request a physical verification of coverage at a given location, which will involve an SP attempting to complete a connection to a radio (Wi-Fi or CBRS) to verify its existence.  An SP that is willing to burn MOBILE to boost a hex is highly motivated to verify legitimate coverage is being provided to current and future customers.
-- This HIP expires after 182 epochs (approximately 6 months), giving the network time to implement a programmatic solution such as HIP 118.  However, the community (or upon recommendation of community participants such as the Mobile Working Group (MWG)) can choose to extend this timeframe with a new vote if it feels sufficient progress has not been made on programmatic solutions. 
+- Deployers will open a support ticket with the SP if they feel they have been mistakenly identified as malicious.  This may involve, but not limted to, the SP attempting a physical verification of coverage at a given location which would involve a connection to a radio (Wi-Fi or CBRS) to verify its existence.  An SP that is willing to burn MOBILE to boost a hex is highly motivated to verify legitimate coverage is being provided to current and future customers.
+- This HIP expires after 182 epochs (approximately 6 months), giving the network time to implement a programmatic solution such as HIP 118.  However, the community can choose to extend this timeframe with a new vote if it feels sufficient progress has not been made on programmatic solutions.  It's suggested the community review the need for a vote several weeks ahead of expiration to provide time for deliberation and the general voting process.
 
 ## Drawbacks
 
 This proposal assumes that the SP is trustworthy and can exercise reasonable judgment to invalidate malicious actors. To mitigate this potential abuse, the HIP is limited to 6 months.  Also, an SP is required to stake 500m MOBILE when it joins the network, which can be slashed if the community believes an SP has acted in bad faith.
 
 A hotspot operator could be mis-identified as a malicious actor.  This is mitigated by allowing the hotspot operator to appeal to the SP for a physical verification.  In addition, the hotspot will still be eligible for other PoC and data transfer rewards.
+
+This HIP will not be able to address every edge case, but aims to mitigate the most egregious bad actors.
 
 ## Rationale and Alternatives
 
@@ -62,7 +64,9 @@ None.
 
 ## Deployment Impact
 
-HIP should require minimal, if any, code changes. 
+Mobile Oracles will report tagging of the hotspots for suspicious activity by the SPs.  This off-chain data will record both tagging and untagging activities for the concerned hotspots. This data will be shared in a way that community applications can allow a deployer to understand concerned hotspots have been flagged.
+
+Current SP has indicated they will use their existing support ticket system to manange deployers that feel they have been mistakenly identified as malicious including an internal escalation procedure to help mitigate support tickets being left unaddressed indefinitely.
 
 ## Success Metrics
 
