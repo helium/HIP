@@ -53,7 +53,7 @@ This HIP imposes the Helium Foundation, on behalf of MOBILE Makers, to create a 
 
 USDC maintained within the Maker Escrow Wallets will automatically be swapped/converted to MOBILE/HNT/DC, and then subsequently burned for each onboard.
 
-Please note, in instances where a MOBILE Maker has subsidiaries that create different devices (e.g. one subsidiary that creates MOBILE CBRS Hotspots, and one subsidiary that creates Wi-Fi Access Points), only one stake of 50M MOBILE tokens is needed for both subsidiaries. The MOBILE Maker can choose to have one combined wallet for the parent company, or separate wallets for each subsidiary. 
+The MOBILE Maker may only have one Maker Escrow wallet per 50M stake. 
 
 ## Ongoing MOBILE Maker Requirements
 As a part of this HIP, MOBILE Makers will be required to keep a minimum balance of tokens within their Maker Escrow Wallet. The minimum balance was calculated to support at least 100 onboards for the highest onboarding fee ($40), and will be the same regardless of what type of device the Maker produces.
