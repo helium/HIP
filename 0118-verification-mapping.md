@@ -63,8 +63,16 @@ No action is required by a mapper to connect to the radio and perform verificati
 
 ### Reward Adjustments for the Radios
 
-It is proposed that absent a verification mapping event during the trailing 7 days, maximum reward multiplier for any radio be 0.5x. I.e receiving boosted rewards of 0.7 per HIP 103 or higher and/or any service provider boosted rewards required for the radio to be verified at least once during the trailing 7 day period.  
-  
+It is proposed that, absent a verification mapping event during the trailing 7 days, there will be a negative effect on the reward multiplier, with a gradual scaling down of rewards based on verification mapping activity. Initially, hotspots that haven’t received a verification in 7 days can have a maximum reward multiplier of 1. In other words, any hotspots in boosted locations that haven’t been verified for 7 days will be unable to earn boosted rewards. Going forward, as we collect more data, we can further decrease the reward multiplier for unverified hotspots.
+
+## Tooling Enhancements
+
+To drive verification mapping activities by the community, specific tooling will be required. The rollout of this HIP is contingent on the availability of the following tools to the community. These tools can be implemented by any community member with adequate access to data and resources.
+
+- Service providers must provide the community with access to a list of locations with active subscribers. This data should be displayed on the planner and/or other third-party tools like Moken.io, allowing hotspot operators to understand where their hotspots are most likely to be mapped.
+
+- At least one app, such as the Helium Mobile app, must provide information to the mapper about the names of the hotspots that have been mapped. This way, hotspot operators who map their own hotspots can verify the mapping.
+
 
 ## Drawbacks
 
@@ -86,6 +94,8 @@ Another alternative is to completely do away with user equipment (UE) based veri
 Most critical open question is what happens in the event of a confirmed negative correlation between the hotspot asserted location and a location reported to by the verification mapper. I.e. if the verification mapper has connected to a hotspot and reported that its location is different from the asserted location?
 
 One option is to implement a method for punishing hotspots for negative correlation events by reducing their rewards. It is suggested, however, that we consider this as step 2, once we’ve gathered sufficient data.
+
+There is an ongoing discussion, whether verification mapping events should affect hotspot trust score and not just the reward multiplier. It is suggested that defer this to another HIP as well to minimize implementation complexity of the current HIP. 
 
 ## Deployment Impact
 
