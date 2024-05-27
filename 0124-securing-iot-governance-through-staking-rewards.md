@@ -63,4 +63,4 @@ Users who choose to stake IOT will now have the opportunity to earn rewards from
 
 ## Success Metrics
 
-- This HIP will be considered successful if more IOT tokens are locked and used for voting. 
+- This HIP will be considered successful if VeIOT used for voting increases by at least 50% on average over the next 5 IoT Hips (excluding IoT WG Membership) compared to the last 5 (excluding IoT WG Membership) - average is currently 5.4b veiot
