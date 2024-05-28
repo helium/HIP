@@ -17,7 +17,9 @@ The motivation for reversing HIP 113 stems from the following issues:
   d.	Lack of Accountability: Unfortunately, this HIP was primarily passed as a bypass to taking accountability for getting CBRS into working shape. There are beta sim chips deployed but they are being held back when all of us as a CBRS community could be benefiting from them.
 2.	Community Feedback: A significant portion of the Helium community has expressed concerns and dissatisfaction regarding the changes introduced by HIP 113. There is a significant amount of negativity in that the larger holders of the token such as Nova are using their power and limiting the power of the actual users to drive change. 
 3.	Economic Impact: The economic implications of HIP 113 have been detrimental, including 75% decreases in the earnings received. This has led to a decrease in overall network participation and growth. This has also led to a lack of interest to continue to grow the network. 
-4.	Technical Challenges: The implementation of HIP 113 has introduced technical challenges and complexities that were not anticipated. These challenges include the fact that maybe 20 CBRS systems are treated as premium to others on the network because they have beta sims and can operate more like what can be considered normal. 
+4.	Technical Challenges: The implementation of HIP 113 has introduced technical challenges and complexities that were not anticipated. 
+  a. A loss of coverage and interest due to little to no financial incentive. Week over week (5/22), there was a net loss of 58 CBRS units on the network.   
+  b. All CBRS are not treated equal: Roughly 20 CBRS systems are treated as premium to others on the network because they have beta sims and can operate more like what can be considered normal. 
 
 Proposed Solution:
 Reversing HIP 113 involves reinstating the previous framework and policies that were in place before its adoption. This includes:
