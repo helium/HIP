@@ -43,13 +43,14 @@ This HIP imposes the Helium Foundation, on behalf of MOBILE Makers, to create a 
 3. Complete and publish penetration testing results of hardware
 4. Provide evidence to the Helium Foundation they have the source of liquidity to provide the required stake
 5. The HIP goes to vote and approval from the MOBILE subDAO via veMOBILE is granted with the current thresholds required of MOBILE governance (today, 67% approval and 100,000,000 veMOBILE vote power)
-6. The Maker stakes a bond of MOBILE tokens (currently specified as 50,000,000 through HIP-53)
+6. The Maker stakes a bond of MOBILE tokens (currently specified as 50,000,000 through HIP-53). Once the bond is staked, and requirements 1-5 above have been satisfied, a MOBILE Maker NFT will be issued to the MOBILE Maker. 
 7. The Maker provides a copy of the Makers secure boot key in an escrow wallet held by the foundation
 8. The Maker must have the following minimum balances within their Maker Wallet:
   - 10,000 USDC
   - 2 SOL
   - 1 MOBILE
 
+Once all 8 above requirements have been satisfied, the Helium Foundation may issue a Maker Key to the MOBILE Maker
 
 USDC maintained within the Maker Escrow Wallets will automatically be swapped/converted to MOBILE/HNT/DC, and then subsequently burned for each onboard.
 
