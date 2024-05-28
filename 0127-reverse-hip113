@@ -1,0 +1,52 @@
+HIP Proposal: Reversing HIP 113
+
+Author: block070
+Contributors: block070
+Start Date: 2024-06-15
+Category: Economic, Technical
+
+Summary:
+This proposal suggests reversing HIP 113. The primary objective of HIP 113 was aimed to reduce the coverage points for CBRS radios by 75%, adjusting the reward distribution to better balance the network's incentives. This change was intended to address the discrepancies in rewards between CBRS radios and Wi-Fi hotspots, ensuring a more equitable distribution based on the actual coverage provided by these devices. However, after its implementation, several unforeseen consequences and challenges have emerged. This proposal aims to outline the reasons for reversing HIP 113, addressing its negative impacts, and proposing a more balanced approach for the Helium community.
+
+Motivation:
+The motivation for reversing HIP 113 stems from the following issues:
+1.	Unintended Consequences: HIP 113 has led to negative consequences. These outcomes have adversely affected all stakeholders who deploy and host CBRS.
+  a.	Reduced Incentives for CBRS Deployers: CBRS hotspot deployers will see a substantial reduction in rewards, which may lead to     dissatisfaction and possibly turning off their radios. This has already began to happen.
+  b.	Potential Decrease in CBRS Deployment: The reduction in rewards might lead to a significant decrease in the number of CBRS radios on the network, affecting ongoing research and development. This has already began to happen.
+  c.	Shift in Network Composition: A possible shift towards more Wi-Fi hotspots as they become more economically viable compared to CBRS radios.
+  d.	Lack of Accountability: Unfortunately, this HIP was primarily passed as a bypass to taking accountability for getting CBRS into working shape. There are beta sim chips deployed but they are being held back when all of us as a CBRS community could be benefiting from them.
+2.	Community Feedback: A significant portion of the Helium community has expressed concerns and dissatisfaction regarding the changes introduced by HIP 113. There is a significant amount of negativity in that the larger holders of the token such as Nova are using their power and limiting the power of the actual users to drive change. 
+3.	Economic Impact: The economic implications of HIP 113 have been detrimental, including 75% decreases in the earnings received. This has led to a decrease in overall network participation and growth. This has also led to a lack of interest to continue to grow the network. 
+4.	Technical Challenges: The implementation of HIP 113 has introduced technical challenges and complexities that were not anticipated. These challenges include the fact that maybe 20 CBRS systems are treated as premium to others on the network because they have beta sims and can operate more like what can be considered normal. 
+
+Proposed Solution:
+Reversing HIP 113 involves reinstating the previous framework and policies that were in place before its adoption. This includes:
+1.	Reverting Changes: All changes introduced by HIP 113 will be reverted to their previous state. This will restore the original operational protocols and mechanisms.
+2.	Addressing Issues: A thorough analysis will be conducted to understand the specific issues that HIP 113 aimed to solve. Alternative solutions that do not have the negative impacts observed will be proposed and implemented.
+3.	Community Engagement: Increased community engagement and feedback mechanisms will be established to ensure that any future proposals are well-vetted and have broad support before implementation.
+
+Rationale:
+The rationale for reversing HIP 113 includes the following points:
+1.	Restoring Balance: Reversing HIP 113 will help restore balance within the Helium ecosystem, ensuring that all stakeholders are fairly represented and incentivized.
+2.	Learning from Mistakes: Acknowledging and correcting mistakes is crucial for the growth and sustainability of the network. Reversing HIP 113 will demonstrate the community’s commitment to continuous improvement and adaptability.
+3.	Improving Stability: Reverting to the previous framework will provide immediate stability and allow time for a more thoughtful and comprehensive solution to be developed.
+
+Technical Specification:
+The technical specification for reversing HIP 113 includes the following steps:
+1.	Code Reversion: Revert the codebase to the state before the implementation of HIP 113. This includes undoing any structural changes in the blockchain or application layers introduced by HIP 113.
+2.	Data Reconciliation: Ensure that any data affected by HIP 113 is reconciled with the previous state. This might involve rolling back database changes or reprocessing transactions that were altered due to HIP 113.
+3.	Communication and Rollout: Clearly communicate the reversion plan to all stakeholders. This includes a timeline for the rollback, detailed instructions for node operators, and support channels for addressing any issues that arise during the transition.
+4.	Testing and Validation: Conduct thorough testing of the reverted system in a controlled environment to ensure that the rollback does not introduce new issues. Validate that the system operates correctly under the previous framework.
+
+Implementation Plan:
+1.	Community Consultation: Before proceeding with the reversion, conduct a community consultation to gather feedback and ensure broad support for the proposal.
+2.	Development and Testing: Develop the rollback code and perform extensive testing to ensure stability and functionality.
+3.	Deployment: Roll out the changes in a phased manner, starting with testnet deployments followed by mainnet implementation.
+4.	Monitoring and Support: Monitor the system closely post-implementation and provide robust support to address any issues that may arise.
+
+Potential Risks:
+1.	Community Division: Reversing HIP 113 may cause divisions within the community. Clear communication and inclusive decision-making processes are essential to maintain community cohesion. It could be argued that more community division has occurred after the passing of HIP 113 than this would ever cause.
+2.	Operational Disruption: The rollback process might cause temporary disruptions to the network. A detailed implementation plan and contingency measures will help minimize these disruptions.
+
+Conclusion:
+Reversing HIP 113 is a necessary step to address the unforeseen negative consequences and restore balance within the Helium ecosystem. By reverting to the previous framework and engaging the community in developing more effective solutions, we can ensure the long-term success and sustainability of the Helium network. Your support for this proposal is crucial to achieve these goals.
