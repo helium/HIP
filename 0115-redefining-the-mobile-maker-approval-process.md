@@ -21,8 +21,9 @@ This Helium Improvement Proposal (HIP) defines the approval process and requirem
 - [HIP 96](https://github.com/helium/HIP/blob/main/0096-wifi-ap-onboarding-structure.md) introduces new onboarding fees for Wi-Fi Access Points
 
 ## Motivation
-[HIP 53](https://github.com/helium/HIP/blob/main/0053-mobile-dao.md) lays out the foundation and requirements that MOBILE Makers adhere to in order to produce equipment eligible to work with the Helium 5G Network. These requirements include manufactures hold a MOBILE NFT, which requires:
+[HIP 53](https://github.com/helium/HIP/blob/main/0053-mobile-dao.md) lays out the foundation and requirements that MOBILE Makers adhere to in order to produce equipment eligible to work with the Helium 5G Network. These requirements include manufactures:
 
+- Hold a MOBILE Maker NFT in their maker wallet
 - Stake a minimum of 50M MOBILE 
 - Obtain MOBILE DAO governance approval
 
@@ -43,14 +44,14 @@ This HIP imposes the Helium Foundation, on behalf of MOBILE Makers, to create a 
 3. Complete and publish penetration testing results of hardware
 4. Provide evidence to the Helium Foundation they have the source of liquidity to provide the required stake
 5. The HIP goes to vote and approval from the MOBILE subDAO via veMOBILE is granted with the current thresholds required of MOBILE governance (today, 67% approval and 100,000,000 veMOBILE vote power)
-6. The Maker stakes a bond of MOBILE tokens (currently specified as 50,000,000 through HIP-53). Once the bond is staked, and requirements 1-5 above have been satisfied, a MOBILE Maker NFT will be issued to the MOBILE Maker. 
+6. The Maker stakes a bond of MOBILE tokens (currently specified as 50,000,000 through HIP-53). 
 7. The Maker provides a copy of the Makers secure boot key in an escrow wallet held by the foundation
 8. The Maker must have the following minimum balances within their Maker Wallet:
   - 10,000 USDC
   - 2 SOL
   - 1 MOBILE
 
-Once all 8 above requirements have been satisfied, the Helium Foundation may issue a Maker Key to the MOBILE Maker
+When these requirements are met, the Helium Foundation will issue a MakerApprovalV0 transaction to the Maker wallet to allow the maker to issue and onboard Hotspots. In the case of Bobcat and Nebra, both have produced a MOBILE CBRS Hotspot; however, neither have satisified the staking or governance approval requirements. Therefore, 30 days after the passing of this HIP, the Helium Foundation will revoke the maker approval on-chain, and change their API keys off-chain, which will prevent any more Hotspots from being onboarded from those makers.
 
 USDC maintained within the Maker Escrow Wallets will automatically be swapped/converted to MOBILE/HNT/DC, and then subsequently burned for each onboard.
 
@@ -91,6 +92,8 @@ After the audit is complete, and the MOBILE Maker Escrow Wallet was funded to su
 ## Migration of MOBILE Maker Wallets to MOBILE Maker Escrow Wallets
 In instances where MOBILE Makers already have a pre-existing MOBILE Maker Wallet, they may continue to use that wallet for onboarding until the balance of DC is 0. Further, regardless if a previous wallet will be used at first, a new MOBILE Maker Escrow Wallet must be created with the minimum wallet requirements noted above. 
 
+## Drawbacks
+Deployers who have yet to onboard their 5G Bobcat CBRS Hotspot will have 30 days after HIP passing to onboard the hotspot. If the Hotspot is not onboarded within 30 days after HIP passing, the Hotspot will never be allowed to be onboarded.
 
 ## Deployment Impact
 
