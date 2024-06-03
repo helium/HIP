@@ -59,27 +59,30 @@ Each Hotspot is capable of transmitting at a variable rate over a limited power 
 
 $`EIRP(dBm) <= TransmitPower(dBm) + AntennGain(dBi)`$
 
-Default(Max) EIRP is taken from LoRaWAN 1.0.4 Regional Parameters standard. The actual transmit power must be lowered to keep the EIRP within regulatory limits when paired with a high gain antenna.  
+Default(Max) EIRP is taken from LoRaWAN 1.0.4 Regional Parameters standard and [(6) Helium lorawan-h3 repo][6]. The actual transmit power must be lowered to keep the EIRP within regulatory limits when paired with a high gain antenna.  
 
-| Region | Max EIRP(dBm) | Notes     |
-|--------|---------------|-----------|
-| KR920  | 14            |           |
-| AS923  | 16            |           |
-| RU864  | 16            |           |
-| EU868  | 16            |           |
-| IN865  | 30            | 36 dBm?   |
-| US915  | 30            | 36 dBm?   |
-| AU915  | 30            | 36 dBm?   |
+| Region    | Max EIRP(dBm) | Notes     |
+|-----------|---------------|-----------|
+| KR920     | 14            |           |
+| AS923-1   | 16            |           |
+| AS923-1B  | 16            |           |
+| AS923-1C  | 30            |           |
+| RU864     | 16            |           |
+| EU868     | 16            |           |
+| CN470     | 19            |           |
+| IN865     | 30            |           |
+| US915     | 36            |           |
+| AU915     | 30            |           |
 
 As an alternative to always transmitting at the maximum permitted value it is suggested that a random selection is made from a subset of allowable transmit powers. But the large spread in allowable power across regions makes it difficult to implement one general set of transmit powers over all regions. Differentiating power-level selection by regions allows PoC to be 'balanced' across regions without additionally affecting the current region power imbalance. This hip does not attempt to address any possible imbalance in the current PoC system which is outside the HIP scope, however, this mechanism could be used to adjust any imbalance in the future. These suggested values keep status quo with today and do not introduce any change across regions:
 
-#### Suggested for AU915, US915 & IN865 (Fixed regional plans)
+#### Suggested for AU915, US915, AS923-1C and IN865
 
 Power options are set to:
 
 $`\{MaxEIRP,\ MaxEIRP*0.8 dBm,\ MaxEIRP*0.6 dBm\}`$
 
-#### Suggested For KR920, AS923, RU864, EU868 (Dynamic regional plans)
+#### Suggested For KR920, AS923-1, AS923-1B, RU864, EU868, CN470
 
 $`\{MaxEIRP,\ MaxEIRP*0.8 dBm,\ MaxEIRP*0.8 dBm\}`$
 
@@ -89,15 +92,18 @@ The duplicate 3rd value is intentionally left to make comparison to the fixed ch
 
 A selection is made between full power or one of the reduced values. MaxEIRP minus 3dBm will cut the transmit power in half and minus 6dBm will be a quarter of the total power. Using inverse square law the estimated range will roughly double with a change of 6dBm.
 
-| Region | EIRP Values(dBm) | Notes |
-|--------|------------------|-------|
-| KR920  | 14, 11, 11       |       |
-| AS923  | 16, 13, 13       |       |
-| RU864  | 16, 13, 13       |       |
-| EU868  | 16, 13, 13       |       |
-| IN865  | 30, 22, 16       | 36?   |
-| US915  | 30, 22, 16       | 36?   |
-| AU915  | 30, 22, 16       | 36?   |
+|  Region  | EIRP Values(dBm) | Notes |
+|----------|------------------|-------|
+| KR920    | 14, 11, 11       |       |
+| AS923-1  | 16, 13, 13       |       |
+| AS923-1B | 16, 13, 13       |       |
+| AS923-1C | 30, 22, 16       |       |
+| RU864    | 16, 13, 13       |       |
+| EU868    | 16, 13, 13       |       |
+| CN470    | 19, 15, 15       |       |
+| IN865    | 30, 22, 16       |       |
+| US915    | 30, 22, 16       | Currently 36   |
+| AU915    | 30, 22, 16       |       |
 
 To enhance the detail and accuracy of the coverage map, we propose introducing variable transmit power for beacons. By randomly adjusting the transmit power at each spreading factor, we can generate a comprehensive map that more accurately reflects the network’s capabilities for sensor fleet deployers.
 
@@ -111,9 +117,9 @@ Sensitivity improvements taken from [(3) Semtech AN1200.22][3]:
 | Mode  | Bit Rate(kb/s) | 	Sensitivity(dBm) | Symbol Time(ms) | US915 Max Packet Size(bytes) |
 |-------|----------------|-------------------|-----------------|------------------------------|
 | FSK   | 1.2            | -122	             |                 | -                            |
-| SF12	 | 0.293	         | -137              | 	32.768         | -                            |
-| SF11	 | 0.537	         | -134.5            | 	16.384         | -                            |
-| SF10	 | 0.976	         | -132	             | 8.192           | 19                           |
+| SF12  | 0.293	         | -137              | 	32.768         | -                            |
+| SF11	| 0.537	         | -134.5            | 	16.384         | -                            |
+| SF10	| 0.976	         | -132	             | 8.192           | 19                           |
 | SF9	  | 1.757	         | -129	             | 4.096           | 61                           |
 | SF8	  | 3.125	         | -126	             | 2.048           | 133                          |
 | SF7	  | 5.468	         | -123	             | 1.024           | 230                          |
@@ -122,13 +128,12 @@ Regulatory constraints in the US915 region, which have a maximum dwell time of 4
 
 The following table, based on calculations from this [(2) Airtime calculator][2], illustrates the potential reductions in on-air time across different configurations:
 
-
 | Region | Spreading Factor | Datarate(bps) | Packet Length (bytes) | On-Air Time(ms) | Max EIRP | Notes                             |
 |--------|------------------|---------------|-----------------------|-----------------|----------|-----------------------------------|
-| US915  | SF7              | 5470          | 52                    | 103             | 36       | 30?                               |
-| US915  | SF8              | 3125          | 52                    | 185             | 36       | 30?                               |
-| US915  | SF9              | 1760          | 52                    | 329             | 36       | Current POC Beacon                |
-| US915  | SF10             | 980           | 52                    | 616             | 36       | Dwell time exceeded(Max 25-bytes) |
+| US915  | SF7              | 5470          | 52                    | 103             | 30       | Currently 36                      |
+| US915  | SF8              | 3125          | 52                    | 185             | 30       |                                   |
+| US915  | SF9              | 1760          | 52                    | 329             | 30       | Current POC Beacon 36 EIRP        |
+| US915  | SF10             | 980           | 52                    | 616             | 30       | Dwell time exceeded(Max 25-bytes) |
 | EU868  | SF7              | 5470          | 52                    | 103             | 16       |                                   |
 | EU868  | SF8              | 3125          | 52                    | 185             | 16       |                                   |
 | EU868  | SF9              | 1760          | 52                    | 329             | 16       |                                   |
@@ -252,10 +257,12 @@ The variable transmit power will most likely help to detected gaming or manipula
 
 (5) https://semtech.my.salesforce.com/sfc/p/E0000000JelG/a/2R000000HSSa/nimci8O3XiFeGQpltq_YTbps18CSIaKKgMfssp5VWwE
 
+(6) https://github.com/helium/lorawan-h3/tree/main/region_params
 
 [1]: https://www.researchgate.net/publication/362115325_On_the_Performances_of_Packet_Error_Rate_for_LoRa_Networks
 [2]: https://avbentem.github.io/airtime-calculator/
 [3]: https://www.frugalprototype.com/wp-content/uploads/2016/08/an1200.22.pdf
 [4]: https://resources.lora-alliance.org/technical-specifications/rp002-1-0-4-regional-parameters
 [5]: https://semtech.my.salesforce.com/sfc/p/E0000000JelG/a/2R000000HSSa/nimci8O3XiFeGQpltq_YTbps18CSIaKKgMfssp5VWwE
+[6]: https://github.com/helium/lorawan-h3/tree/main/region_params
 
