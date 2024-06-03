@@ -1,7 +1,7 @@
 HIP Proposal: Reversing HIP 113
 
 Author: block070
-Contributors: block070
+Contributors: block070, JayLilRoseCollection
 Start Date: 2024-06-15
 Category: Economic, Technical
 
@@ -53,9 +53,11 @@ Potential Risks:
 Success Criteria:  
 1. Returning to Levelized Incentives for Scope. The deployments of CBRS are much more elaborate than plugging in a wifi hotspot in the wall and into the back of a router. With CBRS, deployment carries a lot higher scope and requires ongoing maintenance. CPI approval further validates the work. The expense of the hardware and equipment to hang & mount further add to the scope & cost of work. As a result, the playing field needs to be levelized by returning rewards to where they were prior to the passing of this HIP. It is also worth stating that there are less people willing to climb or work at higher heights and those who do, request a premium for their work because of the demand.
 2. Increase in CBRS Deployments: We are losing CBRS installations with a net loss of over 50 installs week over week. An increase in CBRS deployments will result in stablizing the network and provide more signal strength as compared to wifi.
+3. Equality - It's about not rewarding a few, but keeping rewards equitable across the board and the deployment of helium wifi shouldn't have effected negatively on the CBRS rewards.
 
 A. Community Feedback: A significant portion of the Helium community will be rewarded more fairly and equitable. This can be measured by both greater contribution. Greater contribution is measured by the fact that CBRS carries more signal strength and is more costly and timely to deploy.
 B. Economic Impact: The economic implications of reversing HIP 113 will shift to a more competitive amount. Loss of CBRS units on the network should slow with the return of a more equitable plan to reward contributors. 
+C. Wifi is Just as Eexperimental as CBRS: There shouldn't have been a reduction approved with "community" inputs or otherwise, especially being comprised of whales, until such a time that the CBRS hand off data returned numbers for evaluation (after a full Beta was concluded across the entire spectrum not just a pull of "20" that isn't even an accurate sampling of all deployed CBRS) of best data. While I can understand from a business model that wants to grow the business community, they can't create that at the expense of the general non-business CBRS deployers. This clearly created an advantage for wifi business deployers to move units and that's that.
 
 Conclusion:
 Reversing HIP 113 is a necessary step to address the unforeseen negative consequences and restore balance within the Helium ecosystem. By reverting to the previous framework and engaging the community in developing more effective solutions, we can ensure the long-term success and sustainability of the Helium network. Your support for this proposal is crucial to achieve these goals.
