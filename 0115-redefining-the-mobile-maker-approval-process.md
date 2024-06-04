@@ -115,7 +115,7 @@ Note that the funds can be gathered into the existing onboarding wallets without
  ### Phase 4 
 - The Helium Foundation will create a slashing smart contract to slash the MOBILE stake of MOBILE Makers who do not meet the minimum wallet balances set forward within this HIP.
 - The Helium Foundation will create a way to replenish a stake if it falls below 50M MOBILE.
-- The Helium Foundation will implement a way to withdraw funds in the case of retirement. This withdrawal will require the signoff of the Helium Foundation Multisig.
+- The Helium Foundation will implement a way to withdraw funds in the case of retirement. This withdrawal will require the signoff of the Helium Program Multisig.
 
 If a MOBILE Maker's wallet falls below the minimum balance thresholds before Phase 3 is implemented, slashing will start on the first epoch of implementation.
 
