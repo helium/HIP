@@ -38,11 +38,11 @@ HIP 84 created a framework for SPs to influence the growth of the Network in loc
 HIP 84 has been largely successful given the rapid growth of coverage in regions such as Mexico and Miami, placing the MOBILE Network in a position to attract new service providers (e.g., Telefonica Movistar) and explore new business models (e.g., use of third party aggregators for Wi-Fi offloading).  However, the strong economic incentives that were required for this success attracts malicious actors to spoof or lie about their location to earn these rewards without providing legitimate coverage. 
 
 This HIP provides a very narrow and simple scope:
-- SPs can invalidate boosted rewards if they have reasonable evidence the hexes they boosted are being taken advantage of by a malicious actor.
-- An SP can only invalidate boosted rewards for hexes they burned MOBILE to boost.  An SP can not invalidate another SP’s boosted hex rewards.
+- SPs can invalidate boosted rewards of a hotspot or radios if they have reasonable evidence the hexes they boosted are being taken advantage of by a malicious actor.
+- An SP can only invalidate boosted rewards for hotspots in hexes they burned MOBILE to boost.  An SP can not invalidate another SP’s boosted hex rewards.  Note the invalidation is specific to the suspicious hotspot and not the hex.  Non-suspicious hotspots can still earn boosted rewards from said hex.
 - Although a network operator may have its boosted rewards invalidated, it can still earn rewards for other PoC activities and data transfer.  Hotspots or radios are not banned.
-- Deployers will open a support ticket with the SP if they feel they have been mistakenly identified as malicious.  This may involve, but not limted to, the SP attempting a physical verification of coverage at a given location which would involve a connection to a radio (Wi-Fi or CBRS) to verify its existence.  An SP that is willing to burn MOBILE to boost a hex is highly motivated to verify legitimate coverage is being provided to current and future customers.
-- This HIP expires after 182 epochs (approximately 6 months), giving the network time to implement a programmatic solution such as HIP 118.  However, the community can choose to extend this timeframe with a new vote if it feels sufficient progress has not been made on programmatic solutions.  It's suggested the community review the need for a vote several weeks ahead of expiration to provide time for deliberation and the general voting process.
+- Deployers will open a support ticket with the SP if they feel they have been mistakenly identified as malicious.  This may involve, but not limited to, the SP attempting a physical verification of coverage at a given location which would involve a connection to a radio (Wi-Fi or CBRS) to verify its existence.  An SP that is willing to burn MOBILE to boost a hex is highly motivated to verify legitimate coverage is being provided to current and future customers.
+- This HIP expires after 182 epochs (approximately 6 months) starting from formal HIP implementation. This gives the network time to implement a programmatic solution such as HIP 118.  However, the community can choose to extend this timeframe with a new vote if it feels sufficient progress has not been made on programmatic solutions.  It's suggested the community review the need for a vote several weeks ahead of expiration to provide time for deliberation and the general voting process.  Note that implementation of a programmatic solution would not reduce the 182 epoch duration. 
 
 ## Drawbacks
 
@@ -62,12 +62,14 @@ The HIP was purposely designed to be as simple as possible with the narrowest po
 
 None.
 
-## Deployment Impact
+## Implementation
 
 Mobile Oracles will report tagging of the hotspots for suspicious activity by the SPs.  This off-chain data will record both tagging and untagging activities for the concerned hotspots. This data will be shared in a way that community applications can allow a deployer to understand concerned hotspots have been flagged.
 
-Current SP has indicated they will use their existing support ticket system to manange deployers that feel they have been mistakenly identified as malicious including an internal escalation procedure to help mitigate support tickets being left unaddressed indefinitely.
+Current SP has indicated they will use their existing support ticket system to manage deployers that feel they have been mistakenly identified as malicious including an internal escalation procedure to help mitigate support tickets being left unaddressed indefinitely.
 
 ## Success Metrics
 
-This HIP will be considered a success if MOBILE SPs have ensured their boosted hexes have legitimate coverage for current and future customers.
+The desired outcome of this HIP is that boosted hexes are deployed with mobile hotspots that provide high quality, usable cellular coverage for customers of the MOBILE network and attract potential SPs.
+
+Measuring success of this HIP will require ongoing collaboration with the SP to understand how many mobile hotspots are potentially flagged as malicious through community forums such as the mobile working group community.  Success could mean 50% of the mobile hotspots identified by the SP as malicious are invalidated.
