@@ -36,22 +36,22 @@ In the case of Bobcat and Nebra, both have produced a 5G Hotspot; however, neith
 
 
 ## Detailed Explanation
-This HIP imposes the Helium Foundation, to authorise a MOBILE Maker Account and award a Maker Key, after the Maker has setup the Maker accounts with suitable stake and onboard funds and satisfied the below requirements.  Please note, that approval of this HIP will serve as Nova Lab’s subNetwork governance approval.
+This HIP imposes the Helium Foundation, to authorize a MOBILE Maker Account and award a Maker Key, after the Maker has setup the Maker accounts with suitable stake and onboard funds and satisfied the below requirements.  Please note, that approval of this HIP will also serve as Nova Labs' subnetwork governance approval.
 
 ### Requirements
 1. Propose a HIP to become a MOBILE Maker
 2. Work with the Helium Foundation and Firmware developers to ensure their firmware is compatible
 3. Complete and publish penetration testing results of hardware
 4. Provide evidence to the Helium Foundation they have the source of liquidity to provide the required stake
-5. The HIP goes to vote and approval from the MOBILE Network via a veMOBILE vote is granted with the current thresholds required of MOBILE governance (today, 67% approval and 100,000,000 veMOBILE vote power)
-6. The Maker creates a Solana Maker account and Maker NFT and stakes a bond of MOBILE tokens (currently specified as 50,000,000 through HIP-53).  
+5. The HIP goes to vote and approval is granted based on current thresholds required for MOBILE governance (today, 67% approval and 100,000,000 veMOBILE vote power)
+6. The Maker creates a Solana Maker account, mints a Maker NFT, and stakes a bond of MOBILE tokens (currently specified as 50,000,000 through HIP-53).  
 7. The Maker provides a copy of the Makers secure boot key in an escrow wallet held by the foundation
 8. The Maker must have the following initial minimum balances within their Maker Onboarding Wallet:
   - 4,000 USDC (Or same value of suitable tokens for onboarding 100 hotspots)
   - 2 SOL
   - 1 MOBILE
 
-When these requirements are met, the Helium Foundation will issue a MakerApprovalV0 transaction to allow the maker to issue and onboard Hotspots. In the case of Bobcat and Nebra, both have produced a MOBILE CBRS Hotspot; however, neither have satisified the staking or governance approval requirements. Therefore, 30 days after the passing of this HIP, the Helium Foundation will revoke the maker approval on-chain, and change their API keys off-chain, which will prevent any more Hotspots from being onboarded from those makers.
+When these requirements are met, the Helium Foundation will request the Helium Program Multisig to issue a MakerApprovalV0 transaction to allow the maker to issue and onboard Hotspots. In the case of Bobcat and Nebra, both have produced a MOBILE CBRS Hotspot; however, neither have satisfied the staking or governance approval requirements. Therefore, 30 days after the passing of this HIP, the Helium Foundation will revoke the maker approval on-chain, and change their API keys off-chain, which will prevent any more Hotspots from being onboarded from those makers.
 
 USDC maintained within the Maker Onboarding Wallet will automatically be swapped/converted to MOBILE/HNT/DC, and then subsequently burned for each onboard.
 
@@ -72,7 +72,7 @@ As a part of this HIP, MOBILE Makers will be required to keep a minimum balance 
 ## MOBILE Maker Slashing
 A smart contract will be created to automatically slash the MOBILE Makers 50M stake if that MOBILE Maker does not maintain the minimum balances identified above. If the MOBILE Makers onboarding wallet balance goes below the minimum threshold defined in this HIP, they will have 1 epoch to replenish their wallet before slashing occurs. If the onboarding wallet stays below the minimum threshold on the 2nd epoch, the smart contract will automatically burn 0.10% (50,000 MOBILE) of the 50M MOBILE stake. For each epoch that the onboarding wallet stays below the minimum balance, the percentage burned will increase by 0.01. For example, if a MOBILE Makers onboarding wallet is below the minimum balance, on the second epoch, 0.10% of the stake balance will be burned, on the third epoch, 0.11% of the remaining stake will be burned, on the fourth epoch, 0.12% of the remaining stake will be burned, and so on. If the balance is replenished above the minimum, and then falls again, the slash will reset to 0.10%.
 
-The foundation and or the MOBILE subNetwork may make a request, which must be approved by the subNetwork, to slash the stake of MOBILE Makers if the MOBILE Maker fails to add software support or updates for essential operations, such as adding passpoint profiles of service providers in a timely manner, updating the software on the device if needed, etc. The slash will start at 0.10% on day one, and increase by .01% everyday until the foundation has determined the Maker has taken appropriate steps to remediate the problem. 
+The Helium Foundation and/or the MOBILE subnetwork may make a request, which must be approved by the subnetwork, to slash the stake of MOBILE Makers if the MOBILE Maker fails to add software support or updates for essential operations, such as adding Passpoint profiles of service providers in a timely manner, updating the software on the device if needed, etc. The slash will start at 0.10% on day one, and increase by .01% everyday until the foundation has determined the Maker has taken appropriate steps to remediate the problem. 
 
 If the staked MOBILE account balance falls under 30M MOBILE, the Maker Key will be revoked the same epoch the staked balance falls under 30M MOBILE. In order to reactivate their Maker Key, the Maker must replenish the staked balance to at least 50M.
 
@@ -87,7 +87,7 @@ In some instances, MOBILE Makers may wish to stop producing MOBILE devices, and 
  
   Ultimately, the Helium Foundation will have the final say in determining whether the Maker has satisfied the above. 
 
-The foundation will then require the onboarding wallet be replenished so at the time of the audit, the Maker onboarding Wallet holds at least enough tokens so that all remaining devices that have not been onboarded may be onboarded as of that date, plus an extra 1% to cover any swapping fees. For example, if a Maker has a total of 1000 indoor Wi-Fi access points that have yet to be onboarded, they will require to have at least 20,200 USDC within their Maker Escrow Wallet.
+The foundation will then require the onboarding wallet be replenished so at the time of the audit, the Maker Onboarding Wallet holds at least enough tokens so that all remaining devices that have not been onboarded may be onboarded as of that date, plus an extra 1% to cover any swapping fees. For example, if a Maker has a total of 1000 indoor Wi-Fi access points that have yet to be onboarded, they will require to have at least 20,200 USDC within their Maker Escrow Wallet.
 
 After the audit is complete, and the MOBILE Maker Escrow Wallet was funded to support the remaining onboards, the slashing smart contract will be removed, and the stake will be released no sooner than 60 epochs after the above requirements were met. If new information should arise within the 60 epochs that wasn't disclosed during the initial audit, the Helium Foundation may request a new audit.
 
@@ -126,7 +126,7 @@ Note that the funds can be gathered into the existing onboarding wallets without
 If a MOBILE Maker's onboarding wallet falls below the minimum balance thresholds before Phase 3 is implemented, slashing will start on the first epoch of implementation.
 
 ### After Implementation 
-- The Helium Foundation will ensure they only issue a MakerApprovalV0 transaction and award Maker Keys to MOBILE Makers who have satisfied all requirements noted within this HIP.
+- The Helium Foundation will ensure that the MakerApprovalV0 transaction and Maker Keys will only be issued to MOBILE Makers who have satisfied all requirements noted within this HIP.
 
 ## Success Metrics:
 
