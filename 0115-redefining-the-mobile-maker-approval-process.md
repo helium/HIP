@@ -89,7 +89,7 @@ The foundation will then require the wallet be replenished so at the time of the
 After the audit is complete, and the MOBILE Maker Escrow Wallet was funded to support the remaining onboards, the slashing smart contract will be removed, and the stake will be released no sooner than 60 epochs after the above requirements were met. If new information should arise within the 60 epochs that wasn't disclosed during the initial audit, the Helium Foundation may request a new audit.
 
 ## Migration of MOBILE Maker Wallets to MOBILE Maker Escrow Wallets
-In instances where MOBILE Makers already have a pre-existing MOBILE Maker Wallet, they may continue to use that wallet for onboarding until the balance of DC is 0. Further, regardless if a previous wallet will be used at first, a new MOBILE Maker Escrow Wallet must be created with the minimum wallet requirements noted above. 
+In instances where MOBILE Makers already have a pre-existing MOBILE Maker Wallet, all tokens from these wallets will be migrated to the Maker Escrow Wallet. This includes the data credits, which will be allowed a one-time contract endpoint to be transferred to the new program-owned escrow wallet. Further, regardless if a previous wallet will be used at first, a new MOBILE Maker Escrow Wallet must be created with the minimum wallet requirements noted above. The escrow wallet will use all held MOBILE and DC before exhausting its USDC.
 
 
 ## Deployment Impact
@@ -100,16 +100,22 @@ Upon HIP passing, the Helium Foundation will need to do the following:
 - 30 epochs after HIP passing, the Helium Foundation will strip any MOBILE Maker’s Maker Key’s that have not been approved by the subDAO and have not staked 50M MOBILE. The removal of the MOBILE Makers key will prevent any more hotspots from that MOBILE Maker from being onboarded. 
 
 ### Phase 2 
+-   Makers must fund their existing onboarding wallet with the required USDC to meet the requirements of this HIP. Makers will have 30 epochs to supply the required funds, or their maker keys will be revoked.
 -   The Helium Foundation will create a new MOBILE Maker Escrow Wallet in which MOBILE Makers will have to deposit funds to onboard their devices, and Makers will not have access to withdraw funds.
 -   The Helium Foundation will implement a way for USDC balances to automatically be swapped/converted to MOBILE/HNT/DC at market value, which will then be burned to pay for the MOBILE and DC onboarding fee for each device.
 
+Note that the funds can be gathered into the existing onboarding wallets without the smart contracts having been completed.
+
 ### Phase 3
-- Within 30 epochs of Phase 2 completion, each existing approved Maker must request that a new MOBILE Maker Escrow Wallet is created, and is funded with the minimum balance requirements defined in the detailed explanation section of this HIP. If this is not done within 30 epochs, the Maker key will be revoked.
-- Once Phase 2 is implemented, the Helium Foundation must review existing MOBILE Makers wallet(s) to determine how much DC they have to determine the amount of remaining onboards left for said wallet. Once those onboards are completed, the Maker will be forced to switch to use the new Escrow Wallet, regardless of the DC balance left. 
+- All mobile onboarding wallets will be migrated to the new MOBILE Maker Escrow Wallets, taking with it all MOBILE, USDC, and DC tokens.
+- The MOBILE Maker Escrow related smart contracts will be deployed
+- All new onboards on the mobile network will happen through the excrow wallet
+- These changes may require a big-bang update to all mobile maker apps
 
  ### Phase 4 
 - The Helium Foundation will create a slashing smart contract to slash the MOBILE stake of MOBILE Makers who do not meet the minimum wallet balances set forward within this HIP.
 - The Helium Foundation will create a way to replenish a stake if it falls below 50M MOBILE.
+- The Helium Foundation will implement a way to withdraw funds in the case of retirement. This withdrawal will require the signoff of the Helium Program Multisig.
 
 If a MOBILE Maker's wallet falls below the minimum balance thresholds before Phase 3 is implemented, slashing will start on the first epoch of implementation.
 
