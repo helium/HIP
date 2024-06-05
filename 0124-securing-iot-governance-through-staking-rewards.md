@@ -15,7 +15,14 @@ This Helium Improvement Proposal (HIP) aims to increase voting turnout. It sugge
 
 ## Motivation
 
-The primary motivation behind this proposal is to increase the overall utility of the IOT token and foster greater participation in the network's governance processes. Presently, many IOT holders lack the incentive to engage in voting, resulting in low voter turnout. By rewarding users for staking their tokens, we aim to encourage more individuals to actively participate in governance as they have locked positions to vote with, thereby strengthening the network's resilience against potential attacks during periods of low participation.
+People who want to vote on HIPs concerning the IOT network need to acquire voting power in the form of veIOT. To acquire veIOT, potential voters need to lock IOT tokens.
+IOT that is locked cannot be moved or sold. This can be seen as a cost of voting that disincentivizes potential voters from HIP voting and lowers voting turnout.
+
+HIP 52 specified a reward bucket of 7% of total IOT emissions to rewarded Oracles to be shared with veIOT that is delegated to these Oracles. As rewarded Oracles aren't live yet, this bucket is unused (the tokens are instantly burned instead).
+
+Once rewarded Oracles are live and reward veIOT delegated to them, the cost of locking IOT will be offset to a significant degree for all veIOT that is delegated to Oracles. The current disincentive for participation in HIP votes will then be significantly reduced or even completely disappear.
+
+Until then, we suggest to reduce the costs of acquiring veIOT voting power by paying rewards for locked IOT tokens. This way, we aim to encourage more individuals to actively participate in governance as they have (bigger) locked positions to vote with, thereby strenghtening the network's resilience against potential attacks during periods of low participation.
 
 ## Stakeholders
 
