@@ -20,7 +20,7 @@ IOT that is locked cannot be moved or sold. This can be seen as a cost of voting
 
 HIP 52 specified a reward bucket of 7% of total IOT emissions to rewarded Oracles to be shared with veIOT that is delegated to these Oracles. As rewarded Oracles aren't live yet, this bucket is unused (the tokens are instantly burned instead).
 
-Once rewarded Oracles are live and reward veIOT delegated to them, the cost of locking IOT will be offset to a significant degree for all veIOT that is delegated to Oracles. The current disincentive for participation in HIP votes will then be significantly reduced or even completely disappear.
+Once decentralized Oracles are live and reward veIOT delegated to them, the cost of locking IOT will be offset to a significant degree for all veIOT that is delegated to Oracles. The current disincentive for participation in HIP votes will then be significantly reduced or even completely disappear.
 
 Until then, we suggest to reduce the costs of acquiring veIOT voting power by paying rewards for locked IOT tokens. This way, we aim to encourage more individuals to actively participate in governance as they have (bigger) locked positions to vote with, thereby strenghtening the network's resilience against potential attacks during periods of low participation.
 
