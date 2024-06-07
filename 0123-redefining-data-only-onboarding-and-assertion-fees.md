@@ -15,7 +15,7 @@ This proposal aims to reduce the cost of onboarding [data-only Hotspots](https:/
 
 ## Motivation
 
-The class of Hotspot known as a "Data-only Hotspot" enables the carte blanche onboarding of any LoRaWAN gateway to the Helium IOT Network. This ability is a valuable tool for IoT companies looking to migrate fleets Helium or expand coverage leveraging readily available hardware. As a tradeoff, these Hotspots do not participate in Proof of Coverage and are eligible to earn IOT tokens only for the work of transferring LoRaWAN traffic.
+The class of Hotspot known as a "Data-only Hotspot" enables the carte blanche onboarding of any LoRaWAN gateway to the Helium IOT Network. This ability is a valuable tool for IoT companies looking to migrate fleets to Helium or expand coverage leveraging readily available hardware. As a tradeoff, these Hotspots do not participate in Proof of Coverage and are eligible to earn IOT tokens only for the work of transferring LoRaWAN traffic.
 
 An off-the-shelf LoRaWAN gateway is capable of transferring traffic through the Helium Network when paired with [gateway-rs](https://github.com/helium/gateway-rs), the light client which enables communication with the Helium Packet Router for PoC-enabled and data-only Hotspots alike. This software package can be used without any onboard or assert of the Hotspot. Increasing functionality is illustrated in the table below:
 
@@ -30,10 +30,10 @@ Status quo pricing for the onboarding of a data-only Hotspot is defined as:
 | Action                                            | Cost               |
 | ------------------------------------------------- | ------------------ |
 | Data-Only Onboard                                 | 1,000,000 DC ($10) |
-| Location Assert (incl elevation and Antenna gain) | 500,000 DC ($5)    |
+| Location Assert (incl elevation and antenna gain) | 500,000 DC ($5)    |
 | Transaction Fee                                   | ~0.1 Sol           |
 
-This HIP recognizes that incentive of data transfer rewards and location metadata may be insufficient to encourage data-only Hotspot operators to fully onboard their hardware. As a result, the Helium Network loses out on valuable data. On-chain knowledge of the Hotspot location enables its inclusion on maps, enabling the broader Helium community to depend on on this coverage for their own sensor deployments. Additionally, precise location of a Hotspot offers benefit asset tracking applications that rely on multilateration.
+This HIP acknowledges that data transfer rewards and location metadata might not provide enough incentive for data-only Hotspot operators to fully onboard their hardware. Consequently, the Helium Network misses out on valuable data. On-chain knowledge of a Hotspot's location allows it to be included on maps, which the broader Helium community can rely on for their sensor deployments. Furthermore, the precise location of a Hotspot is advantageous for asset tracking applications that rely on multilateration.
 
 During the time of writing, 1883 unonboarded and unasserted Hotspots were observed to be transferring data on the network. This HIP aims to enable these and future operators to onboard and assert their Hotspots without concern for the financial burden. The IoT Working Group believes that by adopting this proposal, Helium can enhance the IOT Network's robustness and utility while fostering a more vibrant and inclusive community of developers and users.
 
@@ -44,11 +44,12 @@ Existing and future operators of data-only Hotspots will benefit from reduced co
 ## Detailed Explanation
 
 This HIP will reduce the cost of onboarding a data-only Hotspot from 1,000,000 DC ($10) to 50,000 DC ($0.50).  
-The cost of a location assertion will be reduced from 500,000 DC ($5) to 50,000 DC ($0.50).
+The cost of a location assertion will be reduced from 500,000 DC ($5) to 50,000 DC ($0.50).  
+SOL fees remain unaffected.
 
 ## Drawbacks
 
-The main concern is the potential reduction in DC burn per onboarding or assertion. However, the increase in the number of data-only hotspots and assertions might compensate for this reduction by enhancing network coverage and utility.
+The main concern is the potential reduction in DC burn per onboarding or assertion. However, the increase in the number of data-only Hotspots and assertions might compensate for this reduction by enhancing network coverage and utility.
 
 ## Rationale and Alternatives
 
@@ -57,6 +58,7 @@ This HIP significantly lowers the entry barrier for onboarding and assertion, al
 The price effectively discourages spamming of location assertion while balancing a de minimis cost for operators to overcome when onboarding their Hotspots.
 
 Other approaches have been considered in the discussion of this HIP:
+
 - $5 onboard with free location assert every 30 epoch ($1 location assertion if within the 30 epoch period)
 - Free onboard and assertion of data-only Hotspots
 
@@ -69,12 +71,13 @@ None.
 ## Deployment Impact
 
 The Helium documentation will need updates to reflect new fee structures and the benefits of the free monthly location assertion. Pages of particular focus:
+
 - https://docs.helium.com/iot/data-only-hotspots
 - https://docs.helium.com/tokens/data-credit#iot-protocol-fees
 
 Additionally, all developers of Helium Wallets, Maker Apps, CLI, and API tools must update their software to accommodate the new fee structure and free assertion feature to ensure smooth operation across the network.
 
-This proposal is designed for easy reversibility, minimizing disruptions in the event that we need to revert to previous settings. Should a rollback be necessary, developers of Helium CLI will need to re-implement the original fee structures and assertion rules. This requirement ensures the changes are manageable but would involve coordinated efforts across all developer platforms to maintain assertion and onboarding functionality for data-only hotspot operators.
+This proposal is designed for easy reversibility, minimizing disruptions in the event that we need to revert to previous settings. Should a rollback be necessary, developers of Helium CLI will need to re-implement the original fee structures and assertion rules. This requirement ensures the changes are manageable but would involve coordinated efforts across all developer platforms to maintain assertion and onboarding functionality for data-only Hotspot operators.
 
 ## Success Metrics
 
