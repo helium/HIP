@@ -43,9 +43,7 @@ Existing and future operators of data-only Hotspots will benefit from reduced co
 
 ## Detailed Explanation
 
-This HIP will reduce the cost of onboarding a data-only Hotspot from 1,000,000 DC ($10) to 50,000 DC ($0.50).  
-The cost of a location assertion will be reduced from 500,000 DC ($5) to 50,000 DC ($0.50).  
-SOL fees remain unaffected.
+This HIP will reduce the cost of onboarding a data-only Hotspot from 1,000,000 DC ($10) to 50,000 DC ($0.50). The cost of a data-only Hotspot's location assertion will be reduced from 500,000 DC ($5) to 50,000 DC ($0.50). SOL fees remain unaffected.
 
 ## Drawbacks
 
