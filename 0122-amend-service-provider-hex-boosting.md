@@ -33,7 +33,7 @@ This HIP is being proposed to address some concerns about the original implement
 
 ## Stakeholders
 
-- The MOBILE Subdao.
+- The MOBILE Subnetwork.
 - Service Providers assigning boosted Hex Rewards.
 - Operators/Deployers of CBRS and Wi-Fi MOBILE Hotspots outside of boosted hexes will see increased earnings.
 - Operators/Deployers of CBRS and Wi-Fi MOBILE Hotspots inside of boosted hexes will see decreased earnings.
