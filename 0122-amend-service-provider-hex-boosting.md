@@ -48,11 +48,11 @@ This HIP aims to do three (3) things to amend HIP-84 Service Provider Hex Boosti
     - Because of this 10% allocated Hex Boosting Bucket, this would enable a dynamic maximum / ceiling for hex boosts depending on the number of hexes that are actively pulling for boosted rewards. As of writing this HIP, the allocation of PoC to boosted hexes is far above 10%. This will cause boosted hexes to natively get less rewards until the bucket reaches the 10% equilibrium. 
     - The Helium Planner has always stated "Up to ##x"; so this precedent has already been set that none of the boosted hexes multipliers have been guaranteed that exact multiplier, and it could be lower. 
       
-3. Reduce the minimum time for Service Provider Hex Boosting to 3 months.
+2. Reduce the minimum time for Service Provider Hex Boosting to 3 months.
    - Currently set to 6 months, reducing this to 3 months allows Service Providers more flexibility in boosting a hex that they may be unsure of the actual value of that location.
    - It also sets more precedent for deployers to not get accustomed to making contracts based on the boosted time, but rather that this is just a reward to jumpstart the deployment. 
       
-5. Limit FUTURE boost creation to a maximum of 10x.
+3. Limit FUTURE boost creation to a maximum of 10x.
    - Currently uncapped, we as a community have come to the conclusion that the 100x boosted hexes will mostly breed reward-chasing and attempted gaming of PoC.
    - This can be proven as there were very few people (if not no one) deploying within boosted hexes prior to the value oracle of MOBILE changing drastically late in 2023. It is this author's opinion that boosted hexes should incentivize a longer-term deployment strategy, and the deployers should have their goals aligned with that in mind. With the current multipliers that can be set, the goals of the deployments in these are not long-term but only short-term. This multiplier would only reduce the maximum for any future hex boosting and not change any current boosted hexes once passed.
 
