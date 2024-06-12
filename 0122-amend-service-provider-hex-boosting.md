@@ -49,24 +49,25 @@ This HIP aims to do three (3) things to amend HIP-84 Service Provider Hex Boosti
    - The Helium Planner has always stated "Up to ##x"; so this precedent has already been set that none of the boosted hexes multipliers have been guaranteed that exact multiplier, and it could be lower.
    - Mobile rewards are calculated based on the total CPs for that epoch and the PoC bucket of rewards (sans the Mobile due to unused Data rewards). The total Mobile rewards due to the CPs from the boosted hexes are then checked against the 10% Mobile emissions for that epoch. If the number of mobile tokens is higher that the 10% amount, the Mobile rewards for the boosted CPs are reduced  to meet the 10% cap. Mobile rewards from base CPs are then re-calculated after the unused Data rewards are added back into the PoC reward bucket.
       - Example:
-
-         Total Poc bucket: 1,000,000 MOBILE  (500,000 boosted PoC and 500,000 normal PoC)
-   
-         Total Coverage Points: 100,000
-      
-         Total Boosted Coverage Points: 75,000
-      
-         Total Normal Coverage Points: 25,000
-      
-         1,000,000 / 100,000 = 10 MOBILE per CP, 10 * 75,000 exceeds the boosted PoC cap so we have to calculate the MOBILE per CP differently for boosted vs non boosted
-     
-         Boosted: 500,000 / 75,000 = 6.666666667 MOBILE per boosted CP
-     
-         Normal: 500,000 / 25,000 = 20 MOBILE per normal CP
-     
-         For a hotspot with 500 CP, 100 normal and 400 boosted
-     
-         (100 x 20) + (400 * 6.666666667) = 4666.666667
+           - Assumptions
+             - Total Poc bucket: `1,000,000 MOBILE` (500,000 boosted PoC and 500,000 normal PoC)
+             - Total Coverage Points: `100,000`
+             - Total Boosted Coverage Points: `75,000`
+             - Total Normal Coverage Points: `25,000`
+           - Calculation
+             - `1,000,000 / 100,000 = 10 MOBILE per CP, 10 * 75,000` exceeds the boosted PoC cap, so we have to calculate the MOBILE per CP differently for boosted vs non boosted
+             - Boosted
+               ```
+               500,000 / 75,000 = 6.666666667 MOBILE per boosted CP
+               ```
+             - Normal
+               ```
+               500,000 / 25,000 = 20 MOBILE per normal CP
+               ```
+             - For a hotspot with 500 CP, 100 normal and 400 boosted
+               ```
+               (100 x 20) + (400 * 6.666666667) = 4666.666667
+               ```
 
 
 3. Reduce the minimum time for Service Provider Hex Boosting to 3 months.
