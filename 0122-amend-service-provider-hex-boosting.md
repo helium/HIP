@@ -46,7 +46,6 @@ This HIP aims to do three (3) things to amend HIP-84 Service Provider Hex Boosti
    - Any amount not used in this 10% boosted bucket, gets distributed back to the regular PoC bucket.
    - Boosted rewards will no longer benefit from the overflow from the Data Transfer Bucket, as they will be solely dependent on their own bucket.
    - Because of this 10% allocated Hex Boosting Bucket, this would enable a dynamic maximum / ceiling for hex boosts depending on the number of hexes that are actively pulling for boosted rewards. As of writing this HIP, the allocation of PoC to boosted hexes is far above 10%. This will cause boosted hexes to natively get less rewards until the bucket reaches the 10% equilibrium.
-   - The Helium Planner has always stated "Up to ##x"; so this precedent has already been set that none of the boosted hexes multipliers have been guaranteed that exact multiplier, and it could be lower.
    - Mobile rewards are calculated based on the total CPs for that epoch and the PoC bucket of rewards (sans the Mobile due to unused Data rewards). The total Mobile rewards due to the CPs from the boosted hexes are then checked against the 10% Mobile emissions for that epoch. If the number of mobile tokens is higher that the 10% amount, the Mobile rewards for the boosted CPs are reduced  to meet the 10% cap. Mobile rewards from base CPs are then re-calculated after the unused Data rewards are added back into the PoC reward bucket.
       - Example:
            - Assumptions
