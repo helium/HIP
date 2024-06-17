@@ -11,7 +11,7 @@
 
 ## Summary
 
-This Helium Improvement Proposal (HIP) aims to increase voting turnout. It suggests to achieve this goal indirectly by paying rewards for locking IOT, thus reducing the cost of acquiring voting power (veIOT).
+This Helium Improvement Proposal (HIP) aims to increase voting turnout. It suggests to achieve this goal indirectly by paying rewards for locking IOT, thus reducing the cost of acquiring voting power (veIOT). The payments will discontinue once rewarded veIOT staking to decentralized Orcacles is implemented.
 
 ## Motivation
 
@@ -22,11 +22,11 @@ IOT that is locked cannot be moved or sold. This can be seen as a cost of voting
 
 Once decentralized Oracles are implemented and pay IOT rewards to the veIOT holders who delegate to them, the cost of locking IOT will be offset by these delegation rewards, mitigating the current disincentive for participating in HIP votes.
 
-Until then, we propose to compensate IOT holders for the opportunity cost of acquiring veIOT voting power by paying rewards to locked IOT positions. This will encourage more individuals to participate in IOT governance using (larger) locked IOT positions, thereby strengthening the network's resilience against potential governance attacks during periods of low participation.
+Until then, we propose to reduce the opportunity cost of acquiring veIOT voting power by paying rewards to locked IOT positions. This will encourage more individuals to participate in IOT governance using (larger) locked IOT positions, thereby strengthening the network's resilience against potential governance attacks during periods of low participation.
 
 ## Stakeholders
 
-All current and future veIOT holders and holders of IOT are stakeholders in this proposal. Participants who lock IOT benefit from rewards, and all IOT holders benefit from long-term health and stability of the network promoted by greater governance participation.
+All current and future holders of IOT and veIOT are stakeholders in this proposal. Participants who lock IOT benefit from rewards, and all IOT holders benefit from long-term health and stability of the network promoted by greater governance participation.
 
 ## Detailed Explanation
 
@@ -70,7 +70,7 @@ Users who choose to stake IOT will now have the opportunity to earn rewards from
 
 ## Success Metrics
 
-This HIP will be considered successful if veIOT used for voting increases by at least 200% on average over the next 6 months.
+This HIP will be considered successful if veIOT used for voting increases by at least 200% on average over the next 6 months after implementation.
 
 [hip-52]: https://github.com/helium/HIP/blob/main/0052-iot-dao.md
 [hip-70]: https://github.com/helium/HIP/blob/main/0070-scaling-helium.md
