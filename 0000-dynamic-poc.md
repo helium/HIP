@@ -71,18 +71,18 @@ Default(Max) EIRP is taken from LoRaWAN 1.0.4 Regional Parameters standard and [
 | EU868     | 16            |           |
 | CN470     | 19            |           |
 | IN865     | 30            |           |
-| US915     | 36            |           |
+| US915     | 36            | Default from Regional Params is 30dBm |
 | AU915     | 30            |           |
 
 As an alternative to always transmitting at the maximum permitted value it is suggested that a random selection is made from a subset of allowable transmit powers. But the large spread in allowable power across regions makes it difficult to implement one general set of transmit powers over all regions. Differentiating power-level selection by regions allows PoC to be 'balanced' across regions without additionally affecting the current region power imbalance. This hip does not attempt to address any possible imbalance in the current PoC system which is outside the HIP scope, however, this mechanism could be used to adjust any imbalance in the future. These suggested values keep status quo with today and do not introduce any change across regions:
 
-#### Suggested for AU915, US915, AS923-1C and IN865
+#### Suggested for AU915, US915, AS923-1C and IN865(GroupA)
 
 Power options are set to:
 
 $`\{MaxEIRP,\ MaxEIRP*0.8 dBm,\ MaxEIRP*0.6 dBm\}`$
 
-#### Suggested For KR920, AS923-1, AS923-1B, RU864, EU868, CN470
+#### Suggested For KR920, AS923-1, AS923-1B, RU864, EU868, CN470(GroupB)
 
 $`\{MaxEIRP,\ MaxEIRP*0.8 dBm,\ MaxEIRP*0.8 dBm\}`$
 
@@ -92,18 +92,18 @@ The duplicate 3rd value is intentionally left to make comparison to the fixed ch
 
 A selection is made between full power or one of the reduced values. MaxEIRP minus 3dBm will cut the transmit power in half and minus 6dBm will be a quarter of the total power. Using inverse square law the estimated range will roughly double with a change of 6dBm.
 
-|  Region  | EIRP Values(dBm) | Notes |
-|----------|------------------|-------|
-| KR920    | 14, 11, 11       |       |
-| AS923-1  | 16, 13, 13       |       |
-| AS923-1B | 16, 13, 13       |       |
-| AS923-1C | 30, 22, 16       |       |
-| RU864    | 16, 13, 13       |       |
-| EU868    | 16, 13, 13       |       |
-| CN470    | 19, 15, 15       |       |
-| IN865    | 30, 22, 16       |       |
-| US915    | 30, 22, 16       | Currently 36   |
-| AU915    | 30, 22, 16       |       |
+|  Region  | EIRP Values(dBm) | Group | Notes |
+|----------|------------------|-------|-------|
+| KR920    | 14, 11, 11       |    B  |       |
+| AS923-1  | 16, 13, 13       |    B  |       |
+| AS923-1B | 16, 13, 13       |    B  |       |
+| AS923-1C | 30, 22, 16       |    A  |       |
+| RU864    | 16, 13, 13       |    B  |       |
+| EU868    | 16, 13, 13       |    B  |       |
+| CN470    | 19, 15, 15       |    B  |       |
+| IN865    | 30, 22, 16       |    A  |       |
+| US915    | 30, 22, 16       |    A  | Currently 36  |
+| AU915    | 30, 22, 16       |    A  |       |
 
 To enhance the detail and accuracy of the coverage map, we propose introducing variable transmit power for beacons. By randomly adjusting the transmit power at each spreading factor, we can generate a comprehensive map that more accurately reflects the network’s capabilities for sensor fleet deployers.
 
@@ -119,7 +119,7 @@ Sensitivity improvements taken from [(3) Semtech AN1200.22][3]:
 | FSK   | 1.2            | -122	             |                 | -                            |
 | SF12  | 0.293	         | -137              | 	32.768         | -                            |
 | SF11	| 0.537	         | -134.5            | 	16.384         | -                            |
-| SF10	| 0.976	         | -132	             | 8.192           | 19                           |
+| SF10	| 0.976	         | -132	             | 8.192           | 24                           |
 | SF9	  | 1.757	         | -129	             | 4.096           | 61                           |
 | SF8	  | 3.125	         | -126	             | 2.048           | 133                          |
 | SF7	  | 5.468	         | -123	             | 1.024           | 230                          |
@@ -141,6 +141,19 @@ The following table, based on calculations from this [(2) Airtime calculator][2]
 | EU868  | SF11             | 440           | 52                    | 1315            | 16       |                                   |
 | EU868  | SF12             | 250           | 52                    | 2466            | 16       | Current POC Beacon                |
 
+Reducing the poc packet size to 24bytes:
+| Region | Spreading Factor | Datarate(bps) | Packet Length (bytes) | On-Air Time(ms) | Max EIRP | Notes                             |
+|--------|------------------|---------------|-----------------------|-----------------|----------|-----------------------------------|
+| US915  | SF7              | 5470          | 24                    |  62             | 30       | Currently 36                      |
+| US915  | SF8              | 3125          | 24                    | 113             | 30       |                                   |
+| US915  | SF9              | 1760          | 24                    | 206             | 30       | Current POC Beacon 36 EIRP        |
+| US915  | SF10             | 980           | 24                    | 371             | 30       | Dwell Time no longer exceeded     |
+| EU868  | SF7              | 5470          | 24                    |  62             | 16       |                                   |
+| EU868  | SF8              | 3125          | 24                    | 113             | 16       |                                   |
+| EU868  | SF9              | 1760          | 24                    | 206             | 16       |                                   |
+| EU868  | SF10             | 980           | 24                    | 371             | 16       |                                   |
+| EU868  | SF11             | 440           | 24                    | 823             | 16       |                                   |
+| EU868  | SF12             | 250           | 24                    | 1483            | 16       | Current POC Beacon                |
 
 Enabling higher data rates on the network allows battery-powered LoRaWAN sensors to extend their battery life by transmitting data more quickly, which reduces transmitter on-time and consequently lowers system noise and collision risks. However, these higher data rates reduce transmission range, making it essential to accurately understand and map the network's coverage capabilities.
 
@@ -149,8 +162,9 @@ Enabling higher data rates on the network allows battery-powered LoRaWAN sensors
 
 The current packet length of the PoC beacon is 52 bytes. This length comes from legacy data included during targeted proof of coverage. The longer the packet the [(1) higher a chance of interference and packet loss][1]. Using a variable packet length for POC will further help to understand the network's capability.
 
-If the beacon packet length can be reduced from 52-bytes and made variable ideally it would be multiples of 24-bytes or 1 DC (Data Credit). If it could be reduced to 19-bytes SF10 could be utilized in US915 while still respecting the 400ms dwell time.
+The beacon packet length will be reduced from 52-bytes to a static 24-bytes or 1 DC (Data Credit) packet. This includes any header or overhead required for the POC packet. There will be no random selection for packet length. The length of the packet has a limited impact of the performance of the RF link and it has been decided the variable packet length is not worth the extra complication.
 
+It should be noted that the reduction of the packet length has made SF10 feasible with the US915 channel plan as the maximum dwell time is no longer exceeded. 
 
 #### Entropy
 
@@ -159,9 +173,9 @@ The random values will be selected based off...TBC
 
 ### Beacon Creation Algorithm
 
-Each parameter will be independent of each other when creating the beacon. This will allow a random selection of Transmit Power, Datarate and Packet Length without worrying that certain combinations of parameters are not compatible. e.g. All packet length and datarate combinations will respect the 400ms dwell time.
+Each parameter will be independent of each other when creating the beacon. This will allow a random selection of Transmit Power and Datarate without worrying that certain combinations of parameters are not compatible. e.g. All datarate combinations will respect the 400ms dwell time.
 
-This will allow a very simple random selection of Transmit Power, Datarate and Packet Lengthh to create the beacon.
+This will allow a very simple random selection of Transmit Power and Datarate. Packet Length of the beacon will not be dynamic but reduced to a fixed 24 bytes.
 
 ## Drawbacks
 
@@ -184,12 +198,9 @@ One alternative method sends multiple beacons within a very short interval. This
 
 ## Unresolved Questions
   
-- High gain antennas in EU may not be able to be reduced a further 6dbm
 - Does tx power have to be even?
 - What is the minimum/max tx power used?
 - Why do we use 36 dBm in North America?
-
-- The maximum packet size M was taken from 1.0.4 of the regional parameters. I need to double-check whether this includes the LoRaWAN headers. If it doesn't this value may be increased as the beacon format does not require LoRaWAN headers.
 
 - Exact methods for deriving parameters from blockchain entropy need refinement, the randomness of selecting the transmit power, datarate and packet length is not yet fully defined.
 - Impact assessment on existing Hotspots and any required updates.
@@ -207,32 +218,35 @@ Comparison of potential beacon combinations compared to maximum of today. The De
 
 ### EU868
 
-| Spreading Factor | Transmit Power(dBm) | Packet Size | Delta dB | Notes          |
+| Spreading Factor |      EiRP(dBm)      | Packet Size | Delta dB | Notes          |
 |------------------|---------------------|-------------|----------|----------------|
 | SF12             | 16                  | 52          | 0        | Current Beacon |
-| SF10             | 16                  | 52          | -5       |                |
-| SF7              | 16                  | 52          | -14      |                |
-| SF12             | 13                  | 52          | -3       |                |
-| SF10             | 13                  | 52          | -8       |                |
-| SF7              | 13                  | 52          | -17      |                |
-| SF12             | 13                  | 52          | -3       |                |
-| SF10             | 13                  | 52          | -8       |                |
-| SF7              | 13                  | 52          | -17      |                |
+| SF10             | 16                  | 24          | -5       |                |
+| SF7              | 16                  | 24          | -14      |                |
+| SF12             | 13                  | 24          | -3       |                |
+| SF10             | 13                  | 24          | -8       |                |
+| SF7              | 13                  | 24          | -17      |                |
+| SF12             | 13                  | 24          | -3       |                |
+| SF10             | 13                  | 24          | -8       |                |
+| SF7              | 13                  | 24          | -17      |                |
 
 
 ### US915
 
-| Spreading Factor | Transmit Power(dBm) | Packet Size | Delta dB | Notes          |
+| Spreading Factor |      EiRP(dBm)      | Packet Size | Delta dB | Notes          |
 |------------------|---------------------|-------------|----------|----------------|
-| SF9              | 27                  | 52          | 0        | Current Beacon |
-| SF8              | 27                  | 52          | -3       |                |
-| SF7              | 27                  | 52          | -6       |                |
-| SF9              | 22                  | 52          | -5       |                |
-| SF8              | 22                  | 52          | -8       |                |
-| SF7              | 22                  | 52          | -11      |                |
-| SF9              | 16                  | 52          | -11      |                |
-| SF8              | 16                  | 52          | -14      |                |
-| SF7              | 16                  | 52          | -17      |                |
+| SF9              | 36                  | 52          | 0        | Current Beacon |
+| SF10             | 30                  | 24          | -3       |                |
+| SF8              | 30                  | 24          | -9       |                |
+| SF7              | 30                  | 24          | -12      |                |
+| SF10             | 22                  | 24          | -8       |                |
+| SF8              | 22                  | 24          | -8       |                |
+| SF7              | 22                  | 24          | -11      |                |
+| SF10             | 16                  | 24          | -8       |                |
+| SF8              | 16                  | 24          | -14      |                |
+| SF7              | 16                  | 24          | -17      |                |
+
+The SF9 52-byte packet has been included for comparison and will not be used for this HIP. The new highest power packet for US915 uses 30dBm EiRP and SF10 datarate which has an equivalent -3dB delta compared to the original beacon.
 
 ![image](https://github.com/gradoj/HIPS/assets/7544765/5bbe60eb-953f-4c91-aae1-c333c32dcf5c)
 
