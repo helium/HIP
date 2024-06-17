@@ -54,6 +54,10 @@ For each successful and qualified subscriber that registered for the network and
 
 The gradual reward payout promotes subscriber retention and ensures a higher-quality subscriber base (an anti-gaming mechanism). Referrals are paid out of the incentive allocation.
 
+### Geographic Limiations 
+
+This proposal is limited to service providers and subscribers operating in the United States and Mexico. Expansion of this proposal to apply to future geographies will require a separate Helium Improvement Proposal and vote. 
+
 ## Drawbacks
 
 This proposal introduces an additional layer of complexity to the already complex reward mechanism.
