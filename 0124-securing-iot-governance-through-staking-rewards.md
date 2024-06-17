@@ -32,7 +32,7 @@ All current and future holders of IOT and veIOT are stakeholders in this proposa
 
 1. **Emissions Apportionment:**
     - Allocate 4% of IOT emissions to lockup rewards for veIOT. This allocation will be sourced from the reward bucket assigned to Oracles in [HIP-52][hip-52], which is currently not distributed.
-    - Post the implementation of decentralized Oracles, this allocation will revert to Oracle rewards, providing veIOT holders with the opportunity to earn rewards by staking to Oracles as specified in [HIP-52][hip-52].
+    - Post the implementation of decentralized Oracles, this allocation will revert to Oracle rewards, providing veIOT holders with the opportunity to earn rewards by staking to Oracles.
 
 2. **Existing lockups:**
     - All existing lockups stay as is. Functions for unlocking, locking, choosing decaying/constant, vote weight and unlocking remain the same.
