@@ -1,16 +1,17 @@
-# HIP XXX: Dynamic IOT Proof-of-Coverage
+# HIP 127: Dynamic IOT Proof-of-Coverage
 
 - Author(s): [gradoj](https://github.com/gradoj)
-- Start Date: 2024-05-07
+- Start Date: 2024-06-19
 - Category: Technical
 - Original HIP PR: [#1015](https://github.com/helium/HIP/pull/1015)
-- Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
+- Tracking Issue: [#1045](https://github.com/helium/HIP/issues/1045)
 - Vote Requirements: veIOT Holders
+
+---
 
 ## Summary
 
 This is a proposal for the Helium IoT network to update Proof of Coverage (PoC) beacons by introducing a random selection of transmit power, datarate and packet length. The existing PoC algorithm was designed to show maximum coverage with a limited number of beacons. The current beacon frequency allow us to utilize higher data rate capabilities and variable transmit power to collect a more complete picture of the network's capability. This proposal aims to enhance network reliability, improve the accuracy of coverage mapping, and increase security.
-
 
 ## Motivation
 
