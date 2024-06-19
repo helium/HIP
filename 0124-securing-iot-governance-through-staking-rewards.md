@@ -54,6 +54,8 @@ None at this time.
 
 Total daily IOT emissions will increase by the amount of rewards emitted to veIOT holders.
 
+The Helium foundation have confirmed that they will develop and implement the code required by this HIP.
+
 ### Existing veIOT Stakers
 
 Current veIOT stakers will start to receive rewards for their lockups, and can decay/unlock their positions as normal.
