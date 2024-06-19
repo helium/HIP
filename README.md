@@ -140,6 +140,7 @@ If you have questions or feedback, please see the [Discussion](https://github.co
 | 124 | [Securing IOT Governance Through Staking Rewards](0124-securing-iot-governance-through-staking-rewards.md)                                          | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/1013)                |
 | 125 | [Temporary Anti-Gaming Measures For Boosted Hexes](0125-temporary-anti-gaming-measures-for-boosted-hexes.md)                                        | [<img src="https://img.shields.io/badge/Status-Voting_Open-cyan"></img>](https://github.com/helium/HIP/issues/1022)                      |
 | 126 | [Flexible Data Pricing for MOBILE Network](0126-flexible-data-pricing-for-mobile-network.md)                                                        | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/1023)                |
+| 127 | [Dynamic IOT Proof-of-Coverage](0127-dynamic-iot-poc.md)                                                                                            | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/1045)                |
 
 ## HIP Status Key
 
