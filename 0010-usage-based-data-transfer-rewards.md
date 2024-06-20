@@ -67,7 +67,7 @@ over the network exceeds the 32.5% of HNT (1,625,000) at which point it should b
 proportionally. The remainder of the unspent rewards shold be distributed pro-rata to the PoC
 Challengers, Witnesses, and Challengees to further encourage network growth
 
-To illustrate, here are a a couple of scenarios:
+To illustrate, here are a couple of scenarios:
 
 - 10,000,000 DC are transferred across the network through various Hotspots. The HNT oracle price is
   $2. In this scenario the total HNT value of DC being transferred is 50 HNT (10,000,000 DC \*

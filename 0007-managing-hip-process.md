@@ -17,7 +17,7 @@ _"How a bill becomes a law"_
 As Helium Inc begins to share control over the development and management of the Helium Network,
 it's become clear we need a community-driven process for making changes to the protocol, network
 configuration, and other shared concerns. Fortunately, we are not the first to this problem, and
-this document draws heavily on the the Improvement Proposal processes of
+this document draws heavily on the Improvement Proposal processes of
 [Ethereum](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1.md),
 [Zcash](https://github.com/zcash/zips/blob/master/zip-0000.rst),
 [Rust](https://github.com/rust-lang/rfcs) and others.
