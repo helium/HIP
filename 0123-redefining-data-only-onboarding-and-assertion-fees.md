@@ -76,7 +76,3 @@ The Helium documentation will need updates to reflect new fee structures and the
 Additionally, all developers of Helium Wallets, Maker Apps, CLI, and API tools must update their software to accommodate the new fee structure and free assertion feature to ensure smooth operation across the network.
 
 This proposal is designed for easy reversibility, minimizing disruptions in the event that we need to revert to previous settings. Should a rollback be necessary, developers of Helium CLI will need to re-implement the original fee structures and assertion rules. This requirement ensures the changes are manageable but would involve coordinated efforts across all developer platforms to maintain assertion and onboarding functionality for Data-Only Hotspot operators.
-
-## Success Metrics
-
-A successful outcome will be measured by an increase in the number of active Data-Only Hotspots.
