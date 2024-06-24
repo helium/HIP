@@ -25,7 +25,7 @@ An off-the-shelf LoRaWAN gateway is capable of transferring traffic through the 
 | Hotspot is onboarded.                | Data transfer is rewarded to the Hotspot.                                  |
 | Hotspot location is asserted.        | Hotspot location is known to the network and returned in payload metadata. |
 
-Current, prior to implementation of this HIP, pricing for the onboarding of a Data-Only Hotspot is currently:
+Status quo pricing for the onboarding of a Data-Only Hotspot is currently:
 
 | Action                                            | Cost               |
 |---------------------------------------------------|--------------------|
