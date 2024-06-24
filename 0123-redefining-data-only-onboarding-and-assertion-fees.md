@@ -33,7 +33,7 @@ Status quo pricing for the onboarding of a Data-Only Hotspot is:
 | Location Assert (incl elevation and antenna gain) | 500,000 DC ($5)    |
 | Transaction Fee                                   | ~0.1 Sol           |
 
-This HIP acknowledges that data transfer rewards and location metadata might not provide enough incentive for Data-Only Hotspot operators to fully onboard their hardware. Consequently, the Helium Network misses out on valuable data. On-chain knowledge of a Hotspot's location allows it to be included on coverage maps, which the broader Helium community can rely on for their sensor deployments. Furthermore, the precise location of a Hotspot is advantageous for asset tracking applications that rely on multi-lateration.
+This HIP acknowledges that data transfer rewards and location metadata might not provide enough incentive for Data-Only Hotspot operators to fully onboard their hardware. Consequently, the Helium Network misses out on valuable data. On-chain knowledge of a Hotspot's location allows it to be included on coverage maps, which the broader Helium community can rely on for their sensor deployments. Furthermore, the precise location of a Hotspot is advantageous for asset tracking applications that rely on multilateration.
 
 During the time of writing, 1883 Hotspots were not onboarded/asserted but were transferring data on the network. This HIP aims to enable these and future operators to onboard and assert their Hotspots without concern for the financial burden. The IoT Working Group believes that by adopting this proposal, Helium can enhance the IOT Network's robustness and utility while fostering a more vibrant and inclusive community of developers and users.
 
