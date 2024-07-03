@@ -294,7 +294,7 @@ Decentralized Physical Infrastructure Networks (DePIN) represent a new paradigm 
 
 The energy sector is undergoing a rapid transformation towards decentralization, driven by the proliferation of small-scale renewable energy resources. There needs to be an effective way of coordinating the vast number of small energy resources. By leveraging the community with already open hardware platforms, and coordinating current and unforeseen products, we can build a more cost-effective, permissionless, and transparent energy system than options available today. 
 
-The decentralization of the energy sector is a disruptive movement and we need technology that empowers people to be the stakeholders and builders of this movement, not just bystanders.
+The decentralization of the energy sector is a disruptive movement, and we need technology that empowers people to be the stakeholders and builders of this movement, not just bystanders.
 
 The energy system is already a decentralized network that functions solely because there is a coordination of both consumption and production that is always in balance. However, it is rapidly growing and needs are outpacing what’s possible with existing tools. We believe that this coordination–built upon a decentralized and transparent protocol where the people participating are the stakeholders–can solve this problem. 
 
