@@ -296,7 +296,7 @@ The energy sector is undergoing a rapid transformation towards decentralization,
 
 The decentralization of the energy sector is a disruptive movement and we need technology that empowers people to be the stakeholders and builders of this movement, not just bystanders.
 
-The energy system is already a decentralized network that functions solely because there is a coordination of both consumption and production that is always in balance. However it is rapidly growing and needs are outpacing what’s possible with existing tools. We believe that this coordination–built upon a decentralized and transparent protocol where the people participating are the stakeholders–can solve this problem. 
+The energy system is already a decentralized network that functions solely because there is a coordination of both consumption and production that is always in balance. However, it is rapidly growing and needs are outpacing what’s possible with existing tools. We believe that this coordination–built upon a decentralized and transparent protocol where the people participating are the stakeholders–can solve this problem. 
 
 One example: In Germany there is now the possibility of installing small scale solar PV that can be plugged directly into your wall socket (such as balcony solar). Bringing solutions like this to scale is a global energy solution, but there are currently no effective incentive mechanisms to get these resources coordinated in the traditional markets for small scale PV or batteries deployment. The ENERGY subnetwork will incentivize and reward individuals for addressing global power needs. 
 
