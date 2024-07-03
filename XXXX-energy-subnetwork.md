@@ -7,7 +7,7 @@
 - Tracking Issue: [Leave blank for now]
 - Vote Requirements: HNT Holders
 
-# Overview
+## Summary
 This HIP proposes the creation of ENERGY, a new subnetwork within the Helium ecosystem. This network rewards users who participate in solar power production and battery energy storage. The network aims to collect data from, and offer control of connected solar power and battery resources.
 
 The ENERGY subnetwork is designed to create significant value for the entire Helium ecosystem:
