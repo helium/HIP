@@ -250,10 +250,10 @@ At the start, usage of the network is divided into two main buckets, energy data
 Energy data is priced at 1 DC per data point. This data is provided at frequencies of up to one data point per second. Typically, data costs from utility meters (which only measures the amount of energy) are generally billed at about $2.60 USD/month with a transmission rate of one data point per hour. DERs, however, can send more data points more frequently. The ENERGY network prices the data cost for a single DER significantly lower rate than the base price for what a utility company is paying.
 
 | Frequency    | Data Points (DC) /Day | DC per Data Point | 30 Day Cost (USD) |
-|--------------|-----------------------|-------------------|--------------------|
-| Every Hour   | 24                    | 1                 | $0.0072            |
-| Every Minute | 1&nbsp;440            | 1                 | $0.432              |
-| Every Second | 86&nbsp;400           | 1                 | $25.92              |
+|--------------|-----------------------|-------------------|-------------------|
+| Every Hour   | 24                    | 1                 | $0.0072           |
+| Every Minute | 1&nbsp;440            | 1                 | $0.432            |
+| Every Second | 86&nbsp;400           | 1                 | $25.92            |
 
 
 
