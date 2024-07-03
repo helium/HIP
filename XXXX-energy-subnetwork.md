@@ -100,16 +100,16 @@ The motivation for the network growth pool is to stimulate growth of the network
 
 For clarity, the community emission schedule is as follows:
 
-| Year | ENERGY at the start of the year (M) | ENERGY minted (M) | DER host Baseline Rewards | DER host Service Contract Pool | Sensor hosts | Service Providers | Oracles | Operations Fund | veENERGY stakers |
-|------|-------------------------------------|-------------------|---------------------------|-------------------------------|--------------|-------------------|---------|-----------------|------------------|
-| 1 (Stub + 2025) | 1&nbsp;000 | 47&nbsp;250 | 15 % | 45 % | 5 %  | 20 %  | 4 %  | 5 % | 6 % |
-| 2 (2026)   | 48&nbsp;250                     | 47&nbsp;250   | 15 %                    | 45 %                           | 5 %           | 20 %               | 4 %      | 5 %              | 6 %               |
-| 3 (2027)   | 95&nbsp;500                     | 23&nbsp;625   | 15 %                        | 45 %                           | 5 %           | 20 %               | 4 %      | 5 %              | 6 %               |
-| 4 (2028)   | 119&nbsp;125                    | 23&nbsp;625            | 15 %                        | 45 %                           | 5 %           | 20 %               | 4 %      | 5 %              | 6 %               |
-| 5 (2029)   | 142&nbsp;750                            | 11&nbsp;812.5          | 15 %                        | 45 %                           | 5 %           | 20 %               | 4 %      | 5 %              | 6 %               |
-| 6 (2030)   | 154&nbsp;562.5                          | 11&nbsp;812.5          | 15 %                        | 45 %                           | 5 %           | 20 %               | 4 %      | 5 %              | 6 %               |
-| 7 (2031)   | 166&nbsp;375                            | 5&nbsp;906.25          | 15 %                        | 45 %                           | 5 %           | 20 %               | 4 %      | 5 %              | 6 %               |
-| …    |                                     |                   |                           |                               |              |                   |         |                 |                  |
+| Year            | ENERGY at the start of the year (M) | ENERGY minted (M) | DER host Baseline Rewards | DER host Service Contract Pool | Sensor hosts | Service Providers | Oracles | Operations Fund | veENERGY stakers |
+|-----------------|-------------------------------------|-------------------|---------------------------|--------------------------------|--------------|-------------------|---------|-----------------|------------------|
+| 1 (Stub + 2025) | 1&nbsp;000                          | 47&nbsp;250       | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |
+| 2 (2026)        | 48&nbsp;250                         | 47&nbsp;250       | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |
+| 3 (2027)        | 95&nbsp;500                         | 23&nbsp;625       | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |
+| 4 (2028)        | 119&nbsp;125                        | 23&nbsp;625       | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |
+| 5 (2029)        | 142&nbsp;750                        | 11&nbsp;812.5     | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |
+| 6 (2030)        | 154&nbsp;562.5                      | 11&nbsp;812.5     | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |
+| 7 (2031)        | 166&nbsp;375                        | 5&nbsp;906.25     | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |
+| …               |                                     |                   |                           |                                |              |                   |         |                 |                  |
 
 
 Below is a high level overview of the reward flow from the emission curve to economic participants of the subnetwork:
