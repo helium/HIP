@@ -292,7 +292,7 @@ Decentralized Physical Infrastructure Networks (DePIN) represent a new paradigm 
 
 ### Why the DePIN Approach Makes Sense for Energy
 
-The energy sector is undergoing a rapid transformation towards decentralization, driven by the proliferation of small-scale renewable energy resources. There needs to be an effective way of coordinating the vast number of small energy resources. By leveraging the community with already open hardware platforms, and coordinating current and unforeseen products, we can build a more cost effective, permissionless, and transparent energy system than options available today. 
+The energy sector is undergoing a rapid transformation towards decentralization, driven by the proliferation of small-scale renewable energy resources. There needs to be an effective way of coordinating the vast number of small energy resources. By leveraging the community with already open hardware platforms, and coordinating current and unforeseen products, we can build a more cost-effective, permissionless, and transparent energy system than options available today. 
 
 The decentralization of the energy sector is a disruptive movement and we need technology that empowers people to be the stakeholders and builders of this movement, not just bystanders.
 
