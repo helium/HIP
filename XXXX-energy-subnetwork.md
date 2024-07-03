@@ -167,11 +167,11 @@ Baseline rewards for an online DER are defined in three buckets based on the fol
 #### Principle 1: Uptime
 Reward DERs that have been part of the network for a long time;
 
-| Level | Definition                     | Score |
-| ----- | ------------------------------ | ----- |
-| 1     | 3-20 weeks connected           | 100   |
-| 2     | 21-35 weeks connected          | 200   |
-| 3     | 36 or more weeks connected     | 300   |
+| Level | Definition                 | Score |
+|-------|----------------------------|-------|
+| 1     | 3-20 weeks connected       | 100   |
+| 2     | 21-35 weeks connected      | 200   |
+| 3     | 36 or more weeks connected | 300   |
 
 #### Principle 2: Quality
 Incentivize an evenly distributed and continuous data connection; which tells a fuller story of DER behavior and performance. A given time period with data points is subdivided into several levels. If there is data across a whole level the score for that level is used. The score is proportionate to the division of the level. For an hour time period the first division is 2 (data every half hour), the next 2 (data every quarter), the next 3 (data every 5 min), the next 5 (data every min), the next 2 (data every 30 seconds). This gives the following:
