@@ -1,11 +1,13 @@
-# HIP-XXXX: Energy Subnetwork
+# HIP 128: Energy Subnetwork
 
-- Author(s): [@frahlg](https://github.com/frahlg), [@jthiller](https://github.com/jthiller), [@abhay](https://github.com/abhay), [@T0bias0lss0n](https://github.com/h0bb3), [@leitet](https://github.com/leitet), [@VIKOLO](https://github.com/VIKOLO) 
-- Start Date: [Today's Date]
-- Category: Economic, Technical
-- Original HIP PR: [Leave blank for now]
-- Tracking Issue: [Leave blank for now]
-- Vote Requirements: HNT Holders
+- Author(s): [@frahlg](https://github.com/frahlg), [@jthiller](https://github.com/jthiller), [@abhay](https://github.com/abhay), [@T0bias0lss0n](https://github.com/h0bb3), [@leitet](https://github.com/leitet), [@VIKOLO](https://github.com/VIKOLO)
+- Start Date: 2024-07-03
+- Category: Economic, Technical, Governance
+- Original HIP PR: [#1050](https://github.com/helium/HIP/pull/1050)
+- Tracking Issue: [#1051](https://github.com/helium/HIP/issues/1051)
+- Vote Requirements: veHNT Holders
+
+---
 
 ## Summary
 This HIP proposes the creation of ENERGY, a new subnetwork within the Helium ecosystem. This network rewards users who participate in solar power production and battery energy storage. The network aims to collect data from, and offer control of connected solar power and battery resources.
