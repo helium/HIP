@@ -268,10 +268,10 @@ Solar PV systems are only eligible for curtailment during daylight hours with sa
 
 Example of a 24-hour delivery period of aggregated DERs with a combined power of 1 MW (equivalent to 100 average-sized DERs for a household) in a European country with prices as of Q2 2024:
 
-| Type of DER | Daily availability | Controllable resources in MW | Daily price in $  | Daily price(DC) | Monthly price(USD) |
-|-------------|--------------------|------------------------------|-------------------|-----------------|--------------------|
-| Batteries   | 24&nbsp;h               | 1                            | $1&nbsp;000            | 100&nbsp;000&nbsp;000     | $30&nbsp;000           |
-| Solar PVs   | ~ 8&nbsp;h              | 1                            | $100              | 10&nbsp;000&nbsp;000      | $3&nbsp;000              |
+| Type of DER | Daily availability | Controllable resources in MW | Daily price in $ | Daily price(DC)       | Monthly price(USD) |
+|-------------|--------------------|------------------------------|------------------|-----------------------|--------------------|
+| Batteries   | 24&nbsp;h          | 1                            | $1&nbsp;000      | 100&nbsp;000&nbsp;000 | $30&nbsp;000       |
+| Solar PVs   | ~ 8&nbsp;h         | 1                            | $100             | 10&nbsp;000&nbsp;000  | $3&nbsp;000        |
 
 
 ## Oracle Operations for the ENERGY Subnetwork
