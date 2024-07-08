@@ -12,13 +12,13 @@
 ## Summary
 This HIP proposes the creation of ENERGY, a new subnetwork within the Helium ecosystem. This network rewards users who participate in solar power production and battery energy storage. The network aims to collect data from, and offer control of connected solar power and battery resources.
 
-The ENERGY subnetwork is designed to create significant value for the entire Helium ecosystem:
+The ENERGY subnetwork is designed to create value for the entire Helium ecosystem:
 
 1. **Dual Mining for Existing Compatible Hotspots**
    Existing compatible Helium Hotspots can be upgraded to participate in the ENERGY network and earn both IOT and ENERGY rewards.
    
 2. **Utilization of the IOT Network**
-   The ENERGY network will transfer supporting sensor data over the existing IOT infrastructure. This creates a substantial new use case for the IOT network through increased network activity.
+   The ENERGY network will transfer supporting sensor data over the existing IOT infrastructure, including utility meter data and solar lux meter data.
 
 3. **Increased DC Burn**
    Energy management and grid stabilization services provided by the ENERGY network will drive significant Data Credit (DC) burn. This increased DC burn directly benefits all HNT holders by potentially increasing HNT value through the burn-and-mint equilibrium.
