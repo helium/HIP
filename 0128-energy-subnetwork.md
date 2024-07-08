@@ -102,7 +102,7 @@ The motivation for the network growth pool is to stimulate growth of the network
 
 For clarity, the community emission schedule is as follows:
 
-| Year            | ENERGY at the start of the year (M) | ENERGY minted (M) | DER host Baseline Rewards | DER host Service Contract Pool | Sensor hosts | Service Providers | Oracles | Operations Fund | veENERGY Stakers |
+| Year            | ENERGY at the start of the year (M) | ENERGY minted (M) | DER host Baseline Rewards | DER host Service Contract Pool | Sensor hosts | Service Providers | Oracles | Operations Fund | veHNT Delegators |
 |-----------------|-------------------------------------|-------------------|---------------------------|--------------------------------|--------------|-------------------|---------|-----------------|------------------|
 | 1 (Stub + 2025) | 1&nbsp;000                          | 47&nbsp;250       | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |
 | 2 (2026)        | 48&nbsp;250                         | 47&nbsp;250       | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |
@@ -122,7 +122,7 @@ flowchart LR
     HETEmissions[HET Emissions Contract\n190B ENERGY]:::dashed
 
     OperationsFund[Operations Fund]:::dashed
-    veENERGYStakers[veENERGY Stakers]:::dashed
+    veHNTDelegators[veHNT Delegators]:::dashed
     RewardOrBurn{Reward\nor\nBurn}:::standard
     NetworkGrowthPool[Network Growth Pool]:::dashed
     ServiceProviders[Service Providers]:::standard
@@ -136,7 +136,7 @@ flowchart LR
     classDef standard fill:#ffffff,stroke:#000000
 
     HETEmissions -->|5%|OperationsFund
-    HETEmissions -->|6%|veENERGYStakers
+    HETEmissions -->|6%|veHNTDelegators
     HETEmissions -->|45%|RewardOrBurn
     
     HETEmissions -->|15%|BaselineRewards
