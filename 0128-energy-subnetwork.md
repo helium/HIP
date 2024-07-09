@@ -17,7 +17,7 @@ The ENERGY subnetwork is designed to create value for the entire Helium ecosyste
 
 1. **Dual Mining for Existing Compatible Hotspots**
    Existing compatible Helium Hotspots can be upgraded to participate in the ENERGY subnetwork and earn both IOT and ENERGY rewards.
-2. **Utilization of the IoT Subnetwork**
+2. **Utilization of the IOT Subnetwork**
    The ENERGY subnetwork will transfer supporting sensor data over the existing IoT infrastructure, including utility meter data and solar lux meter data.
 3. **Increased DC Burn**
    Energy management and grid stabilization services provided by the ENERGY subnetwork will drive significant Data Credit (DC) burn. This increased DC burn directly benefits all HNT holders by potentially increasing HNT value through the burn-and-mint equilibrium.
@@ -50,7 +50,7 @@ At scale, the VPP that exists via the Helium ENERGY subnetwork may be leased (pu
 
 The primary objective is to create an ecosystem and incentive structure that promotes DER deployment and connects DER's to enhance their intelligence and flexibility. This is critical for achieving affordable and abundant renewable energy within the power system. Additionally, the subnetwork aims to capture opportunities in the global demand for energy data and a more intelligent ancillary services market, which is essential for grid stability as renewable energy integration increases.
 
-Key objectives of the Eenrgy subnetwork:
+Key objectives of the ENERGY subnetwork:
 
 - **Establish a Network of Connected DERs:** Build the People’s Virtual Power Plant by creating a robust network of Distributed Energy Resources (DERs).
 - **Stabilize the Power Grid:** Ensure grid stability as the integration of renewable energy sources increases.
@@ -66,7 +66,7 @@ There are a number of real world physical entities that comprise the network and
 
 | Name                     | Functional Role                                                                                                                                                                                             | Economic Role                                                                                                                                                                                                                |
 |--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| DER Host                 | Operates a connected DER through an ENERGY-capable Gateway including compatible IoT Hotspots (Dual Mining).                                                                                                 | Receives ENERGY rewards for sharing data from DER. Stakes ENERGY to qualify DERs for additional data and VPP service usage and receives ENERGY rewards for participating with controllable DER in the VPP (Energy services). | 
+| DER Host                 | Operates a connected DER through an ENERGY-capable Gateway including compatible IOT Hotspots (Dual Mining).                                                                                                 | Receives ENERGY rewards for sharing data from DER. Stakes ENERGY to qualify DERs for additional data and VPP service usage and receives ENERGY rewards for participating with controllable DER in the VPP (Energy services). |
 | Service Provider         | Promotes and enables data and VPP services to Clients. Aggregates DERs for market optimizations and guarantees technical requirements. Srcful AB is the first service provider at ENERGY subnetwork launch. | Receives payments for data and VPP services from Clients, burns HNT into Data Credits and settles data usage with DER Hosts. Stakes ENERGY to receive % of rewards from Energy Emissions contract.                           |
 | Client                   | Energy Companies, Grid Operators, or Aggregators that use the Energy subnetwork. Clients act in accordance with the country's Transmission System Operator.                                                 | Pays Service Providers to access data and/or the right to control DERs in the Energy subnetwork for VPP services.                                                                                                            |
 | Gateway Vendors          | Builds, sells and supports ENERGY-capable gateways. This includes firmware upgrades for existing Helium Hotspots to enable ENERGY subnetwork functionality (Dual Mining).                                   | Stakes ENERGY to access an NFT to be accepted to operate on the ENERGY subnetwork.                                                                                                                                           |
@@ -80,7 +80,7 @@ To operate on the network, Service Providers and Gateway Vendors must control a 
 
 ## Token Allocation
 
-Allocation of ENERGY tokens prioritizes emission to the community of DER hosts for the data and energy services they provide. A max supply of 250B ENERGY tokens is enforced following the mechanics deployed on the IoT and Mobile subnetworks. 190B tokens are dedicated to emissions mainly as rewards for DER hosts including a one time issuance of 1B tokens to the Operations Fund. 60B tokens are dedicated as emissions for initial funding to investors and founders of the project.
+Allocation of ENERGY tokens prioritizes emission to the community of DER hosts for the data and energy services they provide. A max supply of 250B ENERGY tokens is enforced following the mechanics deployed on the IOT and MOBILE subnetworks. 190B tokens are dedicated to emissions mainly as rewards for DER hosts including a one time issuance of 1B tokens to the Operations Fund. 60B tokens are dedicated as emissions for initial funding to investors and founders of the project.
 
 ### Emissions Curve
 
@@ -94,22 +94,22 @@ We propose using one pool for buffering issued baseline rewards:
 
 **Network growth pool** acts as a resource for growing the network using direct incentives to DER hosts. This pool will receive tokens from the baseline DER host rewards inversely proportional to the total ENERGY subnetwork DC burn as long as this is less than $100 000 USD. The proportion allocated to the pool is calculated by:
 
-$\text{Network Growth Pool Proportion} = 0.5 - \min\left(0.5, 0.5 \times \frac{\text{Total Energy Subnetwork DC burn}}{\$100000}\right)$
+$$\text{Network Growth Pool Proportion} = 0.5 - \min\left(0.5, 0.5 \times \frac{\text{Total Energy Subnetwork DC burn}}{\$100000}\right)$$
 
 The motivation for the network growth pool is to stimulate growth of the network in general and to build critical amounts of DERs in areas that will unlock service contracts. DER hosts are rewarded from the pool for participating as a beta tester, for DERs located in hexes whitelisted for services, and to provide current IOT Hotspot hosts one free DER onboarding for a limited time. Other future initiatives with rewards from the network growth pool will be voted on based on suggestions from the community.
 
 For clarity, the community emission schedule is as follows:
 
-| Year            | ENERGY at the start of the year (M) | ENERGY minted (M)         | DER host Baseline Rewards | DER host Service Contract Pool | Sensor hosts | Service Providers | Oracles | Operations Fund | veENERGY Stakers |
-|-----------------|-------------------------------------|---------------------------|---------------------------|--------------------------------|--------------|-------------------|---------|-----------------|------------------|
-| 1 (Stub + 2025) | 1&nbsp;000                          | 47&nbsp;250 + 20&nbsp;000 | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |
-| 2 (2026)        | 48&nbsp;250 + 20&nbsp;000           | 47&nbsp;250 + 20&nbsp;000 | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |
-| 3 (2027)        | 95&nbsp;500 + 40&nbsp;000           | 23&nbsp;625 + 20&nbsp;000 | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |
-| 4 (2028)        | 119&nbsp;125 + 60&nbsp;000          | 23&nbsp;625               | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |
-| 5 (2029)        | 142&nbsp;750                        | 11&nbsp;812.5             | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |
-| 6 (2030)        | 154&nbsp;562.5                      | 11&nbsp;812.5             | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |
-| 7 (2031)        | 166&nbsp;375                        | 5&nbsp;906.25             | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |
-| …               |                                     |                           |                           |                                |              |                   |         |                 |                  |
+| Year            | ENERGY at the start of the year (M) | ENERGY minted (M) | DER host Baseline Rewards | DER host Service Contract Pool | Sensor hosts | Service Providers | Oracles | Operations Fund | veHNT Delegators |
+|-----------------|-------------------------------------|-------------------|---------------------------|--------------------------------|--------------|-------------------|---------|-----------------|------------------|
+| 1 (Stub + 2025) | 1&nbsp;000                          | 47&nbsp;250       | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |
+| 2 (2026)        | 48&nbsp;250                         | 47&nbsp;250       | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |
+| 3 (2027)        | 95&nbsp;500                         | 23&nbsp;625       | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |
+| 4 (2028)        | 119&nbsp;125                        | 23&nbsp;625       | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |
+| 5 (2029)        | 142&nbsp;750                        | 11&nbsp;812.5     | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |
+| 6 (2030)        | 154&nbsp;562.5                      | 11&nbsp;812.5     | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |
+| 7 (2031)        | 166&nbsp;375                        | 5&nbsp;906.25     | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |
+| …               |                                     |                   |                           |                                |              |                   |         |                 |                  |
 
 Below is a high level overview of the reward flow from the emission curve to economic participants of the subnetwork:
 
@@ -320,7 +320,7 @@ The Helium Foundation acts as an established ecosystem for wireless DePIN, and b
 
 By being able to partner with the existing community of builders it’s a clear win for the whole ecosystem if subnetworks with a strong demand and use case are added. There are already hundreds of thousands Hotspots deployed in the world that can be utilized for the ENERGY subnetwork with a software update. This creates not only an opportunity for quicker growth of the ENERGY subnetwork, but also new incentives for those who are already operating a Helium Hotspot and have renewable energy production in their home. We see this as the natural evolution Helium ethos - building people-powered critical and decentralized infrastructure.
 
-The ENERGY subnetwork will also help strengthen the IoT subnetwork as the software for reading and controlling DERs is running on the same Hotspot. This means a broader buildout of the IoT coverage to regions beyond highly populated areas with existing coverage. There will also be a need for sensors, such as certified energy meters, sensors for measuring state of the grid such as frequency and voltage and solar lux meters. These sensors will be utilizing the Helium IOT, creating a stronger demand for IoT data. One important aspect is also the anti-gaming perspective: when a new subnetwork is created we can leverage both the ENERGY and IOT subnetwork for cross-validation. It is essential that the physical location is correct - and both networks benefit from the other’s validation. For instance, solar panels can be validated both by sensor data (such as energy meters running on Helium IoT) and satellite data where solar panels can be seen from space. As the Helium Hotspot is utilizing the same cryptographic chip for both networks it will be yet another layer of validation added that both networks can leverage from.
+The ENERGY subnetwork will also help strengthen the IOT subnetwork as the software for reading and controlling DERs is running on the same Hotspot. This means a broader buildout of the IOT coverage to regions beyond highly populated areas with existing coverage. There will also be a need for sensors, such as certified energy meters, sensors for measuring state of the grid such as frequency and voltage and solar lux meters. These sensors will be utilizing the Helium IOT, creating a stronger demand for IOT data transfer. One important aspect is also the anti-gaming perspective: when a new subnetwork is created we can leverage both the ENERGY and IOT subnetwork for cross-validation. It is essential that the physical location is correct - and both networks benefit from the other’s validation. For instance, solar panels can be validated both by sensor data (such as energy meters running on Helium IOT) and satellite data where solar panels can be seen from space. As the Helium Hotspot is utilizing the same cryptographic chip for both networks it will be yet another layer of validation added that both networks can leverage from.
 
 Applying the governance structure of the Helium community to power systems will increase the numbers of those involved in the influence and buildout of yet another very critical part of our infrastructure. Communication is essential for both sensors and people, but electrical energy is at the core of a modern society. Now is the time to be part of the start in the shift to a new model that is operated by the people - for the people.
 
