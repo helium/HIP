@@ -86,7 +86,7 @@ Allocation of ENERGY tokens prioritizes emission to the community of DER hosts f
 
 There will be a max supply of 250B ENERGY.
 
-The proposal is for halving of ENERGY issuance to occur every 2 years, with the first halving aligned with the HNT issuance halving in August 2027. This alignment necessitates an initial period of approximately 3 years from the ENERGY token generation event to the first halving, followed by regular 2-year halving intervals thereafter.
+The proposal is for halving of ENERGY issuance to occur every 2 years.
 
 We propose that 60B ENERGY be reserved for providing startup capital for Srcful AB and investors, required to launch the ENERGY subnetwork and develop the technical and operational infrastructure required to build the ENERGY subnetwork. These token will be minted over a 36 month period and will have a lockup of a minimum of 12 months after token emission date. 190B ENERGY is emitted mainly as community rewards but also for the continued operations of the network. Community rewards are divided into two parts, the baseline rewards for participating in the subnetwork and the service rewards for participating in energy services. The baseline rewards will receive 15% of emitted ENERGY and the service rewards will receive 45%. Services are rewarded to reflect the respective DC burn of the DER host, remaining tokens are burned. We use net emissions to replenish burned tokens into service rewards using a 30-day average of burned tokens with a cap. The cap will initially be set to 1% of current emissions but will likely be subject to change.
 
@@ -100,16 +100,16 @@ The motivation for the network growth pool is to stimulate growth of the network
 
 For clarity, the community emission schedule is as follows:
 
-| Year            | ENERGY at the start of the year (M) | ENERGY minted (M) | DER host Baseline Rewards | DER host Service Contract Pool | Sensor hosts | Service Providers | Oracles | Operations Fund | veHNT Delegators |
-|-----------------|-------------------------------------|-------------------|---------------------------|--------------------------------|--------------|-------------------|---------|-----------------|------------------|
-| 1 (Stub + 2025) | 1&nbsp;000                          | 47&nbsp;250       | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |
-| 2 (2026)        | 48&nbsp;250                         | 47&nbsp;250       | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |
-| 3 (2027)        | 95&nbsp;500                         | 23&nbsp;625       | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |
-| 4 (2028)        | 119&nbsp;125                        | 23&nbsp;625       | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |
-| 5 (2029)        | 142&nbsp;750                        | 11&nbsp;812.5     | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |
-| 6 (2030)        | 154&nbsp;562.5                      | 11&nbsp;812.5     | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |
-| 7 (2031)        | 166&nbsp;375                        | 5&nbsp;906.25     | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |
-| …               |                                     |                   |                           |                                |              |                   |         |                 |                  |
+| Year            | ENERGY at the start of the year (M) | ENERGY minted (M) | DER host Baseline Rewards | DER host Service Contract Pool | Sensor hosts | Service Providers | Oracles | Operations Fund | veHNT Delegators | Investors & Founders | 
+|-----------------|-------------------------------------|-------------------|---------------------------|--------------------------------|--------------|-------------------|---------|-----------------|------------------|----------------------|
+| 1               | 1&nbsp;000                          | 47&nbsp;250       | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              | 20&nbsp;000                 |
+| 2               | 68&nbsp;250                         | 47&nbsp;250       | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              | 20&nbsp;000                 |
+| 3               | 135&nbsp;500                        | 23&nbsp;625       | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              | 20&nbsp;000                 |
+| 4               | 179&nbsp;125                        | 23&nbsp;625       | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |                      |
+| 5               | 202&nbsp;750                        | 11&nbsp;812.5     | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |                      |
+| 6               | 214&nbsp;562.5                      | 11&nbsp;812.5     | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |                      |
+| 7               | 226&nbsp;375                        | 5&nbsp;906.25     | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |                      |
+| …               |                                     |                   |                           |                                |              |                   |         |                 |                  |                      |
 
 Below is a high level overview of the reward flow from the emission curve to economic participants of the subnetwork:
 
@@ -178,7 +178,7 @@ Reward DERs that have been part of the network for a long time;
 Incentivize an evenly distributed and continuous data connection; which tells a fuller story of DER behavior and performance. A given time period with data points is subdivided into several levels. If there is data across a whole level the score for that level is used. The score is proportionate to the division of the level. For an hour time period the first division is 2 (data every half hour), the next 2 (data every quarter), the next 3 (data every 5 min), the next 5 (data every min), the next 2 (data every 30 seconds). This gives the following:
 
 | Level | Definition                 | Score |
-|-------|--------------------------- |-------|
+|-------|----------------------------|-------|
 | 1     | Data in each 30 min period | 10    |
 | 2     | Data in each 15 min period | 20    |
 | 3     | Data in each 5 min period  | 60    |
@@ -257,11 +257,11 @@ At the start, usage of the network is divided into two main buckets, energy data
 
 Energy data is priced at 1 DC per data point. This data is provided at frequencies of up to one data point per second. Typically, data costs from utility meters (which only measures the amount of energy) are generally billed at about $2.60 USD/month with a transmission rate of one data point per hour. DERs, however, can send more data points more frequently. The ENERGY subnetwork prices the data cost for a single DER significantly lower rate than the base price for what a utility company is paying.
 
-| Frequency    | Data Points (DC) /Day | DC per Data Point | 30 Day Cost (USD) |
-|--------------|-----------------------|-------------------|-------------------|
-| Every Hour   | 24                    | 1                 | $0.0072           |
-| Every Minute | 1&nbsp;440            | 1                 | $0.432            |
-| Every Second | 86&nbsp;400           | 1                 | $25.92            |
+| Frequency    | Data Points (DC) / Day | DC per Data Point | 30 Day Cost (USD) |
+|--------------|------------------------|-------------------|-------------------|
+| Every Hour   | 24                     | 1                 | $0.0072           |
+| Every Minute | 1&nbsp;440             | 1                 | $0.432            |
+| Every Second | 86&nbsp;400            | 1                 | $25.92            |
 
 #### Ancillary Services
 
@@ -275,10 +275,10 @@ Solar PV systems are only eligible for curtailment during daylight hours with sa
 
 Example of a 24-hour delivery period of aggregated DERs with a combined power of 1 MW (equivalent to 100 average-sized DERs for a household) in a European country with prices as of Q2 2024:
 
-| Type of DER | Daily availability | Controllable resources in MW | Daily price in $ | Daily price(DC)       | Monthly price(USD) |
-|-------------|--------------------|------------------------------|------------------|-----------------------|--------------------|
-| Batteries   | 24&nbsp;h          | 1                            | $1&nbsp;000      | 100&nbsp;000&nbsp;000 | $30&nbsp;000       |
-| Solar PVs   | ~ 8&nbsp;h         | 1                            | $100             | 10&nbsp;000&nbsp;000  | $3&nbsp;000        |
+| Type of DER | Daily availability | Controllable resources in MW | Daily price in $ | Daily price (DC)      | Monthly price (USD) |
+|-------------|--------------------|------------------------------|------------------|-----------------------|---------------------|
+| Batteries   | 24&nbsp;h          | 1                            | $1&nbsp;000      | 100&nbsp;000&nbsp;000 | $30&nbsp;000        |
+| Solar PVs   | ~ 8&nbsp;h         | 1                            | $100             | 10&nbsp;000&nbsp;000  | $3&nbsp;000         |
 
 ## Oracle Operations for the ENERGY Subnetwork
 
