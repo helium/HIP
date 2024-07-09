@@ -50,7 +50,7 @@ At scale, the VPP that exists via the Helium ENERGY subnetwork may be leased (pu
 
 The primary objective is to create an ecosystem and incentive structure that promotes DER deployment and connects DER's to enhance their intelligence and flexibility. This is critical for achieving affordable and abundant renewable energy within the power system. Additionally, the subnetwork aims to capture opportunities in the global demand for energy data and a more intelligent ancillary services market, which is essential for grid stability as renewable energy integration increases.
 
-Key objectives of the Eenrgy subnetwork:
+Key objectives of the ENERGY subnetwork:
 
 - **Establish a Network of Connected DERs:** Build the People’s Virtual Power Plant by creating a robust network of Distributed Energy Resources (DERs).
 - **Stabilize the Power Grid:** Ensure grid stability as the integration of renewable energy sources increases.
