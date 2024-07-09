@@ -19,12 +19,10 @@ The ENERGY subnetwork is designed to create value for the entire Helium ecosyste
    Existing compatible Helium Hotspots can be upgraded to participate in the ENERGY subnetwork and earn both IOT and ENERGY rewards.
 2. **Utilization of the IoT Subnetwork**
    The ENERGY subnetwork will transfer supporting sensor data over the existing IoT infrastructure, including utility meter data and solar lux meter data.
-
 3. **Increased DC Burn**
    Energy management and grid stabilization services provided by the ENERGY subnetwork will drive significant Data Credit (DC) burn. This increased DC burn directly benefits all HNT holders by potentially increasing HNT value through the burn-and-mint equilibrium.
 4. **Expansion of Helium**
    By entering the rapidly growing renewable energy sector, Helium expands its utility and potential market reach attracting new participants and investors.
-
 5. **Sustainability**
    The ENERGY subnetwork aligns Helium with global sustainability goals, potentially attracting environmentally conscious users and partners. This could open up new opportunities for grants, partnerships, and positive public relations for Helium.
 
@@ -66,9 +64,9 @@ The global market for ancillary services had a capitalization of over $9 billion
 
 There are a number of real world physical entities that comprise the network and perform the following functional and economic roles:
 
-| Name   | Functional Role | Economic Role  |
-| ---- | ---- | --- |
-| DER Host                 | Operates a connected DER through an ENERGY-capable Gateway including compatible IoT Hotspots (Dual Mining).                                                                                                 | Receives ENERGY rewards for sharing data from DER. Stakes ENERGY to qualify DERs for data and VPP service usage and receives ENERGY rewards for participating with controllable DER in the VPP (Energy services). |     |
+| Name                     | Functional Role                                                                                                                                                                                             | Economic Role                                                                                                                                                                                                     |
+|--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
+| DER Host                 | Operates a connected DER through an ENERGY-capable Gateway including compatible IoT Hotspots (Dual Mining).                                                                                                 | Receives ENERGY rewards for sharing data from DER. Stakes ENERGY to qualify DERs for data and VPP service usage and receives ENERGY rewards for participating with controllable DER in the VPP (Energy services). | 
 | Service Provider         | Promotes and enables data and VPP services to Clients. Aggregates DERs for market optimizations and guarantees technical requirements. Srcful AB is the first service provider at ENERGY subnetwork launch. | Receives payments for data and VPP services from Clients, burns HNT into Data Credits and settles data usage with DER Hosts. Stakes ENERGY to receive % of rewards from Energy Emissions contract.                |
 | Client                   | Energy Companies, Grid Operators, or Aggregators that use the Energy subnetwork. Clients act in accordance with the country's Transmission System Operator.                                                 | Pays Service Providers to access data and/or the right to control DERs in the Energy subnetwork for VPP services.                                                                                                 |
 | Gateway Vendors          | Builds, sells and supports ENERGY-capable gateways. This includes firmware upgrades for existing Helium Hotspots to enable ENERGY subnetwork functionality (Dual Mining).                                   | Stakes ENERGY to access an NFT to be accepted to operate on the ENERGY subnetwork.                                                                                                                                |
@@ -103,7 +101,7 @@ The motivation for the network growth pool is to stimulate growth of the network
 For clarity, the community emission schedule is as follows:
 
 | Year            | ENERGY at the start of the year (M) | ENERGY minted (M) | DER host Baseline Rewards | DER host Service Contract Pool | Sensor hosts | Service Providers | Oracles | Operations Fund | veHNT Delegators |
-| --------------- | ----------------------------------- | ----------------- | ------------------------- | ------------------------------ | ------------ | ----------------- | ------- | --------------- | ---------------- |
+|-----------------|-------------------------------------|-------------------|---------------------------|--------------------------------|--------------|-------------------|---------|-----------------|------------------|
 | 1 (Stub + 2025) | 1&nbsp;000                          | 47&nbsp;250       | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |
 | 2 (2026)        | 48&nbsp;250                         | 47&nbsp;250       | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |
 | 3 (2027)        | 95&nbsp;500                         | 23&nbsp;625       | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |
@@ -170,7 +168,7 @@ Baseline rewards for an online DER are defined in three buckets based on the fol
 Reward DERs that have been part of the network for a long time;
 
 | Level | Definition                 | Score |
-| ----- | -------------------------- | ----- |
+|-------|--------------------------- |-------|
 | 1     | 3-20 weeks connected       | 100   |
 | 2     | 21-35 weeks connected      | 200   |
 | 3     | 36 or more weeks connected | 300   |
@@ -180,7 +178,7 @@ Reward DERs that have been part of the network for a long time;
 Incentivize an evenly distributed and continuous data connection; which tells a fuller story of DER behavior and performance. A given time period with data points is subdivided into several levels. If there is data across a whole level the score for that level is used. The score is proportionate to the division of the level. For an hour time period the first division is 2 (data every half hour), the next 2 (data every quarter), the next 3 (data every 5 min), the next 5 (data every min), the next 2 (data every 30 seconds). This gives the following:
 
 | Level | Definition                 | Score |
-| ----- | -------------------------- | ----- |
+|-------|--------------------------- |-------|
 | 1     | Data in each 30 min period | 10    |
 | 2     | Data in each 15 min period | 20    |
 | 3     | Data in each 5 min period  | 60    |
@@ -190,11 +188,11 @@ Incentivize an evenly distributed and continuous data connection; which tells a 
 #### Principle 3: Value
 
 Incentivize DERs who contribute with marketable services such as credible and rapidly controllable resources;
-| Level | Definition | Score |
-| ----- | ------------------------------------------------ | ----- |
-| 1 | Read DER Data | 100 |
-| 2 | Read Validated DER Data | 300 |
-| 3 | Read Validated DER Data + Control Qualified DERs | 600 |
+| Level | Definition                                       | Score |
+|-------|--------------------------------------------------|-------|
+| 1     | Read DER Data                                    | 100   |
+| 2     | Read Validated DER Data                          | 300   |
+| 3     | Read Validated DER Data + Control Qualified DERs | 600   |
 
 ##### Validation and Qualification Mechanism
 
@@ -260,7 +258,7 @@ At the start, usage of the network is divided into two main buckets, energy data
 Energy data is priced at 1 DC per data point. This data is provided at frequencies of up to one data point per second. Typically, data costs from utility meters (which only measures the amount of energy) are generally billed at about $2.60 USD/month with a transmission rate of one data point per hour. DERs, however, can send more data points more frequently. The ENERGY subnetwork prices the data cost for a single DER significantly lower rate than the base price for what a utility company is paying.
 
 | Frequency    | Data Points (DC) /Day | DC per Data Point | 30 Day Cost (USD) |
-| ------------ | --------------------- | ----------------- | ----------------- |
+|--------------|-----------------------|-------------------|-------------------|
 | Every Hour   | 24                    | 1                 | $0.0072           |
 | Every Minute | 1&nbsp;440            | 1                 | $0.432            |
 | Every Second | 86&nbsp;400           | 1                 | $25.92            |
@@ -278,11 +276,11 @@ Solar PV systems are only eligible for curtailment during daylight hours with sa
 Example of a 24-hour delivery period of aggregated DERs with a combined power of 1 MW (equivalent to 100 average-sized DERs for a household) in a European country with prices as of Q2 2024:
 
 | Type of DER | Daily availability | Controllable resources in MW | Daily price in $ | Daily price(DC)       | Monthly price(USD) |
-| ----------- | ------------------ | ---------------------------- | ---------------- | --------------------- | ------------------ |
+|-------------|--------------------|------------------------------|------------------|-----------------------|--------------------|
 | Batteries   | 24&nbsp;h          | 1                            | $1&nbsp;000      | 100&nbsp;000&nbsp;000 | $30&nbsp;000       |
 | Solar PVs   | ~ 8&nbsp;h         | 1                            | $100             | 10&nbsp;000&nbsp;000  | $3&nbsp;000        |
 
-## Oracle Operations for the Energy Subnetwork
+## Oracle Operations for the ENERGY Subnetwork
 
 Oracles within the ENERGY subnetwork ensures data integrity, pricing accuracy, and reward distribution across DERs. Key Functions of ENERGY Oracles:
 
@@ -299,7 +297,7 @@ Solar PV deployments show no signs of slowing, and the energy they produce can o
 
 Decentralized Physical Infrastructure Networks (DePIN) represent a new paradigm in building and managing critical infrastructure. By leveraging blockchain technology and token incentives, DePIN enables the creation of community-owned networks that are more resilient, cost-effective, and adaptable than traditional centralized systems.
 
-### Why the DePIN Approach Makes Sense for Energy
+### Why the DePIN Approach Makes Sense for ENERGY
 
 The energy sector is undergoing a rapid transformation towards decentralization, driven by the proliferation of small-scale renewable energy resources. There needs to be an effective way of coordinating the vast number of small energy resources. By leveraging the community with already open hardware platforms, and coordinating current and unforeseen products, we can build a more cost-effective, permissionless, and transparent energy system than options available today.
 
@@ -316,7 +314,7 @@ This shift presents both challenges and opportunities:
 - **Balancing Supply and Demand**: While the energy system is inherently decentralized in terms of consumption and now more increasingly renewable production, its rapid growth is outpacing the capabilities of existing coordination tools. A decentralized and transparent protocol, where participants are stakeholders, can address this coordination challenge.
 - **Incentivizing Small-Scale Solutions**: Consider the example of "balcony solar" in Germany, where small-scale solar PV can be plugged directly into a wall socket. While such solutions have potential for global energy transformation, traditional markets lack effective incentive mechanisms to coordinate these small-scale resources. The ENERGY subnetwork, following the DePIN model, will provide the necessary incentives and rewards for individuals to contribute to addressing global power needs.
 
-### Why Helium Makes Sense for Energy
+### Why Helium Makes Sense for ENERGY
 
 The Helium Foundation acts as an established ecosystem for wireless DePIN, and by aligning a new subnetwork ENERGY it can effectively grow the pie so the whole Helium ecosystem gains value.
 
