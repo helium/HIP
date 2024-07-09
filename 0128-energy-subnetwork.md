@@ -17,7 +17,7 @@ The ENERGY subnetwork is designed to create value for the entire Helium ecosyste
 
 1. **Dual Mining for Existing Compatible Hotspots**
    Existing compatible Helium Hotspots can be upgraded to participate in the ENERGY subnetwork and earn both IOT and ENERGY rewards.
-2. **Utilization of the IoT Subnetwork**
+2. **Utilization of the IOT Subnetwork**
    The ENERGY subnetwork will transfer supporting sensor data over the existing IoT infrastructure, including utility meter data and solar lux meter data.
 3. **Increased DC Burn**
    Energy management and grid stabilization services provided by the ENERGY subnetwork will drive significant Data Credit (DC) burn. This increased DC burn directly benefits all HNT holders by potentially increasing HNT value through the burn-and-mint equilibrium.
