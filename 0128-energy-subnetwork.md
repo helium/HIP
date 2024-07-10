@@ -204,7 +204,7 @@ Validation and Qualification is offered by the Service Provider to DERs that wan
 
 ### Anti-Gaming Measures
 
-The ENERGY subnetwork prioritizes the prevention of gaming through a, multi-layered validation framework that will evolve over time. This approach can e.g. combine physical verification methods such as satellite imagery and existing inverter API integration. In addition cross-referencing data from DERs and sensors in the same region, can provide information regarding misbehaving DERs. Ongoing data analysis will profile inverter performance and compare it with similar installations, considering environmental and grid factors. While a 100% solution will not be achievable from the start, the ENERGY subnetwork commits to refine these measures in collaboration with the Helium community and regulatory bodies.
+The ENERGY subnetwork prioritizes the prevention of gaming through a, multi-layered validation framework that will evolve over time. This approach can e.g. combine physical verification methods such as satellite imagery and existing inverter API integration. In addition cross-referencing data from DERs and sensors in the same region, can provide information regarding misbehaving DERs. Ongoing data analysis will profile inverter performance and compare it with similar installations, considering environmental and grid factors. While a perfect solution will not be achievable from the start, the ENERGY subnetwork commits to refine these measures in collaboration with the Helium community and regulatory bodies.
 
 #### Calculation
 
