@@ -202,10 +202,6 @@ Incentivize DERs who contribute with marketable services such as credible and ra
 
 Validation and Qualification is offered by the Service Provider to DERs that want to participate in Energy Services. Validation is achieved by the DER Host staking $10 USD worth of ENERGY tokens per kW available power for 45 days with a 10 day un-staking period. During staking the DER is subject to additional Service Provider audits and tests. The DER Host must comply with requirements and provide needed information promptly. Failure to comply with the requirements the staked ENERGY tokens will be forfeited and burned. A validated and controllable DER can be Qualified by the Service Provider. A Qualified DER can be opted in to be available for energy services by the DER Host.
 
-### Anti-Gaming Measures
-
-The ENERGY Subnetwork will prioritize the prevention of gaming through a hybrid framework that will evolve over time. At a base level, the subnetwork will leverage knowledge of accurately deployed IOT gateways in addition to ENERGY-specific validation mechanisms ranging from daily satellite imagery to grid frequency checks. This ENERGY-specific validation can also be made available to the IOT Network. The operation of anti-gaming measures will be the responsibility of Srcful AB. As the first service provider on the ENERGY Network, Srcful is appropriately aligned to ensure that valid entities are rewarded on the network. The design of the Oracle infrastructure will allow for community evaluation of raw data emitted from ENERGY gateways.
-
 #### Calculation
 
 Each DER datapoint gets a score based on the sum of the baseline reward principles for a given reward period, e.g. 1h. The scores are summarized for a given period. When the sum of scores for each DER is calculated, each DER is rewarded ENERGY tokens based on its fraction of the total score and the token distribution level for that period.
@@ -247,7 +243,7 @@ Solar PV systems can contribute to frequency reserves by decreasing (curtailing)
 
 ### Anti-Gaming Measures
 
-The ENERGY subnetwork prioritizes the prevention of gaming through a, multi-layered validation framework that will evolve over time. This approach can e.g. combine physical verification methods such as satellite imagery and existing inverter API integration. In addition cross-referencing data from DERs and sensors in the same region can provide information regarding misbehaving DERs. Ongoing data analysis will profile inverter performance and compare it with similar installations, considering environmental and grid factors. While a perfect solution will not be achievable from the start, the ENERGY subnetwork commits to refine these measures in collaboration with the Helium community and regulatory bodies.
+The ENERGY Subnetwork will prioritize the prevention of gaming through a hybrid framework that will evolve over time. At a base level, the subnetwork will leverage knowledge of accurately deployed IOT gateways in addition to ENERGY-specific validation mechanisms ranging from daily satellite imagery to grid frequency checks. This ENERGY-specific validation can also be made available to the IOT Network. The operation of anti-gaming measures will be the responsibility of Srcful AB. As the first service provider on the ENERGY Network, Srcful is appropriately aligned to ensure that valid entities are rewarded on the network. The design of the Oracle infrastructure will allow for community evaluation of raw data emitted from ENERGY gateways.
 
 ### Network Rates & Fees
 
