@@ -245,6 +245,10 @@ During a power outage:
 
 Solar PV systems can contribute to frequency reserves by decreasing (curtailing) their production based on grid needs. Unlike batteries, solar panels can not store energy directly but can temporarily reduce output during production hours. Typically, this happens for a maximum of 20 minutes and occurs a few times per year, but compensation is provided hourly since the value lies in being a controllable, connected curtailment reserve. There can also be other reasons for decreasing the power production from PV such as negative prices on the electricity market (in this case you’re paying to deliver energy to the grid).
 
+### Anti-Gaming Measures
+
+The ENERGY subnetwork prioritizes the prevention of gaming through a, multi-layered validation framework that will evolve over time. This approach can e.g. combine physical verification methods such as satellite imagery and existing inverter API integration. In addition cross-referencing data from DERs and sensors in the same region can provide information regarding misbehaving DERs. Ongoing data analysis will profile inverter performance and compare it with similar installations, considering environmental and grid factors. While a perfect solution will not be achievable from the start, the ENERGY subnetwork commits to refine these measures in collaboration with the Helium community and regulatory bodies.
+
 ### Network Rates & Fees
 
 #### Gateway Onboarding
