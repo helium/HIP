@@ -191,7 +191,8 @@ Incentivize an evenly distributed and continuous data connection; which tells a 
 
 #### Principle 3: Value
 
-Incentivize DERs who contribute with marketable services such as credible and rapidly controllable resources;
+Incentivize DERs who contribute with marketable services such as credible and rapidly controllable resources:
+
 | Level | Definition                                       | Multiplier |
 |-------|--------------------------------------------------|------------|
 | 1     | Read DER Data                                    | 0.01       |
