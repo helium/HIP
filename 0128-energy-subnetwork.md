@@ -26,7 +26,7 @@ The ENERGY subnetwork is designed to create value for the entire Helium ecosyste
 5. **Sustainability**
    The ENERGY subnetwork aligns Helium with global sustainability goals, potentially attracting environmentally conscious users and partners. This could open up new opportunities for grants, partnerships, and positive public relations for Helium.
 
-The ENERGY subnetwork is a practical expansion for Helium. It builds on the existing network while tapping into the growing renewable energy market, solving the real world problems of the acceleration renewable power. This addition will increase IoT network usage, drive more Data Credit burn, and give Hotspot operators new ways to earn.
+The ENERGY subnetwork is a practical expansion for Helium. It builds on the existing network while tapping into the growing renewable energy market, solving the real world problems of the acceleration renewable power. This addition will increase IOT network usage, drive more Data Credit burn, and give Hotspot operators new ways to earn.
 
 ## The Problem
 
