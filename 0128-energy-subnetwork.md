@@ -88,7 +88,11 @@ There will be a max supply of 250B ENERGY.
 
 The proposal is for halving of ENERGY issuance to occur every 2 years.
 
-We propose that 60B ENERGY be reserved for providing startup capital for Srcful AB and investors, required to launch the ENERGY subnetwork and develop the technical and operational infrastructure required to build the ENERGY subnetwork. These token will be minted over a 36-month period and will have a lockup of a minimum of 12 months after token emission date. 190B ENERGY is emitted mainly as community rewards but also for the continued operations of the network. Community rewards are divided into two parts, the baseline rewards for participating in the subnetwork and the service rewards for participating in energy services. The baseline rewards will receive 15% of emitted ENERGY and the service rewards will receive 45%. Services are rewarded to reflect the respective DC burn of the DER host, remaining tokens are burned. We use net emissions to replenish burned tokens into service rewards using a 30-day average of burned tokens with a cap. The cap will initially be set to 1% of current emissions but will likely be subject to change.
+We propose that 60B ENERGY be reserved for providing startup capital for Srcful AB and investors, required to launch the ENERGY subnetwork and develop the technical and operational infrastructure needed for its creation. These tokens will be minted over a 36-month period and will have a minimum lockup of 12 months after the token emission date.
+
+190B ENERGY will be emitted mainly as community rewards but also for the continued operations of the network. Community rewards are divided into two parts: baseline rewards for participating in the subnetwork and service rewards for participating in energy services. The baseline rewards will receive 15% of emitted ENERGY, and the service rewards will receive 45%. Services are rewarded to reflect the respective DC burn of the DER host, with remaining tokens being burned.
+
+The ENERGY protocol will use net emissions to replenish burned tokens into service rewards using a 30-day average of burned tokens, with a cap. The cap will initially be set at 1% of current emissions but will likely be subject to change.
 
 We propose using one pool for buffering issued baseline rewards:
 
