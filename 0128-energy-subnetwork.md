@@ -168,7 +168,7 @@ Baseline rewards for an online DER are defined in three buckets based on the fol
 Reward DERs that have been part of the network for a long time;
 
 | Level | Definition                 | Score |
-|-------|--------------------------- |-------|
+|-------|----------------------------|-------|
 | 1     | 3-20 weeks connected       | 100   |
 | 2     | 21-35 weeks connected      | 200   |
 | 3     | 36 or more weeks connected | 300   |
