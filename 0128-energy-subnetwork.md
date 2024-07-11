@@ -46,6 +46,33 @@ These _Decentralized Energy Resources_ (DER) would be coordinated in what is kno
 
 At scale, the VPP that exists via the Helium ENERGY subnetwork may be leased (purchased via Data Credits) by Service Providers and offered to Clients such as energy companies, grid operators, or aggregators in order to balance grid supply or demand (Energy Services). Use of these resources would reward individual _DER Hosts_ with ENERGY token.
 
+#### Overview
+A typical installation consists of Solar Panels and an Inverter shown in the diagram. Optionally a Battery is added. The Inverter's responsibly is to manage the energy from the Solar Panels, Battery, Home Appliances (your normal electrical devices) and the Power Grid. The Inverter is connected to the local home network via the Internet Router (e.g. via ethernet cable or wifi). An ENERGY Gateway (e.g. a new or existing IOT Hotspot), connected to the home network via the Internet Router, allows for collection of data from the Inverter and to control its operation. The ENERGY Gateway signs the data from the Inverter so that the source of the data is known. The ENERGY Gateway can receive signed signals to control the behavior of the Inverter. Several ENERGY gateways collectively form a Virtual Power Plant where control at scale can offer ancillary services to the grid and home owners can be rewarded for this accordingly.
+
+```mermaid
+%%{init: {'theme': 'neutral'}}%%
+graph LR
+
+
+    subgraph Home [Home]
+
+        Solar[Solar Panels\nDER] -->|DC| Inverter[Inverter]
+        style Solar stroke-width: 3px
+        Battery[Battery Storage\nDER] <-->|DC| Inverter
+        style Battery stroke-width: 3px
+        Inverter -->|AC| HomeApp[Home Appliances]
+        style Gateway stroke-dasharray: 5,5
+        InternetRouter[Gateway Controller] -.- Inverter
+        InternetRouter[Internet Router] -.- Gateway[ENERGY Gateway\n#40;IOT Hotspot#41;]
+        Meter[Utility Meter]<-->|AC|Inverter
+        HomeApp<-->|AC|Meter
+    end
+
+    Meter<-->|AC| PowerGrid[Power Grid]
+
+    Internet[Internet] -.- InternetRouter
+```
+
 ### Subnetwork Goal
 
 The primary objective is to create an ecosystem and incentive structure that promotes DER deployment and connects DER's to enhance their intelligence and flexibility. This is critical for achieving affordable and abundant renewable energy within the power system. Additionally, the subnetwork aims to capture opportunities in the global demand for energy data and a more intelligent ancillary services market, which is essential for grid stability as renewable energy integration increases.
