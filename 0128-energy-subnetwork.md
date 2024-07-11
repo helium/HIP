@@ -65,7 +65,7 @@ graph LR
         InternetRouter[Gateway Controller] -.- Inverter
         InternetRouter[Internet Router] -.- Gateway[ENERGY Gateway\n#40;IOT Hotspot#41;]
         Meter[Utility Meter]<-->|AC|Inverter
-        HomeApp<-->|AC|Meter
+        HomeApp<--|AC|Meter
     end
 
     Meter<-->|AC| PowerGrid[Power Grid]
