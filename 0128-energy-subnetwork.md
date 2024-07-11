@@ -117,12 +117,10 @@ flowchart LR
     OperationsFund[Operations Fund]:::dashed
     veHNTDelegators[veHNT Delegators]:::dashed
     RewardOrBurn{Reward\nor\nBurn}:::standard
-    NetworkGrowthPool[Network Growth Pool]:::dashed
     ServiceProviders[Service Providers]:::standard
     Oracles[Oracles]:::standard
     SensorsSupportHosts[Sensors & Support Hosts]:::standard
     DERHosts[DER Hosts]:::standard
-    BaselineRewards{Calculate\nNGPP}:::standard
     NetEmissions[Net Emissions]:::dashed
 
     classDef dashed fill:#ffffff,stroke:#000000,stroke-dasharray: 5 5
@@ -131,13 +129,8 @@ flowchart LR
     HETEmissions -->|5%|OperationsFund
     HETEmissions -->|6%|veHNTDelegators
     HETEmissions -->|45%|RewardOrBurn
+    HETEmissions --> |15% Baseline rewards|DERHosts
 
-    HETEmissions -->|15%|BaselineRewards
-
-    BaselineRewards --> |100 - NGPP%\nBaseline rewards|DERHosts
-    BaselineRewards -->|NGPP%|NetworkGrowthPool
-
-    NetworkGrowthPool -- Rewards to beta testers and\nDERs located in hexes whitelisted for services --> DERHosts
 
     HETEmissions -->|20%|ServiceProviders
     HETEmissions -->|5%|SensorsSupportHosts
