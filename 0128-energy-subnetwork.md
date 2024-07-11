@@ -165,7 +165,7 @@ flowchart LR
 
 The ENERGY subnetwork proposes an incentive system designed to optimize the participation and contribution of DERs. This approach aims to strengthen and connect more DERs, helping to integrate renewable energy into the grid effectively. The ENERGY subnetwork reward structure draws inspiration from DIMO's successful [Baseline Issuance model](https://docs.dimo.zone/governance/dip2), and rewards DERs for their consistent connectivity and high quality contribution to the network. This structured reward system is crucial for building a reliable data foundation that enables in-depth knowledge of the grid and new service proposals.
 
-Baseline rewards for an online DER are defined in three buckets based on the following principles:
+Baseline rewards for an online DER are defined in three parts based on the following principles:
 
 #### Principle 1: Uptime
 
@@ -191,12 +191,13 @@ Incentivize an evenly distributed and continuous data connection; which tells a 
 
 #### Principle 3: Value
 
-Incentivize DERs who contribute with marketable services such as credible and rapidly controllable resources;
-| Level | Definition                                       | Score |
-|-------|--------------------------------------------------|-------|
-| 1     | Read DER Data                                    | 100   |
-| 2     | Read Validated DER Data                          | 300   |
-| 3     | Read Validated DER Data + Control Qualified DERs | 600   |
+Incentivize DERs who contribute with marketable services such as credible and rapidly controllable resources:
+
+| Level | Definition                                       | Multiplier |
+|-------|--------------------------------------------------|------------|
+| 1     | Read DER Data                                    | 0.01       |
+| 2     | Read Validated DER Data                          | 1          |
+| 3     | Read Validated DER Data + Control Qualified DERs | 2          |
 
 ##### Validation and Qualification Mechanism
 
@@ -204,11 +205,11 @@ Validation and Qualification is offered by the Service Provider to DERs that wan
 
 #### Calculation
 
-Each DER datapoint gets a score based on the sum of the baseline reward principles for a given reward period, e.g. 1h. The scores are summarized for a given period. When the sum of scores for each DER is calculated, each DER is rewarded ENERGY tokens based on its fraction of the total score and the token distribution level for that period.
+Each DER datapoint gets a score based on the sum of principles one and two multiplied by three for a given reward period, e.g. 1h. The scores are summarized for a given period. When the sum of scores for each DER is calculated, each DER is rewarded ENERGY tokens based on its fraction of the total score and the token distribution level for that period.
 
-Example: A DER has been connected to the network for 5 weeks (Uptime Level 1). During the reward epoch of one hour the DER has provided 500 data points, but it had some connection problem for two minutes so there is no data for two consecutive minutes (Quality Level 3). The DER has not been validated (Value Level 1). This gives a score of 500 x (100 + 60 + 100) = 130 000
+Example: A DER has been connected to the network for 5 weeks (Uptime Level 1). During the reward epoch of one hour the DER has provided 500 data points, but it had some connection problem for two minutes so there is no data for two consecutive minutes (Quality Level 3). The DER has not been validated (Value Level 1). This gives a score of ${500 \times (100 + 60) \times 0.01 = 800}$
 
-The total scores for the hour is the sum of all DER scores, e.g. 2&nbsp;000&nbsp;000 and the DER’s part of this is then 130&nbsp;000&nbsp;/&nbsp;2&nbsp;000&nbsp;000&nbsp;=&nbsp;0.065. The amount of ENERGY tokens issued to the DER is then 6.5% of the DER Host rewards emissions.
+The total scores for the hour is the sum of all DER scores, e.g. ${2\ 000\ 000}$ and the DER’s part of this is then $\frac{800}{2\ 000\ 000} = 0.0004$. The amount of ENERGY tokens issued to the DER is then ${0.04\%}$ of the DER Host baseline rewards emissions.
 
 ### Rewards for Energy Services
 
@@ -240,6 +241,11 @@ During a power outage:
 #### How it works for Solar PV
 
 Solar PV systems can contribute to frequency reserves by decreasing (curtailing) their production based on grid needs. Unlike batteries, solar panels can not store energy directly but can temporarily reduce output during production hours. Typically, this happens for a maximum of 20 minutes and occurs a few times per year, but compensation is provided hourly since the value lies in being a controllable, connected curtailment reserve. There can also be other reasons for decreasing the power production from PV such as negative prices on the electricity market (in this case you’re paying to deliver energy to the grid).
+
+### Anti-Gaming Measures
+
+The ENERGY Subnetwork will prioritize the prevention of gaming through a hybrid framework that will evolve over time. At a base level, the subnetwork will leverage knowledge of accurately deployed IOT gateways in addition to ENERGY-specific validation mechanisms ranging from daily satellite imagery to grid frequency checks. This ENERGY-specific validation can also be made available to the IOT Network. 
+The administrator of anti-gaming measures will be the Helium Foundation, who will delegate a portion of the operations fund to Srcful AB for anti-gaming measures. As the first service provider on the ENERGY Network, Srcful is appropriately aligned to ensure that valid entities are rewarded on the network. The design of the Oracle infrastructure will allow for community evaluation of raw data emitted from ENERGY gateways.
 
 ### Network Rates & Fees
 
