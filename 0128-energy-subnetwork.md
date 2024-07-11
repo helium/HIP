@@ -80,7 +80,7 @@ To operate on the network, Service Providers and Gateway Vendors must control a 
 
 ## Token Allocation
 
-Allocation of ENERGY tokens prioritizes emission to the community of DER hosts for the data and energy services they provide. A max supply of 250B ENERGY tokens is enforced following the mechanics deployed on the IOT and MOBILE subnetworks. 190B tokens are dedicated to emissions mainly as rewards for DER hosts including a one time issuance of 1B tokens to the Operations Fund. 60B tokens are dedicated as emissions for initial funding to investors and founders of the project.
+Allocation of ENERGY tokens prioritizes emission to the community of DER hosts for the data and energy services they provide. A max supply of 250B ENERGY tokens is enforced following the mechanics deployed on the IOT and MOBILE subnetworks. 190B tokens are dedicated to emissions mainly as rewards for DER hosts including a one time issuance of 1B tokens, where 900M tokens go to the Operations Fund and 100M for beta testers that participated before the start of the network. 60B tokens are dedicated as emissions for initial funding to investors and founders of the project.
 
 ### Emissions Curve
 
