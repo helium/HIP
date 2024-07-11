@@ -205,7 +205,7 @@ Validation and Qualification is offered by the Service Provider to DERs that wan
 
 #### Calculation
 
-Each DER datapoint gets a score based on the sum of principles one and two multipled by three for a given reward period, e.g. 1h. The scores are summarized for a given period. When the sum of scores for each DER is calculated, each DER is rewarded ENERGY tokens based on its fraction of the total score and the token distribution level for that period.
+Each DER datapoint gets a score based on the sum of principles one and two multiplied by three for a given reward period, e.g. 1h. The scores are summarized for a given period. When the sum of scores for each DER is calculated, each DER is rewarded ENERGY tokens based on its fraction of the total score and the token distribution level for that period.
 
 Example: A DER has been connected to the network for 5 weeks (Uptime Level 1). During the reward epoch of one hour the DER has provided 500 data points, but it had some connection problem for two minutes so there is no data for two consecutive minutes (Quality Level 3). The DER has not been validated (Value Level 1). This gives a score of ${500 \times (100 + 60) \times 0.01 = 800}$
 
