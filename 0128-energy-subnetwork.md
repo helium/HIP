@@ -194,7 +194,7 @@ Each DER datapoint gets a score based on the sum of principles one and two multi
 
 Example: A DER has been connected to the network for 5 weeks (Uptime Level 1). During the reward epoch of one hour the DER has provided 500 data points, but it had some connection problem for two minutes so there is no data for two consecutive minutes (Quality Level 3). The DER has not been validated (Value Level 1). This gives a score of ${500 \times (100 + 60) \times 0.01 = 800}$
 
-The total scores for the hour is the sum of all DER scores, e.g. ${2\ 000\ 000}$ and the DER’s part of this is then ${\frac{800}{2\ 000\ 000} = 0.0004}$. The amount of ENERGY tokens issued to the DER is then ${0.04\%}$ of the DER Host baseline rewards emissions.
+The total scores for the hour is the sum of all DER scores, e.g. ${2\ 000\ 000}$ and the DER’s part of this is then ${\frac{800}{2\ 000\ 000} = 0.0004}$. The amount of ENERGY tokens issued to the DER is then $0.04 \%$ of the DER Host baseline rewards emissions.
 
 ### Rewards for Energy Services
 
