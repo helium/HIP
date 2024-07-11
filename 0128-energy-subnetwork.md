@@ -94,14 +94,6 @@ We propose that 60B ENERGY be reserved for providing startup capital for Srcful 
 
 The ENERGY protocol will use net emissions to replenish burned tokens into service rewards using a 30-day average of burned tokens, with a cap. The cap will initially be set at 1% of current emissions but will likely be subject to change.
 
-We propose using one pool for buffering issued baseline rewards:
-
-**Network growth pool** acts as a resource for growing the network using direct incentives to DER hosts. This pool will receive tokens from the baseline DER host rewards inversely proportional to the total ENERGY subnetwork DC burn as long as this is less than $100 000 USD. The proportion allocated to the pool is calculated by:
-
-$$\text{Network Growth Pool Proportion} = 0.5 - \min\left(0.5, 0.5 \times \frac{\text{Total Energy Subnetwork DC burn}}{\$100000}\right)$$
-
-The motivation for the network growth pool is to stimulate growth of the network in general and to build critical amounts of DERs in areas that will unlock service contracts. DER hosts are rewarded from the pool for participating as a beta tester, for DERs located in hexes whitelisted for services, and to provide current IOT Hotspot hosts one free DER onboarding for a limited time. Other future initiatives with rewards from the network growth pool will be voted on based on suggestions from the community.
-
 For clarity, the community emission schedule is as follows:
 
 | Year | ENERGY at the start of the year (M) | ENERGY minted (M) | DER host Baseline Rewards | DER host Service Contract Pool | Sensor hosts | Service Providers | Oracles | Operations Fund | veHNT Delegators | Investors & Founders |
