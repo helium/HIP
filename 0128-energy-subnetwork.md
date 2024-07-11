@@ -238,11 +238,11 @@ The administrator of anti-gaming measures will be the Helium Foundation, who wil
 
 Gateways can manage multiple DERs on a local network. Under a gateway, each DER is onboarded individually. In many cases this will be just one inverter for a household, but as the network evolves, additional entities may be onboarded – such as pool heaters, batteries, or even bitcoin miners.
 
-The fee for onboarding an ENERGY gateway is set at $1 USD, paid using the ENERGY token and the fee for onboarding one DER is set at $20 USD, paid using the ENERGY token.
+The fee for onboarding an ENERGY gateway is set at $10 USD, paid using DC and the fee for onboarding one DER is set at $20 USD, paid using the ENERGY token.
+
+Gateway vendors can issue coupons to hotspots for the onboarding fees. If a coupon is redeemed and the vendor do not have enough DC/ENERGY to cover it, twice the amount will be slashed (50% will go to an insurance fund and 50% will be burned) from the vendor funds. When a vendor is below the minimum stake after slashing they are not allowed to issue coupons.
 
 The location of the entity is defined as part of the gateway onboarding. There is no separate location assertion fee. DERs are linked to the gateway by an on-chain mechanism.
-
-Existing Hotspot owners (with a compatible dual mining Hotspot) on the IOT network will be granted one free ENERGY gateway onboard with one free DER onboarding within the first 3 months after dual mining launch.
 
 ### Network Rates
 
