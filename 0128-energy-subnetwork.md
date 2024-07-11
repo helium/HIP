@@ -52,23 +52,17 @@ A typical installation consists of Solar Panels and an Inverter shown in the dia
 ```mermaid
 %%{init: {'theme': 'neutral'}}%%
 graph LR
-
     Internet[Internet] -.- InternetRouter
     Meter<---->|AC| PowerGrid[Power Grid]
-
     subgraph Home [Home]
         Meter-->|AC|HomeApp
         Meter[Utility Meter]<-->|AC|Inverter
-
-        Solar[Solar Panels\nDER] -->|DC| Inverter[Inverter]
-        style Solar stroke-width: 3px
-        Battery[Battery Storage\nDER] <-->|DC| Inverter
-        style Battery stroke-width: 3px
+        Solar[Solar Panels\nDER] ==>|DC| Inverter[Inverter]
+        Battery[Battery Storage\nDER] <==>|DC| Inverter
         Inverter -->|AC| HomeApp[Home Appliances]
-
-        style Gateway stroke-dasharray: 5,5
         InternetRouter[Gateway Controller] -.- Inverter
         InternetRouter[Internet Router] -.- Gateway[ENERGY Gateway\n#40;IOT Hotspot#41;]
+        style Gateway stroke-width: 3
     end
 ```
 
