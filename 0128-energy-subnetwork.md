@@ -319,6 +319,9 @@ The ENERGY subnetwork will also help strengthen the IOT subnetwork as the softwa
 
 Applying the governance structure of the Helium community to power systems will increase the numbers of those involved in the influence and buildout of yet another very critical part of our infrastructure. Communication is essential for both sensors and people, but electrical energy is at the core of a modern society. Now is the time to be part of the start in the shift to a new model that is operated by the people - for the people.
 
+### Note on Current Onboarding Fee
+We have implemented a 10 USD in DC onboarding fee due to the current structure of the A variable in the DAO utility score. For future subnetworks, we believe that the main proxy for the utility score should be DC burn for services, rather than this onboarding fee. We propose that the A score should be reconsidered in favor of using DC service burn as the proxy for network value, as the current onboarding fee may not be optimal for new subnetworks joining on fair terms.
+
 ## Definitions
 
 - [Decentralized/Distributed Energy Resource (DER)](https://en.wikipedia.org/wiki/Distributed_generation) - Electrical generation and storage performed by a variety of small, grid-connected or distribution system-connected devices.
