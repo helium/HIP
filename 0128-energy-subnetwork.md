@@ -244,7 +244,8 @@ Solar PV systems can contribute to frequency reserves by decreasing (curtailing)
 
 ### Anti-Gaming Measures
 
-The ENERGY Subnetwork will prioritize the prevention of gaming through a hybrid framework that will evolve over time. At a base level, the subnetwork will leverage knowledge of accurately deployed IOT gateways in addition to ENERGY-specific validation mechanisms ranging from daily satellite imagery to grid frequency checks. This ENERGY-specific validation can also be made available to the IOT Network. The operation of anti-gaming measures will be the responsibility of Srcful AB. As the first service provider on the ENERGY Network, Srcful is appropriately aligned to ensure that valid entities are rewarded on the network. The design of the Oracle infrastructure will allow for community evaluation of raw data emitted from ENERGY gateways.
+The ENERGY Subnetwork will prioritize the prevention of gaming through a hybrid framework that will evolve over time. At a base level, the subnetwork will leverage knowledge of accurately deployed IOT gateways in addition to ENERGY-specific validation mechanisms ranging from daily satellite imagery to grid frequency checks. This ENERGY-specific validation can also be made available to the IOT Network. 
+The administrator of anti-gaming measures will be the Helium Foundation, who will delegate a portion of the operations fund to Srcful AB for anti-gaming measures. As the first service provider on the ENERGY Network, Srcful is appropriately aligned to ensure that valid entities are rewarded on the network. The design of the Oracle infrastructure will allow for community evaluation of raw data emitted from ENERGY gateways.
 
 ### Network Rates & Fees
 
