@@ -11,7 +11,7 @@
 
 ## Declaration
 
-The authors of this HIP hold active VEIOT positions.
+The authors of this HIP hold veIOT.
 
 ## Summary
 
