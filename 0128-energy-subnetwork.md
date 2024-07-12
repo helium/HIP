@@ -46,6 +46,30 @@ These _Decentralized Energy Resources_ (DER) would be coordinated in what is kno
 
 At scale, the VPP that exists via the Helium ENERGY subnetwork may be leased (purchased via Data Credits) by Service Providers and offered to Clients such as energy companies, grid operators, or aggregators in order to balance grid supply or demand (Energy Services). Use of these resources would reward individual _DER Hosts_ with ENERGY token.
 
+#### Overview
+A typical installation consists of solar panels and an inverter, as shown in the diagram. Optionally, one or more batteries can be added.
+
+The inverter's responsibility is to manage the energy from the solar panels, battery, home appliances, and the power grid. The inverter is connected to the local home network via the internet router (via Ethernet cable or Wi-Fi).
+
+An ENERGY Gateway connected to the home network via the internet router allows for the collection of data from the inverter and control of its operation. The ENERGY Gateway signs the data from the inverter so that the source of the data is known. The ENERGY Gateway can receive signed signals to control the behavior of the inverter.
+
+```mermaid
+%%{init: {'theme': 'neutral'}}%%
+graph LR
+    Internet[Internet] -.- InternetRouter
+    Meter<---->|AC| PowerGrid[Power Grid]
+    subgraph Home [Home]
+        Meter-->|AC|HomeApp
+        Meter[Utility Meter]<-->|AC|Inverter
+        Solar[Solar Panels\nDER] ==>|DC| Inverter[Inverter]
+        Battery[Battery Storage\nDER] <==>|DC| Inverter
+        Inverter -->|AC| HomeApp[Home Appliances]
+        InternetRouter[Gateway Controller] -.- Inverter
+        InternetRouter[Internet Router] -.- Gateway[ENERGY Gateway\n#40;IOT Hotspot#41;]
+        style Gateway stroke-width: 3
+    end
+```
+
 ### Subnetwork Goal
 
 The primary objective is to create an ecosystem and incentive structure that promotes DER deployment and connects DER's to enhance their intelligence and flexibility. This is critical for achieving affordable and abundant renewable energy within the power system. Additionally, the subnetwork aims to capture opportunities in the global demand for energy data and a more intelligent ancillary services market, which is essential for grid stability as renewable energy integration increases.
@@ -80,7 +104,7 @@ To operate on the network, Service Providers and Gateway Vendors must control a 
 
 ## Token Allocation
 
-Allocation of ENERGY tokens prioritizes emission to the community of DER hosts for the data and energy services they provide. A max supply of 250B ENERGY tokens is enforced following the mechanics deployed on the IOT and MOBILE subnetworks. 190B tokens are dedicated to emissions mainly as rewards for DER hosts including a one time issuance of 1B tokens to the Operations Fund. 60B tokens are dedicated as emissions for initial funding to investors and founders of the project.
+Allocation of ENERGY tokens prioritizes emission to the community of DER hosts for the data and energy services they provide. A max supply of 250B ENERGY tokens is enforced following the mechanics deployed on the IOT and MOBILE subnetworks. 190B tokens are dedicated to emissions mainly as rewards for DER hosts including a one time issuance of 1B tokens, where 900M tokens go to the Operations Fund and 100M for beta testers that participated before the start of the network. 60B tokens are dedicated as emissions for initial funding to investors and founders of the project.
 
 ### Emissions Curve
 
@@ -93,14 +117,6 @@ We propose that 60B ENERGY be reserved for providing startup capital for Srcful 
 190B ENERGY will be emitted mainly as community rewards but also for the continued operations of the network. Community rewards are divided into two parts: baseline rewards for participating in the subnetwork and service rewards for participating in energy services. The baseline rewards will receive 15% of emitted ENERGY, and the service rewards will receive 45%. Services are rewarded to reflect the respective DC burn of the DER host, with remaining tokens being burned.
 
 The ENERGY protocol will use net emissions to replenish burned tokens into service rewards using a 30-day average of burned tokens, with a cap. The cap will initially be set at 1% of current emissions but will likely be subject to change.
-
-We propose using one pool for buffering issued baseline rewards:
-
-**Network growth pool** acts as a resource for growing the network using direct incentives to DER hosts. This pool will receive tokens from the baseline DER host rewards inversely proportional to the total ENERGY subnetwork DC burn as long as this is less than $100 000 USD. The proportion allocated to the pool is calculated by:
-
-$$\text{Network Growth Pool Proportion} = 0.5 - \min\left(0.5, 0.5 \times \frac{\text{Total Energy Subnetwork DC burn}}{\$100000}\right)$$
-
-The motivation for the network growth pool is to stimulate growth of the network in general and to build critical amounts of DERs in areas that will unlock service contracts. DER hosts are rewarded from the pool for participating as a beta tester, for DERs located in hexes whitelisted for services, and to provide current IOT Hotspot hosts one free DER onboarding for a limited time. Other future initiatives with rewards from the network growth pool will be voted on based on suggestions from the community.
 
 For clarity, the community emission schedule is as follows:
 
@@ -125,12 +141,10 @@ flowchart LR
     OperationsFund[Operations Fund]:::dashed
     veHNTDelegators[veHNT Delegators]:::dashed
     RewardOrBurn{Reward\nor\nBurn}:::standard
-    NetworkGrowthPool[Network Growth Pool]:::dashed
     ServiceProviders[Service Providers]:::standard
     Oracles[Oracles]:::standard
     SensorsSupportHosts[Sensors & Support Hosts]:::standard
     DERHosts[DER Hosts]:::standard
-    BaselineRewards{Calculate\nNGPP}:::standard
     NetEmissions[Net Emissions]:::dashed
 
     classDef dashed fill:#ffffff,stroke:#000000,stroke-dasharray: 5 5
@@ -139,13 +153,8 @@ flowchart LR
     HETEmissions -->|5%|OperationsFund
     HETEmissions -->|6%|veHNTDelegators
     HETEmissions -->|45%|RewardOrBurn
+    HETEmissions --> |15% Baseline rewards|DERHosts
 
-    HETEmissions -->|15%|BaselineRewards
-
-    BaselineRewards --> |100 - NGPP%\nBaseline rewards|DERHosts
-    BaselineRewards -->|NGPP%|NetworkGrowthPool
-
-    NetworkGrowthPool -- Rewards to beta testers and\nDERs located in hexes whitelisted for services --> DERHosts
 
     HETEmissions -->|20%|ServiceProviders
     HETEmissions -->|5%|SensorsSupportHosts
@@ -209,7 +218,7 @@ Each DER datapoint gets a score based on the sum of principles one and two multi
 
 Example: A DER has been connected to the network for 5 weeks (Uptime Level 1). During the reward epoch of one hour the DER has provided 500 data points, but it had some connection problem for two minutes so there is no data for two consecutive minutes (Quality Level 3). The DER has not been validated (Value Level 1). This gives a score of ${500 \times (100 + 60) \times 0.01 = 800}$
 
-The total scores for the hour is the sum of all DER scores, e.g. ${2\ 000\ 000}$ and the DER’s part of this is then $\frac{800}{2\ 000\ 000} = 0.0004$. The amount of ENERGY tokens issued to the DER is then ${0.04\%}$ of the DER Host baseline rewards emissions.
+The total scores for the hour is the sum of all DER scores, e.g. ${2\ 000\ 000}$ and the DER’s part of this is then ${\frac{800}{2\ 000\ 000} = 0.0004}$. The amount of ENERGY tokens issued to the DER is then 0.04% of the DER Host baseline rewards emissions.
 
 ### Rewards for Energy Services
 
@@ -253,25 +262,15 @@ The administrator of anti-gaming measures will be the Helium Foundation, who wil
 
 Gateways can manage multiple DERs on a local network. Under a gateway, each DER is onboarded individually. In many cases this will be just one inverter for a household, but as the network evolves, additional entities may be onboarded – such as pool heaters, batteries, or even bitcoin miners.
 
-The fee for onboarding an ENERGY gateway is set at $1 USD, paid using the ENERGY token and the fee for onboarding one DER is set at $20 USD, paid using the ENERGY token.
+The fee for onboarding an ENERGY gateway is set at $10 USD, paid using DC and the fee for onboarding one DER is set at $20 USD, paid using the ENERGY token.
 
-The location of the entity is defined as part of the gateway onboarding. There is no separate location assertion fee. DERs are linked to the gateway by an on-chain mechanism.
+Gateway vendors can issue coupons for the onboarding of gateways and their respective fees. If a coupon is redeemed and the vendor does not have enough DC/ENERGY to pay from their onboarding account, twice the amount will be slashed from the vendor's stake. Of the slashed amount, 50% will go to an insurance fund and 50% will be burned. When a vendor's stake is depleted, they are not allowed to issue onboarding coupons.
 
-Existing Hotspot owners (with a compatible dual mining Hotspot) on the IOT network will be granted one free ENERGY gateway onboard with one free DER onboarding within the first 3 months after dual mining launch.
+The location of the entity is defined as part of the DER onboarding. There is no separate location assertion fee.
 
 ### Network Rates
 
 At the start, usage of the network is divided into two main buckets, energy data and ancillary services. Usage across all buckets is recorded by network oracles and rewarded to DER Hosts at the end of each epoch. Access to data and DERs for ancillary services is paid using Data Credits derived from HNT. Rewards are allocated to DER Hosts in ENERGY tokens. DER Hosts are eligible for rewards in both buckets simultaneously.
-
-#### Energy Data
-
-Energy data is priced at 1 DC per data point. This data is provided at frequencies of up to one data point per second. Typically, data costs from utility meters (which only measures the amount of energy) are generally billed at about $2.60 USD/month with a transmission rate of one data point per hour. DERs, however, can send more data points more frequently. The ENERGY subnetwork prices the data cost for a single DER significantly lower rate than the base price for what a utility company is paying.
-
-| Frequency    | Data Points (DC) / Day | DC per Data Point | 30 Day Cost (USD) |
-|--------------|------------------------|-------------------|-------------------|
-| Every Hour   | 24                     | 1                 | $0.0072           |
-| Every Minute | 1&nbsp;440             | 1                 | $0.432            |
-| Every Second | 86&nbsp;400            | 1                 | $25.92            |
 
 #### Ancillary Services
 
@@ -333,6 +332,9 @@ By being able to partner with the existing community of builders it’s a clear 
 The ENERGY subnetwork will also help strengthen the IOT subnetwork as the software for reading and controlling DERs is running on the same Hotspot. This means a broader buildout of the IOT coverage to regions beyond highly populated areas with existing coverage. There will also be a need for sensors, such as certified energy meters, sensors for measuring state of the grid such as frequency and voltage and solar lux meters. These sensors will be utilizing the Helium IOT, creating a stronger demand for IOT data transfer. One important aspect is also the anti-gaming perspective: when a new subnetwork is created we can leverage both the ENERGY and IOT subnetwork for cross-validation. It is essential that the physical location is correct - and both networks benefit from the other’s validation. For instance, solar panels can be validated both by sensor data (such as energy meters running on Helium IOT) and satellite data where solar panels can be seen from space. As the Helium Hotspot is utilizing the same cryptographic chip for both networks it will be yet another layer of validation added that both networks can leverage from.
 
 Applying the governance structure of the Helium community to power systems will increase the numbers of those involved in the influence and buildout of yet another very critical part of our infrastructure. Communication is essential for both sensors and people, but electrical energy is at the core of a modern society. Now is the time to be part of the start in the shift to a new model that is operated by the people - for the people.
+
+### Note on Current Onboarding Fee
+We have implemented a $10 USD onboarding fee in DC due to the current structure of the A variable in the DAO utility score. For future subnetworks, we believe that the main proxy for the utility score should be DC burn for services rather than this onboarding fee. Srcful believes that the A score should be reconsidered in favor of using DC service burn as the proxy for network value, as the current onboarding fee may not be optimal for new subnetworks joining on fair terms.
 
 ## Definitions
 
