@@ -264,7 +264,7 @@ Gateways can manage multiple DERs on a local network. Under a gateway, each DER 
 
 The fee for onboarding an ENERGY gateway is set at $10 USD, paid using DC and the fee for onboarding one DER is set at $20 USD, paid using the ENERGY token.
 
-Gateway vendors can issue coupons to hotspots for the onboarding fees. If a coupon is redeemed and the vendor do not have enough DC/ENERGY to cover it, twice the amount will be slashed (50% will go to an insurance fund and 50% will be burned) from the vendor funds. When a vendor is below the minimum stake after slashing they are not allowed to issue coupons.
+Gateway vendors can issue coupons for the onboarding of gateways and their respective fees. If a coupon is redeemed and the vendor does not have enough DC/ENERGY to pay from their onboarding account, twice the amount will be slashed from the vendor's stake. Of the slashed amount, 50% will go to an insurance fund and 50% will be burned. When a vendor's stake is depleted, they are not allowed to issue onboarding coupons.
 
 The location of the entity is defined as part of the DER onboarding. There is no separate location assertion fee.
 
