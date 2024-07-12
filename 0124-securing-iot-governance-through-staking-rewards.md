@@ -36,10 +36,10 @@ All current and future holders of IOT and veIOT are stakeholders in this proposa
 
 1. **Emissions Apportionment:**
     - Implement a sliding scale for emissions allocation to lockup rewards for veIOT based on the total amount of veIOT locked:
-        - **1%** of emissions if the total **veIOT locked** is at least **1.5 billion**.
-        - **2%** of emissions if the total **veIOT locked** is at least **2.5 billion**.
-        - **3%** of emissions if the total **veIOT locked** is at least **4 billion**.
-        - **4%** of emissions if the total **veIOT locked** is at least **6 billion**.
+        - **1%** of emissions if the **total veIOT locked** is at least **1.5 billion**.
+        - **2%** of emissions if the **total veIOT locked** is at least **2.5 billion**.
+        - **3%** of emissions if the **total veIOT locked** is at least **4 billion**.
+        - **4%** of emissions if the **total veIOT locked** is at least **6 billion**.
     - Post the implementation of decentralized Oracles, this allocation will revert to Oracle rewards, providing veIOT holders with the opportunity to earn rewards by staking to Oracles.
 
 2. **Existing lockups:**
