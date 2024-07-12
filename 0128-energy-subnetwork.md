@@ -49,7 +49,7 @@ At scale, the VPP that exists via the Helium ENERGY subnetwork may be leased (pu
 #### Overview
 A typical installation consists of solar panels and an inverter, as shown in the diagram. Optionally, one or more batteries can be added.
 
-The inverter's responsibility is to manage the energy from the solar panels, battery, home appliances (your normal electrical devices), and the power grid. The inverter is connected to the local home network via the internet router (via Ethernet cable or Wi-Fi).
+The inverter's responsibility is to manage the energy from the solar panels, battery, home appliances, and the power grid. The inverter is connected to the local home network via the internet router (via Ethernet cable or Wi-Fi).
 
 An ENERGY Gateway connected to the home network via the internet router allows for the collection of data from the inverter and control of its operation. The ENERGY Gateway signs the data from the inverter so that the source of the data is known. The ENERGY Gateway can receive signed signals to control the behavior of the inverter.
 
