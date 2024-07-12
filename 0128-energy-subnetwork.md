@@ -47,7 +47,11 @@ These _Decentralized Energy Resources_ (DER) would be coordinated in what is kno
 At scale, the VPP that exists via the Helium ENERGY subnetwork may be leased (purchased via Data Credits) by Service Providers and offered to Clients such as energy companies, grid operators, or aggregators in order to balance grid supply or demand (Energy Services). Use of these resources would reward individual _DER Hosts_ with ENERGY token.
 
 #### Overview
-A typical installation consists of Solar Panels and an Inverter shown in the diagram. Optionally a Battery is added. The Inverter's responsibly is to manage the energy from the Solar Panels, Battery, Home Appliances (your normal electrical devices) and the Power Grid. The Inverter is connected to the local home network via the Internet Router (e.g. via ethernet cable or wifi). An ENERGY Gateway (e.g. a new or existing IOT Hotspot), connected to the home network via the Internet Router, allows for collection of data from the Inverter and to control its operation. The ENERGY Gateway signs the data from the Inverter so that the source of the data is known. The ENERGY Gateway can receive signed signals to control the behavior of the Inverter. Several ENERGY gateways collectively form a Virtual Power Plant where control at scale can offer ancillary services to the grid and home owners can be rewarded for this accordingly.
+A typical installation consists of solar panels and an inverter, as shown in the diagram. Optionally, one or more batteries can be added.
+
+The inverter's responsibility is to manage the energy from the solar panels, battery, home appliances (your normal electrical devices), and the power grid. The inverter is connected to the local home network via the internet router (via Ethernet cable or Wi-Fi).
+
+An ENERGY Gateway connected to the home network via the internet router allows for the collection of data from the inverter and control of its operation. The ENERGY Gateway signs the data from the inverter so that the source of the data is known. The ENERGY Gateway can receive signed signals to control the behavior of the inverter.
 
 ```mermaid
 %%{init: {'theme': 'neutral'}}%%
