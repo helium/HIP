@@ -268,16 +268,6 @@ The location of the entity is defined as part of the gateway onboarding. There i
 
 At the start, usage of the network is divided into two main buckets, energy data and ancillary services. Usage across all buckets is recorded by network oracles and rewarded to DER Hosts at the end of each epoch. Access to data and DERs for ancillary services is paid using Data Credits derived from HNT. Rewards are allocated to DER Hosts in ENERGY tokens. DER Hosts are eligible for rewards in both buckets simultaneously.
 
-#### Energy Data
-
-Energy data is priced at 1 DC per data point. This data is provided at frequencies of up to one data point per second. Typically, data costs from utility meters (which only measures the amount of energy) are generally billed at about $2.60 USD/month with a transmission rate of one data point per hour. DERs, however, can send more data points more frequently. The ENERGY subnetwork prices the data cost for a single DER significantly lower rate than the base price for what a utility company is paying.
-
-| Frequency    | Data Points (DC) / Day | DC per Data Point | 30 Day Cost (USD) |
-|--------------|------------------------|-------------------|-------------------|
-| Every Hour   | 24                     | 1                 | $0.0072           |
-| Every Minute | 1&nbsp;440             | 1                 | $0.432            |
-| Every Second | 86&nbsp;400            | 1                 | $25.92            |
-
 #### Ancillary Services
 
 Ancillary services do not have a fixed price; rather, their prices are determined by the open market marginal pricing each hour, depending on the supply size and the minimum bids allowed by the resources comprising the supply.
