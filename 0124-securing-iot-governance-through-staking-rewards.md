@@ -9,6 +9,10 @@
 
 ---
 
+## Declaration
+
+The authors of this HIP hold active VEIOT positions.
+
 ## Summary
 
 This Helium Improvement Proposal (HIP) aims to increase voting turnout. It suggests to achieve this goal indirectly by paying rewards for locking IOT, thus reducing the cost of acquiring voting power (veIOT). The payments will discontinue once rewarded veIOT staking to decentralized Orcacles is implemented.
@@ -31,7 +35,11 @@ All current and future holders of IOT and veIOT are stakeholders in this proposa
 ## Detailed Explanation
 
 1. **Emissions Apportionment:**
-    - Allocate 4% of IOT emissions to lockup rewards for veIOT. This allocation will be sourced from the reward bucket assigned to Oracles in [HIP-52][hip-52], which is currently not distributed.
+    - Implement a sliding scale for emissions allocation to lockup rewards for veIOT based on the total amount of veIOT locked:
+        - **1%** of emissions if the total **veIOT locked** is at least **1.5 billion**.
+        - **2%** of emissions if the total **veIOT locked** is at least **2.5 billion**.
+        - **3%** of emissions if the total **veIOT locked** is at least **4 billion**.
+        - **4%** of emissions if the total **veIOT locked** is at least **6 billion**.
     - Post the implementation of decentralized Oracles, this allocation will revert to Oracle rewards, providing veIOT holders with the opportunity to earn rewards by staking to Oracles.
 
 2. **Existing lockups:**
