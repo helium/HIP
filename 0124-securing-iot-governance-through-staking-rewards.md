@@ -40,6 +40,7 @@ All current and future holders of IOT and veIOT are stakeholders in this proposa
         - **2%** of emissions if the **total veIOT locked** is at least **2.5 billion**.
         - **3%** of emissions if the **total veIOT locked** is at least **4 billion**.
         - **4%** of emissions if the **total veIOT locked** is at least **6 billion**.
+    - This allocation will be sourced from the reward bucket assigned to Oracles in HIP-52, which is currently not distributed.
     - Post the implementation of decentralized Oracles, this allocation will revert to Oracle rewards, providing veIOT holders with the opportunity to earn rewards by staking to Oracles.
 
 2. **Existing lockups:**
