@@ -1,0 +1,58 @@
+#HIP XXX: Carrier Beta Default Opt-In  
+
+- Author: @zer0tweets 
+- Start Date: 
+- Category: Technical & Economic
+- Original HIP PR: #
+- Tracking Issue: #
+- Voting Requirements: veMOBILE
+
+##Summary
+
+This Helium Improvement Proposal introduces the concept of a “beta carrier” and proposes that all mobile Wi-Fi hotspots be opted in to service beta carrier subscribers by default, with the option to opt out at any time by the hotspot operator.
+
+##Motivation
+
+The Helium Mobile network is currently in active beta trials with three tier-1 mobile network operators (MNOs) to provide carrier Wi-Fi offload services. With only 24 hotspots voluntarily opting in to participate in the beta, the Helium Network has seen thousands of unique connections per day and significant data traffic, which so far has been unpaid. MNOs have indicated that they would eventually be willing to pay for some of the traffic in some locations, but:
+
+- They would need to retain control over when and how much they pay for specific locations.
+- They would need exposure to a larger fleet of hotspots that they can connect to and offload data to on-demand, to make the Helium Network relevant to them.
+
+We believe that opening up the rest of the hotspots in the Helium Network to the MNOs will accelerate the beta evaluations by the carriers and allow us to start monetizing MNO data traffic faster.
+
+##Stakeholders
+
+Wi-Fi hotspot operators will have their Wi-Fi hotspots opted in to service beta carrier traffic, irrespective of that traffic being paid, but they will have the option to opt-out at any point via the hotspot dashboard or builder app.
+
+##Detailed Explanation
+
+- We formally introduce the beta carrier program.
+- Any carrier with 5 million or more active subscribers can join the beta carrier program without the need for a community vote to become a service provider.
+- Beta carriers can unilaterally choose where and how much they pay for Wi-Fi data offload, including the ability not to pay at all.
+- However, beta carriers only get access to a limited number of hotspots that are opted in to service beta carriers.
+- Upon approval of this HIP, all Wi-Fi hotspots will be opted in to service beta carriers. Any new Wi-Fi hotspots that come online will also be opted in to service beta carriers by default.
+- Hotspot operators can opt in or out of servicing beta carriers in the builder app and dashboard at any time. Hotspot operators will also see data on which carriers are connecting to them each day and how much data they are using in the app and dashboard, allowing them to decide whether to stay opted in.
+- The network planner will add a dashboard showing hotspot ranking based on unique connections served during the trailing seven days, plus POC and data earnings for said hotspots. Hotspots that earn a lot of POC but serve no beta carriers (and vice versa) will be publicly visible.
+- This HIP proposes no changes to POC or data pricing for now, but the dashboard will provide public visibility into how the beta is progressing across carriers.
+
+##Drawbacks
+
+Some hotspot operators who are not actively following the network may not realize that their hotspot is opted in to service free data traffic by default and may be caught by surprise. To mitigate this, Wi-Fi hotspot manufacturers will provide ample warnings through various means (notifications on the dashboard, emails, etc.) to ensure that everyone who wants to opt out of the beta has the ability to do so.
+
+Hotspots that serve a lot of beta carriers for free and those that opt out will earn the same POC and data rewards. To mitigate this, it is suggested to display a public dashboard that will praise beta participants and shame the “reward squatters,” laying the groundwork for an eventual POC change, if required.
+
+##Rationale and Alternatives
+
+One alternative is to attempt to proceed with HIP 126, as originally planned, and change the pricing scheme for the entire network, allowing hotspot operators to dynamically adjust pricing. This change, however, is harder to get community consensus behind and harder to implement.
+
+##Unresolved Questions
+
+Some community members have voiced the opinion that limits to data access should be implemented along with this change, such as throttling the data to a certain level and/or setting upper limits on the amount of data that can be used by beta carriers. Implementing such throttling will take time. We, therefore, suggest that this be implemented at a later stage when and if it becomes clear that such controls are required.
+
+##Deployment Impact
+
+Nova Labs will complete the implementation, should this HIP pass voting.
+
+##Success Metrics 
+
+The total aggregate amount of data (both paid and unpaid) should increase by at least 10x no later than six months after HIP deployment, and the total amount of paid data should at least double.
