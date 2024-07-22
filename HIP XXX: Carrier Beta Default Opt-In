@@ -32,7 +32,7 @@ Wi-Fi hotspot operators will have their Wi-Fi hotspots opted in to service beta 
 - However, beta carriers only get access to a limited number of hotspots that are opted in to service beta carriers.
 - Upon approval of this HIP, all Wi-Fi hotspots will be opted in to service beta carriers. Any new Wi-Fi hotspots that come online will also be opted in to service beta carriers by default.
 - Hotspot operators can opt in or out of servicing beta carriers in the builder app and dashboard at any time. Hotspot operators will also see data on which carriers are connecting to them each day and how much data they are using in the app and dashboard, allowing them to decide whether to stay opted in.
-- The network planner will add a dashboard showing hotspot ranking based on unique connections served during the trailing seven days, plus POC and data earnings for said hotspots. Hotspots that earn a lot of POC but serve no beta carriers (and vice versa) will be publicly visible.
+- The Helium Mobile Network Planner will add a dashboard showing Hotspot ranking based on unique connections served during the trailing seven days, plus Proof-of-Coverage and data earnings for said Hotspots. Hotspots that earn a lot of POC rewards but serve no Beta Carriers (and vice versa) will be publicly visible.
 - This HIP proposes no changes to POC or data pricing for now, but the dashboard will provide public visibility into how the beta is progressing across carriers.
 
 ##Drawbacks
