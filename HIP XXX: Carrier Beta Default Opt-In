@@ -11,7 +11,7 @@
 
 This Helium Improvement Proposal introduces the concept of a “beta carrier” and proposes that all mobile Wi-Fi hotspots be opted in to service beta carrier subscribers by default, with the option to opt out at any time by the hotspot operator.
 
-##Motivation
+## Motivation
 
 The Helium Mobile network is currently in active beta trials with three tier-1 mobile network operators (MNOs) to provide carrier Wi-Fi offload services. With only 24 hotspots voluntarily opting in to participate in the beta, the Helium Network has seen thousands of unique connections per day and significant data traffic, which so far has been unpaid. MNOs have indicated that they would eventually be willing to pay for some of the traffic in some locations, but:
 
