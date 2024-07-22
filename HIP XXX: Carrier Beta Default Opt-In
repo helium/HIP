@@ -47,7 +47,7 @@ One alternative is to attempt to proceed with [HIP 126](0126-flexible-data-prici
 
 ##Unresolved Questions
 
-Some community members have voiced the opinion that limits to data access should be implemented along with this change, such as throttling the data to a certain level and/or setting upper limits on the amount of data that can be used by beta carriers. Implementing such throttling will take time. We, therefore, suggest that this be implemented at a later stage when and if it becomes clear that such controls are required.
+Some community members have voiced the opinion that limits to data access should be implemented along with this change, such as throttling the data to a certain level and/or setting upper limits on the amount of data that can be used by Beta Carriers. Implementing such throttling will take time. We, therefore, suggest that this be implemented at a later stage when and if it becomes clear that such controls are required.
 
 ##Deployment Impact
 
