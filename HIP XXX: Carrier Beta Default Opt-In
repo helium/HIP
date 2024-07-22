@@ -43,7 +43,7 @@ Hotspots that serve a lot of Beta Carriers for free and those that opt out will 
 
 ##Rationale and Alternatives
 
-One alternative is to attempt to proceed with HIP 126, as originally planned, and change the pricing scheme for the entire network, allowing hotspot operators to dynamically adjust pricing. This change, however, is harder to get community consensus behind and harder to implement.
+One alternative is to attempt to proceed with [HIP 126](0126-flexible-data-pricing-for-mobile-network.md), as originally planned, and change the pricing scheme for the entire network, allowing Hotspot operators to dynamically adjust pricing. This change, however, is harder to get community consensus behind and harder to implement.
 
 ##Unresolved Questions
 
