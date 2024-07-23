@@ -1,11 +1,13 @@
-# HIP XXX: Carrier Beta Default Opt-In
+# HIP 129: Carrier Beta Default Opt-In
 
 - Author: [@zer0tweets](https://github.com/zer0tweets)
-- Start Date: 
-- Category: Technical & Economic
-- Original HIP PR: #
-- Tracking Issue: #
+- Start Date: 2024-07-22
+- Category: Economic, Technical
+- Original HIP PR: [#1057](https://github.com/helium/HIP/pull/1057)
+- Tracking Issue: [#1058](https://github.com/helium/HIP/issues/1058)
 - Vote Requirements: veMOBILE Holders
+
+---
 
 ## Summary
 
