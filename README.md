@@ -142,6 +142,7 @@ If you have questions or feedback, please see the [Discussion](https://github.co
 | 126 | [Flexible Data Pricing for MOBILE Network](0126-flexible-data-pricing-for-mobile-network.md)                                                        | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/1023)                |
 | 127 | [Dynamic IOT Proof-of-Coverage](0127-dynamic-iot-poc.md)                                                                                            | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/1045)                |
 | 128 | [Energy Subnetwork](0128-energy-subnetwork.md)                                                                                                      | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/1051)                |
+| 129 | [Carrier Beta Default Opt-In](0129-carrier-beta-default-opt-in.md)                                                                                  | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/1058)                |
 
 ## HIP Status Key
 
