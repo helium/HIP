@@ -118,20 +118,22 @@ We propose that 60B ENERGY be reserved for providing startup capital for Srcful 
 
 The ENERGY protocol will use net emissions to replenish burned tokens into service rewards using a 30-day average of burned tokens, with a cap. The cap will initially be set at 1% of current emissions but will likely be subject to change.
 
-For clarity, the community emission schedule is as follows:
+For clarity, the emission schedule is as follows:
 
-| Year | ENERGY at the start of the year (M) | ENERGY minted exluding Investors and Founders (M) | DER host Baseline Rewards | DER host Service Contract Pool | Sensor hosts | Service Providers | Oracles | Operations Fund | veHNT Delegators | Investors & Founders |
-|------|-------------------------------------|---------------------------------------------------|---------------------------|--------------------------------|--------------|-------------------|---------|-----------------|------------------|----------------------|
-| 1    | 1&nbsp;000                          | 47&nbsp;250                                       | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              | 24&nbsp;000          |
-| 2    | 72&nbsp;250                         | 47&nbsp;250                                       | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              | 24&nbsp;000          |
-| 3    | 143&nbsp;500                        | 23&nbsp;625                                       | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              | 12&nbsp;000          |
-| 4    | 179&nbsp;125                        | 23&nbsp;625                                       | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |                      |
-| 5    | 202&nbsp;750                        | 11&nbsp;812.5                                     | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |                      |
-| 6    | 214&nbsp;562.5                      | 11&nbsp;812.5                                     | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |                      |
-| 7    | 226&nbsp;375                        | 5&nbsp;906.25                                     | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |                      |
-| …    |                                     |                                                   |                           |                                |              |                   |         |                 |                  |                      |
+| Year | ENERGY at the start of the year (M) | ENERGY minted for community  (M)                             | DER host Baseline Rewards | DER host Service Contract Pool | Sensor hosts | Service Providers | Oracles | Operations Fund | veHNT Delegators | ENERGY minted for Investors & Founders           |
+|------|-------------------------------------|--------------------------------------------------------------|---------------------------|--------------------------------|--------------|-------------------|---------|-----------------|------------------|--------------------------------------------------|
+| 1    | 1&nbsp;000                          | 47&nbsp;250                                                  | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              | 24&nbsp;000                                      |
+| 2    | 72&nbsp;250                         | 47&nbsp;250                                                  | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              | 24&nbsp;000                                      |
+| 3    | 143&nbsp;500                        | 23&nbsp;625                                                  | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              | 12&nbsp;000                                      |
+| 4    | 179&nbsp;125                        | 23&nbsp;625                                                  | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |                                                  |
+| 5    | 202&nbsp;750                        | 11&nbsp;812.5                                                | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |                                                  |
+| 6    | 214&nbsp;562.5                      | 11&nbsp;812.5                                                | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |                                                  |
+| 7    | 226&nbsp;375                        | 5&nbsp;906.25                                                | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |                                                  |
+| …    |                                     |                                                              |                           |                                |              |                   |         |                 |                  |                                                  |
+
 
 Below is a high level overview of the reward flow from the emission curve to economic participants of the subnetwork:
+
 
 ```mermaid
 %%{init: {'theme': 'neutral'}}%%
