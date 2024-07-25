@@ -100,7 +100,7 @@ There are a number of real world physical entities that comprise the network and
 To operate on the network, Service Providers and Gateway Vendors must control a respective NFT. Acquiring this NFT requires Gateway Vendors and Service Providers to:
 
 1. Gateway Vendors must stake 50M ENERGY, and new Service Providers must stake 500M ENERGY.
-2. Obtain ENERGY subnetwork governance approval (Srcful AB will be the first Service Provider when the network launches).
+2. Obtain ENERGY subnetwork governance approval (this HIP also provides governance approval for Srcful AB to be the first Service Provider when the network launches).
 
 ## Token Allocation
 
