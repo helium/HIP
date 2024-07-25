@@ -47,6 +47,7 @@ These _Decentralized Energy Resources_ (DER) would be coordinated in what is kno
 At scale, the VPP that exists via the Helium ENERGY subnetwork may be leased (purchased via Data Credits) by Service Providers and offered to Clients such as energy companies, grid operators, or aggregators in order to balance grid supply or demand (Energy Services). Use of these resources would reward individual _DER Hosts_ with ENERGY token.
 
 #### Overview
+
 A typical installation consists of solar panels and an inverter, as shown in the diagram. Optionally, one or more batteries can be added.
 
 The inverter's responsibility is to manage the energy from the solar panels, battery, home appliances, and the power grid. The inverter is connected to the local home network via the internet router (via Ethernet cable or Wi-Fi).
@@ -120,20 +121,18 @@ The ENERGY protocol will use net emissions to replenish burned tokens into servi
 
 For clarity, the emission schedule is as follows:
 
-| Year | ENERGY at the start of the year (M) | ENERGY minted for community  (M)                             | DER host Baseline Rewards | DER host Service Contract Pool | Sensor hosts | Service Providers | Oracles | Operations Fund | veHNT Delegators | ENERGY minted for Investors & Founders           |
-|------|-------------------------------------|--------------------------------------------------------------|---------------------------|--------------------------------|--------------|-------------------|---------|-----------------|------------------|--------------------------------------------------|
-| 1    | 1&nbsp;000                          | 47&nbsp;250                                                  | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              | 24&nbsp;000                                      |
-| 2    | 72&nbsp;250                         | 47&nbsp;250                                                  | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              | 24&nbsp;000                                      |
-| 3    | 143&nbsp;500                        | 23&nbsp;625                                                  | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              | 12&nbsp;000                                      |
-| 4    | 179&nbsp;125                        | 23&nbsp;625                                                  | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |                                                  |
-| 5    | 202&nbsp;750                        | 11&nbsp;812.5                                                | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |                                                  |
-| 6    | 214&nbsp;562.5                      | 11&nbsp;812.5                                                | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |                                                  |
-| 7    | 226&nbsp;375                        | 5&nbsp;906.25                                                | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |                                                  |
-| …    |                                     |                                                              |                           |                                |              |                   |         |                 |                  |                                                  |
-
+| Year | ENERGY at the start of the year (M) | ENERGY minted for community (M) | DER host Baseline Rewards | DER host Service Contract Pool | Sensor hosts | Service Providers | Oracles | Operations Fund | veHNT Delegators | ENERGY minted for Investors & Founders |
+|------|-------------------------------------|---------------------------------|---------------------------|--------------------------------|--------------|-------------------|---------|-----------------|------------------|----------------------------------------|
+| 1    | 1&nbsp;000                          | 47&nbsp;250                     | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              | 24&nbsp;000                            |
+| 2    | 72&nbsp;250                         | 47&nbsp;250                     | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              | 24&nbsp;000                            |
+| 3    | 143&nbsp;500                        | 23&nbsp;625                     | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              | 12&nbsp;000                            |
+| 4    | 179&nbsp;125                        | 23&nbsp;625                     | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |                                        |
+| 5    | 202&nbsp;750                        | 11&nbsp;812.5                   | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |                                        |
+| 6    | 214&nbsp;562.5                      | 11&nbsp;812.5                   | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |                                        |
+| 7    | 226&nbsp;375                        | 5&nbsp;906.25                   | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |                                        |
+| …    |                                     |                                 |                           |                                |              |                   |         |                 |                  |                                        |
 
 Below is a high level overview of the reward flow from the emission curve to economic participants of the subnetwork:
-
 
 ```mermaid
 %%{init: {'theme': 'neutral'}}%%
@@ -255,7 +254,7 @@ Solar PV systems can contribute to frequency reserves by decreasing (curtailing)
 
 ### Anti-Gaming Measures
 
-The ENERGY Subnetwork will prioritize the prevention of gaming through a hybrid framework that will evolve over time. At a base level, the subnetwork will leverage knowledge of accurately deployed IOT gateways in addition to ENERGY-specific validation mechanisms ranging from daily satellite imagery to grid frequency checks. This ENERGY-specific validation can also be made available to the IOT Network. 
+The ENERGY Subnetwork will prioritize the prevention of gaming through a hybrid framework that will evolve over time. At a base level, the subnetwork will leverage knowledge of accurately deployed IOT gateways in addition to ENERGY-specific validation mechanisms ranging from daily satellite imagery to grid frequency checks. This ENERGY-specific validation can also be made available to the IOT Network.
 The administrator of anti-gaming measures will be the Helium Foundation, who will delegate a portion of the operations fund to Srcful AB for anti-gaming measures. As the first service provider on the ENERGY Network, Srcful is appropriately aligned to ensure that valid entities are rewarded on the network. The design of the Oracle infrastructure will allow for community evaluation of raw data emitted from ENERGY gateways.
 
 ### Network Rates & Fees
@@ -336,6 +335,7 @@ The ENERGY subnetwork will also help strengthen the IOT subnetwork as the softwa
 Applying the governance structure of the Helium community to power systems will increase the numbers of those involved in the influence and buildout of yet another very critical part of our infrastructure. Communication is essential for both sensors and people, but electrical energy is at the core of a modern society. Now is the time to be part of the start in the shift to a new model that is operated by the people - for the people.
 
 ### Note on Current Onboarding Fee
+
 We have implemented a $10 USD onboarding fee in DC due to the current structure of the A variable in the DAO utility score. For future subnetworks, we believe that the main proxy for the utility score should be DC burn for services rather than this onboarding fee. Srcful believes that the A score should be reconsidered in favor of using DC service burn as the proxy for network value, as the current onboarding fee may not be optimal for new subnetworks joining on fair terms.
 
 ## Definitions
