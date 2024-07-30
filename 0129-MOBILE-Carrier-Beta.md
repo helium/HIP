@@ -1,4 +1,4 @@
-# HIP 129: Carrier Beta Default Opt-In
+# HIP 129: MOBILE Carrier Beta
 
 - Author: [@zer0tweets](https://github.com/zer0tweets)
 - Start Date: 2024-07-22
