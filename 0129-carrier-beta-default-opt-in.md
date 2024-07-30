@@ -11,7 +11,7 @@
 
 ## Summary
 
-This Helium Improvement Proposal introduces the concept of a “Beta Carrier” and proposes that all MOBILE Wi-Fi Hotspots be opted in to service Beta Carrier subscribers by default, with the option to opt out at any time by the Hotspot operator.
+This Helium Improvement Proposal introduces the concept of a "Beta Carrier" and proposes that all MOBILE Wi-Fi Hotspots be opted in, by default, to service Beta Carrier subscribers, with the option to opt out at any time by the Hotspot operator. This HIP specifically reverses the restriction placed on Hotspot firmware manufacturers requiring that unrewarded traffic must be intentionally enabled by Hotspot operators. 
 
 ## Motivation
 
@@ -28,14 +28,11 @@ Wi-Fi Hotspot operators will have their Wi-Fi Hotspots opted in to serve Beta Ca
 
 ## Detailed Explanation
 
-- We formally introduce the Beta Carrier program.
-- Any carrier with 5 million or more active subscribers can join the Beta Carrier program without the need for a community vote to become a Service Provider.
-- Beta Carriers can unilaterally choose where and how much they pay for Wi-Fi data offload, including the ability not to pay at all.
-- However, Beta Carriers only get access to a limited number of Hotspots that are opted in to serve Beta Carriers.
-- Upon approval of this HIP, all Wi-Fi hotspots will be opted in to serve Beta Carriers. Any new Wi-Fi hotspots that come online will also be opted in to serve Beta Carriers by default.
-- Hotspot operators can opt in or out of serving Beta Carriers in the Helium Mobile Builder app or Helium Mobile dashboard at any time. Hotspot operators will also see data on which carriers are connecting to them each day and how much data they are using in the app and dashboard, allowing them to decide whether to stay opted in.
-- The Helium Mobile Network Planner will add a dashboard showing Hotspot ranking based on unique connections served during the trailing seven days, plus Proof-of-Coverage and data earnings for said Hotspots. Hotspots that earn a lot of POC rewards but serve no Beta Carriers (and vice versa) will be publicly visible.
-- This HIP proposes no changes to POC or data pricing for now, but the dashboard will provide public visibility into how the beta is progressing across carriers.
+In this proposal, we formally introduce the Beta Carrier program. Service Providers can onboard any carrier of reasonable scale (determined by the Service Provider's internal processes) as a Beta Carrier without the need for a community vote. Beta Carriers can choose where and how much they pay for Wi-Fi data offload through their relationship with the Service Provider, including the ability not to pay at all. However, Beta Carriers will only get access to the Hotspots that are opted in to serve Beta Carriers through their firmware and management applications. Abuse of the Beta Carrier program can lead to the Mobile Working Group or community recommending a slashing of the Service Provider's locked MOBILE stake and confirmed via community vote.
+
+In order to ensure that Hotspot operators may control how Beta Carriers expand services through the Helium network, certain expectations are set for Hotpot firmware and application developers. Upon approval of this HIP, Hotspot firmware may be updated to enable this new class of traffic (for Beta Carriers) and may be deployed in a matter where Hotspots are automatically opted into this feature with reasonable notification via typical communication channels between Hotspot manufacturers and their customers. Hotspot operators must still have the option to opt-out of serving Beta Carriers and opt back in at a later date. We recommend that firmware manufacturers enable visibility of which carriers are connected to them each day, the number of connections they are serving, and the amount of data being used for this subset of traffic. This will allow Hotspot operators to determine whether they want to continue to serve this traffic.
+
+This HIP proposes no changes to Proof-of-Coverage or Service Provider (non Beta Carrier) data pricing at this time, but we imagine that the data from these trials will provide public visibility into how the program is progressing across carriers and potentially influence future changes in the network.
 
 ## Drawbacks
 
