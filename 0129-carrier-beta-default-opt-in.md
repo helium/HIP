@@ -32,7 +32,7 @@ In this proposal, we formally introduce the Beta Carrier program. Service Provid
 
 In order to ensure that Hotspot operators may control how Beta Carriers expand services through the Helium network, certain expectations are set for Hotpot firmware and application developers. Upon approval of this HIP, Hotspot firmware may be updated to enable this new class of traffic (for Beta Carriers) and may be deployed in a matter where Hotspots are automatically opted into this feature with reasonable notification via typical communication channels between Hotspot manufacturers and their customers. Hotspot operators must still have the option to opt-out of serving Beta Carriers and opt back in at a later date. We recommend that firmware manufacturers enable visibility of which carriers are connected to them each day, the number of connections they are serving, and the amount of data being used for this subset of traffic. This will allow Hotspot operators to determine whether they want to continue to serve this traffic.
 
-This HIP proposes no changes to Proof-of-Coverage or Service Provider (non Beta Carrier) data pricing at this time now, but we imagine that the data from these trials will provide public visibility into how the program is progressing across carriers and potentially influence future changes in the network.
+This HIP proposes no changes to Proof-of-Coverage or Service Provider (non Beta Carrier) data pricing at this time, but we imagine that the data from these trials will provide public visibility into how the program is progressing across carriers and potentially influence future changes in the network.
 
 ## Drawbacks
 
