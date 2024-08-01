@@ -1,5 +1,7 @@
 # HIP 128: Energy Subnetwork
 
+# HIP 128: Energy Subnetwork
+
 - Author(s): [@frahlg](https://github.com/frahlg), [@jthiller](https://github.com/jthiller), [@abhay](https://github.com/abhay), [@T0bias0lss0n](https://github.com/h0bb3), [@leitet](https://github.com/leitet), [@VIKOLO](https://github.com/VIKOLO)
 - Start Date: 2024-07-03
 - Category: Economic, Technical, Governance
@@ -32,7 +34,7 @@ The ENERGY subnetwork is a practical expansion for Helium. It builds on the exis
 
 Global energy is shifting from centralized production, dominated by large-scale power plants, to a decentralized model where energy is produced closer to where it is consumed, with solar leading the charge.
 
-However, existing grid infrastructure, designed for centralized production, struggles to effectively integrate this dispersed and variable power. This is being addressed via coordinating Decentralized Energy Resources (DERs), such as electric vehicles, more responsive power demand technology, and energy storage systems. However, no system exists to adequately incentivize and support widespread DER coordination at a homeowner level.
+However, existing grid infrastructure, designed for centralized production, struggles to effectively integrate this dispersed and variable power. This is being addressed via coordinating Decentralized Energy Resources (DERs), such as solar pv and battery storage. However, no system exists to adequately incentivize and support widespread DER coordination at a homeowner level.
 
 There are already institutional markets for power management–often called _Demand and Response_ or _Ancillary Services_. However, these markets are generally unavailable to homeowners, because each individual energy resource is too small to qualify for participation. When these gated systems do permit participation, they disproportionately reward the centralized entities which manage them.
 
@@ -52,7 +54,9 @@ A typical installation consists of solar panels and an inverter, as shown in the
 
 The inverter's responsibility is to manage the energy from the solar panels, battery, home appliances, and the power grid. The inverter is connected to the local home network via the internet router (via Ethernet cable or Wi-Fi).
 
-An ENERGY Gateway connected to the home network via the internet router allows for the collection of data from the inverter and control of its operation. The ENERGY Gateway signs the data from the inverter so that the source of the data is known. The ENERGY Gateway can receive signed signals to control the behavior of the inverter.
+An ENERGY Gateway connected to the home network via the internet router allows for the collection of data from the inverter and control of its operation. The ENERGY Gateway signs the data from the inverter so that the source of the data is known. The ENERGY Gateway can receive signed signals to control the behavior of the inverter. The ENERGY Gateway can be an existing compatible IOT hotspot (a list of compatible IOT hotspots will be published in the future). The IOT hotspot will need a software update to support the ENERGY network. For brewity we will henceforth use the term ENERGY Gateway.
+
+In short to earn ENERGY rewards you will need an ENERGY Gateway , and at least one DER. An ENERGY Gateway can connect multiple DERs but a DER can connect to one and only one ENERGY Gateway.
 
 ```mermaid
 %%{init: {'theme': 'neutral'}}%%
@@ -89,19 +93,21 @@ The global market for ancillary services had a capitalization of over $9 billion
 
 There are a number of real world physical entities that comprise the network and perform the following functional and economic roles:
 
-| Name                     | Functional Role                                                                                                                                                                                             | Economic Role                                                                                                                                                                                                                |
-|--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| DER Host                 | Operates a connected DER through an ENERGY-capable Gateway including compatible IOT Hotspots (Dual Mining).                                                                                                 | Receives ENERGY rewards for sharing data from DER. Stakes ENERGY to qualify DERs for additional data and VPP service usage and receives ENERGY rewards for participating with controllable DER in the VPP (Energy services). |
-| Service Provider         | Promotes and enables data and VPP services to Clients. Aggregates DERs for market optimizations and guarantees technical requirements. Srcful AB is the first service provider at ENERGY subnetwork launch. | Receives payments for data and VPP services from Clients, burns HNT into Data Credits and settles data usage with DER Hosts. Stakes ENERGY to receive % of rewards from Energy Emissions contract.                           |
-| Client                   | Energy Companies, Grid Operators, or Aggregators that use the Energy subnetwork. Clients act in accordance with the country's Transmission System Operator.                                                 | Pays Service Providers to access data and/or the right to control DERs in the Energy subnetwork for VPP services.                                                                                                            |
-| Gateway Vendors          | Builds, sells and supports ENERGY-capable gateways. This includes firmware upgrades for existing Helium Hotspots to enable ENERGY subnetwork functionality (Dual Mining).                                   | Stakes ENERGY to access an NFT to be accepted to operate on the ENERGY subnetwork.                                                                                                                                           |
-| Sensors and Support Host | Provides needed high-quality data (e.g Frequency meters) to support the VPP, and special reward programs.                                                                                                   | Receives ENERGY mining rewards for verified sensor data or validation and support of the ENERGY subnetwork.                                                                                                                  |
-| Oracles                  | Relay data to L1 emission contract. Calculate incentive points for service providers and sensor hosts.                                                                                                      | Stakes ENERGY. Receive % of rewards from emissions contract                                                                                                                                                                  |
+| Name                     | Functional Role                                                                                                                                                                                             | Economic Role                                                                                                                                                                                                                                                             |
+|--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| DER Host                 | Operates a connected DER through an ENERGY-capable Gateway including compatible IOT Hotspots (Dual Mining).                                                                                                 | Receives ENERGY rewards for sharing data from DER. Stakes ENERGY to qualify DERs for additional data and VPP service usage and receives ENERGY rewards for participating with controllable DER in the VPP (Energy services).                                              |
+| Service Provider         | Promotes and enables data and VPP services to Clients. Aggregates DERs for market optimizations and guarantees technical requirements. Srcful AB is the first service provider at ENERGY subnetwork launch. | Receives payments for data and VPP services from Clients, burns HNT into Data Credits and settles data usage with DER Hosts. Stakes ENERGY to receive % of rewards from Energy Emissions contract. A future HIP will decide the split between multiple Service Providers. |
+| Client                   | Energy Companies, Grid Operators, or Aggregators that use the Energy subnetwork. Clients act in accordance with the country's Transmission System Operator.                                                 | Pays Service Providers to access data and/or the right to control DERs in the Energy subnetwork for VPP services.                                                                                                                                                         |
+| Gateway Vendors          | Builds, sells and supports ENERGY-capable gateways. This includes firmware upgrades for existing Helium Hotspots to enable ENERGY subnetwork functionality (Dual Mining).                                   | Stakes ENERGY to access an NFT to be accepted to operate on the ENERGY subnetwork.                                                                                                                                                                                        |
+| Sensors and Support Host | Provides needed high-quality data (e.g Frequency meters) to support the VPP, and special reward programs. The exact definition and rules for these will be defined in future HIPs.                          | Receives ENERGY mining rewards for verified sensor data or validation and support of the ENERGY subnetwork.                                                                                      |
+| Oracles                  | Relay data to L1 emission contract. Calculate incentive points for service providers and sensor hosts.                                                                                                      | Stakes ENERGY. Receive % of rewards from emissions contract                                                                                                                                                                                                               |
 
 To operate on the network, Service Providers and Gateway Vendors must control a respective NFT. Acquiring this NFT requires Gateway Vendors and Service Providers to:
 
 1. Gateway Vendors must stake 50M ENERGY, and new Service Providers must stake 500M ENERGY.
-2. Obtain ENERGY subnetwork governance approval (this HIP also provides governance approval for Srcful AB to be the first Service Provider when the network launches).
+2. Obtain ENERGY subnetwork governance approval.
+
+This HIP also provides governance approval for Srcful AB to be the first Service Provider when the network launches. Srcful AB will provide the needed stake within 3 months of network operation.
 
 ## Token Allocation
 
@@ -113,31 +119,31 @@ There will be a max supply of 250B ENERGY.
 
 The proposal is for halving of ENERGY issuance to occur every 2 years.
 
-We propose that 60B ENERGY be reserved for providing startup capital for Srcful AB and investors, required to launch the ENERGY subnetwork and develop the technical and operational infrastructure needed for its creation. These tokens will be minted over a 36-month period and will have a minimum lockup of 12 months after the token emission date.
+We propose that 60B ENERGY be reserved for providing startup capital for Srcful AB and investors, required to launch the ENERGY subnetwork and develop the technical and operational infrastructure needed for its creation. These tokens will be minted over a 36-month period and will have a minimum lockup of 12 months after the token emission date. These tokens will be emitted on a daily basis.
 
-190B ENERGY will be emitted mainly as community rewards but also for the continued operations of the network. Community rewards are divided into two parts: baseline rewards for participating in the subnetwork and service rewards for participating in energy services. The baseline rewards will receive 15% of emitted ENERGY, and the service rewards will receive 45%. Services are rewarded to reflect the respective DC burn of the DER host, with remaining tokens being burned.
+189B ENERGY will be emitted on a daily basis mainly as community rewards but also for the continued operations of the network. Community rewards are divided into two parts: baseline rewards for participating in the subnetwork and service rewards for participating in energy services. The baseline rewards will receive 15% of emitted ENERGY, and the service rewards will receive 45%. Services are rewarded to reflect the respective DC burn of the DER host, with remaining tokens being burned.
 
-The ENERGY protocol will use net emissions to replenish burned tokens into service rewards using a 30-day average of burned tokens, with a cap. The cap will initially be set at 1% of current emissions but will likely be subject to change.
+The ENERGY protocol will use net emissions to replenish burned tokens into service rewards using a 30-day average of burned tokens, with a cap. The cap will initially be set at 1% of current emissions minted for Community but will likely be subject to change.
 
 For clarity, the emission schedule is as follows:
 
-| Year | ENERGY at the start of the year (M) | ENERGY minted for community (M) | DER host Baseline Rewards | DER host Service Contract Pool | Sensor hosts | Service Providers | Oracles | Operations Fund | veHNT Delegators | ENERGY minted for Investors & Founders |
-|------|-------------------------------------|---------------------------------|---------------------------|--------------------------------|--------------|-------------------|---------|-----------------|------------------|----------------------------------------|
-| 1    | 1&nbsp;000                          | 47&nbsp;250                     | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              | 24&nbsp;000                            |
-| 2    | 72&nbsp;250                         | 47&nbsp;250                     | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              | 24&nbsp;000                            |
-| 3    | 143&nbsp;500                        | 23&nbsp;625                     | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              | 12&nbsp;000                            |
-| 4    | 179&nbsp;125                        | 23&nbsp;625                     | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |                                        |
-| 5    | 202&nbsp;750                        | 11&nbsp;812.5                   | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |                                        |
-| 6    | 214&nbsp;562.5                      | 11&nbsp;812.5                   | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |                                        |
-| 7    | 226&nbsp;375                        | 5&nbsp;906.25                   | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |                                        |
-| …    |                                     |                                 |                           |                                |              |                   |         |                 |                  |                                        |
+| Year | ENERGY at the start of the year (M) | ENERGY minted for community (M) | DER host Baseline Rewards | DER host Service Contract Pool | Sensor hosts | Service Providers | Oracles | Operations Fund | veHNT Delegators | ENERGY minted for Investors & Founders (M) |
+|------|-------------------------------------|---------------------------------|---------------------------|--------------------------------|--------------|-------------------|---------|-----------------|------------------|--------------------------------------------|
+| 1    | 1&nbsp;000                          | 47&nbsp;250                     | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              | 24&nbsp;000                                |
+| 2    | 72&nbsp;250                         | 47&nbsp;250                     | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              | 24&nbsp;000                                |
+| 3    | 143&nbsp;500                        | 23&nbsp;625                     | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              | 12&nbsp;000                                |
+| 4    | 179&nbsp;125                        | 23&nbsp;625                     | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |                                            |
+| 5    | 202&nbsp;750                        | 11&nbsp;812.5                   | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |                                            |
+| 6    | 214&nbsp;562.5                      | 11&nbsp;812.5                   | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |                                            |
+| 7    | 226&nbsp;375                        | 5&nbsp;906.25                   | 15 %                      | 45 %                           | 5 %          | 20 %              | 4 %     | 5 %             | 6 %              |                                            |
+| …    |                                     |                                 |                           |                                |              |                   |         |                 |                  |                                            |
 
 Below is a high level overview of the reward flow from the emission curve to economic participants of the subnetwork:
 
 ```mermaid
 %%{init: {'theme': 'neutral'}}%%
 flowchart LR
-    HETEmissions[HET Emissions Contract\n190B ENERGY]:::dashed
+    HETEmissions[HET Emissions Contract\n189B ENERGY]:::dashed
 
     OperationsFund[Operations Fund]:::dashed
     veHNTDelegators[veHNT Delegators]:::dashed
@@ -153,7 +159,7 @@ flowchart LR
 
     HETEmissions -->|5%|OperationsFund
     HETEmissions -->|6%|veHNTDelegators
-    HETEmissions -->|45%|RewardOrBurn
+    HETEmissions -->|45% Service rewards|RewardOrBurn
     HETEmissions --> |15% Baseline rewards|DERHosts
 
 
