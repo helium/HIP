@@ -365,8 +365,14 @@ The ENERGY subnetwork will also help strengthen the IOT subnetwork as the softwa
 
 Applying the governance structure of the Helium community to power systems will increase the numbers of those involved in the influence and buildout of yet another very critical part of our infrastructure. Communication is essential for both sensors and people, but electrical energy is at the core of a modern society. Now is the time to be part of the start in the shift to a new model that is operated by the people - for the people.
 
+# Stakeholders
 
-## Definitions
+# Implementation
+Onboarding of an ENERGY gateway will be done using the current Helium Wallet App. A specific ENERGY webb app will be developed to handle onboarding and configuration of DERs, etc. The ENERGY webb app will utilize the Helium Wallet App for authentication and signing of DER specific settings. 
+
+Srcful AB and Helium Foundation will be responsible for the implementation of the ENERGY network.
+
+# Definitions
 
 - [Decentralized/Distributed Energy Resource (DER)](https://en.wikipedia.org/wiki/Distributed_generation) - Electrical generation and storage performed by a variety of small, grid-connected or distribution system-connected devices.
 - [Photovoltaic (PV)](https://en.wikipedia.org/wiki/Photovoltaics) - The conversion of light into electricity using semiconducting materials. Typically solar cells, which generate electrical power.
