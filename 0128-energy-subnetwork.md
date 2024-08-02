@@ -309,6 +309,25 @@ Oracles within the ENERGY subnetwork ensures data integrity, pricing accuracy, a
 - Gather and process market data to update pricing in given periods, reflecting changes in supply and demand, regional pricing variations, and emergency energy needs. This ensures that all transactions within the VPP are conducted at fair market rates, maximizing returns for DER hosts and minimizing costs for Clients.
 - Calculate and distribute rewards to DER hosts based on the baseline rewards.
 
+## ENERGY Subnetwork Governance
+The ENERGY subnetwork will use the current vote escrowed token model for Helium tokens and HNT stakers will be able to delegate HNT to ENERGY as they are able to delegate to IOT and MOBILE. ENERGY token holders will be able to lock up ENERGY tokens for veENERGY voting power for Energy network governance, there are no rewards for locking up ENERGY for veENERGY at this time.
+
+ENERGY will be a Network that participates in the Utility score described in [HIP 51 Omni Protocol PoC Incentive Model section](https://github.com/helium/HIP/blob/main/0051-helium-dao.md#omni-protocol-poc-incentive-model) and subsequent [HIP 88](https://github.com/helium/HIP/blob/main/0088-adjustment-of-dao-utility-a-score.md).
+* ${V}$ is the staked HNT delegated to ENERGY
+* ${D}$ is the DCs burned
+* ${A}$ is the $10 Onboarding Fee paid per gateway
+
+### ENERGY DC burn 
+The ENERGY network currently achieves DC burn by the following:
+* Payment for ENERGY services, currently control of a VPP by a service provider on the ENERGY network
+* Onboard of a Hotspot/Gateway on the ENERGY network
+
+
+### Note on Current Onboarding Fee
+
+We have implemented a \$10 USD onboarding fee in DC due to the current structure of the ${A}$ variable in the Utility score. For future subnetworks, Srcful believes that the ${A}$ score should be reconsidered in favor of using DC service burn as the proxy for network value, as the current onboarding fee may not be optimal for new subnetworks joining on fair terms.
+
+
 # Rationale
 
 As decentralized physical infrastructure has risen, token incentives are a path forward when it comes to coordinating the deployment of physical resources. Solar and battery storage, as a residential asset class, will benefit from the people-powered growth and management that comes with web3.
@@ -346,9 +365,6 @@ The ENERGY subnetwork will also help strengthen the IOT subnetwork as the softwa
 
 Applying the governance structure of the Helium community to power systems will increase the numbers of those involved in the influence and buildout of yet another very critical part of our infrastructure. Communication is essential for both sensors and people, but electrical energy is at the core of a modern society. Now is the time to be part of the start in the shift to a new model that is operated by the people - for the people.
 
-### Note on Current Onboarding Fee
-
-We have implemented a $10 USD onboarding fee in DC due to the current structure of the A variable in the DAO utility score. For future subnetworks, we believe that the main proxy for the utility score should be DC burn for services rather than this onboarding fee. Srcful believes that the A score should be reconsidered in favor of using DC service burn as the proxy for network value, as the current onboarding fee may not be optimal for new subnetworks joining on fair terms.
 
 ## Definitions
 
