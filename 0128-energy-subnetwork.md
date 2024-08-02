@@ -107,6 +107,8 @@ To operate on the network, Service Providers and Gateway Vendors must control a 
 1. Gateway Vendors must stake 50M ENERGY, and new Service Providers must stake 500M ENERGY.
 2. Obtain ENERGY subnetwork governance approval.
 
+Vendors may add ENERGY to their stake and DC and ENERGY to their onboarding wallet to avoid depletion.
+
 This HIP also provides governance approval for Srcful AB to be the first Service Provider when the network launches. Srcful AB will provide the needed stake within 3 months of network operation.
 
 ## Token Allocation
