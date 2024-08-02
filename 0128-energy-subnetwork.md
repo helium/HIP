@@ -366,6 +366,11 @@ The ENERGY subnetwork will also help strengthen the IOT subnetwork as the softwa
 Applying the governance structure of the Helium community to power systems will increase the numbers of those involved in the influence and buildout of yet another very critical part of our infrastructure. Communication is essential for both sensors and people, but electrical energy is at the core of a modern society. Now is the time to be part of the start in the shift to a new model that is operated by the people - for the people.
 
 # Stakeholders
+This HIP proposes a new subnetwork as such has an overall impact the entire ecosystem. Specifically:
+* Helium Foundation - will need to support and provide resources to a new subnetwork.
+* Srcful AB - will need to be the first Service Provider and implement the subnetwork within the bounds of the Helium subnetwork structure.
+* IoT Subnetwork - will be affected by HNT emission sharing, dual mining capabilities, and as a utility for sensor data transportation.
+* Mobile Subnetwork - will be affected by HNT emision sharing.
 
 # Implementation
 Onboarding of an ENERGY gateway will be done using the current Helium Wallet App. A specific ENERGY webb app will be developed to handle onboarding and configuration of DERs, etc. The ENERGY webb app will utilize the Helium Wallet App for authentication and signing of DER specific settings. 
