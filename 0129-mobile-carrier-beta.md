@@ -11,7 +11,7 @@
 
 ## Summary
 
-This Helium Improvement Proposal introduces the concept of a "Beta Carrier" and proposes that all MOBILE Wi-Fi Hotspots be opted in, by default, to service Beta Carrier subscribers, with the option to opt out at any time by the Hotspot operator. This HIP specifically reverses the restriction placed on Hotspot firmware manufacturers requiring that unrewarded traffic must be intentionally enabled by Hotspot operators. 
+This Helium Improvement Proposal introduces the concept of a "Beta Carrier" and proposes that all MOBILE Wi-Fi Hotspots be remotely opted in to service Beta Carrier subscribers, with the ability of the Hotspot operator to opt out thereafter. This HIP specifically and uniquely contravenes the restriction placed on Hotspot firmware manufacturers requiring that unrewarded traffic must be intentionally enabled by Hotspot operators for the purpose of expanding the service.
 
 ## Motivation
 
@@ -20,11 +20,11 @@ Helium Mobile, the first Service Provider on the MOBILE subnetwork, is currently
 - They would need to retain control over when and how much they pay for specific locations.
 - They would need exposure to a larger fleet of Hotspots that they can connect to and offload data to on-demand, to make the Helium Network relevant to them.
 
-We believe that opening up the rest of the Hotspots in the Helium Network to MNOs will accelerate beta evaluations by carriers and allow Hotspot owners to start monetizing MNO data traffic faster.
+We believe that opening up the rest of the Hotspots in the Helium Network to MNOs will accelerate beta evaluations by carriers and allow Hotspot owners to start monetizing MNO data traffic sooner.
 
 ## Stakeholders
 
-Wi-Fi Hotspot operators will have their Wi-Fi Hotspots opted in to serve Beta Carrier traffic, irrespective of that traffic being paid, but they will have the option to opt-out at any point via the Hotspot dashboard or Helium Mobile Builder app.
+Wi-Fi Hotspot operators will have their Wi-Fi Hotspots opted-in to serve Beta Carrier traffic, irrespective of that traffic being paid, and they will have the option to opt-out at any point via the Hotspot dashboard or Helium Mobile Builder app.
 
 ## Detailed Explanation
 
@@ -50,7 +50,7 @@ Some community members have voiced the opinion that limits to data access should
 
 ## Deployment Impact
 
-Nova Labs will complete the implementation, should this HIP pass voting.
+Should this HIP pass, Nova Labs will complete the implementation and will collaboration with the foundation on deploying any required on-chain changes.  
 
 ## Success Metrics 
 
