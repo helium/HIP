@@ -50,7 +50,7 @@ Some community members have voiced the opinion that limits to data access should
 
 ## Deployment Impact
 
-Should this HIP pass, Nova Labs will complete the implementation and will collaboration with the foundation on deploying any required on-chain changes.  
+Should this HIP pass, Nova Labs will complete the implementation and will collaborate with the Helium Foundation on deploying any required on-chain changes.  
 
 ## Success Metrics 
 
