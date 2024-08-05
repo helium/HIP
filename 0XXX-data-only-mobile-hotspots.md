@@ -1,4 +1,4 @@
-# HIP XXX: Data-only MOBILE Hotspots 
+# HIP 130: Data-only MOBILE Hotspots 
 
 - Author: @zer0tweets
 - Start Date: 
