@@ -17,8 +17,8 @@ Most commercial venues like airports or malls already have Wi-Fi coverage. To gr
 
 ## Stakeholders
 
-Operators of the pre-existing Wi-Fi networks that support Passpoint will be able to add their Hotspots to the network, instead of having to buy brand new hardware from vendors certified by the Helium network 
-Network users will be able to connect to these Hotspots using the same authentication certificate they currently use for accessing greenfield Helium Hotspots 
+- Operators of the pre-existing Wi-Fi networks that support Passpoint will be able to add their Hotspots to the network, instead of having to buy brand new hardware from vendors certified by the Helium network 
+- Network users will be able to connect to these Hotspots using the same authentication certificate they currently use for accessing greenfield Helium Hotspots 
  
 ## Detailed Explanation
 
