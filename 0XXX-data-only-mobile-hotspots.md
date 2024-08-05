@@ -1,10 +1,10 @@
 # HIP 130: Data-only MOBILE Hotspots 
 
-- Author: @zer0tweets
-- Start Date: 
+- Author: [@zer0tweets](https://github.com/zer0tweets)
+- Start Date: 2024-08-05
 - Category: Technical, Economic
-- Original HIP PR: [#]()
-- Tracking Issue: [#]()
+- Original HIP PR: [#1064](https://github.com/helium/HIP/pull/1064)
+- Tracking Issue: [#1067](https://github.com/helium/HIP/issues/1067)
 - Voting Requirements: veMOBILE Holders
 
 ## Summary
