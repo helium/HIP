@@ -143,6 +143,7 @@ If you have questions or feedback, please see the [Discussion](https://github.co
 | 127 | [Dynamic IOT Proof-of-Coverage](0127-dynamic-iot-poc.md)                                                                                            | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/1045)                |
 | 128 | [Energy Subnetwork](0128-energy-subnetwork.md)                                                                                                      | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/1051)                |
 | 129 | [MOBILE Carrier Beta](0129-mobile-carrier-beta.md)                                                                                                  | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/1058)                |
+| 130 | [Data-only MOBILE Hotspots](0130-data-only-mobile-hotspots.md)                                                                                      | [<img src="https://img.shields.io/badge/Status-In%20Discussion-orange"></img>](https://github.com/helium/HIP/issues/1067)                |
 
 ## HIP Status Key
 
