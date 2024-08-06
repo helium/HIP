@@ -54,7 +54,7 @@ The inverter's responsibility is to manage the energy from the solar panels, bat
 
 An ENERGY Gateway connected to the home network via the internet router allows for the collection of data from the inverter and control of its operation. The ENERGY Gateway signs the data from the inverter so that the source of the data is known. The ENERGY Gateway can receive signed signals to control the behavior of the inverter. The ENERGY Gateway can be an existing compatible IOT hotspot (a list of compatible IOT Hotspots will be published in the future). The IOT Hotspot will need a software update to support the ENERGY network.
 
-In short to earn ENERGY rewards you will need an ENERGY Gateway , and at least one DER. An ENERGY Gateway can connect multiple DERs but a DER can connect to one and only one ENERGY Gateway.
+In short, to earn ENERGY rewards you will need an ENERGY Gateway and at least one DER. An ENERGY Gateway can connect multiple DERs but a DER can connect to only one ENERGY Gateway.
 
 ```mermaid
 %%{init: {'theme': 'neutral'}}%%
