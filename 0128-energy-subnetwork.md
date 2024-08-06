@@ -310,7 +310,7 @@ Oracles within the ENERGY subnetwork ensures data integrity, pricing accuracy, a
 - Calculate and distribute rewards to DER hosts based on the baseline rewards.
 
 ## ENERGY Subnetwork Governance
-The ENERGY subnetwork will use the current vote escrowed token model for Helium tokens and HNT stakers will be able to delegate HNT to ENERGY as they are able to delegate to IOT and MOBILE. ENERGY token holders will be able to lock up ENERGY tokens for veENERGY voting power for Energy network governance, there are no rewards for locking up ENERGY for veENERGY at this time.
+The ENERGY subnetwork will use the current vote escrowed token model for Helium tokens and HNT stakers will be able to delegate HNT to ENERGY as they are able to delegate to IOT and MOBILE. ENERGY token holders will be able to lock up ENERGY tokens as veENERGY voting power for ENERGY subnetwork governance. There are no rewards for locking up ENERGY as veENERGY at this time.
 
 ENERGY will be a Network that participates in the Utility score described in [HIP 51 Omni Protocol PoC Incentive Model section](https://github.com/helium/HIP/blob/main/0051-helium-dao.md#omni-protocol-poc-incentive-model) and subsequent [HIP 88](https://github.com/helium/HIP/blob/main/0088-adjustment-of-dao-utility-a-score.md).
 * ${V}$ is the staked HNT delegated to ENERGY
