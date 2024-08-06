@@ -325,7 +325,7 @@ The ENERGY network currently achieves DC burn by the following:
 
 ### Note on Current Onboarding Fee
 
-We have implemented a &#36;10 USD onboarding fee in DC due to the current structure of the ${A}$ variable in the Utility score. For future subnetworks, Srcful believes that the ${A}$ score should be reconsidered in favor of using DC service burn as the proxy for network value, as the current onboarding fee may not be optimal for new subnetworks joining on fair terms.
+We have implemented a $10 USD onboarding fee in DC due to the current structure of the *A* variable in the Utility score. For future subnetworks, Srcful believes that the *A* score should be reconsidered in favor of using DC service burn as the proxy for network value, as the current onboarding fee may not be optimal for new subnetworks joining on fair terms.
 
 
 # Rationale
