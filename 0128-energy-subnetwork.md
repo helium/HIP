@@ -52,7 +52,7 @@ A typical installation consists of solar panels and an inverter, as shown in the
 
 The inverter's responsibility is to manage the energy from the solar panels, battery, home appliances, and the power grid. The inverter is connected to the local home network via the internet router (via Ethernet cable or Wi-Fi).
 
-An ENERGY Gateway connected to the home network via the internet router allows for the collection of data from the inverter and control of its operation. The ENERGY Gateway signs the data from the inverter so that the source of the data is known. The ENERGY Gateway can receive signed signals to control the behavior of the inverter. The ENERGY Gateway can be an existing compatible IOT hotspot (a list of compatible IOT hotspots will be published in the future). The IOT hotspot will need a software update to support the ENERGY network. For brewity we will henceforth use the term ENERGY Gateway.
+An ENERGY Gateway connected to the home network via the internet router allows for the collection of data from the inverter and control of its operation. The ENERGY Gateway signs the data from the inverter so that the source of the data is known. The ENERGY Gateway can receive signed signals to control the behavior of the inverter. The ENERGY Gateway can be an existing compatible IOT hotspot (a list of compatible IOT Hotspots will be published in the future). The IOT Hotspot will need a software update to support the ENERGY network.
 
 In short to earn ENERGY rewards you will need an ENERGY Gateway , and at least one DER. An ENERGY Gateway can connect multiple DERs but a DER can connect to one and only one ENERGY Gateway.
 
