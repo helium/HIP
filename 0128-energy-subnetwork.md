@@ -1,7 +1,5 @@
 # HIP 128: Energy Subnetwork
 
-# HIP 128: Energy Subnetwork
-
 - Author(s): [@frahlg](https://github.com/frahlg), [@jthiller](https://github.com/jthiller), [@abhay](https://github.com/abhay), [@T0bias0lss0n](https://github.com/h0bb3), [@leitet](https://github.com/leitet), [@VIKOLO](https://github.com/VIKOLO)
 - Start Date: 2024-07-03
 - Category: Economic, Technical, Governance
