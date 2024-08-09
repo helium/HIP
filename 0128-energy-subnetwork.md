@@ -314,7 +314,7 @@ The ENERGY subnetwork will use the current vote escrowed token model for Helium 
 
 As a subnetwork in Helium, ENERGY will participate in the network utility score described in [HIP 51's "Omni Protocol PoC Incentive Model" section](https://github.com/helium/HIP/blob/main/0051-helium-dao.md#omni-protocol-poc-incentive-model) and subsequent [HIP 88](https://github.com/helium/HIP/blob/main/0088-adjustment-of-dao-utility-a-score.md).
 * ${V}$ is the staked HNT delegated to ENERGY
-* ${D}$ is the DCs burned
+* ${D}$ is the DCs burned for ENERGY services
 * ${A}$ is the $10 Onboarding Fee paid per gateway
 
 ### ENERGY DC burn 
