@@ -1,6 +1,6 @@
 # HIP-xxx: Bridging Gap Between Verification Mappers and Anti-Gaming Measures
 
-- Author(s): @Fizzy99
+- Author(s): [Fizzy99](https://github.com/mrfizzy99)
 - Start Date: 2024-08-10
 - Category: Economic, Technical
 - Original HIP PR: 
