@@ -46,7 +46,7 @@ This HIP extends the scope of HIP-125 as follows:
 - PoC rewards of affected hotspots will be reduced to a Oracle Hex Boost multiplier of 0.00x on all hexes covered by that hotspot or radio if there is no qualifing and/or accurate CDR. 
 - This HIP serves as a starting point for how rewards can be affected by the implementation of HIP-118, but less strict as only one qualifing and/or accurate CDR is required until HIP-118 phase-2 is implemented. 
 - Although a network operator may have its Oracle Hex Boost multiplier reduced, it can still earn rewards by way of data transfer.  Hotspots or radios are not banned.
-- Once a qualifing and/or accurate CDR is produiced, the hotspot/radio will return to its orginal Oracle Hex Boost multiplier after 1 epoch.
+- Once a qualifing and/or accurate CDR is produced, the hotspot/radio will return to its orginal Oracle Hex Boost multiplier after 1 epoch.
 - Reasserting a hotspot/radio will reset the CDR, and another qualifing and/or accurate CDR will be required for the new location.
 - SPs can reduce the Oracle Hex Boosting multiplier of a hotspot or radios if they have reasonable evidence the POI hexes are being taken advantage of by a malicious actor (such as inaccurate an CDR).
 - Deployers will open a support ticket with the SP if they feel they have been mistakenly identified as malicious. This may involve, but not limited to, the SP attempting a physical verification of coverage at a given location, which would involve a connection to a radio (Wi-Fi or CBRS) to verify its existence. 
