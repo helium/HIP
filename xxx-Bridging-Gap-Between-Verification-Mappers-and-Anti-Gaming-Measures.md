@@ -18,7 +18,8 @@
 
 ## Summary
 This proposal amends HIP-125 (Temporary Anti-Gaming Measures For Boosted Hexes) to be extended to “Oracle Hex Boosts” (HIP-103 - MOBILE Oracle Hex Boosting) and further the expectations of HIP-118 (Verification Mapping for MOBILE Network). 
-This extension (of HIP-125) when implemented in this HIP will be limited to Oracle Hex Boosts within POI areas, designated as A** and B** areas. Rewards for mobile hotspots that engage in malicious activity to earn the higher multiplier rewards of Oracle Hex Boosts or hotspots that have no CDR data will be reduced to a Oracle Hex Boost multiplier of 0.00x. Only one qualifing and/or accurate CDR is required to qualify for full rewards once again. 
+This extension (of HIP-125) when implemented in this HIP will be limited to Oracle Hex Boosts within POI areas, designated as A** and B** areas. Rewards for mobile hotspots that engage in malicious activity to earn the higher multiplier rewards of Oracle Hex Boosts or hotspots that have no CDR data will be reduced to a Oracle Hex Boost multiplier of 0.00x. Only one qualifying and/or accurate CDR is required to qualify for full rewards once again.
+
 
 
 
