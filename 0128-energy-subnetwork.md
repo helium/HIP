@@ -1,6 +1,6 @@
 # HIP 128: Energy Subnetwork
 
-- Author(s): [@frahlg](https://github.com/frahlg), [@jthiller](https://github.com/jthiller), [@abhay](https://github.com/abhay), [@T0bias0lss0n](https://github.com/h0bb3), [@leitet](https://github.com/leitet), [@VIKOLO](https://github.com/VIKOLO)
+- Author(s): [@frahlg](https://github.com/frahlg), [@T0bias0lss0n](https://github.com/h0bb3), [@leitet](https://github.com/leitet), [@VIKOLO](https://github.com/VIKOLO), [Helium Foundation](https://helium.foundation)
 - Start Date: 2024-07-03
 - Category: Economic, Technical, Governance
 - Original HIP PR: [#1050](https://github.com/helium/HIP/pull/1050)
@@ -27,6 +27,8 @@ The ENERGY subnetwork is designed to create value for the entire Helium ecosyste
    The ENERGY subnetwork aligns Helium with global sustainability goals, potentially attracting environmentally conscious users and partners. This could open up new opportunities for grants, partnerships, and positive public relations for Helium.
 
 The ENERGY subnetwork is a practical expansion for Helium. It builds on the existing network while tapping into the growing renewable energy market, solving the real world problems of the acceleration renewable power. This addition will increase IOT network usage, drive more Data Credit burn, and give Hotspot operators new ways to earn.
+
+Disclosure: This HIP is a formal proposal co-authored by the Helium Foundation along with the Srcful AB team.
 
 ## The Problem
 
