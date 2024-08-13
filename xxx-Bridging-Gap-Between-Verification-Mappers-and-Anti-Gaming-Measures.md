@@ -1,4 +1,4 @@
-# HIP-xxx: Bridging Gap Between Verfication Mappers and Anti-Gaming Measures
+# HIP-xxx: Bridging Gap Between Verification Mappers and Anti-Gaming Measures
 
 - Author(s): @Fizzy99
 - Start Date: 2024-08-10
