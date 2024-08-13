@@ -1,6 +1,8 @@
 # HIP-xxx: Bridging Gap Between Verification Mappers and Anti-Gaming Measures
 
-- Author(s): [Fizzy99](https://github.com/mrfizzy99)
+- Author(s): [Fizzy99](https://github.com/mrfizzy99), [JD](https://github.com/bigbuffer
+), [Rendell](https://github.com/RendellD85
+)
 - Start Date: 2024-08-10
 - Category: Economic, Technical
 - Original HIP PR: 
@@ -18,7 +20,7 @@
 
 ## Summary
 This proposal amends HIP-125 (Temporary Anti-Gaming Measures For Boosted Hexes) to be extended to “Oracle Hex Boosts” (HIP-103 - MOBILE Oracle Hex Boosting) and further the expectations of HIP-118 (Verification Mapping for MOBILE Network). 
-This extension (of HIP-125) when implemented in this HIP will be limited to Oracle Hex Boosts within POI areas, designated as A** and B** areas. Rewards for mobile hotspots that engage in malicious activity to earn the higher multiplier rewards of Oracle Hex Boosts or hotspots that have no CDR data will be reduced to a Oracle Hex Boost multiplier of 0.00x. Only one qualifying and/or accurate CDR is required to qualify for full rewards once again.
+This extension (of HIP-125) when implemented in this HIP will be limited to Oracle Hex Boosts within POI areas, designated as A** and B** areas. Rewards for mobile hotspots that engage in malicious activity to earn the higher multiplier rewards of Oracle Hex Boosts or hotspots that have no CDR data will be reduced to a Oracle Hex Boost multiplier of 0.00x. Only one qualifing and/or accurate CDR is required to qualify for full rewards once again.
 
 
 
@@ -42,11 +44,11 @@ Unlike HIP-125 which only targets SP Boosted Hexes, this will target Oracle Hex 
 Only *ONE* accurate CDR report after the most recent location assertion is required to earn full PoC for the duration of the time that this HIP is active.
 
 This HIP extends the scope of HIP-125 as follows:
-- Network will be given 7 days for communication after passing on what EXACTLY they need to do in order to receive a qualifing and accurate CDR on their hotspots and/or radios. 
+- Deployers and Discovery Mapps will be given 7 days for communication by Nova and/or Helium Mobile though medias of Discord Announcements and Push Notifications/Inbox in both Helium Mobile and Builder apps on mobile; passing on how critical deployers and mappers roles would be to this new form of mapping and PoC together, and what to do in order to receive or give a qualifing and accurate CDR on theirs or other deployers hotspots/radios. 
 - PoC rewards of affected hotspots will be reduced to a Oracle Hex Boost multiplier of 0.00x on all hexes covered by that hotspot or radio if there is no qualifing and/or accurate CDR. 
 - This HIP serves as a starting point for how rewards can be affected by the implementation of HIP-118, but less strict as only one qualifing and/or accurate CDR is required until HIP-118 phase-2 is implemented. 
 - Although a network operator may have its Oracle Hex Boost multiplier reduced, it can still earn rewards by way of data transfer.  Hotspots or radios are not banned.
-- Once a qualifing and/or accurate CDR is produced, the hotspot/radio will return to its orginal Oracle Hex Boost multiplier after 1 epoch.
+- Once a qualifing and/or accurate CDR is produced, the hotspot/radio will return to its original Oracle Hex Boost multiplier after 1 epoch.
 - Reasserting a hotspot/radio will reset the CDR, and another qualifing and/or accurate CDR will be required for the new location.
 - SPs can reduce the Oracle Hex Boosting multiplier of a hotspot or radios if they have reasonable evidence the POI hexes are being taken advantage of by a malicious actor (such as inaccurate an CDR).
 - Deployers will open a support ticket with the SP if they feel they have been mistakenly identified as malicious. This may involve, but not limited to, the SP attempting a physical verification of coverage at a given location, which would involve a connection to a radio (Wi-Fi or CBRS) to verify its existence. 
@@ -69,6 +71,7 @@ None.
 
 ## Implementation
 
+Nova and Helium mobile have agreed to the making the implementation of this 
 Mobile Oracles will report tagging of the hotspots for suspicious activity by the SPs.  This off-chain data will record both tagging and untagging activities for the concerned hotspots. This data will be shared in a way that community applications can allow a deployer to understand concerned hotspots have been flagged.
 Current SP has indicated they will use their existing support ticket system to manage deployers that feel they have been mistakenly identified as malicious, including an internal escalation procedure to help mitigate support tickets being left unaddressed indefinitely.
 
