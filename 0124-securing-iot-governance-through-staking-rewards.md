@@ -31,6 +31,8 @@ Vote proxying will count towards this and IoT Working group elections will count
 
 We also wish to add a ABSTAIN option to all votes to allow users to show they dont wish to vote yes or no, and allow their vote to count towards the required 2 of 4 votes needed to receive rewards.
 
+ABSTAIN votes will not count towards the vote tallies, with 66.7% still needed for a vote to pass, but will count towards qourum of the vote.
+
 ## Stakeholders
 
 All current and future holders of IOT and veIOT are stakeholders in this proposal. Participants who lock IOT benefit from rewards, and all IOT holders benefit from long-term health and stability of the network promoted by greater governance participation.
