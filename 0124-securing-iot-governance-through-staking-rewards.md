@@ -15,7 +15,7 @@ The authors of this HIP hold veIOT.
 
 ## Summary
 
-This Helium Improvement Proposal (HIP) aims to increase voting turnout. It suggests to achieve this goal indirectly by paying rewards for locking IOT, thus reducing the cost of acquiring voting power (veIOT). The payments will discontinue once rewarded veIOT staking to decentralized Orcacles is implemented.
+This Helium Improvement Proposal (HIP) aims to increase IoT HIP voting turnout. It suggests to achieve this goal by paying rewards to locked IOT where the owner has directly voted in the last 2 of 4 IoT HIPS (including working group elections) or indrectly voted by assigning their locked position to a vote proxy. The payments will discontinue once rewarded veIOT staking to decentralized Orcacles is implemented.
 
 ## Motivation
 
@@ -26,7 +26,10 @@ IOT that is locked cannot be moved or sold. This can be seen as a cost of voting
 
 Once decentralized Oracles are implemented and pay IOT rewards to the veIOT holders who delegate to them, the cost of locking IOT will be offset by these delegation rewards, mitigating the current disincentive for participating in HIP votes.
 
-Until then, we propose to reduce the opportunity cost of acquiring veIOT voting power by paying rewards to locked IOT positions. This will encourage more individuals to participate in IOT governance using (larger) locked IOT positions, thereby strengthening the network's resilience against potential governance attacks during periods of low participation.
+Until then, we propose to reduce the opportunity cost of acquiring veIOT voting power by paying rewards to locked IOT positions where the user has voted in the last 2 of 4 votes.
+Vote proxying will count towards this and IoT Working group elections will count. This will encourage more individuals to participate in IOT governance using (larger) locked IOT positions, thereby strengthening the network's resilience against potential governance attacks during periods of low participation.
+
+We also wish to add a ABSTAIN option to all votes to allow users to show they dont wish to vote yes or no, and allow their vote to count towards the required 2 of 4 votes needed to receive rewards.
 
 ## Stakeholders
 
@@ -36,10 +39,8 @@ All current and future holders of IOT and veIOT are stakeholders in this proposa
 
 1. **Emissions Apportionment:**
     - Implement a sliding scale for emissions allocation to lockup rewards for veIOT based on the total amount of IOT locked:
-        - **1%** of emissions if the **total IOT locked** is at least **1.5 billion**.
-        - **2%** of emissions if the **total IOT locked** is at least **2.5 billion**.
-        - **3%** of emissions if the **total IOT locked** is at least **4 billion**.
-        - **4%** of emissions if the **total IOT locked** is at least **6 billion**.
+        - **2%** of emissions if the **total IOT locked** is at least **1.5 billion**.
+        - **4%** of emissions if the **total IOT locked** is at least **3 billion**.
     - This allocation will be sourced from the reward bucket assigned to Oracles in HIP-52, which is currently not distributed.
     - Post the implementation of decentralized Oracles, this allocation will revert to Oracle rewards, providing veIOT holders with the opportunity to earn rewards by staking to Oracles.
 
@@ -48,7 +49,7 @@ All current and future holders of IOT and veIOT are stakeholders in this proposa
 
 ## Drawbacks
 
-- Although this proposal aims to increase the amount of locked IOT, there's a risk that IOT holders may lock tokens solely to earn rewards without actively participating in the voting process. This could potentially lead to an increase in locked tokens without a corresponding rise in voting activity.
+- A minimum of 1.5 billion IOT will need to be locked before the 2% is unlocked. as of writing we currently have 525 million locked.
 - Rewards emitted daily to veIOT holders will contribute to the dilution of the IOT supply. While this may pose a challenge to holders of unlocked IOT, the benefits of increased voting participation are anticipated to outweigh the disadvantages of increased supply.
 
 ## Rationale and Alternatives
