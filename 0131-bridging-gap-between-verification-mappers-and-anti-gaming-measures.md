@@ -1,11 +1,11 @@
-# HIP-xxx: Bridging Gap Between Verification Mappers and Anti-Gaming Measures
+# HIP-131: Bridging Gap Between Verification Mappers and Anti-Gaming Measures
 
 - Author(s): [Fizzy99](https://github.com/mrfizzy99), [JD](https://github.com/bigbuffer), [Rendell](https://github.com/RendellD85)
-- Start Date: 2024-08-10
+- Start Date: 2024-08-15
 - Category: Economic, Technical
-- Original HIP PR: 
-- Tracking Issue: 
-- Vote Requirements: veMOBILE Holders
+- Original HIP PR: [#1070](https://github.com/helium/HIP/pull/1070)
+- Tracking Issue: [#1072](https://github.com/helium/HIP/issues/1072)
+- Voting Requirements: veMOBILE Holders
 
 ---
 
