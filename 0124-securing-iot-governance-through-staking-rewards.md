@@ -1,4 +1,4 @@
-# HIP 124: Securing IOT Governance Through Voting rewards
+# HIP 124: Securing IOT Governance Through Voting Rewards
 
 - Authors: [BFGNeil](https://github.com/BFGNeil), [Siegfried-B](https://github.com/Siegfried-B), [ferebee](https://github.com/ferebee)
 - Start Date: 2024-05-13
