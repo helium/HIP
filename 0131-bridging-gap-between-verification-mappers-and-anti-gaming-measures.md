@@ -62,7 +62,7 @@ None.
 
 ## Implementation
 
-Nova Labs and Helium Mobile have agreed to the making the implementation of this proposal. 
+Nova Labs and Helium Mobile have agreed to the implementation of this proposal but have not indicated a timeline. 
 
 Mobile Oracles will report tagging of the hotspots for suspicious activity by the SPs.  This off-chain data will record both tagging and untagging activities for the concerned hotspots. This data will be shared in a way that community applications can allow a deployer to understand concerned hotspots have been flagged.
 
