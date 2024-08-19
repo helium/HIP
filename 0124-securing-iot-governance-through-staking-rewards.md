@@ -15,51 +15,55 @@ The authors of this HIP hold veIOT.
 
 ## Summary
 
-This Helium Improvement Proposal (HIP) aims to increase IoT HIP voting turnout.
+This Helium Improvement Proposal (HIP) aims to increase IOT HIP voting turnout.
 
-Wallets who sufficiently participate in voting will receive IOT rewards proportional to the percentage of veIOT they control. To qualify for receiving the daily epoch rewards, wallets must have participated in at least 2 out of the last 4 votes (including working group elections).
-Participation can take direct form (the wallet owner votes) or indirect form (the proxy a wallet has been assigned to votes).
+Wallets that sufficiently participate in voting will receive IOT rewards proportional to the percentage of veIOT they control. To qualify for daily rewards, wallets must have participated in at least 2 out of the last 4 votes (including working group elections).
+Participation can be direct (the wallet owner votes) or indirect (the [HIP-110][hip-110] proxy a wallet has delegated to votes).
 
-Going forward, each vote must offer an abstain option that is presented as first voting option. Voting for the abstain option qualifies as participating in a vote, too.
+All future IOT votes must offer an ABSTAIN option. Voting for the ABSTAIN option qualifies as participating in a vote.
   
-Voting rewards will be discontinued permanently once rewarded veIOT staking to decentralized oracles is implemented.
+Voting rewards will be discontinued permanently once rewarded veIOT staking to decentralized Oracles is implemented as defined in [HIP-52][hip-52].
 
 ## Motivation
 
-Voting on the IoT network requires veIOT. To acquire veIOT, IOT tokens must be locked.
-Locked IOT cannot be moved or sold. This can be seen as a cost of voting. It disincentivizes potential voters from voting and lowers voting turnout.
+Voting on the IOT network requires veIOT, which is obtained by locking IOT tokens. Locked IOT cannot be transferred, which creates an an opportunity cost of voting. This disincentive may discourage potential voters from acquiring voting power, leading to lower voter turnout.
 
-[HIP-52][hip-52] specified an Oracle bucket of 7% of total IOT emissions, to be shared between decentralized Oracles and the veIOT delegated to these Oracles. As specified in [HIP-70][hip-70], this bucket is currently unused, and the tokens are instantly burned instead. (The Oracles currently run by Nova Labs on behalf of Helium Foundation are unrewarded.)
+[HIP-52][hip-52] specifies an Oracle bucket of 7% of total IOT emissions, to be shared between decentralized Oracles and the veIOT delegated to these Oracles. As specified in [HIP-70][hip-70], this bucket is currently unused, and the tokens are burned instead. The Oracles currently run by Nova Labs on behalf of Helium Foundation are unrewarded.
 
-Once decentralized Oracles are implemented and pay IOT rewards to the veIOT holders who delegate to them, the cost of locking IOT will be offset by these delegation rewards, mitigating the current disincentive for participating in HIP votes.
+Once decentralized Oracles are implemented and pay IOT rewards to the veIOT holders who delegate to them, the cost of locking IOT will be offset by these delegation rewards, mitigating the current disincentive for those participating in HIP votes.
 
-Until then, we propose to reduce the opportunity cost of acquiring veIOT voting power by paying rewards to locked IOT positions where the user has voted in the last 2 of 4 votes.
-Vote proxying will count towards this and IoT Working group elections will count. This will encourage more individuals to participate in IOT governance using (larger) locked IOT positions, thereby strengthening the network's resilience against potential governance attacks during periods of low participation.
+Until then, we propose to reduce the opportunity cost of acquiring veIOT voting power by paying rewards to locked IOT positions whose holders have voted in the last 2 of 4 votes. IOT Working Group elections will count towards this, as will votes cast indirectly through a proxy.
 
-We also wish to add a ABSTAIN option to all votes to allow users to show they dont wish to vote yes or no, and allow their vote to count towards the required 2 of 4 votes needed to receive rewards.
+The availability of rewards is anticipated to encourage more individuals to lock more IOT for longer periods. As a result, more participants who are long-term aligned with the success of the IOT subnetwork will hold more veHNT, strengthening the network’s resistance to potential governance attacks.
 
-ABSTAIN votes will not count towards the vote tallies, with 66.7% still needed for a vote to pass, but will count towards qourum of the vote.
+This HIP requires that all future IOT votes must provide an ABSTAIN option, so that voters may fulfill their voting requirement under this HIP even if they do not wish to commit to a YES or NO vote.
+
+ABSTAIN votes are not counted in the tally, so a vote will pass with 66.7% of all votes other than ABSTAIN. However, ABSTAIN votes count towards quorum.
 
 ## Stakeholders
 
-All current and future holders of IOT and veIOT are stakeholders in this proposal. Participants who lock IOT benefit from rewards, and all IOT holders benefit from long-term health and stability of the network promoted by greater governance participation.
+All current and future holders of IOT and veIOT are stakeholders in this proposal. Participants who lock IOT benefit from rewards, and all IOT holders benefit from the long-term health and stability of the network promoted by greater governance participation.
 
 ## Detailed Explanation
 
 1. **Emissions Apportionment:**
-    - Implement a sliding scale for emissions allocation to lockup rewards for veIOT based on the total amount of IOT locked:
+    - Implement a sliding scale for emissions allocated to voting rewards for IOT based on the total amount of veIOT in existence in the current epoch:
         - **0.5%** of emissions is assigned as a base level.
-        - **2%** of emissions if the **total IOT locked** is at least **1.5 billion**.
-        - **4%** of emissions if the **total IOT locked** is at least **3 billion**.
+        - **2%** of emissions if **total veIOT** is at least **50 billion**.
+        - **4%** of emissions if **total veIOT** is at least **100 billion**.
     - This allocation will be sourced from the reward bucket assigned to Oracles in HIP-52, which is currently not distributed.
     - Post the implementation of decentralized Oracles, this allocation will revert to Oracle rewards, providing veIOT holders with the opportunity to earn rewards by staking to Oracles.
+    
+2. **Distribution**
+	- Each epoch, qualified veIOT positions are determined. A position is qualified if has voted in at least 2 of the last 4 IOT votes. (Until 4 votes have occurred since HIP-124, including HIP-124 itself, a position is qualified if it has voted in 2 votes beginning with HIP-124.)
+	- The IOT epoch emissions allocated to veIOT voting rewards are distributed among all qualified veIOT positions in proportion to the sizes of the positions.
 
-2. **Existing lockups:**
+3. **Existing lockups:**
     - All existing lockups stay as is. Functions for unlocking, locking, choosing decaying/constant, vote weight and unlocking remain the same.
 
 ## Drawbacks
 - Rewards emitted daily to veIOT holders will contribute to the dilution of the IOT supply. While this may pose a challenge to holders of unlocked IOT, the benefits of increased voting participation are anticipated to outweigh the disadvantages of increased supply.
-- Any halvening will reduce the amount rewarded by half, a future hip after the next halvening if oracles may be needed to assign up to 7% to counter this.
+- Each halvening will reduce the amount of IOT allocated to voting rewards by half. If necessary, a future HIP could increase voting rewards up to the full 7% allocated to Oracles in HIP-52.
 
 ## Rationale and Alternatives
 
@@ -73,21 +77,17 @@ None at this time.
 
 Total daily IOT emissions will increase by the amount of rewards emitted to veIOT holders.
 
-The Helium foundation have confirmed that they will develop and implement the code required by this HIP.
-
-### Existing veIOT Stakers
-
-Current veIOT stakers will start to receive rewards for their lockups, and can decay/unlock their positions as normal.
+Helium Foundation has committed to developing and implementing the code required by this HIP.
 
 ### Documentation Updates
 
-Documentation regarding staking with Helium Vote will need to be updated to reflect that staking IOT now earns rewards.
+Documentation regarding staking with Helium Vote will need to be updated to reflect that staking IOT may now earn rewards.
 
 https://docs.helium.com/governance/staking-with-helium-vote/
 
 ### User Impact
 
-Users who choose to stake IOT will now have the opportunity to earn rewards from their staked tokens. 
+Current and future veIOT stakers will receive rewards for their lockups if and when they fulfill the voting requirements. They can decay/unlock their positions as previously.
 
 ## Success Metrics
 
@@ -95,4 +95,4 @@ This HIP will be considered successful if veIOT used for voting increases by at 
 
 [hip-52]: https://github.com/helium/HIP/blob/main/0052-iot-dao.md
 [hip-70]: https://github.com/helium/HIP/blob/main/0070-scaling-helium.md
-
+[hip-110]: https://github.com/helium/HIP/blob/main/0110-proxy-voting.md
