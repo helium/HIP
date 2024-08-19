@@ -41,6 +41,7 @@ All current and future holders of IOT and veIOT are stakeholders in this proposa
 
 1. **Emissions Apportionment:**
     - Implement a sliding scale for emissions allocation to lockup rewards for veIOT based on the total amount of IOT locked:
+        - **0.5%** of emissions is assigned as a base level.
         - **2%** of emissions if the **total IOT locked** is at least **1.5 billion**.
         - **4%** of emissions if the **total IOT locked** is at least **3 billion**.
     - This allocation will be sourced from the reward bucket assigned to Oracles in HIP-52, which is currently not distributed.
