@@ -51,8 +51,6 @@ All current and future holders of IOT and veIOT are stakeholders in this proposa
     - All existing lockups stay as is. Functions for unlocking, locking, choosing decaying/constant, vote weight and unlocking remain the same.
 
 ## Drawbacks
-
-- A minimum of 1.5 billion IOT will need to be locked before the 2% is unlocked. as of writing we currently have 525 million locked.
 - Rewards emitted daily to veIOT holders will contribute to the dilution of the IOT supply. While this may pose a challenge to holders of unlocked IOT, the benefits of increased voting participation are anticipated to outweigh the disadvantages of increased supply.
 - Any halvening will reduce the amount rewarded by half, a future hip after the next halvening if oracles may be needed to assign up to 7% to counter this.
 
