@@ -26,8 +26,8 @@ Voting rewards will be discontinued permanently once rewarded veIOT staking to d
 
 ## Motivation
 
-People who want to vote on HIPs concerning the IOT network need to acquire voting power in the form of veIOT. To acquire veIOT, potential voters need to lock IOT tokens.
-IOT that is locked cannot be moved or sold. This can be seen as a cost of voting that disincentivizes potential voters from HIP voting and lowers voting turnout.
+Voting on the IoT network requires veIOT. To acquire veIOT, IOT tokens must be locked.
+Locked IOT cannot be moved or sold. This can be seen as a cost of voting. It disincentivizes potential voters from voting and lowers voting turnout.
 
 [HIP-52][hip-52] specified an Oracle bucket of 7% of total IOT emissions, to be shared between decentralized Oracles and the veIOT delegated to these Oracles. As specified in [HIP-70][hip-70], this bucket is currently unused, and the tokens are instantly burned instead. (The Oracles currently run by Nova Labs on behalf of Helium Foundation are unrewarded.)
 
