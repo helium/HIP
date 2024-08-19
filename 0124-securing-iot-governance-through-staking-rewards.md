@@ -15,7 +15,14 @@ The authors of this HIP hold veIOT.
 
 ## Summary
 
-This Helium Improvement Proposal (HIP) aims to increase IoT HIP voting turnout. It suggests to achieve this goal by paying rewards to locked IOT where the owner has directly voted in the last 2 of 4 IoT HIPS (including working group elections) or indrectly voted by assigning their locked position to a vote proxy. The payments will discontinue once rewarded veIOT staking to decentralized Orcacles is implemented.
+This Helium Improvement Proposal (HIP) aims to increase IoT HIP voting turnout.
+
+Wallets who sufficiently participate in voting will receive IOT rewards proportional to the percentage of veIOT they control. To qualify for receiving the daily epoch rewards, wallets must have participated in at least 2 out of the last 4 votes (including working group elections).
+Participation can take direct form (the wallet owner votes) or indirect form (the proxy a wallet has been assigned to votes).
+
+Going forward, each vote must offer an abstain option that is presented as first voting option. Voting for the abstain option qualifies as participating in a vote, too.
+  
+Voting rewards will be discontinued permanently once rewarded veIOT staking to decentralized oracles is implemented.
 
 ## Motivation
 
