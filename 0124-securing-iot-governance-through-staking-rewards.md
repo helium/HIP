@@ -20,6 +20,10 @@ All future IOT votes must offer an ABSTAIN option. Voting for the ABSTAIN option
   
 Voting rewards will be discontinued permanently once rewarded veIOT staking to decentralized Oracles is implemented as defined in [HIP-52][hip-52].
 
+## Declaration
+
+The authors of this HIP hold veIOT positions.
+
 ## Motivation
 
 Voting on the IOT network requires veIOT, which is obtained by locking IOT tokens. Locked IOT cannot be transferred, which creates an an opportunity cost of voting. This disincentive may discourage potential voters from acquiring voting power, leading to lower voter turnout.
