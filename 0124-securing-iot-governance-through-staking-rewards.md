@@ -11,10 +11,7 @@
 
 ## Summary
 
-This Helium Improvement Proposal (HIP) aims to increase IOT HIP voting turnout.
-
-Wallets that sufficiently participate in voting will receive IOT rewards proportional to the percentage of veIOT they control. To qualify for daily rewards, wallets must have participated in at least 2 out of the last 4 votes (including working group elections).
-Participation can be direct (the wallet owner votes) or indirect (the [HIP-110][hip-110] proxy a wallet has delegated to votes).
+This Helium Improvement Proposal (HIP) aims to increase IOT HIP voting turnout by offering rewards to active voting participants in IOT governance. Wallets that sufficiently participate in voting will receive IOT rewards proportional to the percentage of veIOT they control. To qualify for daily rewards, wallets must have participated in at least 2 out of the last 4 votes (including working group elections). Participation can be direct (the wallet owner votes) or indirect (the [HIP-110][hip-110] proxy a wallet has delegated to votes).
 
 All future IOT votes must offer an ABSTAIN option. Voting for the ABSTAIN option qualifies as participating in a vote.
   
