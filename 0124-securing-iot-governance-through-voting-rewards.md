@@ -50,7 +50,7 @@ All current and future holders of IOT and veIOT are stakeholders in this proposa
         - **2%** of emissions if **total veIOT** is at least **50 billion**.
         - **3%** of emissions if **total veIOT** is at least **75 billion**
         - **4%** of emissions if **total veIOT** is at least **100 billion**.
-        - This may be implemented via a chain variable/config that is modified by the program multisig. Alerting should be established that allows the multisig to be aware of a need to modify this variable and it is expected that the change will be made within 4 epochs of passing a defined threshold. 
+    - This may be implemented via a chain variable/config that is modified by the program multisig. Alerting should be established that allows the multisig to be aware of a need to modify this variable and it is expected that the change will be made within 4 epochs of passing a defined threshold. 
     - This allocation will be sourced from the reward bucket assigned to Oracles in HIP-52, which is currently not distributed.
     - Post the implementation of decentralized Oracles, this allocation will revert to Oracle rewards, providing veIOT holders with the opportunity to earn rewards by staking to Oracles.
     
