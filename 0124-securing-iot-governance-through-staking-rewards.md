@@ -31,7 +31,7 @@ Once decentralized Oracles are implemented and pay IOT rewards to the veIOT hold
 
 Until then, we propose to reduce the opportunity cost of acquiring veIOT voting power by paying rewards to locked IOT positions whose holders have voted in the last 2 of 4 votes. IOT Working Group elections will count towards this, as will votes cast indirectly through a proxy.
 
-The availability of rewards is anticipated to encourage more individuals to lock more IOT for longer periods. As a result, more participants who are long-term aligned with the success of the IOT subnetwork will hold more veHNT, strengthening the network’s resistance to potential governance attacks.
+The availability of rewards is anticipated to encourage more individuals to lock more IOT for longer periods. As a result, more participants who are long-term aligned with the success of the IOT subnetwork will hold more veIOT, strengthening the network’s resistance to potential governance attacks.
 
 This HIP requires that all future IOT votes must provide an ABSTAIN option, so that voters may fulfill their voting requirement under this HIP even if they do not wish to commit to a YES or NO vote.
 
