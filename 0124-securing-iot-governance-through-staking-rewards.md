@@ -57,7 +57,7 @@ All current and future holders of IOT and veIOT are stakeholders in this proposa
     - Post the implementation of decentralized Oracles, this allocation will revert to Oracle rewards, providing veIOT holders with the opportunity to earn rewards by staking to Oracles.
     
 2. **Distribution**
-	- Each epoch, qualified veIOT positions are determined. A position is qualified if has voted in at least 2 of the last 4 IOT votes. (Until 4 votes have occurred after the implementation of HIP-124, a position is qualified if it has voted in 2 votes since implementation.)
+	- Each epoch, qualified veIOT positions are determined. A position is qualified if it has voted in at least 2 of the last 4 IOT votes. (Until 4 votes have occurred after the implementation of HIP-124, a position is qualified if it has voted in 2 votes since implementation.)
 	- The IOT epoch emissions allocated to veIOT voting rewards are distributed among all qualified veIOT positions in proportion to the sizes of the positions.
 
 3. **Existing lockups:**
