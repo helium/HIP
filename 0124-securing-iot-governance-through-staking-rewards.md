@@ -9,10 +9,6 @@
 
 ---
 
-## Declaration
-
-The authors of this HIP hold veIOT.
-
 ## Summary
 
 This Helium Improvement Proposal (HIP) aims to increase IOT HIP voting turnout.
