@@ -49,7 +49,9 @@ All current and future holders of IOT and veIOT are stakeholders in this proposa
 1. **Emissions Apportionment:**
     - Implement a sliding scale for emissions allocated to voting rewards for IOT based on the total amount of veIOT in existence in the current epoch:
         - **0.5%** of emissions is assigned as a base level.
+        - **1.0%** of emissions if **total veIOT** is at least **35 billion**
         - **2%** of emissions if **total veIOT** is at least **50 billion**.
+        - **3%** of emissions if **total veIOT** is at least **75 billion**
         - **4%** of emissions if **total veIOT** is at least **100 billion**.
     - This allocation will be sourced from the reward bucket assigned to Oracles in HIP-52, which is currently not distributed.
     - Post the implementation of decentralized Oracles, this allocation will revert to Oracle rewards, providing veIOT holders with the opportunity to earn rewards by staking to Oracles.
