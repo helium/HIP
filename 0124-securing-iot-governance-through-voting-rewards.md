@@ -23,7 +23,7 @@ The authors of this HIP hold veIOT positions.
 
 ## Motivation
 
-Voting on the IOT network requires veIOT, which is obtained by locking IOT tokens. Locked IOT cannot be transferred, which creates an an opportunity cost of voting. This disincentive may discourage potential voters from acquiring voting power, leading to lower voter turnout.
+Voting on the IOT network requires veIOT, which is obtained by locking IOT tokens. Locked IOT cannot be transferred, which creates an opportunity cost of voting. This disincentive may discourage potential voters from acquiring voting power, leading to lower voter turnout.
 
 [HIP-52][hip-52] specifies an Oracle bucket of 7% of total IOT emissions, to be shared between decentralized Oracles and the veIOT delegated to these Oracles. As specified in [HIP-70][hip-70], this bucket is currently unused, and the tokens are burned instead. The Oracles currently run by Nova Labs on behalf of Helium Foundation are unrewarded.
 
