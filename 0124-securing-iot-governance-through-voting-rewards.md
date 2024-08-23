@@ -23,7 +23,7 @@ The authors of this HIP hold veIOT positions.
 
 ## Motivation
 
-Voting on the IOT network requires veIOT, which is obtained by locking IOT tokens. Locked IOT cannot be transferred, which creates an an opportunity cost of voting. This disincentive may discourage potential voters from acquiring voting power, leading to lower voter turnout.
+Voting on the IOT network requires veIOT, which is obtained by locking IOT tokens. Locked IOT cannot be transferred, which creates an opportunity cost of voting. This disincentive may discourage potential voters from acquiring voting power, leading to lower voter turnout.
 
 [HIP-52][hip-52] specifies an Oracle bucket of 7% of total IOT emissions, to be shared between decentralized Oracles and the veIOT delegated to these Oracles. As specified in [HIP-70][hip-70], this bucket is currently unused, and the tokens are burned instead. The Oracles currently run by Nova Labs on behalf of Helium Foundation are unrewarded.
 
@@ -44,10 +44,10 @@ All current and future holders of IOT and veIOT are stakeholders in this proposa
 1. **Emissions Apportionment:**
 	- Implement a sliding scale for emissions allocated to voting rewards for IOT based on the total amount of veIOT in existence in the current epoch:
         - **0.5%** of emissions is assigned as a base level.
-        - **1%** of emissions if **total veIOT** is at least **35 billion**
-        - **2%** of emissions if **total veIOT** is at least **50 billion**.
-        - **3%** of emissions if **total veIOT** is at least **75 billion**
-        - **4%** of emissions if **total veIOT** is at least **100 billion**.
+        - **1%** of emissions if **total veIOT** is at least **35 billion.**
+        - **2%** of emissions if **total veIOT** is at least **50 billion.**
+        - **3%** of emissions if **total veIOT** is at least **75 billion.**
+        - **4%** of emissions if **total veIOT** is at least **100 billion.**
 	- This may be implemented via a chain variable/config that is modified by the program multisig. Alerting should be established that allows the multisig to be aware of a need to modify this variable and it is expected that the change will be made within 4 epochs of passing a defined threshold.
 	- With each future halvening, the tier limits are reduced by half accordingly. For example, from the 2025-08-01 halvening, the voting reward allocation shall be 1% if total veIOT is at least 17.5 billion.
 	- This allocation will be sourced from the reward bucket assigned to Oracles in HIP-52, which is currently not distributed.
@@ -78,7 +78,7 @@ None at this time.
 
 ## Deployment Impact
 
-Total daily IOT emissions will increase by the amount of rewards emitted to veIOT holders.
+Total daily IOT emissions will increase by the amount of rewards emitted to qualified veIOT holders.
 
 Helium Foundation has committed to developing and implementing the code required by this HIP.
 
