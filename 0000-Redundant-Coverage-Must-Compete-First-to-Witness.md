@@ -25,7 +25,7 @@ Currently hotspots that are less than 8 res 12 hexes apart may not witness each 
 May encourage false assertions.
 
 ## Rationale and Alternatives
-Over saturated areas abound and many hotspots are rewarded for providing redundant coverage.  Others install multiple hotspots in a single location in an effort to increase rewards.  
+Over saturated areas abound and many hotspots are rewarded for providing redundant coverage.  Some users install multiple hotspots in a single location in an effort to increase rewards.  
 
 Currently, first to witness (network latency) is the only metric available to gauge a hotspot's performance.  Until other metrics are available, this is a convinient method to only reward the best performing hotspot in an area with redundant coverage.
 
