@@ -6,10 +6,11 @@
 - Vote Requirements: veIOT
 
 ## Summary
-When hotspots are less than 8 res 12 hexes apart only the first to witness will be rewarded.
+When hotspots are less than 8 res 12 hexes apart only the first to witness shall be rewarded.
 
 ## Motivation
 Currently hotspots receive rewards for redundant coverage.  This would only reward the first to witness in areas with redundant coverage.
+- Hotspots that are less than 8 resolution 12 hexes apart are providing redundant coverage.
 - Disuade people from installing multiple hotspots per location when additional rewards are the motivation.
 - Encourage people to spread out to under served areas.
 - Some people belive Proof of Coverage rewards are broken and alternatives should be developed.
