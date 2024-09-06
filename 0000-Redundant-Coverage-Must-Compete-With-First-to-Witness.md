@@ -6,11 +6,11 @@
 - Vote Requirements: veIOT
 
 ## Summary
-When hotspots are less than 8 res 12 hexes apart only the first to witness shall be rewarded.
+When hotspots are less than 8 res 11 hexes apart only the first to witness shall be rewarded.
 
 ## Motivation
 Currently hotspots receive rewards for redundant coverage.  This would only reward the first to witness in areas with redundant coverage.
-- Hotspots that are less than 8 resolution 12 hexes apart are providing redundant coverage.
+- Hotspots that are less than 8 resolution 11 hexes apart are providing redundant coverage.
 - Disuade people from installing multiple hotspots per location when additional rewards are the motivation.
 - Encourage people to spread out to under served areas.
 - Some people belive Proof of Coverage rewards are broken and alternatives should be developed.
@@ -19,7 +19,7 @@ Currently hotspots receive rewards for redundant coverage.  This would only rewa
 All IOT Hotspot owners will be affected.
 
 ## Detailed Explanation
-Currently hotspots that are less than 8 res 12 hexes apart may not witness each other's beacons.  This extends that concept to witnessing all beacons.  When multiple hotspots are less than 8 res 12 hexes apart, only the first to witness shall be rewarded.
+Currently hotspots that are less than 8 res 11 hexes apart may not witness each other's beacons.  This extends that concept to witnessing all beacons.  When multiple hotspots are less than 8 res 11 hexes apart, only the first to witness shall be rewarded.
 
 ## Drawbacks
 May encourage false assertions.
@@ -29,7 +29,7 @@ Over saturated areas abound and many hotspots are rewarded for providing redunda
 
 Currently, first to witness (network latency) is the only metric available to gauge a hotspot's performance.  Until other metrics are available, this is a convinient method to only reward the best performing hotspot in an area with redundant coverage.
 
-It's common advice to new hotspot owners to install their hotspot 350-400 meters apart.  This is the distance represented by less than 8 resolution 12 hexes.  This HIP extends that meaning, hotspots that are within that distance are proving redundant coverage and only the first to witness shall be rewarded.
+It's common advice to new hotspot owners to install their hotspot 350-400 meters apart.  This is the distance represented by less than 8 resolution 11 hexes.  This HIP extends that meaning, hotspots that are within that distance are proving redundant coverage and only the first to witness shall be rewarded.
 
 ## Unresolved Questions
 There are currently no unresolved questions.
