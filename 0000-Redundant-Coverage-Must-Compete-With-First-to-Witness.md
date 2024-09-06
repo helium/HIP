@@ -35,11 +35,11 @@ It's common advice to new hotspot owners to install their hotspot 350-400 meters
 There are currently no unresolved questions.
 
 ## Deployment Impact
-Users with low performance hotspots providing redundant coverage will likely see a reduction in rewards. 
+- Users with low performance hotspots providing redundant coverage will likely see a reduction in rewards. 
 
-Users with high performance hotspots providing redundant coverage will likely see an increase in rewards.  
+- Users with high performance hotspots providing redundant coverage will likely see an increase in rewards.  
 
-Other users may see an increase in rewards with the elimination of rewards for redunant areas.
+- Other users may see an increase in rewards with the elimination of rewards for redunant areas.
 
 ## Success Metrics
 Success could be measured by calculating the rewards for hotspots proving redundant coverage.
