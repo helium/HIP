@@ -8,7 +8,6 @@
 ## Summary
 When hotspots are less than 8 res 12 hexes apart only the first to witness will be rewarded.
 
-
 ## Motivation
 Currently hotspots receive rewards for redundant coverage.  This would only reward the first to witness in areas with redundant coverage.
 - Disuade people from installing multiple hotspots per location when additional rewards are the motivation.
@@ -28,6 +27,8 @@ May encourage false assertions.
 Over saturated areas abound and many hotspots are rewarded for providing redundant coverage.  Some users install multiple hotspots in a single location in an effort to increase rewards.  
 
 Currently, first to witness (network latency) is the only metric available to gauge a hotspot's performance.  Until other metrics are available, this is a convinient method to only reward the best performing hotspot in an area with redundant coverage.
+
+It's common advice to new hotspot owners to install their hotspot 350-400 meters apart.  This is the distance represented by less than 8 resolution 12 hexes.  This HIP extends that meaning, hotspots that are within that distance are proving redundant coverage and only the first to witness shall be rewarded.
 
 ## Unresolved Questions
 There are currently no unresolved questions.
