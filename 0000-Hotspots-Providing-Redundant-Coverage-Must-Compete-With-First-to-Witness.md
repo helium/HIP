@@ -23,7 +23,7 @@ Currently hotspots receive rewards for *Redundant Coverage*.  This HIP proposes 
 - *Redundant Coverage* is defined as hotspots that are less than *Minimum Distance* apart.
 - *Desired Redundancy* is defined as the maximun number of witnesses to a beacon, 14.
 
-Suppose there are two hotspots, **A** and **B**, which is less than *Minimum Distance* apart.  **A** and **B** both witness a beacon, and there is a total of 15 witnesses, which is greater than *Desired Redundancy*(14). Hotspot **A** witnesses at number 8, hotspot **B** witnesses at number 10. Since **A** and **B** are less than *Minimum Distance* apart, only the first to witness, **A** at number 8, will be rewarded.  **B** will be denied as 'Redundant Coverage', and number 15 shall be rewarded instead.
+Suppose there are two hotspots, **A** and **B**, and they are less than *Minimum Distance* apart.  **A** and **B** both witness a beacon, and there are greater then *Desired Redundancy* witnesses. Hotspot **A** witnesses at number 8, hotspot **B** witnesses at number 10. Since **A** and **B** are less than *Minimum Distance* apart, only the first to witness, **A** at number 8, will be rewarded.  **B** will be denied as 'Redundant Coverage'. The next fastest hotspot to respond would then be considered for rewards.  It must also be the fastest to respond if it is providing *Redundant Coverage*, if it is not, the next fastest would be considered, and so on, until either 14 valid witnesses were obtained or there are no more witnesses to consider.  
 
 If instead there were *Desired Redundancy* or fewer witnesses, then all would be rewarded.
 
