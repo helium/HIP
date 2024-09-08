@@ -23,6 +23,7 @@ Currently hotspots receive rewards for *Redundant Coverage*.  This HIP proposes 
 - *Redundant Coverage* is defined as hotspots that are less than *Minimum Distance* apart.
 - *Desired Redundancy* is defined as the maximun number of witnesses to a beacon, 14.
 - *Invalidation Reason* witnesses are invalidated with invalidation reason 'Redundant Coverage'
+ 
 
 If there are *Desired Redundancy* or fewer witnesses to a beacon then there are no changes, all witnesses would be rewarded as normal.
 
@@ -36,7 +37,7 @@ For example, there are 16 witnesses to a beacon.  Number 14 is invalidated with 
 
 Suppose 16 hotspots witness a beacon.  Suppose 4 are invalidated with *Invalidation Reason*.  This would mean that only 12 total hotspots would be rewarded.  There is no recurrsion, once a hotspot is denied it no longer competes.  The number of hotspots invalidated with *Invalidation Reason* do not count towards the total number of hotspots to witness a beacon.
 
-To avoid being invalidated with *Invalidation Reason*, a hotspot providing *Redundant Coverage* must be faster to respond than all other hotspots within *Minimum Distance*, or all other hotspots within *Minimum Distance* must have been previously invalidated with *Invalidation Reason*.
+To avoid being invalidated with *Invalidation Reason*, a hotspot providing *Redundant Coverage* must be faster to respond than all other hotspots within *Minimum Distance*, or all other hotspots within *Minimum Distance* must have been previously invalidated with *Invalidation Reason* or another invalidation reason defined elsewhere.
 
 
 ## Drawbacks
