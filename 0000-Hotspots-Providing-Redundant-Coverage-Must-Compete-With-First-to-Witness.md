@@ -25,8 +25,9 @@ Currently hotspots receive rewards for *Redundant Coverage*.  This HIP proposes 
 - *Invalidation Reason* witnesses are invalidated with invalidation reason 'Redundant Coverage'
 - *Faster to Witness* The procedures in HIP 83 are used to determine which hotspot is faster to witness a beacon. 
 
-If there are *Maximum Withesses* or fewer witnesses to a beacon then there are no changes, all witnesses would be rewarded as normal.  All witnesses are assumed to be potentially valid, that is they have not been invaidated by some other invalidation reason defined elsewhere. 
+If there are *Maximum Withesses* or fewer witnesses to a beacon then there are no changes, all witnesses would be rewarded as normal.  
 
+All witnesses are assumed to be potentially valid for discussion purposes, that is they have not been invaidated by some other invalidation reason defined elsewhere. 
 
 Suppose there are two hotspots, **A** and **B**, and they are less than *Minimum Distance* apart.  **A** and **B** both witness a beacon, and there are greater than *Maximum Withesses* witnesses. Therefore, by definition above, **A** and **B** are providing *Rednundant Coverage*. 
 
