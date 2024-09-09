@@ -21,7 +21,10 @@ Currently hotspots receive rewards for *Redundant Coverage*.  This HIP proposes 
 
 - *Minimum Distance* is defined as 8 resolution 11 hexes.  Hotspots less than this distance apart may not witness each other's beacons.
 - *Maximum Withesses* is equal to the variable max_witnesses_per_poc, which is currently 14.  This HIP will respect and follow any future changes to this number.
-- *Redundant Coverage* is defined as hotspots that are less than *Minimum Distance* apart and witness the same beacon, and there are greater than *Maximum Witnesses* to the beacon.  
+- *Redundant Coverage* is defined, per beacon, as the set of hotspots that: 
+    1. Are less than *Minimum Distance* apart 
+    2. Witness the same beacon.
+    3. There are greater than *Maximum Witnesses* to the beacon.  
 - *Invalidation Reason* witnesses are invalidated with invalidation reason 'Redundant Coverage'
 - *Faster to Witness* The procedures in HIP 83 are used to determine which hotspot is faster to witness a beacon. 
 
