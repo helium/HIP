@@ -21,7 +21,7 @@ Currently hotspots receive rewards for *Redundant Coverage*.  This HIP proposes 
 
 - *Minimum Distance* is defined as 8 resolution 11 hexes.  Hotspots less than this distance apart may not witness each other's beacons.
 - *Maximum Withesses* is equal to the variable max_witnesses_per_poc, which is currently 14.  This HIP will respect and follow any future changes to this number.
-- *Redundant Coverage* is defined as hotspots that are less than *Minimum Distance* apart and witness the same beacon, and there are greater than *Maximum Witnesses* to the beacon.
+- *Redundant Coverage* is defined as hotspots that are less than *Minimum Distance* apart and witness the same beacon, and there are greater than *Maximum Witnesses* to the beacon.  
 - *Invalidation Reason* witnesses are invalidated with invalidation reason 'Redundant Coverage'
 - *Faster to Witness* The procedures in HIP 83 are used to determine which hotspot is faster to witness a beacon. 
 
@@ -35,9 +35,11 @@ Imagine hotspot **A** is  *Faster to Witness* than **B**.  Since **A** and **B**
 
 Suppose we add another hotspot, **C**. **C** is less than *Minimum Distance* from **B**, but greater than *Minimum Distance* to **A**. **A**, **B**, and **C** all witness the same beacon and there are greater than *Maximum Withesses* witnesses. 
 
-So **A** and **B** provide *Redundant Coverage*, and **B** and **C** provide *Redundant Coverage*.  **B** is doubly redundant. If **A** is *Faster to Witness* than **B**, **B** is invalidated with *Invalidation Reason*.  Since **B** is denied, **C** no longer provides *Redundant Coverage* as **B** has been invalidated. **B** must be *Faster to Witness* than both **A** and **C** to be rewarded.  Once a hotspot is invalidated with *Invalidation Reason*, it may no longer compete, it's out of the race.
+According to the above definition, **A** and **B** provide *Redundant Coverage*, and **B** and **C** provide *Redundant Coverage*.  **B** is doubly redundant as it redundant to both **A** and **C**. 
 
-If there are less than *Maximum Withesses* valid witnesses, then the next *Faster to Witness* hotspot would then be considered for validation.  If it is not providing *Redundant Coverage*, then it is valid as normal.  Otherwise if it is providing *Redundant Coverage*, it must also be *Faster to Witness* than all hotspots within *Minimum Distance* to itself. If it is not, it is invalidated with *Invalidation Reason* and  the next fastest would be considered, and so on, until either *Maximum Witnesses* valid witnesses are obtained or there are no more witnesses to consider.  
+If **A** is *Faster to Witness* than **B**, **B** is invalidated with *Invalidation Reason*.  Since **B** is denied, **C** no longer provides *Redundant Coverage* as **B** has been invalidated. **B** must be *Faster to Witness* than both **A** and **C** to be rewarded.  Once a hotspot is invalidated with *Invalidation Reason*, it may no longer compete, it's out of the race.
+
+When invalidated witnesses cause there to be less than *Maximum Withesses* **valid** witnesses, then the next *Faster to Witness* hotspot would then be considered for validation.  If it is not providing *Redundant Coverage*, then it is valid as normal.  Otherwise if it is providing *Redundant Coverage*, it must also be *Faster to Witness* than all hotspots within *Minimum Distance* to itself. If it is not, it is invalidated with *Invalidation Reason* and  the next fastest would be considered, and so on, until either *Maximum Witnesses* valid witnesses are obtained or there are no more witnesses to consider.  
 
 For example, there are 16 witnesses to a beacon.  Number 14 is invalidated with *Invalidation Reason*.  Number 15 would then be considered, if it validates all is done, otherwise 16 is considered. If neither 15 or 16 passes, then there are 13 valid witnesses to the beacon.
 
@@ -63,11 +65,11 @@ Many hotspot owners have low moral.  They are discouraged by a seeming lack of p
 - Discussion may bring up additional questions.
 
 ## Deployment Impact
-- Users with low performance hotspots providing redundant coverage will likely see a reduction in rewards. 
+- Owners with low performance hotspots providing redundant coverage will likely see a reduction in rewards. 
 
-- Users with high performance hotspots providing redundant coverage will likely see an increase in rewards.  
+- Owners with high performance hotspots providing redundant coverage will likely see an increase in rewards.  
 
-- Other users may see an increase in rewards with the elimination of rewards for *Redundant Coverage*.
+- Other other may see an increase in rewards with the elimination of rewards for *Redundant Coverage*.
 
 ## Success Metrics
 Success could be measured by calculating the rewards for hotspots providing *Redundant Coverage*.
