@@ -67,9 +67,7 @@ Many hotspot owners have low moral.  They are discouraged by a seeming lack of p
 ## Deployment Impact
 - Owners with low performance hotspots providing redundant coverage will likely see a reduction in rewards. 
 
-- Owners with high performance hotspots providing redundant coverage will likely see an increase in rewards.  
-
-- Other other may see an increase in rewards with the elimination of rewards for *Redundant Coverage*.
+- Other owners may see an increase in rewards with the elimination of rewards for *Redundant Coverage*.
 
 ## Success Metrics
 Success could be measured by calculating the rewards for hotspots providing *Redundant Coverage*.
