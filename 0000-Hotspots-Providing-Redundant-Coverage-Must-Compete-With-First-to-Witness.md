@@ -19,7 +19,7 @@ Currently hotspots receive rewards for *Redundant Coverage*.  This HIP proposes 
 
 ## Detailed Explanation
 
-- *Minimum Distance* is defined as less than 8 resolution 11 hexes apart.  This is the established distance that determines whether or not hotspots may witness each other's beacons.
+- *Minimum Distance* is defined as 8 resolution 11 hexes.  Hotspots less than this distance apart may not witness each other's beacons.
 - *Redundant Coverage* is defined as hotspots that are less than *Minimum Distance* apart.
 - *Desired Redundancy* is defined as the maximun number of witnesses to a beacon, 14.
 - *Invalidation Reason* witnesses are invalidated with invalidation reason 'Redundant Coverage'
@@ -49,7 +49,7 @@ Over saturated areas abound and many hotspots are rewarded for providing *Redund
 
 Currently, first to witness (network latency) is the only metric available to gauge a hotspot's performance.  Until other metrics are available, this is a convinient method to only reward the best performing hotspot in an area with *Redundant Coverage*.
 
-It's common advice to new hotspot owners to install their hotspot 350-400 meters apart.  This is the distance represented by less than 8 resolution 11 hexes.  This HIP extends that meaning, hotspots that are within that distance are proving *Redundant Coverage* and only the first to witness shall be rewarded.
+It's common advice to new hotspot owners to install their hotspots 350-400 meters apart from one another.  This is the distance represented by 8 resolution 11 hexes.  Hotspots that are asserted less than this distance apart may not witness each other's beacons. This HIP extends that concept. Hotspots which are less then *Minimum Distance* apart are providing *Redundant Coverage* and only the first to witness shall be rewarded.
 
 Many owners want to install multiple hotspots per location for various reasons.  This proposal would implicity allow such installations, yet discourage them by removing rewards.
 
