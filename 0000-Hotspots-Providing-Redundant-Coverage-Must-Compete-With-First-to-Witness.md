@@ -20,7 +20,7 @@ Currently hotspots receive rewards for *Redundant Coverage*.  This HIP proposes 
 ## Detailed Explanation
 
 - *Minimum Distance* is defined as 8 resolution 11 hexes.  Hotspots less than this distance apart may not witness each other's beacons.
-- *Redundant Coverage* is defined as hotspots that are less than *Minimum Distance* apart.
+- *Redundant Coverage* is defined as hotspots that are less than *Minimum Distance* apart and witness the same beacon.
 - *Desired Redundancy* is defined as the maximun number of witnesses to a beacon, 14.
 - *Invalidation Reason* witnesses are invalidated with invalidation reason 'Redundant Coverage'
  
