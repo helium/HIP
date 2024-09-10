@@ -32,17 +32,19 @@ Currently hotspots receive rewards for *Redundant Coverage*.  This HIP proposes 
 *Invalidation Reason* means that witnesses are invalidated with invalidation reason 'Redundant Coverage'
 ### *Faster to Witness*
 The procedures in HIP 83 are used to determine which hotspot is *Faster to Witness* a beacon. 
+### Why use resoloution 11 hexes?
+When the distances between hotspots are calculated using hexes, the hotspots are assumed to be at the center of the hex.  As the resolution increases, the location of the hotspot is more accurate, since the size of the hex containing the hotspot decreases.
 
 ### Examples
 All witnesses are assumed to be potentially valid for discussion purposes, that is they have not been invaidated by some other invalidation reason defined elsewhere. 
 
-Suppose there are two hotspots, **A** and **B**, and they are less than *Minimum Distance* apart.  **A** and **B** both witness a beacon, and there are greater than *Maximum Witnesses* witnesses. Therefore, by definition above, **A** and **B** are providing *Rednundant Coverage*. 
+Suppose there are two hotspots, **A** and **B**, and they are less than *Minimum Distance* apart.  **A** and **B** both witness a beacon, and there are greater than *Maximum Witnesses*. Therefore, by definition above, **A** and **B** are providing *Rednundant Coverage*. 
 
 Imagine hotspot **A** is  *Faster to Witness* than **B**.  Since **A** and **B** are providing *Redundant Coverage*, only the *Faster to Witness*, **A**,will be rewarded.  **B** will be invalidated with *Invalidation Reason*. 
 
 Suppose we add another hotspot, **C**. **C** is less than *Minimum Distance* from **B**, but greater than *Minimum Distance* to **A**. You might think of this as **A** is too close to **B**, **B** is too close to **C**, **A** and **C** are far enough apart.
 
-**A**, **B**, and **C** all witness the same beacon and there are greater than *Maximum Witnesses* witnesses. According to the above definition, **A** and **B** provide *Redundant Coverage*, and **B** and **C** provide *Redundant Coverage*. 
+**A**, **B**, and **C** all witness the same beacon and there are greater than *Maximum Witnesses*. According to the above definition, **A** and **B** provide *Redundant Coverage*, and **B** and **C** provide *Redundant Coverage*. 
 
 If **A** is *Faster to Witness* than **B**, **B** is invalidated with *Invalidation Reason*.  Since **B** is denied, **C** no longer provides *Redundant Coverage* as **B** has been invalidated. **B** must be *Faster to Witness* than both **A** and **C** to be rewarded.  
 
@@ -53,10 +55,6 @@ When invalidated witnesses cause there to be less than *Maximum Witnesses* **val
 For example, there are 16 witnesses to a beacon.  Number 14 is invalidated with *Invalidation Reason*.  Number 15 would then be considered, if it validates all is done, otherwise 16 is considered. If neither 15 or 16 passes, then there are 13 valid witnesses to the beacon.
 
 Suppose 16 hotspots witness a beacon.  Suppose 4 are invalidated with *Invalidation Reason*.  This would mean that only 12 total hotspots would be rewarded.  There is no recurrsion, once a hotspot is denied it no longer competes.  The number of hotspots invalidated with *Invalidation Reason* do not count towards the total number of hotspots to witness a beacon.
-
-### Why use resoloution 11 hexes?
-When the distances between hotspots are calculated using hexes, the hotspots are assumed to be at the center of the hex.  As the resolution increases, the location of the hotspot is more accurate, since the size of the hex containing the hotspot decreases.
-
 ## Drawbacks
 - May encourage false assertions.
 - May encourage owners to turn off hotspots rather than compete
