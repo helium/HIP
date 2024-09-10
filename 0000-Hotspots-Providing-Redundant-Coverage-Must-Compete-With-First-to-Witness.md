@@ -26,7 +26,7 @@ Currently hotspots receive rewards for *Redundant Coverage*.  This HIP proposes 
 ### *Redundant Coverage* 
 *Redundant Coverage* is defined, per beacon, as the set of hotspots where: 
     - The hotspots are less than *Minimum Distance* apart 
-    - THey witness the same beacon.
+    - They witness the same beacon.
     - There are greater than *Maximum Witnesses* to the beacon.  
 ### *Invalidation Reason*
 *Invalidation Reason* means that witnesses are invalidated with invalidation reason 'Redundant Coverage'
