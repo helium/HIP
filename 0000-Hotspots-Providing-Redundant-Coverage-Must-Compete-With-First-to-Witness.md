@@ -32,8 +32,8 @@ Each witness to a beacon is checked to determine if:
 If each of the above conditions are met, then they are deemed to be providing *Redundant Coverage*.
 ### *Invalidation Reason*
 *Invalidation Reason* means that witnesses are invalidated with invalidation reason 'Redundant Coverage'
-### *Faster to Witness*
-The procedures in HIP 83 are used to determine which hotspot is *Faster to Witness* a beacon. 
+### *Fastest to Witness*
+The procedures in HIP 83 are used to determine which hotspot is *Fastest to Witness* a beacon. 
 ### Why use resoloution 11 hexes?
 When the distances between hotspots are calculated using hexes, the hotspots are assumed to be at the center of the hex.  As the resolution increases, the location of the hotspot is more accurate, since the size of the hex containing the hotspot decreases.
 
@@ -42,17 +42,17 @@ All witnesses are assumed to be potentially valid for discussion purposes, that 
 
 Suppose there are two hotspots, **A** and **B**, and they are less than *Minimum Distance* apart.  **A** and **B** both witness a beacon, and there are greater than *Maximum Witnesses*. Therefore, by definition above, **A** and **B** are providing *Rednundant Coverage*. 
 
-Imagine hotspot **A** is  *Faster to Witness* than **B**.  Since **A** and **B** are providing *Redundant Coverage*, only the *Faster to Witness*, **A**,will be rewarded.  **B** will be invalidated with *Invalidation Reason*. 
+Imagine hotspot **A** is  *Fastest to Witness* than **B**.  Since **A** and **B** are providing *Redundant Coverage*, only the *Fastest to Witness*, **A**,will be rewarded.  **B** will be invalidated with *Invalidation Reason*. 
 
 Suppose we add another hotspot, **C**. **C** is less than *Minimum Distance* from **B**, but greater than *Minimum Distance* to **A**. You might think of this as **A** is too close to **B**, **B** is too close to **C**, **A** and **C** are far enough apart.
 
 **A**, **B**, and **C** all witness the same beacon and there are greater than *Maximum Witnesses*. According to the above definition, **A** and **B** provide *Redundant Coverage*, and **B** and **C** provide *Redundant Coverage*. 
 
-If **A** is *Faster to Witness* than **B**, **B** is invalidated with *Invalidation Reason*.  Since **B** is denied, **C** no longer provides *Redundant Coverage* as **B** has been invalidated. **B** must be *Faster to Witness* than both **A** and **C** to be rewarded.  
+If **A** is *Fastest to Witness* than **B**, **B** is invalidated with *Invalidation Reason*.  Since **B** is denied, **C** no longer provides *Redundant Coverage* as **B** has been invalidated. **B** must be *Fastest to Witness* than both **A** and **C** to be rewarded.  
 
 Once a hotspot is invalidated with *Invalidation Reason*, it may no longer compete, it's out of the race.
 
-When invalidated witnesses cause there to be less than *Maximum Witnesses* **valid** witnesses, then the next *Faster to Witness* hotspot would then be considered for validation.  If it is not providing *Redundant Coverage*, then it is valid as normal.  Otherwise if it is providing *Redundant Coverage*, it must also be *Faster to Witness* than all hotspots within *Minimum Distance* to itself. If it is not, it is invalidated with *Invalidation Reason* and  the next fastest would be considered, and so on, until either *Maximum Witnesses* valid witnesses are obtained or there are no more witnesses to consider.  
+When invalidated witnesses cause there to be less than *Maximum Witnesses* **valid** witnesses, then the next *Fastest to Witness* hotspot would then be considered for validation.  If it is not providing *Redundant Coverage*, then it is valid as normal.  Otherwise if it is providing *Redundant Coverage*, it must also be *Fastest to Witness* than all hotspots within *Minimum Distance* to itself. If it is not, it is invalidated with *Invalidation Reason* and  the next fastest would be considered, and so on, until either *Maximum Witnesses* valid witnesses are obtained or there are no more witnesses to consider.  
 
 For example, there are 16 witnesses to a beacon.  Number 14 is invalidated with *Invalidation Reason*.  Number 15 would then be considered, if it validates all is done, otherwise 16 is considered. If neither 15 or 16 passes, then there are 13 valid witnesses to the beacon.
 
