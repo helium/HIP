@@ -24,10 +24,11 @@ Currently hotspots receive rewards for *Redundant Coverage*.  This HIP proposes 
 ### *Maximum Witnesses*
 *Maximum Witnesses* is equal to the variable max_witnesses_per_poc, which is currently 14.  This HIP will respect and follow any future changes to this number.  If there are *Maximum Witnesses* or fewer witnesses to a beacon then there are no changes, all witnesses would be rewarded as normal.  
 ### *Redundant Coverage* 
-*Redundant Coverage* is defined, per beacon, as the set of hotspots where: 
-- The hotspots are less than *Minimum Distance* apart 
-- They witness the same beacon.
+Each witness to a beacon is checked to determine if: 
+- There are hotspots that are less than *Minimum Distance* apart that also witnessed the beacon.
+- The witness has not been previoulsy invalidated with any invalidation reason.
 - There are greater than *Maximum Witnesses* to the beacon.  
+This means that if two or more hotspots witness a beacon, they are less than *Minimum Distance* apart from each other, there are greater than *Maximum Witnesses*, and are otherwise valid, they are deemed to be providing *Redundant Coverage*.
 ### *Invalidation Reason*
 *Invalidation Reason* means that witnesses are invalidated with invalidation reason 'Redundant Coverage'
 ### *Faster to Witness*
