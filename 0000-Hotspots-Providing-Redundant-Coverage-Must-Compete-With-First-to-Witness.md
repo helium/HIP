@@ -21,8 +21,8 @@ Currently hotspots receive rewards for *Redundant Coverage*.  This HIP proposes 
 
 ### *Minimum Distance* 
 *Minimum Distance* is defined as 8 resolution 11 hexes.  Hotspots less than this distance apart may not witness each other's beacons.
-### *Maximum Withesses*
-*Maximum Withesses* is equal to the variable max_witnesses_per_poc, which is currently 14.  This HIP will respect and follow any future changes to this number.  If there are *Maximum Withesses* or fewer witnesses to a beacon then there are no changes, all witnesses would be rewarded as normal.  
+### *Maximum Witnesses*
+*Maximum Witnesses* is equal to the variable max_witnesses_per_poc, which is currently 14.  This HIP will respect and follow any future changes to this number.  If there are *Maximum Witnesses* or fewer witnesses to a beacon then there are no changes, all witnesses would be rewarded as normal.  
 ### *Redundant Coverage* 
 *Redundant Coverage* is defined, per beacon, as the set of hotspots where: 
 - The hotspots are less than *Minimum Distance* apart 
@@ -36,19 +36,19 @@ The procedures in HIP 83 are used to determine which hotspot is *Faster to Witne
 ### Examples
 All witnesses are assumed to be potentially valid for discussion purposes, that is they have not been invaidated by some other invalidation reason defined elsewhere. 
 
-Suppose there are two hotspots, **A** and **B**, and they are less than *Minimum Distance* apart.  **A** and **B** both witness a beacon, and there are greater than *Maximum Withesses* witnesses. Therefore, by definition above, **A** and **B** are providing *Rednundant Coverage*. 
+Suppose there are two hotspots, **A** and **B**, and they are less than *Minimum Distance* apart.  **A** and **B** both witness a beacon, and there are greater than *Maximum Witnesses* witnesses. Therefore, by definition above, **A** and **B** are providing *Rednundant Coverage*. 
 
 Imagine hotspot **A** is  *Faster to Witness* than **B**.  Since **A** and **B** are providing *Redundant Coverage*, only the *Faster to Witness*, **A**,will be rewarded.  **B** will be invalidated with *Invalidation Reason*. 
 
 Suppose we add another hotspot, **C**. **C** is less than *Minimum Distance* from **B**, but greater than *Minimum Distance* to **A**. You might think of this as **A** is too close to **B**, **B** is too close to **C**, **A** and **C** are far enough apart.
 
-**A**, **B**, and **C** all witness the same beacon and there are greater than *Maximum Withesses* witnesses. According to the above definition, **A** and **B** provide *Redundant Coverage*, and **B** and **C** provide *Redundant Coverage*. 
+**A**, **B**, and **C** all witness the same beacon and there are greater than *Maximum Witnesses* witnesses. According to the above definition, **A** and **B** provide *Redundant Coverage*, and **B** and **C** provide *Redundant Coverage*. 
 
 If **A** is *Faster to Witness* than **B**, **B** is invalidated with *Invalidation Reason*.  Since **B** is denied, **C** no longer provides *Redundant Coverage* as **B** has been invalidated. **B** must be *Faster to Witness* than both **A** and **C** to be rewarded.  
 
 Once a hotspot is invalidated with *Invalidation Reason*, it may no longer compete, it's out of the race.
 
-When invalidated witnesses cause there to be less than *Maximum Withesses* **valid** witnesses, then the next *Faster to Witness* hotspot would then be considered for validation.  If it is not providing *Redundant Coverage*, then it is valid as normal.  Otherwise if it is providing *Redundant Coverage*, it must also be *Faster to Witness* than all hotspots within *Minimum Distance* to itself. If it is not, it is invalidated with *Invalidation Reason* and  the next fastest would be considered, and so on, until either *Maximum Witnesses* valid witnesses are obtained or there are no more witnesses to consider.  
+When invalidated witnesses cause there to be less than *Maximum Witnesses* **valid** witnesses, then the next *Faster to Witness* hotspot would then be considered for validation.  If it is not providing *Redundant Coverage*, then it is valid as normal.  Otherwise if it is providing *Redundant Coverage*, it must also be *Faster to Witness* than all hotspots within *Minimum Distance* to itself. If it is not, it is invalidated with *Invalidation Reason* and  the next fastest would be considered, and so on, until either *Maximum Witnesses* valid witnesses are obtained or there are no more witnesses to consider.  
 
 For example, there are 16 witnesses to a beacon.  Number 14 is invalidated with *Invalidation Reason*.  Number 15 would then be considered, if it validates all is done, otherwise 16 is considered. If neither 15 or 16 passes, then there are 13 valid witnesses to the beacon.
 
