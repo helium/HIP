@@ -29,7 +29,7 @@ Each witness to a beacon is checked to determine if:
 - The witness has not been previoulsy invalidated with any invalidation reason.
 - There are greater than *Maximum Witnesses* to the beacon.  
 
-This means that if two or more hotspots witness a beacon, they are less than *Minimum Distance* apart from each other, there are greater than *Maximum Witnesses*, and are otherwise valid, they are deemed to be providing *Redundant Coverage*.
+If each of the above conditions are met, then they are deemed to be providing *Redundant Coverage*.
 ### *Invalidation Reason*
 *Invalidation Reason* means that witnesses are invalidated with invalidation reason 'Redundant Coverage'
 ### *Faster to Witness*
