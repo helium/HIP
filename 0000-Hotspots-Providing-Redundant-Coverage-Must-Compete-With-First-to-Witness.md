@@ -50,6 +50,9 @@ For example, there are 16 witnesses to a beacon.  Number 14 is invalidated with 
 
 Suppose 16 hotspots witness a beacon.  Suppose 4 are invalidated with *Invalidation Reason*.  This would mean that only 12 total hotspots would be rewarded.  There is no recurrsion, once a hotspot is denied it no longer competes.  The number of hotspots invalidated with *Invalidation Reason* do not count towards the total number of hotspots to witness a beacon.
 
+### Why use resoloution 11 hexes?
+When the distances between hotspots are calculated using hexes, the hotspots are assumed to be at the center of the hex.  As the resolution increases, the location of the hotspot is more accurate, since the size of the hex containing the hotspot decreases.
+
 ## Drawbacks
 - May encourage false assertions.
 - May encourage owners to turn off hotspots rather than compete
@@ -66,9 +69,9 @@ Many owners want to install multiple hotspots per location for various reasons. 
 Many hotspot owners have low moral.  They are discouraged by a seeming lack of progress.  The goal is to instill hope, change, and encourage the discouraged.
 
 ## Unresolved Questions
-- There are currently no unresolved questions.
+- Is less than 8 resolution 11 hexes the correct distance?  
 - Discussion may bring up additional questions.
-
+- 
 ## Deployment Impact
 - Owners with low performance hotspots providing redundant coverage will likely see a reduction in rewards. 
 
