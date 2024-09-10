@@ -19,17 +19,21 @@ Currently hotspots receive rewards for *Redundant Coverage*.  This HIP proposes 
 
 ## Detailed Explanation
 
-- *Minimum Distance* is defined as 8 resolution 11 hexes.  Hotspots less than this distance apart may not witness each other's beacons.
-- *Maximum Withesses* is equal to the variable max_witnesses_per_poc, which is currently 14.  This HIP will respect and follow any future changes to this number.
-- *Redundant Coverage* is defined, per beacon, as the set of hotspots that: 
-    1. Are less than *Minimum Distance* apart 
-    2. Witness the same beacon.
-    3. There are greater than *Maximum Witnesses* to the beacon.  
-- *Invalidation Reason* witnesses are invalidated with invalidation reason 'Redundant Coverage'
-- *Faster to Witness* The procedures in HIP 83 are used to determine which hotspot is faster to witness a beacon. 
+### *Minimum Distance* 
+*Minimum Distance* is defined as 8 resolution 11 hexes.  Hotspots less than this distance apart may not witness each other's beacons.
+### *Maximum Withesses*
+*Maximum Withesses* is equal to the variable max_witnesses_per_poc, which is currently 14.  This HIP will respect and follow any future changes to this number.  If there are *Maximum Withesses* or fewer witnesses to a beacon then there are no changes, all witnesses would be rewarded as normal.  
+### *Redundant Coverage* 
+*Redundant Coverage* is defined, per beacon, as the set of hotspots where: 
+    - The hotspots are less than *Minimum Distance* apart 
+    - THey witness the same beacon.
+    - There are greater than *Maximum Witnesses* to the beacon.  
+### *Invalidation Reason*
+*Invalidation Reason* means that witnesses are invalidated with invalidation reason 'Redundant Coverage'
+### *Faster to Witness*
+The procedures in HIP 83 are used to determine which hotspot is *Faster to Witness* a beacon. 
 
-If there are *Maximum Withesses* or fewer witnesses to a beacon then there are no changes, all witnesses would be rewarded as normal.  
-
+### Examples
 All witnesses are assumed to be potentially valid for discussion purposes, that is they have not been invaidated by some other invalidation reason defined elsewhere. 
 
 Suppose there are two hotspots, **A** and **B**, and they are less than *Minimum Distance* apart.  **A** and **B** both witness a beacon, and there are greater than *Maximum Withesses* witnesses. Therefore, by definition above, **A** and **B** are providing *Rednundant Coverage*. 
@@ -71,7 +75,7 @@ Many hotspot owners have low moral.  They are discouraged by a seeming lack of p
 ## Unresolved Questions
 - Is less than 8 resolution 11 hexes the correct distance?  
 - Discussion may bring up additional questions.
-- 
+
 ## Deployment Impact
 - Owners with low performance hotspots providing redundant coverage will likely see a reduction in rewards. 
 
