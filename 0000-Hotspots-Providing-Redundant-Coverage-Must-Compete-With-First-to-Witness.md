@@ -37,7 +37,14 @@ The procedures in HIP 83 are used to determine which hotspot is *First to Witnes
 ### Why use resoloution 11 hexes?
 When the distances between hotspots are calculated using hexes, the hotspots are assumed to be at the center of the hex.  As the resolution increases, the location of the hotspot is more accurate, since the size of the hex containing the hotspot decreases.
 
-### Examples
+### Example Invalidation procedure
+Imagine that all of the witnesses to a beacon were stored in a list sorted by *First to Witness*.  There are greater than *Maximum Witnesses* to the beacon.
+- Start at the head of the list.  Check if there are other hotspots in the list that are within *Minimum Distance* and invalidate them.
+- Proceed to next element in the list and validate as above.
+- Repeat until the end of the list or *Maximum Witness* are validated.
+
+
+
 All witnesses are assumed to be potentially valid for discussion purposes, that is they have not been invaidated by some other invalidation reason defined elsewhere. 
 
 Suppose there are two hotspots, **A** and **B**, and they are less than *Minimum Distance* apart.  **A** and **B** both witness a beacon, and there are greater than *Maximum Witnesses*. Therefore, by definition above, **A** and **B** are providing *Rednundant Coverage*. 
