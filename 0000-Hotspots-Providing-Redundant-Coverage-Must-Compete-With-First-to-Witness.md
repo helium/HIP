@@ -59,7 +59,7 @@ For example, there are 16 witnesses to a beacon.  Number 14 is invalidated with 
 Suppose 16 hotspots witness a beacon.  Suppose 4 are invalidated with *Invalidation Reason*.  This would mean that only 12 total hotspots would be rewarded.  There is no recurrsion, once a hotspot is denied it no longer competes.  The number of hotspots invalidated with *Invalidation Reason* do not count towards the total number of hotspots to witness a beacon.
 ## Drawbacks
 ### May encourage false assertions
-Many owners may want to falsely assert their location.  The current Antenna Classifier may catch many of these, but it also may be possible to update the classifier's parameters to align with this HIP.  Cu
+Many owners may want to falsely assert their location.  The current Antenna Classifier may catch many of these, but it also may be possible to update the classifier's parameters to align with this HIP.
 ### May encourage owners to turn off hotspots rather than compete
 
 ## Rationale and Alternatives
