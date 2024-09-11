@@ -58,13 +58,13 @@ The number of invalidated witness does not count towards the total number of wit
 ### Example #1
 **A** and **B** witness a beacon, but **C** does not.  There are more than *Maximum Witnesses* to the beacon.
 
-**Table #1** shows that **A** is 7 hexes apart from **B**.  This is less than **Minimum Distance**.  If **A** is *First to Witness* compared to **B**, then hotspot **B** is invalidated with *Invalidation Reason*.  
+**Table #1** shows that **A** is 7 hexes apart from **B**.  This is less than **Minimum Distance**.  Start with the *First to Witness*.  If **A** is *First to Witness* compared to **B**, then hotspot **B** is invalidated with *Invalidation Reason*.  
 ### Example #2
 **A**, **B**, and **C** all witness the same beacon.  There are more than *Maximum Witnesses* to the beacon.
 
-**Table #1** shows that **A** is 7 hexes from **B**.  **B** is 7 hexes from **C**.  **A** is 14 hexes from **C**.
+**Table #1** shows that **A** is 7 hexes from **B**.  **B** is 7 hexes from **C**.  **A** is 14 hexes from **C**.  **A** and **B** are redundant, and **B** and **C** are redundant.
 
-We start with the *First to Witness* among the hotspots.  Suppose **A** is the *First to Witness* compared with the others. This would cause **B** to be invalidated.  **C**, would then compete via *First to Witness* to be selected.
+Start with the *First to Witness* among the hotspots.  Suppose **A** is the *First to Witness* compared with the others. This would cause **B** to be invalidated.  **C**, would then compete via *First to Witness* to be selected.
 
 Likewise, if **C** were *First to Witness*, **B** would be invalidated and **A** free to compete.
 
