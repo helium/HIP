@@ -83,6 +83,8 @@ It's common advice to new hotspot owners to install their hotspots 350-400 meter
 In other words, owners may have a grievance if the distance advice given them over years changed via this HIP.
 ### Multiple hotspots per location
 Many owners want to install multiple hotspots per location for various reasons.  This proposal would implicity allow such installations, yet discourage them by removing rewards.
+
+For example, if your use case needs multiple hotspots per location, that's fine, but only the *First to Witness* would be eligible for POC rewards. 
 ## Unresolved Questions
 - Is less than 8 resolution 11 hexes the correct distance?
 - Discussion may bring up additional questions.
