@@ -43,6 +43,7 @@ Imagine that all of the witnesses to a beacon were stored in a list sorted by *F
 - Proceed to next element in the list and validate as above.
 - Repeat until the end of the list or *Maximum Witness* are validated.
 ### Example map
+![3 hotspots res 11 ring 7.png](https://github.com/No1-at-all/HIP/tree/main/files/0000/3-hotspots-res-11-ring-7.png)
 
 All witnesses are assumed to be potentially valid for discussion purposes, that is they have not been invaidated by some other invalidation reason defined elsewhere. 
 
