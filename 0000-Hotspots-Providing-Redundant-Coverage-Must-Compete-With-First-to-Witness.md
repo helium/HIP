@@ -66,9 +66,9 @@ The number of invalidated witness does not count towards the total number of wit
 
 We start with the *First to Witness* among the hotspots.  Suppose **A** is the *First to Witness* compared with the others. This would cause **B** to be invalidated.  **C**, would then compete via *First to Witness* to be selected.
 
-Likewise, if **C** were *First to Witness*, **B** would be invalidate and **A** free to compete.
+Likewise, if **C** were *First to Witness*, **B** would be invalidated and **A** free to compete.
 
-If **B** were *First to Witness, then both **A** and **C** would be invalidated.
+If **B** were *First to Witness*, then both **A** and **C** would be invalidated.
 ## Drawbacks
 ### May encourage false assertions
 Many owners may want to falsely assert their location.  The current Antenna Classifier may catch many of these, but it also may be possible to update the classifier's parameters to align with this HIP.
