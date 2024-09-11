@@ -46,7 +46,7 @@ Imagine that all of the witnesses to a beacon were stored in a list sorted by *F
 ![3 hotspots res 11 ring 7.png](/files/0000/3-hotspots-res-11-ring-7.png)
 ### Table 1 hotspot distances
 | | **A** | **B** | **C** |
-| ----------------------- |
+| - | ------- | ----- | ----- |
 | **A** | | 7 | 14 |
 | **B** | 7 | | 7 |
 | **C** | 14 | 7 | |
