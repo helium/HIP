@@ -73,9 +73,9 @@ Denying the redundant hotspots give other hotspots, that may be slower to witnes
 In other words, why should multiple hotspots within *Minumum Distance* be rewarded for providing more or less the same location coverage at more or less the same time? 
 ### Aligns with previous standards
 It's common advice to new hotspot owners to install their hotspots 350-400 meters apart from one another.  This is the distance represented by *Minimum Distance*.  Hotspots that are asserted less than this distance apart may not witness each other's beacons. This HIP extends that concept. Hotspots which are less then *Minimum Distance* apart are providing *Redundant Coverage* and only the first to witness shall be rewarded.
-
+### Multiple hotspots per location
 Many owners want to install multiple hotspots per location for various reasons.  This proposal would implicity allow such installations, yet discourage them by removing rewards.
-
+### Moral
 Many hotspot owners have low moral.  They are discouraged by a seeming lack of progress.  The goal is to instill hope, change, and encourage the discouraged.
 
 ## Unresolved Questions
