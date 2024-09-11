@@ -58,15 +58,21 @@ For example, there are 16 witnesses to a beacon.  Number 14 is invalidated with 
 
 Suppose 16 hotspots witness a beacon.  Suppose 4 are invalidated with *Invalidation Reason*.  This would mean that only 12 total hotspots would be rewarded.  There is no recurrsion, once a hotspot is denied it no longer competes.  The number of hotspots invalidated with *Invalidation Reason* do not count towards the total number of hotspots to witness a beacon.
 ## Drawbacks
-- May encourage false assertions.
-- May encourage owners to turn off hotspots rather than compete
+### May encourage false assertions
+Many owners may want to falsely assert their location.  The current Antenna Classifier may catch many of these, but it also may be possible to update the classifier's parameters to align with this HIP.  Cu
+### May encourage owners to turn off hotspots rather than compete
 
 ## Rationale and Alternatives
-Over saturated areas abound and many hotspots are rewarded for providing *Redundant Coverage*.  Some users install multiple hotspots in a single location in an effort to increase rewards.  
+### Decrease the amount of redundancy 
+If two or more hotspots are within *Minimum Distance*, they are more or less in the same place and they are providing *Redunant Coverage*.  If those same hotspots witness the same beacon, and they are both to be rewarded according to HIP 83, then they are proving more or less the same coverage as each other because:
+- They are within *Minimum Distance* of each other
+- They both are to be selected for rewards according to HIP 83
 
-Currently, first to witness (network latency) is the only metric available to gauge a hotspot's performance.  Until other metrics are available, this is a convinient method to only reward the best performing hotspot in an area with *Redundant Coverage*.
+Denying the redundant hotspots give other hotspots, that may be slower to witness, an oppurtunity to compete to be selected and decrease the amount of redundancy of witnesses when there are greater than *Maximum Witnesses* to a beacon.
 
-It's common advice to new hotspot owners to install their hotspots 350-400 meters apart from one another.  This is the distance represented by 8 resolution 11 hexes.  Hotspots that are asserted less than this distance apart may not witness each other's beacons. This HIP extends that concept. Hotspots which are less then *Minimum Distance* apart are providing *Redundant Coverage* and only the first to witness shall be rewarded.
+In other words, why should multiple hotspots within *Minumum Distance* be rewarded for providing more or less the same location coverage at more or less the same time? 
+### Aligns with previous standards
+It's common advice to new hotspot owners to install their hotspots 350-400 meters apart from one another.  This is the distance represented by *Minimum Distance*.  Hotspots that are asserted less than this distance apart may not witness each other's beacons. This HIP extends that concept. Hotspots which are less then *Minimum Distance* apart are providing *Redundant Coverage* and only the first to witness shall be rewarded.
 
 Many owners want to install multiple hotspots per location for various reasons.  This proposal would implicity allow such installations, yet discourage them by removing rewards.
 
