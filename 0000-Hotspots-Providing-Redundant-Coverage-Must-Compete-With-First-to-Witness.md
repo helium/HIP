@@ -69,7 +69,7 @@ Many owners may want to falsely assert their location.  The current Antenna Clas
 ### May encourage owners to turn off hotspots rather than compete
 
 ## Rationale and Alternatives
-### Decrease the amount of redundancy 
+### Decrease the amount of witness redundancy 
 If two or more hotspots are within *Minimum Distance*, they are more or less in the same place and they are providing *Redunant Coverage*.  If those same hotspots witness the same beacon, and they are both to be rewarded according to HIP 83, then they are proving more or less the same coverage as each other because:
 - They are within *Minimum Distance* of each other
 - They both are to be selected for rewards according to HIP 83
@@ -80,7 +80,7 @@ In other words, why should multiple hotspots within *Minumum Distance* be reward
 ### Aligns with previous standards
 It's common advice to new hotspot owners to install their hotspots 350-400 meters apart from one another.  This is the distance represented by *Minimum Distance*.  Hotspots that are asserted less than this distance apart may not witness each other's beacons. This HIP extends that concept. Hotspots which are less then *Minimum Distance* apart are providing *Redundant Coverage* and only the first to witness shall be rewarded.
 
-In other words, owners may have a grievance if the distance advice given them over years changed via this HIP.
+Owners may have a grievance if the distance advice given them over years changed via this HIP.
 ### Multiple hotspots per location
 Many owners want to install multiple hotspots per location for various reasons.  This proposal would implicity allow such installations, yet discourage them by removing rewards.
 
