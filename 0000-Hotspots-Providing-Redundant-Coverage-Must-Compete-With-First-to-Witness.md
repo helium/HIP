@@ -99,7 +99,7 @@ If two or more hotspots are within *Minimum Distance*, they are more or less in 
 
 Denying the redundant hotspots give other hotspots, that may be slower to witness, an oppurtunity to compete to be selected and decrease the amount of witness redundancy when there are greater than *Maximum Witnesses* to a beacon.
 
-Multiple hotspots within *Minumum Distance* should not be rewarded for providing more or less the same location coverage at more or less the same time? 
+Multiple hotspots within *Minumum Distance* should not be rewarded for providing more or less the same location coverage at more or less the same time.
 ### Aligns with previous standards
 It's common advice to new hotspot owners to install their hotspots 350-400 meters apart from one another.  This is the distance represented by *Minimum Distance*.  Hotspots that are asserted less than this distance apart may not witness each other's beacons. This HIP extends that concept. Hotspots which are less then *Minimum Distance* apart are providing *Redundant Coverage* and only the *First to Witness* shall be rewarded.
 
