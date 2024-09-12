@@ -40,8 +40,7 @@ When the distances between hotspots are calculated using hexes, the hotspots are
 ### Example invalidation function
 Imagine that all of the witnesses to a beacon were stored in a list sorted by *First to Witness*.  There are greater than *Maximum Witnesses* to the beacon.
 - Start at the head of the list.  Check if there are other hotspots in the list that are within *Minimum Distance* and invalidate them.
-- Proceed to next element in the list and validate as above.
-- Repeat until the end of the list or *Maximum Witness* are validated.
+- Proceed to next element in the list and validate as above, until the end of the list or *Maximum Witness* are validated.
 
 The number of invalidated witness does not count towards the total number of witness a beacon
 ### Example map #1 
