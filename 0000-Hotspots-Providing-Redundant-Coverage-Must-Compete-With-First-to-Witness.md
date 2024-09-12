@@ -8,7 +8,7 @@
 ## Summary
 Currently hotspots receive rewards for *Redundant Coverage*.  This HIP proposes to only reward the *First to Witness* in areas with *Redundant Coverage* when there are greater than *Maximum Witnesses* to a beacon.
 ## Motivation
-- Hotspots that are less than 8 resolution 11 hexes apart are providing *Redundant Coverage*.
+- Hotspots that are less than *Minimum Distance* hexes apart are providing *Redundant Coverage*.
 - Disuade people from installing multiple hotspots per location when additional rewards are the motivation.
 - Encourage people to spread out to under served areas.
 - Some people belive Proof of Coverage rewards are broken and alternatives should be developed.
