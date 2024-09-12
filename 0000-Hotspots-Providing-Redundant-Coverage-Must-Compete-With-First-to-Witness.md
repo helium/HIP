@@ -47,17 +47,15 @@ Imagine that all of the witnesses to a beacon were stored in a list sorted by *F
 - Proceed to next valid element in the list and invalidate as above, until the end of the list or *Maximum Witnesses* are validated.
 
 The number of invalidated witness does not count towards the total number of witness to a beacon.
-### Example map #1 
-#### 3 hotspots in a resolution 11 hex with 7 rings
+### Example map 3 hotspots in a resolution 11 hex with 7 rings
 ![3 hotspots res 11 ring 7.png](/files/0000/3-hotspots-res-11-ring-7.png)
-### Table #1 
-**Hotspot distances**
+#### Table #1 Hotspot distances
 |             | **A** | **B** | **C** |
 | ----------- | ----- | ----- | ----- |
 | **A**       |       | 7     | 14    |
 | **B**       | 7     |       | 7     |
 | **C**       | 14    | 7     |       |
-#### *Example assumptions*
+#### Example assumptions
 None of the other witnesses to the beacon are within *Minimum Distance* of each other.
 ### Example #1
 **A** and **B** witness a beacon, but **C** does not.  There are more than *Maximum Witnesses* to the beacon.
