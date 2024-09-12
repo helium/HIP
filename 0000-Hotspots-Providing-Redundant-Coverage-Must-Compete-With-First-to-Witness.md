@@ -86,7 +86,7 @@ If two or more hotspots are within *Minimum Distance*, they are more or less in 
 - They are within *Minimum Distance* of each other
 - They both are to be selected for rewards according to HIP 83
 
-Denying the redundant hotspots give other hotspots, that may be slower to witness, an oppurtunity to compete to be selected and decrease the amount of redundancy of witnesses when there are greater than *Maximum Witnesses* to a beacon.
+Denying the redundant hotspots give other hotspots, that may be slower to witness, an oppurtunity to compete to be selected and decrease the amount of witness redundancy when there are greater than *Maximum Witnesses* to a beacon.
 
 In other words, why should multiple hotspots within *Minumum Distance* be rewarded for providing more or less the same location coverage at more or less the same time? 
 ### Aligns with previous standards
