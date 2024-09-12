@@ -57,6 +57,7 @@ The number of invalidated witness does not count towards the total number of wit
 | **C** | 14 | 7 | |
 
 ***Example assumptions***
+
 It is assumed that there are more than *Maximum Witnesses* to the beacon.  None of the other witnesses to the beacon are within *Minimum Distance* of each other.
 ### Example #1
 **A** and **B** witness a beacon, but **C** does not.  There are more than *Maximum Witnesses* to the beacon.
