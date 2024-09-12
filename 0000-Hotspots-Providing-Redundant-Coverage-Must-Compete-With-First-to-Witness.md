@@ -22,10 +22,15 @@ Currently hotspots receive rewards for *Redundant Coverage*.  This HIP proposes 
 ### Existing PoC Definitions and rules, not defined by this HIP
 
 ***Maximum Witnesses***
+
 *Maximum Witnesses* is equal to the variable max_witnesses_per_poc, which is the maximum rewardable witnesses per beacon and is currently set to 14.  This HIP will respect and follow any future changes to this number.  If there are *Maximum Witnesses* or fewer witnesses to a beacon then this HIP makes no witness invalidation changes or changes to the PoC rewards structure for that beacon.
+
 ***First to Witness***
+
 The procedures in [HIP 83](https://github.com/helium/HIP/blob/main/0083-restore-first-to-witness.md#detailed-explanation) are used to determine which hotspot is *First to Witness* a beacon. 
+
 ***Minimum Distance***
+
 *Minimum Distance* is defined as 8 resolution 11 hexes.  Hotspots asserted less than this distance apart are not rewarded when they witness each other's beacons.
 **Why use resolution 11 hexes?**
 When the distances between hotspots are [calculated using hexes](https://h3geo.org/docs/core-library/restable/), the hotspots are assumed to be at the center of the hex.  As the resolution number increases, the location of the hotspot is more accurate, since the size of the hex containing the hotspot decreases.
@@ -33,13 +38,16 @@ When the distances between hotspots are [calculated using hexes](https://h3geo.o
 ### New PoC definitions and rules implemented by this HIP
 
 ***Redundant Coverage***
+
 Each witness to a beacon is checked to determine if: 
 - There are hotspots that are less than *Minimum Distance* apart that also witnessed the beacon.
 - The witness has not been previously invalidated with any invalidation reason.
 - There are greater than *Maximum Witnesses* to the beacon.  
 
 If each of the above conditions are met, then they are deemed to be providing *Redundant Coverage*.
+
 ***Invalidation Reason***
+
 *Invalidation Reason* means that witnesses are invalidated with invalidation reason 'Redundant Coverage'
 
 ### Example invalidation function
