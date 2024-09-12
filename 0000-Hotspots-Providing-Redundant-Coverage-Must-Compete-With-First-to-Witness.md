@@ -74,14 +74,12 @@ Start with the *First to Witness* among the hotspots.  Suppose **A** is the *Fir
 Likewise, if **C** were *First to Witness*, **B** would be invalidated and **A** free to compete.
 
 If **B** were *First to Witness*, then both **A** and **C** would be invalidated.
+### Example #3
+There are less than *Maximum Witnesses* to the beacon.  No hotspots are invalidated.
 ## Drawbacks
 ### May encourage false assertions
 Many owners may want to falsely assert their location.  The current Antenna Classifier may catch many of these, but it also may be possible to update the classifier's parameters to align with this HIP.
-### Example #3
-
-There are less than *Maximum Witnesses* to the beacon.  No hotspots are invalidated.
 ### May encourage owners to turn off hotspots rather than compete
-
 ## Rationale and Alternatives
 ### Decrease the amount of witness redundancy 
 If two or more hotspots are within *Minimum Distance*, they are more or less in the same place, they are providing *Redunant Coverage*.  If those same hotspots witness the same beacon, and they are both to be rewarded according to HIP 83, then they are providing more or less the same coverage as each other because:
