@@ -67,7 +67,7 @@ Start with the *First to Witness*.  If **A** is *First to Witness* compared to *
 ### Example #2
 **A**, **B**, and **C** all witness the same beacon.  There are more than *Maximum Witnesses* to the beacon.
 
-**Table #1** shows that **A** is 7 hexes from **B**.  **B** is 7 hexes from **C**.  **A** is 14 hexes from **C**.  **A** and **B** are redundant, and **B** and **C** are redundant.
+**Table #1** shows that **A** is 7 hexes from **B**.  **B** is 7 hexes from **C**.  **A** is 14 hexes from **C**.  **A** and **B** are redundant, and **B** and **C** are redundant.  **A** and **C** are not redundant.
 
 Start with the *First to Witness* among the hotspots.  Suppose **A** is the *First to Witness* compared with the others. This would cause **B** to be invalidated.  **C**, would then compete via *First to Witness* to be selected.
 
