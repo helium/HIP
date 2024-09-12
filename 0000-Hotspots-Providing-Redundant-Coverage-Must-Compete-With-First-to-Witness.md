@@ -77,6 +77,9 @@ If **B** were *First to Witness*, then both **A** and **C** would be invalidated
 ## Drawbacks
 ### May encourage false assertions
 Many owners may want to falsely assert their location.  The current Antenna Classifier may catch many of these, but it also may be possible to update the classifier's parameters to align with this HIP.
+### Example #3
+
+There are less than *Maximum Witnesses* to the beacon.  No hotspots are invalidated.
 ### May encourage owners to turn off hotspots rather than compete
 
 ## Rationale and Alternatives
