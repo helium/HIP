@@ -32,11 +32,6 @@ The procedures in [HIP 83](https://github.com/helium/HIP/blob/main/0083-restore-
 ***Minimum Distance***
 
 *Minimum Distance* is defined as 8 resolution 11 hexes.  Hotspots asserted less than this distance apart are not rewarded when they witness each other's beacons.
-
-**Why use resolution 11 hexes?**
-
-When the distances between hotspots are [calculated using hexes](https://h3geo.org/docs/core-library/restable/), the hotspots are assumed to be at the center of the hex.  As the resolution number increases, the location of the hotspot is more accurate, since the size of the hex containing the hotspot decreases.
-
 ### New PoC definitions and rules implemented by this HIP
 
 ***Redundant Coverage***
@@ -51,7 +46,8 @@ If each of the above conditions are met, then they are deemed to be providing *R
 ***Invalidation Reason***
 
 *Invalidation Reason* means that witnesses are invalidated with invalidation reason 'Redundant Coverage'
-
+### Why use resolution 11 hexes?
+When the distances between hotspots are [calculated using hexes](https://h3geo.org/docs/core-library/restable/), the hotspots are assumed to be at the center of the hex.  As the resolution number increases, the location of the hotspot is more accurate, since the size of the hex containing the hotspot decreases.
 ### Example invalidation function
 Imagine that all of the witnesses to a beacon were stored in a list sorted by *First to Witness*.  There are greater than *Maximum Witnesses* to the beacon.
 - Start at the head of the list.  Check if there are other hotspots in the list that are within *Minimum Distance* and invalidate them.
