@@ -20,35 +20,26 @@ Currently hotspots receive rewards for *Redundant Coverage*.  This HIP proposes 
 ## Detailed Explanation
 
 ### Existing PoC Definitions and rules, not defined by this HIP
-
-***Maximum Witnesses***
-
+#### *Maximum Witnesses*
 *Maximum Witnesses* is equal to the variable max_witnesses_per_poc, which is the maximum rewardable witnesses per beacon and is currently set to 14.  This HIP will respect and follow any future changes to this number.  
 
 If there are *Maximum Witnesses* or fewer witnesses to a beacon then this HIP makes no witness invalidation changes or changes to the PoC rewards structure for that beacon.
 
-***First to Witness***
-
+#### *First to Witness*
 The procedures in [HIP 83](https://github.com/helium/HIP/blob/main/0083-restore-first-to-witness.md#detailed-explanation) are used to determine which hotspot is *First to Witness* a beacon. 
-
-***Minimum Distance***
-
+#### *Minimum Distance*
 *Minimum Distance* is defined as 8 resolution 11 hexes.  Hotspots asserted less than this distance apart are not rewarded when they witness each other's beacons.
 
 When the distances between hotspots are [calculated using hexes](https://h3geo.org/docs/core-library/restable/), the hotspots are assumed to be at the center of the hex.  As the resolution number increases, the location of the hotspot is more accurate, since the size of the hex containing the hotspot decreases.
 ### New PoC definitions and rules implemented by this HIP
-
-***Redundant Coverage***
-
+#### *Redundant Coverage*
 Each witness to a beacon is checked to determine if: 
 - There are hotspots that are less than *Minimum Distance* apart that also witnessed the beacon.
 - The witness has not been previously invalidated with any invalidation reason.
 - There are greater than *Maximum Witnesses* to the beacon.  
 
 If each of the above conditions are met, then they are deemed to be providing *Redundant Coverage*.
-
-***Invalidation Reason***
-
+#### *Invalidation Reason*
 *Invalidation Reason* means that witnesses are invalidated with invalidation reason 'Redundant Coverage'
 ### Example invalidation function
 Imagine that all of the witnesses to a beacon were stored in a list sorted by *First to Witness*.  There are greater than *Maximum Witnesses* to the beacon.
@@ -57,19 +48,16 @@ Imagine that all of the witnesses to a beacon were stored in a list sorted by *F
 
 The number of invalidated witness does not count towards the total number of witness to a beacon.
 ### Example map #1 
-**3 hotspots in a resolution 11 hex with 7 rings**
-
+#### 3 hotspots in a resolution 11 hex with 7 rings
 ![3 hotspots res 11 ring 7.png](/files/0000/3-hotspots-res-11-ring-7.png)
 ### Table #1 
 **Hotspot distances**
-| | **A** | **B** | **C** |
-| - | ------- | ----- | ----- |
-| **A** | | 7 | 14 |
-| **B** | 7 | | 7 |
-| **C** | 14 | 7 | |
-
-***Example assumptions***
-
+|             | **A** | **B** | **C** |
+| ----------- | ----- | ----- | ----- |
+| **A**       |       | 7     | 14    |
+| **B**       | 7     |       | 7     |
+| **C**       | 14    | 7     |       |
+#### *Example assumptions*
 None of the other witnesses to the beacon are within *Minimum Distance* of each other.
 ### Example #1
 **A** and **B** witness a beacon, but **C** does not.  There are more than *Maximum Witnesses* to the beacon.
