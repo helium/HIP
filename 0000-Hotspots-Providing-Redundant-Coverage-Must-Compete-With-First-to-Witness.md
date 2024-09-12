@@ -53,7 +53,7 @@ Imagine that all of the witnesses to a beacon were stored in a list sorted by *F
 - Start at the head of the list.  Check if there are other hotspots in the list that are within *Minimum Distance* and invalidate them.
 - Proceed to next valid element in the list and invalidate as above, until the end of the list or *Maximum Witnesses* are validated.
 
-The number of invalidated witness does not count towards the total number of witness a beacon
+The number of invalidated witness does not count towards the total number of witness to a beacon.
 ### Example map #1 
 **3 hotspots in a resolution 11 hex with 7 rings**
 
