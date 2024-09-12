@@ -23,7 +23,9 @@ Currently hotspots receive rewards for *Redundant Coverage*.  This HIP proposes 
 
 ***Maximum Witnesses***
 
-*Maximum Witnesses* is equal to the variable max_witnesses_per_poc, which is the maximum rewardable witnesses per beacon and is currently set to 14.  This HIP will respect and follow any future changes to this number.  If there are *Maximum Witnesses* or fewer witnesses to a beacon then this HIP makes no witness invalidation changes or changes to the PoC rewards structure for that beacon.
+*Maximum Witnesses* is equal to the variable max_witnesses_per_poc, which is the maximum rewardable witnesses per beacon and is currently set to 14.  This HIP will respect and follow any future changes to this number.  
+
+If there are *Maximum Witnesses* or fewer witnesses to a beacon then this HIP makes no witness invalidation changes or changes to the PoC rewards structure for that beacon.
 
 ***First to Witness***
 
