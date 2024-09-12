@@ -82,7 +82,7 @@ Many owners may want to falsely assert their location.  The current Antenna Clas
 
 ## Rationale and Alternatives
 ### Decrease the amount of witness redundancy 
-If two or more hotspots are within *Minimum Distance*, they are more or less in the same place and they are providing *Redunant Coverage*.  If those same hotspots witness the same beacon, and they are both to be rewarded according to HIP 83, then they are proving more or less the same coverage as each other because:
+If two or more hotspots are within *Minimum Distance*, they are more or less in the same place, they are providing *Redunant Coverage*.  If those same hotspots witness the same beacon, and they are both to be rewarded according to HIP 83, then they are proving more or less the same coverage as each other because:
 - They are within *Minimum Distance* of each other
 - They both are to be selected for rewards according to HIP 83
 
