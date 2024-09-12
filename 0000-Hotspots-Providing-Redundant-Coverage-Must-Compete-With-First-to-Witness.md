@@ -62,7 +62,7 @@ It is assumed that there are more than *Maximum Witnesses* to the beacon.  None 
 ### Example #1
 **A** and **B** witness a beacon, but **C** does not.  There are more than *Maximum Witnesses* to the beacon.
 
-**Table #1** shows that **A** is 7 hexes apart from **B**.  This is less than **Minimum Distance**.  
+**Table #1** shows that **A** is 7 hexes apart from **B**.  This is less than *Minimum Distance*.  
 
 Start with the *First to Witness*.  If **A** is *First to Witness* compared to **B**, then hotspot **B** is invalidated with *Invalidation Reason*. Likewise, if **B** is *First to Witness* **A** is invalidated.
 ### Example #2
