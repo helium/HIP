@@ -32,6 +32,8 @@ The procedures in [HIP 83](https://github.com/helium/HIP/blob/main/0083-restore-
 ***Minimum Distance***
 
 *Minimum Distance* is defined as 8 resolution 11 hexes.  Hotspots asserted less than this distance apart are not rewarded when they witness each other's beacons.
+
+When the distances between hotspots are [calculated using hexes](https://h3geo.org/docs/core-library/restable/), the hotspots are assumed to be at the center of the hex.  As the resolution number increases, the location of the hotspot is more accurate, since the size of the hex containing the hotspot decreases.
 ### New PoC definitions and rules implemented by this HIP
 
 ***Redundant Coverage***
@@ -46,8 +48,6 @@ If each of the above conditions are met, then they are deemed to be providing *R
 ***Invalidation Reason***
 
 *Invalidation Reason* means that witnesses are invalidated with invalidation reason 'Redundant Coverage'
-### Why use resolution 11 hexes?
-When the distances between hotspots are [calculated using hexes](https://h3geo.org/docs/core-library/restable/), the hotspots are assumed to be at the center of the hex.  As the resolution number increases, the location of the hotspot is more accurate, since the size of the hex containing the hotspot decreases.
 ### Example invalidation function
 Imagine that all of the witnesses to a beacon were stored in a list sorted by *First to Witness*.  There are greater than *Maximum Witnesses* to the beacon.
 - Start at the head of the list.  Check if there are other hotspots in the list that are within *Minimum Distance* and invalidate them.
@@ -99,9 +99,9 @@ If two or more hotspots are within *Minimum Distance*, they are more or less in 
 
 Denying the redundant hotspots give other hotspots, that may be slower to witness, an oppurtunity to compete to be selected and decrease the amount of witness redundancy when there are greater than *Maximum Witnesses* to a beacon.
 
-In other words, why should multiple hotspots within *Minumum Distance* be rewarded for providing more or less the same location coverage at more or less the same time? 
+Multiple hotspots within *Minumum Distance* should not be rewarded for providing more or less the same location coverage at more or less the same time? 
 ### Aligns with previous standards
-It's common advice to new hotspot owners to install their hotspots 350-400 meters apart from one another.  This is the distance represented by *Minimum Distance*.  Hotspots that are asserted less than this distance apart may not witness each other's beacons. This HIP extends that concept. Hotspots which are less then *Minimum Distance* apart are providing *Redundant Coverage* and only the first to witness shall be rewarded.
+It's common advice to new hotspot owners to install their hotspots 350-400 meters apart from one another.  This is the distance represented by *Minimum Distance*.  Hotspots that are asserted less than this distance apart may not witness each other's beacons. This HIP extends that concept. Hotspots which are less then *Minimum Distance* apart are providing *Redundant Coverage* and only the *First to Witness* shall be rewarded.
 
 Owners may have a grievance if the distance advice given them over years changed via this HIP.
 ### Multiple hotspots per location
