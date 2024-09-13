@@ -100,7 +100,7 @@ For example, if your use case needs multiple hotspots per location, that's fine,
 #### Antenna Classifier
 Changing the Antenna Classifier to Denylist all hotspots in the same location regardless of asserted location would solve some of the same issues as this HIP.  It would also Denylist legitimate use cases which require multiple hotspots per location.
 #### Split rewards for redundant hotspots
-Instead of invalidating witnesses with *Redundant Coverage*, rewards could be split equally among the hotspots.
+Instead of invalidating witnesses with *Redundant Coverage*, rewards could be split equally among the hotspots.  This would not decrease *Redundant Coverage*.
 ## Unresolved Questions
 - Is less than 8 resolution 11 hexes the correct distance?
 - Discussion may bring up additional questions.
