@@ -11,7 +11,7 @@ Currently hotspots receive rewards for *Redundant Coverage*.  This HIP proposes 
 - Hotspots that are less than *Minimum Distance* hexes apart are providing *Redundant Coverage*.
 - Disuade people from installing multiple hotspots per location when additional rewards are the motivation.
 - Encourage people to spread out to under served areas.
-- Some people belive Proof of Coverage rewards are broken and alternatives should be developed.
+- Some people believe Proof of Coverage rewards are broken and alternatives should be developed.
 
 ## Stakeholders
 - All IOT Hotspot owners will be affected.
