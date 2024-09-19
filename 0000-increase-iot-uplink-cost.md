@@ -11,7 +11,7 @@
 
 This HIP proposes to change the per packet cost of transferring messages on the Helium IOT Network from **1 Data Credit (DC) per 24-byte packet** to **10 Data Credits per 24-byte packet** to increase the network's short-term financial sustainability.
 
-We recognise a longer term variable price needs to be saught for long-term finacial stability, as any change to DC pricing does not offer and long term solutions.
+We recognise a longer term variable price needs to be saught for long-term finacial stability, as any change to DC pricing does not offer a long term solution to DC pricing.
 
 ## Motivation
 
@@ -29,18 +29,18 @@ We can look at some more advanced usecases that are seeing growth on the helium 
 
 That sensor uses max copies of 6 for working out its location based on the signal strength of hotspots and uplinks every hour with a battery that lasts around a year.
 
-If we do the maths on usage, with the current cost of $0.00001 this works out to:
+If we do the math on usage, with the current cost of $0.00001 this works out to:
 
-0.00001 _ 24 uplinks a day _ 6 copies \* 365 days = $0.5256 per year
+`0.00001 * 24 times a day  * 6 copies  * 365 = $0.5256 per year`
 
 As a user of this sticker, I understand this rate is not going to sustain the IOT network.
 
 If we run some models of increasing the price 10x, 20x 50x and 100x we will see:
 
-100x - 0.001 _ 24 uplinks a day _ 6 copies _ 365 days = $52.56 per year
-50x - 0.00005 _ 24 uplinks a day _ 6 copies _ 365 days = $26.28 per year
-20x - 0.00002 _ 24 uplinks a day _ 6 copies _ 365 days = $10.51 per year
-10x - 0.00001 _ 24 uplinks a day _ 6 copies _ 365 days = $5.26 per year
+`100x - 0.001 * 24 times a day  * 6 copies  * 365 = $52.56 per year`
+`50x - 0.0005 * 24 times a day  * 6 copies  * 365 = $26.28 per year`
+`20x - 0.0002 * 24 times a day  * 6 copies  * 365 = $10.51 per year`
+`10x - 0.0001 * 24 times a day  * 6 copies  * 365 = $5.26 per year`
 
 It is our belief this usecase is invalidated based on costs of anything more than 10x. It's not just this one usecase that is growing, we can look to other usecases , for example the SenseCAP T1000 where uplink rates are often as fast as 2-5 minutes, the cost is simply unsustainable above a 10x increase without offering volume discounts.
 
