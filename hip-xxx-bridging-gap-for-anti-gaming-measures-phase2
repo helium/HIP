@@ -11,7 +11,7 @@ Voting Requirements: veMOBILE Holder
 
 ## Summary
 
-This HIP aims to further the refinement of HIP-131, and will further extend the scope of HIP-131 to cover all remaining areas that were not previously included (such as C** areas). It also extends the active duration of HIP-131 (from 150 epochs) to not expire until both phases of HIP-118 are fully implemented and active to the point that the Service Provider is satisfied with it being a replacement of this (HIP-131). Additionally we propose to also put a 42-epoch renewal (every 6 weeks) on valid CDR information. It will also allow a Service Provider to utilize CDR information as part of HIP-118 (Verification Mapping for MOBILE Network) if they choose to do so. Finally, crack down a little more on gaming boosted areas with a requirement with a 7 day CDR requirement that will get invalidated if a invalid CDR is detected, which will be be at the discretion of the Service Provider. 
+This HIP aims to further the refinement of HIP-131, and will further extend the scope of HIP-131 to cover all remaining areas that were not previously included (such as C** areas), along with other tweaks and changes.
 
 
 ## Related Prior HIPs
