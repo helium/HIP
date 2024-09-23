@@ -11,12 +11,16 @@
 
 ## Summary
 
-HIP-84 Service Provider Hex Boosting as it is written, provides too much unilateral control over where rewards are distributed to any service provider at the expense of the network PoC distribution pool.
+This HIP aims to do three things to amend HIP-84 Service Provider Hex Boosting. It creates a dedicated Service Provider Hex Boosting emissions funding category. It reduces the minimum time for Service Provider Hex Boosting to 3 months and finally limits future boost creation to a maximum of 10x rewards.
 
-If a service provider decides to hex boost all of Miami, the rewards distributed on behalf of the network is disproportionate to the amount burned and disincentivizes the remaining nationwide deployments on the network for the sole purpose of that service provider, ultimately dictating areas where majority of rewards should go.
-While this author understands that the first service provider on the network is key to the networks success for future service providers to join, it should not be at the detriment of the network's natural expansion nationwide into other cities, and internationally.
+1. The dedicated Service Provider Hex Boosting Rewards bucket will be limited to a maximum of 10% of all future emissions in the MOBILE network and will be taken out of the current Proof-of-Coverage category (reduced from 20% to a minimum of 10%). Any of the 10% not used by Service Provider Hex Boosting is returned to the Proof-of-Coverage bucket.
+2. The minimum time for Service Provider Hex Boosting is reduced to 3 months from 6 months to allow more flexibility of boosting to hexes that may have an unsure value to the network.
+3. Limit FUTURE hex boost creation to a maximum of 10x rewards. As the community believes the current 100x boosted hexes are breeding temporary deployments that are reward-chasing and attempting gaming of Proof-of-Coverage.
 
-With this in mind, there are also a few other amendments in this HIP that will also benefit the Service Provider in regards to HIP-84. One of which is changing the minimum boost time to 3 months, and the other is staking the hotspot in order to receive the boosted rewards.
+[HIP-84](./0084-service-provider-hex-boosting.md) established Service Provider Hex Boosting but it provides too much unilateral control over emissions distribution to any Service Provider as it has no limits over the network's PoC emissions. For example, when a service provider decides to place boosts, this directs the disproportionate amount of PoC emissions, including all the Data Transfer overage, to boosted hexes. Because of this skewed emission targeting, deployments in remaining regions nationwide have a disincentive to build on the Helium MOBILE network.
+
+It's important to note that these changes do not affect the Data Transfer category of emissions where unused emissions are granted to the Proof-of-Coverage category. This mechanism will remain untouched.
+
 
 ## Prior / Related HIPs
 
@@ -29,60 +33,69 @@ This HIP is being proposed to address some concerns about the original implement
 
 ## Stakeholders
 
-- The MOBILE subnetwork
+- The MOBILE Subnetwork.
+- Service Providers assigning boosted Hex Rewards.
+- Operators/Deployers of CBRS and Wi-Fi MOBILE Hotspots outside of boosted hexes will see increased earnings.
+- Operators/Deployers of CBRS and Wi-Fi MOBILE Hotspots inside of boosted hexes will see decreased earnings.
 
 ## Detailed Explanation
 
-This HIP aims to do four (4) things to amend HIP-84 Service Provider Hex Boosting.
+This HIP aims to do three (3) things to amend HIP-84 Service Provider Hex Boosting.
 
-1. Service Provider Hex Boosting rewards to be taken out of the Service Provider Bucket first.
-    - HIP-84 is, by title, Service Provider Hex Boosting, and this should come out of the rewards distributed to the Service Provider. If there is not enough MOBILE allocated for the Service Provider bucket to cover the boosted hexes in a single epoch, the remainder would then come out of the networks regular PoC bucket.
-    - This would incentivize Service Providers to think more carefully about where, for how long, and by how much a hex is boosted as it comes out of their own reward bucket.
+1. Create a dedicated Service Provider Hex Boosting Rewards bucket. This will be 10% of all future emissions in the MOBILE network and will be taken out of the current Proof-of-Coverage category (reduced from 20% to 10%).
+   - Any amount not used in this 10% boosted bucket, gets distributed back to the regular PoC bucket.
+   - Boosted rewards will no longer benefit from the overflow from the Data Transfer Bucket, as they will be solely dependent on their own bucket.
+   - Because of this 10% allocated Hex Boosting Bucket, this would enable a dynamic maximum / ceiling for hex boosts depending on the number of hexes that are actively pulling for boosted rewards. As of writing this HIP, the allocation of PoC to boosted hexes is far above 10%. This will cause boosted hexes to natively get less rewards until the bucket reaches the 10% equilibrium.
+   - Mobile rewards are calculated based on the total CPs for that epoch and the PoC bucket of rewards (sans the Mobile due to unused Data rewards). The total Mobile rewards due to the CPs from the boosted hexes are then checked against the 10% Mobile emissions for that epoch. If the number of mobile tokens is higher that the 10% amount, the Mobile rewards for the boosted CPs are reduced  to meet the 10% cap. Mobile rewards from base CPs are then re-calculated after the unused Data rewards are added back into the PoC reward bucket.
+      - Example:
+           - Assumptions
+             - Total Poc bucket: `1,000,000 MOBILE` (500,000 boosted PoC and 500,000 normal PoC)
+             - Total Coverage Points: `100,000`
+             - Total Boosted Coverage Points: `75,000`
+             - Total Normal Coverage Points: `25,000`
+           - Calculation
+             - `1,000,000 / 100,000 = 10 MOBILE per CP, 10 * 75,000` exceeds the boosted PoC cap, so we have to calculate the MOBILE per CP differently for boosted vs non boosted
+             - Boosted
+               ```
+               500,000 / 75,000 = 6.666666667 MOBILE per boosted CP
+               ```
+             - Normal
+               ```
+               500,000 / 25,000 = 20 MOBILE per normal CP
+               ```
+             - For a hotspot with 500 CP, 100 normal and 400 boosted
+               ```
+               (100 x 20) + (400 * 6.666666667) = 4666.666667
+               ```
+
+
 2. Reduce the minimum time for Service Provider Hex Boosting to 3 months.
-    - Currently set to 6 months minimum, reducing this to 3 months allows Service Providers more flexibility in boosting a hex that they may be unsure if it has value. Given if that this HIP passes and will be out of their own reward bucket, this will allow the Service Provider to further reduce the risk if the location or deployments in said location do not end up being beneficial to that Service Provider.
-3. Limit boosting to a maximum of 10x.
-    - Currently uncapped, we as a community have come to the conclusion that the 100x boosted hexes only breeds reward chasing and attempted gaming of PoC. This can be proven as there were very few people (if not no one) deploying within boosted hexes prior to the value oracle of MOBILE changing drastically late in 2023. It is this author's opinion that boosted hexes should incentivize a longer term deployment strategy, and the deployer should have their goals aligned with that in mind. With the current multipliers that can be set, the goals of the deployments in these are not long-term but only short-term. This multiplier would only reduce the maximum for any future hex boosting and not change any current boosted hexes once passed.
-4. Staking a hotspot NFT for Boosted Hex rewards.
+   - Currently set to 6 months, reducing this to 3 months allows Service Providers more flexibility in boosting a hex that they may be unsure of the actual value of that location.
+   - It also sets more precedent for deployers to not get accustomed to making contracts based on the boosted time, but rather that this is just a reward to jumpstart the deployment.
 
-For CBRS, the FreedomFi is the NFT, while the radios are what determines the coverage and ultimately the rewards given. This HIP proposes locking the radio IDs to that FreedomFi Gateway during the stake time. This will prevent the deployer from re-utilizing the radios in another deployment with a new FreedomFi after the hex boosting has ended, but the staking time has not. This can be unlocked by Nova / FreedomFi in the case they can verify that a specific FreedomFi unit at a hardware standpoint is dead, but the radios are still operational. Nova / FreedomFi can either ask for an RMA to have the FreedomFi unit shipped and replaced, or it can be put on a mini-deny-list to be prevented from earning MOBILE in the case it 'magically' starts working again. And this would allow the radios to be used with another FreedomFi unit.
+3. Limit FUTURE boost creation to a maximum of 10x.
+   - Currently uncapped, we as a community have come to the conclusion that the 100x boosted hexes will mostly breed reward-chasing and attempted gaming of PoC.
+   - This can be proven as there were very few people (if not no one) deploying within boosted hexes prior to the value oracle of MOBILE changing drastically late in 2023. It is this author's opinion that boosted hexes should incentivize a longer-term deployment strategy, and the deployers should have their goals aligned with that in mind. With the current multipliers that can be set, the goals of the deployments in these are not long-term but only short-term. This multiplier would only reduce the maximum for any future hex boosting and not change any current boosted hexes once passed.
 
-Staking Eligibility for Boosted Hex Rewards:
-- For both Wifi and CBRS, the hotspot asserted or has modeled coverage overlapping a boosted hex location will need to go through 3 full epochs/days with a total of at least 48 valid heartbeats.
-- In the case of WiFi, they will also have to pass Skyhook validation for that area in order to be eligible to stake their hotspot to receive hex boosting rewards. If the hotspot does not pass Skyhook validation, they will not be eligible to proceed with staking their hotspot due to the inaccuracy.
-
-Examples of stake duration:
-- If a Service Provider boosts a hex for 6 months and the boosted hex has not yet been activated, the asserting hotspot will be asked if they would like to stake their hotspot for a total of 12 months in order to receive the boosted rewards.
-- For a boosted hex that has already been activated for 4 months of a total 6-month boost with 2 months left, the hotspot assertion will ask if they are willing to stake their hotspot for a total of 4 months to gain the boosted rewards.
-- For a boosted hex that only has 1 month of epochs left, that hotspot will only be asked to stake for a total of 2 months to receive boosted rewards.
-
-Examples of use when asserting and staking prompts:
-- When the hotspot asserts their location in a boosted hex, or within a Resolution 6 hex of a boosted area, they will get a prompt after the assertion that they could be eligible for boosted hex rewards. They will be told that it will take 72 hours to validate coverage if they meet the eligibility requirements and will need to stake their hotspot NFT in order to receive the boosted rewards, lastly to check back in 72 hours for a new prompt on the status of such.
-  Once the 72 hours have passed, if the hotspot meets eligibility requirements, they will have a prompt to begin the hotspot NFT stake, with a few prompts explaining the implications of staking, and a total time their hotspot will be staked for in order to start receiving those boosts hex rewards. A hotspot could be ineligible for various reasons, and should also give short feedback on why they are not eligible. This could range from something such as the modeled coverage not extending into a boosted hex, to a Skyhook inaccuracy flag.
-
-Phase 1:
-The first phase of this implementation would be Parts 1, 2, and 3 stated above, as these should take relatively little time for implementation.
-
-Phase 2:
-The second phase of this implementation would be Part 4 stated above, as this could take longer for the coding of the staking mechanism.
 
 ## Drawbacks
 
-After the hex boosting has ended, a hotspot deployer could just unplug/dismantle their hotspot setup and closet the hotspot until their staking time has ended. This would only benefit them if the costs of being at that location outweigh the rewards, forcing the operator to retire that hotspot until the staking has expired.
+In the future (when there are only up to 10x boosts), this theoretically limits the maximum amount of boosted hexes that service providers could create and be active during a range of time without hitting the maximum bucket limit. Which in turn could no longer guarantee the 10x boosts and would eventually really become 9.8x boosts, or 9.5x boosts, and so forth as more boosted hotspots get rewarded from the bucket.
 
 ## Rationale and Alternatives
 
-There are a few alternatives to HIP-84 that are being discussed; however, the most prominent topic discussed is where the allocation of rewards comes from, which this HIP addresses.
+There are a few alternatives to HIP-84 that are being discussed; however, the most prominent topic discussed is where the allocation of rewards comes from which this HIP addresses.
 
 ## Unresolved Questions
 
-Will add as they come up in discussion.
+I will add them as they come up in discussion.
 
 ## Deployment Impact
 
-This will impact all hotspots currently asserted that cover boosted hexes by having them stake their hotspot NFT for x amount of time/epochs in order to continue to receive boosted hex rewards. This will also require all future asserting hotspots to stake their hotspot if their coverage is within a boosted hexes.
+This HIP requests Nova to do the coding and implementation. This will impact the emissions allocation for boosted hexes, switching from being an almost unlimited distribution within the current PoC bucket to a bucket dedicated to boosted rewards and capped at 10% of emissions. Because of this, PoC rewards for non-boosted hexes will see an increase.
 
-This will also impact the emissions allocation for boosted hexes, switching from the PoC bucket to the Service Provider bucket.
 
 ## Success Metrics
 
-With the success of this HIP we should see more dedicated deployments within Hex Boosted areas, as operators take more risk of staking their hotspot into that area. 
+The success of this HIP will show when over-boosted areas get rewards redistributed back into the regular PoC bucket.
+
