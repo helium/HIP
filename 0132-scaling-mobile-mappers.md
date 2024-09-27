@@ -1,11 +1,13 @@
-# HIP XXX: Scaling MOBILE Mappers
+# HIP 132: Scaling MOBILE Mappers
 
 - Author: [@zer0tweets](https://github.com/zer0tweets)
-- Start Date: 
-- Category: Technical & Economic
-- Original HIP PR: #
-- Tracking Issue: #
+- Start Date: 2024-09-27
+- Category: Economic, Technical
+- Original HIP PR: [#1086](https://github.com/helium/HIP/pull/1086)
+- Tracking Issue: [#1092](https://github.com/helium/HIP/issues/1092)
 - Voting Requirements: veMOBILE Holders
+
+---
 
 ## Summary
 Currently, discovery and verification mapping is limited to subscribers of a service provider approved by the MOBILE community. Since Helium Mobile is the only provider at the moment, this creates a barrier to becoming a mapper and slows down the expansion of the network. This proposal seeks to boost the number of Wi-Fi mappers by eliminating the requirement for mappers to be customers of a service provider.
