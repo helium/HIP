@@ -8,8 +8,8 @@
 - Voting Requirements: veMOBILE Holders
 
 ## Related Previous HIPs
-[HIP 79 ](https://github.com/helium/HIP/blob/main/0079-mobile-poc-mappers-rewards.md) established a general framework of discovery and verification mapping and related MOBILE reward pools
-[HIP 118](https://github.com/helium/HIP/blob/main/0118-verification-mapping.md) established the framework for verification mapping
+* [HIP 79](https://github.com/helium/HIP/blob/main/0079-mobile-poc-mappers-rewards.md) established a general framework of discovery and verification mapping and related MOBILE reward pools
+* [HIP 118](https://github.com/helium/HIP/blob/main/0118-verification-mapping.md) established the framework for verification mapping
 
 ## Summary
 Currently, discovery and verification mapping is limited to subscribers of a service provider approved by the MOBILE community. Since Helium Mobile is the only provider at the moment, this creates a barrier to becoming a mapper and slows down the expansion of the network. This proposal seeks to boost the number of Wi-Fi mappers by eliminating the requirement for mappers to be customers of a service provider.
