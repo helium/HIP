@@ -49,7 +49,7 @@ Additionally, it’s unclear whether many users will be willing to burn $5 of MO
 One alternative would be for an existing network service provider, like Helium Mobile, to introduce a $5 paid plan that includes a small amount of data on the Helium Mobile network alongside mapping privileges. However, this approach doesn’t allow third-party entities, such as crypto wallet providers or app developers, to contribute to the proliferation of mappers, which, if they could, would lead to a more centralized network.
 
 ## Unresolved Questions
-It’s still unclear how to create a fully open-source, community-curated SDK for mapping that allows: a) Anyone to integrate it into their app; b) It to remain secure and resistant to gaming.
+It’s still unclear how to create a fully open-source, community-curated SDK for mapping that allows: (a) Anyone to integrate it into their app; (b) It to remain secure and resistant to gaming.
 
 Initially, trusted entities like Nova Labs may need to curate the first few integrations. Moving forward, the community may need to develop a staking and voting system, similar to HIP 19, for parties looking to integrate and promote mapping functionality.
 
