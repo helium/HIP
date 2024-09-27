@@ -46,7 +46,7 @@ By eliminating the need for mappers to be service provider customers, GPS confir
 Additionally, it’s unclear whether many users will be willing to burn $5 of MOBILE tokens each month just for the right to map. After launch, this requirement might need to be adjusted. Potential solutions could include modifying the fee, changing the frequency of payments, or offering some amount of usable data on the MOBILE network for mappers.
 
 ## Rationale and Alternatives
-One alternative would be for an existing network service provider, like Helium Mobile, to introduce a $5 paid plan that includes a small amount of data on the Helium Mobile network alongside mapping privileges. However, this approach doesn’t allow third-party entities, such as crypto wallet providers or app developers, to contribute to the proliferation of mappers, which if they could, would lead to a more centralized network.
+One alternative would be for an existing network service provider, like Helium Mobile, to introduce a $5 paid plan that includes a small amount of data on the Helium Mobile network alongside mapping privileges. However, this approach doesn’t allow third-party entities, such as crypto wallet providers or app developers, to contribute to the proliferation of mappers, which, if they could, would lead to a more centralized network.
 
 ## Unresolved Questions
 It’s still unclear how to create a fully open-source, community-curated SDK for mapping that allows: a) Anyone to integrate it into their app; b) It to remain secure and resistant to gaming.
