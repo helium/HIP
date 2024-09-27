@@ -1,6 +1,6 @@
 # HIP XXX: Scaling MOBILE Mappers
 
-- Author: @zer0tweets
+- Author: [@zer0tweets](https://github.com/zer0tweets)
 - Start Date: 
 - Category: Technical & Economic
 - Original HIP PR: #
