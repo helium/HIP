@@ -7,12 +7,12 @@
 - Tracking Issue: #
 - Voting Requirements: veMOBILE Holders
 
+## Summary
+Currently, discovery and verification mapping is limited to subscribers of a service provider approved by the MOBILE community. Since Helium Mobile is the only provider at the moment, this creates a barrier to becoming a mapper and slows down the expansion of the network. This proposal seeks to boost the number of Wi-Fi mappers by eliminating the requirement for mappers to be customers of a service provider.
+
 ## Related Previous HIPs
 * [HIP 79](https://github.com/helium/HIP/blob/main/0079-mobile-poc-mappers-rewards.md) established a general framework of discovery and verification mapping and related MOBILE reward pools
 * [HIP 118](https://github.com/helium/HIP/blob/main/0118-verification-mapping.md) established the framework for verification mapping
-
-## Summary
-Currently, discovery and verification mapping is limited to subscribers of a service provider approved by the MOBILE community. Since Helium Mobile is the only provider at the moment, this creates a barrier to becoming a mapper and slows down the expansion of the network. This proposal seeks to boost the number of Wi-Fi mappers by eliminating the requirement for mappers to be customers of a service provider.
 
 ## Motivation
 As the MOBILE community increasingly relies on verification mapping, and hotspot rewards become tied to verification mapping events (as outlined in HIPs 118 and 131), it's crucial to lower the entry barriers for becoming a mapper, enabling rapid growth in the number of MOBILE mappers. By removing the requirement for a subscription with a mobile service provider, the pool of potential mappers will expand. This change will also make it possible to integrate mapping functionality into third-party apps, such as crypto wallets and DePin project apps. 
@@ -46,7 +46,7 @@ By eliminating the need for mappers to be service provider customers, GPS confir
 Additionally, it’s unclear whether many users will be willing to burn $5 of MOBILE tokens each month just for the right to map. After launch, this requirement might need to be adjusted. Potential solutions could include modifying the fee, changing the frequency of payments, or offering some amount of usable data on the MOBILE network for mappers.
 
 ## Rationale and Alternatives
-One alternative would be for an existing network service provider, like Helium Mobile, to introduce a $5 paid plan that includes a small amount of data on the Helium Mobile network alongside mapping privileges. However, this approach doesn’t allow third-party entities, such as crypto wallet providers or app developers, to contribute to the proliferation of mappers, which, if they could, would lead to a more centralized network.
+One alternative would be for an existing network service provider, like Helium Mobile, to introduce a $5 paid plan that includes a small amount of data on the Helium Mobile network alongside mapping privileges. However, this approach doesn't allow third-party entities, such as crypto wallet providers or app developers, to contribute to the proliferation of mappers, which, if they could, would lead to a more centralized network.
 
 ## Unresolved Questions
 It’s still unclear how to create a fully open-source, community-curated SDK for mapping that allows: (a) Anyone to integrate it into their app; (b) It to remain secure and resistant to gaming.
