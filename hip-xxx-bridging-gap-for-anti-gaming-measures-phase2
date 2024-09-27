@@ -37,7 +37,7 @@ This HIP would enact the following:
 - Adjust the HIP-131 requirement (A**, B**, and C**) to require a valid CDR every 42 epochs.
 - For Boosteed Service Provider locations, a valid CDR will be required every 7 epochs. If an invalid CDR is registered, it will invalidate the valid CDR. This will be left up to the Service provider to quality control what does or does not qualify. 
 - Extend the duration of HIP-131 (from 150 epochs) to last until both phases of HIP-118 are fully implemented and active.
-- Allow HIP-118 (Verification Mapping for MOBILE Network) to utilize CDR information if the Server Provider chooses for all areas, including Serviuce Provider Boosted areas. 
+- Allow HIP-118 (Verification Mapping for MOBILE Network) to utilize CDR information if the Server Provider chooses for all areas, including Service Provider Boosted areas.
 
 
 ## Drawbacks
