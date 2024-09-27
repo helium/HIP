@@ -5,7 +5,7 @@
 - Category: Technical & Economic
 - Original HIP PR: #
 - Tracking Issue: #
-- Voting Requirements: veMOBILE
+- Voting Requirements: veMOBILE Holders
 
 ## Related Previous HIPs
 [HIP 79 ](https://github.com/helium/HIP/blob/main/0079-mobile-poc-mappers-rewards.md) established a general framework of discovery and verification mapping and related MOBILE reward pools
