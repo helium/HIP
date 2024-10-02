@@ -1,3 +1,4 @@
+# HIP ####: Eliminate Rewards for IOT Redundant Coverage
 - Author(s): [@No One At All](https://github.com/No1-at-all)
 - Start Date: 2024-09-06
 - Category: Economic, Technical
