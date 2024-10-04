@@ -43,19 +43,24 @@ If each of the above conditions are met, then they are deemed to be providing *R
 #### *Invalidation Reason*
 *Invalidation Reason* means that witnesses are invalidated with invalidation reason 'Redundant Coverage'
 ### Example invalidation function
-Imagine that all of the witnesses to a beacon were stored in a list sorted by *First to Witness*.  There are greater than *Maximum Witnesses* to the beacon.
-- Start at the head of the list.  Check if there are other hotspots in the list that are within *Minimum Distance* and invalidate them.
-- Proceed to next valid element in the list and invalidate as above, until the end of the list or *Maximum Witnesses* are validated.
+Imagine that all of the witnesses to a beacon were stored in a list sorted by *First to Witness*.  There are greater than *Maximum Witnesses* to the beacon.  The list could be in computer memory, a spreadsheet, or written on paper, it doesn't matter for this example.
+1. Start at the begining of the list.
+2. Check if there are subsequent witnesses in the list that are within *Minimum Distance* and invalidate them.  If this were being done on paper, draw a line through all witnesses below the current one that are within *Minumum Distance*.
+3. Choose the next valid witness in the list repeat step 2, until the end of the list is reached.  If this was being done on paper, go to the next unlined witness, and repeat step 2 until there are no more witnesses in the list.
 
-The number of invalidated witness does not count towards the total number of witness to a beacon.
+The intent is to have all of the *Maximum Witnesses* to a beacon be greater than or equal to *Minimum Distance* apart.  Hotspots less than *Minimum Distance* apart are invalidated.  
+
+This is an example, it's not meant to be the exact function developers would use to invalidate witnesses. Developers are free to implement the logic in some other way or to optimize as needed.
+
+The number of invalidated witness does not count towards the total number of witness to a beacon.  Invalidated witnesses will be replaced by the next *First to Witness*. 
 ### Example map - 3 hotspots in a resolution 11 hex with 7 rings
 ![3 hotspots res 11 ring 7.png](/files/0000/3-hotspots-res-11-ring-7.png)
 #### Table #1 - Hotspot distances
 |             | **A** | **B** | **C** |
 | ----------- | ----- | ----- | ----- |
-| **A**       |       | *7*   | 14    |
-| **B**       | *7*   |       | *7*   |
-| **C**       | 14    | *7*   |       |
+| **A**       |       |   7   | 14    |
+| **B**       |   7   |       |  7    |
+| **C**       |  14   |   7   |       |
 #### Example assumptions
 None of the other witnesses to the beacon are within *Minimum Distance* of each other.
 ### Example #1
@@ -82,7 +87,7 @@ Many owners may want to falsely assert their location.  The current Antenna Clas
 ### May encourage owners to turn off hotspots rather than compete
 ## Rationale and Alternatives
 ### Decrease the amount of witness redundancy 
-If two or more hotspots are within *Minimum Distance*, they are more or less in the same place, they are providing *Redunant Coverage*.  If those same hotspots witness the same beacon, and they are both to be rewarded according to [HIP 83](https://github.com/helium/HIP/blob/main/0083-restore-first-to-witness.md#detailed-explanation), then they are providing more or less the same coverage as each other because:
+If two or more hotspots are within *Minimum Distance*, they are more or less in the same place, they are providing *Redundant Coverage*.  If those same hotspots witness the same beacon, and they are both to be rewarded according to [HIP 83](https://github.com/helium/HIP/blob/main/0083-restore-first-to-witness.md#detailed-explanation), then they are providing more or less the same coverage as each other because:
 - They are within *Minimum Distance* of each other
 - They both are to be selected for rewards according to [HIP 83](https://github.com/helium/HIP/blob/main/0083-restore-first-to-witness.md#detailed-explanation)
 
@@ -112,5 +117,5 @@ Instead of invalidating witnesses with *Redundant Coverage*, rewards could be sp
 - Other owners may see an increase in rewards with the elimination of rewards for *Redundant Coverage*.
 
 ## Success Metrics
-Success could be measured by calculating the rewards for hotspots providing *Redundant Coverage*.
+Success can be measured by observing that hotspots within *Minimum Distance* of each other do not witness the same beacon if there are more than *Maximum Witnesses* to the beacon.
 
