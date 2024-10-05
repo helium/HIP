@@ -1,8 +1,8 @@
-# HIP Template
+# HIP xxx Emergency Templated Coverage Objects
 
 - Author(s): @jhbr821, @zer0tweets, @madninja
 - Start Date: 10/5/2024
-- Category: technical
+- Category: Economic, Technical
 - Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
 - Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
 
@@ -62,6 +62,8 @@ KP Performance KP-3QOMA-13 - 30
 Antel_33deg - 208
 KP Performance KPP-3S65-5S90-X4 - 642
 
+In addition, for radios with directional antennas, the location multiplier will be calculated assuming the optimal direction at the asserted location. This would be the direction that would have earned the radio the most points, avoiding overlap with other radios while covering the most valuable nearby hexes.
+
 # Drawbacks
 [drawbacks]: #drawbacks
 
@@ -72,6 +74,10 @@ The main drawback is that this system no longer properly incentivizes deployment
 
 This HIP is designed for one specific purpose, to provide a purely data-driven method for determining the amount of base coverage points that should be included in these templated coverage points. While concerns over height gaming and "useless" coverage are certainly legitimate, they are beyond the scope of this emergency HIP. Ongoing discussions in the community regarding "Proof-of-Utility" metrics will also likely result in further refinements to these CP values over time. 
 
+While some have suggested maintaining existing coverage objects and only applying templates to new assertions and re-assertions, this would unfairly impact these deployments. In addition, coverage objects expire and can be reset due to skyhook or other mechanisms, so all deployments are likely to require templated coverage over time anyway.
+
+A new data provider could be found, and had one previously been found. However, integration will still require months of work and templated coverage would be necessary regardless in the interim. In addition, the inability to compute modeled coverage outside the United States remains an issue.
+
 # Unresolved Questions
 [unresolved]: #unresolved-questions
 
@@ -80,9 +86,7 @@ None.
 # Deployment Impact
 [deployment-impact]: #deployment-impact
 
-Nova Labs will be responsible for creating these templated coverage objects and deploying them on a network-wide basis. 
-
-        - If not, what is the procedure to migrate?
+Nova Labs will be responsible for creating these templated coverage objects and deploying them on a network-wide basis. Deployments with coverage points exceeding the median for their radio type will likely see a decrease in PoC rewards while those with less than the median coverage points can expect to see an increase. 
 
 # Success Metrics
 [success-metrics]: #success-metrics
