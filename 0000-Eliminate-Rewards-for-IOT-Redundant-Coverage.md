@@ -46,7 +46,7 @@ If each of the above conditions are met, then they are deemed to be providing *R
 Imagine that all of the witnesses to a beacon were stored in a list sorted by *First to Witness*.  There are greater than *Maximum Witnesses* to the beacon.  The list could be in computer memory, a spreadsheet, or written on paper, it doesn't matter for this example.
 1. Start at the begining of the list.
 2. Check if there are subsequent witnesses in the list that are within *Minimum Distance* and invalidate them.  If this were being done on paper, draw a line through all witnesses below the current one that are within *Minumum Distance*.
-3. Choose the next valid witness in the list repeat step 2, until the end of the list is reached.  If this was being done on paper, go to the next unlined witness, and repeat step 2 until there are no more witnesses in the list.
+3. Choose the next valid witness in the list and repeat step 2, until the end of the list is reached.  If this was being done on paper, go to the next unlined witness, and repeat step 2 until there are no more witnesses in the list.
 
 The intent is to have all of the *Maximum Witnesses* to a beacon be greater than or equal to *Minimum Distance* apart.  Hotspots less than *Minimum Distance* apart are invalidated.  
 
@@ -108,7 +108,6 @@ Changing the Antenna Classifier to Denylist all hotspots in the same location re
 #### Split rewards for redundant hotspots
 Instead of invalidating witnesses with *Redundant Coverage*, rewards could be split equally among the hotspots.  This would not decrease *Redundant Coverage*.
 ## Unresolved Questions
-- Is less than 8 resolution 11 hexes the correct distance?
 - Discussion may bring up additional questions.
 
 ## Deployment Impact
