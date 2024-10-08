@@ -62,8 +62,6 @@ KP Performance KP-3QOMA-13 - 30
 Antel_33deg - 208
 KP Performance KPP-3S65-5S90-X4 - 642
 
-In addition, for radios with directional antennas, the location multiplier will be calculated assuming the optimal direction at the asserted location. This would be the direction that would have earned the radio the most points, avoiding overlap with other radios while covering the most valuable nearby hexes.
-
 # Drawbacks
 [drawbacks]: #drawbacks
 
