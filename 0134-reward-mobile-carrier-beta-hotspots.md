@@ -42,16 +42,16 @@ Proposed Incentives for Hotspot Deployers
 
 This HIP proposes two incentives for Hotspot deployers if they meet the requirements detailed further below:
 
-1. **Qualified Hotspots** earn full Proof-of-Coverage (PoC) rewards regardless of whether they have a call detail record (CDR) or verification mapping event from a discovery mapper.  For example, a qualified Hotspot would not have to meet the requirements of HIP 131 to earn full PoC.
+1. **Qualified Hotspots** earn full Proof-of-Coverage (PoC) rewards regardless of whether they have a call detail record (CDR) or verification mapping event from a discovery mapper.  For example, a qualified Hotspot would not have to meet the requirements of HIP 131 (or similiar CDR based HIPs) to earn full PoC.  Applies to outdoor and indoor wifi hotspots.
 
-2. **Qualified Indoor Hotspots** will automatically have an Oracle Multiplier of 1.00X regardless of its original multiplier.
-
-**Note:** Outdoor Hotspots are out of scope for #2 because they generally earn more PoC than Indoor Hotspots.
+2. **Qualified Hotspots** will automatically have an Oracle Multiplier of 1.00X regardless of its original multiplier.  Applies to outdoor and indoor wifi hotspots.
 
 Hotspots meeting the requirements below will be considered qualified for the purposes of this HIP:
 
 - Hotspot has been selected for the MOBILE Carrier beta
-- A Hotspot serving >25 unique connections and >500MB per day on a seven-day rolling average
+- A Hotspot serving >25 unique connections and >500MB on a seven-day rolling average
+
+Note: 50% of participating hotspots would meet the 25 unique connection requirements according to Nova Labs during the October 3, 2024 Mobile Working Group (MWG) call.
 
 ## Drawbacks
 
