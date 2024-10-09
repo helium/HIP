@@ -9,7 +9,7 @@
 # Summary
 [summary]: #summary
 
-This HIP retroactively approves and updates the base coverage points of the emergency coverage templates that were deployed by Nova Labs as a result of a likely permanent outage in the Google Network Planner API that was previously relied on for the creation of modeled coverage objects. Specifically we propose using the median value of CPs for all deployments of each radio/antenna type as the basis for these templated coverage objects.
+This HIP retroactively approves and updates the base coverage points of the emergency coverage templates that were deployed by Nova Labs as a result of a likely permanent outage in the Google Network Planner API that was previously relied on for the creation of modeled coverage objects. Specifically we propose using the median value of base CPs for all deployments of each radio/antenna type as the basis for deriving these templated coverage objects. These templated coverage objects have no impact on oracle hex multipliers or overlapping coverage and simply replace the clutter-adjusted objects previously provided by the Google Planner API.
 
 # Motivation
 [motivation]: #motivation
