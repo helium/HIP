@@ -32,7 +32,7 @@ Deployers: Individuals who have deployments with more coverage points than the m
 
 Templated coverage objects are templates which cover a fixed number of high, medium, and low signal strength hexes and therefore provide a fixed number of "base" coverage points, i.e. the number of coverage points prior to any scaling due to oracle hex multipliers (HIP 103) or overlapping coverage (HIP 105). Templated coverage objects can also be derived (reverse engineered) from an intended number of base coverage points. 
 
-On 10/4/24, Nova Labs began to roll out a templated coverage object too all hotspots on the network derived from the following base coverage point parameters:
+On 10/4/24, Nova Labs began to roll out a templated coverage object to all hotspots on the network derived from the following base coverage point parameters:
 Wi-Fi indoor - 400 CPs (no change)
 Wi-Fi outdoor - 1000 CPs
 Baicells 430 - 1428 CPs
