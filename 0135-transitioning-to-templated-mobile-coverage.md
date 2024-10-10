@@ -56,21 +56,7 @@ While these are certainly legitimate concerns, they are likely beyond the scope 
 * Baicells 430 - 795 CPs
 * Moso Indoor - 250 CPs (no change)
 * Moso Outdoor - 347 CPs
-* Baicells 436 (broken down by antenna type):
-* KP Performance KPPA-3GHZ-DPOMA - 10918
-* KP Performance KP-3QOMNI-8 - 2568
-* KP Performance KPP-3SX4-65 - 7867
-* KP Performance KP-3DP120S-45 - 4413.5
-* Alpha Wireless AW3161 - 2061
-* KP Performance KP-3DP65S-45 - 6035
-* KP Performance KP-35DOMNI-HV - 3798
-* KP Performance KP-3SX4-90 - 3115.5
-* KP Performance KP-3DOMA-13 (STERNBACH A1) - 31719.5
-* KP Performance KPPA-3GHZDP90S-45 - 3126
-* RAK RAKARG22 - 462
-* KP Performance KP-3QOMA-13 - 30
-* Antel_33deg - 208
-* KP Performance KPP-3S65-5S90-X4 - 642
+* Baicells 436 - 6464 CPs
 
 [Example Templates Here]
 
