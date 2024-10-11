@@ -63,7 +63,7 @@ Example templates by radio type are shown below. For the 436s, the exact shape w
 Wi-Fi Indoor:
 ![image](https://github.com/user-attachments/assets/5f47bf4d-9423-4781-a2c2-5b782b320465)
 Wi-Fi Outdoor:
-![image](https://github.com/user-attachments/assets/f0af47e0-5036-43bc-a7b2-072a07f5fe6e)
+![image](https://github.com/user-attachments/assets/9ed40284-9de8-402e-8194-73a5765102ca)
 Baicells 430:
 ![image](https://github.com/user-attachments/assets/a2d65d4f-dedd-40ea-a269-0a18ea1bd4e5)
 Moso Indoor:
