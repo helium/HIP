@@ -13,7 +13,7 @@
 
 [summary]: #summary
 
-This HIP retroactively approves and updates the base coverage points of the emergency coverage templates that were deployed by Nova Labs as a result of a likely permanent outage in the Google Network Planner API that was previously relied on for the creation of modeled coverage objects. Specifically we propose using the median value of base CPs for all deployments of each radio/antenna type as the basis for deriving these templated coverage objects. These templated coverage objects have no impact on oracle hex multipliers or overlapping coverage and simply replace the clutter-adjusted objects previously provided by the Google Planner API.
+This HIP retroactively approves and updates the base coverage points of the emergency coverage templates that were deployed by Nova Labs as a result of a likely permanent outage in the Google Network Planner API that was previously relied on for the creation of modeled coverage objects. Specifically we propose using the median value of base CPs for all deployments of each radio type as the basis for deriving these templated coverage objects. These templated coverage objects have no impact on oracle hex multipliers or overlapping coverage and simply replace the clutter-adjusted objects previously provided by the Google Planner API.
 
 ## Motivation
 [motivation]: #motivation
@@ -49,37 +49,37 @@ Important note: these numbers represent post-HIP 113 values so the coverage obje
 
 While these numbers were primarily based on mean values across the network, two specific changes were introduced: The scaling down of CPs for Wi-Fi outdoor units (from 2164 mean CPs to 1000 in the object) and for the Baicells 436 (from 10648 mean CPs to 5570 in the object). For Outdoor Wi-Fi, the change was primarily driven by concerns about "height gaming" (falsely asserting an inflated height to maximize PoC earnings). This concern is born out by both real world investigations of hotspots and analysis of the distribution of coverage points across all outdoor Wi-Fi units which shows a significant rightward skew in the data along with a large standard deviation. For the Baicells 436, the scaling was performed due to the following concern: "The 436 setups generate unusually high points, likely because users with 436 antennas optimize propagation to maximize rewards. This leads to numerous inefficient setups, such as omni and butterfly antennas, in high-reward areas."
 
-While these are certainly legitimate concerns, they are likely beyond the scope of an emergency HIP such as this one. Therefore, we propose a solely data-driven approach to creating these templated coverage objects utilizing the median values of base coverage points for each radio/antenna type prior to the implementation of templated coverages. This also helps mitigate some concerns over gaming setups as outlier data points will not impact the median value. Templated objects are proposed to be derived from the following base coverage point parameters:
+While these are certainly legitimate concerns, they are likely beyond the scope of an emergency HIP such as this one. Therefore, we propose a solely data-driven approach to creating these templated coverage objects utilizing the median values of base coverage points for each radio type prior to the implementation of templated coverages. This also helps mitigate some concerns over gaming setups as outlier data points will not impact the median value. Templated objects are proposed to be derived from the following base coverage point parameters:
 
 * Wi-Fi indoor - 400 CPs (no change)
 * Wi-Fi outdoor - 1760 CPs
 * Baicells 430 - 795 CPs
 * Moso Indoor - 250 CPs (no change)
 * Moso Outdoor - 347 CPs
-* Baicells 436 (broken down by antenna type):
-* KP Performance KPPA-3GHZ-DPOMA - 10918
-* KP Performance KP-3QOMNI-8 - 2568
-* KP Performance KPP-3SX4-65 - 7867
-* KP Performance KP-3DP120S-45 - 4413.5
-* Alpha Wireless AW3161 - 2061
-* KP Performance KP-3DP65S-45 - 6035
-* KP Performance KP-35DOMNI-HV - 3798
-* KP Performance KP-3SX4-90 - 3115.5
-* KP Performance KP-3DOMA-13 (STERNBACH A1) - 31719.5
-* KP Performance KPPA-3GHZDP90S-45 - 3126
-* RAK RAKARG22 - 462
-* KP Performance KP-3QOMA-13 - 30
-* Antel_33deg - 208
-* KP Performance KPP-3S65-5S90-X4 - 642
+* Baicells 436 - 6464 CPs
 
-[Example Templates Here]
+Example templates by radio type are shown below. For the 436s, the exact shape will vary based on the beamwidth of the attached antenna. However, the total amount of base coverage points and hexes covered will remain the same regardless of antenna. (Red, green, and blue hexes represented high, medium, and low coverage respectively).
+
+Wi-Fi Indoor:
+![image](https://github.com/user-attachments/assets/5f47bf4d-9423-4781-a2c2-5b782b320465)
+Wi-Fi Outdoor:
+![image](https://github.com/user-attachments/assets/f0af47e0-5036-43bc-a7b2-072a07f5fe6e)
+Baicells 430:
+![image](https://github.com/user-attachments/assets/a2d65d4f-dedd-40ea-a269-0a18ea1bd4e5)
+Moso Indoor:
+![image](https://github.com/user-attachments/assets/807c1aaa-a84f-43e6-bf11-5bae343cc23c)
+Moso Outdoor:
+![image](https://github.com/user-attachments/assets/6a686893-d633-402c-bc13-52a02628dfc0)
+Baicells 436:
+![image](https://github.com/user-attachments/assets/306c4f03-12f3-420c-b9e1-8740d0794c05)
+
 
 For these templated coverage objects, all the rules regarding oracle hex boosting (HIP 103) and overlapping coverage (HIP 105) still apply and will ultimately result in a final number of coverage points from which rewards for individual radios are derived. In addition, rewards will vary with the total number of coverage points on the network. The share of the PoC emission pool for each hotspot is determined by the final number of coverage points divided by the network total number of coverage points, as was the case prior to the implementation of templated coverage and as remains the case today.
 
 ## Drawbacks
 [drawbacks]: #drawbacks
 
-The main drawback is that this system no longer properly incentivizes deployments that provide significant coverage as all deployments of a particular radio type receive the same rewards. Unfortunately, given the current lack of data to created modeled coverage, it is unclear how to mitigate this.
+The main drawback is that this system no longer properly incentivizes deployments based on actual (or approximated through modeling) coverage as all deployments of a particular radio type receive the same rewards. Unfortunately, given the current lack of data to created modeled coverage, it is unclear how to mitigate this.
 
 ## Rationale and Alternatives
 [alternatives]: #rationale-and-alternatives
