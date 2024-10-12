@@ -49,9 +49,12 @@ This HIP proposes two incentives for Hotspot deployers if they meet the requirem
 Hotspots meeting the requirements below will be considered qualified for the purposes of this HIP:
 
 - Hotspot has been selected for the MOBILE Carrier beta
-- A Hotspot serving >25 unique connections and >500MB on a seven-day rolling average
+- A Hotspot serving >25 unique connections via the MOBILE Carrier beta
 
-Note: 50% of participating hotspots would meet the 25 unique connection requirements according to Nova Labs during the October 3, 2024 Mobile Working Group (MWG) call.
+Notes: 
+- Data-only hotspots, as defined by HIP 130, are out of scope for this HIP as they do not qualify for proof-of-coverage (PoC) rewards
+- Connections from Helium Mobile Subscribers are out of scope for this HIP 
+- 50% of participating hotspots would meet the 25 unique connection requirements according to Nova Labs during the October 3, 2024 Mobile Working Group (MWG) call.
 
 ## Drawbacks
 
@@ -61,9 +64,7 @@ Some Hotspots may not be selected for MOBILE Carrier beta.  However, there are o
 
 This is intended to be a simple HIP that does not drastically alter the current rewards frameworks for the MOBILE network.
 
-The number of unique connections and data transfer requirements could be scaled higher over time as higher performing Hotspots participate in the MOBILE Carrier beta.
-
-An Oracle Multiplier of 1.00X could be applied to outdoor Hotspots versus limiting this benefit to indoor Hotspots.
+The number of unique connections and other utility centric requirements (e.g. data transfer metrics) could be add and scaled higher over time as higher performing Hotspots participate in the MOBILE Carrier beta.
 
 ## Deployment Impact
 
