@@ -1,4 +1,4 @@
-# HIP XXXX: IOT Data Pricing
+# HIP XXXX: Wipe unused onboarding keys for makers in bad standing
 
 - Author(s): [@bfgneil](https://github.com/bfgneil)
 - Start Date: 2024-09-19
