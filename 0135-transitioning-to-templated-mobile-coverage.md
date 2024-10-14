@@ -61,17 +61,17 @@ While these are certainly legitimate concerns, they are likely beyond the scope 
 Example templates by radio type are shown below. For the 436s, the exact shape will vary based on the beamwidth of the attached antenna. However, the total amount of base coverage points and hexes covered will remain the same regardless of antenna. (Red, green, and blue hexes represented high, medium, and low coverage respectively).
 
 Wi-Fi Indoor:
-![image](https://github.com/user-attachments/assets/5f47bf4d-9423-4781-a2c2-5b782b320465)
+![image](./files/0135/375823134-5f47bf4d-9423-4781-a2c2-5b782b320465.png)
 Wi-Fi Outdoor:
-![image](https://github.com/user-attachments/assets/9ed40284-9de8-402e-8194-73a5765102ca)
+![image](./files/0135/375892180-9ed40284-9de8-402e-8194-73a5765102ca.png)
 Baicells 430:
-![image](https://github.com/user-attachments/assets/a2d65d4f-dedd-40ea-a269-0a18ea1bd4e5)
+![image](./files/0135/375823737-a2d65d4f-dedd-40ea-a269-0a18ea1bd4e5.png)
 Moso Indoor:
-![image](https://github.com/user-attachments/assets/807c1aaa-a84f-43e6-bf11-5bae343cc23c)
+![image](./files/0135/375823834-807c1aaa-a84f-43e6-bf11-5bae343cc23c.png)
 Moso Outdoor:
-![image](https://github.com/user-attachments/assets/6a686893-d633-402c-bc13-52a02628dfc0)
+![image](./files/0135/375827070-6a686893-d633-402c-bc13-52a02628dfc0.png)
 Baicells 436:
-![image](https://github.com/user-attachments/assets/306c4f03-12f3-420c-b9e1-8740d0794c05)
+![image](./files/0135/375823939-306c4f03-12f3-420c-b9e1-8740d0794c05.png)
 
 
 For these templated coverage objects, all the rules regarding oracle hex boosting (HIP 103) and overlapping coverage (HIP 105) still apply and will ultimately result in a final number of coverage points from which rewards for individual radios are derived. In addition, rewards will vary with the total number of coverage points on the network. The share of the PoC emission pool for each hotspot is determined by the final number of coverage points divided by the network total number of coverage points, as was the case prior to the implementation of templated coverage and as remains the case today.
