@@ -1,5 +1,5 @@
 # HIP ####: Eliminate Rewards for IOT Redundant Coverage
-- Author(s): [@No One At All](https://github.com/No1-at-all)
+- Author(s): [@No One At All](https://github.com/No1-at-all) & [@waveform](https://github.com/waveform06)
 - Start Date: 2024-09-06
 - Category: Economic, Technical
 - Original HIP PR: 
@@ -7,7 +7,7 @@
 - Vote Requirements: veIOT
 
 ## Summary
-Currently hotspots receive rewards for *Redundant Coverage*.  This HIP proposes to only reward the *First to Witness* in areas with *Redundant Coverage* when there are greater than *Maximum Witnesses* to a beacon.
+Currently hotspots receive rewards for providing Redundant Coverage where other Hotspots are also rewarded for covering the same are.  This proposal intends to only reward the *First to Witness* in areas with *Redundant Coverage* when there are greater than *Maximum Witnesses* to a beacon.
 ## Motivation
 - Hotspots that are less than *Minimum Distance* hexes apart are providing *Redundant Coverage*.
 - Disuade people from installing multiple hotspots per location when additional rewards are the motivation.
@@ -20,101 +20,101 @@ Currently hotspots receive rewards for *Redundant Coverage*.  This HIP proposes 
 
 ## Detailed Explanation
 
-### Existing PoC Definitions and rules, not defined by this HIP
-#### *Maximum Witnesses*
-*Maximum Witnesses* is equal to the variable max_witnesses_per_poc, which is the maximum rewardable witnesses per beacon and is currently set to 14.  This HIP will respect and follow any future changes to this number.  
+This proposal intends to make several changes to the existing IOT Proof-of-Coverage implementation.
 
-If there are *Maximum Witnesses* or fewer witnesses to a beacon then this HIP makes no witness invalidation changes or changes to the PoC rewards structure for that beacon.
+Rewards for PoC events that have equal to or less than *Maximum Witnesses* (1-14) will not be affected by this HIP.
 
-#### *First to Witness*
-The procedures in [HIP 83](https://github.com/helium/HIP/blob/main/0083-restore-first-to-witness.md#detailed-explanation) are used to determine which hotspot is *First to Witness* a beacon. 
-#### *Minimum Distance*
-*Minimum Distance* is defined as 8 resolution 11 hexes.  Hotspots asserted less than this distance apart are not rewarded when they witness each other's beacons.
+### Redundant Coverage
 
-When the distances between hotspots are [calculated using hexes](https://h3geo.org/docs/core-library/restable/), the hotspots are assumed to be at the center of the hex.  As the resolution number increases, the location of the hotspot is more accurate, since the size of the hex containing the hotspot decreases.
-### New PoC definitions and rules implemented by this HIP
-#### *Redundant Coverage*
-Each witness to a beacon is checked to determine if: 
-- There are hotspots that are less than *Minimum Distance* apart that also witnessed the beacon.
-- The witness has not been previously invalidated with any invalidation reason.
-- There are greater than *Maximum Witnesses* to the beacon.  
+After removing any Hotspots due to previous invalidation reasons (e.g, within *Minimum Distance* from the beaconing Hotspot, invalid due to Antenna Classifier, etc.), each witnessing Hotspot is evaluated for whether they are providing *Redundant Coverage*. This *Redundant Coverage* is defined as being within the *Minimum Distance* of another witnessing Hotspot and is the same distance as the minimum *Witness Distance Limit* from a beacon from [HIP 15](https://github.com/helium/HIP/blob/main/0015-beaconing-rewards.md#witness-distance-limits). *Minimum Distance* is currently defined as eight (8) resolution size 11 h3 hexes, approximately 350 meters.
 
-If each of the above conditions are met, then they are deemed to be providing *Redundant Coverage*.
-#### *Invalidation Reason*
-*Invalidation Reason* means that witnesses are invalidated with invalidation reason 'Redundant Coverage'
-### Example invalidation function
-Imagine that all of the witnesses to a beacon were stored in a list sorted by *First to Witness*.  There are greater than *Maximum Witnesses* to the beacon.  The list could be in computer memory, a spreadsheet, or written on paper, it doesn't matter for this example.
-1. Start at the begining of the list.
-2. Check if there are subsequent witnesses in the list that are within *Minimum Distance* and invalidate them.  If this were being done on paper, draw a line through all witnesses below the current one that are within *Minumum Distance*.
-3. Choose the next valid witness in the list and repeat step 2, until the end of the list is reached.  If this was being done on paper, go to the next unlined witness, and repeat step 2 until there are no more witnesses in the list.
+Ordering of evaluation will use the *First to Witness* function defined in [HIP-83](./0083-restore-first-to-witness.md).
 
-The intent is to have all of the *Maximum Witnesses* to a beacon be greater than or equal to *Minimum Distance* apart.  Hotspots less than *Minimum Distance* apart are invalidated.  
+Identified redundant witness events will be marked with the invalidation reason "Redundant Coverage" and removed from reward calculation. After removals, the remaining witnesses, up to the *Maximum Witnesses* defined as `14` through the `max_witnesses_per_poc` variable, will be considered for rewards.
 
-This is an example, it's not meant to be the exact function developers would use to invalidate witnesses. Developers are free to implement the logic in some other way or to optimize as needed.
+The intent is to have all of the Maximum Witnesses to a beacon be greater than or equal to Minimum Distance apart from any other witness. Hotspots less than Minimum Distance apart from any other are invalidated.
 
-The number of invalidated witness does not count towards the total number of witness to a beacon.  Invalidated witnesses will be replaced by the next *First to Witness*. 
+### Example Invalidation Function
+
+Given a PoC event with more than *Maximum Witnesses* (15 or more), the following process should be followed to determine validity.
+
+1. Remove and mark all invalid witnesses for other invalidation reasons.
+2. Order all witnesses by the *First to Witness* function.
+3. For each witnessing Hotspot:
+   a. Iterate over the later Hotspots to determine whether they are within the *Minimum Distance* from the selected Hotspot.
+   b. If they are, mark the later Hotspots as ineligible for reward due to *Redundant Coverage*
+4. Once *Redundant Coverage* has been evaluated, also mark any Witnesses in excess of *Maximum Witnesses* as ineligible for reward.
+
+Developers are free to implement this logic in a way that optimizes for data processing as the above description implies an `O(n²)` implementation which can be inefficient. The intention of this example is to also confirm that the number of invalidated witnesses do not count towards the total number of witnesses in a PoC event.
 ### Example map - 3 hotspots in a resolution 11 hex with 7 rings
 ![3 hotspots res 11 ring 7.png](/files/0000/3-hotspots-res-11-ring-7.png)
-#### Table #1 - Hotspot distances
-|             | **A** | **B** | **C** |
-| ----------- | ----- | ----- | ----- |
-| **A**       |       |   7   | 14    |
-| **B**       |   7   |       |  7    |
-| **C**       |  14   |   7   |       |
-#### Example assumptions
-None of the other witnesses to the beacon are within *Minimum Distance* of each other.
+
+### In this scenario ###
+**A** and **B** are within *Minimum Distance*, **B** and **C** are within *Minimum Distance*. None of the other witnesses to the beacon are within *Minimum Distance* of each other. There are more than *Maximum Witnesses* to the beacon.
+
 ### Example #1
-**A** and **B** witness a beacon, but **C** does not.  There are more than *Maximum Witnesses* to the beacon.
+**A** and **B** witness a beacon, but **C** does not.  
 
-**Table #1** shows that **A** is 7 hexes apart from **B**.  This is less than *Minimum Distance*.  
+If **A** is *First to Witness* before **B**, then hotspot **B** is invalidated with reason *Redundant Coverage*.  Likewise, if **B** is *First to Witness* **A** is invalidated.
 
-Start with the *First to Witness*.  If **A** is *First to Witness* compared to **B**, then hotspot **B** is invalidated with *Invalidation Reason*. Likewise, if **B** is *First to Witness* **A** is invalidated.
 ### Example #2
-**A**, **B**, and **C** all witness the same beacon.  There are more than *Maximum Witnesses* to the beacon.
+**A**, **B**, and **C** all witness the same beacon.  
 
-**Table #1** shows that **A** is 7 hexes from **B**.  **B** is 7 hexes from **C**.  **A** is 14 hexes from **C**.  **A** and **B** are redundant, and **B** and **C** are redundant.  **A** and **C** are not redundant.
+If **B** were *First to Witness*, then both **A** and **C** would be invalidated with reason *Redundant Coverage*.
 
-Start with the *First to Witness* among the hotspots.  Suppose **A** is the *First to Witness* compared with the others. This would cause **B** to be invalidated.  **C**, would then compete via *First to Witness* to be selected.
-
-Likewise, if **C** were *First to Witness*, **B** would be invalidated and **A** free to compete.
-
-If **B** were *First to Witness*, then both **A** and **C** would be invalidated.
 ### Example #3
-There are *Maximum Witnesses* or fewer witnesses to the beacon.  No hotspots are invalidated.
+**A**, **B**, and **C** all witness the same beacon.  
+
+
+If **A** is the *First to Witness*, this would cause **B** to be invalidated with reason *Redundant Coverage*.  **C**, would then be evaluated for *Minimum Distance* and be validated
+
+### Example #4
+**A**, **B**, and **C** all witness the same beacon.  
+As Example 3 but there are other witnesses not shown within *Minimum Distance*.
+
+If **A** is the *First to Witness*, this would cause **B** to be invalidated with reason *Redundant Coverage*.  **C**, would be evaluated for *Minimum Distance* and *First to Witness* for further rewards eligability with the other witnesses.
+
+### PoC events with 14 witnesses or less ###
+Given a PoC event with less than or equal to *Maximum Witnesses* (14), then all PoC witnesses including A, B and C are eligible for reward.
+
 ## Drawbacks
-### May encourage false assertions
-Many owners may want to falsely assert their location.  The current Antenna Classifier may catch many of these, but it also may be possible to update the classifier's parameters to align with this HIP.
-### May encourage owners to turn off hotspots rather than compete
+- May encourage false assertions: Many owners may want to falsely assert their location.  The current Antenna Classifier may catch many of these, but it also may be possible to update the classifier's parameters to align with this HIP.
+- May encourage owners to turn off Hotspots rather than compete: This is an acceptable outcome as the goal of the network should be to align incentives towards expanding network coverage not deploying redundant coverage.
+
 ## Rationale and Alternatives
 ### Decrease the amount of witness redundancy 
-If two or more hotspots are within *Minimum Distance*, they are more or less in the same place, they are providing *Redundant Coverage*.  If those same hotspots witness the same beacon, and they are both to be rewarded according to [HIP 83](https://github.com/helium/HIP/blob/main/0083-restore-first-to-witness.md#detailed-explanation), then they are providing more or less the same coverage as each other because:
-- They are within *Minimum Distance* of each other
-- They both are to be selected for rewards according to [HIP 83](https://github.com/helium/HIP/blob/main/0083-restore-first-to-witness.md#detailed-explanation)
+If two or more hotspots are within *Minimum Distance*, they are more or less in the same place and they are providing *Redundant Coverage*.  If those same hotspots witness the same beacon, and they are both to be rewarded according to [HIP 83](https://github.com/helium/HIP/blob/main/0083-restore-first-to-witness.md#detailed-explanation), then they are providing the same coverage as each other and both being paid for it.
 
-Denying the redundant hotspots give other hotspots, that may be slower to witness, an oppurtunity to compete to be selected and decrease the amount of witness redundancy when there are greater than *Maximum Witnesses* to a beacon.
+Denying earnings for these redundant Hotspots give other Hotspots, that may be slower to witness but provide more unique coverage, an opportunity to compete to be selected and decrease the amount of witness redundancy when there are greater than *Maximum Witnesses* to a beacon.
 
-Multiple hotspots within *Minumum Distance* should not be rewarded for providing more or less the same location coverage at more or less the same time.
+Multiple Hotspots within *Miniumum Distance* should not be rewarded for providing more or less the same location coverage at more or less the same time.
+
 ### Aligns with previous standards
-It's common advice to new hotspot owners to install their hotspots 350-400 meters apart from one another.  This is the distance represented by *Minimum Distance*.  Hotspots that are asserted less than this distance apart may not witness each other's beacons. This HIP extends that concept. Hotspots which are less then *Minimum Distance* apart are providing *Redundant Coverage* and only the *First to Witness* shall be rewarded.
+New Hotspot owners are advised to install their hotspots at least 350 meters apart from one another to receive PoC rewards.  This is the distance represented by *Minimum Distance*.  Hotspots that are asserted less than this distance apart do not earn by witnessing each other's beacons. This HIP extends that concept to only rewarding the *First to Witness* Hotspots which are less than *Minimum Distance* apart and providing *Redundant Coverage*.
 
-Owners may have a grievance if the distance advice given them over years changed via this HIP.
+Keeping this distance ensures Hotspot deployers do not have a grievance if the minimum distance advice given them over the years changed via this HIP.
+
 ### Multiple hotspots per location
-Many owners want to install multiple hotspots per location for various reasons.  This proposal would implicity allow such installations, yet discourage them by removing rewards.
+Many deployers want to install multiple hotspots per location for various reasons or use cases.  This proposal still supports these installations, yet it discourages rewards based reasons by removing PoC rewards for the slower responding hotspots in dense locations.
 
-For example, if your use case needs multiple hotspots per location, that's fine, but only the *First to Witness* would be eligible for POC rewards. 
 ### Alternatives
 #### Antenna Classifier
 Changing the Antenna Classifier to Denylist all hotspots in the same location regardless of asserted location would solve some of the same issues as this HIP.  It would also Denylist legitimate use cases which require multiple hotspots per location.
 #### Split rewards for redundant hotspots
 Instead of invalidating witnesses with *Redundant Coverage*, rewards could be split equally among the hotspots.  This would not decrease *Redundant Coverage*.
 ## Unresolved Questions
-- Discussion may bring up additional questions.
+- Discussion may bring up additional questions..
+- Evaluation of possible gaming vector scenarios needs to be considered and likely configurations of gaming deployment.
+- Deployers may just reassert Hotspot locations and not physically move them. Denylist classifers may be the way these reasserts are prevented from continuing to receive rewards from faking unique coverage.
 
 ## Deployment Impact
-- Owners with low performance hotspots providing *Redundant Coverage* will likely see a reduction in rewards. 
-
-- Other owners may see an increase in rewards with the elimination of rewards for *Redundant Coverage*.
+- Deployers of Hotspots providing *Redundant Coverage*  in dense areas will likely see a reduction in rewards. 
+- Other Hotspots deployers may see an increase in rewards because of this reduction in rewards for Hotspots rewarded for *Redundant Coverage*.
+- This HIP comes with no code and Nova-Labs would be requested to develop the code for this HIP.
 
 ## Success Metrics
-Success can be measured by observing that hotspots within *Minimum Distance* of each other do not witness the same beacon if there are more than *Maximum Witnesses* to the beacon.
+Success can be measured by 
+- Observing that hotspots within *Minimum Distance* of each other are rewarded less for witnessing the same beacon if there are more than *Maximum Witnesses* to the beacon.
+- A decrease in rewards to overly dense areas of Hotspot deployment.
+- An increase in the reassertion of hotspots in dense areas to those less dense measured by evaluating the change in hotspots in larger resolution Hexes.
 
