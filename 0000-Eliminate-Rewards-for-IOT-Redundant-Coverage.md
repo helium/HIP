@@ -11,12 +11,12 @@
 
 ## Summary
 
-Currently hotspots receive rewards for providing Redundant Coverage where other Hotspots are also rewarded for covering the same are.  This proposal intends to only reward the *First to Witness* in areas with *Redundant Coverage* when there are greater than *Maximum Witnesses* to a beacon.
+Currently, hotspots receive rewards for providing Redundant Coverage where other Hotspots are also rewarded for covering the same are.  This proposal intends to only reward the *First to Witness* in areas with *Redundant Coverage* when there are greater than *Maximum Witnesses* to a beacon.
 
 ## Motivation
 
 - Hotspots that are less than *Minimum Distance* hexes apart are providing *Redundant Coverage*.
-- Disuade people from installing multiple hotspots per location when additional rewards are the motivation.
+- Dissuade people from installing multiple hotspots per location when additional rewards are the motivation.
 - Encourage people to spread out to under served areas.
 - Some people believe Proof of Coverage rewards are broken and alternatives should be developed.
 
@@ -86,7 +86,7 @@ If **A** is the *First to Witness*, this would cause **B** to be invalidated wit
 
 As Example 3 but there are other witnesses not shown within *Minimum Distance*.
 
-If **A** is the *First to Witness*, this would cause **B** to be invalidated with reason *Redundant Coverage*.  **C**, would be evaluated for *Minimum Distance* and *First to Witness* for further rewards eligability with the other witnesses.
+If **A** is the *First to Witness*, this would cause **B** to be invalidated with reason *Redundant Coverage*.  **C**, would be evaluated for *Minimum Distance* and *First to Witness* for further rewards eligibility with the other witnesses.
 
 ### PoC events with 14 witnesses or less ###
 Given a PoC event with less than or equal to *Maximum Witnesses* (14), then all PoC witnesses including A, B and C are eligible for reward.
@@ -103,7 +103,7 @@ If two or more hotspots are within *Minimum Distance*, they are more or less in 
 
 Denying earnings for these redundant Hotspots give other Hotspots, that may be slower to witness but provide more unique coverage, an opportunity to compete to be selected and decrease the amount of witness redundancy when there are greater than *Maximum Witnesses* to a beacon.
 
-Multiple Hotspots within *Miniumum Distance* should not be rewarded for providing more or less the same location coverage at more or less the same time.
+Multiple Hotspots within *Minimum Distance* should not be rewarded for providing more or less the same location coverage at more or less the same time.
 
 ### Aligns with previous standards
 
@@ -126,9 +126,9 @@ Instead of invalidating witnesses with *Redundant Coverage*, rewards could be sp
 
 ## Unresolved Questions
 
-- Discussion may bring up additional questions..
+- Discussion may bring up additional questions.
 - Evaluation of possible gaming vector scenarios needs to be considered and likely configurations of gaming deployment.
-- Deployers may just reassert Hotspot locations and not physically move them. Denylist classifers may be the way these reasserts are prevented from continuing to receive rewards from faking unique coverage.
+- Deployers may just reassert Hotspot locations and not physically move them. Denylist classifiers may be the way these reasserts are prevented from continuing to receive rewards from faking unique coverage.
 
 ## Deployment Impact
 
