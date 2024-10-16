@@ -56,7 +56,7 @@ Developers are free to implement this logic in a way that optimizes for data pro
 
 ### Example map - 3 Hotspots in a resolution 11 hex with 7 rings
 
-![3 Hotspots res 11 ring 7.png](/files/0136/3-Hotspots-res-11-ring-7.png)
+![3 Hotspots res 11 ring 7.png](/files/0136/3-hotspots-res-11-ring-7.png)
 
 ### In this scenario ###
 
