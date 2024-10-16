@@ -1,10 +1,10 @@
-# HIP ####: Eliminate Rewards for IOT Redundant Coverage
+# HIP 136: Eliminate IOT Rewards for Redundant Coverage
 
 - Authors: [@No One At All](https://github.com/No1-at-all) & [@waveform](https://github.com/waveform06)
-- Start Date: 2024-09-06
+- Start Date: 2024-10-16
 - Category: Economic, Technical
-- Original HIP PR:
-- Tracking Issue:
+- Original HIP PR: [#1084](https://github.com/helium/HIP/pull/1084)
+- Tracking Issue: [#1108](https://github.com/helium/HIP/issues/1108)
 - Vote Requirements: veIOT Holders
 
 ---
