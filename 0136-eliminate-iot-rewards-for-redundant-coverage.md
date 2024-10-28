@@ -11,13 +11,13 @@
 
 ## Summary
 
-Currently, Hotspots receive rewards for providing Redundant Coverage where other Hotspots are also rewarded for covering the same are.  This proposal intends to only reward the *First to Witness* in areas with *Redundant Coverage* when there are greater than *Maximum Witnesses* to a beacon.
+Currently, Hotspots receive rewards for providing Redundant Coverage where other Hotspots are also rewarded for covering the same area.  This proposal intends to only reward the *First to Witness* in areas with *Redundant Coverage* when there are greater than *Maximum Witnesses* to a beacon.
 
 ## Motivation
 
 - Hotspots that are less than *Minimum Distance* hexes apart are providing *Redundant Coverage*.
 - Dissuade people from installing multiple Hotspots per location when additional rewards are the motivation.
-- Encourage people to spread out to under served areas.
+- Encourage people to spread out to underserved areas.
 - Some people believe Proof of Coverage rewards are broken and alternatives should be developed.
 
 ## Stakeholders
