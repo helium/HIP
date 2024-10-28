@@ -13,7 +13,7 @@ This proposal removes the CN470 region from earning Proof-of-Coverage rewards on
 
 ## Motivation
 
-Whilst the gaming is easy to detect by eye, its hard to detect it programmatically without finding caveats. The closest we have is the newer ITM model, this can be bypassed by setting height on Hotspots and would need further development and time to implement.
+Whilst the gaming is easy to detect by eye, it's hard to detect it programmatically without finding caveats. The closest we have is the newer ITM model, this can be bypassed by setting height on Hotspots and would need further development and time to implement.
 
 Currently around 14% of PoC rewards are going to Hotspots in the CN470 region. These Hotspots represent under 1,000 of DC usage.
 
