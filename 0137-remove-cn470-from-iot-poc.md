@@ -1,11 +1,13 @@
-# HIP XXXX: Remove CN470 from IOT PoC
+# HIP 137: Remove CN470 from IOT PoC
 
 - Author: [@BFGNeil](https://github.com/BFGNeil)
 - Start Date: 2024-09-19
 - Category: Economic
-- Original HIP PR:
-- Tracking Issue:
+- Original HIP PR: [#1110](https://github.com/helium/HIP/pull/1110)
+- Tracking Issue: [#1112](https://github.com/helium/HIP/issues/1112)
 - Voting Requirements: veIOT Holders
+
+---
 
 ## Summary
 
