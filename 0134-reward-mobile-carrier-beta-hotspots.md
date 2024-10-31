@@ -42,13 +42,13 @@ Proposed Incentives for Hotspot Deployers
 
 This HIP proposes two incentives for Hotspot deployers if they meet the requirements detailed further below:
 
-1. **Qualified Hotspots** earn full PoC rewards regardless of whether they have a call detail record (CDR) or verification mapping event from a discovery mapper.  For example, a qualified Hotspot would not have to meet the requirements of HIP 131 (or similiar location based HIPs) to earn full PoC.  Applies to outdoor and indoor wifi hotspots.
+1. **Qualified Hotspots** earn full PoC rewards regardless of whether they have a call detail record (CDR) or verification mapping event from a discovery mapper.  For example, a qualified Hotspot would not have to meet the requirements of HIP 131, HIP 133, or similiar location based HIPs to earn full PoC.  Applies to outdoor and indoor wifi hotspots.
 
 2. **Qualified Hotspots** will automatically have an Oracle Multiplier of 1.00X regardless of its original multiplier.  Applies to outdoor and indoor wifi hotspots.
 
 Hotspots meeting the requirement below will be considered qualified for the purposes of this HIP:
 
-- A Hotspot serving >25 unique connections as defined by the Carrier utlizing the hotspots for Carrier Offload
+- A Hotspot serving >25 unique connections, as defined by the Carrier utlizing the hotspots for Carrier Offload, on a seven day rolling average.
 
 Notes: 
 - Data-only hotspots, as defined by HIP 130, are out of scope for this HIP as they do not qualify for proof-of-coverage (PoC) rewards
