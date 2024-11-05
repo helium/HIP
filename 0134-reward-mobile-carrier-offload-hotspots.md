@@ -1,4 +1,4 @@
-# HIP 134: Reward MOBILE Carrier Beta Hotspots
+# HIP 134: Reward MOBILE Carrier Offload Hotspots
 
 - Author(s): [jhella](https://github.com/jhella)
 - Start Date: 2024-10-07
