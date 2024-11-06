@@ -33,6 +33,9 @@ The proposed portion of the treasury reserve to be included in the daily HNT auc
 
 It is further proposed that the auctions are conducted with a reserve price equal to 3*[(HNT emitted to MOBILE treasury in last epoch} / (MOBILE added to total supply)]. This provision is to avoid spending down the treasury when the market has a very high price of MOBILE relative to HNT.
 
+## Implementation
+
+
 
 ## Drawbacks
 
