@@ -35,7 +35,7 @@ It is further proposed that the auctions are conducted with a reserve price equa
 
 ## Implementation
 
-
+-Implementing entity to be determined.
 
 ## Drawbacks
 
