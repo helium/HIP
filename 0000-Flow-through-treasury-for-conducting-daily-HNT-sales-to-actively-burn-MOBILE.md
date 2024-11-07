@@ -29,9 +29,7 @@ This HIP involves using HNT from the MOBILE treasury to buy MOBILE through daily
 
 The proposed volume of HNT to be sold in the daily auctions is [100% of the daily emissions of HNT to the MOBILE treasury from the previous epoch] plus [a portion of the treasury reserve]. 
 
-The proposed portion of the treasury reserve to be included in the daily HNT auction is the lesser of [0.25% of the treasury balance or 5x the previous day DC burn by MOBILE]. This provision is to control the speed at which HNT is sold from the treasury thereby mitigating risks to HNT price.
-
-It is further proposed that the auctions are conducted with a reserve price equal to 3*[(HNT emitted to MOBILE treasury in last epoch} / (MOBILE added to total supply)]. This provision is to avoid spending down the treasury when the market has a very high price of MOBILE relative to HNT.
+The proposed portion of the treasury reserve to be included in the daily HNT auction is 0.25% of the treasury balance. 
 
 ## Implementation
 
@@ -111,8 +109,8 @@ As proposed in the ‘flow-through’ treasury, proactively spending the HNT in 
 
 ## Unresolved Questions
 
--	The reserve price if any.
--	The rate at which to draw down the treasury. 
+-	The reserve price if any. For instance, The auctions could be conducted with a reserve price equal to 3*[(HNT emitted to MOBILE treasury in last epoch} / (MOBILE added to total supply)]. This provision would be to avoid spending down the treasury when the market has a very high price of MOBILE relative to HNT.
+-	The rate at which to draw down the treasury. The rate could be the lesser of [0.25% of the treasury balance or 5x the previous day DC burn by MOBILE].
 -	The details of how to technically conduct the auctions. 
 
 ## Deployment Impact
