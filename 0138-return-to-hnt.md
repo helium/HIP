@@ -4,7 +4,7 @@
 - Start Date: 2024-11-08
 - Category: Economic, Technical, Governance
 - Original HIP PR: [#1119](https://github.com/helium/HIP/pull/1119)
-- Tracking Issue: [#XXXX](https://github.com/helium/HIP/issues/XXXX)
+- Tracking Issue: [#1120](https://github.com/helium/HIP/issues/1120)
 - Voting Requirements: veHNT Holders
 
 ---
