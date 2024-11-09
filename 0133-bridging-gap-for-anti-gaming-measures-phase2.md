@@ -4,14 +4,14 @@
 * Start Date: 2024-09-05
 * Category: Economic, Technical
 * Original HIP PR: [#1087](https://github.com/helium/HIP/pull/1087)
-* Tracking Issue: [#1096](https://github.com/helium/HIP/issues/1096)
+* Tracking Issue: [#1087](https://github.com/helium/HIP/issues/1087)
 * Voting Requirements: veMOBILE Holders
 
 ---
 
 ## Summary
 
-This proposal aims to be a further refinement of HIP-131, and will further extend its scope to cover all remaining areas that were not previously included (such as C** areas), along with other tweaks and changes.
+This proposal aims to be a further refinement of HIP-131, and will further extend its scope to cover all areas that were not previously included (such as C** areas), along with other tweaks and changes.
 
 ## Related Prior HIPs
 * [HIP 103: MOBILE Oracle Hex Boosting](./0103-oracle-hex-boosting.md)
@@ -26,20 +26,39 @@ While the community thought that 'C' footfall areas would be less utilized for g
 ## Stakeholders
 
 * Deployers: This preserves POI boosted rewards for legitimate and active coverage builders.
+* Discovery Mappers: Who can enable CDR activity on affected hotspots.
 * Service Providers: This provides a temporary tool to prevent abuse of POI boosted hexes, helping ensure these strategic regions have legitimate coverage and further improve implementation of HIP-118.
 
 ## Detailed Explanation
 
 This HIP would enact the following:
 - Extend the valid CDR requirement to apply to all areas (A**, B**, and C**) instead of just HIP-131 defined areas (A**, B**).
-- Adjust the valid CDR requirement to be once every 42 epochs.
-- Require a valid CDR every 7 epochs for Boosted areas. If an invalid CDR is registered, it will invalidate the valid CDR. The Service Provider will be the final determination of qualifying events.
-- Extend the implementation period of HIP-131 until both phases of HIP-118 are fully implemented and active (from 150 epochs).
-- Allow Verification Mapping (HIP-118) to utilize CDR information for all areas, including Boosted areas.
+- Extend the implementation period of HIP-131 and this HIP until both phases of HIP-118 are fully implemented and active or for 150 epochs, which ever comes first.
+- Allow "Verification Mapping" (HIP-118) to bypass the CDR requirement, including Boosted areas. This stipulation will be up to the Nova / Helium Mobile to implement and verify if Verification Mapping is a sufficient was to verify a hotspots general location. It is in no way a guarantee that any hotspot that is Verification Mapped will be able to bypass CDR requirements. However, this could help out rural areas that lack T-Mobile towers to create a CDR in the first place.
+- Allow "Reward MOBILE Carrier Beta Hotspots" (HIP-134) to bypass the CDR requirement, including Boosted areas.
+
+  How to generate a CDR:
+
+  WiFi:
+    - A phone must have a Helium Mobile service plan.
+    - That same phone must have a Wi-Fi certificate corresponding to their account installed for that service plan, allowing the phone to connect to Helium Wi-Fi hotspots over Passpoint 2.0.
+    - While in range and connected to both a Helium Hotspot Wi-Fi and a T-Mobile cell tower (having cellular connectivity), the phone must complete a few activities on the cellular side of the service. This includes texting and voice calls.
+        - It should be noted that you must have Wi-Fi calling disabled and texts must not be iMessages, as both use the DATA line, which will inherently be the Wi-Fi connection at the time.
+        - Preforming multiple activities is strongly recommended, and having a voice call go longer than 5 minutes is strongly advised to increase the chances of a successful CDR creation.
+
+  CBRS:
+    - A phone must have a Helium Mobile service plan.
+    - That same phone must have a CBRS Beta eSIM corresponding to their account installed as the secondary line for data.
+        - The CBRS Beta eSIM MUST be set in the "Cellular" settings as the line for Data, with "Cellular Switching" disabled to ensure that the regular Helium Mobile service plan does not override the CBRS connection for data.
+        - The regular Helium Mobile service plan MUST be set as the default voice plan. This will allow the phone to connect to the T-Mobile towers for cellular activities.
+    - While in range and connected to both a CBRS radio and a T-Mobile cell tower (having cellular connectivity), the phone must complete a few activities on the cellular side of the service. This includes texting and voice calls.
+        - It should be noted that you must have Wi-Fi connection disabled, as the phone must be connected to the CBRS radio for data connection. Texts must not be iMessages as these go through as data, and not through the cellular towers.
+        - Preforming multiple activities is strongly recommended, and having a voice call go longer than 5 minutes is strongly advised to increase the chances of a successful CDR creation.
+
 
 ## Drawbacks
 
-Having a 42 epoch renewal may be viewed as counterintuitive, but this allows the network to filter out non-utilized hotspots from earning PoC for extended periods of time throughout the Hotspot's or Radio's lifetime.
+No T-Mobile towers in rural (C**) footfall areas could cause issues with obtaining a CDR, however this is counteracted with the inclusion that Discovery Mapping will bring to
 
 ## Unresolved Questions
 
