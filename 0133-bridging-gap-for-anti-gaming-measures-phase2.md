@@ -33,7 +33,7 @@ While the community thought that 'C' footfall areas would be less utilized for g
 
 This HIP would enact the following:
 - Extend the valid CDR requirement to apply to all areas (A**, B**, and C**) instead of just HIP-131 defined areas (A**, B**).
-- Extend the implementation period of HIP-131 and this HIP  until both phases of HIP-118 are fully implemented and active or for 150 epochs, which ever comes first.
+- Extend the implementation period of HIP-131 and this HIP until both phases of HIP-118 are fully implemented and active or for 150 epochs, which ever comes first.
 - Allow "Verification Mapping" (HIP-118) to bypass the CDR requirement, including Boosted areas. This stipulation will be up to the Nova / Helium Mobile to implement and verify if Verification Mapping is a sufficient was to verify a hotspots general location. It is in no way a guarantee that any hotspot that is Verification Mapped will be able to bypass CDR requirements. However this could help out rural areas that lack T-Mobile towers to create a CDR in the first place. 
 - Allow "Reward MOBILE Carrier Beta Hotspots" (HIP-134) to bypass the CDR requirement, including Boosted areas.
 
