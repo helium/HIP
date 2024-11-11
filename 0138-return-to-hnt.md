@@ -11,7 +11,7 @@
 
 ## Summary
 
-If approved and implemented, this proposal would phase out the subnetwork tokens introduced through HIPs [51][hip-51], [52][hip-52], and [53][hip-53] (IOT and MOBILE) and the network would return to rewarding participants directly in HNT. Additionally, HNT emissions allocated to HST holders would end and be redirected to the MOBILE treasury until the next halvening (August 1, 2025). Post halvening, these rewards will be issued, like existing emissions, to Hotspot owners and other network participants via the Utility Score. Finally, unissued HNT (approximately 4.2 million) from the Helium L1 would gradually fund the MOBILE treasury.
+If approved and implemented, this proposal would phase out the subnetwork tokens introduced through HIPs [51][hip-51], [52][hip-52], and [53][hip-53] (IOT and MOBILE), and the network would return to rewarding participants directly in HNT. Additionally, HNT emissions allocated to HST holders would end and be redirected to the MOBILE treasury and IOT reward emissions until the next halvening (August 1, 2025). Post halvening, these rewards will be issued, like existing emissions, to Hotspot owners and other network participants via the Utility Score. Finally, unissued HNT (approximately 4.2 million) from the Helium L1 would gradually fund the MOBILE treasury.
 
 Moving to a single token simplifies the Helium ecosystem, making it more understandable for current and future network builders and more accessible to the crypto community at large. Using HNT as the sole reward currency also corrects the imbalances created by the treasury system. Specifically, MOBILE network participants would see immediate increases in the value of their rewards, while IOT participants’ rewards would continue to be supported post-halvening as the network grows through ongoing community investment.
 
@@ -27,11 +27,11 @@ Historically, the Helium ecosystem has debated the distribution of value among t
 
 [HIP-51][hip-51] introduced a guiding principle: if all networks contribute value to Helium through HNT, then all networks benefit.
 
-In recent years, the IOT and MOBILE subnetworks have significantly contributed to Helium’s growth, with independent tokens helping the ecosystem expand beyond IOT by supporting MOBILE even during volatile market periods. Today, with the economic paths of both subnetworks becoming clearer and token volatility decreasing, a unified focus on building networks with HNT is achievable and beneficial.
+In recent years, the IOT and MOBILE subnetworks have contributed significantly to Helium’s growth, with independent tokens helping the ecosystem expand beyond IOT by supporting MOBILE even during volatile market periods. Today, with the economic paths of both subnetworks becoming clearer and token volatility decreasing, a unified focus on building networks with HNT is achievable and beneficial.
 
 ### Builder Rewards
 
-As the MOBILE network matures, it’s evident that MOBILE rewards are valued lower in HNT terms than the HNT emissions allocated to the MOBILE treasury. If MOBILE network builders received direct HNT rewards instead, their rewards would increase by about 2.5 times in HNT terms, creating a strong incentive for continued network development.
+As the MOBILE network matures, it’s evident that MOBILE rewards are valued lower in HNT terms than the HNT emissions allocated to the MOBILE treasury. If MOBILE network builders received direct HNT rewards instead, their rewards would increase by about 2 times in HNT terms, creating a strong incentive for continued network development.
 
 Meanwhile, IOT’s value is closely aligned with its treasury support, and it remains a vital part of the ecosystem. This proposal seeks to maintain that support.
 
@@ -45,8 +45,8 @@ This proposal suggests several tokenomic changes to simplify the Helium ecosyste
 
 At a high level, we propose to:
 
-1. Discontinue HST emissions beginning with the start of “Phase 1” (defined below), redirecting HST emissions to the MOBILE treasury. This would continue until the next halvening.
-2. Discontinue IOT and MOBILE Emissions at the start of “Phase 2” (also defined below) and reward participants directly in HNT based on the Utility Score.
+1. Discontinue HST emissions beginning with the start of “Phase 1” (defined below), redirecting HST emissions to the MOBILE treasury until the next halvening.
+2. Discontinue IOT and MOBILE Emissions at the start of “Phase 2” (also defined below) and reward participants directly in HNT based on the Utility Score. 90% of emissions from HST would continue to support the MOBILE treasury, with 10% supplementing ongoing rewards to IOT participants.
 3. Recognize the 4.2 million unissued HNT from Helium L1 after [HIP-20][hip-20] and begin emitting these tokens directly into the MOBILE treasury over time throughout “Phase 2” until the next halvening.
 4. At the next halvening, Phase 2 would end. Subsequently, the HST share of emissions would be distributed among subnetwork participants according to the Utility Score.
 
@@ -60,7 +60,7 @@ This proposal does not address other functions of the subnetwork tokens, which r
 
 ### Reward Payout
 
-HNT distribution between IOT and MOBILE subnetworks continues to follow their DAO Utility Scores as per [HIP-51][hip-51] and [HIP-88][hip-88]. HNT will be rewarded directly to participants via the same claim mechanism they are familiar with, rather than deposited in the subnetwork treasuries.
+HNT distribution between IOT and MOBILE subnetworks continues to follow their DAO Utility Scores as per [HIP-51][hip-51] and [HIP-88][hip-88]. HNT will be rewarded directly to participants via the same claim mechanism they are familiar with, rather than being deposited in the subnetwork treasuries.
 
 Rewards will be distributed according to the existing subnetwork structure and remain subject to subnetwork governance. For example, the 6% of subnetwork token emissions rewarded to delegators will instead be rewarded as 6% of the HNT awarded to that subnetwork.
 
@@ -79,16 +79,16 @@ Currently, IOT trades at its treasury rate to HNT, while MOBILE trades at a spec
 1. Higher Value of IOT Emissions: IOT rewards are valued higher in HNT than the HNT emitted to the IOT network, based on Utility Score.
 2. Current Strong Exchange Rate for IOT Tokens: IOT converts to HNT at a strong rate, though this may decline as MOBILE network revenue increases, and HNT emissions to IOT decrease.
 3. Lower Value of MOBILE Emissions: MOBILE rewards are worth less in HNT than the HNT emitted to the MOBILE subnetwork, due to lower HNT funding of the MOBILE treasury relative to subnetwork utility.
-4. Market Premium on MOBILE Tokens: MOBILE trades 1.4 times higher than its treasury rate.
+4. Market Premium on MOBILE Tokens: MOBILE trades at approximately 2 times its treasury rate.
 
 If subnetwork emissions were to shift to HNT without adjustments, potential effects would be:
 
 - IOT network builders may see reduced HNT value of rewards.
 - IOT holders would benefit, with a fixed IOT:HNT treasury rate.
-- MOBILE network builders would benefit, with HNT rewards valued 2.5 times current MOBILE rewards.
+- MOBILE network builders would benefit, with HNT rewards valued 2 times current MOBILE rewards.
 - MOBILE holders would lose speculative premium, reducing their holdings’ value closer to the treasury rate.
 
-This proposal introduces provisions to counteract these potential disadvantage.
+This proposal introduces provisions to counteract these potential disadvantages.
 
 ### Subnetwork Governance
 
@@ -108,29 +108,33 @@ Subnetwork tokens are currently used for various supply-side operations within s
 
 ### Phased Approach
 
-1. Phase 1 redirects HST emissions to the MOBILE treasury. As this is a fairly straightforward change, it would require light implementation and security review. It could likely be deployed within weeks of passing the HIP.
+1. Phase 1 redirects HNT emissions from HST to the MOBILE treasury. As this is a fairly straightforward change, it would require light implementation and security review. It could likely be deployed within weeks of passing the HIP.
 2. Phase 2 is the bulk of work for this proposal. It is expected to take less than three months of work, but requires significant security review and UX improvements. Users would need to claim rewards as they have done in the past, but would receive HNT instead of IOT or MOBILE. We propose an implementation date on or before 2025-01-15. It would be a goal of the core developers to ensure this phase could start as soon as possible.
 3. The remaining changes would be implemented prior to the next halvening, which is currently scheduled for August 1, 2025.
 
 ### HST Reallocation
 
-With discontinued treasury emissions, MOBILE holders could lose value due to the low funding rate of the MOBILE treasury. This proposal reallocates HST emissions to balance this.
+With discontinued treasury emissions, MOBILE holders could lose value due to the low funding rate of the MOBILE treasury. This proposal reallocates HST emissions towards the MOBILE treasury to balance this.
 
 By contrast, IOT holders benefit without a treasury subsidy, as their strong treasury rate is preserved when IOT emissions cease at the beginning of Phase 2.
 
+With the switch to HNT in Phase 2, the value of rewards to IOT participants may decline, as they will no longer be supported by the strong IOT treasury.
+
+To compensate for this, in Phase 2, 10% of rewards from HST will be used to supplement reward emissions to IOT participants, while 90% will continue to be emitted towards the MOBILE treasury.
+
 #### MOBILE Treasury Adjustment
 
-Given that the MOBILE treasury is underfunded by a factor of 1.4 relative to the market value of MOBILE, this proposal redirects HST emissions to the MOBILE treasury from the beginning of Phase 1 until the halvening, thereby improving the treasury rate over time. If Phase 1 were to begin on January 1, this would be a subsidy of approximately 2.6M HNT.
-
-#### IOT Rewards Post Halvening
-
-During Phase 2, the HNT rewarded to IOT participants may be less than the HNT value of the rewards previously emitted as IOT tokens, as long as the surplus funding of the IOT treasury has not yet been fully redeemed through treasury swaps.
-
-To compensate for this, the additional HNT emissions from HST which are redirected towards the IOT and MOBILE ecosystem beginning with the halvening, comprising 29% of total HNT emissions in the year beginning on August 1, 2025, will be shared between the IOT and MOBILE subnetworks according to the DAO Utility Score, and the Utility Score as specified in HIP-51, including its A factor, will remain in effect.
+Given that the MOBILE treasury is underfunded by a factor of 2 relative to the market value of MOBILE, this proposal redirects 100% of HST emissions to the MOBILE treasury in Phase 1, and 90% in Phase 2, until the halvening, thereby improving the treasury rate over time. If Phase 1 were to begin on January 1, this would be a subsidy of approximately 2.3M HNT.
 
 ### Unissued HNT Adjustment
 
-Following HIP-20, Helium experienced L1 outages, leaving 4.2 million unminted HNT. This proposal gradually mints these 4.2 million HNT to the MOBILE treasury from the start of Phase 2 until the halvening.
+Following HIP-20, Helium experienced L1 outages, leaving 4.2 million unminted HNT. This proposal gradually mints these HNT to the MOBILE treasury from the start of Phase 2 until the halvening, delivering an additional 4.2M HNT subsidy.
+
+#### IOT Rewards Adjustments
+
+During Phase 2, the HNT rewarded to IOT participants may be less than the HNT value of the rewards previously emitted as IOT tokens, as long as the surplus funding of the IOT treasury has not yet been fully redeemed through treasury swaps. The 10% of emissions from HST allocated to IOT rewards during Phase 2 will partially compensate for this.
+
+After the halvening, the additional HNT emissions from HST which are redirected towards the IOT and MOBILE ecosystem, comprising 29% of total HNT emissions in the year beginning on August 1, 2025, will be shared between the IOT and MOBILE subnetworks according to the DAO Utility Score, and the Utility Score as specified in HIP-51, including its A factor, will remain in effect.
 
 ## Alternatives
 
