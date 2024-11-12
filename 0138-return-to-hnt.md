@@ -37,7 +37,9 @@ Meanwhile, IOT’s value is closely aligned with its treasury support, and it re
 
 ## Stakeholders
 
-All Helium Ecosystem participants are affected by this proposal.
+All Helium Ecosystem participants are affected directly or indirectly by this proposal.
+
+Specifically Helium Security Token (HST) holders are negtively affected by this HIP. HST holders are investors in, and early employees of Helium Inc who currently receive 30% of emitted HNT, decreasing every year to 15%. This HIP will withdraw the approximately 11 Million remaining HNT sheduled to be emitted to HST holders and redistribute them to the recipents detailed in this HIP. 
 
 ## Detailed Explanation
 
@@ -45,10 +47,10 @@ This proposal suggests several tokenomic changes to simplify the Helium ecosyste
 
 At a high level, we propose to:
 
-1. Discontinue HST emissions beginning with the start of “Phase 1” (defined below), redirecting HST emissions to the MOBILE treasury until the next halvening.
-2. Discontinue IOT and MOBILE Emissions at the start of “Phase 2” (also defined below) and reward participants directly in HNT based on the Utility Score. 90% of emissions from HST would continue to support the MOBILE treasury, with 10% supplementing ongoing rewards to IOT participants.
+1. Discontinue HNT emissions allocated to HST holders beginning with the start of “Phase 1” (defined below), redirecting these HNT emissions to the MOBILE treasury until the start of Phase 1.
+2. Discontinue IOT and MOBILE Emissions at the start of “Phase 2” (also defined below) and reward participants directly in HNT based on the Utility Score. 90% of HNT emissions allocated to HST holders would continue to support the MOBILE treasury, with 10% supplementing ongoing rewards to IOT network participants.
 3. Recognize the 4.2 million unissued HNT from Helium L1 after [HIP-20][hip-20] and begin emitting these tokens directly into the MOBILE treasury over time throughout “Phase 2” until the next halvening.
-4. At the next halvening, Phase 2 would end. Subsequently, the HST share of emissions would be distributed among subnetwork participants according to the Utility Score.
+4. At the next halvening, Phase 2 would end. Subsequently, the HST holder share of HNT emissions would be distributed among subnetwork participants according to the Utility Score.
 
 The existing IOT and MOBILE treasuries remain operational and governed by veHNT governance. Holders of subnetwork tokens may continue to hold them, or may exchange them for HNT at any time through the treasuries. The exchange rate of the MOBILE treasury will continue to improve until the end of Phase 2 due to the supplements defined in (1) and (3) above.
 
@@ -114,13 +116,13 @@ Subnetwork tokens are currently used for various supply-side operations within s
 
 ### HST Reallocation
 
-With discontinued treasury emissions, MOBILE holders could lose value due to the low funding rate of the MOBILE treasury. This proposal reallocates HST emissions towards the MOBILE treasury to balance this.
+With discontinued treasury emissions, MOBILE holders could lose value due to the low funding rate of the MOBILE treasury. This proposal reallocates HNT emissions allocated to HST holders towards the MOBILE treasury to balance this.
 
 By contrast, IOT holders benefit without a treasury subsidy, as their strong treasury rate is preserved when IOT emissions cease at the beginning of Phase 2.
 
 With the switch to HNT in Phase 2, the value of rewards to IOT participants may decline, as they will no longer be supported by the strong IOT treasury.
 
-To compensate for this, in Phase 2, 10% of rewards from HST will be used to supplement reward emissions to IOT participants, while 90% will continue to be emitted towards the MOBILE treasury.
+To compensate for this, in Phase 2, 10% of the HNT rewards from HST holders will be used to supplement reward emissions to IOT participants, while 90% will continue to be emitted towards the MOBILE treasury.
 
 #### MOBILE Treasury Adjustment
 
