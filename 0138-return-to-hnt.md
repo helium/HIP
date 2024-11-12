@@ -39,7 +39,7 @@ Meanwhile, IOT’s value is closely aligned with its treasury support, and it re
 
 All Helium Ecosystem participants are affected directly or indirectly by this proposal.
 
-Specifically Helium Security Token (HST) holders are negtively affected by this HIP. HST holders are investors in, and early employees of Helium Inc who currently receive 30% of emitted HNT, decreasing every year to 15%. This HIP will withdraw the approximately 11 Million remaining HNT sheduled to be emitted to HST holders and redistribute them to the recipents detailed in this HIP. 
+Specifically Helium Security Token (HST) holders are negtively affected by this HIP. HST holders are investors in, and early employees of Helium Inc, who currently receive 30% of emitted HNT, decreasing every year to 15%. This HIP will redirect the approximately 11 Million remaining HNT scheduled to be emitted to HST holders and redistribute.
 
 ## Detailed Explanation
 
