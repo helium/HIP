@@ -1,11 +1,13 @@
-# HIP XXXX: Phase out CBRS
+# HIP 139: Phase out CBRS
 
 - Author: [@zer0tweets](https://github.com/zer0tweets)
 - Start Date: 2024-11-14
 - Category: Technical, Economic
-- Original HIP PR: [#](https://github.com/helium/HIP/pull/####)
-- Tracking Issue: [#](https://github.com/helium/HIP/issues/####)
+- Original HIP PR: [#1127](https://github.com/helium/HIP/pull/1127)
+- Tracking Issue: [#1128](https://github.com/helium/HIP/issues/1128)
 - Voting Requirements: veMOBILE Holders
+
+---
 
 ## Summary
 
