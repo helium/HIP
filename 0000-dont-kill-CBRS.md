@@ -171,6 +171,34 @@ Develop and deploy automated systems using machine learning algorithms and geogr
 ### Representative Example
 A rural hotspot operator using a CBRS radio to provide last-mile connectivity will be incentivized through increased PoC rewards, multi-carrier partnerships, and data offloading capabilities. This ensures maximized uptime and efficient data flow, directly benefiting both the operator and subscribers in the area. 
 
+## Implementation
+### Federal Funding Initiatives
+There are many routes these can be implemented. Telco contractors with SAM.gov approval for bidding on federal contracts can bid, and contract Helium to deploy. Helium Foundation can also apply for SAM.gov to bid themselves. We can't seriously be waling away from that much money because WiFi is easier right now. Way too many people invested in 5G CBRS deployments for them to get some free WiFi gear that they then now have to go around to coffee shops to beg them to get a split revenue share. 
+
+It would take some negotiation, however contracts can be approved tentative to deployment to avoid being cancelled for cause and harming Helium's reputation. Once a set number of zones are fully covered and payment is set to disburse to Helium as agreed, new POC zones can now be incentivized to be covered. 
+### New Hex Layers
+New hex layers would be needed for a coverage zone that will need to be covered in full for the contract to be paid. Helium would incentivize this by creating a barrier of hex's and whether a large invester is deploying in that area and covers all hexes or a small investoer comes in and gets one corner, the hex's would be paid out evenly and start being paid once the contract is considered satisfied by Helium. The cluster would still play into the uptime of the entire zone, so if an investor wants to be sure they were paid they could overlap with the other deployment or count on them and deploy later if necesary. 
+
+Boosting these hex zones would further increase deployment incentives, especially those currently holding equipmeent. 
+
+### POC Timeout
+A new function to highly incentivize deployment in a zone where only POC boosts are applied to the hexes for a certian amount of time so smaller deployments can be incentivized to fill up that zone. This would keep incentives from being geared too strongly towards larger investors or deployments and keep things decentralized.
+
+This could still be used in conjucnction with POC Override.
+
+### Deployment Direct Bid
+Able to bid on an entire hex zone that pertains to a federal contract. Helium can have direct deals with larger deployments or telco contractors that can get things done. This would leave the door open for larger investors to come in and serve CBRS via Helium. It's possible to leave the door open for both big and small investors.
+
+### Handoff "Issue"
+Handoff issues with T-Mobile are just not financially incentivised, the issue is not whether it functions or not, it's how much Nova Labs is willing to pay T-Mobile to get it done. If we look at the >100B in federal funding and used 100M of that, we would be able to have a functining handoff from telcos, and Android and iOS full support. Possibly even a third sim slot if it is CBRS Band 48 only. It makes sense to have the third sim as active as either two would fail over to CBRS equally, where a phone manufacturer or telcos would not have an issue with that. This should be an initiative negoatiated with phone manufactures and telcos using money and leverage, not just a "we asked and they said it would take two years." Speed it up with money. 
+
+
+### High Standards for Up Time
+Contracted connectivity may be strict, and those in coverage zones and Helium would want constant up time. >99% in most cases. Keeping the standard high (way more heart beats and speed tests) would incentivize small investors in the same coverage area to deploy uninteruppted power supplies or back up power to maintain connectivity and compensation so larger deployers don't get let down by one deployer with a 430H in some hexes that their 10 436's are covering. 
+
+### Modeled POC
+Modeled POC would be required to prove that the contracted areas are indeed covered. Higher standards with random speed tests in the areas being a mandatory ask may be added as well. 
+
 ## Drawbacks and Rationale
 ### Drawbacks
 Implementing this proposal may have the following drawbacks:
