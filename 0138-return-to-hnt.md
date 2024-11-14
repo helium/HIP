@@ -49,12 +49,12 @@ At a high level, we propose to:
 
 1. Discontinue HNT emissions to HST holders, and emit all HNT towards network participants directly based on the Utility Score rather than towards the IOT and MOBILE treasuries.
 2. Discontinue IOT and MOBILE emissions, subject to veIOT and veMOBILE votes, and reward participants directly in HNT based on the Utility Score, subject to a veHNT vote. 
-3. Revoke the remaining 18.2B MOBILE currently in the MOBILE Operations Fund, and request that Helium Foundation burn them.
+3. Revoke the remaining 18.2B MOBILE currently in the MOBILE Operations Fund, and request that Helium Foundation burn these tokens.
 4. Recognize the 4.2 million unissued HNT from Helium L1 after [HIP-20][hip-20] and issue them in two ways:
    1. Establish a new 1.3M HNT MOBILE Growth Fund to fund future development of the MOBILE network, to be administered by Helium Foundation.
    2. Emit the remaining 2.9M HNT directly into the MOBILE treasury on an epochal basis until the next halvening (2025-08-01).
 
-The existing IOT and MOBILE treasuries remain operational and subject to veHNT governance. Holders of subnetwork tokens may continue to hold them, or may exchange them for HNT at any time through the treasuries. The exchange rate of the MOBILE treasury will continue to improve until the halvening due to the ongoing HNT emissions defined in 4-2 above. 
+The existing IOT and MOBILE treasuries remain operational and subject to veHNT governance. Holders of subnetwork tokens may continue to hold them, or may exchange them for HNT at any time through the treasuries. The exchange rate of the MOBILE treasury will continue to improve until the halvening due to the ongoing HNT emissions defined in 4-2 above.
 
 The distribution schedule within each subnetwork remains under the control of subnetwork governance, and is unchanged by this proposal. All subnetwork rewards including veHNT delegations are now distributed in HNT.
 
@@ -120,13 +120,13 @@ In addition, this HIP proposes to halt emissions of IOT and MOBILE tokens, which
 
 Therefore, veIOT and veMOBILE holders will each vote separately on the proposal to stop the emission of IOT and MOBILE tokens simultaneously with the cessation of HNT emissions to the treasuries and the begin of HNT emissions to the treasuries.
 
-Note that veIOT or veMOBILE holders could theoretically vote to continue emission of a subnetwork token, contrary to the recommendation of this proposal, but this would result in the issuance of tokens unbacked by treasury HNT, thereby diluting the subnetwork token supply and impairing the treasury exchange rate, and thus the value in HNT terms, of the existing subnetwork tokens.
+Note that veIOT or veMOBILE holders could theoretically vote to continue emission of a subnetwork token, contrary to the recommendation of this proposal, but this would result in the issuance of tokens unbacked by treasury HNT. It's notable that this would dilute the subnetwork token supply and reduce the exchange rate, in HNT terms, of the existing subnetwork tokens.
 
-Should the veHNT vote fail, the veIOT and veMOBILE votes will be void.
+Should the veHNT vote fail, the veIOT and veMOBILE votes will be void. If either subnetwork vote fails, the veHNT decision by the community will stand.
 
 ### Timeline
 
-We expect that this proposal, if approved, can be fully implemented on or before January 15,  2025.
+We expect that this proposal, if approved, can be fully implemented on or before January 15, 2025.
 
 ### HST Reallocation
 
