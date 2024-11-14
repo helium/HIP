@@ -37,7 +37,7 @@ Nova Labs will publish a web form for eligible CBRS radio owners to provide a sh
 
 Additionally, Nova Labs will publish instructions and firmware images for all CBRS hotspot owners to re-flash their existing CBRS equipment to stock configuration. CBRS owners may keep their stock CBRS radios. Nova will also provide instructions for all FreedomFi gateways to re-flash the hardware into generic miniPCs.
 
-Support for onboarding any new CBRS radios will cease immediately upon passing this HIP. All CBRS radios will go offline and stop receiving rewards by March 1, 2025. FreedomFi gateways will continue to function as IoT gateways until January 1, 2025, after which Nova will end support for the FreedomFi gateways.
+Support for onboarding any new CBRS radios will cease immediately upon passing this HIP. All CBRS radios will go offline and stop receiving rewards by March 1, 2025. FreedomFi gateways will continue to function as IoT gateways until January 1, 2026, after which Nova will end support for the FreedomFi gateways.
 
 ## Drawbacks
 
