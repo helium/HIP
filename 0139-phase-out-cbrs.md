@@ -29,20 +29,33 @@ Despite the community's best efforts, we were unable to establish a user-friendl
 
 - **Wi-Fi Hotspot Deployers** - will receive higher rewards.
 - **CBRS Hotspot Deployers** - will have the opportunity to receive free Wi-Fi hardware but will eventually be required to bring their CBRS radios offline.
+- **MOBILE Token Holders** -  Could receive less HNT in to the Mobile treasury/Hotspot rewards if increase in Wi-Fi deployments is not matching/improving on removal of CBRS deployments due to A score in Utility Score.
+- **CBRS Hotspot Makers and Distributors** - Any still holding stock will be unable to sell to Helium deployers on the MOBILE network due to lack of demand. (So Bobcat/Calchip definitely need to be informed of this HIP).
 
 ## Detailed Explanation
 
 All CBRS radios that received rewards between August 1, 2024, and November 1, 2024, are eligible to receive free Wi-Fi gear as follows:
 
 - **CBRS Indoor** - 1 Wi-Fi indoor Hotspot.
-- **Nova 430 or Moso Outdoor** - 1 outdoor Wi-Fi Hotspot.
-- **Nova 436 Outdoor** - 3 outdoor Wi-Fi Hotspots.
+- **Nova 430 or Moso Outdoor** - 1 outdoor Wi-Fi Hotspot or 1 indoor Wi-Fi hotspot (CBRS owner can choose)
+- **Nova 436 Outdoor** - 3 Wi-Fi Hotspots of any type (indoor or outdoor; CBRS owner can choose the mix)
 
-Nova Labs will publish a web form for eligible CBRS radio owners to provide a shipping address within the continental US to receive their Wi-Fi gear and validate ownership of the eligible CBRS radio.
+Free Wi-Fi gear will be provided by Nova Labs. 
 
-Additionally, Nova Labs will publish instructions and firmware images for all CBRS Hotspot owners to re-flash their existing CBRS equipment to stock configuration. CBRS owners may keep their stock CBRS radios. Nova will also provide instructions for all FreedomFi gateways to re-flash the hardware into generic miniPCs.
+Eligibility for free Wi-Fi is not tied to the type of gateway used in conjuction with said radios. CBRS radios that have been connected to any functional 5G gateway (FreedomFi, Bobcat 5G etc.) are all eligible. Immediately after passing this HIP, Nova Labs will publish a web form for eligible CBRS radio owners to provide a shipping address within the continental US to receive their Wi-Fi gear and validate ownership of the eligible CBRS radio. Shipping within continental US will be free. 
 
-Support for onboarding any new CBRS radios will cease immediately upon passing this HIP. All CBRS radios will go offline and stop receiving rewards by March 1, 2025. FreedomFi gateways will continue to function as IoT gateways until January 1, 2026, after which Nova will end support for the FreedomFi gateways.
+Additionally, Nova Labs will publish instructions and firmware images for all CBRS Hotspot owners to re-flash their existing CBRS equipment to stock configuration. CBRS owners may keep their stock CBRS radios. Nova will also provide instructions for all FreedomFi gateways to re-flash the hardware into generic miniPCs. Re-flashing FreedomFi gateways into generic miniPC will preclude it from getting onboarding and/or receiving IoT rewards. 
+
+Support for onboarding any new CBRS radios will cease immediately upon passing this HIP. All CBRS radios will go offline and stop receiving rewards by March 1, 2025. Any SAS fees prepaid past March 1st, 2025 will be refunded pro-rata. 
+
+FreedomFi gateways will continue to function as IoT gateways until January 1st, 2026, after which Nova will end support for the FreedomFi gateways. Onboarding of FreedomFi gateways for IoT will remain possible until January 1st, 2026. After January 1st, 2026, gateways will still remain online and continue to receive rewards, but no new firmware updates will be issued and no support queries related to gateways will be addressed. 
+
+## What to do with CBRS Radios 
+
+If this HIP passes, CBRS radio owners will be able to re-flash radio firmware to a generic, stock version. After this, CBRS radios can be sold or applied for a variety of use cases. Two of the most common use cases are rural fixed wireless access and private LTE/5G networks. Additional information about use cases and deployment architectures is available on the OnGo Alliance website at [https://ongoalliance.org/](https://ongoalliance.org/).
+
+Running your own CBRS network requires a network core. Nova uses an open-source network core called Magma. Code and deployment instructions for Magma are available at [https://magmacore.org/](https://magmacore.org/).
+
 
 ## Drawbacks
 
@@ -62,9 +75,12 @@ Therefore, an alternative approach would be to do nothing and let CBRS fade out 
 
 ## Deployment Impact
 
+Nova Labs will perform all the activities required in this HIP.
+
 ## Success Metrics
 
 - All CBRS radios are offline by March 1, 2025.
 - All CBRS rewards are redirected to operators of Wi-Fi radios.
+- At least 80% of Wi-Fi radios that have been provided by free are deployed and driving data and token burn on the network, no later than 6 months after passing of this HIP. 
 
 [hip-113]: ./0113-reward-cbrs-as-experimental.md
