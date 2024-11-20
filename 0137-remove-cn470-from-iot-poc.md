@@ -15,7 +15,7 @@ This proposal removes the CN470 region from earning Proof-of-Coverage rewards on
 
 ## Motivation
 
-Whilst the gaming is easy to detect by eye, it's hard to detect it programmatically without finding caveats. Where ITM models work with regions where legitimate coverage exists to weed out the gamers, its clear the cn470 region has gotten to a point where next to none exists.
+Whilst the gaming is easy to detect by eye, it's hard to detect it programmatically without finding caveats. ITM models do work with regions where legitimate coverage exists to weed out the gamers, but it's clear the CN470 region has gotten to a point where next to none exists on the Helium network.
 
 [A recently produced report](files/0137/cn470-gaming.pdf) shows that 9,700,000 IOT rewards per epoch are going to the cn470 region whilst gaming detection methods can show over 86.9% of this is gaming, with the remaining hotspots being hard to confirm if they are gaming or not.
 
@@ -23,19 +23,19 @@ Currently the CN470 region accounts for 1,563DC ($0.01563) per Epoch of data tra
 
 ## Stakeholders
 
-All customers (e.g., sensor owners), hosts, and operators of the Helium IOT Network. Gateway manufacturers producing hotspots for the cn470 region.
+All customers (e.g., sensor owners), hosts, and operators of the Helium IOT Network. Gateway manufacturers producing hotspots for the CN470 region.
 
 ## Detailed Explanation
 
 We propose to remove the CN470 region from PoC reward calculations.
 
-We then propose a new denylist focused on any Hotspots that have been asserted to the cn470 region.
+We then propose a new denylist focused on any Hotspots that have been asserted to the CN470 region.
 
 This proposal does not remove Data Transfer capability for CN470 Hotspots.
 
 ## Implementation
 
-- Remove the CN470 region from PoC calculations by adding a check to the poc validator to check if the witness is in the cn470 region and marking it invalid
+- Remove the CN470 region from PoC calculations by adding a check to the IOT PoC verifier to check if the witness is in the CN470 region and marking it invalid
 - Produce a new denylist for all hotspots that have ever been located in the cn470 region.
 
 ## Alternatives
