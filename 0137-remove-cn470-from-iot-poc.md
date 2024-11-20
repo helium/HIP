@@ -15,28 +15,28 @@ This proposal removes the CN470 region from earning Proof-of-Coverage rewards on
 
 ## Motivation
 
-Whilst the gaming is easy to detect by eye, it's hard to detect it programmatically without finding caveats. The closest we have is the newer ITM model, this can be bypassed by setting height on Hotspots and would need further development and time to implement.
+Whilst the gaming is easy to detect by eye, it's hard to detect it programmatically without finding caveats. Where ITM models work with regions where legitimate coverage exists to weed out the gamers, its clear the cn470 region has gotten to a point where next to none exists.
 
-Currently around 14% of PoC rewards are going to Hotspots in the CN470 region. These Hotspots represent under 1,000 of DC usage.
+[A recently produced report](files/0137/cn470-gaming.pdf) shows that 9,700,000 IOT rewards per epoch are going to the cn470 region whilst gaming detection methods can show over 86.9% of this is gaming, with the remaining hotspots being hard to confirm if they are gaming or not.
 
 ## Stakeholders
 
-All customers (e.g., sensor owners), hosts, and operators of the Helium IOT Network.
+All customers (e.g., sensor owners), hosts, and operators of the Helium IOT Network. Gateway manufacturers producing hotspots for the cn470 region.
 
 ## Detailed Explanation
 
-We propose to remove the CN470 region from PoC reward calculations. We then propose a new denylist focused on any Hotspots moving from this region to others be added. We also propose these changes be removed when anti gaming techniques have been developed to address these issues.
+We propose to remove the CN470 region from PoC reward calculations. We then propose a new denylist focused on any Hotspots that have been asserted to the cn470 region.
 
 This proposal does not remove Data Transfer capability for CN470 Hotspots.
 
 ## Implementation
 
-- Remove the CN470 region from PoC calculations
-- Track any Hotspots in the CN470 region for location assertions out of region and produce a list to be added to the denylist
+- Remove the CN470 region from PoC calculations by adding a check to the poc validator to check if the witness is in the cn470 region and marking it invalid
+- Produce a new denylist for all hotspots that have ever been located in the cn470 region.
 
 ## Alternatives
 
-- Do nothing and potentially let gaming happen forever
+- None at this time.
 
 ## Drawbacks
 
