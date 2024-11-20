@@ -19,13 +19,17 @@ Whilst the gaming is easy to detect by eye, it's hard to detect it programmatica
 
 [A recently produced report](files/0137/cn470-gaming.pdf) shows that 9,700,000 IOT rewards per epoch are going to the cn470 region whilst gaming detection methods can show over 86.9% of this is gaming, with the remaining hotspots being hard to confirm if they are gaming or not.
 
+Currently the CN470 region accounts for 1,563DC ($0.01563) per Epoch of data transfer.
+
 ## Stakeholders
 
 All customers (e.g., sensor owners), hosts, and operators of the Helium IOT Network. Gateway manufacturers producing hotspots for the cn470 region.
 
 ## Detailed Explanation
 
-We propose to remove the CN470 region from PoC reward calculations. We then propose a new denylist focused on any Hotspots that have been asserted to the cn470 region.
+We propose to remove the CN470 region from PoC reward calculations.
+
+We then propose a new denylist focused on any Hotspots that have been asserted to the cn470 region.
 
 This proposal does not remove Data Transfer capability for CN470 Hotspots.
 
