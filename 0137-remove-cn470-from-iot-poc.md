@@ -19,7 +19,7 @@ Whilst the gaming is easy to detect by eye, it's hard to detect it programmatica
 
 [A recently produced report](files/0137/cn470-gaming.pdf) shows that 9,738,419 IOT rewards in one epoch were going to the CN470 region whilst gaming detection methods can show over 86.9% of this is gaming, with the remaining hotspots being hard to confirm if they are gaming or not. This 9.7M IOT is 13.6% of the PoC and Data Transfer rewards available each Epoch
 
-Currently the CN470 region accounts for 1,563DC ($0.01563) per Epoch of data transfer. This figure is minute in proportion to the number of Hotspots deployed In China, compared to other countries of large Hotspot deployments
+Currently the CN470 region accounts for 1,563DC ($0.01563) per Epoch of data transfer. This figure is minute in proportion to the number of Hotspots deployed in China, compared to other countries of large Hotspot deployments
 
 ## Stakeholders
 
