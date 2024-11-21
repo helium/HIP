@@ -49,7 +49,7 @@ An implementation date is to be confirmed, but there is no requirement to delay 
 ## Alternatives
 
 - None at this time.
-- This HIP can be reversed by another HIP or IOT Working Group all-member Super Majority vote, if a new gaming identification classifier is identified as implementable that will be effective.
+- This HIP can be reversed by another HIP if a new gaming identification classifier is identified as implementable that will be effective.
 
 ## Drawbacks
 
