@@ -41,7 +41,7 @@ This proposal does not remove Data Transfer capability or rewards for CN470 Hots
 - Remove the CN470 region from PoC calculations by adding a check to the IOT PoC verifier to check if the witness is in the CN470 region and marking it invalid.
 - Produce a new permanent denylist classifier for all hotspots that have ever been located in the CN470 region.
   This classifier will be run weekly to identify new Hotspots asserting or reasserting in the CN470 region.
-  The denial of this hotspot cannot be removed by reassertion or changing the height or antenna properties.
+  The denial of this Hotspot cannot be removed by reassertion or changing the height or antenna properties.
 - Nova Labs/Heliium Foundation will deploy this HIP in their appropriate capacities.
 
 An implementation date is to be confirmed, but there is no requirement to delay implementation when ready to deploy.
