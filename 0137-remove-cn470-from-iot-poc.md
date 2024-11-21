@@ -34,7 +34,7 @@ We propose to remove the CN470 region from PoC reward calculations.
 
 We then propose a new denylist focused on any Hotspots that have ever asserted to the CN470 region, now or in the past.  This includes Hotspots that were asserted in CN470 and have reasserted in other regions.
 
-This proposal does not remove Data Transfer capability or rewards for CN470 Hotspots. 
+This proposal does not remove Data Transfer capability or rewards for CN470 Hotspots.
 
 ## Implementation
 
