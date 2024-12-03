@@ -11,7 +11,7 @@
 
 ## Summary
 
-This proposal establishes a schedule to permanently end rewards for CBRS radios on the Helium Network. If this proposal passes, Nova Labs will assist CBRS owners with the transition by re-flashing their CBRS equipment to stock firmware (turning it into generic CBRS equipment) and offering free Wi-Fi Hotspots to affected Hotspot operators funded through a Foundation grant at-cost.
+This proposal establishes a schedule to permanently end rewards for CBRS radios on the Helium Network. If this proposal passes, Nova Labs will assist CBRS owners with the transition by re-flashing their CBRS equipment to stock firmware (turning it into generic CBRS equipment) and offering free Wi-Fi Hotspots to affected Hotspot operators funded through a Foundation grant.
 
 ## Related Previous HIPs
 
@@ -40,7 +40,7 @@ All CBRS radios that received rewards between September 1, 2024, and December 1,
 - **Nova 430 or Moso Outdoor** - 1 outdoor Wi-Fi Hotspot or 1 indoor Wi-Fi hotspot (CBRS owner can choose)
 - **Nova 436 Outdoor** - 3 Wi-Fi Hotspots of any type (indoor or outdoor; CBRS owner can choose the mix)
 
-Helium Foundation will issue a grant to fund the free Wi-Fi gear (at-cost) and will collaborate with Wi-Fi makers to administer the swap program. The Grant will be paid from the new 1.3M HNT MOBILE Growth Fund created in HIP-138.
+Helium Foundation will issue a grant to fund the free Wi-Fi gear and will collaborate with Wi-Fi makers to administer the swap program. The Grant will be paid from the new 1.3M HNT MOBILE Growth Fund created in HIP-138.
 
 Eligibility for free Wi-Fi is not tied to the type of gateway used in conjuction with said radios. CBRS radios that have been connected to any functional 5G gateway (FreedomFi, Bobcat 5G etc.) are all eligible. Immediately after passing this HIP, a web form will become available for eligible CBRS radio owners to provide a shipping address within the continental US to receive their Wi-Fi gear and validate ownership of the eligible CBRS radio. Shipping within continental US will be free.
 
@@ -75,7 +75,7 @@ Therefore, an alternative approach would be to do nothing and let CBRS fade out 
 
 ## Deployment Impact
 
-Nova Labs will manage all the activities required in this HIP with hardware covered "at-cost" through a Helium Foundation grant. Other approved MOBILE Makers are eligible to participate.
+Nova Labs will manage all the activities required in this HIP with hardware funded through a Helium Foundation grant. Other approved MOBILE Makers are eligible to participate.
 
 ## Success Metrics
 
