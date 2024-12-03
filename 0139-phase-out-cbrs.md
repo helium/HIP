@@ -34,7 +34,7 @@ Despite the community's best efforts, we were unable to establish a user-friendl
 
 ## Detailed Explanation
 
-All CBRS radios that received rewards between September 1, 2024, and December 1, 2024, are eligible to receive free Wi-Fi gear as follows:
+All CBRS radios that received rewards between August 1, 2024, and November 1, 2024, are eligible to receive free Wi-Fi gear as follows:
 
 - **CBRS Indoor** - 1 Wi-Fi indoor Hotspot.
 - **Nova 430 or Moso Outdoor** - 1 outdoor Wi-Fi Hotspot or 1 indoor Wi-Fi hotspot (CBRS owner can choose)
