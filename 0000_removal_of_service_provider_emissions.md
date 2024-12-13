@@ -28,11 +28,11 @@ Upon passing, emissions to Service Providers would cease immediately. This HIP w
 
 ## Alternatives
 
-One alternative is to instead of completely removing SP emissions, to reduce them. For example, for every GB paid for, you will only receive a rebate/emission of 50% of the cost of that data. 
+One alternative is to instead of completely removing SP emissions, to reduce them. For example, for every GB paid for, SPs would only receive a rebate/emission of 50% of the cost of that data. 
 
 ## Drawbacks
 
-One drawback of not having SP emissions is it may encourage other SPs from joining the network; however, as only 1 SP has formally joined the network, in the network's lifetime, these rewards do not appear to be a main motivator to joining the network.
+One drawback of not having SP emissions is it may discourage other SPs from joining the network; however, as only 1 SP has formally joined the network, in the network's lifetime, these rewards do not appear to be a main motivator to joining the network.
 
 
 ## Deployment Impact
