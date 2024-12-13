@@ -9,7 +9,7 @@
 ---
 
 ## Summary
-This HIP would remove the Service Provider MOBILE reward pool/emissions that are currently given Service Providers (SP) as a rebate for using the network.
+This HIP would remove the Service Provider MOBILE reward pool/emissions that are currently given to Service Providers (SP) as a rebate for using the network.
 
 ## Motivation
 
