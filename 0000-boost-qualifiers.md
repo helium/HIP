@@ -28,9 +28,12 @@ Hotspots that assert in a boosted hex:
 * Qualify for non-boosted PoC rewards if they meet HIP133 CDR/disco mapping rules.
 * Qualify for boosted rewards with 25+ unique offload connections over an ongoing 7-day window as specified in HIP134. The hotspot receives boosted rewards for the boosted hex, with this being an ongoing requirement rather than a one-time threshold.
 
-Upon approval and implementation, this HIP will activate in the US, followed by Mexico as carrier offload is activated there.
+Since the implementation timeline of this HIP may overlap the HIP139 CBRS phase-out, CBRS radios will not qualify for boosted rewards. 
 
 The HIP84 requirement of 3 unique devices is deprecated and no longer applicable once this HIP is approved and activated.
+
+Upon approval and implementation, this HIP will activate in the US, followed by Mexico as carrier offload is activated there. The existing 3 device Service Provider boost qualification remains in place in Mexico but will be deprecated and replaced by this HIP when carrier offload is activated in Mexico.
+
 
 
 ## Drawbacks
