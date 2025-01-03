@@ -9,11 +9,17 @@
 
 ## Summary
 
-This HIP proposes adjusting the Service Provider boost eligibility qualifiers in a boosted hex to be based solely on the ongoing unique connections specified in HIP134. This change would eliminate the ability for a hotspot in a boosted hex to qualify for boosted rewards based on CDR (HIP133) or by passing data (HIP84). A hotspot would earn normal (non-boosted) PoC rewards in a boosted hex using HIP133 rules and would only receive Service Provider boost rewards when it has sufficient ongoing unique offload connections.
+This HIP proposes adjusting the Service Provider boost eligibility qualifiers in a boosted hex to be based solely on the ongoing unique connections specified in HIP-134. This change would eliminate the ability for a hotspot in a boosted hex to qualify for boosted rewards based on Call Detail Records (CDR) in HIP-133 or by passing data (HIP-84). A hotspot would earn normal (non-boosted) PoC rewards in a boosted hex using HIP-133 rules and would only receive Service Provider boost rewards when it has sufficient ongoing unique offload connections.
+
+## Related Prior HIPs
+
+- [HIP-134](./0134-reward-mobile-carrier-offload-hotspots.md): Rewarded MOBILE Carrier Offload Hotspots
+- [HIP-133](./0133-bridging-gap-for-anti-gaming-measures-phase2.md): Extended CDR requirements for anti-gaming
+- [HIP-84](./0084-service-provider-hex-boosting.md): Created hex boosting rewards## Summary
 
 ## Motivation
 
-When a hotspot is placed in a Service Provider boosted hex, it is expected to achieve significant offload. Currently, there are hundreds of hotspots in boosted hexes that earn boosted PoC while selected for offload, yet they have little or no actual offload. These hotspots are essentially farming boosted PoC by manipulating their location and meeting one-time CDR requirements as outlined in HIP133.
+When a hotspot is placed in a Service Provider boosted hex, it is expected to achieve significant offload. Currently, there are hundreds of hotspots in boosted hexes that earn boosted PoC while selected for offload, yet they have little or no actual offload. These hotspots are essentially farming boosted PoC by manipulating their location and meeting one-time CDR requirements as outlined in HIP-133.
 
 ## Stakeholders
 
@@ -25,12 +31,12 @@ When a hotspot is placed in a Service Provider boosted hex, it is expected to ac
 
 Hotspots that assert in a boosted hex:
 
-* Qualify for non-boosted PoC rewards if they meet HIP133 CDR/disco mapping rules.
+* Qualify for non-boosted PoC rewards if they meet HIP-133 CDR/disco mapping rules.
 * Qualify for boosted rewards with 25+ unique offload connections over an ongoing 7-day window as specified in HIP134. The hotspot receives boosted rewards for the boosted hex, with this being an ongoing requirement rather than a one-time threshold.
 
-Since the implementation timeline of this HIP may overlap the HIP139 CBRS phase-out, CBRS radios will not qualify for boosted rewards. 
+Since the implementation timeline of this HIP may overlap the HIP-139 CBRS phase-out, CBRS radios will not qualify for boosted rewards. 
 
-The HIP84 requirement of 3 unique devices is deprecated and no longer applicable once this HIP is approved and activated.
+The HIP-84 requirement of 3 unique devices is deprecated and no longer applicable once this HIP is approved and activated.
 
 Upon approval and implementation, this HIP will activate in the US, followed by Mexico as carrier offload is activated there. The existing 3 device Service Provider boost qualification remains in place in Mexico but will be deprecated and replaced by this HIP when carrier offload is activated in Mexico.
 
