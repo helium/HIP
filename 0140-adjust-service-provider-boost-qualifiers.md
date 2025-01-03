@@ -1,10 +1,10 @@
-# HIP XXXX: Adjust Service Provider Boost Qualifiers
+# HIP 140: Adjust Service Provider Boost Qualifiers
 
 - Author: [@madninja](https://github.com/madninja)
-- Start Date: 2024-12-31
+- Start Date: 2025-01-03
 - Category: Technical, Economic
-- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
-- Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
+- Original HIP PR: [#1411](https://github.com/helium/HIP/pull/1411)
+- Tracking Issue: [#1142](https://github.com/helium/HIP/issues/1142)
 - Vote Requirements: veMOBILE Holders
 
 ## Summary
