@@ -34,7 +34,7 @@ Hotspots that assert in a boosted hex:
 * Qualify for non-boosted PoC rewards if they meet HIP-133 CDR/disco mapping rules.
 * Qualify for boosted rewards with 25+ unique offload connections over an ongoing 7-day window as specified in HIP134. The Hotspot receives boosted rewards for the boosted hex, with this being an ongoing requirement rather than a one-time threshold.
 
-The activation of a boosted hex as defined in HIP-84 will be adjusted to activate a boosted hex only when the first hotspot qualifies for boosted rewards per the unique connection rule above.
+The activation of a boosted hex as defined in HIP-84 will be adjusted to occur only when the asserted hotspot covering that hex qualifies for boosted rewards per the unique connection rule above.
 
 Since the implementation timeline of this HIP may overlap the HIP-139 CBRS phase-out, CBRS radios will not qualify for boosted rewards. 
 
