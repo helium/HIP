@@ -3,7 +3,7 @@
 - Author: [@madninja](https://github.com/madninja)
 - Start Date: 2025-01-03
 - Category: Technical, Economic
-- Original HIP PR: [#1411](https://github.com/helium/HIP/pull/1411)
+- Original HIP PR: [#1141](https://github.com/helium/HIP/pull/1141)
 - Tracking Issue: [#1142](https://github.com/helium/HIP/issues/1142)
 - Vote Requirements: veMOBILE Holders
 
@@ -52,6 +52,7 @@ When a hex is boosted, it is expected to experience significant subscriber traff
 
 ## Unresolved Questions
 
+None
 
 ## Deployment Impact
 
