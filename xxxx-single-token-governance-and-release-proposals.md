@@ -158,8 +158,10 @@ To provide some examples of potential future release candidates, the team has co
   * Ability to change the price for data transfer based on geographies and carriers.  
   * Move away from asserted / checked location towards a connectivity driven “template bonus”  
 * IoT  
-  * Move denylist classifiers into open, community managed process  
-  * [HIP-136][hip-136] like improvements to IoT PoC  
+  * Move denylist classifiers into open, community managed process
+  * Multi-station gateway-rs updates
+  * Support for LoRaWAN 1.1 with session key filters
+  * Impactful updates to IoT Proof-of-Coverage
   * Change data pricing model for IoT based on community discussion
 
 Please note that these are all examples of potential improvements that will have an open comment period, an implementation period, and finally an approval through the Release Proposal process.
