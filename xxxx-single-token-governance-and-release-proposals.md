@@ -78,19 +78,22 @@ We propose to smooth the split between subnetworks over a 30-day period. This al
 
 #### New Utility Score
 
-Thus, the new Utility Score becomes solely based on the percentage of veHNT delegated to the subnetwork and is smoothed over a 30-day period:
+The new Utility Score is determined by the share of veHNT delegated to each subnetwork, and is expressed as the subnetwork’s percentage of total subnetwork emissions. Due to the smoothing function, the network will transition gradually from the [HIP-51](./0051-helium-dao.md) Utility Score to the new Score.
 
-Each day, the formula for each subnetwork's percentage share should be:
+- $S_{IOT}(t)$ is defined as the percentage Score of the IOT network on day $t$.
+- $V_{IOT}(t)$ is defined as the veHNT delegation percentage of the IOT network on day $t$.
 
-```
-\frac{1}{30} \cdot \text{Percentage}_{\text{Today}} + \frac{29}{30} \cdot \text{Percentage}_{\text{Yesterday}}
-```
+- $S_{IOT}(0)$ is the percentage Score of the IOT network on the day of transition, as defined by the DAO Utility Score of HIP-51.
+- For $t>0$, let $S_{IOT}(t) = \frac{29}{30} S_{IOT}(t-1) + \frac{1}{30} V_{IOT}(t).$
+- Thus, today’s Score is always $\frac{29}{30}$ of yesterday’s Score plus $\frac{1}{30}$ of today’s veHNT delegation percentage.
 
-In this way, large swings in veHNT delegation will slowly lead to eventual change in emissions allocation.
+The Score $S_{MOBILE}(t)$ of the MOBILE subnetwork is calculated in the same way.
+
+In this way, large swings in veHNT delegation will slowly lead to eventual change in emissions allocation. It is notable that a 30-day smoothing function provides convergence towards a score on a 90-day interval.
 
 HNT is distributed among subnetworks similarly to the current Utility Score, based on their Utility Score divided by the Total Utility Score. This gives a percentage share of the rewards, which is then smoothed against yesterday’s percentage share.
 
-Importantly, this formula takes into account the previous day’s percentage, such that the split of rewards prior to [HIP-138](https://github.com/helium/HIP/blob/main/0138-return-to-hnt.md) will serve as a starting point. This will allow rewards to progress smoothly, rather than in a volatile way, towards their eventual equilibrium point. This will also give delegators time to respond to the changes from this HIP.
+Importantly, this formula takes into account the previous day’s percentage, such that the split of rewards prior to [HIP-138](./0138-return-to-hnt.md) will serve as a starting point. This will allow rewards to progress smoothly, rather than in a volatile way, towards their eventual equilibrium point. This will also give delegators time to respond to the changes from this HIP.
 
 ### Removal of Delegation Rewards
 
