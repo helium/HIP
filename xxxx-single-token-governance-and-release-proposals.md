@@ -47,7 +47,7 @@ This can be considered the first proposal under the new Helium Release Process. 
   * Returning rewards to HNT  
   * Halting IOT and MOBILE emissions  
   * Halting HST rewards and redirecting rewards to other participants  
-* Simplify the DAO Utility Score to use veHNT delegation alone (V Score)  
+* Simplify the DAO Utility Score to use veHNT delegation alone, a new Protocol Score  
 * Remove delegation rewards from subnetworks and establish a 6% HNT rewards pool  
 * Establish activity thresholds for veHNT participants to be eligible for HNT rewards  
 * Allow direct or indirect (via Proxy Account) participation in governance using veHNT
@@ -76,9 +76,9 @@ Active device count and Data Credit burn are backwards-looking and present-time 
 
 We propose to smooth the split between subnetworks over a 30-day period. This allows deployers to better predict their near-term earnings, by reducing the volatility of delegation percentages. It also gives governance participants time to dedicate assets towards delegation as needed.
 
-#### New Utility Score
+#### New Protocol Score
 
-The new Utility Score is determined by the share of veHNT delegated to each subnetwork, and is expressed as the subnetwork’s percentage of total subnetwork emissions. Due to the smoothing function, the network will transition gradually from the [HIP-51][hip-51] Utility Score to the new Score.
+The new Protocol Score is determined by the share of veHNT delegated to each subnetwork (formerly the `V` component of the DAO Utility Score), and is expressed as the subnetwork’s percentage of total subnetwork emissions. Due to the smoothing function, the network will transition gradually from the [HIP-51][hip-51] Utility Score to the new Protocol Score.
 
 - $S_{IOT}(t)$ is defined as the percentage Score of the IOT network on day $t$.
 - $V_{IOT}(t)$ is defined as the veHNT delegation percentage of the IOT network on day $t$.
@@ -91,7 +91,7 @@ The Score $S_{MOBILE}(t)$ of the MOBILE subnetwork is calculated in the same way
 
 In this way, large swings in veHNT delegation will slowly lead to eventual change in emissions allocation. It is notable that a 30-day smoothing function provides convergence towards a score on a 90-day interval.
 
-HNT is distributed among subnetworks similarly to the current Utility Score, based on their Utility Score divided by the Total Utility Score. This gives a percentage share of the rewards, which is then smoothed against yesterday’s percentage share.
+HNT is distributed among subnetworks similarly to the current DAO Utility Score, based on their Protocol Score divided by the Total Protocol Score. This gives a percentage share of the rewards, which is then smoothed against yesterday’s percentage share.
 
 Importantly, this formula takes into account the previous day’s percentage, such that the split of rewards prior to [HIP-138][hip-138] will serve as a starting point. This will allow rewards to progress smoothly, rather than in a volatile way, towards their eventual equilibrium point. This will also give delegators time to respond to the changes from this HIP.
 
@@ -101,7 +101,7 @@ Under this proposal, veHNT holders would receive the same rewards no matter whic
 
 ### Voting and Delegation Rewards
 
-With the simplification of the DAO Utility Score, and the removal of extraneous economic incentives to delegate to a particular subnetwork, delegation becomes a way in which veHNT holders help decide the future of the network.
+With the simplification of the Protocol Score, and the removal of extraneous economic incentives to delegate to a particular subnetwork, delegation becomes a way in which veHNT holders help decide the future of the network.
 
 As this proposal removes independent voting with veIOT, [HIP-124][hip-124] would be repealed. Rewards from IOT subnetwork emissions, which were allocated by [HIP-124][hip-124] to voters in IOT elections, would return to their previous assignment to the Oracle reward pool, which may be allocated as needed by a future HIP. 
 
@@ -127,11 +127,11 @@ As independent subnetwork tokens are now being phased out through [HIP-138][hip-
 
 ### Rewards Flow
 
-If this proposal is approved and implemented, the distribution of HNT emissions will remain effectively unchanged among subnetwork participants, except as influenced by the definition of the new, simpler Utility Score, and the new voting requirement for veHNT positions to be eligible for delegation rewards.
+If this proposal is approved and implemented, the distribution of HNT emissions will remain effectively unchanged among subnetwork participants, except as influenced by the definition of the new, simpler Protocol Score, and the new voting requirement for veHNT positions to be eligible for delegation rewards.
 
 The proposal intends that 6% of total HNT emissions be distributed pro rata among all eligible participants, who have delegated to a subnetwork.
 
-For clarity, should a future release  modify subnetwork emission schedules or the DAO Utility Score, all schedules shall be adjusted to maintain the 6% equal distribution of delegation rewards among all eligible veHNT positions, unless this provision is explicitly modified.
+For clarity, should a future release  modify subnetwork emission schedules or the Protocol Score, all schedules shall be adjusted to maintain the 6% equal distribution of delegation rewards among all eligible veHNT positions, unless this provision is explicitly modified.
 
 ### Development Time
 
