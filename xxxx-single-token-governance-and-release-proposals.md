@@ -109,7 +109,7 @@ HNT is distributed among subnetworks similarly to the current DAO Utility Score,
 
 Under this proposal, rewards issued to veHNT holders will no longer be dependent on the economics of the delegated subnetwork.
 
-Instead, all eligible holders of delegated veHNT receive a share of a new HNT Delegation Rewards Pool. This Pool is created from the 6% of subnetwork token emissions that were previously dedicated to delegation rewards in each subnetwork. Given that all subnetwork emissions are denominated in HNT with HIP-138, and HST emissions have ceased, the sum of all subnetwork delegation rewards as defined in [HIP-52][hip-52] and [HIP-53][hip-53] corresponds exactly to 6% of total HNT issuance.
+Instead, all eligible holders of delegated veHNT receive a share of a new HNT Delegation Rewards Pool. This Pool is created from the 6% of subnetwork token emissions that were previously dedicated to delegation rewards in each subnetwork. Given that all subnetwork emissions are denominated in HNT with [HIP-138][hip-138], and HST emissions have ceased, the sum of all subnetwork delegation rewards as defined in [HIP-52][hip-52] and [HIP-53][hip-53] corresponds exactly to 6% of total HNT issuance.
 
 If future HIPs adjust subnetwork emission schedules, they shall be construed to maintain this total 6% Delegation Rewards Pool unchanged, unless this provision is explicitly modified.
 
