@@ -41,7 +41,7 @@ All Helium ecosystem participants are affected by this proposal.
 
 ## Detailed Explanation
 
-The Protocol Developers are establishing a Roadmap, to be voted on alongside this proposal, providing clarity and predictability for all network participants. Helium is one of the largest decentralized networks with stakeholders of multiple types across two wireless protocols, and an aligned roadmap is needed to protect core Protocol Developers, builders, and token holders from uncertainty.
+The Protocol Developers are establishing a Roadmap, to be voted on alongside this proposal, providing clarity and predictability for all network participants. Helium is one of the largest decentralized networks, with stakeholders of multiple types across two wireless protocols, and an aligned roadmap is needed to protect core Protocol Developers, builders, and token holders from uncertainty.
 
 ### January 2025 Release
 
@@ -52,7 +52,7 @@ As the first release under the new Helium Release Process, the Protocol Develope
   * IOT and MOBILE emissions cease
   * Rewards to HST holders cease, and the corresponding HNT is redirected to network participants  
 * The DAO Utility Score is replaced by the new Protocol Score based on veHNT delegation alone
-* Rewards for delegation to subnetworks are replaced by a new 6% HNT rewards pool  
+* Rewards for delegation to subnetworks are delivered from a new 6% HNT rewards pool  
 * Voting activity thresholds are established for rewards to veHNT participants 
 * Governance is unified under veHNT, voted directly or through a Proxy Account
 
@@ -74,7 +74,7 @@ Instead, under the current Score, the incentive becomes to maximize yield based 
 
 #### A and D Score Component
 
-Active device count and Data Credit burn are backwards-looking and present-time metrics which reflect no forward-looking sentiment. For example, the IoT subnetwork is considering a change to its fee structure that could greatly increase DC burn. It also has an existing, global network ready for use. veHNT delegators should be able to weigh these factors when deciding the rewards (and therefore deployment incentives) that go to the subnetwork. It is the authors’ belief that a market driven approach, detached from the circular financial incentives of the existing Utility Score, will better decide the rewards split than the legacy model.
+Active device count and Data Credit burn are backwards-looking and present-time metrics which reflect no forward-looking sentiment. For example, the IoT subnetwork is considering a change to its fee structure that could greatly increase DC burn. It also has an existing, global network ready for use. On the other hand, the Mobile network, though it has fewer active Hotspots, is growing at a higher rate. veHNT delegators should be able to weigh these factors when deciding the rewards (and therefore deployment incentives) that go to the subnetwork. It is the authors’ belief that a market driven approach, detached from the circular financial incentives of the existing Utility Score, will better decide the rewards split than the legacy model.
 
 #### New Protocol Score
 
@@ -109,25 +109,25 @@ HNT is distributed among subnetworks similarly to the current DAO Utility Score,
 
 Under this proposal, rewards issued to veHNT holders will no longer be dependent on the economics of the delegated subnetwork.
 
-Instead, all eligible holders of delegated veHNT receive a share of a new rewards pool, which consists of 6% of all HNT emissions. Under the new rewards flow, this pool is created first, and all emissions percentages defined in previous HIPs are applied to the remaining 94% of HNT emissions. No future adjustment to rewards percentages shall be construed to modify the 6% rewards pool assigned to veHNT, or its distribution, unless this provision is explicitly modified.
+Instead, all eligible holders of delegated veHNT receive a share of a new HNT Delegation Rewards Pool. This Pool is created from the 6% of subnetwork token emissions that were previously dedicated to delegation rewards in each subnetwork. Given that all subnetwork emissions are denominated in HNT with HIP-138, and HST emissions have ceased, the sum of all subnetwork delegation rewards as defined in [HIP-52][hip-52] and [HIP-53][hip-53] corresponds exactly to 6% of total HNT issuance.
 
-Compensating for this, the 6% of emissions in each subnetwork that were allocated to delegation rewards under [HIP-52][hip-52] and [HIP-53][hip-53] are released and reassigned to augment the rewards to other subnetwork participants. In this way, the magnitude of economic rewards available to veHNT holders remains unchanged.
+If future HIPs adjust subnetwork emission schedules, they shall be construed to maintain this total 6% Delegation Rewards Pool unchanged, unless this provision is explicitly modified.
 
 ### Voting and Delegation Rewards
 
-With the simplification of the Protocol Score, and the removal of extraneous economic incentives to delegate to a particular subnetwork, subnetwork delegation becomes a way in which veHNT holders help decide the future of the network. In this spirit, veHNT rewards are made dependent on voting. veHNT holders can fulfill the voting requirement by voting directly, or by delegating their veHNT to a Proxy Account, provided that the Proxy votes.
+With the simplification of the Protocol Score, and the removal of extraneous economic incentives to delegate to a particular subnetwork, delegation becomes a way in which veHNT holders help decide the future of the network. In this spirit, veHNT rewards are made dependent on voting. veHNT holders can fulfill the voting requirement by voting directly, or by delegating their veHNT to a Proxy Account, provided that the Proxy votes.
 
-Voting incentives were introduced for veIOT with [HIP-124][hip-124]. This proposal removes independent voting with veIOT, and as a result, [HIP-124][hip-124] is repealed. The IoT Oracles rewards pool returns to its previous role.
+Voting incentives were introduced for veIOT with [HIP-124][hip-124]. The current proposal removes independent voting with veIOT, and as a result, [HIP-124][hip-124] is repealed. The IoT Oracles rewards pool returns to its previous role.
 
-Instead, the voting requirements defined in [HIP-124][hip-124] for veIOT will now apply to veHNT as a whole. Briefly, a veHNT position that has been delegated to a subnetwork will only be eligible for delegation rewards if it has voted in 2 of the last 4 veHNT votes. The following modifications apply:
+Instead, the voting requirements defined in [HIP-124][hip-124] for veIOT will now apply to veHNT as a whole. Briefly, a delegated veHNT position will only be eligible for delegation rewards if it has voted in 2 of the last 4 veHNT votes. The following modifications apply:
 
 1. veHNT delegation rewards that would otherwise accrue to veHNT positions which are ineligible, because they have not fulfilled their voting obligation, are burned when the position claims their rewards. These burned rewards will count towards Net Emissions, and will thus be re-emitted if below the Net Emissions threshold.
 2. No Abstain vote. It is the authors’ belief that all incentivized stake must be useful. To be rewarded, a veHNT holder must either vote, or delegate veHNT stake to a Proxy Account that votes.
-3. The voting requirement only takes effect once 4 veHNT votes have occurred, beginning with the vote on this proposal.
+3. The 2-of-4 requirement only takes effect once 4 veHNT votes have occurred, beginning with the vote on this proposal.
 
 ### Stale Delegations
 
-Under this system, there is a risk that delegations become stale. In order to prevent this, delegation choices will follow the same schedule as defined in [HIP-110][hip-110]. This requires the participant to reassign the delegation at least once every 12 months, preventing the `V` score from being weighted down by stale delegations from lost or forgotten wallets.
+Under this system, there is a risk that delegations become stale. In order to prevent this, delegation choices will follow the same schedule as defined in [HIP-110][hip-110]. This requires the participant to assert a delegation assignment at least once every 12 months. Otherwise, the delegation will be deactivated, thus preventing the `V` score from being weighted down by stale delegations from lost or forgotten wallets.
 
 ### Releasing all veIOT and veMOBILE positions
 
@@ -141,7 +141,7 @@ The provisions of this proposal, when combined with the requirements of [HIP-138
 
 ### Future Releases
 
-As discussed above, we propose, at most, a monthly release schedule that reduces the amount of governance fatigue for network participants. At each Helium Community Call, a new Helium Release Proposal will be presented by the Protocol Developer team for the subsequent month. Each of these proposals will be an expected changelog for the next release of the protocol. Protocol Developers and community members may open Pull Requests against this proposal during the month as ideas and code are developed through Working Groups and general community discussion. Pull Requests will not be merged without audited and deployable code in relevant protocol or oracle repositories.
+As discussed above, we propose, at most, a monthly release schedule that reduces the amount of governance fatigue for network participants. At each Helium Community Call, a new Helium Release Proposal will be presented by the Protocol Developer team for the subsequent month. Each of these proposals will include an expected changelog for the next release of the protocol. Protocol Developers and community members may open Pull Requests against this proposal during the month as ideas and code are developed through Working Groups and general community discussion. Pull Requests will not be merged without audited and deployable code in relevant protocol or oracle repositories.
 
 To provide some examples of potential future release candidates, the team has compiled a list of protocol upgrades currently under consideration for future implementation. These will be formally proposed through the Helium Release Proposal process after this HIP is approved. In no particular order:
 
