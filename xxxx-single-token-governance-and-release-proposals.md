@@ -1,6 +1,6 @@
 # HIP XXXX: Single-Token Governance and Helium Release Proposals
 
-- Authors: Helium Protocol Developers, [@ChewingGlass](https://github.com/ChewingGlass), [@abhay](https://github.com/abhay)
+- Authors: Helium Protocol Developers, [@ChewingGlass](https://github.com/ChewingGlass), [@abhay](https://github.com/abhay), [@ferebee](https://github.com/ferebee)
 - Start Date: 2025-01-14
 - Category: Economic, Technical, Governance
 - Original HIP PR: [#####](https://github.com/helium/HIP/pull/####)
@@ -13,23 +13,27 @@
 
 If approved and implemented, this proposal would:
 
-* Establish a Roadmap driven process for future Helium protocol upgrades driven by the core development team, Nova Labs.  
-* Simplify protocol governance by establishing a veHNT only system and HNT rewards for active governance participants.  
-* Unlock existing veIOT and veMOBILE positions to allow for these holders to be able to convert to HNT using network treasuries.
+* Establish a Roadmap driven process for future Helium protocol upgrades led by the core development team, Nova Labs.  
+* Simplify protocol governance by establishing a veHNT-only voting system and HNT rewards for active governance participants.  
+* Unlock existing veIOT and veMOBILE positions to allow holders to convert to HNT through network treasuries.
 
 ### The Problem
 
-The existing system, with separate voting mechanisms and a complicated DAO Utility Score, is difficult to explain, and difficult to understand. It creates multiple interlocking and conflicting incentives, and unnecessarily divides the community. Additionally, the current system creates an environment where protocol developers and community members are at odds with being able to succinctly and predictably forecast the direction of the Helium protocol. This negatively impacts deployers and other participants who are evaluating joining the Helium network.
+The existing structure of the Helium network, with separate subnetwork voting mechanisms and a complicated DAO Utility Score, is difficult to explain, and difficult to understand. It creates multiple interlocking and conflicting incentives, and unnecessarily divides the community. Additionally, the current system of change management can introduce uncertainty for protocol developers, deployers, community members, and other participants due to the lack of a common roadmap.
 
 ### Make It Simpler
 
-When [HIP-138][hip-138] is implemented, HNT will return as the single economic focus of the Helium ecosystem, and holders of IOT and MOBILE can exchange their tokens for HNT. Therefore, veHNT becomes a natural expression of all governance. It’s important to note that no other changes to veHNT are being proposed, specifically no changes to existing land rush positions, lockups, etc.
+When [HIP-138][hip-138] is implemented, HNT will return as the single economic focus of the Helium ecosystem, and holders of IOT and MOBILE can exchange their tokens for HNT. Therefore, veHNT becomes a natural expression of all governance. It’s important to note that no other changes to the intrinsic mechanisms of veHNT are being proposed, specifically no changes to lockup mechanisms including Landrush.
 
-Through this proposal, the protocol developers of the Helium ecosystem, Nova Labs, assert that governance of the Helium protocol must be driven through veHNT alone, and will establish a Proxy Account in Helium Governance to allow other participants to vote with the protocol developers. We will publish a detailed roadmap that defines our intentions to upgrade the protocol over the coming months. We also intend to continue to update this roadmap through an open process including ongoing community calls and will take feedback through participation in the IoT and Mobile Working Groups. 
+With the introduction of Proxy Voting through [HIP-110][hip-110], veHNT holders can assign their voting power to a trusted Proxy Acount. This allows all holders of veHNT to participate in governance with minimal effort, even if they are not familiar with the detailed operation of the IoT or Mobile subnetworks.
+
+After the return to veHNT governance, Nova Labs, as Protocol Developers of the Helium ecosystem, will establish a Proxy Account in Helium Governance alongside other Proxy Voters. By delegating veHNT to this Proxy, veHNT holders may choose to align their voting power directly with the Protocol Developers.
+
+The Protocol Developers will publish and maintain a detailed roadmap of planned upgrades to the protocol over the coming months. The roadmap will be updated through an open process including ongoing Community Calls, and will take input from the IoT and Mobile Working Groups. 
 
 ### Votes with Code
 
-Finally, we propose that the Helium Community votes on a periodic basis (initially monthly) to approve upcoming protocol upgrades proposed by the Nova Labs team. This is an evolution of the HIP process and may be characterized as a Helium Release Process. An important key update here is that all changes come with audited and deployable code. Each of these release votes will be kicked off using the existing Helium Monthly Community Call and cover the full release across the Helium network. There may be emergency or security related deployments that are necessary for protocol safety or bug fixes but these will be announced and ratified on subsequent releases. Participants may vote directly using their veHNT positions or by assigning their vote power to the Nova Labs Proxy Account or any other Proxy Account.
+The Helium Community will vote with veHNT on a periodic basis (initially monthly) to approve upcoming protocol upgrades proposed by the Protocol Developers. This evolution of the HIP process may be characterized as a Helium Release Process. All changes under this process must come with audited and deployable code. Each Release Vote will be kicked off using the existing Helium Monthly Community Call, and will apply to new code deployed across the Helium network. Emergency or security-related deployments that are necessary for protocol safety, as well as bug fixes, may be deployed on an ad-hoc basis, but must be announced and ratified through subsequent Release Votes.
 
 ## Stakeholders
 
@@ -37,30 +41,30 @@ All Helium ecosystem participants are affected by this proposal.
 
 ## Detailed Explanation
 
-Nova Labs is establishing a Roadmap that will be voted on alongside this proposal in order to provide clarity and predictability for all network participants. We, along with the community, have learned that governance of the network requires more clarity and governance risks need to be better mitigated in order to serve the needs of the wider community. As one of the largest decentralized networks with stakeholders of multiple types across two wireless protocols, it’s important that core protocol developers (the ones writing and deploying protocol changes) have an aligned roadmap with builders and token holders in the ecosystem.
+The Protocol Developers are establishing a Roadmap, to be voted on alongside this proposal, providing clarity and predictability for all network participants. Helium is one of the largest decentralized networks with stakeholders of multiple types across two wireless protocols, and an aligned roadmap is needed to protect core Protocol Developers, builders, and token holders from uncertainty.
 
 ### January 2025 Release
 
-This can be considered the first proposal under the new Helium Release Process. Sometime after this proposal is approved and the relevant protocol and app upgrades are audited, the protocol developers will release the following before February 1, 2025\.
+As the first release under the new Helium Release Process, the Protocol Developers will release the following by February 1, 2025, once this proposal is approved and the relevant protocol and app upgrades are audited.
 
-* Full release of [HIP-138][hip-138]  
-  * Returning rewards to HNT  
-  * Halting IOT and MOBILE emissions  
-  * Halting HST rewards and redirecting rewards to other participants  
-* Simplify the DAO Utility Score to use veHNT delegation alone, a new Protocol Score  
-* Remove delegation rewards from subnetworks and establish a 6% HNT rewards pool  
-* Establish activity thresholds for veHNT participants to be eligible for HNT rewards  
-* Allow direct or indirect (via Proxy Account) participation in governance using veHNT
+* Full implementation of [HIP-138][hip-138]  
+  * All network rewards are issued in HNT  
+  * IOT and MOBILE emissions cease
+  * Rewards to HST holders cease, and the corresponding HNT is redirected to network participants  
+* The DAO Utility Score is replaced by the new Protocol Score based on veHNT delegation alone
+* Rewards for delegation to subnetworks are replaced by a new 6% HNT rewards pool  
+* Voting activity thresholds are established for rewards to veHNT participants 
+* Governance is unified under veHNT, voted directly or through a Proxy Account
 
-We believe that the combination of this implementation of [HIP-138][hip-138], and subsequent changes described more in detail below, will fully transition Helium into a more straightforward protocol for all participants. Future releases are described in a subsequent section of this proposal.
+The full implementation of [HIP-138][hip-138], together with the changes described below, will simplify the Helium protocol to the benefit of all participants. Further protocol upgrades are planned and are described in the section Future Releases, to be voted on at a later date.
 
 ### Completing HIP-138
 
-[HIP-138][hip-138] intentionally left governance untouched pending a future proposal. This proposal intends to resolve the governance questions in the simplest way possible.
+[HIP-138][hip-138] intentionally left governance and the DAO Utility Score untouched pending a future proposal. This proposal aims to resolve these questions in the simplest way possible.
 
-### Migrating to a V Score Only Utility Score
+### Migrating to a Protocol Score Based only on Delegation
 
-The current DAO Utility Score, if [HIP-138][hip-138] is implemented without any changes, would dramatically affect the relationship between the IoT and Mobile networks as rational veHNT participants would chase HNT yield rather than make a market driven decision based on their actual interest in the future of one or the other network.
+The current DAO Utility Score, if [HIP-138][hip-138] were to be implemented alone, would dramatically affect the relationship between the IoT and Mobile networks, as rational veHNT participants would chase HNT yield rather than make a market driven decision based on their actual interest in the future of one or the other network.
 
 #### V Score Component
 
@@ -70,15 +74,21 @@ Instead, under the current Score, the incentive becomes to maximize yield based 
 
 #### A and D Score Component
 
-Active device count and Data Credit burn are backwards-looking and present-time metrics which reflect no forward-looking sentiment. For example, the IOT subnetwork is considering a change to its fee structure that could greatly increase DC burn. It also has an existing, global network ready for use. veHNT delegators should be able to weigh these factors when deciding the rewards (and therefore deployment incentives) that go to the subnetwork. It is the authors’ belief that a market driven approach, detached from the circular self-fulfilling financial incentives of the existing Utility Score, will better decide the rewards split than the legacy model.
-
-#### Predictability of V Score Impact
-
-We propose to smooth the split between subnetworks over a 30-day period. This allows deployers to better predict their near-term earnings, by reducing the volatility of delegation percentages. It also gives governance participants time to dedicate assets towards delegation as needed.
+Active device count and Data Credit burn are backwards-looking and present-time metrics which reflect no forward-looking sentiment. For example, the IoT subnetwork is considering a change to its fee structure that could greatly increase DC burn. It also has an existing, global network ready for use. veHNT delegators should be able to weigh these factors when deciding the rewards (and therefore deployment incentives) that go to the subnetwork. It is the authors’ belief that a market driven approach, detached from the circular financial incentives of the existing Utility Score, will better decide the rewards split than the legacy model.
 
 #### New Protocol Score
 
-The new Protocol Score is determined by the share of veHNT delegated to each subnetwork (formerly the `V` component of the DAO Utility Score), and is expressed as the subnetwork’s percentage of total subnetwork emissions. Due to the smoothing function, the network will transition gradually from the [HIP-51][hip-51] Utility Score to the new Protocol Score.
+The new Protocol Score is derived from the share of veHNT delegated to each subnetwork (formerly represented by the `V` component of the DAO Utility Score), as a percentage of total delegated veHNT. It determines the subnetwork’s percentage of total subnetwork emissions.
+
+#### Smoothing Function
+
+To control the volatility of the Protocol Score and allow deployers to better predict their near-term earnings, an exponential smoothing function is applied to the daily shares of veHNT delegation. Large changes in delegation will take effect gradually over a period of several months.
+
+As a result, the implementation of this proposal will not have any large immediate effect on the HNT emission ratio between IOT and MOBILE, and the network will transition gradually from the [HIP-51][hip-51] Utility Score to the new Protocol Score.
+
+Because all effects of delegation are gradual, governance participants can re-evaluate their delegations without time pressure as the networks evolve.
+
+For IOT, 
 
 - $S_{IOT}(t)$ is defined as the percentage Score of the IOT network on day $t$.
 - $V_{IOT}(t)$ is defined as the veHNT delegation percentage of the IOT network on day $t$.
@@ -89,86 +99,78 @@ The new Protocol Score is determined by the share of veHNT delegated to each sub
 
 The Score $S_{MOBILE}(t)$ of the MOBILE subnetwork is calculated in the same way.
 
-In this way, large swings in veHNT delegation will slowly lead to eventual change in emissions allocation. It is notable that a 30-day smoothing function provides convergence towards a score on a 90-day interval.
+In this way, large swings in veHNT delegation lead to gradual changes in emissions allocation. As a rule of thumb, under the given smoothing coefficient of 30, a large change in delegation will achieve most of its effect after about 3 months.
 
-HNT is distributed among subnetworks similarly to the current DAO Utility Score, based on their Protocol Score divided by the Total Protocol Score. This gives a percentage share of the rewards, which is then smoothed against yesterday’s percentage share.
+#### HNT allocation
 
-Importantly, this formula takes into account the previous day’s percentage, such that the split of rewards prior to [HIP-138][hip-138] will serve as a starting point. This will allow rewards to progress smoothly, rather than in a volatile way, towards their eventual equilibrium point. This will also give delegators time to respond to the changes from this HIP.
+HNT is distributed among subnetworks similarly to the current DAO Utility Score, based on their Protocol Score as a percentage of the sum of all Protocol Scores.
 
-### Removal of Delegation Rewards
+### veHNT Rewards Flow
 
-Under this proposal, veHNT holders would receive the same rewards no matter which subnetwork they delegate to, so delegation becomes a pure signal of their support for a particular subnetwork, based on their assessment of its current and future potential. Changing delegations within an epoch will not change HNT rewards for governance participants.
+Under this proposal, rewards issued to veHNT holders will no longer be dependent on the economics of the delegated subnetwork.
+
+Instead, all eligible holders of delegated veHNT receive a share of a new rewards pool, which consists of 6% of all HNT emissions. Under the new rewards flow, this pool is created first, and all emissions percentages defined in previous HIPs are applied to the remaining 94% of HNT emissions. No future adjustment to rewards percentages shall be construed to modify the 6% rewards pool assigned to veHNT, or its distribution, unless this provision is explicitly modified.
+
+Compensating for this, the 6% of emissions in each subnetwork that were allocated to delegation rewards under [HIP-52][hip-52] and [HIP-53][hip-53] are released and reassigned to augment the rewards to other subnetwork participants. In this way, the magnitude of economic rewards available to veHNT holders remains unchanged.
 
 ### Voting and Delegation Rewards
 
-With the simplification of the Protocol Score, and the removal of extraneous economic incentives to delegate to a particular subnetwork, delegation becomes a way in which veHNT holders help decide the future of the network.
+With the simplification of the Protocol Score, and the removal of extraneous economic incentives to delegate to a particular subnetwork, subnetwork delegation becomes a way in which veHNT holders help decide the future of the network. In this spirit, veHNT rewards are made dependent on voting. veHNT holders can fulfill the voting requirement by voting directly, or by delegating their veHNT to a Proxy Account, provided that the Proxy votes.
 
-As this proposal removes independent voting with veIOT, [HIP-124][hip-124] would be repealed. Rewards from IOT subnetwork emissions, which were allocated by [HIP-124][hip-124] to voters in IOT elections, would return to their previous assignment to the Oracle reward pool, which may be allocated as needed by a future HIP. 
+Voting incentives were introduced for veIOT with [HIP-124][hip-124]. This proposal removes independent voting with veIOT, and as a result, [HIP-124][hip-124] is repealed. The IoT Oracles rewards pool returns to its previous role.
 
-Under this proposal, and inspired by the IoT community, the [HIP-124][hip-124] requirements of voting on 2 of 4 proposals will be moved up to veHNT. In order to simplify implementation, the following changes are being made:
+Instead, the voting requirements defined in [HIP-124][hip-124] for veIOT will now apply to veHNT as a whole. Briefly, a veHNT position that has been delegated to a subnetwork will only be eligible for delegation rewards if it has voted in 2 of the last 4 veHNT votes. The following modifications apply:
 
-1. Rewards from positions that are ineligible (because they have not voted) are burned when the position claims their rewards. These burned rewards will count towards Net Emissions, and thus re-emitted if below the Net Emissions threshold.  
-   1. The original implementation of Net Emissions had a pool that smoothed Net Emissions over a 1-week period. This was lost in the migration to Solana. In a later release, it will be added back to ensure burned rewards claims are smoothed.   
-2. Removal of the Abstain vote. It is the authors’ belief that all incentivized stake must be useful, if any position is abstaining from more than 50% of the votes, that stake is not useful. Therefore, abstain is better implemented by choosing not to vote on particular proposals.
+1. veHNT delegation rewards that would otherwise accrue to veHNT positions which are ineligible, because they have not fulfilled their voting obligation, are burned when the position claims their rewards. These burned rewards will count towards Net Emissions, and will thus be re-emitted if below the Net Emissions threshold.
+2. No Abstain vote. It is the authors’ belief that all incentivized stake must be useful. To be rewarded, a veHNT holder must either vote, or delegate veHNT stake to a Proxy Account that votes.
+3. The voting requirement only takes effect once 4 veHNT votes have occurred, beginning with the vote on this proposal.
 
 ### Stale Delegations
 
-Under this system, there is a risk that delegations become stale. In order to prevent this, delegation choices will follow the same schedule as defined in [HIP-110][hip-110]. This requires the participant to be active at least once a year to retain the delegation, and keeps the `V` score from being weighted down by stale delegations from lost or forgotten wallets.
+Under this system, there is a risk that delegations become stale. In order to prevent this, delegation choices will follow the same schedule as defined in [HIP-110][hip-110]. This requires the participant to reassign the delegation at least once every 12 months, preventing the `V` score from being weighted down by stale delegations from lost or forgotten wallets.
 
 ### Releasing all veIOT and veMOBILE positions
 
-We propose that all veIOT and veMOBILE positions are immediately released (including those currently in cooldown) such that individual wallet holders can redeem their IOT or MOBILE tokens.
+After the passage of this proposal, no further veIOT or veMOBILE votes will occur. Therefore, the lock function on all veIOT and veMOBILE positions will be deactivated immediately, so that individual wallet holders can unlock and redeem the underlying tokens at any time, independent of lock or cooldown state.
 
 At the time of writing, 1.5% of IOT supply and 0.35% of MOBILE supply are locked in total with a lockup duration greater than zero, so the effects of these unlocks should be immaterial.
 
-With the introduction of Proxy Accounts, network participants can now assign their vote to someone who is able to spend more time researching each Helium Release entails, and generally aligns with their social and economic interests, while voting independently whenever they choose.
-
-As independent subnetwork tokens are now being phased out through [HIP-138][hip-138], while all decisions ultimately influence the economic future of the entire network, and Proxy Accounts remove the necessity for every voter to evaluate every Helium protocol change, the three separate voting systems have become less relevant, and can be combined into one simpler one.
-
-### Rewards Flow
-
-If this proposal is approved and implemented, the distribution of HNT emissions will remain effectively unchanged among subnetwork participants, except as influenced by the definition of the new, simpler Protocol Score, and the new voting requirement for veHNT positions to be eligible for delegation rewards.
-
-The proposal intends that 6% of total HNT emissions be distributed pro rata among all eligible participants, who have delegated to a subnetwork.
-
-For clarity, should a future release  modify subnetwork emission schedules or the Protocol Score, all schedules shall be adjusted to maintain the 6% equal distribution of delegation rewards among all eligible veHNT positions, unless this provision is explicitly modified.
-
 ### Development Time
 
-This proposal would greatly simplify the entire governance and reward distribution system of Helium, and would reduce the complexity of implementing [HIP-138][hip-138]. Development cycles could be better spent on improving deployment and demand incentives by implementing future proposals as decided by the community, and reducing the complexity of the reward system also reduces the cost for development audits, as well as the attack surface for bad actors.
+The provisions of this proposal, when combined with the requirements of [HIP-138][hip-138], result in significant simplifications to the entire governance and reward distribution system of Helium, when compared to the complexity of the existing system, or the implementation of [HIP-138][hip-138] on its own. This simplicity reduces the total development time required, the cost of necessary audits, and the attack surface for bad actors.
 
 ### Future Releases
 
-As discussed earlier in this HIP, we propose, at most, a monthly release schedule that reduces the amount of governance fatigue for network participants. At each Helium Community Call, a new Helium Release Proposal would be opened by the Nova Labs team for the subsequent month, if one does not exist already. Each of these proposals will be an expected changelog for the next release of the protocol. Protocol developers and community members may open Pull Requests against this proposal during the month as ideas and code is developed through Working Groups and general community discussion. Pull Requests will not be merged without audited and ready to deploy code in relevant protocol or oracle repositories.
+As discussed above, we propose, at most, a monthly release schedule that reduces the amount of governance fatigue for network participants. At each Helium Community Call, a new Helium Release Proposal will be presented by the Protocol Developer team for the subsequent month. Each of these proposals will be an expected changelog for the next release of the protocol. Protocol Developers and community members may open Pull Requests against this proposal during the month as ideas and code are developed through Working Groups and general community discussion. Pull Requests will not be merged without audited and deployable code in relevant protocol or oracle repositories.
 
-To provide some examples of potential future release candidates, the team has compiled a list of (not prioritized) protocol upgrades. These will be formally proposed through the Helium Release Proposal process after this HIP is approved.
+To provide some examples of potential future release candidates, the team has compiled a list of protocol upgrades currently under consideration for future implementation. These will be formally proposed through the Helium Release Proposal process after this HIP is approved. In no particular order:
 
 * Cross protocol  
-  * Migrate IOT and MOBILE token specific stakes/locks/fees to HNT (post [HIP-138][hip-138], e.g. Service Provider stakes, Hex Boosting fees, etc.)  
+  * Migrate IOT and MOBILE token specific stakes/locks/fees to HNT, as recommended in [HIP-138][hip-138], such as Service Provider stakes and Hex Boosting fees  
   * Fractional rewards delegation for Hotspots or Subscribers  
-  * Improve reliability of automated epoch calculations using incentivized system (i.e., “tuk tuk”)  
-  * Enable automation of reward claims / periodic reward claims  
-  * Remove Onboarding server  
-  * Simplify Initial onboard / assert location transaction into one combined action to reduce partial failures  
-  * Upgrade Solana programs to use Anchor 0.30+  
+  * Improved reliability of automated epoch calculations using incentivized system (i.e., “tuk tuk”)  
+  * Automation of reward claims, periodic reward claims  
+  * Removing the Onboarding Server  
+  * Simplification of the initial onboarding and location assert transactions into one combined action to avoid partial failures  
+  * Upgrade of Solana programs to use Anchor 0.30+  
 * Mobile  
-  * Mapping rewards adjustments based on “factor” to incentivize particular kinds of mapping  
-  * Implement Verification Mapping to create coverage map of Hotspots for Carrier planning  
+  * Mapping rewards adjustments based on “factors” to incentivize particular kinds of mapping  
+  * Verification Mapping to create coverage map of Hotspots for Carrier planning  
   * Expanding Mapping outside of Helium Mobile subscribers  
-  * Ability to change the price for data transfer based on geographies and carriers.  
-  * Move away from asserted / checked location towards a connectivity driven “template bonus”  
+  * Flexible pricing for data transfer based on geographies and carriers
+  * Move away from asserted/checked location towards a connectivity driven “template bonus”  
 * IoT  
-  * Move denylist classifiers into open, community managed process
+  * Migration of denylist classifiers into an open, community managed process
   * Multi-station gateway-rs updates
   * Support for LoRaWAN 1.1 with session key filters
   * Impactful updates to IoT Proof-of-Coverage
-  * Change data pricing model for IoT based on community discussion
+  * Adjustment to the data pricing model for IoT based on community discussion
 
-Please note that these are all examples of potential improvements that will have an open comment period, an implementation period, and finally an approval through the Release Proposal process.
+Note that these are all examples of potential improvements that will have an open comment period, an implementation period, and finally an approval through the Release Proposal process.
 
 ## Implementation
 
-The specific changes to veHNT and governance reduces the smart contract complexity of Helium, and thus simplifies the implementation of [HIP-138][hip-138]. It is simpler than implementing subnetwork delegation with HNT rewards under the existing DAO Utility Score, and substantially simpler than implementing a new form of subnetwork governance. Core developers have estimated that the combined implementation of [HIP-138][hip-138] and this proposal will require less work than the implementation of [HIP-138][hip-138] alone.
+Given the factors described above in the section Development Time, core developers have estimated that the combined implementation of [HIP-138][hip-138] and this proposal will require less work than the implementation of [HIP-138][hip-138] alone.
 
 ### Voting
 
@@ -202,9 +204,11 @@ Documentation on these changes will be updated on [Helium Docs][helium-docs] by 
 
 ## Success Metrics
 
-This proposal will be successful if it increases total governance participation, and aligns HNT emissions to the subnetworks with the degree veHNT holders wish to support them.
+This proposal will be successful if it increases total governance participation and aligns HNT emissions to the subnetworks with the value veHNT holders place on them.
 
 [hip-51]: ./0051-helium-dao.md
+[hip-52]: ./0052-iot-dao.md
+[hip-53]: ./0053-mobile-dao.md
 [hip-110]: ./0110-proxy-voting.md
 [hip-124]: ./0124-securing-iot-governance-through-voting-rewards.md
 [hip-136]: ./0136-eliminate-iot-rewards-for-redundant-coverage.md
