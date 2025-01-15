@@ -82,7 +82,7 @@ The new Protocol Score is derived from the share of veHNT delegated to each subn
 
 #### Smoothing Function
 
-To control the volatility of the Protocol Score and allow deployers to better predict their near-term earnings, an exponential smoothing function is applied to the daily shares of veHNT delegation. Large changes in delegation will take effect gradually over a period of several months.
+To control the volatility of the Protocol Score and allow deployers to better predict their near-term earnings, a smoothing function is applied to the daily shares of veHNT delegation. Large changes in delegation will take effect gradually over a period of several months.
 
 As a result, the implementation of this proposal will not have any large immediate effect on the HNT emission ratio between IOT and MOBILE, and the network will transition gradually from the [HIP-51][hip-51] Utility Score to the new Protocol Score.
 
