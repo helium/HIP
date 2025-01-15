@@ -1,10 +1,10 @@
-# HIP XXXX: Single-Token Governance and Helium Release Proposals
+# HIP 141: Single-Token Governance and Helium Release Proposals
 
 - Authors: Helium Protocol Developers, [@ChewingGlass](https://github.com/ChewingGlass), [@abhay](https://github.com/abhay), [@ferebee](https://github.com/ferebee)
 - Start Date: 2025-01-14
 - Category: Economic, Technical, Governance
-- Original HIP PR: [#####](https://github.com/helium/HIP/pull/####)
-- Tracking Issue: [#####](https://github.com/helium/HIP/issues/####)
+- Original HIP PR: [#1146](https://github.com/helium/HIP/pull/1146)
+- Tracking Issue: [#1148](https://github.com/helium/HIP/issues/1148)
 - Voting Requirements: veHNT Holders
 
 ---
