@@ -133,7 +133,7 @@ Under this system, there is a risk that delegations become stale. In order to pr
 
 After the passage of this proposal, no further veIOT or veMOBILE votes will occur. Therefore, the lock function on all veIOT and veMOBILE positions will be deactivated immediately, so that individual wallet holders can unlock and redeem the underlying tokens at any time, independent of lock or cooldown state.
 
-At the time of writing, 1.5% of IOT supply and 0.35% of MOBILE supply are locked in total with a lockup duration greater than zero, so the effects of these unlocks should be immaterial.
+At the time of writing, 2.89% of IOT supply and 9.54% of MOBILE supply are locked in total which represents a total of 0.078% and 0.92% of HNT supply, respectively, so the effects of these unlocks should be immaterial to HNT.
 
 ### Development Time
 
