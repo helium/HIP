@@ -127,7 +127,7 @@ Instead, the voting requirements defined in [HIP-124][hip-124] for veIOT will no
 
 ### Stale Delegations
 
-Under this system, there is a risk that delegations become stale. In order to prevent this, delegation choices will follow the same schedule as defined in [HIP-110][hip-110]. This requires the participant to assert a delegation assignment at least once every 12 months. Otherwise, the delegation will be deactivated, thus preventing the `V` score from being weighted down by stale delegations from lost or forgotten wallets.
+Under this system, there is a risk that delegations become stale. In order to prevent this, delegation choices will follow the same schedule as defined in [HIP-110][hip-110], resetting on August 1 every year. This requires participants to reassert delegations annually during the month of July in order to maintain uninterrupted delegation. Otherwise, the delegation will be deactivated, thus preventing the Protocol Score from being weighted down by stale delegations from lost or forgotten wallets.
 
 ### Releasing all veIOT and veMOBILE positions
 
