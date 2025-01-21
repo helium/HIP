@@ -127,13 +127,13 @@ Instead, the voting requirements defined in [HIP-124][hip-124] for veIOT will no
 
 ### Stale Delegations
 
-Under this system, there is a risk that delegations become stale. In order to prevent this, delegation choices will follow the same schedule as defined in [HIP-110][hip-110]. This requires the participant to assert a delegation assignment at least once every 12 months. Otherwise, the delegation will be deactivated, thus preventing the `V` score from being weighted down by stale delegations from lost or forgotten wallets.
+Under this system, there is a risk that delegations become stale. In order to prevent this, delegation choices will follow the same schedule as defined in [HIP-110][hip-110], resetting on August 1 every year. This requires participants to reassert delegations annually during the month of July in order to maintain uninterrupted delegation. Otherwise, the delegation will be deactivated, thus preventing the Protocol Score from being weighted down by stale delegations from lost or forgotten wallets.
 
 ### Releasing all veIOT and veMOBILE positions
 
 After the passage of this proposal, no further veIOT or veMOBILE votes will occur. Therefore, the lock function on all veIOT and veMOBILE positions will be deactivated immediately, so that individual wallet holders can unlock and redeem the underlying tokens at any time, independent of lock or cooldown state.
 
-At the time of writing, 1.5% of IOT supply and 0.35% of MOBILE supply are locked in total with a lockup duration greater than zero, so the effects of these unlocks should be immaterial.
+At the time of writing, 2.89% of IOT supply and 9.54% of MOBILE supply are locked in total which represents a total of 0.078% and 0.92% of HNT supply, respectively, so the effects of these unlocks should be immaterial to HNT.
 
 ### Development Time
 
