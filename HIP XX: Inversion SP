@@ -1,10 +1,14 @@
-HIP XX: Add Inversion Capital as an International Service Provider to the Helium Mobile subDAO
-- Author(s): santiago@inversioncap.com
-- Start Date: 2024-12-16
+# HIP XXXX: Add Inversion Capital as an International Service Provider to the Helium Mobile Network
+ 
+- Author: [inversioncapital](https://github.com/inversioncapital)
+- Start Date: 2025-01-22
 - Category: Economic, Technical
-- Original HIP PR: [Link to PR]
-- Tracking Issue: [Link to Issue]
+- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
+- Tracking Issue: <!-- leave this empty; maintainer will fill in ID of this pull request -->
 - Voting Requirements: veHNT holders
+
+---
+
 
 Summary
 This HIP proposes to introduce Inversion Capital as the second Service Provider on the Helium Mobile Network, with a focus on international markets.The main goals are to expand the Helium Mobile Network's global presence and increase network demand.
