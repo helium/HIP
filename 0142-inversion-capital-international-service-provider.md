@@ -1,4 +1,4 @@
-# HIP XXXX: Add Inversion Capital as an International Service Provider to the Helium Mobile Network
+# HIP 142: Add Inversion Capital as an International Service Provider to the Helium Mobile Network
  
 - Author: [inversioncapital](https://github.com/inversioncapital)
 - Start Date: 2025-01-22
