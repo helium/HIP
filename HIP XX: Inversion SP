@@ -49,7 +49,7 @@ To match the initial Helium Mobile Service Provider cooldown requirements, this 
 
 ### Service Provider Rewards
 
-HIP-53 created a rewards allocation bucket for Service Providers to support their ongoing operations and assist in growing their subscriber base. Rewards from the emissions contract are distributed between Service Providers, Mappers and Hotspot Operators as a function of the incentive points earned during a period of time.
+[HIP-53][hip-53] created a rewards allocation bucket for Service Providers to support their ongoing operations and assist in growing their subscriber base. Rewards from the emissions contract are distributed between Service Providers, Mappers and Hotspot Operators as a function of the incentive points earned during a period of time.
 
 Service Providers initially earned 20% of all MOBILE tokens minted by the DAO emissions curve, which will be distributed as a function of the number of incentive points accumulated by Service Provider participants during a given hour. Incentive points are issued using the following rules:
 - Service Provider receives 1 point for each of the mappers that used a SIM from this Service Provider and witnessed the network
