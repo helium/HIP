@@ -48,3 +48,5 @@ We leave the implementation of the smart contract components, verifiability, and
 ## Success Metrics
 
 The main success metric is cellular data being offloaded to the Helium Mobile Network by the Inversion Capital Service Provider, creating increased utility for HNT.
+
+[hip-53]: ./0053-mobile-dao.md
