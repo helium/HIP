@@ -1,10 +1,13 @@
-HIP XX: Update Helium’s Data Pricing Structure to Support Multi-Geography Expansion
-- Author(s): santiago@inversioncap.com
-- Start Date: 2024-12-16
+# HIP XXXX: Update Helium’s Data Pricing Structure to Support Multi-Geography Expansion
+
+- Author: [inversioncapital](https://github.com/inversioncapital)
+- Start Date: 2025-01-23
 - Category: Economic, Technical
-- Original HIP PR: [Link to PR]
-- Tracking Issue: [Link to Issue]
+- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
+- Tracking Issue: <!-- leave this empty; maintainer will fill in ID of this pull request -->
 - Voting Requirements: veHNT holders
+
+---
 
 Summary
 This HIP proposes a dynamic pricing model for data transfer that accounts for regional variations in wholesale data costs. The main goals are to expand the Helium Mobile Network's global presence, increase network demand, and establish a more equitable pricing structure for international markets.
