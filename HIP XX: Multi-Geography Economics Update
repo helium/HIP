@@ -13,7 +13,8 @@
 
 This HIP proposes a dynamic pricing model for data transfer that accounts for regional variations in wholesale data costs. The main goals are to expand the Helium Mobile Network's global presence, increase network demand, and establish a more equitable pricing structure for international markets.
 
-Motivation
+## Motivation
+
 The Helium Mobile Network has demonstrated success with its first Service Provider in the US market. However, to achieve true decentralization and global adoption, the network needs Service Providers focused on international markets. Additionally, the current fixed pricing model ($0.50/GB) doesn't account for significant variations in wholesale data costs across different regions, potentially limiting network growth in markets where this price point is not competitive.
 
 In order to support Helium’s expansion into global markets, a new dynamic pricing formula for data must be defined.
