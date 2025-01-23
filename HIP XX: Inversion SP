@@ -47,7 +47,8 @@ This stake will remain locked and will not earn any staking rewards, as long as 
 
 To match the initial Helium Mobile Service Provider cooldown requirements, this HIP requires a cooldown period of 90-days after a public announcement by the Service Provider of its intention to cease data offloading on Helium's mobile network before it can stop such data offloading. An additional 90-day cooldown period will be required before the Service Provider can claim the tokens they staked for the right to operate as a Service Provider on Helium's mobile network.
 
-Service Provider Rewards
+### Service Provider Rewards
+
 HIP-53 created a rewards allocation bucket for Service Providers to support their ongoing operations and assist in growing their subscriber base. Rewards from the emissions contract are distributed between Service Providers, Mappers and Hotspot Operators as a function of the incentive points earned during a period of time.
 
 Service Providers initially earned 20% of all MOBILE tokens minted by the DAO emissions curve, which will be distributed as a function of the number of incentive points accumulated by Service Provider participants during a given hour. Incentive points are issued using the following rules:
