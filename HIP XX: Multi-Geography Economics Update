@@ -45,5 +45,6 @@ We propose that the Helium Foundation maintain responsibility for tracking, repo
 
 We leave the implementation of the smart contract components, verifiability, and Service Provider compliance up to the Helium Core Developers to determine. We note that staking HNT to become a Service Provider locks up HNT independently of veHNT, meaning that a Service Provider does not get governance rights in addition to Service Provider rights.
 
-Success Metrics
+## Success Metrics
+
 The main success metric is cellular data being offloaded to the Helium Mobile Network by the Inversion Capital Service Provider, creating increased utility for HNT.
