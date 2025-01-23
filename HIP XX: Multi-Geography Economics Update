@@ -29,7 +29,8 @@ This HIP affects:
 
 ## Detailed Explanation
 
-Dynamic Regional Pricing Model
+### Dynamic Regional Pricing Model
+
 HIP-53 initially laid out a fixed $0.50/GB price for the Helium Mobile Network. While this initial pricing model works for the United States where Helium Mobile is currently live, the pricing model must be revised to support expansion into new international markets.
 
 Wholesale data costs vary widely across markets. For example, in the U.S., wholesale data pricing can range from $1.50-$5.00/GB, depending on volume. In markets like the UK, pricing can be as low as $0.50 or less from traditional MNOs depending on volume - the same price as Helium’s current fixed data price. For Helium to remain competitive and scale internationally - and thus scale network demand - it must revise its Mobile pricing strategy.
