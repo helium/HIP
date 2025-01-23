@@ -39,7 +39,8 @@ Inversion Capital (“Inversion”) is a private equity firm that acquires estab
 
 Inversion Capital is currently reviewing several potential MNVO acquisition targets globally. Once an asset is acquired, Inversion plans to integrate the MVNO as a roaming partner on the Helium Mobile Network, following all outlined Service Provider policies specified in [HIP-53][hip-53]. We expect to acquire or roll-up several MVNO targets with millions of existing subscribers, creating immediate demand for data credits and HNT burn in new, global markets.
 
-Service Provider Onboarding
+### Service Provider Onboarding
+
 In compliance with HIP-53, Inversion Capital will complete the staking requirement to become a Service Provider. HIP-53 required Service Providers to stake 500 million MOBILE tokens. However, given the network’s migration back to a single token standard, Inversion will stake 75,000 HNT to fulfill the requirement pari passu with a MOBILE total stake value in USD. Once the required amount is staked, the Inversion Capital Service Provider will be minted as an NFT by the ‘Helium entity manager’ smart contract on the Solana blockchain and will become a rewardable entity.
 
 This stake will remain locked and will not earn any staking rewards, as long as the Service Provider remains as part of the Helium Mobile Network.
