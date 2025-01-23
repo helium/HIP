@@ -55,7 +55,7 @@ Service Providers initially earned 20% of all MOBILE tokens minted by the DAO em
 - Service Provider receives 1 point for each of the mappers that used a SIM from this Service Provider and witnessed the network
 - Service Provider receives 3 points for each $1 worth of DCs settled in state channels
 
-HIP-79 revised the Service Provider rewards allocation to 10% of all MOBILE tokens minted.
+[HIP-79][hip-79] revised the Service Provider rewards allocation to 10% of all MOBILE tokens minted.
 
 HIP-138 returns the Helium Network back to one token: HNT. However, HIP-138 did not specifically mention including the Service Provider allocation as part of the new HNT reward structure. This HIP codifies that Service Providers earn 10% of all HNT emissions, following the exact incentive point formula outlined in HIP-53.
 
