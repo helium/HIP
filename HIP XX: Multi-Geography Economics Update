@@ -41,7 +41,8 @@ Moving to a percentage of average wholesale price approach should better reflect
 
 We propose that the Helium Foundation maintain responsibility for tracking, reporting, and verifying the regional market wholesale pricing index to use for Helium Network pricing. The index should be updated on regular 6 month intervals.
 
-Implementation
+## Implementation
+
 We leave the implementation of the smart contract components, verifiability, and Service Provider compliance up to the Helium Core Developers to determine. We note that staking HNT to become a Service Provider locks up HNT independently of veHNT, meaning that a Service Provider does not get governance rights in addition to Service Provider rights.
 
 Success Metrics
