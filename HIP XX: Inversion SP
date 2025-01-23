@@ -57,7 +57,7 @@ Service Providers initially earned 20% of all MOBILE tokens minted by the DAO em
 
 [HIP-79][hip-79] revised the Service Provider rewards allocation to 10% of all MOBILE tokens minted.
 
-HIP-138 returns the Helium Network back to one token: HNT. However, HIP-138 did not specifically mention including the Service Provider allocation as part of the new HNT reward structure. This HIP codifies that Service Providers earn 10% of all HNT emissions, following the exact incentive point formula outlined in HIP-53.
+[HIP-138][hip-138] returns the Helium Network back to one token: HNT. However, [HIP-138][hip-138] did not specifically mention including the Service Provider allocation as part of the new HNT reward structure. This HIP codifies that Service Providers earn 10% of all HNT emissions of the Mobile Network's allocation, following the exact incentive point formula outlined in [HIP-53][hip-53].
 
 It’s important to note that Inversion Capital, as an approved Service Provider, will not earn any HNT emissions until it contributes valuable data offloading to the network based on the Incentive Point formula in HIP-53.
 
