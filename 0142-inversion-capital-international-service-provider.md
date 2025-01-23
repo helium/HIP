@@ -3,8 +3,8 @@
 - Author: [inversioncapital](https://github.com/inversioncapital)
 - Start Date: 2025-01-22
 - Category: Economic, Technical
-- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
-- Tracking Issue: <!-- leave this empty; maintainer will fill in ID of this pull request -->
+- Original HIP PR: [#1152](https://github.com/helium/HIP/pull/1152)
+- Tracking Issue: [#1154](https://github.com/helium/HIP/issues/1154)
 - Voting Requirements: veHNT holders
 
 ---
