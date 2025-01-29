@@ -1,10 +1,10 @@
-# HIP XXXX: Update Helium’s Data Pricing Structure to Support Multi-Geography Expansion
+# HIP 143: Update Helium’s Data Pricing Structure to Support Multi-Geography Expansion
 
 - Author: [inversioncapital](https://github.com/inversioncapital)
-- Start Date: 2025-01-23
+- Start Date: 2025-01-29
 - Category: Economic, Technical
-- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
-- Tracking Issue: <!-- leave this empty; maintainer will fill in ID of this pull request -->
+- Original HIP PR: [#1153](https://github.com/helium/HIP/pull/1153)
+- Tracking Issue: [#1155](https://github.com/helium/HIP/issues/1155)
 - Voting Requirements: veHNT holders
 
 ---
