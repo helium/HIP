@@ -11,7 +11,7 @@
 
 ## Summary
 
-In this HIP, we propose a dynamic pricing model for data transfer that accounts for regional variations in wholesale data costs. The main goals are to expand the Helium Mobile Network's global presence, increase network demand, and establish a more equitable pricing structure for international markets.
+In this HIP, we propose a dynamic pricing model for MVNO data transfer that accounts for regional variations in wholesale data costs. The main goals are to expand the Helium Mobile Network's global presence, increase network demand, and establish a more equitable pricing structure for international markets.
 
 ## Motivation
 
@@ -31,15 +31,19 @@ This HIP affects:
 
 ### Dynamic Regional Pricing Model
 
-[HIP-53][hip-53] initially laid out a fixed $0.50/GB price for the Helium Mobile Network. While this initial pricing model works for the United States where Helium Mobile is currently live, the pricing model must be revised to support expansion into new international markets.
+[HIP-53][hip-53] initially laid out a fixed $0.50/GB price for data transfer on the Helium Mobile Network. For the Helium Mobile hybrid MVNO operated by Nova Labs, this is cheaper than the typical wholesale cost of data from a cellular MNO in the United States. However, wholesale data costs vary widely across international markets.
 
-Wholesale data costs vary widely across markets. For example, in the U.S., wholesale data pricing can range from $1.50-$5.00/GB, depending on volume. In markets like the UK, pricing can be as low as $0.50 or less from traditional MNOs depending on volume - the same price as Helium’s current fixed data price. For Helium to remain competitive and scale internationally - and thus scale network demand - it must revise its Mobile pricing strategy.
+For example, in the U.S., wholesale data pricing can range from $1.50-$5.00/GB, depending on volume. In markets like the UK, pricing can be as low as $0.50 or less from traditional MNOs depending on volume - the same price as Helium’s current fixed data price. For Helium to remain competitive and scale internationally - and thus scale network demand - it must revise its Mobile pricing strategy.
 
-We propose implementing a region-based pricing model where the price for data transfer will be set at 25% of each region's average volumetric wholesale data rate. This percentage is what Nova Labs, as the first Helium Service Provider, pays the network based on U.S. average wholesale rates. JP Morgan research estimates MVNOs typically pay ~$2/GB to MNOs for access to their network; Helium Mobile’s $0.50/GB rate is 25% of this figure. 
+This HIP addresses pricing for data transferred by hybrid MVNOs, which serve customers with a mix of data transfer on the Helium Mobile Network and one or more backup cellular MNOs.
 
-Moving to a percentage of average wholesale price approach should better reflect wholesale data price variations across regions, while ensuring Helium’s competitive cost advantage drives network traffic and demand.
+Service Providers such as Nova Labs may also provide Wi-Fi offload data transfer as a service for MNOs that operate their own wireless infrastructure. The price for MNO Wi-Fi offload data transfer is not affected by this HIP, and will remain at $0.50/GB unless modified separately.
 
-We propose that the Helium Foundation maintain responsibility for tracking, reporting, and verifying the regional market wholesale pricing index to use for Helium Network pricing. The index should be updated on regular 6 month intervals.
+We propose implementing a region-based pricing model which sets the price for MVNO data transfer on the Helium Mobile network at 25% of each region's average volumetric wholesale data rate. This percentage is what Nova Labs, as the first Helium Service Provider, pays the network based on U.S. average wholesale rates. JP Morgan research estimates MVNOs typically pay ~$2/GB to MNOs for access to their network; Helium Mobile’s $0.50/GB rate is 25% of this figure. 
+
+Moving to a percentage of average wholesale price should better reflect wholesale data price variations across regions, while ensuring that Helium’s competitive cost advantage drives network traffic and demand.
+
+We propose that the Helium Foundation maintain responsibility for tracking, reporting, and verifying the regional market wholesale pricing index to use for Helium Network pricing. The index should be updated on regular 6-month intervals.
 
 ## Implementation
 
