@@ -76,4 +76,4 @@ Implementation of this HIP is extremely simple and will involve updating a few v
 
 ## Success Metrics
 
-This HIP is successful if we see the number of Wi-Fi Hotspots being actived on the Network continue to outpace that of CBRS radios, resulting in higher paid data usage and more HNT emitted into MOBILE subDAO treasury.
+This HIP is successful if we see the number of Wi-Fi Hotspots being activated on the Network continue to outpace that of CBRS radios, resulting in higher paid data usage and more HNT emitted into MOBILE subDAO treasury.
