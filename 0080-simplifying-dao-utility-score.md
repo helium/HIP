@@ -184,4 +184,4 @@ The calculation of Utility Score will need to be adjusted. Based on feedback fro
 
 # Success Metrics
 
-- This HIP is succesful if simplifying the DAO Utility Score supports the growth and utility of all subDAOs.
+- This HIP is successful if simplifying the DAO Utility Score supports the growth and utility of all subDAOs.
