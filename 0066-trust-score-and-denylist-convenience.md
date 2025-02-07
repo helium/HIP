@@ -84,12 +84,12 @@ that were added to the blockchain on the same day more likely to be spoofing tha
 **Impact on the Trust Score** : from **-1 to -0** for each interaction in the last 15 days with a
 Hotspot that was added to the blockchain on a similar date, depending on how close the dates are,
 ranging from a 0 to a 30-day difference (-1 if both were added on the exact same date, -0 if they
-were added 30 days appart or more).
+were added 30 days apart or more).
 
 - # Asserted Location
 
 Owners of spoofing Hotspots can try to change the location of their Hotspots in order to hide their
-spoofing activity, namely by better accomodating this HIP's criteria. Hotspots changing location
+spoofing activity, namely by better accommodating this HIP's criteria. Hotspots changing location
 several times are more likely to belong to spoofers than to honest miners physically moving their
 Hotspot.
 
@@ -104,7 +104,7 @@ location is already penalized, we only take the last location assertion date int
 - from **-1 to -0** for each interaction in the last 15 days with a Hotspot whose latest location
   was asserted on a similar date, depending on how close the dates are, ranging from a 0 to a 30-day
   difference (-1 if both were asserted on the exact same date, -0 if they were asserted 30 days
-  appart or more).
+  apart or more).
 
 - # Owner addresses
 
@@ -141,8 +141,8 @@ and a receiver, the lower the SNR, as the signal loses in clarity with every obs
 (buildings, trees, air, rain, dust, birds, clouds, mist, smoke, ...).
 
 SNR values for spoofing Hotspots are often found to be higher than average, which makes sense,
-because spoofing Hotspots are barely a few meters appart in a safe environment in the same room,
-instead of being outside, kilometers appart.
+because spoofing Hotspots are barely a few meters apart in a safe environment in the same room,
+instead of being outside, kilometers apart.
 
 Although it is certainly possible for some witness events to register a higher than average SNR
 value even though both Hotspots are physically separated by several kilometers, a high SNR value is
@@ -295,14 +295,14 @@ Hotspot's behavior in a given timeframe._
 
 - From **-1 to -0** for each interaction in the last 15 days with a Hotspot that was added to the
   blockchain on a similar date, depending on how close the dates are, ranging from a 0 to a 30-day
-  difference (-1 if both were added on the exact same date, -0 if they were added 30 days appart or
+  difference (-1 if both were added on the exact same date, -0 if they were added 30 days apart or
   more).
 - **-1** for each location assertion in the last 365 days _(the first location assertion in a
   Hotspot's history doesn't count)_.
 - From **-1 to -0** for each interaction in the last 15 days with a Hotspot whose latest location
   was asserted on a similar date, depending on how close the dates are, ranging from a 0 to a 30-day
   difference (-1 if both were asserted on the exact same date, -0 if they were asserted 30 days
-  appart or more).
+  apart or more).
 - **-1** for each interaction in the last 15 days with a Hotspot that shares at least one address
 - **-1** per unique Hotspot that was interacted with in the last 30 days and that shares an address
   in their money trail.

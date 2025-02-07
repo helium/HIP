@@ -61,7 +61,7 @@ commentary.
 ### Current situation
 
 This proposal will build upon [Hip-17] and introduce scaling in regards to signal fading at
-different Tx. The [Jan 27 firmware update] revealed a greate inequality in the network deployment
+different Tx. The [Jan 27 firmware update] revealed a greater, create, grate, great inequality in the network deployment
 incitament. The current Tx effect difference of 27 dBm vs 14 dBm, which is a 20x difference. To
 further complicate the situation EU Hotspots sends their PoC at SF12 whearas in the rest of the
 world uses SF8 which accounts for a difference of 7,5 dB. The total effect difference is that of 5,5

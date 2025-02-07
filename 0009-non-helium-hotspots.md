@@ -129,9 +129,9 @@ introduce "Levels of Trust".
 
 ## Current Network Behavior
 
-In the current network, onboarding a Helium Inc manufactured Hotspot grants full Proof-of-Coverage priviledges.
+In the current network, onboarding a Helium Inc manufactured Hotspot grants full Proof-of-Coverage privileges.
 
-As mentioned in the problem defintion, we cannot assume that every single DIY hotspot is going to incorporate a GPS chip
+As mentioned in the problem definition, we cannot assume that every single DIY hotspot is going to incorporate a GPS chip
 or a radio chip. Malicious enttities may try to game the system by tweaking/removing hardware and yet be able to
 participate in PoC. Currently we _know_ that every single hotspot being added to the network is manufactured by helium
 and has the required hardware to participate in proof-of-coverage challenges, as soon as we allow other hotspots to join
@@ -166,7 +166,7 @@ encompasses all the benefits and constraints of the lower Levels (with a few exc
 Before we get into the details and constraints of each level, we need to set some common ground:
 
 - Every hotspot joining the network starts at the first level.
-- Every successive level is granted the priviledges of all previous levels.
+- Every successive level is granted the privileges of all previous levels.
 - Organic network growth allows hotspots to get to level 3A. In order to reach level 4, the owner must stake HNT.
 - There is a path to get to level 3B from level 1 via on-chain governance mechanism (TBD).
 
@@ -227,12 +227,12 @@ TBD
 
 ### Level 3A to Level 2
 
-A hotspot operating at Level 3A may get demoted to Level 2 and lose challenger priviledges if its score continually
+A hotspot operating at Level 3A may get demoted to Level 2 and lose challenger privileges if its score continually
 drops below a chain-var configured threshold for X number of blocks.
 
 ### Level 2 to Level 1
 
-- A hotspot operating at Level 2 may get demoted to Level 1 and lose challenging priviledges if its score continually
+- A hotspot operating at Level 2 may get demoted to Level 1 and lose challenging privileges if its score continually
   drops below a chain-var configured threshold for X number of blocks.
 
 - Once this happens, the hotspot would lose its asserted location via an `unassert_location` transaction and would go
