@@ -41,7 +41,7 @@ Inversion Capital is currently reviewing several potential MNVO acquisition targ
 
 ### Service Provider Onboarding
 
-Inversion Capital will complete the staking requirement to become a Service Provider, defined as 100,000 HNT in the March Release of the Helium Protocol, to fulfill the requirement. Once the required amount is staked, the Inversion Capital Service Provider will be minted as an NFT by the ‘Helium Entity Manager’ smart contract on the Solana blockchain and will become a rewardable entity.
+Inversion Capital will complete the staking requirement to become a Service Provider, defined as 100,000 HNT in the March Release of the Helium Protocol. Once the required amount is staked, the Inversion Capital Service Provider will be minted as an NFT by the ‘Helium Entity Manager’ smart contract on the Solana blockchain and will become a rewardable entity.
 
 This stake will remain locked and will not earn any staking rewards, as long as the Service Provider remains as part of the Helium Mobile Network.
 
