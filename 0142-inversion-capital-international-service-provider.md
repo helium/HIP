@@ -49,17 +49,9 @@ To match the initial Helium Mobile Service Provider cooldown requirements, this 
 
 ### Service Provider Rewards
 
-[HIP-53][hip-53] created a rewards allocation bucket for Service Providers to support their ongoing operations and assist in growing their subscriber base. Rewards from the emissions contract are distributed between Service Providers, Mappers and Hotspot Operators as a function of the incentive points earned during a period of time.
+[HIP-53][hip-53] and [HIP-79][hip-79] created a rewards allocation bucket for Service Providers of up to 10% of the HNT emissions to the Mobile network, in order to support their ongoing operations and assist in growing their subscriber base.
 
-Service Providers initially earned 20% of all MOBILE tokens minted by the DAO emissions curve, which will be distributed as a function of the number of incentive points accumulated by Service Provider participants during a given hour. Incentive points are issued using the following rules:
-- Service Provider receives 1 point for each of the mappers that used a SIM from this Service Provider and witnessed the network
-- Service Provider receives 3 points for each $1 worth of DCs settled in state channels
-
-[HIP-79][hip-79] revised the Service Provider rewards allocation to 10% of all MOBILE tokens minted.
-
-[HIP-138][hip-138] returns the Helium Network back to one token: HNT. However, [HIP-138][hip-138] did not specifically mention including the Service Provider allocation as part of the new HNT reward structure. This HIP codifies that Service Providers earn 10% of all HNT emissions of the Mobile Network's allocation, following the exact incentive point formula outlined in [HIP-53][hip-53].
-
-It’s important to note that Inversion Capital, as an approved Service Provider, will not earn any HNT emissions until it contributes valuable data offloading to the network based on the Incentive Point formula in [HIP-53][hip-53].
+Inversion Capital, when approved as a Service Provider, will not earn any of these HNT emissions until it contributes valuable data offloading to the network based on the Incentive Point formula in [HIP-53][hip-53].
 
 ## Implementation
 
