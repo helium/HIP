@@ -51,7 +51,7 @@ To match the initial Helium Mobile Service Provider cooldown requirements, this 
 
 [HIP 53][hip-53] and [HIP 79][hip-79] created a rewards allocation bucket for Service Providers of up to 10% of the HNT emissions to the Mobile network, in order to support their ongoing operations and assist in growing their subscriber base.
 
-Inversion Capital, when approved as a Service Provider, will not earn any of these HNT emissions until it contributes valuable data offloading to the network based on the Incentive Point formula in [HIP-53][hip-53].
+Inversion Capital, when approved as a Service Provider, will not earn any of these HNT emissions until it contributes valuable data offloading to the network based on the Incentive Point formula in [HIP 53][hip-53].
 
 ## Implementation
 
