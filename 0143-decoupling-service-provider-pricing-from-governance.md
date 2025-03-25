@@ -1,6 +1,6 @@
 # HIP 143: Decoupling Service Provider Pricing from Governance
 
-- Author: [inversioncapital](https://github.com/inversioncapital), zer0tweets
+- Author: [inversioncapital](https://github.com/inversioncapital), [zer0tweets](https://github.com/zer0tweets), [Nova Labs](http://nova.xyz)
 - Start Date: 2025-01-29
 - Category: Economic, Technical
 - Original HIP PR: [#1153](https://github.com/helium/HIP/pull/1153)
