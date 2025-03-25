@@ -11,7 +11,7 @@
 
 ## Summary
 
-Add a 30 day rolling window rewards escrow for Helium Mobile Hotspots. This increases the "stake" a Hotspot Deployer has in the hotspot which can be burnt if the Hotspot is caught exploiting the Helium Network for rewards.
+Add a 30 day rolling window rewards escrow for Helium Mobile Hotspots. This increases the "stake" a Hotspot Deployer has in the Hotspot which can be burnt if the Hotspot is caught exploiting the Helium Network for rewards.
 
 Different escrow collection timelines will be used for existing and newly deployed Hotspots.
 
