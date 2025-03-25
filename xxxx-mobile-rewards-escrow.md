@@ -44,7 +44,7 @@ On activation of this HIP, The Mobile Reward Indexer will:
 
 The Pending Rewards Oracle will return all earned rewards whether claimable or not.
 
-A new ingest ban report to "perma-ban" a hotspot will be created. This ban type does not expire. The Mobile Rewards Indexer will burn accumulated escrow rewards for the banned hotspot. The Mobile Verifier will no longer allocate rewards for a perma-banned hotspot.
+A new ingest ban report to "perma-ban" a hotspot will be created. This ban type does not expire. The Mobile Rewards Indexer will burn accumulated escrow rewards for the banned Hotspot. The Mobile Verifier will no longer allocate rewards for a perma-banned Hotspot.
 
 Builder and Helium Wallet Applications will be modified to show claimable and earned rewards separately. The existing claim mechanism can be used for the claimable amount.
 
