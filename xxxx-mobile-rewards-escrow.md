@@ -1,4 +1,4 @@
-# HIP XXX: Mobile Hotspot Rewards Escrow
+# HIP 144: Mobile Hotspot Rewards Escrow
 
 - Author: [madninja](https://github.com/madninja), [ChewingGlass](https://github.com/ChewingGlass)
 - Start Date: 2024-03-25
