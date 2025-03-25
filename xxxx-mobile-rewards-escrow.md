@@ -1,11 +1,13 @@
-# HIP XXX Mobile Hotspot Rewards Escrow
+# HIP XXX: Mobile Hotspot Rewards Escrow
 
-- Author(s): @madninja, @noah
-- Start Date: 2024-03-18
-- Category: economic
-- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
-- Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
-- Vote Requirements: <!-- veHNT Holders, veIOT Holders, or veMOBILE Holders -->
+- Author: [madninja](https://github.com/madninja), [ChewingGlass](https://github.com/ChewingGlass)
+- Start Date: 2024-03-25
+- Category: Economic
+- Original HIP PR: [#1162](https://github.com/helium/HIP/pull/1162)
+- Tracking Issue: [#1164](https://github.com/helium/HIP/issues/1164)
+- Voting Requirements: veHNT holders
+
+---
 
 ## Summary
 
