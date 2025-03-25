@@ -29,7 +29,7 @@ Using a 30 rolling window rewards escrow will:
 
 ## Stakeholders
 
-- Existing Hotspot Deployers, which have existing fleets with ongoing operational expenses and payouts
+- Existing Hotspot Deployers, who have existing fleets with ongoing operational expenses and payouts
 - New Hotspot Deployers
 
 
