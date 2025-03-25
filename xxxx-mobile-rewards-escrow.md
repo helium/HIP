@@ -59,7 +59,7 @@ In case it is not clearly obvious a Hotspot is gaming the escrow window can be e
    - Need to track reward aging
 2. **Economic**
    - Delayed access to earned rewards
-   - Impact on operator cash flow, mitigated by grace period for already deployed hotspost
+   - Impact on operator cash flow, mitigated by grace period for already deployed Hotspot
    - Potential effect on operator participation
 3. **Technical**
    - Additional reward aging tracking
