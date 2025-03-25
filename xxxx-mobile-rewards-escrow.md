@@ -18,7 +18,7 @@ Different escrow collection timelines will be used for existing and newly deploy
 
 ## Motivation
 
-As the cost of the Hotspots goes down with brownfield and self-service Data-Only Hotspots, the cost to game network rewards goes down very low. Today, a gaming hotspot (and all associated hotspots) will get banned when caught but in most cases the gaming has earned back the cost of the effective hardware cost "slash". With Brownfield and Data-Only hotspots the cost of a Hotspot goes to near zero which makes the cost to game effectively free. This is made worse by the ability generate a new Self-Serve Data-Only Hotspot very quickly.
+As the cost of the Hotspots goes down with brownfield and self-service Data-Only Hotspots, the cost to game network rewards also decreases. Today, a gaming Hotspot (and all associated Hotspots) will get banned when caught but in most cases the gaming has earned back the cost of the effective hardware cost "slash". With Brownfield and Data-Only hotspots the cost of a Hotspot goes to near zero which makes the cost to game effectively free. This is made worse by the ability generate a new Self-Serve Data-Only Hotspot very quickly.
 
 Using a 30 rolling window rewards escrow will:
 
