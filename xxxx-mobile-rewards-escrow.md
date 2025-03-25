@@ -35,7 +35,7 @@ Using a 30 rolling window rewards escrow will:
 
 ## Detailed Explanation
 
- No on-chain changes are needed for this feature.
+Because this change can be made in oracles, no on-chain changes are required for this feature.
 
 On activation of this HIP, The Mobile Reward Indexer will:
 
