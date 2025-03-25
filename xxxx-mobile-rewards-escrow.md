@@ -39,7 +39,7 @@ Because this change can be made in oracles, no on-chain changes are required for
 
 On activation of this HIP, The Mobile Reward Indexer will:
 
- - For new hotspots collect and maintain 30 days of pending rewards for a hotspot and post the first day as claimable using the existing mechanism on day 31, while escrowing day 31. This will continue on to maintain a 30 day rolling window of escrowed rewards.
+ - For new Hotspots collect and maintain 30 days of pending rewards for a Hotspot and post the first day as claimable using the existing mechanism on day 31, while escrowing day 31. This will continue on to maintain a 30 day rolling window of escrowed rewards.
  - For existin hotspots a 90 day grace period will start, after which the 30 day escrow window will start collecting and releasing as described above 
 
 The Pending Rewards Oracle will return all earned rewards whether claimable or not.
