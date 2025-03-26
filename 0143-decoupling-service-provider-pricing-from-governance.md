@@ -37,7 +37,7 @@ This HIP affects:
 
 ## Detailed Explanation
 
-Nova Labs already manages contracts with several U.S. network operators, who pay varying rates and apply different data caps based on their internal policies. Nova Labs then converts dollar payments into HNT that is burned for Data Credits, ensuring the Helium Network is paid $0.50 per GB of Rewardable Data. Nova also manages subscriber Rewardable Data caps to align with [HIP-82][hip-82] rules, ensuring that certain types of subscribers (e. g., unlimited plans) do not pay for traffic when their Rewardable Data caps have been exceeded. 
+Nova Labs already manages contracts with several U.S. network operators, who pay varying rates and apply different data caps based on their internal policies. Nova Labs then converts dollar payments into HNT that is burned for Data Credits, ensuring the Helium Network is paid $0.50 per GB of Rewardable Data. Nova Labs also manages subscriber Rewardable Data caps to align with [HIP-82][hip-82] and [HIP 129][hip-129] rules. 
 
 This proposal would extend this established process to Mexico and other countries. It would adapt the existing Rewardable Data framework, allowing Nova Labs to manage total data cost for each network operator and Service Provider in alignment with negotiated terms.
 
