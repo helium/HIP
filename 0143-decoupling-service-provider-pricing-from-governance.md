@@ -54,3 +54,4 @@ The success metric for this HIP is cellular data being offloaded to the Helium M
 [hip-27]: ./0027-cbrs-5g-support.md
 [hip-53]: ./0053-mobile-dao.md
 [hip-82]: ./0082-helium-mobile-service-provider.md
+[hip-129]: ./0129-mobile-carrier-beta.md
