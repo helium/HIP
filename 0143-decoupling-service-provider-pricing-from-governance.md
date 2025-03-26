@@ -13,7 +13,7 @@
 
 This HIP authorizes Nova Labs to negotiate the total cost of Data Transfer paid to the Helium Network by Nova offload partners, and by independent Service Providers, without involving Helium governance.
 
-The nominal cost of data remains at $0.50/GB as defined in [HIP-53][hip-53], but Nova Labs may adjust the proportion of Rewarded vs. Unrewarded Data as needed.
+The nominal cost of data remains at $0.50/GB as defined in [HIP-53][hip-53], but Nova Labs may adjust the proportion of Rewarded vs. Unrewarded Data as needed as defined in [HIP 129][hip-129].
 
 The provisions of this HIP will remain in effect initially for 1 year from implementation.
 
