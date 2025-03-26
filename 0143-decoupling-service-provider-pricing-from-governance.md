@@ -25,7 +25,7 @@ Meanwhile, the Helium Network pays Hotspots a fixed rate of $0.50 per GB of Data
 
 This proposal allows Nova Labs to negotiate agreements with network operators independently, while paying for usage of the Helium Network at $0.50 per GB, as outlined in [HIP-27][hip-27] and [HIP-53][hip-53]), and applying Rewardable Data rules as introduced with [HIP-82][hip-82]).
 
-The pricing of mobile offload agreements is complex and often confidential. If Nova is able to move fast, without involving Helium governance, the authors of this HIP anticipate that the total Data Transfer of the Helium network will rise. Nova and the Helium community benefit equally from increased Data Transfer.
+The pricing of mobile offload agreements is complex and often confidential. If Nova Labs would be able to move quickly and aligned with overall network goals, without involving Helium governance, the authors of this HIP anticipate that the total Data Transfer of the Helium network will rise. Nova and the Helium community benefit equally from increased Data Transfer.
 
 ## Stakeholders
 
