@@ -11,9 +11,13 @@
 
 ## Summary
 
-Add a 30 day rolling window rewards escrow for Helium Mobile Hotspots. This increases the "stake" a Hotspot Deployer has in the Hotspot which can be burnt if the Hotspot is caught exploiting the Helium Network for rewards.
+This proposal would add a 30-day delay to the process of claiming rewards for Helium Mobile Hotspots.
 
-Different escrow collection timelines will be used for existing and newly deployed Hotspots.
+Rewards will be calculated and earned as before, but each day’s rewards will be held in escrow for 30 days by the Mobile Reward Indexer, and will be released as claimable 30 days after being earned.
+
+If a Hotspot is determined to be gaming the network, and is perma-banned, all earned rewards held in escrow will be burned, or "slashed", which reduces the profitability of gaming.
+
+All Hotspots deployed prior to the implementation of this proposal are granted a 90-day grace period before the 30-day escrow mechanism takes effect, so that deployers can make economic adjustments.
 
 
 ## Motivation
