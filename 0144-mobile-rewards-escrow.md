@@ -11,9 +11,11 @@
 
 ## Summary
 
-Add a 30 day rolling window rewards escrow for Helium Mobile Hotspots. This increases the "stake" a Hotspot Deployer has in the Hotspot which can be burnt if the Hotspot is caught exploiting the Helium Network for rewards.
+This HIP is a community temperature check to add a 30 day rolling window rewards escrow for Helium Mobile Hotspots. This increases the "stake" a Hotspot Deployer has in the Hotspot which can be burnt if the Hotspot is caught exploiting the Helium Network for rewards.
 
-Different escrow collection timelines will be used for existing and newly deployed Hotspots.
+Different escrow collection timelines will be used for existing or newly deployed Hotspots, and hotspots that are part of deployer grant programs.
+
+Note that this HIP is intended as a temperature check to check if the community is in favor of hotspot rewards escrows before. If approved it may or may not actually get proposed an implemented as part of an HRP.  
 
 
 ## Motivation
@@ -37,18 +39,18 @@ Using a 30 rolling window rewards escrow will:
 
 Because this change can be made in oracles, no on-chain changes are required for this feature.
 
-On activation of this HIP, The Mobile Reward Indexer will:
+If implmented and on activation of this HIP, The Mobile Reward Indexer will:
 
  - For new Hotspots collect and maintain 30 days of pending rewards for a Hotspot and post the first day as claimable using the existing mechanism on day 31, while escrowing day 31. This will continue on to maintain a 30 day rolling window of escrowed rewards.
  - For existing Hotspots a 90 day grace period will start, after which the 30 day escrow window will start collecting and releasing as described above 
 
 The Pending Rewards Oracle will return all earned rewards whether claimable or not.
 
-A new ingest ban report to "perma-ban" a hotspot will be created. This ban type does not expire. The Mobile Rewards Indexer will burn accumulated escrow rewards for the banned Hotspot. The Mobile Verifier will no longer allocate rewards for a perma-banned Hotspot.
-
 Builder and Helium Wallet Applications will be modified to show claimable and earned rewards separately. The existing claim mechanism can be used for the claimable amount.
 
 In case it is not clearly obvious a Hotspot is gaming the escrow window can be extended to 60 or 90 days to allow more time to investigate and collaborate with the Deployer and Community members on analysis. If found gaming the whole escrow window is burned. If found to not be gaming the escrow window is shortened back to 30 days and the escrow over 30 days will be claimable.
+
+Conversely, well known deployers have existing financial stakes and trust relationships through other programs such as the Nova or Foundation Deployer Grants can have the escrow window shortened to a much smaller number of days. 
 
 
 ## Drawbacks
