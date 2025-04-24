@@ -55,7 +55,6 @@ In case it is not clearly obvious that a Hotspot is gaming, the escrow window ca
 
 Conversely, Nova may elect to shorten the escrow window for individual well-known deployers who have existing financial stakes and trust relationships through other programs such as the Nova or Foundation Deployer Grants. 
 
-
 ## Drawbacks
 
 1. **Operational**
