@@ -13,7 +13,7 @@ This HIP proposes introducing a \$1/year "seat fee" for each sensor transmitting
 
 ## Motivation
 
-- The network currently earns too little to sustain Hotspot operations: with over 320,000 active sensors, it generates only ~~\$100/day (~~\$36,500/year).
+- The network currently earns too little to sustain Hotspot operations: with over 320,000 active sensors, it generates only ~\$100/day (~\$36,500/year).
 - There is a misalignment between infrastructure costs and minimal usage fees.
 - This proposal introduces fair compensation for Hotspot operators, encourages ongoing participation, and supports the network’s long-term viability.
 - It maintains affordability for sensor owners while ensuring baseline revenue per sensor.
