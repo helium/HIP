@@ -1,11 +1,13 @@
-# IoT Seat Fees for Sensors
+# HIP 146: IoT Seat Fees for Sensors
 
-- Author(s): @BFGNeil
-- Start Date: 2025-06-16
-- Category: economic
-- Original HIP PR:
-- Tracking Issue:
+- Author: [@BFGNeil](https://github.com/BFGNeil)
+- Start Date: 2025-06-23
+- Category: Economic
+- Original HIP PR: [#1173](https://github.com/helium/HIP/pull/1173)
+- Tracking Issue: [#1175](https://github.com/helium/HIP/issues/1175)
 - Vote Requirements: veHNT Holders
+
+---
 
 ## Summary
 
