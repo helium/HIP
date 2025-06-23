@@ -1,11 +1,11 @@
-# HIP XX: Utility Probing
+# HIP 145: Utility Probing
 
-**Author(s):** [@zer0tweets](https://twitter.com/zer0tweets), [@jhiller](https://twitter.com/jhiller)  
-**Start Date:** 2025-05-20  
-**Category:** Economic, Technical  
-**Original HIP PR:** [Link to PR]  
-**Tracking Issue:** [Link to Issue]  
-**Voting Requirements:** veHNT holders  
+- Authors: [@zer0tweets](https://twitter.com/zer0tweets), [@jhiller](https://twitter.com/jhiller)
+- Start Date: 2025-06-23
+- Category: Economic, Technical
+- Original HIP PR: [#1171](https://github.com/helium/HIP/pull/1171)
+- Tracking Issue: [#1174](https://github.com/helium/HIP/issues/1174)
+- Voting Requirements: veHNT holders
 
 ---
 
