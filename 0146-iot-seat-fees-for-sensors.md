@@ -74,7 +74,7 @@ This reward will be allocated based on actual packet delivery from the sensor, e
 
 ### Alternatives Considered
 
-- **Increasing per-packet fees**: Disincentives high-frequency use cases and still fails to generate sufficient revenue.
+- **Increasing per-packet fees**: Disincentivises high-frequency use cases and still fails to generate sufficient revenue.
 
 ### Why This Design Was Chosen
 
