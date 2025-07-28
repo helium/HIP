@@ -47,7 +47,6 @@ This HIP proposes introducing a $1/year "seat fee" for each sensor transmitting 
 | Every 2 minutes (720/day)   | $0.00720 (720 DC)             | $2.62800                       | $0.00720 (720 DC)             | $2.62800                       | $0.00                | $0.00                 |
 | Every 1 minute (1440/day)   | $0.01440 (1440 DC)            | $5.25600                       | $0.01440 (1440 DC)            | $5.25600                       | $0.00                | $0.00                 |
 
-
 This shows that:
 
 - **Low-frequency sensors** pay slightly more annually, but the amount remains negligible.
@@ -63,7 +62,6 @@ This surcharge reflects the added complexity and reduced visibility in routing p
 
 Unspent seat fee DCs will be shared with Hotspots that served that sensor’s data on a given day.  
 This reward will be allocated based on actual packet delivery from the sensor, ensuring Hotspots are fairly compensated for supporting active devices. This approach aligns with incentives and ensures the seat fee does not go to waste.
-
 
 ## Drawbacks
 
