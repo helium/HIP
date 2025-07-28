@@ -11,7 +11,7 @@
 
 ## Summary
 
-This HIP proposes introducing a $1/year "seat fee" for each sensor transmitting on the Helium IoT network. This fee would be deducted from the LNS’s Data Credit (DC) balance on the first uplink of each day, averaging approximately $0.00274 per day. The goal is to create sustainable and predictable revenue for IoT Hotspot operators without increasing per-packet costs or introducing additional friction for end users.
+This HIP proposes introducing a $1/year "seat fee" for each sensor transmitting on the Helium IoT network. This fee would be deducted from the LoRaWAN Network Server’s Data Credit (DC) balance on the first uplink of each day, averaging approximately $0.00274 per day. The goal is to create sustainable and predictable revenue for IoT Hotspot operators without increasing per-packet costs or introducing additional friction for end users.
 
 ## Motivation
 
@@ -38,14 +38,14 @@ This HIP proposes introducing a $1/year "seat fee" for each sensor transmitting 
 
 ### Examples
 
-| **Sensor Frequency**        | **Daily Cost (Current Model)** | **Yearly Cost (Current Model)** | **Daily Cost (With Seat Fee)** | **Yearly Cost (With Seat Fee)** | **Daily \$ Increase** | **Yearly \$ Increase** |
-| --------------------------- | ------------------------------ | ------------------------------- | ------------------------------ | ------------------------------- | --------------------- | ---------------------- |
-| Once per day                | $0.00001 (1 DC)               | $0.00365                       | $0.00274 (274 DC)             | $1.00                          | +$0.00273            | +$0.99635             |
-| Twice per day               | $0.00002 (2 DC)               | $0.00730                       | $0.00274 (274 DC)             | $1.00                          | +$0.00272            | +$0.99270             |
-| Four times per day          | $0.00004 (4 DC)               | $0.01460                       | $0.00274 (274 DC)             | $1.00                          | +$0.00270            | +$0.98540             |
-| Every hour (24/day)         | $0.00024 (24 DC)              | $0.08760                       | $0.00274 (274 DC)             | $1.00                          | +$0.00250            | +$0.91240             |
-| Every 2 minutes (720/day)   | $0.00720 (720 DC)             | $2.62800                       | $0.00720 (720 DC)             | $2.62800                       | $0.00                | $0.00                 |
-| Every 1 minute (1440/day)   | $0.01440 (1440 DC)            | $5.25600                       | $0.01440 (1440 DC)            | $5.25600                       | $0.00                | $0.00                 |
+| **Sensor Frequency**      | **Daily Cost (Current Model)** | **Yearly Cost (Current Model)** | **Daily Cost (With Seat Fee)** | **Yearly Cost (With Seat Fee)** | **Daily \$ Increase** | **Yearly \$ Increase** |
+|---------------------------|--------------------------------|---------------------------------|--------------------------------|---------------------------------|-----------------------|------------------------|
+| Once per day              | $0.00001 (1 DC)                | $0.00365                        | $0.00274 (274 DC)              | $1.00                           | +$0.00273             | +$0.99635              |
+| Twice per day             | $0.00002 (2 DC)                | $0.00730                        | $0.00274 (274 DC)              | $1.00                           | +$0.00272             | +$0.99270              |
+| Four times per day        | $0.00004 (4 DC)                | $0.01460                        | $0.00274 (274 DC)              | $1.00                           | +$0.00270             | +$0.98540              |
+| Every hour (24/day)       | $0.00024 (24 DC)               | $0.08760                        | $0.00274 (274 DC)              | $1.00                           | +$0.00250             | +$0.91240              |
+| Every 2 minutes (720/day) | $0.00720 (720 DC)              | $2.62800                        | $0.00720 (720 DC)              | $2.62800                        | $0.00                 | $0.00                  |
+| Every 1 minute (1440/day) | $0.01440 (1440 DC)             | $5.25600                        | $0.01440 (1440 DC)             | $5.25600                        | $0.00                 | $0.00                  |
 
 This shows that:
 
@@ -68,7 +68,7 @@ This reward will be allocated based on actual packet delivery from the sensor, e
 - Slightly increases cost to end users (~$1/year).
 - Requires development effort to implement in the Oracle.
 - Potential for gaming via key sharing or bypassing identity.
-- Will require LNS providers to explain the pricing structure to users and detail the cost in any tracking systems.
+- Will require LoRaWAN Network Server providers to explain the pricing structure to users and detail the cost in any tracking systems.
 
 ## Rationale and Alternatives
 
@@ -84,7 +84,7 @@ This reward will be allocated based on actual packet delivery from the sensor, e
 
 ### Consequences of Inaction
 
-- Hotspot operators remain undercompensated.
+- Hotspot operators compensation reduces over time.
 - Potential decline in operator retention and network coverage.
 - Poses a risk to the economic sustainability of the Helium IoT network.
 
