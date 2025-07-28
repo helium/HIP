@@ -11,7 +11,7 @@
 
 ## Summary
 
-This HIP proposes introducing a $1/year "seat fee" for each sensor transmitting on the Helium IoT network. This fee would be deducted from the LoraWAN Network Server’s Data Credit (DC) balance on the first uplink of each day, averaging approximately $0.00274 per day. The goal is to create sustainable and predictable revenue for IoT Hotspot operators without increasing per-packet costs or introducing additional friction for end users.
+This HIP proposes introducing a $1/year "seat fee" for each sensor transmitting on the Helium IoT network. This fee would be deducted from the LoRaWAN Network Server’s Data Credit (DC) balance on the first uplink of each day, averaging approximately $0.00274 per day. The goal is to create sustainable and predictable revenue for IoT Hotspot operators without increasing per-packet costs or introducing additional friction for end users.
 
 ## Motivation
 
@@ -68,7 +68,7 @@ This reward will be allocated based on actual packet delivery from the sensor, e
 - Slightly increases cost to end users (~$1/year).
 - Requires development effort to implement in the Oracle.
 - Potential for gaming via key sharing or bypassing identity.
-- Will require LoraWAN Network Server providers to explain the pricing structure to users and detail the cost in any tracking systems.
+- Will require LoRaWAN Network Server providers to explain the pricing structure to users and detail the cost in any tracking systems.
 
 ## Rationale and Alternatives
 
