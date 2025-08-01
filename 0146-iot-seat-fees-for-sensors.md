@@ -67,7 +67,7 @@ This surcharge reflects the added complexity and reduced visibility in routing p
 
 ## How unspent seat fee DCs are rewarded to Hotspot operators.
 
-Unspent seat fee DCs will be shared pro-rata with the specific Hotspots that served that sensor’s data on a given day.  
+Unspent seat fee DCs will be shared pro rata with the specific Hotspots that served that sensor’s data on a given day.  
 This reward will be allocated based on actual packet delivery from the sensor, ensuring Hotspots are fairly compensated for supporting active devices. This approach aligns with incentives and ensures the seat fee does not go to waste.
 
 ## Drawbacks
