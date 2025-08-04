@@ -33,7 +33,7 @@ This HIP proposes introducing a $1/year "seat fee" for each sensor transmitting 
 ### Mechanism
 
 - Data Credit (DC) cost remains at 100,000 per 1 USD
-- The network would charge a daily seat fee (in DC) based on individual SKFs (Session Key Filters) observed by an HPR. The seat fee is $1 per year, the daily cost would be approximately $0.00273973 or 274 DC.
+- The network would charge a daily seat fee (in DC) based on individual SKFs (Session Key Filters) observed by a Helium Packet Router. The seat fee is $1 per year, the daily cost would be approximately $0.00273973 or 274 DC.
 - Additionally, this fee would include a daily data allowance of 274 DC per device, with any usage beyond this limit charged at the standard rate.
 - To ensure that devices sending data multiple times per day are not charged multiple seat fees, SKFs will need to be updated. A unique ID (provided by the user) will be added to each SKF, allowing devices to be recognized by their ID. This approach ensures that devices joining and powering on multiple times in a day are only charged once per day.
 - Sensors that do not transmit on a given day are not charged.
@@ -98,13 +98,13 @@ This reward will be allocated based on actual packet delivery from the sensor, e
 ## Deployment Impact
 
 - **Users**: Must ensure they maintain sufficient DC balance for the daily fee.
-- **LNS Operators**: Updates needed to helium > chirpstack bridges (Disk91/Bones/Custom) to support the new SKF changes.
+- **LNS Operators**: Updates needed to Helium-to-Chirpstack bridges (Disk91/Bones/Custom) to support the new SKF changes.
 - **Documentation**: Updates needed on [docs.helium.com](http://docs.helium.com) under sensor billing.
 - **Compatibility**: No changes required to firmware.
 - **Reversibility**: This HIP can be undone by disabling the fee logic.
 
 ## Success Metrics
 
-- Meaningful contribution of Data Transfer rewards towards the revenue of active Hotspots. Meaniningful contribution and active hotspots to be defined and monitored by the IoT Working group.
+- Meaningful contribution of Data Transfer rewards towards the revenue of active Hotspots. Meaningful contribution and active Hotspots to be defined and monitored by the IoT Working Group.
 - Improvement in Hotspot operator retention and participation rates.
 - Positive reception from stakeholders (sensor owners, operators, token holders).
