@@ -37,6 +37,230 @@ As before, in an Epoch with no Data Transfer, 60% of emissions to Mobile will be
 
 However, in an Epoch in which the DC Burn for Data Transfer is greater than the nominal fiat value of 60% of HNT emissions to the Mobile network, PoC rewards to Mobile Hotspots will be zero, and the entire 60% will be distributed pro-rata among Hotspots for Data Transfer.
 
+### Examples
+
+The following tables show possible daily reward distributions, in terms of USD, at various market prices of HNT according to “legacy” (HIP-53) and “new” (this proposal) rules, under the following assumptions: daily issuance of 20,547.95 HNT plus 1,644 HNT Net Emissions, Protocol Score 82% Mobile vs. 18% IOT, nominal price of Data Transfer at $0.50 per GB.
+
+The columns “PoC/HS” show the average PoC rewards per Helium Mobile (greenfield) Hotspot under the assumption that 30,000/60,000 total Hotspots are participating. The columns “$USD/GB” show the effective rate at which Hotspots (greenfield and brownfield) earn for Rewardable Data.  
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="11" align="center">Current network: 30,000 Hotspots with PoC, 40 TB daily Data Transfer</th>
+    </tr>
+    <tr>
+      <td></td>
+      <td align="center">&nbsp;&nbsp;</td>
+      <td colspan="4" align="center">legacy: 20% PoC reservation</td>
+      <td align="center">&nbsp;&nbsp;</td>
+      <td colspan="4" align="center">new: no PoC reservation</td>
+    </tr>
+    <tr>
+      <th align="left">HNT price</th>
+      <th align="center">&nbsp;&nbsp;</th>
+      <th align="right">total PoC</th>
+      <th align="right">PoC/HS</th>
+      <th align="right">total Data</th>
+      <th align="right">$USD/GB</th>
+      <th align="center">&nbsp;&nbsp;</th>
+      <th align="right">total PoC</th>
+      <th align="right">PoC/HS</th>
+      <th align="right">total Data</th>
+      <th align="right">$USD/GB</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th align="left" scope="row">$1</th>
+      <td align="center">&nbsp;&nbsp;</td>
+      <td align="right">$3,639</td>
+      <td align="right">$0.12</td>
+      <td align="right">$7,279</td>
+      <td align="right">$0.18</td>
+      <td align="center">&nbsp;&nbsp;</td>
+      <td align="right">$0</td>
+      <td align="right">$0.00</td>
+      <td align="right">$10,918</td>
+      <td align="right">$0.27</td>
+    </tr>
+    <tr>
+      <th align="left" scope="row">$2</th>
+      <td align="center">&nbsp;&nbsp;</td>
+      <td align="right">$7,279</td>
+      <td align="right">$0.24</td>
+      <td align="right">$14,558</td>
+      <td align="right">$0.36</td>
+      <td align="center">&nbsp;&nbsp;</td>
+      <td align="right">$1,837</td>
+      <td align="right">$0.06</td>
+      <td align="right">$20,000</td>
+      <td align="right">$0.50</td>
+    </tr>
+    <tr>
+      <th align="left" scope="row">$3</th>
+      <td align="center">&nbsp;&nbsp;</td>
+      <td align="right">$12,755</td>
+      <td align="right">$0.43</td>
+      <td align="right">$20,000</td>
+      <td align="right">$0.50</td>
+      <td align="center">&nbsp;&nbsp;</td>
+      <td align="right">$12,755</td>
+      <td align="right">$0.43</td>
+      <td align="right">$20,000</td>
+      <td align="right">$0.50</td>
+    </tr>
+    <tr>
+      <th align="left" scope="row">$5</th>
+      <td align="center">&nbsp;&nbsp;</td>
+      <td align="right">$34,592</td>
+      <td align="right">$1.15</td>
+      <td align="right">$20,000</td>
+      <td align="right">$0.50</td>
+      <td align="center">&nbsp;&nbsp;</td>
+      <td align="right">$34,592</td>
+      <td align="right">$1.15</td>
+      <td align="right">$20,000</td>
+      <td align="right">$0.50</td>
+    </tr>
+    <tr>
+      <th align="left" scope="row">$10</th>
+      <td align="center">&nbsp;&nbsp;</td>
+      <td align="right">$89,184</td>
+      <td align="right">$2.97</td>
+      <td align="right">$20,000</td>
+      <td align="right">$0.50</td>
+      <td align="center">&nbsp;&nbsp;</td>
+      <td align="right">$89,184</td>
+      <td align="right">$2.97</td>
+      <td align="right">$20,000</td>
+      <td align="right">$0.50</td>
+    </tr>
+    <tr>
+      <th align="left" scope="row">$20</th>
+      <td align="center">&nbsp;&nbsp;</td>
+      <td align="right">$198,369</td>
+      <td align="right">$6.61</td>
+      <td align="right">$20,000</td>
+      <td align="right">$0.50</td>
+      <td align="center">&nbsp;&nbsp;</td>
+      <td align="right">$198,369</td>
+      <td align="right">$6.61</td>
+      <td align="right">$20,000</td>
+      <td align="right">$0.50</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="11" align="center">Future network: 60,000 Hotspots with PoC, 120 TB daily Data Transfer</th>
+    </tr>
+    <tr>
+      <td></td>
+      <td align="center">&nbsp;&nbsp;</td>
+      <td colspan="4" align="center">legacy: 20% PoC reservation</td>
+      <td align="center">&nbsp;&nbsp;</td>
+      <td colspan="4" align="center">new: no PoC reservation</td>
+    </tr>
+    <tr>
+      <th align="left">HNT price</th>
+      <th align="center">&nbsp;&nbsp;</th>
+      <th align="right">total PoC</th>
+      <th align="right">PoC/HS</th>
+      <th align="right">total Data</th>
+      <th align="right">$USD/GB</th>
+      <th align="center">&nbsp;&nbsp;</th>
+      <th align="right">total PoC</th>
+      <th align="right">PoC/HS</th>
+      <th align="right">total Data</th>
+      <th align="right">$USD/GB</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th align="left" scope="row">$1</th>
+      <td align="center">&nbsp;&nbsp;</td>
+      <td align="right">$3,639</td>
+      <td align="right">$0.06</td>
+      <td align="right">$7,279</td>
+      <td align="right">$0.06</td>
+      <td align="center">&nbsp;&nbsp;</td>
+      <td align="right">$0</td>
+      <td align="right">$0.00</td>
+      <td align="right">$10,918</td>
+      <td align="right">$0.09</td>
+    </tr>
+    <tr>
+      <th align="left" scope="row">$2</th>
+      <td align="center">&nbsp;&nbsp;</td>
+      <td align="right">$7,279</td>
+      <td align="right">$0.12</td>
+      <td align="right">$14,558</td>
+      <td align="right">$0.12</td>
+      <td align="center">&nbsp;&nbsp;</td>
+      <td align="right">$0</td>
+      <td align="right">$0.00</td>
+      <td align="right">$21,837</td>
+      <td align="right">$0.18</td>
+    </tr>
+    <tr>
+      <th align="left" scope="row">$3</th>
+      <td align="center">&nbsp;&nbsp;</td>
+      <td align="right">$10,918</td>
+      <td align="right">$0.18</td>
+      <td align="right">$21,837</td>
+      <td align="right">$0.18</td>
+      <td align="center">&nbsp;&nbsp;</td>
+      <td align="right">$0</td>
+      <td align="right">$0.00</td>
+      <td align="right">$32,755</td>
+      <td align="right">$0.27</td>
+    </tr>
+    <tr>
+      <th align="left" scope="row">$5</th>
+      <td align="center">&nbsp;&nbsp;</td>
+      <td align="right">$18,197</td>
+      <td align="right">$0.30</td>
+      <td align="right">$36,395</td>
+      <td align="right">$0.30</td>
+      <td align="center">&nbsp;&nbsp;</td>
+      <td align="right">$0</td>
+      <td align="right">$0.00</td>
+      <td align="right">$54,592</td>
+      <td align="right">$0.45</td>
+    </tr>
+    <tr>
+      <th align="left" scope="row">$10</th>
+      <td align="center">&nbsp;&nbsp;</td>
+      <td align="right">$49,184</td>
+      <td align="right">$0.82</td>
+      <td align="right">$60,000</td>
+      <td align="right">$0.50</td>
+      <td align="center">&nbsp;&nbsp;</td>
+      <td align="right">$49,184</td>
+      <td align="right">$0.82</td>
+      <td align="right">$60,000</td>
+      <td align="right">$0.50</td>
+    </tr>
+    <tr>
+      <th align="left" scope="row">$20</th>
+      <td align="center">&nbsp;&nbsp;</td>
+      <td align="right">$158,369</td>
+      <td align="right">$2.64</td>
+      <td align="right">$60,000</td>
+      <td align="right">$0.50</td>
+      <td align="center">&nbsp;&nbsp;</td>
+      <td align="right">$158,369</td>
+      <td align="right">$2.64</td>
+      <td align="right">$60,000</td>
+      <td align="right">$0.50</td>
+    </tr>
+  </tbody>
+</table>
+
+
 ## Drawbacks
 
 The assumption behind this proposal is that deployers will be encouraged to create maximal utility for the network if the network prioritizes rewarding Data Transfer.
@@ -57,11 +281,11 @@ Are there situations where deployments that bring value to the network can only 
 
 ## Deployment Impact
 
-Madninja can’t wait to deploy this already and thinks why do we even need a HIP about it?
+Core developers have completed the necessary code for inclusion in HRP-2025-09, conditional on the approval of this proposal.
 
 ## Success Metrics
 
-This proposal will be successful if deployments in the top 20% of Data Transfer per Hotspot receive higher rewards than they would have if the 20% reservation for PoC had remained in place.
+This proposal will be successful if the promise of increased rewards under adverse market conditions encourages useful deployments.
 
 [hip-53]: https://github.com/helium/HIP/blob/main/0053-mobile-dao.md
 [hip-145]: https://github.com/ferebee/HIP/blob/main/0145-utility-probing.md
