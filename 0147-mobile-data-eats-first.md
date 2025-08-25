@@ -19,7 +19,7 @@ Therefore, PoC rewards are no longer the primary driver of network growth. Data 
 
 Under this proposal, the 20% reservation of emissions for PoC would be removed. Instead, up to 60% of HNT emissions to Mobile would be used to reward Hotspots for Data Transfer pro-rata. Any remaining emissions would be distributed as PoC rewards.
 
-In the interest of simplicity, [HIP-122][hip-122] and, when it becomes obsolete EOY 2025, [HIP-84][hip-84] are repealed.
+For simplicity, [HIP-122][hip-122] and, when it becomes obsolete at the end of 2025, [HIP-84][hip-84] are repealed.
 
 ## Motivation
 
