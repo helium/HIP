@@ -1,10 +1,10 @@
-# HIP XXXX: Mobile Data Eats First
+# HIP 147: Mobile Data Eats First
 
 - Author: [@ferebee](https://github.com/ferebee)
 - Start Date: 2025-08-20
-- Category: Economic
-- Original HIP PR: [#0000](https://github.com/helium/HIP/pull/0000)
-- Tracking Issue: [#0000](https://github.com/helium/HIP/issues/0000)
+- Category: Economic, Technical
+- Original HIP PR: [#1182](https://github.com/helium/HIP/pull/1182)
+- Tracking Issue: [#1183](https://github.com/helium/HIP/issues/1183)
 - Voting Requirement: veHNT Holders
 
 ---
