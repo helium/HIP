@@ -41,7 +41,7 @@ However, if the dollar value of Data Transfer (DC Burn) exceeds the dollar value
 
 ### Repeal of HIP-122 and HIP-84
 
-In the early stages of the Mobile network, hex boosting as described in [HIP-84][hip-84] was used to incentivize deployments in particular locations. With [HRP-2025-08][hrp-2025-08], this is now deprecated, as boosted hexes are no longer believed to be useful. [HIP-122][hip-122] was implemented to provide an upper bound on boosted hex PoC, but with the decay of boosted hexes, boosted rewards have declined naturally to lower levels. Therefore, if this proposal is approved:
+In the early stages of the Mobile network, Hex Boosting as described in [HIP-84][hip-84] was used to incentivize deployments in particular locations. With [HRP-2025-08][hrp-2025-08], this feature is now deprecated, as boosted hexes are no longer believed to be useful. [HIP-122][hip-122] was implemented to provide an upper bound on boosted hex PoC, but with the decay of boosted hexes, boosted rewards have declined naturally to lower levels. Therefore, if this proposal is approved:
 - [HIP-122][hip-122] is repealed immediately
 - [HIP-84][hip-84] is repealed effective 2025-12-31, as the last boosted hex is scheduled to expire 2025-12-26.
 
