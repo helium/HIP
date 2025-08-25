@@ -1,6 +1,6 @@
 # HIP 147: Mobile Data Eats First
 
-- Author: [@ferebee](https://github.com/ferebee)
+- Author: [@ferebee](https://github.com/ferebee), [madninja](https://github.com/madninja)
 - Start Date: 2025-08-20
 - Category: Economic, Technical
 - Original HIP PR: [#1182](https://github.com/helium/HIP/pull/1182)
