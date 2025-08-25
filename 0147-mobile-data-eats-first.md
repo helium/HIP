@@ -19,6 +19,8 @@ Therefore, PoC rewards are no longer the primary driver of network growth. Data 
 
 Under this proposal, the 20% reservation of emissions for PoC would be removed. Instead, up to 60% of HNT emissions to Mobile would be used to reward Hotspots for Data Transfer pro-rata. Any remaining emissions would be distributed as PoC rewards.
 
+In the interest of simplicity, [HIP-122][hip-122] and, when it becomes obsolete EOY 2025, [HIP-84][hip-84] are repealed.
+
 ## Motivation
 
 The success of the Helium Mobile network depends on Data Transfer. PoC was an important motivator of deployment in the early stages of the network, but now that Hotspots that meet the needs of carrier partners can often earn Data Transfer rewards within weeks, PoC is less important.
@@ -36,6 +38,12 @@ Under this proposal, the 20% reservation of HNT emissions to the Mobile network 
 As before, if there is no Data Transfer in an Epoch, 60% of emissions to Mobile will be distributed as PoC rewards.
 
 However, if the dollar value of Data Transfer (DC Burn) exceeds the dollar value of 60% of HNT emissions to the Mobile network, then PoC rewards to Mobile Hotspots will be zero, and the entire 60% will be distributed pro-rata among Hotspots for Data Transfer.
+
+### Repeal of HIP-122 and HIP-84
+
+In the early stages of the Mobile network, hex boosting as described in [HIP-84][hip-84] was used to incentivize deployments in particular locations. With [HRP-2025-08][hrp-2025-08], this is now deprecated, as boosted hexes are no longer believed to be useful. [HIP-122][hip-122] was implemented to provide an upper bound on boosted hex PoC, but with the decay of boosted hexes, boosted rewards have declined naturally to lower levels. Therefore, if this proposal is approved:
+- [HIP-122][hip-122] is repealed immediately
+- [HIP-84][hip-84] is repealed effective 2025-12-31, as the last boosted hex is scheduled to expire 2025-12-26.
 
 ### Examples
 
@@ -295,4 +303,7 @@ Core developers have completed the necessary code for inclusion in HRP-2025-09, 
 This proposal will be successful if the promise of increased rewards under adverse market conditions encourages useful deployments.
 
 [hip-53]: https://github.com/helium/HIP/blob/main/0053-mobile-dao.md
+[hip-84]: https://github.com/helium/HIP/blob/main/0084-service-provider-hex-boosting.md
+[hip-122]: https://github.com/helium/HIP/blob/main/0122-amend-service-provider-hex-boosting.md
 [hip-145]: https://github.com/helium/HIP/blob/main/0145-utility-probing.md
+[hrp-2025-08]: https://github.com/helium/helium-release-proposals/blob/main/releases/20250812-core-devs.md
