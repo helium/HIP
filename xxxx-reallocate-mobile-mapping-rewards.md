@@ -39,7 +39,9 @@ This proposal affects:
 
 ## Detailed Explanation
 
-Under this proposal, the 20% reservation of HNT emissions for Mobile Mapping would move to the Service Provider Rewards Pool. The Incentive Escrow Fund would be terminated but this would not affect existing Service Provider Rewards, and simplifies on chain accounting and behavior.
+Under this proposal, 10% reservation of HNT emissions for Mobile Mapping would move back to the Service Provider Rewards Pool. The other 10% would be moved to the Data Rewards Pool.
+
+The Incentive Escrow Fund would be terminated but this would not affect existing Service Provider Rewards, and simplifies on chain accounting and behavior.
 
 ### Repeal of HIP-79, HIP-118, and HIP-114
 
