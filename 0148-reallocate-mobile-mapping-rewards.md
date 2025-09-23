@@ -1,10 +1,10 @@
-# HIP xxx: Reallocate Mobile Mapping Rewards
+# HIP 148: Reallocate Mobile Mapping Rewards
 
-- Author: [madninja](https://github.com/madninja)
-- Start Date: 2025-09-22
+- Author: [@madninja](https://github.com/madninja)
+- Start Date: 2025-09-23
 - Category: Economic, Technical
-- Original HIP PR: [](https://github.com/helium/HIP/pull/)
-- Tracking Issue: [](https://github.com/helium/HIP/issues/)
+- Original HIP PR: [#1186](https://github.com/helium/HIP/pull/1186)
+- Tracking Issue: [#1187](https://github.com/helium/HIP/issues/1187)
 - Voting Requirement: veHNT Holders
 
 ---
