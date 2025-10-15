@@ -1,6 +1,6 @@
 # HIP XXX: Deprecate Mobile PoC
 
-- Authors: [@AndrewsMD](https://github.com/AndrewsMD, [@ferebee](https://github.com/ferebee)
+- Authors: [@AndrewsMD](https://github.com/AndrewsMD), [@ferebee](https://github.com/ferebee)
 - Start Date: 2025-10-09
 - Category: Economic, Technical
 - Original HIP PR: [#0000](https://github.com/helium/HIP/pull/0000)
