@@ -119,7 +119,7 @@ Add vote tracking fields to the HIP's YAML frontmatter:
 - `vote-summary-url: {raw gist URL}`
 - `vote-pr: {PR URL or helium/helium-vote#NN}`
 
-If the HIP uses legacy markdown-list metadata, add the fields in the same format for consistency.
+The HIP should already have YAML frontmatter (converted by `/hip:assign`). If for some reason it still uses legacy markdown-list metadata, convert to YAML first using the same process as `/hip:assign` step 7.
 
 Commit this change with message: `Add vote tracking for HIP-{NNN}`
 
@@ -150,4 +150,9 @@ Tell the user:
 - PR opened against helium/helium-vote (with URL)
 - HIP frontmatter updated with vote tracking fields
 - Reddit update posted (or reminder to post)
-- Next step: a maintainer reviews and merges the vote PR, then the multisig signers approve the on-chain proposal
+- Next steps:
+  1. A maintainer reviews and merges the vote PR on helium/helium-vote
+  2. The multisig signers approve the on-chain proposal
+  3. **Once the vote is live on heliumvote.com**, run `/hip:status NNN voting-open` to update the README badge, tracking issue labels, and HIP status
+
+The status is NOT updated here because the vote isn't live yet — there's a delay between opening the vote PR and the multisig activation on-chain. `/hip:status` should be run when the vote is actually live.
