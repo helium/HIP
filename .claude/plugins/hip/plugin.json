@@ -1,0 +1,5 @@
+{
+  "name": "hip",
+  "description": "Helium Improvement Proposal lifecycle management",
+  "skills": ["skills/*.md"]
+}
