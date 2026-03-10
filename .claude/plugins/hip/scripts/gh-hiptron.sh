@@ -1,10 +1,10 @@
 #!/bin/bash
 # Run gh CLI commands as the hiptron GitHub user.
-# Parses the token from ~/.config/hrp/github.env and passes it via GH_TOKEN.
+# Parses the token from ~/.config/hip/github.env and passes it via GH_TOKEN.
 
 set -euo pipefail
 
-ENV_FILE="$HOME/.config/hrp/github.env"
+ENV_FILE="$HOME/.config/hip/github.env"
 
 if [ ! -f "$ENV_FILE" ]; then
   echo "Error: $ENV_FILE not found." >&2

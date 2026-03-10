@@ -11,7 +11,7 @@ Usage:
 The Reddit post ID is stored in the HIP file's YAML frontmatter as
 `reddit-post-id`. This keeps tracking in the repo itself, visible to all users.
 
-Credentials are read from environment variables or ~/.config/hrp/reddit.env:
+Credentials are read from environment variables or ~/.config/hip/reddit.env:
   REDDIT_CLIENT_ID, REDDIT_CLIENT_SECRET, REDDIT_USERNAME, REDDIT_PASSWORD
 """
 
@@ -26,7 +26,7 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
-ENV_FILE = Path.home() / ".config" / "hrp" / "reddit.env"
+ENV_FILE = Path.home() / ".config" / "hip" / "reddit.env"
 USER_AGENT = "helium-improvement-proposals/1.0 (by /u/HeliumConsoleTeam)"
 
 
