@@ -36,13 +36,14 @@ HIPs and HRPs are separate but related governance processes:
 6. Maintainer updates the README.md index table
 7. Merge
 
-Steps 4-6 are manual today. Ideally these would be automated (GitHub Actions or similar).
+Steps 3-6 are automated by `/hip:assign`.
 
 ## HIP Plugin (`/hip:*`)
 
-Four skills for HIP lifecycle — see `.claude/plugins/hip/skills/`:
+Five skills for HIP lifecycle — see `.claude/plugins/hip/skills/`:
 - `/hip:create` — scaffold new HIP with category-specific guidance
 - `/hip:review` — quality/completeness review with argument assessment
+- `/hip:assign` — assign HIP number, create tracking issue, update README, prepare for merge
 - `/hip:vote-open` — open heliumvote.com voting (requires hiptron credentials)
 - `/hip:post` — Reddit announcements on r/HeliumNetwork
 
