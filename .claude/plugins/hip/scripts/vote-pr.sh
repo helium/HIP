@@ -46,6 +46,27 @@ if [[ -z "$HIP_NUMBER" || -z "$TITLE" || -z "$CATEGORY" || -z "$GIST_URL" || -z 
   usage
 fi
 
+# Input validation
+if ! [[ "$HIP_NUMBER" =~ ^[0-9]+$ ]]; then
+  echo "Error: --hip-number must be numeric (got: $HIP_NUMBER)" >&2
+  exit 1
+fi
+
+if ! [[ "$GIST_URL" =~ ^https://gist\.githubusercontent\.com/ ]]; then
+  echo "Error: --gist-url must be a raw gist URL (https://gist.githubusercontent.com/...)" >&2
+  exit 1
+fi
+
+if ! [[ "$HIP_FILE" =~ ^[0-9]{4}-[a-z0-9-]+\.md$ ]]; then
+  echo "Error: --hip-file must match NNNN-slug.md format (got: $HIP_FILE)" >&2
+  exit 1
+fi
+
+if ! [[ "$CATEGORY" =~ ^(economic|technical|meta)(,\ ?(economic|technical|meta))*$ ]]; then
+  echo "Error: --category must be economic, technical, or meta (got: $CATEGORY)" >&2
+  exit 1
+fi
+
 BRANCH="hip-${HIP_NUMBER}"
 
 # Map category to tags
