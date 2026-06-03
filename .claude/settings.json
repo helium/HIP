@@ -1,0 +1,10 @@
+{
+  "plugins": {
+    "hip": {
+      "source": {
+        "type": "local",
+        "path": ".claude/plugins/hip"
+      }
+    }
+  }
+}
