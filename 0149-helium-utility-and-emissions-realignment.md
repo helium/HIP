@@ -7,6 +7,7 @@ original-hip-pr: https://github.com/helium/HIP/pull/1200
 tracking-issue: https://github.com/helium/HIP/issues/1201
 vote-requirements: veHNT Holders
 status: In Discussion
+reddit-post-id: 1twsn06
 ---
 
 # HIP 149: Helium Utility and Emissions Realignment
