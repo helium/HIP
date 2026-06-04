@@ -1,13 +1,15 @@
-# HIP 149: Helium Utility and Emissions Realignment
-
-- Author: [@madninja](https://github.com/madninja)
-- Start Date: 2026-06-02
-- Category: Economic, Technical
-- Original HIP PR: <!-- maintainer will fill in -->
-- Tracking Issue: <!-- maintainer will create -->
-- Voting Requirement: veHNT Holders
-
 ---
+authors:
+  - "@madninja"
+start-date: 2026-06-02
+category: Economic, Technical
+original-hip-pr: https://github.com/helium/HIP/pull/1200
+tracking-issue: https://github.com/helium/HIP/issues/1201
+vote-requirements: veHNT Holders
+status: In Discussion
+---
+
+# HIP 149: Helium Utility and Emissions Realignment
 
 ## Summary
 
