@@ -214,9 +214,9 @@ The on-chain changes ship in a single program upgrade at passage. Verifier oracl
 
 This proposal is not backwards compatible in the sense that PoC reward emissions stop after passage. Hotspots earning predominantly through PoC today will see their rewards drop to zero from the PoC bucket and depend on data utility. The +20% Mobile data reallocation and the dynamic floor are the offsetting mechanisms for Mobile; IoT continues at the existing $/DC peg.
 
-HIPs retired by Mobile PoC removal: [74][hip-74], [75][hip-75], [85][hip-85], [101][hip-101], [105][hip-105], [107][hip-107], [111][hip-111], [113][hip-113], [118][hip-118], [119][hip-119], [131][hip-131], [132][hip-132], [133][hip-133], [135][hip-135], [147][hip-147].
+HIPs retired by Mobile PoC removal: [74][hip-74], [75][hip-75], [85][hip-85], [105][hip-105], [113][hip-113], [119][hip-119], [131][hip-131], [133][hip-133], [135][hip-135], [147][hip-147].
 
-HIPs retired by IoT PoC removal: [15][hip-15], [17][hip-17], [21][hip-21], [42][hip-42], [44][hip-44], [50][hip-50], [54][hip-54], [57][hip-57], [58][hip-58], [61][hip-61], [62][hip-62], [66][hip-66], [72][hip-72], [83][hip-83], [94][hip-94], [127][hip-127], [136][hip-136], [137][hip-137].
+HIPs retired by IoT PoC removal: [15][hip-15], [17][hip-17], [54][hip-54], [58][hip-58], [83][hip-83], [136][hip-136], [137][hip-137].
 
 HIPs retired under the SP allocation reframe: [82][hip-82] and [87][hip-87]. [HIP 93][hip-93] is partially amended.
 
@@ -232,18 +232,9 @@ Documentation at <http://docs.helium.com> will need to reflect the retirement of
 [hip-15]: ./0015-beaconing-rewards.md
 [hip-17]: ./0017-hex-density-based-transmit-reward-scaling.md
 [hip-20]: ./0020-hnt-max-supply.md
-[hip-21]: ./0021-poc-link-layer.md
-[hip-42]: ./0042-beacon-witness-ratio-witness-reward-limit.md
-[hip-44]: ./0044-witness-decay.md
-[hip-50]: ./0050-display-all-potential-beacon-witnesses.md
 [hip-53]: ./0053-mobile-dao.md
 [hip-54]: ./0054-h3dex-targeting.md
-[hip-57]: ./0057-poc-rewards-establishment-period.md
 [hip-58]: ./0058-poc-distance-limit.md
-[hip-61]: ./0061-increase-challenger-rewards.md
-[hip-62]: ./0062-poc-witness-ip-check.md
-[hip-66]: ./0066-trust-score-and-denylist-convenience.md
-[hip-72]: ./0072-secure-concentrators.md
 [hip-74]: ./0074-mobile-poc-modeled-coverage-rewards.md
 [hip-75]: ./0075-mobile-poc-initiate-programmatic-minting-and-updated-emissions-curve.md
 [hip-82]: ./0082-helium-mobile-service-provider.md
@@ -251,18 +242,11 @@ Documentation at <http://docs.helium.com> will need to reflect the retirement of
 [hip-85]: ./0085-mobile-hex-coverage-limit.md
 [hip-87]: ./0087-proportional-service-provider-rewards.md
 [hip-93]: ./0093-addition-of-wifi-aps-to-mobile-subdao.md
-[hip-94]: ./0094-response-time-windows-for-witness-rewarding.md
-[hip-101]: ./0101-equalizing-poc-rewards-across-wifi-and-cbrs.md
 [hip-105]: ./0105-modification-of-mobile-subdao-hex-limits.md
-[hip-107]: ./0107-preventing-gaming-within-the-mobile-network.md
-[hip-111]: ./0111-mobile-data-utility-benchmark.md
 [hip-113]: ./0113-reward-cbrs-as-experimental.md
-[hip-118]: ./0118-verification-mapping.md
 [hip-119]: ./0119-closing-gaming-loopholes-within-the-mobile-network.md
-[hip-127]: ./0127-dynamic-iot-poc.md
 [hip-130]: ./0130-data-only-mobile-hotspots.md
 [hip-131]: ./0131-bridging-gap-between-verification-mappers-and-anti-gaming-measures.md
-[hip-132]: ./0132-scaling-mobile-mappers.md
 [hip-133]: ./0133-bridging-gap-for-anti-gaming-measures-phase2.md
 [hip-135]: ./0135-transitioning-to-templated-mobile-coverage.md
 [hip-136]: ./0136-eliminate-iot-rewards-for-redundant-coverage.md
