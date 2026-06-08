@@ -46,7 +46,7 @@ This proposal ties deployer earnings to the carrier-paid rate Nova sets under [H
 
 ### Decision 1: Deployer floor tied to carrier burn
 
-Mobile data deployers earn HNT pro-rata of rewardable bytes from the 84% data bucket of Mobile sub-DAO emission (Decision 3). Each epoch, that baseline emission is valued in USD/GB and compared against a floor of 50% of the carrier-paid burn rate. When the baseline meets or exceeds the floor, the backstop is zero and deployers earn the pro-rata baseline. When it falls below, the protocol emits additional HNT sized to bring deployer earnings up to the floor.
+Mobile data deployers earn HNT pro-rata of rewardable bytes from the 84% data bucket of Mobile sub-DAO emission (Decision 3). Each epoch, that baseline emission is valued in USD/GB and compared against a floor of 50% of the carrier-paid burn rate. When the baseline meets or exceeds the floor, the backstop is zero and deployers earn the pro-rata baseline. When it falls below, the protocol mints additional HNT sized so that, after distribution through the standard sub-DAO allocation, the Mobile data slice brings deployer earnings up to the floor.
 
 | Condition | Outcome for Mobile data deployers |
 |---|---|
@@ -56,16 +56,22 @@ Mobile data deployers earn HNT pro-rata of rewardable bytes from the 84% data bu
 The protocol computes the backstop emission each epoch from the published formula:
 
 ```
-backstop = max(0, ((0.5 × R_burn × bytes_GB / HNT_price) - D_baseline) / 0.75)
+D_target = 0.5 × R_burn × bytes_GB / HNT_price
+α        = mobile_percent_share × 0.84
+backstop = max(0, (D_target − D_baseline) / α)
 ```
 
-`R_burn` is the carrier-paid burn rate Nova sets under [HIP 143][hip-143]; `bytes_GB` is rewardable bytes in the epoch; `HNT_price` is the HNT/USD price; `D_baseline` is baseline Mobile data deployer emission ((HIP 20 schedule + net emissions re-emit) × Mobile percent share × 84% data bucket). The 0.75 factor accounts for the backstop flowing through the existing sub-DAO allocation (see Decision 3).
+`R_burn` is the carrier-paid burn rate Nova sets under [HIP 143][hip-143]; `bytes_GB` is rewardable bytes in the epoch; `HNT_price` is the HNT/USD price; `D_baseline` is baseline Mobile data deployer emission ((HIP 20 schedule + Net Emissions re-emit) × α); `mobile_percent_share` is the Mobile sub-DAO's current percent share of HNT emission, derived on-chain from a 30-epoch EMA of `mobile_vehnt / (mobile_vehnt + iot_vehnt)` (~0.89 at current delegations); and `α` is the fraction of total HNT emission that reaches the Mobile data bucket.
+
+The division by `α` reflects how the backstop is realised on-chain. The backstop is minted into the protocol's per-epoch total emission and then distributed through the standard sub-DAO allocation, so only `α` of it reaches Mobile data deployers. To lift Mobile data emission by `(D_target − D_baseline)`, the protocol must mint `(D_target − D_baseline) / α`. The remaining `(1 − α)` of the backstop flows to the Mobile Operations Fund, the delegator pool, and the IoT sub-DAO at their existing percent shares (see Decision 3); in any epoch the backstop fires, those recipients receive a proportional increase relative to baseline as a mechanical side effect of how the floor is delivered. Decision 1 is named for its goal (a deployer floor) but materially raises all recipients' emissions when it binds.
+
+`α` is a per-epoch variable, not a hardcoded constant: if the Mobile/IoT veHNT split shifts, the on-chain Mobile percent share moves and `α` moves with it. The formula recomputes `α` each epoch from on-chain state, so the floor binds for Mobile data deployers under any delegation split, not only the current ~89/11.
 
 Effective Mobile data deployer earn rate per GB = `max(baseline_$/GB, 0.5 × R_burn)`. Two effects flow through to deployers without a follow-on vote: HNT/USD price increases raise the USD value of pro-rata baseline rewards; carrier-rate increases under [HIP 143][hip-143] raise the floor.
 
-Ahead of the vote on this proposal, Nova will reduce the carrier-paid burn rate from $0.50/GB to ~$0.10/GB under [HIP 143][hip-143]. The reduction reflects current commercial offload rates; [HIP 143][hip-143] is the existing authority for the burn-rate setting and permits further adjustments under Nova's commercial discretion. The floor sits at $0.05/GB (50% × $0.10 carrier-paid burn rate). It binds when the Mobile data deployer pool (~15,215 HNT/day after Decision 3's +14pp reallocation) at the current ~91K GB/day rewardable volume falls below $0.05/GB in USD, which happens when HNT drops below ~$0.30. Above that threshold, deployers earn baseline and the backstop stays at zero. The backstop activates under HNT downside or carrier-rate uplift.
+Ahead of the vote on this proposal, Nova will reduce the carrier-paid burn rate from $0.50/GB to ~$0.10/GB under [HIP 143][hip-143]. The reduction reflects current commercial offload rates; [HIP 143][hip-143] is the existing authority for the burn-rate setting and permits further adjustments under Nova's commercial discretion. The floor sits at $0.05/GB (50% × $0.10 carrier-paid burn rate). At the current ~89/11 Mobile/IoT split, `α ≈ 0.75`, and the Mobile data deployer pool (~15,215 HNT/day after Decision 3's +14pp reallocation) at ~91K GB/day rewardable volume falls below $0.05/GB in USD when HNT drops below ~$0.30. Above that threshold, deployers earn baseline and the backstop stays at zero. The backstop activates under HNT downside or carrier-rate uplift.
 
-The floor share (50%) and the formula itself sit outside any administrative authority. Changing them requires a community HIP and program upgrade.
+The floor share (50%), the 84% Mobile data bucket, and the formula itself sit outside any administrative authority. Changing them requires a community HIP and program upgrade. `mobile_percent_share` is not a parameter; it tracks on-chain veHNT delegation and floats with it.
 
 IoT data transfer is unaffected by Decision 1 and continues on the existing $/DC peg. The IoT sub-DAO's existing percent share of any Mobile-driven backstop emission flows to the IoT Operations Fund (Decision 3).
 
@@ -122,7 +128,7 @@ The on-chain SP role under [HIPs 82][hip-82] and [87][hip-87] ends; the SP NFT/e
 - IoT Operations Fund absorbs the former PoC bucket and data-bucket underflow.
 - The IoT sub-DAO's existing percent share of any Mobile-driven backstop emission (Decision 1) also flows to the IoT Operations Fund. IoT data deployers are already paid at peg from baseline; this share is not split with them.
 
-**Backstop flow.** Decision 1's backstop flows through the standard sub-DAO allocation. 75% reaches Mobile data deployers; the remaining 25% routes to the Mobile Operations Fund (~9%), the delegator pool (~6%), and the IoT sub-DAO (~10%) at their existing percent shares. The IoT sub-DAO's portion flows to the IoT Operations Fund.
+**Backstop flow.** Decision 1's backstop is minted into the protocol's per-epoch total emission and distributed via the standard sub-DAO allocation. The fraction reaching Mobile data deployers (the targeted floor uplift) is `α = mobile_percent_share × 0.84`, currently ~75% at the ~89/11 Mobile/IoT veHNT split; the remaining ~25% routes to the Mobile Operations Fund (~9%), the delegator pool (~6%), and the IoT sub-DAO (~10%) at their existing percent shares. `α` and the residual shares move with veHNT delegation. The IoT sub-DAO's portion flows to the IoT Operations Fund.
 
 ### Decision 4: Advisory Council
 
