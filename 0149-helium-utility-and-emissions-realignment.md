@@ -17,7 +17,7 @@ reddit-post-id: 1twsn06
 This HIP bundles four governance decisions, executed in a single program upgrade at passage:
 
 1. Mobile data deployers earn HNT pro-rata of rewardable bytes. A USD-anchored backstop tops up that baseline whenever it falls below 50% of the carrier-paid burn rate Nova sets under [HIP 143][hip-143].
-2. An operations and growth capitalization: a per-epoch HNT mint into a Nova-administered Squads multisig vault for a flat-rate window followed by a multi-year linear taper. Total **~141M HNT over 36 months**, about 72% of current circulating HNT supply, front-loaded (~50% in the first 12 months). Both windows are hardcoded at passage and self-terminate.
+2. An operations and growth capitalization: a per-epoch HNT mint into a Nova-administered Squads multisig vault for a flat-rate window followed by a multi-year linear taper. Total **~141M HNT over 36 months**, about 77% of current on-chain HNT supply (~182.5M), front-loaded (~50% in the first 12 months). Both windows are hardcoded at passage and self-terminate.
 3. Retirement of Proof-of-Coverage on both Mobile and IoT. Mobile data deployers earn pro-rata of rewardable bytes; the on-chain Service Provider allocation under [HIPs 82][hip-82]/[87][hip-87] is reframed as a flat Mobile Operations Fund. IoT data transfer continues at the existing $/DC peg.
 4. A 7-seat Advisory Council with standing oversight of how the operations and growth capitalization is used, with the authority to escalate to a community termination vote.
 
@@ -39,7 +39,7 @@ This proposal ties deployer earnings to the carrier-paid rate Nova sets under [H
 
 - **Mobile data deployers.** Gain an immediate +20% uplift on baseline data rewards from the reallocation in Decision 3, plus a USD-anchored floor from Decision 1.
 - **IoT data deployers.** Unchanged on the income side ($/DC peg preserved); IoT PoC retires.
-- **veHNT holders and delegators.** 6% delegator allocation preserved. Effective HNT max supply rises from 223M to ~364M to fund the capitalization in Decision 2.
+- **veHNT holders and delegators.** 6% delegator allocation preserved. Effective HNT max supply rises from ~206M (today's effective ceiling, after cumulative reductions since HIP 20) to ~347M to fund the capitalization in Decision 2.
 - **Carriers and offload partners.** Continue under the existing [HIP 143][hip-143] commercial framework. The deployer floor follows carrier pricing.
 
 ## Detailed Explanation
@@ -93,10 +93,10 @@ Combined accrual: **~141M HNT**, fully bounded at deploy. Both boundaries auto-t
 | Mint rate during flat window | ~196,000 HNT/day (~9.5× the current ~20,548 HNT/day HIP 20 network emission) |
 | Vault share of gross HNT issuance during flat | ~90% (mint + existing emission ≈ 216,500 HNT/day; vault receives ~196,000 of it) |
 | Program total | ~141M HNT over 36 months, front-loaded (~50% in the flat first 12 months, ~50% tapering linearly over the next 24) |
-| Cumulative new supply vs current circulating | ~141M / ~196M ≈ 72% of current circulating HNT supply (issued over 36 months) |
+| Cumulative new supply vs current on-chain HNT | ~141M / ~182.5M ≈ 77% of current on-chain HNT supply (issued over 36 months) |
 | USD value at HNT $0.60 reference | ~$85M total (~$42M in the first 12 months, ~$42M over the next 24); scales linearly with HNT price |
 
-**Supply impact.** The capitalization is a new mint stream, additive to [HIP 20][hip-20]'s halving schedule and not subject to its halvings. [HIP 20][hip-20]'s halving schedule continues unchanged; its 223M max-supply property is not preserved. Effective max HNT supply rises to roughly 364M (~196M circulating + ~27M HIP 20 remainder + ~141M capitalization). The same pattern was used in the audited [HIP 138][hip-138] MOBILE-treasury supplement (~2.9M HNT minted outside HIP 20's schedule from Dec 2024 to Aug 2025); the capitalization here is also bounded at deploy.
+**Supply impact.** The capitalization is a new mint stream, additive to [HIP 20][hip-20]'s halving schedule and not subject to its halvings. [HIP 20][hip-20]'s halving schedule continues unchanged; its named max-supply property is not preserved. HIP 20 projected an asymptotic max of 223M HNT in Nov 2020. Cumulative permanent reductions since (~9.5M L1 post-Y1 reductions plus ~10.3M Solana-era burns above the net_emissions_cap path and via the no_emit wallet, partially offset by HIP 138's ~2.9M supplement above schedule) have shifted the effective ceiling to ~206M today (current on-chain supply ~182.5M plus ~23.6M remaining under the HIP 20 schedule). Effective max HNT supply rises from ~206M to ~347M (= 206M + 141M HIP 149 capitalization). The same pattern was used in the audited [HIP 138][hip-138] MOBILE-treasury supplement (~2.9M HNT minted outside HIP 20's schedule from Dec 2024 to Aug 2025); the capitalization here is also bounded at deploy.
 
 **Use of funds.** International carrier expansion, deployer programs, engineering (network intelligence and carrier interoperability), ecosystem grants, regulatory work, and core operating costs. The capitalization mints to the vault only; it does not flow to on-chain Hotspot rewards.
 
@@ -173,7 +173,7 @@ A 7-seat Advisory Council with standing oversight of how the operations and grow
 
 ### What this proposal does not change
 
-- [HIP 20][hip-20] halving emission schedule and Net Emissions re-emission mechanism (the 223M max-supply property is the only HIP 20 element affected; the schedule itself runs unchanged).
+- [HIP 20][hip-20] halving emission schedule and Net Emissions re-emission mechanism (HIP 20's max-supply projection is raised by HIP 149's capitalization; the schedule itself runs unchanged).
 - Sub-DAO structure (Mobile and IoT).
 - veHNT lockup positions, multipliers, and voting mechanics.
 - 6% delegator allocation.
@@ -184,7 +184,7 @@ A 7-seat Advisory Council with standing oversight of how the operations and grow
 
 ## Drawbacks
 
-- **Dilution.** The capitalization in Decision 2 raises effective max HNT supply from 223M to ~364M. The accrual is bounded at deploy and self-terminating.
+- **Dilution.** The capitalization in Decision 2 raises effective max HNT supply from ~206M (today's effective ceiling, after cumulative reductions since HIP 20's 2020 projection) to ~347M. The accrual is bounded at deploy and self-terminating.
 - **Bundling.** Voters cannot accept some decisions and reject others. The decisions are operationally coupled (the Council oversees the capitalization; the floor relies on the same program upgrade as the reallocation), but a voter who supports three of four still has to vote on the bundle.
 - **PoC removal ends a reward category.** Some deployments that brought network value primarily through PoC may not be sustained on data utility alone. The proposal accepts this trade in exchange for routing rewards to verifiable utility.
 - **Dependence on the carrier-rate setting.** The deployer floor depends on the carrier-paid rate Nova sets under [HIP 143][hip-143]. Council insight rights cover this setting, but the authority remains with Nova as in [HIP 143][hip-143].
