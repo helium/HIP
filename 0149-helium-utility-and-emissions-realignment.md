@@ -17,9 +17,9 @@ reddit-post-id: 1twsn06
 This HIP bundles four governance decisions, executed in a single program upgrade at passage:
 
 1. Mobile data deployers earn HNT pro-rata of rewardable bytes. A USD-anchored backstop tops up that baseline whenever it falls below 50% of the carrier-paid burn rate Nova sets under [HIP 143][hip-143].
-2. An operations and growth capitalization: a per-epoch HNT mint into a Nova-administered Squads multisig vault for a flat-rate window followed by a multi-year linear taper. Total **~141M HNT over 36 months**, about 77% of current on-chain HNT supply (~182.5M), front-loaded (~50% in the first 12 months). Both windows are hardcoded at passage and self-terminate.
+2. An operations and growth supplement: a per-epoch HNT mint into a Nova-administered Squads multisig vault for a flat-rate window followed by a multi-year linear taper. Total **~141M HNT over 36 months**, about 77% of current on-chain HNT supply (~182.5M), front-loaded (~50% in the first 12 months). Both windows are hardcoded at passage and self-terminate.
 3. Retirement of Proof-of-Coverage on both Mobile and IoT. Mobile data deployers earn pro-rata of rewardable bytes; the on-chain Service Provider allocation under [HIPs 82][hip-82]/[87][hip-87] is reframed as a flat Mobile Operations Fund. IoT data transfer continues at the existing $/DC peg.
-4. A 7-seat Advisory Council with standing oversight of how the operations and growth capitalization is used, with the authority to escalate to a community termination vote.
+4. A 7-seat Advisory Council with standing oversight of how the operations and growth supplement is used, with the authority to escalate to a community termination vote.
 
 One veHNT vote approves all four decisions together.
 
@@ -31,15 +31,15 @@ Three problems follow:
 
 - **Deployer earnings are unanchored to revenue.** Carrier-driven burn enters circulation as DC and permanently leaves on use; the income deployers receive is decoupled from the rate carriers actually pay.
 - **Proof-of-Coverage pays for existing rather than for serving subscribers.** The work that grows the network now is offload utility, not coverage proofs.
-- **Operations and growth are undercapitalized.** Carrier expansion, deployer programs, and core engineering are funded on a year-by-year basis with no encoded runway.
+- **Operations and growth are under-funded.** Carrier expansion, deployer programs, and core engineering are funded on a year-by-year basis with no encoded runway.
 
-This proposal ties deployer earnings to the carrier-paid rate Nova sets under [HIP 143][hip-143], capitalizes operations and growth on a bounded schedule, retires PoC on both networks, and establishes standing community oversight of the capitalization.
+This proposal ties deployer earnings to the carrier-paid rate Nova sets under [HIP 143][hip-143], supplements operations and growth on a bounded schedule, retires PoC on both networks, and establishes standing community oversight of the supplement.
 
 ## Stakeholders
 
 - **Mobile data deployers.** Gain an immediate +20% uplift on baseline data rewards from the reallocation in Decision 3, plus a USD-anchored floor from Decision 1.
 - **IoT data deployers.** Unchanged on the income side ($/DC peg preserved); IoT PoC retires.
-- **veHNT holders and delegators.** 6% delegator allocation preserved. Effective HNT max supply rises from ~206M (today's effective ceiling, after cumulative reductions since HIP 20) to ~347M to fund the capitalization in Decision 2.
+- **veHNT holders and delegators.** 6% delegator allocation preserved. Effective HNT max supply rises from ~206M (today's effective ceiling, after cumulative reductions since HIP 20) to ~347M to fund the supplement in Decision 2.
 - **Carriers and offload partners.** Continue under the existing [HIP 143][hip-143] commercial framework. The deployer floor follows carrier pricing.
 
 ## Detailed Explanation
@@ -73,9 +73,9 @@ The floor share (50%) and the 84% Mobile data bucket are hardcoded; changing the
 
 IoT data transfer is unaffected by Decision 1 and continues on the existing $/DC peg. The IoT sub-DAO's existing percent share of any Mobile-driven backstop emission flows to the IoT Operations Fund (Decision 3).
 
-### Decision 2: Operations and growth capitalization
+### Decision 2: Operations and growth supplement
 
-A per-epoch HNT mint into an operations and growth capitalization vault (Nova-administered Squads multisig; recipient address fixed at the program upgrade), with two hardcoded boundary timestamps. Distinct from the on-chain Mobile Operations Fund in Decision 3 (which is a 10% slice of Mobile sub-DAO emission distributed on-chain); the capitalization vault is a separate mint stream that does not flow through the sub-DAO allocation.
+A per-epoch HNT mint into an operations and growth supplement vault (Nova-administered Squads multisig; recipient address fixed at the program upgrade), with two hardcoded boundary timestamps. Distinct from the on-chain Mobile Operations Fund in Decision 3 (which is a 10% slice of Mobile sub-DAO emission distributed on-chain); the supplement vault is a separate mint stream that does not flow through the sub-DAO allocation.
 
 | Parameter | First window (flat) | Second window (taper) |
 |---|---|---|
@@ -96,9 +96,9 @@ Combined accrual: **~141M HNT**, fully bounded at deploy. Both boundaries auto-t
 | Cumulative new supply vs current on-chain HNT | ~141M / ~182.5M ≈ 77% of current on-chain HNT supply (issued over 36 months) |
 | USD value at HNT $0.60 reference | ~$85M total (~$42M in the first 12 months, ~$42M over the next 24); scales linearly with HNT price |
 
-**Supply impact.** The capitalization is a new mint stream, additive to [HIP 20][hip-20]'s halving schedule and not subject to its halvings. [HIP 20][hip-20]'s halving schedule continues unchanged; its named max-supply property is not preserved. HIP 20 projected an asymptotic max of 223M HNT in Nov 2020. Cumulative permanent reductions since (~9.5M L1 post-Y1 reductions plus ~10.3M Solana-era burns above the net_emissions_cap path and via the no_emit wallet, partially offset by HIP 138's ~2.9M supplement above schedule) have shifted the effective ceiling to ~206M today (current on-chain supply ~182.5M plus ~23.6M remaining under the HIP 20 schedule). Effective max HNT supply rises from ~206M to ~347M (= 206M + 141M HIP 149 capitalization). The same pattern was used in the audited [HIP 138][hip-138] MOBILE-treasury supplement (~2.9M HNT minted outside HIP 20's schedule from Dec 2024 to Aug 2025); the capitalization here is also bounded at deploy.
+**Supply impact.** The supplement is a new mint stream, additive to [HIP 20][hip-20]'s halving schedule and not subject to its halvings. [HIP 20][hip-20]'s halving schedule continues unchanged; its named max-supply property is not preserved. HIP 20 projected an asymptotic max of 223M HNT in Nov 2020. Cumulative permanent reductions since (~9.5M L1 post-Y1 reductions plus ~10.3M Solana-era burns above the net_emissions_cap path and via the no_emit wallet, partially offset by HIP 138's ~2.9M supplement above schedule) have shifted the effective ceiling to ~206M today (current on-chain supply ~182.5M plus ~23.6M remaining under the HIP 20 schedule). Effective max HNT supply rises from ~206M to ~347M (= 206M + 141M HIP 149 supplement). The same pattern was used in the audited [HIP 138][hip-138] MOBILE-treasury supplement (~2.9M HNT minted outside HIP 20's schedule from Dec 2024 to Aug 2025); the supplement here is also bounded at deploy.
 
-**Use of funds.** International carrier expansion, deployer programs, engineering (network intelligence and carrier interoperability), ecosystem grants, regulatory work, and core operating costs. The capitalization mints to the vault only; it does not flow to on-chain Hotspot rewards.
+**Use of funds.** International carrier expansion, deployer programs, engineering (network intelligence and carrier interoperability), ecosystem grants, regulatory work, and core operating costs. The supplement mints to the vault only; it does not flow to on-chain Hotspot rewards.
 
 **Bound and immutability.** Per-epoch rate, boundary timestamps, and recipient vault address are fixed at the program upgrade; changing any of them requires a new community-voted program upgrade. Vault balance and outflows are observable on-chain in real time.
 
@@ -130,7 +130,7 @@ The on-chain SP role under [HIPs 82][hip-82] and [87][hip-87] ends; the SP NFT/e
 
 ### Decision 4: Advisory Council
 
-A 7-seat Advisory Council with standing oversight of how the operations and growth capitalization is used across both accrual windows.
+A 7-seat Advisory Council with standing oversight of how the operations and growth supplement is used across both supplement windows.
 
 **Composition:**
 
@@ -139,16 +139,16 @@ A 7-seat Advisory Council with standing oversight of how the operations and grow
 
 **Authority:**
 
-- NDA-level information rights over use of the operations and growth capitalization, including insight into carrier revenue negotiations relevant to the [HIP 143][hip-143] burn-rate setting (insight only; [HIP 143][hip-143] authority stays with Nova).
+- NDA-level information rights over use of the operations and growth supplement, including insight into carrier revenue negotiations relevant to the [HIP 143][hip-143] burn-rate setting (insight only; [HIP 143][hip-143] authority stays with Nova).
 - Standard actions (demand disclosure, publish dissent, recommend course-correction): quorum 4 of 7 seated, including at least 2 community seats.
-- Trigger a community vote to terminate the capitalization accrual: quorum 5 of 7 seated, including at least 3 community seats. Nova's 2 seats alone cannot trigger or block.
-- No unilateral on-chain levers. Halting either accrual window requires a community-voted program upgrade.
+- Trigger a community vote to terminate the supplement: quorum 5 of 7 seated, including at least 3 community seats. Nova's 2 seats alone cannot trigger or block.
+- No unilateral on-chain levers. Halting either supplement window requires a community-voted program upgrade.
 
-**Scope.** Council authority covers use of the operations and growth capitalization only. Dynamic floor parameters (50% share, the formula) sit outside Council authority; changing them requires a community HIP and program upgrade.
+**Scope.** Council authority covers use of the operations and growth supplement only. Dynamic floor parameters (50% share, the formula) sit outside Council authority; changing them requires a community HIP and program upgrade.
 
-**Compensation.** HNT-denominated, performance-gated. Paid from the Mobile and IoT Operations Funds (not from the capitalization accrual). Working amount: ~2,000 HNT/month per member, settled by community vote at first seating.
+**Compensation.** HNT-denominated, performance-gated. Paid from the Mobile and IoT Operations Funds (not from the supplement). Working amount: ~2,000 HNT/month per member, settled by community vote at first seating.
 
-**Termination vote (operations and growth capitalization; either or both accrual windows):**
+**Termination vote (operations and growth supplement; either or both supplement windows):**
 
 - Triggerable by Council escalation or direct community proposal.
 - 7-day voting window.
@@ -160,20 +160,20 @@ A 7-seat Advisory Council with standing oversight of how the operations and grow
 | Milestone | Timing | What happens |
 |---|---|---|
 | **Pre-vote burn-rate change** | pre-M0 | Nova reduces the carrier-paid burn rate from $0.50/GB to ~$0.10/GB under [HIP 143][hip-143] (existing authority; no governance vote required), reflecting current commercial offload rates. |
-| **Passage** | M0 | Program upgrade ships: capitalization windows (flat boundary ≈ M0+12mo, taper boundary ≈ M0+36mo), the dynamic floor formula, PoC retirement in verifier oracles, Mobile data reallocation to 84% pro-rata, SP allocation reframed to the 10% Mobile Operations Fund. First-window capitalization accrual begins. Floor formula is live but dormant at passage conditions. Council nomination opens. |
+| **Passage** | M0 | Program upgrade ships: supplement windows (flat boundary ≈ M0+12mo, taper boundary ≈ M0+36mo), the dynamic floor formula, PoC retirement in verifier oracles, Mobile data reallocation to 84% pro-rata, SP allocation reframed to the 10% Mobile Operations Fund. First-window supplement begins minting. Floor formula is live but dormant at passage conditions. Council nomination opens. |
 | **Council seated** | ~M0+49 days | Per-nominee community confirmation vote concludes. Disclosure obligations and escalation pathway operational. |
-| **Flat boundary** | ~M0+12 months (hardcoded) | First-window capitalization auto-transitions to the tapering window. |
-| **Taper boundary** | ~M0+36 months (hardcoded) | Tapering capitalization reaches zero and halts. |
+| **Flat boundary** | ~M0+12 months (hardcoded) | First-window supplement auto-transitions to the tapering window. |
+| **Taper boundary** | ~M0+36 months (hardcoded) | Tapering supplement reaches zero and halts. |
 
 ### Voting mechanics
 
-- veHNT-weighted, single yes/no on the four-decision bundle. The Council exists to oversee the capitalization that funds operations and growth; voting them separately would let one pass without the other.
+- veHNT-weighted, single yes/no on the four-decision bundle. The Council exists to oversee the supplement that funds operations and growth; voting them separately would let one pass without the other.
 - Minimum 7-day forum discussion period; 7-day voting window.
 - Simple majority of votes cast; ≥7% quorum.
 
 ### What this proposal does not change
 
-- [HIP 20][hip-20] halving emission schedule and Net Emissions re-emission mechanism (HIP 20's max-supply projection is raised by HIP 149's capitalization; the schedule itself runs unchanged).
+- [HIP 20][hip-20] halving emission schedule and Net Emissions re-emission mechanism (HIP 20's max-supply projection is raised by HIP 149's supplement; the schedule itself runs unchanged).
 - Sub-DAO structure (Mobile and IoT).
 - veHNT lockup positions, multipliers, and voting mechanics.
 - 6% delegator allocation.
@@ -184,8 +184,8 @@ A 7-seat Advisory Council with standing oversight of how the operations and grow
 
 ## Drawbacks
 
-- **Dilution.** The capitalization in Decision 2 raises effective max HNT supply from ~206M (today's effective ceiling, after cumulative reductions since HIP 20's 2020 projection) to ~347M. The accrual is bounded at deploy and self-terminating.
-- **Bundling.** Voters cannot accept some decisions and reject others. The decisions are operationally coupled (the Council oversees the capitalization; the floor relies on the same program upgrade as the reallocation), but a voter who supports three of four still has to vote on the bundle.
+- **Dilution.** The supplement in Decision 2 raises effective max HNT supply from ~206M (today's effective ceiling, after cumulative reductions since HIP 20's 2020 projection) to ~347M. The accrual is bounded at deploy and self-terminating.
+- **Bundling.** Voters cannot accept some decisions and reject others. The decisions are operationally coupled (the Council oversees the supplement; the floor relies on the same program upgrade as the reallocation), but a voter who supports three of four still has to vote on the bundle.
 - **PoC removal ends a reward category.** Some deployments that brought network value primarily through PoC may not be sustained on data utility alone. The proposal accepts this trade in exchange for routing rewards to verifiable utility.
 - **Dependence on the carrier-rate setting.** The deployer floor depends on the carrier-paid rate Nova sets under [HIP 143][hip-143]. Council insight rights cover this setting, but the authority remains with Nova as in [HIP 143][hip-143].
 
@@ -197,9 +197,9 @@ A 7-seat Advisory Council with standing oversight of how the operations and grow
 
 **Why retire PoC rather than reduce it further.** [HIP 147][hip-147] already implemented "data eats first" in Sept 2025. With most viable Mobile deployments now reaching carrier offload within weeks, the residual PoC bucket pays for existing rather than for utility. Retiring it is preferable to maintaining a verifier code path that produces near-zero rewards.
 
-**Why encode capitalization rather than seek annual approvals.** Operations and growth funding through year-by-year HIPs creates uncertainty that compromises multi-year hiring, partner commitments, and carrier expansion. Encoding the windows at passage with hardcoded boundaries gives the protocol runway without leaving open-ended issuance authority. The same pattern was used in the audited [HIP 138][hip-138] MOBILE-treasury supplement (2024-2025).
+**Why encode the supplement rather than seek annual approvals.** Operations and growth funding through year-by-year HIPs creates uncertainty that compromises multi-year hiring, partner commitments, and carrier expansion. Encoding the windows at passage with hardcoded boundaries gives the protocol runway without leaving open-ended issuance authority. The same pattern was used in the audited [HIP 138][hip-138] MOBILE-treasury supplement (2024-2025).
 
-**Why a 7-seat Council rather than a larger body or no body.** A 7-seat Council with 5 community-elected members is large enough that no single appointment swings outcomes and small enough to function as a working body. Without a Council, the capitalization accrues without scheduled disclosure.
+**Why a 7-seat Council rather than a larger body or no body.** A 7-seat Council with 5 community-elected members is large enough that no single appointment swings outcomes and small enough to function as a working body. Without a Council, the supplement accrues without scheduled disclosure.
 
 **Alternatives considered and not adopted:**
 
@@ -210,7 +210,7 @@ A 7-seat Advisory Council with standing oversight of how the operations and grow
 
 - Council nomination threshold (veHNT minimum) and selection cadence specifics for replacements during a term.
 - The exact compensation amount; the working figure of ~2,000 HNT/month per member is to be settled by community vote at first seating.
-- Whether to add additional disclosure obligations beyond the quarterly capitalization outflow report.
+- Whether to add additional disclosure obligations beyond the quarterly supplement outflow report.
 
 ## Deployment Impact
 
@@ -230,7 +230,7 @@ Documentation at <http://docs.helium.com> will need to reflect the retirement of
 
 - Mobile data deployer earnings (USD per GB) stay at or above the floor in every epoch after Decision 1 goes live.
 - Carrier offload traffic on the Mobile network (rewardable GB/day) continues to grow after passage.
-- Operations and growth capitalization vault outflows are published quarterly by the Council, with material disclosures (carrier expansion commitments, deployer programs, ecosystem grants).
+- Operations and growth supplement vault outflows are published quarterly by the Council, with material disclosures (carrier expansion commitments, deployer programs, ecosystem grants).
 - Council activity: nominee participation, quorum on standard actions, escalation events surfaced for community vote.
 
 [hip-15]: ./0015-beaconing-rewards.md
