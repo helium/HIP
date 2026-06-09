@@ -137,23 +137,23 @@ A 7-seat Advisory Council with standing oversight of how the operations and grow
 - **5 community-nominated.** Any veHNT holder above a low threshold may nominate themselves or others; each nominee confirmed by veHNT-weighted vote.
 - **2 Nova-appointed.** Designated directly by Nova; voting members; Nova responsible for their conduct.
 
-**Authority:**
+**Authority:** Once seated, the Council has the following authority at any time during either supplement window.
 
 - NDA-level information rights over use of the operations and growth supplement, including insight into carrier revenue negotiations relevant to the [HIP 143][hip-143] burn-rate setting (insight only; [HIP 143][hip-143] authority stays with Nova).
 - Standard actions (demand disclosure, publish dissent, recommend course-correction): quorum 4 of 7 seated, including at least 2 community seats.
-- Trigger a community vote to terminate the supplement: quorum 5 of 7 seated, including at least 3 community seats. Nova's 2 seats alone cannot trigger or block.
-- No unilateral on-chain levers. Halting either supplement window requires a community-voted program upgrade.
+- Trigger a community vote to terminate the supplement, or to amend its parameters (per-epoch rate, window durations, recipient vault): quorum 5 of 7 seated, including at least 3 community seats. Nova's 2 seats alone cannot trigger or block.
+- No unilateral on-chain levers. Halting or amending either supplement window requires a community-voted program upgrade.
 
-**Scope.** Council authority covers use of the operations and growth supplement only. Dynamic floor parameters (50% share, the formula) sit outside Council authority; changing them requires a community HIP and program upgrade.
+**Scope.** Council authority covers the operations and growth supplement: how funds are used, and the parameters governing accrual (per-epoch rate, window durations, recipient vault). Dynamic floor parameters (50% share, the formula) sit outside Council authority; changing them requires a community HIP and program upgrade.
 
 **Compensation.** HNT-denominated, performance-gated. Paid from the Mobile and IoT Operations Funds (not from the supplement). Working amount: ~2,000 HNT/month per member, settled by community vote at first seating.
 
-**Termination vote (operations and growth supplement; either or both supplement windows):**
+**Termination or amendment vote (operations and growth supplement; either or both supplement windows):**
 
-- Triggerable by Council escalation or direct community proposal.
+- Triggerable by Council escalation or direct community proposal, at any time during either supplement window.
 - 7-day voting window.
-- Simple majority of votes cast; ≥7% quorum (symmetric with this authorizing vote: same bar to terminate as to authorize).
-- 7-day enforcement: on approval, a program upgrade halting subsequent accrual in the active window is deployed within 7 days.
+- Simple majority of votes cast; ≥7% quorum (symmetric with this authorizing vote: same bar to amend or terminate as to authorize).
+- 7-day enforcement: on approval, a program upgrade implementing the change is deployed within 7 days. Termination halts subsequent accrual in the active window; amendments take effect from deployment forward.
 
 ### Execution sequence
 
