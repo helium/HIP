@@ -58,12 +58,14 @@ The protocol computes the backstop emission each epoch from the published formul
 ```
 D_target = 0.5 × R_burn × bytes_GB / HNT_price
 α        = mobile_percent_share × 0.84
-backstop = max(0, (D_target − D_baseline) / α)
+backstop = min(smoothed_hnt_burned, max(0, (D_target − D_baseline) / α))
 ```
 
 `R_burn` is the carrier-paid burn rate Nova sets under [HIP 143][hip-143]; `bytes_GB` is rewardable bytes in the epoch; `HNT_price` is the HNT/USD price; `D_baseline = (HIP 20 schedule + Net Emissions re-emit) × α`; and `α` is the fraction of total HNT emission that reaches the Mobile data bucket. `mobile_percent_share` is the Mobile sub-DAO's on-chain percent share (a 30-epoch EMA of `mobile_vehnt / (mobile_vehnt + iot_vehnt)`, ~0.89 today, giving `α ≈ 0.75`), read from chain each epoch; it is not a parameter and floats with veHNT delegation, so the floor binds under any Mobile/IoT split.
 
 The division by `α` reflects how the floor reaches deployers: the backstop is minted into the protocol's per-epoch total emission and distributed via the standard sub-DAO allocation, so only `α` of it lands at Mobile data deployers; the remaining `(1 − α)` flows to the Mobile Operations Fund, the delegator pool, and the IoT sub-DAO at their existing percent shares (see Decision 3). Decision 1 is named for its goal, a deployer floor, but mechanically raises every recipient's emission proportionally whenever the backstop fires.
+
+The `min(smoothed_hnt_burned, …)` cap stops the backstop from emitting more HNT than has recently been burned. `smoothed_hnt_burned` is the existing HIP 20 variable: a 7-epoch moving average of HNT destroyed on-chain, mostly from Nova's burns to mint DC. Over any window, backstop emissions stay below total HNT destruction over the same window, so the backstop never adds to net supply. The trade-off shows up during sharp HNT price moves: it takes Nova 1–2 weeks of burns at the new price for the moving average to catch up, and during that window the cap binds and the floor delivers less than the full USD target. Once the average catches up, the floor returns to full delivery.
 
 Effective Mobile data deployer earn rate per GB = `max(baseline_$/GB, 0.5 × R_burn)`. Two effects flow through to deployers without a follow-on vote: HNT/USD price increases raise the USD value of pro-rata baseline rewards; carrier-rate increases under [HIP 143][hip-143] raise the floor.
 
@@ -188,6 +190,7 @@ A 7-seat Advisory Council with standing oversight of how the operations and grow
 - **Bundling.** Voters cannot accept some decisions and reject others. The decisions are operationally coupled (the Council oversees the supplement; the floor relies on the same program upgrade as the reallocation), but a voter who supports three of four still has to vote on the bundle.
 - **PoC removal ends a reward category.** Some deployments that brought network value primarily through PoC may not be sustained on data utility alone. The proposal accepts this trade in exchange for routing rewards to verifiable utility.
 - **Dependence on the carrier-rate setting.** The deployer floor depends on the carrier-paid rate Nova sets under [HIP 143][hip-143]. Council insight rights cover this setting, but the authority remains with Nova as in [HIP 143][hip-143].
+- **Floor dips briefly after sharp HNT moves.** The backstop is capped at `smoothed_hnt_burned` so it can't emit more HNT than has been burned recently. After a sharp HNT crash, deployers get a partial floor for 1–2 weeks until Nova's burns at the new price lift the moving average; floor returns to full after. The same cap is what prevents unbounded minting under crash.
 
 ## Rationale and Alternatives
 
