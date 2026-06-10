@@ -225,7 +225,9 @@ HIPs retired by Mobile PoC removal: [74][hip-74], [75][hip-75], [85][hip-85], [1
 
 HIPs retired by IoT PoC removal: [15][hip-15], [17][hip-17], [54][hip-54], [58][hip-58], [83][hip-83], [136][hip-136], [137][hip-137].
 
-HIPs retired under the SP allocation reframe: [82][hip-82] and [87][hip-87]. [HIP 93][hip-93] is partially amended.
+HIPs retired under the SP allocation reframe: [82][hip-82] and [87][hip-87].
+
+HIPs partially amended: [10][hip-10] (Mobile $/DC peg replaced by pro-rata of rewardable bytes plus the dynamic floor; IoT $/DC peg preserved), [53][hip-53] ($0.50/GB Mobile target superseded by Decision 1's dynamic floor; Mobile sub-DAO structure preserved), [93][hip-93].
 
 Documentation at <http://docs.helium.com> will need to reflect the retirement of PoC on both networks, the new Mobile allocation, and the dynamic-floor mechanism.
 
@@ -236,6 +238,7 @@ Documentation at <http://docs.helium.com> will need to reflect the retirement of
 - Operations and growth supplement vault outflows are published quarterly by the Council, with material disclosures (carrier expansion commitments, deployer programs, ecosystem grants).
 - Council activity: nominee participation, quorum on standard actions, escalation events surfaced for community vote.
 
+[hip-10]: ./0010-usage-based-data-transfer-rewards.md
 [hip-15]: ./0015-beaconing-rewards.md
 [hip-17]: ./0017-hex-density-based-transmit-reward-scaling.md
 [hip-20]: ./0020-hnt-max-supply.md
