@@ -144,6 +144,7 @@ A 7-seat Advisory Council with standing oversight of how the operations and grow
 - NDA-level information rights over use of the operations and growth supplement, including insight into carrier revenue negotiations relevant to the [HIP 143][hip-143] burn-rate setting (insight only; [HIP 143][hip-143] authority stays with Nova).
 - Standard actions (demand disclosure, publish dissent, recommend course-correction): quorum 4 of 7 seated, including at least 2 community seats.
 - Trigger a community vote to terminate the supplement, or to amend its parameters (per-epoch rate, window durations, recipient vault): quorum 5 of 7 seated, including at least 3 community seats. Nova's 2 seats alone cannot trigger or block.
+- Council votes require 5 days' written notice to all seven seats, waivable only by unanimous consent. Quorum does not depend on any particular seat attending: notice, not presence, guarantees each seat the opportunity to participate.
 - No unilateral on-chain levers. Halting or amending either supplement window requires a community-voted program upgrade.
 
 **Scope.** Council authority covers the operations and growth supplement: how funds are used, and the parameters governing accrual (per-epoch rate, window durations, recipient vault). Dynamic floor parameters (50% share, the formula) sit outside Council authority; changing them requires a community HIP and program upgrade.
@@ -156,6 +157,8 @@ A 7-seat Advisory Council with standing oversight of how the operations and grow
 - 7-day voting window.
 - Simple majority of votes cast; ≥7% quorum (symmetric with this authorizing vote: same bar to amend or terminate as to authorize).
 - 7-day enforcement: on approval, a program upgrade implementing the change is deployed within 7 days. Termination halts subsequent accrual in the active window; amendments take effect from deployment forward.
+
+**Nova voting position.** Nova votes its veHNT like any other holder, including on votes arising from Council escalation; all votes are public on-chain. Supplement HNT is different: Nova does not lock or delegate supplement HNT for voting while it is under Nova's control. The vault address is fixed, so outflows into lockup positions are publicly traceable.
 
 ### Execution sequence
 
