@@ -117,18 +117,19 @@ def figure_two():
     fig, ax = plt.subplots(figsize=(8.4, 4.6))
     ax.plot(epochs, delivered, color=TOPUP, lw=2.4, marker="o", ms=3.5,
             label="$/GB delivered to deployers", zorder=3)
-    ax.plot(epochs, target, color=TARGET, lw=1.8, ls="--", label="target: $0.05/GB", zorder=2)
+    # Target drawn on top so it stays visible even where delivery sits on it.
+    ax.plot(epochs, target, color=TARGET, lw=2.0, ls="--", label="target: $0.05/GB", zorder=5)
     ax.fill_between(epochs, delivered, target, where=[d < t for d, t in zip(delivered, target)],
                     color=TOPUP, alpha=0.10, zorder=1)
 
     ax.axvline(crash, color="#dc2626", lw=1, ls=":", zorder=1)
-    ax.annotate("HNT price drop", (crash, 0.013), color="#dc2626", fontsize=9,
-                ha="left", xytext=(crash + 0.2, 0.013))
+    ax.annotate("HNT price drop", (crash + 0.25, 0.058), color="#dc2626", fontsize=9, ha="left")
     ax.annotate("shortfall", ((crash + 12) / 2 + 1, 0.034), color=MUTED, fontsize=9, ha="center")
 
-    ax.set_xlabel("epochs (≈ days)")
+    ax.set_xlabel("epochs (≈ days) →")
     ax.set_ylabel("$/GB delivered to deployers")
     ax.set_ylim(0, 0.062)
+    ax.set_xticks([])
     ax.yaxis.set_major_formatter(FuncFormatter(lambda v, p: f"${v:.2f}"))
     ax.set_title("Figure 2 — After an HNT price drop, delivery dips below target, then recovers")
     ax.spines[["top"]].set_visible(False)
@@ -136,7 +137,7 @@ def figure_two():
     ax2 = ax.twinx()
     ax2.plot(epochs, burn, color=CAP, lw=1.6, ls="-", alpha=0.8,
              label="HNT recently burned (the cap)")
-    ax2.set_ylabel("HNT per day (the cap)", color=CAP)
+    ax2.set_ylabel("HNT recently burned (the cap)", color=CAP)
     ax2.tick_params(axis="y", colors=CAP)
     ax2.yaxis.set_major_formatter(FuncFormatter(thousands))
     ax2.set_ylim(0, cap_for(0.025) * 1.1)
