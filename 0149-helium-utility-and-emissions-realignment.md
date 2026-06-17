@@ -61,8 +61,8 @@ The target minimum is what the protocol aims to deliver, not a hard guarantee ev
 | Condition | Outcome for Mobile data deployers |
 |---|---|
 | Baseline ≥ half the payer rate (USD/GB) | Top-up = 0. Deployer earns baseline. |
-| Baseline < half the payer rate | Top-up emits. Deployer earns half the payer rate in USD (target binds). |
-| Baseline < half the payer rate, and the required top-up exceeds recent burns | Top-up capped at `smoothed_hnt_burned`. Deployer earns below the target until the burn average catches up. |
+| Baseline < half the payer rate | Total daily emissions increase, staying below the cap. Deployer earns half the payer rate in USD (target binds). |
+| Baseline < half the payer rate, and the required increase exceeds recent burns | Total daily emissions increase, capped at `smoothed_hnt_burned`. Deployer earns below the target until the burn average catches up. |
 
 The protocol computes the top-up each epoch from the published formula:
 
