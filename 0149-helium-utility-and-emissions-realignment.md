@@ -148,13 +148,13 @@ A 7-seat Advisory Council with standing oversight of how the operations and grow
 **Composition:**
 
 - **5 community-nominated.** Any veHNT holder above a low threshold may nominate themselves or others; each nominee confirmed by veHNT-weighted vote.
-- **2 Nova-appointed.** Designated directly by Nova; voting members; Nova responsible for their conduct.
+- **2 Nova-appointed.** Designated directly by Nova; voting members; Nova responsible for their conduct, and may replace them at any time at its discretion.
 
 **Authority:** Once seated, the Council has the following authority at any time during either supplement window.
 
 - NDA-level information rights over use of the operations and growth supplement, including insight into carrier revenue negotiations relevant to the [HIP 143][hip-143] burn-rate setting (insight only; [HIP 143][hip-143] authority stays with Nova).
-- Standard actions (demand disclosure, publish dissent, recommend course-correction): quorum 4 of 7 seated, including at least 2 community seats.
-- Trigger a community vote to terminate the supplement, or to amend its parameters (per-epoch rate, window durations, recipient vault): quorum 5 of 7 seated, including at least 3 community seats. Nova's 2 seats alone cannot trigger or block.
+- Standard actions (demand disclosure, publish dissent, recommend course-correction): 5 days' notice; quorum 4 of 7 seated, including at least 2 community seats.
+- Trigger a community vote to terminate the supplement, or to amend its parameters (per-epoch rate, window durations, recipient vault): 5 days' notice; quorum 5 of 7 seated, including at least 3 community seats. Nova's 2 seats alone cannot trigger or block.
 - No unilateral on-chain levers. Halting or amending either supplement window requires a community-voted program upgrade.
 
 **Scope.** Council authority covers the operations and growth supplement: how funds are used, and the parameters governing accrual (per-epoch rate, window durations, recipient vault). The target-minimum parameters (the 50% share and the formula) sit outside Council authority; changing them requires a community HIP and program upgrade.
@@ -167,6 +167,8 @@ A 7-seat Advisory Council with standing oversight of how the operations and grow
 - 7-day voting window.
 - Simple majority of votes cast; ≥7% quorum (symmetric with this authorizing vote: same bar to amend or terminate as to authorize).
 - 7-day enforcement: on approval, a program upgrade implementing the change is deployed within 7 days. Termination halts subsequent accrual in the active window; amendments take effect from deployment forward.
+
+**Operational terms.** The obligations a member takes on once seated, the detailed information rights, confidentiality, the HNT trading policy, and removal for cause, are set out in the [Advisory Council Roles, Responsibilities, and Access][council-roles] document and the NDA each member signs. These are operational terms; they do not alter the authority established here.
 
 ### Execution sequence
 
@@ -249,6 +251,7 @@ Documentation at <http://docs.helium.com> will need to reflect the retirement of
 - Operations and growth supplement vault outflows are published quarterly by the Council, with material disclosures (carrier expansion commitments, deployer programs, ecosystem grants).
 - Council activity: nominee participation, quorum on standard actions, escalation events surfaced for community vote.
 
+[council-roles]: ./files/0149/advisory-council-roles.md
 [hip-10]: ./0010-usage-based-data-transfer-rewards.md
 [hip-15]: ./0015-beaconing-rewards.md
 [hip-17]: ./0017-hex-density-based-transmit-reward-scaling.md
