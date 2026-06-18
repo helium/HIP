@@ -14,10 +14,10 @@ reddit-post-id: 1twsn06
 
 ## Summary
 
-This HIP bundles four governance decisions, executed in a single program upgrade at passage:
+This HIP bundles four governance decisions, executed in a single program upgrade that ships once the Council is seated:
 
 1. Mobile data deployers earn HNT based on the data they deliver, with a target minimum, in dollars, of half the per-GB offload price Nova sets under [HIP 143][hip-143]. The HNT that funds it is capped at HNT recently burned, so the target on its own does not grow net HNT supply. The Decision 2 supplement is separate, and it does raise the supply ceiling.
-2. An operations and growth supplement: a per-epoch HNT mint into a Nova-administered Squads multisig vault for a flat-rate window followed by a multi-year linear taper. Total **~141M HNT over 36 months**, about 77% of current on-chain HNT supply (~182.5M), front-loaded (~50% in the first 12 months). Both windows are hardcoded at passage and self-terminate.
+2. An operations and growth supplement: a per-epoch HNT mint into a Nova-administered Squads multisig vault for a flat-rate window followed by a multi-year linear taper. Total **~141M HNT over 36 months**, about 77% of current on-chain HNT supply (~182.5M), front-loaded (~50% in the first 12 months). Both windows are hardcoded at deploy and self-terminate.
 3. Retirement of Proof-of-Coverage on both Mobile and IoT. Mobile data deployers earn pro-rata of rewardable bytes; the on-chain Service Provider allocation under [HIPs 82][hip-82]/[87][hip-87] is reframed as a flat Mobile Operations Fund. IoT data transfer continues at the existing $/DC peg.
 4. A 7-seat Advisory Council with standing oversight of how the operations and growth supplement is used, with the authority to escalate to a community termination vote.
 
@@ -95,7 +95,7 @@ A per-epoch HNT mint into an operations and growth supplement vault (Nova-admini
 | Per-epoch rate | ~196,000 HNT | 196,000 → 0 (linear decay) |
 | Duration | ~360 days (≈12 months) | ~720 days (≈24 months) |
 | Total | ~70.6M HNT | ~70.6M HNT |
-| Boundary | hardcoded at ~M0+12mo | hardcoded at ~M0+36mo |
+| Boundary | hardcoded at ~mint start +12mo | hardcoded at ~mint start +36mo |
 
 Combined accrual: **~141M HNT**, fully bounded at deploy. Both boundaries auto-terminate via hardcoded timestamps; no future vote or manual halt is required to end them.
 
@@ -107,11 +107,13 @@ Combined accrual: **~141M HNT**, fully bounded at deploy. Both boundaries auto-t
 | Vault share of gross HNT issuance during flat | ~90% (mint + existing emission ≈ 216,500 HNT/day; vault receives ~196,000 of it) |
 | Program total | ~141M HNT over 36 months, front-loaded (~50% in the flat first 12 months, ~50% tapering linearly over the next 24) |
 | Cumulative new supply vs current on-chain HNT | ~141M / ~182.5M ≈ 77% of current on-chain HNT supply (issued over 36 months) |
-| USD value at HNT $0.60 reference | ~$85M total (~$42M in the first 12 months, ~$42M over the next 24); scales linearly with HNT price |
+| USD value at HNT $0.30 reference | ~$42M total (~$21M in the first 12 months, ~$21M over the next 24); illustrative, scales linearly with HNT price |
+
+USD figures in this proposal are illustrative at a ~$0.30 HNT reference and scale linearly with price; the binding commitments are HNT-denominated.
 
 **Supply impact.** The supplement is a new mint stream, additive to [HIP 20][hip-20]'s halving schedule and not subject to its halvings. [HIP 20][hip-20]'s halving schedule continues unchanged; its named max-supply property is not preserved. HIP 20 projected an asymptotic max of 223M HNT in Nov 2020. Cumulative permanent reductions since (~9.5M L1 post-Y1 reductions plus ~10.3M Solana-era burns above the net_emissions_cap path and via the no_emit wallet, partially offset by HIP 138's ~2.9M supplement above schedule) have shifted the effective ceiling to ~206M today (current on-chain supply ~182.5M plus ~23.6M remaining under the HIP 20 schedule). Effective max HNT supply rises from ~206M to ~347M (= 206M + 141M HIP 149 supplement). The same pattern was used in the audited [HIP 138][hip-138] MOBILE-treasury supplement (~2.9M HNT minted outside HIP 20's schedule from Dec 2024 to Aug 2025); the supplement here is also bounded at deploy.
 
-**Use of funds.** International carrier expansion, deployer programs, engineering (network intelligence and carrier interoperability), ecosystem grants, regulatory work, and core operating costs. The supplement mints to the vault only; it does not flow to on-chain Hotspot rewards.
+**Use of funds.** International carrier expansion, deployer programs, engineering (network intelligence and carrier interoperability), ecosystem grants, regulatory work, and core operating costs. The supplement mints to the vault only; it does not flow to on-chain Hotspot rewards. Council compensation (Decision 4) is paid from this vault as a separate ~1% charge, not one of the operating uses above.
 
 **Bound and immutability.** Per-epoch rate, boundary timestamps, and recipient vault address are fixed at the program upgrade; changing any of them requires a new community-voted program upgrade. Vault balance and outflows are observable on-chain in real time.
 
@@ -119,7 +121,7 @@ Combined accrual: **~141M HNT**, fully bounded at deploy. Both boundaries auto-t
 
 Removal of Proof-of-Coverage mechanisms from the Mobile and IoT verifier oracles, and reframing of the Mobile Service Provider allocation.
 
-**Mobile sub-DAO allocation (at passage):**
+**Mobile sub-DAO allocation (at the program upgrade):**
 
 | Bucket | Today | Under this proposal |
 |---|---|---|
@@ -143,30 +145,37 @@ The on-chain SP role under [HIPs 82][hip-82] and [87][hip-87] ends; the SP NFT/e
 
 ### Decision 4: Advisory Council
 
-A 7-seat Advisory Council with standing oversight of how the operations and growth supplement is used across both supplement windows.
+A 7-seat Advisory Council with standing oversight of how the operations and growth supplement is used across both supplement windows. Its members are charged to act independently and in the best interest of the community. The Council exists for the life of the supplement and dissolves when the taper window ends.
 
 **Composition:**
 
 - **5 community-nominated.** Any veHNT holder above a low threshold may nominate themselves or others; each nominee confirmed by veHNT-weighted vote.
-- **2 Nova-appointed.** Designated directly by Nova; voting members; Nova responsible for their conduct, and may replace them at any time at its discretion.
+- **2 Nova-appointed.** Designated directly by Nova; voting members; Nova responsible for their conduct, and may replace them at any time at its discretion. They serve unpaid: compensation is paid only to the five community-nominated seats.
 
-**Authority:** Once seated, the Council has the following authority at any time during either supplement window.
+**Authority:** Once seated, the Council has the following authority at any time, including the pre-mint review window and both supplement windows.
 
-- NDA-level information rights over use of the operations and growth supplement, including insight into carrier revenue negotiations relevant to the [HIP 143][hip-143] burn-rate setting (insight only; [HIP 143][hip-143] authority stays with Nova).
-- Standard actions (demand disclosure, publish dissent, recommend course-correction): 5 days' notice; quorum 4 of 7 seated, including at least 2 community seats.
-- Trigger a community vote to terminate the supplement, or to amend its parameters (per-epoch rate, window durations, recipient vault): 5 days' notice; quorum 5 of 7 seated, including at least 3 community seats. Nova's 2 seats alone cannot trigger or block.
-- No unilateral on-chain levers. Halting or amending either supplement window requires a community-voted program upgrade.
+- NDA-level information rights over use of the operations and growth supplement, including insight into carrier revenue negotiations relevant to the [HIP 143][hip-143] payer-rate setting (insight only; [HIP 143][hip-143] authority stays with Nova).
+- Standard actions (demand disclosure, publish dissent, recommend course-correction): quorum 4 of 7 seated, including at least 2 community seats.
+- Trigger a community vote to terminate the supplement, or to amend its parameters (per-epoch rate, window durations, recipient vault, Council compensation): quorum 5 of 7 seated, including at least 3 community seats. Nova's 2 seats alone cannot trigger or block.
+- Council votes require 5 days' written notice to all seven seats, waivable only by unanimous consent. An absent seat that received notice does not block quorum.
+- No unilateral on-chain levers. Halting or amending either supplement window requires a community-voted program upgrade. The Council drafts that upgrade proposal itself rather than leaving a vacuum; the community retains the final vote.
 
-**Scope.** Council authority covers the operations and growth supplement: how funds are used, and the parameters governing accrual (per-epoch rate, window durations, recipient vault). The target-minimum parameters (the 50% share and the formula) sit outside Council authority; changing them requires a community HIP and program upgrade.
+**Scope.** Council authority over the supplement is oversight, not control. It covers whether spending conforms to the use-of-funds purposes defined in Decision 2, and the parameters governing accrual and compensation (per-epoch rate, window durations, recipient vault, Council compensation). The Council cannot block or direct any individual spend, and does not impose new spending restrictions by its own authority. The target-minimum parameters (the 50% share and the formula) sit outside Council authority; changing them requires a community HIP and program upgrade.
 
-**Compensation.** HNT-denominated, performance-gated. Paid from the Mobile and IoT Operations Funds (not from the supplement). Working amount: ~2,000 HNT/month per member, settled by community vote at first seating.
+**If funds are used outside scope.** The Council has no on-chain veto over the Nova-administered vault. Where it finds use outside the defined purposes, its remedies escalate: (1) demand disclosure; (2) publish dissent; (3) recommend course-correction; (4) trigger a community vote to amend the supplement (including adding or tightening requirements on use) or terminate it. Any new requirement on use therefore takes effect only when the community adopts it by vote, not by Council fiat. The binding safeguard is the community's standing ability to tighten or end the supplement.
 
-**Termination or amendment vote (operations and growth supplement; either or both supplement windows):**
+**Compensation.** Paid only to the five community-nominated members; the two Nova-appointed seats serve unpaid. HNT-denominated: 8,000 HNT per community member per month, paid by Nova out of the operations and growth supplement vault. It comes out of the supplement, not on top of it: about 1.46M HNT total (~1% of the supplement), reducing funds available for operations and growth by that amount. A $10,000 per-member-per-month value cap applies if HNT appreciates: above ~$1.25/HNT, fewer than 8,000 HNT are paid. At the ~$0.30 reference, 8,000 HNT is ~$2,400 per member per month, ~$12,000/month across the five seats. The amount is set by this authorizing vote contingent on passage, not deferred to first seating, and adjustable forward at any time by community vote: a reduction at simple majority, an increase at the 66.67% supermajority. Minted HNT cannot be reclaimed. Compensation accrues only while a member is seated; amounts accrued before mint start are paid in arrears once the vault funds. There is no Council-controlled discretionary fund: for funding beyond compensation, the Council recommends use of the supplement or escalates a proposal to a community vote.
 
-- Triggerable by Council escalation or direct community proposal, at any time during either supplement window.
+**Council-raised amendment or termination vote (operations and growth supplement; either or both supplement windows):**
+
+- Triggered by Council escalation, at any time once seated.
 - 7-day voting window.
-- Simple majority of votes cast; ≥7% quorum (symmetric with this authorizing vote: same bar to amend or terminate as to authorize).
-- 7-day enforcement: on approval, a program upgrade implementing the change is deployed within 7 days. Termination halts subsequent accrual in the active window; amendments take effect from deployment forward.
+- Simple majority of votes cast; ≥7% quorum. Asymmetric with the authorizing vote: starting the supplement takes a 66.67% supermajority, while correcting, reducing, or terminating it through Council escalation takes a simple majority. This lever loosens downward only; an amendment that increases issuance (higher per-epoch rate, longer windows, or higher compensation) takes the same 66.67% supermajority as the original authorization.
+- 7-day enforcement: on approval, a program upgrade implementing the change is deployed within 7 days. Termination halts subsequent accrual in the active window (or, before mint start, prevents the first window from beginning); amendments take effect from deployment forward.
+
+This is the Council's built-in escalation mechanism, not a limit on normal governance: the community may raise an independent HIP to amend or stop the mint at any time, under the vote requirements that apply to that proposal.
+
+**Nova voting position.** Nova votes its veHNT like any other holder, including on votes arising from Council escalation; all votes are public on-chain. Supplement HNT is different: Nova does not lock or delegate supplement HNT for voting while it is under Nova's control. The vault address is fixed, so outflows into lockup positions are publicly traceable.
 
 **Operational terms.** The obligations a member takes on once seated, the detailed information rights, confidentiality, the HNT trading policy, and removal for cause, are set out in the [Advisory Council Roles, Responsibilities, and Access][council-roles] document and the NDA each member signs. These are operational terms; they do not alter the authority established here.
 
@@ -174,17 +183,18 @@ A 7-seat Advisory Council with standing oversight of how the operations and grow
 
 | Milestone | Timing | What happens |
 |---|---|---|
-| **Pre-vote payer-rate change** | pre-M0 | Nova reduces the payer rate from $0.50/GB to ~$0.10/GB under [HIP 143][hip-143] (existing authority; no governance vote required), reflecting current commercial offload rates. |
-| **Passage** | M0 | Program upgrade ships: supplement windows (flat boundary ≈ M0+12mo, taper boundary ≈ M0+36mo), the target-minimum formula, PoC retirement in verifier oracles, Mobile data reallocation to 84% pro-rata, SP allocation reframed to the 10% Mobile Operations Fund. First-window supplement begins minting. The formula is live but dormant at passage conditions. Council nomination opens. |
-| **Council seated** | ~M0+49 days | Per-nominee community confirmation vote concludes. Disclosure obligations and escalation pathway operational. |
-| **Flat boundary** | ~M0+12 months (hardcoded) | First-window supplement auto-transitions to the tapering window. |
-| **Taper boundary** | ~M0+36 months (hardcoded) | Tapering supplement reaches zero and halts. |
+| **Pre-vote payer-rate change** | pre-passage | Nova reduces the payer rate from $0.50/GB to ~$0.10/GB under [HIP 143][hip-143] (existing authority; no governance vote required), reflecting current commercial offload rates. |
+| **Passage** | pre-M0 | Bundle approved at the 66.67% supermajority. Council nomination opens. |
+| **Council seated** | M0 | Per-nominee community confirmation concludes; all seven seats filled, disclosure obligations and escalation pathway operational. Program upgrade ships: the target-minimum formula (live but dormant at deploy conditions), PoC retirement in Mobile and IoT verifier oracles, Mobile data reallocation to 84% pro-rata, SP allocation reframed to the 10% Mobile Operations Fund. Supplement mint configured but not yet active. |
+| **Mint start** | M0 + 2 weeks | First-window supplement begins minting into the vault. The two-week gap lets the seated Council review materials and, if it objects, escalate a community vote to terminate or amend the supplement before minting starts; a termination here prevents the first window from beginning. Its standing escalation power continues throughout both windows. |
+| **Flat boundary** | ≈ mint start + 12 months (hardcoded) | First-window supplement auto-transitions to the tapering window. |
+| **Taper boundary** | ≈ mint start + 36 months (hardcoded) | Tapering supplement reaches zero and halts. |
 
 ### Voting mechanics
 
 - veHNT-weighted, single yes/no on the four-decision bundle. The Council exists to oversee the supplement that funds operations and growth; voting them separately would let one pass without the other.
 - Minimum 7-day forum discussion period; 7-day voting window.
-- Simple majority of votes cast; ≥7% quorum.
+- 66.67% supermajority of votes cast; ≥7% quorum. Token-economic votes pass on a supermajority, not a simple majority (precedent: [HIP 85][hip-85], [HIP 124][hip-124]); a proposal should not authorize its own issuance at a self-set simple-majority bar.
 
 ### What this proposal does not change
 
@@ -193,7 +203,7 @@ A 7-seat Advisory Council with standing oversight of how the operations and grow
 - veHNT lockup positions, multipliers, and voting mechanics.
 - 6% delegator allocation.
 - [HIP 138][hip-138] single-token (HNT) reward model.
-- [HIP 143][hip-143] commercial burn-rate decoupling. The deployer target anchors to the payer rate Nova sets under [HIP 143][hip-143]; authority over the rate itself stays with Nova.
+- [HIP 143][hip-143] commercial payer-rate decoupling. The deployer target anchors to the payer rate Nova sets under [HIP 143][hip-143]; authority over the rate itself stays with Nova.
 - [HIP 130][hip-130] data-only Mobile Hotspots.
 - $/DC peg for IoT data transfer.
 
@@ -213,7 +223,7 @@ A 7-seat Advisory Council with standing oversight of how the operations and grow
 
 **Why retire PoC rather than reduce it further.** [HIP 147][hip-147] already implemented "data eats first" in Sept 2025. With most viable Mobile deployments now reaching carrier offload within weeks, the residual PoC bucket pays for existing rather than for utility. Retiring it is preferable to maintaining a verifier code path that produces near-zero rewards.
 
-**Why encode the supplement rather than seek annual approvals.** Operations and growth funding through year-by-year HIPs creates uncertainty that compromises multi-year hiring, partner commitments, and carrier expansion. Encoding the windows at passage with hardcoded boundaries gives the protocol runway without leaving open-ended issuance authority. The same pattern was used in the audited [HIP 138][hip-138] MOBILE-treasury supplement (2024-2025).
+**Why encode the supplement rather than seek annual approvals.** Operations and growth funding through year-by-year HIPs creates uncertainty that compromises multi-year hiring, partner commitments, and carrier expansion. Encoding the windows at deploy with hardcoded boundaries gives the protocol runway without leaving open-ended issuance authority. The same pattern was used in the audited [HIP 138][hip-138] MOBILE-treasury supplement (2024-2025).
 
 **Why a 7-seat Council rather than a larger body or no body.** A 7-seat Council with 5 community-elected members is large enough that no single appointment swings outcomes and small enough to function as a working body. Without a Council, the supplement accrues without scheduled disclosure.
 
@@ -225,14 +235,13 @@ A 7-seat Advisory Council with standing oversight of how the operations and grow
 ## Unresolved Questions
 
 - Council nomination threshold (veHNT minimum) and selection cadence specifics for replacements during a term.
-- The exact compensation amount; the working figure of ~2,000 HNT/month per member is to be settled by community vote at first seating.
 - Whether to add additional disclosure obligations beyond the quarterly supplement outflow report.
 
 ## Deployment Impact
 
-The on-chain changes ship in a single program upgrade at passage. Verifier oracle changes for PoC retirement (Mobile and IoT) are coordinated with that upgrade. We leave the implementation of the program upgrade and verifier oracle changes up to the Helium Core Developers to determine.
+The on-chain changes ship in a single program upgrade once the Council is seated. Verifier oracle changes for PoC retirement (Mobile and IoT) are coordinated with that upgrade. We leave the implementation of the program upgrade and verifier oracle changes up to the Helium Core Developers to determine.
 
-This proposal is not backwards compatible in the sense that PoC reward emissions stop after passage. Hotspots earning predominantly through PoC today will see their rewards drop to zero from the PoC bucket and depend on data utility. The +20% Mobile data reallocation and the target minimum are the offsetting mechanisms for Mobile; IoT continues at the existing $/DC peg.
+This proposal is not backwards compatible in the sense that PoC reward emissions stop when the program upgrade ships (at Council seating). Hotspots earning predominantly through PoC today will see their rewards drop to zero from the PoC bucket and depend on data utility. The +20% Mobile data reallocation and the target minimum are the offsetting mechanisms for Mobile; IoT continues at the existing $/DC peg.
 
 HIPs retired by Mobile PoC removal: [74][hip-74], [75][hip-75], [85][hip-85], [105][hip-105], [113][hip-113], [119][hip-119], [131][hip-131], [133][hip-133], [135][hip-135], [147][hip-147].
 
@@ -269,6 +278,7 @@ Documentation at <http://docs.helium.com> will need to reflect the retirement of
 [hip-105]: ./0105-modification-of-mobile-subdao-hex-limits.md
 [hip-113]: ./0113-reward-cbrs-as-experimental.md
 [hip-119]: ./0119-closing-gaming-loopholes-within-the-mobile-network.md
+[hip-124]: ./0124-securing-iot-governance-through-voting-rewards.md
 [hip-130]: ./0130-data-only-mobile-hotspots.md
 [hip-131]: ./0131-bridging-gap-between-verification-mappers-and-anti-gaming-measures.md
 [hip-133]: ./0133-bridging-gap-for-anti-gaming-measures-phase2.md

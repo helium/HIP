@@ -29,7 +29,7 @@ Canonical: [HIP 149 Decision 4][hip149-d4]. In summary:
 
 ## Term
 
-All seven seats are co-terminus with the Supplement. Council authority begins when all seats are confirmed through the community nomination and voting process (per the [HIP 149][hip149-d4] execution sequence, approximately 7 weeks after HIP 149 passes) and ends when the Supplement's second window reaches zero and halts. There are no automatic renewals. If the community votes to terminate or amend the Supplement early, council authority adjusts accordingly.
+All seven seats are co-terminus with the Supplement. Council authority begins when all seats are confirmed through the community nomination and voting process (M0 in the [HIP 149][hip149-d4] execution sequence) and ends when the Supplement's second window reaches zero and halts. There are no automatic renewals. If the community votes to terminate or amend the Supplement early, council authority adjusts accordingly.
 
 ## Authority
 
@@ -44,13 +44,13 @@ Canonical: [HIP 149 Decision 4][hip149-d4]. The council's authority is limited t
 **Escalation actions** (5 days' notice; quorum 5 of 7 seated, including at least 3 community seats):
 
 - Trigger a community vote to terminate the Supplement (one or both windows)
-- Trigger a community vote to amend Supplement parameters (per-epoch rate, window durations, recipient vault)
+- Trigger a community vote to amend Supplement parameters (per-epoch rate, window durations, recipient vault, council compensation)
 
 **What the council cannot do:**
 
 - Unilaterally halt, pause, or amend the Supplement on-chain
 - Direct Nova's business strategy, hiring, vendor selection, or product decisions
-- Override Nova's authority to set the carrier-paid burn rate under HIP 143
+- Override Nova's authority to set the payer rate under HIP 143
 - Bind Nova to any commitment, contract, or expenditure
 - Speak on behalf of Nova publicly, unless specifically authorized in writing
 
@@ -140,7 +140,7 @@ If a council member trades HNT based on confidential information received throug
 
 ## Compensation
 
-Canonical: [HIP 149 Decision 4][hip149-d4]. Compensation is HNT-denominated and performance-gated, paid from the Mobile and IoT Operations Funds (not from the Supplement vault). The per-seat amount is settled by community vote at first seating; see HIP 149 for the working figure.
+Canonical: [HIP 149 Decision 4][hip149-d4]. HNT-denominated, paid by Nova from the Supplement vault (a ~1% charge on the Supplement, not the Operations Funds). 8,000 HNT per month to each of the five community-nominated seats; the two Nova-appointed seats serve unpaid. A $10,000 per-seat-per-month value cap applies if HNT appreciates. The amount is set by the authorizing vote and adjustable forward by community vote (reduction at simple majority, increase at the 66.67% supermajority).
 
 ## Removal
 
