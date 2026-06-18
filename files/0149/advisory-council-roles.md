@@ -4,7 +4,7 @@
 
 ## What This Document Covers
 
-This document describes what the Advisory Council does, what council members can and cannot access, the confidentiality and trading obligations that come with the seat, and how removal works. Acceptance of a council seat is contingent on signing a separate Confidentiality and Participation Agreement (the "NDA") with Nova Labs, Inc. ("Nova"), which will contain the binding terms summarized here.
+This document describes what the Advisory Council does, what council members can and cannot access, the confidentiality and trading obligations that come with the seat, and how removal works. Acceptance of a council seat is contingent on signing a separate Confidentiality and Participation Agreement (the "NDA") with Nova Labs, Inc. ("Nova"), which will contain the binding terms summarized here. This document is incorporated into the NDA as Exhibit A; an [outline of the NDA's key terms][council-nda] is available as a reference.
 
 The council sits across two layers, with a clear division of what each owns:
 
@@ -158,5 +158,6 @@ Removal procedures, including notice requirements and replacement mechanics, are
 
 Prospective council members should direct questions to Nova at advisors-info@helium.com.
 
+[council-nda]: ./advisory-council-nda.md
 [hip149-d2]: ../../0149-helium-utility-and-emissions-realignment.md#decision-2-operations-and-growth-supplement
 [hip149-d4]: ../../0149-helium-utility-and-emissions-realignment.md#decision-4-advisory-council

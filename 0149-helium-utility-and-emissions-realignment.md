@@ -177,7 +177,7 @@ This is the Council's built-in escalation mechanism, not a limit on normal gover
 
 **Nova voting position.** Nova votes its veHNT like any other holder, including on votes arising from Council escalation; all votes are public on-chain. Supplement HNT is different: Nova does not lock or delegate supplement HNT for voting while it is under Nova's control. The vault address is fixed, so outflows into lockup positions are publicly traceable.
 
-**Operational terms.** The obligations a member takes on once seated, the detailed information rights, confidentiality, the HNT trading policy, and removal for cause, are set out in the [Advisory Council Roles, Responsibilities, and Access][council-roles] document and the NDA each member signs. These are operational terms; they do not alter the authority established here.
+**Operational terms.** The obligations a member takes on once seated, the detailed information rights, confidentiality, the HNT trading policy, and removal for cause, are set out in the [Advisory Council Roles, Responsibilities, and Access][council-roles] document and the [Confidentiality and Participation Agreement (NDA)][council-nda] each member signs. These are operational terms set by Nova; they are not part of this vote and do not alter the authority established here.
 
 ### Execution sequence
 
@@ -261,6 +261,7 @@ Documentation at <http://docs.helium.com> will need to reflect the retirement of
 - Council activity: nominee participation, quorum on standard actions, escalation events surfaced for community vote.
 
 [council-roles]: ./files/0149/advisory-council-roles.md
+[council-nda]: ./files/0149/advisory-council-nda.md
 [hip-10]: ./0010-usage-based-data-transfer-rewards.md
 [hip-15]: ./0015-beaconing-rewards.md
 [hip-17]: ./0017-hex-density-based-transmit-reward-scaling.md
