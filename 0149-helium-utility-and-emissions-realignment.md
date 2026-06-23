@@ -139,7 +139,7 @@ Removal of Proof-of-Coverage mechanisms from the Mobile and IoT verifier oracles
 
 The Mobile data pool moves from 70% to 74% of sub-DAO emission (+4pp). The reallocation is a modest absolute lift; the deployer value comes from Decision 1's target minimum and earnings cap, which at current HNT prices is the binding support.
 
-The on-chain SP role under [HIPs 82][hip-82] and [87][hip-87] ends; the SP NFT/entity is reused as the bucket holder for the flat 20% Mobile Operations Fund. Future carriers onboard as offload carriers under the existing [HIP 143][hip-143] framework, not as on-chain SPs.
+The on-chain SP role under [HIPs 82][hip-82] and [87][hip-87] ends; the SP NFT/entity is reused as the bucket holder for the flat 20% Mobile Operations Fund. The 20% level covers the cost of operating and growing Mobile network infrastructure and keeps Nova, which administers the fund, aligned with network success, at a level comparable to the up-to-24% Service Provider allocation it replaces. Future carriers onboard as offload carriers under the existing [HIP 143][hip-143] framework, not as on-chain SPs.
 
 **IoT sub-DAO changes:**
 
@@ -230,6 +230,8 @@ This is the Council's built-in escalation mechanism, not a limit on normal gover
 **Why cap deployer earnings at twice the payer rate, and route the excess to stakers.** Because the baseline pool is fixed in HNT and distributed pro-rata, its USD value rises without limit as HNT appreciates, so deployers could earn many multiples of what carriers pay the network for the same GB. The cap bounds that: deployer USD pay can't run more than 2× ahead of revenue. The 4× band ($0.05 to $0.20/GB at the current payer rate) leaves deployers full exposure to HNT appreciation through normal ranges and engages only on sustained appreciation. The excess is redirected to veHNT stakers rather than burned: it gives lockers a revenue-linked upside that activates exactly when deployer pay outruns revenue, and keeps the cap net-supply-neutral. Burning instead would tighten supply but return nothing to participants; redirecting concentrates the benefit on the holders who lock to govern.
 
 **Why pro-rata of rewardable bytes for Mobile data.** Pro-rata is splitting-resistant by construction: subdividing a busy site doesn't change total rewards earned from its traffic. Tiered-DAU and per-Hotspot caps were modeled and rejected because they reward subdivision.
+
+**Why 20% for the Mobile Operations Fund.** The fund covers the cost of operating and growing Mobile network infrastructure, and 20% keeps Nova, which administers it, aligned with network success at a level comparable to the up-to-24% Service Provider allocation it replaces (HIPs 82/87). It is a flat pre-allocation rather than a residual because Mobile data is oversubscribed and has no underflow to absorb.
 
 **Why retire PoC rather than reduce it further.** [HIP 147][hip-147] already implemented "data eats first" in Sept 2025. With most viable Mobile deployments now reaching carrier offload within weeks, the residual PoC bucket pays for existing rather than for utility. Retiring it is preferable to maintaining a verifier code path that produces near-zero rewards.
 
