@@ -16,7 +16,7 @@ reddit-post-id: 1twsn06
 
 This HIP bundles four governance decisions, executed in a single program upgrade that ships once the Council is seated:
 
-1. Mobile data deployers earn HNT based on the data they deliver, with a target minimum, in dollars, of half the per-GB offload price Nova sets under [HIP 143][hip-143]. The HNT that funds it is capped at HNT recently burned, so the target on its own does not grow net HNT supply. The Decision 2 supplement is separate, and it does raise the supply ceiling.
+1. Mobile data deployers earn HNT based on the data they deliver, held within a band tied to the per-GB offload price Nova sets under [HIP 143][hip-143]: a target minimum, in dollars, of half that price, and a cap at twice it. The HNT that funds the minimum is capped at HNT recently burned, so the target on its own does not grow net HNT supply; earnings above the cap (when HNT appreciates faster than carrier revenue) are redirected to veHNT stakers and do not change supply. The Decision 2 supplement is separate, and it does raise the supply ceiling.
 2. An operations and growth supplement: a per-epoch HNT mint into a Nova-administered Squads multisig vault for a flat-rate window followed by a multi-year linear taper. Total **~141M HNT over 36 months**, about 77% of current on-chain HNT supply (~182.5M), front-loaded (~50% in the first 12 months). Both windows are hardcoded at deploy and self-terminate.
 3. Retirement of Proof-of-Coverage on both Mobile and IoT. Mobile data deployers earn pro-rata of rewardable bytes; the on-chain Service Provider allocation under [HIPs 82][hip-82]/[87][hip-87] is reframed as a flat Mobile Operations Fund. IoT data transfer continues at the existing $/DC peg.
 4. A 7-seat Advisory Council with standing oversight of how the operations and growth supplement is used, with the authority to escalate to a community termination vote.
@@ -37,16 +37,16 @@ This proposal ties deployer earnings to the payer rate Nova sets under [HIP 143]
 
 ## Stakeholders
 
-- **Mobile data deployers.** Gain an immediate +20% uplift on baseline data rewards from the reallocation in Decision 3, plus a USD target minimum from Decision 1.
+- **Mobile data deployers.** Gain an immediate +20% uplift on baseline data rewards from the reallocation in Decision 3, plus a USD target minimum from Decision 1. Earnings above twice the payer rate are redirected to stakers (Decision 1 cap).
 - **IoT data deployers.** Unchanged on the income side ($/DC peg preserved); IoT PoC retires.
-- **veHNT holders and delegators.** 6% delegator allocation preserved. Effective HNT max supply rises from ~206M (today's effective ceiling, after cumulative reductions since HIP 20) to ~347M to fund the supplement in Decision 2.
+- **veHNT holders and delegators.** 6% delegator allocation preserved, plus any Mobile data earnings above the Decision 1 cap. Effective HNT max supply rises from ~206M (today's effective ceiling, after cumulative reductions since HIP 20) to ~347M to fund the supplement in Decision 2.
 - **Carriers and offload partners.** Continue under the existing [HIP 143][hip-143] commercial framework. The deployer target follows the payer rate.
 
 ## Detailed Explanation
 
 ### Decision 1: Revenue-linked emissions with a target minimum for Mobile deployers
 
-What deployers get: a target minimum on earnings, in dollars per GB. Nova sets a per-GB offload price under [HIP 143][hip-143], the dollar amount the network charges carriers for each GB of data delivered. This decision aims to pay Mobile data deployers at least half that price per GB. When normal HNT emissions already pay more than the target, nothing changes; when they pay less, the protocol mints extra HNT that epoch to close the gap.
+What deployers get: an earnings band, in dollars per GB. Nova sets a per-GB offload price under [HIP 143][hip-143], the dollar amount the network charges carriers for each GB of data delivered. This decision holds Mobile data deployer earnings between a floor of half that price (the target minimum) and a cap of twice it (the earnings cap). When normal HNT emissions land inside the band, nothing changes. When they pay less than the floor, the protocol mints extra HNT that epoch to close the gap. When they would pay more than the cap (HNT appreciating faster than carrier revenue), deployers earn the cap and the excess HNT is paid to veHNT stakers instead.
 
 Where the HNT comes from: the top-up is capped at the HNT recently burned, mostly Nova burning HNT to create the Data Credits carriers spend on offload. The protocol never mints more than was just burned, so this target on its own does not grow the net HNT supply. Decision 2's supplement is separate, and it does raise the supply ceiling.
 
@@ -60,29 +60,34 @@ The target minimum is what the protocol aims to deliver, not a hard guarantee ev
 
 | Condition | Outcome for Mobile data deployers |
 |---|---|
-| Baseline ≥ half the payer rate (USD/GB) | Top-up = 0. Deployer earns baseline. |
-| Baseline < half the payer rate | Total daily emissions increase, staying below the cap. Deployer earns half the payer rate in USD (target binds). |
-| Baseline < half the payer rate, and the required increase exceeds recent burns | Total daily emissions increase, capped at `smoothed_hnt_burned`. Deployer earns below the target until the burn average catches up. |
+| Baseline between half and twice the payer rate (USD/GB) | Top-up = 0, no redirect. Deployer earns baseline. |
+| Baseline < half the payer rate | Total daily emissions increase, staying below the burn bound. Deployer earns half the payer rate in USD (target minimum binds). |
+| Baseline < half the payer rate, and the required increase exceeds recent burns | Total daily emissions increase, bounded at `smoothed_hnt_burned`. Deployer earns below the target until the burn average catches up. |
+| Baseline > twice the payer rate | Deployer earns twice the payer rate in USD (earnings cap binds); the excess HNT goes to veHNT stakers. Total daily emissions unchanged. |
 
-The protocol computes the top-up each epoch from the published formula:
+The protocol computes the top-up (floor) and the overflow (cap) each epoch from the published formula:
 
 ```
 D_target = 0.5 × R_payer × bytes_GB / HNT_price
+D_cap    = 2.0 × R_payer × bytes_GB / HNT_price
 α        = mobile_percent_share × 0.84
-top_up   = min(smoothed_hnt_burned, max(0, (D_target − D_baseline) / α))
+top_up          = min(smoothed_hnt_burned, max(0, (D_target − D_baseline) / α))
+staker_overflow = max(0, deployer_pool − D_cap)
 ```
 
 `R_payer` is the per-GB offload price Nova sets under [HIP 143][hip-143] (what the network charges carriers per GB); `bytes_GB` is rewardable bytes in the epoch (the GB that qualify for rewards); `HNT_price` is the HNT/USD price; `D_baseline = (HIP 20 schedule + Net Emissions re-emit) × α`; and `α` is the fraction of total HNT emission that reaches the Mobile data bucket. `mobile_percent_share` is the Mobile sub-DAO's on-chain percent share (a 30-epoch EMA of `mobile_vehnt / (mobile_vehnt + iot_vehnt)`, ~0.89 today, giving `α ≈ 0.75`), read from chain each epoch; it is not a parameter and floats with veHNT delegation, so the target binds under any Mobile/IoT split.
 
 The division by `α` follows from the distribution described above: only `α` of the top-up lands at Mobile data deployers; the remaining `(1 − α)` flows to the Mobile Operations Fund, the delegator pool, and the IoT sub-DAO at their existing percent shares (see Decision 3).
 
+The cap is simpler than the top-up. `deployer_pool` is the Mobile data bucket itself, so the overflow above `D_cap` is moved directly from that bucket to the delegator pool with no `α` division (the top-up needs the division only because it sizes a DAO-level mint that then splits across buckets). The overflow is neither minted nor burned: total emission that epoch is unchanged, and the HNT is paid to veHNT delegators (claimed DAO-wide pro-rata of total veHNT) instead of deployers, so the cap is net-supply-neutral. The floor and the cap never bind in the same epoch, since the floor sits at a quarter of the cap. On-chain, the redirect rides the existing reward fields: the Mobile sub-DAO's reward-issuance step mints the overflow to the delegator pool rather than the rewards escrow, and the verifier oracle sizes the Mobile data pool as the escrow remainder after the flat Operations Fund cut, so no new account or schema is required.
+
 The `min(smoothed_hnt_burned, …)` cap stops the top-up from emitting more HNT than has recently been burned. `smoothed_hnt_burned` is the existing HIP 20 variable: a 7-epoch moving average of HNT destroyed on-chain, mostly from Nova's burns to mint DC. Over any window, the top-up stays below total HNT destruction over the same window, so the top-up never adds to net supply. The top-up is distinct from and additive to the existing HIP 20 net-emissions re-emit, which is already counted in the baseline; combined, the two re-emission paths can exceed destruction by at most the net-emissions cap (~1,644 HNT/epoch), a pre-existing property unchanged by this proposal. The trade-off shows up during sharp HNT price moves: it takes Nova 1–2 weeks of burns at the new price for the moving average to catch up, and during that window the cap binds and delivery falls short of the full target. Once the average catches up, delivery returns to the full target.
 
-Effective Mobile data deployer earn rate per GB = `max(baseline_$/GB, 0.5 × R_payer)`, subject to the burn-bounded cap. Two effects flow through to deployers without a follow-on vote: HNT/USD price increases raise the USD value of pro-rata baseline rewards; payer-rate increases under [HIP 143][hip-143] raise the target.
+Effective Mobile data deployer earn rate per GB = `clamp(baseline_$/GB, 0.5 × R_payer, 2.0 × R_payer)`, the floor subject to the burn bound. Two effects flow through to deployers without a follow-on vote: HNT/USD price increases raise the USD value of pro-rata baseline rewards, up to the cap at twice the payer rate, above which the excess goes to stakers; payer-rate increases under [HIP 143][hip-143] raise both the floor and the cap.
 
-Ahead of the vote on this proposal, Nova will reduce the payer rate from $0.50/GB to ~$0.10/GB under [HIP 143][hip-143]. The reduction reflects current commercial offload rates; [HIP 143][hip-143] is the existing authority for the rate setting and permits further adjustments under Nova's commercial discretion. The target sits at $0.05/GB (50% × $0.10 payer rate). At current delegations (`α ≈ 0.75`), the Mobile data deployer baseline (~16,640 HNT/day: HIP 20 schedule + Net Emissions re-emit pass-through, after Decision 3's +14pp reallocation) at ~91K GB/day rewardable volume falls below $0.05/GB in USD when HNT drops below ~$0.27. Above that threshold the top-up stays at zero; it activates under HNT downside or payer-rate uplift.
+Ahead of the vote on this proposal, Nova will reduce the payer rate from $0.50/GB to ~$0.10/GB under [HIP 143][hip-143]. The reduction reflects current commercial offload rates; [HIP 143][hip-143] is the existing authority for the rate setting and permits further adjustments under Nova's commercial discretion. The target sits at $0.05/GB (50% × $0.10 payer rate) and the cap at $0.20/GB (200% × $0.10). At current delegations (`α ≈ 0.75`), the Mobile data deployer baseline (~16,640 HNT/day: HIP 20 schedule + Net Emissions re-emit pass-through, after Decision 3's +14pp reallocation) at ~91K GB/day rewardable volume falls below the $0.05/GB floor when HNT drops below ~$0.27, and rises above the $0.20/GB cap when HNT climbs above ~$1.09. Between those prices neither bound binds and deployers earn the full pro-rata baseline; at current conditions the baseline sits inside the band. The floor activates under HNT downside or payer-rate uplift; the cap activates under HNT appreciation or a payer-rate cut.
 
-The target share (50%) and the 84% Mobile data bucket are hardcoded; changing them requires a community HIP and program upgrade.
+The target share (50%), the cap (200%), and the 84% Mobile data bucket are hardcoded; changing them requires a community HIP and program upgrade.
 
 IoT data transfer is unaffected by Decision 1 and continues on the existing $/DC peg. The IoT sub-DAO's existing percent share of any Mobile-driven top-up flows to the IoT Operations Fund (Decision 3).
 
@@ -213,11 +218,14 @@ This is the Council's built-in escalation mechanism, not a limit on normal gover
 - **Bundling.** Voters cannot accept some decisions and reject others. The decisions are operationally coupled (the Council oversees the supplement; the target relies on the same program upgrade as the reallocation), but a voter who supports three of four still has to vote on the bundle.
 - **PoC removal ends a reward category.** Some deployments that brought network value primarily through PoC may not be sustained on data utility alone. The proposal accepts this trade in exchange for routing rewards to verifiable utility.
 - **Dependence on the payer-rate setting.** The deployer target depends on the payer rate Nova sets under [HIP 143][hip-143]. Council insight rights cover this setting, but the authority remains with Nova as in [HIP 143][hip-143].
-- **Delivery dips briefly after sharp HNT moves.** The top-up is capped at `smoothed_hnt_burned` so it can't emit more HNT than has been burned recently. After a sharp HNT crash, deployers get partial delivery for 1–2 weeks until Nova's burns at the new price lift the moving average; delivery returns to the full target after. The same cap is what prevents unbounded minting under crash.
+- **Delivery dips briefly after sharp HNT moves.** The top-up is bounded by `smoothed_hnt_burned` so it can't emit more HNT than has been burned recently. After a sharp HNT crash, deployers get partial delivery for 1–2 weeks until Nova's burns at the new price lift the moving average; delivery returns to the full target after. The same bound is what prevents unbounded minting under crash.
+- **The earnings cap limits deployer upside in a bull market.** Above twice the payer rate, additional HNT appreciation no longer accrues to deployers; the excess goes to veHNT stakers. Deployers retain full appreciation up to the cap (a 4× band above the floor), and the threshold moves up with the payer rate, but a sustained high HNT price routes value to lockers rather than operators.
 
 ## Rationale and Alternatives
 
 **Why a target tied to the payer rate rather than a fixed $/GB.** A fixed $/GB number goes stale as HNT price and offload economics change; the original $0.50/GB target no longer reflects actual deployer earnings. Tying the target to the payer rate Nova sets under [HIP 143][hip-143] makes deployer earnings track the revenue the network actually generates and routes future payer-rate improvements directly to deployers.
+
+**Why cap deployer earnings at twice the payer rate, and route the excess to stakers.** Because the baseline pool is fixed in HNT and distributed pro-rata, its USD value rises without limit as HNT appreciates, so deployers could earn many multiples of what carriers pay the network for the same GB. The cap bounds that: deployer USD pay can't run more than 2× ahead of revenue. The 4× band ($0.05 to $0.20/GB at the current payer rate) leaves deployers full exposure to HNT appreciation through normal ranges and engages only on sustained appreciation. The excess is redirected to veHNT stakers rather than burned: it gives lockers a revenue-linked upside that activates exactly when deployer pay outruns revenue, and keeps the cap net-supply-neutral. Burning instead would tighten supply but return nothing to participants; redirecting concentrates the benefit on the holders who lock to govern.
 
 **Why pro-rata of rewardable bytes for Mobile data.** Pro-rata is splitting-resistant by construction: subdividing a busy site doesn't change total rewards earned from its traffic. Tiered-DAU and per-Hotspot caps were modeled and rejected because they reward subdivision.
 
