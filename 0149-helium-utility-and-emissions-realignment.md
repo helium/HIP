@@ -139,7 +139,7 @@ Removal of Proof-of-Coverage mechanisms from the Mobile and IoT verifier oracles
 
 PoC retirement is the only Mobile allocation change: the data bucket stays at 70% and Service Provider Rewards stay at 24%. The deployer value comes from Decision 1's target minimum and earnings cap, which at current HNT prices is the binding support.
 
-The Service Provider Rewards bucket is unchanged: a flat 24% to the single registered Service Provider. Future carriers onboard as offload carriers under the existing [HIP 143][hip-143] framework, not as on-chain SPs.
+The Service Provider Rewards bucket is unchanged: a flat 24% to Nova Labs, the single registered Service Provider. Future carriers onboard as offload carriers under the existing [HIP 143][hip-143] framework, not as on-chain SPs.
 
 **IoT sub-DAO changes:**
 
