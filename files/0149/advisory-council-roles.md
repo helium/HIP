@@ -36,7 +36,7 @@ Canonical: [HIP 149 Decision 4][hip149-d4]. In summary:
 
 ## Term
 
-All seven seats run with the Supplement. The Council's term ends on the earliest of: a community vote to dissolve the Council; full distribution of the ~141M HNT Supplement; or the Receiving Entity declining further distributions. If the Supplement is suspended early through a curtailment, the Council survives 90 days to facilitate restart discussions, then dissolves unless a restart HIP is actively in the voting process. There are no automatic renewals.
+All seven seats run with the Supplement. The Council's term ends on the earliest of: a community vote to dissolve the Council; full distribution of the ≈141M HNT Supplement; or the Receiving Entity declining further distributions. If the Supplement is suspended early through a curtailment, the Council survives 90 days to facilitate restart discussions, then dissolves unless a restart HIP is actively in the voting process. There are no automatic renewals.
 
 ## Authority
 
@@ -132,7 +132,7 @@ If a member trades while in possession of MNPI, the Receiving Entity will cooper
 
 ## Compensation
 
-Canonical: [HIP 149 Decision 4][hip149-d4]. The five community-nominated members share **1.25% of the Supplement** (~1.76M HNT total; ~352,500 HNT per seat over the program if all five remain seated), distributed pro-rata among the seated community members and minted directly to their wallets. The full 1.25% is always distributed: a vacant seat's share is distributed among the seated community members, not returned to the vault. The Receiving Entity is not the custodian or payer of these funds. The two Receiving-Entity-appointed seats serve unpaid.
+Canonical: [HIP 149 Decision 4][hip149-d4]. The five community-nominated members share **1.25% of the Supplement** (≈1.76M HNT total; ≈352,500 HNT per seat over the program if all five remain seated), distributed pro-rata among the seated community members and minted directly to their wallets. The full 1.25% is always distributed: a vacant seat's share is distributed among the seated community members, not returned to the vault. The Receiving Entity is not the custodian or payer of these funds. The two Receiving-Entity-appointed seats serve unpaid.
 
 - A member accrues compensation only while seated.
 - The total allocation may be adjusted by Council vote or community vote but may not exceed 1.25% of the Supplement.
