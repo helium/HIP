@@ -38,7 +38,7 @@ This proposal ties deployer earnings to the payer rate Nova sets under [HIP 143]
 ## Stakeholders
 
 - **Mobile data deployers.** Gain two-sided participation from Decision 1: downside protection from the target minimum (binding at current HNT prices), and upside participation as HNT appreciates, since rewards are HNT-denominated, up to twice the payer rate. Above that the surplus is shared with stakers. The Decision 3 data bucket is unchanged at 70% (only PoC retires).
-- **IoT data deployers.** Unchanged on the income side ($/DC peg preserved); IoT PoC retires.
+- **IoT data deployers.** Unchanged on the revenue side ($/DC peg preserved); IoT PoC retires.
 - **veHNT holders and delegators.** 6% delegator allocation preserved, plus any Mobile data earnings above the Decision 1 cap. Effective HNT max supply rises from ~206M (today's effective ceiling, after cumulative reductions since HIP 20) to ~347M to fund the supplement in Decision 2.
 - **Carriers and offload partners.** Continue under the existing [HIP 143][hip-143] commercial framework. The deployer target follows the payer rate.
 
@@ -46,13 +46,19 @@ This proposal ties deployer earnings to the payer rate Nova sets under [HIP 143]
 
 ### Decision 1: Revenue-linked emissions with a target minimum for Mobile deployers
 
-What deployers get: earnings that move with the network in both directions. Proof-of-Coverage is already retired by consensus; in its place, deployers earn from the data they deliver, tied to the per-GB offload price Nova sets under [HIP 143][hip-143] (the dollar amount the network charges carriers per GB). On the downside, a target minimum holds deployers at no less than half that price per GB: if HNT falls, the protocol mints extra HNT that epoch to keep them at the floor. On the upside, deployers share in HNT's appreciation, because rewards are paid pro-rata in HNT and their dollar value rises with the token, all the way up to twice the payer rate. The old $/DC peg gave neither; it paid a fixed dollar rate regardless of where HNT traded. Now that network metrics reveal the verifiable utility each deployment delivers, the deployments carrying real traffic share in the upside the token provides. Past twice the payer rate, where deployers would be earning more than double what carriers pay for the data, the surplus flows to veHNT stakers. Deployers, stakers, and the network each gain.
+What deployers get: earnings that move with the network in both directions. Proof-of-Coverage is already retired by consensus; in its place, deployers earn from the data they deliver, tied to the per-GB offload price Nova sets under [HIP 143][hip-143] (the dollar amount the network charges carriers per GB).
 
-Where the HNT comes from: the top-up is capped at the HNT recently burned, mostly Nova burning HNT to create the Data Credits carriers spend on offload. The protocol never mints more than was just burned, so this target on its own does not grow the net HNT supply. Decision 2's supplement is separate, and it does raise the supply ceiling.
+To the downside, a target minimum holds deployers at no less than half that price per GB: if HNT falls, the protocol re-emits a portion of the HNT burned for data transfer, sufficient to uphold the floor.
+
+To the upside, deployers share in HNT's appreciation, because rewards are paid pro-rata in HNT, and their dollar value rises with the token, all the way up to twice the payer rate.
+
+The old $/DC peg gave neither; it capped data transfer rewards at 1x of network revenue, while allowing the effective reward rate in dollar terms to trend towards zero if the price of HNT diverged sufficiently from network data volumes. Now that network metrics reveal the verifiable utility each deployment delivers, the deployments carrying real traffic can share in the upside the token provides. Past twice the payer rate, where deployers would be earning more than double what carriers pay for the data, the surplus flows to veHNT stakers. Deployers, stakers, and the network each gain.
+
+Where the HNT comes from: the top-up is capped at the HNT recently burned, mostly Nova burning HNT to create the Data Credits carriers spend on offload. The protocol never mints more than was just burned, so this target on its own does not grow the net HNT supply, and when HNT price is low, HNT supply dynamics remain long-term deflationary. Decision 2's supplement is separate, and it does raise the supply ceiling.
 
 The top-up is shared, not deployer-only: it is added to the epoch's total emissions and split across all reward pools by the usual percentages, the same as every other HNT emission. It is sized so Mobile data deployers reach the target after that split; the other pools (Service Provider Rewards, delegators, and the IoT sub-DAO) rise proportionally as a side effect.
 
-The target minimum is what the protocol aims to deliver, not a hard guarantee every epoch. After a sharp drop in the HNT price, the amount delivered can fall short for 1 to 2 weeks, until the burn average catches up. In normal conditions deployers receive the full target.
+The target minimum is what the protocol aims to deliver, not a hard guarantee every epoch. After a sharp drop in the HNT price, the amount delivered can fall short for 1 to 2 weeks, until the burn average catches up. Under normal conditions, deployers receive the full target.
 
 ![Figure 1: the top-up needed to reach the target stays under the HNT burned that day at any HNT price, so it never adds to net supply; only the HNT count scales.](files/0149/decision-1-affordable-at-any-price.png)
 
