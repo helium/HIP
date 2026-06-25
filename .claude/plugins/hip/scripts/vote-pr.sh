@@ -113,14 +113,9 @@ if [[ -z "$BASE_SHA" || "$BASE_SHA" == "null" ]]; then
   exit 1
 fi
 
-# Get the current file's blob SHA and its raw content. Fetch raw content
-# directly (Accept: raw) instead of base64-decoding the JSON response — BSD/macOS
-# `base64 -d` mishandles the newline-wrapped base64 the contents API returns.
-FILE_SHA=$("$GH" api "repos/$REPO/contents/$FILE_PATH" --jq '.sha')
-if [[ -z "$FILE_SHA" || "$FILE_SHA" == "null" ]]; then
-  echo "Error: Could not get $FILE_PATH SHA from $REPO." >&2
-  exit 1
-fi
+# Get the current file's raw content. Fetch raw directly (Accept: raw) instead of
+# base64-decoding the JSON response — BSD/macOS `base64 -d` mishandles the
+# newline-wrapped base64 the contents API returns.
 CURRENT_CONTENT=$("$GH" api "repos/$REPO/contents/$FILE_PATH" -H "Accept: application/vnd.github.raw")
 
 # Build the new entry as a text block matching the file's existing style:
@@ -184,16 +179,35 @@ fi
   -f "sha=$BASE_SHA" > /dev/null
 BRANCH_CREATED=true
 
-echo "Committing updated $FILE_PATH..."
+echo "Committing updated $FILE_PATH (signed)..."
 
-# Encode content
+# Commit via the GraphQL createCommitOnBranch mutation, NOT the REST contents API.
+# GitHub web-flow-signs commits made through this mutation (they show as Verified);
+# the contents API does not, and helium/helium-vote's main requires signed commits —
+# a contents-API commit leaves the PR unmergeable without an admin override.
+# expectedHeadOid is the branch tip, which equals BASE_SHA right after branch creation.
 ENCODED_CONTENT=$(printf '%s' "$UPDATED_CONTENT" | base64 | tr -d '\n')
-"$GH" api "repos/$REPO/contents/$FILE_PATH" \
-  -X PUT \
-  -f "message=Add HIP-${HIP_NUMBER} vote proposal" \
-  -f "content=$ENCODED_CONTENT" \
-  -f "sha=$FILE_SHA" \
-  -f "branch=$BRANCH" > /dev/null
+COMMIT_REQUEST=$(jq -n \
+  --arg query 'mutation($input: CreateCommitOnBranchInput!) { createCommitOnBranch(input: $input) { commit { oid } } }' \
+  --arg repo "$REPO" \
+  --arg branch "$BRANCH" \
+  --arg oid "$BASE_SHA" \
+  --arg message "Add HIP-${HIP_NUMBER} vote proposal" \
+  --arg path "$FILE_PATH" \
+  --arg contents "$ENCODED_CONTENT" \
+  '{query: $query, variables: {input: {
+      branch: {repositoryNameWithOwner: $repo, branchName: $branch},
+      expectedHeadOid: $oid,
+      message: {headline: $message},
+      fileChanges: {additions: [{path: $path, contents: $contents}]}
+  }}}')
+COMMIT_RESPONSE=$(printf '%s' "$COMMIT_REQUEST" | "$GH" api graphql --input -)
+COMMIT_OID=$(printf '%s' "$COMMIT_RESPONSE" | jq -r '.data.createCommitOnBranch.commit.oid // empty')
+if [[ -z "$COMMIT_OID" ]]; then
+  echo "Error: createCommitOnBranch did not return a commit:" >&2
+  echo "$COMMIT_RESPONSE" >&2
+  exit 1
+fi
 
 echo "Opening PR..."
 
