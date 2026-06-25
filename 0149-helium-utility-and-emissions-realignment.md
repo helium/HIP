@@ -1,6 +1,9 @@
 ---
 authors:
   - "@madninja"
+  - "@jmfayal"
+  - "@ferebee"
+  - "@Siegfried-B"
 start-date: 2026-06-02
 category: Economic, Technical
 original-hip-pr: https://github.com/helium/HIP/pull/1200
