@@ -58,7 +58,7 @@ The old $/DC peg gave neither; it capped the dollar value of rewards per GB at t
 
 Where the HNT comes from: the top-up is capped at the HNT recently burned, mostly Nova burning HNT to create the Data Credits used for paying the carrier offload. The protocol never mints more than was just burned, so this target on its own does not grow the net HNT supply, and when HNT price is low, HNT supply dynamics remain long-term deflationary. Decision 2's supplement is separate, and it does raise the supply ceiling.
 
-The top-up is shared, not deployer-only: it is added to the epoch's total emissions and split across all reward pools by the usual percentages, the same as every other HNT emission. It is sized so Mobile data deployers reach the target after that split; the other pools (Service Provider Rewards, delegators, and the IoT sub-DAO) rise proportionally as a side effect.
+The top-up is shared, not deployer-only: it is added to the epoch's total emissions and split across all reward pools by the usual percentages, the same as every other HNT emission. It is sized so Mobile data deployers reach the target after that split, as much as keeping the additional HNT emissions below the cap allows; the other pools (Service Provider Rewards, delegators, and the IoT sub-DAO) rise proportionally as a side effect.
 
 The target minimum is what the protocol aims to deliver, not a hard guarantee every epoch. After a sharp drop in the HNT price, the amount delivered can fall short for 1 to 2 weeks, until the burn average catches up. Under normal conditions, deployers receive the full target.
 
