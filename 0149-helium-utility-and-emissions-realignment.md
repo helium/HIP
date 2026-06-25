@@ -8,6 +8,8 @@ tracking-issue: https://github.com/helium/HIP/issues/1201
 vote-requirements: veHNT Holders
 status: In Discussion
 reddit-post-id: 1twsn06
+vote-summary-url: https://gist.githubusercontent.com/hiptron/dbaf4c1df802bf3f32a0eb75cb1918a3/raw/HIP-149-Vote-Summary.md
+vote-pr: https://github.com/helium/helium-vote/pull/280
 ---
 
 # HIP 149: Helium Utility and Emissions Realignment
