@@ -120,6 +120,8 @@ The script fetches `helium-proposals.json`, appends the vote entry, creates a br
 
 The script appends the entry **textually**, preserving the file's existing inline style (2-space indent with inline `tags`/`choices`), so the PR diff is just the one new entry. Do not "simplify" it back to `jq '. + [entry]'` — jq's pretty-printer expands the inline arrays and reformats every existing entry (a ~500-line diff). A comma-separated `--category` (e.g. `"economic, technical"`) produces multiple tags.
 
+The commit is made via the GraphQL `createCommitOnBranch` mutation, **not** the REST contents API, so GitHub web-flow-signs it (shows as Verified). `helium/helium-vote` `main` requires signed commits; a contents-API commit is unsigned and leaves the PR `BLOCKED`/unmergeable without an admin override. Don't switch it back to the contents API.
+
 **Pinned vs unpinned gist URL.** The raw gist URL with a commit hash (`/raw/<sha>/…`) is version-pinned and changes whenever you edit the gist; the unpinned form (`/raw/<file>`) always serves the latest. `vote-pr.sh` records the pinned URL in `helium-proposals.json` (frozen snapshot). If you edit the gist after opening the vote PR, re-point the entry's `uri` to the new pinned URL. For the HIP frontmatter `vote-summary-url` (step 5), prefer the **unpinned** URL so it follows edits.
 
 ### How the vote goes live on-chain (after the PR merges)
