@@ -69,16 +69,18 @@ fi
 
 BRANCH="hip-${HIP_NUMBER}"
 
-# Map category to tags
-case "$CATEGORY" in
-  economic*)  TAGS='["Economic"]' ;;
-  technical*) TAGS='["Technical"]' ;;
-  meta*)      TAGS='["Meta"]' ;;
-  *)          TAGS='["Economic", "Technical"]' ;;
-esac
+# Map category (possibly comma-separated, e.g. "economic, technical") to tags,
+# preserving every category rather than just the first. The ${TAGS//,/, } adds a
+# space after commas to match the inline-array style in helium-proposals.json.
+TAGS=$(printf '%s' "$CATEGORY" | jq -Rc '
+  split(",")
+  | map(gsub("^\\s+|\\s+$"; "") | ascii_downcase)
+  | map({economic: "Economic", technical: "Technical", meta: "Meta"}[.])
+  | map(select(. != null))')
+TAGS=${TAGS//,/, }
 
 # Check dependencies
-for cmd in jq base64; do
+for cmd in jq base64 python3; do
   if ! command -v "$cmd" &>/dev/null; then
     echo "Error: $cmd is required but not installed." >&2
     exit 1
@@ -111,56 +113,68 @@ if [[ -z "$BASE_SHA" || "$BASE_SHA" == "null" ]]; then
   exit 1
 fi
 
-# Get the current file content and its blob SHA
-FILE_RESPONSE=$("$GH" api "repos/$REPO/contents/$FILE_PATH")
-FILE_SHA=$(echo "$FILE_RESPONSE" | jq -r '.sha')
+# Get the current file's blob SHA and its raw content. Fetch raw content
+# directly (Accept: raw) instead of base64-decoding the JSON response — BSD/macOS
+# `base64 -d` mishandles the newline-wrapped base64 the contents API returns.
+FILE_SHA=$("$GH" api "repos/$REPO/contents/$FILE_PATH" --jq '.sha')
 if [[ -z "$FILE_SHA" || "$FILE_SHA" == "null" ]]; then
   echo "Error: Could not get $FILE_PATH SHA from $REPO." >&2
   exit 1
 fi
-CURRENT_CONTENT=$(echo "$FILE_RESPONSE" | jq -r '.content' | base64 -d)
+CURRENT_CONTENT=$("$GH" api "repos/$REPO/contents/$FILE_PATH" -H "Accept: application/vnd.github.raw")
 
-# Build the new entry
-NEW_ENTRY=$(jq -n \
-  --arg name "HIP-${HIP_NUMBER}: ${TITLE}" \
-  --arg uri "$GIST_URL" \
-  --arg choice_for "For HIP-${HIP_NUMBER}" \
-  --arg choice_against "Against HIP-${HIP_NUMBER}" \
-  --argjson tags "$TAGS" \
-  '{
-    name: $name,
-    uri: $uri,
-    maxChoicesPerVoter: 1,
-    tags: $tags,
-    choices: [
-      { uri: null, name: $choice_for },
-      { uri: null, name: $choice_against }
+# Build the new entry as a text block matching the file's existing style:
+# 2-space indentation with inline `tags` and `choices`. We append it textually
+# rather than re-serializing the whole array with `jq`, because jq's pretty-printer
+# expands those inline arrays and reformats every existing entry (a ~500-line diff
+# for a one-entry change). jq is used only to JSON-escape the scalar values, and
+# to validate the result below.
+NAME_JSON=$(jq -cn --arg x "HIP-${HIP_NUMBER}: ${TITLE}" '$x')
+URI_JSON=$(jq -cn --arg x "$GIST_URL" '$x')
+FOR_JSON=$(jq -cn --arg x "For HIP-${HIP_NUMBER}" '$x')
+AGAINST_JSON=$(jq -cn --arg x "Against HIP-${HIP_NUMBER}" '$x')
+ENTRY_BLOCK="  {
+    \"name\": ${NAME_JSON},
+    \"uri\": ${URI_JSON},
+    \"maxChoicesPerVoter\": 1,
+    \"tags\": ${TAGS},
+    \"choices\": [
+      { \"uri\": null, \"name\": ${FOR_JSON} },
+      { \"uri\": null, \"name\": ${AGAINST_JSON} }
     ]
-  }')
+  }"
 
-# Append to the array
-UPDATED_CONTENT=$(echo "$CURRENT_CONTENT" | jq --argjson entry "$NEW_ENTRY" '. + [$entry]')
+# Append the entry before the array's closing ']', preserving all existing bytes
+# (and the file's trailing-newline state).
+UPDATED_CONTENT=$(CUR="$CURRENT_CONTENT" ENTRY="$ENTRY_BLOCK" python3 -c '
+import os, sys
+cur = os.environ["CUR"]
+entry = os.environ["ENTRY"]
+trailing_nl = cur.endswith("\n")
+body = cur.rstrip()
+if not body.endswith("]"):
+    raise SystemExit("helium-proposals.json does not end with a JSON array")
+body = body[:-1].rstrip()  # drop the final "]" -> body now ends at the last entry "}"
+sys.stdout.write(body + ",\n" + entry + "\n]" + ("\n" if trailing_nl else ""))
+')
 
-# Check that the entry was actually added
-ORIGINAL_COUNT=$(echo "$CURRENT_CONTENT" | jq 'length')
-UPDATED_COUNT=$(echo "$UPDATED_CONTENT" | jq 'length')
-if [[ "$UPDATED_COUNT" -le "$ORIGINAL_COUNT" ]]; then
-  echo "Error: Failed to append entry to $FILE_PATH" >&2
+# Validate the result is well-formed JSON and exactly one entry was added
+ORIGINAL_COUNT=$(printf '%s' "$CURRENT_CONTENT" | jq 'length')
+UPDATED_COUNT=$(printf '%s' "$UPDATED_CONTENT" | jq 'length')
+if [[ "$UPDATED_COUNT" -ne $((ORIGINAL_COUNT + 1)) ]]; then
+  echo "Error: Failed to append entry to $FILE_PATH (or produced invalid JSON)" >&2
   exit 1
 fi
 
 echo "Creating branch $BRANCH..."
 
-# Check if branch already exists
-BRANCH_CHECK_STATUS=$("$GH" api "repos/$REPO/git/ref/heads/$BRANCH" \
-  --include 2>/dev/null | head -1 | grep -oE '[0-9]{3}' || echo "000")
-if [[ "$BRANCH_CHECK_STATUS" == "200" ]]; then
+# Check if the branch already exists. `gh api` exits non-zero on a 404, so test
+# its exit status directly — do not pipe the response through `head`/`grep`, which
+# races with SIGPIPE under `set -o pipefail` and misreports the status as "404\n000".
+if "$GH" api "repos/$REPO/git/ref/heads/$BRANCH" >/dev/null 2>&1; then
   echo "Error: Branch $BRANCH already exists in $REPO." >&2
   echo "Delete it first if you want to retry:" >&2
   echo "  $GH api repos/$REPO/git/refs/heads/$BRANCH -X DELETE" >&2
-  exit 1
-elif [[ "$BRANCH_CHECK_STATUS" != "404" ]]; then
-  echo "Error: Could not check if branch exists (HTTP $BRANCH_CHECK_STATUS)." >&2
   exit 1
 fi
 

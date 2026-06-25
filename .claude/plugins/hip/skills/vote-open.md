@@ -58,6 +58,19 @@ Create a markdown document summarizing the HIP for voters. This is what voters s
 - **veMOBILE Holders**: 67% voting power — ask the user for the quorum threshold
 - **Multiple vote types**: each gets its own approval section
 
+**Quorum is an absolute veHNT number, not a percentage.** The on-chain proposal resolves against a fixed vote-weight threshold, and heliumvote works in absolute veHNT (recent network-wide votes used **100,000,000 veHNT**). If the HIP states its quorum as a percentage (e.g. "≥7% quorum"), convert it to an absolute figure at vote time:
+
+1. Fetch the current delegated veHNT (what heliumvote sums as the network total):
+
+   ```bash
+   curl -s https://helium-vote-service.web.helium.io/v1/subdao-delegations
+   # {"iot":"<raw>","mobile":"<raw>"}  — raw integers, 8 decimals
+   ```
+
+2. `total veHNT = (iot + mobile) / 1e8`, then `quorum = percentage × total`. Example: at ≈862M total veHNT, 7% ≈ 60.3M veHNT.
+
+Put the absolute figure in the summary and give it to the multisig signer to configure on-chain. If the HIP body and the summary express quorum differently (% vs absolute), reconcile them so voters see one consistent bar.
+
 **Template:**
 
 ```markdown
@@ -111,6 +124,8 @@ Use the `vote-pr.sh` script:
 ```
 
 The script fetches `helium-proposals.json`, appends the vote entry, creates a branch, commits, and opens the PR. It prints the PR URL on success.
+
+The script appends the entry **textually**, preserving the file's existing inline style (2-space indent with inline `tags`/`choices`), so the PR diff is just the one new entry. Do not "simplify" it back to `jq '. + [entry]'` — jq's pretty-printer expands the inline arrays and reformats every existing entry (a ~500-line diff). A comma-separated `--category` (e.g. `"economic, technical"`) produces multiple tags.
 
 ### 5. Update the HIP frontmatter
 
