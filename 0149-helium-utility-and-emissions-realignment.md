@@ -8,6 +8,8 @@ tracking-issue: https://github.com/helium/HIP/issues/1201
 vote-requirements: veHNT Holders
 status: In Discussion
 reddit-post-id: 1twsn06
+vote-summary-url: https://gist.githubusercontent.com/hiptron/dbaf4c1df802bf3f32a0eb75cb1918a3/raw/HIP-149-Vote-Summary.md
+vote-pr: https://github.com/helium/helium-vote/pull/280
 ---
 
 # HIP 149: Helium Utility and Emissions Realignment
@@ -179,7 +181,7 @@ A 7-seat Advisory Council with standing oversight of how the operations and grow
 
 - Triggered by Council escalation, at any time once seated.
 - Announced within 3 days of the Council vote; minimum 7-day discussion period and 7-day voting window.
-- Approved by a simple majority of voted veHNT; ≥7% quorum. Asymmetric with the authorizing vote: authorizing the supplement takes a 66.67% supermajority, while curtailing it (reduce, pause, or halt) through Council escalation takes a simple majority. The lever loosens downward only.
+- Approved by a simple majority of voted veHNT; 100,000,000 veHNT quorum. Asymmetric with the authorizing vote: authorizing the supplement takes a 66.67% supermajority, while curtailing it (reduce, pause, or halt) through Council escalation takes a simple majority. The lever loosens downward only.
 - On approval, a program upgrade implementing the curtailment is deployed within 7 days. Termination halts subsequent accrual in the active window (or, before mint start, prevents the first window from beginning).
 - Curtailment can only reduce, pause, or halt the mint. Any increase, acceleration, restart, or other amendment requires a standard community HIP at the 66.67% supermajority.
 
@@ -231,7 +233,7 @@ For the supplement authorized under Decision 2, the designated wallet is the on-
 
 - veHNT-weighted, single yes/no on the four-decision bundle. The Council exists to oversee the supplement that funds operations and growth; voting them separately would let one pass without the other.
 - Minimum 7-day forum discussion period; 7-day voting window.
-- 66.67% supermajority of votes cast; ≥7% quorum. Token-economic votes pass on a supermajority, not a simple majority (precedent: [HIP 85][hip-85], [HIP 124][hip-124]); a proposal should not authorize its own issuance at a self-set simple-majority bar.
+- 66.67% supermajority of votes cast; 100,000,000 veHNT quorum. Token-economic votes pass on a supermajority, not a simple majority (precedent: [HIP 85][hip-85], [HIP 124][hip-124]); a proposal should not authorize its own issuance at a self-set simple-majority bar.
 
 ### What this proposal does not change
 
