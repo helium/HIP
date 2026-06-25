@@ -53,23 +53,16 @@ Create a markdown document summarizing the HIP for voters. This is what voters s
 
 **Determine approval requirements from `vote-requirements`:**
 
-- **veHNT Holders**: 67% voting power, 100,000,000 veHNT quorum
-- **veIOT Holders**: 67% voting power — ask the user for the quorum threshold
-- **veMOBILE Holders**: 67% voting power — ask the user for the quorum threshold
+- **veHNT Holders**: 67% of votes cast, 100,000,000 veHNT quorum, 7-day window
+- **veIOT Holders / veMOBILE Holders**: 67% of votes cast — confirm the quorum with the user (the sub-DAO registrars have their own resolution settings)
 - **Multiple vote types**: each gets its own approval section
 
-**Quorum is an absolute veHNT number, not a percentage.** The on-chain proposal resolves against a fixed vote-weight threshold, and heliumvote works in absolute veHNT (recent network-wide votes used **100,000,000 veHNT**). If the HIP states its quorum as a percentage (e.g. "≥7% quorum"), convert it to an absolute figure at vote time:
+**Quorum/approval/window are an on-chain default, not set per vote.** HNT proposals inherit the Helium org's default proposal config; you do not configure these per vote. The summary just needs to state them correctly. Confirmed on mainnet (RPC `https://solana-rpc.web.helium.io`) and stable across votes:
 
-1. Fetch the current delegated veHNT (what heliumvote sums as the network total):
+- **Quorum: 100,000,000 veHNT · Approval: 67% of votes cast · Window: 7 days**
+- Trace: org program `orgdXvHVLkWgBYerptASkAwkZAE563CJUu717dMNx5f` → Helium org PDA `3tGYboYbWSPXPbtHjLLuem7e8tNhUgvrWaNKz7GXCWGc` → `defaultProposalConfig` `22SWTDZVj1L81SXfwbEeUmdZBFj23MFmER3Gv8BmxbBS` ("Helium Default V2") → `stateController` `7Vrme34DXPH8ow4HEAatZKwZF9AR5vq8MZhA3CanMEbr` (`ResolutionSettingsV0` "Helium Single Choice V1"): `choiceVoteWeight.weightThreshold = 0x2386f26fc10000 = 100,000,000 × 1e8`, `choicePercentage = 670000000` (= 67%), `offsetFromStartTs = 604800` (= 7 days). The 100M basis traces to HIP 77 (1% of HNT supply × ~75x average lockup multiplier).
 
-   ```bash
-   curl -s https://helium-vote-service.web.helium.io/v1/subdao-delegations
-   # {"iot":"<raw>","mobile":"<raw>"}  — raw integers, 8 decimals
-   ```
-
-2. `total veHNT = (iot + mobile) / 1e8`, then `quorum = percentage × total`. Example: at ≈862M total veHNT, 7% ≈ 60.3M veHNT.
-
-Put the absolute figure in the summary and give it to the multisig signer to configure on-chain. If the HIP body and the summary express quorum differently (% vs absolute), reconcile them so voters see one consistent bar.
+If a HIP frames its quorum as a percentage, reconcile it to this absolute default rather than inventing a new bar (an earlier "≥7%" draft of HIP 149 had no precedent and was dropped). Note: `https://helium-vote-service.web.helium.io/v1/subdao-delegations` returns *delegated* veHNT (mobile+iot — a subset of total staked, not the votable total), so it is not a clean denominator for "% of total veHNT"; the quorum is an absolute number regardless.
 
 **Template:**
 
@@ -126,6 +119,16 @@ Use the `vote-pr.sh` script:
 The script fetches `helium-proposals.json`, appends the vote entry, creates a branch, commits, and opens the PR. It prints the PR URL on success.
 
 The script appends the entry **textually**, preserving the file's existing inline style (2-space indent with inline `tags`/`choices`), so the PR diff is just the one new entry. Do not "simplify" it back to `jq '. + [entry]'` — jq's pretty-printer expands the inline arrays and reformats every existing entry (a ~500-line diff). A comma-separated `--category` (e.g. `"economic, technical"`) produces multiple tags.
+
+**Pinned vs unpinned gist URL.** The raw gist URL with a commit hash (`/raw/<sha>/…`) is version-pinned and changes whenever you edit the gist; the unpinned form (`/raw/<file>`) always serves the latest. `vote-pr.sh` records the pinned URL in `helium-proposals.json` (frozen snapshot). If you edit the gist after opening the vote PR, re-point the entry's `uri` to the new pinned URL. For the HIP frontmatter `vote-summary-url` (step 5), prefer the **unpinned** URL so it follows edits.
+
+### How the vote goes live on-chain (after the PR merges)
+
+The proposal is created and opened by the **Helium governance Squads multisig** (V4, program `SQDS4ep65T869zMMBKyuUq6aD6EgTu8psMjkvj52pCf`; its vault — the Helium org authority — is `pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U`):
+
+1. After the `helium-vote` PR merges, `bin/helium-vote.ts bulk-create-proposal --multisig <addr> --orgName Helium` (the `create-proposals` CI workflow, or a manual run) *proposes* a bundled transaction: `initializeProposalV0` (owner = the multisig vault) + `updateStateV0 → voting` (opens voting) + `queueResolveProposalV0` (schedules the tuktuk auto-resolve).
+2. The multisig **members approve to threshold and execute in the Squads app** (app.squads.so). Execution opens voting on heliumvote.com — this is the "multisig signs off" step.
+3. Resolution is **automated** by the tuktuk task queue at the end of the window, against the default config above. No manual tally, and no per-vote quorum to set.
 
 ### 5. Update the HIP frontmatter
 
