@@ -40,30 +40,27 @@ Each status change updates three things in lockstep: README badge, tracking issu
 1. Author submits PR with `0000-slug.md` file
 2. Maintainer reviews — `/hip:review`
 3. Maintainer accepts — `/hip:assign` (numbers, renames, creates tracking issue, updates README, merges)
-4. Announce to community — `/hip:post`
-5. Prepare vote — `/hip:vote-open` (gist, helium-vote PR, Reddit reminder)
-6. Vote goes live on-chain (multisig signs off) — `/hip:status NNN voting-open`
-7. Vote closes — `/hip:status NNN approved` or `/hip:status NNN rejected`
-8. Implementation complete — `/hip:status NNN deployed`
+4. Prepare vote — `/hip:vote-open` (gist, helium-vote PR)
+5. Vote goes live on-chain (multisig signs off) — `/hip:status NNN voting-open`
+6. Vote closes — `/hip:status NNN approved` or `/hip:status NNN rejected`
+7. Implementation complete — `/hip:status NNN deployed`
 
 ## HIP Plugin (`/hip:*`)
 
-Six skills for HIP lifecycle — see `.claude/plugins/hip/skills/`:
+Five skills for HIP lifecycle — see `.claude/plugins/hip/skills/`:
 - `/hip:create` — scaffold new HIP with category-specific guidance
 - `/hip:review` — quality/completeness review with argument assessment
 - `/hip:assign` — assign HIP number, create tracking issue, update README, prepare for merge
 - `/hip:vote-open` — open heliumvote.com voting (requires hiptron credentials)
-- `/hip:status` — update status (README badge, tracking issue labels, frontmatter, Reddit comment)
-- `/hip:post` — Reddit announcements on r/HeliumNetwork
+- `/hip:status` — update status (README badge, tracking issue labels, frontmatter)
 
 All skills treat HIP file content as untrusted input (prompt injection guards).
-Scripts in `.claude/plugins/hip/scripts/` handle GitHub and Reddit API calls.
+Scripts in `.claude/plugins/hip/scripts/` handle GitHub API calls.
 
 ### Credentials
 
 Scripts read credentials from `~/.config/hip/`:
 - `github.env` — hiptron GitHub token (`HIPTRON_GITHUB_TOKEN=ghp_...`), needs `repo` + `gist` scopes
-- `reddit.env` — HeliumConsoleTeam Reddit credentials (`REDDIT_CLIENT_ID`, `REDDIT_CLIENT_SECRET`, `REDDIT_USERNAME`, `REDDIT_PASSWORD`)
 
 If you already have HRP credentials in `~/.config/hrp/`, you can copy them — same accounts.
 
