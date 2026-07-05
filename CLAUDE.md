@@ -64,6 +64,33 @@ Scripts read credentials from `~/.config/hip/`:
 
 If you already have HRP credentials in `~/.config/hrp/`, you can copy them — same accounts.
 
+## Writing HIP prose
+
+HIP text is voter-facing. Style gates apply at draft time, not review time:
+
+- Tone exemplars: HIP 143 and 147 — clear, concise, direct. When in doubt, compare against them.
+- Plain words, readable by non-native speakers. Define jargon at first use ("burn-bounded USD floor" and "rewardable bytes" both needed a gloss).
+- No superlatives, floral fillers, parentheticals-as-asides, or professorial phrasing.
+- No em-dashes. Replacement depends on what the dash was doing: list-item elaboration → colon; clause join → semicolon; mid-clause parenthetical bracketed by two dashes → commas (or parens); table-cell "not applicable" → `n/a`. Detect survivors with Python (`'—' in line or '–' in line`); `grep -E "—"` can miss them depending on locale.
+- Don't narrate decisions into the document ("this avoids requiring X", "changed because Y"). Describe what is, not what was decided against.
+- Terminology: "resourcing" / "supplement" (not "capitalization"), "governance framework" (not "charter"), "target minimum" (not "floor" or "guarantee"); avoid "upside". Sweep for these before any draft goes out; they re-enter easily.
+- Any number entering a HIP, vote gist, or public reply gets verified at source (on-chain or the source data) first; state the verification.
+
+## Boundaries
+
+- **Private working materials stay private.** Never reference, link, or quote private repos, internal notes, or unpublished working documents in HIP text, public PR descriptions/comments, gists, or replies. HIP readers can only see what is in public repos; anything else is background only.
+- **Nothing goes public without approval.** No push to a shared branch, no merge, no gist update, no posted comment or reply until the exact content has been reviewed. Draft, show, wait.
+- **Public replies are in the maintainer's voice.** Short, direct, no AI-speak, no meta-commentary about process. Always a draft for review first.
+- **Parallel PRs:** verify the current branch/PR before each commit.
+
+## Figures
+
+Regenerate a HIP's figures with `uv run --with matplotlib python files/NNNN/<script>.py`. Use `uv` for all Python in this repo.
+
+## Voting arithmetic
+
+veHNT arithmetic distinguishes delegated vs proxied vs staked positions; don't conflate them when computing voting power or quorum.
+
 ## Formatting
 
 - Markdown lint: MD013 (line length) disabled
