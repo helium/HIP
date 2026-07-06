@@ -139,19 +139,26 @@ Remove whichever of these is currently on the issue, then add the new one:
 
 If transitioning to **Deployed**, also remove `in development` if present (a HIP might have had that intermediate label added manually).
 
-### 6. Commit
+### 6. Commit and open a PR
 
-Stage the changed files (HIP `.md` file and `README.md`) and commit:
+`main` is a protected branch — direct pushes are rejected (`protected branch hook declined`). Status changes go through a PR like any other change.
 
-```
-Update HIP-{NNN} status: {new status}
-```
-
-Push to `main` (status changes are direct commits, not PRs):
+Create a branch, stage the changed files (HIP `.md` file and `README.md`), and commit:
 
 ```bash
-git push
+git checkout -b hip-{NNN}-{status-slug}
+git add {NNNN-slug}.md README.md
+git commit -m "Update HIP-{NNN} status: {new status}"
 ```
+
+Commit message body: none needed. Push the branch and open a PR against `main`:
+
+```bash
+git push -u origin hip-{NNN}-{status-slug}
+gh pr create --repo helium/HIP --base main --title "Update HIP-{NNN} status: {new status}" --body "..."
+```
+
+The PR body should state the transition (old → new status) and, for a vote outcome (Approved/Rejected), the verified on-chain tally and the proposal address. Do **not** merge on your own initiative — hand the merge decision to the user. After they approve the merge, squash-merge, restore local `main` (`git checkout main && git pull --ff-only`), and delete the branch locally and on the remote.
 
 ### 7. Report
 
@@ -159,6 +166,7 @@ Tell the user:
 - HIP-**NNN** status updated to **{new status}**
 - README badge updated
 - Tracking issue labels updated: removed `{old label}`, added `{new label}`
+- PR opened: **{PR URL}** (awaiting merge approval)
 
 ---
 
@@ -166,8 +174,11 @@ Tell the user:
 
 | Failed at | What exists | Recovery |
 |---|---|---|
-| After frontmatter update but before README | Frontmatter updated, README stale | Continue manually — update README and commit |
+| After frontmatter update but before README | Frontmatter updated, README stale | Continue manually — update README |
 | After README but before label update | Files updated, labels stale | Run the label update command manually |
-| After labels but before commit | Everything updated but not committed | Just commit and push |
+| After labels but before commit | Everything updated but not committed | Create the branch, commit, and open the PR (step 6) |
+| Commit made but push rejected | Committed on `main` locally | `main` is protected. Move the commit to a branch (`git branch <b>; git reset --hard origin/main; git checkout <b>`), push it, open the PR |
 
 Status changes are idempotent — running the same transition twice is harmless (badge and labels are already in the target state).
+
+Note: the tracking-issue label update (step 5) goes through the GitHub API, not the PR, so it lands before the PR merges. The issue briefly shows the new status label while the frontmatter/README change is still in review. That is expected; the labels reflect the confirmed outcome.
