@@ -9,7 +9,7 @@ category: Economic, Technical
 original-hip-pr: https://github.com/helium/HIP/pull/1200
 tracking-issue: https://github.com/helium/HIP/issues/1201
 vote-requirements: veHNT Holders
-status: Voting Open
+status: Approved
 reddit-post-id: 1twsn06
 vote-summary-url: https://gist.githubusercontent.com/hiptron/dbaf4c1df802bf3f32a0eb75cb1918a3/raw/HIP-149-Vote-Summary.md
 vote-pr: https://github.com/helium/helium-vote/pull/280
