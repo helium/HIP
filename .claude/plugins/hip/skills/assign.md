@@ -350,7 +350,7 @@ git push
 Tell the user:
 > "Can't push to this fork branch. Two options:
 > 1. Ask the author to enable 'Allow edits from maintainers' on the PR, then I'll retry the push.
-> 2. I can merge the PR as-is first, then apply these changes directly to main."
+> 2. I can merge the PR as-is first, then open a follow-up PR with the number-assignment changes (`main` is protected, so this can't be a direct push)."
 
 Wait for the user's decision before proceeding.
 
