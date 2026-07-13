@@ -59,8 +59,8 @@ for cmd in jq base64 python3; do
   command -v "$cmd" &>/dev/null || { echo "Error: $cmd is required." >&2; exit 1; }
 done
 # Validate the replacements file shape up front.
-if ! jq -e 'type == "array" and length > 0 and all(has("old") and has("new"))' "$REPL" >/dev/null 2>&1; then
-  echo "Error: --replacements must be a non-empty JSON array of {old,new}" >&2; exit 1
+if ! jq -e 'type == "array" and length > 0 and all(has("old") and has("new") and (.old | type == "string") and (.new | type == "string"))' "$REPL" >/dev/null 2>&1; then
+  echo "Error: --replacements must be a non-empty JSON array of {old,new} strings" >&2; exit 1
 fi
 
 AUTH_OUTPUT=$("$GH" auth status 2>&1) || {
@@ -130,7 +130,9 @@ COMMIT_REQUEST=$(jq -n \
 COMMIT_RESPONSE=$(printf '%s' "$COMMIT_REQUEST" | "$GH" api graphql --input -)
 COMMIT_OID=$(printf '%s' "$COMMIT_RESPONSE" | jq -r '.data.createCommitOnBranch.commit.oid // empty')
 if [[ -z "$COMMIT_OID" ]]; then
-  echo "Error: createCommitOnBranch did not return a commit:" >&2; echo "$COMMIT_RESPONSE" >&2; exit 1
+  echo "Error: createCommitOnBranch did not return a commit:" >&2; echo "$COMMIT_RESPONSE" >&2
+  cleanup  # explicit exit does not fire the ERR trap; delete the orphan branch
+  exit 1
 fi
 
 echo "Opening PR..."

@@ -204,10 +204,12 @@ echo "Appended election entry: $CAND_COUNT candidates, $SEATS seats."
 # discriminator, vec-length prefixes, compute-budget ixs, and batch wrapper; each
 # choice costs ~5 bytes of framing plus its name; the uri and proposal name cost
 # ~1 byte/char). It reproduces the measured sizes to the byte in the relevant range.
-NAME_LEN=${#NAME}
-GIST_LEN=${#GIST_URL}
-TAGS_CHARS=$(printf '%s' "$TAGS_JSON" | jq -r '[.[] | length] | add // 0')
-NAME_CHARS=$(jq -Rrn '[inputs | gsub("^\\s+|\\s+$"; "") | select(length > 0) | length] | add // 0' "$CANDIDATES_FILE")
+# Byte lengths (not codepoints) — the Squads limit is in bytes, so non-ASCII
+# names/tags/title must count as their UTF-8 byte size.
+NAME_LEN=$(printf %s "$NAME" | wc -c | tr -d '[:space:]')
+GIST_LEN=$(printf %s "$GIST_URL" | wc -c | tr -d '[:space:]')
+TAGS_CHARS=$(printf '%s' "$TAGS_JSON" | jq -r '[.[] | utf8bytelength] | add // 0')
+NAME_CHARS=$(jq -Rrn '[inputs | gsub("^\\s+|\\s+$"; "") | select(length > 0) | utf8bytelength] | add // 0' "$CANDIDATES_FILE")
 EST=$(( 708 + NAME_LEN + TAGS_CHARS + 5 * CAND_COUNT + NAME_CHARS + GIST_LEN ))
 echo "Pre-flight packaged-size estimate: ~${EST} bytes (Squads V4 limit ~1100)."
 if [[ "$EST" -gt 1100 ]]; then

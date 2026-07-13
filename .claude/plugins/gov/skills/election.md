@@ -28,8 +28,9 @@ single For/Against proposal.
   vault-transaction message. The binding limit is that message's **~1100-byte
   guard** (tighter than Solana's 1232-byte hard limit), so for ~12 choices the
   ballot must use **plain names, not `Name (@handle)`** — handles overflow it and
-  the creation run fails (see Step 4). As a rule of thumb, 12 choices fit only if
-  the total of all choice-name characters is ≲ 140. Candidate detail and handles
+  the creation run fails (see Step 4). As a rule of thumb (short gist URL and title
+  assumed; the Step 3 size check is authoritative), 12 choices fit only if the
+  total of all choice-name characters is ≲ 140. Candidate detail and handles
   live in the combined summary gist (the proposal's top-level `uri`), which has no
   size limit. Always run the pre-flight size check (Step 3) before opening the PR.
 

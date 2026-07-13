@@ -69,7 +69,8 @@ Mobile/IoT working-group elections — see `.claude/plugins/gov/skills/`:
 Top-N is a distinct mechanism from a binary HIP vote: voters approve up to N
 candidates, the N highest-weighted win, winners are derived off-chain, and the
 67% / quorum pass-bar does not apply. Ballot choices are names only (`uri: null`)
-because all choices share one transaction-size-bounded creation instruction;
+and short: all choices share one creation instruction bounded by the Squads V4
+vault-transaction message (~1100 bytes, tighter than the 1232-byte tx limit);
 candidate detail lives in the summary gist. Scripts in
 `.claude/plugins/gov/scripts/` reuse the hiptron GitHub identity.
 
