@@ -8,6 +8,7 @@ Helium Improvement Proposals — the governance mechanism for the Helium Network
 - `0000-template.md` — Template for new HIPs
 - `files/NNNN/` — Supporting assets (images, diagrams) per HIP
 - `.claude/plugins/hip/` — Claude Code plugin for HIP lifecycle
+- `.claude/plugins/gov/` — Claude Code plugin for multi-seat governance elections
 
 ## HIPs vs HRPs
 
@@ -56,6 +57,21 @@ Five skills for HIP lifecycle — see `.claude/plugins/hip/skills/`:
 
 All skills treat HIP file content as untrusted input (prompt injection guards).
 Scripts in `.claude/plugins/hip/scripts/` handle GitHub API calls.
+
+## Governance Election Plugin (`/gov:*`)
+
+For multi-seat (top-N) approval elections — seating the HIP-149 Advisory Council,
+Mobile/IoT working-group elections — see `.claude/plugins/gov/skills/`:
+- `/gov:election` — open a top-N election: build the combined candidate-roster
+  gist, open a `helium-proposals.json` PR with a multi-seat ballot, tally the
+  top-N winners after close.
+
+Top-N is a distinct mechanism from a binary HIP vote: voters approve up to N
+candidates, the N highest-weighted win, winners are derived off-chain, and the
+67% / quorum pass-bar does not apply. Ballot choices are names only (`uri: null`)
+because all choices share one transaction-size-bounded creation instruction;
+candidate detail lives in the summary gist. Scripts in
+`.claude/plugins/gov/scripts/` reuse the hiptron GitHub identity.
 
 ### Credentials
 

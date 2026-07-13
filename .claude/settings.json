@@ -5,6 +5,12 @@
         "type": "local",
         "path": ".claude/plugins/hip"
       }
+    },
+    "gov": {
+      "source": {
+        "type": "local",
+        "path": ".claude/plugins/gov"
+      }
     }
   }
 }
