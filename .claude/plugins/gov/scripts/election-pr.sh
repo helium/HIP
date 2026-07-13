@@ -90,6 +90,11 @@ if [[ ! -f "$CANDIDATES_FILE" ]]; then
   exit 1
 fi
 
+if [[ -n "$REFERENCE_URL" ]] && ! [[ "$REFERENCE_URL" =~ ^https:// ]]; then
+  echo "Error: --reference-url must be an https URL (got: $REFERENCE_URL)" >&2
+  exit 1
+fi
+
 # Check dependencies
 for cmd in jq base64 python3; do
   if ! command -v "$cmd" &>/dev/null; then
