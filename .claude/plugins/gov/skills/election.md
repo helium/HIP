@@ -153,6 +153,23 @@ commits via the signed GraphQL mutation, and opens the PR. `--tags` is freeform.
 For a Mobile/IoT working-group election, pass `--file mobile-proposals.json` (or
 the relevant file) instead.
 
+**Editing the summary after the PR is open.** The entry pins a specific gist
+revision, so if you change the summary you must re-point the entry. Update the
+gist in place, then re-point the branch (both as hiptron):
+
+```bash
+# 1. edit the preamble, re-render, and update the gist in place -> new pinned URL
+"${CLAUDE_PLUGIN_ROOT}/scripts/roster-gist.sh" --input /tmp/council.json \
+  --preamble /tmp/election-preamble.md --out /tmp/election-summary.md \
+  --sort-by-name --names-with-handle --update-gist <GIST_ID>
+
+# 2. re-point the open PR branch's entry to the new pinned URL (signed commit)
+"${CLAUDE_PLUGIN_ROOT}/scripts/repoint-uri.sh" --branch <BRANCH> \
+  --old-uri "<OLD_PINNED_URL>" --new-uri "<NEW_PINNED_URL>"
+```
+
+Do this **before** on-chain creation; once voting is live the text must not change.
+
 ## Step 4 — On-chain creation (after the PR merges)
 
 Runs the same way as every governance vote — same proposer key and multisig, only

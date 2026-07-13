@@ -36,12 +36,13 @@ usage() {
   echo "  --out        Markdown output path for the combined summary" >&2
   echo "  --names-out  Also write candidate names, one per line (for election-pr.sh)" >&2
   echo "  --preamble   Markdown file prepended before the candidate statements" >&2
-  echo "  --publish    Create the gist as hiptron (default: render only)" >&2
+  echo "  --publish    Create a new gist as hiptron (default: render only)" >&2
   echo "  --desc       Gist description (required with --publish)" >&2
+  echo "  --update-gist ID  Update an existing gist in place; prints the new pinned raw URL" >&2
   exit 1
 }
 
-INPUT="" OUT="" NAMES_OUT="" PREAMBLE="" PUBLISH=false DESC="" SORT=false WITH_HANDLE=false
+INPUT="" OUT="" NAMES_OUT="" PREAMBLE="" PUBLISH=false DESC="" SORT=false WITH_HANDLE=false UPDATE_GIST=""
 while [[ $# -gt 0 ]]; do
   case "$1" in
     --input)             INPUT="$2"; shift 2 ;;
@@ -51,6 +52,7 @@ while [[ $# -gt 0 ]]; do
     --sort-by-name)      SORT=true; shift ;;
     --names-with-handle) WITH_HANDLE=true; shift ;;
     --publish)           PUBLISH=true; shift ;;
+    --update-gist)       UPDATE_GIST="$2"; shift 2 ;;
     --desc)              DESC="$2"; shift 2 ;;
     *) usage ;;
   esac
@@ -59,6 +61,7 @@ done
 if [[ -z "$INPUT" || -z "$OUT" ]]; then usage; fi
 if [[ ! -f "$INPUT" ]]; then echo "Error: --input not found: $INPUT" >&2; exit 1; fi
 if $PUBLISH && [[ -z "$DESC" ]]; then echo "Error: --publish requires --desc" >&2; exit 1; fi
+if $PUBLISH && [[ -n "$UPDATE_GIST" ]]; then echo "Error: --publish and --update-gist are mutually exclusive" >&2; exit 1; fi
 if ! command -v jq &>/dev/null; then echo "Error: jq is required." >&2; exit 1; fi
 
 # Validate the input has the expected shape.
@@ -105,4 +108,20 @@ if $PUBLISH; then
   RAW_URL=$("$GH" api "gists/$GIST_ID" --jq '.files | to_entries[0].value.raw_url')
   echo "Gist created: $GIST_WEB_URL"
   echo "Pinned raw URL (use as --gist-url): $RAW_URL"
+fi
+
+if [[ -n "$UPDATE_GIST" ]]; then
+  echo "Updating gist $UPDATE_GIST as hiptron..." >&2
+  # PATCH the existing gist's file (same filename => new revision, not a new file).
+  # The API response's raw_url carries the new commit sha (a fresh pinned URL).
+  BASENAME=$(basename "$OUT")
+  RESP=$(jq -n --arg fn "$BASENAME" --rawfile c "$OUT" '{files: {($fn): {content: $c}}}' \
+    | "$GH" api -X PATCH "gists/$UPDATE_GIST" --input -)
+  RAW_URL=$(printf '%s' "$RESP" | jq -r '.files | to_entries[0].value.raw_url')
+  if [[ -z "$RAW_URL" || "$RAW_URL" == "null" ]]; then
+    echo "Error: gist update did not return a raw_url:" >&2
+    printf '%s\n' "$RESP" >&2
+    exit 1
+  fi
+  echo "Gist updated. New pinned raw URL (use as --new-uri / --gist-url): $RAW_URL"
 fi
