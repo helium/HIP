@@ -1,0 +1,5 @@
+{
+  "name": "gov",
+  "description": "Helium governance elections (multi-seat top-N votes)",
+  "skills": ["skills/*.md"]
+}
