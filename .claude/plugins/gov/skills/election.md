@@ -168,6 +168,8 @@ gist in place, then re-point the branch (both as hiptron):
   --old-uri "<OLD_PINNED_URL>" --new-uri "<NEW_PINNED_URL>"
 ```
 
+`<GIST_ID>` is the id in the gist URL from Step 2. For a Mobile/IoT election,
+pass the same `--file` to `repoint-uri.sh` that you used with `election-pr.sh`.
 Do this **before** on-chain creation; once voting is live the text must not change.
 
 ## Step 4 — On-chain creation (after the PR merges)

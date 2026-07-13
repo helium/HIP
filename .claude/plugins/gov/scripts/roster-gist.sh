@@ -114,8 +114,14 @@ if [[ -n "$UPDATE_GIST" ]]; then
   echo "Updating gist $UPDATE_GIST as hiptron..." >&2
   # PATCH the existing gist's file (same filename => new revision, not a new file).
   # The API response's raw_url carries the new commit sha (a fresh pinned URL).
-  BASENAME=$(basename "$OUT")
-  RESP=$(jq -n --arg fn "$BASENAME" --rawfile c "$OUT" '{files: {($fn): {content: $c}}}' \
+  # Update the gist's existing file in place. Look up its current filename so a
+  # differing --out basename doesn't add a second file to the gist.
+  FN=$("$GH" api "gists/$UPDATE_GIST" --jq '.files | keys[0]')
+  if [[ -z "$FN" || "$FN" == "null" ]]; then
+    echo "Error: could not read gist $UPDATE_GIST (does it exist?)" >&2
+    exit 1
+  fi
+  RESP=$(jq -n --arg fn "$FN" --rawfile c "$OUT" '{files: {($fn): {content: $c}}}' \
     | "$GH" api -X PATCH "gists/$UPDATE_GIST" --input -)
   RAW_URL=$(printf '%s' "$RESP" | jq -r '.files | to_entries[0].value.raw_url')
   if [[ -z "$RAW_URL" || "$RAW_URL" == "null" ]]; then

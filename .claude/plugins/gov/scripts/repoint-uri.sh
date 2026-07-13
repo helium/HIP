@@ -50,6 +50,10 @@ if ! [[ "$NEW_URI" =~ ^https://gist\.githubusercontent\.com/ ]]; then
   echo "Error: --new-uri must be a raw gist URL (https://gist.githubusercontent.com/...)" >&2
   exit 1
 fi
+if ! [[ "$BRANCH" =~ ^[A-Za-z0-9._/-]+$ ]]; then
+  echo "Error: --branch has invalid characters (got: $BRANCH)" >&2
+  exit 1
+fi
 for cmd in jq base64 python3; do
   command -v "$cmd" &>/dev/null || { echo "Error: $cmd is required." >&2; exit 1; }
 done
@@ -81,11 +85,13 @@ sys.stdout.write(cur.replace(old, new))
 # Validate: still valid JSON, same entry count, new uri present once, old gone.
 ORIGINAL_COUNT=$(printf '%s' "$CURRENT_CONTENT" | jq 'length')
 UPDATED_COUNT=$(printf '%s' "$UPDATED_CONTENT" | jq 'length' 2>/dev/null || echo -1)
-NEW_HITS=$(printf '%s' "$UPDATED_CONTENT" | jq --arg u "$NEW_URI" '[.[] | select(.uri == $u)] | length')
+# Check JSON validity + count BEFORE any further jq, so invalid JSON hits this
+# friendly message instead of a raw parse error under `set -e`.
 if [[ "$UPDATED_COUNT" != "$ORIGINAL_COUNT" ]]; then
   echo "Error: entry count changed ($ORIGINAL_COUNT -> $UPDATED_COUNT) or invalid JSON" >&2
   exit 1
 fi
+NEW_HITS=$(printf '%s' "$UPDATED_CONTENT" | jq --arg u "$NEW_URI" '[.[] | select(.uri == $u)] | length')
 if [[ "$NEW_HITS" -lt 1 ]]; then
   echo "Error: new uri not present after replacement" >&2
   exit 1
