@@ -81,8 +81,8 @@ fi
   echo "## Candidates"
   echo
   jq -r --argjson sort "$SORT" '
-    (if $sort then (.items | sort_by(.name)) else .items end) | to_entries[]
-    | "### \(.key + 1). \(.value.name) (@\(.value.handle))\n\n\(.value.body)\n"' "$INPUT"
+    (if $sort then (.items | sort_by(.name)) else .items end)[]
+    | "### \(.name) (@\(.handle))\n\n\(.body)\n"' "$INPUT"
 } >> "$OUT"
 
 echo "Rendered $(jq '.items | length' "$INPUT") candidate statements -> $OUT"

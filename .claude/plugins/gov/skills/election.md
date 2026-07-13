@@ -69,20 +69,25 @@ The API is a **mutable third-party Discord scrape** (it carries `editedAt`,
 reaction and endorsement counts). Never point the ballot at it directly — freeze
 a snapshot into a hiptron gist.
 
-Write a short markdown **preamble** (`/tmp/election-preamble.md`) with the election
-title and rules. State the rule plainly, with no 67%/quorum language, e.g.:
+Write a short markdown **preamble** (`/tmp/election-preamble.md`): the title and
+the voting rule, plainly worded, no 67%/quorum language. The gist is rendered by
+heliumvote.com and the mobile app as **basic markdown** (headings, paragraphs,
+lists, links, blockquotes); keep it simple, with no HTML, tables, or images.
+Keep it short. Example:
 
 ```markdown
 # HIP-149 Advisory Council Election
 
-The Advisory Council has 7 seats: 2 appointed by the Receiving Entity and 5
-elected here by the community. This vote fills the 5 community seats.
+HIP 149 creates a 7-seat Advisory Council. The Receiving Entity appoints 2 seats.
+This vote fills the other 5, elected by the community.
 
-- veHNT-weighted. Each holder may vote for up to 5 candidates.
-- The 5 candidates with the most voting weight are elected. There is no approval
-  percentage or pass/fail quorum.
-- The Receiving Entity recuses the veHNT positions it directly controls from
-  these 5 seats.
+## How to vote
+
+- Vote for up to 5 candidates. Each candidate you choose receives your full voting weight.
+- The 5 candidates with the most weight win.
+- The Receiving Entity does not vote in this election.
+
+Candidates are listed alphabetically below.
 ```
 
 Render the combined summary (drops Discord social metrics) and the candidate-name
