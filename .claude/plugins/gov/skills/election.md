@@ -69,6 +69,13 @@ The API is a **mutable third-party Discord scrape** (it carries `editedAt`,
 reaction and endorsement counts). Never point the ballot at it directly — freeze
 a snapshot into a hiptron gist.
 
+**The roster source is not fixed.** `roster-gist.sh` expects candidate JSON
+shaped as `{ "items": [ { "name": "...", "body": "...", "handle": "..." } ] }`
+(`handle` optional). The heliumtools council API happens to match this shape, but
+a future election may use a different source (a forum export, a CSV, another API)
+with a different shape or no handles. Reshape whatever you have into that contract
+with a small `jq` map before this step; the rest of the flow is unchanged.
+
 Write a short markdown **preamble** (`/tmp/election-preamble.md`): the title and
 the voting rule, plainly worded, no 67%/quorum language. The gist is rendered by
 heliumvote.com and the mobile app as **basic markdown** (headings, paragraphs,

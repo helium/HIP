@@ -2,12 +2,14 @@
 # Render (and optionally publish) the combined election-summary gist for a
 # multi-seat election.
 #
-# Input is the candidate JSON (e.g. the heliumtools council API response, saved
-# to a file): an object with an `items` array, each item having `name`, `handle`,
-# and `body`. Renders one markdown document: an optional preamble (election rules)
-# followed by every candidate's statement. Discord social metrics (reactions,
-# endorsers, edit timestamps) are intentionally dropped — a ballot statement is
-# the candidate's own words, not popularity signals.
+# Input is candidate JSON: an object with an `items` array, each item having
+# `name`, `body`, and optionally `handle`. The heliumtools council API is one
+# such source; a different election source (a forum export, a CSV you convert,
+# another API) can be reshaped into this form with a small jq map before calling.
+# Renders one markdown document: an optional preamble (election rules) followed by
+# every candidate's statement. Any extra fields (reaction/endorsement counts, edit
+# timestamps) are ignored — a ballot statement is the candidate's own words, not
+# popularity signals.
 #
 # By default it only renders (safe). Pass --publish to create the hiptron gist;
 # render and review the markdown first.
@@ -30,7 +32,7 @@ GH="$SCRIPT_DIR/gh-hiptron.sh"
 usage() {
   echo "Usage: $0 --input JSON --out MD [--names-out TXT] [--preamble MD] [--publish --desc DESC]" >&2
   echo "" >&2
-  echo "  --input      Candidate JSON with an .items[] array (name, handle, body)" >&2
+  echo "  --input      Candidate JSON: .items[] with name, body, optional handle" >&2
   echo "  --out        Markdown output path for the combined summary" >&2
   echo "  --names-out  Also write candidate names, one per line (for election-pr.sh)" >&2
   echo "  --preamble   Markdown file prepended before the candidate statements" >&2
@@ -64,8 +66,8 @@ if ! jq -e '.items | type == "array" and length > 0' "$INPUT" >/dev/null 2>&1; t
   echo "Error: $INPUT has no non-empty .items[] array" >&2
   exit 1
 fi
-if ! jq -e '.items | all(has("name") and has("handle") and has("body"))' "$INPUT" >/dev/null 2>&1; then
-  echo "Error: every .items[] entry must have name, handle, and body" >&2
+if ! jq -e '.items | all(has("name") and has("body"))' "$INPUT" >/dev/null 2>&1; then
+  echo "Error: every .items[] entry must have name and body" >&2
   exit 1
 fi
 
@@ -82,7 +84,7 @@ fi
   echo
   jq -r --argjson sort "$SORT" '
     (if $sort then (.items | sort_by(.name)) else .items end)[]
-    | "### \(.name) (@\(.handle))\n\n\(.body)\n"' "$INPUT"
+    | "### \(.name)\(if (.handle // "") != "" then " (@\(.handle))" else "" end)\n\n\(.body)\n"' "$INPUT"
 } >> "$OUT"
 
 echo "Rendered $(jq '.items | length' "$INPUT") candidate statements -> $OUT"
@@ -90,7 +92,7 @@ echo "Rendered $(jq '.items | length' "$INPUT") candidate statements -> $OUT"
 if [[ -n "$NAMES_OUT" ]]; then
   jq -r --argjson sort "$SORT" --argjson wh "$WITH_HANDLE" '
     (if $sort then (.items | sort_by(.name)) else .items end)[]
-    | if $wh then "\(.name) (@\(.handle))" else .name end' "$INPUT" > "$NAMES_OUT"
+    | if $wh and ((.handle // "") != "") then "\(.name) (@\(.handle))" else .name end' "$INPUT" > "$NAMES_OUT"
   echo "Wrote candidate names -> $NAMES_OUT"
 fi
 
