@@ -93,8 +93,14 @@ list:
   --input /tmp/council.json \
   --preamble /tmp/election-preamble.md \
   --out /tmp/election-summary.md \
-  --names-out /tmp/candidates.txt
+  --names-out /tmp/candidates.txt \
+  --sort-by-name --names-with-handle
 ```
+
+`--sort-by-name` orders candidates alphabetically (avoids input-order position
+bias); `--names-with-handle` makes the ballot label read "Name (@handle)". Both
+the gist and `candidates.txt` come out in the same order. Confirm the order and
+label format with the user.
 
 **Show `/tmp/election-summary.md` and `/tmp/candidates.txt` to the user and get
 explicit approval before publishing anything.** Confirm the candidate order in
@@ -105,7 +111,7 @@ explicit approval before publishing anything.** Confirm the candidate order in
 ```bash
 "${CLAUDE_PLUGIN_ROOT}/scripts/roster-gist.sh" \
   --input /tmp/council.json --preamble /tmp/election-preamble.md \
-  --out /tmp/election-summary.md \
+  --out /tmp/election-summary.md --sort-by-name --names-with-handle \
   --publish --desc "HIP-149 Advisory Council Election"
 ```
 

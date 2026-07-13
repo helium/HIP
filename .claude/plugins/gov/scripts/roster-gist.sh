@@ -14,7 +14,11 @@
 #
 # Usage:
 #   roster-gist.sh --input council.json --out summary.md [--names-out candidates.txt] \
-#     [--preamble rules.md] [--publish --desc "HIP-149 Advisory Council Election"]
+#     [--preamble rules.md] [--sort-by-name] [--names-with-handle] \
+#     [--publish --desc "HIP-149 Advisory Council Election"]
+#
+# --sort-by-name      order candidates alphabetically by name (default: input order)
+# --names-with-handle --names-out / ballot labels read "Name (@handle)" (default: name only)
 #
 # Requires: jq (+ gh CLI for --publish)
 
@@ -35,15 +39,17 @@ usage() {
   exit 1
 }
 
-INPUT="" OUT="" NAMES_OUT="" PREAMBLE="" PUBLISH=false DESC=""
+INPUT="" OUT="" NAMES_OUT="" PREAMBLE="" PUBLISH=false DESC="" SORT=false WITH_HANDLE=false
 while [[ $# -gt 0 ]]; do
   case "$1" in
-    --input)     INPUT="$2"; shift 2 ;;
-    --out)       OUT="$2"; shift 2 ;;
-    --names-out) NAMES_OUT="$2"; shift 2 ;;
-    --preamble)  PREAMBLE="$2"; shift 2 ;;
-    --publish)   PUBLISH=true; shift ;;
-    --desc)      DESC="$2"; shift 2 ;;
+    --input)             INPUT="$2"; shift 2 ;;
+    --out)               OUT="$2"; shift 2 ;;
+    --names-out)         NAMES_OUT="$2"; shift 2 ;;
+    --preamble)          PREAMBLE="$2"; shift 2 ;;
+    --sort-by-name)      SORT=true; shift ;;
+    --names-with-handle) WITH_HANDLE=true; shift ;;
+    --publish)           PUBLISH=true; shift ;;
+    --desc)              DESC="$2"; shift 2 ;;
     *) usage ;;
   esac
 done
@@ -74,14 +80,17 @@ fi
 {
   echo "## Candidates"
   echo
-  jq -r '.items | to_entries[]
+  jq -r --argjson sort "$SORT" '
+    (if $sort then (.items | sort_by(.name)) else .items end) | to_entries[]
     | "### \(.key + 1). \(.value.name) (@\(.value.handle))\n\n\(.value.body)\n"' "$INPUT"
 } >> "$OUT"
 
 echo "Rendered $(jq '.items | length' "$INPUT") candidate statements -> $OUT"
 
 if [[ -n "$NAMES_OUT" ]]; then
-  jq -r '.items[].name' "$INPUT" > "$NAMES_OUT"
+  jq -r --argjson sort "$SORT" --argjson wh "$WITH_HANDLE" '
+    (if $sort then (.items | sort_by(.name)) else .items end)[]
+    | if $wh then "\(.name) (@\(.handle))" else .name end' "$INPUT" > "$NAMES_OUT"
   echo "Wrote candidate names -> $NAMES_OUT"
 fi
 
