@@ -231,6 +231,7 @@ COMMIT_OID=$(printf '%s' "$COMMIT_RESPONSE" | jq -r '.data.createCommitOnBranch.
 if [[ -z "$COMMIT_OID" ]]; then
   echo "Error: createCommitOnBranch did not return a commit:" >&2
   echo "$COMMIT_RESPONSE" >&2
+  cleanup  # explicit exit does not fire the ERR trap; delete the orphan branch
   exit 1
 fi
 

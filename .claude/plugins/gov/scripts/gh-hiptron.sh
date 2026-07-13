@@ -20,7 +20,9 @@ if [ ! -f "$ENV_FILE" ]; then
 fi
 
 # Parse the token value directly instead of sourcing the file as code
-HIPTRON_GITHUB_TOKEN=$(grep -m1 '^HIPTRON_GITHUB_TOKEN=' "$ENV_FILE" | cut -d'=' -f2-)
+# || true so a missing line falls through to the friendly empty-check below
+# rather than exiting silently under pipefail.
+HIPTRON_GITHUB_TOKEN=$(grep -m1 '^HIPTRON_GITHUB_TOKEN=' "$ENV_FILE" | cut -d'=' -f2- || true)
 
 if [ -z "$HIPTRON_GITHUB_TOKEN" ]; then
   echo "Error: HIPTRON_GITHUB_TOKEN not set in $ENV_FILE" >&2

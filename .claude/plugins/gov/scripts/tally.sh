@@ -78,6 +78,8 @@ for row in votes:
     if row.get("voter") in excluded:
         dropped += 1
         continue
+    if "choice" not in row or "weight" not in row:
+        raise SystemExit(f"unexpected vote row shape (missing choice/weight): {row}")
     ci = row["choice"]
     totals[ci] = totals.get(ci, Decimal(0)) + Decimal(str(row["weight"]))
     names[ci] = row.get("choiceName") or f"choice {ci}"
@@ -92,6 +94,8 @@ for i, (ci, wt) in enumerate(ranked, 1):
     mark = "W" if i <= seats else " "
     print(f"{i:>2}  {mark} {names[ci][:30]:30} {str(wt):>28}")
 print()
+if len(ranked) < seats:
+    print(f"WARNING: only {len(ranked)} candidates received votes for {seats} seats — seats under-filled.")
 print(f"Winners (top {seats} by weight): " + ", ".join(names[ci] for ci, _ in ranked[:seats]))
 if len(ranked) > seats:
     tie_edge = ranked[seats-1][1] == ranked[seats][1]

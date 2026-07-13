@@ -89,7 +89,7 @@ if $PUBLISH; then
   echo "Publishing gist as hiptron..." >&2
   # gh gist create prints the gist's web URL; derive the pinned raw URL
   # (contains the commit sha) from the API so the vote entry freezes a snapshot.
-  GIST_WEB_URL=$("$GH" gist create --public --desc "$DESC" "$OUT")
+  GIST_WEB_URL=$("$GH" gist create --public --desc "$DESC" "$OUT" | tail -1)
   GIST_ID=$(basename "$GIST_WEB_URL")
   RAW_URL=$("$GH" api "gists/$GIST_ID" --jq '.files | to_entries[0].value.raw_url')
   echo "Gist created: $GIST_WEB_URL"

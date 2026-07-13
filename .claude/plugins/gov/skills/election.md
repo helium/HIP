@@ -114,6 +114,10 @@ the next step.
 
 ## Step 3 — Open the helium-vote PR
 
+**Before running this, show the user the resolved vote entry — proposal name,
+seats, gist URL, and the candidate list in ballot order — and get explicit
+go-ahead. This opens a public PR against helium/helium-vote as hiptron.**
+
 ```bash
 "${CLAUDE_PLUGIN_ROOT}/scripts/election-pr.sh" \
   --name "HIP-149: Advisory Council Election" \
@@ -142,10 +146,13 @@ the ballot shape differs:
 - Owner / org authority: the Helium governance Squads vault
   `pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U`; members approve and execute in
   app.squads.so.
-- **Config: the Helium org default ("Helium Single Choice V1", 7-day close).** No
-  custom proposalConfig is needed. Its 67% / 100M nodes are inert for a top-N
-  election (no single candidate trips them); the proposal simply closes on the
-  7-day timer and records per-choice weights.
+- **Config: the Helium org default proposal config ("Helium Default V2"; its
+  resolution settings are "Helium Single Choice V1", 7-day close).** No custom
+  proposalConfig is needed. Its 67% / quorum thresholds are For/Against pass-bar
+  logic and do not gate a top-N outcome: whatever the config records on-chain,
+  winners are the top-N by weight, derived off-chain (step 5). Before the first
+  mainnet use, confirm on a devnet dry-run how the config resolves a
+  multi-choice ballot.
 
 ## Step 5 — Announce and tally
 
