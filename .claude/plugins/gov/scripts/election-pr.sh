@@ -196,6 +196,30 @@ if [[ "$NEW_CHOICES" != "$CAND_COUNT" ]]; then
 fi
 
 echo "Appended election entry: $CAND_COUNT candidates, $SEATS seats."
+
+# Pre-flight size check. All choices go into one initialize_proposal_v0 wrapped in
+# a Squads V4 vault-transaction message; the create-proposals pipeline rejects it
+# ("Failed to package instructions") above ~1100 bytes. This estimate is calibrated
+# against the real @sqds/multisig serialization (constant covers the 8 accounts,
+# discriminator, vec-length prefixes, compute-budget ixs, and batch wrapper; each
+# choice costs ~5 bytes of framing plus its name; the uri and proposal name cost
+# ~1 byte/char). It reproduces the measured sizes to the byte in the relevant range.
+NAME_LEN=${#NAME}
+GIST_LEN=${#GIST_URL}
+TAGS_CHARS=$(printf '%s' "$TAGS_JSON" | jq -r '[.[] | length] | add // 0')
+NAME_CHARS=$(jq -Rrn '[inputs | gsub("^\\s+|\\s+$"; "") | select(length > 0) | length] | add // 0' "$CANDIDATES_FILE")
+EST=$(( 708 + NAME_LEN + TAGS_CHARS + 5 * CAND_COUNT + NAME_CHARS + GIST_LEN ))
+echo "Pre-flight packaged-size estimate: ~${EST} bytes (Squads V4 limit ~1100)."
+if [[ "$EST" -gt 1100 ]]; then
+  echo "Error: estimated ~${EST} B exceeds the ~1100 B Squads V4 message limit." >&2
+  echo "The post-merge create-proposals run would fail with 'Failed to package instructions'." >&2
+  echo "Shorten the ballot: plain candidate names (no @handles) and a short gist filename." >&2
+  exit 1
+elif [[ "$EST" -gt 1075 ]]; then
+  echo "Warning: estimated ~${EST} B is within ~25 B of the ~1100 B limit." >&2
+  echo "Consider shortening candidate names or the gist filename for more margin." >&2
+fi
+
 echo "Creating branch $BRANCH..."
 
 # gh api exits non-zero on 404; test its exit status directly (no pipe race).

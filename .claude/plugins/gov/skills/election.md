@@ -23,10 +23,15 @@ single For/Against proposal.
   the user one exists. The election closes on its timer and the top N win, period.
 - **Winners are derived off-chain.** The on-chain proposal only records per-choice
   weights; it does not crown winners. Tally with `tally.sh` after close.
-- **Ballot choices are names only (`uri: null`).** Per-candidate on-chain URIs do
-  not fit: all choices are serialized into one `initialize_proposal_v0`
-  instruction bounded by the 1232-byte Solana transaction limit. Candidate detail
-  lives in one combined summary gist referenced by the proposal's top-level `uri`.
+- **Ballot choices are names only (`uri: null`), and kept short.** All choices are
+  serialized into one `initialize_proposal_v0` instruction, wrapped in a Squads V4
+  vault-transaction message. The binding limit is that message's **~1100-byte
+  guard** (tighter than Solana's 1232-byte hard limit), so for ~12 choices the
+  ballot must use **plain names, not `Name (@handle)`** — handles overflow it and
+  the creation run fails (see Step 4). As a rule of thumb, 12 choices fit only if
+  the total of all choice-name characters is ≲ 140. Candidate detail and handles
+  live in the combined summary gist (the proposal's top-level `uri`), which has no
+  size limit. Always run the pre-flight size check (Step 3) before opening the PR.
 
 ## Security: untrusted content
 
@@ -106,13 +111,15 @@ list:
   --preamble /tmp/election-preamble.md \
   --out /tmp/election-summary.md \
   --names-out /tmp/candidates.txt \
-  --sort-by-name --names-with-handle
+  --sort-by-name
 ```
 
 `--sort-by-name` orders candidates alphabetically (avoids input-order position
-bias); `--names-with-handle` makes the ballot label read "Name (@handle)". Both
-the gist and `candidates.txt` come out in the same order. Confirm the order and
-label format with the user.
+bias). Ballot labels default to **plain names**; the gist body still shows each
+candidate's `(@handle)` in its section header. `--names-with-handle` would put
+handles on the ballot labels too, but for a large ballot that overflows the size
+limit (Top-N semantics), so only use it for a small ballot and only if the Step 3
+size check passes. Confirm the order and label format with the user.
 
 **Show `/tmp/election-summary.md` and `/tmp/candidates.txt` to the user and get
 explicit approval before publishing anything.** Confirm the candidate order in
@@ -123,7 +130,7 @@ explicit approval before publishing anything.** Confirm the candidate order in
 ```bash
 "${CLAUDE_PLUGIN_ROOT}/scripts/roster-gist.sh" \
   --input /tmp/council.json --preamble /tmp/election-preamble.md \
-  --out /tmp/election-summary.md --sort-by-name --names-with-handle \
+  --out /tmp/election-summary.md --sort-by-name \
   --publish --desc "HIP-149 Advisory Council Election"
 ```
 
@@ -153,6 +160,17 @@ commits via the signed GraphQL mutation, and opens the PR. `--tags` is freeform.
 For a Mobile/IoT working-group election, pass `--file mobile-proposals.json` (or
 the relevant file) instead.
 
+`election-pr.sh` runs a **pre-flight size check** and refuses to open the PR if
+the entry's estimated packaged size exceeds the Squads V4 limit (this is what
+would otherwise fail the post-merge creation run — see Step 4). If it errors on
+size, shorten the ballot: plain names, and a short gist filename.
+
+**Verify load-bearing values with `jq`, not a summarizing fetch.** After the PR,
+confirm the entry with an exact read, e.g.
+`gh api "repos/helium/helium-vote/contents/helium-proposals.json?ref=<branch>" -H "Accept: application/vnd.github.raw" | jq '.[-1] | {maxChoicesPerVoter, choices:(.choices|length), uri}'`.
+A prose/markdown fetch summarizer misreads numeric fields like
+`maxChoicesPerVoter` and choice counts — never trust it for those.
+
 **Editing the summary after the PR is open.** The entry pins a specific gist
 revision, so if you change the summary you must re-point the entry. Update the
 gist in place, then re-point the branch (both as hiptron):
@@ -161,7 +179,7 @@ gist in place, then re-point the branch (both as hiptron):
 # 1. edit the preamble, re-render, and update the gist in place -> new pinned URL
 "${CLAUDE_PLUGIN_ROOT}/scripts/roster-gist.sh" --input /tmp/council.json \
   --preamble /tmp/election-preamble.md --out /tmp/election-summary.md \
-  --sort-by-name --names-with-handle --update-gist <GIST_ID>
+  --sort-by-name --update-gist <GIST_ID>
 
 # 2. re-point the open PR branch's entry to the new pinned URL (signed commit)
 "${CLAUDE_PLUGIN_ROOT}/scripts/repoint-uri.sh" --branch <BRANCH> \
@@ -174,22 +192,35 @@ Do this **before** on-chain creation; once voting is live the text must not chan
 
 ## Step 4 — On-chain creation (after the PR merges)
 
-Runs the same way as every governance vote — same proposer key and multisig, only
-the ballot shape differs:
+Creation is automated, not run by hand. Merging the helium-vote PR to `main`
+triggers the `create-proposals` workflow
+(`.github/workflows/create-proposals.yaml` in `helium/helium-vote`). Its
+`bulk-create-proposal` step is gated `if: github.ref == 'refs/heads/main'`, so on
+the open PR it is only a build check (the create step is skipped); it runs for
+real only after merge (push to `main`). **Never run `bulk-create-proposal` by
+hand.**
 
-- Proposer/signer: the Nova automation key
-  `propu8J469CCZuBxerEm3Yrzx1NDNSFkkn7SYD8MEyz` submits `bulk-create-proposal`
-  (in the `helium/helium-vote` repo / `create-proposals` workflow).
+- Proposer/signer: the post-merge run signs with the workflow's `DEPLOYER_KEYPAIR`
+  secret — the Nova automation key `propu8J469CCZuBxerEm3Yrzx1NDNSFkkn7SYD8MEyz` —
+  and proposes the bundle (`initializeProposalV0` + `updateStateV0 -> voting` +
+  `queueResolveProposalV0` + `addRecentProposalToDaoV0`) to the Squads multisig via
+  `sendInstructionsOrSquadsV4`.
 - Owner / org authority: the Helium governance Squads vault
-  `pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U`; members approve and execute in
-  app.squads.so.
+  `pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U`. The remaining human step is the
+  multisig approving to threshold and executing in app.squads.so, which opens
+  voting on heliumvote.com.
 - **Config: the Helium org default proposal config ("Helium Default V2"; its
   resolution settings are "Helium Single Choice V1", 7-day close).** No custom
   proposalConfig is needed. Its 67% / quorum thresholds are For/Against pass-bar
   logic and do not gate a top-N outcome: whatever the config records on-chain,
-  winners are the top-N by weight, derived off-chain (step 5). Before the first
-  mainnet use, confirm on a devnet dry-run how the config resolves a
-  multi-choice ballot.
+  winners are the top-N by weight, derived off-chain (step 5).
+- **If the post-merge run fails with `Failed to package instructions`,** the
+  entry's `initialize_proposal_v0` is over the Squads V4 message limit (Top-N
+  semantics above). No proposal is created — only an inert empty Squads batch, no
+  cleanup needed. Fix: shrink the entry (plain names, short gist filename) and
+  re-issue the already-merged entry with `edit-entry.sh` (exactly-once swaps off
+  `main`), then re-merge. The workflow gates on `i >= num_proposals`, so it
+  rebuilds the same index exactly once — no duplication.
 
 ## Step 5 — Announce and tally
 
