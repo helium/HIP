@@ -80,7 +80,7 @@ A multiplier is a number `m` attached to one on-chain Hotspot. It applies to the
 derived from that Hotspot's rewardable bytes**, not to the bytes themselves: a rewardable-byte count
 is a measurement and does not change. The payer burns those data credits, and a deployer's share of
 the Mobile data pool is pro-rata of them, so one multiplier moves both sides at once. A Hotspot
-without one sits at the base tier, `m = 1`, and this decision does nothing to it. Because both sides move together, a multiplier funds itself while the
+without one is at `m = 1`, and this decision does nothing to it. Because both sides move together, a multiplier funds itself while the
 target minimum binds.
 
 A multiplier need not be a whole number. Applied to a data credit count it is rounded down, so a
@@ -95,8 +95,8 @@ which Nova Labs sets under [HIP 143][hip-143] and can change.
 
 | Case | Pay rate per GB | Deployer floor | Deployer ceiling |
 |---|---|---|---|
-| Today, base tier | $0.10 | $0.050 | $0.30 |
-| Base tier, `m = 1` | $0.10 | **$0.080** | $0.30 |
+| Today, no multiplier | $0.10 | $0.050 | $0.30 |
+| `m = 1` | $0.10 | **$0.080** | $0.30 |
 | `m = 1.5` | $0.15 | **$0.120** | $0.45 |
 | `m = 5` | $0.50 | **$0.400** | $1.50 |
 
@@ -106,7 +106,7 @@ and the deployer's reward minted, so this is a ratio between two flows rather th
 revenue.
 
 This decision fixes what a Hotspot must have to hold a multiplier above 1. Nothing here applies to a
-Hotspot at the base tier, which needs no enrollment:
+Hotspot without a multiplier, which needs no enrollment:
 
 - **A deployer agreement and custodial ownership**, via Helium Plus enrollment. Custody makes abuse
   recoverable: rewards withheld or clawed back and the multiplier set back to 1, without notice.
