@@ -3,13 +3,13 @@ authors:
   - '@madninja'
 start-date: 2026-08-18
 category: Economic, Technical
-original-hip-pr:
-tracking-issue:
+original-hip-pr: https://github.com/helium/HIP/pull/1238
+tracking-issue: https://github.com/helium/HIP/issues/1239
 vote-requirements: veHNT Holders
-status: Draft
+status: In Discussion
 ---
 
-# HIP: Mobile Deployer Prioritization
+# HIP 150: Mobile Deployer Prioritization
 
 ## Summary
 
@@ -29,7 +29,7 @@ contributing the Service Provider allocation are together what make a higher tar
 affordable without growing supply. Decisions 2 and 3 reach every Mobile data deployer; Decision 1
 reaches only the Hotspots that are granted a multiplier.
 
-![Figure 1: the Mobile sub-DAO bucket split, today and after. Data goes from 70% of the sub-DAO slice to 94% as the 24% Service Provider allocation moves into it for the duration of the contribution. The 6% veHNT allocation is unchanged.](files/0000/mobile-bucket-split.png)
+![Figure 1: the Mobile sub-DAO bucket split, today and after. Data goes from 70% of the sub-DAO slice to 94% as the 24% Service Provider allocation moves into it for the duration of the contribution. The 6% veHNT allocation is unchanged.](files/0150/mobile-bucket-split.png)
 
 ## Motivation
 
@@ -135,10 +135,10 @@ candidate venues were 2.7% of earning locations and carried 3.3% of rewarded vol
 more per location than average rather than a multiple. Their traffic also arrives in bursts, so on
 a normal day one of them carries less than a commodity site. Pro-rata pays for the traffic that
 arrives; the cost of these deployments is set by the peak they must be ready for. The venue
-grouping, its criteria and these measurements are in [supporting notes](files/0000/venue-groups-and-measurements.md),
+grouping, its criteria and these measurements are in [supporting notes](files/0150/venue-groups-and-measurements.md),
 which are not part of the proposal.
 
-![Figure 2: daily rewardable volume per location, seven days to 11 August 2026, grouped by candidate venue group. A high-value location's mean day is 14 times its median day, because a few large venues carry the average while the typical one is quiet. High-value venues have both the lowest median and the highest tail.](files/0000/volume-is-not-value.png)
+![Figure 2: daily rewardable volume per location, seven days to 11 August 2026, grouped by candidate venue group. A high-value location's mean day is 14 times its median day, because a few large venues carry the average while the typical one is quiet. High-value venues have both the lowest median and the highest tail.](files/0150/volume-is-not-value.png)
 
 ### Decision 2: Direct minting, and a target minimum of 80%
 
@@ -253,7 +253,7 @@ Mobile data rewards escrow instead of to DAO-level total rewards; the Mobile dat
 both sides and accept the tickets that grant one.
 
 The package adds no on-chain account and no field, and nothing migrates. Where each change lands, and
-why the multiplier belongs where it does, are in [implementation notes](files/0000/implementation-notes.md),
+why the multiplier belongs where it does, are in [implementation notes](files/0150/implementation-notes.md),
 which are not part of the proposal. We leave the implementation to the Helium Core Developers.
 
 **HIPs retired outright:** none.
