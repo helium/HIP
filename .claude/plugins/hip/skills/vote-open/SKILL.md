@@ -90,7 +90,7 @@ If a HIP frames its quorum as a percentage, reconcile it to this absolute defaul
 
 ## Governance
 
-Helium Network governance is discussed in the community [Discord](https://discord.gg/helium). Governance related updates are shared in the monthly newsletter, monthly community calls, and quarterly tokenholder updates.
+To participate in governance, please join the community [Discord](https://discord.gg/helium). Governance related updates and discussion include the monthly community call, newsletter, and quarterly tokenholder updates.
 ```
 
 **Show the generated summary to the user for confirmation before creating the gist.**
