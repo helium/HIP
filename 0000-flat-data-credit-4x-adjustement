@@ -99,6 +99,7 @@ This HIP introduces a **flat 4x multiplier** to the DC cost for all data packets
 - **Market Alignment:** $0.20/sensor/month is the industry standard set by TTN. Helium cannot charge more without losing enterprise customers.
 - **Simplicity:** A flat multiplier is easy for users to understand, developers to implement, and oracles to track. No complex tiering, no usage thresholds, no per-wallet caps.
 - **Sustainability First:** This HIP prioritizes keeping the chain alive and developers paid over maximizing hotspot rewards. Without Nova Labs, there is no network.
+- **Improved hotspot placement:** Some hotspot owners may be incentivized to strategically relocate their hotspots to higher-traffic areas to capture a larger share.
 - **Post-Merge Simplicity:** With IOT merged back to HNT, the reward flow is cleaner—burn HNT → reward HNT. No subnetwork token conversion complexity.
 
 ### What is the impact of not doing this?
