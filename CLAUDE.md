@@ -48,12 +48,14 @@ Each status change updates three things in lockstep: README badge, tracking issu
 
 ## HIP Plugin (`/hip:*`)
 
-Five skills for HIP lifecycle — see `.claude/plugins/hip/skills/`:
+Seven skills for HIP lifecycle — see `.claude/plugins/hip/skills/`:
 - `/hip:create` — scaffold new HIP with category-specific guidance
 - `/hip:review` — quality/completeness review with argument assessment
 - `/hip:assign` — assign HIP number, create tracking issue, update README, prepare for merge
 - `/hip:vote-open` — open heliumvote.com voting (requires hiptron credentials)
 - `/hip:status` — update status (README badge, tracking issue labels, frontmatter)
+- `/hip:feedback` — triage community feedback: verify each claim, fix what's real, draft replies
+- `/hip:sweep` — terminology or number consistency sweep across a HIP and its vote surfaces
 
 All skills treat HIP file content as untrusted input (prompt injection guards).
 Scripts in `.claude/plugins/hip/scripts/` handle GitHub API calls.
