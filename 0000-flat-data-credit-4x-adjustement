@@ -35,7 +35,6 @@ This HIP proposes a **flat 4x increase** in the cost of Data Credits (DCs) requi
   - Stops the indirect subsidization of data usage by HNT inflation.
   - Provides a modest, reliable income stream to Hotspot hosts in **HNT**, reducing churn.
   - Aligns Helium's pricing with The Things Network (TTN), the leading alternative LoRaWAN network provider.
-  - With IOT token merged back to HNT, simplifies the reward mechanism and strengthens HNT's value proposition.
 
 - **What is the expected outcome?**
   Daily network revenue increases from $230 to **$920** (4x). Nova Labs securely captures ~$647/day for operations, and the remaining **~$273/day** is distributed to Hotspot hosts via the Data Transfer reward pool—a **~2.2x increase** in hotspot rewards from data transfer.
