@@ -71,6 +71,7 @@ This HIP introduces a **flat 4x multiplier** to the DC cost for all data packets
 - TTN charges $0.20/sensor/month. Helium must remain **at or below** this price to compete.
 - 4x achieves operational sustainability while keeping Helium price-competitive.
 - At 4x, Helium's value proposition shifts from "cheaper than TTN" to "same price as TTN, but with 150,000 hotspots and decentralized coverage."
+- In reality Helium network uses pay as you go model vs TTN that you pay per month, not per traffic. So if a helium sensor transmits 12 times per hour it will pay $4.20 per year for a 24 byte message.
 
 ### Revised Token Flow (Post-IOT Merge)
 1. Sender burns HNT to purchase DCs at the **new 4x rate**.
