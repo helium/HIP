@@ -44,8 +44,8 @@ This HIP proposes a **flat 4x increase** in the cost of Data Credits (DCs) requi
 ## Stakeholders
 
 - **Who is affected by this HIP?**
-  - **Network Users (Sensor Owners):** Will see a monthly cost increase from $0.05 to $0.20 per actively transmitting sensor.
-  - **Hotspot Hosts:** Will receive increased data-transfer rewards in HNT (from $0.0015/day to ~$0.0033/day average).
+  - **Network Users (Sensor Owners):** Scenario: If a sensor pays $0.05 per month will pay $0.20.
+  - **Hotspot Hosts:** Will receive increased data-transfer rewards in HNT (scenario: from $0.0015/day to ~$0.0033/day average).
   - **Nova Labs (Core Developers):** Will receive sustainable operational funding without relying on HNT emissions or selling treasury assets.
   - **HNT Holders:** Reduced inflationary pressure on HNT, as Nova will no longer need to sell emitted HNT to cover operational losses. All rewards flow directly in HNT.
 
