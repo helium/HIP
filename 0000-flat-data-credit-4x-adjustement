@@ -85,8 +85,7 @@ This HIP introduces a **flat 4x multiplier** to the DC cost for all data packets
 ## Drawbacks
 
 - **Why should we *not* do this?**
-  - Hobbyists with multiple sensors (e.g., 20 sensors) will see their monthly bill rise from $1.00 to $4.00—still affordable, but a psychological barrier.
-  - TTN offers a free-tier for very low usage and for 10 sensors, which Helium does not (though Helium offers global coverage, which TTN does not). But TTN after 10 sensors wants 200€ per month.
+  - TTN offers a free-tier for very low usage and for 10 sensors, which Helium does not (though Helium offers global coverage, which TTN does not. And pay as you go not per month). TTN after 10 sensors wants 200€ per month.
 
 - **What problems could occur?**
   - Short-term user churn of 5–10% could temporarily reduce total revenue, though the 4x multiplier compensates for this.
