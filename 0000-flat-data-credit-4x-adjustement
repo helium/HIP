@@ -48,6 +48,7 @@ This HIP proposes a **flat 4x increase** in the cost of Data Credits (DCs) requi
   - **Hotspot Hosts:** Will receive increased data-transfer rewards in HNT (scenario: from $0.0015/day to ~$0.0033/day average).
   - **Nova Labs (Core Developers):** Will receive sustainable operational funding without relying on HNT emissions or selling treasury assets.
   - **HNT Holders:** Reduced inflationary pressure on HNT, as Nova will no longer need to sell emitted HNT to cover operational losses. All rewards flow directly in HNT.
+  - **Heavy Users:** Users who transmit 6+ times per hour (excessive for LPWAN standards) or send unusually large payloads may pay more than TTN's equivalent pricing. This is by design—Helium's pay-as-you-go model fairly charges for actual network usage, and typical sensors remain at $0.20/month. 6 times per hour, 24 bytes message.
 
 - **How are we soliciting feedback?**
   This HIP will be discussed in the Helium Discord `#iot-general` channel.
@@ -62,9 +63,9 @@ This HIP proposes a **flat 4x increase** in the cost of Data Credits (DCs) requi
 ### Proposed Mechanism
 This HIP introduces a **flat 4x multiplier** to the DC cost for all data packets transmitted over the Helium LoRaWAN network. 
 
-**Example Walkthrough:**
-- Old cost: $0.05.
-- New cost: $0.20.
+**Example Walkthrough for 6 times per hour 24 bytes:**
+- Old cost: $0.04.
+- New cost: $0.17.
 
 **Why 4x and not 10x?**
 - TTN charges $0.20/sensor/month. Helium must remain **at or below** this price to compete.
@@ -112,7 +113,6 @@ This HIP introduces a **flat 4x multiplier** to the DC cost for all data packets
 
 - **Dependencies:**
   - Requires a core update to the Oracle and Treasury smart contracts.
-  - Requires the IOT→HNT merge to be fully complete and stable.
   - Target implementation date: Q4 2026.
 
 ---
@@ -124,9 +124,8 @@ This HIP introduces a **flat 4x multiplier** to the DC cost for all data packets
 
 - **Documentation Updates:**
   - The Helium Docs (`docs.helium.com`) will be updated to reflect the new DC pricing structure.
-  - The Helium Console pricing calculator will be updated to show $0.20/month per active sensor.
   - A blog post and FAQ will be published addressing the "Why 4x?" question, explicitly comparing to TTN's $0.20 pricing.
-  - A comparison chart will be published: Helium ($0.20) vs. TTN ($0.20) vs. NB-IoT ($1.50).
+  - A comparison chart will be published for 6 times hour and 24 bytes : Helium ($0.17) vs. TTN ($0.20) vs. NB-IoT ($1.50).
 
 - **Backwards Compatibility & Rollback:**
   - **Yes, this is backwards compatible.** No changes to the packet format or hotspot firmware are required.
