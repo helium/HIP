@@ -23,7 +23,7 @@ This HIP proposes a **flat 4x increase** in the cost of Data Credits (DCs) requi
   - LoRa Alliance Sponsorship: ~$4,167/month ($50,000/year)
   - Developer Maintenance (core devs, security audits, chain upkeep): ~$8,000/month
   - 20% Operating Buffer: ~$3,233/month
-  - **Total Monthly Ops:** ~**$19,400/month** (~$647/day)
+  - **Total Monthly Ops:** ~$647/day
 
   This creates a **monthly deficit of ~$12,500** that is currently subsidized by Nova Labs.
 
@@ -37,7 +37,7 @@ This HIP proposes a **flat 4x increase** in the cost of Data Credits (DCs) requi
   - Aligns Helium's pricing with The Things Network (TTN), the leading alternative LoRaWAN network provider.
 
 - **What is the expected outcome?**
-  Daily network revenue increases from $230 to **$920** (4x). Nova Labs securely captures ~$647/day for operations, and the remaining **~$273/day** is distributed to Hotspot hosts via the Data Transfer reward pool—a **~2.2x increase** in hotspot rewards from data transfer.
+  Daily network revenue increases from $230 to **$920** (4x). Nova Labs securely captures $647/day for operations, and the remaining **$273/day** is distributed to Hotspot hosts via the Data Transfer reward pool—a **~2.2x increase** in hotspot rewards from data transfer.
 
 ---
 
