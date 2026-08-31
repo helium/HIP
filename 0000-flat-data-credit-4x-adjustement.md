@@ -11,7 +11,7 @@
 
 ## Summary
 
-This HIP proposes a **flat 4x increase** in the cost of Data Credits (DCs) required for sending data packets over the Helium IoT Network. If a sensor currently pays $0.05 per month, the cost goes from **$0.05 to $0.20**, matching the pricing of The Things Network (TTN) at ~$200/month per 1,000 sensors. The resulting revenue increase will cover Nova Labs' fixed operational expenses (AWS infrastructure, LoRa Alliance sponsorship, developer maintenance salaries, and a 20% buffer), eliminate the network's current deficit, and provide a sustainable revenue stream for Hotspot hosts—all while remaining price-competitive with the leading LoRaWAN alternative.
+This HIP proposes a **flat 4x increase** in the burn of Data Credits (DCs) required for sending data packets over the Helium IoT Network. Currently a sensor burns 1 DC for 24 bytes. We purpose 4 DC for 24 bytes. Scenario: if a sensor currently pays $0.05 per month, the cost goes from **$0.05 to $0.20**, matching the pricing of The Things Network (TTN) at ~$200/month per 1,000 sensors. The resulting revenue increase will cover Nova Labs' fixed operational expenses (AWS infrastructure, LoRa Alliance sponsorship, developer maintenance salaries, and a 20% buffer), eliminate the network's current deficit, and provide a sustainable revenue stream for Hotspot hosts—all while remaining price-competitive with the leading LoRaWAN alternative.
 
 ---
 
