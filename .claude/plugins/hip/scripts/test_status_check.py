@@ -181,7 +181,7 @@ class EndToEnd(unittest.TestCase):
     mislink detection, and the label comparison behind them.
     """
 
-    def _run(self, rows, files, issues, pulls, argv):
+    def _run(self, rows, files, issues, pulls, argv, sweep=True):
         import contextlib, io, tempfile, os
         with tempfile.TemporaryDirectory() as d:
             with open(os.path.join(d, "README.md"), "w") as f:
@@ -192,7 +192,8 @@ class EndToEnd(unittest.TestCase):
             sc.all_issues = lambda: (issues, pulls)
             sc.open_status_prs = lambda: []
             old_argv = sys.argv
-            sys.argv = ["sc", "--root", d, "--all"] + argv
+            sys.argv = (["sc", "--root", d] + (["--all"] if sweep else [])
+                        + argv)
             buf = io.StringIO()
             try:
                 with contextlib.redirect_stdout(buf):
@@ -261,6 +262,57 @@ class EndToEnd(unittest.TestCase):
             set(), [],
         )
         self.assertIn("expects label", out)
+        self.assertEqual(code, 1)
+
+
+class DefaultScope(unittest.TestCase):
+    """The bare run covers HIPs under the current convention.
+
+    A HIP acquires YAML frontmatter when it goes through the lifecycle, so
+    anything whose status can half-land is in scope; settled older HIPs are
+    reached with --all.
+    """
+
+    def _fixture(self):
+        return (
+            [_row(148, "Deployed", "issues/1187"), _row(150, "Approved", "issues/1239")],
+            {"0148-t.md": "# HIP 148\n\n- Author: x\n",      # legacy preamble
+             "0150-t.md": "---\nstatus: Approved\n---\n"},   # current preamble
+            {1187: {"labels": {"approved"}, "title": "HIP 148: T"},   # drifted
+             1239: {"labels": {"approved"}, "title": "HIP 150: T"}},  # agrees
+        )
+
+    def test_legacy_drift_is_out_of_scope_by_default(self):
+        rows, files, issues = self._fixture()
+        code, out = EndToEnd._run(self, rows, files, issues, set(), [], sweep=False)
+        self.assertIn("YAML frontmatter", out)
+        self.assertNotIn("HIP-148", out)
+        self.assertEqual(code, 0)
+
+    def test_all_still_reaches_the_legacy_drift(self):
+        rows, files, issues = self._fixture()
+        code, out = EndToEnd._run(self, rows, files, issues, set(), [], sweep=True)
+        self.assertIn("HIP-148", out)
+        self.assertEqual(code, 1)
+
+    def test_drift_on_a_current_preamble_hip_is_in_scope(self):
+        rows, files, issues = self._fixture()
+        issues[1239]["labels"] = {"deployed"}          # now disagrees with badge
+        code, out = EndToEnd._run(self, rows, files, issues, set(), [], sweep=False)
+        self.assertIn("HIP-150", out)
+        self.assertEqual(code, 1)
+
+    def test_missing_readme_row_follows_the_same_scope(self):
+        # A legacy HIP file with no row must not hold the gate open, but
+        # --all must still report it.
+        rows = [_row(150, "Approved", "issues/1239")]
+        files = {"0003-t.md": "# HIP 3\n", "0150-t.md": "---\nstatus: Approved\n---\n"}
+        issues = {1239: {"labels": {"approved"}, "title": "HIP 150: T"}}
+        code, out = EndToEnd._run(self, rows, files, issues, set(), [], sweep=False)
+        self.assertNotIn("no README index row", out)
+        self.assertEqual(code, 0)
+        code, out = EndToEnd._run(self, rows, files, issues, set(), [], sweep=True)
+        self.assertIn("no README index row", out)
         self.assertEqual(code, 1)
 
 

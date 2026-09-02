@@ -10,7 +10,7 @@ to surface it.
 This reports that disagreement, and any open status PR that would cause it.
 
 Usage:
-  status-check.py                 # in-flight HIPs and the most recent few
+  status-check.py                 # HIPs under the current convention
   status-check.py --all           # every HIP
   status-check.py --hip 150       # one HIP
 
@@ -44,14 +44,6 @@ TRANSITIONAL_LABELS = {
     "draft", "voting soon", "closing soon", "in development",
     "stale", "changes requested", "revoked", "repealed",
 }
-
-# Badges for a HIP still moving through the lifecycle. A stalled status PR
-# does its damage here, so these are always in scope.
-IN_FLIGHT = {"In Discussion", "Voting Open"}
-
-# Recently-settled HIPs stay in scope too: the transition into a terminal
-# state is itself a status change that can half-land.
-RECENT_COUNT = 5
 
 
 def badge_text(raw):
@@ -238,10 +230,14 @@ def main():
     elif args.all:
         numbers, scope = sorted(readme), "every HIP"
     else:
-        inflight = {n for n, (b, _) in readme.items() if b in IN_FLIGHT}
-        recent = set(sorted(readme)[-RECENT_COUNT:])
-        numbers = sorted(inflight | recent)
-        scope = (f"in-flight ({len(inflight)}) + {RECENT_COUNT} most recent"
+        # HIPs written under the current convention carry YAML frontmatter,
+        # and `/hip:status` converts a legacy HIP to it before changing a
+        # status, so anything moving through the lifecycle has it by the
+        # time a transition can half-land. Older HIPs are settled and hold
+        # their status in the README and the tracking issue alone; --all
+        # sweeps those.
+        numbers = sorted(set(readme) & set(frontmatter))
+        scope = (f"{len(numbers)} HIP(s) with YAML frontmatter"
                  " -- pass --all for the full corpus")
 
     findings = []
@@ -261,11 +257,13 @@ def main():
                 f"README badge says {badge!r}"
             )
 
-    # 2. A HIP file with no README row is missing from a surface, not out
-    #    of scope. This compares two whole sets, so it always covers the
-    #    corpus regardless of the scope above.
+    # 2. A HIP file with no README row is missing from a surface. Held to
+    #    the same scope as everything else, so a settled older HIP does not
+    #    hold the gate open; --all reports those.
     files = hip_files(root)
-    for num in sorted(set(files) - set(readme)):
+    missing = set(files) - set(readme)
+    in_scope = missing if args.all else missing & set(frontmatter)
+    for num in sorted(in_scope):
         if args.hip is None or num == args.hip:
             findings.append(f"HIP-{num}: file exists with no README index row")
 
