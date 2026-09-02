@@ -138,5 +138,183 @@ class ParseFrontmatterStatus(unittest.TestCase):
         )
 
 
+class TitledHipNumber(unittest.TestCase):
+    """A tracking issue names its own HIP; a mismatch means a mislinked row."""
+
+    def test_current_convention(self):
+        self.assertEqual(sc.titled_hip_number("HIP 150: Mobile Deployer"), 150)
+
+    def test_no_space(self):
+        self.assertEqual(sc.titled_hip_number("HIP18: Remove Oracle Forecast"), 18)
+
+    def test_leading_zeros(self):
+        self.assertEqual(sc.titled_hip_number("HIP-0053: Mobile DAO"), 53)
+
+    def test_pre_convention_title_names_none(self):
+        for title in ["new HIP", "Crowdspot Modifications",
+                      "LoRaWAN packet routing (HIP draft)",
+                      "Create 0006-reward-ramp-for-packets.md"]:
+            self.assertIsNone(sc.titled_hip_number(title), title)
+
+    def test_does_not_match_a_number_further_into_the_title(self):
+        # "HIP" must introduce the number, or a title mentioning another
+        # HIP in passing would read as that HIP's issue.
+        self.assertIsNone(sc.titled_hip_number("Follow-up to HIP 42 discussion"))
+
+    def test_number_must_end_at_a_boundary(self):
+        self.assertEqual(sc.titled_hip_number("HIP 10: x"), 10)
+        self.assertNotEqual(sc.titled_hip_number("HIP 100: x"), 10)
+
+
+def _row(hip, badge, link):
+    pad = " " * 40
+    cell = (f'[<img src="https://img.shields.io/badge/Status-{badge}-x"></img>]'
+            f'(https://github.com/helium/HIP/{link})' if link
+            else f'<img src="https://img.shields.io/badge/Status-{badge}-x"></img>')
+    return f"| {hip} | [T](00{hip}-t.md){pad} | {cell} | x |"
+
+
+class EndToEnd(unittest.TestCase):
+    """Drives main() over a fixture repo.
+
+    Covers the branches that consume the parsers: era classification,
+    mislink detection, and the label comparison behind them.
+    """
+
+    def _run(self, rows, files, issues, pulls, argv, sweep=True):
+        import contextlib, io, tempfile, os
+        with tempfile.TemporaryDirectory() as d:
+            with open(os.path.join(d, "README.md"), "w") as f:
+                f.write("\n".join(rows) + "\n")
+            for name, body in files.items():
+                with open(os.path.join(d, name), "w") as f:
+                    f.write(body)
+            sc.all_issues = lambda: (issues, pulls)
+            sc.open_status_prs = lambda: []
+            old_argv = sys.argv
+            sys.argv = (["sc", "--root", d] + (["--all"] if sweep else [])
+                        + argv)
+            buf = io.StringIO()
+            try:
+                with contextlib.redirect_stdout(buf):
+                    code = sc.main()
+            finally:
+                sys.argv = old_argv
+            return code, buf.getvalue()
+
+    def test_legacy_pr_link_is_a_note_not_drift(self):
+        code, out = self._run(
+            [_row(6, "Deployed", "pull/20")],
+            {"0006-t.md": "# HIP 6\n\n- Author: x\n"},
+            {}, {20}, [],
+        )
+        self.assertIn("predates tracking issues", out)
+        self.assertNotIn("finding(s)", out)
+        self.assertEqual(code, 0)
+
+    def test_legacy_row_with_no_link_is_a_note(self):
+        code, out = self._run(
+            [_row(1, "Deployed", None)],
+            {"0001-t.md": "# HIP 1\n"},
+            {}, set(), [],
+        )
+        self.assertIn("has no GitHub link", out)
+        self.assertEqual(code, 0)
+
+    def test_modern_hip_without_a_tracking_issue_is_drift(self):
+        # YAML frontmatter means the current convention applies, so a
+        # missing tracking issue is a finding rather than an era note.
+        code, out = self._run(
+            [_row(150, "Approved", None)],
+            {"0150-t.md": "---\nstatus: Approved\n---\n"},
+            {}, set(), [],
+        )
+        self.assertIn("no tracking issue", out)
+        self.assertIn("1 finding(s)", out)
+        self.assertEqual(code, 1)
+
+    def test_row_linking_to_another_hips_issue_is_drift(self):
+        code, out = self._run(
+            [_row(18, "Closed", "issues/60")],
+            {"0018-t.md": "# HIP 18\n"},
+            {60: {"labels": {"deployed"}, "title": "HIP17: Hex Density"}}, set(), [],
+        )
+        self.assertIn("is HIP-17's issue", out)
+        self.assertEqual(code, 1)
+        # The label comparison must not also run against the wrong issue.
+        self.assertNotIn("expects label", out)
+
+    def test_correctly_linked_row_still_checks_labels(self):
+        code, out = self._run(
+            [_row(18, "Closed", "issues/65")],
+            {"0018-t.md": "# HIP 18\n"},
+            {65: {"labels": {"closed/withdrawn"},
+                  "title": "HIP18: Remove Oracle Forecast"}}, set(), [],
+        )
+        self.assertIn("All surfaces agree", out)
+        self.assertEqual(code, 0)
+
+    def test_correctly_linked_row_reports_a_real_label_mismatch(self):
+        code, out = self._run(
+            [_row(18, "Closed", "issues/65")],
+            {"0018-t.md": "# HIP 18\n"},
+            {65: {"labels": {"deployed"}, "title": "HIP18: Remove Oracle"}},
+            set(), [],
+        )
+        self.assertIn("expects label", out)
+        self.assertEqual(code, 1)
+
+
+class DefaultScope(unittest.TestCase):
+    """The bare run covers HIPs under the current convention.
+
+    A HIP acquires YAML frontmatter when it goes through the lifecycle, so
+    anything whose status can half-land is in scope; settled older HIPs are
+    reached with --all.
+    """
+
+    def _fixture(self):
+        return (
+            [_row(148, "Deployed", "issues/1187"), _row(150, "Approved", "issues/1239")],
+            {"0148-t.md": "# HIP 148\n\n- Author: x\n",      # legacy preamble
+             "0150-t.md": "---\nstatus: Approved\n---\n"},   # current preamble
+            {1187: {"labels": {"approved"}, "title": "HIP 148: T"},   # drifted
+             1239: {"labels": {"approved"}, "title": "HIP 150: T"}},  # agrees
+        )
+
+    def test_legacy_drift_is_out_of_scope_by_default(self):
+        rows, files, issues = self._fixture()
+        code, out = EndToEnd._run(self, rows, files, issues, set(), [], sweep=False)
+        self.assertIn("YAML frontmatter", out)
+        self.assertNotIn("HIP-148", out)
+        self.assertEqual(code, 0)
+
+    def test_all_still_reaches_the_legacy_drift(self):
+        rows, files, issues = self._fixture()
+        code, out = EndToEnd._run(self, rows, files, issues, set(), [], sweep=True)
+        self.assertIn("HIP-148", out)
+        self.assertEqual(code, 1)
+
+    def test_drift_on_a_current_preamble_hip_is_in_scope(self):
+        rows, files, issues = self._fixture()
+        issues[1239]["labels"] = {"deployed"}          # now disagrees with badge
+        code, out = EndToEnd._run(self, rows, files, issues, set(), [], sweep=False)
+        self.assertIn("HIP-150", out)
+        self.assertEqual(code, 1)
+
+    def test_missing_readme_row_follows_the_same_scope(self):
+        # A legacy HIP file with no row must not hold the gate open, but
+        # --all must still report it.
+        rows = [_row(150, "Approved", "issues/1239")]
+        files = {"0003-t.md": "# HIP 3\n", "0150-t.md": "---\nstatus: Approved\n---\n"}
+        issues = {1239: {"labels": {"approved"}, "title": "HIP 150: T"}}
+        code, out = EndToEnd._run(self, rows, files, issues, set(), [], sweep=False)
+        self.assertNotIn("no README index row", out)
+        self.assertEqual(code, 0)
+        code, out = EndToEnd._run(self, rows, files, issues, set(), [], sweep=True)
+        self.assertIn("no README index row", out)
+        self.assertEqual(code, 1)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

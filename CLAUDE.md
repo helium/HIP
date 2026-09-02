@@ -36,7 +36,7 @@ create (Draft) → assign (In Discussion) → vote-open → status (Voting Open 
 
 Each status change updates three things in lockstep: README badge, tracking issue labels, and frontmatter `status` field.
 
-The label lands immediately through the API; the README badge and frontmatter land through a PR that needs a human merge. Until that PR merges the two disagree, so a status transition is only done once it is merged. `.claude/plugins/hip/scripts/status-check.py` reconciles all three surfaces and flags any status PR left open: bare for in-flight and recent HIPs, `--hip NNN` for one, `--all` for the whole corpus. The exit code is a bitmask, 1 for drift and 2 for a check that could not run (unmeasured, not clean), so 3 is both; gate on the bit, not on equality. `test_status_check.py` beside it covers the exit contract and the parsers.
+The label lands immediately through the API; the README badge and frontmatter land through a PR that needs a human merge. Until that PR merges the two disagree, so a status transition is only done once it is merged. `.claude/plugins/hip/scripts/status-check.py` reconciles all three surfaces and flags any status PR left open: bare for HIPs carrying YAML frontmatter, which is every HIP the current workflow touches, `--hip NNN` for one, `--all` for the whole corpus including the settled older HIPs and their known stale-label backlog. The exit code is a bitmask, 1 for drift and 2 for a check that could not run (unmeasured, not clean), so 3 is both; gate on the bit, not on equality. `test_status_check.py` beside it covers the exit contract and the parsers.
 
 ### Maintainer PR Workflow
 
