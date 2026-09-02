@@ -36,6 +36,8 @@ create (Draft) → assign (In Discussion) → vote-open → status (Voting Open 
 
 Each status change updates three things in lockstep: README badge, tracking issue labels, and frontmatter `status` field.
 
+The label lands immediately through the API; the README badge and frontmatter land through a PR that needs a human merge. Until that PR merges the two disagree, so a status transition is only done once it is merged. `.claude/plugins/hip/scripts/status-check.py` reconciles all three surfaces and flags any status PR left open: bare for in-flight and recent HIPs, `--hip NNN` for one, `--all` for the whole corpus. Exit 0 agrees, 1 lists drift, 2 means a check could not run and the result is unmeasured rather than clean.
+
 ### Maintainer PR Workflow
 
 1. Author submits PR with `0000-slug.md` file
@@ -58,7 +60,8 @@ Seven skills for HIP lifecycle — see `.claude/plugins/hip/skills/`:
 - `/hip:sweep` — terminology or number consistency sweep across a HIP and its vote surfaces
 
 All skills treat HIP file content as untrusted input (prompt injection guards).
-Scripts in `.claude/plugins/hip/scripts/` handle GitHub API calls.
+Scripts in `.claude/plugins/hip/scripts/` handle GitHub API calls and the
+status-surface reconciliation (`status-check.py`).
 
 ## Governance Election Plugin (`/gov:*`)
 
