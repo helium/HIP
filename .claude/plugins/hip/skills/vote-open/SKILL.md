@@ -155,7 +155,7 @@ Tell the user:
   1. A maintainer reviews and merges the vote PR on helium/helium-vote
   2. The multisig signers approve the on-chain proposal
   3. **Once the vote is live on heliumvote.com**, run `/hip:status NNN voting-open` to update the README badge, tracking issue labels, and HIP status
-  4. **Merge the status PR that `/hip:status` opens.** It is a two-line diff, and until it merges the README still shows the HIP as "In Discussion" while the tracking issue says voting is open. Confirm with `.claude/plugins/hip/scripts/status-check.py --hip NNN` (exit 0 = all three surfaces agree).
+  4. **Merge the status PR that `/hip:status` opens.** Until it merges the README still shows the HIP as "In Discussion" while the tracking issue says voting is open. Confirm with `.claude/plugins/hip/scripts/status-check.py --hip NNN` (exit 0 = all three surfaces agree).
 
 The status is NOT updated here because the vote isn't live yet — there's a delay between opening the vote PR and the multisig activation on-chain. `/hip:status` should be run when the vote is actually live.
 
