@@ -6,7 +6,7 @@ category: Economic, Technical
 original-hip-pr: https://github.com/helium/HIP/pull/1238
 tracking-issue: https://github.com/helium/HIP/issues/1239
 vote-requirements: veHNT Holders
-status: In Discussion
+status: Approved
 vote-summary-url: https://gist.githubusercontent.com/hiptron/6f42c230f4ba4116023425e07314869c/raw/HIP-150-Vote-Summary.md
 vote-pr: https://github.com/helium/helium-vote/pull/288
 ---
