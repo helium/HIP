@@ -176,10 +176,10 @@ This is the most variable section. Apply category-specific checks:
 - Flag hand-wavy language: "rewards will be adjusted", "a portion of tokens", "stakeholders will benefit"
 
 **For Technical HIPs:**
-- Must include implementation approach (not just the end state)
+- Must describe the behavior change and its rollout, not just the end state
 - Should describe how this interacts with existing protocol components
-- Edge cases and error handling should be addressed
-- New data structures, API changes, or protocol messages should be specified
+- Edge cases and error handling should be addressed at the level a voter can judge
+- Instruction, account and data-structure detail belongs to the Helium Core Developers; see Q11
 
 **For Meta HIPs:**
 - Must clearly define roles, responsibilities, and decision criteria
@@ -249,14 +249,35 @@ Severity: **Error** if amending/repealing without referencing the target HIP, **
 
 ### Q10: Proportional depth
 
-The depth of the proposal should match its impact:
-- A HIP redistributing millions in token rewards should not be 500 words
-- A minor process tweak doesn't need 5000 words
+The depth of the proposal should match its impact, within the length norm in Q11:
+- A HIP redistributing millions in token rewards needs enough words to show before/after numbers and the alternatives considered
+- A minor process tweak doesn't need 1,000 words
 - Service provider onboarding HIPs can be shorter but must clearly describe the provider and their plan
 
 Flag significant mismatches between impact and depth.
 
 Severity: **Note**
+
+### Q11: Abstraction level and length
+
+A HIP states what changes, when and for whom, plus the few numbers voters need. Mechanism (instructions, accounts, formulas, oracle internals) is left to the Helium Core Developers. The norm is roughly 550 to 1,350 words, the range of HIP 143 to 148; measure the word count rather than estimating it.
+
+Flag:
+- Mechanism a voter cannot weigh, such as instruction layouts, account lists, formulas or oracle internals
+- Length well above the norm: name the sections that carry mechanism or repeat each other and suggest cutting them
+- Length well below the norm with no before/after numbers (see Q10)
+
+The HIP text and the "Writing HIP prose" section of `CLAUDE.md` are the reference; HIP 149 and 150 are too long to copy.
+
+Severity: **Warning**
+
+### Q12: Numbers are dated
+
+Every number that describes current state (a price, a balance, a count, a rate) carries its as-of date in the text or table. Numbers that are the proposal's own parameters need no date. Where the source is reachable, spot-check one or two against it and say which you checked.
+
+Flag a current-state number with no date, or a date that is more than a few weeks old at review time.
+
+Severity: **Warning**
 
 ---
 

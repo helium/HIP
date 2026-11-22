@@ -140,12 +140,14 @@ Work through each section with the user. Don't leave template prompts — every 
 
 Apply the category-specific guidance below to push for substance.
 
+**Prose rules.** The "Writing HIP prose" section of the repo's `CLAUDE.md` is the single home for the style gates. Apply them while drafting, not after: state what changes, when and for whom, plus the few numbers voters need, and leave mechanism to the Helium Core Developers; stay near HIP 143 to 148 in length; give every number its as-of date, re-read from source before the draft goes out. The category guidance below asks for substance within that level, not for implementation detail.
+
 #### Economic HIPs — writing guidance
 
 Economic proposals are the most common HIP category and the most likely to be underspecified. Push hard on these:
 
 **Detailed Explanation must include:**
-- Concrete numbers: percentages, token amounts, allocation tables
+- Concrete numbers: percentages, token amounts, allocation tables, each with its as-of date
 - Before/after comparisons showing what changes
 - If modifying reward structures: a table showing current allocation vs. proposed allocation
 - If touching treasury or fee mechanics: worked examples with realistic numbers
@@ -167,8 +169,8 @@ Economic proposals are the most common HIP category and the most likely to be un
 
 **Detailed Explanation must include:**
 - How the change interacts with existing protocol components
-- Implementation approach (phases, milestones if complex)
-- Any new data structures, API changes, or protocol messages
+- Rollout phases and milestones if complex
+- The behavior change and any interface changes that affect users; instruction, account and data-structure detail is left to the Helium Core Developers
 - Edge cases and how they're handled
 
 **Deployment Impact is critical** — technical changes need:
@@ -200,6 +202,9 @@ Before presenting the final HIP, verify:
 - [ ] Every link definition at the bottom is actually used in the text (no orphaned definitions)
 - [ ] Every `[hip-nn]` reference in the text has a matching definition at the bottom
 - [ ] Success Metrics are measurable
+- [ ] Every number carries its as-of date and was re-read from source
+- [ ] States what changes, when and for whom; mechanism is left to the Core Developers
+- [ ] Length is near HIP 143 to 148 (roughly 550 to 1,350 words), or the excess is justified
 - [ ] No template placeholder text remains
 - [ ] No `<!-- comments -->` with template instructions remain
 

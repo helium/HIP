@@ -91,6 +91,8 @@ If you already have HRP credentials in `~/.config/hrp/`, you can copy them — s
 HIP text is voter-facing. Style gates apply at draft time, not review time:
 
 - Tone exemplars: HIP 143 and 147 — clear, concise, direct. When in doubt, compare against them.
+- Abstraction level: state what changes, when, for whom, and the few numbers voters need. Leave mechanism (instructions, accounts, formulas, oracle internals) to the Helium Core Developers, as HIP 143 and 150 do ("We leave the implementation ... to the Helium Core Developers"). Aim for roughly 550 to 1,350 words, the range of HIP 143 to 148 (555 to 1,335); HIP 149 and 150 are too long to copy.
+- Every number carries its as-of date ("$0.10/GB as of 2026-08-21") and is re-read from source right before the draft goes out.
 - Plain words, readable by non-native speakers. Define jargon at first use ("burn-bounded USD floor" and "rewardable bytes" both needed a gloss).
 - No superlatives, floral fillers, parentheticals-as-asides, or professorial phrasing.
 - No em-dashes. Replacement depends on what the dash was doing: list-item elaboration → colon; clause join → semicolon; mid-clause parenthetical bracketed by two dashes → commas (or parens); table-cell "not applicable" → `n/a`. Detect survivors with Python (`'—' in line or '–' in line`); `grep -E "—"` can miss them depending on locale.
