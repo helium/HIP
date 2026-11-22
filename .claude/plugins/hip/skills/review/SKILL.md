@@ -265,7 +265,6 @@ A HIP states what changes, when and for whom, plus the few numbers voters need. 
 Flag:
 - Mechanism a voter cannot weigh, such as instruction layouts, account lists, formulas or oracle internals
 - Length well above the norm: name the sections that carry mechanism or repeat each other and suggest cutting them
-- Length well below the norm with no before/after numbers (see Q10)
 
 The HIP text and the "Writing HIP prose" section of `CLAUDE.md` are the reference; HIP 149 and 150 are too long to copy.
 
@@ -275,7 +274,7 @@ Severity: **Warning**
 
 Every number that describes current state (a price, a balance, a count, a rate) carries its as-of date in the text or table. Numbers that are the proposal's own parameters need no date. Where the source is reachable, spot-check one or two against it and say which you checked.
 
-Flag a current-state number with no date, or a date that is more than a few weeks old at review time.
+Flag a current-state number with no date, or a date that is more than a few weeks old at review time. For an amendment, check only the numbers the PR adds or changes.
 
 Severity: **Warning**
 
@@ -341,7 +340,7 @@ Category: {category} | Vote: {vote requirement}
 - **Q9**: This HIP changes reward allocations established in HIP-53 but doesn't reference it
 
 ### Notes
-- **Q10**: This economic proposal affects major reward pools but is only ~400 words — consider expanding Detailed Explanation
+- **Q10**: This economic proposal affects major reward pools but is only 412 words — consider expanding Detailed Explanation
 - **C3**: Orphaned link definition `[hip-77]` at bottom of file is not used in text
 
 ### Strength of Argument
