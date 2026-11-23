@@ -1,0 +1,140 @@
+# HIP: Flat Data Credit Adjustment (4x) for Network Sustainability
+
+- **Author(s):** @clavisound
+- **Start Date:** 2026-08-26
+- **Category:** Economic
+- **Original HIP PR:**
+- **Tracking Issue:**
+- **Vote Requirements:** veHNT Holders
+
+---
+
+## Summary
+
+This HIP proposes a **flat 4x increase** in the burn of Data Credits (DCs) required for sending data packets over the Helium IoT Network. Currently a sensor burns 1 DC for 24 bytes. We purpose 4 DC for 24 bytes. Scenario: if a sensor currently pays $0.05 per month, the cost goes from **$0.05 to $0.20**, matching the pricing of The Things Network (TTN) at ~$200/month per 1,000 sensors. The resulting revenue increase will cover Nova Labs' fixed operational expenses (AWS infrastructure, LoRa Alliance sponsorship, developer maintenance salaries, and a 20% buffer), eliminate the network's current deficit, and provide a sustainable revenue stream for Hotspot hosts—all while remaining price-competitive with the leading LoRaWAN alternative.
+
+---
+
+## Motivation
+
+- **Why are we doing this?** 
+  The Helium IoT Network currently generates approximately **$230 per day** (~$6,900/month) in Data Credit burns. Meanwhile, Nova Labs incurs significant fixed operational costs:
+  - AWS Cloud Infrastructure: ~$4,000/month
+  - LoRa Alliance Sponsorship: ~$4,167/month ($50,000/year)
+  - Developer Maintenance (core devs, security audits, chain upkeep): ~$8,000/month
+  - 20% Operating Buffer: ~$3,233/month
+  - **Total Monthly Ops:** ~$647/day
+
+  This creates a **monthly deficit of ~$12,500** that is currently subsidized by Nova Labs.
+
+- **What use cases does it support?**
+  This HIP ensures the long-term viability of the network for all existing use cases (supply chain tracking, agricultural sensors, smart cities, environmental monitoring) without pricing out small-scale users.
+
+- **What problems does it solve?**
+  - Eliminates Nova Labs' operational deficit (~$12,500/month).
+  - Stops the indirect subsidization of data usage by HNT inflation.
+  - Provides a modest, reliable income stream to Hotspot hosts in **HNT**, reducing churn.
+  - Aligns Helium's pricing with The Things Network (TTN), the leading alternative LoRaWAN network provider.
+
+- **What is the expected outcome?**
+  Daily network revenue increases from $230 to **$920** (4x). Nova Labs securely captures $647/day for operations, and the remaining **$273/day** is distributed to Hotspot hosts via the Data Transfer reward pool—a **~2.2x increase** in hotspot rewards from data transfer.
+
+---
+
+## Stakeholders
+
+- **Who is affected by this HIP?**
+  - **Network Users (Sensor Owners):** Scenario: A sensor currently paying $0.05 per month will pay $0.20.
+  - **Hotspot Hosts:** Will receive increased data-transfer rewards in HNT (scenario: from $0.0015/day to ~$0.0033/day average).
+  - **Nova Labs (Core Developers):** Will receive sustainable operational funding without relying on HNT emissions or selling treasury assets.
+  - **HNT Holders:** Reduced inflationary pressure on HNT, as Nova will no longer need to sell emitted HNT to cover operational losses. All rewards flow directly in HNT.
+  - **Heavy Users:** Users who transmit 6+ times per hour (excessive for LPWAN standards) or send unusually large payloads may pay more than TTN's equivalent pricing. This is by design—Helium's pay-as-you-go model fairly charges for actual network usage, and typical sensors remain at $0.20/month. 6 times per hour, 24-bytes message.
+
+- **How are we soliciting feedback?**
+  This HIP will be discussed in the Helium Discord `#iot-general` channel.
+
+---
+
+## Detailed Explanation
+
+### Current Mechanism
+1. Nova Labs receives **$0** from DC burns.
+
+### Proposed Mechanism
+This HIP introduces a **flat 4x multiplier** to the DC cost for all data packets transmitted over the Helium LoRaWAN network. 
+
+**Example Walkthrough for 6 times per hour 24 bytes:**
+- Old cost: $0.04.
+- New cost: $0.17.
+
+**Why 4x and not 10x?**
+- TTN charges $0.20/sensor/month. Helium must remain **at or below** this price to compete.
+- 4x achieves operational sustainability while keeping Helium price-competitive.
+- At 4x, Helium's value proposition shifts from "cheaper than TTN" to "same price as TTN, but with 150,000 hotspots and decentralized coverage."
+- Helium uses a pay-as-you-go model, whereas TTN charges a flat monthly fee regardless of traffic.
+
+### Revised Token Flow (Post-IOT Merge)
+1. Sender burns HNT to purchase DCs at the **new 4x rate**.
+2. The HNT is burned (deflationary).
+3. The equivalent USD value ($920/day) is deposited into the **HNT Treasury**.
+4. **First Priority:** ~$647/day is automatically routed to the **Nova Operations Wallet** (multisig) via a smart-contract oracle.
+5. **Second Priority:** The remaining ~$273/day is distributed to Hotspot hosts via the existing Data Transfer reward mechanism, proportional to packets relayed, paid directly in **HNT**.
+
+---
+
+## Drawbacks
+
+- **Why should we *not* do this?**
+  - TTN offers a free tier for very low usage (up to 10 sensors), which Helium does not (though Helium offers global coverage, which TTN does not, and Helium uses a pay-as-you-go model rather than a flat monthly fee)
+
+- **What problems could occur?**
+  - Short-term user churn of 5–10% could temporarily reduce total revenue, though the 4x multiplier compensates for this.
+  - Hotspots may see a temporary reduction in packet volume, but the higher per-packet reward ensures their total earnings still increase.
+  - The $273/day leftover for hotspots (~$0.0033/hotspot/day) is still modest—this HIP prioritizes network sustainability over hotspot profitability.
+
+---
+
+## Rationale and Alternatives
+
+### Why is this design the best?
+- **Market Alignment:** $0.20/sensor/month is the industry standard set by TTN. Helium cannot charge more without losing enterprise customers.
+- **Simplicity:** A flat multiplier is easy for users to understand, developers to implement, and oracles to track. No complex tiering, no usage thresholds, no per-wallet caps.
+- **Sustainability First:** This HIP prioritizes keeping the chain alive and developers paid over maximizing hotspot rewards. Without Nova Labs, there is no network.
+- **Improved hotspot placement:** Some hotspot owners may be incentivized to strategically relocate their hotspots to higher-traffic areas to capture a larger share.
+- **Post-Merge Simplicity:** With IOT merged back to HNT, the reward flow is cleaner—burn HNT → reward HNT. No subnetwork token conversion complexity.
+
+### What is the impact of not doing this?
+- We lose the denser and cheaper worldwide LoRaWAN network.
+- Hotspots earn $0.56/year, making it economically irrational to stay online. Network coverage collapses.
+
+---
+
+## Unresolved Questions
+
+- **Dependencies:**
+  - Requires a core update to the Oracle and Treasury smart contracts.
+  - Target implementation date: Q4 2026.
+
+---
+
+## Deployment Impact
+
+- **How will current users be impacted?**
+  - Users paying $0.05/month will now pay $0.20/month—a $0.15 increase per active sensor.
+
+- **Documentation Updates:**
+  - The Helium Docs (`docs.helium.com`) will be updated to reflect the new DC pricing structure.
+  - A blog post and FAQ will be published addressing the "Why 4x?" question, explicitly comparing to TTN's $0.20 pricing.
+  - A comparison chart will be published for 6 times per hour and 24-byte message: Helium ($0.17) vs. TTN ($0.20) vs. NB-IoT ($1.50).
+
+- **Backwards Compatibility & Rollback:**
+  - **Yes, this is backwards compatible.** No changes to the packet format or hotspot firmware are required.
+  - **Can this HIP be undone?** Yes. A subsequent HIP can adjust the multiplier up or down. The smart contract will include a governance-controlled multiplier variable, allowing veHNT holders to vote on future changes without a full HIP.
+
+---
+
+## Success Metrics
+
+- **Primary Metric:** Daily DC burn revenue increases from $230 to **≥ $800** within 30 days of implementation (accounting for a potential 5–10% user churn).
+- **Nova Labs Operational Health:** The Nova Operations Wallet receives ~$647/day consistently, eliminating the need to sell HNT from the treasury for operational costs.
+- **Hotspot Earnings:** Average daily data-transfer payout per hotspot increases from $0.0015 to **≥ $0.003** (a 2x increase, accounting for churn).
